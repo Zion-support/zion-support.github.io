@@ -1,18 +1,27 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { 
+  AlertTriangle, 
+  RefreshCw, 
+  Home, 
+  Bug, 
+  Mail, 
+  Copy,
+  CheckCircle
+} from 'lucide-react';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  showDetails?: boolean;
 }
 
 interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
-  errorId: string;
+  showDetails: boolean;
+  copied: boolean;
 }
 
 export class ErrorBoundary extends Component<Props, State> {
@@ -22,60 +31,70 @@ export class ErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: ''
+      showDetails: props.showDetails || false,
+      copied: false
     };
   }
 
-  static getDerivedStateFromError(error: Error): Partial<State> {
+  static getDerivedStateFromError(error: Error): State {
     return {
       hasError: true,
       error,
-      errorId: `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
+      errorInfo: null,
+      showDetails: false,
+      copied: false
     };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
+      error,
       errorInfo
     });
 
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
+    // Log error to console
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
 
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
 
-    // Log to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo);
-    }
+    // Send error to analytics/monitoring service
+    this.logErrorToService(error, errorInfo);
   }
 
-  private logErrorToService = async (error: Error, errorInfo: ErrorInfo) => {
+  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     try {
-      const errorData = {
-        errorId: this.state.errorId,
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        url: window.location.href,
-        version: process.env.REACT_APP_VERSION || 'unknown'
-      };
+      // Example: Send to error reporting service
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'exception', {
+          description: error.message,
+          fatal: false,
+          stack: error.stack,
+          componentStack: errorInfo.componentStack
+        });
+      }
 
-      // Send to error logging service (replace with your service)
-      await fetch('/api/errors', {
+      // Example: Send to custom error endpoint
+      fetch('/api/error-log', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(errorData)
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          message: error.message,
+          stack: error.stack,
+          componentStack: errorInfo.componentStack,
+          url: window.location.href,
+          userAgent: navigator.userAgent,
+          timestamp: new Date().toISOString()
+        })
+      }).catch(() => {
+        // Silently fail if error logging fails
       });
-    } catch (logError) {
-      console.error('Failed to log error:', logError);
+    } catch (loggingError) {
+      console.error('Failed to log error:', loggingError);
     }
   };
 
@@ -84,7 +103,8 @@ export class ErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: ''
+      showDetails: false,
+      copied: false
     });
   };
 
@@ -92,18 +112,51 @@ export class ErrorBoundary extends Component<Props, State> {
     window.location.href = '/';
   };
 
-  private handleReportBug = () => {
-    const errorDetails = `
-Error ID: ${this.state.errorId}
-Message: ${this.state.error?.message}
-Stack: ${this.state.error?.stack}
-Component Stack: ${this.state.errorInfo?.componentStack}
+  private handleCopyError = async () => {
+    if (this.state.error && this.state.errorInfo) {
+      const errorReport = `
+Error Report - ${new Date().toISOString()}
+
+Error: ${this.state.error.message}
+Stack: ${this.state.error.stack}
+Component Stack: ${this.state.errorInfo.componentStack}
 URL: ${window.location.href}
 User Agent: ${navigator.userAgent}
-    `.trim();
+      `.trim();
 
-    const mailtoLink = `mailto:support@ziontechgroup.com?subject=Bug Report - Error ID: ${this.state.errorId}&body=${encodeURIComponent(errorDetails)}`;
-    window.open(mailtoLink);
+      try {
+        await navigator.clipboard.writeText(errorReport);
+        this.setState({ copied: true });
+        setTimeout(() => this.setState({ copied: false }), 2000);
+      } catch (err) {
+        console.error('Failed to copy error:', err);
+      }
+    }
+  };
+
+  private handleReportError = () => {
+    if (this.state.error) {
+      const subject = encodeURIComponent(`Bug Report: ${this.state.error.message}`);
+      const body = encodeURIComponent(`
+Hi Zion Tech Group Team,
+
+I encountered an error while using the website:
+
+Error: ${this.state.error.message}
+URL: ${window.location.href}
+Time: ${new Date().toISOString()}
+
+Please let me know if you need any additional information.
+
+Best regards,
+      `);
+      
+      window.open(`mailto:support@ziontechgroup.com?subject=${subject}&body=${body}`);
+    }
+  };
+
+  private toggleDetails = () => {
+    this.setState(prev => ({ showDetails: !prev.showDetails }));
   };
 
   render() {
@@ -113,117 +166,150 @@ User Agent: ${navigator.userAgent}
         return this.props.fallback;
       }
 
-      // Default error UI
       return (
-        <div className="min-h-screen bg-zion-blue-dark flex items-center justify-center p-4">
-          <div className="max-w-2xl w-full bg-zion-blue-light/10 backdrop-blur-md border border-zion-cyan/20 rounded-2xl p-8 text-center">
-            {/* Error Icon */}
-            <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-orange-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-              <AlertTriangle className="w-10 h-10 text-white" />
+        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center p-4">
+          <div className="max-w-2xl w-full bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
+            {/* Header */}
+            <div className="bg-gradient-to-r from-red-500 to-red-600 p-6 text-white">
+              <div className="flex items-center gap-3">
+                <AlertTriangle className="w-8 h-8" />
+                <div>
+                  <h1 className="text-2xl font-bold">Something went wrong</h1>
+                  <p className="text-red-100 mt-1">
+                    We're sorry, but something unexpected happened. Our team has been notified.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            {/* Error Title */}
-            <h1 className="text-3xl font-bold text-white mb-4">
-              Oops! Something went wrong
-            </h1>
+            {/* Content */}
+            <div className="p-6">
+              {/* Error Message */}
+              <div className="mb-6">
+                <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  Error Details
+                </h2>
+                <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4">
+                  <p className="text-red-800 dark:text-red-200 font-mono text-sm">
+                    {this.state.error?.message || 'An unknown error occurred'}
+                  </p>
+                </div>
+              </div>
 
-            {/* Error Message */}
-            <p className="text-zion-slate-light mb-6 text-lg">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
-            </p>
+              {/* Action Buttons */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                <button
+                  onClick={this.handleRetry}
+                  className="flex items-center justify-center gap-2 px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+                >
+                  <RefreshCw className="w-4 h-4" />
+                  Try Again
+                </button>
+                
+                <button
+                  onClick={this.handleGoHome}
+                  className="flex items-center justify-center gap-2 px-4 py-3 bg-gray-600 hover:bg-gray-700 text-white rounded-lg font-medium transition-colors"
+                >
+                  <Home className="w-4 h-4" />
+                  Go Home
+                </button>
+              </div>
 
-            {/* Error Details (Development Only) */}
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mb-6 text-left bg-zion-blue-dark/50 rounded-lg p-4">
-                <summary className="text-zion-cyan cursor-pointer font-medium mb-2">
-                  Error Details (Development)
-                </summary>
-                <div className="text-sm text-zion-slate-light space-y-2">
-                  <div>
-                    <strong>Message:</strong> {this.state.error.message}
-                  </div>
-                  <div>
-                    <strong>Stack:</strong>
-                    <pre className="mt-1 text-xs overflow-x-auto">
-                      {this.state.error.stack}
-                    </pre>
-                  </div>
-                  {this.state.errorInfo && (
+              {/* Additional Actions */}
+              <div className="flex flex-wrap gap-2 mb-6">
+                <button
+                  onClick={this.handleCopyError}
+                  className="flex items-center gap-2 px-3 py-2 text-sm bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-md transition-colors"
+                >
+                  {this.state.copied ? (
+                    <>
+                      <CheckCircle className="w-4 h-4 text-green-500" />
+                      Copied!
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="w-4 h-4" />
+                      Copy Error
+                    </>
+                  )}
+                </button>
+                
+                <button
+                  onClick={this.handleReportError}
+                  className="flex items-center gap-2 px-3 py-2 text-sm bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-md transition-colors"
+                >
+                  <Mail className="w-4 h-4" />
+                  Report Bug
+                </button>
+                
+                <button
+                  onClick={this.toggleDetails}
+                  className="flex items-center gap-2 px-3 py-2 text-sm bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-md transition-colors"
+                >
+                  <Bug className="w-4 h-4" />
+                  {this.state.showDetails ? 'Hide' : 'Show'} Details
+                </button>
+              </div>
+
+              {/* Error Details */}
+              {this.state.showDetails && (
+                <div className="space-y-4">
+                  {/* Stack Trace */}
+                  {this.state.error?.stack && (
                     <div>
-                      <strong>Component Stack:</strong>
-                      <pre className="mt-1 text-xs overflow-x-auto">
+                      <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
+                        Stack Trace
+                      </h3>
+                      <pre className="bg-gray-100 dark:bg-gray-900 rounded-lg p-4 overflow-x-auto text-xs text-gray-800 dark:text-gray-200 font-mono">
+                        {this.state.error.stack}
+                      </pre>
+                    </div>
+                  )}
+
+                  {/* Component Stack */}
+                  {this.state.errorInfo?.componentStack && (
+                    <div>
+                      <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
+                        Component Stack
+                      </h3>
+                      <pre className="bg-gray-100 dark:bg-gray-900 rounded-lg p-4 overflow-x-auto text-xs text-gray-800 dark:text-gray-200 font-mono">
                         {this.state.errorInfo.componentStack}
                       </pre>
                     </div>
                   )}
+
+                  {/* Environment Info */}
+                  <div>
+                    <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
+                      Environment Information
+                    </h3>
+                    <div className="bg-gray-100 dark:bg-gray-900 rounded-lg p-4 text-xs text-gray-800 dark:text-gray-200 font-mono">
+                      <div>URL: {window.location.href}</div>
+                      <div>User Agent: {navigator.userAgent}</div>
+                      <div>Timestamp: {new Date().toISOString()}</div>
+                    </div>
+                  </div>
                 </div>
-              </details>
-            )}
+              )}
 
-            {/* Error ID */}
-            <div className="mb-6 p-3 bg-zion-blue-dark/50 rounded-lg">
-              <p className="text-sm text-zion-slate-light">
-                Error ID: <span className="font-mono text-zion-cyan">{this.state.errorId}</span>
-              </p>
-            </div>
-
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                onClick={this.handleRetry}
-                className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2"
-              >
-                <RefreshCw className="w-4 h-4" />
-                Try Again
-              </Button>
-
-              <Button
-                onClick={this.handleGoHome}
-                variant="outline"
-                className="border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2"
-              >
-                <Home className="w-4 h-4" />
-                Go Home
-              </Button>
-
-              <Button
-                onClick={this.handleReportBug}
-                variant="outline"
-                className="border-zion-purple/30 text-zion-purple hover:bg-zion-purple hover:text-white transition-all duration-300 flex items-center gap-2"
-              >
-                <Bug className="w-4 h-4" />
-                Report Bug
-              </Button>
-            </div>
-
-            {/* Additional Help */}
-            <div className="mt-8 pt-6 border-t border-zion-cyan/20">
-              <p className="text-sm text-zion-slate-light mb-2">
-                Still having issues? We're here to help!
-              </p>
-              <div className="flex justify-center gap-4 text-sm">
-                <a
-                  href="/contact"
-                  className="text-zion-cyan hover:text-white transition-colors duration-300"
-                >
-                  Contact Support
-                </a>
-                <span className="text-zion-slate-light">•</span>
-                <a
-                  href="/help"
-                  className="text-zion-cyan hover:text-white transition-colors duration-300"
-                >
-                  Help Center
-                </a>
-                <span className="text-zion-slate-light">•</span>
-                <a
-                  href="https://status.ziontechgroup.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-zion-cyan hover:text-white transition-colors duration-300"
-                >
-                  System Status
-                </a>
+              {/* Help Text */}
+              <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
+                <p className="text-sm text-blue-800 dark:text-blue-200">
+                  <strong>Need help?</strong> If this error persists, please contact our support team at{' '}
+                  <a 
+                    href="mailto:support@ziontechgroup.com" 
+                    className="underline hover:no-underline"
+                  >
+                    support@ziontechgroup.com
+                  </a>
+                  {' '}or call us at{' '}
+                  <a 
+                    href="tel:+1-302-464-0950" 
+                    className="underline hover:no-underline"
+                  >
+                    +1 (302) 464-0950
+                  </a>
+                </p>
               </div>
             </div>
           </div>

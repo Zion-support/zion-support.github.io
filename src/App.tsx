@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import Sidebar from './components/Sidebar';
-import { AccessibilityControls } from './components/AccessibilityControls';
-import { PerformanceDashboard } from './components/PerformanceDashboard';
+import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
 import { AnalyticsDashboard } from './components/AnalyticsDashboard';
 import { AIChatbot } from './components/AIChatbot';
 import { CollaborativeTextEditor } from './components/CollaborativeTextEditor';
@@ -17,6 +17,7 @@ import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
 import { ErrorBoundary } from './components/ErrorBoundary';
+import { SEOHead } from './components/SEOHead';
 
 // Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
@@ -78,6 +79,9 @@ const App = () => {
         <WhitelabelProvider>
           <Router>
             <div className="App min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+              {/* SEO Head */}
+              <SEOHead />
+              
               <Header />
               <Sidebar isOpen={false} onClose={() => {}} />
               
@@ -128,10 +132,13 @@ const App = () => {
               </main>
               
               <Footer />
+              
+              {/* Global Components */}
               <SonnerToaster />
               
-              {/* Enhanced Accessibility Controls */}
-              <AccessibilityControls position="bottom-right" />
+              {/* Enhanced Accessibility and Performance Tools */}
+              <AccessibilityEnhancer />
+              <PerformanceMonitor />
               
               {/* AI Chatbot - Always Available */}
               <AIChatbot />
