@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
 import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
 import type { TalentProfile as TalentProfileType } from '@/types/talent';
@@ -8,20 +8,19 @@ interface TalentProfileWithSocial extends TalentProfileType {
   social?: Record<string, string>;
 }
 
-// Simple error component for 404
-const NotFoundError = () => (
-  <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
-    <div className="text-center">
-      <h1 className="text-4xl font-bold mb-4">404</h1>
-      <p className="text-xl mb-4">Talent Profile Not Found</p>
-      <p className="text-zion-slate-light">The talent profile you're looking for doesn't exist or has been removed.</p>
+const ErrorPage: React.FC<{ statusCode: number }> = ({ statusCode }) => (
+  <div className="min-h-screen bg-zion-blue flex items-center justify-center">
+    <div className="text-center text-white">
+      <h1 className="text-6xl font-bold mb-4">{statusCode}</h1>
+      <p className="text-xl text-zion-slate-light">
+        {statusCode === 404 ? 'Page Not Found' : 'Something went wrong'}
+      </p>
     </div>
   </div>
 );
 
 const TalentProfilePage: React.FC = () => {
   const { id } = useParams();
-  const navigate = useNavigate();
   const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -68,16 +67,18 @@ const TalentProfilePage: React.FC = () => {
         </h1>
         {profile.skills && profile.skills.length > 0 && (
           <div>
-            <h2 className="font-semibold">Skills</h2>
-            <ul className="list-disc ml-5">
+            <h2 className="text-2xl font-semibold mb-2">Skills</h2>
+            <ul className="list-disc ml-5 space-y-1">
               {profile.skills.map(skill => (
-                <li key={skill}>{skill}</li>
+                <li key={skill} className="text-zion-slate-light">{skill}</li>
               ))}
             </ul>
           </div>
         )}
         {profile.availability_type && (
-          <p>Availability: {profile.availability_type}</p>
+          <div className="mt-4">
+            <span className="text-zion-cyan font-medium">Availability:</span> {profile.availability_type}
+          </div>
         )}
       </div>
     </main>
