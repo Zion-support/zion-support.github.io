@@ -19,9 +19,9 @@ import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
 import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
-import { EnhancedSEO } from './components/EnhancedSEO';
-import { EnhancedAccessibility } from './components/EnhancedAccessibility';
-import { PerformanceMonitor } from './components/PerformanceMonitor';
+import EnhancedSEO from './components/EnhancedSEO';
+import EnhancedAccessibility from './components/EnhancedAccessibility';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 // Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
@@ -98,7 +98,7 @@ const Testimonials = lazy(() => import('./pages/Testimonials'));
 const Support = lazy(() => import('./pages/HelpCenter'));
 const Docs = lazy(() => import('./pages/HelpCenter'));
 const Marketplace = lazy(() => import('./pages/Marketplace'));
-const Community = lazy(() => import('./pages/Community'));
+const Community = lazy(() => import('./pages/CommunityPage'));
 
 // AI Autonomous Service pages
 const AIAutonomousBusinessManager = lazy(() => import('./pages/services/AIAutonomousBusinessManager'));
@@ -149,7 +149,6 @@ const App: React.FC = () => {
 
   return (
     <EnhancedErrorBoundary>
-      <EnhancedSEO />
       <EnhancedAccessibility />
       <PerformanceMonitor />
       <ThemeProvider>

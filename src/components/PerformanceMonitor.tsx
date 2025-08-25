@@ -208,8 +208,10 @@ const PerformanceMonitor: React.FC = () => {
       // First Input Delay
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        const fid = entries[entries.length - 1];
-        setMetrics(prev => ({ ...prev, fid: fid.processingStart - fid.startTime }));
+        const fid = entries[entries.length - 1] as any;
+        if (fid.processingStart && fid.startTime) {
+          setMetrics(prev => ({ ...prev, fid: fid.processingStart - fid.startTime }));
+        }
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
 
