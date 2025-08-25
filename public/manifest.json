@@ -1,74 +1,64 @@
 {
   "name": "Zion Tech Group",
   "short_name": "Zion Tech",
-  "description": "Transform Your Business With AI & Tech - Discover cutting-edge AI services, Micro SAAS solutions, and comprehensive IT services.",
+  "description": "Empowering businesses with cutting-edge AI solutions, cybersecurity, cloud DevOps, and digital transformation services.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#00ffff",
+  "background_color": "#0f172a",
+  "theme_color": "#3b82f6",
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en",
   "categories": ["business", "productivity", "technology"],
   "icons": [
     {
-      "src": "/icon-72x72.png",
-      "sizes": "72x72",
-      "type": "image/png",
-      "purpose": "maskable any"
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32",
+      "type": "image/x-icon"
     },
     {
-      "src": "/icon-96x96.png",
-      "sizes": "96x96",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/icon-128x128.png",
-      "sizes": "128x128",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/icon-144x144.png",
-      "sizes": "144x144",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/icon-152x152.png",
-      "sizes": "152x152",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/icon-192x192.png",
+      "src": "/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "maskable any"
+      "purpose": "any maskable"
     },
     {
-      "src": "/icon-384x384.png",
-      "sizes": "384x384",
-      "type": "image/png",
-      "purpose": "maskable any"
-    },
-    {
-      "src": "/icon-512x512.png",
+      "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "maskable any"
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/desktop-home.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Homepage on desktop"
+    },
+    {
+      "src": "/screenshots/mobile-home.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Homepage on mobile"
     }
   ],
   "shortcuts": [
     {
       "name": "Services",
       "short_name": "Services",
-      "description": "View our AI services and solutions",
+      "description": "View our AI and technology services",
       "url": "/services",
       "icons": [
         {
-          "src": "/icon-96x96.png",
+          "src": "/icons/services.png",
           "sizes": "96x96"
         }
       ]
@@ -76,43 +66,34 @@
     {
       "name": "Contact",
       "short_name": "Contact",
-      "description": "Get in touch with us",
+      "description": "Get in touch with our team",
       "url": "/contact",
       "icons": [
         {
-          "src": "/icon-96x96.png",
+          "src": "/icons/contact.png",
           "sizes": "96x96"
         }
       ]
     },
     {
-      "name": "AI Solutions",
-      "short_name": "AI Solutions",
-      "description": "Explore our AI solutions",
-      "url": "/ai-solutions",
+      "name": "AI Matcher",
+      "short_name": "AI Matcher",
+      "description": "Find the perfect AI solution for your business",
+      "url": "/ai-matcher",
       "icons": [
         {
-          "src": "/icon-96x96.png",
+          "src": "/icons/ai-matcher.png",
           "sizes": "96x96"
         }
       ]
     }
   ],
-  "screenshots": [
+  "related_applications": [
     {
-      "src": "/screenshot-wide.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide"
-    },
-    {
-      "src": "/screenshot-narrow.png",
-      "sizes": "750x1334",
-      "type": "image/png",
-      "form_factor": "narrow"
+      "platform": "webapp",
+      "url": "https://ziontechgroup.com"
     }
   ],
-  "related_applications": [],
   "prefer_related_applications": false,
   "edge_side_panel": {
     "preferred_width": 400
@@ -120,10 +101,11 @@
   "launch_handler": {
     "client_mode": "navigate-existing"
   },
+  "handle_links": "preferred",
   "protocol_handlers": [
     {
       "protocol": "web+zion",
-      "url": "/?protocol=%s"
+      "url": "/%s"
     }
   ]
 }

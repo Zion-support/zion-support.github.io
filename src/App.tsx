@@ -4,7 +4,7 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import Sidebar from './components/Sidebar';
 import { AccessibilityControls } from './components/AccessibilityControls';
-import { PerformanceDashboard } from './components/PerformanceDashboard';
+import PerformanceDashboard from './components/PerformanceDashboard';
 import { AnalyticsDashboard } from './components/AnalyticsDashboard';
 import { AIChatbot } from './components/AIChatbot';
 import { CollaborativeTextEditor } from './components/CollaborativeTextEditor';
@@ -21,7 +21,8 @@ import { Toaster as SonnerToaster } from "./components/ui/sonner";
 import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
 import EnhancedSEO from './components/EnhancedSEO';
 import EnhancedAccessibility from './components/EnhancedAccessibility';
-import PerformanceMonitor from './components/PerformanceMonitor';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { ScrollToTop } from './components/ScrollToTop';
 import { ContentQualityEnhancer } from './components/ContentQualityEnhancer';
 import { BrokenLinkFixer } from './components/BrokenLinkFixer';
 import { WebsiteImprovementDashboard } from './components/WebsiteImprovementDashboard';
@@ -328,6 +329,9 @@ const App: React.FC = () => {
                 {/* AI Chatbot - Always Available */}
                 <AIChatbot />
                 
+                {/* Scroll to Top Button */}
+                <ScrollToTop />
+                
                 {/* Collaborative Text Editor - Development Mode */}
                 {import.meta.env.DEV && (
                   <div className="fixed bottom-24 left-6 z-40 w-96">
@@ -385,6 +389,6 @@ const App: React.FC = () => {
       </ThemeProvider>
     </EnhancedErrorBoundary>
   );
-};
+}
 
 export default App;
