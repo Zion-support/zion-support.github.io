@@ -286,28 +286,14 @@ export default function ComprehensiveInnovativeServices() {
                         <span className="text-zion-cyan/70">Market Price:</span>
                         <span className="text-white font-semibold">{service.marketPrice}</span>
                       </div>
-                      <div className="flex items-center justify-between text-sm mt-1">
-                        <span className="text-zion-cyan/70">ROI:</span>
-                        <span className="text-green-400 font-semibold">{service.roi}</span>
-                      </div>
+
                       <div className="flex items-center justify-between text-sm mt-1">
                         <span className="text-zion-cyan/70">Delivery:</span>
                         <span className="text-white font-semibold">{service.estimatedDelivery}</span>
                       </div>
                     </div>
 
-                    {/* Innovation Level */}
-                    <div className="mb-4">
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs text-zion-cyan/70">Innovation Level:</span>
-                        <div className="flex items-center">
-                          <Award className="w-4 h-4 text-yellow-400 mr-1" />
-                          <span className="text-xs text-yellow-400 font-semibold">
-                            {service.innovationLevel.split(' ')[0]}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
+
 
                     {/* CTA Button */}
                     <div className="mt-6">
