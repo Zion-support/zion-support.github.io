@@ -49,6 +49,12 @@ const FiveGEnterpriseSolutions = lazy(() => import('./pages/5GEnterpriseSolution
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 
+// New Innovative Services Showcase
+const InnovativeServicesShowcase = lazy(() => import('./pages/InnovativeServicesShowcase'));
+
+// Comprehensive Services Overview
+const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveServicesOverview'));
+
 // Company information pages
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
@@ -146,6 +152,12 @@ const App = () => {
                       <Route path="/5g-enterprise-solutions" element={<FiveGEnterpriseSolutions />} />
                       <Route path="/case-studies" element={<CaseStudies />} />
                       <Route path="/help" element={<HelpCenter />} />
+                      
+                      {/* New Innovative Services Showcase */}
+                      <Route path="/innovative-services-showcase" element={<InnovativeServicesShowcase />} />
+                      
+                      {/* Comprehensive Services Overview */}
+                      <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview />} />
                       
                       {/* Company Routes */}
                       <Route path="/about" element={<About />} />
