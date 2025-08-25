@@ -29,10 +29,10 @@ const services = [
   },
   {
     icon: Rocket,
-    title: "Digital Transformation",
-    description: "End-to-end digital transformation strategies for modern businesses",
-    features: ["Process Automation", "Legacy Modernization", "Change Management", "ROI Optimization"],
-    path: "/digital-transformation",
+    title: "Innovative Micro SAAS",
+    description: "Cutting-edge micro SAAS solutions for modern businesses",
+    features: ["AI Analytics", "Quantum Computing", "Blockchain Solutions", "Edge Computing"],
+    path: "/comprehensive-services-showcase",
     color: "from-orange-500 to-red-600"
   },
   {
