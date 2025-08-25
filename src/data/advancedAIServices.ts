@@ -20,284 +20,256 @@ export interface AdvancedAIService {
     email: string;
     website: string;
   };
-  websiteUrl: string;
-  demoUrl?: string;
-  documentationUrl?: string;
 }
 
 export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
-  // AI-Powered Content Creation & Marketing
+  // AI-Powered Financial Services
   {
-    id: "ai-content-factory-pro",
-    title: "AI Content Factory Pro - Enterprise Content Generation Platform",
-    description: "Advanced AI-powered content creation platform that generates high-quality, SEO-optimized content across multiple formats and languages with brand voice consistency.",
-    category: "AI Content Creation",
-    subcategory: "Marketing Automation",
-    price: 1499,
+    id: "ai-financial-advisor",
+    title: "AI-Powered Financial Advisory Platform",
+    description: "Intelligent financial planning and investment advisory system that provides personalized financial recommendations using advanced machine learning algorithms.",
+    category: "AI & Financial Services",
+    subcategory: "Financial Advisory",
+    price: 2500,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Multi-format content generation (blogs, social media, emails, ads)",
-      "Brand voice training and consistency",
-      "SEO optimization with keyword research",
-      "Multi-language support (50+ languages)",
-      "Content calendar automation",
-      "Plagiarism detection and originality scoring",
-      "Performance analytics and A/B testing",
-      "Team collaboration tools",
-      "API integration with major platforms",
-      "Custom content templates"
+      "Personalized investment portfolios",
+      "Risk assessment algorithms",
+      "Market trend analysis",
+      "Automated rebalancing",
+      "Tax optimization strategies",
+      "Real-time portfolio monitoring"
     ],
     benefits: [
-      "Increase content production by 500%",
-      "Reduce content creation costs by 70%",
-      "Improve SEO rankings by 45%",
-      "Maintain consistent brand voice",
-      "Scale content globally"
+      "Increase investment returns by 15-25%",
+      "Reduce financial planning time by 80%",
+      "Minimize tax liabilities",
+      "Professional-grade financial advice",
+      "24/7 portfolio management"
     ],
     useCases: [
-      "Content marketing agencies",
-      "E-commerce businesses",
-      "SaaS companies",
-      "Educational institutions",
-      "Multinational corporations"
+      "Individual investors",
+      "Financial advisors",
+      "Wealth management firms",
+      "Retirement planning",
+      "Tax optimization"
     ],
     targetAudience: [
-      "Content marketers",
-      "Digital marketing managers",
-      "Brand managers",
-      "SEO specialists",
-      "Marketing directors"
+      "High-net-worth individuals",
+      "Financial advisors",
+      "Investment firms",
+      "Retirement planners",
+      "Tax professionals"
     ],
-    tags: ["AI", "Content Creation", "Marketing Automation", "SEO", "Multi-language"],
-    estimatedDelivery: "2-3 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$1,499 - $4,999/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/ai-content-factory-pro"
-  },
-
-  // AI-Powered Video Production
-  {
-    id: "ai-video-production-suite",
-    title: "AI Video Production Suite - Automated Video Creation Platform",
-    description: "Revolutionary AI platform that automatically generates professional-quality videos from text, images, and audio with advanced editing capabilities.",
-    category: "AI Video Production",
-    subcategory: "Media Creation",
-    price: 899,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Text-to-video generation",
-      "AI-powered video editing",
-      "Automatic scene transitions",
-      "Voice-over generation (30+ languages)",
-      "Background music selection",
-      "Custom branding and templates",
-      "Social media format optimization",
-      "Video analytics and performance tracking",
-      "Collaborative editing tools",
-      "API for bulk video creation"
-    ],
-    benefits: [
-      "Reduce video production time by 90%",
-      "Lower production costs by 80%",
-      "Increase engagement by 60%",
-      "Professional quality output",
-      "Scalable video marketing"
-    ],
-    useCases: [
-      "Marketing agencies",
-      "E-learning platforms",
-      "Social media managers",
-      "Product demo creation",
-      "Training video production"
-    ],
-    targetAudience: [
-      "Video marketers",
-      "Content creators",
-      "Marketing managers",
-      "Social media specialists",
-      "Training coordinators"
-    ],
-    tags: ["AI", "Video Production", "Content Creation", "Marketing", "Automation"],
+    tags: ["AI", "Financial Advisory", "Investment Management", "Portfolio Optimization", "Tax Planning"],
     estimatedDelivery: "3-4 weeks",
     supportLevel: "premium",
-    marketPrice: "$899 - $2,999/month",
+    marketPrice: "$2,500 - $8,000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/ai-video-production-suite"
+    }
   },
 
-  // AI-Powered Customer Experience Platform
+  // AI-Powered Legal Research
   {
-    id: "ai-customer-experience-platform",
-    title: "AI Customer Experience Platform - Intelligent Customer Journey Optimization",
-    description: "Comprehensive AI platform that personalizes customer experiences across all touchpoints, predicts customer needs, and optimizes conversion rates in real-time.",
-    category: "AI Customer Experience",
-    subcategory: "Customer Journey Optimization",
-    price: 2499,
+    id: "ai-legal-research-assistant",
+    title: "AI Legal Research & Document Analysis Platform",
+    description: "Advanced legal research platform that uses natural language processing to analyze case law, contracts, and legal documents for faster, more accurate legal research.",
+    category: "AI & Legal Services",
+    subcategory: "Legal Research",
+    price: 1800,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Real-time customer behavior analysis",
-      "Predictive customer journey mapping",
-      "Dynamic content personalization",
-      "A/B testing automation",
-      "Customer sentiment analysis",
-      "Churn prediction and prevention",
-      "Multi-channel experience orchestration",
-      "Customer lifetime value optimization",
-      "Real-time recommendations engine",
-      "Advanced analytics dashboard"
+      "Case law analysis",
+      "Contract review automation",
+      "Legal precedent identification",
+      "Document similarity matching",
+      "Regulatory compliance checking",
+      "Legal citation validation"
     ],
     benefits: [
-      "Increase conversion rates by 35%",
-      "Reduce customer churn by 40%",
-      "Improve customer satisfaction by 50%",
-      "Optimize customer lifetime value",
-      "Real-time personalization"
+      "Reduce research time by 70%",
+      "Improve case outcome prediction",
+      "Enhance contract review accuracy",
+      "Stay updated on legal changes",
+      "Reduce legal research costs"
     ],
     useCases: [
-      "E-commerce platforms",
-      "SaaS companies",
-      "Financial services",
-      "Healthcare providers",
-      "Retail chains"
+      "Law firms",
+      "Corporate legal departments",
+      "Legal researchers",
+      "Compliance officers",
+      "Contract managers"
     ],
     targetAudience: [
-      "Customer experience managers",
-      "Marketing directors",
-      "Product managers",
-      "Customer success teams",
-      "Business analysts"
+      "Law firms",
+      "Corporate legal teams",
+      "Legal researchers",
+      "Compliance professionals",
+      "Contract administrators"
     ],
-    tags: ["AI", "Customer Experience", "Personalization", "Analytics", "Optimization"],
+    tags: ["AI", "Legal Research", "Document Analysis", "Case Law", "Contract Review"],
+    estimatedDelivery: "2-3 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,800 - $5,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // AI-Powered Healthcare Diagnostics
+  {
+    id: "ai-healthcare-diagnostics",
+    title: "AI Healthcare Diagnostic Imaging Platform",
+    description: "Advanced medical imaging analysis platform that uses deep learning to detect diseases, analyze medical scans, and provide diagnostic recommendations.",
+    category: "AI & Healthcare",
+    subcategory: "Medical Diagnostics",
+    price: 3500,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Medical image analysis",
+      "Disease detection algorithms",
+      "Diagnostic recommendations",
+      "Patient data integration",
+      "Radiology workflow automation",
+      "Clinical decision support"
+    ],
+    benefits: [
+      "Improve diagnostic accuracy by 25%",
+      "Reduce diagnosis time by 60%",
+      "Enhance patient outcomes",
+      "Optimize radiology workflows",
+      "Reduce healthcare costs"
+    ],
+    useCases: [
+      "Hospitals",
+      "Radiology centers",
+      "Medical clinics",
+      "Research institutions",
+      "Telemedicine platforms"
+    ],
+    targetAudience: [
+      "Healthcare providers",
+      "Radiologists",
+      "Medical imaging centers",
+      "Hospital administrators",
+      "Healthcare IT teams"
+    ],
+    tags: ["AI", "Healthcare", "Medical Imaging", "Diagnostics", "Radiology"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$2,499 - $7,999/month",
+    marketPrice: "$3,500 - $12,000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/ai-customer-experience-platform"
+    }
   },
 
-  // AI-Powered Financial Analysis Platform
+  // AI-Powered Supply Chain Optimization
   {
-    id: "ai-financial-analysis-platform",
-    title: "AI Financial Analysis Platform - Intelligent Investment & Risk Management",
-    description: "Advanced AI platform that provides real-time financial analysis, risk assessment, and investment recommendations using machine learning and predictive analytics.",
-    category: "AI Financial Services",
-    subcategory: "Investment & Risk Management",
-    price: 3999,
+    id: "ai-supply-chain-optimization",
+    title: "AI Supply Chain Optimization Platform",
+    description: "Intelligent supply chain management system that uses predictive analytics and machine learning to optimize inventory, reduce costs, and improve efficiency.",
+    category: "AI & Supply Chain",
+    subcategory: "Supply Chain Management",
+    price: 2200,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Real-time market data analysis",
-      "AI-powered investment recommendations",
-      "Risk assessment and scoring",
-      "Portfolio optimization algorithms",
-      "Market trend prediction",
-      "Regulatory compliance monitoring",
-      "Automated trading signals",
-      "Performance analytics dashboard",
-      "Multi-asset class support",
-      "Custom risk models"
+      "Demand forecasting",
+      "Inventory optimization",
+      "Route optimization",
+      "Supplier performance analysis",
+      "Risk assessment",
+      "Real-time monitoring"
     ],
     benefits: [
-      "Improve investment returns by 25%",
-      "Reduce risk exposure by 40%",
-      "Automate compliance monitoring",
-      "Real-time market insights",
-      "Data-driven decisions"
+      "Reduce inventory costs by 20-30%",
+      "Improve delivery times by 25%",
+      "Optimize supplier relationships",
+      "Reduce supply chain risks",
+      "Increase operational efficiency"
     ],
     useCases: [
-      "Investment firms",
-      "Hedge funds",
-      "Family offices",
-      "Financial advisors",
-      "Corporate treasuries"
+      "Manufacturing companies",
+      "Retail chains",
+      "Logistics providers",
+      "E-commerce businesses",
+      "Distribution centers"
     ],
     targetAudience: [
-      "Portfolio managers",
-      "Risk managers",
-      "Investment analysts",
-      "Financial advisors",
-      "Treasury managers"
+      "Supply chain managers",
+      "Operations directors",
+      "Logistics coordinators",
+      "Inventory managers",
+      "Procurement teams"
     ],
-    tags: ["AI", "Financial Analysis", "Investment", "Risk Management", "Trading"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$3,999 - $12,999/month",
+    tags: ["AI", "Supply Chain", "Inventory Management", "Logistics", "Predictive Analytics"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "premium",
+    marketPrice: "$2,200 - $6,500/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/ai-financial-analysis-platform"
+    }
   },
 
-  // AI-Powered Healthcare Analytics Platform
+  // AI-Powered Energy Management
   {
-    id: "ai-healthcare-analytics-platform",
-    title: "AI Healthcare Analytics Platform - Predictive Healthcare Intelligence",
-    description: "Comprehensive AI platform that analyzes healthcare data to predict patient outcomes, optimize treatment plans, and improve operational efficiency.",
-    category: "AI Healthcare",
-    subcategory: "Predictive Analytics",
-    price: 2999,
+    id: "ai-energy-management",
+    title: "AI Energy Management & Optimization Platform",
+    description: "Smart energy management system that uses AI to optimize energy consumption, predict demand, and reduce costs for commercial and industrial facilities.",
+    category: "AI & Energy",
+    subcategory: "Energy Management",
+    price: 1900,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Patient outcome prediction",
-      "Treatment optimization algorithms",
-      "Disease risk assessment",
-      "Resource utilization optimization",
-      "Clinical decision support",
-      "Population health analytics",
-      "Real-time monitoring alerts",
-      "Compliance and security features",
-      "Integration with EHR systems",
-      "Custom analytics dashboards"
+      "Energy consumption monitoring",
+      "Demand forecasting",
+      "Peak load management",
+      "Renewable energy integration",
+      "Cost optimization",
+      "Sustainability reporting"
     ],
     benefits: [
-      "Improve patient outcomes by 30%",
-      "Reduce healthcare costs by 25%",
-      "Optimize resource allocation",
-      "Early disease detection",
-      "Personalized treatment plans"
+      "Reduce energy costs by 15-25%",
+      "Improve energy efficiency",
+      "Optimize renewable energy usage",
+      "Reduce carbon footprint",
+      "Comply with regulations"
     ],
     useCases: [
-      "Hospitals and clinics",
-      "Health insurance companies",
-      "Pharmaceutical companies",
-      "Research institutions",
-      "Public health agencies"
+      "Commercial buildings",
+      "Industrial facilities",
+      "Data centers",
+      "Retail chains",
+      "Manufacturing plants"
     ],
     targetAudience: [
-      "Healthcare administrators",
-      "Clinical researchers",
-      "Health IT managers",
-      "Medical directors",
-      "Population health managers"
+      "Facility managers",
+      "Energy managers",
+      "Sustainability officers",
+      "Building owners",
+      "Operations managers"
     ],
-    tags: ["AI", "Healthcare", "Predictive Analytics", "Clinical Decision Support", "Population Health"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$2,999 - $9,999/month",
+    tags: ["AI", "Energy Management", "Sustainability", "Cost Optimization", "Renewable Energy"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,900 - $5,500/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/ai-healthcare-analytics-platform"
+    }
   }
 ];
