@@ -24,15 +24,71 @@ import EnhancedAccessibility from './components/EnhancedAccessibility';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
 import { ScrollToTop } from './components/ScrollToTop';
 
+import {
+  AuthRoutes,
+  DashboardRoutes,
+  MarketplaceRoutes,
+  TalentRoutes,
+  AdminRoutes,
+  MobileAppRoutes,
+  ContentRoutes,
+  ErrorRoutes,
+  EnterpriseRoutes,
+  CommunityRoutes,
+  DeveloperRoutes
+} from './routes';
+
 // Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
-const Services = lazy(() => import('./pages/Services'));
-const AISolutions = lazy(() => import('./pages/AISolutions'));
-const ServicesShowcase = lazy(() => import('./pages/ServicesShowcase'));
 const AIMatcherPage = lazy(() => import('./pages/AIMatcher'));
 const TalentDirectory = lazy(() => import('./pages/TalentDirectory'));
 const TalentsPage = lazy(() => import('./pages/TalentsPage'));
-const EmergingTech = lazy(() => import('./pages/EmergingTech'));
+const ServicesPage = lazy(() => import('./pages/ServicesPage'));
+const EquipmentPage = lazy(() => import('./pages/EquipmentPage'));
+const EquipmentDetail = lazy(() => import('./pages/EquipmentDetail'));
+const Analytics = lazy(() => import('./pages/Analytics'));
+const MobileLaunchPage = lazy(() => import('./pages/MobileLaunchPage'));
+const CommunityPage = lazy(() => import('./pages/CommunityPage'));
+const Categories = lazy(() => import('./pages/Categories'));
+const Blog = lazy(() => import('./pages/Blog'));
+const BlogPost = lazy(() => import('./pages/BlogPost'));
+const PartnersPage = lazy(() => import('./pages/Partners'));
+const Login = lazy(() => import('./pages/Login'));
+const Signup = lazy(() => import('./pages/Signup'));
+const ITOnsiteServicesPage = lazy(() => import('./pages/ITOnsiteServicesPage'));
+const OpenAppRedirect = lazy(() => import('./pages/OpenAppRedirect'));
+const ContactPage = lazy(() => import('./pages/Contact'));
+const ZionHireAI = lazy(() => import('./pages/ZionHireAI'));
+const RequestQuotePage = lazy(() => import('./pages/RequestQuote'));
+const ExpandedServicesPage = lazy(() => import('./pages/ExpandedServicesPage'));
+const ServicesPricingPage = lazy(() => import('./pages/ServicesPricingPage'));
+
+const baseRoutes = [
+  { path: '/', element: <Home /> },
+  { path: '/match', element: <AIMatcherPage /> },
+  { path: '/login', element: <Login /> },
+  { path: '/signup', element: <Signup /> },
+  { path: '/talent', element: <TalentDirectory /> },
+  { path: '/talents', element: <TalentsPage /> },
+  { path: '/services', element: <ServicesPage /> },
+  { path: '/expanded-services', element: <ExpandedServicesPage /> },
+  { path: '/services-pricing', element: <ServicesPricingPage /> },
+  { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
+  { path: '/categories', element: <Categories /> },
+  { path: '/equipment', element: <EquipmentPage /> },
+  { path: '/equipment/:id', element: <EquipmentDetail /> },
+  { path: '/analytics', element: <Analytics /> },
+  { path: '/mobile-launch', element: <MobileLaunchPage /> },
+  { path: '/open-app', element: <OpenAppRedirect /> },
+  { path: '/community', element: <CommunityPage /> },
+  { path: '/contact', element: <ContactPage /> },
+  { path: '/partners', element: <PartnersPage /> },
+  { path: '/zion-hire-ai', element: <ZionHireAI /> },
+  { path: '/hire-ai', element: <ZionHireAI /> },
+  { path: '/request-quote', element: <RequestQuotePage /> },
+  { path: '/blog', element: <Blog /> },
+  { path: '/blog/:slug', element: <BlogPost /> },
+];
 
 // Service pages
 const AIServices = lazy(() => import('./pages/AIServices'));

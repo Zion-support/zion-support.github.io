@@ -46,6 +46,15 @@ const LazyFeaturesSection = React.lazy(() => import('../components/home/Features
 const LazyTestimonialsSection = React.lazy(() => import('../components/home/TestimonialsSection'));
 const LazyCTASection = React.lazy(() => import('../components/home/CTASection'));
 
+// Additional components from the incoming branch
+const FeatureHighlights = React.lazy(() => import('../components/home/FeatureHighlights'));
+const ServicesOverview = React.lazy(() => import('../components/home/ServicesOverview'));
+const CategoriesSection = React.lazy(() => import('../components/home/CategoriesSection'));
+const BenefitsSection = React.lazy(() => import('../components/home/BenefitsSection'));
+const HowItWorksSection = React.lazy(() => import('../components/home/HowItWorksSection'));
+const FeaturedListingsSection = React.lazy(() => import('../components/home/FeaturedListingsSection'));
+const NewsletterSection = React.lazy(() => import('../components/home/NewsletterSection'));
+
 // Loading fallback component
 const LoadingFallback = ({ message }: { message: string }) => (
   <div className="flex items-center justify-center py-12">
@@ -556,6 +565,16 @@ const Home: React.FC = () => {
       <Suspense fallback={<LoadingFallback message="Loading CTA..." />}>
         <LazyCTASection />
       </Suspense>
+
+      <FeatureHighlights />
+      
+      <ServicesOverview />
+      
+      <CategoriesSection />
+      <BenefitsSection />
+      <HowItWorksSection />
+      <FeaturedListingsSection />
+      <NewsletterSection />
     </div>
   );
 }
