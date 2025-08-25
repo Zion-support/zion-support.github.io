@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 import { 
@@ -320,6 +321,39 @@ const QuantumNeuralNetworkPlatform = () => {
               </button>
               <button className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
                 Schedule Demo
+=======
+import { motion } from 'framer-motion';
+import { Brain, Zap, Cpu, Network, Shield, TrendingUp } from 'lucide-react';
+
+const QuantumNeuralNetworkPlatform: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-20">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20" />
+        <div className="relative z-10 container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Quantum Neural Network
+              <span className="block bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Platform
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Revolutionizing AI with quantum computing and neural networks. Experience the future of machine learning with unprecedented speed and accuracy.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
+                Learn More
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-20ee
               </button>
             </div>
           </motion.div>
@@ -327,14 +361,20 @@ const QuantumNeuralNetworkPlatform = () => {
       </section>
 
       {/* Features Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
+=======
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-20ee
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
+<<<<<<< HEAD
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Quantum-Powered Features
             </h2>
@@ -346,17 +386,69 @@ const QuantumNeuralNetworkPlatform = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
+=======
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Quantum-Powered Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Harness the power of quantum computing to unlock new possibilities in neural network processing
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Brain,
+                title: "Quantum Neural Processing",
+                description: "Process neural networks at quantum speeds with exponential performance improvements"
+              },
+              {
+                icon: Zap,
+                title: "Lightning Fast Training",
+                description: "Train complex models in minutes instead of hours with quantum acceleration"
+              },
+              {
+                icon: Cpu,
+                title: "Quantum Memory",
+                description: "Leverage quantum memory for unprecedented data processing capabilities"
+              },
+              {
+                icon: Network,
+                title: "Distributed Quantum Computing",
+                description: "Scale across multiple quantum nodes for massive parallel processing"
+              },
+              {
+                icon: Shield,
+                title: "Quantum Security",
+                description: "Unbreakable encryption powered by quantum cryptography"
+              },
+              {
+                icon: TrendingUp,
+                title: "Continuous Learning",
+                description: "Self-improving algorithms that evolve with quantum-enhanced learning"
+              }
+            ].map((feature, index) => (
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-20ee
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
+<<<<<<< HEAD
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 mx-auto">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+=======
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400/50 transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-20ee
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
@@ -364,15 +456,22 @@ const QuantumNeuralNetworkPlatform = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 bg-gray-900/50">
         <div className="container mx-auto max-w-6xl">
+=======
+      {/* Technology Stack */}
+      <section className="py-20 bg-black/20">
+        <div className="container mx-auto px-4">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-20ee
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
+<<<<<<< HEAD
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Why Choose Our Platform?
             </h2>
@@ -593,6 +692,30 @@ export default function QuantumNeuralNetworkPlatform() {
                   ))}
                 </ul>
               </div>
+=======
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Cutting-Edge Technology
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Built with the latest quantum computing frameworks and neural network architectures
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+              "Qiskit", "TensorFlow Quantum", "PennyLane", "Cirq",
+              "PyTorch", "JAX", "NumPy", "SciPy"
+            ].map((tech, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 text-center border border-white/20 hover:border-purple-400/50 transition-all duration-300"
+              >
+                <span className="text-white font-semibold text-lg">{tech}</span>
+              </motion.div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-20ee
             ))}
           </div>
         </div>
@@ -792,6 +915,7 @@ export default function QuantumNeuralNetworkPlatform() {
       {/* CTA Section */}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-purple-900 to-blue-900 text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold mb-6">
@@ -861,11 +985,16 @@ export default function QuantumNeuralNetworkPlatform() {
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-4xl text-center">
+=======
+      <section className="py-20">
+        <div className="container mx-auto px-4 text-center">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-20ee
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
+<<<<<<< HEAD
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Experience the Future?
             </h2>
@@ -882,6 +1011,23 @@ export default function QuantumNeuralNetworkPlatform() {
             </div>
           </motion.div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-efd3
+=======
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to Experience the Future?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Join the quantum revolution and transform your AI capabilities with our cutting-edge platform
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-10 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-purple-400 text-purple-400 px-10 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300">
+                Schedule Demo
+              </button>
+            </div>
+          </motion.div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-20ee
         </div>
       </section>
     </div>
