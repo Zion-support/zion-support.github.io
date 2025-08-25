@@ -8,9 +8,6 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { Toaster } from "./components/ui/toaster";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import { PerformanceMonitor } from "./components/PerformanceMonitor";
-import { AccessibilityPanel } from "./components/AccessibilityPanel";
-import { PageLoader } from "./components/ui/LoadingSpinner";
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -26,10 +23,6 @@ import {
 } from './routes';
 
 const Home = React.lazy(() => import('./pages/Home'));
-const About = React.lazy(() => import('./pages/About'));
-const Contact = React.lazy(() => import('./pages/Contact'));
-const Services = React.lazy(() => import('./pages/Services'));
-const Marketplace = React.lazy(() => import('./pages/Marketplace'));
 const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
 const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
 const TalentsPage = React.lazy(() => import('./pages/TalentsPage'));
@@ -45,7 +38,9 @@ const PartnersPage = React.lazy(() => import('./pages/Partners'));
 const Login = React.lazy(() => import('./pages/Login'));
 const Signup = React.lazy(() => import('./pages/Signup'));
 const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage'));
+const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
 const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
+const ContactPage = React.lazy(() => import('./pages/ContactPage'));
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 const MicroSaasServices = React.lazy(() => import('./pages/MicroSaasServices'));
@@ -53,10 +48,6 @@ const PricingPage = React.lazy(() => import('./pages/PricingPage'));
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
-  { path: '/about', element: <About /> },
-  { path: '/contact', element: <Contact /> },
-  { path: '/services', element: <Services /> },
-  { path: '/marketplace', element: <Marketplace /> },
   { path: '/match', element: <AIMatcherPage /> },
   { path: '/login', element: <Login /> },
   { path: '/signup', element: <Signup /> },
@@ -65,6 +56,7 @@ const baseRoutes = [
   { path: '/micro-saas-services', element: <MicroSaasServices /> },
   { path: '/pricing', element: <PricingPage /> },
   { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
+  { path: '/it-services', element: <ITServicesPage /> },
   { path: '/categories', element: <Categories /> },
   { path: '/equipment', element: <EquipmentPage /> },
   { path: '/equipment/:id', element: <EquipmentDetail /> },
@@ -72,6 +64,7 @@ const baseRoutes = [
   { path: '/mobile-launch', element: <MobileLaunchPage /> },
   { path: '/open-app', element: <OpenAppRedirect /> },
   { path: '/community', element: <CommunityPage /> },
+  { path: '/contact', element: <ContactPage /> },
   { path: '/partners', element: <PartnersPage /> },
   { path: '/zion-hire-ai', element: <ZionHireAI /> },
   { path: '/hire-ai', element: <ZionHireAI /> },
@@ -85,8 +78,8 @@ const App = () => {
     <WhitelabelProvider>
       <ThemeProvider defaultTheme="dark">
         <Header />
-        <main className="min-h-screen">
-          <Suspense fallback={<PageLoader />}>
+        <main className="min-h-screen pt-20">
+          <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
             <Routes>
               {baseRoutes.map(({ path, element }) => (
                 <Route key={path} path={path} element={element} />
@@ -108,8 +101,6 @@ const App = () => {
         <Footer />
         <Toaster />
         <SonnerToaster position="top-right" />
-        <PerformanceMonitor />
-        <AccessibilityPanel />
       </ThemeProvider>
     </WhitelabelProvider>
   );
