@@ -87,9 +87,12 @@ import { GradientHeading } from "@/components/GradientHeading";
         description="Learn how Zion Tech Group handles your data and protects your privacy."
         canonical="https://ziontechgroup.com/privacy"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-3805
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-1f4f
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-a0eb
       />
       
       <div className="min-h-screen bg-zion-blue-dark">

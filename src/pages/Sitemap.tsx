@@ -693,7 +693,10 @@ export default function Sitemap() {
         description="Human readable sitemap for all public routes"
         keywords="sitemap, navigation"
         canonical="https://ziontechgroup.com/sitemap"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-3805
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-a0eb
       />
       
       <Header />

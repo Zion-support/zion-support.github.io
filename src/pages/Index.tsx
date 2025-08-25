@@ -4,12 +4,21 @@ import { SEO } from '@/components/SEO';
 
 export default function Index() {
   return (
+<<<<<<< HEAD
     <>
       <SEO
         title="Welcome | Zion Tech Group"
         description="Your comprehensive marketplace for all things technology and AI"
         keywords="technology marketplace, AI services, IT solutions, digital transformation, Zion Tech Group"
         canonical="https://ziontechgroup.com"
+=======
+    <div className="min-h-screen bg-zion-blue text-white">
+      <SEO 
+        title={t("home.seo_title")} 
+        description={t("home.seo_description")} 
+        keywords={t("home.seo_keywords")}
+        canonical="https://ziontechgroup.com/"
+>>>>>>> origin/cursor/website-audit-and-enhancement-a0eb
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

@@ -951,3 +951,131 @@ src/pages/ServicesPage.tsx
 [2025-08-25 23:35:25] Processing unmerged file: src/pages/ServicesPage.tsx
 [2025-08-25 23:35:25] File exists in HEAD, keeping it
 [2025-08-25 23:35:26] Still have unmerged paths, attempting additional resolution...
+[main af4ac7f6e76] Merge PR #6648: cursor/expand-services-and-deploy-updates-936f (advanced conflict resolution)
+[2025-08-25 23:35:27] ✓ Advanced conflict resolution successful for PR #6648
+[2025-08-25 23:35:27] ✓ PR #6648 processed successfully
+==========================================
+
+
+==========================================
+[2025-08-25 23:35:27] Processing PR #6646 from branch: cursor/website-audit-and-enhancement-a0eb
+==========================================
+[2025-08-25 23:35:27] Processing PR #6646 from branch: cursor/website-audit-and-enhancement-a0eb
+[2025-08-25 23:35:27] Attempting regular merge...
+Auto-merging automation/backups/file-sync/2025-08-25T15-27-04-843Z/public/locales/en-US/common.json
+CONFLICT (content): Merge conflict in automation/backups/file-sync/2025-08-25T15-27-04-843Z/public/locales/en-US/common.json
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Auto-merging package-lock.json
+CONFLICT (content): Merge conflict in package-lock.json
+CONFLICT (rename/delete): pages/about.jsx renamed to pages.disabled/about.jsx in HEAD, but deleted in origin/cursor/website-audit-and-enhancement-a0eb.
+CONFLICT (rename/delete): pages/api/auth/login.ts renamed to pages.disabled/api/auth/login.ts in HEAD, but deleted in origin/cursor/website-audit-and-enhancement-a0eb.
+CONFLICT (rename/delete): pages/api/auth/register.ts renamed to pages.disabled/api/auth/register.ts in HEAD, but deleted in origin/cursor/website-audit-and-enhancement-a0eb.
+CONFLICT (rename/delete): pages/api/services.ts renamed to pages.disabled/api/services.ts in HEAD, but deleted in origin/cursor/website-audit-and-enhancement-a0eb.
+CONFLICT (rename/delete): pages/api/stripe/webhook.ts renamed to pages.disabled/api/stripe/webhook.ts in HEAD, but deleted in origin/cursor/website-audit-and-enhancement-a0eb.
+CONFLICT (rename/delete): pages/api/talent/[id].ts renamed to pages.disabled/api/talent/[id].ts in HEAD, but deleted in origin/cursor/website-audit-and-enhancement-a0eb.
+CONFLICT (rename/delete): pages/blog/[slug].tsx renamed to pages.disabled/blog/[slug].tsx in HEAD, but deleted in origin/cursor/website-audit-and-enhancement-a0eb.
+CONFLICT (rename/delete): pages/marketplace/listing/[slug].tsx renamed to pages.disabled/marketplace/listing/[slug].tsx in HEAD, but deleted in origin/cursor/website-audit-and-enhancement-a0eb.
+CONFLICT (modify/delete): pages/talent/[id].tsx deleted in origin/cursor/website-audit-and-enhancement-a0eb and modified in HEAD.  Version HEAD of pages/talent/[id].tsx left in tree.
+Auto-merging src/components/Footer.tsx
+CONFLICT (content): Merge conflict in src/components/Footer.tsx
+Auto-merging src/layout/MainNavigation.tsx
+CONFLICT (content): Merge conflict in src/layout/MainNavigation.tsx
+Auto-merging src/pages/About.tsx
+Auto-merging src/pages/Blog.tsx
+Auto-merging src/pages/Careers.tsx
+Auto-merging src/pages/Contact.tsx
+Auto-merging src/pages/CreateProfile.tsx
+CONFLICT (add/add): Merge conflict in src/pages/CreateProfile.tsx
+Auto-merging src/pages/GreenIT.tsx
+CONFLICT (content): Merge conflict in src/pages/GreenIT.tsx
+Auto-merging src/pages/Home.tsx
+Auto-merging src/pages/Index.tsx
+CONFLICT (content): Merge conflict in src/pages/Index.tsx
+Auto-merging src/pages/Privacy.tsx
+CONFLICT (content): Merge conflict in src/pages/Privacy.tsx
+Auto-merging src/pages/Sitemap.tsx
+CONFLICT (content): Merge conflict in src/pages/Sitemap.tsx
+Auto-merging src/pages/Terms.tsx
+CONFLICT (content): Merge conflict in src/pages/Terms.tsx
+Auto-merging src/routes/AdminRoutes.tsx
+CONFLICT (content): Merge conflict in src/routes/AdminRoutes.tsx
+Auto-merging src/routes/AuthRoutes.tsx
+CONFLICT (content): Merge conflict in src/routes/AuthRoutes.tsx
+Auto-merging src/routes/ContentRoutes.tsx
+Auto-merging src/routes/DashboardRoutes.tsx
+CONFLICT (content): Merge conflict in src/routes/DashboardRoutes.tsx
+CONFLICT (file location): src/pages/admin/DisputeManagement.tsx added in origin/cursor/website-audit-and-enhancement-a0eb inside a directory that was renamed in HEAD, suggesting it should perhaps be moved to src_disabled/admin/DisputeManagement.tsx.
+Automatic merge failed; fix conflicts and then commit the result.
+[2025-08-25 23:35:29] ✗ Merge failed for PR #6646, attempting advanced conflict resolution...
+[2025-08-25 23:35:29] Resolving complex conflicts for PR #6646 (cursor/website-audit-and-enhancement-a0eb)...
+[2025-08-25 23:35:29] Found unmerged files: automation/backups/file-sync/2025-08-25T15-27-04-843Z/public/locales/en-US/common.json
+index.html
+package-lock.json
+pages.disabled/about.jsx
+pages.disabled/api/auth/login.ts
+pages.disabled/api/auth/register.ts
+pages.disabled/api/services.ts
+pages.disabled/api/stripe/webhook.ts
+pages.disabled/api/talent/[id].ts
+pages.disabled/blog/[slug].tsx
+pages.disabled/marketplace/listing/[slug].tsx
+pages/talent/[id].tsx
+src/components/Footer.tsx
+src/layout/MainNavigation.tsx
+src/pages/GreenIT.tsx
+src/pages/Index.tsx
+src/pages/Privacy.tsx
+src/pages/Sitemap.tsx
+src/pages/Terms.tsx
+src/routes/AdminRoutes.tsx
+src/routes/AuthRoutes.tsx
+src/routes/DashboardRoutes.tsx
+src_disabled/admin/DisputeManagement.tsx
+[2025-08-25 23:35:29] Processing unmerged file: automation/backups/file-sync/2025-08-25T15-27-04-843Z/public/locales/en-US/common.json
+[2025-08-25 23:35:29] File exists in HEAD, keeping it
+[2025-08-25 23:35:29] Processing unmerged file: index.html
+[2025-08-25 23:35:29] File exists in HEAD, keeping it
+[2025-08-25 23:35:29] Processing unmerged file: package-lock.json
+[2025-08-25 23:35:29] File exists in HEAD, keeping it
+[2025-08-25 23:35:29] Processing unmerged file: pages.disabled/about.jsx
+[2025-08-25 23:35:29] File exists in HEAD, keeping it
+[2025-08-25 23:35:29] Processing unmerged file: pages.disabled/api/auth/login.ts
+[2025-08-25 23:35:29] File exists in HEAD, keeping it
+[2025-08-25 23:35:30] Processing unmerged file: pages.disabled/api/auth/register.ts
+[2025-08-25 23:35:30] File exists in HEAD, keeping it
+[2025-08-25 23:35:30] Processing unmerged file: pages.disabled/api/services.ts
+[2025-08-25 23:35:30] File exists in HEAD, keeping it
+[2025-08-25 23:35:30] Processing unmerged file: pages.disabled/api/stripe/webhook.ts
+[2025-08-25 23:35:30] File exists in HEAD, keeping it
+[2025-08-25 23:35:30] Processing unmerged file: pages.disabled/api/talent/[id].ts
+[2025-08-25 23:35:30] File exists in HEAD, keeping it
+[2025-08-25 23:35:30] Processing unmerged file: pages.disabled/blog/[slug].tsx
+[2025-08-25 23:35:30] File exists in HEAD, keeping it
+[2025-08-25 23:35:30] Processing unmerged file: pages.disabled/marketplace/listing/[slug].tsx
+[2025-08-25 23:35:30] File exists in HEAD, keeping it
+[2025-08-25 23:35:30] Processing unmerged file: pages/talent/[id].tsx
+[2025-08-25 23:35:30] File exists in HEAD, keeping it
+[2025-08-25 23:35:30] Processing unmerged file: src/components/Footer.tsx
+[2025-08-25 23:35:30] File exists in HEAD, keeping it
+[2025-08-25 23:35:30] Processing unmerged file: src/layout/MainNavigation.tsx
+[2025-08-25 23:35:30] File exists in HEAD, keeping it
+[2025-08-25 23:35:30] Processing unmerged file: src/pages/GreenIT.tsx
+[2025-08-25 23:35:30] File exists in HEAD, keeping it
+[2025-08-25 23:35:30] Processing unmerged file: src/pages/Index.tsx
+[2025-08-25 23:35:30] File exists in HEAD, keeping it
+[2025-08-25 23:35:30] Processing unmerged file: src/pages/Privacy.tsx
+[2025-08-25 23:35:30] File exists in HEAD, keeping it
+[2025-08-25 23:35:30] Processing unmerged file: src/pages/Sitemap.tsx
+[2025-08-25 23:35:30] File exists in HEAD, keeping it
+[2025-08-25 23:35:30] Processing unmerged file: src/pages/Terms.tsx
+[2025-08-25 23:35:30] File exists in HEAD, keeping it
+[2025-08-25 23:35:30] Processing unmerged file: src/routes/AdminRoutes.tsx
+[2025-08-25 23:35:30] File exists in HEAD, keeping it
+[2025-08-25 23:35:30] Processing unmerged file: src/routes/AuthRoutes.tsx
+[2025-08-25 23:35:30] File exists in HEAD, keeping it
+[2025-08-25 23:35:30] Processing unmerged file: src/routes/DashboardRoutes.tsx
+[2025-08-25 23:35:30] File exists in HEAD, keeping it
+[2025-08-25 23:35:30] Processing unmerged file: src_disabled/admin/DisputeManagement.tsx
+[2025-08-25 23:35:30] File exists in HEAD, keeping it
+[2025-08-25 23:35:31] Still have unmerged paths, attempting additional resolution...

@@ -53,6 +53,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path === '/'
     },
     {
+<<<<<<< HEAD
       key: 'services',
 <<<<<<< HEAD
       href: '/services',
@@ -83,6 +84,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: '/services-hub',
       matches: (path: string) => path.startsWith('/services') || path.startsWith('/ai-services') || path.startsWith('/it-services') || path.startsWith('/digital-transformation')
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4df9
+=======
+      key: 'about',
+      href: '/about',
+      matches: (path: string) => path === '/about'
+>>>>>>> origin/cursor/website-audit-and-enhancement-a0eb
     },
     {
       key: 'marketplace',
@@ -91,6 +97,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith('/marketplace')
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -128,22 +135,45 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith('/services') || path.startsWith('/ai-services') || path.startsWith('/it-services') || path.startsWith('/digital-marketing') || path.startsWith('/business-solutions')
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-a0eb
       key: 'services',
       href: '/services',
       matches: (path: string) => path.startsWith('/services')
     },
     {
+<<<<<<< HEAD
       key: 'micro-saas',
       href: '/micro-saas-services',
       matches: (path: string) => path.startsWith('/micro-saas-services')
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-73d5
     },
     {
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-a0eb
       key: 'categories',
       href: '/categories',
       matches: (path: string) => path.startsWith('/categories')
     },
     {
+<<<<<<< HEAD
+=======
+      key: 'talent',
+      href: '/talent',
+      matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard')
+    },
+    {
+      key: 'equipment',
+      href: '/equipment',
+      matches: (path: string) => path.startsWith('/equipment')
+    },
+    {
+      key: 'blog',
+      href: '/blog',
+      matches: (path: string) => path.startsWith('/blog')
+    },
+    {
+>>>>>>> origin/cursor/website-audit-and-enhancement-a0eb
       key: 'community',
       href: '/community',
       name: 'Community',

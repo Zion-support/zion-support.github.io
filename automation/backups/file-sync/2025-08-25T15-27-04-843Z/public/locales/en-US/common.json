@@ -20,13 +20,19 @@
   },
   "nav": {
     "home": "Home",
+    "about": "About",
     "marketplace": "Marketplace",
+<<<<<<< HEAD:automation/backups/file-sync/2025-08-25T15-27-04-843Z/public/locales/en-US/common.json
     "micro-saas": "Micro SAAS",
+=======
+    "services": "Services",
+>>>>>>> origin/cursor/website-audit-and-enhancement-a0eb:src/i18n/locales/en/translation.json
     "categories": "Categories",
     "services": "Services",
     "micro-saas": "Micro SAAS",
     "talent": "Talent",
     "equipment": "Equipment",
+    "blog": "Blog",
     "community": "Community",
     "dashboard": "Dashboard",
     "messages": "Messages",

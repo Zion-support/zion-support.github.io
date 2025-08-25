@@ -135,9 +135,12 @@ import TermsOfService from "@/legal/TermsOfService";
         description="The terms and conditions for using the Zion platform."
         canonical="https://ziontechgroup.com/terms"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-3805
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-1f4f
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-a0eb
       />
       
       <div className="min-h-screen bg-zion-blue-dark">

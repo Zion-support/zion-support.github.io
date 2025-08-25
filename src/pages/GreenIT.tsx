@@ -450,7 +450,10 @@ const GreenIT = () => {
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance." 
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
         canonical="https://ziontechgroup.com/marketplace/category/green-it"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-3805
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-a0eb
       />
       <Header />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
