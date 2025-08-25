@@ -1193,7 +1193,11 @@ const InnovativeServicesShowcase: React.FC = () => {
 
                   <div className="flex space-x-3">
                     <Link
+<<<<<<< HEAD
                       to={service.contactInfo.website}
+=======
+                      to={('websiteUrl' in service ? service.websiteUrl : service.contactInfo?.website) || '/'}
+>>>>>>> origin/cursor/website-audit-and-enhancement-53a4
                       className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg text-center font-medium hover:bg-blue-700 transition-colors flex items-center justify-center"
                     >
                       Learn More
