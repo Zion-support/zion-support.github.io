@@ -74,6 +74,14 @@ const services = [
     features: ["Custom Development", "API Integration", "User Management", "Analytics Dashboard"],
     path: "/services/micro-saas-solutions",
     color: "from-amber-500 to-orange-600"
+  },
+  {
+    icon: Rocket,
+    title: "Innovative Services Hub",
+    description: "Comprehensive portfolio of cutting-edge AI and technology solutions",
+    features: ["AI-Powered Services", "Specialized IT Solutions", "Emerging Technologies", "Enterprise Platforms"],
+    path: "/innovative-services",
+    color: "from-violet-500 to-purple-600"
   }
 ];
 
