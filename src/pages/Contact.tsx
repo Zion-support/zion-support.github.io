@@ -67,7 +67,7 @@ const ContactPage: React.FC = () => {
     } finally {
       setIsSubmitting(false);
     }
-  ];
+  };
 
   if (isSubmitted) {
     return (

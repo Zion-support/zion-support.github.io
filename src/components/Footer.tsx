@@ -206,6 +206,7 @@ export function Footer() {
             </div>
           ))}
         </div>
+      </div>
 
         {/* Trust Signals Section */}
         <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-8">

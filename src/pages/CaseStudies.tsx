@@ -12,6 +12,7 @@ import {
   CogIcon
 } from '@heroicons/react/24/outline';
 
+const CaseStudies: React.FC = () => {
   const caseStudies = [
     {
       id: 1,
@@ -332,4 +333,6 @@ import {
       </section>
     </div>
   );
-}
+};
+
+export default CaseStudies;
