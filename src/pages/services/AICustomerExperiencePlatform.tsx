@@ -1,8 +1,8 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
 import { 
-  Workflow, 
-  Zap, 
+  MessageCircle, 
+  Heart, 
   Brain, 
   TrendingUp, 
   Shield, 
@@ -12,83 +12,87 @@ import {
   Target,
   Award,
   Globe,
-  Cpu
+  Cpu,
+  Zap,
+  Star,
+  Smartphone,
+  Headphones
 } from 'lucide-react';
 
-export default function AIWorkflowAutomation() {
+export default function AICustomerExperiencePlatform() {
   const features = [
     {
-      title: "Intelligent Process Discovery",
-      description: "AI automatically identifies and maps your existing business processes",
+      title: "Intelligent Chatbots & Virtual Assistants",
+      description: "AI-powered conversational agents that understand context and provide personalized support",
+      icon: MessageCircle,
+      benefits: ["24/7 availability", "Multi-language support", "Context awareness", "Seamless handoff"]
+    },
+    {
+      title: "Predictive Customer Analytics",
+      description: "Machine learning algorithms that predict customer behavior and churn risk",
       icon: Brain,
-      benefits: ["Process optimization", "Bottleneck identification", "Efficiency insights"]
+      benefits: ["Churn prediction", "Lifetime value analysis", "Behavioral insights", "Proactive engagement"]
     },
     {
-      title: "Automated Workflow Creation",
-      description: "Create complex workflows using natural language and AI assistance",
-      icon: Workflow,
-      benefits: ["Drag & drop interface", "AI suggestions", "Template library"]
-    },
-    {
-      title: "Smart Decision Making",
-      description: "AI-powered decision trees and conditional logic for complex workflows",
+      title: "Personalized Content & Recommendations",
+      description: "AI-driven content personalization based on customer preferences and behavior",
       icon: Target,
-      benefits: ["Intelligent routing", "Risk assessment", "Predictive analytics"]
+      benefits: ["Dynamic content", "Product recommendations", "Personalized offers", "Behavioral targeting"]
     },
     {
-      title: "Real-time Monitoring",
-      description: "Live tracking of workflow performance and bottlenecks",
-      icon: BarChart3,
-      benefits: ["Performance metrics", "Alert system", "KPI dashboards"]
+      title: "Sentiment Analysis & Voice of Customer",
+      description: "Real-time analysis of customer feedback across all channels",
+      icon: Heart,
+      benefits: ["Real-time monitoring", "Sentiment tracking", "Trend analysis", "Alert system"]
     },
     {
-      title: "Integration Hub",
-      description: "Connect with 500+ business applications and services",
-      icon: Cpu,
-      benefits: ["API integration", "Webhook support", "Custom connectors"]
+      title: "Omnichannel Experience Management",
+      description: "Seamless customer experience across web, mobile, social, and traditional channels",
+      icon: Smartphone,
+      benefits: ["Channel integration", "Consistent messaging", "Cross-channel analytics", "Unified customer view"]
     },
     {
-      title: "Compliance Automation",
-      description: "Built-in compliance checks and audit trails for regulated industries",
-      icon: Shield,
-      benefits: ["SOC 2 compliance", "GDPR support", "Audit logging"]
+      title: "Automated Customer Journey Mapping",
+      description: "AI-powered journey optimization and personalization at scale",
+      icon: Zap,
+      benefits: ["Journey automation", "Personalized touchpoints", "A/B testing", "Conversion optimization"]
     }
   ];
 
   const pricingTiers = [
     {
-      name: "Starter",
-      price: "$299",
+      name: "Growth",
+      price: "$499",
       period: "per month",
       features: [
-        "Up to 10 workflows",
-        "Basic AI automation",
-        "Standard integrations",
+        "Up to 10,000 monthly interactions",
+        "Basic AI chatbot",
         "Email support",
-        "Basic analytics"
+        "Standard analytics",
+        "Basic integrations"
       ],
-      bestFor: "Small teams and startups"
+      bestFor: "Small businesses and startups"
     },
     {
       name: "Professional",
-      price: "$799",
+      price: "$1,299",
       period: "per month",
       features: [
-        "Up to 100 workflows",
+        "Up to 100,000 monthly interactions",
         "Advanced AI features",
-        "Premium integrations",
         "Priority support",
         "Advanced analytics",
+        "Premium integrations",
         "Custom branding"
       ],
       bestFor: "Growing businesses"
     },
     {
       name: "Enterprise",
-      price: "$2,499",
+      price: "$3,999",
       period: "per month",
       features: [
-        "Unlimited workflows",
+        "Unlimited interactions",
         "Full AI capabilities",
         "Custom integrations",
         "24/7 dedicated support",
@@ -102,73 +106,94 @@ export default function AIWorkflowAutomation() {
 
   const useCases = [
     {
+      industry: "E-commerce",
+      examples: [
+        "Personalized product recommendations",
+        "Intelligent search and filtering",
+        "Automated customer support",
+        "Abandoned cart recovery"
+      ]
+    },
+    {
+      industry: "Banking & Finance",
+      examples: [
+        "Personalized financial advice",
+        "Fraud detection alerts",
+        "Account management support",
+        "Investment recommendations"
+      ]
+    },
+    {
       industry: "Healthcare",
       examples: [
-        "Patient appointment scheduling",
-        "Medical record processing",
-        "Insurance claim workflows",
-        "Pharmacy order management"
+        "Appointment scheduling",
+        "Health information support",
+        "Medication reminders",
+        "Telemedicine assistance"
       ]
     },
     {
-      industry: "Finance",
+      industry: "Travel & Hospitality",
       examples: [
-        "Loan approval processes",
-        "KYC verification workflows",
-        "Fraud detection automation",
-        "Compliance reporting"
-      ]
-    },
-    {
-      industry: "Manufacturing",
-      examples: [
-        "Quality control workflows",
-        "Supply chain management",
-        "Maintenance scheduling",
-        "Inventory optimization"
-      ]
-    },
-    {
-      industry: "Retail",
-      examples: [
-        "Order fulfillment",
-        "Customer service routing",
-        "Inventory management",
-        "Returns processing"
+        "Personalized travel planning",
+        "Booking assistance",
+        "Local recommendations",
+        "Customer service automation"
       ]
     }
   ];
 
   const benefits = [
     {
-      metric: "80%",
-      description: "Reduction in manual tasks",
-      icon: Zap
+      metric: "85%",
+      description: "Improvement in customer satisfaction",
+      icon: Star
     },
     {
       metric: "60%",
-      description: "Faster process completion",
-      icon: Clock
-    },
-    {
-      metric: "45%",
-      description: "Cost savings",
+      description: "Reduction in support costs",
       icon: TrendingUp
     },
     {
-      metric: "95%",
-      description: "Error reduction",
-      icon: Shield
+      metric: "40%",
+      description: "Increase in customer retention",
+      icon: Heart
+    },
+    {
+      metric: "3.2x",
+      description: "Faster response times",
+      icon: Clock
+    }
+  ];
+
+  const customerSuccessStories = [
+    {
+      company: "TechCorp Solutions",
+      industry: "SaaS",
+      results: "45% increase in customer satisfaction scores",
+      implementation: "3 months"
+    },
+    {
+      company: "Global Retail Chain",
+      industry: "Retail",
+      results: "60% reduction in customer service costs",
+      implementation: "6 months"
+    },
+    {
+      company: "Healthcare Network",
+      industry: "Healthcare",
+      results: "80% improvement in appointment scheduling efficiency",
+      implementation: "4 months"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
       <SEO 
-        title="AI Workflow Automation - Zion Tech Group" 
-        description="Transform your business processes with AI-powered workflow automation. Reduce manual tasks by 80%, increase efficiency by 60%, and achieve 45% cost savings."
-        keywords="AI workflow automation, business process automation, workflow management, process optimization, AI automation platform"
-        canonical="https://ziontechgroup.com/services/ai-workflow-automation"
+        title="AI Customer Experience Platform - Zion Tech Group" 
+        description="Transform customer interactions with AI-powered CX platform. Improve satisfaction by 85%, reduce support costs by 60%, and increase retention by 40%."
+        keywords="AI customer experience, customer experience platform, AI chatbot, customer analytics, personalization, omnichannel"
+        canonical="https://ziontechgroup.com/services/ai-customer-experience-platform"
       />
 
       {/* Hero Section */}
@@ -176,18 +201,18 @@ export default function AIWorkflowAutomation() {
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/80 to-zion-purple/80"></div>
         <div className="relative z-10 container mx-auto px-4 py-24 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Workflow Automation
+            AI Customer Experience Platform
             <span className="block text-3xl md:text-4xl text-zion-cyan mt-2">
-              Transform Your Business Processes with AI
+              Deliver Exceptional Customer Experiences with AI
             </span>
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Automate complex business workflows using artificial intelligence. Reduce manual tasks by 80%, 
-            increase efficiency by 60%, and achieve 45% cost savings with our intelligent automation platform.
+            Transform customer interactions with our AI-powered platform. Improve satisfaction by 85%, 
+            reduce support costs by 60%, and increase customer retention by 40% through intelligent automation.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a 
-              href="mailto:kleber@ziontechgroup.com?subject=AI Workflow Automation Demo Request"
+              href="mailto:kleber@ziontechgroup.com?subject=AI Customer Experience Platform Demo Request"
               className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Request Demo
@@ -207,10 +232,10 @@ export default function AIWorkflowAutomation() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
-              Transform Your Business with AI Automation
+              Transform Customer Experience with AI
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Our AI-powered workflow automation platform delivers measurable results that impact your bottom line
+              Our AI-powered platform delivers measurable improvements in customer satisfaction and business outcomes
             </p>
           </div>
           
@@ -240,7 +265,7 @@ export default function AIWorkflowAutomation() {
               Powerful AI-Powered Features
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Everything you need to automate and optimize your business workflows
+              Everything you need to deliver exceptional customer experiences at scale
             </p>
           </div>
           
@@ -311,7 +336,7 @@ export default function AIWorkflowAutomation() {
                   ))}
                 </ul>
                 <a
-                  href={`mailto:kleber@ziontechgroup.com?subject=AI Workflow Automation - ${tier.name} Plan Inquiry`}
+                  href={`mailto:kleber@ziontechgroup.com?subject=AI Customer Experience Platform - ${tier.name} Plan Inquiry`}
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors ${
                     tier.name === 'Professional'
                       ? 'bg-zion-cyan hover:bg-zion-cyan-light text-white'
@@ -334,7 +359,7 @@ export default function AIWorkflowAutomation() {
               Industry-Specific Use Cases
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              See how AI workflow automation transforms different industries
+              See how AI customer experience transforms different industries
             </p>
           </div>
           
@@ -358,8 +383,38 @@ export default function AIWorkflowAutomation() {
         </div>
       </section>
 
-      {/* Market Information */}
+      {/* Customer Success Stories */}
       <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
+              Customer Success Stories
+            </h2>
+            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
+              Real results from businesses that have transformed their customer experience with our platform
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {customerSuccessStories.map((story, index) => (
+              <div key={index} className="bg-zion-blue-light rounded-xl p-6 text-center">
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Star className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-zion-blue-dark mb-2">
+                  {story.company}
+                </h3>
+                <p className="text-sm text-zion-slate mb-2">{story.industry}</p>
+                <p className="text-zion-cyan font-semibold mb-2">{story.results}</p>
+                <p className="text-xs text-zion-slate">Implementation: {story.implementation}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Market Information */}
+      <section className="py-20 bg-zion-blue-light">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
@@ -374,24 +429,24 @@ export default function AIWorkflowAutomation() {
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-zion-blue-dark mb-6">Market Overview</h3>
               <div className="space-y-4">
-                <div className="bg-zion-blue-light rounded-lg p-4">
+                <div className="bg-white rounded-lg p-4">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-zion-blue-dark font-semibold">Market Size</span>
-                    <span className="text-zion-cyan font-bold">$19.6B</span>
+                    <span className="text-zion-cyan font-bold">$15.7B</span>
                   </div>
-                  <p className="text-sm text-zion-slate">Global workflow automation market (2024)</p>
+                  <p className="text-sm text-zion-slate">Global customer experience platform market (2024)</p>
                 </div>
-                <div className="bg-zion-blue-light rounded-lg p-4">
+                <div className="bg-white rounded-lg p-4">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-zion-blue-dark font-semibold">Growth Rate</span>
-                    <span className="text-green-600 font-bold">23.4% CAGR</span>
+                    <span className="text-green-600 font-bold">18.9% CAGR</span>
                   </div>
                   <p className="text-sm text-zion-slate">Expected annual growth through 2030</p>
                 </div>
-                <div className="bg-zion-blue-light rounded-lg p-4">
+                <div className="bg-white rounded-lg p-4">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-zion-blue-dark font-semibold">Average ROI</span>
-                    <span className="text-purple-600 font-bold">312%</span>
+                    <span className="text-purple-600 font-bold">287%</span>
                   </div>
                   <p className="text-sm text-zion-slate">Within 12 months of implementation</p>
                 </div>
@@ -404,22 +459,22 @@ export default function AIWorkflowAutomation() {
                 <div className="flex items-start">
                   <div className="bg-zion-cyan rounded-full w-3 h-3 mt-2 mr-4 flex-shrink-0"></div>
                   <div>
-                    <h4 className="text-lg font-semibold text-zion-blue-dark">AI-First Approach</h4>
-                    <p className="text-zion-slate">Advanced machine learning algorithms for intelligent automation</p>
+                    <h4 className="text-lg font-semibold text-zion-blue-dark">Advanced AI Capabilities</h4>
+                    <p className="text-zion-slate">State-of-the-art machine learning for superior customer understanding</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <div className="bg-zion-purple rounded-full w-3 h-3 mt-2 mr-4 flex-shrink-0"></div>
                   <div>
-                    <h4 className="text-lg font-semibold text-zion-blue-dark">Enterprise Security</h4>
-                    <p className="text-zion-slate">SOC 2 compliant with enterprise-grade security features</p>
+                    <h4 className="text-lg font-semibold text-zion-blue-dark">Omnichannel Integration</h4>
+                    <p className="text-zion-slate">Seamless experience across all customer touchpoints</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <div className="bg-zion-green rounded-full w-3 h-3 mt-2 mr-4 flex-shrink-0"></div>
                   <div>
                     <h4 className="text-lg font-semibold text-zion-blue-dark">Rapid Implementation</h4>
-                    <p className="text-zion-slate">Deploy workflows in days, not months</p>
+                    <p className="text-zion-slate">Deploy and see results in weeks, not months</p>
                   </div>
                 </div>
               </div>
@@ -432,14 +487,14 @@ export default function AIWorkflowAutomation() {
       <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Automate Your Workflows?
+            Ready to Transform Your Customer Experience?
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Join thousands of businesses that have transformed their operations with AI-powered workflow automation
+            Join leading businesses that have revolutionized customer interactions with AI-powered experiences
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="mailto:kleber@ziontechgroup.com?subject=AI Workflow Automation Demo Request"
+              href="mailto:kleber@ziontechgroup.com?subject=AI Customer Experience Platform Demo Request"
               className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Schedule Demo

@@ -110,7 +110,7 @@ const Home: React.FC = () => {
       title: "AI Business Intelligence",
       description: "Transform data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive modeling, and automated reporting.",
       icon: Brain,
-      path: "/services/ai-business-intelligence",
+      path: "/ai-solutions",
       category: "AI Solutions",
       price: "$2,500/mo",
       rating: 4.9,
@@ -122,7 +122,7 @@ const Home: React.FC = () => {
       title: "Cloud Infrastructure",
       description: "Scalable cloud solutions designed for enterprise performance and security. Optimize costs while maintaining high availability and performance.",
       icon: Cloud,
-      path: "/services/cloud-infrastructure",
+      path: "/services/it-infrastructure",
       category: "Infrastructure",
       price: "$1,800/mo",
       rating: 4.8,
@@ -139,8 +139,44 @@ const Home: React.FC = () => {
       price: "$3,200/mo",
       rating: 4.9,
       reviewCount: 156,
-      highlights: ["Threat Detection", "Compliance Ready", "24/7 Monitoring", "Incident Response"],
-      features: ["Penetration Testing", "Security Audits", "Incident Response", "Training", "Vulnerability Assessment", "Security Architecture"]
+      highlights: ["Threat Detection", "Compliance Ready", "24/7 Monitoring"],
+      features: ["Penetration Testing", "Security Audits", "Incident Response", "Training"]
+    },
+    {
+      title: "AI Autonomous Systems",
+      description: "Next-generation autonomous AI systems that revolutionize business operations.",
+      icon: Cpu,
+      path: "/services/ai-autonomous-systems",
+      category: "AI Solutions",
+      price: "$4,500/mo",
+      rating: 4.9,
+      reviewCount: 203,
+      highlights: ["Self-Learning", "Process Automation", "Intelligent Decision Making"],
+      features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]
+    },
+    {
+      title: "Micro-SaaS Solutions",
+      description: "Custom SaaS applications designed to streamline operations and boost productivity.",
+      icon: Code,
+      path: "/services/micro-saas-solutions",
+      category: "Software",
+      price: "$1,200/mo",
+      rating: 4.7,
+      reviewCount: 94,
+      highlights: ["Custom Development", "Scalable Architecture", "Cloud-Native"],
+      features: ["User Management", "API Integration", "Analytics Dashboard", "Mobile Support"]
+    },
+    {
+      title: "Digital Transformation",
+      description: "End-to-end business transformation services for the digital age.",
+      icon: Rocket,
+      path: "/digital-transformation",
+      category: "Consulting",
+      price: "$5,000/mo",
+      rating: 4.9,
+      reviewCount: 178,
+      highlights: ["Strategic Planning", "Technology Implementation", "Change Management"],
+      features: ["Business Analysis", "Process Optimization", "Technology Integration", "Training & Support"]
     }
   ];
 

@@ -1,95 +1,99 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
 import { 
-  Workflow, 
-  Zap, 
-  Brain, 
-  TrendingUp, 
+  Link, 
   Shield, 
+  Eye, 
+  TrendingUp, 
+  Globe, 
   Users, 
   BarChart3, 
   Clock,
   Target,
   Award,
-  Globe,
-  Cpu
+  Cpu,
+  Zap,
+  CheckCircle,
+  Truck,
+  Factory,
+  Leaf
 } from 'lucide-react';
 
-export default function AIWorkflowAutomation() {
+export default function BlockchainSupplyChainTransparency() {
   const features = [
     {
-      title: "Intelligent Process Discovery",
-      description: "AI automatically identifies and maps your existing business processes",
-      icon: Brain,
-      benefits: ["Process optimization", "Bottleneck identification", "Efficiency insights"]
+      title: "End-to-End Traceability",
+      description: "Track products from raw materials to final delivery with immutable blockchain records",
+      icon: Eye,
+      benefits: ["Complete visibility", "Real-time tracking", "Immutable records", "Audit trail"]
     },
     {
-      title: "Automated Workflow Creation",
-      description: "Create complex workflows using natural language and AI assistance",
-      icon: Workflow,
-      benefits: ["Drag & drop interface", "AI suggestions", "Template library"]
-    },
-    {
-      title: "Smart Decision Making",
-      description: "AI-powered decision trees and conditional logic for complex workflows",
-      icon: Target,
-      benefits: ["Intelligent routing", "Risk assessment", "Predictive analytics"]
-    },
-    {
-      title: "Real-time Monitoring",
-      description: "Live tracking of workflow performance and bottlenecks",
-      icon: BarChart3,
-      benefits: ["Performance metrics", "Alert system", "KPI dashboards"]
-    },
-    {
-      title: "Integration Hub",
-      description: "Connect with 500+ business applications and services",
+      title: "Smart Contract Automation",
+      description: "Automate supply chain processes with self-executing smart contracts",
       icon: Cpu,
-      benefits: ["API integration", "Webhook support", "Custom connectors"]
+      benefits: ["Payment automation", "Quality verification", "Compliance checks", "Dispute resolution"]
     },
     {
-      title: "Compliance Automation",
-      description: "Built-in compliance checks and audit trails for regulated industries",
+      title: "Sustainability Monitoring",
+      description: "Track environmental impact and sustainability metrics across the supply chain",
+      icon: Leaf,
+      benefits: ["Carbon footprint", "ESG compliance", "Green certification", "Impact reporting"]
+    },
+    {
+      title: "Quality Assurance",
+      description: "Real-time quality monitoring and verification at every stage",
+      icon: CheckCircle,
+      benefits: ["Quality metrics", "Compliance tracking", "Certification management", "Risk assessment"]
+    },
+    {
+      title: "Supplier Verification",
+      description: "Verify supplier credentials and compliance with blockchain-based verification",
       icon: Shield,
-      benefits: ["SOC 2 compliance", "GDPR support", "Audit logging"]
+      benefits: ["Identity verification", "Compliance checking", "Performance tracking", "Risk scoring"]
+    },
+    {
+      title: "Analytics & Reporting",
+      description: "Advanced analytics and reporting for supply chain optimization",
+      icon: BarChart3,
+      benefits: ["Performance metrics", "Cost analysis", "Efficiency insights", "Predictive analytics"]
     }
   ];
 
   const pricingTiers = [
     {
       name: "Starter",
-      price: "$299",
+      price: "$899",
       period: "per month",
       features: [
-        "Up to 10 workflows",
-        "Basic AI automation",
-        "Standard integrations",
+        "Up to 100 products tracked",
+        "Basic blockchain tracking",
+        "Standard reporting",
         "Email support",
-        "Basic analytics"
+        "Basic integrations"
       ],
-      bestFor: "Small teams and startups"
+      bestFor: "Small manufacturers and distributors"
     },
     {
       name: "Professional",
-      price: "$799",
+      price: "$2,499",
       period: "per month",
       features: [
-        "Up to 100 workflows",
-        "Advanced AI features",
-        "Premium integrations",
+        "Up to 1,000 products tracked",
+        "Advanced blockchain features",
+        "Premium reporting",
         "Priority support",
-        "Advanced analytics",
-        "Custom branding"
+        "Advanced integrations",
+        "Custom dashboards"
       ],
       bestFor: "Growing businesses"
     },
     {
       name: "Enterprise",
-      price: "$2,499",
+      price: "$6,999",
       period: "per month",
       features: [
-        "Unlimited workflows",
-        "Full AI capabilities",
+        "Unlimited products tracked",
+        "Full blockchain capabilities",
         "Custom integrations",
         "24/7 dedicated support",
         "Enterprise analytics",
@@ -102,73 +106,100 @@ export default function AIWorkflowAutomation() {
 
   const useCases = [
     {
-      industry: "Healthcare",
+      industry: "Food & Beverage",
       examples: [
-        "Patient appointment scheduling",
-        "Medical record processing",
-        "Insurance claim workflows",
-        "Pharmacy order management"
+        "Farm-to-table traceability",
+        "Food safety compliance",
+        "Organic certification",
+        "Recall management"
       ]
     },
     {
-      industry: "Finance",
+      industry: "Pharmaceuticals",
       examples: [
-        "Loan approval processes",
-        "KYC verification workflows",
-        "Fraud detection automation",
-        "Compliance reporting"
+        "Drug authenticity verification",
+        "Temperature monitoring",
+        "Regulatory compliance",
+        "Counterfeit prevention"
       ]
     },
     {
-      industry: "Manufacturing",
+      industry: "Luxury Goods",
       examples: [
-        "Quality control workflows",
-        "Supply chain management",
-        "Maintenance scheduling",
-        "Inventory optimization"
+        "Authenticity verification",
+        "Origin certification",
+        "Quality assurance",
+        "Brand protection"
       ]
     },
     {
-      industry: "Retail",
+      industry: "Electronics",
       examples: [
-        "Order fulfillment",
-        "Customer service routing",
-        "Inventory management",
-        "Returns processing"
+        "Component traceability",
+        "Conflict mineral tracking",
+        "Quality control",
+        "Warranty management"
       ]
     }
   ];
 
   const benefits = [
     {
-      metric: "80%",
-      description: "Reduction in manual tasks",
-      icon: Zap
+      metric: "100%",
+      description: "Supply chain transparency",
+      icon: Eye
     },
     {
       metric: "60%",
-      description: "Faster process completion",
-      icon: Clock
+      description: "Reduction in fraud risk",
+      icon: Shield
     },
     {
-      metric: "45%",
+      metric: "40%",
       description: "Cost savings",
       icon: TrendingUp
     },
     {
-      metric: "95%",
-      description: "Error reduction",
-      icon: Shield
+      metric: "3x",
+      description: "Faster compliance",
+      icon: CheckCircle
+    }
+  ];
+
+  const industrySolutions = [
+    {
+      name: "Food Safety",
+      description: "Ensure food safety with blockchain-based traceability and compliance monitoring",
+      icon: Leaf,
+      features: ["HACCP compliance", "Temperature monitoring", "Recall management", "Supplier verification"]
+    },
+    {
+      name: "Pharmaceutical Security",
+      description: "Prevent counterfeiting and ensure drug authenticity with blockchain verification",
+      icon: Shield,
+      features: ["Drug authentication", "Serial number tracking", "Regulatory compliance", "Quality assurance"]
+    },
+    {
+      name: "Sustainable Sourcing",
+      description: "Track sustainability metrics and ensure responsible sourcing practices",
+      icon: Globe,
+      features: ["ESG compliance", "Carbon footprint", "Fair trade verification", "Environmental impact"]
+    },
+    {
+      name: "Quality Management",
+      description: "Maintain product quality throughout the supply chain with real-time monitoring",
+      icon: CheckCircle,
+      features: ["Quality metrics", "Compliance tracking", "Performance monitoring", "Risk assessment"]
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
       <SEO 
-        title="AI Workflow Automation - Zion Tech Group" 
-        description="Transform your business processes with AI-powered workflow automation. Reduce manual tasks by 80%, increase efficiency by 60%, and achieve 45% cost savings."
-        keywords="AI workflow automation, business process automation, workflow management, process optimization, AI automation platform"
-        canonical="https://ziontechgroup.com/services/ai-workflow-automation"
+        title="Blockchain Supply Chain Transparency Platform - Zion Tech Group" 
+        description="Transform your supply chain with blockchain transparency. Achieve 100% visibility, reduce fraud risk by 60%, and save 40% on costs."
+        keywords="blockchain supply chain, supply chain transparency, blockchain traceability, supply chain management, blockchain logistics"
+        canonical="https://ziontechgroup.com/services/blockchain-supply-chain-transparency"
       />
 
       {/* Hero Section */}
@@ -176,18 +207,18 @@ export default function AIWorkflowAutomation() {
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/80 to-zion-purple/80"></div>
         <div className="relative z-10 container mx-auto px-4 py-24 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Workflow Automation
+            Blockchain Supply Chain Transparency
             <span className="block text-3xl md:text-4xl text-zion-cyan mt-2">
-              Transform Your Business Processes with AI
+              Complete Visibility & Trust in Every Link
             </span>
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Automate complex business workflows using artificial intelligence. Reduce manual tasks by 80%, 
-            increase efficiency by 60%, and achieve 45% cost savings with our intelligent automation platform.
+            Transform your supply chain with blockchain transparency. Achieve 100% visibility, 
+            reduce fraud risk by 60%, and save 40% on costs with immutable tracking and smart contracts.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a 
-              href="mailto:kleber@ziontechgroup.com?subject=AI Workflow Automation Demo Request"
+              href="mailto:kleber@ziontechgroup.com?subject=Blockchain Supply Chain Transparency Demo Request"
               className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Request Demo
@@ -207,10 +238,10 @@ export default function AIWorkflowAutomation() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
-              Transform Your Business with AI Automation
+              Transform Your Supply Chain with Blockchain
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Our AI-powered workflow automation platform delivers measurable results that impact your bottom line
+              Our blockchain platform delivers measurable improvements in transparency, security, and efficiency
             </p>
           </div>
           
@@ -237,10 +268,10 @@ export default function AIWorkflowAutomation() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
-              Powerful AI-Powered Features
+              Powerful Blockchain Features
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Everything you need to automate and optimize your business workflows
+              Everything you need to achieve complete supply chain transparency and trust
             </p>
           </div>
           
@@ -270,8 +301,46 @@ export default function AIWorkflowAutomation() {
         </div>
       </section>
 
-      {/* Pricing Section */}
+      {/* Industry Solutions */}
       <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
+              Industry-Specific Solutions
+            </h2>
+            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
+              Tailored blockchain solutions for different industries and compliance requirements
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {industrySolutions.map((solution, index) => (
+              <div key={index} className="bg-zion-blue-light rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <solution.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-zion-blue-dark mb-2">
+                  {solution.name}
+                </h3>
+                <p className="text-sm text-zion-slate mb-4">
+                  {solution.description}
+                </p>
+                <ul className="space-y-1 text-left">
+                  {solution.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-xs text-zion-slate">
+                      <div className="w-2 h-2 bg-zion-cyan rounded-full mr-2 flex-shrink-0"></div>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 bg-zion-blue-light">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
@@ -311,7 +380,7 @@ export default function AIWorkflowAutomation() {
                   ))}
                 </ul>
                 <a
-                  href={`mailto:kleber@ziontechgroup.com?subject=AI Workflow Automation - ${tier.name} Plan Inquiry`}
+                  href={`mailto:kleber@ziontechgroup.com?subject=Blockchain Supply Chain Transparency - ${tier.name} Plan Inquiry`}
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors ${
                     tier.name === 'Professional'
                       ? 'bg-zion-cyan hover:bg-zion-cyan-light text-white'
@@ -327,20 +396,20 @@ export default function AIWorkflowAutomation() {
       </section>
 
       {/* Use Cases */}
-      <section className="py-20 bg-zion-blue-light">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
               Industry-Specific Use Cases
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              See how AI workflow automation transforms different industries
+              See how blockchain transparency transforms different industries
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+              <div key={index} className="bg-zion-blue-light rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
                 <h3 className="text-xl font-semibold text-zion-blue-dark mb-4 text-center">
                   {useCase.industry}
                 </h3>
@@ -359,7 +428,7 @@ export default function AIWorkflowAutomation() {
       </section>
 
       {/* Market Information */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-zion-blue-light">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
@@ -374,26 +443,26 @@ export default function AIWorkflowAutomation() {
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-zion-blue-dark mb-6">Market Overview</h3>
               <div className="space-y-4">
-                <div className="bg-zion-blue-light rounded-lg p-4">
+                <div className="bg-white rounded-lg p-4">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-zion-blue-dark font-semibold">Market Size</span>
-                    <span className="text-zion-cyan font-bold">$19.6B</span>
+                    <span className="text-zion-cyan font-bold">$23.4B</span>
                   </div>
-                  <p className="text-sm text-zion-slate">Global workflow automation market (2024)</p>
+                  <p className="text-sm text-zion-slate">Global blockchain supply chain market (2024)</p>
                 </div>
-                <div className="bg-zion-blue-light rounded-lg p-4">
+                <div className="bg-white rounded-lg p-4">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-zion-blue-dark font-semibold">Growth Rate</span>
-                    <span className="text-green-600 font-bold">23.4% CAGR</span>
+                    <span className="text-green-600 font-bold">87.7% CAGR</span>
                   </div>
                   <p className="text-sm text-zion-slate">Expected annual growth through 2030</p>
                 </div>
-                <div className="bg-zion-blue-light rounded-lg p-4">
+                <div className="bg-white rounded-lg p-4">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-zion-blue-dark font-semibold">Average ROI</span>
-                    <span className="text-purple-600 font-bold">312%</span>
+                    <span className="text-purple-600 font-bold">450%</span>
                   </div>
-                  <p className="text-sm text-zion-slate">Within 12 months of implementation</p>
+                  <p className="text-sm text-zion-slate">Within 18 months of implementation</p>
                 </div>
               </div>
             </div>
@@ -404,22 +473,22 @@ export default function AIWorkflowAutomation() {
                 <div className="flex items-start">
                   <div className="bg-zion-cyan rounded-full w-3 h-3 mt-2 mr-4 flex-shrink-0"></div>
                   <div>
-                    <h4 className="text-lg font-semibold text-zion-blue-dark">AI-First Approach</h4>
-                    <p className="text-zion-slate">Advanced machine learning algorithms for intelligent automation</p>
+                    <h4 className="text-lg font-semibold text-zion-blue-dark">Advanced Blockchain</h4>
+                    <p className="text-zion-slate">Latest blockchain technology with smart contract capabilities</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <div className="bg-zion-purple rounded-full w-3 h-3 mt-2 mr-4 flex-shrink-0"></div>
                   <div>
-                    <h4 className="text-lg font-semibold text-zion-blue-dark">Enterprise Security</h4>
-                    <p className="text-zion-slate">SOC 2 compliant with enterprise-grade security features</p>
+                    <h4 className="text-lg font-semibold text-zion-blue-dark">Industry Expertise</h4>
+                    <p className="text-zion-slate">Deep understanding of supply chain challenges and solutions</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <div className="bg-zion-green rounded-full w-3 h-3 mt-2 mr-4 flex-shrink-0"></div>
                   <div>
                     <h4 className="text-lg font-semibold text-zion-blue-dark">Rapid Implementation</h4>
-                    <p className="text-zion-slate">Deploy workflows in days, not months</p>
+                    <p className="text-zion-slate">Deploy blockchain solutions in weeks, not months</p>
                   </div>
                 </div>
               </div>
@@ -432,14 +501,14 @@ export default function AIWorkflowAutomation() {
       <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Automate Your Workflows?
+            Ready to Transform Your Supply Chain?
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Join thousands of businesses that have transformed their operations with AI-powered workflow automation
+            Join leading businesses that have achieved complete transparency and trust with blockchain technology
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="mailto:kleber@ziontechgroup.com?subject=AI Workflow Automation Demo Request"
+              href="mailto:kleber@ziontechgroup.com?subject=Blockchain Supply Chain Transparency Demo Request"
               className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Schedule Demo
