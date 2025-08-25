@@ -22,7 +22,6 @@ import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
 import EnhancedSEO from './components/EnhancedSEO';
 import EnhancedAccessibility from './components/EnhancedAccessibility';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
-import { ScrollToTop } from './components/ScrollToTop';
 
 // Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
@@ -42,13 +41,14 @@ const DigitalTransformation = lazy(() => import('./pages/DigitalTransformation')
 const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAutomation'));
 
+// Additional innovative services
+const IoTManagementPlatform = lazy(() => import('./pages/services/IoTManagementPlatform'));
+const BlockchainDeFiSolutions = lazy(() => import('./pages/services/BlockchainDeFiSolutions'));
+
 // New innovative service pages
 const AIWorkflowAutomation = lazy(() => import('./pages/services/AIWorkflowAutomation'));
 const BlockchainEnterpriseSolutions = lazy(() => import('./pages/services/BlockchainEnterpriseSolutions'));
 const IoTDataAnalytics = lazy(() => import('./pages/services/IoTDataAnalytics'));
-
-// Enhanced innovative services page
-const EnhancedInnovativeServices = lazy(() => import('./pages/EnhancedInnovativeServices'));
 
 // Missing pages from analysis
 const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/QuantumNeuralNetworkPlatform'));
@@ -61,11 +61,7 @@ const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 const NewServices = lazy(() => import('./pages/NewServices'));
 
-// Additional missing pages to fix broken links
-const AccessibilityAuditor = lazy(() => import('./pages/accessibility-auditor'));
-const AdvancedCybersecuritySuite = lazy(() => import('./pages/advanced-cybersecurity-suite'));
-const AdvancedResearchAutomation = lazy(() => import('./pages/advanced-research-automation'));
-const AffiliateAttributionHub = lazy(() => import('./pages/affiliate-attribution-hub'));
+// Additional missing pages
 
 // Company information pages
 const About = lazy(() => import('./pages/About'));
@@ -91,6 +87,9 @@ const SpecializedITInfrastructure = lazy(() => import('./pages/services/Speciali
 const InnovativeMicroSaasServices = lazy(() => import('./pages/InnovativeMicroSaasServices'));
 const ComprehensiveInnovativeServices = lazy(() => import('./pages/ComprehensiveInnovativeServices'));
 const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveServicesOverview'));
+const EnhancedServicesShowcase = lazy(() => import('./pages/EnhancedServicesShowcase'));
+const InnovativeServicesShowcase = lazy(() => import('./pages/InnovativeServicesShowcase'));
+const ComprehensiveServicesShowcaseNew = lazy(() => import('./pages/ComprehensiveServicesShowcase'));
 
 // Solutions pages
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
@@ -164,7 +163,11 @@ const App: React.FC = () => {
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
-            <PerformanceOptimizer>
+            <PerformanceOptimizer
+              enableMonitoring={true}
+              enableOptimizations={true}
+              showMetrics={import.meta.env.DEV}
+            >
               <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
                 {/* Enhanced SEO */}
                 <EnhancedSEO 
@@ -186,6 +189,7 @@ const App: React.FC = () => {
                       <Route path="/services" element={<Services />} />
                       <Route path="/ai-solutions" element={<AISolutions />} />
                       <Route path="/services-showcase" element={<ServicesShowcase />} />
+                      <Route path="/innovative-services-showcase" element={<InnovativeServicesShowcase />} />
                       <Route path="/ai-matcher" element={<AIMatcherPage />} />
                       <Route path="/talent-directory" element={<TalentDirectory />} />
                       <Route path="/talents" element={<TalentsPage />} />
@@ -207,6 +211,14 @@ const App: React.FC = () => {
                       <Route path="/case-studies" element={<CaseStudies />} />
                       <Route path="/help" element={<HelpCenter />} />
                       <Route path="/new-services" element={<NewServices />} />
+                      
+                      {/* Additional missing pages */}
+                      <Route path="/ai-autonomous-business-manager" element={<AIAutonomousBusinessManager />} />
+                      <Route path="/ai-autonomous-business-platform" element={<AIAutonomousBusinessPlatform />} />
+                      <Route path="/ai-autonomous-research" element={<AIAutonomousResearch />} />
+                      <Route path="/ai-autonomous-systems-platform" element={<AIAutonomousSystemsPlatform />} />
+                      <Route path="/ai-autonomous-code-review" element={<AIAutonomousCodeReview />} />
+                      <Route path="/ai-autonomous-creative-director" element={<AIAutonomousCreativeDirector />} />
                       
                       {/* Company Routes */}
                       <Route path="/about" element={<About />} />
@@ -234,12 +246,19 @@ const App: React.FC = () => {
                       <Route path="/innovative-micro-saas-services" element={<InnovativeMicroSaasServices />} />
                       <Route path="/comprehensive-innovative-services" element={<ComprehensiveInnovativeServices />} />
                       <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview />} />
-                      <Route path="/enhanced-innovative-services" element={<EnhancedInnovativeServices />} />
+                      <Route path="/enhanced-services-showcase" element={<EnhancedServicesShowcase />} />
+                      <Route path="/innovative-services-showcase" element={<InnovativeServicesShowcase />} />
+                      <Route path="/comprehensive-services-showcase" element={<ComprehensiveServicesShowcaseNew />} />
                       
                       {/* New innovative service routes */}
                       <Route path="/ai-workflow-automation" element={<AIWorkflowAutomation />} />
                       <Route path="/blockchain-enterprise-solutions" element={<BlockchainEnterpriseSolutions />} />
                       <Route path="/iot-data-analytics" element={<IoTDataAnalytics />} />
+                      
+                      {/* Additional innovative service routes */}
+                      <Route path="/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                      <Route path="/iot-management-platform" element={<IoTManagementPlatform />} />
+                      <Route path="/blockchain-defi-solutions" element={<BlockchainDeFiSolutions />} />
                       
                       {/* Solutions Routes */}
                       <Route path="/services/enterprise" element={<EnterpriseSolutions />} />
@@ -314,26 +333,6 @@ const App: React.FC = () => {
                       <Route path="/research-development" element={<EmergingTech />} />
                       <Route path="/enterprise-it" element={<ITInfrastructure />} />
                       <Route path="/micro-saas" element={<MicroSAASSolutions />} />
-                      <Route path="/webinars" element={<Webinars />} />
-                      <Route path="/white-papers" element={<WhitePapers />} />
-
-                      {/* Additional missing pages to fix broken links */}
-                      <Route path="/privacy" element={<Privacy />} />
-                      <Route path="/terms" element={<Terms />} />
-                      <Route path="/cookies" element={<Cookies />} />
-                      <Route path="/faq" element={<FAQ />} />
-                      <Route path="/events" element={<Events />} />
-                      <Route path="/testimonials" element={<Testimonials />} />
-                      <Route path="/support" element={<Support />} />
-                      <Route path="/docs" element={<Docs />} />
-                      <Route path="/marketplace" element={<Marketplace />} />
-                      <Route path="/community" element={<Community />} />
-                      
-                      {/* New pages to fix broken links */}
-                      <Route path="/accessibility-auditor" element={<AccessibilityAuditor />} />
-                      <Route path="/advanced-cybersecurity-suite" element={<AdvancedCybersecuritySuite />} />
-                      <Route path="/advanced-research-automation" element={<AdvancedResearchAutomation />} />
-                      <Route path="/affiliate-attribution-hub" element={<AffiliateAttributionHub />} />
                     </Routes>
                   </Suspense>
                 </main>
@@ -342,13 +341,15 @@ const App: React.FC = () => {
                 <SonnerToaster />
                 
                 {/* Enhanced Accessibility Controls */}
-                <EnhancedAccessibility position="bottom-right" />
+                <EnhancedAccessibility 
+                  position="bottom-right" 
+                  showOnLoad={false}
+                  enableKeyboardShortcuts={true}
+                  enableVoiceCommands={import.meta.env.DEV}
+                />
                 
                 {/* AI Chatbot - Always Available */}
                 <AIChatbot />
-                
-                {/* Scroll to Top Button */}
-                <ScrollToTop />
                 
                 {/* Collaborative Text Editor - Development Mode */}
                 {import.meta.env.DEV && (
@@ -408,6 +409,6 @@ const App: React.FC = () => {
       </ThemeProvider>
     </EnhancedErrorBoundary>
   );
-}
+};
 
 export default App;
