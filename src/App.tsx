@@ -12,7 +12,7 @@ import { AICodeGenerator } from './components/AICodeGenerator';
 import { EnterpriseDashboard } from './components/EnterpriseDashboard';
 import { SecurityComplianceDashboard } from './components/SecurityComplianceDashboard';
 import { MachineLearningDashboard } from './components/MachineLearningDashboard';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { LinkHealthMonitor } from './components/LinkHealthMonitor';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
@@ -38,6 +38,7 @@ const TalentsPage = lazy(() => import('./pages/TalentsPage'));
 const EmergingTech = lazy(() => import('./pages/EmergingTech'));
 
 // New pages from incoming branch
+const MicroSaasServicesPage = lazy(() => import('./pages/MicroSaasServices'));
 const PricingPage = lazy(() => import('./pages/PricingPage'));
 
 // Service pages
@@ -67,8 +68,6 @@ const FiveGEnterpriseSolutions = lazy(() => import('./pages/5GEnterpriseSolution
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 const NewServices = lazy(() => import('./pages/NewServices'));
-
-// Additional missing pages
 
 // Company information pages
 const About = lazy(() => import('./pages/About'));
@@ -175,16 +174,16 @@ const App: React.FC = () => {
                 title="Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services"
                 description="Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology."
                 keywords="AI solutions, quantum computing, cybersecurity, digital transformation, enterprise technology, machine learning, cloud services, IT infrastructure"
-                type="website"
-                url="/"
-                image="/og-image.jpg"
-                canonicalUrl="https://ziontechgroup.com"
+                url="https://ziontechgroup.com"
+                image="https://ziontechgroup.com/og-image.jpg"
+                ogType="website"
+                twitterCard="summary_large_image"
               />
               
               <Header />
               <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
               
-              <main id="main-content" className="pt-20">
+              <main className="pt-20">
                 <Suspense fallback={<LoadingSpinner />}>
                   <Routes>
                     {/* Main Routes */}
@@ -200,7 +199,7 @@ const App: React.FC = () => {
                     <Route path="/emerging-tech" element={<EmergingTech />} />
                     
                     {/* New routes from incoming branch */}
-                    <Route path="/micro-saas-services" element={<Services />} />
+                    <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
                     <Route path="/pricing" element={<PricingPage />} />
                     
                     {/* Service Routes */}
@@ -348,7 +347,12 @@ const App: React.FC = () => {
             </div>
             
             {/* Enhanced Accessibility Controls */}
-            <EnhancedAccessibility />
+            <EnhancedAccessibility 
+              position="bottom-right" 
+              showOnLoad={false}
+              enableKeyboardShortcuts={true}
+              enableVoiceCommands={import.meta.env.DEV}
+            />
             
             {/* Website Improvement Tools */}
             <ContentQualityEnhancer />
@@ -357,6 +361,9 @@ const App: React.FC = () => {
             
             {/* AI Chatbot - Always Available */}
             <AIChatbot />
+            
+            {/* Scroll to Top Button */}
+            <ScrollToTop />
             
             {/* Collaborative Text Editor - Development Mode */}
             {import.meta.env.DEV && (
@@ -408,14 +415,6 @@ const App: React.FC = () => {
                   <MachineLearningDashboard />
                 </div>
               </>
-            )}
-            
-            {/* Enhanced Performance Monitor - Always Available */}
-            <PerformanceMonitor />
-            
-            {/* Link Health Monitor - Development Mode */}
-            {import.meta.env.DEV && (
-              <LinkHealthMonitor />
             )}
           </Router>
         </WhitelabelProvider>

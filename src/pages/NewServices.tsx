@@ -246,10 +246,10 @@ export function NewServices() {
                 <div className="border-t border-zion-cyan/20 pt-4">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-zion-slate-light">
-                      Delivery: {service.estimatedDelivery}
+                      Delivery: {'estimatedDelivery' in service ? service.estimatedDelivery : 'Custom'}
                     </span>
                     <span className="text-zion-cyan font-medium">
-                      {service.supportLevel} support
+                      {'supportLevel' in service ? service.supportLevel : 'Premium'} support
                     </span>
                   </div>
                   <div className="mt-3 text-center">
@@ -260,7 +260,7 @@ export function NewServices() {
                 </div>
 
                 {/* Tags */}
-                {service.tags && (
+                {'tags' in service && service.tags && (
                   <div className="mt-4 flex flex-wrap gap-2">
                     {service.tags.slice(0, 4).map((tag, index) => (
                       <span
@@ -350,10 +350,10 @@ export function NewServices() {
                 <div className="border-t border-zion-cyan/20 pt-4">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-zion-slate-light">
-                      Delivery: {service.estimatedDelivery}
+                      Delivery: {'estimatedDelivery' in service ? service.estimatedDelivery : 'Custom'}
                     </span>
                     <span className="text-zion-cyan font-medium">
-                      {service.supportLevel} support
+                      {'supportLevel' in service ? service.supportLevel : 'Premium'} support
                     </span>
                   </div>
                   <div className="mt-3 text-center">
@@ -364,7 +364,7 @@ export function NewServices() {
                 </div>
 
                 {/* Tags */}
-                {service.tags && (
+                {'tags' in service && service.tags && (
                   <div className="mt-4 flex flex-wrap gap-2">
                     {service.tags.slice(0, 4).map((tag, index) => (
                       <span
