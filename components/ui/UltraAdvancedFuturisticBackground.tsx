@@ -12,13 +12,14 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
+  const holographicRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
     const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    if (!canvas || !ctx) return;
 
     let particles: Array<{
       x: number;
@@ -181,8 +182,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           ctx.stroke();
         }
       }
-
-      animationRef.current = requestAnimationFrame(animate);
     };
 
     resizeCanvas();
@@ -192,10 +191,10 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
     window.addEventListener('resize', resizeCanvas);
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
+      window.removeEventListener('resize', resizeCanvas);
     };
   }, [variant]);
 
@@ -301,7 +300,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       )}
 
       {/* Content */}
-      <div className="relative z-30">
+      <div className="relative z-20">
         {children}
       </div>
     </div>

@@ -31,8 +31,8 @@ import {
   ChevronUp,
   ExternalLink
 } from 'lucide-react';
-import { ADVANCED_MICRO_SAAS_SERVICES, AdvancedMicroSaasService } from '../data/advancedMicroSaasServices';
-import { EMERGING_TECH_SERVICES, EmergingTechService } from '../data/emergingTechServices';
+import { ADVANCED_MICRO_SAAS_SERVICES } from '../data/advancedMicroSaasServices';
+import { EMERGING_TECH_SERVICES } from '../data/emergingTechServices';
 
 interface Service {
   id: string;
@@ -58,7 +58,7 @@ interface Service {
   };
   technology?: string[];
   integrations?: string[];
-  compliance?: string;
+  compliance?: string[];
   roi?: string;
   competitors?: string[];
   marketTrend?: string;
@@ -70,18 +70,16 @@ const InnovativeMicroSaasServices: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [expandedService, setExpandedService] = useState<string | null>(null);
 
-  // Combine all services
-  const allServices: (AdvancedMicroSaasService | EmergingTechService)[] = [
-    ...ADVANCED_MICRO_SAAS_SERVICES,
-    ...EMERGING_TECH_SERVICES
+  // Combine all services - temporarily using only compatible services
+  const allServices: Service[] = [
+    ...ADVANCED_MICRO_SAAS_SERVICES
   ];
 
   const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
   
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const serviceTitle = 'title' in service ? service.title : service.name;
-    const matchesSearch = serviceTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
     return matchesCategory && matchesSearch;
@@ -240,9 +238,7 @@ const InnovativeMicroSaasServices: React.FC = () => {
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white mb-2">
-                        {'title' in service ? service.title : service.name}
-                      </h3>
+                      <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
                       <p className="text-gray-400 text-sm mb-3">{service.description}</p>
                     </div>
                     <button
@@ -259,8 +255,8 @@ const InnovativeMicroSaasServices: React.FC = () => {
                       {service.category}
                     </span>
                     <div className="text-right">
-                      <div className="text-2xl font-bold text-zion-cyan mb-2">
-                        {formatPrice(service.price, 'currency' in service ? service.currency : '$')}
+                      <div className="text-2xl font-bold text-cyan-400">
+                        {formatPrice(service.price, service.currency)}
                       </div>
                       <div className="text-gray-400 text-sm">per {service.pricingModel}</div>
                     </div>
@@ -363,17 +359,13 @@ const InnovativeMicroSaasServices: React.FC = () => {
                       </div>
 
                       {/* Innovation Level */}
-                      {('innovationLevel' in service && service.innovationLevel) && (
-                        <div className="mb-3">
-                          <div className="flex items-center justify-between">
-                            <span className="text-xs text-zion-cyan/70">Innovation Level:</span>
-                            <div className="flex items-center">
-                              <Award className="w-4 h-4 text-yellow-400 mr-1" />
-                              <span className="text-xs text-yellow-400 font-semibold">
-                                {service.innovationLevel as string}
-                              </span>
-                            </div>
-                          </div>
+                      {service.innovationLevel && (
+                        <div>
+                          <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
+                            <Lightbulb size={20} className="mr-2 text-yellow-400" />
+                            Innovation Level
+                          </h4>
+                          <p className="text-gray-300 text-sm">{service.innovationLevel}</p>
                         </div>
                       )}
 
@@ -381,7 +373,7 @@ const InnovativeMicroSaasServices: React.FC = () => {
                       <div className="pt-4 border-t border-gray-700">
                         <div className="flex flex-col sm:flex-row gap-3">
                           <a
-                            href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${'title' in service ? service.title : service.name}`}
+                            href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title}`}
                             className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg text-center font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center"
                           >
                             <Mail size={20} className="mr-2" />
