@@ -13,14 +13,22 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
 import { extraServices } from '../data/extra-services';
 import { additionalEnhancedServices } from '../data/additional-real-services';
-import { emergingTechServices } from '../data/emerging-tech-services';
-import { nextGenAIServices } from '../data/next-gen-ai-services';
-import { comprehensiveITServices } from '../data/comprehensive-it-services';
-import { newInnovativeServices } from '../data/innovative-micro-saas-services';
-import { enhancedEnterpriseITServices } from '../data/enhanced-enterprise-it-services';
-import { advancedAISolutions } from '../data/advanced-ai-solutions';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
+import { newRealServices } from '../data/new-real-services';
+import { industryRealServices } from '../data/industry-real-services';
+import { professionalServices } from '../data/professional-services';
+import { nextGenerationAIServices } from '../data/next-generation-ai-services';
+import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
+import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
+import { marketValidatedServices } from '../data/market-validated-services';
+import { emergingTechnologyServices } from '../data/emerging-technology-services';
+import { comprehensiveITSolutions } from '../data/comprehensive-it-solutions';
+import { curatedMarketServices } from '../data/curated-market-services';
+import { realMarketServices } from '../data/real-market-services';
+import { new2025Services } from '../data/new-2025-services';
+import { newRealInnovations } from '../data/new-real-innovations';
+import { serviceExpansions2025 } from '../data/service-expansions-2025';
+import { newOperationalServices2025 } from '../data/new-operational-services-2025';
+import { realVerifiedServiceAdditions2025 } from '../data/real-verified-service-additions-2025';
 
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -34,12 +42,23 @@ export default function ServicesPage() {
     ...innovativeMicroSaasServices,
     ...extraServices,
     ...additionalEnhancedServices,
-    ...emergingTechServices,
-    ...nextGenAIServices,
-    ...comprehensiveITServices,
-    ...newInnovativeServices,
-    ...enhancedEnterpriseITServices,
-    ...advancedAISolutions
+    ...newRealServices,
+    ...industryRealServices,
+    ...professionalServices,
+    ...nextGenerationAIServices,
+    ...cuttingEdgeITServices,
+    ...innovativeMicroSaasV2Services,
+    ...marketValidatedServices,
+    ...emergingTechnologyServices,
+    ...comprehensiveITSolutions,
+    ...curatedMarketServices,
+    ...realMarketServices,
+    ...new2025Services,
+    ...newRealInnovations,
+    ...serviceExpansions2025,
+    ...newOperationalServices2025
+    ,
+    ...realVerifiedServiceAdditions2025
   ];
 
   // Enhanced categories with icons and better organization

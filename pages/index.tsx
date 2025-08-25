@@ -4,10 +4,22 @@ import Link from 'next/link';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, Shield, Mail, MapPin, Rocket, Brain, Users, Globe, Award, Atom, Lock } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
-import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-micro-saas-services';
-import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced';
-import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced';
-import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { extraServices } from '../data/extra-services';
+import { additionalEnhancedServices } from '../data/additional-real-services';
+import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
+import { innovativeAIServices } from '../data/innovative-ai-services';
+import { quantumSpaceServices } from '../data/quantum-space-services';
+import { enterpriseITServices } from '../data/enterprise-it-services';
+import { professionalServices } from '../data/professional-services';
+import { nextGenerationAIServices } from '../data/next-generation-ai-services';
+import { emergingTechnologyServices } from '../data/emerging-technology-services';
+import { comprehensiveITSolutions } from '../data/comprehensive-it-solutions';
+import { realMarketServices } from '../data/real-market-services';
+import { serviceExpansions2025 } from '../data/service-expansions-2025';
+import { realOperationalServices } from '../data/real-operational-services';
+import { newOperationalServices2025 } from '../data/new-operational-services-2025';
+import { realVerifiedServiceAdditions2025 } from '../data/real-verified-service-additions-2025';
 
 export default function HomePage() {
   const heroStats = [
@@ -26,6 +38,25 @@ export default function HomePage() {
     website: 'https://ziontechgroup.com'
   };
 
+  // Combine all services for comprehensive showcase
+  const allServices = [
+    ...enhancedRealMicroSaasServices,
+    ...innovativeMicroSaasServices,
+    ...extraServices,
+    ...additionalEnhancedServices,
+    ...innovativeAIServices,
+    ...quantumSpaceServices,
+    ...enterpriseITServices,
+    ...nextGenerationAIServices,
+    ...emergingTechnologyServices,
+    ...comprehensiveITSolutions,
+    ...realMarketServices,
+    ...serviceExpansions2025,
+    ...realOperationalServices,
+    ...newOperationalServices2025
+    ,
+    ...realVerifiedServiceAdditions2025
+  ];
 
 
 const serviceCategories = [
