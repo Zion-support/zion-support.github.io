@@ -155,6 +155,7 @@ const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const AboutPage = React.lazy(() => import('./pages/About'));
 const CareersPage = React.lazy(() => import('./pages/Careers'));
 const SitemapPage = React.lazy(() => import('./pages/Sitemap'));
@@ -242,6 +243,10 @@ const ApiDocs = React.lazy(() => import('./pages/ApiDocs'));
 const MicroSaasServicesPage = React.lazy(() => import('./pages/MicroSaasServicesPage'));
 const ServicesPricingPage = React.lazy(() => import('./pages/ServicesPricingPage'));
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0682
+=======
+const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage'));
+const ServicesComparisonPage = React.lazy(() => import('./pages/ServicesComparisonPage'));
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e6db
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -327,6 +332,7 @@ const baseRoutes = [
   { path: '/request-quote', element: <RequestQuotePage /> },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   { path: '/enhanced-services', element: <EnhancedServicesPage /> },
   { path: '/pricing', element: <PricingPage /> },
 =======
@@ -335,6 +341,10 @@ const baseRoutes = [
 =======
   { path: '/faq', element: <FAQPage /> },
 >>>>>>> origin/cursor/website-audit-and-enhancement-5083
+=======
+  { path: '/enhanced-services', element: <EnhancedServicesPage /> },
+  { path: '/services-comparison', element: <ServicesComparisonPage /> },
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e6db
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
 <<<<<<< HEAD

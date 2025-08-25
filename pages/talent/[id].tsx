@@ -9,6 +9,7 @@ import { useParams } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-3805
 =======
@@ -24,6 +25,8 @@ import { ErrorPage } from '@/components/ErrorPage';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-217b
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f4cb
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e6db
 import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
 import type { TalentProfile as TalentProfileType } from '@/types/talent';
 import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
@@ -70,10 +73,14 @@ const ProfileLoadingState: React.FC = () => (
 
 const TalentProfilePage: React.FC = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const { id } = useParams();
 =======
   const { id } = useParams() as { id?: string };
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f4cb
+=======
+  const { id } = useParams();
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e6db
   const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -118,6 +125,7 @@ const TalentProfilePage: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
 =======
   if (error || !profile) return <ProfileErrorState error={error} />;
@@ -140,6 +148,9 @@ const TalentProfilePage: React.FC = () => {
 =======
   if (error || !profile) return <ProfileErrorState error={error} />;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f4cb
+=======
+  if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e6db
 
   return (
     <main className="min-h-screen bg-zion-blue py-8 text-white">

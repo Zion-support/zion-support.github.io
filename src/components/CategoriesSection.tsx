@@ -259,6 +259,7 @@ const specialServices = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     title: "Comprehensive Services",
     link: "/comprehensive-services"
 <<<<<<< HEAD
@@ -713,6 +714,14 @@ const advancedCategories = [
     title: "Services Pricing",
     link: "/services-pricing"
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0682
+=======
+    title: "Enhanced Services",
+    link: "/enhanced-services"
+  },
+  {
+    title: "Services Comparison",
+    link: "/services-comparison"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-e6db
   }
 ];
 
