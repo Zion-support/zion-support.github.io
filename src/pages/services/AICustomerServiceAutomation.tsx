@@ -238,7 +238,7 @@ export default function AICustomerServiceAutomation() {
             <div className="text-gray-400">Resolution Rate</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-indigo-400 mb-2"><1s</div>
+            <div className="text-3xl font-bold text-indigo-400 mb-2">&lt;1s</div>
             <div className="text-gray-400">Response Time</div>
           </div>
         </div>
