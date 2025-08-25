@@ -159,6 +159,7 @@ const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const AboutPage = React.lazy(() => import('./pages/About'));
 const CareersPage = React.lazy(() => import('./pages/Careers'));
 const SitemapPage = React.lazy(() => import('./pages/Sitemap'));
@@ -269,6 +270,10 @@ const TermsPage = React.lazy(() => import('./pages/Terms'));
 const SitemapPage = React.lazy(() => import('./pages/Sitemap'));
 const GreenITPage = React.lazy(() => import('./pages/GreenIT'));
 >>>>>>> origin/cursor/website-audit-and-enhancement-050f
+=======
+const ExpandedServicesPage = React.lazy(() => import('./pages/ExpandedServicesPage'));
+const ServicesPricingPage = React.lazy(() => import('./pages/ServicesPricingPage'));
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1baf
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -280,6 +285,7 @@ const baseRoutes = [
   { path: '/talents', element: <TalentsPage /> },
 <<<<<<< HEAD
   { path: '/services', element: <ServicesPage /> },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -347,6 +353,10 @@ const baseRoutes = [
   { path: '/ai-services', element: <AIServicesPage /> },
   { path: '/cybersecurity', element: <CybersecurityServicesPage /> },
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-2e79
+=======
+  { path: '/expanded-services', element: <ExpandedServicesPage /> },
+  { path: '/services-pricing', element: <ServicesPricingPage /> },
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1baf
   { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
   { path: '/ai-services', element: <AIServicesPage /> },
   { path: '/blockchain-services', element: <BlockchainServicesPage /> },

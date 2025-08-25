@@ -223,6 +223,7 @@ import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { EnhancedServicesShowcase } from "@/components/home/EnhancedServicesShowcase";
 import { BottomNavigation } from "@/components/MobileNavigation";
 import { MicroSaasServicesSection } from "@/components/home/MicroSaasServicesSection";
@@ -495,6 +496,10 @@ const STATS_DATA = [
   { number: "98%", label: "Client Satisfaction", icon: <Star className="w-6 h-6" /> }
 ];
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
+=======
+import { ServicesOverview } from "@/components/home/ServicesOverview";
+import { ServiceRecommendations } from "@/components/ServiceRecommendations";
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1baf
 
 export default function Home() {
   const features = [
@@ -904,6 +909,7 @@ export default function Home() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <MicroSaasShowcase />
 =======
       <ServicesOverview />
@@ -920,6 +926,11 @@ export default function Home() {
 =======
       <ServicesOverview />
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e6db
+=======
+      <ServicesOverview />
+      
+      <ServiceRecommendations maxRecommendations={6} />
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1baf
       
       <CategoriesSection />
       <ServicesShowcase />

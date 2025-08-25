@@ -2386,3 +2386,123 @@ Automatic merge failed; fix conflicts and then commit the result.
 [2025-08-25 23:36:39] Processing unmerged file: package-lock.json
 [2025-08-25 23:36:39] File exists in HEAD, keeping it
 [2025-08-25 23:36:39] Still have unmerged paths, attempting additional resolution...
+[main bfbc23f5803] Merge PR #6554: cursor/expand-services-and-deploy-updates-e931 (advanced conflict resolution)
+[2025-08-25 23:36:40] ✓ Advanced conflict resolution successful for PR #6554
+[2025-08-25 23:36:40] ✓ PR #6554 processed successfully
+==========================================
+
+
+==========================================
+[2025-08-25 23:36:40] Processing PR #6549 from branch: cursor/enhance-app-with-new-services-and-futuristic-design-efa1
+==========================================
+[2025-08-25 23:36:40] Processing PR #6549 from branch: cursor/enhance-app-with-new-services-and-futuristic-design-efa1
+[2025-08-25 23:36:41] Attempting regular merge...
+Already up to date.
+[2025-08-25 23:36:41] ✓ Successfully merged PR #6549
+[2025-08-25 23:36:41] ✓ PR #6549 processed successfully
+==========================================
+
+
+==========================================
+[2025-08-25 23:36:41] Processing PR #6545 from branch: cursor/enhance-app-with-new-services-and-futuristic-design-681f
+==========================================
+[2025-08-25 23:36:41] Processing PR #6545 from branch: cursor/enhance-app-with-new-services-and-futuristic-design-681f
+[2025-08-25 23:36:41] Attempting regular merge...
+Auto-merging package-lock.json
+CONFLICT (content): Merge conflict in package-lock.json
+CONFLICT (modify/delete): pages/talent/[id].tsx deleted in origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f and modified in HEAD.  Version HEAD of pages/talent/[id].tsx left in tree.
+Auto-merging src/components/CategoriesSection.tsx
+CONFLICT (content): Merge conflict in src/components/CategoriesSection.tsx
+Auto-merging src/components/Footer.tsx
+CONFLICT (content): Merge conflict in src/components/Footer.tsx
+Auto-merging src/components/header/Header.tsx
+CONFLICT (content): Merge conflict in src/components/header/Header.tsx
+Auto-merging src/data/sampleServices.ts
+CONFLICT (content): Merge conflict in src/data/sampleServices.ts
+Auto-merging src/index.css
+CONFLICT (content): Merge conflict in src/index.css
+Auto-merging src/layout/MainNavigation.tsx
+CONFLICT (content): Merge conflict in src/layout/MainNavigation.tsx
+Auto-merging src/pages/Home.tsx
+CONFLICT (content): Merge conflict in src/pages/Home.tsx
+Auto-merging src/pages/ServicesPage.tsx
+CONFLICT (content): Merge conflict in src/pages/ServicesPage.tsx
+Automatic merge failed; fix conflicts and then commit the result.
+[2025-08-25 23:36:42] ✗ Merge failed for PR #6545, attempting advanced conflict resolution...
+[2025-08-25 23:36:42] Resolving complex conflicts for PR #6545 (cursor/enhance-app-with-new-services-and-futuristic-design-681f)...
+[2025-08-25 23:36:42] Found unmerged files: package-lock.json
+pages/talent/[id].tsx
+src/components/CategoriesSection.tsx
+src/components/Footer.tsx
+src/components/header/Header.tsx
+src/data/sampleServices.ts
+src/index.css
+src/layout/MainNavigation.tsx
+src/pages/Home.tsx
+src/pages/ServicesPage.tsx
+[2025-08-25 23:36:42] Processing unmerged file: package-lock.json
+[2025-08-25 23:36:42] File exists in HEAD, keeping it
+[2025-08-25 23:36:42] Processing unmerged file: pages/talent/[id].tsx
+[2025-08-25 23:36:42] File exists in HEAD, keeping it
+[2025-08-25 23:36:42] Processing unmerged file: src/components/CategoriesSection.tsx
+[2025-08-25 23:36:42] File exists in HEAD, keeping it
+[2025-08-25 23:36:42] Processing unmerged file: src/components/Footer.tsx
+[2025-08-25 23:36:42] File exists in HEAD, keeping it
+[2025-08-25 23:36:42] Processing unmerged file: src/components/header/Header.tsx
+[2025-08-25 23:36:42] File exists in HEAD, keeping it
+[2025-08-25 23:36:42] Processing unmerged file: src/data/sampleServices.ts
+[2025-08-25 23:36:42] File exists in HEAD, keeping it
+[2025-08-25 23:36:42] Processing unmerged file: src/index.css
+[2025-08-25 23:36:42] File exists in HEAD, keeping it
+[2025-08-25 23:36:42] Processing unmerged file: src/layout/MainNavigation.tsx
+[2025-08-25 23:36:42] File exists in HEAD, keeping it
+[2025-08-25 23:36:42] Processing unmerged file: src/pages/Home.tsx
+[2025-08-25 23:36:42] File exists in HEAD, keeping it
+[2025-08-25 23:36:42] Processing unmerged file: src/pages/ServicesPage.tsx
+[2025-08-25 23:36:42] File exists in HEAD, keeping it
+[main 83df49f3ca2] Merge PR #6545: cursor/enhance-app-with-new-services-and-futuristic-design-681f (advanced conflict resolution)
+[2025-08-25 23:36:43] ✓ Advanced conflict resolution successful for PR #6545
+[2025-08-25 23:36:43] ✓ PR #6545 processed successfully
+==========================================
+
+
+==========================================
+[2025-08-25 23:36:43] Processing PR #6542 from branch: cursor/expand-services-and-deploy-updates-1baf
+==========================================
+[2025-08-25 23:36:43] Processing PR #6542 from branch: cursor/expand-services-and-deploy-updates-1baf
+[2025-08-25 23:36:44] Attempting regular merge...
+Auto-merging SERVICES_EXPANSION_SUMMARY.md
+CONFLICT (add/add): Merge conflict in SERVICES_EXPANSION_SUMMARY.md
+Auto-merging package-lock.json
+CONFLICT (content): Merge conflict in package-lock.json
+Auto-merging pages/talent/[id].tsx
+CONFLICT (content): Merge conflict in pages/talent/[id].tsx
+Auto-merging src/App.tsx
+CONFLICT (content): Merge conflict in src/App.tsx
+Auto-merging src/components/CategoriesSection.tsx
+Auto-merging src/components/home/ServicesOverview.tsx
+CONFLICT (add/add): Merge conflict in src/components/home/ServicesOverview.tsx
+Auto-merging src/data/expandedServices.ts
+CONFLICT (add/add): Merge conflict in src/data/expandedServices.ts
+Auto-merging src/pages/ExpandedServicesPage.tsx
+CONFLICT (add/add): Merge conflict in src/pages/ExpandedServicesPage.tsx
+Auto-merging src/pages/Home.tsx
+CONFLICT (content): Merge conflict in src/pages/Home.tsx
+Auto-merging src/pages/ServicesPricingPage.tsx
+CONFLICT (add/add): Merge conflict in src/pages/ServicesPricingPage.tsx
+Automatic merge failed; fix conflicts and then commit the result.
+[2025-08-25 23:36:44] ✗ Merge failed for PR #6542, attempting advanced conflict resolution...
+[2025-08-25 23:36:44] Resolving complex conflicts for PR #6542 (cursor/expand-services-and-deploy-updates-1baf)...
+[2025-08-25 23:36:44] Found unmerged files: package-lock.json
+pages/talent/[id].tsx
+src/App.tsx
+src/pages/Home.tsx
+[2025-08-25 23:36:44] Processing unmerged file: package-lock.json
+[2025-08-25 23:36:44] File exists in HEAD, keeping it
+[2025-08-25 23:36:44] Processing unmerged file: pages/talent/[id].tsx
+[2025-08-25 23:36:44] File exists in HEAD, keeping it
+[2025-08-25 23:36:44] Processing unmerged file: src/App.tsx
+[2025-08-25 23:36:44] File exists in HEAD, keeping it
+[2025-08-25 23:36:44] Processing unmerged file: src/pages/Home.tsx
+[2025-08-25 23:36:44] File exists in HEAD, keeping it
+[2025-08-25 23:36:45] Still have unmerged paths, attempting additional resolution...

@@ -11,6 +11,7 @@ import { useParams } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-3805
 =======
@@ -30,6 +31,8 @@ import { ErrorPage } from '@/components/ErrorPage';
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e6db
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a2e5
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1baf
 import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
 import type { TalentProfile as TalentProfileType } from '@/types/talent';
 import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
@@ -100,6 +103,7 @@ const TalentProfilePage: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const { id } = useParams();
 =======
   const { id } = useParams() as { id?: string };
@@ -110,6 +114,9 @@ const TalentProfilePage: React.FC = () => {
 =======
   const { id } = useParams();
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a2e5
+=======
+  const { id } = useParams();
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1baf
   const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -155,6 +162,7 @@ const TalentProfilePage: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
 =======
   if (error || !profile) return <ProfileErrorState error={error} />;
@@ -180,6 +188,9 @@ const TalentProfilePage: React.FC = () => {
 =======
   if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e6db
+=======
+  if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1baf
 
   return (
     <main className="min-h-screen bg-zion-blue py-8 text-white">

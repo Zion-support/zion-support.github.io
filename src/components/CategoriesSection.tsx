@@ -1357,6 +1357,30 @@ export function CategoriesSection({ showTitle = true, className = "" }: Categori
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
               </Link>
             ))}
+            <Link 
+              to="/expanded-services"
+              className="px-6 py-3 bg-zion-purple hover:bg-zion-purple-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-white transition-all duration-300"
+            >
+              View All Services
+            </Link>
+            <Link 
+              to="/services-pricing"
+              className="px-6 py-3 bg-zion-cyan hover:bg-zion-cyan-dark border border-zion-cyan/20 hover:border-zion-cyan/50 rounded-full text-white transition-all duration-300"
+            >
+              View Pricing
+            </Link>
+            <Link 
+              to="/expanded-services#comparison"
+              className="px-6 py-3 bg-zion-blue hover:bg-zion-blue-dark border border-zion-blue/20 hover:border-zion-blue/50 rounded-full text-white transition-all duration-300"
+            >
+              Compare Services
+            </Link>
+            <Link 
+              to="/services-pricing#calculator"
+              className="px-6 py-3 bg-zion-green hover:bg-zion-green-dark border border-zion-green/20 hover:border-zion-green/50 rounded-full text-white transition-all duration-300"
+            >
+              Get Quote
+            </Link>
           </div>
         </motion.div>
         
