@@ -61,13 +61,7 @@ const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 const NewServices = lazy(() => import('./pages/NewServices'));
 
-// Additional missing pages
-const AIAutonomousBusinessManager = lazy(() => import('./pages/ai-autonomous-business-manager'));
-const AIAutonomousBusinessPlatform = lazy(() => import('./pages/ai-autonomous-business-platform'));
-const AIAutonomousResearch = lazy(() => import('./pages/ai-autonomous-research'));
-const AIAutonomousSystemsPlatform = lazy(() => import('./pages/ai-autonomous-systems-platform'));
-const AIAutonomousCodeReview = lazy(() => import('./pages/ai-autonomous-code-review'));
-const AIAutonomousCreativeDirector = lazy(() => import('./pages/ai-autonomous-creative-director'));
+// Additional missing pages - These are now handled by the services directory imports below
 
 // Company information pages
 const About = lazy(() => import('./pages/About'));
@@ -94,6 +88,7 @@ const InnovativeMicroSaasServices = lazy(() => import('./pages/InnovativeMicroSa
 const ComprehensiveInnovativeServices = lazy(() => import('./pages/ComprehensiveInnovativeServices'));
 const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveServicesOverview'));
 const EnhancedServicesShowcase = lazy(() => import('./pages/EnhancedServicesShowcase'));
+const ComprehensiveServicesShowcase2025 = lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
 
 // Solutions pages
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
@@ -250,6 +245,7 @@ const App: React.FC = () => {
                       <Route path="/comprehensive-innovative-services" element={<ComprehensiveInnovativeServices />} />
                       <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview />} />
                       <Route path="/enhanced-services-showcase" element={<EnhancedServicesShowcase />} />
+                      <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
                       
                       {/* New innovative service routes */}
                       <Route path="/ai-workflow-automation" element={<AIWorkflowAutomation />} />

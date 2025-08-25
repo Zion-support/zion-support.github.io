@@ -269,10 +269,10 @@ const Home: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/services" 
+                to="/comprehensive-services-showcase-2025" 
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
-                Explore Our Services
+                Explore 2025 Innovation Showcase
               </Link>
               <Link 
                 to="/contact" 

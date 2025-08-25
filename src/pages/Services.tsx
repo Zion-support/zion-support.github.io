@@ -26,7 +26,11 @@ import {
   Star,
   CheckCircle,
   Clock,
-  TrendingUp
+  TrendingUp,
+  Mail,
+  FileText,
+  Truck,
+  Scale
 } from 'lucide-react';
 
 export default function Services() {
@@ -42,36 +46,36 @@ export default function Services() {
       description: 'Intelligent solutions powered by artificial intelligence',
       services: [
         {
-          name: 'AI Autonomous Systems',
-          path: '/services/ai-autonomous-systems',
-          description: 'Advanced autonomous AI systems that operate independently',
+          name: 'AI Autonomous Business Manager 2025',
+          path: '/ai-autonomous-business-manager-2025',
+          description: 'Next-generation autonomous business management system',
           icon: Brain,
-          features: ['Self-learning algorithms', 'Predictive analytics', 'Automated decision making'],
-          pricing: 'Starting from $5,000/month'
+          features: ['Fully autonomous decision-making', 'Real-time market analysis', 'Predictive optimization'],
+          pricing: 'Starting from $8,500/month'
         },
         {
-          name: 'AI Research Assistant',
-          path: '/ai-autonomous-research-assistant',
-          description: 'AI-powered research automation and insights',
+          name: 'AI Content Generation Suite 2025',
+          path: '/ai-content-generation-suite-2025',
+          description: 'Comprehensive AI-powered content creation platform',
           icon: Brain,
-          features: ['Data analysis', 'Literature review', 'Trend identification'],
-          pricing: 'Starting from $3,000/month'
+          features: ['AI blog generation', 'SEO optimization', 'Multi-language support'],
+          pricing: 'Starting from $299/month'
         },
         {
-          name: 'AI Business Intelligence',
-          path: '/services/ai-business-intelligence',
-          description: 'Advanced analytics and business insights',
-          icon: BarChart3,
-          features: ['Real-time dashboards', 'Predictive modeling', 'Performance tracking'],
-          pricing: 'Starting from $4,000/month'
+          name: 'AI Customer Support Platform',
+          path: '/ai-customer-support-platform',
+          description: 'Intelligent customer support with AI chatbot',
+          icon: Brain,
+          features: ['24/7 automated support', 'Intelligent routing', 'Sentiment analysis'],
+          pricing: 'Starting from $399/month'
         },
         {
-          name: 'AI Marketing Automation',
-          path: '/services/ai-marketing-automation',
-          description: 'Smart marketing optimization and automation',
+          name: 'AI Lead Generation Platform',
+          path: '/ai-lead-generation-platform',
+          description: 'AI-powered prospect identification and nurturing',
           icon: Target,
-          features: ['Customer segmentation', 'Campaign optimization', 'ROI tracking'],
-          pricing: 'Starting from $2,500/month'
+          features: ['Prospect identification', 'Lead scoring', 'Automated nurturing'],
+          pricing: 'Starting from $449/month'
         }
       ]
     },
@@ -83,20 +87,78 @@ export default function Services() {
       description: 'Next-generation quantum computing solutions',
       services: [
         {
-          name: 'Quantum Neural Networks',
-          path: '/quantum-neural-network-platform',
-          description: 'Quantum-powered neural networks for complex problems',
+          name: 'Quantum AI Neural Network Platform',
+          path: '/quantum-ai-neural-network-platform',
+          description: 'Revolutionary quantum-AI hybrid platform',
           icon: Brain,
-          features: ['Quantum algorithms', 'Superior performance', 'Future-proof technology'],
+          features: ['Quantum-enhanced neural networks', '1000x faster processing', 'Future-proof technology'],
           pricing: 'Starting from $15,000/month'
         },
         {
-          name: 'Quantum Computing',
-          path: '/services/quantum-technology',
-          description: 'Quantum computing platforms and solutions',
-          icon: Cpu,
-          features: ['Quantum supremacy', 'Complex simulations', 'Cryptography'],
+          name: 'Quantum Financial Trading Platform',
+          path: '/quantum-financial-trading-platform',
+          description: 'Ultra-fast quantum-powered trading system',
+          icon: DollarSign,
+          features: ['1000x faster trades', 'Quantum risk assessment', 'Portfolio optimization'],
+          pricing: 'Starting from $25,000/month'
+        },
+        {
+          name: 'Quantum Cloud Infrastructure',
+          path: '/quantum-cloud-infrastructure',
+          description: 'Hybrid quantum-classical cloud computing',
+          icon: Cloud,
+          features: ['Quantum algorithm optimization', 'Quantum-safe security', 'Scalable resources'],
           pricing: 'Starting from $20,000/month'
+        }
+      ]
+    },
+    {
+      id: 'blockchain',
+      title: 'Blockchain & DeFi',
+      icon: Network,
+      color: 'from-green-500 to-blue-500',
+      description: 'Decentralized finance and blockchain solutions',
+      services: [
+        {
+          name: 'Blockchain DeFi Enterprise Platform',
+          path: '/blockchain-defi-enterprise-platform',
+          description: 'Enterprise-grade decentralized finance platform',
+          icon: DollarSign,
+          features: ['Multi-chain protocols', 'Smart contracts', 'Regulatory compliance'],
+          pricing: 'Starting from $6,500/month'
+        },
+        {
+          name: 'AI Blockchain Governance',
+          path: '/services/ai-blockchain-governance',
+          description: 'AI-powered blockchain governance solutions',
+          icon: Shield,
+          features: ['Automated governance', 'Smart contract auditing', 'Compliance automation'],
+          pricing: 'Starting from $5,000/month'
+        }
+      ]
+    },
+    {
+      id: 'iot',
+      title: 'Internet of Things',
+      icon: Cpu,
+      color: 'from-orange-500 to-red-500',
+      description: 'Smart IoT solutions for connected environments',
+      services: [
+        {
+          name: 'IoT Smart City Management Platform',
+          path: '/iot-smart-city-management-platform',
+          description: 'Comprehensive smart city IoT management',
+          icon: Globe,
+          features: ['Real-time monitoring', 'AI traffic optimization', 'Environmental tracking'],
+          pricing: 'Starting from $12,000/month'
+        },
+        {
+          name: 'Smart Inventory Management System',
+          path: '/smart-inventory-management-system',
+          description: 'AI-powered inventory prediction and optimization',
+          icon: Database,
+          features: ['Demand forecasting', 'Automated reordering', 'Real-time monitoring'],
+          pricing: 'Starting from $349/month'
         }
       ]
     },
@@ -108,110 +170,236 @@ export default function Services() {
       description: 'Comprehensive security and compliance solutions',
       services: [
         {
-          name: 'Cybersecurity Services',
-          path: '/services/cybersecurity',
-          description: 'Complete security solutions for your business',
+          name: 'AI Cybersecurity Threat Intelligence',
+          path: '/ai-cybersecurity-threat-intelligence',
+          description: 'AI-powered threat detection and response',
           icon: Shield,
-          features: ['Threat detection', 'Vulnerability assessment', 'Incident response'],
-          pricing: 'Starting from $3,500/month'
+          features: ['10x faster threat detection', 'AI behavioral analysis', 'Automated response'],
+          pricing: 'Starting from $7,500/month'
         },
         {
-          name: 'SOC2 Compliance Automation',
-          path: '/soc2-compliance-automation',
-          description: 'Automated compliance management and monitoring',
-          icon: Lock,
-          features: ['Automated audits', 'Real-time monitoring', 'Compliance reporting'],
-          pricing: 'Starting from $4,500/month'
+          name: 'Advanced Cybersecurity Operations Center',
+          path: '/advanced-cybersecurity-operations-center',
+          description: '24/7 SOC with real-time threat monitoring',
+          icon: Shield,
+          features: ['24/7 monitoring', 'Advanced threat hunting', 'Incident response'],
+          pricing: 'Starting from $25,000/month'
         }
       ]
     },
     {
-      id: 'infrastructure',
+      id: 'cloud-infrastructure',
       title: 'Cloud & Infrastructure',
       icon: Cpu,
       color: 'from-blue-500 to-indigo-500',
       description: 'Scalable cloud solutions and infrastructure management',
       services: [
         {
-          name: 'Cloud DevOps',
-          path: '/cloud-devops',
-          description: 'Cloud development and operations automation',
+          name: 'Enterprise Cloud Migration & Management',
+          path: '/enterprise-cloud-migration-management',
+          description: 'End-to-end cloud migration service',
           icon: Cloud,
-          features: ['CI/CD pipelines', 'Infrastructure as code', 'Monitoring & alerting'],
-          pricing: 'Starting from $3,000/month'
+          features: ['Multi-cloud strategy', 'Legacy modernization', '24/7 management'],
+          pricing: 'Starting from $15,000/month'
         },
         {
-          name: 'IT Infrastructure',
-          path: '/services/it-infrastructure',
-          description: 'Complete IT infrastructure solutions',
-          icon: Network,
-          features: ['Network design', 'Hardware management', 'Performance optimization'],
-          pricing: 'Starting from $2,500/month'
+          name: 'DevOps & CI/CD Pipeline Automation',
+          path: '/devops-cicd-pipeline-automation',
+          description: 'Complete DevOps transformation service',
+          icon: Code,
+          features: ['80% faster deployment', 'Infrastructure as code', 'Automated testing'],
+          pricing: 'Starting from $12,000/month'
         },
         {
-          name: '5G Enterprise Solutions',
-          path: '/5g-enterprise-solutions',
-          description: 'High-speed 5G connectivity solutions',
+          name: 'Enterprise Network Infrastructure & Security',
+          path: '/enterprise-network-infrastructure-security',
+          description: 'High-availability network infrastructure',
           icon: Network,
-          features: ['Ultra-fast connectivity', 'Low latency', 'High bandwidth'],
-          pricing: 'Starting from $5,000/month'
+          features: ['99.99% uptime', 'High-performance design', '24/7 support'],
+          pricing: 'Starting from $20,000/month'
         }
       ]
     },
     {
-      id: 'business',
+      id: 'data-analytics',
+      title: 'Data & Analytics',
+      icon: BarChart3,
+      color: 'from-indigo-500 to-purple-500',
+      description: 'Advanced analytics and business intelligence',
+      services: [
+        {
+          name: 'Data Analytics & Business Intelligence Platform',
+          path: '/data-analytics-business-intelligence-platform',
+          description: 'Comprehensive data analytics platform',
+          icon: BarChart3,
+          features: ['Real-time processing', 'Predictive analytics', 'Interactive dashboards'],
+          pricing: 'Starting from $18,000/month'
+        },
+        {
+          name: 'AI Business Intelligence Suite',
+          path: '/services/ai-business-intelligence',
+          description: 'AI-powered business insights and analytics',
+          icon: BarChart3,
+          features: ['Real-time dashboards', 'Predictive modeling', 'Performance tracking'],
+          pricing: 'Starting from $4,000/month'
+        }
+      ]
+    },
+    {
+      id: 'business-operations',
       title: 'Business Operations',
       icon: Building,
       color: 'from-green-500 to-emerald-500',
       description: 'Streamlined business process automation',
       services: [
         {
-          name: 'Autonomous Business Platform',
-          path: '/autonomous-business-operations-platform',
-          description: 'Self-operating business systems and automation',
-          icon: Building,
-          features: ['Process automation', 'Workflow optimization', 'Performance analytics'],
-          pricing: 'Starting from $6,000/month'
+          name: 'Autonomous Manufacturing Intelligence Platform',
+          path: '/autonomous-manufacturing-intelligence',
+          description: 'AI-powered manufacturing automation',
+          icon: Cpu,
+          features: ['60% efficiency increase', '90% defect reduction', 'Predictive maintenance'],
+          pricing: 'Starting from $18,000/month'
         },
         {
-          name: 'AI Asset Management',
-          path: '/ai-powered-it-asset-management',
-          description: 'Intelligent IT asset management and tracking',
-          icon: Database,
-          features: ['Asset tracking', 'Lifecycle management', 'Cost optimization'],
-          pricing: 'Starting from $2,000/month'
+          name: 'Smart Project Management Tool',
+          path: '/smart-project-management-tool',
+          description: 'AI-enhanced project management platform',
+          icon: Target,
+          features: ['25% faster completion', 'AI task prioritization', 'Risk prediction'],
+          pricing: 'Starting from $249/month'
+        },
+        {
+          name: 'Smart Time Tracking Solution',
+          path: '/smart-time-tracking-solution',
+          description: 'AI-powered time tracking and productivity',
+          icon: Clock,
+          features: ['Automatic categorization', 'Productivity insights', 'Project allocation'],
+          pricing: 'Starting from $129/month'
         }
       ]
     },
     {
-      id: 'industry',
-      title: 'Industry Solutions',
-      icon: Target,
-      color: 'from-orange-500 to-yellow-500',
-      description: 'Tailored solutions for specific industries',
+      id: 'financial-management',
+      title: 'Financial Management',
+      icon: DollarSign,
+      color: 'from-yellow-500 to-orange-500',
+      description: 'Intelligent financial solutions and automation',
       services: [
         {
-          name: 'Healthcare Technology',
-          path: '/solutions/healthcare',
-          description: 'Technology solutions for healthcare industry',
-          icon: Heart,
-          features: ['Patient management', 'Medical analytics', 'Compliance'],
+          name: 'Smart Invoice Management System',
+          path: '/smart-invoice-management-system',
+          description: 'AI-powered invoice processing and management',
+          icon: DollarSign,
+          features: ['5x faster processing', 'OCR technology', 'Automated reconciliation'],
+          pricing: 'Starting from $199/month'
+        },
+        {
+          name: 'AI Email Marketing Platform',
+          path: '/ai-email-marketing-platform',
+          description: 'Intelligent email marketing optimization',
+          icon: Mail,
+          features: ['45% higher open rates', 'AI send time optimization', 'Personalized content'],
+          pricing: 'Starting from $179/month'
+        }
+      ]
+    },
+    {
+      id: 'content-marketing',
+      title: 'Content & Marketing',
+      icon: Target,
+      color: 'from-pink-500 to-purple-500',
+      description: 'AI-powered content creation and marketing automation',
+      services: [
+        {
+          name: 'AI Social Media Manager',
+          path: '/ai-social-media-manager',
+          description: 'Intelligent social media management platform',
+          icon: Globe,
+          features: ['AI content generation', 'Multi-platform management', 'Engagement optimization'],
+          pricing: 'Starting from $199/month'
+        },
+        {
+          name: 'Smart Document Management System',
+          path: '/smart-document-management-system',
+          description: 'AI-powered document organization and search',
+          icon: FileText,
+          features: ['10x faster search', 'AI categorization', 'Workflow automation'],
+          pricing: 'Starting from $279/month'
+        }
+      ]
+    },
+    {
+      id: 'managed-services',
+      title: 'Managed Services',
+      icon: Shield,
+      color: 'from-gray-500 to-blue-500',
+      description: 'Comprehensive IT management and support',
+      services: [
+        {
+          name: 'Managed IT Services & Support',
+          path: '/managed-it-services-support',
+          description: '24/7 IT infrastructure management',
+          icon: Shield,
+          features: ['24/7 monitoring', 'Proactive maintenance', 'Help desk support'],
           pricing: 'Starting from $8,000/month'
         },
         {
-          name: 'Financial Services',
-          path: '/services/financial-services',
-          description: 'Fintech solutions and financial technology',
-          icon: DollarSign,
-          features: ['Risk management', 'Fraud detection', 'Compliance'],
-          pricing: 'Starting from $7,000/month'
-        },
+          name: 'Digital Transformation Consulting',
+          path: '/digital-transformation-consulting',
+          description: 'Strategic digital transformation guidance',
+          icon: Rocket,
+          features: ['Maturity assessment', 'Roadmap development', 'Change management'],
+          pricing: 'Starting from $30,000/month'
+        }
+      ]
+    },
+    {
+      id: 'healthcare',
+      title: 'Healthcare Technology',
+      icon: Heart,
+      color: 'from-red-500 to-pink-500',
+      description: 'Advanced healthcare technology solutions',
+      services: [
         {
-          name: 'Manufacturing Intelligence',
-          path: '/services/manufacturing-intelligence',
-          description: 'Smart manufacturing and Industry 4.0 solutions',
-          icon: Cpu,
-          features: ['Predictive maintenance', 'Quality control', 'Supply chain optimization'],
+          name: 'AI Healthcare Diagnostics Platform',
+          path: '/ai-healthcare-diagnostics-platform',
+          description: 'AI-powered medical diagnostics and treatment',
+          icon: Heart,
+          features: ['30% accuracy improvement', '70% faster diagnosis', 'Treatment recommendations'],
+          pricing: 'Starting from $9,500/month'
+        }
+      ]
+    },
+    {
+      id: 'logistics',
+      title: 'Logistics & Supply Chain',
+      icon: Truck,
+      color: 'from-blue-500 to-green-500',
+      description: 'Intelligent logistics and supply chain optimization',
+      services: [
+        {
+          name: 'Autonomous Logistics & Supply Chain Platform',
+          path: '/autonomous-logistics-supply-chain',
+          description: 'AI-powered supply chain management',
+          icon: Truck,
+          features: ['35% cost reduction', '50% efficiency improvement', 'Real-time monitoring'],
+          pricing: 'Starting from $8,500/month'
+        }
+      ]
+    },
+    {
+      id: 'legal-tech',
+      title: 'Legal Technology',
+      icon: Scale,
+      color: 'from-purple-500 to-indigo-500',
+      description: 'AI-powered legal research and compliance',
+      services: [
+        {
+          name: 'AI Legal Research & Compliance Platform',
+          path: '/ai-legal-research-compliance-platform',
+          description: 'Automated legal research and compliance',
+          icon: Scale,
+          features: ['80% time reduction', '90% accuracy improvement', 'Automated compliance'],
           pricing: 'Starting from $6,500/month'
         }
       ]
