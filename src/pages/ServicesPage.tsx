@@ -1453,6 +1453,7 @@ export default function ServicesPage() {
                 Premium Services
               </Button>
             </Link>
+<<<<<<< HEAD
             <Link to="/it-onsite-services">
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-099c
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
@@ -2576,6 +2577,13 @@ export default function ServicesPage() {
               </Button>
             </Link>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-ad2d
+=======
+            <Link to="/comprehensive-services">
+              <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
+                View All Services
+              </Button>
+            </Link>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1010
             <Link to="/request-quote">
 <<<<<<< HEAD
               <Button className="bg-white text-zion-blue-dark hover:bg-gray-100 px-8 py-3">

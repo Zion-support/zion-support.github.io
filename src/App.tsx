@@ -77,6 +77,7 @@ const ContactPage = React.lazy(() => import('./pages/Contact'));
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 <<<<<<< HEAD
+<<<<<<< HEAD
 const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServicesPage'));
 const ServicesOverviewPage = React.lazy(() => import('./pages/ServicesOverviewPage'));
 const AIServicesShowcase = React.lazy(() => import('./pages/AIServicesShowcase'));
@@ -186,6 +187,11 @@ const AIBusinessIntelligenceSuite = lazy(() => import('./pages/services/AIBusine
 =======
 const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage'));
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-099c
+=======
+const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServicesPage'));
+const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
+const CybersecurityServicesPage = React.lazy(() => import('./pages/CybersecurityServicesPage'));
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1010
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -210,8 +216,13 @@ const baseRoutes = [
   { path: '/hire-ai', element: <ZionHireAI /> },
   { path: '/request-quote', element: <RequestQuotePage /> },
   { path: '/comprehensive-services', element: <ComprehensiveServicesPage /> },
+<<<<<<< HEAD
   { path: '/services-overview', element: <ServicesOverviewPage /> },
   { path: '/ai-services', element: <AIServicesShowcase /> },
+=======
+  { path: '/ai-services', element: <AIServicesPage /> },
+  { path: '/cybersecurity-services', element: <CybersecurityServicesPage /> },
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1010
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
   
