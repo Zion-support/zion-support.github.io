@@ -85,6 +85,8 @@ export default function ContactPage() {
         <meta name="keywords" content="contact, AI services, quantum computing, IT solutions, get started, consultation" />
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
+        
+        {/* Open Graph */}
         <meta property="og:title" content="Contact Us - Zion Tech Group" />
         <meta property="og:description" content="Get started with our revolutionary AI, quantum computing, and IT solutions." />
         <meta property="og:type" content="website" />
@@ -220,7 +222,6 @@ export default function ContactPage() {
                       placeholder="Enter your email address"
                     />
                   </div>
-                </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -290,6 +291,7 @@ export default function ContactPage() {
                     placeholder="Tell us about your project, goals, and how we can help..."
                   />
                 </div>
+              </motion.div>
 
                 {/* Submit Status Messages */}
                 {submitStatus === 'success' && (
