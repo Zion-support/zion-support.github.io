@@ -197,7 +197,11 @@ const Home: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
-      <SEOHead configKey="home" />
+      <SEOHead 
+        title="Zion Tech Group - AI-Powered Innovation & Enterprise Solutions"
+        description="Transform your business with cutting-edge AI solutions, quantum technology, and innovative micro SAAS platforms. Leading the future of technology."
+        keywords={['AI solutions', 'quantum technology', 'enterprise IT', 'cybersecurity', 'micro SAAS', 'digital transformation', 'machine learning', 'blockchain']}
+      />
       
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">

@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import Sidebar from './components/Sidebar';
-import { AccessibilityControls } from './components/AccessibilityControls';
-import { PerformanceDashboard } from './components/PerformanceDashboard';
+import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
 import { AnalyticsDashboard } from './components/AnalyticsDashboard';
 import { AIChatbot } from './components/AIChatbot';
 import { CollaborativeTextEditor } from './components/CollaborativeTextEditor';
@@ -18,10 +18,8 @@ import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
-import { EnhancedSEO } from './components/EnhancedSEO';
-import { EnhancedAccessibility } from './components/EnhancedAccessibility';
-import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { ErrorBoundary } from './components/ErrorBoundary';
+import { SEOHead } from './components/SEOHead';
 
 // Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
@@ -81,6 +79,8 @@ const SpecializedITInfrastructure = lazy(() => import('./pages/services/Speciali
 const InnovativeMicroSaasServices = lazy(() => import('./pages/InnovativeMicroSaasServices'));
 const ComprehensiveInnovativeServices = lazy(() => import('./pages/ComprehensiveInnovativeServices'));
 const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveServicesOverview'));
+const ComprehensiveServicesShowcase = lazy(() => import('./pages/ComprehensiveServicesShowcase'));
+const InnovativeServicesMarketing = lazy(() => import('./pages/InnovativeServicesMarketing'));
 
 // Solutions pages
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
@@ -148,17 +148,14 @@ const App: React.FC = () => {
   useScrollToTop();
 
   return (
-    <EnhancedErrorBoundary>
-      <EnhancedSEO />
-      <EnhancedAccessibility />
-      <PerformanceMonitor />
+    <ErrorBoundary>
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
             <PerformanceOptimizer>
               <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
                 {/* Enhanced SEO */}
-                <EnhancedSEO 
+                <SEOHead 
                   title="Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services"
                   description="Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology."
                   keywords="AI solutions, quantum computing, cybersecurity, digital transformation, enterprise technology, machine learning, cloud services, IT infrastructure"
@@ -225,6 +222,8 @@ const App: React.FC = () => {
                       <Route path="/innovative-micro-saas-services" element={<InnovativeMicroSaasServices />} />
                       <Route path="/comprehensive-innovative-services" element={<ComprehensiveInnovativeServices />} />
                       <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview />} />
+                      <Route path="/services-showcase" element={<ComprehensiveServicesShowcase />} />
+                      <Route path="/innovative-services-marketing" element={<InnovativeServicesMarketing />} />
                       
                       {/* New innovative service routes */}
                       <Route path="/ai-workflow-automation" element={<AIWorkflowAutomation />} />
@@ -311,8 +310,9 @@ const App: React.FC = () => {
                 <Footer />
                 <SonnerToaster />
                 
-                {/* Enhanced Accessibility Controls */}
-                <EnhancedAccessibility position="bottom-right" />
+                {/* Enhanced Accessibility and Performance Tools */}
+                <AccessibilityEnhancer />
+                <PerformanceMonitor />
                 
                 {/* AI Chatbot - Always Available */}
                 <AIChatbot />
@@ -344,7 +344,7 @@ const App: React.FC = () => {
                   <>
                     {/* Performance Dashboard */}
                     <div className="fixed top-4 left-4 z-40">
-                      <PerformanceDashboard />
+                      <AnalyticsDashboard />
                     </div>
                     
                     {/* Analytics Dashboard */}
@@ -368,12 +368,28 @@ const App: React.FC = () => {
                     </div>
                   </>
                 )}
+                
+                {/* Link Health Monitor - Development Mode */}
+                {import.meta.env.DEV && (
+                  <LinkHealthMonitor
+                    links={[
+                      'https://ziontechgroup.com',
+                      'https://www.linkedin.com/company/ziontechgroup',
+                      'https://twitter.com/ziontechgroup',
+                      'https://github.com/ziontechgroup',
+                      'https://www.youtube.com/@ziontechgroup'
+                    ]}
+                    autoCheck={true}
+                    checkInterval={600000} // 10 minutes
+                    timeout={5000} // 5 seconds
+                  />
+                )}
               </div>
             </PerformanceOptimizer>
           </Router>
         </WhitelabelProvider>
       </ThemeProvider>
-    </EnhancedErrorBoundary>
+    </ErrorBoundary>
   );
 };
 
