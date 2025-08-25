@@ -30,6 +30,10 @@ export function Footer() {
       title: "AI & Technology Services",
       icon: Brain,
       links: [
+        { label: "AI Workflow Automation", path: "/services/ai-workflow-automation" },
+        { label: "AI Customer Intelligence", path: "/services/ai-customer-intelligence" },
+        { label: "AI Security & Compliance", path: "/services/ai-security-compliance" },
+        { label: "AI Data Analytics", path: "/services/ai-data-analytics" },
         { label: "AI & Autonomous Systems", path: "/services/ai-autonomous-systems" },
         { label: "AI Research Assistant", path: "/ai-autonomous-research-assistant" },
         { label: "Quantum Neural Networks", path: "/quantum-neural-network-platform" },
