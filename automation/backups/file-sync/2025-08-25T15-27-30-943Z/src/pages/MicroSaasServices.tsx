@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, Calendar, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, BookOpen, Target, TrendingUp, PieChart, Activity, Package, Wifi } from 'lucide-react';
+import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, Calendar, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, BookOpen, Target, TrendingUp, PieChart, Activity, Zap as ZapIcon2 } from 'lucide-react';
 
 const MicroSaasServices: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -290,298 +290,299 @@ const MicroSaasServices: React.FC = () => {
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com/inventorysmart"
+        website: "https://ziontechgroup.com"
       }
     },
+    // NEW INNOVATIVE SERVICES ADDED
     {
       id: 16,
-      name: "CodeSync Pro",
-      category: "Development",
+      name: "AI-Powered HR Assistant",
+      category: "Human Resources",
       pricing: "Freemium",
-      description: "AI-powered code review and collaboration platform for development teams",
-      price: 45,
+      description: "Intelligent HR automation with AI-powered recruitment, onboarding, and employee management",
+      price: 42,
       pricingModel: "monthly",
-      userLimit: "Up to 25 developers",
-      features: ["AI code review", "Git integration", "Code quality metrics", "Team collaboration", "Security scanning"],
-      benefits: ["Faster code reviews", "Better code quality", "Security improvement", "Team productivity"],
-      targetAudience: ["Development teams", "Startups", "Tech companies", "Freelance developers"],
-      tags: ["Code Review", "AI", "Development", "Collaboration", "Security"],
+      userLimit: "Up to 100 employees",
+      features: ["AI resume screening", "Automated onboarding", "Performance tracking", "Employee self-service"],
+      benefits: ["Faster hiring", "Reduced bias", "Improved retention", "HR efficiency"],
+      targetAudience: ["Growing companies", "HR departments", "Recruitment agencies", "Startups"],
+      tags: ["HR Automation", "AI Recruitment", "Employee Management", "Onboarding", "Performance"],
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com/codesync-pro"
+        website: "https://ziontechgroup.com"
       }
     },
     {
       id: 17,
-      name: "DataGuardian",
-      category: "Data Protection",
-      pricing: "Subscription",
-      description: "Comprehensive data backup and disaster recovery solution for businesses",
-      price: 60,
+      name: "SmartContract AI",
+      category: "Blockchain",
+      pricing: "Freemium",
+      description: "AI-powered smart contract development and blockchain automation for businesses",
+      price: 55,
       pricingModel: "monthly",
-      userLimit: "Unlimited data",
-      features: ["Automated backups", "Cloud storage", "Disaster recovery", "Compliance reporting", "24/7 monitoring"],
-      benefits: ["Data security", "Business continuity", "Compliance", "Peace of mind"],
-      targetAudience: ["Small businesses", "Healthcare", "Finance", "Legal services"],
-      tags: ["Data Backup", "Disaster Recovery", "Security", "Compliance"],
+      userLimit: "Up to 10 developers",
+      features: ["Smart contract templates", "AI code generation", "Security auditing", "Deployment automation"],
+      benefits: ["Faster development", "Enhanced security", "Cost reduction", "Innovation enablement"],
+      targetAudience: ["Blockchain startups", "DeFi projects", "Enterprise blockchain", "Developers"],
+      tags: ["Blockchain", "Smart Contracts", "AI", "DeFi", "Web3"],
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com/dataguardian"
+        website: "https://ziontechgroup.com"
       }
     },
     {
       id: 18,
-      name: "HR Suite Pro",
-      category: "Human Resources",
+      name: "IoT Fleet Manager",
+      category: "IoT",
       pricing: "Freemium",
-      description: "Complete HR management system for small to medium businesses",
-      price: 35,
+      description: "Comprehensive IoT fleet management with real-time tracking and predictive maintenance",
+      price: 48,
       pricingModel: "monthly",
-      userLimit: "Up to 100 employees",
-      features: ["Employee onboarding", "Time tracking", "Payroll integration", "Performance reviews", "Benefits management"],
-      benefits: ["Streamlined HR processes", "Compliance", "Employee satisfaction", "Cost reduction"],
-      targetAudience: ["Small businesses", "Startups", "Consulting firms", "Service companies"],
-      tags: ["HR Management", "Employee Onboarding", "Time Tracking", "Payroll", "Performance"],
+      userLimit: "Up to 50 vehicles",
+      features: ["Real-time tracking", "Predictive maintenance", "Fuel optimization", "Driver analytics"],
+      benefits: ["Cost reduction", "Safety improvement", "Efficiency gains", "Data insights"],
+      targetAudience: ["Transportation companies", "Delivery services", "Fleet operators", "Logistics"],
+      tags: ["IoT", "Fleet Management", "Predictive Maintenance", "GPS Tracking", "Analytics"],
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com/hr-suite-pro"
+        website: "https://ziontechgroup.com"
       }
     },
     {
       id: 19,
-      name: "AIAnalytics Pro",
-      category: "AI & Analytics",
+      name: "VoiceCommerce Pro",
+      category: "E-commerce",
       pricing: "Freemium",
-      description: "Advanced AI-powered business intelligence and predictive analytics platform",
-      price: 55,
+      description: "Voice-activated e-commerce platform with AI-powered shopping assistants",
+      price: 38,
       pricingModel: "monthly",
-      userLimit: "Up to 20 users",
-      features: ["AI insights", "Predictive modeling", "Custom dashboards", "Data visualization", "Real-time alerts"],
-      benefits: ["Better decision making", "Predictive insights", "Competitive advantage", "Data-driven growth"],
-      targetAudience: ["Business analysts", "Executives", "Marketing teams", "Data scientists"],
-      tags: ["AI Analytics", "Business Intelligence", "Predictive Modeling", "Data Visualization"],
+      userLimit: "Up to 1000 products",
+      features: ["Voice search", "AI recommendations", "Multi-language support", "Analytics dashboard"],
+      benefits: ["Improved accessibility", "Higher conversion", "Better UX", "Competitive advantage"],
+      targetAudience: ["E-commerce stores", "Retail businesses", "Marketplaces", "Online sellers"],
+      tags: ["Voice Commerce", "AI", "E-commerce", "Accessibility", "Voice Search"],
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com/ai-analytics-pro"
+        website: "https://ziontechgroup.com"
       }
     },
     {
       id: 20,
-      name: "ChatBot Studio",
-      category: "AI & Automation",
+      name: "QuantumML Studio",
+      category: "Quantum Computing",
       pricing: "Freemium",
-      description: "AI-powered chatbot builder for customer service and lead generation",
-      price: 38,
+      description: "Quantum machine learning platform for advanced AI model training and optimization",
+      price: 75,
       pricingModel: "monthly",
-      userLimit: "Up to 10 chatbots",
-      features: ["No-code builder", "AI training", "Multi-language support", "Analytics dashboard", "Integration APIs"],
-      benefits: ["24/7 customer support", "Lead generation", "Cost reduction", "Customer satisfaction"],
-      targetAudience: ["E-commerce", "Service businesses", "Startups", "Marketing agencies"],
-      tags: ["Chatbot", "AI", "Customer Service", "Automation", "Lead Generation"],
+      userLimit: "Up to 5 researchers",
+      features: ["Quantum algorithms", "ML model training", "Performance optimization", "Research tools"],
+      benefits: ["Faster training", "Better accuracy", "Innovation leadership", "Research advancement"],
+      targetAudience: ["Research institutions", "AI companies", "Pharmaceutical companies", "Financial services"],
+      tags: ["Quantum Computing", "Machine Learning", "AI", "Research", "Innovation"],
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com/chatbot-studio"
+        website: "https://ziontechgroup.com"
       }
     },
     {
       id: 21,
-      name: "DevOpsFlow",
-      category: "Development",
-      pricing: "Subscription",
-      description: "Complete CI/CD automation and DevOps pipeline management platform",
-      price: 42,
+      name: "AR Business Suite",
+      category: "Augmented Reality",
+      pricing: "Freemium",
+      description: "Complete AR solution for business presentations, training, and customer engagement",
+      price: 45,
       pricingModel: "monthly",
-      userLimit: "Up to 30 developers",
-      features: ["CI/CD pipelines", "Docker integration", "Kubernetes support", "Monitoring", "Security scanning"],
-      benefits: ["Faster deployments", "Better reliability", "Security compliance", "Team efficiency"],
-      targetAudience: ["Development teams", "DevOps engineers", "Tech companies", "Startups"],
-      tags: ["DevOps", "CI/CD", "Automation", "Docker", "Kubernetes"],
+      userLimit: "Up to 20 users",
+      features: ["AR presentations", "Interactive training", "3D visualization", "Mobile AR apps"],
+      benefits: ["Enhanced engagement", "Better training", "Innovative marketing", "Competitive edge"],
+      targetAudience: ["Marketing agencies", "Training companies", "Real estate", "Manufacturing"],
+      tags: ["Augmented Reality", "AR", "3D Visualization", "Training", "Marketing"],
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com/devopsflow"
+        website: "https://ziontechgroup.com"
       }
     },
     {
       id: 22,
-      name: "API Gateway Pro",
-      category: "Development",
+      name: "EdgeAI Platform",
+      category: "Edge Computing",
       pricing: "Freemium",
-      description: "Enterprise-grade API management and gateway solution for microservices",
-      price: 28,
+      description: "Edge AI platform for real-time processing and decision making at the network edge",
+      price: 52,
       pricingModel: "monthly",
-      userLimit: "Up to 1000 API calls/month",
-      features: ["API gateway", "Rate limiting", "Authentication", "Analytics", "Documentation"],
-      benefits: ["Better API security", "Performance monitoring", "Developer experience", "Scalability"],
-      targetAudience: ["API developers", "Tech companies", "Startups", "Enterprise teams"],
-      tags: ["API Management", "Gateway", "Microservices", "Security", "Analytics"],
+      userLimit: "Up to 100 edge devices",
+      features: ["Real-time processing", "Edge ML models", "Device management", "Performance monitoring"],
+      benefits: ["Lower latency", "Reduced bandwidth", "Privacy protection", "Cost efficiency"],
+      targetAudience: ["IoT companies", "Manufacturing", "Smart cities", "Healthcare"],
+      tags: ["Edge Computing", "AI", "IoT", "Real-time", "Machine Learning"],
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com/api-gateway-pro"
+        website: "https://ziontechgroup.com"
       }
     },
     {
       id: 23,
-      name: "LegalAssist AI",
-      category: "Legal Tech",
+      name: "GreenTech Analytics",
+      category: "Sustainability",
       pricing: "Freemium",
-      description: "AI-powered legal document generation and contract management for small businesses",
-      price: 50,
+      description: "Advanced sustainability analytics and ESG reporting for modern businesses",
+      price: 40,
       pricingModel: "monthly",
-      userLimit: "Up to 8 users",
-      features: ["Document templates", "AI generation", "Contract management", "Legal compliance"],
-      benefits: ["Cost reduction", "Legal protection", "Time savings", "Compliance"],
-      targetAudience: ["Small businesses", "Startups", "Freelancers", "Legal professionals"],
-      tags: ["Legal Tech", "AI", "Document Generation", "Contract Management", "Compliance"],
+      userLimit: "Up to 30 users",
+      features: ["ESG reporting", "Carbon tracking", "Sustainability scoring", "Regulatory compliance"],
+      benefits: ["ESG compliance", "Investor attraction", "Brand reputation", "Cost savings"],
+      targetAudience: ["Public companies", "ESG investors", "Sustainability consultants", "Government"],
+      tags: ["ESG", "Sustainability", "Carbon Tracking", "Compliance", "Reporting"],
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com/legalassist-ai"
+        website: "https://ziontechgroup.com"
       }
     },
     {
       id: 24,
-      name: "EcoTrack Pro",
-      category: "Sustainability",
+      name: "NeuroTech Interface",
+      category: "Neural Interfaces",
       pricing: "Freemium",
-      description: "Sustainability tracking and environmental impact management for businesses",
-      price: 38,
+      description: "Brain-computer interface platform for accessibility and human-computer interaction",
+      price: 65,
       pricingModel: "monthly",
-      userLimit: "Up to 25 users",
-      features: ["Carbon footprint tracking", "Sustainability reporting", "Goal setting", "Progress monitoring"],
-      benefits: ["Environmental impact", "Regulatory compliance", "Brand reputation", "Cost savings"],
-      targetAudience: ["Manufacturing", "Retail", "Service businesses", "Sustainability-focused companies"],
-      tags: ["Sustainability", "Environmental Impact", "Carbon Tracking", "Reporting", "Compliance"],
+      userLimit: "Up to 10 users",
+      features: ["EEG monitoring", "Brain-computer control", "Accessibility tools", "Research platform"],
+      benefits: ["Accessibility improvement", "Innovation leadership", "Research advancement", "Human enhancement"],
+      targetAudience: ["Healthcare providers", "Research institutions", "Accessibility companies", "Gaming"],
+      tags: ["Neural Interfaces", "BCI", "Accessibility", "Healthcare", "Research"],
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com/ecotrack-pro"
+        website: "https://ziontechgroup.com"
       }
     },
     {
       id: 25,
-      name: "HealthTrack Plus",
-      category: "Healthcare",
+      name: "BioTech Simulator",
+      category: "Biotechnology",
       pricing: "Freemium",
-      description: "Health monitoring and wellness tracking platform for individuals and small clinics",
-      price: 22,
+      description: "AI-powered biotechnology simulation and drug discovery platform",
+      price: 80,
       pricingModel: "monthly",
-      userLimit: "Up to 50 patients",
-      features: ["Health monitoring", "Wellness tracking", "Patient portal", "Health reports"],
-      benefits: ["Better health outcomes", "Patient engagement", "Data insights", "Preventive care"],
-      targetAudience: ["Small clinics", "Wellness centers", "Personal trainers", "Individuals"],
-      tags: ["Healthcare", "Wellness", "Health Monitoring", "Patient Portal", "Preventive Care"],
+      userLimit: "Up to 15 researchers",
+      features: ["Molecular modeling", "Drug discovery", "Clinical trial simulation", "Bioinformatics tools"],
+      benefits: ["Faster discovery", "Cost reduction", "Risk mitigation", "Innovation acceleration"],
+      targetAudience: ["Pharmaceutical companies", "Research institutions", "Biotech startups", "Universities"],
+      tags: ["Biotechnology", "Drug Discovery", "AI", "Molecular Modeling", "Bioinformatics"],
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com/healthtrack-plus"
+        website: "https://ziontechgroup.com"
       }
     },
     {
       id: 26,
-      name: "QuantumFlow AI",
-      category: "AI & Analytics",
-      pricing: "Premium",
-      description: "Next-generation quantum-inspired AI algorithms for complex problem solving",
-      price: 75,
+      name: "SpaceTech Analytics",
+      category: "Space Technology",
+      pricing: "Freemium",
+      description: "Satellite data analytics and space technology solutions for Earth observation",
+      price: 70,
       pricingModel: "monthly",
-      userLimit: "Up to 15 users",
-      features: ["Quantum algorithms", "Complex optimization", "Machine learning", "Real-time processing", "Advanced analytics"],
-      benefits: ["Competitive advantage", "Complex problem solving", "Faster insights", "Innovation leadership"],
-      targetAudience: ["Research institutions", "Tech companies", "Financial services", "Pharmaceutical companies"],
-      tags: ["Quantum AI", "Machine Learning", "Optimization", "Research", "Innovation"],
+      userLimit: "Up to 20 users",
+      features: ["Satellite imagery", "Climate monitoring", "Agricultural insights", "Infrastructure monitoring"],
+      benefits: ["Environmental insights", "Agricultural optimization", "Infrastructure planning", "Climate action"],
+      targetAudience: ["Agriculture companies", "Environmental agencies", "Infrastructure planners", "Research"],
+      tags: ["Space Technology", "Satellite Data", "Climate Monitoring", "Agriculture", "Infrastructure"],
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com/quantumflow-ai"
+        website: "https://ziontechgroup.com"
       }
     },
     {
       id: 27,
-      name: "BlockChain Forge",
-      category: "Blockchain",
-      pricing: "Enterprise",
-      description: "Enterprise blockchain development and smart contract platform for businesses",
-      price: 120,
+      name: "CyberDefense AI",
+      category: "Cybersecurity",
+      pricing: "Freemium",
+      description: "AI-powered cybersecurity platform with threat detection and automated response",
+      price: 58,
       pricingModel: "monthly",
-      userLimit: "Up to 50 users",
-      features: ["Smart contracts", "DApp development", "Blockchain infrastructure", "Security auditing", "Compliance tools"],
-      benefits: ["Transparency", "Security", "Automation", "Cost reduction", "Trust building"],
-      targetAudience: ["Financial services", "Supply chain", "Healthcare", "Government", "Real estate"],
-      tags: ["Blockchain", "Smart Contracts", "DApps", "Security", "Compliance"],
+      userLimit: "Up to 25 users",
+      features: ["Threat detection", "Automated response", "Vulnerability scanning", "Incident management"],
+      benefits: ["Enhanced security", "Faster response", "Reduced risk", "Cost efficiency"],
+      targetAudience: ["Financial institutions", "Healthcare", "Government", "E-commerce"],
+      tags: ["Cybersecurity", "AI", "Threat Detection", "Automation", "Incident Response"],
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com/blockchain-forge"
+        website: "https://ziontechgroup.com"
       }
     },
     {
       id: 28,
-      name: "IoT Nexus Hub",
-      category: "IoT",
-      pricing: "Premium",
-      description: "Comprehensive IoT platform for device management and data analytics",
-      price: 65,
+      name: "FinTech Compliance",
+      category: "Financial Technology",
+      pricing: "Freemium",
+      description: "Regulatory compliance and risk management platform for financial services",
+      price: 45,
       pricingModel: "monthly",
-      userLimit: "Up to 1000 devices",
-      features: ["Device management", "Real-time monitoring", "Data analytics", "Automation rules", "Security protocols"],
-      benefits: ["Operational efficiency", "Predictive maintenance", "Cost savings", "Data insights"],
-      targetAudience: ["Manufacturing", "Smart cities", "Healthcare", "Agriculture", "Energy"],
-      tags: ["IoT", "Device Management", "Real-time Monitoring", "Automation", "Analytics"],
+      userLimit: "Up to 15 users",
+      features: ["Regulatory monitoring", "Risk assessment", "Compliance reporting", "Audit trails"],
+      benefits: ["Regulatory compliance", "Risk mitigation", "Audit readiness", "Cost reduction"],
+      targetAudience: ["Banks", "Credit unions", "Fintech startups", "Investment firms"],
+      tags: ["FinTech", "Compliance", "Risk Management", "Regulations", "Auditing"],
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com/iot-nexus-hub"
+        website: "https://ziontechgroup.com"
       }
     },
     {
       id: 29,
-      name: "CyberShield Pro",
-      category: "Cybersecurity",
-      pricing: "Enterprise",
-      description: "Advanced cybersecurity platform with AI-powered threat detection and response",
-      price: 95,
+      name: "SmartCity Platform",
+      category: "Smart Cities",
+      pricing: "Freemium",
+      description: "Comprehensive smart city management platform for urban infrastructure and services",
+      price: 60,
       pricingModel: "monthly",
-      userLimit: "Up to 100 users",
-      features: ["Threat detection", "AI analysis", "Incident response", "Compliance reporting", "24/7 monitoring"],
-      benefits: ["Enhanced security", "Threat prevention", "Compliance", "Peace of mind", "Cost reduction"],
-      targetAudience: ["Financial services", "Healthcare", "Government", "E-commerce", "Tech companies"],
-      tags: ["Cybersecurity", "AI", "Threat Detection", "Compliance", "Monitoring"],
+      userLimit: "Up to 50 city departments",
+      features: ["Traffic management", "Energy optimization", "Waste management", "Public safety"],
+      benefits: ["Efficiency improvement", "Cost reduction", "Quality of life", "Sustainability"],
+      targetAudience: ["City governments", "Municipalities", "Urban planners", "Infrastructure companies"],
+      tags: ["Smart Cities", "IoT", "Urban Planning", "Infrastructure", "Sustainability"],
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com/cybershield-pro"
+        website: "https://ziontechgroup.com"
       }
     },
     {
       id: 30,
-      name: "DataFusion Studio",
-      category: "Data & Analytics",
-      pricing: "Premium",
-      description: "Advanced data integration and analytics platform for enterprise insights",
-      price: 85,
+      name: "Metaverse Business",
+      category: "Metaverse",
+      pricing: "Freemium",
+      description: "Complete metaverse business platform for virtual commerce and experiences",
+      price: 55,
       pricingModel: "monthly",
-      userLimit: "Up to 30 users",
-      features: ["Data integration", "ETL pipelines", "Advanced analytics", "Machine learning", "Real-time dashboards"],
-      benefits: ["Better insights", "Data-driven decisions", "Operational efficiency", "Competitive advantage"],
-      targetAudience: ["Data scientists", "Business analysts", "Executives", "IT teams"],
-      tags: ["Data Integration", "Analytics", "Machine Learning", "ETL", "Business Intelligence"],
+      userLimit: "Up to 1000 virtual visitors",
+      features: ["Virtual storefronts", "3D product showcases", "Virtual events", "Digital asset management"],
+      benefits: ["New revenue streams", "Global reach", "Innovation leadership", "Customer engagement"],
+      targetAudience: ["Retail businesses", "Event organizers", "Real estate", "Entertainment"],
+      tags: ["Metaverse", "Virtual Reality", "Digital Commerce", "3D", "Virtual Events"],
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com/datafusion-studio"
+        website: "https://ziontechgroup.com"
       }
     }
   ];
 
-  const categories = ['all', 'Productivity', 'Finance', 'Marketing', 'CRM', 'Analytics', 'Scheduling', 'Content', 'Security', 'Media', 'Education', 'Sustainability', 'Legal', 'Healthcare', 'Events', 'Inventory', 'Development', 'AI & Automation', 'AI & Analytics', 'Human Resources', 'Data Protection', 'Legal Tech', 'Blockchain', 'IoT', 'Cybersecurity', 'Data & Analytics'];
-  const pricingModels = ['all', 'Freemium', 'Premium', 'Enterprise', 'Subscription', 'One-time'];
+  const categories = ['all', 'Productivity', 'Finance', 'Marketing', 'CRM', 'Analytics', 'Scheduling', 'Content', 'Security', 'Media', 'Education', 'Sustainability', 'Legal', 'Healthcare', 'Events', 'Inventory', 'Human Resources', 'Blockchain', 'IoT', 'E-commerce', 'Quantum Computing', 'Augmented Reality', 'Edge Computing', 'Neural Interfaces', 'Biotechnology', 'Space Technology', 'Cybersecurity', 'Financial Technology', 'Smart Cities', 'Metaverse'];
+  const pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];
 
   const filteredServices = microSaasServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -619,31 +620,15 @@ const MicroSaasServices: React.FC = () => {
       case 'Security': return <Shield className="w-6 h-6" />;
       case 'Media': return <Video className="w-6 h-6" />;
       case 'Education': return <BookOpen className="w-6 h-6" />;
-      case 'Development': return <Cpu className="w-6 h-6" />;
-      case 'AI & Automation': return <Bot className="w-6 h-6" />;
-      case 'AI & Analytics': return <Brain className="w-6 h-6" />;
-      case 'Human Resources': return <Users className="w-6 h-6" />;
-      case 'Data Protection': return <ShieldIcon className="w-6 h-6" />;
-      case 'Legal Tech': return <FileText className="w-6 h-6" />;
-      case 'Sustainability': return <Leaf className="w-6 h-6" />;
-      case 'Healthcare': return <Heart className="w-6 h-6" />;
-      case 'Events': return <Calendar className="w-6 h-6" />;
-      case 'Inventory': return <Package className="w-6 h-6" />;
-      case 'Blockchain': return <Globe className="w-6 h-6" />;
-      case 'IoT': return <Wifi className="w-6 h-6" />;
-      case 'Cybersecurity': return <Shield className="w-6 h-6" />;
-      case 'Data & Analytics': return <Database className="w-6 h-6" />;
-      default: return <ZapIcon className="w-6 h-6" />;
+      default: return <ZapIcon2 className="w-6 h-6" />;
     }
   };
 
   const getPricingColor = (pricing: string) => {
     switch (pricing) {
       case 'Freemium': return 'text-green-400';
-      case 'Premium': return 'text-yellow-400';
-      case 'Enterprise': return 'text-purple-400';
       case 'Subscription': return 'text-blue-400';
-      case 'One-time': return 'text-orange-400';
+      case 'One-time': return 'text-purple-400';
       default: return 'text-gray-400';
     }
   };
