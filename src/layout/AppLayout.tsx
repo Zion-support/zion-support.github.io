@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import React from 'react';
 import { AppHeader } from './AppHeader';
 import { Footer } from '@/components/Footer';
+=======
+
+import { Outlet } from "react-router-dom";
+import Footer from "@/components/Footer";
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 
 interface AppLayoutProps {
   children: React.ReactNode;

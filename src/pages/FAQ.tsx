@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, Search, HelpCircle, MessageCircle, Phone, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -16,6 +17,8 @@ interface FAQItem {
 }
 =======
 import React from 'react';
+=======
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 import { FaqSection } from "@/components/FaqSection";
 =======
 import { Header } from "@/components/header/Header";

@@ -6,8 +6,11 @@ import { LoadingSpinner } from "@/components/ui/loading-spinner";
 =======
 
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { Loader2, User, Sparkles } from 'lucide-react';
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
+=======
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 
 export function ProfileLoadingState() {
   return (

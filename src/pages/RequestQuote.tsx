@@ -3,12 +3,16 @@
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
 import QuoteRequestForm from "@/components/QuoteRequestForm";
+=======
+import { QuoteRequestForm } from "@/components/QuoteRequestForm";
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 import { SEO } from "@/components/SEO";
 <<<<<<< HEAD
 import { MainNavigation } from "@/layout/MainNavigation";

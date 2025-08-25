@@ -1,5 +1,9 @@
+<<<<<<< HEAD:automation/backups/file-sync/2025-08-25T15-27-30-943Z/src/components.disabled/layout/Layout.tsx.disabled
 import React, { useState, useEffect } from 'react';
 import { Header } from '../components/header/Header';
+=======
+import { Header } from '../components/Header';
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d:src/layout/Layout.tsx
 import { Footer } from '../components/Footer';
 import { Helmet } from 'react-helmet-async';
 

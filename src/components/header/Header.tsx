@@ -1,12 +1,15 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Search, ChevronDown, Globe, Phone, Mail } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 =======
 import React, { useState } from 'react';
+=======
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Logo } from './Logo';
 import { UserMenu } from './UserMenu';
@@ -15,8 +18,12 @@ import { useAuth } from '@/hooks/useAuth';
 import { useWhitelabel } from '@/context/WhitelabelContext';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
+<<<<<<< HEAD
 import { Menu, X, ChevronDown } from 'lucide-react';
 >>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
+=======
+import { Menu, X } from 'lucide-react';
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 
 export interface HeaderProps {
   hideLogin?: boolean;

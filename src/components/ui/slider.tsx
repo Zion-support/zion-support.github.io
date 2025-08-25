@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 interface SliderProps {
   value: number[];
   onValueChange: (value: number[]) => void;

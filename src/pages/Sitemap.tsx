@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
@@ -89,6 +90,146 @@ import {
 } from 'lucide-react';
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-74a8
+=======
+import { SEO } from '../components/SEO';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../components/ui/card.js';
+import { Badge } from '../components/ui/badge.js';
+import { Phone, Mail } from 'lucide-react';
+
+interface SitemapSection {
+  id: string;
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  links: SitemapLink[];
+}
+
+interface SitemapLink {
+  title: string;
+  href: string;
+  description?: string;
+  isExternal?: boolean;
+  badge?: string;
+}
+
+const sitemapSections: SitemapSection[] = [
+  {
+    id: 'main',
+    title: 'Main Pages',
+    description: 'Core website pages and navigation',
+    icon: <Home className="w-6 h-6" />,
+    links: [
+      {
+        title: 'Home',
+        href: '/',
+        description: 'Welcome to Zion Tech Group'
+      },
+      {
+        title: 'About Us',
+        href: '/about',
+        description: 'Learn about our company and mission'
+      },
+      {
+        title: 'Contact',
+        href: '/contact',
+        description: 'Get in touch with our team'
+      }
+    ]
+  },
+  {
+    id: 'services',
+    title: 'Services & Solutions',
+    description: 'Our comprehensive range of technology services',
+    icon: <Zap className="w-6 h-6" />,
+    links: [
+      {
+        title: 'Comprehensive Services',
+        href: '/comprehensive-services',
+        description: 'Full-service technology solutions',
+        badge: 'Popular'
+      },
+      {
+        title: 'AI Services',
+        href: '/ai-services',
+        description: 'Artificial Intelligence solutions',
+        badge: 'New'
+      },
+      {
+        title: 'Micro SAAS',
+        href: '/micro-saas',
+        description: 'Custom software solutions'
+      },
+      {
+        title: 'Enterprise Solutions',
+        href: '/enterprise-solutions',
+        description: 'Large-scale business solutions'
+      },
+      {
+        title: 'Services Pricing',
+        href: '/services-pricing',
+        description: 'Transparent pricing plans'
+      }
+    ]
+  },
+  {
+    id: 'resources',
+    title: 'Resources & Support',
+    description: 'Help, documentation, and support resources',
+    icon: <BookOpen className="w-6 h-6" />,
+    links: [
+      {
+        title: 'Help Center',
+        href: '/help',
+        description: 'Find answers and support'
+      },
+      {
+        title: 'Cookie Policy',
+        href: '/cookies',
+        description: 'Learn about our cookie usage'
+      },
+      {
+        title: 'Privacy Policy',
+        href: '/privacy',
+        description: 'Data protection and privacy'
+      },
+      {
+        title: 'Terms of Service',
+        href: '/terms',
+        description: 'Service terms and conditions'
+      }
+    ]
+  },
+  {
+    id: 'company',
+    title: 'Company Information',
+    description: 'Corporate information and resources',
+    icon: <Globe className="w-6 h-6" />,
+    links: [
+      {
+        title: 'Careers',
+        href: '/careers',
+        description: 'Join our team',
+        isExternal: true
+      },
+      {
+        title: 'News & Updates',
+        href: '/news',
+        description: 'Latest company news'
+      },
+      {
+        title: 'Partnerships',
+        href: '/partners',
+        description: 'Strategic partnerships'
+      },
+      {
+        title: 'Sitemap',
+        href: '/sitemap',
+        description: 'Site structure overview'
+      }
+    ]
+  }
+];
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 
 export default function Sitemap() {
   const sitemapStructure = [

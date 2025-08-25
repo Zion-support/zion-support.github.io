@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
+=======
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {

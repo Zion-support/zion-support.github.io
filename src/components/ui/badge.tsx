@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
@@ -94,6 +95,8 @@ export { Badge }
 >>>>>>> origin/cursor/build-and-fix-errors-e276
 =======
 import React from 'react';
+=======
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 import { cn } from '../../lib/utils';
 
 export interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {

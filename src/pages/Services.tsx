@@ -7,6 +7,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-89a0
 import React, { useState } from 'react';
@@ -1033,8 +1034,10 @@ const Services = () => {
 =======
 =======
 import React, { useState, useMemo } from 'react';
+=======
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 import { motion } from 'framer-motion';
-import { Search, Filter, Star, ExternalLink, Zap, Shield, Cloud, Brain, Globe, Lock, Cpu, Database, Network, Code, BarChart3, Users, Smartphone, Server, Key, Eye, Rocket, Target, TrendingUp, Award, Clock, CheckCircle, ArrowRight, Phone } from 'lucide-react';
+import { Search, CheckCircle, ArrowRight, Phone } from 'lucide-react';
 
 interface Service {
   id: string;

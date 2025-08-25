@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 =======
@@ -8,6 +9,8 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
 =======
+=======
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 import { cn } from '../../lib/utils';
 >>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
 

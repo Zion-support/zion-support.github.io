@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
 <<<<<<< HEAD

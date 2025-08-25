@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronRight, Home } from 'lucide-react';
+=======
+import { Link, useLocation } from 'react-router-dom';
+import { cn } from '@/lib/utils';
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 
 interface BreadcrumbItem {
   label: string;

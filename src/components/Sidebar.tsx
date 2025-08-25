@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
@@ -173,6 +174,10 @@ import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+=======
+import { Link, useLocation } from 'react-router-dom';
+import { cn } from '@/lib/utils';
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 
 interface SidebarProps {
   isOpen: boolean;

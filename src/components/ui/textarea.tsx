@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as React from "react"
+=======
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 
 <<<<<<< HEAD
 import { cn } from "@/lib/utils"

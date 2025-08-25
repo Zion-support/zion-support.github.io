@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -109,6 +110,8 @@ export function HowItWorksSection() {
   };
 =======
 import React from 'react';
+=======
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 
 export const HowItWorksSection: React.FC = () => {
   const steps = [

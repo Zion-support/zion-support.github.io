@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
 >>>>>>> origin/cursor/build-and-fix-errors-e276
@@ -32,6 +33,13 @@ export function HeroSection() {
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Building, ArrowRight, Check, Zap, Globe, Shield, Cpu, Rocket, Brain, Server, Code, ShieldCheck, Sparkles, Star, Award, TrendingUp, Users, Clock, Target, BarChart3, Bot, CpuIcon, Eye, Layers, Globe2, ZapIcon } from 'lucide-react';
+=======
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { GradientHeading } from './GradientHeading';
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 import { Button } from './ui/button';
 
 export const HeroSection: React.FC = () => {

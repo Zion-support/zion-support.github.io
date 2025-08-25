@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 <<<<<<< HEAD
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
@@ -8,8 +9,9 @@ import { Link } from 'react-router-dom';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
 =======
 import React, { useState, useEffect, ReactNode } from 'react';
+=======
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 import { motion } from 'framer-motion';
-import { AlertTriangle, RefreshCw, Home, ChevronUp } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
 

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useMemo } from 'react';
 <<<<<<< HEAD
 import { SEO } from '@/components/SEO';
@@ -9,25 +10,14 @@ import { Input } from '@/components/ui/input';
 import { Star, Clock, DollarSign, Users, ArrowRight, Search, Filter, LayoutGrid, List } from 'lucide-react';
 import { comprehensiveServices, serviceCategories, serviceSubcategories } from '@/data/comprehensiveServices';
 =======
+=======
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES } from '@/data/comprehensiveServices';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  Clock, 
-  Users, 
-  CheckCircle, 
-  TrendingUp,
-  Phone,
-  Mail,
-  Globe,
-  ArrowRight,
-  Sparkles
-} from 'lucide-react';
+import { Search, CheckCircle, Phone, Mail, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 >>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
 

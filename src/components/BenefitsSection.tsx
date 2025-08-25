@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -8,6 +9,9 @@ import React from 'react';
 import { GradientHeading } from "./GradientHeading";
 import { FeatureCard } from "./FeatureCard";
 import { Bot, Clock, Globe, TrendingDown, Zap, Shield, Users, Award } from "lucide-react";
+=======
+import { GradientHeading } from "./GradientHeading";
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 import { motion } from "framer-motion";
 <<<<<<< HEAD
 import React from "react";

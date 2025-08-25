@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Globe } from 'lucide-react';
+=======
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 
 export function LanguageSelector() {
   return (

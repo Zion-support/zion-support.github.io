@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Star, Eye, Heart, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 =======
 import React from 'react';
+=======
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 import { Link } from 'react-router-dom';
 >>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
 

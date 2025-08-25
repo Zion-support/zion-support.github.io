@@ -8,6 +8,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -218,6 +219,11 @@ import { Button } from "@/components/ui/Button";
 import { Search, BookOpen, MessageCircle, Phone, Mail, FileText, Users, Settings, Shield, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 >>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Search, Phone, Mail, ArrowRight } from 'lucide-react';
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 
 export default function HelpCenter() {
   const [searchQuery, setSearchQuery] = useState('');

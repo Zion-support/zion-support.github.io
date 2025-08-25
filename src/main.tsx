@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/build-and-fix-errors-fb38
 import React from 'react'
@@ -136,12 +137,19 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import './index.css';
 >>>>>>> origin/cursor/build-and-fix-errors-e276
+=======
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.tsx'
+import './index.css'
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
 )
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/build-and-fix-errors-fb38
 =======
@@ -163,3 +171,5 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 =======
 
 >>>>>>> origin/cursor/build-and-fix-errors-e276
+=======
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d

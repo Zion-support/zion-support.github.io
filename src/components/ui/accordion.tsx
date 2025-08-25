@@ -10,8 +10,11 @@
 >>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
 import * as React from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
+<<<<<<< HEAD
 import { ChevronDown } from "lucide-react"
 
+=======
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 import { cn } from "@/lib/utils"
 
 const Accordion = AccordionPrimitive.Root

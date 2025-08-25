@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,6 +10,10 @@ import { Shield, Settings, Eye, Database } from 'lucide-react';
 =======
 import { SEO } from '@/components/SEO';
 >>>>>>> origin/cursor/website-audit-and-enhancement-8e2b
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 
 export default function Cookies() {
   return (
