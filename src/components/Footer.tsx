@@ -38,6 +38,9 @@ export function Footer() {
       color: "from-purple-500 to-pink-500",
       links: [
         { label: "AI & Autonomous Systems", path: "/services/ai-autonomous-systems" },
+        { label: "AI Workflow Automation", path: "/services/ai-workflow-automation" },
+        { label: "AI Customer Intelligence", path: "/services/ai-customer-intelligence" },
+        { label: "AI Predictive Analytics", path: "/services/ai-predictive-analytics" },
         { label: "AI Research Assistant", path: "/ai-autonomous-research-assistant" },
         { label: "Quantum Neural Networks", path: "/quantum-neural-network-platform" },
         { label: "Autonomous Business Platform", path: "/autonomous-business-operations-platform" },
@@ -70,6 +73,17 @@ export function Footer() {
         { label: "Marketing Automation", path: "/services/ai-marketing-automation" },
         { label: "HR & Recruitment", path: "/services/ai-hr-recruitment" },
         { label: "Legal Tech", path: "/services/ai-legal-tech" }
+      ]
+    },
+    {
+      title: "Cloud & Security",
+      links: [
+        { label: "Quantum-Secure Cloud", path: "/services/quantum-secure-cloud" },
+        { label: "Cloud Infrastructure", path: "/services/cloud-infrastructure" },
+        { label: "DevOps Solutions", path: "/cloud-devops" },
+        { label: "Cybersecurity Services", path: "/services/cybersecurity" },
+        { label: "Network Security", path: "/services/network-security" },
+        { label: "Data Protection", path: "/services/data-protection" }
       ]
     },
     {

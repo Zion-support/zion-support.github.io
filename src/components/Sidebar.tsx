@@ -32,6 +32,9 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       title: 'AI & Technology Services',
       items: [
         { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
+        { name: 'AI Workflow Automation', path: '/services/ai-workflow-automation', icon: Brain },
+        { name: 'AI Customer Intelligence', path: '/services/ai-customer-intelligence', icon: Users },
+        { name: 'AI Predictive Analytics', path: '/services/ai-predictive-analytics', icon: BarChart3 },
         { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Brain },
         { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain },
         { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Rocket },
@@ -39,7 +42,15 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
         { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Target },
         { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', icon: Users },
-        { name: 'AI Legal Tech', path: '/services/ai-legal-tech', icon: Shield }
+        { name: 'AI Legal Tech', path: '/services/ai-legal-tech', icon: Shield },
+        { name: 'Quantum-Secure Cloud', path: '/services/quantum-secure-cloud', icon: Shield },
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
+        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Shield },
+        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Cpu },
+        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Network },
+        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Code },
+        { name: 'Emerging Technology', path: '/emerging-tech', icon: Rocket }
       ]
     },
     {

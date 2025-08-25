@@ -39,8 +39,14 @@ const DigitalTransformation = lazy(() => import('./pages/DigitalTransformation')
 const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAutomation'));
 
-// New innovative service pages
+// New innovative micro SAAS services
 const AIWorkflowAutomation = lazy(() => import('./pages/services/AIWorkflowAutomation'));
+const AICustomerIntelligence = lazy(() => import('./pages/services/AICustomerIntelligence'));
+const QuantumSecureCloud = lazy(() => import('./pages/services/QuantumSecureCloud'));
+const AIPredictiveAnalytics = lazy(() => import('./pages/services/AIPredictiveAnalytics'));
+const InnovativeServicesOverview = lazy(() => import('./pages/services/InnovativeServicesOverview'));
+
+// Additional innovative service pages from main
 const BlockchainEnterpriseSolutions = lazy(() => import('./pages/services/BlockchainEnterpriseSolutions'));
 const IoTDataAnalytics = lazy(() => import('./pages/services/IoTDataAnalytics'));
 
@@ -76,6 +82,7 @@ const MicroSAASSolutions = lazy(() => import('./pages/services/MicroSAASSolution
 const IndustrySolutions = lazy(() => import('./pages/services/IndustrySolutions'));
 const InnovativeNewServices = lazy(() => import('./pages/services/InnovativeNewServices'));
 const SpecializedITInfrastructure = lazy(() => import('./pages/services/SpecializedITInfrastructure'));
+const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const InnovativeMicroSaasServices = lazy(() => import('./pages/InnovativeMicroSaasServices'));
 const ComprehensiveInnovativeServices = lazy(() => import('./pages/ComprehensiveInnovativeServices'));
 const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveServicesOverview'));
@@ -185,6 +192,13 @@ const App: React.FC = () => {
                       <Route path="/enterprise-solutions" element={<EnterpriseSolutionsPage />} />
                       <Route path="/digital-transformation" element={<DigitalTransformation />} />
                       
+                      {/* New Innovative Micro SAAS Services */}
+                      <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
+                      <Route path="/services/ai-customer-intelligence" element={<AICustomerIntelligence />} />
+                      <Route path="/services/quantum-secure-cloud" element={<QuantumSecureCloud />} />
+                      <Route path="/services/ai-predictive-analytics" element={<AIPredictiveAnalytics />} />
+                      <Route path="/services/innovative-overview" element={<InnovativeServicesOverview />} />
+                      
                       {/* Missing pages from analysis */}
                       <Route path="/quantum-neural-network-platform" element={<QuantumNeuralNetworkPlatform />} />
                       <Route path="/autonomous-business-operations-platform" element={<AutonomousBusinessOperationsPlatform />} />
@@ -219,6 +233,7 @@ const App: React.FC = () => {
                       <Route path="/services/industry-solutions" element={<IndustrySolutions />} />
                       <Route path="/services/innovative-new-services" element={<InnovativeNewServices />} />
                       <Route path="/services/specialized-it-infrastructure" element={<SpecializedITInfrastructure />} />
+                      <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
                       <Route path="/innovative-micro-saas-services" element={<InnovativeMicroSaasServices />} />
                       <Route path="/comprehensive-innovative-services" element={<ComprehensiveInnovativeServices />} />
                       <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview />} />
