@@ -35,6 +35,13 @@ export default function Services() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
+  const allServices = [
+    ...COMPREHENSIVE_SERVICES,
+    ...INNOVATIVE_MICRO_SAAS_SERVICES,
+    ...ADVANCED_ENTERPRISE_SOLUTIONS,
+    ...SPECIALIZED_IT_SERVICES
+  ];
+
   const serviceCategories = [
     {
       id: 'ai-ml',
