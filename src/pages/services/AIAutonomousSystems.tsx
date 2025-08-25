@@ -208,6 +208,7 @@ const AIAutonomousSystems = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
 <<<<<<< HEAD
       <Helmet>
@@ -216,6 +217,15 @@ const AIAutonomousSystems = () => {
         <meta name="keywords" content="AI systems, autonomous systems, intelligent automation, AI decision making, system automation, AI operations" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-autonomous-systems" />
       </Helmet>
+=======
+    <div className="min-h-screen bg-background">
+      <SEO 
+        title="AI & Autonomous Systems - Zion Tech Group" 
+        description="Revolutionary AI systems that operate independently and transform business operations across industries."
+        tags={["AI autonomous systems", "artificial intelligence", "machine learning", "business automation"]}
+        url="https://ziontechgroup.com/services/ai-autonomous-systems"
+      />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">

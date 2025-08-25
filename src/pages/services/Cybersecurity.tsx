@@ -226,6 +226,7 @@ import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Zap, Users, Globe, Target, CheckCircle } from 'lucide-react';
 
 export default function Cybersecurity() {
+<<<<<<< HEAD
   const services = [
     {
       icon: Shield,
@@ -258,6 +259,16 @@ export default function Cybersecurity() {
       description: "Regulatory compliance support for SOC2, ISO 27001, and other frameworks."
     }
   ];
+=======
+  return (
+    <div className="min-h-screen bg-background">
+      <SEO 
+        title="Cybersecurity - Zion Tech Group" 
+        description="Advanced security and protection solutions for digital assets with comprehensive threat detection and compliance automation."
+        tags={["cybersecurity", "zero trust", "threat intelligence", "compliance automation", "SOC2", "penetration testing"]}
+        url="https://ziontechgroup.com/services/cybersecurity"
+      />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
 
   const threats = [
     "Ransomware & Malware Attacks",

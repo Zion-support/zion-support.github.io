@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 
 export default function Mission() {
+<<<<<<< HEAD
   const missionPillars = [
     {
       icon: Brain,
@@ -65,6 +66,16 @@ export default function Mission() {
       ]
     }
   ];
+=======
+  return (
+    <div className="min-h-screen bg-background">
+      <SEO 
+        title="Our Mission - Zion Tech Group" 
+        description="Discover Zion Tech Group's mission to revolutionize technology and create positive global impact through innovation."
+        tags={["mission", "vision", "values", "innovation", "technology", "global impact"]}
+        url="https://ziontechgroup.com/mission"
+      />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
 
   const strategicGoals = [
     {

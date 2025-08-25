@@ -169,7 +169,18 @@ const ITInfrastructure = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-green-900 text-white">
+=======
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
+      <SEO 
+        title="IT Infrastructure - Zion Tech Group" 
+        description="Comprehensive IT infrastructure solutions including cloud management, network architecture, data centers, and enterprise storage."
+        tags={["IT infrastructure", "cloud management", "network architecture", "data centers", "enterprise storage", "virtualization"]}
+        url="https://ziontechgroup.com/services/it-infrastructure"
+      />
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
       {/* Hero Section */}
 <<<<<<< HEAD
       <section className="pt-20 pb-16 px-4">

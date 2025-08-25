@@ -257,7 +257,18 @@ export default function QuantumTechnology() {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-purple-900 text-white">
+=======
+    <div className="min-h-screen bg-background">
+      <SEO 
+        title="Quantum Technology - Zion Tech Group" 
+        description="Next-generation quantum computing solutions for unprecedented performance and innovation across industries."
+        tags={["quantum computing", "quantum technology", "quantum edge computing", "neuromorphic computing", "holographic data centers"]}
+        url="https://ziontechgroup.com/services/quantum-technology"
+      />
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">

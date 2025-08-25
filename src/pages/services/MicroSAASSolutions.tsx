@@ -980,6 +980,7 @@ const MicroSAASSolutions = () => {
       <SEO 
         title="Micro SAAS Solutions - Zion Tech Group" 
 <<<<<<< HEAD
+<<<<<<< HEAD
         description="Custom software-as-a-service solutions designed for rapid deployment, scalability, and business growth across industries. Starting at $129/month."
         keywords="micro SAAS, custom software, subscription management, multi-tenant, API development, business software, AI solutions, cloud software"
 =======
@@ -990,6 +991,12 @@ const MicroSAASSolutions = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
         <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(138,43,226,0.1),transparent_50%)]"></div>
       </div>
+=======
+        description="Custom software-as-a-service solutions designed for rapid deployment, scalability, and business growth across industries."
+        tags={["micro SAAS", "custom software", "subscription management", "multi-tenant", "API development", "business software"]}
+        url="https://ziontechgroup.com/services/micro-saas-solutions"
+      />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
 
       <SEO 
         title="Micro SAAS Solutions - Zion Tech Group" 

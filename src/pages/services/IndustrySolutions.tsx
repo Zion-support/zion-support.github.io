@@ -124,7 +124,18 @@ const IndustrySolutions = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-indigo-900 text-white">
+=======
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
+      <SEO 
+        title="Industry Solutions - Zion Tech Group" 
+        description="Tailored technology solutions for healthcare, finance, manufacturing, retail, and government sectors with industry-specific compliance and expertise."
+        tags={["industry solutions", "healthcare technology", "financial services", "manufacturing 4.0", "retail solutions", "government technology"]}
+        url="https://ziontechgroup.com/services/industry-solutions"
+      />
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
