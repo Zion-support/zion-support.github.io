@@ -58,6 +58,9 @@ const AIWorkflowAutomation = lazy(() => import('./pages/services/AIWorkflowAutom
 const BlockchainEnterpriseSolutions = lazy(() => import('./pages/services/BlockchainEnterpriseSolutions'));
 const IoTDataAnalytics = lazy(() => import('./pages/services/IoTDataAnalytics'));
 
+// Advanced Innovative Services 2025
+const AdvancedInnovativeServices2025 = lazy(() => import('./pages/AdvancedInnovativeServices2025'));
+
 // Missing pages from analysis
 const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/QuantumNeuralNetworkPlatform'));
 const AutonomousBusinessOperationsPlatform = lazy(() => import('./pages/AutonomousBusinessOperationsPlatform'));
@@ -265,6 +268,7 @@ const App: React.FC = () => {
                       <Route path="/ai-workflow-automation" element={<AIWorkflowAutomation />} />
                       <Route path="/blockchain-enterprise-solutions" element={<BlockchainEnterpriseSolutions />} />
                       <Route path="/iot-data-analytics" element={<IoTDataAnalytics />} />
+                      <Route path="/advanced-innovative-services-2025" element={<AdvancedInnovativeServices2025 />} />
                       
                       {/* Additional innovative service routes */}
                       <Route path="/ai-business-intelligence" element={<AIBusinessIntelligence />} />
@@ -352,99 +356,101 @@ const App: React.FC = () => {
                 <SonnerToaster />
               </div>
             </PerformanceOptimizer>
-                
-                {/* Enhanced Accessibility Controls */}
-                <EnhancedAccessibility 
+            
+            {/* Enhanced Accessibility Controls */}
+            <EnhancedAccessibility 
                   position="bottom-right" 
                   showOnLoad={false}
                   enableKeyboardShortcuts={true}
                   enableVoiceCommands={import.meta.env.DEV}
                 />
                 
-                {/* Website Improvement Tools */}
-                <ContentQualityEnhancer />
-                <BrokenLinkFixer />
-                <WebsiteImprovementDashboard />
+            {/* Website Improvement Tools */}
+            <ContentQualityEnhancer />
+            <BrokenLinkFixer />
+            <WebsiteImprovementDashboard />
+            
+            {/* AI Chatbot - Always Available */}
+            <AIChatbot />
+            
+            {/* Scroll to Top Button */}
+            <ScrollToTop />
                 
-                {/* AI Chatbot - Always Available */}
-                <AIChatbot />
-                
-                {/* Collaborative Text Editor - Development Mode */}
-                {import.meta.env.DEV && (
-                  <div className="fixed bottom-24 left-6 z-40 w-96">
-                    <CollaborativeTextEditor
-                      roomId="dev-editor"
-                      userId="dev-user"
-                      userName="Developer"
-                      initialContent="Welcome to the collaborative text editor! Start typing to see AI suggestions and real-time collaboration features."
-                      enableAI={true}
-                      enableCollaboration={true}
-                      enableVersioning={true}
-                    />
-                  </div>
-                )}
-                
-                {/* AI Code Generator - Development Mode */}
-                {import.meta.env.DEV && (
-                  <div className="fixed bottom-24 right-6 z-40 w-96">
-                    <AICodeGenerator />
-                  </div>
-                )}
-                
-                {/* Development Dashboards */}
-                {import.meta.env.DEV && (
-                  <>
-                    {/* Performance Dashboard */}
-                    <div className="fixed top-4 left-4 z-40">
-                      <PerformanceDashboard />
-                    </div>
-                    
-                    {/* Analytics Dashboard */}
-                    <div className="fixed top-4 right-4 z-40">
-                      <AnalyticsDashboard />
-                    </div>
-                    
-                    {/* Enterprise Dashboard */}
-                    <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-40">
-                      <EnterpriseDashboard />
-                    </div>
-                    
-                    {/* Security & Compliance Dashboard */}
-                    <div className="fixed top-4 right-1/2 transform translate-x-1/2 z-40">
-                      <SecurityComplianceDashboard />
-                    </div>
-                    
-                    {/* Machine Learning Dashboard */}
-                    <div className="fixed top-4 right-4 z-40">
-                      <MachineLearningDashboard />
-                    </div>
-                  </>
-                )}
-                
-                {/* Enhanced Performance Monitor - Always Available */}
-                <PerformanceMonitor />
-                
-                {/* Link Health Monitor - Development Mode */}
-                {import.meta.env.DEV && (
-                  <LinkHealthMonitor
-                    links={[
-                      'https://ziontechgroup.com',
-                      'https://www.linkedin.com/company/ziontechgroup',
-                      'https://twitter.com/ziontechgroup',
-                      'https://github.com/ziontechgroup',
-                      'https://www.youtube.com/@ziontechgroup'
-                    ]}
-                    autoCheck={true}
-                    checkInterval={600000} // 10 minutes
-                    timeout={5000} // 5 seconds
-                  />
-                )}
+            {/* Collaborative Text Editor - Development Mode */}
+            {import.meta.env.DEV && (
+              <div className="fixed bottom-24 left-6 z-40 w-96">
+                <CollaborativeTextEditor
+                  roomId="dev-editor"
+                  userId="dev-user"
+                  userName="Developer"
+                  initialContent="Welcome to the collaborative text editor! Start typing to see AI suggestions and real-time collaboration features."
+                  enableAI={true}
+                  enableCollaboration={true}
+                  enableVersioning={true}
+                />
               </div>
-            </Router>
-          </WhitelabelProvider>
-        </ThemeProvider>
-      </EnhancedErrorBoundary>
-    );
-  };
+            )}
+            
+            {/* AI Code Generator - Development Mode */}
+            {import.meta.env.DEV && (
+              <div className="fixed bottom-24 right-6 z-40 w-96">
+                <AICodeGenerator />
+              </div>
+            )}
+            
+            {/* Development Dashboards */}
+            {import.meta.env.DEV && (
+              <>
+                {/* Performance Dashboard */}
+                <div className="fixed top-4 left-4 z-40">
+                  <PerformanceDashboard />
+                </div>
+                
+                {/* Analytics Dashboard */}
+                <div className="fixed top-4 right-4 z-40">
+                  <AnalyticsDashboard />
+                </div>
+                
+                {/* Enterprise Dashboard */}
+                <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-40">
+                  <EnterpriseDashboard />
+                </div>
+                
+                {/* Security & Compliance Dashboard */}
+                <div className="fixed top-4 right-1/2 transform translate-x-1/2 z-40">
+                  <SecurityComplianceDashboard />
+                </div>
+                
+                {/* Machine Learning Dashboard */}
+                <div className="fixed top-4 right-4 z-40">
+                  <MachineLearningDashboard />
+                </div>
+              </>
+            )}
+            
+            {/* Enhanced Performance Monitor - Always Available */}
+            <PerformanceMonitor />
+            
+            {/* Link Health Monitor - Development Mode */}
+            {import.meta.env.DEV && (
+              <LinkHealthMonitor
+                links={[
+                  'https://ziontechgroup.com',
+                  'https://www.linkedin.com/company/ziontechgroup',
+                  'https://twitter.com/ziontechgroup',
+                  'https://github.com/ziontechgroup',
+                  'https://www.youtube.com/@ziontechgroup'
+                ]}
+                autoCheck={true}
+                checkInterval={600000} // 10 minutes
+                timeout={5000} // 5 seconds
+              />
+            )}
+          </div>
+        </Router>
+      </WhitelabelProvider>
+    </ThemeProvider>
+  </EnhancedErrorBoundary>
+);
 
 export default App;
