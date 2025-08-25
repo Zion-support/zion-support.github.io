@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
@@ -19,6 +19,7 @@ import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
 import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
+import { SidebarProvider } from './context/SidebarContext';
 
 // Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
@@ -99,8 +100,8 @@ const App = () => {
     <EnhancedErrorBoundary>
       <ThemeProvider>
         <WhitelabelProvider>
-          <Router>
-            <PerformanceOptimizer>
+          <SidebarProvider>
+            <Router>
               <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
                 <Header />
                 <Sidebar />
@@ -246,9 +247,16 @@ const App = () => {
                     timeout={5000} // 5 seconds
                   />
                 )}
+                
+                {/* Performance Optimizer - Always Available */}
+                <PerformanceOptimizer 
+                  showMetrics={true}
+                  onOptimize={(metrics) => console.log('Performance metrics:', metrics)}
+                  autoOptimize={true}
+                />
               </div>
-            </PerformanceOptimizer>
           </Router>
+        </SidebarProvider>
         </WhitelabelProvider>
       </ThemeProvider>
     </EnhancedErrorBoundary>

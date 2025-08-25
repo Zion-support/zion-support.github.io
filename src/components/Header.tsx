@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import Sidebar from './Sidebar';
+import { useSidebar } from '../context/SidebarContext';
 import { 
   Menu, 
   X, 
@@ -24,7 +24,7 @@ import {
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const { isSidebarOpen, toggleSidebar } = useSidebar();
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
@@ -352,6 +352,15 @@ export function Header() {
               View Pricing
             </Link>
           </div>
+
+          {/* Sidebar Toggle Button */}
+          <button
+            onClick={toggleSidebar}
+            className="lg:hidden p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300 mr-2"
+            aria-label="Toggle sidebar"
+          >
+            <Menu className="w-6 h-6" />
+          </button>
 
           {/* Mobile Menu Button */}
           <button

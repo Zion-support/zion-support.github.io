@@ -31,7 +31,6 @@ import {
   MapPin
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
-import { SEOConfigs } from '../components/SEOHead';
 
 // Lazy load components for better performance
 const LazyServicesSection = React.lazy(() => import('../components/home/ServicesSection'));
@@ -178,7 +177,14 @@ const Home: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
-      <SEOHead {...SEOConfigs.home} />
+      <SEOHead 
+        config={{
+          title: "AI-Powered Innovation & Enterprise Solutions",
+          description: "Transform your business with cutting-edge artificial intelligence solutions, comprehensive IT services, and digital transformation expertise.",
+          keywords: "AI solutions, artificial intelligence, enterprise IT, cybersecurity, cloud computing, digital transformation",
+          type: "website"
+        }}
+      />
       
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
