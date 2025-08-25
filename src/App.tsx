@@ -166,25 +166,18 @@ const App: React.FC = () => {
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
-            <PerformanceOptimizer
-              enableMonitoring={true}
-              enableOptimizations={true}
-              showMetrics={import.meta.env.DEV}
-            >
-              <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-                {/* Enhanced SEO */}
-                <EnhancedSEO 
-                  seoData={{
-                    title: "Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services",
-                    description: "Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology.",
-                    keywords: ["AI solutions", "quantum computing", "cybersecurity", "digital transformation", "enterprise technology", "machine learning", "cloud services", "IT infrastructure"],
-                    canonicalUrl: "https://ziontechgroup.com",
-                    ogImage: "https://ziontechgroup.com/og-image.jpg",
-                    ogType: "website",
-                    twitterCard: "summary_large_image"
-                  }}
-                  pageType="home"
-                />
+            <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+              {/* Enhanced SEO */}
+              <EnhancedSEO 
+                title="Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services"
+                description="Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology."
+                keywords="AI solutions, quantum computing, cybersecurity, digital transformation, enterprise technology, machine learning, cloud services, IT infrastructure"
+                url="https://ziontechgroup.com"
+                image="/images/zion-tech-group-og.jpg"
+                type="website"
+                ogType="website"
+                twitterCard="summary_large_image"
+              />
                 
                 <Header />
                 <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
@@ -346,8 +339,6 @@ const App: React.FC = () => {
                 
                 <Footer />
                 <SonnerToaster />
-              </div>
-            </PerformanceOptimizer>
                 
                 {/* Enhanced Accessibility Controls */}
                 <EnhancedAccessibility 
@@ -420,7 +411,7 @@ const App: React.FC = () => {
                   </>
                 )}
               </div>
-            </Router>
+          </Router>
         </WhitelabelProvider>
       </ThemeProvider>
     </EnhancedErrorBoundary>
