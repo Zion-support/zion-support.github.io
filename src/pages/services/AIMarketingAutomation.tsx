@@ -1,303 +1,419 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { SEO } from '../../components/SEO';
 import { 
   Target, 
   TrendingUp, 
   Users, 
+  Mail, 
   MessageSquare, 
   BarChart3, 
   Zap, 
   Globe,
-  CheckCircle,
-  ArrowRight,
-  Mail,
   Smartphone,
-  Monitor,
-  Calendar,
-  DollarSign
+  Video,
+  Camera,
+  Palette,
+  CheckCircle,
+  ArrowRight
 } from 'lucide-react';
 
 export default function AIMarketingAutomation() {
   const features = [
     {
+      title: "AI-Powered Audience Targeting",
+      description: "Intelligent customer segmentation and targeting using machine learning algorithms",
       icon: Target,
-      title: "Smart Audience Segmentation",
-      description: "AI-powered customer segmentation that automatically identifies and targets high-value prospects."
+      benefits: ["95% targeting accuracy", "Real-time audience insights", "Predictive customer behavior"]
     },
     {
+      title: "Automated Content Generation",
+      description: "AI-generated marketing content that adapts to your brand voice and audience preferences",
+      icon: Palette,
+      benefits: ["Personalized content", "Multi-language support", "Brand consistency"]
+    },
+    {
+      title: "Smart Campaign Optimization",
+      description: "Continuous campaign performance optimization using real-time data and AI insights",
       icon: TrendingUp,
-      title: "Predictive Campaign Optimization",
-      description: "Machine learning algorithms that continuously optimize campaigns for maximum ROI and engagement."
+      benefits: ["Real-time optimization", "A/B testing automation", "Performance prediction"]
     },
     {
-      icon: Users,
-      title: "Personalized Content Generation",
-      description: "AI creates personalized marketing content based on customer behavior and preferences."
+      title: "Multi-Channel Orchestration",
+      description: "Seamless coordination across email, social media, SMS, and advertising platforms",
+      icon: Globe,
+      benefits: ["Unified dashboard", "Cross-channel analytics", "Consistent messaging"]
     },
     {
-      icon: MessageSquare,
-      title: "Multi-Channel Automation",
-      description: "Seamlessly coordinate campaigns across email, social media, SMS, and web channels."
-    },
-    {
+      title: "Predictive Analytics",
+      description: "Forecast campaign performance and customer lifetime value with AI-powered insights",
       icon: BarChart3,
-      title: "Real-Time Analytics",
-      description: "Live performance tracking with actionable insights and automated reporting."
+      benefits: ["ROI prediction", "Customer churn prevention", "Optimal timing analysis"]
     },
     {
-      icon: Zap,
-      title: "Intelligent A/B Testing",
-      description: "Automated testing of multiple campaign variations to find the best performing elements."
+      title: "Personalization Engine",
+      description: "Dynamic content personalization based on real-time user behavior and preferences",
+      icon: Users,
+      benefits: ["Real-time personalization", "Behavioral triggers", "Contextual messaging"]
     }
   ];
 
-  const benefits = [
-    "Increase conversion rates by 30-50% with personalized campaigns",
-    "Reduce marketing costs by 25-40% through automation",
-    "Improve customer engagement by 40-60% with targeted content",
-    "Save 20+ hours per week on manual marketing tasks",
-    "Boost ROI by 35-55% with predictive optimization",
-    "Achieve 24/7 marketing presence across all channels"
-  ];
-
-  const useCases = [
+  const marketingChannels = [
     {
-      industry: "E-commerce",
-      description: "Personalized product recommendations, abandoned cart recovery, and customer lifecycle marketing",
-      metrics: ["Conversion Rate", "Customer Lifetime Value", "Cart Abandonment Rate"]
+      name: "Email Marketing",
+      description: "AI-powered email campaigns with personalized content and optimal send times",
+      icon: Mail,
+      features: ["Smart subject lines", "Dynamic content", "Send time optimization", "A/B testing"]
     },
     {
-      industry: "B2B Services",
-      description: "Lead nurturing, account-based marketing, and sales funnel optimization",
-      metrics: ["Lead Quality Score", "Sales Cycle Length", "Pipeline Velocity"]
+      name: "Social Media",
+      description: "Automated social media management with content scheduling and engagement tracking",
+      icon: MessageSquare,
+      features: ["Content scheduling", "Engagement monitoring", "Trend analysis", "Community management"]
     },
     {
-      industry: "Healthcare",
-      description: "Patient engagement, appointment reminders, and health education campaigns",
-      metrics: ["Patient Retention", "Appointment Show Rate", "Health Outcomes"]
+      name: "SMS Marketing",
+      description: "Intelligent SMS campaigns with personalized messaging and delivery optimization",
+      icon: Smartphone,
+      features: ["Personalized content", "Delivery timing", "Response tracking", "Compliance management"]
     },
     {
-      industry: "Education",
-      description: "Student recruitment, course recommendations, and alumni engagement",
-      metrics: ["Enrollment Rate", "Course Completion", "Alumni Engagement"]
+      name: "Video Marketing",
+      description: "AI-generated video content and automated video marketing campaigns",
+      icon: Video,
+      features: ["Auto-generated videos", "Thumbnail optimization", "Performance tracking", "Platform optimization"]
     }
   ];
 
-  const pricing = [
+  const pricingPlans = [
     {
       name: "Starter",
-      price: "$1,500",
-      period: "/month",
+      price: "$199/month",
       description: "Perfect for small businesses starting with marketing automation",
       features: [
         "Up to 5,000 contacts",
         "Basic email automation",
         "Social media scheduling",
-        "Standard analytics",
-        "Email support"
-      ]
+        "Email support",
+        "Standard templates",
+        "Basic analytics"
+      ],
+      cta: "Start Free Trial",
+      popular: false
     },
     {
       name: "Professional",
-      price: "$4,500",
-      period: "/month",
-      description: "Ideal for growing companies with advanced marketing needs",
+      price: "$499/month",
+      description: "Ideal for growing businesses with advanced marketing needs",
       features: [
         "Up to 25,000 contacts",
-        "Advanced AI personalization",
-        "Multi-channel automation",
-        "Predictive analytics",
+        "Advanced automation workflows",
+        "AI content generation",
         "Priority support",
-        "Custom integrations"
+        "Custom templates",
+        "Advanced analytics",
+        "Multi-channel campaigns",
+        "A/B testing"
       ],
+      cta: "Start Free Trial",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "Custom",
-      period: "",
-      description: "Tailored solutions for large organizations with complex marketing requirements",
+      price: "$1,299/month",
+      description: "For large organizations requiring enterprise-grade marketing automation",
       features: [
         "Unlimited contacts",
-        "Custom AI models",
-        "White-label solutions",
-        "Dedicated support",
-        "Advanced security",
-        "API access"
-      ]
+        "Custom automation workflows",
+        "Advanced AI models",
+        "24/7 dedicated support",
+        "White-label solution",
+        "Custom integrations",
+        "Advanced reporting",
+        "API access",
+        "On-premise option",
+        "SLA guarantees"
+      ],
+      cta: "Contact Sales",
+      popular: false
+    }
+  ];
+
+  const successMetrics = [
+    {
+      metric: "3.5x",
+      description: "Increase in email open rates",
+      detail: "AI-optimized subject lines and send times"
+    },
+    {
+      metric: "2.8x",
+      description: "Higher conversion rates",
+      detail: "Personalized content and targeting"
+    },
+    {
+      metric: "40%",
+      description: "Reduction in customer acquisition costs",
+      detail: "Optimized campaigns and targeting"
+    },
+    {
+      metric: "5.2x",
+      description: "ROI improvement",
+      detail: "Automated optimization and personalization"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
-      <div className="container mx-auto px-4 py-12">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="flex justify-center mb-6">
-            <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
-              <Target className="w-10 h-10 text-white" />
+    <div className="min-h-screen bg-gradient-to-br from-black via-purple-900 to-pink-900">
+      <SEO 
+        title="AI Marketing Automation Platform - Zion Tech Group" 
+        description="Revolutionize your marketing with AI-powered automation. Personalized campaigns, intelligent targeting, and automated optimization."
+        keywords="AI marketing automation, marketing automation, AI content generation, customer targeting, campaign optimization"
+        canonical="https://ziontechgroup.com/services/ai-marketing-automation"
+      />
+
+      {/* Hero Section with Futuristic Background */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-pink-600/20 to-cyan-500/20"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(168,85,247,0.1),transparent_50%)]"></div>
+        </div>
+        
+        <div className="relative z-10 container mx-auto px-4 py-24 text-center">
+          <div className="mb-8">
+            <div className="inline-flex items-center px-4 py-2 bg-purple-500/20 border border-purple-500/50 rounded-full text-purple-400 text-sm font-medium mb-6">
+              <Target className="w-4 h-4 mr-2" />
+              AI-Powered Marketing Automation
             </div>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Marketing Automation
+          
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+              AI Marketing Automation
+            </span>
+            <span className="block text-3xl md:text-4xl text-gray-300 mt-4">
+              Transform Marketing with Intelligent Automation
+            </span>
           </h1>
-          <p className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8">
-            Transform your marketing with intelligent automation that personalizes campaigns, 
-            optimizes performance, and drives results across all channels.
+          
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+            Leverage artificial intelligence to automate your marketing campaigns, personalize customer experiences, 
+            and optimize performance in real-time. Our AI platform handles everything from content creation to 
+            campaign optimization.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
-            >
-              Start Free Trial
-            </Link>
-            <Link
-              to="/request-quote"
-              className="bg-transparent border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
-            >
-              Request Demo
-            </Link>
+          
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <button className="group relative px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
+              <span className="relative z-10">Start Free Trial</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </button>
+            <button className="px-8 py-4 border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105">
+              Schedule Demo
+            </button>
           </div>
-        </div>
 
-        {/* Features Grid */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Powerful Marketing Automation Features
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <div key={index} className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-4">
-                    <Icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                  <p className="text-zion-slate-light">{feature.description}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Benefits Section */}
-        <div className="mb-20">
-          <div className="bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-8">
-            <h2 className="text-3xl font-bold text-white text-center mb-8">
-              Proven Marketing Results
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
-                  <span className="text-zion-slate-light">{benefit}</span>
-                </div>
-              ))}
+          {/* Key Metrics */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-purple-400 mb-2">3.5x</div>
+              <div className="text-gray-400 text-sm">Email Open Rates</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-pink-400 mb-2">2.8x</div>
+              <div className="text-gray-400 text-sm">Conversion Rates</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-cyan-400 mb-2">40%</div>
+              <div className="text-gray-400 text-sm">Cost Reduction</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-green-400 mb-2">5.2x</div>
+              <div className="text-gray-400 text-sm">ROI Improvement</div>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* Use Cases */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Industry Applications
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6">
-                <h3 className="text-2xl font-bold text-white mb-4">{useCase.industry}</h3>
-                <p className="text-zion-slate-light mb-4">{useCase.description}</p>
-                <div className="space-y-2">
-                  <h4 className="font-semibold text-zion-cyan">Key Metrics:</h4>
-                  {useCase.metrics.map((metric, metricIndex) => (
-                    <div key={metricIndex} className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                      <span className="text-zion-slate-light text-sm">{metric}</span>
-                    </div>
-                  ))}
+      {/* Features Section */}
+      <section className="py-20 bg-black/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Powerful AI Marketing Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI-powered platform combines cutting-edge technology with marketing expertise 
+              to deliver results that drive business growth.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="group relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="w-8 h-8 text-white" />
                 </div>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300 mb-4">
+                  {feature.description}
+                </p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-400">
+                      <div className="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
         </div>
+      </section>
 
-        {/* Pricing */}
-        <div className="mb-20">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Transparent Pricing
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
-              <div key={index} className={`relative bg-zion-blue-dark/50 backdrop-blur-sm border rounded-2xl p-6 ${
-                plan.popular ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' : 'border-zion-cyan/20'
+      {/* Marketing Channels Section */}
+      <section className="py-20 bg-purple-900/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Multi-Channel Marketing Automation
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Orchestrate campaigns across all your marketing channels with intelligent automation 
+              and unified analytics.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {marketingChannels.map((channel, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mr-4">
+                    <channel.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">{channel.name}</h3>
+                </div>
+                <p className="text-gray-300 mb-4">{channel.description}</p>
+                <ul className="space-y-2">
+                  {channel.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-purple-500 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Success Metrics Section */}
+      <section className="py-20 bg-black/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Proven Results
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See the measurable impact our AI marketing automation platform delivers for businesses.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {successMetrics.map((metric, index) => (
+              <div key={index} className="text-center bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300">
+                <div className="text-4xl font-bold text-purple-400 mb-2">{metric.metric}</div>
+                <div className="text-white font-semibold mb-2">{metric.description}</div>
+                <div className="text-gray-400 text-sm">{metric.detail}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 bg-purple-900/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Transparent Pricing Plans
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the plan that fits your marketing needs. All plans include a 14-day free trial.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingPlans.map((plan, index) => (
+              <div key={index} className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
+                plan.popular 
+                  ? 'border-purple-500/50 shadow-2xl shadow-purple-500/25' 
+                  : 'border-gray-700/50 hover:border-purple-500/50'
               }`}>
                 {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-1 rounded-full text-sm font-semibold">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
                 )}
-                <div className="text-center mb-6">
+                
+                <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-zion-cyan">{plan.price}</span>
-                    <span className="text-zion-slate-light ml-1">{plan.period}</span>
-                  </div>
-                  <p className="text-zion-slate-light mt-2">{plan.description}</p>
+                  <div className="text-4xl font-bold text-purple-400 mb-2">{plan.price}</div>
+                  <p className="text-gray-400">{plan.description}</p>
                 </div>
-                <ul className="space-y-3 mb-6">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
-                      <span className="text-zion-slate-light">{feature}</span>
+                
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-purple-500 mr-3 flex-shrink-0" />
+                      {feature}
                     </li>
                   ))}
                 </ul>
-                <Link
-                  to="/contact"
-                  className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:from-zion-cyan-light hover:to-zion-purple-light'
-                      : 'bg-transparent border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white'
-                  }`}
-                >
-                  Get Started
-                </Link>
+                
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  plan.popular
+                    ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:scale-105'
+                    : 'bg-gray-700 text-white hover:bg-gray-600'
+                }`}>
+                  {plan.cta}
+                </button>
               </div>
             ))}
           </div>
         </div>
+      </section>
 
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 backdrop-blur-sm border border-zion-cyan/30 rounded-2xl p-8">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Automate Your Marketing?
-            </h2>
-            <p className="text-zion-slate-light text-lg mb-6 max-w-2xl mx-auto">
-              Join thousands of marketers already using our AI-powered automation platform 
-              to create personalized campaigns that convert.
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-purple-900/50 via-pink-900/50 to-cyan-900/50">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Ready to Automate Your Marketing?
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Join thousands of businesses that have already transformed their marketing with 
+            AI-powered automation.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <button className="group relative px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
+              <span className="relative z-10">Start Free Trial</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </button>
+            <button className="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 font-semibold rounded-lg transition-all duration-300 hover:scale-105">
+              Schedule Demo
+            </button>
+          </div>
+          
+          <div className="mt-8 text-center">
+            <p className="text-gray-400 text-sm">
+              Need enterprise pricing? <a href="/contact" className="text-purple-400 hover:text-purple-300 underline">Contact our sales team</a>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
-              >
-                Start Free Trial
-              </Link>
-              <Link
-                to="/request-quote"
-                className="bg-transparent border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
-              >
-                Schedule Consultation
-              </Link>
-            </div>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 }

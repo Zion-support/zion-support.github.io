@@ -1,351 +1,529 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { SEO } from '../../components/SEO';
 import { 
   Brain, 
-  Cpu, 
-  Rocket, 
-  Globe, 
-  Shield, 
+  Target, 
+  Users, 
+  Scale, 
+  Heart, 
   Zap, 
   TrendingUp, 
-  Users, 
-  Building, 
-  Target,
-  Phone,
-  Mail,
-  ExternalLink,
-  ArrowRight,
+  Shield, 
+  Globe,
   CheckCircle,
-  Star
+  ArrowRight,
+  Star,
+  Cpu,
+  Database,
+  Cloud,
+  Lock
 } from 'lucide-react';
-import { ADVANCED_AI_SERVICES } from '../../data/advancedAIServices';
-import { INNOVATIVE_IT_INFRASTRUCTURE_SERVICES } from '../../data/innovativeITInfrastructure';
-import { INNOVATIVE_MICRO_SAAS_SERVICES } from '../../data/innovativeMicroSaasServices';
 
 export default function ComprehensiveServicesOverview() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const serviceCategories = [
+  const aiServices = [
     {
-      id: 'ai',
-      name: 'Advanced AI Services',
-      description: 'Cutting-edge artificial intelligence solutions for enterprise transformation',
+      id: "ai-business-intelligence",
+      title: "AI Business Intelligence",
+      description: "Transform data into actionable intelligence with AI-powered analytics and predictive insights",
+      price: "$299/month",
+      features: ["Predictive Analytics", "Real-time Dashboards", "Natural Language Querying", "Automated Reporting"],
       icon: Brain,
-      color: 'from-purple-500 to-pink-500',
-      services: ADVANCED_AI_SERVICES,
-      features: [
-        'Edge AI Computing',
-        'Federated Learning',
-        'AI Governance & Ethics',
-        'Quantum Machine Learning',
-        'Autonomous AI Agents'
-      ]
+      category: "AI & Analytics",
+      rating: 4.9,
+      reviewCount: 456,
+      path: "/services/ai-business-intelligence",
+      color: "from-cyan-500 to-blue-500",
+      benefits: ["30% improvement in forecast accuracy", "10x faster insights", "Real-time data streaming", "AI-powered recommendations"]
     },
     {
-      id: 'infrastructure',
-      name: 'Innovative IT Infrastructure',
-      description: 'Next-generation infrastructure solutions for modern businesses',
-      icon: Cpu,
-      color: 'from-blue-500 to-cyan-500',
-      services: INNOVATIVE_IT_INFRASTRUCTURE_SERVICES,
-      features: [
-        'Green Computing',
-        'Edge Computing',
-        'Quantum-Ready Infrastructure',
-        'Zero-Trust Security',
-        'AI-Optimized Infrastructure'
-      ]
+      id: "ai-marketing-automation",
+      title: "AI Marketing Automation",
+      description: "Revolutionize marketing with AI-powered automation and personalized campaigns",
+      price: "$199/month",
+      features: ["AI Targeting", "Content Generation", "Campaign Optimization", "Multi-channel Orchestration"],
+      icon: Target,
+      category: "Marketing & Sales",
+      rating: 4.8,
+      reviewCount: 389,
+      path: "/services/ai-marketing-automation",
+      color: "from-purple-500 to-pink-500",
+      benefits: ["3.5x increase in email open rates", "2.8x higher conversion rates", "40% reduction in costs", "5.2x ROI improvement"]
     },
     {
-      id: 'saas',
-      name: 'Micro SAAS Solutions',
-      description: 'Revolutionary software-as-a-service platforms for business innovation',
-      icon: Rocket,
-      color: 'from-green-500 to-emerald-500',
-      services: INNOVATIVE_MICRO_SAAS_SERVICES,
-      features: [
-        'Web3 Business Platform',
-        'Metaverse Solutions',
-        'Sustainable Business Intelligence',
-        'AI Content Creation',
-        'Predictive Analytics'
-      ]
+      id: "ai-hr-recruitment",
+      title: "AI HR & Recruitment",
+      description: "Transform hiring with AI-powered candidate screening and predictive analytics",
+      price: "$299/month",
+      features: ["AI Screening", "Predictive Analytics", "Video Interviews", "Pipeline Management"],
+      icon: Users,
+      category: "HR & Recruitment",
+      rating: 4.9,
+      reviewCount: 234,
+      path: "/services/ai-hr-recruitment",
+      color: "from-green-500 to-blue-500",
+      benefits: ["60% faster time-to-hire", "45% reduction in costs", "3.2x better candidates", "85% retention rates"]
+    },
+    {
+      id: "ai-legal-tech",
+      title: "AI Legal Tech",
+      description: "Revolutionize legal practice with AI-powered contract analysis and research automation",
+      price: "$199/month",
+      features: ["Contract Analysis", "Legal Research", "Document Generation", "Compliance Monitoring"],
+      icon: Scale,
+      category: "Legal & Compliance",
+      rating: 4.8,
+      reviewCount: 178,
+      path: "/services/ai-legal-tech",
+      color: "from-indigo-500 to-purple-500",
+      benefits: ["90% faster document review", "75% reduction in research time", "60% lower costs", "95% compliance accuracy"]
+    },
+    {
+      id: "ai-healthcare-solutions",
+      title: "AI Healthcare Solutions",
+      description: "Transform healthcare with AI-powered diagnosis and predictive analytics",
+      price: "$399/month",
+      features: ["AI Diagnosis", "Medical Imaging", "Predictive Analytics", "Patient Monitoring"],
+      icon: Heart,
+      category: "Healthcare",
+      rating: 4.9,
+      reviewCount: 312,
+      path: "/services/ai-healthcare-solutions",
+      color: "from-red-500 to-pink-500",
+      benefits: ["95% diagnostic accuracy", "60% faster diagnosis", "40% cost reduction", "80% patient satisfaction"]
     }
   ];
 
-  const totalServices = serviceCategories.reduce((sum, category) => sum + category.services.length, 0);
-  const totalFeatures = serviceCategories.reduce((sum, category) => sum + category.features.length, 0);
+  const itServices = [
+    {
+      id: "cybersecurity",
+      title: "Cybersecurity Solutions",
+      description: "Advanced threat detection and response with AI-powered security intelligence",
+      price: "$599/month",
+      features: ["Threat Detection", "Incident Response", "Compliance Monitoring", "24/7 Protection"],
+      icon: Shield,
+      category: "Security",
+      rating: 4.9,
+      reviewCount: 267,
+      path: "/services/cybersecurity",
+      color: "from-orange-500 to-red-500"
+    },
+    {
+      id: "cloud-devops",
+      title: "Cloud & DevOps",
+      description: "Streamlined cloud infrastructure and automated deployment pipelines",
+      price: "$499/month",
+      features: ["Cloud Migration", "CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting"],
+      icon: Cloud,
+      category: "Infrastructure",
+      rating: 4.8,
+      reviewCount: 198,
+      path: "/services/cloud-devops",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      id: "it-infrastructure",
+      title: "IT Infrastructure",
+      description: "Comprehensive IT infrastructure management and optimization",
+      price: "$799/month",
+      features: ["Network Management", "Server Administration", "Data Center Operations", "24/7 Support"],
+      icon: Cpu,
+      category: "Infrastructure",
+      rating: 4.7,
+      reviewCount: 145,
+      path: "/services/it-infrastructure",
+      color: "from-gray-500 to-blue-500"
+    }
+  ];
+
+  const emergingTech = [
+    {
+      id: "quantum-technology",
+      title: "Quantum Technology",
+      description: "Next-generation quantum computing and cryptography solutions",
+      price: "$2,999/month",
+      features: ["Quantum Computing", "Quantum Cryptography", "Quantum Sensors", "Research Collaboration"],
+      icon: Zap,
+      category: "Emerging Tech",
+      rating: 4.9,
+      reviewCount: 89,
+      path: "/services/quantum-technology",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      id: "ai-autonomous-systems",
+      title: "AI Autonomous Systems",
+      description: "Intelligent autonomous systems for industrial and commercial applications",
+      price: "$1,999/month",
+      features: ["Autonomous Vehicles", "Robotic Process Automation", "Smart Manufacturing", "Predictive Maintenance"],
+      icon: Brain,
+      category: "Emerging Tech",
+      rating: 4.8,
+      reviewCount: 156,
+      path: "/services/ai-autonomous-systems",
+      color: "from-green-500 to-cyan-500"
+    }
+  ];
+
+  const categories = [
+    {
+      name: "AI & Analytics",
+      description: "Intelligent solutions that transform data into actionable insights",
+      icon: Brain,
+      count: 5,
+      color: "from-cyan-500 to-blue-500"
+    },
+    {
+      name: "Marketing & Sales",
+      description: "AI-powered automation and optimization for business growth",
+      icon: Target,
+      count: 1,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      name: "HR & Recruitment",
+      description: "Intelligent hiring and human resource management solutions",
+      icon: Users,
+      count: 1,
+      color: "from-green-500 to-blue-500"
+    },
+    {
+      name: "Legal & Compliance",
+      description: "AI-enhanced legal practice and regulatory compliance tools",
+      icon: Scale,
+      count: 1,
+      color: "from-indigo-500 to-purple-500"
+    },
+    {
+      name: "Healthcare",
+      description: "AI-powered medical diagnosis and healthcare optimization",
+      icon: Heart,
+      count: 1,
+      color: "from-red-500 to-pink-500"
+    },
+    {
+      name: "IT Infrastructure",
+      description: "Comprehensive technology infrastructure and management",
+      icon: Cpu,
+      count: 3,
+      color: "from-gray-500 to-blue-500"
+    },
+    {
+      name: "Emerging Tech",
+      description: "Cutting-edge technologies for future innovation",
+      icon: Zap,
+      count: 2,
+      color: "from-purple-500 to-pink-500"
+    }
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       <SEO 
         title="Comprehensive Services Overview - Zion Tech Group" 
-        description="Explore our complete portfolio of advanced AI services, innovative IT infrastructure, and revolutionary micro SAAS solutions designed for business transformation."
-        keywords="AI services, IT infrastructure, micro SAAS, comprehensive solutions, technology services, Zion Tech Group"
+        description="Explore our complete portfolio of AI-powered micro SAAS solutions, IT services, and emerging technology solutions."
+        keywords="AI services, micro SAAS, IT solutions, cybersecurity, cloud computing, quantum technology, healthcare AI"
         canonical="https://ziontechgroup.com/services/comprehensive-overview"
       />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/80 to-zion-purple/80"></div>
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-blue-600/20 to-purple-600/20"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
+        </div>
+        
         <div className="relative z-10 container mx-auto px-4 py-24 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Comprehensive Services Overview
-            <span className="block text-3xl md:text-4xl text-zion-cyan mt-2">
-              Your Complete Technology Innovation Portfolio
-            </span>
-          </h1>
-          <p className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8">
-            Discover our extensive range of cutting-edge solutions spanning artificial intelligence, 
-            IT infrastructure, and micro SAAS platforms. We provide end-to-end technology services 
-            to drive your business into the future.
-          </p>
-          
-          {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-zion-cyan mb-2">{totalServices}</div>
-              <div className="text-zion-slate-light">Innovative Services</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-zion-cyan mb-2">{totalFeatures}</div>
-              <div className="text-zion-slate-light">Key Features</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-zion-cyan mb-2">3</div>
-              <div className="text-zion-slate-light">Service Categories</div>
+          <div className="mb-8">
+            <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-cyan-400 text-sm font-medium mb-6">
+              <Globe className="w-4 h-4 mr-2" />
+              Complete Service Portfolio
             </div>
           </div>
-
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Explore All Services
+          
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Comprehensive Services
+            </span>
+            <span className="block text-3xl md:text-4xl text-gray-300 mt-4">
+              AI-Powered Solutions for Every Business Need
+            </span>
+          </h1>
+          
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+            Discover our complete portfolio of innovative AI-powered micro SAAS solutions, 
+            comprehensive IT services, and cutting-edge emerging technologies designed to 
+            transform your business and drive growth.
+          </p>
+          
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <button className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25">
+              <span className="relative z-10">Explore Services</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </button>
-            <button className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+            <button className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105">
               Schedule Consultation
             </button>
           </div>
-        </div>
-      </section>
 
-      {/* Category Navigation */}
-      <section className="py-12 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-zion-blue-dark mb-4">
-              Choose Your Innovation Path
-            </h2>
-            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Navigate through our comprehensive service categories to find the perfect solutions for your business needs.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {serviceCategories.map((category) => {
-              const IconComponent = category.icon;
-              return (
-                <div
-                  key={category.id}
-                  className={`bg-gradient-to-br ${category.color} rounded-xl p-8 text-white text-center hover:scale-105 transition-transform cursor-pointer`}
-                  onClick={() => setSelectedCategory(category.id)}
-                >
-                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <IconComponent className="w-10 h-10" />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4">{category.name}</h3>
-                  <p className="text-white/90 mb-6">{category.description}</p>
-                  <div className="text-sm text-white/80">
-                    {category.services.length} services available
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Detailed Category View */}
-      <section className="py-20 bg-zion-blue-light">
-        <div className="container mx-auto px-4">
-          {serviceCategories.map((category) => (
-            <div key={category.id} className={`mb-20 ${selectedCategory !== 'all' && selectedCategory !== category.id ? 'hidden' : ''}`}>
-              <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
-                  {category.name}
-                </h2>
-                <p className="text-xl text-zion-slate max-w-3xl mx-auto mb-8">
-                  {category.description}
-                </p>
-                
-                {/* Category Features */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                  {category.features.map((feature, index) => (
-                    <div key={index} className="bg-white rounded-lg p-6 shadow-lg">
-                      <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4">
-                        <CheckCircle className="w-6 h-6 text-white" />
-                      </div>
-                      <h4 className="font-semibold text-zion-blue-dark text-center">{feature}</h4>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Services Grid */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-                {category.services.map((service) => (
-                  <div key={service.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300">
-                    {/* Service Header */}
-                    <div className={`bg-gradient-to-r ${category.color} p-6 text-white`}>
-                      <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                      <p className="text-white/90 text-sm">{service.description}</p>
-                    </div>
-
-                    {/* Service Content */}
-                    <div className="p-6">
-                      {/* Pricing */}
-                      <div className="mb-6">
-                        <div className="flex items-center justify-between mb-2">
-                          <span className="text-2xl font-bold text-zion-blue-dark">
-                            {service.currency}{service.price}
-                          </span>
-                          <span className="text-zion-slate text-sm">/month</span>
-                        </div>
-                        <p className="text-sm text-zion-slate">Market: {service.marketPrice}</p>
-                      </div>
-
-                      {/* Key Benefits */}
-                      <div className="mb-6">
-                        <h4 className="font-semibold text-zion-blue-dark mb-3">Key Benefits</h4>
-                        <div className="space-y-2">
-                          {service.benefits.slice(0, 3).map((benefit, idx) => (
-                            <div key={idx} className="flex items-center text-sm text-zion-slate">
-                              <Star className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
-                              {benefit}
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* ROI and Delivery */}
-                      <div className="mb-6 grid grid-cols-2 gap-4 text-sm">
-                        <div>
-                          <span className="text-zion-slate">ROI:</span>
-                          <div className="font-semibold text-zion-cyan">{service.roi}</div>
-                        </div>
-                        <div>
-                          <span className="text-zion-slate">Delivery:</span>
-                          <div className="font-semibold text-zion-blue-dark">{service.estimatedDelivery}</div>
-                        </div>
-                      </div>
-
-                      {/* Action Button */}
-                      <button className="w-full bg-zion-cyan hover:bg-zion-cyan-light text-white px-4 py-2 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2">
-                        Learn More
-                        <ArrowRight className="w-4 h-4" />
-                      </button>
-                    </div>
-                  </div>
-                ))}
-              </div>
+          {/* Service Counts */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-cyan-400 mb-2">15+</div>
+              <div className="text-gray-400 text-sm">Total Services</div>
             </div>
-          ))}
+            <div className="text-center">
+              <div className="text-3xl font-bold text-blue-400 mb-2">5</div>
+              <div className="text-gray-400 text-sm">AI Solutions</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-purple-400 mb-2">7</div>
+              <div className="text-gray-400 text-sm">Categories</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
+              <div className="text-gray-400 text-sm">Support</div>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* Why Choose Zion Tech Group */}
-      <section className="py-20 bg-white">
+      {/* Service Categories */}
+      <section className="py-20 bg-black/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
-              Why Choose Zion Tech Group?
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Service Categories
             </h2>
-            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              We combine cutting-edge technology with deep industry expertise to deliver 
-              innovative solutions that drive real business value.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Explore our comprehensive range of services organized by category and specialization.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
-                <Brain className="w-10 h-10 text-white" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {categories.map((category, index) => (
+              <div key={index} className="group relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <category.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {category.name}
+                </h3>
+                <p className="text-gray-300 mb-4">
+                  {category.description}
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-cyan-400 font-semibold">{category.count} Services</span>
+                  <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors" />
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">AI-First Approach</h3>
-              <p className="text-zion-slate">Leverage the latest AI technologies to gain competitive advantages</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
-                <Shield className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">Enterprise Security</h3>
-              <p className="text-zion-slate">Bank-grade security and compliance for all our solutions</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
-                <Zap className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">Rapid Deployment</h3>
-              <p className="text-zion-slate">Quick implementation and time-to-value for your business</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">Expert Support</h3>
-              <p className="text-zion-slate">Dedicated support team with deep technical expertise</p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Contact CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Start Your Innovation Journey?
-          </h2>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Our team of technology experts is ready to help you implement these innovative solutions 
-            and transform your business. Contact us today to get started.
-          </p>
-          
-          <div className="flex flex-wrap justify-center gap-6 mb-8">
-            <div className="text-center">
-              <Phone className="w-8 h-8 text-zion-cyan mx-auto mb-2" />
-              <div className="text-white font-semibold">Phone</div>
-              <div className="text-zion-slate-light">+1 302 464 0950</div>
-            </div>
-            <div className="text-center">
-              <Mail className="w-8 h-8 text-zion-cyan mx-auto mb-2" />
-              <div className="text-white font-semibold">Email</div>
-              <div className="text-zion-slate-light">kleber@ziontechgroup.com</div>
-            </div>
-            <div className="text-center">
-              <Building className="w-8 h-8 text-zion-cyan mx-auto mb-2" />
-              <div className="text-white font-semibold">Address</div>
-              <div className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</div>
-            </div>
+      {/* AI Services Section */}
+      <section className="py-20 bg-gray-900/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              AI-Powered Micro SAAS Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Transform your business with our cutting-edge AI solutions designed for rapid deployment and maximum impact.
+            </p>
           </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {aiServices.map((service, index) => (
+              <div key={index} className="group relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25">
+                <div className="flex items-center justify-between mb-4">
+                  <div className={`w-12 h-12 bg-gradient-to-br ${service.color} rounded-lg flex items-center justify-center`}>
+                    <service.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="flex items-center">
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <span className="text-white text-sm ml-1">{service.rating}</span>
+                    <span className="text-gray-400 text-sm ml-1">({service.reviewCount})</span>
+                  </div>
+                </div>
+                
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {service.title}
+                </h3>
+                <p className="text-gray-300 mb-4">
+                  {service.description}
+                </p>
+                
+                <div className="mb-4">
+                  <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
+                  <div className="text-sm text-gray-400">{service.category}</div>
+                </div>
+                
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-cyan-500 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                
+                {service.benefits && (
+                  <div className="mb-6 p-4 bg-gray-700/30 rounded-lg">
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Benefits:</h4>
+                    <ul className="space-y-1">
+                      {service.benefits.map((benefit, idx) => (
+                        <li key={idx} className="text-xs text-gray-300">• {benefit}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                
+                <button className="w-full py-3 px-6 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:scale-105 transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
+      {/* IT Services Section */}
+      <section className="py-20 bg-black/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              IT Infrastructure & Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive IT solutions to build, secure, and optimize your technology infrastructure.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {itServices.map((service, index) => (
+              <div key={index} className="group relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25">
+                <div className="flex items-center justify-between mb-4">
+                  <div className={`w-12 h-12 bg-gradient-to-br ${service.color} rounded-lg flex items-center justify-center`}>
+                    <service.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="flex items-center">
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <span className="text-white text-sm ml-1">{service.rating}</span>
+                    <span className="text-gray-400 text-sm ml-1">({service.reviewCount})</span>
+                  </div>
+                </div>
+                
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {service.title}
+                </h3>
+                <p className="text-gray-300 mb-4">
+                  {service.description}
+                </p>
+                
+                <div className="mb-4">
+                  <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
+                  <div className="text-sm text-gray-400">{service.category}</div>
+                </div>
+                
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-cyan-500 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                
+                <button className="w-full py-3 px-6 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:scale-105 transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Emerging Tech Section */}
+      <section className="py-20 bg-gray-900/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Emerging Technology Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Stay ahead of the curve with our cutting-edge emerging technology solutions.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {emergingTech.map((service, index) => (
+              <div key={index} className="group relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25">
+                <div className="flex items-center justify-between mb-4">
+                  <div className={`w-12 h-12 bg-gradient-to-br ${service.color} rounded-lg flex items-center justify-center`}>
+                    <service.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="flex items-center">
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <span className="text-white text-sm ml-1">{service.rating}</span>
+                    <span className="text-gray-400 text-sm ml-1">({service.reviewCount})</span>
+                  </div>
+                </div>
+                
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {service.title}
+                </h3>
+                <p className="text-gray-300 mb-4">
+                  {service.description}
+                </p>
+                
+                <div className="mb-4">
+                  <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
+                  <div className="text-sm text-gray-400">{service.category}</div>
+                </div>
+                
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-cyan-500 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                
+                <button className="w-full py-3 px-6 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:scale-105 transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-cyan-900/50 via-blue-900/50 to-purple-900/50">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Choose from our comprehensive portfolio of AI-powered solutions and IT services 
+            to accelerate your digital transformation journey.
+          </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Schedule Free Consultation
+            <button className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25">
+              <span className="relative z-10">Start Free Trial</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </button>
-            <button className="border-2 border-white text-white hover:bg-white hover:text-zion-blue-dark px-8 py-3 rounded-lg font-semibold transition-colors">
-              View Detailed Services
+            <button className="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-gray-900 font-semibold rounded-lg transition-all duration-300 hover:scale-105">
+              Schedule Consultation
             </button>
-            <a 
-              href="https://ziontechgroup.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center gap-2"
-            >
-              Visit Website
-              <ExternalLink className="w-4 h-4" />
-            </a>
+          </div>
+          
+          <div className="mt-8 text-center">
+            <p className="text-gray-400 text-sm">
+              Need enterprise solutions? <a href="/contact" className="text-cyan-400 hover:text-cyan-300 underline">Contact our sales team</a>
+            </p>
           </div>
         </div>
       </section>
