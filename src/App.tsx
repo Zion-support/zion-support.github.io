@@ -1,14 +1,16 @@
-import React from 'react';
-import { Suspense } from 'react';
+import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
+import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 
 // Lazy load only the pages we know work
 const MicroSaasServicesPage = React.lazy(() => import('./pages/MicroSaasServices'));
 const PricingPage = React.lazy(() => import('./pages/PricingPage'));
+const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServices'));
 
 // Enhanced loading component with skeleton
 const PageLoader = () => (
@@ -24,12 +26,14 @@ const baseRoutes = [
   { path: '/', element: <MicroSaasServicesPage /> },
   { path: '/micro-saas-services', element: <MicroSaasServicesPage /> },
   { path: '/pricing', element: <PricingPage /> },
+  { path: '/comprehensive-services', element: <ComprehensiveServicesPage /> },
 ];
 
 function App() {
   return (
     <ErrorBoundary>
       <div className="app">
+        <Navigation />
         <main className="main-content">
           <Suspense fallback={<PageLoader />}>
             <Routes>
@@ -43,6 +47,8 @@ function App() {
             </Routes>
           </Suspense>
         </main>
+        
+        <Footer />
         
         {/* Enhanced user experience components */}
         <PerformanceOptimizer />
