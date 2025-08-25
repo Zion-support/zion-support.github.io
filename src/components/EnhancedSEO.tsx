@@ -1,437 +1,408 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { useLocation } from 'react-router-dom';
 
 interface SEOProps {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   keywords?: string;
-  type?: string;
-  url: string;
   image?: string;
+  url?: string;
+  type?: 'website' | 'article' | 'product' | 'service';
   author?: string;
   publishedTime?: string;
   modifiedTime?: string;
   section?: string;
   tags?: string[];
-  structuredData?: any;
-  canonicalUrl?: string;
+  canonical?: string;
   noindex?: boolean;
   nofollow?: boolean;
-  robots?: string;
-  ogType?: string;
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
-  twitterSite?: string;
-  twitterCreator?: string;
-  twitterImage?: string;
-  facebookAppId?: string;
-  googleSiteVerification?: string;
-  bingSiteVerification?: string;
-  yandexVerification?: string;
-  baiduVerification?: string;
-  googleAnalyticsId?: string;
-  googleTagManagerId?: string;
-  facebookPixelId?: string;
-  linkedinInsightTag?: string;
-  hotjarId?: string;
-  crispId?: string;
-  intercomId?: string;
-  zendeskId?: string;
-  hubspotId?: string;
-  salesforceId?: string;
-  marketoId?: string;
-  pardotId?: string;
-  segmentId?: string;
-  mixpanelId?: string;
-  amplitudeId?: string;
-  heapId?: string;
-  posthogId?: string;
-  rudderstackId?: string;
-  mauticId?: string;
-  activeCampaignId?: string;
-  convertkitId?: string;
-  mailchimpId?: string;
-  klaviyoId?: string;
-  dripId?: string;
-  getresponseId?: string;
-  aweberId?: string;
-  constantContactId?: string;
-  campaignMonitorId?: string;
-  sendinblueId?: string;
-  mailerliteId?: string;
-  convertflowId?: string;
-  optimizelyId?: string;
-  vwoId?: string;
-  abTastyId?: string;
-  googleOptimizeId?: string;
-  fullstoryId?: string;
-  logrocketId?: string;
-  sentryId?: string;
-  datadogId?: string;
-  newrelicId?: string;
-  appdynamicsId?: string;
-  dynatraceId?: string;
-  elasticId?: string;
-  splunkId?: string;
-  sumologicId?: string;
-  logglyId?: string;
-  papertrailId?: string;
-  logentriesId?: string;
-  logzId?: string;
-  scalyrId?: string;
-  timberId?: string;
-  logdnaId?: string;
-  logmaticId?: string;
-  logtailId?: string;
-  logflareId?: string;
-  betterstackId?: string;
+  locale?: string;
+  alternateLocales?: string[];
 }
 
-const EnhancedSEO: React.FC<SEOProps> = ({
-  title = "Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services",
-  description = "Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology.",
-  keywords = "AI solutions, quantum computing, cybersecurity, digital transformation, enterprise technology, machine learning, cloud services, IT infrastructure",
-  type = 'website',
-  url = "https://ziontechgroup.com",
-  image = "/images/zion-tech-group-og.jpg",
-  author = "Zion Tech Group",
+interface OrganizationSchema {
+  '@context': string;
+  '@type': string;
+  name: string;
+  url: string;
+  logo: string;
+  description: string;
+  address: {
+    '@type': string;
+    streetAddress: string;
+    addressLocality: string;
+    addressRegion: string;
+    postalCode: string;
+    addressCountry: string;
+  };
+  contactPoint: {
+    '@type': string;
+    telephone: string;
+    contactType: string;
+    email: string;
+  };
+  sameAs: string[];
+  foundingDate: string;
+  numberOfEmployees: string;
+  industry: string;
+  serviceArea: {
+    '@type': string;
+    name: string;
+  };
+}
+
+interface WebSiteSchema {
+  '@context': string;
+  '@type': string;
+  name: string;
+  url: string;
+  description: string;
+  potentialAction: {
+    '@type': string;
+    target: string;
+    'query-input': string;
+  };
+  publisher: {
+    '@type': string;
+    name: string;
+    logo: {
+      '@type': string;
+      url: string;
+    };
+  };
+}
+
+interface BreadcrumbSchema {
+  '@context': string;
+  '@type': string;
+  itemListElement: Array<{
+    '@type': string;
+    position: number;
+    name: string;
+    item: string;
+  }>;
+}
+
+interface ServiceSchema {
+  '@context': string;
+  '@type': string;
+  name: string;
+  description: string;
+  provider: {
+    '@type': string;
+    name: string;
+  };
+  areaServed: {
+    '@type': string;
+    name: string;
+  };
+  serviceType: string;
+  category: string;
+}
+
+const defaultSEO = {
+  title: 'Zion Tech Group - AI-Powered Business Solutions & IT Services',
+  description: 'Transform your business with cutting-edge AI solutions, comprehensive IT services, and innovative micro-SaaS platforms. Expert consulting for digital transformation.',
+  keywords: 'AI solutions, IT services, digital transformation, micro-SaaS, business automation, cloud infrastructure, cybersecurity, DevOps',
+  image: '/images/zion-tech-group-og.jpg',
+  url: 'https://ziontechgroup.com',
+  type: 'website' as const,
+  author: 'Zion Tech Group',
+  locale: 'en_US',
+  alternateLocales: ['en_CA', 'en_GB'],
+};
+
+export const EnhancedSEO: React.FC<SEOProps> = ({
+  title,
+  description,
+  keywords,
+  image,
+  url,
+  type,
+  author,
   publishedTime,
   modifiedTime,
   section,
-  tags = [],
-  structuredData,
-  canonicalUrl,
+  tags,
+  canonical,
   noindex = false,
   nofollow = false,
-  robots,
-  ogType,
-  twitterCard = 'summary_large_image',
-  twitterSite = '@ziontechgroup',
-  twitterCreator = '@ziontechgroup',
-  twitterImage,
-  facebookAppId,
-  googleSiteVerification,
-  bingSiteVerification,
-  yandexVerification,
-  baiduVerification,
-  googleAnalyticsId,
-  googleTagManagerId,
-  facebookPixelId,
-  linkedinInsightTag,
-  hotjarId,
-  crispId,
-  intercomId,
-  zendeskId,
-  hubspotId,
-  salesforceId,
-  marketoId,
-  pardotId,
-  segmentId,
-  mixpanelId,
-  amplitudeId,
-  heapId,
-  posthogId,
-  rudderstackId,
-  mauticId,
-  activeCampaignId,
-  convertkitId,
-  mailchimpId,
-  klaviyoId,
-  dripId,
-  getresponseId,
-  aweberId,
-  constantContactId,
-  campaignMonitorId,
-  sendinblueId,
-  mailerliteId,
-  convertflowId,
-  optimizelyId,
-  vwoId,
-  abTastyId,
-  googleOptimizeId,
-  fullstoryId,
-  logrocketId,
-  sentryId,
-  datadogId,
-  newrelicId,
-  appdynamicsId,
-  dynatraceId,
-  elasticId,
-  splunkId,
-  sumologicId,
-  logglyId,
-  papertrailId,
-  logentriesId,
-  logzId,
-  scalyrId,
-  timberId,
-  logdnaId,
-  logmaticId,
-  logtailId,
-  logflareId,
-  betterstackId,
+  locale,
+  alternateLocales,
 }) => {
-  const location = useLocation();
-  const defaultImage = image || 'https://ziontechgroup.com/images/og-default.jpg';
-  const currentUrl = canonicalUrl || `${url}${location.pathname}`;
-  const fullImageUrl = defaultImage.startsWith('http') ? defaultImage : `${url}${defaultImage}`;
-  
-  const defaultStructuredData = {
+  const seo = {
+    title: title || defaultSEO.title,
+    description: description || defaultSEO.description,
+    keywords: keywords || defaultSEO.keywords,
+    image: image || defaultSEO.image,
+    url: url || defaultSEO.url,
+    type: type || defaultSEO.type,
+    author: author || defaultSEO.author,
+    locale: locale || defaultSEO.locale,
+    alternateLocales: alternateLocales || defaultSEO.alternateLocales,
+  };
+
+  // Organization Schema
+  const organizationSchema: OrganizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/images/logo.png',
-    description: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.',
+    logo: 'https://ziontechgroup.com/images/zion-tech-group-logo.png',
+    description: 'Leading provider of AI-powered business solutions, IT services, and innovative technology consulting.',
     address: {
       '@type': 'PostalAddress',
       streetAddress: '123 Technology Drive',
       addressLocality: 'Wilmington',
       addressRegion: 'DE',
       postalCode: '19801',
-      addressCountry: 'US'
+      addressCountry: 'US',
     },
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-302-464-0950',
       contactType: 'customer service',
-      email: 'info@ziontechgroup.com'
+      email: 'info@ziontechgroup.com',
     },
     sameAs: [
       'https://linkedin.com/company/ziontechgroup',
       'https://twitter.com/ziontechgroup',
       'https://github.com/ziontechgroup',
-      'https://facebook.com/ziontechgroup'
+      'https://facebook.com/ziontechgroup',
     ],
-    founder: {
-      '@type': 'Person',
-      name: 'Kleber',
-      jobTitle: 'CEO & Founder',
-      email: 'kleber@ziontechgroup.com'
-    },
     foundingDate: '2015',
     numberOfEmployees: '50-100',
-    industry: 'Technology',
-    keywords: 'AI solutions, quantum computing, cybersecurity, digital transformation, enterprise technology, machine learning, cloud services, IT infrastructure'
+    industry: 'Information Technology',
+    serviceArea: {
+      '@type': 'Country',
+      name: 'United States',
+    },
   };
 
-  const finalStructuredData = structuredData || defaultStructuredData;
+  // Website Schema
+  const websiteSchema: WebSiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Zion Tech Group',
+    url: 'https://ziontechgroup.com',
+    description: 'AI-powered business solutions and IT services for modern enterprises.',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://ziontechgroup.com/search?q={search_term_string}',
+      'query-input': 'required name=search_term_string',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://ziontechgroup.com/images/zion-tech-group-logo.png',
+      },
+    },
+  };
+
+  // Breadcrumb Schema
+  const generateBreadcrumbs = (): BreadcrumbSchema => {
+    const pathSegments = window.location.pathname.split('/').filter(Boolean);
+    const breadcrumbs = pathSegments.map((segment, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
+      item: `https://ziontechgroup.com/${pathSegments.slice(0, index + 1).join('/')}`,
+    }));
+
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://ziontechgroup.com',
+        },
+        ...breadcrumbs,
+      ],
+    };
+  };
+
+  // Service Schema (if applicable)
+  const generateServiceSchema = (): ServiceSchema | null => {
+    if (type === 'service' && section) {
+      return {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: seo.title,
+        description: seo.description,
+        provider: {
+          '@type': 'Organization',
+          name: 'Zion Tech Group',
+        },
+        areaServed: {
+          '@type': 'Country',
+          name: 'United States',
+        },
+        serviceType: section,
+        category: 'Technology Services',
+      };
+    }
+    return null;
+  };
+
+  // Article Schema (if applicable)
+  const generateArticleSchema = () => {
+    if (type === 'article' && publishedTime) {
+      return {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: seo.title,
+        description: seo.description,
+        image: seo.image,
+        author: {
+          '@type': 'Organization',
+          name: seo.author,
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'Zion Tech Group',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://ziontechgroup.com/images/zion-tech-group-logo.png',
+          },
+        },
+        datePublished: publishedTime,
+        dateModified: modifiedTime || publishedTime,
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': seo.url,
+        },
+        articleSection: section,
+        keywords: tags?.join(', '),
+      };
+    }
+    return null;
+  };
+
+  // Performance optimizations
+  useEffect(() => {
+    // Preconnect to external domains
+    const preconnectLinks = [
+      'https://fonts.googleapis.com',
+      'https://fonts.gstatic.com',
+      'https://www.google-analytics.com',
+      'https://www.googletagmanager.com',
+    ];
+
+    preconnectLinks.forEach(domain => {
+      const link = document.createElement('link');
+      link.rel = 'preconnect';
+      link.href = domain;
+      link.crossOrigin = 'anonymous';
+      document.head.appendChild(link);
+    });
+
+    // DNS prefetch for additional domains
+    const dnsPrefetchLinks = [
+      'https://cdn.jsdelivr.net',
+      'https://unpkg.com',
+      'https://cdnjs.cloudflare.com',
+    ];
+
+    dnsPrefetchLinks.forEach(domain => {
+      const link = document.createElement('link');
+      link.rel = 'dns-prefetch';
+      link.href = domain;
+      document.head.appendChild(link);
+    });
+
+    // Cleanup function
+    return () => {
+      const preconnectElements = document.querySelectorAll('link[rel="preconnect"]');
+      const dnsPrefetchElements = document.querySelectorAll('link[rel="dns-prefetch"]');
+      
+      preconnectElements.forEach(el => el.remove());
+      dnsPrefetchElements.forEach(el => el.remove());
+    };
+  }, []);
+
+  const structuredData = [
+    organizationSchema,
+    websiteSchema,
+    generateBreadcrumbs(),
+    generateServiceSchema(),
+    generateArticleSchema(),
+  ].filter(Boolean);
 
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
-      <meta name="author" content={author || 'Zion Tech Group'} />
-      <meta name="robots" content={robots || `${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`} />
+      <title>{seo.title}</title>
+      <meta name="description" content={seo.description} />
+      <meta name="keywords" content={seo.keywords} />
+      <meta name="author" content={seo.author} />
       
       {/* Canonical URL */}
-      <link rel="canonical" href={currentUrl} />
+      <link rel="canonical" href={canonical || seo.url} />
+      
+      {/* Robots Meta */}
+      {noindex && <meta name="robots" content="noindex" />}
+      {nofollow && <meta name="robots" content="nofollow" />}
+      {noindex && nofollow && <meta name="robots" content="noindex, nofollow" />}
+      
+      {/* Language and Locale */}
+      <meta property="og:locale" content={seo.locale} />
+      {seo.alternateLocales.map(loc => (
+        <meta key={loc} property="og:locale:alternate" content={loc} />
+      ))}
       
       {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType || type} />
-      <meta property="og:url" content={currentUrl} />
-      <meta property="og:image" content={fullImageUrl} />
+      <meta property="og:type" content={seo.type} />
+      <meta property="og:title" content={seo.title} />
+      <meta property="og:description" content={seo.description} />
+      <meta property="og:image" content={seo.image} />
+      <meta property="og:url" content={seo.url} />
+      <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
+      <meta property="og:image:alt" content={seo.title} />
       
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:site" content={twitterSite} />
-      <meta name="twitter:creator" content={twitterCreator} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={twitterImage || fullImageUrl} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+      <meta name="twitter:title" content={seo.title} />
+      <meta name="twitter:description" content={seo.description} />
+      <meta name="twitter:image" content={seo.image} />
+      <meta name="twitter:image:alt" content={seo.title} />
       
-      {/* Article-specific meta tags */}
+      {/* Article Specific Meta Tags */}
       {type === 'article' && (
         <>
           {publishedTime && <meta property="article:published_time" content={publishedTime} />}
           {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
           {author && <meta property="article:author" content={author} />}
           {section && <meta property="article:section" content={section} />}
-          {tags && tags.map((tag, index) => (
-            <meta key={index} property="article:tag" content={tag} />
+          {tags?.map(tag => (
+            <meta key={tag} property="article:tag" content={tag} />
           ))}
         </>
       )}
       
-      {/* Facebook App ID */}
-      {facebookAppId && <meta property="fb:app_id" content={facebookAppId} />}
-      
-      {/* Site Verification */}
-      {googleSiteVerification && <meta name="google-site-verification" content={googleSiteVerification} />}
-      {bingSiteVerification && <meta name="msvalidate.01" content={bingSiteVerification} />}
-      {yandexVerification && <meta name="yandex-verification" content={yandexVerification} />}
-      {baiduVerification && <meta name="baidu-site-verification" content={baiduVerification} />}
-      
-      {/* Analytics and Tracking Scripts */}
-      {googleAnalyticsId && (
-        <>
-          <script async src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`} />
-          <script>
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${googleAnalyticsId}', {
-                page_title: '${title}',
-                page_location: '${currentUrl}'
-              });
-            `}
-          </script>
-        </>
-      )}
-      
-      {googleTagManagerId && (
-        <>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-                })(window,document,'script','dataLayer','${googleTagManagerId}');
-              `
-            }}
-          />
-          <noscript>
-            <iframe
-              src={`https://www.googletagmanager.com/ns.html?id=${googleTagManagerId}`}
-              height="0"
-              width="0"
-              style={{ display: 'none', visibility: 'hidden' }}
-            />
-          </noscript>
-        </>
-      )}
-      
-      {/* Facebook Pixel */}
-      {facebookPixelId && (
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              !function(f,b,e,v,n,t,s)
-              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-              n.queue=[];t=b.createElement(e);t.async=!0;
-              t.src=v;s=b.getElementsByTagName(e)[0];
-              s.parentNode.insertBefore(t,s)}(window, document,'script',
-              'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '${facebookPixelId}');
-              fbq('track', 'PageView');
-            `
-          }}
-        />
-      )}
-      
-      {/* LinkedIn Insight Tag */}
-      {linkedinInsightTag && (
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(l) {
-                if (l.search("linkedin.com/insight/") > -1) return;
-                var s = document.createElement("script");
-                s.type = "text/javascript";
-                s.async = true;
-                s.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
-                var el = document.getElementsByTagName("script")[0];
-                el.parentNode.insertBefore(s, el);
-              })(window.location);
-            `
-          }}
-        />
-      )}
-      
-      {/* Hotjar */}
-      {hotjarId && (
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(h,o,t,j,a,r){
-                h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-                h._hjSettings={hjid:${hotjarId},hjsv:6};
-                a=o.getElementsByTagName('head')[0];
-                r=o.createElement('script');r.async=1;
-                r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-                a.appendChild(r);
-              })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-            `
-          }}
-        />
-      )}
-      
-      {/* Crisp Chat */}
-      {crispId && (
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.$crisp=[];window.CRISP_WEBSITE_ID="${crispId}";
-              (function(){d=document;s=d.createElement("script");
-              s.src="https://client.crisp.chat/l.js";s.async=1;
-              d.getElementsByTagName("head")[0].appendChild(s);})();
-            `
-          }}
-        />
-      )}
-      
-      {/* Intercom */}
-      {intercomId && (
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){
-              ic('reattach_activator');ic('update',w.intercomSettings);}else{
-              var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){
-              i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');
-              s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/' + ${intercomId};
-              var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};
-              if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
-            `
-          }}
-        />
-      )}
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(finalStructuredData)}
-      </script>
-      
-      {/* Performance and Security Headers */}
+      {/* Performance Meta Tags */}
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-      <meta name="theme-color" content="#1e40af" />
-      <meta name="msapplication-TileColor" content="#1e40af" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
+      
+      {/* Security Meta Tags */}
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+      <meta httpEquiv="X-Frame-Options" content="DENY" />
+      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+      
+      {/* Theme and Color Meta Tags */}
+      <meta name="theme-color" content="#3B82F6" />
+      <meta name="msapplication-TileColor" content="#3B82F6" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-      
-      {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      <link rel="preconnect" href="https://connect.facebook.net" />
-      <link rel="preconnect" href="https://static.hotjar.com" />
-      <link rel="preconnect" href="https://client.crisp.chat" />
-      <link rel="preconnect" href="https://widget.intercom.io" />
-      
-      {/* DNS Prefetch for additional performance */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//connect.facebook.net" />
-      <link rel="dns-prefetch" href="//static.hotjar.com" />
-      <link rel="dns-prefetch" href="//client.crisp.chat" />
-      <link rel="dns-prefetch" href="//widget.intercom.io" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
       
       {/* Favicon and App Icons */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -440,36 +411,63 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="manifest" href="/site.webmanifest" />
       
-      {/* Additional Meta Tags for SEO */}
-      <meta name="application-name" content="Zion Tech Group" />
-      <meta name="msapplication-config" content="/browserconfig.xml" />
-      <meta name="format-detection" content="telephone=no" />
-      <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="apple-touch-fullscreen" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData)}
+      </script>
       
-      {/* Language and Region */}
-      <meta httpEquiv="Content-Language" content="en" />
-      <meta name="language" content="English" />
-      <meta name="geo.region" content="US-DE" />
-      <meta name="geo.placename" content="Wilmington, Delaware" />
+      {/* Additional Performance Optimizations */}
+      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      <link rel="preload" href="/css/tailwind.css" as="style" />
+      <link rel="preload" href="/js/main.js" as="script" />
       
-      {/* Business Information */}
-      <meta name="business:contact_data:street_address" content="123 Technology Drive" />
-      <meta name="business:contact_data:locality" content="Wilmington" />
-      <meta name="business:contact_data:region" content="DE" />
-      <meta name="business:contact_data:postal_code" content="19801" />
-      <meta name="business:contact_data:country_name" content="United States" />
-      <meta name="business:contact_data:phone_number" content="+1-302-464-0950" />
-      <meta name="business:contact_data:email" content="info@ziontechgroup.com" />
+      {/* Service Worker */}
+      <script>
+        {`
+          if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+              navigator.serviceWorker.register('/sw.js')
+                .then(function(registration) {
+                  console.log('SW registered: ', registration);
+                })
+                .catch(function(registrationError) {
+                  console.log('SW registration failed: ', registrationError);
+                });
+            });
+          }
+        `}
+      </script>
       
-      {/* Security Headers */}
-      <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https:; connect-src 'self' https:; frame-src 'self' https:;" />
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-      <meta httpEquiv="X-Frame-Options" content="SAMEORIGIN" />
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-      <meta httpEquiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
+      {/* Performance Monitoring */}
+      <script>
+        {`
+          // Performance monitoring
+          window.addEventListener('load', function() {
+            if ('performance' in window) {
+              const perfData = performance.getEntriesByType('navigation')[0];
+              if (perfData) {
+                const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
+                const domContentLoaded = perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart;
+                
+                // Send to analytics if available
+                if (window.gtag) {
+                  window.gtag('event', 'timing_complete', {
+                    name: 'load',
+                    value: Math.round(loadTime),
+                    event_category: 'Performance'
+                  });
+                  
+                  window.gtag('event', 'timing_complete', {
+                    name: 'dom_content_loaded',
+                    value: Math.round(domContentLoaded),
+                    event_category: 'Performance'
+                  });
+                }
+              }
+            }
+          });
+        `}
+      </script>
     </Helmet>
   );
 };

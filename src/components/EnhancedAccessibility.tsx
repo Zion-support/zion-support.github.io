@@ -45,6 +45,7 @@ interface AccessibilitySettings {
   showFocusRings: boolean;
   showKeyboardShortcuts: boolean;
   showScreenReaderHints: boolean;
+  showAccessibilityInfo: boolean;
 }
 
 interface EnhancedAccessibilityProps {
@@ -75,7 +76,8 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     autoPlay: false,
     showFocusRings: true,
     showKeyboardShortcuts: false,
-    showScreenReaderHints: false
+    showScreenReaderHints: false,
+    showAccessibilityInfo: false
   });
   const [activeTab, setActiveTab] = useState<'general' | 'visual' | 'audio' | 'navigation'>('general');
   const [showKeyboardShortcuts, setShowKeyboardShortcuts] = useState(false);
@@ -636,7 +638,8 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       autoPlay: false,
       showFocusRings: true,
       showKeyboardShortcuts: false,
-      showScreenReaderHints: false
+      showScreenReaderHints: false,
+      showAccessibilityInfo: false
     });
     addNotification('All settings reset to default');
   };
