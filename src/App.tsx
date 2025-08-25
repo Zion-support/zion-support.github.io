@@ -22,6 +22,7 @@ import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
 import EnhancedSEO from './components/EnhancedSEO';
 import EnhancedAccessibility from './components/EnhancedAccessibility';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { ScrollToTop } from './components/ScrollToTop';
 
 // Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
@@ -316,6 +317,9 @@ const App: React.FC = () => {
                 {/* AI Chatbot - Always Available */}
                 <AIChatbot />
                 
+                {/* Scroll to Top Button */}
+                <ScrollToTop />
+                
                 {/* Collaborative Text Editor - Development Mode */}
                 {import.meta.env.DEV && (
                   <div className="fixed bottom-24 left-6 z-40 w-96">
@@ -374,6 +378,6 @@ const App: React.FC = () => {
       </ThemeProvider>
     </EnhancedErrorBoundary>
   );
-};
+}
 
 export default App;
