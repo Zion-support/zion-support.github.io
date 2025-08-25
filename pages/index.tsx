@@ -10,17 +10,16 @@ import Button from '../components/ui/Button';
 import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
-import UltraFuturisticNavigation2034 from '../components/layout/UltraFuturisticNavigation2034';
-import UltraFuturisticFooter2034 from '../components/layout/UltraFuturisticFooter2034';
+import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisticNavigation2029V2';
+import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2';
 import EnhancedServiceShowcase from '../components/sections/EnhancedServiceShowcase';
 import Enhanced2026ServicesShowcase from '../components/sections/Enhanced2026ServicesShowcase';
 import Revolutionary2026ServiceShowcase from '../components/sections/Revolutionary2026ServiceShowcase';
 import Revolutionary2027ServicesShowcase from '../components/sections/Revolutionary2027ServicesShowcase';
 import Revolutionary2027Hero from '../components/sections/Revolutionary2027Hero';
 import EnhancedHero2026 from '../components/sections/EnhancedHero2026';
-import UltraFuturisticHero2033 from '../components/sections/UltraFuturisticHero2033';
-import UltraFuturisticServiceShowcase2032 from '../components/sections/UltraFuturisticServiceShowcase2032';
-import UltraFuturisticServiceShowcase2033 from '../components/sections/UltraFuturisticServiceShowcase2033';
+import UltraFuturisticHero2029V2 from '../components/sections/UltraFuturisticHero2029V2';
+import UltraFuturisticServiceShowcase2029 from '../components/sections/UltraFuturisticServiceShowcase2029';
 import { motion } from 'framer-motion';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../data/extra-services';
@@ -83,23 +82,12 @@ import { futuristicAIServices2029 } from '../data/2029-futuristic-ai-services';
 import { emergingTech2029Services } from '../data/2029-emerging-tech-services';
 import { enterpriseIT2029Services } from '../data/2029-enterprise-it-services';
 import { innovativeMicroSaasServices2029 } from '../data/2029-innovative-micro-saas';
-import { innovativeMicroSaasServices2029V2 } from '../data/2029-innovative-micro-saas-v2';
-import { innovativeITServices2029V2 } from '../data/2029-innovative-it-services-v2';
-import { innovativeAIServices2029V2 } from '../data/2029-innovative-ai-services-v2';
-// Import new 2029 services
-import { emergingTechBreakthroughs2029V3 } from '../data/2029-emerging-tech-breakthroughs-v3';
-import { aiAutonomousEcosystem2029V2 } from '../data/2029-ai-autonomous-ecosystem-v2';
-// Import new 2031 services
-import { futuristicAIServices2031 } from '../data/2031-futuristic-ai-services';
-import { quantumEmergingTechServices2031 } from '../data/2031-quantum-emerging-tech-services';
-import { enterpriseITServices2031 } from '../data/2031-enterprise-it-services';
-import { innovativeMicroSaasServices2031 } from '../data/2031-innovative-micro-saas-services';
-import { researchDevelopmentServices2031 } from '../data/2031-research-development-services';
-import { spaceMetaverseServices2031 } from '../data/2031-space-metaverse-services';
-import { futuristicInnovations2032 } from '../data/2032-futuristic-innovations';
-import { enterpriseInnovations2032 } from '../data/2032-enterprise-innovations';
-import { cuttingEdgeInnovations2029V2 } from '../data/2029-cutting-edge-innovations-v2';
-import { futuristicInnovations2030 } from '../data/2030-futuristic-innovations';
+import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem';
+import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs';
+import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions';
+import { innovative2029MicroSaasServicesV2 } from '../data/2029-innovative-micro-saas-v2';
+import { emergingTechBreakthroughServicesV2 } from '../data/2029-emerging-tech-breakthroughs-v2';
+import { practicalBusinessSolutionsV2 } from '../data/2029-practical-business-solutions-v2';
 
 export default function HomePage() {
   const heroStats = [
@@ -312,26 +300,12 @@ export default function HomePage() {
     ...emergingTech2029Services,
     ...enterpriseIT2029Services,
     ...innovativeMicroSaasServices2029,
-    ...innovativeMicroSaasServices2029V2,
-    ...innovativeITServices2029V2,
-    ...innovativeAIServices2029V2,
-    // Add new 2029 services
-    ...cuttingEdgeInnovations2029,
-    ...emergingTechBreakthroughs2029V3,
-    ...aiAutonomousEcosystem2029V2,
-    // Add new 2031 services
-    ...futuristicAIServices2031,
-    ...quantumEmergingTechServices2031,
-    ...enterpriseITServices2031,
-    ...innovativeMicroSaasServices2031,
-    ...researchDevelopmentServices2031,
-    ...spaceMetaverseServices2031,
-    // Add new 2032 services
-    ...futuristicInnovations2032,
-    ...enterpriseInnovations2032,
-    // Add new 2029 and 2030 services
-    ...cuttingEdgeInnovations2029V2,
-    ...futuristicInnovations2030
+    ...aiAutonomousEcosystemServices2029,
+    ...emergingTechBreakthroughServices2029,
+    ...practicalBusinessSolutionServices2029,
+    ...innovative2029MicroSaasServicesV2,
+    ...emergingTechBreakthroughServicesV2,
+    ...practicalBusinessSolutionsV2
   ];
 
   // Get featured services (most popular and innovative)
@@ -363,31 +337,10 @@ export default function HomePage() {
 
       <UltraFuturisticBackground2030>
         {/* Ultra Advanced Navigation */}
-        <UltraFuturisticNavigation2034 />
+        <UltraFuturisticNavigation2029V2 />
 
-            {/* Enhanced CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button
-                href="/services"
-                variant="primary"
-                size="lg"
-                className="group relative overflow-hidden"
-              >
-                <span className="relative z-10">Explore Our Services</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </Button>
-              
-              <Button
-                href="/contact"
-                variant="secondary"
-                size="lg"
-                className="group relative overflow-hidden"
-              >
-                <span className="relative z-10">Get Started Today</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </Button>
-            </div>
-          </motion.div>
+                  {/* Ultra Futuristic Hero Section 2029 */}
+          <UltraFuturisticHero2029V2 />
 
           {/* Enhanced Hero Stats */}
           <motion.div
@@ -724,11 +677,10 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-      </main>
-
-      {/* Enhanced Footer */}
-              <UltraFuturisticFooter2034 />
-    </UltraFuturisticBackground2034 />
-  </>
+      </UltraFuturisticBackground2029>
+      
+      {/* Footer */}
+      <UltraFuturisticFooter2029V2 />
+    </UltraFuturisticBackground2029>
   );
 }
