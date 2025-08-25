@@ -37,9 +37,9 @@ import {
   DollarSign,
   Cloud
 } from 'lucide-react';
-import { comprehensiveServices } from '@/data/comprehensiveServices';
+import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
 
-const CYBERSECURITY_SERVICES = comprehensiveServices.filter(service => 
+const CYBERSECURITY_SERVICES = COMPREHENSIVE_SERVICES.filter(service => 
   service.category.includes('Cybersecurity') || 
   service.category.includes('Security') || 
   service.category.includes('Zero Trust')

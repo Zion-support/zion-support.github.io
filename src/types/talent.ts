@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface TalentProfile {
   id: string;
   full_name: string;
@@ -96,3 +97,10 @@ export const SAMPLE_TALENT_PROFILE: TalentProfileWithSocial = {
     behance: 'https://behance.net/johndoe',
   },
 };
+=======
+interface TalentProfile {
+  id: string;
+  name: string;
+  slug: string;
+}
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974

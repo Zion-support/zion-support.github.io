@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+
+import { Routes, Route } from 'react-router-dom';
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
 
 // Placeholder route components
 export const AuthRoutes = () => <></>;

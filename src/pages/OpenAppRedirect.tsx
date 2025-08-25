@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -15,6 +16,16 @@ import {
   Mail
 } from 'lucide-react';
 
+<<<<<<< HEAD
+=======
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { SEO } from "@/components/SEO";
+import { Button } from "@/components/ui/Button";
+import { Link } from "react-router-dom";
+
+// This component handles deep linking to the mobile app
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 const OpenAppRedirect = () => {
   const [countdown, setCountdown] = useState<number>(5);
   const [isRedirecting, setIsRedirecting] = useState(false);
@@ -70,6 +81,9 @@ const OpenAppRedirect = () => {
       }
     ]
   };
+=======
+
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
 
   return (
     <div className="min-h-screen bg-background py-20">
