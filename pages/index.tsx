@@ -44,15 +44,17 @@ import { newOperationalServices2025 } from '../data/new-operational-services-202
 import { innovative2025Services } from '../data/innovative-2025-services';
 import { revolutionary2025Services } from '../data/revolutionary-2025-services';
 import { nextGenInnovations2025 } from '../data/next-gen-innovations-2025';
-import { innovative2026Services } from '../data/innovative-2026-services';
-import { emergingTech2026Services } from '../data/emerging-tech-2026-services';
-import { enterpriseIT2026Services } from '../data/enterprise-it-2026-services';
-import { innovative2026MicroSaasServices } from '../data/innovative-2026-micro-saas';
-import { emergingTech2026Services as emergingTech2026ServicesNew } from '../data/emerging-tech-2026-services';
-import { enterpriseIT2026Services as enterpriseIT2026ServicesNew } from '../data/enterprise-it-2026-services';
-import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
-import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2';
-import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2';
+import { innovative2025MicroSaasServices } from '../data/innovative-2025-micro-saas';
+import { emergingTech2025Services as newEmergingTech2025Services } from '../data/emerging-tech-2025-services';
+import { revolutionaryAI2025Services } from '../data/revolutionary-2025-ai-services';
+import { revolutionaryITInfrastructure2025Services } from '../data/revolutionary-2025-it-infrastructure';
+import { revolutionary2025MicroSaasServices } from '../data/revolutionary-2025-micro-saas';
+import { innovative2026MicroSaasServices } from '../data/innovative-2026-micro-saas-services';
+import { innovative2026ITServices } from '../data/innovative-2026-it-services';
+import { innovative2026AIServices } from '../data/innovative-2026-ai-services';
+import { revolutionary2026AIServices } from '../data/revolutionary-2026-ai-services';
+import { revolutionary2026ITInfrastructureServices } from '../data/revolutionary-2026-it-infrastructure';
+import { revolutionary2026MicroSaasServices } from '../data/revolutionary-2026-micro-saas';
 
 export default function HomePage() {
   const heroStats = [
@@ -99,94 +101,27 @@ export default function HomePage() {
     ...emergingTech2026Services,
     ...enterpriseIT2026Services,
     ...innovative2026MicroSaasServices,
-    ...emergingTech2026ServicesNew,
-    ...enterpriseIT2026ServicesNew,
-    ...innovative2026MicroSaasServicesV2,
-    ...emergingTech2026ServicesV2,
-    ...enterpriseIT2026ServicesV2
+    ...innovative2026ITServices,
+    ...innovative2026AIServices,
+    ...revolutionary2026AIServices,
+    ...revolutionary2026ITInfrastructureServices,
+    ...revolutionary2026MicroSaasServices
   ];
 
-const serviceCategories = [
-  {
-    title: 'AI & Consciousness',
-    description: 'Revolutionary AI platforms with consciousness and emotional intelligence',
-    services: innovativeAIServicesEnhanced2025.slice(0, 3),
-    icon: Brain,
-    color: 'from-violet-500 to-purple-600',
-    href: '/ai-services',
-    features: ['Emotional Intelligence', 'Self-Awareness', 'Consciousness Evolution']
-  },
-  {
-    title: 'Quantum & Emerging Tech',
-    description: 'Breakthrough quantum computing and space technology solutions',
-    services: emergingTechServicesEnhanced2025.slice(0, 3),
-    icon: Atom,
-    color: 'from-indigo-500 to-blue-600',
-    href: '/quantum-services',
-    features: ['Quantum Computing', 'Space Mining', 'Brain-Computer Interface']
-  },
-  {
-    title: 'Enterprise IT',
-    description: 'Advanced enterprise infrastructure and security solutions',
-    services: innovativeITServicesEnhanced2025.slice(0, 3),
-    icon: Shield,
-    color: 'from-blue-500 to-cyan-600',
-    href: '/enterprise-it',
-    features: ['Zero Trust Security', 'Quantum Cloud', 'Autonomous Operations']
-  },
-  {
-    title: 'Micro SAAS',
-    description: 'Innovative business solutions for modern enterprises',
-    services: innovativeRealMicroSaasServices2025.slice(0, 3),
-    icon: Rocket,
-    color: 'from-teal-500 to-emerald-600',
-    href: '/micro-saas',
-    features: ['Content Automation', 'CRM Intelligence', 'Decision Engine']
-  },
-  {
-    title: 'Advanced AI Automation',
-    description: 'Revolutionary AI automation for development, testing, DevOps, and security',
-    services: advancedAIAutomationServices2025.slice(0, 3),
-    icon: Brain,
-    color: 'from-emerald-500 to-teal-600',
-    href: '/advanced-ai-automation-services',
-    features: ['Code Review AI', 'Testing Automation', 'DevOps Intelligence']
-  },
-  {
-    title: 'Advanced IT Infrastructure',
-    description: 'Next-generation infrastructure with quantum computing and edge computing',
-    services: advancedITInfrastructureServices2025.slice(0, 3),
-    icon: Cloud,
-    color: 'from-indigo-500 to-purple-600',
-    href: '/advanced-it-infrastructure-services',
-    features: ['Quantum Cloud', 'Edge Computing', 'Zero Trust Security']
-  },
-  {
-    title: 'Innovative Business Solutions',
-    description: 'AI-powered business intelligence, marketing, sales, and HR solutions',
-    services: innovativeBusinessSolutions2025.slice(0, 3),
-    icon: Target,
-    color: 'from-green-500 to-emerald-600',
-    href: '/innovative-business-solutions',
-    features: ['Business Intelligence', 'Marketing Automation', 'Sales Intelligence']
-  },
-  {
-    title: 'Cutting-Edge 2025',
-    description: 'Latest revolutionary services with quantum computing and AI breakthroughs',
-    services: [...cuttingEdgeAIServices2025, ...cuttingEdgeITInfrastructure2025, ...cuttingEdgeMicroSaas2025].slice(0, 3),
-    icon: Zap,
-    color: 'from-pink-500 to-purple-600',
-    href: '/cutting-edge-services-2025',
-    features: ['Quantum AI', 'Edge Computing', 'Autonomous Systems'],
-    badge: 'New'
-  }
-];
+  const featuredOffers = professionalServices.slice(0, 3);
 
-  // Get featured services (most popular and innovative)
-  const featuredServices = allServices
-    .filter(service => service.popular)
-    .sort((a, b) => (b.rating || 0) - (a.rating || 0))
-    .slice(0, 12);
+  // Service statistics
+  const serviceStats = {
+    totalServices: allServices.length,
+    aiServices: nextGenerationAIServices.length + innovativeAIServices.length + realMarketServices.filter(s => s.category.includes('AI')).length + revolutionary2025Services.filter(s => s.category.includes('AI')).length + nextGenInnovations2025.filter(s => s.category.includes('AI')).length + revolutionaryAI2025Services.length + revolutionary2025MicroSaasServices.filter(s => s.category.includes('AI')).length + innovative2026AIServices.length + revolutionary2026AIServices.length,
+    emergingTech: emergingTechnologyServices.length + emergingTech2025Services.length + newEmergingTech2025Services.length,
+    itSolutions: comprehensiveITSolutions.length + enterpriseITServices.length + revolutionaryITInfrastructure2025Services.length + innovative2026ITServices.length + revolutionary2026ITInfrastructureServices.length,
+    microSaas: enhancedRealMicroSaasServices.length + innovativeMicroSaasServices.length + innovative2025MicroSaasServices.length + revolutionary2025MicroSaasServices.length + innovative2026MicroSaasServices.length + revolutionary2026MicroSaasServices.length,
+    revolutionaryServices: revolutionary2025Services.length + nextGenInnovations2025.length + revolutionaryAI2025Services.length + revolutionaryITInfrastructure2025Services.length + revolutionary2025MicroSaasServices.length + revolutionary2026AIServices.length + revolutionary2026ITInfrastructureServices.length + revolutionary2026MicroSaasServices.length,
+    quantumServices: quantumSpaceServices.length + revolutionaryAI2025Services.filter(s => s.category.includes('Quantum')).length + revolutionaryITInfrastructure2025Services.filter(s => s.category.includes('Quantum')).length + revolutionary2025MicroSaasServices.filter(s => s.category.includes('Quantum')).length + revolutionary2026AIServices.filter(s => s.category.includes('Quantum')).length + revolutionary2026ITInfrastructureServices.filter(s => s.category.includes('Quantum')).length,
+    blockchainServices: revolutionaryAI2025Services.filter(s => s.category.includes('Blockchain')).length + revolutionaryITInfrastructure2025Services.filter(s => s.category.includes('Blockchain')).length + revolutionary2025MicroSaasServices.filter(s => s.category.includes('Blockchain')).length + revolutionary2026AIServices.filter(s => s.category.includes('Blockchain')).length + revolutionary2026ITInfrastructureServices.filter(s => s.category.includes('Blockchain')).length,
+    spaceTech: revolutionaryAI2025Services.filter(s => s.category.includes('Space')).length + revolutionaryITInfrastructure2025Services.filter(s => s.category.includes('Space')).length + revolutionary2025MicroSaasServices.filter(s => s.category.includes('Space')).length + revolutionary2026AIServices.filter(s => s.category.includes('Space')).length + revolutionary2026ITInfrastructureServices.filter(s => s.category.includes('Space')).length
+  };
 
   return (
     <UltraAdvancedFuturisticBackground variant="quantum-holographic-advanced">
@@ -213,13 +148,30 @@ const serviceCategories = [
         {/* Ultra Advanced Navigation */}
         <UltraFuturisticNavigation2034 />
 
-            {/* Enhanced CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button
-                href="/services"
-                variant="primary"
-                size="lg"
-                className="group relative overflow-hidden"
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="text-2xl md:text-3xl text-gray-200 mb-8 max-w-5xl mx-auto font-medium"
+              >
+                Revolutionary <span className="text-cyan-400 font-bold">AI</span>, <span className="text-purple-400 font-bold">Quantum Computing</span> & <span className="text-pink-400 font-bold">IT Services</span>
+              </motion.p>
+
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                className="text-lg md:text-xl text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed"
+              >
+                <span className="text-cyan-300 font-semibold">{serviceStats.totalServices}+</span> revolutionary services delivering <span className="text-green-400 font-bold">1000% ROI</span>. From AI consciousness simulation to quantum space mining, we're building the future of technology.
+              </motion.p>
+              
+              {/* Service Statistics Grid */}
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.55 }}
+                className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 max-w-4xl mx-auto"
               >
                 <span className="relative z-10">Explore Our Services</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -520,24 +472,240 @@ const serviceCategories = [
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 px-6 bg-gray-900">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            viewport={{ once: true }}
-            className="text-center mt-12"
-          >
-            <Button 
-              href="/services" 
-              variant="primary"
-              size="lg"
-              className="text-lg px-8 py-4"
+        {/* Enhanced Service Showcase - 2026 Services */}
+        <EnhancedServiceShowcase 
+          services={[...innovative2026MicroSaasServices, ...innovative2026ITServices, ...innovative2026AIServices]}
+          title="Revolutionary 2026 Services"
+          subtitle="Cutting-edge AI, IT, and Micro SaaS solutions for the future"
+          showPricing={true}
+          showFeatures={true}
+          showStats={true}
+          maxServices={12}
+        />
+
+        {/* Enhanced Service Showcase - All Services */}
+        <EnhancedServiceShowcase 
+          services={allServices}
+          title="Complete Service Portfolio"
+          subtitle="1000+ revolutionary services across all technology domains"
+          showPricing={true}
+          showFeatures={true}
+          showStats={true}
+          maxServices={18}
+        />
+
+        {/* Revolutionary 2026 Services Showcase */}
+        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-6xl font-black bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent mb-6">
+                Revolutionary 2026 Services
+              </h2>
+              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                Experience the future with our groundbreaking 2026 services that push the boundaries of what's possible
+              </p>
+            </motion.div>
+
+            {/* Revolutionary AI Services */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="mb-16"
+            >
+              <h3 className="text-3xl md:text-4xl font-bold text-cyan-400 mb-8 text-center">
+                🧠 Revolutionary AI Services 2026
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {revolutionary2026AIServices.slice(0, 6).map((service, index) => (
+                  <motion.div
+                    key={service.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="group relative"
+                  >
+                    <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="text-4xl">{service.icon}</div>
+                        <div className="text-right">
+                          <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
+                          <div className="text-sm text-gray-400">{service.period}</div>
+                        </div>
+                      </div>
+                      <h4 className="text-xl font-bold text-white mb-2">{service.name}</h4>
+                      <p className="text-gray-300 mb-4">{service.tagline}</p>
+                      <div className="space-y-2 mb-4">
+                        {service.features.slice(0, 3).map((feature, idx) => (
+                          <div key={idx} className="flex items-center text-sm text-gray-400">
+                            <div className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></div>
+                            {feature}
+                          </div>
+                        ))}
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-cyan-400 font-semibold">{service.category}</span>
+                        <Link href={service.link} className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                          Learn More →
+                        </Link>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Revolutionary IT Infrastructure Services */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="mb-16"
+            >
+              <h3 className="text-3xl md:text-4xl font-bold text-purple-400 mb-8 text-center">
+                ⚛️ Revolutionary IT Infrastructure 2026
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {revolutionary2026ITInfrastructureServices.slice(0, 6).map((service, index) => (
+                  <motion.div
+                    key={service.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="group relative"
+                  >
+                    <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="text-4xl">{service.icon}</div>
+                        <div className="text-right">
+                          <div className="text-2xl font-bold text-purple-400">{service.price}</div>
+                          <div className="text-sm text-gray-400">{service.period}</div>
+                        </div>
+                      </div>
+                      <h4 className="text-xl font-bold text-white mb-2">{service.name}</h4>
+                      <p className="text-gray-300 mb-4">{service.tagline}</p>
+                      <div className="space-y-2 mb-4">
+                        {service.features.slice(0, 3).map((feature, idx) => (
+                          <div key={idx} className="flex items-center text-sm text-gray-400">
+                            <div className="w-2 h-2 bg-purple-400 rounded-full mr-2"></div>
+                            {feature}
+                          </div>
+                        ))}
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-purple-400 font-semibold">{service.category}</span>
+                        <Link href={service.link} className="text-purple-400 hover:text-purple-300 transition-colors">
+                          Learn More →
+                        </Link>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Revolutionary Micro SaaS Services */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="mb-16"
+            >
+              <h3 className="text-3xl md:text-4xl font-bold text-pink-400 mb-8 text-center">
+                🚀 Revolutionary Micro SaaS 2026
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {revolutionary2026MicroSaasServices.slice(0, 6).map((service, index) => (
+                  <motion.div
+                    key={service.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="group relative"
+                  >
+                    <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-xl rounded-2xl p-6 border border-gray-700/50 hover:border-pink-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="text-4xl">{service.icon}</div>
+                        <div className="text-right">
+                          <div className="text-2xl font-bold text-pink-400">{service.price}</div>
+                          <div className="text-sm text-gray-400">{service.period}</div>
+                        </div>
+                      </div>
+                      <h4 className="text-xl font-bold text-white mb-2">{service.name}</h4>
+                      <p className="text-gray-300 mb-4">{service.tagline}</p>
+                      <div className="space-y-2 mb-4">
+                        {service.features.slice(0, 3).map((feature, idx) => (
+                          <div key={idx} className="flex items-center text-sm text-gray-400">
+                            <div className="w-2 h-2 bg-pink-400 rounded-full mr-2"></div>
+                            {feature}
+                          </div>
+                        ))}
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-pink-400 font-semibold">{service.category}</span>
+                        <Link href={service.link} className="text-pink-400 hover:text-pink-300 transition-colors">
+                          Learn More →
+                        </Link>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Featured Offers */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="mb-8 text-center">
+              <h2 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Featured Offers</h2>
+              <p className="text-gray-300 mt-2">New professional services with clear pricing and fast onboarding</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {featuredOffers.map((svc) => (
+                <div key={svc.id} className="bg-gray-800/60 border border-gray-700 rounded-2xl p-6 hover:border-cyan-500/40 transition-colors">
+                  <div className="text-2xl font-semibold text-white mb-2">{svc.name}</div>
+                  <div className="text-gray-300 mb-3">{svc.tagline}</div>
+                  <div className="text-cyan-300 font-bold mb-4">{svc.price}{svc.period}</div>
+                  <ul className="text-gray-400 text-sm space-y-1 mb-6 list-disc list-inside">
+                    {svc.features.slice(0, 3).map((f, i) => (
+                      <li key={i}>{f}</li>
+                    ))}
+                  </ul>
+                  <div className="flex gap-3">
+                    <Button href={svc.link || '/contact'} variant="primary">Learn More</Button>
+                    <Button href="/contact" variant="secondary">Talk to Expert</Button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Zion Tech Group */}
+        <section className="py-24 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-center mb-20"
             >
               View All 500+ Services
               <ArrowRight className="ml-2 w-6 h-6" />
