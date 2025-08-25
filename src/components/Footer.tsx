@@ -7,9 +7,14 @@ export function Footer() {
     {
       title: "AI & Micro SAAS",
       links: [
+        { label: "AI Content Hub Pro", path: "/services/ai-content-hub-pro" },
+        { label: "AI Customer Service Automation", path: "/services/ai-customer-service-automation" },
+        { label: "AI Sales Intelligence Platform", path: "/services/ai-sales-intelligence-platform" },
+        { label: "AI Fintech Platform", path: "/services/ai-fintech-platform" },
+        { label: "AI Healthcare Technology", path: "/services/ai-healthcare-tech-platform" },
         { label: "AI & Autonomous Systems", path: "/services/ai-autonomous-systems" },
         { label: "AI Research Assistant", path: "/ai-autonomous-research-assistant" },
-        { label: "Quantum Neural Networks", path: "/quantum-neural-network-platform" },
+        { label: "Quantum Enterprise Platform", path: "/services/quantum-enterprise-platform" },
         { label: "Autonomous Business Platform", path: "/autonomous-business-operations-platform" },
         { label: "AI Asset Management", path: "/ai-powered-it-asset-management" },
         { label: "Quantum Technology", path: "/services/quantum-technology" },
@@ -17,12 +22,19 @@ export function Footer() {
         { label: "Micro SAAS Solutions", path: "/services/micro-saas-solutions" },
         { label: "Cybersecurity", path: "/services/cybersecurity" },
         { label: "SOC2 Compliance Automation", path: "/soc2-compliance-automation" },
-        { label: "Industry Solutions", path: "/services/industry-solutions" },
-        { label: "AI & Machine Learning", path: "/services#ai-ml" },
-        { label: "Cloud & Infrastructure", path: "/services#cloud" },
-        { label: "5G Enterprise Solutions", path: "/5g-enterprise-solutions" },
-        { label: "Blockchain Solutions", path: "/services#blockchain" },
-        { label: "IoT & Edge Computing", path: "/services#iot" }
+        { label: "Industry Solutions", path: "/services/industry-solutions" }
+      ]
+    },
+    {
+      title: "Specialized IT Services",
+      links: [
+        { label: "Cloud Cost Optimization", path: "/services/cloud-cost-optimization-finops" },
+        { label: "DevOps Automation Platform", path: "/services/devops-automation-cicd-platform" },
+        { label: "Data Analytics Platform", path: "/services/data-analytics-business-intelligence" },
+        { label: "IoT & Edge Computing", path: "/services/iot-edge-computing-platform" },
+        { label: "API Management Platform", path: "/services/api-management-integration-platform" },
+        { label: "Advanced Cybersecurity", path: "/services/advanced-cybersecurity-platform" },
+        { label: "5G Enterprise Networks", path: "/services/5g-enterprise-network-solutions" }
       ]
     },
     {
@@ -81,7 +93,7 @@ export function Footer() {
   const socialLinks = [
     { 
       name: 'LinkedIn', 
-      url: 'https://www.linkedin.com/company/zion-tech-group', 
+      url: 'https://www.linkedin.com/company/ziontechgroup', 
       icon: '💼',
       fallback: 'https://linkedin.com'
     },
@@ -93,7 +105,7 @@ export function Footer() {
     },
     { 
       name: 'GitHub', 
-      url: 'https://github.com/Zion-Holdings', 
+      url: 'https://github.com/ziontechgroup', 
       icon: '💻',
       fallback: 'https://github.com'
     },
@@ -240,12 +252,6 @@ export function Footer() {
             </Link>
             <Link to="/accessibility" className="hover:text-cyan-400 transition-colors duration-200">
               Accessibility
-            </Link>
-            <Link to="/sitemap" className="hover:text-cyan-400 transition-colors duration-200">
-              Sitemap
-            </Link>
-            <Link to="/help" className="hover:text-cyan-400 transition-colors duration-200">
-              Help Center
             </Link>
           </div>
         </div>

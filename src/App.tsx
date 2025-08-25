@@ -1,29 +1,30 @@
-import React, { lazy, Suspense, useState } from 'react';
+import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ThemeProvider } from './contexts/ThemeContext';
-import { WhitelabelProvider } from './contexts/WhitelabelContext';
-import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { Header } from './components/Header';
-import { Sidebar } from './components/Sidebar';
 import { Footer } from './components/Footer';
-import { SonnerToaster } from './components/SonnerToaster';
-import { EnhancedAccessibility } from './components/EnhancedAccessibility';
+import Sidebar from './components/Sidebar';
+import { AccessibilityControls } from './components/AccessibilityControls';
+import { PerformanceDashboard } from './components/PerformanceDashboard';
+import { AnalyticsDashboard } from './components/AnalyticsDashboard';
 import { AIChatbot } from './components/AIChatbot';
 import { CollaborativeTextEditor } from './components/CollaborativeTextEditor';
 import { AICodeGenerator } from './components/AICodeGenerator';
-import { PerformanceDashboard } from './components/PerformanceDashboard';
-import { AnalyticsDashboard } from './components/AnalyticsDashboard';
 import { EnterpriseDashboard } from './components/EnterpriseDashboard';
 import { SecurityComplianceDashboard } from './components/SecurityComplianceDashboard';
 import { MachineLearningDashboard } from './components/MachineLearningDashboard';
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import { LinkHealthMonitor } from './components/LinkHealthMonitor';
+import { ThemeProvider } from "./components/ThemeProvider";
+import { useScrollToTop } from "./hooks";
+import { WhitelabelProvider } from "./context/WhitelabelContext";
+import { Toaster as SonnerToaster } from "./components/ui/sonner";
+import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
+import EnhancedSEO from './components/EnhancedSEO';
+import EnhancedAccessibility from './components/EnhancedAccessibility';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
 import './App.css';
 
-// Lazy load only the pages we know work
-const MicroSaasServicesPage = React.lazy(() => import('./pages/MicroSaasServices'));
-const PricingPage = React.lazy(() => import('./pages/PricingPage'));
-
-// Main page components
+// Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
 const Services = lazy(() => import('./pages/Services'));
 const AISolutions = lazy(() => import('./pages/AISolutions'));
@@ -32,6 +33,10 @@ const AIMatcherPage = lazy(() => import('./pages/AIMatcher'));
 const TalentDirectory = lazy(() => import('./pages/TalentDirectory'));
 const TalentsPage = lazy(() => import('./pages/TalentsPage'));
 const EmergingTech = lazy(() => import('./pages/EmergingTech'));
+
+// Lazy load only the pages we know work
+const MicroSaasServicesPage = React.lazy(() => import('./pages/MicroSaasServices'));
+const PricingPage = React.lazy(() => import('./pages/PricingPage'));
 
 // Service pages
 const AIServices = lazy(() => import('./pages/AIServices'));
@@ -168,16 +173,32 @@ const baseRoutes = [
   { path: '/pricing', element: <PricingPage /> },
 ];
 
-function App() {
+const App: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  useScrollToTop();
 
   return (
     <EnhancedErrorBoundary>
+      <EnhancedAccessibility />
+      <PerformanceMonitor />
       <ThemeProvider>
         <WhitelabelProvider>
-          <PerformanceOptimizer>
-            <Router>
-              <div className="app">
+          <Router>
+            <PerformanceOptimizer
+              enableMonitoring={true}
+              enableOptimizations={true}
+              showMetrics={import.meta.env.DEV}
+            >
+              <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+                {/* Enhanced SEO */}
+                <EnhancedSEO 
+                  title="Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services"
+                  description="Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology."
+                  keywords="AI solutions, quantum computing, cybersecurity, digital transformation, enterprise technology, machine learning, cloud services, IT infrastructure"
+                  type="website"
+                  url="https://ziontechgroup.com"
+                />
+                
                 <Header />
                 <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
                 
@@ -415,6 +436,6 @@ function App() {
       </ThemeProvider>
     </EnhancedErrorBoundary>
   );
-}
+};
 
 export default App;

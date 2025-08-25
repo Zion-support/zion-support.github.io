@@ -12,6 +12,15 @@ import {
 import { 
   emergingTechServicesEnhanced2025 
 } from '../data/2025-emerging-tech-services-enhanced';
+import { 
+  advancedInnovativeServicesExpansion 
+} from '../data/2025-advanced-innovative-services-expansion';
+import { 
+  specializedIndustrySolutionsExpansion 
+} from '../data/2025-specialized-industry-solutions-expansion';
+import { 
+  cuttingEdgeEmergingTechServices 
+} from '../data/2025-cutting-edge-emerging-tech-services';
 
 const Homepage2025: React.FC = () => {
   const [activeSection, setActiveSection] = useState('hero');
@@ -47,7 +56,10 @@ const Homepage2025: React.FC = () => {
     ...innovativeRealMicroSaasServices2025,
     ...innovativeAIServicesEnhanced2025,
     ...innovativeITServicesEnhanced2025,
-    ...emergingTechServicesEnhanced2025
+    ...emergingTechServicesEnhanced2025,
+    ...advancedInnovativeServicesExpansion,
+    ...specializedIndustrySolutionsExpansion,
+    ...cuttingEdgeEmergingTechServices
   ];
 
   const featuredServices = allServices.filter(service => service.popular).slice(0, 12);
@@ -114,7 +126,7 @@ const Homepage2025: React.FC = () => {
             </motion.div>
             
             <div className="hidden lg:flex space-x-8">
-              {['hero', 'services', 'ai', 'it', 'emerging', 'contact'].map((section) => (
+              {['hero', 'services', 'ai', 'it', 'emerging', 'industry', 'emerging-tech', 'contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -124,7 +136,9 @@ const Homepage2025: React.FC = () => {
                       : 'text-gray-300 hover:text-cyan-400'
                   }`}
                 >
-                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                  {section === 'hero' ? 'Home' : 
+                   section === 'emerging-tech' ? 'Cutting-Edge Tech' :
+                   section.charAt(0).toUpperCase() + section.slice(1)}
                   <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 transition-all duration-300 group-hover:w-full ${
                     activeSection === section ? 'w-full' : ''
                   }`}></span>
@@ -269,12 +283,14 @@ const Homepage2025: React.FC = () => {
           </motion.div>
 
           {/* Service Categories Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 mb-16">
             {[
-              { title: 'AI Services', icon: '🤖', color: 'from-purple-500 to-pink-500', count: innovativeAIServicesEnhanced2025.length },
-              { title: 'IT Solutions', icon: '💻', color: 'from-blue-500 to-cyan-500', count: innovativeITServicesEnhanced2025.length },
-              { title: 'Emerging Tech', icon: '🚀', color: 'from-green-500 to-emerald-500', count: emergingTechServicesEnhanced2025.length },
-              { title: 'Micro SAAS', icon: '📱', color: 'from-orange-500 to-red-500', count: innovativeRealMicroSaasServices2025.length }
+              { title: 'AI Services', icon: '🤖', color: 'from-purple-500 to-pink-500', count: innovativeAIServicesEnhanced2025.length + advancedInnovativeServicesExpansion.filter(s => s.category.includes('AI')).length },
+              { title: 'IT Solutions', icon: '💻', color: 'from-blue-500 to-cyan-500', count: innovativeITServicesEnhanced2025.length + specializedIndustrySolutionsExpansion.filter(s => s.category.includes('IT') || s.category.includes('Manufacturing') || s.category.includes('Construction')).length },
+              { title: 'Emerging Tech', icon: '🚀', color: 'from-green-500 to-emerald-500', count: emergingTechServicesEnhanced2025.length + cuttingEdgeEmergingTechServices.length },
+              { title: 'Micro SAAS', icon: '📱', color: 'from-orange-500 to-red-500', count: innovativeRealMicroSaasServices2025.length + advancedInnovativeServicesExpansion.filter(s => s.category.includes('Micro SAAS')).length },
+              { title: 'Industry Solutions', icon: '🏭', color: 'from-indigo-500 to-purple-500', count: specializedIndustrySolutionsExpansion.length },
+              { title: 'Advanced Tech', icon: '⚡', color: 'from-yellow-500 to-orange-500', count: advancedInnovativeServicesExpansion.length }
             ].map((category, index) => (
               <motion.div
                 key={category.title}
@@ -494,6 +510,122 @@ const Homepage2025: React.FC = () => {
                   <a
                     href={service.link}
                     className="text-green-400 hover:text-green-300 text-sm font-medium transition-colors duration-300"
+                  >
+                    Learn More →
+                  </a>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Specialized Industry Solutions Section */}
+      <section id="industry" className="py-24 px-4 sm:px-6 lg:px-8 relative bg-gradient-to-r from-indigo-900/20 to-purple-900/20">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-20"
+          >
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
+                Specialized
+              </span>
+              <br />
+              <span className="bg-gradient-to-r from-purple-400 to-indigo-500 bg-clip-text text-transparent">
+                Industry Solutions
+              </span>
+            </h2>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Industry-specific solutions designed to address unique challenges and drive innovation across sectors.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {specializedIndustrySolutionsExpansion.slice(0, 6).map((service, index) => (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                whileHover={{ 
+                  y: -5,
+                  scale: 1.02,
+                  transition: { duration: 0.3 }
+                }}
+                className="group bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6 hover:border-indigo-400/50 transition-all duration-300 shadow-xl hover:shadow-indigo-500/25"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div className="text-4xl group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
+                  <div className="text-indigo-400 font-bold text-lg">{service.price}{service.period}</div>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-indigo-400 transition-colors duration-300">{service.name}</h3>
+                <p className="text-gray-400 text-sm mb-4 leading-relaxed">{service.description}</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-gray-500">{service.trialDays} days free trial</span>
+                  <a
+                    href={service.link}
+                    className="text-indigo-400 hover:text-indigo-300 text-sm font-medium transition-colors duration-300"
+                  >
+                    Learn More →
+                  </a>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Cutting-Edge Emerging Tech Section */}
+      <section id="emerging-tech" className="py-24 px-4 sm:px-6 lg:px-8 relative">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-20"
+          >
+            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+                Cutting-Edge
+              </span>
+              <br />
+              <span className="bg-gradient-to-r from-orange-400 to-yellow-500 bg-clip-text text-transparent">
+                Emerging Tech
+              </span>
+            </h2>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Explore the future with our revolutionary emerging technology solutions that push the boundaries of what's possible.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cuttingEdgeEmergingTechServices.slice(0, 6).map((service, index) => (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                whileHover={{ 
+                  y: -5,
+                  scale: 1.02,
+                  transition: { duration: 0.3 }
+                }}
+                className="group bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6 hover:border-yellow-400/50 transition-all duration-300 shadow-xl hover:shadow-yellow-500/25"
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div className="text-4xl group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
+                  <div className="text-yellow-400 font-bold text-lg">{service.price}{service.period}</div>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-yellow-400 transition-colors duration-300">{service.name}</h3>
+                <p className="text-gray-400 text-sm mb-4 leading-relaxed">{service.description}</p>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-gray-500">{service.trialDays} days free trial</span>
+                  <a
+                    href={service.link}
+                    className="text-yellow-400 hover:text-yellow-300 text-sm font-medium transition-colors duration-300"
                   >
                     Learn More →
                   </a>
