@@ -9,20 +9,17 @@ import {
   LifeBuoy, Store, PieChart, Share2, Monitor, Smartphone
 } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import { useSidebar } from '../context/SidebarContext';
 
-interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-export default function Sidebar({ isOpen, onClose }: SidebarProps) {
+export default function Sidebar() {
+  const { isSidebarOpen, setIsSidebarOpen } = useSidebar();
   const location = useLocation();
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
 
   // Close sidebar when route changes
   useEffect(() => {
-    onClose();
-  }, [location.pathname, onClose]);
+    setIsSidebarOpen(false);
+  }, [location.pathname, setIsSidebarOpen]);
 
   const toggleSection = (sectionTitle: string) => {
     setExpandedSections(prev => 
@@ -215,21 +212,21 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     <>
       {/* Overlay */}
       <AnimatePresence>
-        {isOpen && (
+        {isSidebarOpen && (
           <motion.div
             variants={overlayVariants}
             initial="closed"
             animate="open"
             exit="closed"
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
-            onClick={onClose}
+            onClick={() => setIsSidebarOpen(false)}
           />
         )}
       </AnimatePresence>
 
       {/* Sidebar */}
       <AnimatePresence>
-        {isOpen && (
+        {isSidebarOpen && (
           <motion.div
             variants={sidebarVariants}
             initial="closed"
@@ -273,7 +270,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                   </div>
                 </div>
                 <button
-                  onClick={onClose}
+                  onClick={() => setIsSidebarOpen(false)}
                   className="p-2 futuristic-card hover:bg-white/20 rounded-lg transition-colors group"
                 >
                   <X className="w-5 h-5 text-zion-slate-light group-hover:neon-text transition-colors" />

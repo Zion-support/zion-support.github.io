@@ -1,11 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Menu, X, ChevronDown, Globe, Sun, Moon } from 'lucide-react';
-import { useTheme } from '@/components/ThemeProvider';
+import { useSidebar } from '../context/SidebarContext';
+import { 
+  Menu, 
+  X, 
+  ChevronDown, 
+  Search, 
+  Phone, 
+  Mail, 
+  MapPin,
+  Brain,
+  Users,
+  Target,
+  Shield,
+  Zap,
+  Building,
+  Cpu,
+  Globe,
+  Rocket,
+  Star,
+  ArrowRight
+} from 'lucide-react';
 
 export const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { isSidebarOpen, toggleSidebar } = useSidebar();
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const { theme, setTheme } = useTheme();
@@ -166,6 +185,15 @@ export const Header: React.FC = () => {
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
+
+          {/* Sidebar Toggle Button */}
+          <button
+            onClick={toggleSidebar}
+            className="lg:hidden p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300 mr-2"
+            aria-label="Toggle sidebar"
+          >
+            <Menu className="w-6 h-6" />
+          </button>
 
           {/* Mobile Menu Button */}
           <button
