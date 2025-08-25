@@ -4,7 +4,7 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import Sidebar from './components/Sidebar';
 import { AccessibilityControls } from './components/AccessibilityControls';
-import { PerformanceDashboard } from './components/PerformanceDashboard';
+import PerformanceDashboard from './components/PerformanceDashboard';
 import { AnalyticsDashboard } from './components/AnalyticsDashboard';
 import { AIChatbot } from './components/AIChatbot';
 import { CollaborativeTextEditor } from './components/CollaborativeTextEditor';
@@ -21,7 +21,11 @@ import { Toaster as SonnerToaster } from "./components/ui/sonner";
 import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
 import EnhancedSEO from './components/EnhancedSEO';
 import EnhancedAccessibility from './components/EnhancedAccessibility';
-import PerformanceMonitor from './components/PerformanceMonitor';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { ScrollToTop } from './components/ScrollToTop';
+import { ContentQualityEnhancer } from './components/ContentQualityEnhancer';
+import { BrokenLinkFixer } from './components/BrokenLinkFixer';
+import { WebsiteImprovementDashboard } from './components/WebsiteImprovementDashboard';
 
 // Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
@@ -45,9 +49,6 @@ const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAut
 const AIWorkflowAutomation = lazy(() => import('./pages/services/AIWorkflowAutomation'));
 const BlockchainEnterpriseSolutions = lazy(() => import('./pages/services/BlockchainEnterpriseSolutions'));
 const IoTDataAnalytics = lazy(() => import('./pages/services/IoTDataAnalytics'));
-
-// Next Generation Innovative Services
-const NextGenInnovativeServices = lazy(() => import('./pages/NextGenInnovativeServices'));
 
 // Missing pages from analysis
 const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/QuantumNeuralNetworkPlatform'));
@@ -157,15 +158,19 @@ const App: React.FC = () => {
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
-            <PerformanceOptimizer>
-              <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+            <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
                 {/* Enhanced SEO */}
                 <EnhancedSEO 
-                  title="Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services"
-                  description="Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology."
-                  keywords="AI solutions, quantum computing, cybersecurity, digital transformation, enterprise technology, machine learning, cloud services, IT infrastructure"
-                  type="website"
-                  url="https://ziontechgroup.com"
+                  seoData={{
+                    title: "Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services",
+                    description: "Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology.",
+                    keywords: ["AI solutions", "quantum computing", "cybersecurity", "digital transformation", "enterprise technology", "machine learning", "cloud services", "IT infrastructure"],
+                    canonicalUrl: "https://ziontechgroup.com",
+                    ogImage: "https://ziontechgroup.com/og-image.jpg",
+                    ogType: "website",
+                    twitterCard: "summary_large_image"
+                  }}
+                  pageType="home"
                 />
                 
                 <Header />
@@ -232,9 +237,6 @@ const App: React.FC = () => {
                       <Route path="/ai-workflow-automation" element={<AIWorkflowAutomation />} />
                       <Route path="/blockchain-enterprise-solutions" element={<BlockchainEnterpriseSolutions />} />
                       <Route path="/iot-data-analytics" element={<IoTDataAnalytics />} />
-                      
-                      {/* Next Generation Innovative Services */}
-                      <Route path="/next-gen-innovative-services" element={<NextGenInnovativeServices />} />
                       
                       {/* Solutions Routes */}
                       <Route path="/services/enterprise" element={<EnterpriseSolutions />} />
@@ -319,8 +321,16 @@ const App: React.FC = () => {
                 {/* Enhanced Accessibility Controls */}
                 <EnhancedAccessibility position="bottom-right" />
                 
+                {/* Website Improvement Tools */}
+                <ContentQualityEnhancer />
+                <BrokenLinkFixer />
+                <WebsiteImprovementDashboard />
+                
                 {/* AI Chatbot - Always Available */}
                 <AIChatbot />
+                
+                {/* Scroll to Top Button */}
+                <ScrollToTop />
                 
                 {/* Collaborative Text Editor - Development Mode */}
                 {import.meta.env.DEV && (
@@ -374,12 +384,11 @@ const App: React.FC = () => {
                   </>
                 )}
               </div>
-            </PerformanceOptimizer>
-          </Router>
+            </Router>
         </WhitelabelProvider>
       </ThemeProvider>
     </EnhancedErrorBoundary>
   );
-};
+}
 
 export default App;
