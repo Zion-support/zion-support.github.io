@@ -13,7 +13,9 @@ import { EnterpriseDashboard } from './components/EnterpriseDashboard';
 import { SecurityComplianceDashboard } from './components/SecurityComplianceDashboard';
 import { MachineLearningDashboard } from './components/MachineLearningDashboard';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import { LinkHealthMonitor } from './components/LinkHealthMonitor';
+import LinkHealthMonitor from './components/LinkHealthMonitor';
+import ContentQualityDashboard from './components/ContentQualityDashboard';
+import SEOOptimizer from './components/SEOOptimizer';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
@@ -192,6 +194,11 @@ const App = () => {
                 {/* AI Chatbot - Always Available */}
                 <AIChatbot />
                 
+                {/* Enhanced Monitoring and Analysis Tools */}
+                <LinkHealthMonitor />
+                <ContentQualityDashboard />
+                <SEOOptimizer />
+                
                 {/* Collaborative Text Editor - Development Mode */}
                 {import.meta.env.DEV && (
                   <div className="fixed bottom-24 left-6 z-40 w-96">
@@ -261,21 +268,7 @@ const App = () => {
                   }}
                 />
                 
-                {/* Link Health Monitor - Development Mode */}
-                {import.meta.env.DEV && (
-                  <LinkHealthMonitor
-                    links={[
-                      'https://ziontechgroup.com',
-                      'https://www.linkedin.com/company/ziontechgroup',
-                      'https://twitter.com/ziontechgroup',
-                      'https://github.com/ziontechgroup',
-                      'https://www.youtube.com/@ziontechgroup'
-                    ]}
-                    autoCheck={true}
-                    checkInterval={600000} // 10 minutes
-                    timeout={5000} // 5 seconds
-                  />
-                )}
+
               </div>
             </PerformanceOptimizer>
           </Router>
