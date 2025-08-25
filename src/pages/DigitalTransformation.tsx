@@ -1,178 +1,137 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
+import { Link } from 'react-router-dom';
 import { 
   Rocket, 
-  Target, 
-  Users, 
-  BarChart3, 
   Zap, 
-  Globe,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Brain,
-  Award,
-  Shield,
-  Cpu,
-  Network,
-  Code,
-  Settings,
+  Shield, 
+  Users, 
+  Cpu, 
+  Cloud,
   TrendingUp,
-  Lightbulb
+  CheckCircle,
+  ArrowRight,
+  Target,
+  Brain,
+  Globe,
+  Database,
+  Network,
+  Lock,
+  BarChart3
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const DigitalTransformation = () => {
-  const services = [
+  const transformationServices = [
     {
       icon: Rocket,
-      title: "Digital Strategy & Roadmap Development",
-      description: "Comprehensive digital transformation strategy with detailed roadmap and implementation planning.",
-      features: ["Digital assessment", "Strategy development", "Roadmap creation", "Change management"],
-      price: "From $150,000",
-      maturity: "Enterprise",
-      color: "from-purple-500 to-pink-500"
+      title: 'Strategy & Planning',
+      description: 'Comprehensive digital transformation strategy development and roadmap planning.',
+      features: ['Current State Assessment', 'Future State Vision', 'Implementation Roadmap', 'Change Management'],
+      link: '/digital-strategy'
+    },
+    {
+      icon: Brain,
+      title: 'AI & Automation',
+      description: 'Intelligent automation solutions that streamline operations and enhance decision-making.',
+      features: ['Process Automation', 'AI Integration', 'Machine Learning', 'Predictive Analytics'],
+      link: '/ai-automation'
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud Migration',
+      description: 'Seamless migration to cloud infrastructure for improved scalability and efficiency.',
+      features: ['Migration Planning', 'Infrastructure Design', 'Data Migration', 'Performance Optimization'],
+      link: '/cloud-migration'
+    },
+    {
+      icon: Database,
+      title: 'Data Modernization',
+      description: 'Transform your data infrastructure for better insights and decision-making.',
+      features: ['Data Strategy', 'Modernization Planning', 'Integration Solutions', 'Analytics Platform'],
+      link: '/data-modernization'
     },
     {
       icon: Users,
-      title: "Customer Experience (CX) Transformation",
-      description: "End-to-end customer experience transformation with journey mapping and digital touchpoints.",
-      features: ["Customer journey mapping", "Touchpoint optimization", "Digital experience design", "Analytics integration"],
-      price: "From $95,000",
-      maturity: "Advanced",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: Code,
-      title: "Process Digitalization & Automation",
-      description: "Comprehensive process digitalization with intelligent automation and workflow optimization.",
-      features: ["Process analysis", "Digital workflow design", "Automation implementation", "Performance monitoring"],
-      price: "From $75,000",
-      maturity: "Mid-Size",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      icon: BarChart3,
-      title: "Data-Driven Decision Making Platform",
-      description: "Comprehensive data analytics platform for informed decision making and business intelligence.",
-      features: ["Data integration", "Advanced analytics", "Real-time dashboards", "Predictive modeling"],
-      price: "From $110,000",
-      maturity: "Advanced",
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      icon: Lightbulb,
-      title: "Innovation Lab & Digital Hub",
-      description: "Dedicated innovation lab for digital experimentation, prototyping, and innovation management.",
-      features: ["Innovation lab setup", "Prototyping facilities", "Innovation management", "Collaboration tools"],
-      price: "From $180,000",
-      maturity: "Enterprise",
-      color: "from-indigo-500 to-purple-500"
+      title: 'Customer Experience',
+      description: 'Enhance customer engagement through digital channels and personalized experiences.',
+      features: ['Digital Channels', 'Personalization', 'Customer Analytics', 'Omnichannel Strategy'],
+      link: '/customer-experience'
     },
     {
       icon: Shield,
-      title: "Change Management & Training",
-      description: "Comprehensive change management programs with employee training and adoption strategies.",
-      features: ["Change strategy", "Training programs", "Communication plans", "Adoption metrics"],
-      price: "From $60,000",
-      maturity: "Mid-Size",
-      color: "from-yellow-500 to-orange-500"
+      title: 'Security & Compliance',
+      description: 'Ensure digital security and maintain regulatory compliance throughout transformation.',
+      features: ['Security Assessment', 'Compliance Framework', 'Risk Management', 'Security Monitoring'],
+      link: '/security-compliance'
     }
   ];
 
   const benefits = [
     {
+      icon: TrendingUp,
+      title: 'Increased Efficiency',
+      description: 'Streamline operations and automate processes to improve productivity and reduce costs.'
+    },
+    {
       icon: Target,
-      title: "Increased Efficiency",
-      description: "Streamline operations and automate processes for maximum productivity and cost savings."
-    },
-    {
-      icon: Award,
-      title: "Competitive Advantage",
-      description: "Stay ahead of the competition with cutting-edge digital capabilities and innovation."
-    },
-    {
-      icon: Globe,
-      title: "Global Reach",
-      description: "Expand your business reach with digital platforms and online presence."
+      title: 'Better Customer Experience',
+      description: 'Deliver personalized, seamless experiences across all digital touchpoints.'
     },
     {
       icon: Shield,
-      title: "Future-Proof Business",
-      description: "Build a resilient business model that adapts to changing market conditions."
+      title: 'Enhanced Security',
+      description: 'Implement modern security measures to protect your business and customer data.'
+    },
+    {
+      icon: Users,
+      title: 'Competitive Advantage',
+      description: 'Stay ahead of the competition with cutting-edge digital capabilities.'
     }
   ];
 
-  const stats = [
-    { label: "Digital Transformations", value: "80+", icon: Rocket },
-    { label: "Processes Automated", value: "500+", icon: Code },
-    { label: "Efficiency Gain", value: "45%", icon: TrendingUp },
-    { label: "Client ROI", value: "3.2x", icon: Star }
-  ];
-
-  const methodologies = [
-    { name: "Design Thinking", icon: "🧠", description: "Human-centered approach to problem solving and innovation" },
-    { name: "Agile Methodology", icon: "🔄", description: "Iterative development with rapid feedback and adaptation" },
-    { name: "Lean Six Sigma", icon: "⚡", description: "Process improvement and waste elimination strategies" },
-    { name: "Change Management", icon: "📈", description: "Structured approach to organizational change and adoption" },
-    { name: "Digital Maturity Assessment", icon: "📊", description: "Comprehensive evaluation of current digital capabilities" },
-    { name: "Innovation Management", icon: "💡", description: "Systematic approach to fostering and managing innovation" }
+  const industries = [
+    'Financial Services',
+    'Healthcare',
+    'Manufacturing',
+    'Retail',
+    'Technology',
+    'Government',
+    'Education',
+    'Energy'
   ];
 
   return (
-    <div className="min-h-screen bg-background relative overflow-hidden">
-      <SEO 
-        title="Digital Transformation Services - Zion Tech Group"
-        description="End-to-end business modernization through strategic digital transformation, process optimization, and innovation management."
-        keywords="digital transformation, business modernization, process optimization, innovation management, Zion Tech Group"
-        canonical="https://ziontechgroup.com/digital-transformation"
-      />
-
+    <div className="min-h-screen bg-zion-blue-dark text-white">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple opacity-95" />
-        <div className="absolute inset-0">
-          <motion.div 
-            className="absolute top-1/4 left-1/4 w-4 h-4 rounded-full bg-zion-purple opacity-60 blur-sm"
-            animate={{ y: [0, -20, 0], opacity: [0.3, 0.8, 0.3] }}
-            transition={{ duration: 3, repeat: Infinity }}
-          />
-          <motion.div 
-            className="absolute top-3/4 right-1/4 w-6 h-6 rounded-full bg-zion-cyan opacity-40 blur-sm"
-            animate={{ y: [0, 20, 0], opacity: [0.4, 0.7, 0.4] }}
-            transition={{ duration: 4, repeat: Infinity, delay: 1 }}
-          />
-        </div>
-        
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/10 via-zion-purple/10 to-zion-blue-light/10"></div>
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">
-                Digital
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Digital{' '}
+              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                Transformation
               </span>
-              <br />
-              <span className="text-white">Transformation</span>
             </h1>
-            <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8">
-              End-to-end business modernization through strategic digital transformation, 
-              process optimization, and innovation management.
+            <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
+              Transform your business for the digital age with comprehensive solutions that drive innovation, 
+              efficiency, and competitive advantage.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
               >
                 Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/request-quote"
-                className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan/30 text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
+                className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan rounded-xl font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
               >
                 Request Quote
               </Link>
@@ -181,97 +140,62 @@ const DigitalTransformation = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-zion-blue-dark">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => {
-              const IconComponent = stat.icon;
-              return (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                  <div className="text-zion-slate-light">{stat.label}</div>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-20 bg-zion-blue">
+      {/* Transformation Services Grid */}
+      <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our Digital Transformation Services
+            <h2 className="text-4xl font-bold mb-6">
+              Our{' '}
+              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                Transformation Services
+              </span>
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Comprehensive services designed to modernize your business and drive innovation
+            <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
+              End-to-end digital transformation solutions that modernize your business operations and drive growth.
             </p>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => {
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {transformationServices.map((service, index) => {
               const IconComponent = service.icon;
               return (
                 <motion.div
-                  key={service.title}
-                  initial={{ opacity: 0, y: 20 }}
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-zion-blue-dark border border-zion-blue-light rounded-2xl p-6 hover:border-zion-cyan/50 transition-all duration-300"
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="group p-6 rounded-2xl border border-zion-cyan/20 hover:border-zion-cyan/40 hover:bg-zion-blue-light/10 transition-all duration-300"
                 >
-                  <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center mb-6`}>
+                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-xl font-bold text-white">{service.title}</h3>
-                    <span className={`px-3 py-1 text-xs font-semibold rounded-full ${
-                      service.maturity === 'Enterprise' ? 'bg-red-500/20 text-red-400' :
-                      service.maturity === 'Advanced' ? 'bg-orange-500/20 text-orange-400' :
-                      'bg-green-500/20 text-green-400'
-                    }`}>
-                      {service.maturity}
-                    </span>
-                  </div>
-                  <p className="text-zion-slate-light mb-6">{service.description}</p>
+                  <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                  <p className="text-zion-slate-light mb-4">{service.description}</p>
                   
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-zion-cyan mb-3">Key Features:</h4>
-                    <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-sm text-zion-slate-light">
-                          <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-zion-cyan mb-2">Key Features:</h4>
+                    <ul className="space-y-1">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="text-sm text-zion-slate-light flex items-center">
+                          <CheckCircle className="w-3 h-3 text-zion-cyan mr-2 flex-shrink-0" />
                           {feature}
                         </li>
                       ))}
                     </ul>
                   </div>
                   
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-zion-cyan mb-4">{service.price}</div>
-                    <Link
-                      to="/contact"
-                      className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
-                    >
-                      Learn More
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </Link>
-                  </div>
+                  <Link
+                    to={service.link}
+                    className="inline-flex items-center text-zion-cyan hover:text-zion-purple transition-colors duration-300 group/link"
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform duration-300" />
+                  </Link>
                 </motion.div>
               );
             })}
@@ -279,110 +203,176 @@ const DigitalTransformation = () => {
         </div>
       </section>
 
-      {/* Methodologies Section */}
-      <section className="py-20 bg-zion-blue-dark">
+      {/* Benefits Section */}
+      <section className="py-20 bg-zion-blue-light/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our Methodologies
+            <h2 className="text-4xl font-bold mb-6">
+              Why Choose{' '}
+              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                Digital Transformation?
+              </span>
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Proven frameworks and approaches for successful digital transformation
+            <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
+              Discover the transformative benefits that digital transformation can bring to your business.
             </p>
           </motion.div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => {
+              const IconComponent = benefit.icon;
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="text-center p-6 rounded-2xl hover:bg-zion-blue-light/10 transition-all duration-300"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <IconComponent className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
+                  <p className="text-zion-slate-light">{benefit.description}</p>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {methodologies.map((methodology, index) => (
+      {/* Industries Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold mb-6">
+              Industries We{' '}
+              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                Transform
+              </span>
+            </h2>
+            <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
+              Our digital transformation solutions are tailored to meet the unique challenges and opportunities across diverse industries.
+            </p>
+          </motion.div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {industries.map((industry, index) => (
               <motion.div
-                key={methodology.name}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-blue border border-zion-blue-light rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.05 }}
+                className="p-4 rounded-xl border border-zion-cyan/20 hover:border-zion-cyan/40 hover:bg-zion-blue-light/10 transition-all duration-300 text-center"
               >
-                <div className="text-4xl mb-3">{methodology.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{methodology.name}</h3>
-                <p className="text-zion-slate-light">{methodology.description}</p>
+                <span className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300">
+                  {industry}
+                </span>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 bg-zion-blue">
+      {/* Transformation Process */}
+      <section className="py-20 bg-zion-blue-light/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Why Choose Our Digital Transformation Services?
+            <h2 className="text-4xl font-bold mb-6">
+              Our{' '}
+              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                Transformation
+              </span>
+              {' '}Process
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Experience the benefits of strategic digital transformation and innovation
+            <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
+              A proven methodology for successfully implementing digital transformation initiatives that drive business value.
             </p>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => {
-              const IconComponent = benefit.icon;
-              return (
-                <motion.div
-                  key={benefit.title}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="flex items-start gap-6"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center flex-shrink-0">
-                    <IconComponent className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                    <p className="text-zion-slate-light">{benefit.description}</p>
-                  </div>
-                </motion.div>
-              );
-            })}
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                step: '01',
+                title: 'Assessment & Strategy',
+                description: 'Evaluate current state and develop comprehensive transformation strategy.'
+              },
+              {
+                step: '02',
+                title: 'Planning & Design',
+                description: 'Create detailed implementation plan and design future state architecture.'
+              },
+              {
+                step: '03',
+                title: 'Implementation',
+                description: 'Execute transformation initiatives with careful attention to change management.'
+              },
+              {
+                step: '04',
+                title: 'Optimization & Growth',
+                description: 'Continuously optimize and scale digital capabilities for sustained growth.'
+              }
+            ].map((phase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                  {phase.step}
+                </div>
+                <h3 className="text-xl font-semibold mb-3">{phase.title}</h3>
+                <p className="text-zion-slate-light">{phase.description}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan to-zion-purple">
+      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl font-bold mb-6">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
-              Let's discuss how our digital transformation services can modernize your operations and drive growth
+            <p className="text-lg text-zion-slate-light mb-8 max-w-2xl mx-auto">
+              Let's discuss how our digital transformation solutions can modernize your operations, 
+              improve efficiency, and create lasting competitive advantages.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-white text-zion-blue-dark font-semibold rounded-xl hover:shadow-lg transition-all duration-300"
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
               >
-                Schedule Consultation
-                <ArrowRight className="ml-2 w-5 h-5" />
+                Start Your Transformation
               </Link>
               <Link
                 to="/request-quote"
-                className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white hover:text-zion-blue-dark transition-all duration-300"
+                className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan rounded-xl font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
               >
-                Get Free Quote
+                Get a Custom Quote
               </Link>
             </div>
           </motion.div>
