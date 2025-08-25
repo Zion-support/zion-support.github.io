@@ -1,320 +1,414 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
 import { 
-  Building, 
+  Target, 
+  Heart, 
   Users, 
   Globe, 
-  Zap,
-  Heart,
+  Rocket, 
+  Shield, 
+  Award, 
   ArrowRight,
-  CheckCircle,
+  Brain,
+  Cpu,
+  Zap,
+  Building,
   Star,
-  Lightbulb,
-  Shield,
-  Network
+  TrendingUp,
+  Eye
 } from 'lucide-react';
 
-const missionValues = [
-  {
-    title: 'Innovation First',
-    description: 'We push the boundaries of what\'s possible through cutting-edge technology and creative solutions',
-    icon: Lightbulb,
-    color: 'from-yellow-500 to-orange-600'
-  },
-  {
-    title: 'Human-Centric',
-    description: 'Technology serves humanity - we build solutions that enhance human potential and well-being',
-    icon: Heart,
-    color: 'from-red-500 to-pink-600'
-  },
-  {
-    title: 'Global Impact',
-    description: 'We create solutions that address global challenges and benefit communities worldwide',
-    icon: Globe,
-    color: 'from-blue-500 to-cyan-600'
-  },
-  {
-    title: 'Excellence',
-    description: 'We maintain the highest standards of quality and performance in everything we do',
-    icon: Star,
-    color: 'from-purple-500 to-indigo-600'
-  }
-];
-
-const strategicGoals = [
-  {
-    goal: 'AI Revolution',
-    description: 'Democratize access to advanced AI technology and make it accessible to businesses of all sizes',
-    icon: Building,
-    timeline: '2025-2030'
-  },
-  {
-    goal: 'Quantum Computing',
-    description: 'Lead the quantum computing revolution and bring quantum advantage to practical applications',
-    icon: Zap,
-    timeline: '2025-2035'
-  },
-  {
-    goal: 'Sustainable Tech',
-    description: 'Develop environmentally conscious technology solutions that reduce carbon footprint',
-    icon: Globe,
-    timeline: '2025-2040'
-  },
-  {
-    goal: 'Global Connectivity',
-    description: 'Bridge the digital divide and connect underserved communities worldwide',
-    icon: Network,
-    timeline: '2025-2045'
-  }
-];
-
-const impactAreas = [
-  {
-    area: 'Healthcare',
-    description: 'Revolutionizing medical diagnostics and patient care through AI and quantum computing',
-    icon: Heart,
-    metrics: '10M+ patients impacted'
-  },
-  {
-    area: 'Education',
-    description: 'Transforming learning experiences with personalized AI-driven education platforms',
-    icon: Users,
-    metrics: '5M+ students reached'
-  },
-  {
-    area: 'Environment',
-    description: 'Developing sustainable technology solutions for climate change and conservation',
-    icon: Globe,
-    metrics: '50% reduction in carbon footprint'
-  },
-  {
-    area: 'Business',
-    description: 'Empowering businesses with intelligent automation and data-driven insights',
-    icon: Building,
-    metrics: '1000+ businesses transformed'
-  }
-];
-
 export default function Mission() {
-  return (
-    <div className="min-h-screen bg-background">
-      <SEO 
-        title="Our Mission - Zion Tech Group" 
-        description="Discover Zion Tech Group's mission to revolutionize technology and create positive global impact through innovation."
-        keywords="mission, vision, values, innovation, technology, global impact"
-        canonical="https://ziontechgroup.com/mission"
-      />
+  const coreValues = [
+    {
+      title: "Innovation First",
+      description: "We push the boundaries of what's possible with cutting-edge technology",
+      icon: Rocket,
+      details: [
+        "Continuous research and development",
+        "Adoption of emerging technologies",
+        "Creative problem-solving approaches",
+        "Future-focused solutions"
+      ]
+    },
+    {
+      title: "Excellence",
+      description: "We deliver the highest quality solutions and exceptional service",
+      icon: Award,
+      details: [
+        "Rigorous quality standards",
+        "Continuous improvement processes",
+        "Attention to detail",
+        "Customer satisfaction focus"
+      ]
+    },
+    {
+      title: "Collaboration",
+      description: "We work together to achieve extraordinary results for our clients",
+      icon: Users,
+      details: [
+        "Team-based problem solving",
+        "Cross-functional expertise",
+        "Client partnership approach",
+        "Knowledge sharing culture"
+      ]
+    },
+    {
+      title: "Integrity",
+      description: "We maintain the highest ethical standards in all our interactions",
+      icon: Shield,
+      details: [
+        "Transparent communication",
+        "Ethical AI development",
+        "Data privacy protection",
+        "Trust-based relationships"
+      ]
+    }
+  ];
 
+  const missionPillars = [
+    {
+      title: "AI-Powered Transformation",
+      description: "Leveraging artificial intelligence to revolutionize business operations and decision-making",
+      icon: Brain,
+      goals: [
+        "Democratize AI access for businesses of all sizes",
+        "Develop autonomous systems that enhance human capabilities",
+        "Create intelligent solutions that learn and adapt",
+        "Bridge the gap between AI research and practical applications"
+      ],
+      metrics: ["500+ AI implementations", "40% average efficiency improvement", "99.9% system reliability"]
+    },
+    {
+      title: "Quantum Computing Innovation",
+      description: "Pioneering quantum computing solutions for complex computational challenges",
+      icon: Cpu,
+      goals: [
+        "Advance quantum computing research and development",
+        "Create quantum-safe security solutions",
+        "Develop quantum algorithms for real-world problems",
+        "Establish quantum computing as a mainstream technology"
+      ],
+      metrics: ["3 quantum research partnerships", "2 quantum patents filed", "10x computational speed improvement"]
+    },
+    {
+      title: "Cybersecurity Excellence",
+      description: "Protecting businesses from evolving threats with advanced security solutions",
+      icon: Shield,
+      goals: [
+        "Provide comprehensive security protection",
+        "Automate compliance and risk management",
+        "Develop proactive threat detection",
+        "Ensure business continuity and resilience"
+      ],
+      metrics: ["Zero security breaches", "100% compliance success", "24/7 threat monitoring"]
+    },
+    {
+      title: "Global Impact",
+      description: "Making technology accessible and beneficial to businesses worldwide",
+      icon: Globe,
+      goals: [
+        "Expand our global presence and reach",
+        "Localize solutions for regional markets",
+        "Support sustainable technology development",
+        "Contribute to digital inclusion initiatives"
+      ],
+      metrics: ["25+ countries served", "10+ regional offices", "Multi-language support"]
+    }
+  ];
+
+  const impactAreas = [
+    {
+      title: "Healthcare",
+      description: "Improving patient care and medical research through AI-powered solutions",
+      icon: Heart,
+      impact: [
+        "30% improvement in diagnostic accuracy",
+        "50% reduction in administrative burden",
+        "Enhanced patient engagement and outcomes",
+        "Accelerated drug discovery processes"
+      ]
+    },
+    {
+      title: "Manufacturing",
+      description: "Revolutionizing production processes with intelligent automation and predictive analytics",
+      icon: Building,
+      impact: [
+        "40% increase in production efficiency",
+        "60% reduction in downtime",
+        "Real-time quality monitoring and control",
+        "Sustainable manufacturing practices"
+      ]
+    },
+    {
+      title: "Financial Services",
+      description: "Enhancing security, compliance, and customer experience in financial operations",
+      icon: TrendingUp,
+      impact: [
+        "99.9% fraud detection accuracy",
+        "Real-time risk assessment and management",
+        "Automated compliance monitoring",
+        "Enhanced customer personalization"
+      ]
+    },
+    {
+      title: "Education",
+      description: "Transforming learning experiences through personalized and adaptive technology",
+      icon: Star,
+      impact: [
+        "Personalized learning pathways",
+        "Adaptive content delivery",
+        "Enhanced student engagement",
+        "Improved learning outcomes"
+      ]
+    }
+  ];
+
+  const futureVision = [
+    {
+      year: "2025",
+      title: "AI Democratization",
+      description: "Making AI accessible to businesses of all sizes through simplified platforms and tools",
+      milestones: [
+        "Launch of AI marketplace platform",
+        "1000+ AI implementations",
+        "Partnership with 50+ technology providers"
+      ]
+    },
+    {
+      year: "2027",
+      title: "Quantum Revolution",
+      description: "Commercial quantum computing solutions for enterprise applications",
+      milestones: [
+        "First commercial quantum platform",
+        "Quantum-safe security standards",
+        "Industry-specific quantum solutions"
+      ]
+    },
+    {
+      year: "2030",
+      title: "Autonomous Future",
+      description: "Fully autonomous business operations powered by AI and quantum computing",
+      milestones: [
+        "Autonomous business platform launch",
+        "Zero-touch business operations",
+        "AI-human collaboration ecosystem"
+      ]
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-zion-blue-dark via-black to-zion-purple-dark overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <div className="flex items-center justify-center mb-6">
-            <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mr-4">
-              <Building className="w-10 h-10 text-white" />
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-gradient">
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Our Mission
             </h1>
-          </div>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            To revolutionize technology and create positive global impact through innovation, 
-            empowering humanity to solve the world's most complex challenges.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              to="/about"
-              className="btn-primary text-lg px-8 py-4 inline-flex items-center"
-            >
-              Learn More
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-            <Link
-              to="/contact"
-              className="btn-secondary text-lg px-8 py-4"
-            >
-              Join Us
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission Statement */}
-      <section className="py-20 bg-gray-900/50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-8 text-gradient">
-              Mission Statement
-            </h2>
-            <div className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
-              <p className="text-2xl text-white leading-relaxed mb-6">
-                "To pioneer the future of technology by developing revolutionary AI, quantum computing, 
-                and autonomous systems that transform industries, empower individuals, and create 
-                sustainable solutions for global challenges."
-              </p>
-              <p className="text-xl text-gray-300">
-                We believe that technology should serve humanity, not replace it. Our mission is to 
-                create intelligent systems that augment human capabilities and solve problems that 
-                were once considered impossible.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Vision */}
-      <section className="py-20 bg-black/50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold mb-8 text-gradient">
-              Our Vision
-            </h2>
-            <div className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
-              <div className="flex items-center justify-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mr-4">
-                  <Zap className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white">Vision 2050</h3>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+              To democratize cutting-edge technology and empower businesses worldwide to achieve 
+              extraordinary results through AI, quantum computing, and innovative digital solutions. 
+              We believe that every organization, regardless of size, should have access to the 
+              transformative power of advanced technology.
+            </p>
+            <div className="flex items-center justify-center space-x-8 text-gray-400">
+              <div className="flex items-center">
+                <Target className="w-5 h-5 mr-2" />
+                <span>Clear Vision</span>
               </div>
-              <p className="text-xl text-gray-300 leading-relaxed">
-                By 2050, we envision a world where AI and quantum computing are seamlessly integrated 
-                into everyday life, solving humanity's greatest challenges from climate change to 
-                healthcare, while maintaining the highest ethical standards and human values.
-              </p>
+              <div className="flex items-center">
+                <Heart className="w-5 h-5 mr-2" />
+                <span>Passionate Purpose</span>
+              </div>
+              <div className="flex items-center">
+                <Globe className="w-5 h-5 mr-2" />
+                <span>Global Impact</span>
+              </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Core Values */}
-      <section className="py-20 bg-gray-900/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6 text-gradient">
-              Core Values
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              The principles that guide our decisions and shape our culture
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {missionValues.map((value, index) => (
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Core Values</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {coreValues.map((value, index) => {
+            const Icon = value.icon;
+            return (
               <div
                 key={index}
-                className="group bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-zion-purple/50 transition-all duration-300 hover:transform hover:scale-105"
+                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
               >
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${value.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                    <value.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white group-hover:text-zion-cyan transition-colors duration-300">
-                    {value.title}
-                  </h3>
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Icon className="w-8 h-8 text-white" />
                 </div>
-                <p className="text-gray-300 text-lg leading-relaxed">{value.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3 text-center">{value.title}</h3>
+                <p className="text-gray-300 text-sm mb-4 text-center">{value.description}</p>
+                
+                <ul className="space-y-2">
+                  {value.details.map((detail, idx) => (
+                    <li key={idx} className="text-gray-300 text-xs flex items-start">
+                      <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-1.5 mr-2 flex-shrink-0" />
+                      {detail}
+                    </li>
+                  ))}
+                </ul>
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
-      </section>
+      </div>
 
-      {/* Strategic Goals */}
-      <section className="py-20 bg-black/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6 text-gradient">
-              Strategic Goals
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our roadmap to achieving our mission and vision
-            </p>
-          </div>
-
+      {/* Mission Pillars */}
+      <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Mission Pillars</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {strategicGoals.map((goal, index) => (
-              <div
-                key={index}
-                className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-zion-cyan/50 transition-all duration-300"
-              >
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">
-                    <goal.icon className="w-8 h-8 text-white" />
+            {missionPillars.map((pillar, index) => {
+              const Icon = pillar.icon;
+              return (
+                <div
+                  key={index}
+                  className="bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-600 hover:border-cyan-500"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mr-4">
+                      <Icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-white">{pillar.title}</h3>
                   </div>
+                  
+                  <p className="text-gray-300 mb-6">{pillar.description}</p>
+                  
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Goals</h4>
+                    <ul className="space-y-2">
+                      {pillar.goals.map((goal, idx) => (
+                        <li key={idx} className="text-gray-300 text-sm flex items-start">
+                          <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-1.5 mr-2 flex-shrink-0" />
+                          {goal}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
                   <div>
-                    <h3 className="text-2xl font-bold text-white">{goal.goal}</h3>
-                    <span className="text-zion-cyan text-sm font-medium">{goal.timeline}</span>
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-3">Success Metrics</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {pillar.metrics.map((metric, idx) => (
+                        <span
+                          key={idx}
+                          className="px-3 py-1 bg-gray-600 text-gray-300 text-xs rounded-full"
+                        >
+                          {metric}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
-                <p className="text-gray-300 text-lg leading-relaxed">{goal.description}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Impact Areas */}
-      <section className="py-20 bg-gray-900/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6 text-gradient">
-              Areas of Impact
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              How we're making a difference across key sectors
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {impactAreas.map((area, index) => (
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Impact</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {impactAreas.map((area, index) => {
+            const Icon = area.icon;
+            return (
               <div
                 key={index}
-                className="group bg-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-zion-purple/50 transition-all duration-300 hover:transform hover:scale-105"
+                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
               >
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
-                    <area.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white">{area.area}</h3>
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <Icon className="w-8 h-8 text-white" />
                 </div>
-                <p className="text-gray-300 mb-4">{area.description}</p>
-                <div className="pt-4 border-t border-gray-700/50">
-                  <span className="text-zion-cyan text-sm font-medium">{area.metrics}</span>
+                <h3 className="text-lg font-semibold text-white mb-3 text-center">{area.title}</h3>
+                <p className="text-gray-300 text-sm mb-4 text-center">{area.description}</p>
+                
+                <ul className="space-y-2">
+                  {area.impact.map((item, idx) => (
+                    <li key={idx} className="text-gray-300 text-xs flex items-start">
+                      <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-1.5 mr-2 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* Future Vision */}
+      <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Future Vision</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {futureVision.map((vision, index) => (
+              <div
+                key={index}
+                className="bg-gradient-to-br from-gray-700 to-gray-800 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-600 hover:border-cyan-500"
+              >
+                <div className="text-center mb-6">
+                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-2xl">{vision.year}</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">{vision.title}</h3>
+                  <p className="text-gray-300 text-sm">{vision.description}</p>
+                </div>
+                
+                <div>
+                  <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Milestones</h4>
+                  <ul className="space-y-2">
+                    {vision.milestones.map((milestone, idx) => (
+                      <li key={idx} className="text-gray-300 text-sm flex items-start">
+                        <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-1.5 mr-2 flex-shrink-0" />
+                        {milestone}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-purple-dark to-zion-blue-dark">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6 text-white">
+      {/* Call to Action */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
             Join Us in Our Mission
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Together, we can revolutionize technology and create a better future for humanity. 
-            Be part of the solution.
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Whether you're a client looking to transform your business, a partner wanting to 
+            collaborate, or a team member passionate about making a difference, we invite you 
+            to be part of our journey to democratize technology and create positive global impact.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              to="/careers"
-              className="btn-primary text-lg px-8 py-4 inline-flex items-center"
-            >
-              Join Our Team
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="btn-secondary text-lg px-8 py-4"
+              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"
             >
-              Partner With Us
+              Get Started Today
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+            <Link
+              to="/careers"
+              className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-medium rounded-lg transition-all duration-200"
+            >
+              Join Our Team
             </Link>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }
