@@ -1,71 +1,71 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Code, Brain, Zap, Users, Target, Shield, Cpu, Globe, Rocket, Star, ArrowRight, CheckCircle, Play, BookOpen, Database, Cloud, Lock, BarChart3, Settings, Monitor, GitBranch } from 'lucide-react';
+import { Brain, Zap, Users, Target, Shield, Cpu, Globe, Rocket, Star, ArrowRight, CheckCircle, Play, BookOpen, Code, Database, Cloud, Lock, BarChart3 } from 'lucide-react';
 
-export default function AIAutonomousCodeReview() {
+export default function AIAgentOrchestrator() {
   const features = [
     {
-      icon: Code,
-      title: 'Intelligent Code Analysis',
-      description: 'AI-powered code review that identifies bugs, security vulnerabilities, and optimization opportunities'
-    },
-    {
       icon: Brain,
-      title: 'Learning & Adaptation',
-      description: 'Continuously learns from your codebase to provide increasingly accurate and relevant feedback'
+      title: 'Intelligent Agent Coordination',
+      description: 'Advanced orchestration algorithms that coordinate multiple AI agents for complex workflows'
     },
     {
       icon: Zap,
-      title: 'Real-time Review',
-      description: 'Instant feedback as you code with suggestions for improvements and best practices'
-    },
-    {
-      icon: Shield,
-      title: 'Security Scanning',
-      description: 'Automated detection of security vulnerabilities, dependency issues, and compliance violations'
+      title: 'Real-time Performance Optimization',
+      description: 'Dynamic resource allocation and performance tuning for optimal agent efficiency'
     },
     {
       icon: Users,
-      title: 'Team Collaboration',
-      description: 'Streamlined code review process with AI assistance for faster, more thorough reviews'
+      title: 'Multi-Agent Collaboration',
+      description: 'Seamless collaboration between different AI agents with conflict resolution'
+    },
+    {
+      icon: Target,
+      title: 'Goal-Oriented Execution',
+      description: 'Purpose-driven agent coordination that ensures business objectives are met'
+    },
+    {
+      icon: Shield,
+      title: 'Security & Compliance',
+      description: 'Enterprise-grade security with built-in compliance monitoring and audit trails'
     },
     {
       icon: Cpu,
-      title: 'Multi-language Support',
-      description: 'Support for all major programming languages and frameworks'
+      title: 'Scalable Infrastructure',
+      description: 'Cloud-native architecture that scales from small teams to enterprise deployments'
     }
   ];
 
-  const capabilities = [
+  const useCases = [
     {
-      title: 'Code Quality Analysis',
-      description: 'Automated assessment of code quality, complexity, and maintainability',
-      icon: Code
+      title: 'Customer Service Automation',
+      description: 'Coordinate multiple AI agents for seamless customer support across all channels',
+      icon: Users
     },
     {
-      title: 'Security Vulnerability Detection',
-      description: 'Identify security issues, SQL injection, XSS, and other common vulnerabilities',
+      title: 'Supply Chain Optimization',
+      description: 'Orchestrate AI agents for demand forecasting, inventory management, and logistics',
+      icon: Globe
+    },
+    {
+      title: 'Financial Trading Systems',
+      description: 'Coordinate AI agents for market analysis, risk assessment, and automated trading',
+      icon: BarChart3
+    },
+    {
+      title: 'Healthcare Coordination',
+      description: 'Orchestrate AI agents for patient care, diagnosis, and treatment planning',
       icon: Shield
-    },
-    {
-      title: 'Performance Optimization',
-      description: 'Suggestions for improving code performance and efficiency',
-      icon: Zap
-    },
-    {
-      title: 'Best Practices Enforcement',
-      description: 'Ensure adherence to coding standards and industry best practices',
-      icon: GitBranch
     }
   ];
 
   const benefits = [
-    'Reduce code review time by 70%',
-    'Improve code quality by 40%',
-    'Detect security issues early',
-    'Ensure consistent coding standards',
-    'Accelerate development cycles',
-    'Reduce production bugs by 60%'
+    'Reduce operational costs by up to 40%',
+    'Improve process efficiency by 60%',
+    'Enable 24/7 automated operations',
+    'Provide real-time insights and analytics',
+    'Ensure consistent quality and compliance',
+    'Scale operations without proportional cost increase'
   ];
 
   return (
@@ -75,22 +75,22 @@ export default function AIAutonomousCodeReview() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <div className="flex items-center justify-center space-x-2 mb-6">
-              <Code className="w-8 h-8 text-cyan-400" />
-              <span className="text-cyan-400 font-semibold">AI Autonomous Code Review</span>
+              <Brain className="w-8 h-8 text-cyan-400" />
+              <span className="text-cyan-400 font-semibold">AI Agent Orchestrator</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Code Review
+              Orchestrate AI Agents
               <br />
-              <span className="text-white">Reimagined</span>
+              <span className="text-white">Like a Conductor</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your code review process with AI that understands your codebase, 
-              identifies issues instantly, and helps your team write better code.
+              Coordinate multiple AI agents seamlessly to execute complex business processes, 
+              optimize workflows, and achieve unprecedented operational efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105">
                 <Play className="w-5 h-5 inline mr-2" />
-                Try Demo
+                Watch Demo
               </button>
               <button className="px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
                 <BookOpen className="w-5 h-5 inline mr-2" />
@@ -112,10 +112,11 @@ export default function AIAutonomousCodeReview() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Advanced Code Review Features
+              Powerful Orchestration Capabilities
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              AI-powered insights that transform how you review and improve code
+              Our AI Agent Orchestrator provides enterprise-grade coordination and management 
+              for complex AI workflows and business processes.
             </p>
           </div>
           
@@ -136,21 +137,21 @@ export default function AIAutonomousCodeReview() {
         </div>
       </section>
 
-      {/* Capabilities Section */}
+      {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Comprehensive Code Analysis
+              Real-World Applications
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              From security to performance, our AI covers every aspect of code quality
+              Discover how AI Agent Orchestration transforms industries and business operations
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {capabilities.map((capability, index) => {
-              const Icon = capability.icon;
+            {useCases.map((useCase, index) => {
+              const Icon = useCase.icon;
               return (
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50">
                   <div className="flex items-start space-x-4">
@@ -158,8 +159,8 @@ export default function AIAutonomousCodeReview() {
                       <Icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold mb-3">{capability.title}</h3>
-                      <p className="text-gray-400">{capability.description}</p>
+                      <h3 className="text-xl font-semibold mb-3">{useCase.title}</h3>
+                      <p className="text-gray-400">{useCase.description}</p>
                     </div>
                   </div>
                 </div>
@@ -174,10 +175,10 @@ export default function AIAutonomousCodeReview() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Why Choose AI Code Review?
+              Why Choose AI Agent Orchestration?
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Transform your development process with measurable improvements
+              Transform your business operations with intelligent automation and coordination
             </p>
           </div>
           
@@ -206,24 +207,24 @@ export default function AIAutonomousCodeReview() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Revolutionize Code Review?
+            Ready to Orchestrate Your AI Agents?
           </h2>
           <p className="text-xl text-gray-400 mb-8">
-            Join development teams that are already writing better code with AI assistance
+            Join leading enterprises that are already transforming their operations with AI Agent Orchestration
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105 inline-flex items-center"
             >
-              Start Free Trial
+              Get Started Today
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link
               to="/case-studies"
               className="px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
             >
-              View Developer Success Stories
+              View Case Studies
             </Link>
           </div>
         </div>

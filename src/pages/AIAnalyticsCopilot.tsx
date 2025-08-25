@@ -1,71 +1,94 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Code, Brain, Zap, Users, Target, Shield, Cpu, Globe, Rocket, Star, ArrowRight, CheckCircle, Play, BookOpen, Database, Cloud, Lock, BarChart3, Settings, Monitor, GitBranch } from 'lucide-react';
+import { BarChart3, Brain, Zap, Users, Target, Shield, Cpu, Globe, Rocket, Star, ArrowRight, CheckCircle, Play, BookOpen, Code, Database, Cloud, Lock, TrendingUp, PieChart, Activity, FileText, Smartphone } from 'lucide-react';
 
-export default function AIAutonomousCodeReview() {
+export default function AIAnalyticsCopilot() {
   const features = [
     {
-      icon: Code,
-      title: 'Intelligent Code Analysis',
-      description: 'AI-powered code review that identifies bugs, security vulnerabilities, and optimization opportunities'
+      icon: Brain,
+      title: 'Intelligent Data Analysis',
+      description: 'AI-powered insights that automatically identify patterns, trends, and anomalies in your data'
     },
     {
-      icon: Brain,
-      title: 'Learning & Adaptation',
-      description: 'Continuously learns from your codebase to provide increasingly accurate and relevant feedback'
+      icon: BarChart3,
+      title: 'Advanced Visualization',
+      description: 'Create stunning, interactive charts and dashboards with natural language commands'
     },
     {
       icon: Zap,
-      title: 'Real-time Review',
-      description: 'Instant feedback as you code with suggestions for improvements and best practices'
-    },
-    {
-      icon: Shield,
-      title: 'Security Scanning',
-      description: 'Automated detection of security vulnerabilities, dependency issues, and compliance violations'
+      title: 'Real-time Processing',
+      description: 'Analyze streaming data in real-time with instant insights and alerts'
     },
     {
       icon: Users,
-      title: 'Team Collaboration',
-      description: 'Streamlined code review process with AI assistance for faster, more thorough reviews'
+      title: 'Natural Language Queries',
+      description: 'Ask questions in plain English and get instant analytical insights'
     },
     {
-      icon: Cpu,
-      title: 'Multi-language Support',
-      description: 'Support for all major programming languages and frameworks'
+      icon: Target,
+      title: 'Predictive Analytics',
+      description: 'Forecast future trends and outcomes using advanced machine learning models'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with role-based access control and data encryption'
     }
   ];
 
   const capabilities = [
     {
-      title: 'Code Quality Analysis',
-      description: 'Automated assessment of code quality, complexity, and maintainability',
-      icon: Code
+      title: 'Data Integration',
+      description: 'Connect to 100+ data sources including databases, APIs, and cloud services',
+      icon: Database
     },
     {
-      title: 'Security Vulnerability Detection',
-      description: 'Identify security issues, SQL injection, XSS, and other common vulnerabilities',
-      icon: Shield
+      title: 'Automated Reporting',
+      description: 'Generate comprehensive reports automatically with customizable templates',
+      icon: FileText
     },
     {
-      title: 'Performance Optimization',
-      description: 'Suggestions for improving code performance and efficiency',
-      icon: Zap
+      title: 'Collaborative Analytics',
+      description: 'Share insights and collaborate with team members in real-time',
+      icon: Users
     },
     {
-      title: 'Best Practices Enforcement',
-      description: 'Ensure adherence to coding standards and industry best practices',
-      icon: GitBranch
+      title: 'Mobile Analytics',
+      description: 'Access your analytics anywhere with our mobile-optimized interface',
+      icon: Smartphone
+    }
+  ];
+
+  const useCases = [
+    {
+      title: 'Business Intelligence',
+      description: 'Transform raw data into actionable business insights and strategic recommendations',
+      icon: TrendingUp
+    },
+    {
+      title: 'Customer Analytics',
+      description: 'Understand customer behavior, preferences, and lifetime value',
+      icon: Users
+    },
+    {
+      title: 'Financial Analysis',
+      description: 'Monitor financial performance, detect fraud, and optimize cash flow',
+      icon: BarChart3
+    },
+    {
+      title: 'Operational Analytics',
+      description: 'Optimize business processes and identify efficiency improvements',
+      icon: Activity
     }
   ];
 
   const benefits = [
-    'Reduce code review time by 70%',
-    'Improve code quality by 40%',
-    'Detect security issues early',
-    'Ensure consistent coding standards',
-    'Accelerate development cycles',
-    'Reduce production bugs by 60%'
+    'Reduce time to insights by 80%',
+    'Increase data accuracy by 95%',
+    'Enable self-service analytics for all users',
+    'Provide real-time monitoring and alerts',
+    'Scale from small teams to enterprise',
+    'Reduce analytics costs by 60%'
   ];
 
   return (
@@ -75,17 +98,17 @@ export default function AIAutonomousCodeReview() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <div className="flex items-center justify-center space-x-2 mb-6">
-              <Code className="w-8 h-8 text-cyan-400" />
-              <span className="text-cyan-400 font-semibold">AI Autonomous Code Review</span>
+              <BarChart3 className="w-8 h-8 text-cyan-400" />
+              <span className="text-cyan-400 font-semibold">AI Analytics Copilot</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Code Review
+              Your AI-Powered
               <br />
-              <span className="text-white">Reimagined</span>
+              <span className="text-white">Analytics Partner</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your code review process with AI that understands your codebase, 
-              identifies issues instantly, and helps your team write better code.
+              Transform data into insights with AI that understands your business. 
+              Ask questions in plain English and get instant, intelligent answers.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105">
@@ -112,10 +135,10 @@ export default function AIAutonomousCodeReview() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Advanced Code Review Features
+              Intelligent Analytics Features
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              AI-powered insights that transform how you review and improve code
+              Experience the future of analytics with AI that thinks, learns, and adapts to your needs
             </p>
           </div>
           
@@ -141,10 +164,10 @@ export default function AIAutonomousCodeReview() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Comprehensive Code Analysis
+              Enterprise-Grade Capabilities
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              From security to performance, our AI covers every aspect of code quality
+              Built for scale, security, and collaboration across your entire organization
             </p>
           </div>
           
@@ -169,15 +192,48 @@ export default function AIAutonomousCodeReview() {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Why Choose AI Code Review?
+              Transform Every Business Function
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Transform your development process with measurable improvements
+              From marketing to operations, AI Analytics Copilot delivers insights across your organization
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => {
+              const Icon = useCase.icon;
+              return (
+                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50">
+                  <div className="flex items-start space-x-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold mb-3">{useCase.title}</h3>
+                      <p className="text-gray-400">{useCase.description}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Measurable Business Impact
+            </h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              See real results with our AI-powered analytics platform
             </p>
           </div>
           
@@ -206,10 +262,10 @@ export default function AIAutonomousCodeReview() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Revolutionize Code Review?
+            Ready to Transform Your Analytics?
           </h2>
           <p className="text-xl text-gray-400 mb-8">
-            Join development teams that are already writing better code with AI assistance
+            Join thousands of businesses using AI Analytics Copilot to make better decisions faster
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -223,7 +279,7 @@ export default function AIAutonomousCodeReview() {
               to="/case-studies"
               className="px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
             >
-              View Developer Success Stories
+              View Success Stories
             </Link>
           </div>
         </div>
