@@ -1,9 +1,8 @@
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Brain, Cpu, Shield, Cloud, Zap, Users, TrendingUp, Globe, Lock, Code, BarChart3 } from 'lucide-react';
-
+import { motion } from 'framer-motion';
+import { ArrowRight, Star, CheckCircle, Brain, Zap, Shield, Globe, Cpu, Database, Cloud, Lock, Users } from 'lucide-react';
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
@@ -17,117 +16,106 @@ import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 import { AnimatedBackground, FloatingOrbs } from "@/components/ui/AnimatedBackground";
 
-const featuredServices = [
-  {
-    title: "AI & Machine Learning",
-    description: "Transform your business with cutting-edge AI solutions including predictive analytics, natural language processing, and automated decision-making systems.",
-    icon: Brain,
-    link: "/ai-autonomous-business-manager",
-    color: "from-purple-500 to-pink-500"
-  },
-  {
-    title: "Micro SAAS Solutions",
-    description: "Custom software solutions designed for modern businesses, from workflow automation to customer relationship management systems.",
-    icon: Cpu,
-    link: "/micro-saas-services",
-    color: "from-blue-500 to-cyan-500"
-  },
-  {
-    title: "Cloud & DevOps",
-    description: "Scalable cloud infrastructure, CI/CD pipelines, and automated deployment solutions that accelerate your development cycle.",
-    icon: Cloud,
-    link: "/cloud-devops",
-    color: "from-green-500 to-emerald-500"
-  },
-  {
-    title: "Enterprise Security",
-    description: "Comprehensive security solutions including threat detection, data protection, and compliance management for enterprise environments.",
-    icon: Shield,
-    link: "/enterprise-solutions",
-    color: "from-orange-500 to-red-500"
-  }
-];
-
-const features = [
-  {
-    title: "AI-Powered Matching",
-    description: "Our advanced AI algorithms connect you with the perfect tech talent and solutions for your specific needs.",
-    icon: Brain,
-    color: "text-zion-cyan"
-  },
-  {
-    title: "Global Talent Network",
-    description: "Access a diverse pool of verified tech professionals from around the world with proven expertise.",
-    icon: Globe,
-    color: "text-zion-purple"
-  },
-  {
-    title: "Enterprise-Grade Security",
-    description: "Bank-level security protocols ensure your data and transactions are protected at every step.",
-    icon: Lock,
-    color: "text-green-400"
-  },
-  {
-    title: "24/7 Expert Support",
-    description: "Round-the-clock technical support and consultation from our team of industry experts.",
-    icon: Users,
-    color: "text-blue-400"
-  }
-];
-
-const testimonials = [
-  {
-    content: "Zion Tech Group transformed our entire IT infrastructure. Their AI-powered solutions helped us reduce costs by 40% while improving efficiency.",
-    name: "Sarah Johnson",
-    role: "CTO, TechCorp Solutions",
-    rating: 5
-  },
-  {
-    content: "The micro SAAS platform they built for us has streamlined our operations completely. It's like they read our minds!",
-    name: "Michael Chen",
-    role: "Operations Director, InnovateLab",
-    rating: 5
-  },
-  {
-    content: "Working with Zion has been a game-changer. Their AI talent matching found us the perfect team in record time.",
-    name: "Emily Rodriguez",
-    role: "Founder, StartupXYZ",
-    rating: 5
-  }
-];
-
-const stats = [
-  { label: "Projects Completed", value: "500+", icon: CheckCircle },
-  { label: "Happy Clients", value: "200+", icon: Users },
-  { label: "AI Models Deployed", value: "50+", icon: Brain },
-  { label: "Success Rate", value: "98%", icon: TrendingUp }
-];
-
 export default function Home() {
+  const featuredServices = [
+    {
+      icon: Brain,
+      title: 'AI & Machine Learning',
+      description: 'Cutting-edge AI solutions that transform business operations and decision-making processes.',
+      color: 'from-purple-500 to-pink-600',
+      link: '/ai-services'
+    },
+    {
+      icon: Zap,
+      title: 'Micro SAAS Solutions',
+      description: 'Scalable software solutions designed for modern businesses seeking rapid digital transformation.',
+      color: 'from-blue-500 to-cyan-600',
+      link: '/micro-saas-services'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Comprehensive security solutions protecting your business assets and customer data.',
+      color: 'from-green-500 to-emerald-600',
+      link: '/enterprise-solutions'
+    },
+    {
+      icon: Globe,
+      title: 'Cloud & DevOps',
+      description: 'Optimize your infrastructure with modern cloud solutions and DevOps practices.',
+      color: 'from-orange-500 to-red-600',
+      link: '/cloud-devops-solutions'
+    }
+  ];
+
+  const features = [
+    {
+      icon: Cpu,
+      title: 'Advanced Technology Stack',
+      description: 'Built on cutting-edge technologies including AI, blockchain, and quantum computing principles.',
+      color: 'text-zion-cyan'
+    },
+    {
+      icon: Database,
+      title: 'Scalable Architecture',
+      description: 'Enterprise-grade infrastructure that grows with your business needs and requirements.',
+      color: 'text-zion-purple'
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud-Native Solutions',
+      description: 'Modern cloud-first approach ensuring reliability, performance, and global accessibility.',
+      color: 'text-zion-cyan'
+    },
+    {
+      icon: Lock,
+      title: 'Enterprise Security',
+      description: 'Bank-level security protocols and compliance standards for maximum data protection.',
+      color: 'text-zion-purple'
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      role: 'CTO, TechCorp Inc.',
+      content: 'Zion Tech Group transformed our entire IT infrastructure. Their AI solutions increased our efficiency by 300% in just 6 months.',
+      rating: 5
+    },
+    {
+      name: 'Michael Chen',
+      role: 'CEO, StartupXYZ',
+      content: 'The micro SAAS solutions from Zion helped us scale from 10 to 1000 users without any infrastructure headaches.',
+      rating: 5
+    },
+    {
+      name: 'Emily Rodriguez',
+      role: 'VP Engineering, DataFlow',
+      content: 'Outstanding support and cutting-edge technology. Zion is truly a partner in our digital transformation journey.',
+      rating: 5
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-background relative overflow-hidden">
+    <div className="min-h-screen bg-background relative overflow-hidden pt-20">
       <SEO 
-        title="Zion Tech Group - The Future of Tech is Here" 
-        description="Discover cutting-edge AI solutions, connect with top tech talent, and access innovative micro SAAS services that transform your business operations."
-        keywords="AI, technology, marketplace, services, talent, micro SAAS, digital transformation"
-        canonical="https://ziontechgroup.com/"
+        title="Zion - The Tech & AI Marketplace" 
+        description="Discover top AI and tech talent, services, and equipment in one place."
+        keywords="AI, technology, marketplace, services, talent"
+        canonical="https://app.ziontechgroup.com/"
       />
 
       {/* Futuristic Animated Backgrounds */}
       <AnimatedBackground variant="grid" intensity="low" />
       <FloatingOrbs count={8} />
 
-      {/* Hero Section */}
-      <HeroSection />
-
-      {/* IT Service Request Hero */}
       <ITServiceRequestHero />
 
       {/* Featured Services */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-center mb-16"
         >
@@ -146,7 +134,7 @@ export default function Home() {
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
                 className="group bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-6 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20"
               >
@@ -172,35 +160,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {stats.map((stat, index) => {
-            const IconComponent = stat.icon;
-            return (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mx-auto mb-4 flex items-center justify-center">
-                  <IconComponent className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-zion-slate-light">{stat.label}</div>
-              </motion.div>
-            );
-          })}
-        </div>
-      </section>
-
       {/* Features Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center mb-16"
         >
@@ -219,7 +183,7 @@ export default function Home() {
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
                 className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300"
               >
@@ -242,7 +206,7 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
           className="text-center mb-16"
         >
@@ -259,7 +223,7 @@ export default function Home() {
             <motion.div
               key={testimonial.name}
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.2 + index * 0.1 }}
               className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300"
             >
@@ -284,7 +248,7 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.4 }}
           className="text-center"
         >
@@ -313,113 +277,6 @@ export default function Home() {
               </Link>
             </div>
           </div>
-        </motion.div>
-      </section>
-
-      {/* AI Services Showcase */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 bg-zion-blue-light/5">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-            Comprehensive AI Solutions
-          </h2>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Discover our full range of AI-powered solutions designed to automate and optimize every aspect of your business.
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            {
-              title: "AI Business Manager",
-              description: "Intelligent business operations management with automated decision-making and real-time analytics.",
-              link: "/ai-autonomous-business-manager",
-              icon: Brain,
-              color: "from-purple-500 to-pink-500"
-            },
-            {
-              title: "AI Business Platform",
-              description: "Unified AI-powered business platform that integrates all your operations seamlessly.",
-              link: "/ai-autonomous-business-platform",
-              icon: Cpu,
-              color: "from-blue-500 to-cyan-500"
-            },
-            {
-              title: "AI Code Review",
-              description: "Automated code analysis and optimization with security vulnerability detection.",
-              link: "/ai-autonomous-code-review",
-              icon: Code,
-              color: "from-green-500 to-emerald-500"
-            },
-            {
-              title: "AI Creative Director",
-              description: "AI-powered creative content generation and management for marketing teams.",
-              link: "/ai-autonomous-creative-director",
-              icon: Zap,
-              color: "from-orange-500 to-red-500"
-            },
-            {
-              title: "AI Data Management",
-              description: "Intelligent data processing, analysis, and insights generation.",
-              link: "/ai-autonomous-data",
-              icon: BarChart3,
-              color: "from-indigo-500 to-purple-500"
-            },
-            {
-              title: "AI Security Platform",
-              description: "Advanced threat detection and security automation for enterprise environments.",
-              link: "/ai-autonomous-security",
-              icon: Shield,
-              color: "from-red-500 to-pink-500"
-            }
-          ].map((service, index) => {
-            const IconComponent = service.icon;
-            return (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1.8 + index * 0.1 }}
-                className="group bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-6 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20"
-              >
-                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>
-                  <IconComponent className="w-8 h-8" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-zion-slate-light mb-6 leading-relaxed">
-                  {service.description}
-                </p>
-                <Link
-                  to={service.link}
-                  className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors group-hover:translate-x-1 transition-transform duration-300"
-                >
-                  Learn More
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </motion.div>
-            );
-          })}
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 2.2 }}
-          className="text-center mt-12"
-        >
-          <Link
-            to="/ai-services"
-            className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors text-lg font-semibold hover:scale-105 transition-transform duration-300"
-          >
-            View All AI Solutions
-            <ArrowRight className="w-5 h-5" />
-          </Link>
         </motion.div>
       </section>
     </div>
