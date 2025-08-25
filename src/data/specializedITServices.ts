@@ -345,18 +345,6 @@ export const SPECIALIZED_IT_SERVICES: SpecializedITService[] = [
   }
 ];
 
-export const getSpecializedITServiceByCategory = (category: string) => {
-  return SPECIALIZED_IT_SERVICES.filter(service => service.category === category);
-};
-
-export const getSpecializedITServiceBySubcategory = (subcategory: string) => {
-  return SPECIALIZED_IT_SERVICES.filter(service => service.subcategory === subcategory);
-};
-
-export const getFeaturedSpecializedITServices = () => {
-  return SPECIALIZED_IT_SERVICES.slice(0, 6);
-};
-
 export const SPECIALIZED_SERVICE_CATEGORIES = [
   {
     id: 'enterprise-infrastructure',
