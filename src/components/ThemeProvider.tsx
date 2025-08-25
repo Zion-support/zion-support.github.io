@@ -1,79 +1,69 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
-=======
-import React, { createContext, useContext, useState, useEffect } from 'react';
->>>>>>> origin/cursor/check-and-fix-github-actions-e92c
-=======
->>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
+"use client";
 
-type Theme = 'light' | 'dark' | 'system';
+import * as React from "react";
 
-interface ThemeContextType {
-  theme: Theme;
-  setTheme: (theme: Theme) => void;
-}
-
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
-
-<<<<<<< HEAD
 interface ThemeProviderProps {
-  children: ReactNode;
-  defaultTheme?: Theme;
+  children: React.ReactNode;
+  defaultTheme?: string;
+  storageKey?: string;
 }
 
-export const ThemeProvider: React.FC<ThemeProviderProps> = ({ 
-  children, 
-  defaultTheme = 'system' 
-}) => {
-=======
 export function ThemeProvider({ 
   children, 
-  defaultTheme = 'dark' 
-}: { 
-  children: React.ReactNode;
-  defaultTheme?: Theme;
-}) {
->>>>>>> origin/cursor/check-and-fix-github-actions-e92c
-  const [theme, setTheme] = useState<Theme>(defaultTheme);
-
-  useEffect(() => {
-    const root = window.document.documentElement;
-<<<<<<< HEAD
-    
-    root.classList.remove('light', 'dark');
-    
-=======
-    root.classList.remove('light', 'dark');
-
->>>>>>> origin/cursor/check-and-fix-github-actions-e92c
-    if (theme === 'system') {
-      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      root.classList.add(systemTheme);
-    } else {
-      root.classList.add(theme);
+  defaultTheme = "system", 
+  storageKey = "vite-ui-theme" 
+}: ThemeProviderProps) {
+  const [theme, setTheme] = React.useState<string>(() => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem(storageKey) || defaultTheme;
     }
+    return defaultTheme;
+  });
+
+  React.useEffect(() => {
+    const root = window.document.documentElement;
+    root.classList.remove("light", "dark");
+
+    if (theme === "system") {
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+      root.classList.add(systemTheme);
+      return;
+    }
+
+    root.classList.add(theme);
   }, [theme]);
 
-  const value = {
-    theme,
-    setTheme: (newTheme: Theme) => {
-      setTheme(newTheme);
-      localStorage.setItem('theme', newTheme);
-    }
-  };
+  const value = React.useMemo(
+    () => ({
+      theme,
+      setTheme: (theme: string) => {
+        localStorage.setItem(storageKey, theme);
+        setTheme(theme);
+      },
+    }),
+    [theme, storageKey]
+  );
 
   return (
     <ThemeContext.Provider value={value}>
       {children}
     </ThemeContext.Provider>
   );
-};
+}
 
-export function useTheme() {
-  const context = useContext(ThemeContext);
+interface ThemeContextType {
+  theme: string;
+  setTheme: (theme: string) => void;
+}
+
+const ThemeContext = React.createContext<ThemeContextType | undefined>(undefined);
+
+export const useTheme = () => {
+  const context = React.useContext(ThemeContext);
   if (context === undefined) {
-    throw new Error('useTheme must be used within a ThemeProvider');
+    throw new Error("useTheme must be used within a ThemeProvider");
   }
   return context;
-}
+};

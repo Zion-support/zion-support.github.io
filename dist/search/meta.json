@@ -10,13 +10,8 @@
     "h1": ""
   },
   {
-<<<<<<< HEAD
-    "route": "/comprehensive-2025-services-showcase",
-    "title": "Comprehensive 2025 Services Showcase — Zion Tech Group",
-    "h1": "Comprehensive 2025 Services"
-=======
     "route": "/about",
-    "title": "About Us — Zion Tech Group | Leading-Edge Technology Solutions",
+    "title": "About Us — Zion Tech Group | Leading AI & Quantum Technology Company",
     "h1": "About Zion Tech Group"
   },
   {
@@ -26,9 +21,8 @@
   },
   {
     "route": "/contact",
-    "title": "Contact Us — Zion Tech Group | Get in Touch",
+    "title": "Contact Us — Zion Tech Group | Get in Touch with AI & Quantum Experts",
     "h1": "Get in Touch"
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
   },
   {
     "route": "/",
@@ -39,23 +33,15 @@
     "route": "/pricing-2025",
     "title": "2025 Pricing & Services — Zion Tech Group",
     "h1": "2025 Pricing & Services"
-<<<<<<< HEAD
-=======
-  },
-  {
-    "route": "/resources",
-    "title": "Resources — Zion Tech Group | Documentation, Tools & Community",
-    "h1": "Resources Hub"
   },
   {
     "route": "/services",
-    "title": "Services — Zion Tech Group | AI, Quantum & Technology Solutions",
+    "title": "Services — Zion Tech Group | AI, Quantum Computing & Technology Solutions",
     "h1": "Our Services"
   },
   {
-    "route": "/solutions",
-    "title": "Solutions — Zion Tech Group | Industry-Specific Technology Solutions",
-    "h1": "Industry Solutions"
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+    "route": "/team",
+    "title": "Our Team — Zion Tech Group | World-Class AI & Quantum Technology Experts",
+    "h1": "Meet Our Team"
   }
 ]

@@ -1,25 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
+"use client";
 
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
+import { useTheme } from "../ThemeProvider";
+import { Toaster as Sonner } from "sonner";
 
-interface ToasterProps {
-  position?: string;
-}
-
-export function Toaster({ position = 'top-right' }: ToasterProps) {
-  return <div id="sonner-toaster" data-position={position} />;
-}
-=======
-import { Toaster as Sonner } from "sonner"
-
-type ToasterProps = React.ComponentProps<typeof Sonner>
+type ToasterProps = React.ComponentProps<typeof Sonner>;
 
 const Toaster = ({ ...props }: ToasterProps) => {
+  const { theme = "system" } = useTheme();
+
   return (
     <Sonner
+      theme={theme as ToasterProps["theme"]}
       className="toaster group"
       toastOptions={{
         classNames: {
@@ -34,8 +25,7 @@ const Toaster = ({ ...props }: ToasterProps) => {
       }}
       {...props}
     />
-  )
-}
+  );
+};
 
-export { Toaster }
->>>>>>> origin/cursor/check-and-fix-github-actions-e92c
+export { Toaster };

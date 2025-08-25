@@ -1,25 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Globe } from 'lucide-react';
-=======
->>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
-
-export function LanguageSelector() {
-  return (
-    <div className="flex items-center gap-2 px-3 py-2 text-white hover:text-zion-cyan transition-colors cursor-pointer">
-      <Globe className="w-4 h-4" />
-      <span className="hidden sm:inline">EN</span>
-=======
 import React, { useState } from 'react';
-import { Globe } from 'lucide-react';
-import { Button } from '@/components/ui/Button';
+import { ChevronDown, Globe } from 'lucide-react';
 
-export function LanguageSelector() {
+interface Language {
+  code: string;
+  name: string;
+  flag: string;
+}
+
+export const LanguageSelector: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState('EN');
 
-  const languages = [
+  const languages: Language[] = [
     { code: 'EN', name: 'English', flag: '🇺🇸' },
     { code: 'ES', name: 'Español', flag: '🇪🇸' },
     { code: 'FR', name: 'Français', flag: '🇫🇷' },
@@ -29,52 +21,48 @@ export function LanguageSelector() {
     { code: 'RU', name: 'Русский', flag: '🇷🇺' },
     { code: 'ZH', name: '中文', flag: '🇨🇳' },
     { code: 'JA', name: '日本語', flag: '🇯🇵' },
-    { code: 'KO', name: '한국어', flag: '🇰🇷' },
+    { code: 'KO', name: '한국어', flag: '🇰🇷' }
   ];
 
   const handleLanguageChange = (languageCode: string) => {
     setCurrentLanguage(languageCode);
     setIsOpen(false);
-    // Here you would typically call a function to change the app's language
-    console.log(`Language changed to: ${languageCode}`);
+    // Here you would typically implement language change logic
   };
 
   const currentLang = languages.find(lang => lang.code === currentLanguage);
 
   return (
     <div className="relative">
-      <Button
-        variant="ghost"
-        size="sm"
+      <button
         onClick={() => setIsOpen(!isOpen)}
-        className="text-zion-cyan hover:bg-zion-cyan/10"
-        aria-expanded={isOpen}
-        aria-label="Language selector"
+        className="flex items-center gap-2 px-3 py-2 text-white hover:text-zion-cyan transition-colors cursor-pointer"
       >
-        <Globe className="w-4 h-4 mr-2" />
-        {currentLang?.flag} {currentLang?.code}
-      </Button>
+        <Globe className="w-4 h-4" />
+        <span className="text-sm font-medium">{currentLang?.code}</span>
+        <ChevronDown className={`w-3 h-3 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+      </button>
 
       {isOpen && (
-        <div className="absolute right-0 mt-2 w-48 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-lg py-2 z-50 max-h-64 overflow-y-auto">
-          {languages.map((language) => (
-            <button
-              key={language.code}
-              onClick={() => handleLanguageChange(language.code)}
-              className={`flex items-center w-full px-4 py-2 text-left transition-colors ${
-                language.code === currentLanguage
-                  ? 'bg-zion-blue text-white'
-                  : 'text-zion-slate-light hover:bg-zion-blue hover:text-white'
-              }`}
-            >
-              <span className="mr-3">{language.flag}</span>
-              <span className="mr-2">{language.code}</span>
-              <span className="text-sm">{language.name}</span>
-            </button>
-          ))}
+        <div className="absolute top-full right-0 mt-2 w-48 bg-black/95 backdrop-blur-md rounded-lg shadow-xl border border-gray-800 z-50">
+          <div className="py-2">
+            {languages.map((language) => (
+              <button
+                key={language.code}
+                onClick={() => handleLanguageChange(language.code)}
+                className={`w-full flex items-center gap-3 px-4 py-2 text-sm transition-colors ${
+                  currentLanguage === language.code
+                    ? 'text-zion-cyan bg-gray-800/50'
+                    : 'text-white hover:text-zion-cyan hover:bg-gray-800/30'
+                }`}
+              >
+                <span className="text-lg">{language.flag}</span>
+                <span>{language.name}</span>
+              </button>
+            ))}
+          </div>
         </div>
       )}
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
     </div>
   );
-}
+};

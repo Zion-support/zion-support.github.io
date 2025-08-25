@@ -1,200 +1,177 @@
-import { Search, X } from 'lucide-react';
-<<<<<<< HEAD
-=======
-import { Input } from '@/components/ui/Input';
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+import React, { useState, useEffect, useRef } from 'react';
+import { Search, X, ArrowDown } from 'lucide-react';
 
 interface SearchSuggestion {
   id: string;
-  text: string;
-<<<<<<< HEAD
-  type: string;
-=======
-  type: 'talent' | 'service' | 'equipment' | 'category';
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+  title: string;
+  type: 'service' | 'talent' | 'equipment';
+  description?: string;
 }
 
 interface EnhancedSearchInputProps {
-  value: string;
-  onChange: (value: string) => void;
-<<<<<<< HEAD
-  onSelectSuggestion: (text: string) => void;
-=======
-  onSelectSuggestion: (suggestion: string) => void;
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
-  searchSuggestions: SearchSuggestion[];
   placeholder?: string;
+  onSearch?: (query: string) => void;
+  suggestions?: SearchSuggestion[];
   className?: string;
 }
 
-export function EnhancedSearchInput({
-  value,
-  onChange,
-  onSelectSuggestion,
-  searchSuggestions,
-<<<<<<< HEAD
-  placeholder = "Search services, solutions...",
+export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({
+  placeholder = "Search for services, talent, or equipment...",
+  onSearch,
+  suggestions = [],
   className = ""
-}: EnhancedSearchInputProps) {
+}) => {
+  const [query, setQuery] = useState('');
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
+  const [selectedIndex, setSelectedIndex] = useState(-1);
   const inputRef = useRef<HTMLInputElement>(null);
   const suggestionsRef = useRef<HTMLDivElement>(null);
-=======
-  placeholder = "Search...",
-  className = ""
-}: EnhancedSearchInputProps) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
-  const wrapperRef = useRef<HTMLDivElement>(null);
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 
   useEffect(() => {
-    if (value.trim()) {
-      const filtered = searchSuggestions.filter(suggestion =>
-        suggestion.text.toLowerCase().includes(value.toLowerCase())
-<<<<<<< HEAD
+    if (query.trim()) {
+      const filtered = suggestions.filter(suggestion =>
+        suggestion.title.toLowerCase().includes(query.toLowerCase()) ||
+        suggestion.description?.toLowerCase().includes(query.toLowerCase())
       );
       setFilteredSuggestions(filtered.slice(0, 5));
       setShowSuggestions(true);
-    } else {
-      setShowSuggestions(false);
-=======
-      ).slice(0, 5);
-      setFilteredSuggestions(filtered);
-      setIsOpen(filtered.length > 0);
+      setSelectedIndex(-1);
     } else {
       setFilteredSuggestions([]);
-      setIsOpen(false);
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+      setShowSuggestions(false);
     }
-  }, [value, searchSuggestions]);
+  }, [query, suggestions]);
 
   useEffect(() => {
-<<<<<<< HEAD
     const handleClickOutside = (event: MouseEvent) => {
       if (suggestionsRef.current && !suggestionsRef.current.contains(event.target as Node)) {
         setShowSuggestions(false);
       }
     };
-=======
-    function handleClickOutside(event: MouseEvent) {
-      if (wrapperRef.current && !wrapperRef.current.contains(event.target as Node)) {
-        setIsOpen(false);
-      }
-    }
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const handleSuggestionClick = (suggestion: SearchSuggestion) => {
-    onSelectSuggestion(suggestion.text);
-<<<<<<< HEAD
-    setShowSuggestions(false);
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setQuery(e.target.value);
   };
 
-  const clearSearch = () => {
-    onChange('');
+  const handleClear = () => {
+    setQuery('');
     setShowSuggestions(false);
     inputRef.current?.focus();
   };
 
-  return (
-    <div className={`relative ${className}`} ref={suggestionsRef}>
-      <div className="relative">
-        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
-        <input
-          ref={inputRef}
-=======
-    setIsOpen(false);
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (query.trim() && onSearch) {
+      onSearch(query.trim());
+      setShowSuggestions(false);
+    }
   };
 
-  const handleClear = () => {
-    onChange('');
-    setIsOpen(false);
+  const handleSuggestionClick = (suggestion: SearchSuggestion) => {
+    setQuery(suggestion.title);
+    setShowSuggestions(false);
+    if (onSearch) {
+      onSearch(suggestion.title);
+    }
   };
 
-  const getTypeIcon = (type: string) => {
-    switch (type) {
-      case 'talent':
-        return '👤';
-      case 'service':
-        return '🔧';
-      case 'equipment':
-        return '💻';
-      case 'category':
-        return '📁';
-      default:
-        return '🔍';
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (!showSuggestions) return;
+
+    switch (e.key) {
+      case 'ArrowDown':
+        e.preventDefault();
+        setSelectedIndex(prev => 
+          prev < filteredSuggestions.length - 1 ? prev + 1 : prev
+        );
+        break;
+      case 'ArrowUp':
+        e.preventDefault();
+        setSelectedIndex(prev => prev > 0 ? prev - 1 : -1);
+        break;
+      case 'Enter':
+        e.preventDefault();
+        if (selectedIndex >= 0 && filteredSuggestions[selectedIndex]) {
+          handleSuggestionClick(filteredSuggestions[selectedIndex]);
+        } else if (query.trim()) {
+          handleSubmit(e);
+        }
+        break;
+      case 'Escape':
+        setShowSuggestions(false);
+        setSelectedIndex(-1);
+        break;
     }
   };
 
   return (
-    <div ref={wrapperRef} className={`relative ${className}`}>
-      <div className="relative">
-        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
-        <Input
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
-          type="text"
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          placeholder={placeholder}
-<<<<<<< HEAD
-          className="w-full pl-10 pr-10 py-2 bg-zion-blue-light/20 border border-zion-blue-light/30 rounded-lg text-white placeholder:text-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-          onFocus={() => value.trim() && setShowSuggestions(true)}
-        />
-        {value && (
+    <div className={`relative ${className}`} ref={suggestionsRef}>
+      <form onSubmit={handleSubmit} className="relative">
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+          <input
+            ref={inputRef}
+            type="text"
+            value={query}
+            onChange={handleInputChange}
+            onKeyDown={handleKeyDown}
+            onFocus={() => query.trim() && setShowSuggestions(true)}
+            placeholder={placeholder}
+            className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200"
+          />
+          {query && (
+            <button
+              type="button"
+              onClick={handleClear}
+              className="absolute right-12 top-1/2 transform -translate-y-1/2 p-1 hover:bg-gray-100 rounded-full transition-colors"
+            >
+              <X className="w-4 h-4 text-gray-400" />
+            </button>
+          )}
           <button
-            onClick={clearSearch}
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-white transition-colors"
+            type="submit"
+            className="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
           >
-            <X className="w-4 h-4" />
-=======
-          className="pl-10 pr-10 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"
-          onFocus={() => value.trim() && filteredSuggestions.length > 0 && setIsOpen(true)}
-        />
-        {value && (
-          <button
-            onClick={handleClear}
-            className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-white transition-colors"
-            aria-label="Clear search"
-          >
-            <X className="h-4 w-4" />
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+            <ArrowDown className="w-4 h-4" />
           </button>
-        )}
-      </div>
+        </div>
+      </form>
 
-<<<<<<< HEAD
       {showSuggestions && filteredSuggestions.length > 0 && (
-        <div className="absolute top-full left-0 right-0 mt-1 bg-zion-blue-light/95 backdrop-blur-sm border border-zion-blue-light/30 rounded-lg shadow-xl z-50">
-=======
-      {isOpen && filteredSuggestions.length > 0 && (
-        <div className="absolute top-full left-0 right-0 mt-1 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-lg z-50 max-h-64 overflow-y-auto">
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
-          {filteredSuggestions.map((suggestion) => (
+        <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-60 overflow-y-auto">
+          {filteredSuggestions.map((suggestion, index) => (
             <button
               key={suggestion.id}
               onClick={() => handleSuggestionClick(suggestion)}
-<<<<<<< HEAD
-              className="w-full px-4 py-3 text-left text-white hover:bg-zion-blue-light/30 transition-colors first:rounded-t-lg last:rounded-b-lg"
+              className={`w-full text-left px-4 py-3 hover:bg-gray-50 transition-colors ${
+                index === selectedIndex ? 'bg-blue-50 border-l-4 border-l-blue-500' : ''
+              }`}
             >
               <div className="flex items-center gap-3">
-                <Search className="w-4 h-4 text-zion-cyan" />
-                <div>
-                  <div className="font-medium">{suggestion.text}</div>
-                  <div className="text-sm text-zion-slate-light capitalize">{suggestion.type}</div>
+                <div className="flex-shrink-0">
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center text-xs font-medium ${
+                    suggestion.type === 'service' ? 'bg-blue-100 text-blue-600' :
+                    suggestion.type === 'talent' ? 'bg-green-100 text-green-600' :
+                    'bg-purple-100 text-purple-600'
+                  }`}>
+                    {suggestion.type.charAt(0).toUpperCase()}
+                  </div>
                 </div>
-=======
-              className="flex items-center w-full px-4 py-3 text-left hover:bg-zion-blue transition-colors"
-            >
-              <span className="mr-3 text-lg">{getTypeIcon(suggestion.type)}</span>
-              <div className="flex-1">
-                <div className="text-white font-medium">{suggestion.text}</div>
-                <div className="text-zion-slate-light text-sm capitalize">{suggestion.type}</div>
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+                <div className="flex-1 min-w-0">
+                  <div className="font-medium text-gray-900 truncate">
+                    {suggestion.title}
+                  </div>
+                  {suggestion.description && (
+                    <div className="text-sm text-gray-500 truncate">
+                      {suggestion.description}
+                    </div>
+                  )}
+                </div>
               </div>
             </button>
           ))}
@@ -202,4 +179,4 @@ export function EnhancedSearchInput({
       )}
     </div>
   );
-}
+};
