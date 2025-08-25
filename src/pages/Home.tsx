@@ -40,8 +40,7 @@ import {
   ShieldCheck,
   Zap as ZapIcon
 } from 'lucide-react';
-import SEOHead from '../components/SEOHead';
-import { SEOConfigs } from '../components/SEOHead';
+import { SEOHead } from '../components/SEOHead';
 
 // Lazy load components for better performance
 const LazyServicesSection = React.lazy(() => import('../components/home/ServicesSection'));
@@ -61,6 +60,15 @@ const Home: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
+
+  // SEO metadata for the home page
+  const seoMetadata = {
+    title: "AI-Powered Innovation & Enterprise Solutions",
+    description: "Transform your business with cutting-edge AI solutions, comprehensive IT services, and digital transformation expertise. Leading technology consulting for modern enterprises.",
+    keywords: "AI solutions, artificial intelligence, enterprise IT, cybersecurity, cloud computing, digital transformation, Zion Tech Group",
+    type: "website" as const,
+    url: "https://ziontechgroup.com"
+  };
 
   const heroSlides = [
     {
@@ -251,7 +259,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
-      <SEOHead {...SEOConfigs.home} />
+      <SEOHead {...seoMetadata} />
       
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
