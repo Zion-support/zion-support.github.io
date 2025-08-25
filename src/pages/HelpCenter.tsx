@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 <<<<<<< HEAD
 import { Link } from 'react-router-dom';
@@ -307,10 +308,81 @@ const HelpCenter = () => {
         { title: "Payment Methods", path: "/help/payment-methods" },
         { title: "Support Plans", path: "/help/support-plans" },
         { title: "Refund Policy", path: "/help/refund-policy" }
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
+import { 
+  QuestionMarkCircleIcon, 
+  BookOpenIcon, 
+  ChatBubbleLeftRightIcon, 
+  PhoneIcon,
+  EnvelopeIcon,
+  DocumentTextIcon,
+  VideoCameraIcon,
+  AcademicCapIcon
+} from '@heroicons/react/24/outline';
+
+const HelpCenter: React.FC = () => {
+  const faqCategories = [
+    {
+      title: "Getting Started",
+      icon: BookOpenIcon,
+      questions: [
+        {
+          question: "How do I get started with Zion Tech Group services?",
+          answer: "Getting started is easy! Simply contact our team through our contact form or call us directly. We'll schedule a consultation to understand your needs and recommend the best solutions for your business."
+        },
+        {
+          question: "What services do you offer?",
+          answer: "We offer a comprehensive range of AI, 5G, cybersecurity, and digital transformation services. This includes AI autonomous systems, quantum computing solutions, 5G enterprise networks, and much more."
+        },
+        {
+          question: "Do you offer free consultations?",
+          answer: "Yes, we provide free initial consultations to understand your business needs and recommend appropriate solutions. This helps ensure we can provide the most value to your organization."
+        }
+      ]
+    },
+    {
+      title: "Technical Support",
+      icon: QuestionMarkCircleIcon,
+      questions: [
+        {
+          question: "What kind of technical support do you provide?",
+          answer: "We provide comprehensive technical support including 24/7 monitoring, troubleshooting, system optimization, and ongoing maintenance. Our team of experts is always available to help resolve any technical issues."
+        },
+        {
+          question: "How quickly do you respond to support requests?",
+          answer: "We prioritize support requests based on severity. Critical issues receive immediate attention, while standard requests are typically resolved within 4-8 hours during business days."
+        },
+        {
+          question: "Do you provide training for your solutions?",
+          answer: "Absolutely! We provide comprehensive training programs for all our solutions, including user training, administrator training, and ongoing education to ensure your team gets the most value from our technology."
+        }
+      ]
+    },
+    {
+      title: "Billing & Pricing",
+      icon: DocumentTextIcon,
+      questions: [
+        {
+          question: "What are your pricing models?",
+          answer: "We offer flexible pricing models including subscription-based services, project-based pricing, and enterprise licensing. We work with you to find the most cost-effective solution for your needs."
+        },
+        {
+          question: "Do you offer volume discounts?",
+          answer: "Yes, we offer volume discounts for enterprise clients and organizations implementing multiple services. Contact our sales team to discuss custom pricing options."
+        },
+        {
+          question: "What payment methods do you accept?",
+          answer: "We accept all major credit cards, bank transfers, and can arrange custom payment terms for enterprise clients. All payments are processed securely through our payment systems."
+        }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d2cf
       ]
     }
   ];
 
+<<<<<<< HEAD
   const popularArticles = [
     {
       title: "How to Set Up AI Autonomous Systems",
@@ -1068,10 +1140,104 @@ export default function HelpCenter() {
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20"
             />
+=======
+  const supportChannels = [
+    {
+      title: "Live Chat",
+      description: "Get instant help from our support team",
+      icon: ChatBubbleLeftRightIcon,
+      action: "Start Chat",
+      color: "from-cyan-500 to-blue-600"
+    },
+    {
+      title: "Phone Support",
+      description: "Speak directly with our experts",
+      icon: PhoneIcon,
+      action: "Call Now",
+      color: "from-green-500 to-emerald-600"
+    },
+    {
+      title: "Email Support",
+      description: "Send us a detailed message",
+      icon: EnvelopeIcon,
+      action: "Send Email",
+      color: "from-purple-500 to-pink-600"
+    },
+    {
+      title: "Documentation",
+      description: "Browse our comprehensive guides",
+      icon: BookOpenIcon,
+      action: "View Docs",
+      color: "from-orange-500 to-red-600"
+    }
+  ];
+
+  const resources = [
+    {
+      title: "User Guides",
+      description: "Step-by-step instructions for all our services",
+      icon: BookOpenIcon,
+      count: "50+"
+    },
+    {
+      title: "Video Tutorials",
+      description: "Visual guides and demonstrations",
+      icon: VideoCameraIcon,
+      count: "100+"
+    },
+    {
+      title: "API Documentation",
+      description: "Technical documentation for developers",
+      icon: DocumentTextIcon,
+      count: "25+"
+    },
+    {
+      title: "Training Materials",
+      description: "Educational resources and courses",
+      icon: AcademicCapIcon,
+      count: "30+"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+      <Helmet>
+        <title>Help Center - Zion Tech Group</title>
+        <meta name="description" content="Get help and support for Zion Tech Group services. Find answers to frequently asked questions, access documentation, and connect with our support team." />
+        <meta name="keywords" content="help center, support, FAQ, documentation, customer service, technical support" />
+        <link rel="canonical" href="https://ziontechgroup.com/help" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">
+              Help Center
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+              Find answers to your questions, access comprehensive documentation, 
+              and get the support you need to succeed with our technology solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Search Help
+              </button>
+              <button className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300">
+                Contact Support
+              </button>
+            </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d2cf
           </motion.div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Support Channels */}
       <section className="pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1110,10 +1276,95 @@ export default function HelpCenter() {
                     <span className="text-gray-400">Response:</span>
                     <span className="text-green-400">{channel.responseTime}</span>
                   </div>
+=======
+      {/* Support Channels Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              How Can We Help You?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose from multiple support channels to get the help you need, 
+              when you need it.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {supportChannels.map((channel, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 text-center"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-r ${channel.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
+                  <channel.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{channel.title}</h3>
+                <p className="text-gray-300 mb-6">{channel.description}</p>
+                <button className={`w-full bg-gradient-to-r ${channel.color} hover:opacity-90 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300`}>
+                  {channel.action}
+                </button>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Find quick answers to common questions about our services, 
+              support, and solutions.
+            </p>
+          </motion.div>
+
+          <div className="space-y-8">
+            {faqCategories.map((category, categoryIndex) => (
+              <motion.div
+                key={categoryIndex}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
+              >
+                <div className="flex items-center mb-6">
+                  <category.icon className="w-8 h-8 text-cyan-400 mr-3" />
+                  <h3 className="text-2xl font-bold text-white">{category.title}</h3>
+                </div>
+                
+                <div className="space-y-6">
+                  {category.questions.map((item, questionIndex) => (
+                    <div key={questionIndex} className="border-b border-gray-700 pb-4 last:border-b-0">
+                      <h4 className="text-lg font-semibold text-white mb-2">
+                        {item.question}
+                      </h4>
+                      <p className="text-gray-300">{item.answer}</p>
+                    </div>
+                  ))}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d2cf
                 </div>
               </motion.div>
             ))}
           </div>
+<<<<<<< HEAD
         </div>
       </section>
 
@@ -1533,6 +1784,71 @@ export default function HelpCenter() {
               </button>
               <button className="px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/20 transition-all duration-300">
                 Schedule a Call
+=======
+        </div>
+      </section>
+
+      {/* Resources Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Learning Resources
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Access comprehensive documentation, tutorials, and training materials 
+              to maximize the value of our solutions.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {resources.map((resource, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 text-center"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <resource.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{resource.title}</h3>
+                <p className="text-gray-300 mb-4">{resource.description}</p>
+                <div className="text-2xl font-bold text-cyan-400">{resource.count}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Support Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600/20 to-blue-600/20">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Still Need Help?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Our support team is here to help you succeed. Contact us for 
+              personalized assistance and expert guidance.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Contact Support
+              </button>
+              <button className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">
+                Schedule Call
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d2cf
               </button>
             </div>
           </motion.div>
