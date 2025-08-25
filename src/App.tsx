@@ -2,8 +2,8 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { EnhancedLoading } from "./components/ui/enhanced-loading";
 import { MainNavigation } from "./layout/MainNavigation";
-import { Footer } from "./components/Footer";
-import { ToastContainer } from "./components/ui/toaster";
+import Footer from "./components/Footer";
+import { Toaster } from "./components/ui/toaster";
 import { motion } from 'framer-motion';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
@@ -123,7 +123,7 @@ const App = () => {
             </main>
             
             <Footer />
-            <ToastContainer />
+            <Toaster />
           </div>
         </Router>
       </WhitelabelProvider>
