@@ -1,88 +1,88 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Wifi, Zap, Shield, BarChart3, Globe, Users, Database, Settings, Network, Server, ArrowRight, Lock, Building, Globe2 } from 'lucide-react';
+import { Brain, Zap, BarChart3, Globe, Users, Database, Settings, ArrowRight, Search, BookOpen, Lightbulb, Target } from 'lucide-react';
 
-const FiveGPrivateNetworkSolutions: React.FC = () => {
+const AdvancedResearchAutomation: React.FC = () => {
   const features = [
     {
-      icon: Lock,
-      title: "Private Network Security",
-      description: "Isolated network infrastructure with enterprise-grade security and compliance."
+      icon: Brain,
+      title: "AI-Powered Research",
+      description: "Advanced AI algorithms for automated research and data analysis."
     },
     {
-      icon: Building,
-      title: "Custom Network Slicing",
-      description: "Tailored network segments for different business applications and security requirements."
+      icon: Search,
+      title: "Intelligent Search",
+      description: "Smart search algorithms that understand context and intent."
     },
     {
-      icon: Shield,
-      title: "Advanced Security Protocols",
-      description: "Multi-layered security with encryption, authentication, and threat detection."
+      icon: BookOpen,
+      title: "Literature Review",
+      description: "Automated literature review and citation management."
     },
     {
       icon: BarChart3,
-      title: "Network Analytics",
-      description: "Comprehensive monitoring and analytics for network performance and security."
+      title: "Data Analytics",
+      description: "Advanced data analytics and visualization capabilities."
     },
     {
-      icon: Server,
-      title: "Edge Computing Integration",
-      description: "Seamless integration with edge computing for low-latency applications."
+      icon: Lightbulb,
+      title: "Insight Generation",
+      description: "AI-generated insights and research recommendations."
     },
     {
-      icon: Users,
-      title: "Multi-Tenant Architecture",
-      description: "Support for multiple business units with isolated network segments."
+      icon: Target,
+      title: "Research Planning",
+      description: "Intelligent research planning and methodology suggestions."
     }
   ];
 
-  const solutions = [
+  const researchAreas = [
     {
-      title: "Enterprise Private Networks",
-      description: "Dedicated 5G networks for large enterprises with custom security policies."
+      title: "Scientific Research",
+      description: "Automated research workflows for scientific publications and studies."
     },
     {
-      title: "Government & Defense",
-      description: "Secure networks for government agencies and defense applications."
+      title: "Market Research",
+      description: "Intelligent market analysis and competitive intelligence gathering."
     },
     {
-      title: "Healthcare Networks",
-      description: "HIPAA-compliant networks for medical facilities and telemedicine."
+      title: "Academic Research",
+      description: "Academic research automation for universities and research institutions."
     },
     {
-      title: "Financial Services",
-      description: "PCI-DSS compliant networks for banking and financial applications."
+      title: "Business Intelligence",
+      description: "Automated business research and competitive analysis."
     },
     {
-      title: "Manufacturing Networks",
-      description: "Industrial IoT networks for smart manufacturing and automation."
+      title: "Medical Research",
+      description: "Healthcare research automation and clinical trial analysis."
     },
     {
-      title: "Educational Institutions",
-      description: "Campus-wide networks for universities and research facilities."
+      title: "Technology Research",
+      description: "Emerging technology research and trend analysis."
     }
   ];
 
   const benefits = [
     {
+      metric: "10x",
+      label: "Research Speed",
+      description: "Dramatically faster research completion"
+    },
+    {
+      metric: "90%",
+      label: "Accuracy",
+      description: "High accuracy in research findings"
+    },
+    {
+      metric: "24/7",
+      label: "Availability",
+      description: "Continuous research capabilities"
+    },
+    {
       metric: "100%",
-      label: "Network Isolation",
-      description: "Complete separation from public networks"
-    },
-    {
-      metric: "99.99%",
-      label: "Uptime",
-      description: "Enterprise-grade reliability and availability"
-    },
-    {
-      metric: "1ms",
-      label: "Ultra-Low Latency",
-      description: "Near-instantaneous response times"
-    },
-    {
-      metric: "10Gbps",
-      label: "Peak Speeds",
-      description: "Lightning-fast data transfer capabilities"
+      label: "Coverage",
+      description: "Comprehensive research coverage"
     }
   ];
 
@@ -94,24 +94,24 @@ const FiveGPrivateNetworkSolutions: React.FC = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-cyan-400 text-sm font-medium mb-6">
-              <Lock className="w-4 h-4 mr-2" />
-              5G Private Network Solutions
+              <Brain className="w-4 h-4 mr-2" />
+              Advanced Research Automation
             </div>
             <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
-              5G Private Network
+              Advanced Research
               <br />
-              <span className="text-white">Solutions</span>
+              <span className="text-white">Automation</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Build your own secure, isolated 5G network infrastructure with enterprise-grade security, 
-              custom network slicing, and complete control over your network environment.
+              Transform your research process with AI-powered automation, intelligent search, 
+              and advanced analytics. Accelerate discovery and gain deeper insights faster.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
               >
-                Build Private Network
+                Automate Your Research
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
@@ -130,10 +130,10 @@ const FiveGPrivateNetworkSolutions: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Private Network Features
+              Automation Features
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Advanced capabilities for secure, isolated enterprise networks
+              Advanced capabilities for intelligent research automation
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -157,28 +157,28 @@ const FiveGPrivateNetworkSolutions: React.FC = () => {
         </div>
       </section>
 
-      {/* Solutions Section */}
+      {/* Research Areas Section */}
       <section className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Solutions
+              Research Applications
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Tailored private network solutions for specific industry requirements
+              Comprehensive research automation across multiple domains
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {solutions.map((solution, index) => (
+            {researchAreas.map((area, index) => (
               <div
                 key={index}
                 className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"
               >
                 <h3 className="text-xl font-semibold text-white mb-3">
-                  {solution.title}
+                  {area.title}
                 </h3>
                 <p className="text-gray-400">
-                  {solution.description}
+                  {area.description}
                 </p>
               </div>
             ))}
@@ -191,10 +191,10 @@ const FiveGPrivateNetworkSolutions: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Network Benefits
+              Research Benefits
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Key advantages of private 5G network solutions
+              Key advantages of our research automation platform
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -222,17 +222,17 @@ const FiveGPrivateNetworkSolutions: React.FC = () => {
       <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Build Your Private 5G Network?
+            Ready to Automate Your Research?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Our network infrastructure experts can design and deploy your custom private 5G network.
+            Our research automation experts can help you accelerate your research process.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
             >
-              Start Your Project
+              Start Automation
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link
@@ -248,4 +248,4 @@ const FiveGPrivateNetworkSolutions: React.FC = () => {
   );
 };
 
-export default FiveGPrivateNetworkSolutions;
+export default AdvancedResearchAutomation;
