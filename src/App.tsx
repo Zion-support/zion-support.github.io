@@ -106,7 +106,11 @@ const App = () => {
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
-            <PerformanceOptimizer>
+            <PerformanceOptimizer
+              enableMonitoring={true}
+              enableOptimizations={true}
+              showMetrics={import.meta.env.DEV}
+            >
               <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
                 {/* Enhanced SEO */}
                 <EnhancedSEO 
@@ -191,7 +195,12 @@ const App = () => {
                 <SonnerToaster />
                 
                 {/* Enhanced Accessibility Controls */}
-                <EnhancedAccessibility position="bottom-right" />
+                <EnhancedAccessibility 
+                  position="bottom-right" 
+                  showOnLoad={false}
+                  enableKeyboardShortcuts={true}
+                  enableVoiceCommands={import.meta.env.DEV}
+                />
                 
                 {/* AI Chatbot - Always Available */}
                 <AIChatbot />
