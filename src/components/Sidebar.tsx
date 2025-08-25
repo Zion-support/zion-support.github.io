@@ -22,39 +22,50 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       items: [
         { name: 'Home', path: '/', icon: Home },
         { name: 'Services', path: '/services', icon: Briefcase },
+        { name: 'AI Services', path: '/ai-services', icon: Briefcase },
         { name: 'Solutions', path: '/solutions/enterprise', icon: Briefcase },
+        { name: 'Pricing', path: '/pricing', icon: Briefcase },
         { name: 'About', path: '/about', icon: Users },
-        { name: 'Contact', path: '/contact', icon: Phone }
+        { name: 'Contact', path: '/contact', icon: Phone },
+        { name: 'Sitemap', path: '/sitemap', icon: Globe }
       ]
     },
     {
-      title: 'AI & Autonomous Systems',
+      title: 'Services',
       items: [
-        { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
-        { name: 'AI Agent Orchestrator', path: '/ai-agent-orchestrator', icon: Briefcase },
-        { name: 'AI Analytics Copilot', path: '/ai-analytics-copilot', icon: Briefcase },
-        { name: 'Autonomous Business Operations', path: '/autonomous-business-operations-platform', icon: Briefcase },
-        { name: 'AI-Powered IT Asset Management', path: '/ai-powered-it-asset-management', icon: Briefcase }
-      ]
-    },
-    {
-      title: 'Quantum & Emerging Tech',
-      items: [
-        { name: 'Quantum Neural Network Platform', path: '/quantum-neural-network-platform', icon: Globe },
-        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
+        { name: 'AI & Machine Learning', path: '/ai-services', icon: Briefcase },
+        { name: 'AI Research Assistant', path: '/ai-research-assistant', icon: Briefcase },
+        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
+        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Briefcase },
+        { name: 'Quantum Neural Network Platform', path: '/quantum-neural-network-platform', icon: Briefcase },
         { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
+        { name: 'SOC2 Compliance Automation', path: '/soc2-compliance-automation', icon: Shield },
+        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Briefcase },
-        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe }
+        { name: 'Industry Solutions', path: '/services/industry-solutions', icon: Briefcase },
+        { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Globe },
+        { name: 'Digital Transformation', path: '/digital-transformation', icon: Globe }
       ]
     },
     {
-      title: 'Company & Support',
+      title: 'Company',
       items: [
         { name: 'About Us', path: '/about', icon: Users },
         { name: 'Our Team', path: '/team', icon: Users },
-        { name: 'Help Center', path: '/help', icon: Users },
+        { name: 'Careers', path: '/careers', icon: Briefcase },
+        { name: 'Partners', path: '/partners', icon: Handshake },
+        { name: 'Blog', path: '/blog', icon: Globe }
+      ]
+    },
+    {
+      title: 'Support',
+      items: [
+        { name: 'Help Center', path: '/help-center', icon: Users },
         { name: 'Documentation', path: '/docs', icon: Globe },
-        { name: 'Contact Support', path: '/support', icon: Phone }
+        { name: 'Contact Support', path: '/support', icon: Phone },
+        { name: 'Status Page', path: '/status', icon: Globe },
+        { name: 'FAQ', path: '/faq', icon: Users },
+        { name: 'Sitemap', path: '/sitemap', icon: Globe }
       ]
     }
   ];
@@ -66,10 +77,10 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
+    { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
-    { icon: Facebook, href: 'https://www.facebook.com/ziontechgroup', label: 'Facebook' },
-    { icon: Instagram, href: 'https://www.instagram.com/ziontechgroup', label: 'Instagram' }
+    { icon: Facebook, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' },
+    { icon: Instagram, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' }
   ];
 
   const sidebarVariants = {

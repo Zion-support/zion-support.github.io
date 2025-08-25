@@ -5,36 +5,56 @@ export function Footer() {
 
   const footerSections = [
     {
-      title: "AI & Autonomous Systems",
+      title: "AI & Technology Services",
       links: [
         { label: "AI & Autonomous Systems", path: "/services/ai-autonomous-systems" },
-        { label: "AI Autonomous Business Manager", path: "/ai-autonomous-business-manager" },
-        { label: "AI Agent Orchestrator", path: "/ai-agent-orchestrator" },
-        { label: "AI Analytics Copilot", path: "/ai-analytics-copilot" },
-        { label: "Autonomous Business Operations", path: "/autonomous-business-operations-platform" },
-        { label: "AI-Powered IT Asset Management", path: "/ai-powered-it-asset-management" }
-      ]
-    },
-    {
-      title: "Quantum & Emerging Tech",
-      links: [
-        { label: "Quantum Neural Network Platform", path: "/quantum-neural-network-platform" },
+        { label: "AI Research Assistant", path: "/ai-research-assistant" },
+        { label: "AI Business Solutions", path: "/ai-business-solutions" },
         { label: "Quantum Technology", path: "/services/quantum-technology" },
-        { label: "Cybersecurity", path: "/services/cybersecurity" },
+        { label: "Quantum Neural Network Platform", path: "/quantum-neural-network-platform" },
         { label: "IT Infrastructure", path: "/services/it-infrastructure" },
         { label: "Micro SAAS Solutions", path: "/services/micro-saas-solutions" },
-        { label: "Industry Solutions", path: "/services/industry-solutions" }
+        { label: "Cybersecurity", path: "/services/cybersecurity" },
+        { label: "SOC2 Compliance Automation", path: "/soc2-compliance-automation" },
+        { label: "Industry Solutions", path: "/services/industry-solutions" },
+        { label: "Marketplace", path: "/marketplace" },
+        { label: "AI & Machine Learning", path: "/ai-services" },
+        { label: "Cloud & Infrastructure", path: "/cloud-devops" },
+        { label: "Blockchain Solutions", path: "/blockchain-solutions" },
+        { label: "IoT & Edge Computing", path: "/iot-edge-computing" },
+        { label: "IT Consulting", path: "/services" },
+        { label: "Managed Services", path: "/services" }
       ]
     },
     {
-      title: "Solutions & Industries",
+      title: "Solutions",
       links: [
         { label: "Enterprise Solutions", path: "/solutions/enterprise" },
         { label: "Healthcare Solutions", path: "/solutions/healthcare" },
         { label: "Financial Solutions", path: "/solutions/financial" },
         { label: "Manufacturing Solutions", path: "/solutions/manufacturing" },
         { label: "Retail Solutions", path: "/solutions/retail" },
-        { label: "Government Solutions", path: "/solutions/government" }
+        { label: "Government Solutions", path: "/solutions/government" },
+        { label: "Business Intelligence", path: "/services/ai-autonomous-systems" },
+        { label: "Marketing Automation", path: "/services/ai-autonomous-systems" },
+        { label: "HR & Recruitment", path: "/services/ai-autonomous-systems" },
+        { label: "Legal Tech", path: "/services/ai-autonomous-systems" },
+        { label: "Supply Chain", path: "/services/industry-solutions" },
+        { label: "Smart Buildings", path: "/services/industry-solutions" },
+        { label: "Data Protection", path: "/services/cybersecurity" },
+        { label: "Network Security", path: "/services/cybersecurity" }
+      ]
+    },
+    {
+      title: "Emerging Tech",
+      links: [
+        { label: "Quantum Computing", path: "/emerging-tech" },
+        { label: "Blockchain & DeFi", path: "/emerging-tech" },
+        { label: "IoT & Edge Computing", path: "/emerging-tech" },
+        { label: "Extended Reality (XR)", path: "/emerging-tech" },
+        { label: "5G & Networks", path: "/emerging-tech" },
+        { label: "Green Technology", path: "/emerging-tech" },
+        { label: "Digital Twins", path: "/emerging-tech" }
       ]
     },
     {
@@ -56,13 +76,14 @@ export function Footer() {
         { label: "Blog & Articles", path: "/blog" },
         { label: "Case Studies", path: "/case-studies" },
         { label: "Documentation", path: "/docs" },
-        { label: "Support Center", path: "/support" }
+        { label: "Support Center", path: "/support" },
+        { label: "Sitemap", path: "/sitemap" }
       ]
     }
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', url: 'https://www.linkedin.com/company/ziontechgroup', icon: '💼' },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/company/zion-tech-group', icon: '💼' },
     { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: '🐦' },
     { name: 'Facebook', url: 'https://www.facebook.com/ziontechgroup', icon: '📘' },
     { name: 'Instagram', url: 'https://www.instagram.com/ziontechgroup', icon: '📷' },
