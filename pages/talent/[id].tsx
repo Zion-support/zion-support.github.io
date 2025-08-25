@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
 import type { TalentProfile as TalentProfileType } from '@/types/talent';
 import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
@@ -21,6 +21,7 @@ const NotFoundError = () => (
 
 const TalentProfilePage: React.FC = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -53,7 +54,11 @@ const TalentProfilePage: React.FC = () => {
   }, [id]);
 
   if (loading) return <ProfileLoadingState />;
-  if (error || !profile) return <Navigate to="/404" replace />;
+  if (error || !profile) {
+    // Redirect to 404 page or show error state
+    navigate('/404', { replace: true });
+    return null;
+  }
 
   return (
     <main className="min-h-screen bg-zion-blue py-8 text-white">
