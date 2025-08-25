@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, Calendar, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, BookOpen, Target, TrendingUp, PieChart, Activity, Zap as ZapIcon2, Wifi, Smartphone, Server, Code, Lock, Key, Bug, CheckCircle, AlertTriangle, Info, ArrowRight, Satellite, Rocket, Atom, Dna, Brain as BrainIcon, Microchip, Database as DatabaseIcon2, Shield as ShieldIcon2, Zap as ZapIcon3, Globe as GlobeIcon, Network as NetworkIcon, Cpu as CpuIcon, Server as ServerIcon, Code as CodeIcon, Lock as LockIcon, Key as KeyIcon, Bug as BugIcon, CheckCircle as CheckCircleIcon, AlertTriangle as AlertTriangleIcon, Info as InfoIcon, ArrowRight as ArrowRightIcon, Glasses, Cpu as CpuIcon2, Brain as BrainIcon2, Zap as ZapIcon4, Shield as ShieldIcon3, Database as DatabaseIcon3, Cloud as CloudIcon, Network as NetworkIcon2, Server as ServerIcon2, Code as CodeIcon2, Lock as LockIcon2, Key as KeyIcon2, Bug as BugIcon2, CheckCircle as CheckCircleIcon2, AlertTriangle as AlertTriangleIcon2, Info as InfoIcon2, ArrowRight as ArrowRightIcon2 } from 'lucide-react';
 =======
 import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, Calendar, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, BookOpen, Target, TrendingUp, PieChart, Activity, Zap as ZapIcon2, Server, Code, Smartphone, Monitor, Router, HardDrive, Wifi, Lock, Key, Bug, CheckCircle, AlertTriangle, Info, ArrowRight, ExternalLink, Sparkles, Rocket, Shield as ShieldIcon2, Zap as ZapIcon3 } from 'lucide-react';
@@ -10,12 +11,16 @@ import { enhancedITServices2025 } from '@/data/comprehensiveServices2025';
 import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, Calendar, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, BookOpen, Target, TrendingUp, PieChart, Activity, Zap as ZapIcon2, Server, Code, Smartphone, Monitor, Router, HardDrive, Wifi, Lock, Key, Bug, CheckCircle, AlertTriangle, Info, ArrowRight, Rocket, Sparkles, Layers, Atom, Globe2, Shield as ShieldIcon2, Zap as ZapIcon2, Brain as BrainIcon, Cpu as CpuIcon, Cloud as CloudIcon, Database as DatabaseIcon3, Shield as ShieldIcon3, Zap as ZapIcon3 } from 'lucide-react';
 import { motion } from 'framer-motion';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-375a
+=======
+import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, Calendar, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, BookOpen, Target, TrendingUp, PieChart, Activity, Zap as ZapIcon2, Server, Code, Smartphone, Monitor, Router, HardDrive, Wifi, Lock, Key, Bug, Tool, Wrench, Cog, Rocket, Lightbulb, CheckCircle, ArrowRight } from 'lucide-react';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1fc9
 
 const ComprehensiveITServices: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPricing, setSelectedPricing] = useState<string>('all');
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   // Enhanced Comprehensive IT Services data with more innovative offerings
@@ -46,21 +51,43 @@ const ComprehensiveITServices: React.FC = () => {
       benefits: ["Scalable infrastructure", "Enhanced security", "Improved performance", "Reduced downtime", "Cost optimization", "Future-ready design", "Global connectivity", "Compliance ready"],
       targetAudience: ["Large enterprises", "Multi-location businesses", "Healthcare organizations", "Financial institutions", "Government agencies"],
       tags: ["Networking", "Infrastructure", "Enterprise", "Security", "SD-WAN", "Zero Trust"],
+=======
+  // Comprehensive IT Services data
+  const itServices = [
+    {
+      id: 1,
+      name: "Enterprise Network Infrastructure",
+      category: "Infrastructure",
+      pricing: "Enterprise",
+      description: "Complete network design, implementation, and management for large organizations",
+      price: 15000,
+      pricingModel: "project-based",
+      userLimit: "Unlimited users",
+      features: ["Network design & architecture", "Cisco/Meraki implementation", "SD-WAN solutions", "Network security", "24/7 monitoring", "Performance optimization"],
+      benefits: ["Scalable infrastructure", "Enhanced security", "Improved performance", "Reduced downtime", "Cost optimization", "Future-ready design"],
+      targetAudience: ["Large enterprises", "Multi-location businesses", "Healthcare organizations", "Financial institutions"],
+      tags: ["Networking", "Infrastructure", "Enterprise", "Security", "SD-WAN"],
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1fc9
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
       },
       deliveryTime: "8-12 weeks",
+<<<<<<< HEAD
       support: "24/7 enterprise support",
       innovationLevel: "Cutting-edge",
       marketPrice: "$15,000 - $50,000"
+=======
+      support: "24/7 enterprise support"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1fc9
     },
     {
       id: 2,
       name: "Cloud Migration & Optimization",
       category: "Cloud Services",
       pricing: "Enterprise",
+<<<<<<< HEAD
       description: "End-to-end cloud migration services with cost optimization, performance tuning, and multi-cloud strategy",
       price: 25000,
       pricingModel: "project-based",
@@ -69,12 +96,23 @@ const ComprehensiveITServices: React.FC = () => {
       benefits: ["Reduced infrastructure costs", "Improved scalability", "Enhanced security", "Better performance", "Disaster recovery", "Global accessibility", "Cost predictability", "Innovation acceleration"],
       targetAudience: ["Medium to large businesses", "Healthcare providers", "Financial services", "Manufacturing companies", "E-commerce platforms"],
       tags: ["Cloud Migration", "AWS", "Azure", "GCP", "Cost Optimization", "Multi-cloud"],
+=======
+      description: "End-to-end cloud migration services with cost optimization and performance tuning",
+      price: 25000,
+      pricingModel: "project-based",
+      userLimit: "Unlimited users",
+      features: ["AWS/Azure migration", "Cost optimization", "Performance tuning", "Security implementation", "Disaster recovery", "Monitoring setup"],
+      benefits: ["Reduced infrastructure costs", "Improved scalability", "Enhanced security", "Better performance", "Disaster recovery", "Flexible scaling"],
+      targetAudience: ["Medium to large businesses", "Healthcare", "Finance", "E-commerce", "Manufacturing"],
+      tags: ["Cloud Migration", "AWS", "Azure", "Cost Optimization", "Performance"],
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1fc9
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
       },
       deliveryTime: "12-16 weeks",
+<<<<<<< HEAD
       support: "24/7 cloud support",
       innovationLevel: "Advanced",
       marketPrice: "$25,000 - $75,000"
@@ -92,12 +130,30 @@ const ComprehensiveITServices: React.FC = () => {
       benefits: ["Future-proof security", "Risk mitigation", "Compliance achievement", "Customer trust", "Reduced breach risk", "Insurance benefits", "Regulatory compliance", "Quantum readiness"],
       targetAudience: ["Financial institutions", "Healthcare organizations", "Government agencies", "E-commerce businesses", "Critical infrastructure"],
       tags: ["Cybersecurity", "Quantum Computing", "AI", "Zero Trust", "Compliance", "Risk Assessment"],
+=======
+      support: "24/7 cloud support"
+    },
+    {
+      id: 3,
+      name: "Cybersecurity Assessment & Implementation",
+      category: "Security",
+      pricing: "Enterprise",
+      description: "Comprehensive security assessment, penetration testing, and security infrastructure implementation",
+      price: 18000,
+      pricingModel: "project-based",
+      userLimit: "Unlimited users",
+      features: ["Security assessment", "Penetration testing", "SIEM implementation", "Endpoint protection", "Security training", "Compliance audit"],
+      benefits: ["Enhanced security posture", "Compliance achievement", "Risk reduction", "Employee awareness", "Incident response", "Peace of mind"],
+      targetAudience: ["Healthcare", "Finance", "Government", "Manufacturing", "Retail"],
+      tags: ["Cybersecurity", "Penetration Testing", "SIEM", "Compliance", "Security Training"],
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1fc9
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
       },
       deliveryTime: "6-10 weeks",
+<<<<<<< HEAD
       support: "24/7 security support",
       innovationLevel: "Revolutionary",
       marketPrice: "$18,000 - $60,000"
@@ -314,12 +370,30 @@ const ComprehensiveITServices: React.FC = () => {
       benefits: ["Data insights", "Operational efficiency", "Better decisions", "Cost reduction", "Innovation", "Competitive advantage"],
       targetAudience: ["Data-driven companies", "Financial institutions", "Healthcare organizations", "Retail chains", "Manufacturing companies", "Research institutions"],
       tags: ["Data Fabric", "Analytics", "AI/ML", "Data Governance", "Real-time", "Insights"],
+=======
+      support: "24/7 security support"
+    },
+    {
+      id: 4,
+      name: "Data Center Design & Implementation",
+      category: "Infrastructure",
+      pricing: "Enterprise",
+      description: "Complete data center design, build, and implementation services",
+      price: 50000,
+      pricingModel: "project-based",
+      userLimit: "Unlimited users",
+      features: ["Data center design", "Hardware procurement", "Installation & configuration", "Power & cooling", "Security systems", "Monitoring setup"],
+      benefits: ["Custom design", "Scalable infrastructure", "Enhanced performance", "Improved reliability", "Cost optimization", "Future growth"],
+      targetAudience: ["Large enterprises", "Data centers", "Cloud providers", "Financial institutions"],
+      tags: ["Data Center", "Infrastructure", "Hardware", "Design", "Implementation"],
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1fc9
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
       },
       deliveryTime: "16-24 weeks",
+<<<<<<< HEAD
       support: "24/7 data support"
     },
     {
@@ -335,11 +409,29 @@ const ComprehensiveITServices: React.FC = () => {
       benefits: ["Predictive maintenance", "Cost reduction", "Operational efficiency", "Risk mitigation", "Innovation", "Competitive advantage"],
       targetAudience: ["Manufacturing companies", "Infrastructure projects", "Smart cities", "Healthcare facilities", "Energy companies", "Transportation"],
       tags: ["Digital Twins", "3D Modeling", "Predictive Analytics", "IoT", "Simulation", "Monitoring"],
+=======
+      support: "24/7 data center support"
+    },
+    {
+      id: 5,
+      name: "DevOps Implementation & Automation",
+      category: "DevOps",
+      pricing: "Enterprise",
+      description: "Complete DevOps implementation with CI/CD pipelines, automation, and monitoring",
+      price: 22000,
+      pricingModel: "project-based",
+      userLimit: "Unlimited users",
+      features: ["CI/CD pipelines", "Infrastructure as code", "Monitoring & alerting", "Automation scripts", "Container orchestration", "Performance optimization"],
+      benefits: ["Faster deployments", "Reduced errors", "Improved collaboration", "Better monitoring", "Cost savings", "Scalability"],
+      targetAudience: ["Software companies", "IT departments", "Startups", "Enterprises"],
+      tags: ["DevOps", "CI/CD", "Automation", "Monitoring", "Containers"],
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1fc9
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
       },
+<<<<<<< HEAD
       deliveryTime: "12-20 weeks",
       support: "24/7 digital twin support"
     },
@@ -356,11 +448,30 @@ const ComprehensiveITServices: React.FC = () => {
       benefits: ["Enhanced training", "Improved collaboration", "Cost reduction", "Innovation", "Competitive advantage", "User engagement"],
       targetAudience: ["Training companies", "Manufacturing", "Healthcare", "Education", "Retail", "Entertainment"],
       tags: ["AR/VR", "3D Content", "Collaboration", "Training", "Visualization", "Immersive Tech"],
+=======
+      deliveryTime: "10-14 weeks",
+      support: "24/7 DevOps support"
+    },
+    {
+      id: 6,
+      name: "Business Intelligence & Analytics Platform",
+      category: "Analytics",
+      pricing: "Enterprise",
+      description: "Custom BI platform with data warehousing, reporting, and advanced analytics",
+      price: 35000,
+      pricingModel: "project-based",
+      userLimit: "Unlimited users",
+      features: ["Data warehousing", "ETL processes", "Interactive dashboards", "Advanced analytics", "Predictive modeling", "Mobile access"],
+      benefits: ["Data-driven decisions", "Improved insights", "Better reporting", "Real-time analytics", "Competitive advantage", "Operational efficiency"],
+      targetAudience: ["Enterprises", "Healthcare", "Finance", "Retail", "Manufacturing"],
+      tags: ["Business Intelligence", "Analytics", "Data Warehouse", "Reporting", "Predictive Analytics"],
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1fc9
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
       },
+<<<<<<< HEAD
       deliveryTime: "10-16 weeks",
       support: "24/7 AR/VR support"
     },
@@ -377,12 +488,31 @@ const ComprehensiveITServices: React.FC = () => {
       benefits: ["Ultra-fast connectivity", "Low latency", "Massive IoT support", "Network flexibility", "Future-proof infrastructure", "Innovation"],
       targetAudience: ["Telecommunications", "Smart cities", "Manufacturing", "Healthcare", "Transportation", "Entertainment"],
       tags: ["5G", "Edge Computing", "IoT", "Network Slicing", "Connectivity", "Infrastructure"],
+=======
+      deliveryTime: "14-20 weeks",
+      support: "24/7 analytics support"
+    },
+    {
+      id: 7,
+      name: "Digital Transformation Consulting",
+      category: "Consulting",
+      pricing: "Enterprise",
+      description: "Strategic digital transformation consulting and implementation services",
+      price: 40000,
+      pricingModel: "project-based",
+      userLimit: "Unlimited users",
+      features: ["Strategy development", "Process optimization", "Technology selection", "Change management", "Implementation support", "ROI measurement"],
+      benefits: ["Improved efficiency", "Cost reduction", "Competitive advantage", "Employee satisfaction", "Customer experience", "Future readiness"],
+      targetAudience: ["Traditional businesses", "Manufacturing", "Healthcare", "Finance", "Retail"],
+      tags: ["Digital Transformation", "Strategy", "Process Optimization", "Change Management", "Technology"],
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1fc9
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
       },
       deliveryTime: "20-32 weeks",
+<<<<<<< HEAD
       support: "24/7 5G support"
     },
     {
@@ -494,11 +624,29 @@ const ComprehensiveITServices: React.FC = () => {
       benefits: ["Reduced latency", "Bandwidth optimization", "Privacy protection", "Scalability", "Cost efficiency", "Real-time capabilities"],
       targetAudience: ["IoT companies", "Manufacturing", "Smart cities", "Healthcare systems"],
       tags: ["Edge Computing", "IoT", "Real-time", "Low Latency", "Distributed Systems"],
+=======
+      support: "24/7 transformation support"
+    },
+    {
+      id: 8,
+      name: "Managed IT Services",
+      category: "Managed Services",
+      pricing: "Monthly",
+      description: "Complete managed IT services including monitoring, maintenance, and support",
+      price: 5000,
+      pricingModel: "monthly",
+      userLimit: "Up to 500 users",
+      features: ["24/7 monitoring", "Proactive maintenance", "Help desk support", "Security management", "Backup & recovery", "Performance optimization"],
+      benefits: ["Reduced IT costs", "Improved reliability", "Expert support", "Proactive maintenance", "Scalable services", "Peace of mind"],
+      targetAudience: ["Small to medium businesses", "Healthcare", "Finance", "Legal", "Manufacturing"],
+      tags: ["Managed Services", "Monitoring", "Maintenance", "Support", "24/7"],
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1fc9
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
       },
+<<<<<<< HEAD
       deliveryTime: "16-20 weeks",
       support: "24/7 edge support"
     },
@@ -612,6 +760,15 @@ const ComprehensiveITServices: React.FC = () => {
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-375a
   const pricingOptions = ['all', 'Enterprise', 'Professional', 'Standard'];
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-5dad
+=======
+      deliveryTime: "2-4 weeks",
+      support: "24/7 managed services support"
+    }
+  ];
+
+  const categories = ['all', 'Infrastructure', 'Cloud Services', 'Security', 'DevOps', 'Analytics', 'Consulting', 'Managed Services'];
+  const pricingModels = ['all', 'project-based', 'monthly', 'yearly'];
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1fc9
 
   const filteredServices = itServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -619,11 +776,16 @@ const ComprehensiveITServices: React.FC = () => {
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+<<<<<<< HEAD
     const matchesPricing = selectedPricing === 'all' || service.pricing === selectedPricing;
+=======
+    const matchesPricing = selectedPricing === 'all' || service.pricingModel === selectedPricing;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1fc9
     
     return matchesSearch && matchesCategory && matchesPricing;
   });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   const getInnovationLevelColor = (level: string) => {
@@ -715,23 +877,59 @@ const ComprehensiveITServices: React.FC = () => {
               <div className="absolute left-4 top-1/2 transform -translate-y-1/2">
                 <Sparkles className="w-5 h-5 text-zion-cyan animate-pulse" />
               </div>
+=======
+  return (
+    <div className="min-h-screen bg-zion-blue-dark text-white">
+      {/* Header Section */}
+      <div className="bg-zion-blue-darker py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-holographic-gradient bg-clip-text text-transparent">
+            Comprehensive IT Services
+          </h1>
+          <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
+            Enterprise-grade IT solutions designed to transform your business infrastructure, 
+            enhance security, and drive digital innovation
+          </p>
+          
+          {/* Search and Filters */}
+          <div className="max-w-4xl mx-auto space-y-6">
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Search IT services..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full px-6 py-4 bg-zion-blue-light/20 border border-zion-cyan/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"
+              />
+              <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-cyan w-6 h-6" />
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1fc9
             </div>
             
             <div className="flex flex-wrap gap-4 justify-center">
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
+<<<<<<< HEAD
                 className="px-6 py-3 bg-zion-blue-light/20 backdrop-blur-md border border-zion-cyan/30 rounded-xl text-white focus:outline-none focus:border-zion-cyan transition-all duration-300 hover:bg-zion-blue-light/30"
               >
                 <option value="all">🚀 All Categories</option>
                 {categories.slice(1).map(category => (
                   <option key={category} value={category}>✨ {category}</option>
+=======
+                className="px-4 py-2 bg-zion-blue-light/20 border border-zion-cyan/30 rounded-lg text-white focus:outline-none focus:border-zion-cyan"
+              >
+                {categories.map(category => (
+                  <option key={category} value={category} className="bg-zion-blue-dark text-white">
+                    {category === 'all' ? 'All Categories' : category}
+                  </option>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1fc9
                 ))}
               </select>
               
               <select
                 value={selectedPricing}
                 onChange={(e) => setSelectedPricing(e.target.value)}
+<<<<<<< HEAD
                 className="px-6 py-3 bg-zion-blue-light/20 backdrop-blur-md border border-zion-cyan/30 rounded-xl text-white focus:outline-none focus:border-zion-cyan transition-all duration-300 hover:bg-zion-blue-light/30"
               >
 <<<<<<< HEAD
@@ -947,10 +1145,36 @@ const ComprehensiveITServices: React.FC = () => {
                   </div>
                 </div>
                 <span className="px-3 py-1 bg-zion-blue-light/20 text-zion-slate-light text-sm rounded-full border border-zion-cyan/30">
+=======
+                className="px-4 py-2 bg-zion-blue-light/20 border border-zion-cyan/30 rounded-lg text-white focus:outline-none focus:border-zion-cyan"
+              >
+                {pricingModels.map(model => (
+                  <option key={model} value={model} className="bg-zion-blue-dark text-white">
+                    {model === 'all' ? 'All Pricing Models' : model === 'project-based' ? 'Project-Based' : model.charAt(0).toUpperCase() + model.slice(1)}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Services Grid */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredServices.map((service) => (
+            <div key={service.id} className="bg-zion-blue-light/10 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
+              <div className="flex items-center justify-between mb-4">
+                <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full">
+                  {service.category}
+                </span>
+                <span className="px-3 py-1 bg-zion-blue-light/20 text-zion-slate-light text-sm rounded-full">
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1fc9
                   {service.pricing}
                 </span>
               </div>
               
+<<<<<<< HEAD
               <h3 className="text-2xl font-bold mb-3 text-zion-cyan group-hover:text-zion-cyan/80 transition-colors">
                 {service.name}
               </h3>
@@ -980,11 +1204,45 @@ const ComprehensiveITServices: React.FC = () => {
                     <li key={index} className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                       <span className="line-clamp-1">{feature}</span>
+=======
+              <h3 className="text-2xl font-bold mb-3 text-zion-cyan">
+                {service.name}
+              </h3>
+              
+              <p className="text-zion-slate-light mb-4 leading-relaxed">
+                {service.description}
+              </p>
+              
+              <div className="mb-4">
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-2xl font-bold text-white">
+                    ${service.price.toLocaleString()}
+                  </span>
+                  <span className="text-zion-slate-light text-sm">
+                    {service.pricingModel === 'monthly' ? '/month' : service.pricingModel === 'yearly' ? '/year' : 'project'}
+                  </span>
+                </div>
+                {service.pricingModel === 'project-based' && (
+                  <p className="text-zion-slate-light text-sm">
+                    Delivery: {service.deliveryTime}
+                  </p>
+                )}
+              </div>
+              
+              <div className="mb-4">
+                <h4 className="font-semibold text-zion-cyan mb-2">Key Features:</h4>
+                <ul className="space-y-1">
+                  {service.features.slice(0, 4).map((feature, index) => (
+                    <li key={index} className="flex items-center text-zion-slate-light text-sm">
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
+                      {feature}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1fc9
                     </li>
                   ))}
                 </ul>
               </div>
               
+<<<<<<< HEAD
               <div className="mb-6">
                 <h4 className="font-semibold mb-2 text-zion-cyan flex items-center gap-2">
                   <Rocket className="w-4 h-4" />
@@ -995,11 +1253,21 @@ const ComprehensiveITServices: React.FC = () => {
                     <li key={index} className="flex items-center gap-2">
                       <ArrowRight className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                       <span className="line-clamp-1">{benefit}</span>
+=======
+              <div className="mb-4">
+                <h4 className="font-semibold text-zion-cyan mb-2">Benefits:</h4>
+                <ul className="space-y-1">
+                  {service.benefits.slice(0, 3).map((benefit, index) => (
+                    <li key={index} className="flex items-center text-zion-slate-light text-sm">
+                      <ArrowRight className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
+                      {benefit}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1fc9
                     </li>
                   ))}
                 </ul>
               </div>
               
+<<<<<<< HEAD
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2 text-sm text-zion-slate-light">
                   <Users className="w-4 h-4" />
@@ -1015,10 +1283,46 @@ const ComprehensiveITServices: React.FC = () => {
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-375a
               </div>
             </motion.div>
+=======
+              <div className="mb-4">
+                <h4 className="font-semibold text-zion-cyan mb-2">Target Audience:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {service.targetAudience.slice(0, 3).map((audience, index) => (
+                    <span key={index} className="px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light text-xs rounded">
+                      {audience}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              
+              <div className="border-t border-zion-cyan/20 pt-4">
+                <div className="flex items-center justify-between text-sm text-zion-slate-light mb-3">
+                  <span>Support: {service.support}</span>
+                  <span>Users: {service.userLimit}</span>
+                </div>
+                
+                <div className="flex space-x-2">
+                  <a
+                    href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`}
+                    className="flex-1 bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue-dark font-semibold py-2 px-4 rounded-lg text-center transition-colors duration-200"
+                  >
+                    Get Quote
+                  </a>
+                  <a
+                    href={`tel:${service.contactInfo.phone}`}
+                    className="bg-zion-blue-light/20 hover:bg-zion-blue-light/30 text-zion-cyan p-2 rounded-lg transition-colors duration-200"
+                  >
+                    <Phone className="w-5 h-5" />
+                  </a>
+                </div>
+              </div>
+            </div>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1fc9
           ))}
         </div>
       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Enhanced Contact Section */}
       <div className="bg-zion-blue-darker py-20 relative overflow-hidden">
@@ -1053,12 +1357,41 @@ const ComprehensiveITServices: React.FC = () => {
                 <MapPin className="w-6 h-6 text-white" />
               </div>
               <span className="text-lg text-white">Middletown, DE</span>
+=======
+      {/* Contact Section */}
+      <div className="bg-zion-blue-darker py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-zion-cyan">
+            Ready to Transform Your IT Infrastructure?
+          </h2>
+          <p className="text-xl text-zion-slate-light mb-8">
+            Let our expert team help you build a robust, scalable, and secure IT foundation 
+            that drives your business forward.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="text-center">
+              <Phone className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
+              <h3 className="text-lg font-semibold mb-2">Call Us</h3>
+              <p className="text-zion-slate-light">+1 302 464 0950</p>
+            </div>
+            <div className="text-center">
+              <Mail className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
+              <h3 className="text-lg font-semibold mb-2">Email Us</h3>
+              <p className="text-zion-slate-light">kleber@ziontechgroup.com</p>
+            </div>
+            <div className="text-center">
+              <MapPin className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
+              <h3 className="text-lg font-semibold mb-2">Visit Us</h3>
+              <p className="text-zion-slate-light">364 E Main St STE 1008<br />Middletown DE 19709</p>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1fc9
             </div>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="https://ziontechgroup.com"
+<<<<<<< HEAD
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-zion-cyan text-zion-blue-dark font-semibold rounded-xl hover:bg-zion-cyan/80 transition-colors duration-300 group"
@@ -1130,6 +1463,19 @@ const ComprehensiveITServices: React.FC = () => {
             </div>
           </motion.div>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-375a
+=======
+              className="bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue-dark font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
+            >
+              Visit Our Website
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com?subject=IT Services Consultation"
+              className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark font-semibold py-3 px-8 rounded-lg transition-colors duration-200"
+            >
+              Schedule Consultation
+            </a>
+          </div>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1fc9
         </div>
       </div>
     </div>
