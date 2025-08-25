@@ -20,189 +20,256 @@ export interface AdvancedAIService {
     email: string;
     website: string;
   };
+  websiteUrl: string;
+  demoUrl?: string;
+  documentationUrl?: string;
 }
 
 export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
-  // AI-Powered Financial Services
+  // AI-Powered Content Generation & Marketing
   {
-    id: "ai-financial-advisor",
-    title: "AI-Powered Financial Advisory Platform",
-    description: "Intelligent financial planning and investment advisory system that provides personalized financial recommendations using advanced machine learning algorithms.",
-    category: "AI & Financial Services",
-    subcategory: "Financial Advisory",
-    price: 2500,
+    id: "ai-content-generation-suite",
+    title: "AI Content Generation & Marketing Suite",
+    description: "Advanced AI platform that generates high-quality, SEO-optimized content for blogs, social media, and marketing campaigns with human-like creativity.",
+    category: "AI & Content Marketing",
+    subcategory: "Content Generation",
+    price: 399,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Personalized investment portfolios",
-      "Risk assessment algorithms",
-      "Market trend analysis",
-      "Automated rebalancing",
-      "Tax optimization strategies",
-      "Real-time portfolio monitoring"
+      "Multi-format content generation (blogs, social posts, emails)",
+      "SEO optimization with keyword research",
+      "Brand voice customization",
+      "Plagiarism detection",
+      "Content scheduling and automation",
+      "Performance analytics dashboard",
+      "Multi-language support",
+      "API integration capabilities"
     ],
     benefits: [
-      "Increase investment returns by 15-25%",
-      "Reduce financial planning time by 80%",
-      "Minimize tax liabilities",
-      "Professional-grade financial advice",
-      "24/7 portfolio management"
+      "Reduce content creation time by 80%",
+      "Improve SEO rankings by 45%",
+      "Increase engagement rates by 60%",
+      "Consistent brand messaging",
+      "Scalable content production"
     ],
     useCases: [
-      "Individual investors",
-      "Financial advisors",
-      "Wealth management firms",
-      "Retirement planning",
-      "Tax optimization"
+      "Digital marketing agencies",
+      "E-commerce businesses",
+      "Content creators",
+      "Startups",
+      "Enterprise marketing teams"
     ],
     targetAudience: [
-      "High-net-worth individuals",
-      "Financial advisors",
-      "Investment firms",
-      "Retirement planners",
-      "Tax professionals"
+      "Content marketers",
+      "SEO specialists",
+      "Social media managers",
+      "Business owners",
+      "Marketing directors"
     ],
-    tags: ["AI", "Financial Advisory", "Investment Management", "Portfolio Optimization", "Tax Planning"],
-    estimatedDelivery: "3-4 weeks",
+    tags: ["AI", "Content Generation", "SEO", "Marketing Automation", "Content Marketing"],
+    estimatedDelivery: "1-2 weeks",
     supportLevel: "premium",
-    marketPrice: "$2,500 - $8,000/month",
+    marketPrice: "$399 - $1,299/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    },
+    websiteUrl: "https://ziontechgroup.com/ai-content-generation"
   },
 
-  // AI-Powered Legal Research
+  // AI-Powered Customer Support Automation
   {
-    id: "ai-legal-research-assistant",
-    title: "AI Legal Research & Document Analysis Platform",
-    description: "Advanced legal research platform that uses natural language processing to analyze case law, contracts, and legal documents for faster, more accurate legal research.",
-    category: "AI & Legal Services",
-    subcategory: "Legal Research",
-    price: 1800,
+    id: "ai-customer-support-automation",
+    title: "AI Customer Support Automation Platform",
+    description: "Intelligent customer support system that uses AI to handle inquiries, resolve issues, and provide 24/7 customer service with human-like understanding.",
+    category: "AI & Customer Service",
+    subcategory: "Support Automation",
+    price: 599,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Case law analysis",
-      "Contract review automation",
-      "Legal precedent identification",
-      "Document similarity matching",
-      "Regulatory compliance checking",
-      "Legal citation validation"
+      "Natural language processing",
+      "Multi-channel support (chat, email, phone)",
+      "Automated ticket routing",
+      "Knowledge base integration",
+      "Sentiment analysis",
+      "Escalation management",
+      "Performance analytics",
+      "Custom workflow automation"
     ],
     benefits: [
-      "Reduce research time by 70%",
-      "Improve case outcome prediction",
-      "Enhance contract review accuracy",
-      "Stay updated on legal changes",
-      "Reduce legal research costs"
+      "Reduce support costs by 70%",
+      "Improve response time by 90%",
+      "Increase customer satisfaction by 40%",
+      "24/7 availability",
+      "Scalable support operations"
     ],
     useCases: [
-      "Law firms",
-      "Corporate legal departments",
-      "Legal researchers",
-      "Compliance officers",
-      "Contract managers"
+      "E-commerce platforms",
+      "SaaS companies",
+      "Financial services",
+      "Healthcare providers",
+      "Educational institutions"
     ],
     targetAudience: [
-      "Law firms",
-      "Corporate legal teams",
-      "Legal researchers",
-      "Compliance professionals",
-      "Contract administrators"
+      "Customer support managers",
+      "Operations directors",
+      "Business owners",
+      "IT managers",
+      "Customer experience teams"
     ],
-    tags: ["AI", "Legal Research", "Document Analysis", "Case Law", "Contract Review"],
+    tags: ["AI", "Customer Support", "Automation", "Chatbot", "Customer Experience"],
     estimatedDelivery: "2-3 weeks",
     supportLevel: "premium",
-    marketPrice: "$1,800 - $5,000/month",
+    marketPrice: "$599 - $1,999/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    },
+    websiteUrl: "https://ziontechgroup.com/ai-customer-support"
+  },
+
+  // AI-Powered Financial Analysis & Trading
+  {
+    id: "ai-financial-analysis-trading",
+    title: "AI Financial Analysis & Trading Platform",
+    description: "Advanced AI platform for financial analysis, risk assessment, and algorithmic trading with real-time market data and predictive analytics.",
+    category: "AI & Financial Technology",
+    subcategory: "Trading & Analysis",
+    price: 1299,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Real-time market data analysis",
+      "AI-powered trading signals",
+      "Risk assessment algorithms",
+      "Portfolio optimization",
+      "Market sentiment analysis",
+      "Backtesting capabilities",
+      "Compliance monitoring",
+      "Multi-exchange integration"
+    ],
+    benefits: [
+      "Improve trading performance by 35%",
+      "Reduce risk exposure by 50%",
+      "Automated portfolio management",
+      "Data-driven investment decisions",
+      "24/7 market monitoring"
+    ],
+    useCases: [
+      "Investment firms",
+      "Hedge funds",
+      "Individual traders",
+      "Financial advisors",
+      "Institutional investors"
+    ],
+    targetAudience: [
+      "Traders",
+      "Investment managers",
+      "Financial analysts",
+      "Portfolio managers",
+      "Risk managers"
+    ],
+    tags: ["AI", "Financial Technology", "Trading", "Risk Management", "Algorithmic Trading"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$1,299 - $4,999/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/ai-financial-trading"
   },
 
   // AI-Powered Healthcare Diagnostics
   {
     id: "ai-healthcare-diagnostics",
-    title: "AI Healthcare Diagnostic Imaging Platform",
-    description: "Advanced medical imaging analysis platform that uses deep learning to detect diseases, analyze medical scans, and provide diagnostic recommendations.",
+    title: "AI Healthcare Diagnostics Platform",
+    description: "Advanced AI platform for medical image analysis, disease detection, and diagnostic assistance with FDA compliance and clinical validation.",
     category: "AI & Healthcare",
     subcategory: "Medical Diagnostics",
-    price: 3500,
+    price: 2499,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Medical image analysis",
+      "Medical image analysis (X-rays, MRIs, CT scans)",
       "Disease detection algorithms",
-      "Diagnostic recommendations",
+      "Clinical decision support",
       "Patient data integration",
-      "Radiology workflow automation",
-      "Clinical decision support"
+      "HIPAA compliance",
+      "FDA regulatory support",
+      "Clinical validation tools",
+      "Telemedicine integration"
     ],
     benefits: [
-      "Improve diagnostic accuracy by 25%",
+      "Improve diagnostic accuracy by 30%",
       "Reduce diagnosis time by 60%",
       "Enhance patient outcomes",
-      "Optimize radiology workflows",
-      "Reduce healthcare costs"
+      "Cost-effective healthcare",
+      "Scalable medical services"
     ],
     useCases: [
       "Hospitals",
-      "Radiology centers",
-      "Medical clinics",
-      "Research institutions",
+      "Medical imaging centers",
+      "Primary care clinics",
+      "Specialist practices",
       "Telemedicine platforms"
     ],
     targetAudience: [
-      "Healthcare providers",
       "Radiologists",
-      "Medical imaging centers",
-      "Hospital administrators",
-      "Healthcare IT teams"
+      "Physicians",
+      "Healthcare administrators",
+      "Medical directors",
+      "Clinical managers"
     ],
-    tags: ["AI", "Healthcare", "Medical Imaging", "Diagnostics", "Radiology"],
+    tags: ["AI", "Healthcare", "Medical Diagnostics", "Medical Imaging", "Clinical AI"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$3,500 - $12,000/month",
+    marketPrice: "$2,499 - $8,999/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
+    },
+    websiteUrl: "https://ziontechgroup.com/ai-healthcare-diagnostics"
   },
 
   // AI-Powered Supply Chain Optimization
   {
     id: "ai-supply-chain-optimization",
     title: "AI Supply Chain Optimization Platform",
-    description: "Intelligent supply chain management system that uses predictive analytics and machine learning to optimize inventory, reduce costs, and improve efficiency.",
+    description: "Intelligent supply chain management platform that uses AI to optimize inventory, predict demand, and streamline logistics operations.",
     category: "AI & Supply Chain",
-    subcategory: "Supply Chain Management",
-    price: 2200,
+    subcategory: "Logistics Optimization",
+    price: 899,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Demand forecasting",
+      "Demand forecasting algorithms",
       "Inventory optimization",
       "Route optimization",
-      "Supplier performance analysis",
+      "Supplier performance analytics",
+      "Real-time tracking",
       "Risk assessment",
-      "Real-time monitoring"
+      "Cost optimization",
+      "Integration with ERP systems"
     ],
     benefits: [
-      "Reduce inventory costs by 20-30%",
-      "Improve delivery times by 25%",
-      "Optimize supplier relationships",
-      "Reduce supply chain risks",
-      "Increase operational efficiency"
+      "Reduce inventory costs by 25%",
+      "Improve delivery times by 40%",
+      "Optimize supply chain efficiency",
+      "Reduce operational costs",
+      "Enhanced customer satisfaction"
     ],
     useCases: [
       "Manufacturing companies",
       "Retail chains",
+      "E-commerce platforms",
       "Logistics providers",
-      "E-commerce businesses",
       "Distribution centers"
     ],
     targetAudience: [
@@ -210,66 +277,17 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
       "Operations directors",
       "Logistics coordinators",
       "Inventory managers",
-      "Procurement teams"
+      "Procurement specialists"
     ],
-    tags: ["AI", "Supply Chain", "Inventory Management", "Logistics", "Predictive Analytics"],
-    estimatedDelivery: "3-4 weeks",
+    tags: ["AI", "Supply Chain", "Logistics", "Inventory Management", "Demand Forecasting"],
+    estimatedDelivery: "2-3 weeks",
     supportLevel: "premium",
-    marketPrice: "$2,200 - $6,500/month",
+    marketPrice: "$899 - $2,999/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
-    }
-  },
-
-  // AI-Powered Energy Management
-  {
-    id: "ai-energy-management",
-    title: "AI Energy Management & Optimization Platform",
-    description: "Smart energy management system that uses AI to optimize energy consumption, predict demand, and reduce costs for commercial and industrial facilities.",
-    category: "AI & Energy",
-    subcategory: "Energy Management",
-    price: 1900,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Energy consumption monitoring",
-      "Demand forecasting",
-      "Peak load management",
-      "Renewable energy integration",
-      "Cost optimization",
-      "Sustainability reporting"
-    ],
-    benefits: [
-      "Reduce energy costs by 15-25%",
-      "Improve energy efficiency",
-      "Optimize renewable energy usage",
-      "Reduce carbon footprint",
-      "Comply with regulations"
-    ],
-    useCases: [
-      "Commercial buildings",
-      "Industrial facilities",
-      "Data centers",
-      "Retail chains",
-      "Manufacturing plants"
-    ],
-    targetAudience: [
-      "Facility managers",
-      "Energy managers",
-      "Sustainability officers",
-      "Building owners",
-      "Operations managers"
-    ],
-    tags: ["AI", "Energy Management", "Sustainability", "Cost Optimization", "Renewable Energy"],
-    estimatedDelivery: "3-4 weeks",
-    supportLevel: "premium",
-    marketPrice: "$1,900 - $5,500/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
+    },
+    websiteUrl: "https://ziontechgroup.com/ai-supply-chain"
   }
 ];
