@@ -2154,8 +2154,13 @@ export default function AIServicesPage() {
         </Tabs>
       </div>
 
+<<<<<<< HEAD
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16">
+=======
+      {/* Call to Action */}
+      <div className="bg-slate-800 py-16 border-t border-slate-700">
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-3629
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Harness the Power of AI?
@@ -2304,11 +2309,25 @@ export default function AIServicesPage() {
             <Brain className="w-8 h-8 text-purple-400" />
             Ready to Harness AI Power?
           </h2>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-8">
             <div className="text-center group">
               <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Phone className="w-8 h-8 text-white" />
               </div>
+=======
+          <div className="mb-8">
+            <a 
+              href="/comprehensive-services"
+              className="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 mb-4"
+            >
+              Explore Our Complete Service Portfolio →
+            </a>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="text-center">
+              <Phone className="w-8 h-8 text-purple-400 mx-auto mb-4" />
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-3629
               <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
               <p className="text-slate-300">{aiServices[0].contactInfo.phone}</p>
             </div>
