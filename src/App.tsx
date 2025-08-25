@@ -62,6 +62,13 @@ const InnovativeServicesShowcase = lazy(() => import('./pages/services/Innovativ
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
 const HealthcareSolutions = lazy(() => import('./pages/solutions/Healthcare'));
 
+// Support and documentation pages
+const HelpCenter = lazy(() => import('./pages/HelpCenter'));
+const Documentation = lazy(() => import('./pages/Documentation'));
+const Support = lazy(() => import('./pages/Support'));
+const Status = lazy(() => import('./pages/Status'));
+const CaseStudies = lazy(() => import('./pages/CaseStudies'));
+
 // Loading Component
 const LoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
@@ -137,6 +144,13 @@ const App = () => {
                     {/* Solutions Routes */}
                     <Route path="/services/enterprise" element={<EnterpriseSolutions />} />
                     <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
+                    
+                    {/* Support and Documentation Routes */}
+                    <Route path="/help" element={<HelpCenter />} />
+                    <Route path="/docs" element={<Documentation />} />
+                    <Route path="/support" element={<Support />} />
+                    <Route path="/status" element={<Status />} />
+                    <Route path="/case-studies" element={<CaseStudies />} />
                   </Routes>
                 </Suspense>
               </main>
