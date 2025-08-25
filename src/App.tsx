@@ -1,10 +1,12 @@
 import React from 'react';
 import { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import './App.css';
 import { ErrorBoundary } from './components/ErrorBoundary';
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
+import Header from './components/Header';
+import HeroSection from './components/HeroSection';
+import Footer from './components/Footer';
 
 // Lazy load only the pages we know work
 const MicroSaasServicesPage = React.lazy(() => import('./pages/MicroSaasServices'));
@@ -28,27 +30,36 @@ const baseRoutes = [
 
 function App() {
   return (
-    <ErrorBoundary>
-      <div className="app">
-        <main className="main-content">
-          <Suspense fallback={<PageLoader />}>
-            <Routes>
-              {baseRoutes.map((route) => (
-                <Route
-                  key={route.path}
-                  path={route.path}
-                  element={route.element}
-                />
-              ))}
-            </Routes>
-          </Suspense>
-        </main>
-        
-        {/* Enhanced user experience components */}
-        <PerformanceOptimizer />
-        <AccessibilityEnhancer />
-      </div>
-    </ErrorBoundary>
+    <HelmetProvider>
+      <ErrorBoundary>
+        <div className="app">
+          {/* Header */}
+          <Header />
+          
+          {/* Hero Section for Home Page */}
+          <Routes>
+            <Route path="/" element={<HeroSection />} />
+          </Routes>
+          
+          <main className="main-content">
+            <Suspense fallback={<PageLoader />}>
+              <Routes>
+                {baseRoutes.map((route) => (
+                  <Route
+                    key={route.path}
+                    path={route.path}
+                    element={route.element}
+                  />
+                ))}
+              </Routes>
+            </Suspense>
+          </main>
+
+          {/* Footer */}
+          <Footer />
+        </div>
+      </ErrorBoundary>
+    </HelmetProvider>
   );
 }
 

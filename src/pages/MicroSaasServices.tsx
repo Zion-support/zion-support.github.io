@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
-import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, Calendar, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, BookOpen, Target, TrendingUp, PieChart, Activity, Package, Wifi } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, Calendar, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, BookOpen, Target, TrendingUp, PieChart, Activity, Package, Wifi, ArrowRight, CheckCircle, Sparkles, Rocket, Award, TrendingUp as TrendingUpIcon } from 'lucide-react';
 
 const MicroSaasServices: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPricing, setSelectedPricing] = useState<string>('all');
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
   // Micro SAAS Services data
   const microSaasServices = [
@@ -580,9 +585,7 @@ const MicroSaasServices: React.FC = () => {
     }
   ];
 
-  const categories = ['all', 'Productivity', 'Finance', 'Marketing', 'CRM', 'Analytics', 'Scheduling', 'Content', 'Security', 'Media', 'Education', 'Sustainability', 'Legal', 'Healthcare', 'Events', 'Inventory', 'Development', 'AI & Automation', 'AI & Analytics', 'Human Resources', 'Data Protection', 'Legal Tech', 'Blockchain', 'IoT', 'Cybersecurity', 'Data & Analytics'];
-  const pricingModels = ['all', 'Freemium', 'Premium', 'Enterprise', 'Subscription', 'One-time'];
-
+  // Filter services based on search and filters
   const filteredServices = microSaasServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -594,124 +597,169 @@ const MicroSaasServices: React.FC = () => {
     return matchesSearch && matchesCategory && matchesPricing;
   });
 
-  const formatPrice = (price: number, model: string) => {
-    switch (model) {
-      case 'monthly':
-        return `$${price}/month`;
-      case 'yearly':
-        return `$${price * 12}/year`;
-      case 'one-time':
-        return `$${price.toLocaleString()}`;
-      default:
-        return `$${price}`;
-    }
-  };
-
   const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'Productivity': return <Target className="w-6 h-6" />;
-      case 'Finance': return <CreditCardIcon className="w-6 h-6" />;
-      case 'Marketing': return <TrendingUp className="w-6 h-6" />;
-      case 'CRM': return <UsersIcon className="w-6 h-6" />;
-      case 'Analytics': return <BarChart3 className="w-6 h-6" />;
-      case 'Scheduling': return <Calendar className="w-6 h-6" />;
-      case 'Content': return <FileText className="w-6 h-6" />;
-      case 'Security': return <Shield className="w-6 h-6" />;
-      case 'Media': return <Video className="w-6 h-6" />;
-      case 'Education': return <BookOpen className="w-6 h-6" />;
-      case 'Development': return <Cpu className="w-6 h-6" />;
-      case 'AI & Automation': return <Bot className="w-6 h-6" />;
-      case 'AI & Analytics': return <Brain className="w-6 h-6" />;
-      case 'Human Resources': return <Users className="w-6 h-6" />;
-      case 'Data Protection': return <ShieldIcon className="w-6 h-6" />;
-      case 'Legal Tech': return <FileText className="w-6 h-6" />;
-      case 'Sustainability': return <Leaf className="w-6 h-6" />;
-      case 'Healthcare': return <Heart className="w-6 h-6" />;
-      case 'Events': return <Calendar className="w-6 h-6" />;
-      case 'Inventory': return <Package className="w-6 h-6" />;
-      case 'Blockchain': return <Globe className="w-6 h-6" />;
-      case 'IoT': return <Wifi className="w-6 h-6" />;
-      case 'Cybersecurity': return <Shield className="w-6 h-6" />;
-      case 'Data & Analytics': return <Database className="w-6 h-6" />;
-      default: return <ZapIcon className="w-6 h-6" />;
-    }
+    const iconMap: { [key: string]: any } = {
+      'Productivity': <Zap className="w-6 h-6" />,
+      'Finance': <DollarSign className="w-6 h-6" />,
+      'Marketing': <Target className="w-6 h-6" />,
+      'CRM': <Users className="w-6 h-6" />,
+      'Analytics': <BarChart3 className="w-6 h-6" />,
+      'Scheduling': <Calendar className="w-6 h-6" />,
+      'Content': <FileText className="w-6 h-6" />,
+      'Security': <Shield className="w-6 h-6" />,
+      'Media': <Camera className="w-6 h-6" />,
+      'Education': <GraduationCap className="w-6 h-6" />
+    };
+    return iconMap[category] || <Settings className="w-6 h-6" />;
   };
 
   const getPricingColor = (pricing: string) => {
-    switch (pricing) {
-      case 'Freemium': return 'text-green-400';
-      case 'Premium': return 'text-yellow-400';
-      case 'Enterprise': return 'text-purple-400';
-      case 'Subscription': return 'text-blue-400';
-      case 'One-time': return 'text-orange-400';
-      default: return 'text-gray-400';
-    }
+    const colorMap: { [key: string]: string } = {
+      'Freemium': 'text-green-400',
+      'Premium': 'text-blue-400',
+      'Enterprise': 'text-purple-400'
+    };
+    return colorMap[pricing] || 'text-gray-400';
   };
 
+  const formatPrice = (price: number, model: string) => {
+    return `$${price}/${model}`;
+  };
+
+  const categories = ['all', ...Array.from(new Set(microSaasServices.map(service => service.category)))];
+  const pricingModels = ['all', ...Array.from(new Set(microSaasServices.map(service => service.pricing)))];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
-      <div className="container mx-auto px-4 py-8">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-green-400 via-blue-400 to-green-600 bg-clip-text text-transparent mb-4">
-            Micro SAAS Services
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Page Header */}
+        <div className={`text-center mb-16 transition-all duration-1000 ease-in-out ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
+          <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-green-500/20 to-blue-500/20 backdrop-blur-sm border border-green-500/30 rounded-full px-6 py-3 mb-6">
+            <Sparkles className="w-5 h-5 text-green-400" />
+            <span className="text-green-400 font-medium">Micro SAAS Solutions</span>
+          </div>
+          
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Transform Your Business with
+            <span className="block bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
+              Micro SAAS Solutions
+            </span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Affordable, focused software solutions designed specifically for small businesses, startups, and entrepreneurs
+          
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Discover powerful, scalable software solutions designed to streamline your operations, 
+            boost productivity, and drive growth. Start small, scale smart.
           </p>
         </div>
 
-        {/* Search and Filters */}
-        <div className="mb-8 space-y-4">
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-            <input
-              type="text"
-              placeholder="Search micro SAAS services..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
-            />
+        {/* Stats Section */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
+          <div className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-6 text-center">
+            <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <Rocket className="w-6 h-6 text-white" />
+            </div>
+            <div className="text-2xl font-bold text-white mb-2">10+</div>
+            <div className="text-gray-400">Solutions Available</div>
           </div>
           
-          <div className="flex flex-wrap gap-4">
-            <select
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-500"
-            >
-              {categories.map(category => (
-                <option key={category} value={category} className="bg-gray-800 text-white">
-                  {category === 'all' ? 'All Categories' : category}
-                </option>
-              ))}
-            </select>
-            
-            <select
-              value={selectedPricing}
-              onChange={(e) => setSelectedPricing(e.target.value)}
-              className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-500"
-            >
-              {pricingModels.map(pricing => (
-                <option key={pricing} value={pricing} className="bg-gray-800 text-white">
-                  {pricing === 'all' ? 'All Pricing Models' : pricing}
-                </option>
-              ))}
-            </select>
+          <div className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-6 text-center">
+            <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <Users className="w-6 h-6 text-white" />
+            </div>
+            <div className="text-2xl font-bold text-white mb-2">500+</div>
+            <div className="text-gray-400">Happy Customers</div>
           </div>
+          
+          <div className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-6 text-center">
+            <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <Award className="w-6 h-6 text-white" />
+            </div>
+            <div className="text-2xl font-bold text-white mb-2">99.9%</div>
+            <div className="text-gray-400">Uptime Guarantee</div>
+          </div>
+          
+          <div className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-6 text-center">
+            <div className="w-12 h-12 bg-gradient-to-br from-red-400 to-orange-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <TrendingUpIcon className="w-6 h-6 text-white" />
+            </div>
+            <div className="text-2xl font-bold text-white mb-2">24/7</div>
+            <div className="text-gray-400">Support Available</div>
+          </div>
+        </div>
+
+        {/* Search and Filters */}
+        <div className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {/* Search */}
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search services..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+              />
+            </div>
+
+            {/* Category Filter */}
+            <div className="relative">
+              <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent appearance-none cursor-pointer"
+              >
+                {categories.map((category) => (
+                  <option key={category} value={category} className="bg-gray-800 text-white">
+                    {category === 'all' ? 'All Categories' : category}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Pricing Filter */}
+            <div className="relative">
+              <DollarSign className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <select
+                value={selectedPricing}
+                onChange={(e) => setSelectedPricing(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent appearance-none cursor-pointer"
+              >
+                {pricingModels.map((pricing) => (
+                  <option key={pricing} value={pricing} className="bg-gray-800 text-white">
+                    {pricing === 'all' ? 'All Pricing' : pricing}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+        </div>
+
+        {/* Results Count */}
+        <div className="mb-8">
+          <p className="text-gray-400">
+            Showing <span className="text-white font-semibold">{filteredServices.length}</span> of{' '}
+            <span className="text-white font-semibold">{microSaasServices.length}</span> services
+          </p>
         </div>
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredServices.map((service) => (
-            <div key={service.id} className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/20">
+            <div key={service.id} className="group bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/20 hover:-translate-y-1">
+              {/* Service Header */}
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center gap-3 mb-2">
-                  <div className="text-green-400">
+                  <div className="text-green-400 group-hover:scale-110 transition-transform duration-200">
                     {getCategoryIcon(service.category)}
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white">{service.name}</h3>
+                    <h3 className="text-xl font-semibold text-white group-hover:text-green-400 transition-colors">
+                      {service.name}
+                    </h3>
                     <div className="flex items-center gap-2">
                       <span className={`px-2 py-1 text-xs font-medium rounded-full ${getPricingColor(service.pricing)} bg-opacity-20 bg-current`}>
                         {service.pricing}
@@ -724,8 +772,10 @@ const MicroSaasServices: React.FC = () => {
                 </div>
               </div>
               
-              <p className="text-gray-300 mb-4">{service.description}</p>
+              {/* Description */}
+              <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
               
+              {/* Pricing */}
               <div className="mb-4">
                 <div className="text-2xl font-bold text-white mb-2">
                   {formatPrice(service.price, service.pricingModel)}
@@ -733,8 +783,12 @@ const MicroSaasServices: React.FC = () => {
                 <div className="text-sm text-gray-400">{service.userLimit}</div>
               </div>
 
+              {/* Features */}
               <div className="mb-4">
-                <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+                <h4 className="text-sm font-semibold text-white mb-2 flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  Key Features:
+                </h4>
                 <div className="flex flex-wrap gap-2">
                   {service.features.slice(0, 3).map((feature, index) => (
                     <span key={index} className="px-2 py-1 text-xs bg-green-500/20 text-green-300 rounded">
@@ -744,8 +798,12 @@ const MicroSaasServices: React.FC = () => {
                 </div>
               </div>
 
+              {/* Target Audience */}
               <div className="mb-4">
-                <h4 className="text-sm font-semibold text-white mb-2">Perfect For:</h4>
+                <h4 className="text-sm font-semibold text-white mb-2 flex items-center gap-2">
+                  <Users className="w-4 h-4 text-blue-400" />
+                  Perfect For:
+                </h4>
                 <div className="flex flex-wrap gap-2">
                   {service.targetAudience.slice(0, 2).map((audience, index) => (
                     <span key={index} className="px-2 py-1 text-xs bg-blue-500/20 text-blue-300 rounded">
@@ -755,16 +813,18 @@ const MicroSaasServices: React.FC = () => {
                 </div>
               </div>
 
+              {/* CTA */}
               <div className="border-t border-gray-600 pt-4">
-                <div className="flex items-center justify-between text-sm text-gray-400">
-                  <span>Start your free trial today</span>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-400">Start your free trial today</span>
                   <a 
                     href={service.contactInfo.website}
-                    className="text-green-400 hover:text-green-300 transition-colors"
+                    className="group/btn flex items-center space-x-2 text-green-400 hover:text-green-300 transition-colors px-4 py-2 rounded-lg hover:bg-green-400/10"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Get Started →
+                    <span>Get Started</span>
+                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-200" />
                   </a>
                 </div>
               </div>
@@ -773,28 +833,48 @@ const MicroSaasServices: React.FC = () => {
         </div>
 
         {/* Contact Information */}
-        <div className="mt-16 text-center">
+        <div className="mt-20 text-center">
           <div className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-8">
-            <h2 className="text-2xl font-bold text-white mb-4">Ready to Scale Your Business?</h2>
-            <p className="text-gray-300 mb-6">
-              Our micro SAAS solutions are designed to grow with your business needs
+            <h2 className="text-3xl font-bold text-white mb-4">Ready to Scale Your Business?</h2>
+            <p className="text-gray-300 mb-8 text-lg">
+              Our micro SAAS solutions are designed to grow with your business needs. 
+              Get in touch to learn how we can help you succeed.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-              <div>
-                <Phone className="w-8 h-8 text-green-400 mx-auto mb-2" />
-                <p className="text-white font-semibold">Phone</p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div className="group">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-200">
+                  <Phone className="w-8 h-8 text-white" />
+                </div>
+                <p className="text-white font-semibold text-lg mb-2">Phone</p>
                 <p className="text-gray-300">{microSaasServices[0].contactInfo.phone}</p>
               </div>
-              <div>
-                <Mail className="w-8 h-8 text-green-400 mx-auto mb-2" />
-                <p className="text-white font-semibold">Email</p>
+              
+              <div className="group">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-200">
+                  <Mail className="w-8 h-8 text-white" />
+                </div>
+                <p className="text-white font-semibold text-lg mb-2">Email</p>
                 <p className="text-gray-300">{microSaasServices[0].contactInfo.email}</p>
               </div>
-              <div>
-                <MapPin className="w-8 h-8 text-green-400 mx-auto mb-2" />
-                <p className="text-white font-semibold">Address</p>
+              
+              <div className="group">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-200">
+                  <MapPin className="w-8 h-8 text-white" />
+                </div>
+                <p className="text-white font-semibold text-lg mb-2">Address</p>
                 <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
+            </div>
+            
+            <div className="mt-8">
+              <a
+                href="/contact"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/25"
+              >
+                <span>Contact Us Today</span>
+                <ArrowRight className="w-5 h-5" />
+              </a>
             </div>
           </div>
         </div>
