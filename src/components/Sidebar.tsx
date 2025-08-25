@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { 
   X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, 
   Shield, Handshake, ChevronDown, ChevronRight, Brain, Cpu, Database, Network, Code, Palette, 
@@ -24,6 +25,9 @@ import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitte
 =======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Database, Cloud, Lock, BookOpen, FileText, Calendar, HelpCircle, Settings, Star, TrendingUp, Rocket, Cpu, Network, Server, Code, Palette, Target, Lightbulb, Github } from 'lucide-react';
 >>>>>>> origin/cursor/website-audit-and-enhancement-118f
+=======
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, ShoppingCart, Code, DollarSign } from 'lucide-react';
+>>>>>>> origin/cursor/website-audit-and-enhancement-0fd3
 import { Link, useLocation } from 'react-router-dom';
 
 interface SidebarProps {
@@ -69,10 +73,16 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       items: [
         { name: 'Home', path: '/', icon: Home },
         { name: 'Services', path: '/services', icon: Briefcase },
+<<<<<<< HEAD
         { name: 'Solutions', path: '/solutions/enterprise', icon: Building },
         { name: 'Case Studies', path: '/case-studies', icon: Star },
         { name: 'Pricing', path: '/pricing', icon: Zap },
 >>>>>>> origin/cursor/website-audit-and-enhancement-4b00
+=======
+        { name: 'Solutions', path: '/solutions/enterprise', icon: Briefcase },
+        { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
+        { name: 'Pricing', path: '/pricing', icon: Briefcase },
+>>>>>>> origin/cursor/website-audit-and-enhancement-0fd3
         { name: 'About', path: '/about', icon: Users },
         { name: 'Contact', path: '/contact', icon: Phone }
       ]
@@ -80,6 +90,9 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-0fd3
       title: 'AI & Autonomous Systems',
       items: [
 <<<<<<< HEAD
@@ -109,6 +122,36 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
 =======
         { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
         { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Briefcase },
+<<<<<<< HEAD
+=======
+        { name: 'AI Autonomous Research', path: '/ai-autonomous-research', icon: Briefcase },
+        { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
+        { name: 'AI Autonomous Business Platform', path: '/ai-autonomous-business-platform', icon: Briefcase },
+        { name: 'AI Autonomous Code Review', path: '/ai-autonomous-code-review', icon: Briefcase },
+        { name: 'AI Autonomous Creative Director', path: '/ai-autonomous-creative-director', icon: Briefcase },
+        { name: 'AI Autonomous Data', path: '/ai-autonomous-data', icon: Briefcase },
+        { name: 'AI Autonomous Decision Engine', path: '/ai-autonomous-decision-engine', icon: Briefcase },
+        { name: 'AI Autonomous DevOps', path: '/ai-autonomous-devops', icon: Briefcase },
+        { name: 'AI Autonomous Education', path: '/ai-autonomous-education-professor', icon: Briefcase },
+        { name: 'AI Autonomous Healthcare', path: '/ai-autonomous-healthcare-physician', icon: Briefcase },
+        { name: 'AI Autonomous Learning', path: '/ai-autonomous-learning-system', icon: Briefcase },
+        { name: 'AI Autonomous Legal', path: '/ai-autonomous-legal-counsel', icon: Briefcase },
+        { name: 'AI Autonomous Logistics', path: '/ai-autonomous-logistics', icon: Briefcase },
+        { name: 'AI Autonomous Manufacturing', path: '/ai-autonomous-manufacturing', icon: Briefcase },
+        { name: 'AI Autonomous Robotics', path: '/ai-autonomous-robotics', icon: Briefcase },
+        { name: 'AI Autonomous Security', path: '/ai-autonomous-security', icon: Briefcase },
+        { name: 'AI Autonomous Testing', path: '/ai-autonomous-testing', icon: Briefcase },
+        { name: 'AI Autonomous Vehicle Platform', path: '/ai-autonomous-vehicle-platform', icon: Briefcase },
+        { name: 'AI Autonomous Vehicle', path: '/ai-autonomous-vehicle', icon: Briefcase },
+        { name: 'AI Autonomous Vehicles Platform', path: '/ai-autonomous-vehicles-platform', icon: Briefcase },
+        { name: 'AI Autonomous Vehicles', path: '/ai-autonomous-vehicles', icon: Briefcase },
+        { name: 'AI Autonomous Venture Capitalist', path: '/ai-autonomous-venture-capitalist', icon: Briefcase }
+      ]
+    },
+    {
+      title: 'Core Services',
+      items: [
+>>>>>>> origin/cursor/website-audit-and-enhancement-0fd3
         { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Briefcase },
         { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Briefcase },
         { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Briefcase },
@@ -427,18 +470,29 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
         { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Shield },
         { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
+<<<<<<< HEAD
         { name: 'Accessibility Auditor', path: '/accessibility-auditor', icon: Eye },
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Cpu },
         { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Network },
         { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Code },
         { name: 'Emerging Technology', path: '/emerging-tech', icon: Rocket }
 >>>>>>> origin/cursor/website-audit-and-enhancement-acb8
+=======
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Briefcase },
+        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Briefcase },
+        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
+        { name: 'Cloud DevOps', path: '/cloud-devops', icon: Briefcase },
+        { name: 'Digital Transformation', path: '/digital-transformation', icon: Briefcase },
+        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Briefcase },
+        { name: 'Emerging Technology', path: '/emerging-tech', icon: Globe }
+>>>>>>> origin/cursor/website-audit-and-enhancement-0fd3
       ]
     },
     {
       title: 'Cybersecurity & Quantum',
       icon: Shield,
       items: [
+<<<<<<< HEAD
 <<<<<<< HEAD
         { name: 'Quantum Encryption', path: '/services/quantum-encryption-platform', icon: Shield, description: 'Future-proof security' },
         { name: 'Quantum Cybersecurity', path: '/services/quantum-enhanced-cybersecurity', icon: Shield, description: 'Post-quantum protection' },
@@ -590,6 +644,40 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         { name: 'Pricing', path: '/pricing', icon: Star, description: 'Service costs' },
         { name: 'Status Page', path: '/status', icon: Settings, description: 'System status' }
 >>>>>>> origin/cursor/website-audit-and-enhancement-118f
+=======
+        { name: 'About Us', path: '/about', icon: Users },
+        { name: 'Our Team', path: '/team', icon: Users },
+        { name: 'Our Mission', path: '/mission', icon: Users },
+        { name: 'Leadership', path: '/leadership', icon: Users },
+        { name: 'Partners', path: '/partners', icon: Handshake },
+        { name: 'Case Studies', path: '/case-studies', icon: Globe },
+        { name: 'Careers', path: '/careers', icon: Users },
+        { name: 'News', path: '/news', icon: Globe },
+        { name: 'Blog', path: '/blog', icon: Globe }
+      ]
+    },
+    {
+      title: 'Support & Resources',
+      items: [
+        { name: 'Help Center', path: '/help', icon: Users },
+        { name: 'Documentation', path: '/docs', icon: Globe },
+        { name: 'Contact Support', path: '/support', icon: Phone },
+        { name: 'FAQ', path: '/faq', icon: Users },
+        { name: 'Webinars', path: '/webinars', icon: Globe },
+        { name: 'White Papers', path: '/white-papers', icon: Globe },
+        { name: 'Testimonials', path: '/testimonials', icon: Users },
+        { name: 'Status Page', path: '/status', icon: Globe }
+>>>>>>> origin/cursor/website-audit-and-enhancement-0fd3
+      ]
+    },
+    {
+      title: 'Additional Services',
+      items: [
+        { name: 'Marketplace', path: '/marketplace', icon: ShoppingCart },
+        { name: 'Community', path: '/community', icon: Users },
+        { name: 'Developer Portal', path: '/developer-portal', icon: Code },
+        { name: 'Request Quote', path: '/request-quote', icon: DollarSign },
+        { name: 'Pricing', path: '/pricing', icon: DollarSign }
       ]
     }
   ];

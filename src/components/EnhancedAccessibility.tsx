@@ -106,7 +106,10 @@ interface AccessibilityIssue {
   showKeyboardShortcuts: boolean;
   showScreenReaderHints: boolean;
   showAccessibilityInfo: boolean;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-3b7b
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-0fd3
 }
 
 interface EnhancedAccessibilityProps {
@@ -161,7 +164,10 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     showKeyboardShortcuts: false,
     showScreenReaderHints: false,
     showAccessibilityInfo: false
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-3b7b
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-0fd3
   });
   const [activeTab, setActiveTab] = useState<'quick' | 'advanced' | 'help'>('quick');
   const [announcement, setAnnouncement] = useState<string>('');
@@ -1613,7 +1619,10 @@ const EnhancedAccessibility: React.FC = () => {
       showKeyboardShortcuts: false,
       showScreenReaderHints: false,
       showAccessibilityInfo: false
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-3b7b
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-0fd3
     });
   }, []);
 
