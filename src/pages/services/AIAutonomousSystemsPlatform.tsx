@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { 
   Brain, 
   TrendingUp, 
@@ -15,12 +16,29 @@ import {
   Star,
   Award,
   Rocket,
+=======
+import { 
+  Brain, 
+  Zap, 
+  Target, 
+  TrendingUp, 
+  Shield, 
+  Users, 
+  BarChart3, 
+  Clock,
+  CheckCircle,
+  ArrowRight,
+  Play,
+  Star,
+  Award,
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
   Globe,
   Cpu,
   Database,
   Network,
   Lock,
   Eye,
+<<<<<<< HEAD
   BarChart
 } from 'lucide-react';
 
@@ -35,10 +53,48 @@ const AIAutonomousSystemsPlatform: React.FC = () => {
       icon: TrendingUp,
       title: "Predictive Analytics",
       description: "Advanced forecasting models that predict trends and optimize  a i autonomous systems platform operations with 95%+ accuracy."
+=======
+  BarChart,
+  Rocket,
+  Layers,
+  Workflow,
+  Monitor,
+  Settings,
+  Cloud,
+  Server,
+
+  Gauge,
+  CpuIcon,
+  Building
+} from 'lucide-react';
+
+const AIAutonomousSystemsPlatform = () => {
+  const platformFeatures = [
+    {
+      icon: Brain,
+      title: "AI Core Engine",
+      description: "Advanced artificial intelligence that powers all autonomous systems and decision-making processes"
+    },
+    {
+      icon: Server,
+      title: "System Integration",
+      description: "Seamless integration with existing infrastructure and third-party systems for unified operations"
+    },
+    {
+      icon: Monitor,
+      title: "Real-Time Monitoring",
+      description: "Continuous monitoring and analysis of system performance, health, and operational metrics"
+    },
+    {
+      icon: Zap,
+      title: "Automated Response",
+      description: "Intelligent automated responses to system events, anomalies, and operational requirements"
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
     },
     {
       icon: Shield,
       title: "Security & Compliance",
+<<<<<<< HEAD
       description: "Enterprise-grade security measures and compliance frameworks to protect your  a i autonomous systems platform operations."
     },
     {
@@ -55,10 +111,46 @@ const AIAutonomousSystemsPlatform: React.FC = () => {
       icon: Users,
       title: "User Experience",
       description: "Intuitive interfaces and seamless integration that enhance user experience across all  a i autonomous systems platform touchpoints."
+=======
+      description: "Built-in security protocols and compliance automation for enterprise-grade protection"
+    },
+    {
+      icon: Cloud,
+      title: "Scalable Architecture",
+      description: "Cloud-native architecture that scales automatically with your business growth and requirements"
+    }
+  ];
+
+  const autonomousSystems = [
+    {
+      title: "IT Infrastructure Management",
+      description: "Autonomous management of servers, networks, storage, and cloud resources",
+      icon: Server,
+      capabilities: ["Resource optimization", "Performance monitoring", "Automated scaling", "Fault tolerance"]
+    },
+    {
+      title: "Business Process Automation",
+      description: "End-to-end automation of business workflows and operational processes",
+      icon: Workflow,
+      capabilities: ["Process optimization", "Workflow automation", "Task scheduling", "Performance tracking"]
+    },
+    {
+      title: "Customer Service Automation",
+      description: "Intelligent customer support and service delivery systems",
+      icon: Users,
+      capabilities: ["24/7 support", "Intelligent routing", "Automated responses", "Customer analytics"]
+    },
+    {
+      title: "Security & Threat Management",
+      description: "Proactive security monitoring and automated threat response systems",
+      icon: Shield,
+      capabilities: ["Threat detection", "Automated response", "Security monitoring", "Compliance management"]
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
     }
   ];
 
   const benefits = [
+<<<<<<< HEAD
     "Increase efficiency by up to 300%",
     "Reduce operational costs by 40%",
     "Improve accuracy and reduce errors",
@@ -126,11 +218,33 @@ const AIAutonomousSystemsPlatform: React.FC = () => {
         "Custom AI model training"
       ]
     }
+=======
+    "Reduce operational costs by up to 80%",
+    "Increase system reliability by 99.9%",
+    "24/7 autonomous operation",
+    "Real-time system optimization",
+    "Predictive maintenance",
+    "Automated problem resolution",
+    "Scalable system architecture",
+    "Enhanced security posture"
+  ];
+
+  const industries = [
+    "Manufacturing",
+    "Healthcare",
+    "Financial Services",
+    "Retail & E-commerce",
+    "Technology",
+    "Transportation",
+    "Energy",
+    "Government"
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
+<<<<<<< HEAD
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -191,10 +305,39 @@ const AIAutonomousSystemsPlatform: React.FC = () => {
               Watch Demo
             </button>
 >>>>>>> origin/cursor/website-audit-and-enhancement-ac08
+=======
+      <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <div className="flex items-center justify-center mb-6">
+              <CpuIcon className="w-12 h-12 text-cyan-400 mr-3" />
+              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                AI Autonomous Systems Platform
+              </h1>
+            </div>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+              The comprehensive platform for building, deploying, and managing intelligent autonomous systems 
+              that operate independently and optimize your business operations
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <button className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300">
+                <Play className="mr-2 w-5 h-5" />
+                Platform Demo
+              </button>
+            </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -206,10 +349,23 @@ const AIAutonomousSystemsPlatform: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our  A I Autonomous Systems Platform combines cutting-edge artificial intelligence with 
               advanced business logic to create the most intelligent solution in the market.
+=======
+      {/* Platform Features */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Advanced Platform Capabilities
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI Autonomous Systems Platform provides the foundation for building intelligent, 
+              self-operating systems that transform your business operations
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
             {features.map((feature, index) => {
               const Icon = feature.icon;
               return (
@@ -226,11 +382,61 @@ const AIAutonomousSystemsPlatform: React.FC = () => {
                 </div>
               );
             })}
+=======
+            {platformFeatures.map((feature, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Autonomous Systems */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Autonomous System Types
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Build and deploy various types of autonomous systems tailored to your specific business needs
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {autonomousSystems.map((system, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mr-4">
+                    <system.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white">{system.title}</h3>
+                    <p className="text-gray-300 text-sm">{system.description}</p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-2">
+                  {system.capabilities.map((capability, capIndex) => (
+                    <div key={capIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                      {capability}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -348,12 +554,33 @@ const AIAutonomousSystemsPlatform: React.FC = () => {
                 <p className="text-gray-300 text-lg">
                   {useCase.description}
                 </p>
+=======
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Transform Your Operations
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience unprecedented efficiency and reliability with AI-powered autonomous systems
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-cyan-500 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="w-8 h-8 text-white" />
+                </div>
+                <p className="text-gray-300">{benefit}</p>
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
               </div>
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
@@ -492,11 +719,36 @@ const AIAutonomousSystemsPlatform: React.FC = () => {
               
             </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-ac08
+=======
+      {/* Industries Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Industry Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our platform is designed to work across all industries with specialized configurations 
+              for your specific operational requirements
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {industries.map((industry, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-cyan-500 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Building className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white">{industry}</h3>
+              </div>
+            ))}
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
 <<<<<<< HEAD
@@ -537,6 +789,31 @@ const AIAutonomousSystemsPlatform: React.FC = () => {
               </Link>
             </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-ac08
+=======
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/50 to-blue-900/50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Build Autonomous Systems?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join the future of autonomous operations with our AI Autonomous Systems Platform. 
+            Start building intelligent systems that work for you 24/7.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+            >
+              Schedule Consultation
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+            <Link
+              to="/pricing"
+              className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300"
+            >
+              View Pricing
+            </Link>
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
           </div>
         </div>
       </section>
@@ -544,4 +821,8 @@ const AIAutonomousSystemsPlatform: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default AIAutonomousSystemsPlatform;
+=======
+export default AIAutonomousSystemsPlatform;
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
