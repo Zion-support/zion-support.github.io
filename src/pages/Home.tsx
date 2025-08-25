@@ -915,6 +915,7 @@ export default function Home() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <MicroSaasShowcase />
 =======
       <ServicesOverview />
@@ -939,6 +940,9 @@ export default function Home() {
 =======
       <AdvancedServicesShowcase />
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-1ab5
+=======
+      <MicroSaasShowcase />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-de94
       
       <CategoriesSection />
       <ServicesShowcase />

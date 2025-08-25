@@ -44,6 +44,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Globe } from "lucide-react";
 import { useState } from "react";
 import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES } from "@/data/comprehensiveServices";
@@ -73,6 +74,11 @@ import Wifi from "lucide-react/dist/esm/icons/wifi";
 import { useEffect, useState } from "react";
 import { EXPANDED_SERVICES, FEATURED_SERVICES, NEW_SERVICES } from "@/data/expandedServices";
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-32cc
+=======
+import { Globe, Zap, Shield, BarChart3, Database, Code, Network } from "lucide-react";
+import { useEffect, useState } from "react";
+import { IT_SERVICES, getITServicesByCategory } from "@/data/itServices";
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-de94
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1402,11 +1408,22 @@ export default function ServicesPage() {
           <h2 className="text-white text-lg font-medium">Featured Services</h2>
           <div className="flex flex-wrap gap-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Link to="/expanded-services">
 =======
             <Link to="/services-overview">
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-7440
               <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
+=======
+            <Link to="/micro-saas-services">
+              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+                <Zap className="h-4 w-4 mr-2" />
+                Micro SAAS Services
+              </Button>
+            </Link>
+            <Link to="/it-onsite-services">
+              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-de94
                 <Globe className="h-4 w-4 mr-2" />
                 View All Services
               </Button>
@@ -2893,6 +2910,7 @@ export default function ServicesPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3035,10 +3053,62 @@ export default function ServicesPage() {
                         key={index}
                         className="px-2 py-1 bg-zion-blue-light/20 text-zion-cyan text-xs rounded-full border border-zion-blue-light/30"
                       >
+=======
+      {/* IT Services Showcase */}
+      <div className="bg-zion-blue-dark py-16 mb-8">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Professional IT Services</h2>
+            <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
+              Expert IT consulting, development, and infrastructure services to help your business thrive in the digital age
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {IT_SERVICES.map((service) => (
+              <div key={service.id} className="bg-zion-blue-light/20 backdrop-blur-md rounded-xl p-6 border border-zion-purple/30 hover:border-zion-purple/60 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20 group">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 rounded-lg bg-gradient-to-br from-zion-purple to-zion-cyan">
+                    {service.category === 'Development' && <Code className="w-5 h-5 text-white" />}
+                    {service.category === 'Infrastructure' && <Network className="w-5 h-5 text-white" />}
+                    {service.category === 'Security' && <Shield className="w-5 h-5 text-white" />}
+                    {service.category === 'Analytics' && <BarChart3 className="w-5 h-5 text-white" />}
+                  </div>
+                  <div>
+                    <h3 className="text-white font-semibold group-hover:text-zion-cyan transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-zion-slate-light text-sm">{service.subcategory}</p>
+                  </div>
+                </div>
+                
+                <p className="text-zion-slate-light text-sm mb-4">{service.description}</p>
+                
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-zion-slate-light text-sm">Starting at</span>
+                    <span className="text-zion-cyan font-bold">
+                      {service.pricing.currency}{service.pricing.hourly}/hr
+                    </span>
+                  </div>
+                  
+                  <div className="flex items-center gap-2 text-sm text-zion-slate-light">
+                    <span>⭐ {service.rating}</span>
+                    <span>•</span>
+                    <span>{service.reviewCount} reviews</span>
+                    <span>•</span>
+                    <span>{service.experience}</span>
+                  </div>
+                  
+                  <div className="flex flex-wrap gap-2">
+                    {service.tags.slice(0, 3).map((tag, index) => (
+                      <span key={index} className="px-2 py-1 bg-zion-purple/20 text-zion-purple-light text-xs rounded-full">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-de94
                         {tag}
                       </span>
                     ))}
                   </div>
+<<<<<<< HEAD
                   
                   <div className="flex items-center justify-between">
                     <div className="text-zion-cyan font-bold text-lg">
@@ -3049,10 +3119,20 @@ export default function ServicesPage() {
                     </Button>
                   </div>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
+=======
+                </div>
+                
+                <div className="mt-4 pt-4 border-t border-zion-purple/20">
+                  <div className="flex items-center justify-between text-sm text-zion-slate-light">
+                    <span>📧 {service.contactEmail}</span>
+                    <span>📞 {service.phone}</span>
+                  </div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-de94
                 </div>
               </div>
             ))}
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
           <div className="text-center">
@@ -3075,6 +3155,11 @@ export default function ServicesPage() {
 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-32cc
+=======
+        </div>
+      </div>
+
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-de94
       <DynamicListingPage 
         title="IT & AI Services"
         description="Find expert technology service providers for your business needs, from AI development to infrastructure management."

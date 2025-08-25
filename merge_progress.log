@@ -2709,3 +2709,90 @@ src/pages/ServicesPage.tsx
 [2025-08-25 23:36:54] Processing unmerged file: src/pages/ServicesPage.tsx
 [2025-08-25 23:36:54] File exists in HEAD, keeping it
 [2025-08-25 23:36:55] Still have unmerged paths, attempting additional resolution...
+[main 14696380e34] Merge PR #6534: cursor/expand-services-and-deploy-updates-a231 (advanced conflict resolution)
+[2025-08-25 23:36:56] ✓ Advanced conflict resolution successful for PR #6534
+[2025-08-25 23:36:56] ✓ PR #6534 processed successfully
+==========================================
+
+
+==========================================
+[2025-08-25 23:36:56] Processing PR #6531 from branch: cursor/website-audit-and-enhancement-1786
+==========================================
+[2025-08-25 23:36:56] Processing PR #6531 from branch: cursor/website-audit-and-enhancement-1786
+[2025-08-25 23:36:57] Attempting regular merge...
+Already up to date.
+[2025-08-25 23:36:57] ✓ Successfully merged PR #6531
+[2025-08-25 23:36:57] ✓ PR #6531 processed successfully
+==========================================
+
+
+==========================================
+[2025-08-25 23:36:57] Processing PR #6532 from branch: cursor/enhance-app-with-new-services-and-futuristic-design-de94
+==========================================
+[2025-08-25 23:36:57] Processing PR #6532 from branch: cursor/enhance-app-with-new-services-and-futuristic-design-de94
+[2025-08-25 23:36:57] Attempting regular merge...
+Auto-merging package-lock.json
+CONFLICT (content): Merge conflict in package-lock.json
+CONFLICT (modify/delete): pages/talent/[id].tsx deleted in origin/cursor/enhance-app-with-new-services-and-futuristic-design-de94 and modified in HEAD.  Version HEAD of pages/talent/[id].tsx left in tree.
+Auto-merging src/App.tsx
+CONFLICT (content): Merge conflict in src/App.tsx
+Auto-merging src/components/CategoriesSection.tsx
+CONFLICT (content): Merge conflict in src/components/CategoriesSection.tsx
+Auto-merging src/components/Footer.tsx
+CONFLICT (content): Merge conflict in src/components/Footer.tsx
+Auto-merging src/components/header/Header.tsx
+CONFLICT (content): Merge conflict in src/components/header/Header.tsx
+Auto-merging src/components/home/FeatureHighlights.tsx
+CONFLICT (content): Merge conflict in src/components/home/FeatureHighlights.tsx
+Auto-merging src/components/home/MicroSaasShowcase.tsx
+CONFLICT (add/add): Merge conflict in src/components/home/MicroSaasShowcase.tsx
+Auto-merging src/data/microSaasServices.ts
+CONFLICT (add/add): Merge conflict in src/data/microSaasServices.ts
+Auto-merging src/index.css
+Auto-merging src/layout/MainNavigation.tsx
+CONFLICT (content): Merge conflict in src/layout/MainNavigation.tsx
+Auto-merging src/pages/Home.tsx
+CONFLICT (content): Merge conflict in src/pages/Home.tsx
+Auto-merging src/pages/MicroSaasServicesPage.tsx
+CONFLICT (add/add): Merge conflict in src/pages/MicroSaasServicesPage.tsx
+Auto-merging src/pages/ServicesPage.tsx
+CONFLICT (content): Merge conflict in src/pages/ServicesPage.tsx
+Auto-merging tailwind.config.ts
+CONFLICT (content): Merge conflict in tailwind.config.ts
+Automatic merge failed; fix conflicts and then commit the result.
+[2025-08-25 23:36:58] ✗ Merge failed for PR #6532, attempting advanced conflict resolution...
+[2025-08-25 23:36:58] Resolving complex conflicts for PR #6532 (cursor/enhance-app-with-new-services-and-futuristic-design-de94)...
+[2025-08-25 23:36:58] Found unmerged files: package-lock.json
+pages/talent/[id].tsx
+src/App.tsx
+src/components/CategoriesSection.tsx
+src/components/Footer.tsx
+src/components/header/Header.tsx
+src/components/home/FeatureHighlights.tsx
+src/layout/MainNavigation.tsx
+src/pages/Home.tsx
+src/pages/ServicesPage.tsx
+tailwind.config.ts
+[2025-08-25 23:36:58] Processing unmerged file: package-lock.json
+[2025-08-25 23:36:58] File exists in HEAD, keeping it
+[2025-08-25 23:36:58] Processing unmerged file: pages/talent/[id].tsx
+[2025-08-25 23:36:58] File exists in HEAD, keeping it
+[2025-08-25 23:36:58] Processing unmerged file: src/App.tsx
+[2025-08-25 23:36:58] File exists in HEAD, keeping it
+[2025-08-25 23:36:58] Processing unmerged file: src/components/CategoriesSection.tsx
+[2025-08-25 23:36:58] File exists in HEAD, keeping it
+[2025-08-25 23:36:58] Processing unmerged file: src/components/Footer.tsx
+[2025-08-25 23:36:58] File exists in HEAD, keeping it
+[2025-08-25 23:36:58] Processing unmerged file: src/components/header/Header.tsx
+[2025-08-25 23:36:58] File exists in HEAD, keeping it
+[2025-08-25 23:36:58] Processing unmerged file: src/components/home/FeatureHighlights.tsx
+[2025-08-25 23:36:58] File exists in HEAD, keeping it
+[2025-08-25 23:36:58] Processing unmerged file: src/layout/MainNavigation.tsx
+[2025-08-25 23:36:58] File exists in HEAD, keeping it
+[2025-08-25 23:36:58] Processing unmerged file: src/pages/Home.tsx
+[2025-08-25 23:36:58] File exists in HEAD, keeping it
+[2025-08-25 23:36:58] Processing unmerged file: src/pages/ServicesPage.tsx
+[2025-08-25 23:36:58] File exists in HEAD, keeping it
+[2025-08-25 23:36:58] Processing unmerged file: tailwind.config.ts
+[2025-08-25 23:36:58] File exists in HEAD, keeping it
+[2025-08-25 23:36:59] Still have unmerged paths, attempting additional resolution...

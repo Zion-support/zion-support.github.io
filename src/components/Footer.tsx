@@ -8,6 +8,7 @@ import { FooterNewsletter } from "@/components/FooterNewsletter";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin } from "lucide-react";
 =======
 import { Twitter, Linkedin, Facebook, Instagram, Github, Phone, Mail, MapPin, Sparkles, Zap, Shield, Brain, Code, Database, BarChart3, Link as LinkIcon, UserCheck } from "lucide-react";
@@ -22,6 +23,9 @@ import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
 =======
 import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Sparkles, Shield, Zap, Users } from "lucide-react";
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
+=======
+import { Twitter, Linkedin, Facebook, Instagram, Github, Phone, Mail, MapPin } from "lucide-react";
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-de94
 import { Link } from "react-router-dom";
 >>>>>>> origin/cursor/website-audit-and-enhancement-ba38
 
@@ -573,6 +577,7 @@ export function Footer() {
             <h3 className="text-white font-semibold mb-4 text-lg">Services</h3>
             <ul className="space-y-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
               <li><Link to="/ai-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Services</Link></li>
               <li><Link to="/it-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">IT Services</Link></li>
               <li><Link to="/digital-marketing" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Digital Marketing</Link></li>
@@ -599,6 +604,9 @@ export function Footer() {
             <ul className="space-y-2">
 <<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
+=======
+              <li><Link to="/micro-saas-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Micro SAAS Services</Link></li>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-de94
               <li><Link to="/marketplace" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Products</Link></li>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -620,9 +628,12 @@ export function Footer() {
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a2e5
               <li><Link to="/talent" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Talent</Link></li>
               <li><Link to="/equipment" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Equipment</Link></li>
+<<<<<<< HEAD
               <li><Link to="/categories" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Categories</Link></li>
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-de94
               <li><Link to="/green-it" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Green IT</Link></li>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1054,6 +1065,7 @@ export function Footer() {
         {/* Bottom Section */}
         <div className="mt-12 pt-8 border-t border-zion-purple/20">
           <div className="flex flex-col md:flex-row justify-between items-center">
+<<<<<<< HEAD
             <p className="text-zion-slate-light text-sm">
               &copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
@@ -1133,6 +1145,28 @@ export function Footer() {
               </p>
             </div>
             <div className="flex flex-wrap justify-center gap-6">
+=======
+            <div className="text-center md:text-left">
+              <p className="text-zion-slate-light text-sm mb-2">
+                &copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+              </p>
+              <div className="flex flex-col md:flex-row items-center gap-4 text-xs text-zion-slate-light">
+                <div className="flex items-center gap-1">
+                  <Phone className="w-3 h-3" />
+                  <span>+1 302 464 0950</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <Mail className="w-3 h-3" />
+                  <span>kleber@ziontechgroup.com</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <MapPin className="w-3 h-3" />
+                  <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                </div>
+              </div>
+            </div>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-de94
               <Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">Privacy Policy</Link>
               <Link to="/terms" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">Terms of Service</Link>
 <<<<<<< HEAD

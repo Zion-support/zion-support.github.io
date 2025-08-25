@@ -25,6 +25,7 @@ import { Check, Users, Building, TrendingUp, Shield, Zap, Globe, Award } from "l
 export function FeatureHighlights() {
   const highlights = [
     {
+<<<<<<< HEAD
       title: "For Talent Seekers",
 <<<<<<< HEAD
       icon: <Users className="w-8 h-8" />,
@@ -58,6 +59,20 @@ export function FeatureHighlights() {
       subtitle: "Grow your career and business",
       icon: TrendingUp,
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4514
+=======
+      title: "Micro SAAS Solutions",
+      features: [
+        "AI-powered content generation and optimization tools",
+        "Advanced analytics and business intelligence platforms",
+        "Enterprise-grade cybersecurity and compliance solutions",
+        "Cloud cost optimization and resource management",
+        "Intelligent customer support and automation",
+        "Data backup, recovery, and disaster planning"
+      ]
+    },
+    {
+      title: "Talent & Service Providers",
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-de94
       features: [
         "Create a professional profile showcasing your skills and experience",
         "Get matched with relevant projects that fit your expertise",
@@ -70,6 +85,7 @@ export function FeatureHighlights() {
       cta: "Join as Provider"
     },
     {
+<<<<<<< HEAD
       title: "For Enterprise Clients",
 <<<<<<< HEAD
       icon: <TrendingUp className="w-8 h-8" />,
@@ -78,6 +94,9 @@ export function FeatureHighlights() {
       subtitle: "Enterprise-grade solutions for large organizations",
       icon: Building,
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4514
+=======
+      title: "Enterprise & Business Clients",
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-de94
       features: [
         "White-labeled talent portal with your company branding",
         "Dedicated account management and priority support",

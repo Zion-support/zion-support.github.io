@@ -14,8 +14,16 @@ import { motion } from "framer-motion";
 
 const categories = [
   {
+    title: "Micro SAAS",
+    description: "Innovative micro SAAS solutions for modern businesses",
+    icon: <Briefcase className="w-10 h-10" />,
+    link: "/micro-saas-services",
+    color: "from-purple-500 to-indigo-600",
+  },
+  {
     title: "Services",
     description: "On-demand IT support, consulting, development, and more",
+<<<<<<< HEAD
     icon: <Briefcase className="w-8 h-8" />,
     link: "/services",
 <<<<<<< HEAD
@@ -78,6 +86,11 @@ const categories = [
     icon: <Lightbulb className="w-10 h-10" />,
     link: "/expanded-services",
     color: "from-emerald-500 to-green-600",
+=======
+    icon: <Users className="w-10 h-10" />,
+    link: "/services",
+    color: "from-cyan-500 to-blue-600",
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-de94
   },
   {
     title: "Talents",
@@ -182,6 +195,7 @@ const categories = [
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
     link: "/talent",
 <<<<<<< HEAD
+<<<<<<< HEAD
     color: "from-cyan-500 to-blue-600",
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -191,6 +205,9 @@ const categories = [
     borderColor: "border-zion-cyan/20",
     features: ["Vetted Experts", "AI Matching", "Instant Connect"]
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
+=======
+    color: "from-emerald-500 to-green-600",
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-de94
   },
   {
     title: "Equipment",
@@ -214,6 +231,7 @@ const categories = [
     color: "from-purple-500 to-pink-600",
     count: "12 Services"
   },
+<<<<<<< HEAD
   {
     title: "IT Solutions",
     description: "Cloud migration, cybersecurity, infrastructure management, and optimization",
@@ -361,6 +379,8 @@ const categories = [
     services: ["Innovation", "Research", "Prototyping", "Consulting"]
   }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-de94
 ];
 
 const specialServices = [

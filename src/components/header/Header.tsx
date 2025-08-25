@@ -455,6 +455,7 @@ export function Header() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/95 backdrop-blur-md shadow-lg shadow-zion-purple/10"
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-da9e
 =======
@@ -503,6 +504,15 @@ export function Header() {
 
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-eb69
       <div className="container flex h-16 items-center px-4 sm:px-6 relative z-10">
+=======
+      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-gradient-to-r from-zion-blue-dark/95 via-zion-blue-dark/90 to-zion-slate-dark/95 backdrop-blur-xl"
+      style={headerStyle}
+    >
+      {/* Animated background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/5 via-zion-cyan/5 to-zion-purple/5 animate-pulse"></div>
+      
+      <div className="relative container flex h-16 items-center px-4 sm:px-6">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-de94
         <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
 
         {/* Desktop Navigation */}
@@ -624,20 +634,27 @@ export function Header() {
         <div className="ml-6 flex-1 hidden lg:block">
           <MainNavigation />
         </div>
+<<<<<<< HEAD
 
         {/* Search Bar */}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-da9e
+=======
+        
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-de94
         <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">
-          <EnhancedSearchInput
-            value={query}
-            onChange={setQuery}
-            onSelectSuggestion={(text) => {
-              navigate(`/search?q=${encodeURIComponent(text)}`);
-              setQuery("");
-            }}
-            searchSuggestions={searchSuggestions}
-          />
+          <div className="relative group">
+            <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 rounded-lg blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <EnhancedSearchInput
+              value={query}
+              onChange={setQuery}
+              onSelectSuggestion={(text) => {
+                navigate(`/search?q=${encodeURIComponent(text)}`);
+                setQuery("");
+              }}
+              searchSuggestions={searchSuggestions}
+            />
+          </div>
         </form>
 
         {/* Desktop Actions */}
@@ -787,6 +804,7 @@ export function Header() {
           {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1093,6 +1111,11 @@ export function Header() {
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-da9e
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
+=======
+      
+      {/* Glowing border effect */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60"></div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-de94
     </header>
   );
 }

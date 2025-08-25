@@ -91,6 +91,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       key: 'services',
 <<<<<<< HEAD
       href: '/services',
@@ -162,18 +163,24 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith('/it-services')
     },
     {
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-de94
       key: 'micro-saas',
       href: '/micro-saas-services',
       matches: (path: string) => path.startsWith('/micro-saas-services')
     },
     {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2048
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-de94
       key: 'marketplace',
       href: '/marketplace',
       name: 'Marketplace',
       matches: (path: string) => path.startsWith('/marketplace')
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -248,6 +255,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         }
       ]
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
+=======
+      key: 'services',
+      href: '/services',
+      matches: (path: string) => path.startsWith('/services')
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-de94
     },
     {
 =======
