@@ -162,12 +162,8 @@ const App: React.FC = () => {
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
-            <PerformanceOptimizer
-              enableMonitoring={true}
-              enableOptimizations={true}
-              showMetrics={import.meta.env.DEV}
-            >
-              <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+            <PerformanceOptimizer />
+            <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
                 {/* Enhanced SEO */}
                 <EnhancedSEO 
                   title="Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services"
@@ -402,7 +398,6 @@ const App: React.FC = () => {
                   </>
                 )}
               </div>
-            </PerformanceOptimizer>
           </Router>
         </WhitelabelProvider>
       </ThemeProvider>

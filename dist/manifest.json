@@ -1,19 +1,11 @@
 {
   "name": "Zion Tech Group - Revolutionary AI & Technology Solutions",
   "short_name": "Zion Tech",
-<<<<<<< HEAD
   "description": "Leading provider of AI-powered solutions, quantum computing, autonomous systems, and enterprise technology services. Transform your business with cutting-edge innovation.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#3b82f6",
-=======
-  "description": "AI-Powered Technology Solutions & Enterprise Services",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#1e40af",
->>>>>>> 8166e4d86173885c3ad451d279716a4c1c8c4172
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en",
@@ -21,22 +13,17 @@
   "categories": ["business", "productivity", "technology", "ai", "enterprise"],
   "icons": [
     {
-<<<<<<< HEAD
       "src": "/favicon.ico",
       "sizes": "16x16 32x32",
       "type": "image/x-icon"
     },
     {
       "src": "/icon-192.png",
-=======
-      "src": "/images/zion-tech-group-logo-192.png",
->>>>>>> 8166e4d86173885c3ad451d279716a4c1c8c4172
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-<<<<<<< HEAD
       "src": "/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
@@ -53,83 +40,21 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
-=======
-      "src": "/images/zion-tech-group-logo-512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/images/zion-tech-group-logo-1024.png",
-      "sizes": "1024x1024",
-      "type": "image/png",
-      "purpose": "any maskable"
-    }
-  ],
-  "shortcuts": [
-    {
-      "name": "AI Solutions",
-      "short_name": "AI",
-      "description": "Explore our AI-powered solutions",
-      "url": "/ai-solutions",
-      "icons": [
-        {
-          "src": "/images/ai-solutions-icon.png",
-          "sizes": "96x96"
-        }
-      ]
-    },
-    {
-      "name": "Services",
-      "short_name": "Services",
-      "description": "View all our services",
-      "url": "/services",
-      "icons": [
-        {
-          "src": "/images/services-icon.png",
-          "sizes": "96x96"
-        }
-      ]
-    },
-    {
-      "name": "Contact",
-      "short_name": "Contact",
-      "description": "Get in touch with us",
-      "url": "/contact",
-      "icons": [
-        {
-          "src": "/images/contact-icon.png",
-          "sizes": "96x96"
-        }
-      ]
->>>>>>> 8166e4d86173885c3ad451d279716a4c1c8c4172
     }
   ],
   "screenshots": [
     {
-      "src": "/images/screenshot-home.png",
+      "src": "/screenshot-wide.png",
       "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide",
-<<<<<<< HEAD
       "label": "Zion Tech Group Homepage - Wide View"
-=======
-      "label": "Home page showcasing our AI solutions"
->>>>>>> 8166e4d86173885c3ad451d279716a4c1c8c4172
     },
     {
-      "src": "/images/screenshot-services.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "Services page with detailed offerings"
-    },
-    {
-      "src": "/images/screenshot-mobile.png",
+      "src": "/screenshot-narrow.png",
       "sizes": "750x1334",
       "type": "image/png",
       "form_factor": "narrow",
-<<<<<<< HEAD
       "label": "Zion Tech Group Homepage - Mobile View"
     }
   ],
@@ -169,9 +94,6 @@
           "sizes": "192x192"
         }
       ]
-=======
-      "label": "Mobile-optimized interface"
->>>>>>> 8166e4d86173885c3ad451d279716a4c1c8c4172
     }
   ],
   "related_applications": [
@@ -187,25 +109,12 @@
   "launch_handler": {
     "client_mode": "navigate-existing"
   },
-  "handle_links": "preferred",
-  "capture_links": "existing-client-navigate",
-  "file_handlers": [
-    {
-      "action": "/file-handler",
-      "accept": {
-        "text/*": [".txt", ".md", ".json"],
-        "application/pdf": [".pdf"],
-        "image/*": [".png", ".jpg", ".jpeg", ".gif", ".webp"]
-      }
-    }
-  ],
   "protocol_handlers": [
     {
       "protocol": "web+zion",
-      "url": "/protocol-handler?url=%s"
+      "url": "/?protocol=%s"
     }
   ],
-<<<<<<< HEAD
   "file_handlers": [
     {
       "action": "/",
@@ -216,8 +125,6 @@
       }
     }
   ],
-=======
->>>>>>> 8166e4d86173885c3ad451d279716a4c1c8c4172
   "share_target": {
     "action": "/share",
     "method": "POST",
@@ -233,7 +140,6 @@
         }
       ]
     }
-<<<<<<< HEAD
   },
   "handle_links": "preferred",
   "scope_extensions": [
@@ -264,7 +170,4 @@
   },
   "version": "1.0.0",
   "minimum_version": "1.0.0"
-=======
-  }
->>>>>>> 8166e4d86173885c3ad451d279716a4c1c8c4172
 }
