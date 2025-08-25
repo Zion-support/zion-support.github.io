@@ -58,6 +58,20 @@ export const Header: React.FC = () => {
       name: 'Services', 
       href: '#',
       dropdown: [
+<<<<<<< HEAD
+        { name: 'Micro SAAS Services', href: '/micro-saas-services' },
+        { name: 'AI & Machine Learning', href: '/ai-services' },
+        { name: 'Cloud & DevOps', href: '/cloud-devops' },
+        { name: 'Digital Transformation', href: '/digital-transformation' },
+        { name: 'Enterprise Solutions', href: '/enterprise-solutions' },
+        { name: 'IT Onsite Services', href: '/it-onsite-services' },
+      ]
+    },
+    { name: 'Marketplace', href: '/marketplace' },
+    { name: 'Talent', href: '/talent' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+=======
         { name: 'AI Solutions', href: '/ai-solutions', description: 'Advanced AI and machine learning services' },
         { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems-platform', description: 'AI-powered business automation' },
         { name: 'Quantum Technology', href: '/quantum-technology', description: 'Next-generation quantum computing' },
@@ -98,6 +112,7 @@ export const Header: React.FC = () => {
       ]
     },
     { name: 'Contact', href: '/contact' }
+>>>>>>> origin/cursor/website-audit-and-enhancement-bca6
   ];
 
   const isActive = (href: string) => {

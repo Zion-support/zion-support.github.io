@@ -27,6 +27,9 @@ const AIWorkflowAutomation = lazy(() => import('./pages/services/AIWorkflowAutom
 const BlockchainEnterpriseSolutions = lazy(() => import('./pages/services/BlockchainEnterpriseSolutions'));
 const IoTDataAnalytics = lazy(() => import('./pages/services/IoTDataAnalytics'));
 
+<<<<<<< HEAD
+// Company pages
+=======
 // Missing pages from analysis
 const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/QuantumNeuralNetworkPlatform'));
 const AutonomousBusinessOperationsPlatform = lazy(() => import('./pages/AutonomousBusinessOperationsPlatform'));
@@ -44,6 +47,7 @@ const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 // Company information pages
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
+>>>>>>> origin/cursor/website-audit-and-enhancement-bca6
 const Mission = lazy(() => import('./pages/Mission'));
 const Team = lazy(() => import('./pages/Team'));
 const Pricing = lazy(() => import('./pages/Pricing'));
@@ -62,12 +66,21 @@ const MicroSAASSolutions = lazy(() => import('./pages/services/MicroSAASSolution
 const IndustrySolutions = lazy(() => import('./pages/services/IndustrySolutions'));
 const InnovativeNewServices = lazy(() => import('./pages/services/InnovativeNewServices'));
 const SpecializedITInfrastructure = lazy(() => import('./pages/services/SpecializedITInfrastructure'));
+<<<<<<< HEAD
+const InnovativeMicroSaasServices = lazy(() => import('./pages/InnovativeMicroSaasServices'));
+const ComprehensiveInnovativeServices = lazy(() => import('./pages/ComprehensiveInnovativeServices'));
+const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveServicesOverview'));
+const EnhancedServicesShowcase = lazy(() => import('./pages/EnhancedServicesShowcase'));
+const InnovativeServicesShowcase = lazy(() => import('./pages/InnovativeServicesShowcase'));
+const EnhancedNextGenServicesShowcase = lazy(() => import('./pages/NextGenServicesShowcase'));
+=======
 // Temporarily commented out due to TypeScript errors
 // const InnovativeMicroSaasServices = lazy(() => import('./pages/InnovativeMicroSaasServices'));
 // const ComprehensiveInnovativeServices = lazy(() => import('./pages/ComprehensiveInnovativeServices'));
 // const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveServicesOverview'));
 // const EnhancedServicesShowcase = lazy(() => import('./pages/EnhancedServicesShowcase'));
 // const InnovativeServicesShowcase = lazy(() => import('./pages/InnovativeServicesShowcase'));
+>>>>>>> origin/cursor/website-audit-and-enhancement-bca6
 
 // Solutions pages
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
@@ -92,6 +105,18 @@ const App = () => {
         <WhitelabelProvider>
           <Router>
             <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+<<<<<<< HEAD
+              {/* Enhanced SEO */}
+              <EnhancedSEO 
+                title="Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services"
+                description="Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology."
+                keywords="AI solutions, quantum computing, cybersecurity, digital transformation, enterprise technology, machine learning, cloud services, IT infrastructure"
+                url="https://ziontechgroup.com"
+                image="https://ziontechgroup.com/og-image.jpg"
+                ogType="website"
+                twitterCard="summary_large_image"
+              />
+=======
                 {/* Enhanced SEO */}
                 <EnhancedSEO 
                   title="Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services"
@@ -102,6 +127,7 @@ const App = () => {
                   ogType="website"
                   twitterCard="summary_large_image"
                 />
+>>>>>>> origin/cursor/website-audit-and-enhancement-bca6
                 
                 <Header />
                 <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
@@ -169,12 +195,21 @@ const App = () => {
                       <Route path="/services/industry-solutions" element={<IndustrySolutions />} />
                       <Route path="/services/innovative-new-services" element={<InnovativeNewServices />} />
                       <Route path="/services/specialized-it-infrastructure" element={<SpecializedITInfrastructure />} />
+<<<<<<< HEAD
+                      <Route path="/innovative-micro-saas-services" element={<InnovativeMicroSaasServices />} />
+                      <Route path="/comprehensive-innovative-services" element={<ComprehensiveInnovativeServices />} />
+                      <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview />} />
+                      <Route path="/enhanced-services-showcase" element={<EnhancedServicesShowcase />} />
+                      <Route path="/innovative-services-showcase" element={<InnovativeServicesShowcase />} />
+                      <Route path="/nextgen-services-showcase" element={<EnhancedNextGenServicesShowcase />} />
+=======
                       {/* Temporarily commented out due to TypeScript errors */}
                       {/* <Route path="/innovative-micro-saas-services" element={<InnovativeMicroSaasServices />} /> */}
                       {/* <Route path="/comprehensive-innovative-services" element={<ComprehensiveInnovativeServices />} /> */}
                       {/* <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview />} /> */}
                       {/* <Route path="/enhanced-services-showcase" element={<EnhancedServicesShowcase />} /> */}
                       {/* <Route path="/innovative-services-showcase" element={<InnovativeServicesShowcase />} /> */}
+>>>>>>> origin/cursor/website-audit-and-enhancement-bca6
                       
                       {/* New innovative service routes */}
                       <Route path="/ai-workflow-automation" element={<AIWorkflowAutomation />} />
@@ -266,6 +301,8 @@ const App = () => {
                 <Footer />
                 <SonnerToaster />
               </div>
+<<<<<<< HEAD
+=======
                 
             {/* Enhanced Accessibility Controls */}
             <EnhancedAccessibility 
@@ -337,6 +374,7 @@ const App = () => {
                 </div>
               </>
             )}
+>>>>>>> origin/cursor/website-audit-and-enhancement-bca6
           </Router>
         </WhitelabelProvider>
       </ThemeProvider>

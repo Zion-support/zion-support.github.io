@@ -1,0 +1,382 @@
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { 
+  BookOpenIcon, 
+  CodeBracketIcon,
+  CpuChipIcon,
+  CloudIcon,
+  ShieldCheckIcon,
+  GlobeAltIcon,
+  DocumentTextIcon,
+  PlayIcon,
+  DownloadIcon,
+  MagnifyingGlassIcon
+} from '@heroicons/react/24/outline';
+
+const Docs: React.FC = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeCategory, setActiveCategory] = useState('all');
+
+  const categories = [
+    { id: 'all', name: 'All Documentation', icon: BookOpenIcon },
+    { id: 'api', name: 'API Reference', icon: CodeBracketIcon },
+    { id: 'ai', name: 'AI Services', icon: CpuChipIcon },
+    { id: 'cloud', name: 'Cloud & DevOps', icon: CloudIcon },
+    { id: 'security', name: 'Security', icon: ShieldCheckIcon },
+    { id: 'guides', name: 'User Guides', icon: DocumentTextIcon }
+  ];
+
+  const documentation = [
+    {
+      category: 'api',
+      title: 'REST API Reference',
+      description: 'Complete API documentation with endpoints, parameters, and examples',
+      icon: CodeBracketIcon,
+      href: '/docs/api',
+      tags: ['API', 'REST', 'Endpoints']
+    },
+    {
+      category: 'api',
+      title: 'GraphQL API',
+      description: 'GraphQL schema documentation and query examples',
+      icon: CodeBracketIcon,
+      href: '/docs/graphql',
+      tags: ['GraphQL', 'Schema', 'Queries']
+    },
+    {
+      category: 'ai',
+      title: 'AI Autonomous Systems',
+      description: 'Setup and configuration guide for AI autonomous business platforms',
+      icon: CpuChipIcon,
+      href: '/docs/ai-autonomous-systems',
+      tags: ['AI', 'Autonomous', 'Business']
+    },
+    {
+      category: 'ai',
+      title: 'Machine Learning Models',
+      description: 'Documentation for deploying and managing ML models',
+      icon: CpuChipIcon,
+      href: '/docs/ml-models',
+      tags: ['ML', 'Models', 'Deployment']
+    },
+    {
+      category: 'cloud',
+      title: 'Cloud Infrastructure',
+      description: 'Setup guides for AWS, Azure, and GCP deployments',
+      icon: CloudIcon,
+      href: '/docs/cloud-infrastructure',
+      tags: ['Cloud', 'AWS', 'Azure', 'GCP']
+    },
+    {
+      category: 'cloud',
+      title: 'DevOps Pipeline',
+      description: 'CI/CD setup and automation workflows',
+      icon: CloudIcon,
+      href: '/docs/devops-pipeline',
+      tags: ['DevOps', 'CI/CD', 'Automation']
+    },
+    {
+      category: 'security',
+      title: 'Security Best Practices',
+      description: 'Security guidelines and compliance documentation',
+      icon: ShieldCheckIcon,
+      href: '/docs/security',
+      tags: ['Security', 'Compliance', 'Best Practices']
+    },
+    {
+      category: 'security',
+      title: 'SOC2 Compliance',
+      description: 'SOC2 compliance automation and audit procedures',
+      icon: ShieldCheckIcon,
+      href: '/docs/soc2-compliance',
+      tags: ['SOC2', 'Compliance', 'Audit']
+    },
+    {
+      category: 'guides',
+      title: 'Getting Started',
+      description: 'Quick start guide for new users',
+      icon: DocumentTextIcon,
+      href: '/docs/getting-started',
+      tags: ['Getting Started', 'Tutorial', 'Beginner']
+    },
+    {
+      category: 'guides',
+      title: 'User Manual',
+      description: 'Comprehensive user manual for all services',
+      icon: DocumentTextIcon,
+      href: '/docs/user-manual',
+      tags: ['User Manual', 'Guide', 'Reference']
+    }
+  ];
+
+  const filteredDocs = documentation.filter(doc => 
+    activeCategory === 'all' || doc.category === activeCategory
+  ).filter(doc =>
+    doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    doc.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    doc.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+  );
+
+  const quickStartGuides = [
+    {
+      title: 'AI Platform Setup',
+      description: 'Get your AI autonomous business platform running in minutes',
+      icon: CpuChipIcon,
+      href: '/docs/ai-platform-setup'
+    },
+    {
+      title: 'Cloud Deployment',
+      description: 'Deploy your applications to the cloud with our step-by-step guide',
+      icon: CloudIcon,
+      href: '/docs/cloud-deployment'
+    },
+    {
+      title: 'Security Configuration',
+      description: 'Configure security settings and compliance requirements',
+      icon: ShieldCheckIcon,
+      href: '/docs/security-configuration'
+    }
+  ];
+
+  const apiExamples = [
+    {
+      title: 'Authentication',
+      description: 'Learn how to authenticate with our APIs',
+      code: `curl -X POST https://api.ziontechgroup.com/auth \\
+  -H "Content-Type: application/json" \\
+  -d '{"apiKey": "your-api-key"}'`
+    },
+    {
+      title: 'AI Model Training',
+      description: 'Train a new AI model using our API',
+      code: `curl -X POST https://api.ziontechgroup.com/ai/models \\
+  -H "Authorization: Bearer YOUR_TOKEN" \\
+  -H "Content-Type: application/json" \\
+  -d '{"modelType": "classification", "data": "..."}'`
+    },
+    {
+      title: 'Data Analytics Query',
+      description: 'Query your data using our analytics API',
+      code: `curl -X GET "https://api.ziontechgroup.com/analytics/query?q=SELECT * FROM users WHERE created_at > '2024-01-01'" \\
+  -H "Authorization: Bearer YOUR_TOKEN"`
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Header */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Documentation
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive guides, API references, and tutorials to help you get the most out of Zion Tech Group services.
+            </p>
+          </motion.div>
+
+          {/* Search Bar */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="max-w-2xl mx-auto mt-8"
+          >
+            <div className="relative">
+              <MagnifyingGlassIcon className="absolute left-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Search documentation, APIs, and guides..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-200"
+              />
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        {/* Categories */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mb-12"
+        >
+          <div className="flex flex-wrap gap-4 justify-center">
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setActiveCategory(category.id)}
+                className={`flex items-center space-x-2 px-6 py-3 rounded-lg border transition-all duration-200 ${
+                  activeCategory === category.id
+                    ? 'bg-purple-600 border-purple-500 text-white'
+                    : 'bg-white/10 border-white/20 text-gray-300 hover:bg-white/20 hover:text-white'
+                }`}
+              >
+                <category.icon className="h-5 w-5" />
+                <span>{category.name}</span>
+              </button>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Quick Start Guides */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="mb-16"
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-8">
+            Quick Start Guides
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {quickStartGuides.map((guide, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
+                className="bg-white/10 border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-all duration-200"
+              >
+                <div className="w-16 h-16 bg-purple-600/20 rounded-full flex items-center justify-center mb-4">
+                  <guide.icon className="h-8 w-8 text-purple-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {guide.title}
+                </h3>
+                <p className="text-gray-300 mb-4">
+                  {guide.description}
+                </p>
+                <a
+                  href={guide.href}
+                  className="inline-flex items-center space-x-2 px-4 py-2 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-all duration-200"
+                >
+                  <PlayIcon className="h-4 w-4" />
+                  <span>Get Started</span>
+                </a>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Documentation Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="mb-16"
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-8">
+            All Documentation
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredDocs.map((doc, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4, delay: 0.8 + index * 0.1 }}
+                className="bg-white/10 border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-all duration-200"
+              >
+                <div className="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4">
+                  <doc.icon className="h-6 w-6 text-purple-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">
+                  {doc.title}
+                </h3>
+                <p className="text-gray-300 text-sm mb-4">
+                  {doc.description}
+                </p>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {doc.tags.map((tag, tagIndex) => (
+                    <span
+                      key={tagIndex}
+                      className="px-2 py-1 bg-purple-600/20 text-purple-300 text-xs rounded-md border border-purple-500/30"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <a
+                  href={doc.href}
+                  className="inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors duration-200"
+                >
+                  <span>View Documentation</span>
+                  <DocumentTextIcon className="h-4 w-4" />
+                </a>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* API Examples */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.0 }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-8">
+            API Examples
+          </h2>
+          <div className="grid gap-6 max-w-4xl mx-auto">
+            {apiExamples.map((example, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 1.0 + index * 0.1 }}
+                className="bg-white/10 border border-white/20 rounded-xl p-6"
+              >
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {example.title}
+                </h3>
+                <p className="text-gray-300 mb-4">
+                  {example.description}
+                </p>
+                <div className="bg-slate-800 rounded-lg p-4 overflow-x-auto">
+                  <pre className="text-green-400 text-sm">
+                    <code>{example.code}</code>
+                  </pre>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Download Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.2 }}
+          className="mt-16 text-center"
+        >
+          <div className="bg-white/10 border border-white/20 rounded-xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Download Complete Documentation
+            </h3>
+            <p className="text-gray-300 mb-6">
+              Get the complete documentation package including PDFs, code samples, and offline references.
+            </p>
+            <button className="inline-flex items-center space-x-2 px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-all duration-200">
+              <DownloadIcon className="h-5 w-5" />
+              <span>Download PDF</span>
+            </button>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+export default Docs;
