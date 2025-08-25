@@ -1,365 +1,390 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Briefcase, MapPin, Clock, Users, Zap, Brain, Shield, Globe, Heart, Star } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { 
+  BriefcaseIcon, 
+  MapPinIcon,
+  ClockIcon,
+  AcademicCapIcon,
+  HeartIcon,
+  SparklesIcon,
+  ArrowRightIcon,
+  CheckIcon
+} from '@heroicons/react/24/outline';
 
-const Careers = () => {
-  const [selectedDepartment, setSelectedDepartment] = useState('all');
+const Careers: React.FC = () => {
+  const [activeCategory, setActiveCategory] = useState('all');
 
-  const departments = [
-    { id: 'all', name: 'All Departments', count: 12 },
-    { id: 'engineering', name: 'Engineering', count: 5 },
-    { id: 'ai', name: 'AI & ML', count: 3 },
-    { id: 'cybersecurity', name: 'Cybersecurity', count: 2 },
-    { id: 'business', name: 'Business Development', count: 2 }
+  const categories = [
+    { id: 'all', name: 'All Positions' },
+    { id: 'engineering', name: 'Engineering' },
+    { id: 'ai', name: 'AI & ML' },
+    { id: 'design', name: 'Design' },
+    { id: 'business', name: 'Business' },
+    { id: 'sales', name: 'Sales & Marketing' }
   ];
 
   const jobOpenings = [
     {
       id: 1,
       title: 'Senior AI Engineer',
-      department: 'ai',
+      category: 'ai',
       location: 'Remote / Middletown, DE',
       type: 'Full-time',
       experience: '5+ years',
-      description: 'Lead the development of cutting-edge AI solutions for enterprise clients.',
+      description: 'Join our AI team to develop cutting-edge autonomous business systems and machine learning platforms.',
       requirements: [
         'Advanced degree in Computer Science, AI, or related field',
-        'Experience with deep learning frameworks (TensorFlow, PyTorch)',
-        'Strong Python programming skills',
-        'Experience with cloud platforms (AWS, Azure, GCP)',
-        'Knowledge of MLOps and model deployment'
+        'Experience with PyTorch, TensorFlow, and modern ML frameworks',
+        'Knowledge of quantum computing and neural networks',
+        'Experience with large-scale AI systems deployment'
       ],
       benefits: [
         'Competitive salary with equity options',
         'Flexible remote work policy',
-        'Health, dental, and vision insurance',
         'Professional development budget',
-        '401(k) with company match'
+        'Health, dental, and vision insurance'
       ]
     },
     {
       id: 2,
-      title: 'Cybersecurity Specialist',
-      department: 'cybersecurity',
-      location: 'Middletown, DE',
+      title: 'Full Stack Developer',
+      category: 'engineering',
+      location: 'Remote / Middletown, DE',
       type: 'Full-time',
       experience: '3+ years',
-      description: 'Protect our clients and infrastructure from evolving cyber threats.',
+      description: 'Build scalable web applications and APIs for our enterprise clients using modern technologies.',
       requirements: [
-        'Bachelor\'s degree in Cybersecurity, IT, or related field',
-        'Certifications: CISSP, CISM, or equivalent',
-        'Experience with security tools and frameworks',
-        'Knowledge of compliance standards (SOC2, ISO 27001)',
-        'Strong analytical and problem-solving skills'
+        'Proficiency in React, Node.js, and TypeScript',
+        'Experience with cloud platforms (AWS, Azure, GCP)',
+        'Knowledge of microservices architecture',
+        'Experience with CI/CD pipelines'
       ],
       benefits: [
-        'Competitive salary',
-        'Comprehensive benefits package',
-        'Continuous learning opportunities',
-        'Modern office environment',
-        'Team collaboration events'
+        'Competitive salary with equity options',
+        'Flexible remote work policy',
+        'Professional development budget',
+        'Health, dental, and vision insurance'
       ]
     },
     {
       id: 3,
-      title: 'Full Stack Developer',
-      department: 'engineering',
+      title: 'UX/UI Designer',
+      category: 'design',
       location: 'Remote / Middletown, DE',
       type: 'Full-time',
-      experience: '3+ years',
-      description: 'Build scalable web applications and microservices for our AI platform.',
+      experience: '4+ years',
+      description: 'Create intuitive and beautiful user experiences for our AI-powered applications and platforms.',
       requirements: [
-        'Proficiency in React, Node.js, and TypeScript',
-        'Experience with cloud-native development',
-        'Knowledge of database design and optimization',
-        'Understanding of DevOps practices',
-        'Strong problem-solving abilities'
+        'Strong portfolio showcasing complex applications',
+        'Experience with design systems and component libraries',
+        'Knowledge of accessibility standards',
+        'Experience with user research and testing'
       ],
       benefits: [
-        'Competitive salary with growth potential',
-        'Remote work flexibility',
-        'Health and wellness benefits',
-        'Professional development support',
-        'Innovative technology stack'
+        'Competitive salary with equity options',
+        'Flexible remote work policy',
+        'Professional development budget',
+        'Health, dental, and vision insurance'
       ]
     },
     {
       id: 4,
-      title: 'Business Development Manager',
-      department: 'business',
-      location: 'Middletown, DE',
+      title: 'AI Solutions Architect',
+      category: 'ai',
+      location: 'Remote / Middletown, DE',
       type: 'Full-time',
-      experience: '5+ years',
-      description: 'Drive business growth through strategic partnerships and client acquisition.',
+      experience: '7+ years',
+      description: 'Design and architect AI solutions for enterprise clients across various industries.',
       requirements: [
-        'Bachelor\'s degree in Business, Marketing, or related field',
-        'Proven track record in B2B sales',
-        'Experience in technology or AI industry',
-        'Strong communication and negotiation skills',
-        'Ability to build and maintain client relationships'
+        'Deep understanding of AI/ML technologies and architectures',
+        'Experience with enterprise software design',
+        'Strong communication and presentation skills',
+        'Experience with cloud AI services'
       ],
       benefits: [
-        'Base salary + commission structure',
-        'Performance-based bonuses',
-        'Company car allowance',
-        'Health and dental coverage',
-        'Professional development budget'
+        'Competitive salary with equity options',
+        'Flexible remote work policy',
+        'Professional development budget',
+        'Health, dental, and vision insurance'
+      ]
+    },
+    {
+      id: 5,
+      title: 'Business Development Manager',
+      category: 'business',
+      location: 'Remote / Middletown, DE',
+      type: 'Full-time',
+      experience: '5+ years',
+      description: 'Drive business growth by identifying new opportunities and building strategic partnerships.',
+      requirements: [
+        'Experience in B2B technology sales',
+        'Strong network in enterprise technology',
+        'Understanding of AI and emerging technologies',
+        'Track record of meeting sales targets'
+      ],
+      benefits: [
+        'Competitive salary with commission structure',
+        'Flexible remote work policy',
+        'Professional development budget',
+        'Health, dental, and vision insurance'
+      ]
+    },
+    {
+      id: 6,
+      title: 'DevOps Engineer',
+      category: 'engineering',
+      location: 'Remote / Middletown, DE',
+      type: 'Full-time',
+      experience: '4+ years',
+      description: 'Build and maintain our cloud infrastructure and deployment pipelines.',
+      requirements: [
+        'Experience with Kubernetes and containerization',
+        'Knowledge of AWS, Azure, or GCP',
+        'Experience with infrastructure as code',
+        'Understanding of security best practices'
+      ],
+      benefits: [
+        'Competitive salary with equity options',
+        'Flexible remote work policy',
+        'Professional development budget',
+        'Health, dental, and vision insurance'
       ]
     }
   ];
 
   const filteredJobs = jobOpenings.filter(job => 
-    selectedDepartment === 'all' || job.department === selectedDepartment
+    activeCategory === 'all' || job.category === activeCategory
   );
 
   const companyValues = [
     {
       title: 'Innovation First',
-      description: 'We push the boundaries of what\'s possible with AI and technology.',
-      icon: Zap
+      description: 'We push the boundaries of what\'s possible with AI and technology',
+      icon: SparklesIcon
+    },
+    {
+      title: 'People Matter',
+      description: 'Our team is our greatest asset and we invest in their growth',
+      icon: HeartIcon
     },
     {
       title: 'Continuous Learning',
-      description: 'Growth mindset drives our personal and professional development.',
-      icon: Brain
-    },
-    {
-      title: 'Security & Trust',
-      description: 'We build secure, reliable solutions that our clients can trust.',
-      icon: Shield
-    },
-    {
-      title: 'Global Impact',
-      description: 'Our solutions help businesses worldwide transform and grow.',
-      icon: Globe
+      description: 'We believe in lifelong learning and professional development',
+      icon: AcademicCapIcon
     }
   ];
 
-  const perks = [
-    {
-      title: 'Flexible Work',
-      description: 'Remote-first culture with flexible hours',
-      icon: Clock
-    },
-    {
-      title: 'Health & Wellness',
-      description: 'Comprehensive health coverage and wellness programs',
-      icon: Heart
-    },
-    {
-      title: 'Growth Opportunities',
-      description: 'Clear career paths and advancement opportunities',
-      icon: Star
-    },
-    {
-      title: 'Team Culture',
-      description: 'Collaborative environment with smart, passionate people',
-      icon: Users
-    }
+  const benefits = [
+    'Competitive salary with equity options',
+    '100% remote work flexibility',
+    'Unlimited PTO and flexible hours',
+    'Professional development budget ($5,000/year)',
+    'Health, dental, and vision insurance',
+    '401(k) with company match',
+    'Latest technology and equipment',
+    'Regular team events and retreats'
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Header Section */}
-      <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
-            Join Our Team
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Help us shape the future of AI and technology. Join a team of innovators, 
-            problem-solvers, and visionaries building solutions that transform businesses worldwide.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="#openings"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
-            >
-              View Open Positions
-            </Link>
-            <Link
-              to="/contact"
-              className="px-8 py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold rounded-lg transition-all duration-300"
-            >
-              Contact HR Team
-            </Link>
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Header */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Join Our Team
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Help us build the future of AI-powered technology. Join a team that's pushing the boundaries of what's possible.
+            </p>
+          </motion.div>
         </div>
       </div>
 
       {/* Company Values */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-            Our Values
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {companyValues.map((value, index) => {
-              const Icon = value.icon;
-              return (
-                <div key={index} className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <Icon className="w-10 h-10 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-4">{value.title}</h3>
-                  <p className="text-gray-300">{value.description}</p>
-                </div>
-              );
-            })}
-          </div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16"
+      >
+        <h2 className="text-3xl font-bold text-white text-center mb-12">
+          Our Values
+        </h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          {companyValues.map((value, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
+              className="text-center"
+            >
+              <div className="w-20 h-20 bg-purple-600/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <value.icon className="h-10 w-10 text-purple-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">
+                {value.title}
+              </h3>
+              <p className="text-gray-300">
+                {value.description}
+              </p>
+            </motion.div>
+          ))}
         </div>
-      </div>
+      </motion.div>
 
-      {/* Perks & Benefits */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-            Perks & Benefits
+      {/* Benefits Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16"
+      >
+        <div className="bg-white/10 border border-white/20 rounded-xl p-8">
+          <h2 className="text-3xl font-bold text-white text-center mb-8">
+            Why Work With Us?
           </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {perks.map((perk, index) => {
-              const Icon = perk.icon;
-              return (
-                <div key={index} className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <Icon className="w-10 h-10 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-4">{perk.title}</h3>
-                  <p className="text-gray-300">{perk.description}</p>
-                </div>
-              );
-            })}
+          <div className="grid md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4, delay: 0.4 + index * 0.05 }}
+                className="flex items-center space-x-3"
+              >
+                <CheckIcon className="h-5 w-5 text-green-400 flex-shrink-0" />
+                <span className="text-gray-300">{benefit}</span>
+              </motion.div>
+            ))}
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Job Openings */}
-      <div id="openings" className="px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-            Open Positions
-          </h2>
-          
-          {/* Department Filter */}
-          <div className="flex flex-wrap gap-2 justify-center mb-12">
-            {departments.map((dept) => (
-              <button
-                key={dept.id}
-                onClick={() => setSelectedDepartment(dept.id)}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                  selectedDepartment === dept.id
-                    ? 'bg-cyan-500 text-black'
-                    : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50'
-                }`}
-              >
-                {dept.name} ({dept.count})
-              </button>
-            ))}
-          </div>
-          
-          {/* Jobs List */}
-          <div className="space-y-6">
-            {filteredJobs.map((job) => (
-              <div key={job.id} className="bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300">
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
-                  <div>
-                    <h3 className="text-2xl font-bold mb-2">{job.title}</h3>
-                    <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-4">
-                      <span className="flex items-center">
-                        <Briefcase className="w-4 h-4 mr-2" />
-                        {departments.find(d => d.id === job.department)?.name}
-                      </span>
-                      <span className="flex items-center">
-                        <MapPin className="w-4 h-4 mr-2" />
-                        {job.location}
-                      </span>
-                      <span className="flex items-center">
-                        <Clock className="w-4 h-4 mr-2" />
-                        {job.type}
-                      </span>
-                      <span className="flex items-center">
-                        <Users className="w-4 h-4 mr-2" />
-                        {job.experience}
-                      </span>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.6 }}
+        className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16"
+      >
+        <h2 className="text-3xl font-bold text-white text-center mb-8">
+          Open Positions
+        </h2>
+
+        {/* Category Filter */}
+        <div className="flex flex-wrap gap-4 justify-center mb-8">
+          {categories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setActiveCategory(category.id)}
+              className={`px-6 py-3 rounded-lg border transition-all duration-200 ${
+                activeCategory === category.id
+                  ? 'bg-purple-600 border-purple-500 text-white'
+                  : 'bg-white/10 border-white/20 text-gray-300 hover:bg-white/20 hover:text-white'
+              }`}
+            >
+              {category.name}
+            </button>
+          ))}
+        </div>
+
+        {/* Jobs Grid */}
+        <div className="grid gap-6">
+          {filteredJobs.map((job, index) => (
+            <motion.div
+              key={job.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
+              className="bg-white/10 border border-white/20 rounded-xl p-6 hover:bg-white/20 transition-all duration-200"
+            >
+              <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    {job.title}
+                  </h3>
+                  <div className="flex flex-wrap items-center gap-4 text-sm text-gray-300">
+                    <div className="flex items-center space-x-1">
+                      <MapPinIcon className="h-4 w-4" />
+                      <span>{job.location}</span>
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      <BriefcaseIcon className="h-4 w-4" />
+                      <span>{job.type}</span>
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      <ClockIcon className="h-4 w-4" />
+                      <span>{job.experience}</span>
                     </div>
                   </div>
-                  <Link
-                    to={`/careers/${job.id}`}
-                    className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
-                  >
-                    Apply Now
-                  </Link>
                 </div>
-                
-                <p className="text-gray-300 mb-6">{job.description}</p>
-                
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="text-lg font-semibold text-cyan-400 mb-3">Requirements</h4>
-                    <ul className="space-y-2">
-                      {job.requirements.map((req, index) => (
-                        <li key={index} className="flex items-start space-x-2">
-                          <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="text-gray-300 text-sm">{req}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div>
-                    <h4 className="text-lg font-semibold text-cyan-400 mb-3">Benefits</h4>
-                    <ul className="space-y-2">
-                      {job.benefits.map((benefit, index) => (
-                        <li key={index} className="flex items-start space-x-2">
-                          <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="text-gray-300 text-sm">{benefit}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                <button className="mt-4 lg:mt-0 inline-flex items-center space-x-2 px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-all duration-200">
+                  <span>Apply Now</span>
+                  <ArrowRightIcon className="h-4 w-4" />
+                </button>
+              </div>
+
+              <p className="text-gray-300 mb-4">
+                {job.description}
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="text-white font-semibold mb-3">Requirements:</h4>
+                  <ul className="space-y-2">
+                    {job.requirements.map((req, reqIndex) => (
+                      <li key={reqIndex} className="flex items-start space-x-2">
+                        <CheckIcon className="h-4 w-4 text-green-400 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-300 text-sm">{req}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="text-white font-semibold mb-3">Benefits:</h4>
+                  <ul className="space-y-2">
+                    {job.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-start space-x-2">
+                        <CheckIcon className="h-4 w-4 text-green-400 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-300 text-sm">{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
-            ))}
-          </div>
-          
-          {filteredJobs.length === 0 && (
-            <div className="text-center py-16">
-              <p className="text-gray-400 text-lg">No positions found in the selected department.</p>
-            </div>
-          )}
+            </motion.div>
+          ))}
         </div>
-      </div>
+      </motion.div>
 
       {/* CTA Section */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-12 border border-cyan-500/30">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Don't See the Right Fit?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              We're always looking for talented individuals to join our team. Send us your resume 
-              and we'll keep you in mind for future opportunities.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
-              >
-                Submit Resume
-              </Link>
-              <Link
-                to="/contact"
-                className="px-8 py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold rounded-lg transition-all duration-300"
-              >
-                Contact HR Team
-              </Link>
-            </div>
-          </div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.8 }}
+        className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16"
+      >
+        <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-xl p-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Don't See the Right Role?
+          </h2>
+          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            We're always looking for talented individuals to join our team. Send us your resume and let's discuss how you can contribute to our mission.
+          </p>
+          <button className="inline-flex items-center space-x-2 px-8 py-4 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-all duration-200">
+            <span>Send Resume</span>
+            <ArrowRightIcon className="h-5 w-5" />
+          </button>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

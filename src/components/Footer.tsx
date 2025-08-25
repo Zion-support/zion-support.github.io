@@ -26,14 +26,14 @@ export function Footer() {
       icon: Brain,
       description: "Intelligent solutions powered by artificial intelligence",
       links: [
-        { label: "AI Business Intelligence", path: "/services#ai-bi", description: "Advanced analytics and insights" },
-        { label: "AI Marketing Automation", path: "/services#ai-marketing", description: "Smart marketing optimization" },
-        { label: "AI HR & Recruitment", path: "/services#ai-hr", description: "Intelligent talent management" },
-        { label: "AI Legal Tech", path: "/services#ai-legal", description: "Automated legal processes" },
-        { label: "AI Healthcare Analytics", path: "/services#ai-healthcare", description: "Patient care optimization" },
-        { label: "AI Financial Analytics", path: "/services#financial", description: "Risk assessment and insights" },
-        { label: "AI Supply Chain", path: "/services#supply-chain", description: "Optimization and forecasting" },
-        { label: "AI Manufacturing", path: "/services#manufacturing", description: "Smart production systems" }
+
+        { name: "AI Solutions", href: "/ai-solutions" },
+        { name: "AI Autonomous Systems", href: "/ai-autonomous-systems-platform" },
+        { name: "Quantum Technology", href: "/quantum-technology" },
+        { name: "Cybersecurity", href: "/cybersecurity" },
+        { name: "Cloud & DevOps", href: "/cloud-devops" },
+        { name: "Enterprise Solutions", href: "/enterprise-solutions" },
+        { name: "5G Solutions", href: "/5g-enterprise-solutions" }
       ]
     },
     {
@@ -71,14 +71,24 @@ export function Footer() {
       icon: Star,
       description: "Learn about our mission and team",
       links: [
-        { label: "About Us", path: "/about", description: "Our story and values" },
-        { label: "Our Mission", path: "/mission", description: "What drives us forward" },
-        { label: "Team", path: "/team", description: "Meet our experts" },
-        { label: "Pricing", path: "/pricing", description: "Transparent pricing plans" },
-        { label: "Careers", path: "/careers", description: "Join our team" },
-        { label: "Partners", path: "/partners", description: "Strategic partnerships" },
-        { label: "Contact", path: "/contact", description: "Get in touch" },
-        { label: "Blog", path: "/blog", description: "Latest insights" }
+
+        { name: "About Us", href: "/about" },
+        { name: "Our Team", href: "/team" },
+        { name: "Careers", href: "/careers" },
+        { name: "Blog", href: "/blog" },
+        { name: "Case Studies", href: "/case-studies" },
+        { name: "Partners", href: "/partners" }
+      ]
+    },
+    {
+      title: "Resources",
+      links: [
+        { name: "Documentation", href: "/docs" },
+        { name: "Help Center", href: "/help" },
+        { name: "Community", href: "/community" },
+        { name: "Webinars", href: "/webinars" },
+        { name: "White Papers", href: "/white-papers" },
+        { name: "Marketplace", href: "/marketplace" }
       ]
     }
   ];

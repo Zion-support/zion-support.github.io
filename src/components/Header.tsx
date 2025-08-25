@@ -58,18 +58,48 @@ export const Header: React.FC = () => {
       name: 'Services', 
       href: '#',
       dropdown: [
-        { name: 'Micro SAAS Services', href: '/micro-saas-services' },
-        { name: 'AI & Machine Learning', href: '/ai-services' },
-        { name: 'Cloud & DevOps', href: '/cloud-devops' },
-        { name: 'Digital Transformation', href: '/digital-transformation' },
-        { name: 'Enterprise Solutions', href: '/enterprise-solutions' },
-        { name: 'IT Onsite Services', href: '/it-onsite-services' },
+
+        { name: 'AI Solutions', href: '/ai-solutions', description: 'Advanced AI and machine learning services' },
+        { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems-platform', description: 'AI-powered business automation' },
+        { name: 'Quantum Technology', href: '/quantum-technology', description: 'Next-generation quantum computing' },
+        { name: 'Cybersecurity', href: '/cybersecurity', description: 'Comprehensive security solutions' },
+        { name: 'Cloud & DevOps', href: '/cloud-devops', description: 'Scalable cloud infrastructure' },
+        { name: 'Enterprise Solutions', href: '/enterprise-solutions', description: 'Large-scale business solutions' },
+        { name: '5G Solutions', href: '/5g-enterprise-solutions', description: '5G enterprise deployment' }
       ]
     },
-    { name: 'Marketplace', href: '/marketplace' },
-    { name: 'Talent', href: '/talent' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
+    { 
+      name: 'Solutions', 
+      href: '/solutions',
+      dropdown: [
+        { name: 'Healthcare', href: '/solutions/healthcare', description: 'AI-powered healthcare solutions' },
+        { name: 'Finance', href: '/solutions/finance', description: 'Financial technology innovations' },
+        { name: 'Manufacturing', href: '/solutions/manufacturing', description: 'Smart manufacturing systems' },
+        { name: 'Retail', href: '/solutions/retail', description: 'Digital retail transformation' }
+      ]
+    },
+    { 
+      name: 'Company', 
+      href: '/about',
+      dropdown: [
+        { name: 'About Us', href: '/about', description: 'Learn about our mission and values' },
+        { name: 'Our Team', href: '/team', description: 'Meet our leadership and experts' },
+        { name: 'Careers', href: '/careers', description: 'Join our growing team' },
+        { name: 'Partners', href: '/partners', description: 'Strategic partnerships' }
+      ]
+    },
+    { 
+      name: 'Resources', 
+      href: '/blog',
+      dropdown: [
+        { name: 'Blog', href: '/blog', description: 'Latest insights and updates' },
+        { name: 'Documentation', href: '/docs', description: 'Technical guides and APIs' },
+        { name: 'Help Center', href: '/help', description: 'Support and troubleshooting' },
+        { name: 'Community', href: '/community', description: 'Connect with peers' }
+      ]
+    },
+    { name: 'Contact', href: '/contact' }
+
   ];
 
   const isActive = (href: string) => {
