@@ -362,6 +362,8 @@
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s ease;
+  animation: cyber-glow 2s ease-in-out infinite;
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
 }
 
 .futuristic-btn::before {
@@ -380,8 +382,9 @@
 }
 
 .futuristic-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 255, 255, 0.3);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 255, 255, 0.5);
+  animation: none;
 }
 
 /* Holographic Effects */
@@ -591,5 +594,21 @@
   .neon-cyan, .neon-purple, .neon-pink, .neon-green, .neon-blue, .neon-orange, .neon-yellow, .neon-red {
     color: black;
     text-shadow: none;
+  }
+}
+
+/* Cyber Glow Animation */
+@keyframes cyber-glow {
+  0%, 100% {
+    box-shadow: 
+      0 0 20px rgba(0, 255, 255, 0.3),
+      0 0 40px rgba(0, 255, 255, 0.2),
+      0 0 60px rgba(0, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 
+      0 0 30px rgba(0, 255, 255, 0.5),
+      0 0 60px rgba(0, 255, 255, 0.3),
+      0 0 90px rgba(0, 255, 255, 0.2);
   }
 }
