@@ -28,6 +28,101 @@ const MicroSaasServices: React.FC = () => {
       }
     },
     {
+      id: 16,
+      name: "AI Content Optimizer",
+      category: "AI & Marketing",
+      pricing: "Subscription",
+      description: "AI-powered content optimization tool that analyzes and improves your marketing content for better engagement",
+      price: 45,
+      pricingModel: "monthly",
+      userLimit: "Up to 8 users",
+      features: ["AI content analysis", "SEO optimization", "Engagement scoring", "A/B testing suggestions"],
+      benefits: ["Higher engagement rates", "Better SEO rankings", "Content performance insights", "Time savings"],
+      targetAudience: ["Marketing teams", "Content creators", "Digital agencies", "E-commerce businesses"],
+      tags: ["AI", "Content Marketing", "SEO", "Analytics", "Optimization"],
+      contactInfo: {
+        phone: "+1 302 464 0950",
+        email: "kleber@ziontechgroup.com",
+        website: "https://ziontechgroup.com"
+      }
+    },
+    {
+      id: 17,
+      name: "Smart Inventory Manager",
+      category: "Inventory",
+      pricing: "Subscription",
+      description: "Intelligent inventory management with AI-powered demand forecasting and automated reordering",
+      price: 35,
+      pricingModel: "monthly",
+      userLimit: "Up to 20 users",
+      features: ["AI demand forecasting", "Automated reordering", "Real-time tracking", "Multi-location support"],
+      benefits: ["Reduced stockouts", "Lower carrying costs", "Improved cash flow", "Better planning"],
+      targetAudience: ["Retail stores", "E-commerce", "Manufacturing", "Distribution centers"],
+      tags: ["Inventory", "AI", "Forecasting", "Automation", "Supply Chain"],
+      contactInfo: {
+        phone: "+1 302 464 0950",
+        email: "kleber@ziontechgroup.com",
+        website: "https://ziontechgroup.com"
+      }
+    },
+    {
+      id: 18,
+      name: "Customer Success Hub",
+      category: "Customer Success",
+      pricing: "Freemium",
+      description: "Comprehensive customer success platform with automated onboarding and retention tracking",
+      price: 28,
+      pricingModel: "monthly",
+      userLimit: "Up to 15 users",
+      features: ["Automated onboarding", "Success tracking", "Churn prediction", "Customer health scoring"],
+      benefits: ["Improved retention", "Higher customer satisfaction", "Reduced churn", "Better insights"],
+      targetAudience: ["SaaS companies", "Subscription businesses", "Service providers", "B2B companies"],
+      tags: ["Customer Success", "Onboarding", "Retention", "Analytics", "Automation"],
+      contactInfo: {
+        phone: "+1 302 464 0950",
+        email: "kleber@ziontechgroup.com",
+        website: "https://ziontechgroup.com"
+      }
+    },
+    {
+      id: 19,
+      name: "Financial Analytics Pro",
+      category: "Finance",
+      pricing: "Subscription",
+      description: "Advanced financial analytics and reporting platform for small to medium businesses",
+      price: 55,
+      pricingModel: "monthly",
+      userLimit: "Up to 12 users",
+      features: ["Financial dashboards", "Cash flow analysis", "Budget tracking", "Forecasting models"],
+      benefits: ["Better financial decisions", "Improved cash flow", "Risk management", "Strategic planning"],
+      targetAudience: ["Small businesses", "Startups", "Consulting firms", "Service providers"],
+      tags: ["Finance", "Analytics", "Reporting", "Forecasting", "Cash Flow"],
+      contactInfo: {
+        phone: "+1 302 464 0950",
+        email: "kleber@ziontechgroup.com",
+        website: "https://ziontechgroup.com"
+      }
+    },
+    {
+      id: 20,
+      name: "HR Management Suite",
+      category: "Human Resources",
+      pricing: "Freemium",
+      description: "Complete HR management solution with employee onboarding, time tracking, and performance management",
+      price: 32,
+      pricingModel: "monthly",
+      userLimit: "Up to 50 employees",
+      features: ["Employee onboarding", "Time tracking", "Performance reviews", "Benefits management"],
+      benefits: ["Streamlined HR processes", "Better employee experience", "Compliance management", "Cost reduction"],
+      targetAudience: ["Growing companies", "Remote teams", "Small businesses", "Startups"],
+      tags: ["HR", "Employee Management", "Time Tracking", "Performance", "Compliance"],
+      contactInfo: {
+        phone: "+1 302 464 0950",
+        email: "kleber@ziontechgroup.com",
+        website: "https://ziontechgroup.com"
+      }
+    },
+    {
       id: 2,
       name: "InvoiceGenius",
       category: "Finance",
@@ -292,296 +387,10 @@ const MicroSaasServices: React.FC = () => {
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
       }
-    },
-    // NEW INNOVATIVE SERVICES ADDED
-    {
-      id: 16,
-      name: "AI-Powered HR Assistant",
-      category: "Human Resources",
-      pricing: "Freemium",
-      description: "Intelligent HR automation with AI-powered recruitment, onboarding, and employee management",
-      price: 42,
-      pricingModel: "monthly",
-      userLimit: "Up to 100 employees",
-      features: ["AI resume screening", "Automated onboarding", "Performance tracking", "Employee self-service"],
-      benefits: ["Faster hiring", "Reduced bias", "Improved retention", "HR efficiency"],
-      targetAudience: ["Growing companies", "HR departments", "Recruitment agencies", "Startups"],
-      tags: ["HR Automation", "AI Recruitment", "Employee Management", "Onboarding", "Performance"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
-    },
-    {
-      id: 17,
-      name: "SmartContract AI",
-      category: "Blockchain",
-      pricing: "Freemium",
-      description: "AI-powered smart contract development and blockchain automation for businesses",
-      price: 55,
-      pricingModel: "monthly",
-      userLimit: "Up to 10 developers",
-      features: ["Smart contract templates", "AI code generation", "Security auditing", "Deployment automation"],
-      benefits: ["Faster development", "Enhanced security", "Cost reduction", "Innovation enablement"],
-      targetAudience: ["Blockchain startups", "DeFi projects", "Enterprise blockchain", "Developers"],
-      tags: ["Blockchain", "Smart Contracts", "AI", "DeFi", "Web3"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
-    },
-    {
-      id: 18,
-      name: "IoT Fleet Manager",
-      category: "IoT",
-      pricing: "Freemium",
-      description: "Comprehensive IoT fleet management with real-time tracking and predictive maintenance",
-      price: 48,
-      pricingModel: "monthly",
-      userLimit: "Up to 50 vehicles",
-      features: ["Real-time tracking", "Predictive maintenance", "Fuel optimization", "Driver analytics"],
-      benefits: ["Cost reduction", "Safety improvement", "Efficiency gains", "Data insights"],
-      targetAudience: ["Transportation companies", "Delivery services", "Fleet operators", "Logistics"],
-      tags: ["IoT", "Fleet Management", "Predictive Maintenance", "GPS Tracking", "Analytics"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
-    },
-    {
-      id: 19,
-      name: "VoiceCommerce Pro",
-      category: "E-commerce",
-      pricing: "Freemium",
-      description: "Voice-activated e-commerce platform with AI-powered shopping assistants",
-      price: 38,
-      pricingModel: "monthly",
-      userLimit: "Up to 1000 products",
-      features: ["Voice search", "AI recommendations", "Multi-language support", "Analytics dashboard"],
-      benefits: ["Improved accessibility", "Higher conversion", "Better UX", "Competitive advantage"],
-      targetAudience: ["E-commerce stores", "Retail businesses", "Marketplaces", "Online sellers"],
-      tags: ["Voice Commerce", "AI", "E-commerce", "Accessibility", "Voice Search"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
-    },
-    {
-      id: 20,
-      name: "QuantumML Studio",
-      category: "Quantum Computing",
-      pricing: "Freemium",
-      description: "Quantum machine learning platform for advanced AI model training and optimization",
-      price: 75,
-      pricingModel: "monthly",
-      userLimit: "Up to 5 researchers",
-      features: ["Quantum algorithms", "ML model training", "Performance optimization", "Research tools"],
-      benefits: ["Faster training", "Better accuracy", "Innovation leadership", "Research advancement"],
-      targetAudience: ["Research institutions", "AI companies", "Pharmaceutical companies", "Financial services"],
-      tags: ["Quantum Computing", "Machine Learning", "AI", "Research", "Innovation"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
-    },
-    {
-      id: 21,
-      name: "AR Business Suite",
-      category: "Augmented Reality",
-      pricing: "Freemium",
-      description: "Complete AR solution for business presentations, training, and customer engagement",
-      price: 45,
-      pricingModel: "monthly",
-      userLimit: "Up to 20 users",
-      features: ["AR presentations", "Interactive training", "3D visualization", "Mobile AR apps"],
-      benefits: ["Enhanced engagement", "Better training", "Innovative marketing", "Competitive edge"],
-      targetAudience: ["Marketing agencies", "Training companies", "Real estate", "Manufacturing"],
-      tags: ["Augmented Reality", "AR", "3D Visualization", "Training", "Marketing"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
-    },
-    {
-      id: 22,
-      name: "EdgeAI Platform",
-      category: "Edge Computing",
-      pricing: "Freemium",
-      description: "Edge AI platform for real-time processing and decision making at the network edge",
-      price: 52,
-      pricingModel: "monthly",
-      userLimit: "Up to 100 edge devices",
-      features: ["Real-time processing", "Edge ML models", "Device management", "Performance monitoring"],
-      benefits: ["Lower latency", "Reduced bandwidth", "Privacy protection", "Cost efficiency"],
-      targetAudience: ["IoT companies", "Manufacturing", "Smart cities", "Healthcare"],
-      tags: ["Edge Computing", "AI", "IoT", "Real-time", "Machine Learning"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
-    },
-    {
-      id: 23,
-      name: "GreenTech Analytics",
-      category: "Sustainability",
-      pricing: "Freemium",
-      description: "Advanced sustainability analytics and ESG reporting for modern businesses",
-      price: 40,
-      pricingModel: "monthly",
-      userLimit: "Up to 30 users",
-      features: ["ESG reporting", "Carbon tracking", "Sustainability scoring", "Regulatory compliance"],
-      benefits: ["ESG compliance", "Investor attraction", "Brand reputation", "Cost savings"],
-      targetAudience: ["Public companies", "ESG investors", "Sustainability consultants", "Government"],
-      tags: ["ESG", "Sustainability", "Carbon Tracking", "Compliance", "Reporting"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
-    },
-    {
-      id: 24,
-      name: "NeuroTech Interface",
-      category: "Neural Interfaces",
-      pricing: "Freemium",
-      description: "Brain-computer interface platform for accessibility and human-computer interaction",
-      price: 65,
-      pricingModel: "monthly",
-      userLimit: "Up to 10 users",
-      features: ["EEG monitoring", "Brain-computer control", "Accessibility tools", "Research platform"],
-      benefits: ["Accessibility improvement", "Innovation leadership", "Research advancement", "Human enhancement"],
-      targetAudience: ["Healthcare providers", "Research institutions", "Accessibility companies", "Gaming"],
-      tags: ["Neural Interfaces", "BCI", "Accessibility", "Healthcare", "Research"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
-    },
-    {
-      id: 25,
-      name: "BioTech Simulator",
-      category: "Biotechnology",
-      pricing: "Freemium",
-      description: "AI-powered biotechnology simulation and drug discovery platform",
-      price: 80,
-      pricingModel: "monthly",
-      userLimit: "Up to 15 researchers",
-      features: ["Molecular modeling", "Drug discovery", "Clinical trial simulation", "Bioinformatics tools"],
-      benefits: ["Faster discovery", "Cost reduction", "Risk mitigation", "Innovation acceleration"],
-      targetAudience: ["Pharmaceutical companies", "Research institutions", "Biotech startups", "Universities"],
-      tags: ["Biotechnology", "Drug Discovery", "AI", "Molecular Modeling", "Bioinformatics"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
-    },
-    {
-      id: 26,
-      name: "SpaceTech Analytics",
-      category: "Space Technology",
-      pricing: "Freemium",
-      description: "Satellite data analytics and space technology solutions for Earth observation",
-      price: 70,
-      pricingModel: "monthly",
-      userLimit: "Up to 20 users",
-      features: ["Satellite imagery", "Climate monitoring", "Agricultural insights", "Infrastructure monitoring"],
-      benefits: ["Environmental insights", "Agricultural optimization", "Infrastructure planning", "Climate action"],
-      targetAudience: ["Agriculture companies", "Environmental agencies", "Infrastructure planners", "Research"],
-      tags: ["Space Technology", "Satellite Data", "Climate Monitoring", "Agriculture", "Infrastructure"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
-    },
-    {
-      id: 27,
-      name: "CyberDefense AI",
-      category: "Cybersecurity",
-      pricing: "Freemium",
-      description: "AI-powered cybersecurity platform with threat detection and automated response",
-      price: 58,
-      pricingModel: "monthly",
-      userLimit: "Up to 25 users",
-      features: ["Threat detection", "Automated response", "Vulnerability scanning", "Incident management"],
-      benefits: ["Enhanced security", "Faster response", "Reduced risk", "Cost efficiency"],
-      targetAudience: ["Financial institutions", "Healthcare", "Government", "E-commerce"],
-      tags: ["Cybersecurity", "AI", "Threat Detection", "Automation", "Incident Response"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
-    },
-    {
-      id: 28,
-      name: "FinTech Compliance",
-      category: "Financial Technology",
-      pricing: "Freemium",
-      description: "Regulatory compliance and risk management platform for financial services",
-      price: 45,
-      pricingModel: "monthly",
-      userLimit: "Up to 15 users",
-      features: ["Regulatory monitoring", "Risk assessment", "Compliance reporting", "Audit trails"],
-      benefits: ["Regulatory compliance", "Risk mitigation", "Audit readiness", "Cost reduction"],
-      targetAudience: ["Banks", "Credit unions", "Fintech startups", "Investment firms"],
-      tags: ["FinTech", "Compliance", "Risk Management", "Regulations", "Auditing"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
-    },
-    {
-      id: 29,
-      name: "SmartCity Platform",
-      category: "Smart Cities",
-      pricing: "Freemium",
-      description: "Comprehensive smart city management platform for urban infrastructure and services",
-      price: 60,
-      pricingModel: "monthly",
-      userLimit: "Up to 50 city departments",
-      features: ["Traffic management", "Energy optimization", "Waste management", "Public safety"],
-      benefits: ["Efficiency improvement", "Cost reduction", "Quality of life", "Sustainability"],
-      targetAudience: ["City governments", "Municipalities", "Urban planners", "Infrastructure companies"],
-      tags: ["Smart Cities", "IoT", "Urban Planning", "Infrastructure", "Sustainability"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
-    },
-    {
-      id: 30,
-      name: "Metaverse Business",
-      category: "Metaverse",
-      pricing: "Freemium",
-      description: "Complete metaverse business platform for virtual commerce and experiences",
-      price: 55,
-      pricingModel: "monthly",
-      userLimit: "Up to 1000 virtual visitors",
-      features: ["Virtual storefronts", "3D product showcases", "Virtual events", "Digital asset management"],
-      benefits: ["New revenue streams", "Global reach", "Innovation leadership", "Customer engagement"],
-      targetAudience: ["Retail businesses", "Event organizers", "Real estate", "Entertainment"],
-      tags: ["Metaverse", "Virtual Reality", "Digital Commerce", "3D", "Virtual Events"],
-      contactInfo: {
-        phone: "+1 302 464 0950",
-        email: "kleber@ziontechgroup.com",
-        website: "https://ziontechgroup.com"
-      }
     }
   ];
 
-  const categories = ['all', 'Productivity', 'Finance', 'Marketing', 'CRM', 'Analytics', 'Scheduling', 'Content', 'Security', 'Media', 'Education', 'Sustainability', 'Legal', 'Healthcare', 'Events', 'Inventory', 'Human Resources', 'Blockchain', 'IoT', 'E-commerce', 'Quantum Computing', 'Augmented Reality', 'Edge Computing', 'Neural Interfaces', 'Biotechnology', 'Space Technology', 'Cybersecurity', 'Financial Technology', 'Smart Cities', 'Metaverse'];
+  const categories = ['all', 'Productivity', 'Finance', 'Marketing', 'CRM', 'Analytics', 'Scheduling', 'Content', 'Security', 'Media', 'Education', 'Sustainability', 'Legal', 'Healthcare', 'Events', 'Inventory', 'AI & Marketing', 'Customer Success', 'Human Resources'];
   const pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];
 
   const filteredServices = microSaasServices.filter(service => {
@@ -634,16 +443,35 @@ const MicroSaasServices: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
-      <div className="container mx-auto px-4 py-8">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-br from-green-900/20 via-blue-900/20 to-purple-900/20 animate-pulse"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(34,197,94,0.1),transparent_50%)] animate-float"></div>
+        <div className="absolute top-20 left-10 w-32 h-32 bg-green-500/10 rounded-full blur-xl animate-float"></div>
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-blue-500/10 rounded-full blur-xl animate-float" style={{animationDelay: '2s'}}></div>
+      </div>
+      
+      <div className="container mx-auto px-4 py-8 relative z-10">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-green-400 via-blue-400 to-green-600 bg-clip-text text-transparent mb-4">
+          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-green-400 via-blue-400 to-green-600 bg-clip-text text-transparent mb-4 animate-neon-pulse">
             Micro SAAS Services
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-fade-in">
             Affordable, focused software solutions designed specifically for small businesses, startups, and entrepreneurs
           </p>
+          <div className="mt-6 flex justify-center space-x-4">
+            <div className="px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-lg text-green-300 text-sm">
+              <span className="animate-pulse">🚀</span> 20+ Solutions
+            </div>
+            <div className="px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-lg text-blue-300 text-sm">
+              <span className="animate-pulse">💰</span> Starting at $15/month
+            </div>
+            <div className="px-4 py-2 bg-purple-500/20 border border-purple-500/30 rounded-lg text-purple-300 text-sm">
+              <span className="animate-pulse">⚡</span> Instant Setup
+            </div>
+          </div>
         </div>
 
         {/* Search and Filters */}
@@ -688,8 +516,12 @@ const MicroSaasServices: React.FC = () => {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredServices.map((service) => (
-            <div key={service.id} className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/20">
+          {filteredServices.map((service, index) => (
+            <div 
+              key={service.id} 
+              className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-6 hover:bg-white/10 transition-all duration-500 hover:shadow-2xl hover:shadow-green-500/20 group hover:scale-105 hover:-translate-y-2"
+              style={{animationDelay: `${index * 100}ms`}}
+            >
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="text-green-400">
@@ -757,76 +589,51 @@ const MicroSaasServices: React.FC = () => {
           ))}
         </div>
 
-        {/* Why Choose Zion Tech Group */}
-        <div className="mt-16 mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Why Choose Zion Tech Group?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Proven ROI</h3>
-              <p className="text-gray-300">Our micro SAAS solutions deliver 250-400% ROI within 3-8 months, with measurable business impact</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Rapid Implementation</h3>
-              <p className="text-gray-300">Get up and running in 1-4 weeks with our streamlined onboarding and setup process</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Enterprise Security</h3>
-              <p className="text-gray-300">Bank-level security with SOC 2 compliance, GDPR readiness, and industry-standard encryption</p>
-            </div>
-          </div>
-        </div>
-
         {/* Contact Information */}
-        <div className="text-center">
-          <div className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-8">
-            <h2 className="text-2xl font-bold text-white mb-4">Ready to Scale Your Business?</h2>
-            <p className="text-gray-300 mb-6">
-              Our micro SAAS solutions are designed to grow with your business needs and provide measurable ROI
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center mb-8">
-              <div>
-                <Phone className="w-8 h-8 text-green-400 mx-auto mb-2" />
-                <p className="text-white font-semibold">Phone</p>
-                <p className="text-gray-300">+1 302 464 0950</p>
-              </div>
-              <div>
-                <Mail className="w-8 h-8 text-green-400 mx-auto mb-2" />
-                <p className="text-white font-semibold">Email</p>
-                <p className="text-gray-300">kleber@ziontechgroup.com</p>
-              </div>
-              <div>
-                <MapPin className="w-8 h-8 text-green-400 mx-auto mb-2" />
-                <p className="text-white font-semibold">Address</p>
-                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
-              </div>
-            </div>
+        <div className="mt-16 text-center">
+          <div className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-8 relative overflow-hidden">
+            {/* Background decoration */}
+            <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 via-blue-500/5 to-purple-500/5"></div>
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-400 via-blue-400 to-purple-400"></div>
             
-            <div className="flex flex-wrap justify-center gap-4">
-              <a 
-                href="https://ziontechgroup.com"
-                className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Visit Our Website
-              </a>
-              <a 
-                href="/request-quote"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-              >
-                Request Custom Quote
-              </a>
+            <div className="relative z-10">
+              <h2 className="text-3xl font-bold text-white mb-4 animate-neon-pulse">Ready to Scale Your Business?</h2>
+              <p className="text-gray-300 mb-8 text-lg">
+                Our micro SAAS solutions are designed to grow with your business needs
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div className="group">
+                  <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-500/30 transition-all duration-300 group-hover:scale-110">
+                    <Phone className="w-8 h-8 text-green-400" />
+                  </div>
+                  <p className="text-white font-semibold text-lg mb-2">Phone</p>
+                  <p className="text-gray-300 group-hover:text-green-300 transition-colors">{microSaasServices[0].contactInfo.phone}</p>
+                </div>
+                <div className="group">
+                  <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500/30 transition-all duration-300 group-hover:scale-110">
+                    <Mail className="w-8 h-8 text-blue-400" />
+                  </div>
+                  <p className="text-white font-semibold text-lg mb-2">Email</p>
+                  <p className="text-gray-300 group-hover:text-blue-300 transition-colors">{microSaasServices[0].contactInfo.email}</p>
+                </div>
+                <div className="group">
+                  <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-500/30 transition-all duration-300 group-hover:scale-110">
+                    <MapPin className="w-8 h-8 text-purple-400" />
+                  </div>
+                  <p className="text-white font-semibold text-lg mb-2">Address</p>
+                  <p className="text-gray-300 group-hover:text-purple-300 transition-colors">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                </div>
+              </div>
+              
+              <div className="mt-8 pt-8 border-t border-gray-600">
+                <a 
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/25"
+                >
+                  <Mail className="w-5 h-5 mr-2" />
+                  Get Started Today
+                </a>
+              </div>
             </div>
           </div>
         </div>
