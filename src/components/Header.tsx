@@ -98,8 +98,13 @@ export function Header() {
       description: 'Intelligent solutions powered by artificial intelligence',
       services: [
         { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', description: 'Advanced autonomous AI systems' },
+        { name: 'AI Autonomous Systems Platform', path: '/ai-autonomous-systems-platform', description: 'Complete platform for autonomous systems' },
+        { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', description: 'AI-powered business management' },
+        { name: 'AI Autonomous Business Platform', path: '/ai-autonomous-business-platform', description: 'Complete autonomous business platform' },
+        { name: 'AI Autonomous Research', path: '/ai-autonomous-research', description: 'AI-powered research automation' },
         { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', description: 'AI-powered research automation' },
-        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', description: 'Advanced analytics and insights' },
+        { name: 'AI Business Intelligence', path: '/ai-business-intelligence', description: 'Advanced analytics and insights' },
+        { name: 'AI Autonomous Code Review', path: '/ai-autonomous-code-review', description: 'AI-powered code analysis' },
         { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', description: 'Smart marketing optimization' },
         { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', description: 'Intelligent talent management' },
         { name: 'AI Legal Tech', path: '/services/ai-legal-tech', description: 'Automated legal processes' },
@@ -113,7 +118,9 @@ export function Header() {
       services: [
         { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', description: 'Quantum-powered neural networks' },
         { name: 'Quantum Computing', path: '/services/quantum-technology', description: 'Quantum computing platforms' },
-        { name: 'Quantum-Safe Security', path: '/services/quantum-security', description: 'Future-proof quantum security' }
+        { name: 'Quantum-Safe Security', path: '/services/quantum-security', description: 'Future-proof quantum security' },
+        { name: 'Quantum Cloud Infrastructure', path: '/quantum-cloud-infrastructure', description: 'Quantum-powered cloud solutions' },
+        { name: 'Quantum Financial Trading', path: '/quantum-financial-trading', description: 'Quantum algorithms for trading' }
       ]
     },
     {
@@ -123,7 +130,9 @@ export function Header() {
       services: [
         { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', description: 'Self-operating business systems' },
         { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', description: 'Intelligent IT asset management' },
-        { name: 'Business Intelligence', path: '/services/ai-business-intelligence', description: 'Advanced business analytics' }
+        { name: 'Business Intelligence', path: '/ai-business-intelligence', description: 'Advanced business analytics' },
+        { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', description: 'AI-powered business management' },
+        { name: 'AI Autonomous Business Platform', path: '/ai-autonomous-business-platform', description: 'Complete autonomous business platform' }
       ]
     },
     {

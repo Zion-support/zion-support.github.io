@@ -46,6 +46,15 @@ const FiveGEnterpriseSolutions = lazy(() => import('./pages/5GEnterpriseSolution
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 
+// Additional missing service pages
+const AIAutonomousBusinessManager = lazy(() => import('./pages/services/AIAutonomousBusinessManager'));
+const AIAutonomousBusinessPlatform = lazy(() => import('./pages/services/AIAutonomousBusinessPlatform'));
+const AIAutonomousResearch = lazy(() => import('./pages/services/AIAutonomousResearch'));
+const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
+const AIAutonomousSystemsPlatform = lazy(() => import('./pages/services/AIAutonomousSystemsPlatform'));
+const QuantumCloudInfrastructure = lazy(() => import('./pages/QuantumCloudInfrastructure'));
+const AIAutonomousCodeReview = lazy(() => import('./pages/services/AIAutonomousCodeReview'));
+
 // Company information pages
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
@@ -134,6 +143,15 @@ const App = () => {
                       <Route path="/5g-enterprise-solutions" element={<FiveGEnterpriseSolutions />} />
                       <Route path="/case-studies" element={<CaseStudies />} />
                       <Route path="/help" element={<HelpCenter />} />
+                      
+                      {/* Additional missing service routes */}
+                      <Route path="/ai-autonomous-business-manager" element={<AIAutonomousBusinessManager />} />
+                      <Route path="/ai-autonomous-business-platform" element={<AIAutonomousBusinessPlatform />} />
+                      <Route path="/ai-autonomous-research" element={<AIAutonomousResearch />} />
+                      <Route path="/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                      <Route path="/ai-autonomous-systems-platform" element={<AIAutonomousSystemsPlatform />} />
+                      <Route path="/quantum-cloud-infrastructure" element={<QuantumCloudInfrastructure />} />
+                      <Route path="/ai-autonomous-code-review" element={<AIAutonomousCodeReview />} />
                       
                       {/* Company Routes */}
                       <Route path="/about" element={<About />} />
