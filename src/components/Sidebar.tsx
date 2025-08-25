@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Atom, Server, Database, Package, Building, Rocket } from 'lucide-react';
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 interface SidebarProps {
@@ -23,7 +23,6 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         { name: 'Home', path: '/', icon: Home },
         { name: 'Services', path: '/services', icon: Briefcase },
         { name: 'Solutions', path: '/solutions/enterprise', icon: Briefcase },
-        { name: 'Pricing', path: '/pricing', icon: Briefcase },
         { name: 'About', path: '/about', icon: Users },
         { name: 'Contact', path: '/contact', icon: Phone }
       ]
@@ -31,56 +30,31 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     {
       title: 'AI & Autonomous Systems',
       items: [
-        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
-        { name: 'AI Services', path: '/ai-services', icon: Brain },
-        { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
-        { name: 'AI Matcher', path: '/match', icon: Brain }
+        { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
+        { name: 'AI Agent Orchestrator', path: '/ai-agent-orchestrator', icon: Briefcase },
+        { name: 'AI Analytics Copilot', path: '/ai-analytics-copilot', icon: Briefcase },
+        { name: 'Autonomous Business Operations', path: '/autonomous-business-operations-platform', icon: Briefcase },
+        { name: 'AI-Powered IT Asset Management', path: '/ai-powered-it-asset-management', icon: Briefcase }
       ]
     },
     {
-      title: 'Quantum & Advanced Tech',
+      title: 'Quantum & Emerging Tech',
       items: [
-        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Atom },
-        { name: 'Innovative New Services', path: '/services/innovative-new-services', icon: Rocket },
-        { name: 'Emerging Technology', path: '/emerging-tech', icon: Globe }
-      ]
-    },
-    {
-      title: 'Infrastructure & Security',
-      items: [
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Server },
-        { name: 'Specialized IT Infrastructure', path: '/services/specialized-it-infrastructure', icon: Database },
+        { name: 'Quantum Neural Network Platform', path: '/quantum-neural-network-platform', icon: Globe },
+        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
         { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-        { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Globe }
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Briefcase },
+        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe }
       ]
     },
     {
-      title: 'Solutions & Services',
-      items: [
-        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Package },
-        { name: 'Industry Solutions', path: '/services/industry-solutions', icon: Building },
-        { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Briefcase },
-        { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Users }
-      ]
-    },
-    {
-      title: 'Company',
+      title: 'Company & Support',
       items: [
         { name: 'About Us', path: '/about', icon: Users },
         { name: 'Our Team', path: '/team', icon: Users },
-        { name: 'Careers', path: '/careers', icon: Briefcase },
-        { name: 'Partners', path: '/partners', icon: Handshake },
-        { name: 'Blog', path: '/blog', icon: Globe }
-      ]
-    },
-    {
-      title: 'Support',
-      items: [
-        { name: 'Help Center', path: '/help-center', icon: Users },
-        { name: 'Case Studies', path: '/case-studies', icon: Globe },
-        { name: 'News', path: '/news', icon: Globe },
-        { name: 'Webinars', path: '/webinars', icon: Globe },
-        { name: 'White Papers', path: '/white-papers', icon: Globe }
+        { name: 'Help Center', path: '/help', icon: Users },
+        { name: 'Documentation', path: '/docs', icon: Globe },
+        { name: 'Contact Support', path: '/support', icon: Phone }
       ]
     }
   ];
@@ -92,7 +66,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: 'https://www.linkedin.com/company/zion-tech-group', label: 'LinkedIn' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Facebook, href: 'https://www.facebook.com/ziontechgroup', label: 'Facebook' },
     { icon: Instagram, href: 'https://www.instagram.com/ziontechgroup', label: 'Instagram' }
@@ -124,113 +98,182 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
 
   return (
     <>
+      {/* Overlay */}
       <AnimatePresence>
         {isOpen && (
-          <>
-            {/* Overlay */}
-            <motion.div
-              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
-              variants={overlayVariants}
-              initial="closed"
-              animate="open"
-              exit="closed"
-              onClick={onClose}
-            />
+          <motion.div
+            variants={overlayVariants}
+            initial="closed"
+            animate="open"
+            exit="closed"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
+            onClick={onClose}
+          />
+        )}
+      </AnimatePresence>
 
-            {/* Sidebar */}
-            <motion.aside
-              className="fixed left-0 top-0 h-full w-80 bg-gradient-to-b from-gray-900 via-black to-blue-900 text-white z-50 shadow-2xl border-r border-cyan-500/30"
-              variants={sidebarVariants}
-              initial="closed"
-              animate="open"
-              exit="closed"
-            >
+      {/* Sidebar */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            variants={sidebarVariants}
+            initial="closed"
+            animate="open"
+            exit="closed"
+            className="fixed left-0 top-0 h-full w-80 max-w-[90vw] z-50 overflow-hidden"
+          >
+            {/* Futuristic Background */}
+            <div className="absolute inset-0 futuristic-bg opacity-80"></div>
+            <div className="absolute inset-0 cyber-grid-bg opacity-30"></div>
+            
+            {/* Neural Network Lines */}
+            <div className="absolute inset-0 pointer-events-none">
+              <div className="neural-line" style={{ top: '20%', width: '60%', left: '20%', animationDelay: '0s' }}></div>
+              <div className="neural-line" style={{ top: '40%', width: '40%', left: '10%', animationDelay: '1s' }}></div>
+              <div className="neural-line" style={{ top: '60%', width: '70%', left: '15%', animationDelay: '2s' }}></div>
+              <div className="neural-line" style={{ top: '80%', width: '50%', left: '25%', animationDelay: '3s' }}></div>
+            </div>
+
+            {/* Floating Quantum Elements */}
+            <div className="absolute inset-0 pointer-events-none">
+              <div className="quantum-particle" style={{ top: '15%', left: '80%', animationDelay: '0s' }}></div>
+              <div className="quantum-particle" style={{ top: '35%', left: '85%', animationDelay: '1s' }}></div>
+              <div className="quantum-particle" style={{ top: '55%', left: '90%', animationDelay: '2s' }}></div>
+              <div className="quantum-particle" style={{ top: '75%', left: '88%', animationDelay: '3s' }}></div>
+            </div>
+
+            <div className="relative h-full flex flex-col">
               {/* Header */}
-              <div className="flex items-center justify-between p-6 border-b border-gray-700/50">
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center text-white font-bold">
-                    Z
+              <div className="flex items-center justify-between p-6 border-b border-zion-cyan/30">
+                <div className="flex items-center gap-3">
+                  <div className="relative">
+                    <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center animate-quantum-float">
+                      <span className="text-white font-bold text-xl">Z</span>
+                    </div>
+                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-zion-cyan rounded-full animate-ping"></div>
                   </div>
-                  <span className="text-lg font-semibold text-cyan-400">Zion Tech Group</span>
+                  <div>
+                    <h2 className="text-xl font-bold neon-text">Zion Tech</h2>
+                    <p className="text-sm text-zion-slate-light">Navigation</p>
+                  </div>
                 </div>
                 <button
                   onClick={onClose}
-                  className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800/50 transition-all duration-300"
+                  className="p-2 futuristic-card hover:bg-white/20 rounded-lg transition-colors group"
                 >
-                  <X className="w-5 h-5" />
+                  <X className="w-5 h-5 text-zion-slate-light group-hover:neon-text transition-colors" />
                 </button>
               </div>
 
-              {/* Navigation */}
-              <div className="flex-1 overflow-y-auto py-6">
-                <nav className="space-y-8">
-                  {navigationItems.map((section, index) => (
-                    <div key={index} className="px-6">
-                      <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider mb-3">
-                        {section.title}
-                      </h3>
-                      <ul className="space-y-2">
-                        {section.items.map((item, itemIndex) => (
-                          <li key={itemIndex}>
-                            <Link
-                              to={item.path}
-                              className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all duration-300 ${
-                                location.pathname === item.path
-                                  ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
-                                  : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
-                              }`}
-                            >
-                              <item.icon className="w-4 h-4" />
-                              <span>{item.name}</span>
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
+              {/* Navigation Content */}
+              <div className="flex-1 overflow-y-auto p-6 space-y-6">
+                {/* Main Navigation */}
+                {navigationItems.map((section) => (
+                  <div key={section.title} className="space-y-3">
+                    <h3 className="text-sm font-semibold text-zion-cyan uppercase tracking-wider neon-text">
+                      {section.title}
+                    </h3>
+                    <div className="space-y-1">
+                      {section.items.map((item) => {
+                        const Icon = item.icon;
+                        const isActive = location.pathname === item.path;
+                        
+                        return (
+                          <Link
+                            key={item.name}
+                            to={item.path}
+                            className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 group ${
+                              isActive
+                                ? 'quantum-button shadow-lg shadow-zion-cyan/30'
+                                : 'futuristic-card text-zion-slate-light hover:bg-white/20 hover:neon-text'
+                            }`}
+                          >
+                            <Icon className={`w-4 h-4 ${
+                              isActive ? 'text-white' : 'text-zion-cyan group-hover:neon-text'
+                            }`} />
+                            <span className="flex-1">{item.name}</span>
+                            {isActive && (
+                              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                            )}
+                          </Link>
+                        );
+                      })}
                     </div>
-                  ))}
-                </nav>
+                  </div>
+                ))}
+
+                {/* Quick Actions */}
+                <div className="space-y-3">
+                  <h3 className="text-sm font-semibold text-zion-cyan uppercase tracking-wider neon-text">
+                    Quick Actions
+                  </h3>
+                  <div className="space-y-2">
+                    <button className="w-full quantum-button py-3 px-4 rounded-lg font-medium transform hover:scale-105 transition-transform">
+                      Get Free Quote
+                    </button>
+                    <button className="w-full futuristic-card border border-zion-cyan/30 text-zion-cyan py-3 px-4 rounded-lg font-medium hover:bg-zion-cyan/10 transition-colors">
+                      Schedule Demo
+                    </button>
+                  </div>
+                </div>
               </div>
 
               {/* Footer */}
-              <div className="border-t border-gray-700/50 p-6 space-y-6">
+              <div className="border-t border-zion-cyan/30 p-6 space-y-4">
                 {/* Contact Info */}
                 <div className="space-y-3">
-                  <h4 className="text-sm font-semibold text-cyan-400">Contact Information</h4>
+                  <h4 className="text-sm font-semibold text-zion-cyan neon-text">Contact Info</h4>
                   <div className="space-y-2">
-                    {contactInfo.map((contact, index) => (
-                      <a
-                        key={index}
-                        href={contact.href}
-                        className="flex items-center space-x-2 text-xs text-gray-300 hover:text-cyan-400 transition-colors"
-                      >
-                        <contact.icon className="w-3 h-3" />
-                        <span>{contact.text}</span>
-                      </a>
-                    ))}
+                    {contactInfo.map((contact, index) => {
+                      const Icon = contact.icon;
+                      return (
+                        <a
+                          key={index}
+                          href={contact.href}
+                          className="flex items-center gap-3 text-sm text-zion-slate-light hover:neon-text transition-colors group"
+                        >
+                          <Icon className="w-4 h-4 text-zion-cyan group-hover:neon-text" />
+                          <span className="flex-1">{contact.text}</span>
+                        </a>
+                      );
+                    })}
                   </div>
                 </div>
 
                 {/* Social Links */}
                 <div className="space-y-3">
-                  <h4 className="text-sm font-semibold text-cyan-400">Follow Us</h4>
-                  <div className="flex space-x-3">
-                    {socialLinks.map((social, index) => (
-                      <a
-                        key={index}
-                        href={social.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-8 h-8 bg-gray-800/50 rounded-lg flex items-center justify-center text-sm hover:bg-cyan-500/20 hover:text-cyan-400 transition-all duration-300"
-                        aria-label={`Follow us on ${social.label}`}
-                      >
-                        <social.icon className="w-4 h-4" />
-                      </a>
-                    ))}
+                  <h4 className="text-sm font-semibold text-zion-cyan neon-text">Follow Us</h4>
+                  <div className="flex gap-3">
+                    {socialLinks.map((social, index) => {
+                      const Icon = social.icon;
+                      return (
+                        <a
+                          key={index}
+                          href={social.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-2 futuristic-card hover:bg-white/20 rounded-lg transition-colors group"
+                          aria-label={social.label}
+                        >
+                          <Icon className="w-4 h-4 text-zion-slate-light group-hover:neon-text transition-colors" />
+                        </a>
+                      );
+                    })}
                   </div>
                 </div>
+
+                {/* Company Info */}
+                <div className="text-center pt-4 border-t border-zion-cyan/20">
+                  <p className="text-xs text-zion-slate-light">
+                    © 2024 Zion Tech Group
+                  </p>
+                  <p className="text-xs text-zion-slate-light mt-1">
+                    Transforming Business with AI & Tech
+                  </p>
+                </div>
               </div>
-            </motion.aside>
-          </>
+            </div>
+          </motion.div>
         )}
       </AnimatePresence>
     </>

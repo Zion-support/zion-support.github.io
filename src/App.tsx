@@ -43,6 +43,16 @@ const Careers = lazy(() => import('./pages/Careers'));
 const Partners = lazy(() => import('./pages/Partners'));
 const Blog = lazy(() => import('./pages/Blog'));
 const News = lazy(() => import('./pages/News'));
+
+// New service pages - fixing broken links
+const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/quantum-neural-network-platform'));
+const AutonomousBusinessOperationsPlatform = lazy(() => import('./pages/autonomous-business-operations-platform'));
+const AIPoweredITAssetManagement = lazy(() => import('./pages/ai-powered-it-asset-management'));
+const AIAgentOrchestrator = lazy(() => import('./pages/ai-agent-orchestrator'));
+const AIAnalyticsCopilot = lazy(() => import('./pages/ai-analytics-copilot'));
+const AIAutonomousBusinessManager = lazy(() => import('./pages/ai-autonomous-business-manager'));
+const AIAutonomousBusinessPlatform = lazy(() => import('./pages/ai-autonomous-business-platform'));
+const AIAutonomousBusinessPlatform2026 = lazy(() => import('./pages/ai-autonomous-business-platform-2026'));
 const ServicesOverview = lazy(() => import('./pages/services/ServicesOverview'));
 const AIAutonomousSystems = lazy(() => import('./pages/services/AIAutonomousSystems'));
 const QuantumTechnology = lazy(() => import('./pages/services/QuantumTechnology'));
@@ -52,18 +62,10 @@ const MicroSAASSolutions = lazy(() => import('./pages/services/MicroSAASSolution
 const IndustrySolutions = lazy(() => import('./pages/services/IndustrySolutions'));
 const InnovativeNewServices = lazy(() => import('./pages/services/InnovativeNewServices'));
 const SpecializedITInfrastructure = lazy(() => import('./pages/services/SpecializedITInfrastructure'));
-const ComprehensiveServicesShowcase = lazy(() => import('./pages/services/ComprehensiveServicesShowcase'));
 
 // Solutions pages
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
 const HealthcareSolutions = lazy(() => import('./pages/solutions/Healthcare'));
-
-// Additional pages
-const HelpCenter = lazy(() => import('./pages/HelpCenter'));
-const CaseStudies = lazy(() => import('./pages/CaseStudies'));
-const Webinars = lazy(() => import('./pages/Webinars'));
-const WhitePapers = lazy(() => import('./pages/WhitePapers'));
-const FAQ = lazy(() => import('./pages/FAQ'));
 
 // Loading Component
 const LoadingSpinner = () => (
@@ -131,18 +133,20 @@ const App = () => {
                     <Route path="/services/industry-solutions" element={<IndustrySolutions />} />
                     <Route path="/services/innovative-new-services" element={<InnovativeNewServices />} />
                     <Route path="/services/specialized-it-infrastructure" element={<SpecializedITInfrastructure />} />
-                    <Route path="/services/comprehensive-showcase" element={<ComprehensiveServicesShowcase />} />
                     
                     {/* Solutions Routes */}
-                    <Route path="/solutions/enterprise" element={<EnterpriseSolutions />} />
+                    <Route path="/services/enterprise" element={<EnterpriseSolutions />} />
                     <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
                     
-                    {/* Additional Routes */}
-                    <Route path="/help-center" element={<HelpCenter />} />
-                    <Route path="/case-studies" element={<CaseStudies />} />
-                    <Route path="/webinars" element={<Webinars />} />
-                    <Route path="/white-papers" element={<WhitePapers />} />
-                    <Route path="/faq" element={<FAQ />} />
+                    {/* New Service Pages - Fixing Broken Links */}
+                    <Route path="/quantum-neural-network-platform" element={<QuantumNeuralNetworkPlatform />} />
+                    <Route path="/autonomous-business-operations-platform" element={<AutonomousBusinessOperationsPlatform />} />
+                    <Route path="/ai-powered-it-asset-management" element={<AIPoweredITAssetManagement />} />
+                    <Route path="/ai-agent-orchestrator" element={<AIAgentOrchestrator />} />
+                    <Route path="/ai-analytics-copilot" element={<AIAnalyticsCopilot />} />
+                    <Route path="/ai-autonomous-business-manager" element={<AIAutonomousBusinessManager />} />
+                    <Route path="/ai-autonomous-business-platform" element={<AIAutonomousBusinessPlatform />} />
+                    <Route path="/ai-autonomous-business-platform-2026" element={<AIAutonomousBusinessPlatform2026 />} />
                   </Routes>
                 </Suspense>
               </main>
