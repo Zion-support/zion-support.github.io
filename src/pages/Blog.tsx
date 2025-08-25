@@ -45,6 +45,7 @@ export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedTag, setSelectedTag] = useState('all');
 
+<<<<<<< HEAD
   const categories = [
     { id: 'all', name: 'All Posts', icon: BookOpen, count: 25 },
     { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain, count: 8 },
@@ -184,6 +185,10 @@ import {
 
 export default function Blog() {
   const blogPosts = [
+=======
+export default function Blog() {
+  const [posts, setPosts] = useState<BlogPost[]>([
+>>>>>>> origin/cursor/website-audit-and-enhancement-bc98
     {
       id: 1,
 <<<<<<< HEAD

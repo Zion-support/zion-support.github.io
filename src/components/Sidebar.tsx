@@ -247,6 +247,7 @@ export default function Sidebar() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Brain },
         { name: 'AI Autonomous Business Platform', path: '/ai-autonomous-business-platform', icon: Brain },
         { name: 'AI Autonomous Systems Platform', path: '/ai-autonomous-systems-platform', icon: Brain },
@@ -402,6 +403,14 @@ export default function Sidebar() {
         { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Globe },
         { name: 'Digital Transformation', path: '/digital-transformation', icon: Globe }
 >>>>>>> origin/cursor/website-audit-and-enhancement-74a8
+=======
+        { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
+        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Shield },
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Globe },
+        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
+        { name: 'Industry Solutions', path: '/services/industry-solutions', icon: Briefcase }
+>>>>>>> origin/cursor/website-audit-and-enhancement-bc98
       ]
     },
     {
@@ -882,6 +891,7 @@ export default function Sidebar() {
 =======
         { name: 'Our Mission', path: '/mission', icon: Target },
         { name: 'Our Team', path: '/team', icon: Users },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         { name: 'Careers', path: '/careers', icon: Briefcase },
@@ -1835,6 +1845,23 @@ export default function Sidebar() {
         { name: 'FAQ', path: '/faq', icon: Users },
         { name: 'Sitemap', path: '/sitemap', icon: Globe }
 >>>>>>> origin/cursor/website-audit-and-enhancement-74a8
+=======
+        { name: 'Leadership', path: '/leadership', icon: Users },
+        { name: 'Careers', path: '/careers', icon: Briefcase },
+        { name: 'Partners', path: '/partners', icon: Users },
+        { name: 'News', path: '/news', icon: Globe }
+      ]
+    },
+    {
+      title: 'Resources',
+      items: [
+        { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
+        { name: 'Blog', path: '/blog', icon: Globe },
+        { name: 'FAQ', path: '/faq', icon: Users },
+        { name: 'Help Center', path: '/help', icon: Users },
+        { name: 'Support', path: '/support', icon: Phone },
+        { name: 'Pricing', path: '/pricing', icon: Briefcase }
+>>>>>>> origin/cursor/website-audit-and-enhancement-bc98
       ]
     }
   ];

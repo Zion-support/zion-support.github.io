@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -195,6 +196,8 @@ import SEOHead from '../components/SEOHead';
 } from 'lucide-react';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-889e
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-bc98
 import React, { useState } from 'react';
 import { Search, BookOpen, Users, Shield, CreditCard, Settings, HelpCircle, ChevronDown, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -367,6 +370,18 @@ const HelpCenter = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-889e
       ]
     }
+<<<<<<< HEAD
+=======
+  } as const;
+
+  const popularArticles = [
+    'How to create your first account',
+    'Understanding the marketplace',
+    'Creating a talent profile',
+    'Finding and hiring talent',
+    'Payment and escrow system',
+    'Account security best practices'
+>>>>>>> origin/cursor/website-audit-and-enhancement-bc98
   ];
 
 <<<<<<< HEAD
@@ -1930,6 +1945,7 @@ const HelpCenter = () => {
         <link rel="canonical" href="https://ziontechgroup.com/help" />
       </Helmet>
 
+<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
@@ -2024,9 +2040,20 @@ const HelpCenter = () => {
               Find answers to your questions, access helpful resources, and get the support you need 
               to make the most of Zion Tech Group's innovative solutions.
 >>>>>>> origin/cursor/website-audit-and-enhancement-2bc0
+=======
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+        {/* Hero Section */}
+        <section className="pt-32 pb-16 px-4">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              How can we <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">help you?</span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+              Find answers to common questions, explore tutorials, and get the support you need to succeed with Zion Tech Group.
+>>>>>>> origin/cursor/website-audit-and-enhancement-bc98
             </p>
-            
             {/* Search Bar */}
+<<<<<<< HEAD
             <div className="max-w-2xl mx-auto">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
@@ -2162,12 +2189,17 @@ const HelpCenter = () => {
 >>>>>>> origin/cursor/website-audit-and-enhancement-4d8c
             <div className="relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+=======
+            <div className="max-w-2xl mx-auto relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+>>>>>>> origin/cursor/website-audit-and-enhancement-bc98
               <input
                 type="text"
 <<<<<<< HEAD
                 placeholder="Search for help articles, guides, and more..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
+<<<<<<< HEAD
                 className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 transition-colors"
               />
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-889e
@@ -2415,6 +2447,9 @@ export default function HelpCenter() {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-6 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg text-white placeholder:text-gray-400 focus:outline-none focus:border-cyan-400 transition-colors text-lg"
 >>>>>>> origin/cursor/website-audit-and-enhancement-4d8c
+=======
+                className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+>>>>>>> origin/cursor/website-audit-and-enhancement-bc98
               />
             </div>
           </div>
@@ -2516,6 +2551,7 @@ export default function HelpCenter() {
         </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Popular Articles */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
@@ -2603,6 +2639,40 @@ export default function HelpCenter() {
                           key={articleIndex}
                           to={article.path}
                           className="flex items-center p-3 rounded-lg hover:bg-gray-700/50 transition-colors duration-300"
+=======
+        {/* Help Categories */}
+        <section className="py-16 px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Browse Help Categories</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {Object.entries(helpCategories).map(([key, category]) => (
+                <div key={key} className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                        <category.icon className="w-5 h-5 text-cyan-400" />
+                      </div>
+                      <h3 className="text-xl font-bold text-white">{category.title}</h3>
+                    </div>
+                    <button
+                      onClick={() => toggleCategory(key)}
+                      className="text-gray-300 hover:text-cyan-400 transition-colors"
+                    >
+                      {expandedCategories.includes(key) ? (
+                        <ChevronDown className="w-5 h-5" />
+                      ) : (
+                        <ChevronRight className="w-5 h-5" />
+                      )}
+                    </button>
+                  </div>
+                  {expandedCategories.includes(key) && (
+                    <div className="space-y-2">
+                      {category.articles.map((article, index) => (
+                        <Link
+                          key={index}
+                          to={article.href}
+                          className="block text-gray-300 hover:text-cyan-400 transition-colors py-2 px-3 rounded-lg hover:bg-white/10"
+>>>>>>> origin/cursor/website-audit-and-enhancement-bc98
                         >
                           <FileText className="w-5 h-5 text-cyan-400 mr-3" />
                           <span className="text-gray-300 hover:text-white transition-colors duration-300">
@@ -2611,6 +2681,7 @@ export default function HelpCenter() {
                         </Link>
                       ))}
                     </div>
+<<<<<<< HEAD
                   </div>
                 )}
               </div>
@@ -3381,10 +3452,14 @@ export default function HelpCenter() {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{article.title}</h3>
                   <p className="text-gray-300">{article.description}</p>
+=======
+                  )}
+>>>>>>> origin/cursor/website-audit-and-enhancement-bc98
                 </div>
               ))}
             </div>
           </div>
+<<<<<<< HEAD
         </div>
 
 <<<<<<< HEAD
@@ -5677,3 +5752,79 @@ export default HelpCenter;
 
 export default HelpCenter;
 >>>>>>> origin/cursor/website-audit-and-enhancement-9ebb
+=======
+        </section>
+
+        {/* Popular Articles */}
+        <section className="py-16 px-4 bg-white/5">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Popular Help Articles</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {popularArticles.map((article, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300">
+                  <h3 className="text-lg font-semibold text-white mb-3">{article}</h3>
+                  <Link
+                    to={`/help/${article.toLowerCase().replace(/\s+/g, '-')}`}
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
+                  >
+                    Read Article
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Support */}
+        <section className="py-16 px-4">
+          <div className="max-w-6xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Still Need Help?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Our support team is here to help you 24/7. Get in touch with us through any of these channels.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6">
+                <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <MessageSquare className="w-6 h-6 text-cyan-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Live Chat</h3>
+                <p className="text-gray-300 text-sm mb-4">Get instant help from our support team</p>
+                <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                  Start Chat
+                </button>
+              </div>
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6">
+                <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Mail className="w-6 h-6 text-cyan-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Email Support</h3>
+                <p className="text-gray-300 text-sm mb-4">Send us a detailed message</p>
+                <Link
+                  to="/contact"
+                  className="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors inline-block"
+                >
+                  Send Email
+                </Link>
+              </div>
+              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6">
+                <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Phone className="w-6 h-6 text-cyan-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Phone Support</h3>
+                <p className="text-gray-300 text-sm mb-4">Call us directly for urgent issues</p>
+                <a
+                  href="tel:+13024640950"
+                  className="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors inline-block"
+                >
+                  Call Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+}
+>>>>>>> origin/cursor/website-audit-and-enhancement-bc98
