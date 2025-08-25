@@ -22,10 +22,7 @@ import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
 import EnhancedSEO from './components/EnhancedSEO';
 import EnhancedAccessibility from './components/EnhancedAccessibility';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
-import { ScrollToTop } from './components/ScrollToTop';
-import { ContentQualityEnhancer } from './components/ContentQualityEnhancer';
-import { BrokenLinkFixer } from './components/BrokenLinkFixer';
-import { WebsiteImprovementDashboard } from './components/WebsiteImprovementDashboard';
+import { BundleAnalyzer } from './components/BundleAnalyzer';
 
 // Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
@@ -365,6 +362,9 @@ const App: React.FC = () => {
                 <ContentQualityEnhancer />
                 <BrokenLinkFixer />
                 <WebsiteImprovementDashboard />
+                
+                {/* Bundle Analyzer - Development Mode */}
+                {import.meta.env.DEV && <BundleAnalyzer />}
                 
                 {/* AI Chatbot - Always Available */}
                 <AIChatbot />
