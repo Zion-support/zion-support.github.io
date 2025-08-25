@@ -27,9 +27,9 @@ import {
   DollarSign, 
   PieChart 
 } from 'lucide-react';
-import { comprehensiveServices } from '@/data/comprehensiveServices';
+import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
 
-const AI_SERVICES = comprehensiveServices.filter(service => 
+const AI_SERVICES = COMPREHENSIVE_SERVICES.filter(service => 
   service.category.includes('AI') || 
   service.category.includes('Machine Learning') || 
   service.category.includes('Automation')
