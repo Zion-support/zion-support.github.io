@@ -42,8 +42,9 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Briefcase },
         { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Briefcase },
-        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
-        { name: 'Cloud DevOps', path: '/cloud-devops', icon: Globe }
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', icon: Briefcase },
+        { name: 'Blockchain Solutions', path: '/blockchain-enterprise-solutions', icon: Globe },
+        { name: 'IoT Analytics', path: '/iot-data-analytics', icon: Globe }
       ]
     },
     {
@@ -63,6 +64,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       items: [
         { name: 'Help Center', path: '/help', icon: Users },
         { name: 'Case Studies', path: '/case-studies', icon: Globe },
+        { name: 'New Services', path: '/new-services', icon: Globe },
         { name: 'White Papers', path: '/white-papers', icon: Globe },
         { name: 'Webinars', path: '/webinars', icon: Globe },
         { name: 'Emerging Tech', path: '/emerging-tech', icon: Globe }

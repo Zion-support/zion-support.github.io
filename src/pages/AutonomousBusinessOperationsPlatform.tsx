@@ -1,216 +1,259 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Bot, Zap, TrendingUp, Shield, Users, Globe, BarChart3, Settings } from 'lucide-react';
+import { 
+  Bot, 
+  Zap, 
+  Cpu, 
+  Database, 
+  BarChart3, 
+  Globe, 
+  Network, 
+  Shield,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+  Clock,
+  Award,
+  Lightbulb,
+  Target,
+  Settings,
+  Workflow
+} from 'lucide-react';
 
-const AutonomousBusinessOperationsPlatform: React.FC = () => {
-  const capabilities = [
+const AutonomousBusinessOperationsPlatform = () => {
+  const features = [
     {
       icon: Bot,
-      title: "AI-Powered Automation",
-      description: "Intelligent automation of complex business processes with machine learning optimization."
+      title: "Autonomous Operations",
+      description: "AI-powered systems that operate independently and make intelligent decisions"
     },
     {
       icon: Zap,
-      title: "Real-time Operations",
-      description: "Continuous monitoring and instant response to business events and market changes."
+      title: "Real-time Processing",
+      description: "Instant processing and decision-making for critical business operations"
     },
     {
-      icon: TrendingUp,
+      icon: Cpu,
+      title: "Intelligent Automation",
+      description: "Smart automation that learns and adapts to business needs"
+    },
+    {
+      icon: Database,
+      title: "Data Integration",
+      description: "Seamless integration across all business systems and data sources"
+    },
+    {
+      icon: BarChart3,
       title: "Predictive Analytics",
-      description: "Advanced forecasting and trend analysis for proactive business decision-making."
+      description: "Advanced analytics that predict trends and optimize operations"
     },
     {
       icon: Shield,
       title: "Security & Compliance",
-      description: "Built-in security protocols and automated compliance monitoring across all operations."
-    },
-    {
-      icon: Users,
-      title: "Team Collaboration",
-      description: "Seamless integration with human teams for optimal human-AI collaboration."
-    },
-    {
-      icon: Globe,
-      title: "Global Operations",
-      description: "Multi-location and multi-timezone business operations management."
+      description: "Built-in security and compliance monitoring for all operations"
     }
   ];
 
-  const businessAreas = [
+  const operations = [
     {
-      title: "Finance & Accounting",
-      description: "Automated financial reporting, expense management, and regulatory compliance."
-    },
-    {
-      title: "Human Resources",
-      description: "AI-powered recruitment, performance management, and employee engagement."
-    },
-    {
-      title: "Supply Chain",
-      description: "Intelligent inventory management, demand forecasting, and logistics optimization."
+      title: "Supply Chain Management",
+      description: "Autonomous supply chain optimization and inventory management",
+      benefits: ["Demand forecasting", "Inventory optimization", "Supplier management"]
     },
     {
       title: "Customer Service",
-      description: "24/7 automated customer support with intelligent routing and issue resolution."
+      description: "AI-powered customer support and relationship management",
+      benefits: ["24/7 support", "Personalized interactions", "Issue resolution"]
     },
     {
-      title: "Marketing & Sales",
-      description: "Automated lead generation, campaign management, and sales pipeline optimization."
+      title: "Financial Operations",
+      description: "Automated financial processing and risk management",
+      benefits: ["Invoice processing", "Risk assessment", "Financial reporting"]
     },
     {
-      title: "Operations Management",
-      description: "Real-time monitoring and optimization of all business processes and workflows."
+      title: "HR & Recruitment",
+      description: "Intelligent HR processes and talent acquisition",
+      benefits: ["Candidate screening", "Performance monitoring", "Training optimization"]
     }
   ];
 
   const benefits = [
+    "24/7 autonomous operation",
+    "Reduced operational costs",
+    "Improved efficiency and accuracy",
+    "Real-time decision making",
+    "Scalable operations",
+    "Enhanced customer experience"
+  ];
+
+  const useCases = [
     {
-      metric: "24/7",
-      label: "Continuous Operations",
-      description: "Round-the-clock business operations without human limitations"
+      title: "Manufacturing Companies",
+      description: "Automate production lines and quality control processes"
     },
     {
-      metric: "90%+",
-      label: "Efficiency Gain",
-      description: "Significant improvement in operational efficiency and productivity"
+      title: "Retail & E-commerce",
+      description: "Optimize inventory and customer service operations"
     },
     {
-      metric: "50%+",
-      label: "Cost Reduction",
-      description: "Substantial cost savings through automation and optimization"
+      title: "Financial Services",
+      description: "Automate trading, risk management, and compliance"
     },
     {
-      metric: "Real-time",
-      label: "Decision Making",
-      description: "Instant data analysis and decision-making capabilities"
+      title: "Healthcare Organizations",
+      description: "Streamline patient care and administrative processes"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 quantum-particles"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-cyan-400 text-sm font-medium mb-6">
-              <Bot className="w-4 h-4 mr-2" />
-              Autonomous Business Platform
+      <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <div className="flex items-center justify-center mb-6">
+              <Bot className="w-12 h-12 text-cyan-400 mr-3" />
+              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+                Autonomous Business Operations Platform
+              </h1>
             </div>
-            <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
-              Autonomous Business Operations Platform
-            </h1>
-            <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Transform your business with AI-powered autonomous operations. Achieve unprecedented efficiency, scalability, and competitive advantage.
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+              Transform your business with fully autonomous operations. Our AI-powered platform 
+              handles complex business processes independently, optimizing efficiency and 
+              driving growth while you focus on strategic decisions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
-                Start Free Trial
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <button className="px-8 py-4 border border-cyan-400/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">
-                Schedule Demo
-              </button>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
+              >
+                View All Services
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Features Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your Business Operations
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Revolutionary Autonomous Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the future of business with autonomous operations that work around the clock to optimize your success.
+              Our platform combines cutting-edge AI with business process automation to create 
+              truly autonomous operations that work around the clock.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
               <div
                 key={index}
-                className="text-center p-6 bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-cyan-500/30"
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105"
               >
-                <div className="text-4xl font-bold text-cyan-400 mb-2">
-                  {benefit.metric}
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <div className="text-lg font-semibold text-white mb-2">
-                  {benefit.label}
-                </div>
-                <p className="text-gray-300 text-sm">
-                  {benefit.description}
-                </p>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Capabilities Section */}
-      <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black/50 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Operations Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Capabilities
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Autonomous Business Operations
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform combines cutting-edge AI technology with deep business intelligence to deliver unprecedented operational excellence.
+              Discover how autonomous systems are revolutionizing key business operations 
+              across all industries.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {capabilities.map((capability, index) => {
-              const Icon = capability.icon;
-              return (
-                <div
-                  key={index}
-                  className="p-6 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {capability.title}
-                  </h3>
-                  <p className="text-gray-300">
-                    {capability.description}
-                  </p>
-                </div>
-              );
-            })}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {operations.map((operation, index) => (
+              <div
+                key={index}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
+              >
+                <h3 className="text-2xl font-semibold text-white mb-4">{operation.title}</h3>
+                <p className="text-gray-300 mb-6">{operation.description}</p>
+                <ul className="space-y-2">
+                  {operation.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Business Areas Section */}
-      <section className="py-20 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Benefits Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Business Coverage
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Transformative Benefits
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From finance to operations, our platform automates and optimizes every aspect of your business.
+              Experience the revolutionary benefits of autonomous business operations.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
+              <div
+                key={index}
+                className="flex items-center bg-gray-800/50 backdrop-blur-sm rounded-lg p-4 border border-gray-700"
+              >
+                <Star className="w-6 h-6 text-cyan-400 mr-3 flex-shrink-0" />
+                <span className="text-gray-300">{benefit}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Industry Applications
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our autonomous operations platform is designed for forward-thinking organizations 
+              across all industries.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {businessAreas.map((area, index) => (
+            {useCases.map((useCase, index) => (
               <div
                 key={index}
-                className="p-8 bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300"
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
               >
-                <h3 className="text-2xl font-semibold text-cyan-400 mb-4">
-                  {area.title}
-                </h3>
-                <p className="text-gray-300 text-lg">
-                  {area.description}
-                </p>
+                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
+                <p className="text-gray-300">{useCase.description}</p>
               </div>
             ))}
           </div>
@@ -218,26 +261,28 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 text-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Automate Your Business?
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/50 to-purple-900/50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready for Autonomous Operations?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join thousands of businesses already experiencing the benefits of autonomous operations.
+            Join the autonomous revolution and transform your business operations. 
+            Our expert team is ready to help you implement cutting-edge autonomous solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             >
-              Get Started Today
+              Schedule Consultation
+              <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link
-              to="/pricing"
-              className="px-8 py-4 border border-cyan-400/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300"
+              to="/services"
+              className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
             >
-              View Pricing Plans
+              Explore All Services
             </Link>
           </div>
         </div>

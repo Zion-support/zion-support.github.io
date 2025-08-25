@@ -30,25 +30,23 @@ export function Footer() {
       icon: Brain,
       links: [
         { label: "AI Autonomous Systems", path: "/services/ai-autonomous-systems" },
-        { label: "AI-Powered CRM", path: "/services" },
-        { label: "AI Content Generation", path: "/services" },
-        { label: "AI Sales Intelligence", path: "/services" },
-        { label: "AI Customer Analytics", path: "/services" },
-        { label: "AI HR Technology", path: "/services" },
-        { label: "AI Supply Chain", path: "/services" },
-        { label: "AI Customer Experience", path: "/services" }
+        { label: "AI Research Assistant", path: "/ai-autonomous-research-assistant" },
+        { label: "Quantum Neural Networks", path: "/quantum-neural-network-platform" },
+        { label: "Autonomous Business Platform", path: "/autonomous-business-operations-platform" },
+        { label: "AI Asset Management", path: "/ai-powered-it-asset-management" },
+        { label: "AI Workflow Automation", path: "/ai-workflow-automation" }
       ]
     },
     {
       title: "Cybersecurity & Security",
       icon: Shield,
       links: [
-        { label: "Threat Intelligence", path: "/services" },
-        { label: "Zero Trust Security", path: "/services" },
-        { label: "Incident Response", path: "/services" },
-        { label: "Financial Security", path: "/services" },
-        { label: "Security Testing", path: "/services" },
-        { label: "Quantum Security", path: "/services" }
+        { label: "Cybersecurity Suite", path: "/services/cybersecurity" },
+        { label: "SOC2 Compliance", path: "/soc2-compliance-automation" },
+        { label: "Threat Intelligence", path: "/services/cybersecurity" },
+        { label: "Zero Trust Security", path: "/services/cybersecurity" },
+        { label: "Incident Response", path: "/services/cybersecurity" },
+        { label: "Security Testing", path: "/services/cybersecurity" }
       ]
     },
     {
@@ -80,7 +78,8 @@ export function Footer() {
         { label: "Healthcare Solutions", path: "/solutions/healthcare" },
         { label: "Financial Solutions", path: "/solutions/financial" },
         { label: "Manufacturing Solutions", path: "/solutions/manufacturing" },
-        { label: "Retail Solutions", path: "/solutions/retail" }
+        { label: "Retail Solutions", path: "/solutions/retail" },
+        { label: "Government Solutions", path: "/solutions/government" }
       ]
     },
     {

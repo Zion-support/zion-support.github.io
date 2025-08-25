@@ -1,109 +1,167 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Search, HelpCircle, BookOpen, MessageCircle, Phone, Mail, FileText, Video, Users, Globe } from 'lucide-react';
+import { 
+  Search, 
+  HelpCircle, 
+  BookOpen, 
+  Video, 
+  MessageCircle, 
+  Phone, 
+  Mail, 
+  ArrowRight,
+  ChevronDown,
+  ChevronRight,
+  Star,
+  Users,
+  Clock,
+  Award,
+  Lightbulb,
+  Target,
+  Settings,
+  FileText,
+  Download
+} from 'lucide-react';
 
-const HelpCenter: React.FC = () => {
+const HelpCenter = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 
   const categories = [
-    { id: 'all', name: 'All Categories', icon: HelpCircle, count: 25 },
-    { id: 'getting-started', name: 'Getting Started', icon: BookOpen, count: 8 },
-    { id: 'ai-services', name: 'AI Services', icon: Users, count: 6 },
-    { id: 'technical-support', name: 'Technical Support', icon: Globe, count: 7 },
-    { id: 'billing', name: 'Billing & Pricing', icon: FileText, count: 4 }
-  ];
-
-  const faqs = [
     {
-      category: 'getting-started',
-      question: "How do I get started with Zion Tech Group services?",
-      answer: "Getting started is easy! Simply contact our team through our contact form or call us directly. We'll schedule a consultation to understand your needs and recommend the best solutions for your business."
+      title: "Getting Started",
+      icon: Lightbulb,
+      articles: [
+        { title: "Welcome to Zion Tech Group", path: "/help/getting-started" },
+        { title: "Account Setup Guide", path: "/help/account-setup" },
+        { title: "First Steps with Our Platform", path: "/help/first-steps" },
+        { title: "Platform Overview", path: "/help/platform-overview" }
+      ]
     },
     {
-      category: 'getting-started',
-      question: "What services do you offer?",
-      answer: "We offer a comprehensive range of services including AI & Autonomous Systems, Quantum Technology, Cybersecurity, IT Infrastructure, Micro SAAS Solutions, and Industry-specific solutions. Visit our services page for detailed information."
+      title: "AI Solutions",
+      icon: Target,
+      articles: [
+        { title: "AI Autonomous Systems Guide", path: "/help/ai-autonomous-systems" },
+        { title: "Quantum Neural Networks", path: "/help/quantum-neural-networks" },
+        { title: "AI Research Assistant", path: "/help/ai-research-assistant" },
+        { title: "AI Asset Management", path: "/help/ai-asset-management" }
+      ]
     },
     {
-      category: 'ai-services',
-      question: "How does your AI autonomous systems work?",
-      answer: "Our AI autonomous systems use advanced machine learning algorithms to automate complex business processes. They continuously learn and adapt to optimize performance, reduce costs, and improve efficiency across your organization."
+      title: "Services & Features",
+      icon: Settings,
+      articles: [
+        { title: "Service Configuration", path: "/help/service-configuration" },
+        { title: "API Documentation", path: "/help/api-documentation" },
+        { title: "Integration Guides", path: "/help/integration-guides" },
+        { title: "Feature Updates", path: "/help/feature-updates" }
+      ]
     },
     {
-      category: 'ai-services',
-      question: "What is quantum neural network technology?",
-      answer: "Quantum neural networks combine quantum computing principles with neural network architectures to solve complex problems that are beyond the capabilities of classical computers. This technology is particularly effective for optimization, simulation, and machine learning tasks."
+      title: "Troubleshooting",
+      icon: HelpCircle,
+      articles: [
+        { title: "Common Issues", path: "/help/common-issues" },
+        { title: "Error Messages", path: "/help/error-messages" },
+        { title: "Performance Optimization", path: "/help/performance" },
+        { title: "Debugging Tools", path: "/help/debugging" }
+      ]
     },
     {
-      category: 'technical-support',
-      question: "What kind of technical support do you provide?",
-      answer: "We provide comprehensive technical support including 24/7 monitoring, real-time issue resolution, preventive maintenance, and dedicated support teams. Our support covers all aspects of our services and solutions."
+      title: "Security & Compliance",
+      icon: Shield,
+      articles: [
+        { title: "Security Best Practices", path: "/help/security-best-practices" },
+        { title: "SOC2 Compliance Guide", path: "/help/soc2-compliance" },
+        { title: "Data Protection", path: "/help/data-protection" },
+        { title: "Access Control", path: "/help/access-control" }
+      ]
     },
     {
-      category: 'technical-support',
-      question: "How do you ensure data security and compliance?",
-      answer: "We implement enterprise-grade security measures including quantum-safe encryption, SOC2 compliance automation, and continuous security monitoring. All our solutions are designed with security and compliance as top priorities."
-    },
-    {
-      category: 'billing',
-      question: "What are your pricing models?",
-      answer: "We offer flexible pricing models including subscription-based services, project-based pricing, and custom enterprise solutions. Contact us for a personalized quote based on your specific needs and requirements."
-    },
-    {
-      category: 'billing',
-      question: "Do you offer free trials or demos?",
-      answer: "Yes! We offer free trials for many of our services and can arrange personalized demos to show you how our solutions can benefit your business. Contact us to schedule a demo or start a free trial."
+      title: "Billing & Support",
+      icon: CreditCard,
+      articles: [
+        { title: "Billing FAQ", path: "/help/billing-faq" },
+        { title: "Payment Methods", path: "/help/payment-methods" },
+        { title: "Support Plans", path: "/help/support-plans" },
+        { title: "Refund Policy", path: "/help/refund-policy" }
+      ]
     }
   ];
 
-  const filteredFAQs = faqs.filter(faq => {
-    const matchesCategory = selectedCategory === 'all' || faq.category === selectedCategory;
-    const matchesSearch = faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         faq.answer.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
-
-  const supportChannels = [
+  const popularArticles = [
     {
-      icon: Phone,
-      title: "Phone Support",
-      description: "Call us directly for immediate assistance",
-      contact: "+1 302 464 0950",
-      availability: "24/7"
+      title: "How to Set Up AI Autonomous Systems",
+      description: "Complete guide to configuring and deploying AI autonomous systems",
+      views: "2.5k",
+      category: "AI Solutions"
     },
     {
-      icon: Mail,
+      title: "SOC2 Compliance Automation Setup",
+      description: "Step-by-step guide to implementing SOC2 compliance automation",
+      views: "1.8k",
+      category: "Security & Compliance"
+    },
+    {
+      title: "5G Enterprise Solutions Configuration",
+      description: "Configure and optimize 5G enterprise solutions for your business",
+      views: "1.2k",
+      category: "Services & Features"
+    },
+    {
+      title: "Troubleshooting Common Integration Issues",
+      description: "Resolve common problems when integrating our services",
+      views: "950",
+      category: "Troubleshooting"
+    }
+  ];
+
+  const supportOptions = [
+    {
+      title: "Live Chat",
+      description: "Get instant help from our support team",
+      icon: MessageCircle,
+      action: "Start Chat",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "Phone Support",
+      description: "Speak directly with our experts",
+      icon: Phone,
+      action: "Call Now",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
       title: "Email Support",
       description: "Send us a detailed message",
-      contact: "support@ziontechgroup.com",
-      availability: "Response within 4 hours"
+      icon: Mail,
+      action: "Send Email",
+      color: "from-purple-500 to-pink-500"
     },
     {
-      icon: MessageCircle,
-      title: "Live Chat",
-      description: "Chat with our support team in real-time",
-      contact: "Available on website",
-      availability: "Business hours"
+      title: "Video Tutorials",
+      description: "Learn with step-by-step video guides",
+      icon: Video,
+      action: "Watch Videos",
+      color: "from-orange-500 to-red-500"
     }
   ];
+
+  const toggleCategory = (title: string) => {
+    setExpandedCategory(expandedCategory === title ? null : title);
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 quantum-particles"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-cyan-400 text-sm font-medium mb-6">
-              <HelpCircle className="w-4 h-4 mr-2" />
-              Help & Support
-            </div>
-            <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
+      <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-6">
               Help Center
             </h1>
-            <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Find answers to your questions, get technical support, and learn how to make the most of our services.
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+              Find answers to your questions, learn how to use our platform, and get the support you need.
             </p>
             
             {/* Search Bar */}
@@ -112,10 +170,10 @@ const HelpCenter: React.FC = () => {
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
-                  placeholder="Search for help articles, FAQs, and guides..."
+                  placeholder="Search for help articles, guides, and tutorials..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                  className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
                 />
               </div>
             </div>
@@ -123,148 +181,214 @@ const HelpCenter: React.FC = () => {
         </div>
       </section>
 
-      {/* Support Channels Section */}
-      <section className="py-20 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Support Options */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Get Support
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Get Help Fast
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Multiple ways to get the help you need, when you need it.
+              Choose the support option that works best for you.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {supportOptions.map((option, index) => (
+              <div
+                key={index}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-r ${option.color} rounded-lg flex items-center justify-center mb-4 mx-auto`}>
+                  <option.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2 text-center">{option.title}</h3>
+                <p className="text-gray-300 text-sm text-center mb-4">{option.description}</p>
+                <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
+                  {option.action}
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Popular Articles */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Popular Help Articles
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Most frequently viewed help articles and guides.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {popularArticles.map((article, index) => (
+              <div
+                key={index}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300"
+              >
+                <div className="flex items-start justify-between mb-3">
+                  <span className="px-3 py-1 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-cyan-400 text-xs">
+                    {article.category}
+                  </span>
+                  <span className="text-gray-400 text-sm flex items-center">
+                    <Users className="w-4 h-4 mr-1" />
+                    {article.views}
+                  </span>
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{article.title}</h3>
+                <p className="text-gray-300 text-sm mb-4">{article.description}</p>
+                <Link
+                  to="#"
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
+                >
+                  Read Article
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Help Categories */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Help Categories
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Browse help articles organized by category to find what you need quickly.
+            </p>
+          </div>
+          
+          <div className="space-y-4">
+            {categories.map((category, index) => (
+              <div
+                key={index}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700 overflow-hidden"
+              >
+                <button
+                  onClick={() => toggleCategory(category.title)}
+                  className="w-full p-6 flex items-center justify-between hover:bg-gray-700/50 transition-colors duration-300"
+                >
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
+                      <category.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white">{category.title}</h3>
+                  </div>
+                  {expandedCategory === category.title ? (
+                    <ChevronDown className="w-6 h-6 text-gray-400" />
+                  ) : (
+                    <ChevronRight className="w-6 h-6 text-gray-400" />
+                  )}
+                </button>
+                
+                {expandedCategory === category.title && (
+                  <div className="px-6 pb-6 border-t border-gray-700">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                      {category.articles.map((article, articleIndex) => (
+                        <Link
+                          key={articleIndex}
+                          to={article.path}
+                          className="flex items-center p-3 rounded-lg hover:bg-gray-700/50 transition-colors duration-300"
+                        >
+                          <FileText className="w-5 h-5 text-cyan-400 mr-3" />
+                          <span className="text-gray-300 hover:text-white transition-colors duration-300">
+                            {article.title}
+                          </span>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Resources */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Additional Resources
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Access additional learning materials and resources to help you succeed.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {supportChannels.map((channel, index) => {
-              const Icon = channel.icon;
-              return (
-                <div
-                  key={index}
-                  className="p-8 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
-                    <Icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-semibold text-white mb-4">
-                    {channel.title}
-                  </h3>
-                  <p className="text-gray-300 mb-6">
-                    {channel.description}
-                  </p>
-                  <div className="space-y-2">
-                    <div className="text-cyan-400 font-semibold">
-                      {channel.contact}
-                    </div>
-                    <div className="text-sm text-gray-400">
-                      {channel.availability}
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Categories Section */}
-      <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black/50 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Browse by Category
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Find help articles organized by topic and service area.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-            {categories.map((category) => {
-              const Icon = category.icon;
-              return (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`p-6 rounded-2xl border transition-all duration-300 text-center ${
-                    selectedCategory === category.id
-                      ? 'bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border-cyan-400/50'
-                      : 'bg-gradient-to-br from-gray-800/50 to-gray-900/50 border-cyan-500/30 hover:border-cyan-400/50'
-                  }`}
-                >
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">
-                    {category.name}
-                  </h3>
-                  <p className="text-cyan-400 text-sm">
-                    {category.count} articles
-                  </p>
-                </button>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQs Section */}
-      <section className="py-20 relative">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-xl text-gray-300">
-              Quick answers to common questions about our services and solutions.
-            </p>
-          </div>
-          
-          <div className="space-y-6">
-            {filteredFAQs.map((faq, index) => (
-              <div
-                key={index}
-                className="p-6 bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-cyan-500/30"
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 text-center">
+              <BookOpen className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-3">Documentation</h3>
+              <p className="text-gray-300 mb-6">Comprehensive technical documentation and API references.</p>
+              <Link
+                to="#"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
               >
-                <h3 className="text-xl font-semibold text-white mb-4">
-                  {faq.question}
-                </h3>
-                <p className="text-gray-300 leading-relaxed">
-                  {faq.answer}
-                </p>
-              </div>
-            ))}
+                View Documentation
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </div>
             
-            {filteredFAQs.length === 0 && (
-              <div className="text-center py-12">
-                <HelpCircle className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-2">No results found</h3>
-                <p className="text-gray-300">Try adjusting your search or category filter</p>
-              </div>
-            )}
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 text-center">
+              <Video className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-3">Video Tutorials</h3>
+              <p className="text-gray-300 mb-6">Step-by-step video guides and tutorials for all features.</p>
+              <Link
+                to="#"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              >
+                Watch Videos
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </div>
+            
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 text-center">
+              <Download className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-3">Downloads</h3>
+              <p className="text-gray-300 mb-6">Download SDKs, tools, and sample code for development.</p>
+              <Link
+                to="#"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              >
+                Download Resources
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 text-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-white mb-6">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/50 to-purple-900/50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Still Need Help?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Our support team is here to help you succeed with our solutions.
+            Can't find what you're looking for? Our expert support team is here to help you succeed.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             >
               Contact Support
+              <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link
               to="/services"
-              className="px-8 py-4 border border-cyan-400/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300"
+              className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
             >
               Explore Services
             </Link>
@@ -274,5 +398,18 @@ const HelpCenter: React.FC = () => {
     </div>
   );
 };
+
+// Add missing Shield and CreditCard icons
+const Shield = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+  </svg>
+);
+
+const CreditCard = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+  </svg>
+);
 
 export default HelpCenter;

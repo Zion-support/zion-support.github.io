@@ -122,13 +122,11 @@ export function Header() {
       description: 'Intelligent solutions powered by artificial intelligence',
       services: [
         { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', description: 'Advanced autonomous AI systems' },
-        { name: 'AI-Powered CRM', path: '/services', description: 'Intelligent customer relationship management' },
-        { name: 'AI Content Generation', path: '/services', description: 'AI-powered content creation suite' },
-        { name: 'AI Sales Intelligence', path: '/services', description: 'Predictive sales analytics platform' },
-        { name: 'AI Customer Analytics', path: '/services', description: 'Advanced customer behavior analysis' },
-        { name: 'AI HR Technology', path: '/services', description: 'Intelligent HR management suite' },
-        { name: 'AI Supply Chain', path: '/services', description: 'Supply chain optimization platform' },
-        { name: 'AI Customer Experience', path: '/services', description: 'Customer experience optimization' }
+        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', description: 'AI-powered research platform' },
+        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', description: 'Quantum computing with neural networks' },
+        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', description: 'AI-powered business automation' },
+        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', description: 'Intelligent IT asset management' },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'AI-powered workflow automation' }
       ]
     },
     {
@@ -136,12 +134,12 @@ export function Header() {
       icon: ShieldCheck,
       description: 'Advanced security solutions for modern threats',
       services: [
-        { name: 'Threat Intelligence', path: '/services', description: 'AI-powered threat detection' },
-        { name: 'Zero Trust Security', path: '/services', description: 'Continuous verification platform' },
-        { name: 'Incident Response', path: '/services', description: 'Automated incident response' },
-        { name: 'Financial Security', path: '/services', description: 'Fraud detection & prevention' },
-        { name: 'Security Testing', path: '/services', description: 'Automated security testing' },
-        { name: 'Quantum Security', path: '/services', description: 'Quantum-resistant encryption' }
+        { name: 'Cybersecurity Suite', path: '/services/cybersecurity', description: 'Comprehensive security solutions' },
+        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', description: 'Automated compliance automation' },
+        { name: 'Threat Intelligence', path: '/services/cybersecurity', description: 'AI-powered threat detection' },
+        { name: 'Zero Trust Security', path: '/services/cybersecurity', description: 'Continuous verification platform' },
+        { name: 'Incident Response', path: '/services/cybersecurity', description: 'Automated incident response' },
+        { name: 'Security Testing', path: '/services/cybersecurity', description: 'Automated security testing' }
       ]
     },
     {
@@ -193,8 +191,9 @@ export function Header() {
       description: 'Cutting-edge technology solutions for the future',
       services: [
         { name: 'Quantum Technology', path: '/services/quantum-technology', description: 'Quantum computing solutions' },
-        { name: 'Voice AI', path: '/services', description: 'AI-powered voice cloning' },
-        { name: '5G Solutions', path: '/5g-enterprise-solutions', description: 'Enterprise 5G infrastructure' }
+        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', description: 'Enterprise 5G infrastructure' },
+        { name: 'Blockchain Solutions', path: '/blockchain-enterprise-solutions', description: 'Enterprise blockchain platform' },
+        { name: 'IoT Analytics', path: '/iot-data-analytics', description: 'IoT data management platform' }
       ]
     }
   ];

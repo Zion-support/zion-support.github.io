@@ -1,259 +1,345 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { 
-  Brain, 
-  Shield, 
-  Cloud, 
+  Sparkles, 
   Zap, 
+  Brain, 
   Globe, 
+  Shield, 
   Cpu, 
   Database, 
-  Network,
   ArrowRight,
-  CheckCircle,
   Star,
-  TrendingUp
+  CheckCircle,
+  Clock,
+  Award,
+  Lightbulb,
+  Target,
+  Settings,
+  Rocket,
+  Atom,
+  Bot
 } from 'lucide-react';
 
 const NewServices = () => {
-  const services = [
+  const newServices = [
     {
+      title: "AI Autonomous Research Assistant",
+      description: "Revolutionary AI-powered research platform that works independently to discover insights and patterns across multiple data sources.",
+      features: [
+        "Autonomous research capabilities",
+        "Multi-source data integration",
+        "Real-time analysis and insights",
+        "Advanced knowledge synthesis"
+      ],
       icon: Brain,
-      title: "AI Autonomous Systems",
-      description: "Next-generation AI systems that operate independently and learn continuously",
-      features: ["Self-learning algorithms", "Autonomous decision making", "Continuous optimization"],
-      path: "/services/ai-autonomous-systems",
-      category: "AI & Machine Learning"
+      color: "from-blue-500 to-cyan-500",
+      path: "/ai-autonomous-research-assistant",
+      status: "New"
     },
     {
-      icon: Shield,
-      title: "Advanced Cybersecurity Suite",
-      description: "Comprehensive security solutions with AI-powered threat detection",
-      features: ["Real-time monitoring", "AI threat analysis", "Automated response"],
-      path: "/services/cybersecurity",
-      category: "Security"
-    },
-    {
-      icon: Cloud,
-      title: "Quantum Cloud Infrastructure",
-      description: "Revolutionary cloud computing powered by quantum technology",
-      features: ["Quantum encryption", "Superior performance", "Future-proof architecture"],
-      path: "/quantum-cloud-infrastructure",
-      category: "Cloud & Infrastructure"
-    },
-    {
-      icon: Zap,
-      title: "5G Enterprise Solutions",
-      description: "Cutting-edge 5G networks optimized for enterprise needs",
-      features: ["Ultra-low latency", "Massive connectivity", "Enterprise security"],
-      path: "/5g-enterprise-solutions",
-      category: "Networking"
-    },
-    {
-      icon: Globe,
-      title: "AI-Powered IT Asset Management",
-      description: "Intelligent asset tracking and optimization for modern enterprises",
-      features: ["Predictive maintenance", "Cost optimization", "Real-time insights"],
-      path: "/ai-powered-it-asset-management",
-      category: "IT Management"
-    },
-    {
-      icon: Cpu,
       title: "Quantum Neural Network Platform",
-      description: "Revolutionary neural networks leveraging quantum computing principles",
-      features: ["Quantum algorithms", "Enhanced learning", "Breakthrough performance"],
+      description: "Cutting-edge platform combining quantum computing with neural networks to solve previously impossible computational problems.",
+      features: [
+        "Quantum processing power",
+        "Exponential speed improvements",
+        "Hybrid quantum-classical architecture",
+        "Advanced simulation capabilities"
+      ],
+      icon: Atom,
+      color: "from-purple-500 to-pink-500",
       path: "/quantum-neural-network-platform",
-      category: "AI & Quantum"
+      status: "New"
+    },
+    {
+      title: "Autonomous Business Operations Platform",
+      description: "AI-powered platform that handles complex business processes independently, optimizing efficiency and driving growth.",
+      features: [
+        "24/7 autonomous operation",
+        "Intelligent process automation",
+        "Real-time decision making",
+        "Predictive business analytics"
+      ],
+      icon: Bot,
+      color: "from-green-500 to-emerald-500",
+      path: "/autonomous-business-operations-platform",
+      status: "New"
+    },
+    {
+      title: "AI-Powered IT Asset Management",
+      description: "Intelligent asset management platform that provides complete visibility and optimization of your IT infrastructure.",
+      features: [
+        "Automated asset discovery",
+        "Predictive maintenance",
+        "Real-time monitoring",
+        "Comprehensive analytics"
+      ],
+      icon: Cpu,
+      color: "from-orange-500 to-red-500",
+      path: "/ai-powered-it-asset-management",
+      status: "New"
+    },
+    {
+      title: "SOC2 Compliance Automation",
+      description: "Streamlined SOC2 compliance with AI-powered automation that reduces manual effort and ensures continuous compliance.",
+      features: [
+        "Automated compliance monitoring",
+        "Real-time violation detection",
+        "Automated evidence collection",
+        "Audit preparation tools"
+      ],
+      icon: Shield,
+      color: "from-indigo-500 to-blue-500",
+      path: "/soc2-compliance-automation",
+      status: "New"
+    },
+    {
+      title: "5G Enterprise Solutions",
+      description: "Transform your enterprise with cutting-edge 5G technology for ultra-fast connectivity and ultra-low latency.",
+      features: [
+        "Ultra-fast 5G networks",
+        "Enterprise security protocols",
+        "Private network solutions",
+        "Real-time analytics"
+      ],
+      icon: Globe,
+      color: "from-teal-500 to-cyan-500",
+      path: "/5g-enterprise-solutions",
+      status: "New"
     }
   ];
 
-  const categories = [
-    "AI & Machine Learning",
-    "Security",
-    "Cloud & Infrastructure",
-    "Networking",
-    "IT Management",
-    "AI & Quantum"
+  const upcomingServices = [
+    {
+      title: "AI-Powered Voice Cloning",
+      description: "Advanced voice synthesis technology for personalized AI interactions and content creation.",
+      eta: "Q2 2024",
+      icon: Mic,
+      color: "from-yellow-500 to-orange-500"
+    },
+    {
+      title: "Blockchain Enterprise Solutions",
+      description: "Enterprise-grade blockchain infrastructure for secure, transparent business operations.",
+      eta: "Q3 2024",
+      icon: LinkIcon,
+      color: "from-blue-500 to-indigo-500"
+    },
+    {
+      title: "IoT Data Analytics Platform",
+      description: "Comprehensive IoT data management and analytics for smart city and industrial applications.",
+      eta: "Q3 2024",
+      icon: Wifi,
+      color: "from-green-500 to-teal-500"
+    }
+  ];
+
+  const benefits = [
+    "Early access to cutting-edge technology",
+    "Competitive advantage in your industry",
+    "Reduced implementation costs",
+    "Priority support and consultation",
+    "Customization and integration support",
+    "Exclusive training and resources"
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
+          <div className="text-center">
+            <div className="flex items-center justify-center mb-6">
+              <Sparkles className="w-12 h-12 text-cyan-400 mr-3" />
+              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                 New Services
-              </span>
-              <br />
-              <span className="text-white">2024-2025</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover our latest cutting-edge technology services designed to transform your business 
-              and keep you ahead of the competition in the AI-driven future.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
-                <span
-                  key={category}
-                  className="px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-cyan-400 text-sm"
-                >
-                  {category}
-                </span>
-              ))}
+              </h1>
             </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Services Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-            {services.map((service, index) => (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 * index }}
-                className="group relative"
-              >
-                <div className="relative p-8 bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
-                  {/* Background Glow */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  
-                  {/* Icon */}
-                  <div className="relative z-10 mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <service.icon className="w-8 h-8 text-white" />
-                    </div>
-                  </div>
-
-                  {/* Content */}
-                  <div className="relative z-10">
-                    <div className="mb-2">
-                      <span className="text-xs font-medium text-cyan-400 uppercase tracking-wide">
-                        {service.category}
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-300 mb-4 leading-relaxed">
-                      {service.description}
-                    </p>
-                    
-                    {/* Features */}
-                    <ul className="space-y-2 mb-6">
-                      {service.features.map((feature) => (
-                        <li key={feature} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-cyan-500 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-
-                    {/* CTA */}
-                    <Link
-                      to={service.path}
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-all duration-300"
-                    >
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                    </Link>
-                  </div>
-
-                  {/* Hover Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Experience the Future?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Our new services are designed to give your business a competitive edge. 
-              Get in touch to learn how we can help you transform your operations.
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+              Discover our latest AI-powered services and cutting-edge technology solutions. 
+              Be among the first to experience the future of business technology.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
-                Get Started Today
-                <ArrowRight className="w-5 h-5 ml-2" />
+                Get Early Access
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-medium rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
               >
                 View All Services
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* New Services Grid */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="grid grid-cols-1 md:grid-cols-4 gap-8"
-          >
-            {[
-              { icon: Star, label: "New Services", value: "25+", description: "Cutting-edge solutions" },
-              { icon: TrendingUp, label: "Success Rate", value: "98%", description: "Client satisfaction" },
-              { icon: Zap, label: "Implementation", value: "2-4 weeks", description: "Fast deployment" },
-              { icon: CheckCircle, label: "Support", value: "24/7", description: "Always available" }
-            ].map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.8 + 0.1 * index }}
-                className="text-center"
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Latest Innovations
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Explore our newest AI-powered services that are revolutionizing industries 
+              and transforming business operations.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {newServices.map((service, index) => (
+              <div
+                key={index}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-8 h-8 text-white" />
+                <div className="flex items-start justify-between mb-4">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center`}>
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <span className="px-3 py-1 bg-green-500/20 border border-green-500/50 rounded-full text-green-400 text-xs font-medium">
+                    {service.status}
+                  </span>
                 </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-lg font-medium text-cyan-400 mb-2">{stat.label}</div>
-                <div className="text-sm text-gray-400">{stat.description}</div>
-              </motion.div>
+                
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-300 text-sm mb-4">{service.description}</p>
+                
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features</h4>
+                  <ul className="space-y-1">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <Link
+                  to={service.path}
+                  className="inline-flex items-center w-full justify-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </div>
             ))}
-          </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Upcoming Services */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Coming Soon
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Get a sneak peek at the revolutionary services we're developing for the future.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {upcomingServices.map((service, index) => (
+              <div
+                key={index}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 text-center"
+              >
+                <div className={`w-20 h-20 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mx-auto mb-6`}>
+                  <service.icon className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-cyan-400 text-sm">
+                  <Clock className="w-4 h-4 mr-2" />
+                  {service.eta}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our New Services?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Be among the first to experience cutting-edge technology and gain a competitive advantage.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
+              <div
+                key={index}
+                className="flex items-center bg-gray-800/50 backdrop-blur-sm rounded-lg p-4 border border-gray-700"
+              >
+                <Star className="w-6 h-6 text-cyan-400 mr-3 flex-shrink-0" />
+                <span className="text-gray-300">{benefit}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/50 to-purple-900/50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Experience the Future?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Don't wait to transform your business with our latest AI-powered services. 
+            Contact us today to get early access and priority implementation.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+            >
+              Schedule Consultation
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+            <Link
+              to="/services"
+              className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
+            >
+              Explore All Services
+            </Link>
+          </div>
         </div>
       </section>
     </div>
   );
 };
+
+// Add missing icons
+const Mic = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+  </svg>
+);
+
+const LinkIcon = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+  </svg>
+);
+
+const Wifi = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
+  </svg>
+);
 
 export default NewServices;
