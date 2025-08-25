@@ -100,8 +100,11 @@ import {
   DeveloperRoutes
 } from './routes';
 const Home = React.lazy(() => import('./pages/Home'));
+<<<<<<< HEAD
 const About = React.lazy(() => import('./pages/About'));
 const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-76ca
 const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
 const TalentsPage = React.lazy(() => import('./pages/TalentsPage'));
 const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
@@ -146,6 +149,7 @@ const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
 const ContactPage = React.lazy(() => import('./pages/Contact'));
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -296,6 +300,15 @@ const DataAnalyticsServicesPage = React.lazy(() => import('./pages/DataAnalytics
 =======
 const MicroSaasServicesPage = React.lazy(() => import('./pages/MicroSaasServicesPage'));
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-de94
+=======
+const FAQPage = React.lazy(() => import('./pages/FAQ'));
+const HelpCenterPage = React.lazy(() => import('./pages/HelpCenterPage'));
+const GreenITPage = React.lazy(() => import('./pages/GreenIT'));
+const ContentGeneratorPage = React.lazy(() => import('./pages/ContentGenerator'));
+const PortfolioBuilderPage = React.lazy(() => import('./pages/PortfolioBuilder'));
+const ServiceDescriptionGeneratorPage = React.lazy(() => import('./pages/ServiceDescriptionGenerator'));
+const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
+>>>>>>> origin/cursor/website-audit-and-enhancement-76ca
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -440,6 +453,7 @@ const baseRoutes = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   { path: '/about', element: <AboutPage /> },
   { path: '/careers', element: <CareersPage /> },
   { path: '/sitemap', element: <SitemapPage /> },
@@ -521,6 +535,15 @@ const baseRoutes = [
   { path: '/sitemap', element: <SitemapPage /> },
   { path: '/green-it', element: <GreenITPage /> },
 >>>>>>> origin/cursor/website-audit-and-enhancement-050f
+=======
+  { path: '/faq', element: <FAQPage /> },
+  { path: '/help', element: <HelpCenterPage /> },
+  { path: '/green-it', element: <GreenITPage /> },
+  { path: '/content-generator', element: <ContentGeneratorPage /> },
+  { path: '/portfolio-builder', element: <PortfolioBuilderPage /> },
+  { path: '/service-description-generator', element: <ServiceDescriptionGeneratorPage /> },
+  { path: '/ai-matcher', element: <AIMatcherPage /> },
+>>>>>>> origin/cursor/website-audit-and-enhancement-76ca
 ];
 
 const App = () => {

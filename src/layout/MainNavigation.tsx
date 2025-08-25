@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 <<<<<<< HEAD
@@ -25,6 +26,11 @@ import { MessageSquare, ChevronDown, Sparkles, Zap, Shield, Database, Cloud, Cod
 import { useTranslation } from "react-i18next";
 import { useState, useRef, useEffect } from "react";
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
+=======
+import { MessageSquare, ChevronDown } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useState, useEffect, useRef } from "react";
+>>>>>>> origin/cursor/website-audit-and-enhancement-76ca
 
 interface MainNavigationProps {
   isAdmin?: boolean;
@@ -45,6 +51,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const isAuthenticated = !!user;
   const location = useLocation();
   const { t } = useTranslation();
+<<<<<<< HEAD
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -61,10 +68,20 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setActiveDropdown(null);
+=======
+  const [toolsOpen, setToolsOpen] = useState(false);
+  const toolsRef = useRef<HTMLLIElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (toolsRef.current && !toolsRef.current.contains(event.target as Node)) {
+        setToolsOpen(false);
+>>>>>>> origin/cursor/website-audit-and-enhancement-76ca
       }
     };
 
     document.addEventListener('mousedown', handleClickOutside);
+<<<<<<< HEAD
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 <<<<<<< HEAD
@@ -77,6 +94,12 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-da9e
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
+=======
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+>>>>>>> origin/cursor/website-audit-and-enhancement-76ca
 
   const baseLinks = [
     {
@@ -473,6 +496,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: '/community',
       matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
 =======
 =======
@@ -494,6 +518,18 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 >>>>>>> origin/cursor/website-audit-and-enhancement-050f
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-7286
+=======
+    },
+    {
+      key: 'faq',
+      href: '/faq',
+      matches: (path: string) => path === '/faq'
+    },
+    {
+      key: 'help',
+      href: '/help',
+      matches: (path: string) => path === '/help'
+>>>>>>> origin/cursor/website-audit-and-enhancement-76ca
     }
   ];
 
@@ -732,6 +768,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
           </li>
         ))}
         
+<<<<<<< HEAD
         {/* Company Dropdown */}
         <li className="relative">
           <button
@@ -793,10 +830,20 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             className={cn(
               "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
               isActive('/help') || isActive('/sitemap') || isActive('/green-it')
+=======
+        {/* Tools dropdown */}
+        <li className="relative" ref={toolsRef}>
+          <button
+            onClick={() => setToolsOpen(!toolsOpen)}
+            className={cn(
+              "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
+              toolsOpen
+>>>>>>> origin/cursor/website-audit-and-enhancement-76ca
                 ? "bg-zion-purple/20 text-zion-cyan"
                 : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
             )}
           >
+<<<<<<< HEAD
             Resources
             <ChevronDown className="ml-1 h-4 w-4" />
           </button>
@@ -839,6 +886,42 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   {link.name}
                 </Link>
               ))}
+=======
+            Tools
+            <ChevronDown className={cn("ml-1 h-4 w-4 transition-transform", toolsOpen && "rotate-180")} />
+          </button>
+          
+          {toolsOpen && (
+            <div className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-blue-light rounded-md shadow-lg py-2 z-50">
+              <Link
+                to="/ai-matcher"
+                className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10"
+                onClick={() => setToolsOpen(false)}
+              >
+                AI Matcher
+              </Link>
+              <Link
+                to="/content-generator"
+                className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10"
+                onClick={() => setToolsOpen(false)}
+              >
+                Content Generator
+              </Link>
+              <Link
+                to="/portfolio-builder"
+                className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10"
+                onClick={() => setToolsOpen(false)}
+              >
+                Portfolio Builder
+              </Link>
+              <Link
+                to="/service-description-generator"
+                className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10"
+                onClick={() => setToolsOpen(false)}
+              >
+                Service Generator
+              </Link>
+>>>>>>> origin/cursor/website-audit-and-enhancement-76ca
             </div>
           )}
         </li>
