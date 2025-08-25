@@ -217,6 +217,7 @@ import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { EnhancedServicesShowcase } from "@/components/home/EnhancedServicesShowcase";
 import { BottomNavigation } from "@/components/MobileNavigation";
 import { MicroSaasServicesSection } from "@/components/home/MicroSaasServicesSection";
@@ -402,6 +403,9 @@ import { ContactInfo } from "@/components/ContactInfo";
 import { FloatingCTA } from "@/components/FloatingCTA";
 import { TestimonialCarousel } from "@/components/TestimonialCarousel";
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fb01
+=======
+import { ComprehensiveServicesShowcase } from "@/components/home/ComprehensiveServicesShowcase";
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-8a54
 
 export default function Home() {
   const features = [
@@ -784,6 +788,7 @@ export default function Home() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <MicroSaasShowcase />
 =======
       <ServicesOverview />
@@ -794,6 +799,9 @@ export default function Home() {
 =======
       <TestimonialCarousel />
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fb01
+=======
+      <ComprehensiveServicesShowcase />
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-8a54
       
       <CategoriesSection />
       <BenefitsSection />

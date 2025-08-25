@@ -1413,3 +1413,49 @@ src/pages/ServicesPage.tsx
 [2025-08-25 23:35:47] Processing unmerged file: src/pages/ServicesPage.tsx
 [2025-08-25 23:35:47] File exists in HEAD, keeping it
 [2025-08-25 23:35:48] Still have unmerged paths, attempting additional resolution...
+[main 519b74beb86] Merge PR #6633: cursor/expand-services-and-deploy-updates-32cc (advanced conflict resolution)
+[2025-08-25 23:35:49] ✓ Advanced conflict resolution successful for PR #6633
+[2025-08-25 23:35:49] ✓ PR #6633 processed successfully
+==========================================
+
+
+==========================================
+[2025-08-25 23:35:49] Processing PR #6627 from branch: cursor/expand-services-and-deploy-updates-8a54
+==========================================
+[2025-08-25 23:35:49] Processing PR #6627 from branch: cursor/expand-services-and-deploy-updates-8a54
+[2025-08-25 23:35:49] Attempting regular merge...
+Auto-merging package-lock.json
+CONFLICT (content): Merge conflict in package-lock.json
+Auto-merging pages/talent/[id].tsx
+CONFLICT (content): Merge conflict in pages/talent/[id].tsx
+Auto-merging src/App.tsx
+CONFLICT (content): Merge conflict in src/App.tsx
+Auto-merging src/components/CategoriesSection.tsx
+CONFLICT (content): Merge conflict in src/components/CategoriesSection.tsx
+Auto-merging src/components/home/ComprehensiveServicesShowcase.tsx
+CONFLICT (add/add): Merge conflict in src/components/home/ComprehensiveServicesShowcase.tsx
+Auto-merging src/data/comprehensiveServices.ts
+CONFLICT (add/add): Merge conflict in src/data/comprehensiveServices.ts
+Auto-merging src/pages/ComprehensiveServices.tsx
+CONFLICT (add/add): Merge conflict in src/pages/ComprehensiveServices.tsx
+Auto-merging src/pages/Home.tsx
+CONFLICT (content): Merge conflict in src/pages/Home.tsx
+Automatic merge failed; fix conflicts and then commit the result.
+[2025-08-25 23:35:50] ✗ Merge failed for PR #6627, attempting advanced conflict resolution...
+[2025-08-25 23:35:50] Resolving complex conflicts for PR #6627 (cursor/expand-services-and-deploy-updates-8a54)...
+[2025-08-25 23:35:50] Found unmerged files: package-lock.json
+pages/talent/[id].tsx
+src/App.tsx
+src/components/CategoriesSection.tsx
+src/pages/Home.tsx
+[2025-08-25 23:35:50] Processing unmerged file: package-lock.json
+[2025-08-25 23:35:50] File exists in HEAD, keeping it
+[2025-08-25 23:35:50] Processing unmerged file: pages/talent/[id].tsx
+[2025-08-25 23:35:50] File exists in HEAD, keeping it
+[2025-08-25 23:35:50] Processing unmerged file: src/App.tsx
+[2025-08-25 23:35:50] File exists in HEAD, keeping it
+[2025-08-25 23:35:50] Processing unmerged file: src/components/CategoriesSection.tsx
+[2025-08-25 23:35:50] File exists in HEAD, keeping it
+[2025-08-25 23:35:50] Processing unmerged file: src/pages/Home.tsx
+[2025-08-25 23:35:50] File exists in HEAD, keeping it
+[2025-08-25 23:35:51] Still have unmerged paths, attempting additional resolution...
