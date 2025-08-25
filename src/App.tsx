@@ -213,6 +213,7 @@ const App = () => {
                     <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                     <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
                     <Route path="/services/industry-solutions" element={<IndustrySolutions />} />
+                    <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview />} />
                     
                     {/* Solutions Routes */}
                     <Route path="/solutions/enterprise" element={<EnterpriseSolutions />} />

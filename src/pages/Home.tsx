@@ -503,6 +503,102 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+      {/* Comprehensive Services Showcase */}
+      <section className="py-20 bg-gradient-to-b from-gray-900/50 to-black/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Explore Our Complete Service Portfolio
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Discover 500+ cutting-edge technology services across AI, Quantum Computing, Cybersecurity, 
+              IT Infrastructure, and emerging technologies. Find the perfect solution for your business needs.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg mr-4">
+                  <Brain className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white">AI & Autonomous Systems</h3>
+              </div>
+              <p className="text-gray-400 mb-4">
+                Revolutionary AI solutions that transform business operations with autonomous decision-making, 
+                intelligent automation, and cognitive capabilities.
+              </p>
+              <div className="text-sm text-gray-300 mb-4">
+                <strong>Services:</strong> AI Business Intelligence, Autonomous Customer Support, 
+                Legal Research AI, Healthcare Diagnostics, Marketing Orchestration
+              </div>
+              <Link
+                to="/comprehensive-services-overview?category=AI"
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+              >
+                Explore AI Services <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </div>
+
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <div className="p-3 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg mr-4">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white">Quantum Computing</h3>
+              </div>
+              <p className="text-gray-400 mb-4">
+                Next-generation quantum solutions for financial modeling, drug discovery, 
+                cybersecurity, and complex optimization problems.
+              </p>
+              <div className="text-sm text-gray-300 mb-4">
+                <strong>Services:</strong> Quantum Financial Trading, Quantum Cybersecurity, 
+                Quantum Machine Learning, Quantum Internet, Quantum Storage
+              </div>
+              <Link
+                to="/comprehensive-services-overview?category=Quantum"
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+              >
+                Explore Quantum Services <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </div>
+
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <div className="p-3 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg mr-4">
+                  <Cpu className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white">IT Infrastructure</h3>
+              </div>
+              <p className="text-gray-400 mb-4">
+                Advanced infrastructure solutions including edge computing, autonomous DevOps, 
+                zero-trust security, and hybrid cloud orchestration.
+              </p>
+              <div className="text-sm text-gray-300 mb-4">
+                <strong>Services:</strong> Edge Computing, Autonomous DevOps, Zero-Trust Security, 
+                AI-Powered Data Centers, Hybrid Cloud Management
+              </div>
+              <Link
+                to="/comprehensive-services-overview?category=IT"
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+              >
+                Explore Infrastructure Services <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Link
+              to="/comprehensive-services-overview"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+            >
+              View All 500+ Services
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <Suspense fallback={<LoadingFallback message="Loading services..." />}>
         <LazyServicesSection />
