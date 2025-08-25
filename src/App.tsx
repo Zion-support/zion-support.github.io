@@ -245,21 +245,7 @@ const App = () => {
                 )}
                 
                 {/* Enhanced Performance Monitor - Always Available */}
-                <PerformanceMonitor 
-                  showMetrics={true}
-                  autoRefresh={true}
-                  refreshInterval={30000}
-                  onMetricsUpdate={(metrics) => {
-                    if (import.meta.env.DEV) {
-                      console.log('Performance metrics updated:', metrics);
-                    }
-                  }}
-                  onScoreUpdate={(score) => {
-                    if (import.meta.env.DEV) {
-                      console.log('Performance score updated:', score);
-                    }
-                  }}
-                />
+                <PerformanceMonitor />
                 
                 {/* Link Health Monitor - Development Mode */}
                 {import.meta.env.DEV && (
