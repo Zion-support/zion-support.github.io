@@ -39,6 +39,12 @@ export function Footer() {
       links: [
         { label: "AI & Autonomous Systems", path: "/services/ai-autonomous-systems" },
         { label: "AI Research Assistant", path: "/ai-autonomous-research-assistant" },
+        { label: "AI Business Manager", path: "/ai-autonomous-business-manager" },
+        { label: "AI Business Manager 2029", path: "/ai-autonomous-business-manager-2029" },
+        { label: "AI Business Platform", path: "/ai-autonomous-business-platform" },
+        { label: "AI Business Platform 2026", path: "/ai-autonomous-business-platform-2026" },
+        { label: "AI Code Review", path: "/ai-autonomous-code-review" },
+        { label: "AI Creative Director", path: "/ai-autonomous-creative-director" },
         { label: "Quantum Neural Networks", path: "/quantum-neural-network-platform" },
         { label: "Autonomous Business Platform", path: "/autonomous-business-operations-platform" },
         { label: "AI Asset Management", path: "/ai-powered-it-asset-management" },

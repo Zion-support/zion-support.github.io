@@ -53,6 +53,14 @@ const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 const NewServices = lazy(() => import('./pages/NewServices'));
 
+// Additional missing pages from analysis
+const AIAutonomousBusinessManager = lazy(() => import('./pages/AIAutonomousBusinessManager'));
+const AIAutonomousBusinessManager2029 = lazy(() => import('./pages/AIAutonomousBusinessManager2029'));
+const AIAutonomousBusinessPlatform = lazy(() => import('./pages/AIAutonomousBusinessPlatform'));
+const AIAutonomousBusinessPlatform2026 = lazy(() => import('./pages/AIAutonomousBusinessPlatform2026'));
+const AIAutonomousCodeReview = lazy(() => import('./pages/AIAutonomousCodeReview'));
+const AIAutonomousCreativeDirector = lazy(() => import('./pages/AIAutonomousCreativeDirector'));
+
 // Company information pages
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
@@ -152,6 +160,14 @@ const App = () => {
                       <Route path="/case-studies" element={<CaseStudies />} />
                       <Route path="/help" element={<HelpCenter />} />
                       <Route path="/new-services" element={<NewServices />} />
+                      
+                      {/* Additional missing pages from analysis */}
+                      <Route path="/ai-autonomous-business-manager" element={<AIAutonomousBusinessManager />} />
+                      <Route path="/ai-autonomous-business-manager-2029" element={<AIAutonomousBusinessManager2029 />} />
+                      <Route path="/ai-autonomous-business-platform" element={<AIAutonomousBusinessPlatform />} />
+                      <Route path="/ai-autonomous-business-platform-2026" element={<AIAutonomousBusinessPlatform2026 />} />
+                      <Route path="/ai-autonomous-code-review" element={<AIAutonomousCodeReview />} />
+                      <Route path="/ai-autonomous-creative-director" element={<AIAutonomousCreativeDirector />} />
                       
                       {/* Company Routes */}
                       <Route path="/about" element={<About />} />

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Rocket, Cpu, Database, Lock, BarChart3, Target, Heart, Code, Network, Cloud, Eye } from 'lucide-react';
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Rocket, Cpu, Database, Lock, BarChart3, Target, Heart, Code, Network, Cloud, Eye, Palette } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 interface SidebarProps {
@@ -33,6 +33,12 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       items: [
         { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
         { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Brain },
+        { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', icon: Brain },
+        { name: 'AI Business Manager 2029', path: '/ai-autonomous-business-manager-2029', icon: Brain },
+        { name: 'AI Business Platform', path: '/ai-autonomous-business-platform', icon: Brain },
+        { name: 'AI Business Platform 2026', path: '/ai-autonomous-business-platform-2026', icon: Brain },
+        { name: 'AI Code Review', path: '/ai-autonomous-code-review', icon: Code },
+        { name: 'AI Creative Director', path: '/ai-autonomous-creative-director', icon: Palette },
         { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain },
         { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Rocket },
         { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Database },
