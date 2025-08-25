@@ -1,148 +1,265 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Wifi, Zap, Shield, BarChart3, Globe, Users, Database, Settings } from 'lucide-react';
+import { 
+  Network, 
+  Zap, 
+  Shield, 
+  Users, 
+  Target, 
+  ArrowRight,
+  CheckCircle,
+  Star,
+  TrendingUp,
+  Globe,
+  Cpu,
+  Lock,
+  Eye,
+  Search,
+  Filter,
+  Download,
+  Upload,
+  RefreshCw,
+  Settings,
+  Monitor,
+  AlertTriangle,
+  Clock,
+  Calendar,
+  FileText,
+  PieChart,
+  LineChart,
+  Activity,
+  Gauge,
+  Lightbulb,
+  Rocket,
+  Award,
+  Wifi,
+  Signal,
+  Router,
+  Antenna,
+  Satellite,
+  Cloud,
+  Database,
+  Server,
+  HardDrive,
+  Smartphone,
+  Tablet,
+  Laptop,
+  Monitor as MonitorIcon
+} from 'lucide-react';
 
 const FiveGEnterpriseSolutions: React.FC = () => {
   const features = [
     {
-      icon: Wifi,
+      icon: Network,
       title: "Ultra-Fast Connectivity",
-      description: "Lightning-fast 5G network speeds for enterprise applications and data transfer."
-    },
-    {
-      icon: Zap,
-      title: "Low Latency",
-      description: "Ultra-low latency for real-time applications and critical business operations."
+      description: "Lightning-fast 5G networks with ultra-low latency for enterprise applications"
     },
     {
       icon: Shield,
       title: "Enterprise Security",
-      description: "Advanced security protocols and private network solutions for enterprise use."
+      description: "Advanced security protocols and network isolation for business-critical operations"
     },
     {
-      icon: BarChart3,
-      title: "Network Analytics",
-      description: "Comprehensive network monitoring and performance analytics for optimization."
+      icon: Users,
+      title: "Massive IoT Support",
+      description: "Connect thousands of devices with reliable, scalable network infrastructure"
+    },
+    {
+      icon: Zap,
+      title: "Real-Time Processing",
+      description: "Near-instantaneous data transmission for time-sensitive applications"
+    },
+    {
+      icon: Target,
+      title: "Custom Solutions",
+      description: "Tailored 5G solutions designed for your specific business requirements"
     },
     {
       icon: Globe,
       title: "Global Coverage",
-      description: "Worldwide 5G network coverage with seamless roaming capabilities."
-    },
-    {
-      icon: Users,
-      title: "Scalable Solutions",
-      description: "Flexible and scalable 5G solutions that grow with your business needs."
+      description: "Worldwide 5G network coverage with seamless roaming capabilities"
     }
+  ];
+
+  const capabilities = [
+    "Private 5G network deployment and management",
+    "Network slicing for isolated business applications",
+    "Edge computing integration and optimization",
+    "IoT device management and monitoring",
+    "Real-time analytics and network performance tracking",
+    "Advanced security and compliance features",
+    "Scalable bandwidth allocation and management",
+    "24/7 network monitoring and support",
+    "Custom API integration and development",
+    "Comprehensive network documentation and reporting"
   ];
 
   const useCases = [
     {
-      title: "Smart Manufacturing",
-      description: "5G-powered IoT sensors and real-time monitoring for industrial automation."
-    },
-    {
-      title: "Remote Work",
-      description: "High-speed connectivity for remote teams and virtual collaboration platforms."
-    },
-    {
-      title: "Autonomous Vehicles",
-      description: "Low-latency communication for autonomous vehicle fleets and logistics."
+      title: "Manufacturing",
+      description: "Smart factory automation with real-time monitoring and control"
     },
     {
       title: "Healthcare",
-      description: "Real-time telemedicine and remote patient monitoring with 5G connectivity."
+      description: "Remote surgery and telemedicine with ultra-low latency"
     },
     {
-      title: "Financial Services",
-      description: "Ultra-fast trading platforms and secure financial data transmission."
+      title: "Transportation",
+      description: "Autonomous vehicles and intelligent traffic management"
     },
     {
       title: "Retail",
-      description: "Enhanced customer experiences with AR/VR and smart retail solutions."
+      description: "Enhanced customer experiences with AR/VR and IoT integration"
+    },
+    {
+      title: "Energy",
+      description: "Smart grid management and renewable energy optimization"
+    },
+    {
+      title: "Education",
+      description: "Immersive learning experiences and remote collaboration"
     }
   ];
 
   const benefits = [
     {
-      metric: "10x",
-      label: "Faster Speed",
-      description: "Dramatically faster data transfer and network performance"
+      icon: Zap,
+      title: "10x Faster Speed",
+      description: "Up to 10x faster than 4G networks"
     },
     {
-      metric: "1ms",
-      label: "Ultra-Low Latency",
-      description: "Near-instantaneous response times for critical applications"
+      icon: Clock,
+      title: "Ultra-Low Latency",
+      description: "1ms latency for real-time applications"
     },
     {
-      metric: "100x",
-      label: "More Devices",
-      description: "Support for massive IoT device connectivity"
+      icon: Users,
+      title: "Massive Connectivity",
+      description: "Support for 1M+ devices per km²"
     },
     {
-      metric: "99.9%",
-      label: "Reliability",
-      description: "Enterprise-grade network reliability and uptime"
+      icon: Shield,
+      title: "Enhanced Security",
+      description: "Advanced encryption and network isolation"
+    }
+  ];
+
+  const solutions = [
+    {
+      title: "Private 5G Networks",
+      description: "Dedicated 5G infrastructure for enterprise use",
+      icon: Network
+    },
+    {
+      title: "Network Slicing",
+      description: "Isolated network segments for different applications",
+      icon: Shield
+    },
+    {
+      title: "Edge Computing",
+      description: "Local data processing for reduced latency",
+      icon: Cpu
+    },
+    {
+      title: "IoT Integration",
+      description: "Seamless connectivity for smart devices",
+      icon: Wifi
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 quantum-particles"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-cyan-400 text-sm font-medium mb-6">
-              <Wifi className="w-4 h-4 mr-2" />
-              5G Enterprise Solutions
+      <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 text-white">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <div className="text-center">
+            <div className="flex justify-center mb-6">
+              <div className="p-3 bg-white/20 rounded-full">
+                <Network className="w-12 h-12 text-white" />
+              </div>
             </div>
-            <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
               5G Enterprise Solutions
             </h1>
-            <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Transform your enterprise with cutting-edge 5G technology. Experience unprecedented speed, reliability, and connectivity for the future of business.
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-blue-100">
+              Transform your business with next-generation 5G connectivity, 
+              ultra-low latency, and massive IoT support for the digital enterprise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30"
+                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors"
               >
                 Get Started
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <button className="px-8 py-4 border border-cyan-400/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">
-                Schedule Demo
-              </button>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
+              >
+                Watch Demo
+              </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 relative">
+      {/* Features Section */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Revolutionary 5G Performance
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Next-Generation Connectivity
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the next generation of wireless technology with enterprise-grade 5G solutions.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Experience the power of 5G technology with enterprise-grade features 
+              designed for modern business needs.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl border border-blue-100 hover:shadow-lg transition-shadow">
+                <div className="p-3 bg-blue-600 rounded-lg w-fit mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose 5G for Enterprise?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Experience the transformative benefits of 5G technology in your business operations.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className="text-center p-6 bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-cyan-500/30"
-              >
-                <div className="text-4xl font-bold text-cyan-400 mb-2">
-                  {benefit.metric}
+              <div key={index} className="text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="p-4 bg-blue-600 rounded-full">
+                    <benefit.icon className="w-8 h-8 text-white" />
+                  </div>
                 </div>
-                <div className="text-lg font-semibold text-white mb-2">
-                  {benefit.label}
-                </div>
-                <p className="text-gray-300 text-sm">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  {benefit.title}
+                </h3>
+                <p className="text-gray-600">
                   {benefit.description}
                 </p>
               </div>
@@ -151,64 +268,90 @@ const FiveGEnterpriseSolutions: React.FC = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black/50 relative">
+      {/* Solutions Section */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Features
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Enterprise 5G Solutions
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our 5G enterprise solutions provide comprehensive capabilities designed for modern businesses.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive 5G solutions designed to meet the unique needs of modern enterprises.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <div
-                  key={index}
-                  className="p-6 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-white" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {solutions.map((solution, index) => (
+              <div key={index} className="bg-gradient-to-br from-indigo-50 to-blue-50 p-8 rounded-xl border border-indigo-100 hover:shadow-lg transition-shadow">
+                <div className="flex items-center mb-4">
+                  <div className="p-3 bg-indigo-600 rounded-lg mr-4">
+                    <solution.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {feature.title}
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    {solution.title}
                   </h3>
-                  <p className="text-gray-300">
-                    {feature.description}
-                  </p>
                 </div>
-              );
-            })}
+                <p className="text-gray-600">
+                  {solution.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Capabilities Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Advanced Capabilities
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive 5G capabilities that adapt and scale with your business requirements.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-4">
+              {capabilities.slice(0, 5).map((capability, index) => (
+                <div key={index} className="flex items-start space-x-3">
+                  <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">{capability}</span>
+                </div>
+              ))}
+            </div>
+            <div className="space-y-4">
+              {capabilities.slice(5).map((capability, index) => (
+                <div key={index + 5} className="flex items-start space-x-3">
+                  <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">{capability}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 relative">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Industry Applications
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how 5G technology is transforming industries and enabling new business models.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover how 5G Enterprise Solutions transform operations across various industries.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (
-              <div
-                key={index}
-                className="p-8 bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300"
-              >
-                <h3 className="text-2xl font-semibold text-cyan-400 mb-4">
+              <div key={index} className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100 hover:shadow-lg transition-shadow">
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   {useCase.title}
                 </h3>
-                <p className="text-gray-300 text-lg">
+                <p className="text-gray-600">
                   {useCase.description}
                 </p>
               </div>
@@ -218,26 +361,27 @@ const FiveGEnterpriseSolutions: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 text-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Embrace 5G Technology?
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Deploy 5G in Your Enterprise?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join leading enterprises that are already experiencing the benefits of 5G connectivity.
+          <p className="text-xl text-blue-100 mb-8">
+            Join the 5G revolution and transform your business connectivity with Zion Tech Group.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105"
+              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors"
             >
-              Get Started Today
+              Start Your Journey
+              <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link
               to="/pricing"
-              className="px-8 py-4 border border-cyan-400/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300"
+              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
             >
-              View Pricing Plans
+              View Pricing
             </Link>
           </div>
         </div>

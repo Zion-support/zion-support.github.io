@@ -1,310 +1,88 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { 
+  Search, 
+  Filter, 
+  Star, 
+  Clock, 
+  Users, 
+  Zap, 
+  Shield, 
+  Brain, 
+  Cloud, 
+  Lock,
+  Cpu,
+  Database,
+  Network,
+  Code,
+  BarChart3,
+  Target,
+  Lightbulb,
+  Rocket,
+  Phone,
+  Mail,
+  Globe,
+  TrendingUp,
+  Award,
+  CheckCircle,
+  ArrowRight,
+  ChevronDown,
+  ChevronUp,
+  ExternalLink
+} from 'lucide-react';
+import { ADVANCED_MICRO_SAAS_SERVICES } from '../data/advancedMicroSaasServices';
+import { EMERGING_TECH_SERVICES } from '../data/emergingTechServices';
 
-const INNOVATIVE_SERVICES = [
-  {
-    id: "ai-powered-legal-document-generator",
-    title: "AI-Powered Legal Document Generator",
-    description: "Intelligent legal document creation platform that generates contracts, agreements, and legal forms with AI-powered compliance checking.",
-    category: "Legal Technology",
-    price: 450,
-    currency: "$",
-    pricingModel: "monthly",
-    marketPrice: "$450 - $1,200/month",
-    features: [
-      "AI-powered document templates",
-      "Compliance checking",
-      "Legal clause suggestions",
-      "Multi-jurisdiction support",
-      "E-signature integration"
-    ],
-    benefits: [
-      "Reduce legal document creation time by 80%",
-      "Ensure compliance accuracy",
-      "Lower legal costs",
-      "Standardize document quality"
-    ],
-    useCases: ["Law firms", "Corporate legal departments", "Startups", "Real estate agencies"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  },
-  {
-    id: "quantum-cryptography-platform",
-    title: "Quantum Cryptography & Security Platform",
-    description: "Next-generation cryptographic platform using quantum key distribution for unbreakable encryption and secure communications.",
-    category: "Quantum Security",
-    price: 8000,
-    currency: "$",
-    pricingModel: "monthly",
-    marketPrice: "$8,000 - $25,000/month",
-    features: [
-      "Quantum key distribution",
-      "Post-quantum cryptography",
-      "Secure communication channels",
-      "Quantum-resistant algorithms",
-      "Real-time encryption"
-    ],
-    benefits: [
-      "Unbreakable encryption",
-      "Future-proof security",
-      "Quantum-resistant protection",
-      "Regulatory compliance"
-    ],
-    useCases: ["Financial institutions", "Government agencies", "Healthcare organizations", "Defense contractors"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  },
-  {
-    id: "autonomous-ai-research-assistant",
-    title: "Autonomous AI Research Assistant",
-    description: "Self-learning AI research platform that autonomously conducts research, analyzes data, and generates insights across multiple domains.",
-    category: "AI & Machine Learning",
-    price: 3500,
-    currency: "$",
-    pricingModel: "monthly",
-    marketPrice: "$3,500 - $12,000/month",
-    features: [
-      "Autonomous research execution",
-      "Multi-domain knowledge synthesis",
-      "Real-time data analysis",
-      "Insight generation",
-      "Research report creation"
-    ],
-    benefits: [
-      "Accelerate research by 10x",
-      "Reduce research costs",
-      "Discover hidden insights",
-      "Automate literature reviews"
-    ],
-    useCases: ["Academic institutions", "Research organizations", "Pharmaceutical companies", "Market research firms"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  },
-  {
-    id: "quantum-machine-learning-platform",
-    title: "Quantum Machine Learning Platform",
-    description: "Advanced machine learning platform that leverages quantum computing to solve complex optimization problems and accelerate AI training.",
-    category: "Quantum Computing",
-    price: 12000,
-    currency: "$",
-    pricingModel: "monthly",
-    marketPrice: "$12,000 - $40,000/month",
-    features: [
-      "Quantum neural networks",
-      "Quantum optimization algorithms",
-      "Hybrid quantum-classical ML",
-      "Quantum feature selection",
-      "Real-time model training"
-    ],
-    benefits: [
-      "Exponential speedup for ML tasks",
-      "Solve previously intractable problems",
-      "Better model accuracy",
-      "Faster training times"
-    ],
-    useCases: ["Financial modeling", "Drug discovery", "Logistics optimization", "Climate modeling"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  },
-  {
-    id: "ai-powered-healthcare-diagnostics",
-    title: "AI-Powered Healthcare Diagnostics Platform",
-    description: "Comprehensive medical diagnostics platform using AI to analyze medical images, patient data, and provide diagnostic recommendations.",
-    category: "Healthcare Technology",
-    price: 2800,
-    currency: "$",
-    pricingModel: "monthly",
-    marketPrice: "$2,800 - $8,500/month",
-    features: [
-      "Medical image analysis",
-      "Patient data analytics",
-      "Diagnostic recommendations",
-      "Risk assessment",
-      "Treatment planning"
-    ],
-    benefits: [
-      "Improve diagnostic accuracy by 30%",
-      "Reduce diagnostic time",
-      "Lower healthcare costs",
-      "Better patient outcomes"
-    ],
-    useCases: ["Hospitals", "Medical clinics", "Radiology centers", "Research institutions"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  },
-  {
-    id: "quantum-financial-modeling",
-    title: "Quantum Financial Modeling & Risk Assessment",
-    description: "Advanced financial modeling platform using quantum computing for portfolio optimization, risk assessment, and market prediction.",
-    category: "Quantum Computing",
-    price: 15000,
-    currency: "$",
-    pricingModel: "monthly",
-    marketPrice: "$15,000 - $50,000/month",
-    features: [
-      "Quantum portfolio optimization",
-      "Risk assessment algorithms",
-      "Market prediction models",
-      "Real-time trading signals",
-      "Regulatory compliance"
-    ],
-    benefits: [
-      "Superior portfolio optimization",
-      "Better risk management",
-      "Faster market analysis",
-      "Regulatory compliance"
-    ],
-    useCases: ["Investment banks", "Hedge funds", "Asset management firms", "Insurance companies"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  },
-  {
-    id: "autonomous-cybersecurity-operations",
-    title: "Autonomous Cybersecurity Operations Center",
-    description: "Self-operating cybersecurity platform that autonomously detects, analyzes, and responds to security threats in real-time.",
-    category: "Cybersecurity",
-    price: 4200,
-    currency: "$",
-    pricingModel: "monthly",
-    marketPrice: "$4,200 - $15,000/month",
-    features: [
-      "Autonomous threat detection",
-      "AI-powered incident response",
-      "Behavioral analysis",
-      "Threat hunting automation",
-      "Vulnerability assessment"
-    ],
-    benefits: [
-      "Reduce response time by 90%",
-      "Lower security operations costs",
-      "Continuous protection",
-      "Proactive threat prevention"
-    ],
-    useCases: ["Large enterprises", "Government agencies", "Financial institutions", "Healthcare organizations"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  },
-  {
-    id: "ai-powered-creative-design-platform",
-    title: "AI-Powered Creative Design Platform",
-    description: "Intelligent design platform that uses AI to generate creative content, logos, graphics, and marketing materials.",
-    category: "Creative Design",
-    price: 180,
-    currency: "$",
-    pricingModel: "monthly",
-    marketPrice: "$180 - $500/month",
-    features: [
-      "AI logo generation",
-      "Graphic design automation",
-      "Brand identity creation",
-      "Marketing material design",
-      "Social media graphics"
-    ],
-    benefits: [
-      "Reduce design costs by 70%",
-      "Faster design creation",
-      "Consistent brand identity",
-      "Professional quality output"
-    ],
-    useCases: ["Startups", "Small businesses", "Marketing agencies", "E-commerce businesses"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  },
-  {
-    id: "quantum-drug-discovery-platform",
-    title: "Quantum Drug Discovery Platform",
-    description: "Advanced pharmaceutical research platform using quantum computing to accelerate drug discovery and molecular modeling.",
-    category: "Quantum Computing",
-    price: 20000,
-    currency: "$",
-    pricingModel: "monthly",
-    marketPrice: "$20,000 - $75,000/month",
-    features: [
-      "Quantum molecular modeling",
-      "Drug candidate screening",
-      "Protein folding simulation",
-      "Chemical reaction prediction",
-      "Toxicity assessment"
-    ],
-    benefits: [
-      "Accelerate drug discovery by 10x",
-      "Reduce research costs",
-      "Better drug candidates",
-      "Faster time to market"
-    ],
-    useCases: ["Pharmaceutical companies", "Biotech startups", "Research institutions", "Government agencies"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  },
-  {
-    id: "ai-powered-education-platform",
-    title: "AI-Powered Personalized Education Platform",
-    description: "Intelligent learning platform that adapts to individual student needs, providing personalized education experiences and automated tutoring.",
-    category: "Education Technology",
-    price: 220,
-    currency: "$",
-    pricingModel: "monthly",
-    marketPrice: "$220 - $800/month",
-    features: [
-      "Personalized learning paths",
-      "AI tutoring assistance",
-      "Adaptive assessments",
-      "Progress tracking",
-      "Content recommendation"
-    ],
-    benefits: [
-      "Improve learning outcomes by 40%",
-      "Personalized education",
-      "24/7 learning support",
-      "Scalable education"
-    ],
-    useCases: ["K-12 schools", "Universities", "Corporate training", "Online education"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  }
-];
+interface Service {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  subcategory: string;
+  price: number;
+  currency: string;
+  pricingModel: string;
+  features: string[];
+  benefits: string[];
+  useCases: string[];
+  targetAudience: string[];
+  tags: string[];
+  estimatedDelivery: string;
+  supportLevel: string;
+  marketPrice: string;
+  contactInfo: {
+    phone: string;
+    email: string;
+    website: string;
+  };
+  technology?: string[];
+  integrations?: string[];
+  compliance?: string[];
+  roi?: string;
+  competitors?: string[];
+  marketTrend?: string;
+  innovationLevel?: string;
+}
 
-export default function InnovativeMicroSaasServices() {
+const InnovativeMicroSaasServices: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
+  const [expandedService, setExpandedService] = useState<string | null>(null);
 
-  const categories = ['all', ...Array.from(new Set(INNOVATIVE_SERVICES.map(service => service.category)))];
+  // Combine all services
+  const allServices: Service[] = [
+    ...ADVANCED_MICRO_SAAS_SERVICES,
+    ...EMERGING_TECH_SERVICES
+  ];
+
+  const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
   
-  const filteredServices = INNOVATIVE_SERVICES.filter(service => {
+  const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
     return matchesCategory && matchesSearch;
   });
 
@@ -329,230 +107,357 @@ export default function InnovativeMicroSaasServices() {
     }
   };
 
-  return (
-    <div className="min-h-screen bg-zion-blue-dark text-white relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-quantum-gradient opacity-20 animate-pulse"></div>
-      <div className="absolute inset-0 bg-quantum-mesh"></div>
-      
-      {/* Matrix Rain Effect */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute text-zion-cyan text-xs animate-matrix-rain"
-            style={{
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 20}s`,
-              animationDuration: `${20 + Math.random() * 10}s`
-            }}
-          >
-            {Math.random() > 0.5 ? '1' : '0'}
-          </div>
-        ))}
-      </div>
+  const toggleServiceExpansion = (serviceId: string) => {
+    setExpandedService(expandedService === serviceId ? null : serviceId);
+  };
 
+  const formatPrice = (price: number, currency: string) => {
+    if (price >= 1000) {
+      return `${currency}${(price / 1000).toFixed(1)}k`;
+    }
+    return `${currency}${price}`;
+  };
+
+  const getSupportLevelColor = (level: string) => {
+    switch (level.toLowerCase()) {
+      case 'enterprise':
+        return 'bg-purple-600';
+      case 'premium':
+        return 'bg-blue-600';
+      case 'standard':
+        return 'bg-green-600';
+      default:
+        return 'bg-gray-600';
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
+      {/* Header Section */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-holographic-gradient bg-clip-text text-transparent animate-holographic-shift">
-            Innovative Micro SAAS Services
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+            Innovative Micro-SaaS Services
           </h1>
-          <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Discover our cutting-edge micro SAAS solutions that combine AI, quantum computing, and autonomous systems to transform your business
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Discover our cutting-edge micro-SaaS solutions that combine AI, quantum computing, and emerging technologies to transform your business
           </p>
           
-          {/* Search Bar */}
-          <div className="max-w-2xl mx-auto mb-8">
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Search innovative services..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-6 py-4 bg-zion-blue-light/20 border border-zion-cyan/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 backdrop-blur-sm"
-              />
-              <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-cyan">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
+          {/* Hero CTA */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <Link
+              to="/comprehensive-services-showcase"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+            >
+              <Globe size={24} className="mr-2" />
+              View Complete Portfolio
+            </Link>
+            <a
+              href="tel:+13024640950"
+              className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+            >
+              <Phone size={24} className="mr-2" />
+              Call +1 302 464 0950
+            </a>
+          </div>
+          
+          {/* Search and Filters */}
+          <div className="max-w-4xl mx-auto mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+              {/* Search Bar */}
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search innovative services..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+                />
               </div>
+
+              {/* Category Filter */}
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
+              >
+                {categories.map(category => (
+                  <option key={category} value={category} className="bg-gray-800 text-white">
+                    {category === 'all' ? 'All Categories' : category}
+                  </option>
+                ))}
+              </select>
             </div>
           </div>
 
-          {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                  selectedCategory === category
-                    ? 'bg-zion-cyan text-black shadow-lg shadow-zion-cyan/30'
-                    : 'bg-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-light/30 hover:text-white border border-zion-cyan/30'
-                }`}
-              >
-                {category === 'all' ? 'All Services' : category}
-              </button>
-            ))}
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-cyan-400">{allServices.length}</div>
+              <div className="text-gray-400">Innovative Services</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-blue-400">{categories.length - 1}</div>
+              <div className="text-gray-400">Technology Categories</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-purple-400">{filteredServices.length}</div>
+              <div className="text-gray-400">Available Solutions</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-green-400">24/7</div>
+              <div className="text-gray-400">Expert Support</div>
+            </div>
           </div>
         </motion.div>
 
-        {/* Services Grid */}
+        {/* Featured Services */}
         <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mb-20"
         >
-          {filteredServices.map((service) => (
-            <motion.div
-              key={service.id}
-              variants={itemVariants}
-              className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
-            >
-              {/* Service Header */}
-              <div className="mb-4">
-                <h3 className="text-xl font-bold text-zion-cyan mb-2 group-hover:text-zion-cyan-light transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-zion-slate-light text-sm mb-3">
-                  {service.description}
-                </p>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-zion-cyan font-semibold">
-                    {service.currency}{service.price.toLocaleString()}/{service.pricingModel}
-                  </span>
-                  <span className="text-zion-slate-light text-sm">
-                    Market: {service.marketPrice}
-                  </span>
-                </div>
-              </div>
-
-              {/* Category Badge */}
-              <div className="mb-4">
-                <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs font-medium rounded-full">
-                  {service.category}
-                </span>
-              </div>
-
-              {/* Features */}
-              <div className="mb-4">
-                <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
-                <ul className="space-y-1">
-                  {service.features.slice(0, 3).map((feature, index) => (
-                    <li key={index} className="text-zion-slate-light text-xs flex items-center">
-                      <span className="text-zion-cyan mr-2">•</span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Benefits */}
-              <div className="mb-4">
-                <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
-                <ul className="space-y-1">
-                  {service.benefits.slice(0, 2).map((benefit, index) => (
-                    <li key={index} className="text-zion-slate-light text-xs flex items-center">
-                      <span className="text-zion-cyan mr-2">✓</span>
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Use Cases */}
-              <div className="mb-4">
-                <h4 className="text-sm font-semibold text-white mb-2">Perfect For:</h4>
-                <div className="flex flex-wrap gap-1">
-                  {service.useCases.slice(0, 3).map((useCase, index) => (
-                    <span key={index} className="px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light text-xs rounded">
-                      {useCase}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Contact Information */}
-              <div className="border-t border-zion-cyan/20 pt-4">
-                <div className="text-center">
-                  <p className="text-zion-slate-light text-xs mb-2">Ready to get started?</p>
-                  <div className="space-y-2 text-xs">
-                    <p className="text-zion-cyan">
-                      <span className="text-zion-slate-light">Phone:</span> {service.contactInfo.phone}
-                    </p>
-                    <p className="text-zion-cyan">
-                      <span className="text-zion-slate-light">Email:</span> {service.contactInfo.email}
-                    </p>
-                    <a
-                      href={service.contactInfo.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block px-4 py-2 bg-zion-cyan text-black font-medium rounded-lg hover:bg-zion-cyan-light transition-colors"
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            Featured Innovative Solutions
+          </h2>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+            {filteredServices.slice(0, 6).map((service) => (
+              <motion.div
+                key={service.id}
+                variants={itemVariants}
+                className="bg-gray-800/50 border border-gray-700 rounded-xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20"
+              >
+                {/* Service Header */}
+                <div className="p-6">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
+                      <p className="text-gray-400 text-sm mb-3">{service.description}</p>
+                    </div>
+                    <button
+                      onClick={() => toggleServiceExpansion(service.id)}
+                      className="ml-2 p-1 text-gray-400 hover:text-white transition-colors"
                     >
-                      Learn More
-                    </a>
+                      {expandedService === service.id ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                    </button>
+                  </div>
+
+                  {/* Category and Price */}
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="px-3 py-1 bg-gray-700 text-gray-300 text-xs rounded-full">
+                      {service.category}
+                    </span>
+                    <div className="text-right">
+                      <div className="text-2xl font-bold text-cyan-400">
+                        {formatPrice(service.price, service.currency)}
+                      </div>
+                      <div className="text-gray-400 text-sm">per {service.pricingModel}</div>
+                    </div>
+                  </div>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {service.tags.slice(0, 3).map((tag, index) => (
+                      <span
+                        key={index}
+                        className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                    {service.tags.length > 3 && (
+                      <span className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">
+                        +{service.tags.length - 3} more
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Support Level */}
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-sm text-gray-400">Support Level:</span>
+                    <span className={`px-2 py-1 text-xs text-white rounded ${getSupportLevelColor(service.supportLevel)}`}>
+                      {service.supportLevel}
+                    </span>
+                  </div>
+
+                  {/* Quick Info */}
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div className="flex items-center text-gray-400">
+                      <Clock size={16} className="mr-2" />
+                      {service.estimatedDelivery}
+                    </div>
+                    <div className="flex items-center text-gray-400">
+                      <Users size={16} className="mr-2" />
+                      {service.targetAudience.length} audiences
+                    </div>
+                  </div>
+
+                  {/* Contact Info */}
+                  <div className="mt-4 pt-4 border-t border-gray-700">
+                    <div className="flex items-center justify-between text-sm">
+                      <div className="flex items-center text-gray-400">
+                        <Phone size={16} className="mr-2" />
+                        {service.contactInfo.phone}
+                      </div>
+                      <a
+                        href={`mailto:${service.contactInfo.email}`}
+                        className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                      >
+                        <Mail size={16} className="mr-2" />
+                        Contact
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+
+                {/* Expanded Details */}
+                {expandedService === service.id && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    className="border-t border-gray-700 bg-gray-900/50"
+                  >
+                    <div className="p-6 space-y-6">
+                      {/* Features */}
+                      <div>
+                        <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
+                          <CheckCircle size={20} className="mr-2 text-green-400" />
+                          Key Features
+                        </h4>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                          {service.features.slice(0, 6).map((feature, index) => (
+                            <div key={index} className="flex items-center text-sm text-gray-300">
+                              <div className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></div>
+                              {feature}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Benefits */}
+                      <div>
+                        <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
+                          <TrendingUp size={20} className="mr-2 text-blue-400" />
+                          Benefits
+                        </h4>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                          {service.benefits.slice(0, 4).map((benefit, index) => (
+                            <div key={index} className="flex items-center text-sm text-gray-300">
+                              <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
+                              {benefit}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Innovation Level */}
+                      {service.innovationLevel && (
+                        <div>
+                          <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
+                            <Lightbulb size={20} className="mr-2 text-yellow-400" />
+                            Innovation Level
+                          </h4>
+                          <p className="text-gray-300 text-sm">{service.innovationLevel}</p>
+                        </div>
+                      )}
+
+                      {/* CTA */}
+                      <div className="pt-4 border-t border-gray-700">
+                        <div className="flex flex-col sm:flex-row gap-3">
+                          <a
+                            href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title}`}
+                            className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg text-center font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center"
+                          >
+                            <Mail size={20} className="mr-2" />
+                            Get Quote
+                          </a>
+                          <a
+                            href={`tel:${service.contactInfo.phone}`}
+                            className="flex-1 bg-gray-700 text-white px-6 py-3 rounded-lg text-center font-semibold hover:bg-gray-600 transition-all duration-300 flex items-center justify-center"
+                          >
+                            <Phone size={20} className="mr-2" />
+                            Call Now
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </motion.div>
+            ))}
+          </div>
+
+          {/* View All Services CTA */}
+          {filteredServices.length > 6 && (
+            <div className="text-center mt-12">
+              <Link
+                to="/comprehensive-services-showcase"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
+              >
+                <Globe size={24} className="mr-2" />
+                View All {allServices.length} Services
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+            </div>
+          )}
         </motion.div>
 
-        {/* Call to Action */}
+        {/* Contact CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="text-center mt-16"
+          className="text-center"
         >
-          <div className="bg-zion-blue-light/10 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8">
-            <h2 className="text-3xl font-bold text-zion-cyan mb-4">
-              Ready to Transform Your Business?
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Innovate?
             </h2>
-            <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-              Our innovative micro SAAS services combine cutting-edge technology with practical business solutions. 
-              Get in touch to discover how we can help you stay ahead of the competition.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Our team of technology experts is ready to help you implement cutting-edge solutions that will give you a competitive advantage. 
+              Get in touch today to start your innovation journey.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
-                className="inline-flex items-center px-6 py-3 bg-zion-cyan text-black font-medium rounded-lg hover:bg-zion-cyan-light transition-colors"
+                className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center"
               >
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
+                <Phone size={24} className="mr-2" />
                 Call +1 302 464 0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
-                className="inline-flex items-center px-6 py-3 border border-zion-cyan text-zion-cyan font-medium rounded-lg hover:bg-zion-cyan hover:text-black transition-colors"
+                className="bg-gray-700 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-600 transition-all duration-300 flex items-center justify-center"
               >
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                Email kleber@ziontechgroup.com
+                <Mail size={24} className="mr-2" />
+                Email Us
               </a>
+              <Link
+                to="/comprehensive-services-showcase"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 flex items-center justify-center"
+              >
+                <ExternalLink size={24} className="mr-2" />
+                View Portfolio
+              </Link>
             </div>
-            <div className="mt-6">
-              <a
-                href="https://ziontechgroup.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-zion-cyan hover:text-zion-cyan-light transition-colors"
-              >
-                Visit our website →
-              </a>
+            <div className="mt-8 text-gray-400">
+              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+              <p>Website: <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">https://ziontechgroup.com</a></p>
             </div>
           </div>
         </motion.div>
       </div>
     </div>
   );
-}
+};
+
+export default InnovativeMicroSaasServices;
