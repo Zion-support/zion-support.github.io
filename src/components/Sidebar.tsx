@@ -23,7 +23,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         { name: 'Home', path: '/', icon: Home },
         { name: 'Services', path: '/services', icon: Briefcase },
         { name: 'Solutions', path: '/solutions/enterprise', icon: Target },
-        { name: 'Pricing', path: '/pricing', icon: Briefcase },
+        { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
         { name: 'About', path: '/about', icon: Users },
         { name: 'Contact', path: '/contact', icon: Phone }
       ]

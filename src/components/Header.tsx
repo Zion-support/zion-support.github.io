@@ -80,28 +80,16 @@ export function Header() {
       hasDropdown: true
     },
     { 
-      path: '/pricing', 
-      label: 'Pricing', 
-      icon: '💰',
-      description: 'Transparent pricing plans'
+      path: '/case-studies', 
+      label: 'Case Studies', 
+      icon: '📊',
+      description: 'Success stories and results'
     },
     { 
       path: '/about', 
       label: 'About', 
       icon: 'ℹ️',
       description: 'Learn about our company'
-    },
-    { 
-      path: '/careers', 
-      label: 'Careers', 
-      icon: '🚀',
-      description: 'Join our team'
-    },
-    { 
-      path: '/blog', 
-      label: 'Blog', 
-      icon: '📝',
-      description: 'Latest insights and news'
     },
     { 
       path: '/contact', 

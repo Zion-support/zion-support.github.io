@@ -24,7 +24,7 @@ export function HeroSection() {
       opacity: 1,
       transition: {
         duration: 0.8,
-        ease: "easeOut"
+        ease: "easeOut" as const
       }
     }
   }), []);
@@ -36,7 +36,7 @@ export function HeroSection() {
       transition: {
         duration: 4,
         repeat: Infinity,
-        ease: "easeInOut"
+        ease: "easeInOut" as const
       }
     }
   }), []);
