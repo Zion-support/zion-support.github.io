@@ -44,45 +44,45 @@ export function Header() {
     },
     { 
       path: '/services', 
-      label: 'AI Services', 
+      label: 'Services', 
       icon: '🤖',
-      description: 'Explore our AI service offerings'
+      description: 'Explore our comprehensive service offerings'
     },
     { 
       path: '/solutions/enterprise', 
       label: 'Solutions', 
       icon: '💼',
-      description: 'Industry-specific solutions'
+      description: 'Industry-specific solutions and use cases'
     },
     { 
       path: '/pricing', 
       label: 'Pricing', 
       icon: '💰',
-      description: 'Transparent pricing plans'
+      description: 'Transparent pricing plans and packages'
     },
     { 
       path: '/about', 
       label: 'About', 
       icon: 'ℹ️',
-      description: 'Learn about our company'
+      description: 'Learn about our company and mission'
     },
     { 
       path: '/careers', 
       label: 'Careers', 
       icon: '🚀',
-      description: 'Join our team'
+      description: 'Join our innovative team'
     },
     { 
       path: '/blog', 
       label: 'Blog', 
       icon: '📝',
-      description: 'Latest insights and news'
+      description: 'Latest insights and industry news'
     },
     { 
       path: '/contact', 
       label: 'Contact', 
       icon: '📞',
-      description: 'Get in touch with us'
+      description: 'Get in touch with our team'
     }
   ], []);
 
@@ -93,23 +93,37 @@ export function Header() {
         { name: 'AI Business Intelligence', path: '/services#ai-bi' },
         { name: 'AI Marketing Automation', path: '/services#ai-marketing' },
         { name: 'AI HR & Recruitment', path: '/services#ai-hr' },
-        { name: 'AI Legal Tech', path: '/services#ai-legal' }
+        { name: 'AI Legal Tech', path: '/services#ai-legal' },
+        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant' },
+        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems' }
+      ]
+    },
+    {
+      title: 'Quantum Technology',
+      services: [
+        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform' },
+        { name: 'Quantum-Safe Security', path: '/services#quantum-security' },
+        { name: 'Quantum Computing Solutions', path: '/services/quantum-technology' },
+        { name: 'Quantum Financial Trading', path: '/quantum-financial-trading' }
       ]
     },
     {
       title: 'Cybersecurity',
       services: [
-        { name: 'Quantum-Safe Security', path: '/services#quantum-security' },
+        { name: 'SOC2 Compliance Automation', path: '/soc2-compliance-automation' },
         { name: 'Security Assessment', path: '/services#security-assessment' },
-        { name: 'Compliance & Audit', path: '/services#compliance' }
+        { name: 'Compliance & Audit', path: '/services#compliance' },
+        { name: 'AI-Powered Security', path: '/services#ai-security' }
       ]
     },
     {
-      title: 'Cloud & Infrastructure',
+      title: 'Infrastructure & Cloud',
       services: [
         { name: 'Cloud Migration', path: '/services#cloud-migration' },
+        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions' },
         { name: 'Network Infrastructure', path: '/services#network' },
-        { name: 'Managed IT Services', path: '/services#managed-it' }
+        { name: 'Managed IT Services', path: '/services#managed-it' },
+        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management' }
       ]
     },
     {
@@ -117,9 +131,28 @@ export function Header() {
       services: [
         { name: 'Blockchain Solutions', path: '/services#blockchain' },
         { name: 'IoT Integration', path: '/services#iot' },
-        { name: 'Quantum Computing', path: '/services#quantum' }
+        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform' },
+        { name: 'Space Technology', path: '/space-tech' }
       ]
     }
+  ], []);
+
+  const companyLinks = useMemo(() => [
+    { name: 'About Us', path: '/about', description: 'Our story and mission' },
+    { name: 'Our Team', path: '/team', description: 'Meet our leadership' },
+    { name: 'Careers', path: '/careers', description: 'Join our team' },
+    { name: 'Partners', path: '/partners', description: 'Strategic partnerships' },
+    { name: 'Case Studies', path: '/case-studies', description: 'Success stories' },
+    { name: 'News', path: '/news', description: 'Company updates' }
+  ], []);
+
+  const resourceLinks = useMemo(() => [
+    { name: 'Blog', path: '/blog', description: 'Industry insights' },
+    { name: 'Webinars', path: '/webinars', description: 'Educational content' },
+    { name: 'White Papers', path: '/white-papers', description: 'Research reports' },
+    { name: 'Help Center', path: '/help', description: 'Support & documentation' },
+    { name: 'FAQ', path: '/faq', description: 'Common questions' },
+    { name: 'Contact Support', path: '/contact', description: 'Get help' }
   ], []);
 
   const toggleMenu = useCallback(() => {
@@ -200,41 +233,163 @@ export function Header() {
                       
                       {/* Services Dropdown */}
                       {activeDropdown === 'services' && (
-                        <div className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-cyan-500/30 rounded-xl shadow-2xl p-4 z-50">
-                          <div className="grid grid-cols-2 gap-4">
-                            {serviceCategories.map((category) => (
-                              <div key={category.title} className="space-y-2">
-                                <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide">
-                                  {category.title}
-                                </h3>
-                                <ul className="space-y-1">
-                                  {category.services.map((service) => (
-                                    <li key={service.name}>
-                                      <Link
-                                        to={service.path}
-                                        className="block px-3 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
-                                      >
-                                        {service.name}
-                                      </Link>
-                                    </li>
+                        <div className="absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl p-6 z-50">
+                          <div className="grid grid-cols-1 gap-4">
+                            {serviceCategories.map((category, index) => (
+                              <div key={index}>
+                                <h3 className="text-sm font-semibold text-cyan-400 mb-2">{category.title}</h3>
+                                <div className="space-y-1">
+                                  {category.services.map((service, serviceIndex) => (
+                                    <Link
+                                      key={serviceIndex}
+                                      to={service.path}
+                                      className="block px-3 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
+                                      onClick={() => setActiveDropdown(null)}
+                                    >
+                                      {service.name}
+                                    </Link>
                                   ))}
-                                </ul>
+                                </div>
                               </div>
                             ))}
                           </div>
-                          <div className="mt-4 pt-4 border-t border-cyan-500/30">
+                          <div className="mt-4 pt-4 border-t border-gray-700">
                             <Link
-                              to="/comprehensive-services-overview"
-                              className="block px-3 py-2 text-sm font-medium text-cyan-400 hover:text-white hover:bg-cyan-500/20 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+                              to="/services"
+                              className="block w-full text-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                              onClick={() => setActiveDropdown(null)}
                             >
-                              View All Services Overview →
+                              View All Services
                             </Link>
-                            <Link
-                              to="/innovative-micro-saas-services"
-                              className="block px-3 py-2 text-sm font-medium text-cyan-400 hover:text-white hover:bg-cyan-500/20 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
-                            >
-                              Innovative Micro SAAS Services →
-                            </Link>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  ) : item.path === '/solutions/enterprise' ? (
+                    <div className="relative">
+                      <button
+                        onClick={() => toggleDropdown('solutions')}
+                        className={`flex items-center space-x-1 px-4 py-2 rounded-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-500/50 ${
+                          isActiveRoute(item.path)
+                            ? 'text-cyan-400 bg-cyan-500/10 border border-cyan-500/30'
+                            : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10'
+                        }`}
+                        aria-expanded={activeDropdown === 'solutions'}
+                        aria-haspopup="true"
+                        aria-label={`${item.label} menu`}
+                      >
+                        <span>{item.label}</span>
+                        <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
+                          activeDropdown === 'solutions' ? 'rotate-180' : ''
+                        }`} aria-hidden="true" />
+                      </button>
+                      
+                      {/* Solutions Dropdown */}
+                      {activeDropdown === 'solutions' && (
+                        <div className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl p-6 z-50">
+                          <div className="space-y-4">
+                            <div>
+                              <h3 className="text-sm font-semibold text-cyan-400 mb-2">Industry Solutions</h3>
+                              <div className="space-y-1">
+                                <Link
+                                  to="/solutions/enterprise"
+                                  className="block px-3 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
+                                  onClick={() => setActiveDropdown(null)}
+                                >
+                                  Enterprise Solutions
+                                </Link>
+                                <Link
+                                  to="/solutions/healthcare"
+                                  className="block px-3 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
+                                  onClick={() => setActiveDropdown(null)}
+                                >
+                                  Healthcare Solutions
+                                </Link>
+                                <Link
+                                  to="/industry-solutions"
+                                  className="block px-3 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
+                                  onClick={() => setActiveDropdown(null)}
+                                >
+                                  Industry Solutions
+                                </Link>
+                              </div>
+                            </div>
+                            <div>
+                              <h3 className="text-sm font-semibold text-cyan-400 mb-2">Technology Solutions</h3>
+                              <div className="space-y-1">
+                                <Link
+                                  to="/quantum-neural-network-platform"
+                                  className="block px-3 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
+                                  onClick={() => setActiveDropdown(null)}
+                                >
+                                  Quantum Neural Networks
+                                </Link>
+                                <Link
+                                  to="/autonomous-business-operations-platform"
+                                  className="block px-3 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
+                                  onClick={() => setActiveDropdown(null)}
+                                >
+                                  Autonomous Business Platform
+                                </Link>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  ) : item.path === '/about' ? (
+                    <div className="relative">
+                      <button
+                        onClick={() => toggleDropdown('company')}
+                        className={`flex items-center space-x-1 px-4 py-2 rounded-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-500/50 ${
+                          isActiveRoute(item.path)
+                            ? 'text-cyan-400 bg-cyan-500/10 border border-cyan-500/30'
+                            : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10'
+                        }`}
+                        aria-expanded={activeDropdown === 'company'}
+                        aria-haspopup="true"
+                        aria-label={`${item.label} menu`}
+                      >
+                        <span>{item.label}</span>
+                        <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
+                          activeDropdown === 'company' ? 'rotate-180' : ''
+                        }`} aria-hidden="true" />
+                      </button>
+                      
+                      {/* Company Dropdown */}
+                      {activeDropdown === 'company' && (
+                        <div className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl p-6 z-50">
+                          <div className="space-y-4">
+                            <div>
+                              <h3 className="text-sm font-semibold text-cyan-400 mb-2">Company</h3>
+                              <div className="space-y-1">
+                                {companyLinks.map((link, index) => (
+                                  <Link
+                                    key={index}
+                                    to={link.path}
+                                    className="block px-3 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
+                                    onClick={() => setActiveDropdown(null)}
+                                  >
+                                    {link.name}
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
+                            <div>
+                              <h3 className="text-sm font-semibold text-cyan-400 mb-2">Resources</h3>
+                              <div className="space-y-1">
+                                {resourceLinks.map((link, index) => (
+                                  <Link
+                                    key={index}
+                                    to={link.path}
+                                    className="block px-3 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
+                                    onClick={() => setActiveDropdown(null)}
+                                  >
+                                    {link.name}
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
                           </div>
                         </div>
                       )}
@@ -247,7 +402,6 @@ export function Header() {
                           ? 'text-cyan-400 bg-cyan-500/10 border border-cyan-500/30'
                           : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10'
                       }`}
-                      aria-label={item.description}
                     >
                       {item.label}
                     </Link>
@@ -257,137 +411,79 @@ export function Header() {
             </nav>
 
             {/* Right Side Actions */}
-            <div className="hidden lg:flex items-center space-x-4">
+            <div className="flex items-center space-x-4">
               {/* Search Button */}
               <button
-                className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-500/50"
+                className="p-2 text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-500/50"
                 aria-label="Search"
               >
-                <Search className="w-5 h-5" aria-hidden="true" />
+                <Search className="w-5 h-5" />
               </button>
 
               {/* Contact Button */}
               <Link
                 to="/contact"
-                className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-500/50 focus:ring-offset-2 focus:ring-offset-gray-900"
-                aria-label="Contact us"
+                className="hidden sm:inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
-                <Phone className="w-4 h-4" aria-hidden="true" />
-                <span>Contact</span>
+                Get Started
               </Link>
+
+              {/* Mobile Menu Button */}
+              <button
+                onClick={toggleMenu}
+                className="lg:hidden p-2 text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-500/50"
+                aria-label="Toggle mobile menu"
+                aria-expanded={isMenuOpen}
+              >
+                {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+
+              {/* Sidebar Toggle */}
+              <button
+                onClick={toggleSidebar}
+                className="lg:hidden p-2 text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-500/50"
+                aria-label="Toggle sidebar"
+              >
+                <User className="w-5 h-5" />
+              </button>
             </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={toggleMenu}
-              className="lg:hidden p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-500/50"
-              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-              aria-expanded={isMenuOpen}
-            >
-              {isMenuOpen ? (
-                <X className="w-6 h-6" aria-hidden="true" />
-              ) : (
-                <Menu className="w-6 h-6" aria-hidden="true" />
-              )}
-            </button>
           </div>
+        </div>
 
-          {/* Mobile Menu */}
-          {isMenuOpen && (
-            <div className="lg:hidden py-6 border-t border-gray-700/50">
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="lg:hidden bg-black/95 backdrop-blur-md border-t border-cyan-500/20">
+            <div className="container mx-auto px-4 py-6">
               <nav className="space-y-4" role="navigation" aria-label="Mobile navigation">
                 {navigationItems.map((item) => (
-                  <div key={item.path}>
-                    {item.path === '/services' ? (
-                      <div>
-                        <button
-                          onClick={() => toggleDropdown('mobile-services')}
-                          className={`w-full flex items-center justify-between px-4 py-3 text-left rounded-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-500/50 ${
-                            isActiveRoute(item.path)
-                              ? 'text-cyan-400 bg-cyan-500/10 border border-cyan-500/30'
-                              : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10'
-                          }`}
-                          aria-expanded={activeDropdown === 'mobile-services'}
-                          aria-haspopup="true"
-                        >
-                          <span>{item.label}</span>
-                          <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
-                            activeDropdown === 'mobile-services' ? 'rotate-180' : ''
-                          }`} aria-hidden="true" />
-                        </button>
-                        
-                        {activeDropdown === 'mobile-services' && (
-                          <div className="mt-2 ml-4 space-y-2">
-                            {serviceCategories.map((category) => (
-                              <div key={category.title} className="space-y-2">
-                                <h4 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide px-4">
-                                  {category.title}
-                                </h4>
-                                <ul className="space-y-1">
-                                  {category.services.map((service) => (
-                                    <li key={service.name}>
-                                      <Link
-                                        to={service.path}
-                                        className="block px-4 py-2 text-sm text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
-                                      >
-                                        {service.name}
-                                      </Link>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                            ))}
-                            <div className="pt-4 border-t border-cyan-500/30 mt-4">
-                              <Link
-                                to="/comprehensive-services-overview"
-                                className="block px-4 py-2 text-sm font-medium text-cyan-400 hover:text-white hover:bg-cyan-500/20 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
-                              >
-                                View All Services Overview →
-                              </Link>
-                              <Link
-                                to="/innovative-micro-saas-services"
-                                className="block px-4 py-2 text-sm font-medium text-cyan-400 hover:text-white hover:bg-cyan-500/20 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
-                              >
-                                Innovative Micro SAAS Services →
-                              </Link>
-                            </div>
-                          </div>
-                        )}
-                      </div>
-                    ) : (
-                      <Link
-                        to={item.path}
-                        className={`block px-4 py-3 rounded-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-500/50 ${
-                          isActiveRoute(item.path)
-                            ? 'text-cyan-400 bg-cyan-500/10 border border-cyan-500/30'
-                            : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10'
-                        }`}
-                        aria-label={item.description}
-                      >
-                        {item.label}
-                      </Link>
-                    )}
-                  </div>
-                ))}
-                
-                {/* Mobile Contact Button */}
-                <div className="pt-4 border-t border-gray-700/50">
                   <Link
-                    to="/contact"
-                    className="block w-full text-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-500/50"
-                    aria-label="Contact us"
+                    key={item.path}
+                    to={item.path}
+                    className="block px-4 py-3 text-lg font-medium text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300"
+                    onClick={() => setIsMenuOpen(false)}
                   >
-                    Contact Us
+                    <span className="mr-3">{item.icon}</span>
+                    {item.label}
                   </Link>
-                </div>
+                ))}
               </nav>
+              
+              <div className="mt-6 pt-6 border-t border-cyan-500/20">
+                <Link
+                  to="/contact"
+                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Get Started
+                </Link>
+              </div>
             </div>
-          )}
-        </div>
+          </div>
+        )}
       </header>
 
       {/* Sidebar */}
-      <Sidebar isOpen={isSidebarOpen} onClose={toggleSidebar} />
+      <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
     </>
   );
 }
