@@ -102,6 +102,16 @@ export function Header() {
         { name: 'Quantum Computing', path: '/services#quantum' },
         { name: 'IoT & Edge Computing', path: '/services#iot-edge' }
       ]
+    },
+    {
+      title: 'Innovative Services Showcase',
+      icon: Star,
+      description: 'Explore our latest innovative solutions',
+      services: [
+        { name: 'AI Services Showcase', path: '/innovative-services-showcase', description: 'Cutting-edge AI solutions' },
+        { name: 'IT Infrastructure', path: '/innovative-services-showcase', description: 'Advanced IT solutions' },
+        { name: 'Micro SAAS Platforms', path: '/innovative-services-showcase', description: 'Innovative software solutions' }
+      ]
     }
   ];
 
