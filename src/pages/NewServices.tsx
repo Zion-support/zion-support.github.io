@@ -23,9 +23,14 @@ export function NewServices() {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         ('tags' in service && service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
+                         (('tags' in service && service.tags) ? service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())) : false);
     return matchesCategory && matchesSearch;
   });
+
+  // Helper function to safely access service properties
+  const getServiceProperty = (service: any, property: string, defaultValue: string = 'N/A') => {
+    return service && property in service ? service[property] : defaultValue;
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -246,10 +251,10 @@ export function NewServices() {
                 <div className="border-t border-zion-cyan/20 pt-4">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-zion-slate-light">
-                      Delivery: {'estimatedDelivery' in service ? service.estimatedDelivery : 'Custom'}
+                      Delivery: {getServiceProperty(service, 'estimatedDelivery', 'Custom')}
                     </span>
                     <span className="text-zion-cyan font-medium">
-                      {'supportLevel' in service ? service.supportLevel : 'Premium'} support
+                      {getServiceProperty(service, 'supportLevel', 'Premium')} support
                     </span>
                   </div>
                   <div className="mt-3 text-center">
@@ -260,9 +265,9 @@ export function NewServices() {
                 </div>
 
                 {/* Tags */}
-                {'tags' in service && service.tags && (
+                {getServiceProperty(service, 'tags') && (
                   <div className="mt-4 flex flex-wrap gap-2">
-                    {service.tags.slice(0, 4).map((tag, index) => (
+                    {getServiceProperty(service, 'tags').slice(0, 4).map((tag: string, index: number) => (
                       <span
                         key={index}
                         className="text-xs px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light rounded-full"
@@ -350,10 +355,10 @@ export function NewServices() {
                 <div className="border-t border-zion-cyan/20 pt-4">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-zion-slate-light">
-                      Delivery: {'estimatedDelivery' in service ? service.estimatedDelivery : 'Custom'}
+                      Delivery: {getServiceProperty(service, 'estimatedDelivery', 'Custom')}
                     </span>
                     <span className="text-zion-cyan font-medium">
-                      {'supportLevel' in service ? service.supportLevel : 'Premium'} support
+                      {getServiceProperty(service, 'supportLevel', 'Premium')} support
                     </span>
                   </div>
                   <div className="mt-3 text-center">
@@ -364,9 +369,9 @@ export function NewServices() {
                 </div>
 
                 {/* Tags */}
-                {'tags' in service && service.tags && (
+                {getServiceProperty(service, 'tags') && (
                   <div className="mt-4 flex flex-wrap gap-2">
-                    {service.tags.slice(0, 4).map((tag, index) => (
+                    {getServiceProperty(service, 'tags').slice(0, 4).map((tag: string, index: number) => (
                       <span
                         key={index}
                         className="text-xs px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light rounded-full"
