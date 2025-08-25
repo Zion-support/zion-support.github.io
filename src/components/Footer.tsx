@@ -5,16 +5,65 @@ export function Footer() {
 
   const footerSections = [
     {
-      title: "Services",
+      title: "Innovative Services",
+      links: [
+        { label: "AI Content Factory Pro", path: "/innovative-services#ai-content-factory" },
+        { label: "Quantum-Safe Cyber Shield", path: "/innovative-services#quantum-safe-cyber-shield" },
+        { label: "Autonomous Business Ops", path: "/innovative-services#autonomous-business-ops" },
+        { label: "Blockchain Supply Chain", path: "/innovative-services#blockchain-supply-chain" },
+        { label: "AI Healthcare Diagnostics", path: "/innovative-services#ai-healthcare-diagnostics" },
+        { label: "Quantum ML Platform", path: "/innovative-services#quantum-ml-platform" },
+        { label: "Edge AI Computing", path: "/innovative-services#edge-ai-computing" },
+        { label: "Autonomous Trading", path: "/innovative-services#autonomous-financial-trading" }
+      ]
+    },
+    {
+      title: "AI & Micro SAAS",
       links: [
         { label: "AI & Autonomous Systems", path: "/services/ai-autonomous-systems" },
         { label: "Quantum Technology", path: "/services/quantum-technology" },
-        { label: "Cybersecurity", path: "/services/cybersecurity" },
         { label: "IT Infrastructure", path: "/services/it-infrastructure" },
         { label: "Micro SAAS Solutions", path: "/services/micro-saas-solutions" },
+        { label: "Cybersecurity", path: "/services/cybersecurity" },
         { label: "Industry Solutions", path: "/services/industry-solutions" },
-        { label: "All Services", path: "/services" },
-        { label: "Pricing", path: "/pricing" }
+        { label: "Marketplace", path: "/marketplace" },
+        { label: "AI & Machine Learning", path: "/services#ai-ml" },
+        { label: "Cloud & Infrastructure", path: "/services#cloud" },
+        { label: "Blockchain Solutions", path: "/services#blockchain" },
+        { label: "IoT & Edge Computing", path: "/services#iot" },
+        { label: "IT Consulting", path: "/services#consulting" },
+        { label: "Managed Services", path: "/services#managed" }
+      ]
+    },
+    {
+      title: "Solutions",
+      links: [
+        { label: "Enterprise Solutions", path: "/solutions/enterprise" },
+        { label: "Healthcare Solutions", path: "/solutions/healthcare" },
+        { label: "Financial Solutions", path: "/solutions/financial" },
+        { label: "Manufacturing Solutions", path: "/solutions/manufacturing" },
+        { label: "Retail Solutions", path: "/solutions/retail" },
+        { label: "Government Solutions", path: "/solutions/government" },
+        { label: "Business Intelligence", path: "/solutions#bi" },
+        { label: "Marketing Automation", path: "/solutions#marketing" },
+        { label: "HR & Recruitment", path: "/solutions#hr" },
+        { label: "Legal Tech", path: "/solutions#legal" },
+        { label: "Supply Chain", path: "/solutions#supply-chain" },
+        { label: "Smart Buildings", path: "/solutions#smart-buildings" },
+        { label: "Data Protection", path: "/solutions#data-protection" },
+        { label: "Network Security", path: "/solutions#network-security" }
+      ]
+    },
+    {
+      title: "Emerging Tech",
+      links: [
+        { label: "Quantum Computing", path: "/emerging-tech" },
+        { label: "Blockchain & DeFi", path: "/emerging-tech" },
+        { label: "IoT & Edge Computing", path: "/emerging-tech" },
+        { label: "Extended Reality (XR)", path: "/emerging-tech" },
+        { label: "5G & Networks", path: "/emerging-tech" },
+        { label: "Green Technology", path: "/emerging-tech" },
+        { label: "Digital Twins", path: "/emerging-tech" }
       ]
     },
     {
@@ -24,32 +73,28 @@ export function Footer() {
         { label: "Our Mission", path: "/mission" },
         { label: "Team", path: "/team" },
         { label: "Leadership", path: "/leadership" },
+        { label: "All Services", path: "/comprehensive-services" },
+        { label: "Pricing", path: "/pricing" },
         { label: "Careers", path: "/careers" },
         { label: "Partners", path: "/partners" },
-        { label: "News", path: "/news" },
+        { label: "Contact", path: "/contact" },
+        { label: "Our Team", path: "/team" },
+        { label: "News & Updates", path: "/news" },
         { label: "Testimonials", path: "/testimonials" }
       ]
     },
     {
       title: "Resources",
       links: [
+        { label: "Blog & Articles", path: "/blog" },
+        { label: "Technology Blog", path: "/blog" },
+        { label: "Documentation", path: "/docs" },
         { label: "Case Studies", path: "/case-studies" },
-        { label: "Blog", path: "/blog" },
-        { label: "FAQ", path: "/faq" },
-        { label: "Help Center", path: "/help" },
-        { label: "Support", path: "/support" },
-        { label: "Contact", path: "/contact" },
-        { label: "Request Quote", path: "/request-quote" }
-      ]
-    },
-    {
-      title: "Legal",
-      links: [
-        { label: "Privacy Policy", path: "/privacy" },
-        { label: "Terms of Service", path: "/terms" },
-        { label: "Cookie Policy", path: "/cookies" },
-        { label: "Accessibility", path: "/accessibility" },
-        { label: "Sitemap", path: "/sitemap" }
+        { label: "White Papers", path: "/white-papers" },
+        { label: "API Documentation", path: "/api-docs" },
+        { label: "Webinars", path: "/webinars" },
+        { label: "Training", path: "/training" },
+        { label: "Support Center", path: "/support" }
       ]
     }
   ];
@@ -57,7 +102,8 @@ export function Footer() {
   const socialLinks = [
     { name: 'LinkedIn', url: 'https://www.linkedin.com/company/zion-tech-group', icon: '💼' },
     { name: 'Twitter', url: 'https://twitter.com/ziontechgroup', icon: '🐦' },
-    { name: 'GitHub', url: 'https://github.com/ziontechgroup', icon: '💻' },
+    { name: 'Facebook', url: 'https://www.facebook.com/ziontechgroup', icon: '📘' },
+    { name: 'Instagram', url: 'https://www.instagram.com/ziontechgroup', icon: '📷' },
     { name: 'YouTube', url: 'https://www.youtube.com/@ziontechgroup', icon: '📺' }
   ];
 
