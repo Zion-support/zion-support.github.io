@@ -81,6 +81,12 @@ export function Header() {
       hasDropdown: true
     },
     { 
+      path: '/case-studies', 
+      label: 'Case Studies', 
+      icon: '📊',
+      description: 'Success stories and results'
+    },
+    { 
       path: '/pricing', 
       label: 'Pricing', 
       icon: '💰',
@@ -93,16 +99,10 @@ export function Header() {
       description: 'Learn about our company'
     },
     { 
-      path: '/careers', 
-      label: 'Careers', 
-      icon: '🚀',
-      description: 'Join our team'
-    },
-    { 
-      path: '/blog', 
-      label: 'Blog', 
-      icon: '📝',
-      description: 'Latest insights and news'
+      path: '/help', 
+      label: 'Help', 
+      icon: '❓',
+      description: 'Support and documentation'
     },
     { 
       path: '/contact', 
@@ -283,8 +283,20 @@ export function Header() {
             </div>
           </Link>
 
+          {/* Search Bar */}
+          <div className="hidden md:flex flex-1 max-w-md mx-8">
+            <div className="relative w-full">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+              <input
+                type="text"
+                placeholder="Search services, solutions..."
+                className="w-full pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-sm"
+              />
+            </div>
+          </div>
+
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-6">
             {navigationItems.map((item) => (
               <div key={item.path} className="relative">
                 {item.hasDropdown ? (
