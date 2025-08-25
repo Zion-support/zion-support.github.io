@@ -1,66 +1,66 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Bot, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, Cpu, Database, Network } from 'lucide-react';
+import { Network, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, Cpu, Database, Wifi } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 
-const AutonomousBusinessOperationsPlatform: React.FC = () => {
+const FiveGEnterpriseSolutions: React.FC = () => {
   const features = [
     {
-      icon: Bot,
-      title: "AI Autonomous Systems",
-      description: "Self-managing AI systems that operate independently and make intelligent decisions."
+      icon: Network,
+      title: "5G Network Infrastructure",
+      description: "Enterprise-grade 5G network deployment and optimization for maximum performance."
     },
     {
       icon: Zap,
-      title: "Real-time Optimization",
-      description: "Continuous monitoring and optimization of business processes for maximum efficiency."
+      title: "Ultra-Low Latency",
+      description: "Sub-millisecond latency for real-time applications and critical business operations."
     },
     {
       icon: Shield,
-      title: "Intelligent Security",
-      description: "Advanced threat detection and automated security responses powered by AI."
+      title: "Enterprise Security",
+      description: "Advanced security protocols and network segmentation for enterprise environments."
     },
     {
       icon: TrendingUp,
-      title: "Predictive Analytics",
-      description: "Forecast trends and identify opportunities before they become apparent."
+      title: "Scalable Bandwidth",
+      description: "Dynamic bandwidth allocation to meet growing enterprise demands."
     }
   ];
 
-  const capabilities = [
+  const useCases = [
     {
-      title: "Process Automation",
-      description: "Automate complex business workflows with intelligent decision-making capabilities."
+      title: "Industrial IoT",
+      description: "Connect and manage thousands of IoT devices with reliable 5G connectivity."
     },
     {
-      title: "Resource Management",
-      description: "Optimize resource allocation across departments and projects automatically."
+      title: "Remote Work",
+      description: "Enable seamless remote work with high-speed, low-latency connections."
     },
     {
-      title: "Customer Intelligence",
-      description: "Deep insights into customer behavior and preferences for personalized experiences."
+      title: "Edge Computing",
+      description: "Deploy edge computing solutions with ultra-fast 5G backhaul."
     },
     {
-      title: "Risk Management",
-      description: "Proactive identification and mitigation of business risks using AI algorithms."
+      title: "Video Conferencing",
+      description: "Crystal-clear video calls with minimal latency and maximum reliability."
     }
   ];
 
   const industries = [
+    "Manufacturing",
     "Healthcare",
     "Finance",
-    "Manufacturing",
     "Retail",
-    "Logistics",
-    "Technology"
+    "Transportation",
+    "Education"
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       <SEOHead 
-        title="Autonomous Business Operations Platform - Zion Tech Group"
-        description="Revolutionary AI-powered platform that autonomously manages and optimizes business operations for maximum efficiency and growth."
-        keywords="autonomous business operations, AI automation, business intelligence, process optimization, AI management"
+        title="5G Enterprise Solutions - Zion Tech Group"
+        description="Revolutionary 5G enterprise solutions providing ultra-fast connectivity, low latency, and scalable network infrastructure for modern businesses."
+        keywords="5G enterprise, 5G solutions, enterprise networking, 5G infrastructure, network optimization, enterprise connectivity"
       />
       
       {/* Hero Section */}
@@ -68,15 +68,15 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex justify-center mb-8">
             <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full">
-              <Bot className="h-12 w-12 text-white" />
+              <Network className="h-12 w-12 text-white" />
             </div>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Autonomous Business Operations Platform
+            5G Enterprise Solutions
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your business with our revolutionary AI-powered platform that autonomously manages 
-            and optimizes operations for unprecedented efficiency and growth.
+            Transform your business with our revolutionary 5G enterprise solutions that provide 
+            ultra-fast connectivity, ultra-low latency, and scalable network infrastructure.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -87,7 +87,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
-              to="/services/ai-autonomous-systems"
+              to="/services/it-infrastructure"
               className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-500 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
             >
               Learn More
@@ -104,7 +104,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
               Revolutionary Features
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our platform combines cutting-edge AI with autonomous decision-making capabilities.
+              Our 5G solutions combine cutting-edge technology with enterprise-grade reliability.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -121,22 +121,22 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Capabilities Section */}
+      {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Capabilities
+              Enterprise Use Cases
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Discover the powerful capabilities that make our platform truly autonomous.
+              Discover how 5G technology transforms enterprise operations and connectivity.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {capabilities.map((capability, index) => (
+            {useCases.map((useCase, index) => (
               <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700">
-                <h3 className="text-2xl font-semibold text-white mb-4">{capability.title}</h3>
-                <p className="text-gray-300 text-lg">{capability.description}</p>
+                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
+                <p className="text-gray-300 text-lg">{useCase.description}</p>
               </div>
             ))}
           </div>
@@ -151,7 +151,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
               Industry Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our platform is designed to transform operations across diverse industries.
+              Our 5G solutions are designed to transform operations across diverse industries.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
@@ -172,15 +172,15 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
               Technology Stack
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Built with cutting-edge technologies for maximum performance and reliability.
+              Built with cutting-edge 5G technologies for maximum performance and reliability.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { icon: Cpu, name: "AI Processors" },
-              { icon: Database, name: "Big Data" },
-              { icon: Network, name: "Cloud Native" },
-              { icon: Bot, name: "Machine Learning" }
+              { icon: Network, name: "5G Core" },
+              { icon: Wifi, name: "RAN" },
+              { icon: Cpu, name: "Edge Computing" },
+              { icon: Database, name: "Network Slicing" }
             ].map((tech, index) => (
               <div key={index} className="text-center">
                 <div className="p-4 bg-gray-800/50 rounded-xl mb-4 mx-auto w-fit">
@@ -197,10 +197,10 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Automate Your Business?
+            Ready to Deploy 5G?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join the autonomous business revolution and transform your operations with AI-powered automation.
+            Join the 5G revolution and transform your enterprise connectivity and operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -211,10 +211,10 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
-              to="/services/ai-autonomous-systems"
+              to="/services/it-infrastructure"
               className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-500 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
             >
-              Explore AI Services
+              Explore Infrastructure Services
             </Link>
           </div>
         </div>
@@ -223,4 +223,4 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
   );
 };
 
-export default AutonomousBusinessOperationsPlatform;
+export default FiveGEnterpriseSolutions;
