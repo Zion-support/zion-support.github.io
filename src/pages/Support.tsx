@@ -1,411 +1,327 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  MessageCircle, 
+  HelpCircle, 
+  MessageSquare, 
   Phone, 
   Mail, 
-  Clock, 
-  Users,
-  FileText,
+  BookOpen, 
   Video,
-  Calendar,
-  MapPin,
-  Globe,
-  ChevronRight,
+  FileText,
+  ArrowRight,
   CheckCircle,
-  AlertCircle,
-  XCircle,
-  Star,
-  Rocket,
-  Brain,
-  Shield
+  Clock,
+  Users,
+  Zap
 } from 'lucide-react';
 
 const Support = () => {
-  const [selectedCategory, setSelectedCategory] = useState('general');
-
-  const supportCategories = [
+  const supportChannels = [
     {
-      id: 'general',
-      title: 'General Support',
-      icon: Users,
-      description: 'General questions and account support',
-      priority: 'medium',
-      responseTime: '2-4 hours'
-    },
-    {
-      id: 'technical',
-      title: 'Technical Support',
-      icon: FileText,
-      description: 'Technical issues and troubleshooting',
-      priority: 'high',
-      responseTime: '1-2 hours'
-    },
-    {
-      id: 'billing',
-      title: 'Billing Support',
-      icon: CheckCircle,
-      description: 'Billing, payments, and subscription issues',
-      priority: 'high',
-      responseTime: '1-2 hours'
-    },
-    {
-      id: 'ai-services',
-      title: 'AI Services Support',
-      icon: Brain,
-      description: 'AI and machine learning service support',
-      priority: 'high',
-      responseTime: '1-3 hours'
-    },
-    {
-      id: 'security',
-      title: 'Security Support',
-      icon: Shield,
-      description: 'Security incidents and compliance questions',
-      priority: 'critical',
-      responseTime: '30 minutes - 1 hour'
-    },
-    {
-      id: 'enterprise',
-      title: 'Enterprise Support',
-      icon: Rocket,
-      description: 'Enterprise customer support and account management',
-      priority: 'critical',
-      responseTime: '30 minutes - 1 hour'
-    }
-  ];
-
-  const contactMethods = [
-    {
-      title: 'Live Chat',
-      icon: MessageCircle,
-      description: 'Get instant help from our support team',
-      availability: '24/7',
-      responseTime: 'Immediate',
-      color: 'from-green-500 to-emerald-500',
-      path: '/chat'
-    },
-    {
-      title: 'Phone Support',
       icon: Phone,
-      description: 'Call us directly for urgent issues',
-      availability: 'Mon-Fri 9AM-6PM EST',
-      responseTime: 'Immediate',
-      color: 'from-blue-500 to-cyan-500',
-      path: 'tel:+13024640950'
+      title: "Phone Support",
+      description: "Speak directly with our support team",
+      details: "+1 302 464 0950",
+      availability: "Mon - Fri: 9:00 AM - 6:00 PM EST",
+      color: "from-cyan-500 to-blue-500"
     },
     {
-      title: 'Email Support',
       icon: Mail,
-      description: 'Send detailed messages for complex issues',
-      availability: '24/7',
-      responseTime: '2-4 hours',
-      color: 'from-purple-500 to-pink-500',
-      path: 'mailto:kleber@ziontechgroup.com'
+      title: "Email Support",
+      description: "Send us a detailed message",
+      details: "support@ziontechgroup.com",
+      availability: "24/7 response within 4 hours",
+      color: "from-purple-500 to-pink-500"
     },
     {
-      title: 'Schedule Call',
-      icon: Calendar,
-      description: 'Book a dedicated support session',
-      availability: 'Mon-Fri 9AM-6PM EST',
-      responseTime: 'Scheduled',
-      color: 'from-orange-500 to-red-500',
-      path: '/schedule'
+      icon: MessageSquare,
+      title: "Live Chat",
+      description: "Get instant help from our team",
+      details: "Available on all pages",
+      availability: "Mon - Fri: 9:00 AM - 6:00 PM EST",
+      color: "from-green-500 to-teal-500"
     }
   ];
 
-  const faqCategories = [
+  const helpResources = [
     {
-      title: 'Getting Started',
-      questions: [
-        'How do I create my first project?',
-        'What are the system requirements?',
-        'How do I set up my account?'
-      ]
+      icon: BookOpen,
+      title: "Documentation",
+      description: "Comprehensive guides and API references",
+      link: "/docs",
+      color: "from-blue-500 to-indigo-500"
     },
     {
-      title: 'AI Services',
-      questions: [
-        'How do I integrate AI services?',
-        'What AI models do you support?',
-        'How do I train custom AI models?'
-      ]
+      icon: Video,
+      title: "Video Tutorials",
+      description: "Step-by-step video guides",
+      link: "/tutorials",
+      color: "from-purple-500 to-pink-500"
     },
     {
-      title: 'Billing & Pricing',
-      questions: [
-        'How does your pricing work?',
-        'Can I change my plan?',
-        'What payment methods do you accept?'
-      ]
+      icon: FileText,
+      title: "Knowledge Base",
+      description: "Searchable articles and FAQs",
+      link: "/kb",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      icon: Users,
+      title: "Community Forum",
+      description: "Connect with other users",
+      link: "/community",
+      color: "from-orange-500 to-red-500"
+    }
+  ];
+
+  const faqs = [
+    {
+      question: "How do I get started with Zion Tech Group services?",
+      answer: "Getting started is easy! Simply schedule a free consultation call, and our team will assess your needs and design a customized solution. Visit our Get Started page for more details."
+    },
+    {
+      question: "What is the typical implementation timeline?",
+      answer: "Implementation timelines vary based on project complexity. Simple integrations can take 2-4 weeks, while complex enterprise solutions may take 3-6 months. We'll provide a detailed timeline during planning."
+    },
+    {
+      question: "Do you provide ongoing support after implementation?",
+      answer: "Yes! All our solutions include ongoing support and maintenance. We offer different support tiers to meet your needs, from basic email support to 24/7 dedicated support teams."
+    },
+    {
+      question: "What industries do you specialize in?",
+      answer: "We serve clients across all major industries including healthcare, finance, manufacturing, retail, government, and more. Our solutions are designed to be industry-agnostic while addressing specific sector challenges."
+    },
+    {
+      question: "How do you ensure data security and compliance?",
+      answer: "Security is our top priority. We implement enterprise-grade security measures including encryption, access controls, and compliance frameworks. All solutions are designed to meet industry standards like SOC2, HIPAA, and GDPR."
+    },
+    {
+      question: "Can you integrate with our existing systems?",
+      answer: "Absolutely! We specialize in seamless integrations with existing infrastructure. Our team will assess your current systems and design solutions that work with your existing technology stack."
     }
   ];
 
   const supportTiers = [
     {
-      name: 'Basic Support',
-      description: 'Standard support for all customers',
+      name: "Basic Support",
+      description: "Perfect for small implementations",
       features: [
-        'Email support (2-4 hour response)',
-        'Help center access',
-        'Community forum access',
-        'Documentation access'
+        "Email support",
+        "Basic documentation access",
+        "Community forum access",
+        "Response within 24 hours"
       ],
-      included: true
+      price: "Included"
     },
     {
-      name: 'Priority Support',
-      description: 'Enhanced support for business customers',
+      name: "Professional Support",
+      description: "Ideal for growing businesses",
       features: [
-        'Phone support (1-2 hour response)',
-        'Live chat support',
-        'Priority ticket handling',
-        'Dedicated support team'
+        "Phone and email support",
+        "Priority response (4 hours)",
+        "Video consultation",
+        "Advanced documentation",
+        "Training sessions"
       ],
-      included: false
+      price: "$299/month"
     },
     {
-      name: 'Enterprise Support',
-      description: 'Premium support for enterprise customers',
+      name: "Enterprise Support",
+      description: "For mission-critical operations",
       features: [
-        '24/7 phone support',
-        'Dedicated account manager',
-        'Custom SLA agreements',
-        'On-site support available'
+        "24/7 dedicated support",
+        "1-hour response guarantee",
+        "Dedicated support engineer",
+        "Custom training programs",
+        "SLA guarantees",
+        "On-site support available"
       ],
-      included: false
+      price: "$999/month"
     }
   ];
 
-  const getPriorityColor = (priority: string) => {
-    switch (priority) {
-      case 'critical':
-        return 'text-red-400 bg-red-400/10';
-      case 'high':
-        return 'text-orange-400 bg-orange-400/10';
-      case 'medium':
-        return 'text-yellow-400 bg-yellow-400/10';
-      case 'low':
-        return 'text-green-400 bg-green-400/10';
-      default:
-        return 'text-gray-400 bg-gray-400/10';
-    }
-  };
-
-  const getPriorityIcon = (priority: string) => {
-    switch (priority) {
-      case 'critical':
-        return <XCircle className="w-4 h-4" />;
-      case 'high':
-        return <AlertCircle className="w-4 h-4" />;
-      case 'medium':
-        return <Clock className="w-4 h-4" />;
-      case 'low':
-        return <CheckCircle className="w-4 h-4" />;
-      default:
-        return <Clock className="w-4 h-4" />;
-    }
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
-      <div className="container mx-auto px-4 py-12">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center mb-6">
-            <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mr-4">
-              <MessageCircle className="w-8 h-8 text-white" />
-            </div>
-            <div>
-              <h1 className="text-5xl font-bold text-white mb-2">Support Center</h1>
-              <p className="text-xl text-zion-slate-light">Get the help you need, when you need it</p>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-cyan-900/20 to-indigo-900/20"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]"></div>
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <div className="flex justify-center mb-6">
+            <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center">
+              <HelpCircle className="w-10 h-10 text-white" />
             </div>
           </div>
-        </div>
-
-        {/* Contact Methods */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Get Support</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {contactMethods.map((method, index) => (
-              <Link
-                key={index}
-                to={method.path}
-                className="group bg-white/5 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 transform hover:scale-105"
-              >
-                <div className={`w-12 h-12 bg-gradient-to-r ${method.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <method.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-zion-cyan transition-colors">
-                  {method.title}
-                </h3>
-                <p className="text-sm text-zion-slate-light mb-3">{method.description}</p>
-                <div className="space-y-1 text-xs text-zion-slate-light">
-                  <div className="flex items-center justify-between">
-                    <span>Availability:</span>
-                    <span className="text-zion-cyan">{method.availability}</span>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span>Response:</span>
-                    <span className="text-zion-cyan">{method.responseTime}</span>
-                  </div>
-                </div>
-              </Link>
-            ))}
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gradient">
+            Support Center
+          </h1>
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+            We're here to help you succeed with our technology solutions. 
+            Get the support you need through multiple channels and resources.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link 
+              to="/contact" 
+              className="btn-primary text-lg px-8 py-4 flex items-center space-x-2"
+            >
+              <span>Contact Support</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link 
+              to="/docs" 
+              className="btn-secondary text-lg px-8 py-4"
+            >
+              View Documentation
+            </Link>
           </div>
         </div>
+      </section>
 
-        {/* Support Categories */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Support Categories</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {supportCategories.map((category) => (
-              <div
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`cursor-pointer bg-white/5 backdrop-blur-sm border rounded-xl p-6 transition-all duration-300 hover:bg-white/10 ${
-                  selectedCategory === category.id
-                    ? 'border-zion-cyan bg-zion-cyan/10'
-                    : 'border-zion-cyan/20'
-                }`}
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mr-4">
-                      <category.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-white">{category.title}</h3>
-                      <p className="text-zion-slate-light">{category.description}</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    {getPriorityIcon(category.priority)}
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${getPriorityColor(category.priority)}`}>
-                      {category.priority}
-                    </span>
-                  </div>
+      {/* Support Channels */}
+      <section className="py-20 bg-gray-800/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">
+              Get Help When You Need It
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Multiple support channels available to meet your needs
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {supportChannels.map((channel, index) => (
+              <div key={index} className="text-center group">
+                <div className={`w-20 h-20 bg-gradient-to-r ${channel.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <channel.icon className="w-10 h-10 text-white" />
                 </div>
-                
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-zion-slate-light">Response Time:</span>
-                  <span className="text-zion-cyan font-semibold">{category.responseTime}</span>
-                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{channel.title}</h3>
+                <p className="text-gray-300 mb-4">{channel.description}</p>
+                <div className="text-cyan-400 font-medium mb-2">{channel.details}</div>
+                <div className="text-gray-400 text-sm">{channel.availability}</div>
               </div>
             ))}
           </div>
         </div>
+      </section>
 
-        {/* FAQ Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Frequently Asked Questions</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {faqCategories.map((category, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6">
-                <h3 className="text-xl font-semibold text-white mb-4">{category.title}</h3>
-                <div className="space-y-3">
-                  {category.questions.map((question, qIndex) => (
-                    <Link
-                      key={qIndex}
-                      to={`/help/${category.title.toLowerCase().replace(/\s+/g, '-')}/${qIndex}`}
-                      className="block p-3 rounded-lg hover:bg-white/5 transition-colors group"
-                    >
-                      <div className="flex items-center justify-between">
-                        <span className="text-zion-slate-light group-hover:text-zion-cyan transition-colors">
-                          {question}
-                        </span>
-                        <ChevronRight className="w-4 h-4 text-zion-slate-light group-hover:text-zion-cyan group-hover:translate-x-1 transition-all duration-300" />
-                      </div>
-                    </Link>
-                  ))}
+      {/* Help Resources */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">
+              Self-Service Resources
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Find answers quickly with our comprehensive help resources
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {helpResources.map((resource, index) => (
+              <div key={index} className="text-center group">
+                <div className={`w-16 h-16 bg-gradient-to-r ${resource.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <resource.icon className="w-8 h-8 text-white" />
                 </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{resource.title}</h3>
+                <p className="text-gray-300 text-sm mb-4">{resource.description}</p>
+                <Link 
+                  to={resource.link} 
+                  className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
+                >
+                  <span>Access</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
             ))}
           </div>
         </div>
+      </section>
 
-        {/* Support Tiers */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Support Tiers</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      {/* FAQs Section */}
+      <section className="py-20 bg-gray-800/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Quick answers to common questions
+            </p>
+          </div>
+          <div className="max-w-4xl mx-auto space-y-6">
+            {faqs.map((faq, index) => (
+              <div key={index} className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
+                <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
+                <p className="text-gray-300">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Support Tiers */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">
+              Support Plans
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the support level that fits your needs
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {supportTiers.map((tier, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6">
-                <div className="text-center mb-6">
-                  <h3 className="text-xl font-semibold text-white mb-2">{tier.name}</h3>
-                  <p className="text-zion-slate-light">{tier.description}</p>
+              <div key={index} className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">{tier.price}</div>
+                  <p className="text-gray-300">{tier.description}</p>
                 </div>
-                
-                <div className="space-y-3 mb-6">
-                  {tier.features.map((feature, fIndex) => (
-                    <div key={fIndex} className="flex items-center space-x-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
-                      <span className="text-sm text-zion-slate-light">{feature}</span>
-                    </div>
+                <ul className="space-y-3 mb-8">
+                  {tier.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
                   ))}
-                </div>
-                
-                <div className="text-center">
-                  {tier.included ? (
-                    <span className="inline-block px-4 py-2 bg-green-500/20 text-green-400 rounded-lg font-medium">
-                      Included
-                    </span>
-                  ) : (
-                    <Link
-                      to="/contact"
-                      className="inline-block px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-lg font-medium hover:bg-zion-cyan/30 transition-colors"
-                    >
-                      Contact Sales
-                    </Link>
-                  )}
-                </div>
+                </ul>
+                <Link 
+                  to="/contact" 
+                  className="w-full py-3 px-6 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium text-center transition-all duration-300 hover:from-cyan-600 hover:to-blue-600 block"
+                >
+                  Get Started
+                </Link>
               </div>
             ))}
           </div>
         </div>
+      </section>
 
-        {/* Contact Information */}
-        <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 border border-zion-cyan/20 rounded-2xl p-8">
-          <h2 className="text-3xl font-bold text-white text-center mb-8">Contact Information</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Phone className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
-              <p className="text-zion-slate-light mb-2">+1 302 464 0950</p>
-              <p className="text-xs text-zion-slate-light">Mon-Fri 9AM-6PM EST</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-              <p className="text-zion-slate-light mb-2">kleber@ziontechgroup.com</p>
-              <p className="text-xs text-zion-slate-light">24/7 Support</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
-              <p className="text-zion-slate-light mb-2">364 E Main St STE 1008</p>
-              <p className="text-xs text-zion-slate-light">Middletown DE 19709</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Globe className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Website</h3>
-              <p className="text-zion-slate-light mb-2">ziontechgroup.com</p>
-              <p className="text-xs text-zion-slate-light">24/7 Access</p>
-            </div>
+      {/* CTA Section */}
+      <section className="py-20 bg-gray-800/50">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">
+            Still Need Help?
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Our support team is ready to assist you with any questions or issues
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link 
+              to="/contact" 
+              className="btn-primary text-lg px-8 py-4"
+            >
+              Contact Support Team
+            </Link>
+            <Link 
+              to="/get-started" 
+              className="btn-secondary text-lg px-8 py-4"
+            >
+              Schedule Consultation
+            </Link>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };
