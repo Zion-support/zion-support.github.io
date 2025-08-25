@@ -42,6 +42,10 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Briefcase },
         { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Briefcase },
+        { name: '5G Enterprise Network', path: '/5g-enterprise-network', icon: Briefcase },
+        { name: '5G Network Optimization', path: '/5g-network-optimization', icon: Briefcase },
+        { name: '5G Private Networks', path: '/5g-private-network-solutions', icon: Briefcase },
+        { name: 'Accessibility Auditor', path: '/accessibility-auditor', icon: Shield },
         { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
         { name: 'Cloud DevOps', path: '/cloud-devops', icon: Globe }
       ]
