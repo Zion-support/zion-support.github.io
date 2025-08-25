@@ -1667,6 +1667,7 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   // AI Workflow Automation Platform
   {
     id: "ai-workflow-automation",
@@ -1804,11 +1805,63 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     estimatedDelivery: "8-12 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,500 - $15,000/month",
+=======
+  // AI-Powered Supply Chain Optimization
+  {
+    id: "ai-supply-chain-optimization",
+    title: "AI-Powered Supply Chain Optimization Platform",
+    description: "Intelligent supply chain management system that uses AI to predict demand, optimize inventory, and streamline logistics operations.",
+    category: "AI & Supply Chain",
+    subcategory: "Supply Chain Management",
+    price: 3500,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI demand forecasting",
+      "Inventory optimization",
+      "Route optimization",
+      "Supplier performance analytics",
+      "Risk assessment and mitigation",
+      "Real-time tracking",
+      "Cost optimization",
+      "Sustainability tracking",
+      "Multi-warehouse management",
+      "Predictive analytics"
+    ],
+    benefits: [
+      "Reduce inventory costs by 30%",
+      "Improve delivery times by 40%",
+      "Lower supply chain risks by 60%",
+      "Increase efficiency by 35%",
+      "Better supplier relationships",
+      "Enhanced customer satisfaction"
+    ],
+    useCases: [
+      "Manufacturing companies",
+      "Retail chains",
+      "E-commerce businesses",
+      "Logistics providers",
+      "Distribution centers",
+      "Import/export companies"
+    ],
+    targetAudience: [
+      "Supply chain managers",
+      "Operations directors",
+      "Logistics coordinators",
+      "Inventory managers",
+      "Procurement teams"
+    ],
+    tags: ["AI", "Supply Chain", "Logistics", "Inventory Management", "Demand Forecasting", "Automation"],
+    estimatedDelivery: "10-14 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,500 - $18,000/month",
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-8bff
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
+<<<<<<< HEAD
     technology: ["Ethereum", "Hyperledger", "Corda", "Smart Contracts", "Zero-Knowledge Proofs"],
     integrations: ["ERP Systems", "Supply Chain Platforms", "Financial Systems", "Government APIs", "Custom Solutions"],
     compliance: ["GDPR", "SOC 2", "ISO 27001", "Industry Standards", "Regulatory Requirements"],
@@ -1959,11 +2012,52 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
       "24/7 automated monitoring",
       "Proactive threat prevention",
       "Enhanced compliance"
+=======
+    technology: ["Machine Learning", "IoT Sensors", "Blockchain", "Cloud Computing", "Edge Computing"],
+    integrations: ["ERP Systems", "WMS", "TMS", "Supplier Portals", "E-commerce Platforms"],
+    compliance: ["ISO 28000", "C-TPAT", "GDPR", "SOC 2"],
+    roi: "450% within 18 months",
+    competitors: ["SAP", "Oracle", "Manhattan Associates", "JDA Software"],
+    marketTrend: "High-growth market with 300% annual expansion",
+    innovationLevel: "Advanced AI technology revolutionizing supply chain management"
+  },
+
+  // Blockchain-Based Digital Identity Platform
+  {
+    id: "blockchain-digital-identity",
+    title: "Blockchain-Based Digital Identity Platform",
+    description: "Secure, decentralized digital identity solution that provides self-sovereign identity management with privacy and security.",
+    category: "Blockchain & Identity",
+    subcategory: "Digital Identity",
+    price: 2800,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Self-sovereign identity",
+      "Zero-knowledge proofs",
+      "Multi-factor authentication",
+      "Identity verification",
+      "Privacy protection",
+      "Cross-platform compatibility",
+      "Compliance management",
+      "API integration",
+      "Mobile app support",
+      "Audit trails"
+    ],
+    benefits: [
+      "Reduce identity fraud by 95%",
+      "Improve user privacy",
+      "Lower compliance costs by 40%",
+      "Faster identity verification",
+      "Enhanced security",
+      "Global accessibility"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-8bff
     ],
     useCases: [
       "Financial institutions",
       "Healthcare organizations",
       "Government agencies",
+<<<<<<< HEAD
       "Technology companies",
       "Manufacturing firms",
       "Retail businesses"
@@ -2976,10 +3070,28 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     estimatedDelivery: "10-12 weeks",
     supportLevel: "enterprise",
     marketPrice: "$1,999 - $8,000/month",
+=======
+      "Educational institutions",
+      "E-commerce platforms",
+      "Travel and hospitality"
+    ],
+    targetAudience: [
+      "CISOs",
+      "Compliance officers",
+      "IT directors",
+      "Product managers",
+      "Security architects"
+    ],
+    tags: ["Blockchain", "Digital Identity", "Security", "Privacy", "Compliance", "Zero-Knowledge Proofs"],
+    estimatedDelivery: "12-16 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$2,800 - $15,000/month",
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-8bff
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
   },
@@ -3111,6 +3223,16 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     marketTrend: "High-growth market with 300% annual expansion",
     innovationLevel: "Advanced AI technology revolutionizing customer experience optimization and personalization"
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-3cf3
+=======
+    },
+    technology: ["Blockchain", "Zero-Knowledge Proofs", "Cryptography", "Smart Contracts", "Cloud Computing"],
+    integrations: ["Active Directory", "SSO Systems", "CRM Platforms", "Payment Systems", "Government APIs"],
+    compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001", "NIST"],
+    roi: "500% within 24 months",
+    competitors: ["Microsoft", "IBM", "Accenture", "Deloitte"],
+    marketTrend: "Emerging market with 400% projected growth in next 5 years",
+    innovationLevel: "Revolutionary blockchain technology for digital identity management"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-8bff
   }
 ];
 
