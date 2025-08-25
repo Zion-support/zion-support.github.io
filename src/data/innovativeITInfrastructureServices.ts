@@ -26,268 +26,278 @@ export interface InnovativeITInfrastructureService {
 }
 
 export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureService[] = [
-  // Edge Computing Infrastructure
+  // Edge Computing & IoT Infrastructure
   {
-    id: "edge-computing-infrastructure",
-    title: "Edge Computing Infrastructure Platform",
-    description: "Distributed edge computing platform that brings computation and data storage closer to data sources, reducing latency and improving performance for IoT devices and real-time applications.",
-    category: "IT Infrastructure",
-    subcategory: "Edge Computing",
-    price: 3500,
+    id: "edge-computing-orchestration-platform",
+    title: "Edge Computing Orchestration Platform - Distributed Computing Infrastructure",
+    description: "Advanced edge computing platform that orchestrates distributed computing resources, optimizes data processing at the edge, and provides real-time analytics for IoT and edge applications.",
+    category: "Edge Computing & IoT",
+    subcategory: "Infrastructure Orchestration",
+    price: 1899,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Distributed edge nodes",
+      "Distributed edge node management",
       "Real-time data processing",
-      "Low-latency connectivity",
-      "IoT device management",
-      "Edge analytics engine",
-      "Automatic failover",
-      "Scalable architecture",
-      "Security at the edge"
+      "Edge-to-cloud synchronization",
+      "Load balancing and failover",
+      "Security and encryption",
+      "Performance monitoring",
+      "Auto-scaling capabilities",
+      "Multi-cloud integration",
+      "Edge AI deployment",
+      "Compliance and governance"
     ],
     benefits: [
       "Reduce latency by 80%",
-      "Improve application performance",
-      "Reduce bandwidth costs",
-      "Enhanced data privacy",
-      "Scalable edge deployment"
+      "Lower bandwidth costs by 60%",
+      "Improve reliability and uptime",
+      "Real-time data processing",
+      "Scalable edge infrastructure"
     ],
     useCases: [
-      "IoT applications",
-      "Real-time analytics",
-      "Autonomous vehicles",
       "Smart cities",
-      "Industrial automation"
+      "Industrial IoT",
+      "Autonomous vehicles",
+      "Healthcare monitoring",
+      "Retail analytics"
     ],
     targetAudience: [
-      "IoT developers",
-      "System architects",
+      "IT infrastructure managers",
       "DevOps engineers",
-      "Infrastructure managers",
+      "IoT architects",
+      "System administrators",
       "Technology directors"
     ],
-    tags: ["Edge Computing", "IoT", "Real-time Processing", "Low Latency", "Distributed Systems"],
+    tags: ["Edge Computing", "IoT", "Distributed Computing", "Real-time Analytics", "Infrastructure"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$3,500 - $9,000/month",
+    marketPrice: "$1,899 - $5,999/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    websiteUrl: "https://ziontechgroup.com/edge-computing"
+    websiteUrl: "https://ziontechgroup.com/edge-computing-orchestration-platform"
   },
 
-  // Zero Trust Security Architecture
+  // Quantum-Safe Cybersecurity Infrastructure
   {
-    id: "zero-trust-security-architecture",
-    title: "Zero Trust Security Architecture Implementation",
-    description: "Comprehensive zero trust security framework that implements continuous verification, least privilege access, and micro-segmentation to protect modern IT environments from advanced threats.",
-    category: "IT Infrastructure",
-    subcategory: "Security",
-    price: 4200,
+    id: "quantum-safe-cybersecurity-infrastructure",
+    title: "Quantum-Safe Cybersecurity Infrastructure - Post-Quantum Security Platform",
+    description: "Future-proof cybersecurity infrastructure that implements quantum-resistant encryption algorithms and prepares organizations for the quantum computing era.",
+    category: "Cybersecurity",
+    subcategory: "Quantum-Safe Security",
+    price: 3499,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Identity verification",
-      "Continuous monitoring",
-      "Micro-segmentation",
-      "Least privilege access",
-      "Threat detection",
-      "Compliance reporting",
-      "API security",
-      "Multi-factor authentication"
+      "Quantum-resistant encryption algorithms",
+      "Post-quantum cryptography",
+      "Hybrid encryption systems",
+      "Quantum key distribution",
+      "Advanced threat detection",
+      "Compliance frameworks",
+      "Security audit tools",
+      "Zero-trust architecture",
+      "Multi-factor authentication",
+      "Real-time security monitoring"
     ],
     benefits: [
-      "Reduce security breaches by 90%",
-      "Improve compliance posture",
-      "Enhanced threat visibility",
-      "Simplified security management",
-      "Adaptive security policies"
+      "Future-proof security infrastructure",
+      "Protect against quantum attacks",
+      "Meet compliance requirements",
+      "Enhanced data protection",
+      "Long-term security investment"
     ],
     useCases: [
-      "Enterprise networks",
-      "Cloud environments",
-      "Remote workforces",
-      "Critical infrastructure",
-      "Financial institutions"
+      "Financial institutions",
+      "Government agencies",
+      "Healthcare organizations",
+      "Defense contractors",
+      "Critical infrastructure"
     ],
     targetAudience: [
       "CISOs",
       "Security architects",
-      "Network administrators",
       "Compliance officers",
-      "IT security managers"
+      "Risk managers",
+      "IT security directors"
     ],
-    tags: ["Zero Trust", "Security", "Network Security", "Compliance", "Threat Detection"],
-    estimatedDelivery: "8-10 weeks",
+    tags: ["Cybersecurity", "Quantum-Safe", "Post-Quantum Cryptography", "Zero-Trust", "Compliance"],
+    estimatedDelivery: "8-12 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$4,200 - $12,000/month",
+    marketPrice: "$3,499 - $9,999/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    websiteUrl: "https://ziontechgroup.com/zero-trust-security"
+    websiteUrl: "https://ziontechgroup.com/quantum-safe-cybersecurity-infrastructure"
   },
 
-  // Hybrid Cloud Management Platform
+  // Green IT Infrastructure Platform
   {
-    id: "hybrid-cloud-management-platform",
-    title: "Hybrid Cloud Management Platform",
-    description: "Unified platform for managing multi-cloud and hybrid cloud environments, providing consistent governance, cost optimization, and operational efficiency across public and private clouds.",
-    category: "IT Infrastructure",
-    subcategory: "Cloud Management",
-    price: 2800,
+    id: "green-it-infrastructure-platform",
+    title: "Green IT Infrastructure Platform - Sustainable Computing Solutions",
+    description: "Eco-friendly IT infrastructure platform that optimizes energy consumption, reduces carbon footprint, and provides sustainable computing solutions for environmentally conscious organizations.",
+    category: "Green IT",
+    subcategory: "Sustainable Infrastructure",
+    price: 1299,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Multi-cloud orchestration",
-      "Cost optimization",
-      "Resource monitoring",
-      "Automated scaling",
-      "Security compliance",
-      "Backup and disaster recovery",
+      "Energy consumption optimization",
+      "Carbon footprint tracking",
+      "Renewable energy integration",
+      "Smart cooling systems",
+      "Power management automation",
+      "Sustainability reporting",
+      "Green procurement tools",
+      "Waste reduction analytics",
+      "Environmental compliance",
+      "Green certification support"
+    ],
+    benefits: [
+      "Reduce energy costs by 40%",
+      "Lower carbon footprint by 60%",
+      "Meet sustainability goals",
+      "Improve brand reputation",
+      "Compliance with green regulations"
+    ],
+    useCases: [
+      "Data centers",
+      "Cloud providers",
+      "Enterprise IT",
+      "Educational institutions",
+      "Government agencies"
+    ],
+    targetAudience: [
+      "IT sustainability managers",
+      "Facility managers",
+      "Environmental officers",
+      "CSR managers",
+      "IT directors"
+    ],
+    tags: ["Green IT", "Sustainability", "Energy Efficiency", "Carbon Reduction", "Environmental Compliance"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,299 - $3,999/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/green-it-infrastructure-platform"
+  },
+
+  // Autonomous IT Operations Platform
+  {
+    id: "autonomous-it-operations-platform",
+    title: "Autonomous IT Operations Platform - Self-Healing Infrastructure",
+    description: "Intelligent IT operations platform that uses AI and machine learning to automatically detect, diagnose, and resolve infrastructure issues without human intervention.",
+    category: "IT Operations",
+    subcategory: "Autonomous Operations",
+    price: 2799,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered issue detection",
+      "Automated problem resolution",
+      "Predictive maintenance",
+      "Self-healing infrastructure",
+      "Intelligent alerting",
+      "Root cause analysis",
+      "Performance optimization",
+      "Capacity planning",
+      "Change management automation",
+      "Comprehensive monitoring"
+    ],
+    benefits: [
+      "Reduce downtime by 90%",
+      "Lower operational costs by 50%",
+      "Improve system reliability",
+      "Automated problem resolution",
+      "Proactive maintenance"
+    ],
+    useCases: [
+      "Enterprise IT operations",
+      "Cloud service providers",
+      "Managed service providers",
+      "Data centers",
+      "Critical infrastructure"
+    ],
+    targetAudience: [
+      "IT operations managers",
+      "DevOps engineers",
+      "System administrators",
+      "Site reliability engineers",
+      "IT directors"
+    ],
+    tags: ["IT Operations", "Autonomous", "AI", "Self-Healing", "Predictive Maintenance"],
+    estimatedDelivery: "6-8 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$2,799 - $7,999/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/autonomous-it-operations-platform"
+  },
+
+  // Hybrid Multi-Cloud Management Platform
+  {
+    id: "hybrid-multi-cloud-management-platform",
+    title: "Hybrid Multi-Cloud Management Platform - Unified Cloud Orchestration",
+    description: "Comprehensive cloud management platform that provides unified control, monitoring, and optimization across multiple cloud providers and hybrid environments.",
+    category: "Cloud Management",
+    subcategory: "Multi-Cloud Orchestration",
+    price: 1999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Multi-cloud resource management",
+      "Unified monitoring dashboard",
+      "Cost optimization tools",
+      "Security and compliance",
+      "Workload migration",
       "Performance analytics",
-      "API management"
+      "Automated scaling",
+      "Disaster recovery",
+      "API management",
+      "Governance and policies"
     ],
     benefits: [
       "Reduce cloud costs by 30%",
+      "Simplify multi-cloud management",
       "Improve operational efficiency",
-      "Enhanced security posture",
-      "Simplified cloud management",
-      "Better resource utilization"
+      "Enhanced security and compliance",
+      "Flexible cloud strategy"
     ],
     useCases: [
-      "Enterprise IT departments",
+      "Enterprise organizations",
+      "Multi-cloud environments",
+      "Hybrid cloud deployments",
       "Cloud migration projects",
-      "Multi-cloud strategies",
-      "DevOps teams",
-      "IT operations"
+      "DevOps teams"
     ],
     targetAudience: [
       "Cloud architects",
       "DevOps engineers",
-      "IT operations managers",
-      "System administrators",
+      "IT infrastructure managers",
+      "Cloud operations teams",
       "Technology directors"
     ],
-    tags: ["Hybrid Cloud", "Multi-cloud", "Cloud Management", "Cost Optimization", "DevOps"],
+    tags: ["Cloud Management", "Multi-Cloud", "Hybrid Cloud", "Cost Optimization", "DevOps"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "premium",
-    marketPrice: "$2,800 - $7,500/month",
+    marketPrice: "$1,999 - $5,999/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    websiteUrl: "https://ziontechgroup.com/hybrid-cloud"
-  },
-
-  // Software-Defined Networking (SDN)
-  {
-    id: "software-defined-networking",
-    title: "Software-Defined Networking (SDN) Solution",
-    description: "Advanced SDN platform that centralizes network control, automates network configuration, and provides programmatic network management for improved agility and cost efficiency.",
-    category: "IT Infrastructure",
-    subcategory: "Networking",
-    price: 2200,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Centralized network control",
-      "Automated provisioning",
-      "Traffic engineering",
-      "Network virtualization",
-      "Policy-based management",
-      "Real-time monitoring",
-      "API integration",
-      "Scalable architecture"
-    ],
-    benefits: [
-      "Reduce network provisioning time by 70%",
-      "Improve network utilization by 40%",
-      "Lower operational costs",
-      "Enhanced network security",
-      "Faster service deployment"
-    ],
-    useCases: [
-      "Data centers",
-      "Enterprise networks",
-      "Cloud providers",
-      "Telecommunications",
-      "Educational institutions"
-    ],
-    targetAudience: [
-      "Network engineers",
-      "System administrators",
-      "IT architects",
-      "Network administrators",
-      "Technology managers"
-    ],
-    tags: ["SDN", "Networking", "Network Automation", "Virtualization", "Network Management"],
-    estimatedDelivery: "5-7 weeks",
-    supportLevel: "premium",
-    marketPrice: "$2,200 - $6,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/sdn-solution"
-  },
-
-  // Container Orchestration Platform
-  {
-    id: "container-orchestration-platform",
-    title: "Enterprise Container Orchestration Platform",
-    description: "Production-ready container orchestration platform with advanced features for managing, scaling, and securing containerized applications across distributed environments.",
-    category: "IT Infrastructure",
-    subcategory: "Containerization",
-    price: 1800,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Container orchestration",
-      "Auto-scaling",
-      "Load balancing",
-      "Service discovery",
-      "Health monitoring",
-      "Security policies",
-      "Multi-cluster management",
-      "CI/CD integration"
-    ],
-    benefits: [
-      "Improve deployment speed by 60%",
-      "Reduce infrastructure costs by 25%",
-      "Enhanced application reliability",
-      "Simplified operations",
-      "Better resource utilization"
-    ],
-    useCases: [
-      "Microservices applications",
-      "DevOps environments",
-      "Cloud-native applications",
-      "Legacy application modernization",
-      "Development teams"
-    ],
-    targetAudience: [
-      "DevOps engineers",
-      "System administrators",
-      "Application developers",
-      "Platform engineers",
-      "IT operations teams"
-    ],
-    tags: ["Containers", "Orchestration", "DevOps", "Microservices", "Cloud Native"],
-    estimatedDelivery: "3-4 weeks",
-    supportLevel: "premium",
-    marketPrice: "$1,800 - $5,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/container-orchestration"
+    websiteUrl: "https://ziontechgroup.com/hybrid-multi-cloud-management-platform"
   }
 ];
