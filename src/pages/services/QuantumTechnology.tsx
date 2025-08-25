@@ -140,11 +140,12 @@ const QuantumTechnology: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-purple-900 text-white">
-      <SEOHead 
-        title="Quantum Technology - Zion Tech Group"
-        description="Explore the future of computing with our quantum technology solutions. From quantum computing to quantum security, unlock unprecedented computational power and security."
-        keywords="quantum technology, quantum computing, quantum security, quantum AI, quantum networks, quantum cryptography"
+    <div className="min-h-screen bg-background">
+      <SEO 
+        title="Quantum Technology - Zion Tech Group" 
+        description="Next-generation quantum computing solutions for unprecedented performance and innovation across industries."
+        tags={["quantum computing", "quantum technology", "quantum edge computing", "neuromorphic computing", "holographic data centers"]}
+        url="https://ziontechgroup.com/services/quantum-technology"
       />
       
       {/* Hero Section */}

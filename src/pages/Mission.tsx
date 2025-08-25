@@ -102,8 +102,8 @@ export default function Mission() {
       <SEO 
         title="Our Mission - Zion Tech Group" 
         description="Discover Zion Tech Group's mission to revolutionize technology and create positive global impact through innovation."
-        keywords="mission, vision, values, innovation, technology, global impact"
-        canonical="https://ziontechgroup.com/mission"
+        tags={["mission", "vision", "values", "innovation", "technology", "global impact"]}
+        url="https://ziontechgroup.com/mission"
       />
 
       {/* Hero Section */}

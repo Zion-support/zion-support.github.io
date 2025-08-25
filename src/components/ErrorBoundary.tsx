@@ -1,17 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  AlertTriangle, 
-  RefreshCw, 
-  Home, 
-  Mail, 
-  Bug, 
-  Copy,
-  CheckCircle,
-  ArrowLeft,
-  Zap,
-  Shield
-} from 'lucide-react';
 
 interface Props {
   children: ReactNode;
@@ -24,21 +12,15 @@ interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
-  showDetails: boolean;
-  copied: boolean;
-  errorId: string | null;
 }
 
-class ErrorBoundary extends Component<Props, State> {
+export class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
       hasError: false,
       error: null,
-      errorInfo: null,
-      showDetails: props.showDetails || false,
-      copied: false,
-      errorId: null
+      errorInfo: null
     };
   }
 
@@ -46,15 +28,8 @@ class ErrorBoundary extends Component<Props, State> {
     return {
       hasError: true,
       error,
-      errorInfo: null,
-      showDetails: false,
-      copied: false,
-      errorId: ErrorBoundary.generateErrorId()
+      errorInfo: null
     };
-  }
-
-  static generateErrorId(): string {
-    return `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -64,117 +39,13 @@ class ErrorBoundary extends Component<Props, State> {
     });
 
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
+    if (import.meta.env.DEV) {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
-    // Call custom error handler if provided
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-
-    // Send error to analytics/monitoring service
-    this.logErrorToService(error, errorInfo);
+    // In production, you might want to log to an error reporting service
+    // logErrorToService(error, errorInfo);
   }
-
-  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    try {
-      // Example: Send to error reporting service
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'exception', {
-          description: error.message,
-          fatal: false,
-          stack: error.stack,
-          componentStack: errorInfo.componentStack
-        });
-      }
-
-      // Example: Send to custom error endpoint
-      fetch('/api/error-log', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          message: error.message,
-          stack: error.stack,
-          componentStack: errorInfo.componentStack,
-          url: window.location.href,
-          userAgent: navigator.userAgent,
-          timestamp: new Date().toISOString(),
-          errorId: this.state.errorId
-        })
-      }).catch(() => {
-        // Silently fail if error logging fails
-      });
-    } catch (loggingError) {
-      console.error('Failed to log error:', loggingError);
-    }
-  };
-
-  private handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      showDetails: false,
-      copied: false,
-      errorId: null
-    });
-  };
-
-  private handleGoHome = () => {
-    window.location.href = '/';
-  };
-
-  private handleCopyError = async () => {
-    if (this.state.error && this.state.errorInfo) {
-      const errorReport = `
-Error Report - ${new Date().toISOString()}
-Error ID: ${this.state.errorId}
-
-Error: ${this.state.error.message}
-Stack: ${this.state.error.stack}
-Component Stack: ${this.state.errorInfo.componentStack}
-URL: ${window.location.href}
-User Agent: ${navigator.userAgent}
-      `.trim();
-
-      try {
-        await navigator.clipboard.writeText(errorReport);
-        this.setState({ copied: true });
-        setTimeout(() => this.setState({ copied: false }), 2000);
-      } catch (err) {
-        console.error('Failed to copy error:', err);
-      }
-    }
-  };
-
-  private handleReportError = () => {
-    if (this.state.error) {
-      const subject = encodeURIComponent(`Bug Report: ${this.state.error.message} [${this.state.errorId}]`);
-      const body = encodeURIComponent(`
-Hi Zion Tech Group Team,
-
-I encountered an error while using the website:
-
-Error ID: ${this.state.errorId}
-Error: ${this.state.error.message}
-URL: ${window.location.href}
-Time: ${new Date().toISOString()}
-
-Please let me know if you need any additional information.
-
-Best regards,
-      `);
-      
-      window.open(`mailto:support@ziontechgroup.com?subject=${subject}&body=${body}`);
-    }
-  };
-
-  private toggleDetails = () => {
-    this.setState(prev => ({ showDetails: !prev.showDetails }));
-  };
 
   render() {
     if (this.state.hasError) {
@@ -184,157 +55,94 @@ Best regards,
       }
 
       return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center p-4">
-          <div className="max-w-2xl w-full bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
-            {/* Header */}
-            <div className="bg-gradient-to-r from-red-500 to-red-600 p-6 text-white">
-              <div className="flex items-center gap-3">
-                <Shield className="w-8 h-8" />
-                <div>
-                  <h1 className="text-2xl font-bold">Something went wrong</h1>
-                  <p className="text-red-100 mt-1">
-                    We're sorry, but something unexpected happened. Our team has been notified.
-                  </p>
-                  {this.state.errorId && (
-                    <p className="text-red-100 text-sm mt-2">
-                      Error ID: {this.state.errorId}
-                    </p>
-                  )}
-                </div>
+        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 flex items-center justify-center px-4">
+          <div className="max-w-2xl mx-auto text-center">
+            {/* Error Icon */}
+            <div className="mb-8">
+              <div className="w-24 h-24 mx-auto bg-gradient-to-br from-red-500 to-red-700 rounded-full flex items-center justify-center mb-4">
+                <svg 
+                  className="w-12 h-12 text-white" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    strokeWidth={2} 
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" 
+                  />
+                </svg>
               </div>
             </div>
 
-            {/* Content */}
-            <div className="p-6">
-              {/* Error Message */}
-              <div className="mb-6">
-                <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                  Error Details
-                </h2>
-                <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4">
-                  <p className="text-red-800 dark:text-red-200 font-mono text-sm">
-                    {this.state.error?.message || 'An unknown error occurred'}
-                  </p>
-                </div>
-              </div>
+            {/* Error Message */}
+            <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Oops! Something went wrong
+            </h1>
+            
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+            </p>
 
-              {/* Action Buttons */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-                <button
-                  onClick={this.handleRetry}
-                  className="flex items-center justify-center gap-2 px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
-                >
-                  <RefreshCw className="w-4 h-4" />
-                  Try Again
-                </button>
-                
-                <button
-                  onClick={this.handleGoHome}
-                  className="flex items-center justify-center gap-2 px-4 py-3 bg-gray-600 hover:bg-gray-700 text-white rounded-lg font-medium transition-colors"
-                >
-                  <Home className="w-4 h-4" />
-                  Go Home
-                </button>
-              </div>
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <button
+                onClick={() => window.location.reload()}
+                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+              >
+                Try Again
+              </button>
+              
+              <Link
+                to="/"
+                className="px-6 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+              >
+                Go Home
+              </Link>
+            </div>
 
-              {/* Additional Actions */}
-              <div className="flex flex-wrap gap-2 mb-6">
-                <button
-                  onClick={this.handleCopyError}
-                  className="flex items-center gap-2 px-3 py-2 text-sm bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-md transition-colors"
+            {/* Contact Information */}
+            <div className="bg-gray-800/50 rounded-xl p-6 border border-gray-700/50">
+              <p className="text-gray-400 mb-2">Need immediate assistance?</p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm">
+                <a 
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
                 >
-                  {this.state.copied ? (
-                    <>
-                      <CheckCircle className="w-4 h-4 text-green-500" />
-                      Copied!
-                    </>
-                  ) : (
-                    <>
-                      <Copy className="w-4 h-4" />
-                      Copy Error
-                    </>
-                  )}
-                </button>
-                
-                <button
-                  onClick={this.handleReportError}
-                  className="flex items-center gap-2 px-3 py-2 text-sm bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-md transition-colors"
+                  📧 kleber@ziontechgroup.com
+                </a>
+                <a 
+                  href="tel:+13024640950"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
                 >
-                  <Mail className="w-4 h-4" />
-                  Report Bug
-                </button>
-                
-                <button
-                  onClick={this.toggleDetails}
-                  className="flex items-center gap-2 px-3 py-2 text-sm bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-md transition-colors"
-                >
-                  <Bug className="w-4 h-4" />
-                  {this.state.showDetails ? 'Hide' : 'Show'} Details
-                </button>
+                  📞 +1 (302) 464-0950
+                </a>
               </div>
+            </div>
 
-              {/* Error Details */}
-              {this.state.showDetails && (
-                <div className="space-y-4">
-                  {/* Stack Trace */}
-                  {this.state.error?.stack && (
+            {/* Development Details */}
+            {import.meta.env.DEV && this.state.error && (
+              <details className="mt-8 text-left bg-gray-800/30 rounded-xl p-4 border border-gray-700/50">
+                <summary className="text-cyan-400 cursor-pointer font-semibold mb-2">
+                  Development Details (Click to expand)
+                </summary>
+                <div className="text-sm text-gray-400 space-y-2">
+                  <div>
+                    <strong>Error:</strong> {this.state.error.toString()}
+                  </div>
+                  {this.state.errorInfo && (
                     <div>
-                      <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
-                        Stack Trace
-                      </h3>
-                      <pre className="bg-gray-100 dark:bg-gray-900 rounded-lg p-4 overflow-x-auto text-xs text-gray-800 dark:text-gray-200 font-mono">
-                        {this.state.error.stack}
-                      </pre>
-                    </div>
-                  )}
-
-                  {/* Component Stack */}
-                  {this.state.errorInfo?.componentStack && (
-                    <div>
-                      <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
-                        Component Stack
-                      </h3>
-                      <pre className="bg-gray-100 dark:bg-gray-900 rounded-lg p-4 overflow-x-auto text-xs text-gray-800 dark:text-gray-200 font-mono">
+                      <strong>Component Stack:</strong>
+                      <pre className="mt-2 p-2 bg-gray-900/50 rounded text-xs overflow-x-auto">
                         {this.state.errorInfo.componentStack}
                       </pre>
                     </div>
                   )}
-
-                  {/* Environment Info */}
-                  <div>
-                    <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
-                      Environment Information
-                    </h3>
-                    <div className="bg-gray-100 dark:bg-gray-900 rounded-lg p-4 text-xs text-gray-800 dark:text-gray-200 font-mono">
-                      <div>URL: {window.location.href}</div>
-                      <div>User Agent: {navigator.userAgent}</div>
-                      <div>Timestamp: {new Date().toISOString()}</div>
-                      <div>Error ID: {this.state.errorId}</div>
-                    </div>
-                  </div>
                 </div>
-              )}
-
-              {/* Help Text */}
-              <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
-                <p className="text-sm text-blue-800 dark:text-blue-200">
-                  <strong>Need help?</strong> If this error persists, please contact our support team at{' '}
-                  <a 
-                    href="mailto:support@ziontechgroup.com" 
-                    className="underline hover:no-underline"
-                  >
-                    support@ziontechgroup.com
-                  </a>
-                  {' '}or call us at{' '}
-                  <a 
-                    href="tel:+1-302-464-0950" 
-                    className="underline hover:no-underline"
-                  >
-                    +1 (302) 464-0950
-                  </a>
-                </p>
-              </div>
-            </div>
+              </details>
+            )}
           </div>
         </div>
       );
@@ -343,5 +151,3 @@ Best regards,
     return this.props.children;
   }
 }
-
-export { ErrorBoundary };

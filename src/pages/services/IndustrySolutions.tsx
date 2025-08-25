@@ -103,8 +103,8 @@ export default function IndustrySolutions() {
       <SEO 
         title="Industry Solutions - Zion Tech Group" 
         description="Tailored technology solutions for healthcare, finance, manufacturing, retail, and government sectors with industry-specific compliance and expertise."
-        keywords="industry solutions, healthcare technology, financial services, manufacturing 4.0, retail solutions, government technology"
-        canonical="https://ziontechgroup.com/services/industry-solutions"
+        tags={["industry solutions", "healthcare technology", "financial services", "manufacturing 4.0", "retail solutions", "government technology"]}
+        url="https://ziontechgroup.com/services/industry-solutions"
       />
 
       {/* Hero Section */}

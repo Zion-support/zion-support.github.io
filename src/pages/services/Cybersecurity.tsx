@@ -140,11 +140,12 @@ const Cybersecurity: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-red-900 text-white">
-      <SEOHead 
-        title="Cybersecurity Solutions - Zion Tech Group"
-        description="Protect your business with comprehensive cybersecurity solutions. From threat detection to compliance, we provide enterprise-grade security services."
-        keywords="cybersecurity, threat detection, data protection, security audits, penetration testing, incident response, compliance"
+    <div className="min-h-screen bg-background">
+      <SEO 
+        title="Cybersecurity - Zion Tech Group" 
+        description="Advanced security and protection solutions for digital assets with comprehensive threat detection and compliance automation."
+        tags={["cybersecurity", "zero trust", "threat intelligence", "compliance automation", "SOC2", "penetration testing"]}
+        url="https://ziontechgroup.com/services/cybersecurity"
       />
       
       {/* Hero Section */}

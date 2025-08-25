@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Eye, 
-  EyeOff, 
-  Volume2, 
-  VolumeX, 
-  Sun, 
-  Moon, 
-  Contrast, 
+  Accessibility, 
   Type, 
-  Move, 
+  Contrast, 
+  Volume2, 
+  VolumeX,
   Settings,
   X,
-  Check,
-  AlertTriangle
+  Sun,
+  Moon,
+  Monitor
 } from 'lucide-react';
 
 interface AccessibilityControlsProps {
@@ -23,121 +21,12 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
   position = 'bottom-right' 
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [highContrast, setHighContrast] = useState(false);
-  const [largeText, setLargeText] = useState(false);
-  const [reducedMotion, setReducedMotion] = useState(false);
-  const [mutedAudio, setMutedAudio] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
-  const [showNotifications, setShowNotifications] = useState(true);
+  const [fontSize, setFontSize] = useState(16);
+  const [contrast, setContrast] = useState<'normal' | 'high' | 'inverted'>('normal');
+  const [isMuted, setIsMuted] = useState(false);
+  const [theme, setTheme] = useState<'light' | 'dark' | 'auto'>('dark');
 
-  // Load saved preferences from localStorage
-  useEffect(() => {
-    const savedHighContrast = localStorage.getItem('highContrast') === 'true';
-    const savedLargeText = localStorage.getItem('largeText') === 'true';
-    const savedReducedMotion = localStorage.getItem('reducedMotion') === 'true';
-    const savedMutedAudio = localStorage.getItem('mutedAudio') === 'true';
-    const savedDarkMode = localStorage.getItem('darkMode') === 'true';
-
-    setHighContrast(savedHighContrast);
-    setLargeText(savedLargeText);
-    setReducedMotion(savedReducedMotion);
-    setMutedAudio(savedMutedAudio);
-    setDarkMode(savedDarkMode);
-
-    // Apply saved preferences
-    applyAccessibilitySettings(savedHighContrast, savedLargeText, savedReducedMotion, savedMutedAudio, savedDarkMode);
-  }, []);
-
-  // Apply accessibility settings to the document
-  const applyAccessibilitySettings = (
-    contrast: boolean, 
-    text: boolean, 
-    motion: boolean, 
-    audio: boolean, 
-    dark: boolean
-  ) => {
-    const root = document.documentElement;
-    
-    // High contrast
-    if (contrast) {
-      root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
-    }
-    
-    // Large text
-    if (text) {
-      root.classList.add('large-text');
-    } else {
-      root.classList.remove('large-text');
-    }
-    
-    // Reduced motion
-    if (motion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
-    
-    // Dark mode
-    if (dark) {
-      root.classList.add('dark-mode');
-    } else {
-      root.classList.remove('dark-mode');
-    }
-  };
-
-  // Handle setting changes
-  const handleSettingChange = (setting: string, value: boolean) => {
-    switch (setting) {
-      case 'highContrast':
-        setHighContrast(value);
-        localStorage.setItem('highContrast', value.toString());
-        break;
-      case 'largeText':
-        setLargeText(value);
-        localStorage.setItem('largeText', value.toString());
-        break;
-      case 'reducedMotion':
-        setReducedMotion(value);
-        localStorage.setItem('reducedMotion', value.toString());
-        break;
-      case 'mutedAudio':
-        setMutedAudio(value);
-        localStorage.setItem('mutedAudio', value.toString());
-        break;
-      case 'darkMode':
-        setDarkMode(value);
-        localStorage.setItem('darkMode', value.toString());
-        break;
-    }
-    
-    // Apply all current settings
-    applyAccessibilitySettings(highContrast, largeText, reducedMotion, mutedAudio, darkMode);
-  };
-
-  // Reset all settings to default
-  const resetSettings = () => {
-    setHighContrast(false);
-    setLargeText(false);
-    setReducedMotion(false);
-    setMutedAudio(false);
-    setDarkMode(false);
-    
-    localStorage.removeItem('highContrast');
-    localStorage.removeItem('largeText');
-    localStorage.removeItem('reducedMotion');
-    localStorage.removeItem('mutedAudio');
-    localStorage.removeItem('darkMode');
-    
-    applyAccessibilitySettings(false, false, false, false, false);
-    
-    // Show notification
-    setShowNotifications(true);
-    setTimeout(() => setShowNotifications(false), 3000);
-  };
-
-  // Get position classes
+  // Position classes based on prop
   const getPositionClasses = () => {
     switch (position) {
       case 'top-left':
@@ -152,220 +41,217 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
     }
   };
 
+  // Apply font size changes
+  useEffect(() => {
+    document.documentElement.style.fontSize = `${fontSize}px`;
+  }, [fontSize]);
+
+  // Apply contrast changes
+  useEffect(() => {
+    const root = document.documentElement;
+    root.classList.remove('contrast-normal', 'contrast-high', 'contrast-inverted');
+    root.classList.add(`contrast-${contrast}`);
+  }, [contrast]);
+
+  // Apply theme changes
+  useEffect(() => {
+    const root = document.documentElement;
+    if (theme === 'auto') {
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      root.classList.toggle('dark', prefersDark);
+    } else {
+      root.classList.toggle('dark', theme === 'dark');
+    }
+  }, [theme]);
+
+  // Toggle mute state
+  const toggleMute = () => {
+    setIsMuted(!isMuted);
+    // Here you would implement actual audio muting logic
+    if (isMuted) {
+      // Unmute audio
+      console.log('Audio unmuted');
+    } else {
+      // Mute audio
+      console.log('Audio muted');
+    }
+  };
+
+  // Reset all settings
+  const resetSettings = () => {
+    setFontSize(16);
+    setContrast('normal');
+    setIsMuted(false);
+    setTheme('dark');
+  };
+
   return (
-    <>
+    <div className={`fixed ${getPositionClasses()} z-50`}>
       {/* Main Accessibility Button */}
-      <button
+      <motion.button
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen(!isOpen)}
-        className={`fixed ${getPositionClasses()} z-50 p-3 bg-zion-cyan/20 backdrop-blur-sm border border-zion-cyan/30 rounded-full hover:bg-zion-cyan/30 hover:border-zion-cyan/60 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:ring-offset-2 focus:ring-offset-black`}
+        className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center group"
         aria-label="Accessibility controls"
         aria-expanded={isOpen}
         aria-haspopup="dialog"
       >
-        <Settings className="w-6 h-6 text-zion-cyan" />
-      </button>
+        <Accessibility className="w-7 h-7" />
+        
+        {/* Pulse animation when open */}
+        {isOpen && (
+          <motion.div
+            className="absolute inset-0 rounded-full border-2 border-cyan-300"
+            animate={{ scale: [1, 1.2, 1], opacity: [1, 0.5, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+          />
+        )}
+      </motion.button>
 
       {/* Accessibility Panel */}
-      {isOpen && (
-        <div className="fixed inset-0 z-40">
-          {/* Backdrop */}
-          <div 
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-            onClick={() => setIsOpen(false)}
-            aria-hidden="true"
-          />
-          
-          {/* Panel */}
-          <div className={`fixed ${getPositionClasses()} z-50 w-80 max-h-96 overflow-y-auto bg-zion-blue-dark/95 backdrop-blur-md border border-zion-cyan/30 rounded-2xl shadow-2xl shadow-zion-cyan/10`}>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.8, y: 20 }}
+            transition={{ duration: 0.3, ease: 'easeOut' }}
+            className="absolute bottom-20 right-0 w-80 bg-gray-900/95 backdrop-blur-xl rounded-2xl border border-gray-700/50 shadow-2xl overflow-hidden"
+            role="dialog"
+            aria-label="Accessibility settings"
+          >
             {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b border-zion-cyan/20">
-              <h2 className="text-lg font-semibold text-white">Accessibility Controls</h2>
+            <div className="flex items-center justify-between p-4 border-b border-gray-700/50">
+              <h3 className="text-lg font-semibold text-white flex items-center gap-2">
+                <Accessibility className="w-5 h-5 text-cyan-400" />
+                Accessibility
+              </h3>
               <button
                 onClick={() => setIsOpen(false)}
-                className="p-1 hover:bg-zion-cyan/20 rounded-full transition-colors duration-200"
+                className="text-gray-400 hover:text-white transition-colors duration-200"
                 aria-label="Close accessibility panel"
               >
-                <X className="w-5 h-5 text-zion-cyan" />
+                <X className="w-5 h-5" />
               </button>
             </div>
 
-            {/* Settings */}
-            <div className="p-4 space-y-4">
-              {/* High Contrast */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-3">
-                  <Contrast className="w-5 h-5 text-zion-cyan" />
-                  <div>
-                    <label htmlFor="highContrast" className="text-sm font-medium text-white">
-                      High Contrast
-                    </label>
-                    <p className="text-xs text-gray-400">Enhanced color contrast</p>
-                  </div>
+            {/* Content */}
+            <div className="p-4 space-y-6">
+              {/* Font Size Control */}
+              <div>
+                <label className="flex items-center gap-2 text-sm font-medium text-gray-300 mb-3">
+                  <Type className="w-4 h-4 text-cyan-400" />
+                  Font Size
+                </label>
+                <div className="flex items-center gap-3">
+                  <button
+                    onClick={() => setFontSize(Math.max(12, fontSize - 2))}
+                    className="w-8 h-8 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors duration-200 flex items-center justify-center"
+                    aria-label="Decrease font size"
+                  >
+                    A-
+                  </button>
+                  <span className="text-white font-medium min-w-[3rem] text-center">
+                    {fontSize}px
+                  </span>
+                  <button
+                    onClick={() => setFontSize(Math.min(24, fontSize + 2))}
+                    className="w-8 h-8 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors duration-200 flex items-center justify-center"
+                    aria-label="Increase font size"
+                  >
+                    A+
+                  </button>
                 </div>
-                <button
-                  id="highContrast"
-                  onClick={() => handleSettingChange('highContrast', !highContrast)}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:ring-offset-2 focus:ring-offset-zion-blue-dark ${
-                    highContrast ? 'bg-zion-cyan' : 'bg-gray-600'
-                  }`}
-                  role="switch"
-                  aria-checked={highContrast}
-                  aria-labelledby="highContrast"
-                >
-                  <span
-                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform duration-200 ${
-                      highContrast ? 'translate-x-6' : 'translate-x-1'
-                    }`}
-                  />
-                </button>
               </div>
 
-              {/* Large Text */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-3">
-                  <Type className="w-5 h-5 text-zion-cyan" />
-                  <div>
-                    <label htmlFor="largeText" className="text-sm font-medium text-white">
-                      Large Text
-                    </label>
-                    <p className="text-xs text-gray-400">Increased font sizes</p>
-                  </div>
+              {/* Contrast Control */}
+              <div>
+                <label className="flex items-center gap-2 text-sm font-medium text-gray-300 mb-3">
+                  <Contrast className="w-4 h-4 text-cyan-400" />
+                  Contrast
+                </label>
+                <div className="grid grid-cols-3 gap-2">
+                  {(['normal', 'high', 'inverted'] as const).map((contrastOption) => (
+                    <button
+                      key={contrastOption}
+                      onClick={() => setContrast(contrastOption)}
+                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                        contrast === contrastOption
+                          ? 'bg-cyan-500 text-white shadow-lg'
+                          : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                      }`}
+                    >
+                      {contrastOption.charAt(0).toUpperCase() + contrastOption.slice(1)}
+                    </button>
+                  ))}
                 </div>
-                <button
-                  id="largeText"
-                  onClick={() => handleSettingChange('largeText', !largeText)}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:ring-offset-2 focus:ring-offset-zion-blue-dark ${
-                    largeText ? 'bg-zion-cyan' : 'bg-gray-600'
-                  }`}
-                  role="switch"
-                  aria-checked={largeText}
-                  aria-labelledby="largeText"
-                >
-                  <span
-                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform duration-200 ${
-                      largeText ? 'translate-x-6' : 'translate-x-1'
-                    }`}
-                  />
-                </button>
               </div>
 
-              {/* Reduced Motion */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-3">
-                  <Move className="w-5 h-5 text-zion-cyan" />
-                  <div>
-                    <label htmlFor="reducedMotion" className="text-sm font-medium text-white">
-                      Reduced Motion
-                    </label>
-                    <p className="text-xs text-gray-400">Minimize animations</p>
-                  </div>
+              {/* Theme Control */}
+              <div>
+                <label className="flex items-center gap-2 text-sm font-medium text-gray-300 mb-3">
+                  <Settings className="w-4 h-4 text-cyan-400" />
+                  Theme
+                </label>
+                <div className="grid grid-cols-3 gap-2">
+                  {([
+                    { value: 'light', icon: Sun, label: 'Light' },
+                    { value: 'dark', icon: Moon, label: 'Dark' },
+                    { value: 'auto', icon: Monitor, label: 'Auto' }
+                  ] as const).map(({ value, icon: Icon, label }) => (
+                    <button
+                      key={value}
+                      onClick={() => setTheme(value)}
+                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 flex items-center justify-center gap-2 ${
+                        theme === value
+                          ? 'bg-cyan-500 text-white shadow-lg'
+                          : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                      }`}
+                    >
+                      <Icon className="w-4 h-4" />
+                      {label}
+                    </button>
+                  ))}
                 </div>
-                <button
-                  id="reducedMotion"
-                  onClick={() => handleSettingChange('reducedMotion', !reducedMotion)}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:ring-offset-2 focus:ring-offset-zion-blue-dark ${
-                    reducedMotion ? 'bg-zion-cyan' : 'bg-gray-600'
-                  }`}
-                  role="switch"
-                  aria-checked={reducedMotion}
-                  aria-labelledby="reducedMotion"
-                >
-                  <span
-                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform duration-200 ${
-                      reducedMotion ? 'translate-x-6' : 'translate-x-1'
-                    }`}
-                  />
-                </button>
               </div>
 
-              {/* Muted Audio */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-3">
-                  {mutedAudio ? (
-                    <VolumeX className="w-5 h-5 text-zion-cyan" />
+              {/* Audio Control */}
+              <div>
+                <label className="flex items-center gap-2 text-sm font-medium text-gray-300 mb-3">
+                  {isMuted ? (
+                    <VolumeX className="w-4 h-4 text-red-400" />
                   ) : (
-                    <Volume2 className="w-5 h-5 text-zion-cyan" />
+                    <Volume2 className="w-4 h-4 text-cyan-400" />
                   )}
-                  <div>
-                    <label htmlFor="mutedAudio" className="text-sm font-medium text-white">
-                      Mute Audio
-                    </label>
-                    <p className="text-xs text-gray-400">Disable sound effects</p>
-                  </div>
-                </div>
+                  Audio
+                </label>
                 <button
-                  id="mutedAudio"
-                  onClick={() => handleSettingChange('mutedAudio', !mutedAudio)}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:ring-offset-2 focus:ring-offset-zion-blue-dark ${
-                    mutedAudio ? 'bg-zion-cyan' : 'bg-gray-600'
+                  onClick={toggleMute}
+                  className={`w-full px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+                    isMuted
+                      ? 'bg-red-500 text-white hover:bg-red-600'
+                      : 'bg-green-500 text-white hover:bg-green-600'
                   }`}
-                  role="switch"
-                  aria-checked={mutedAudio}
-                  aria-labelledby="mutedAudio"
                 >
-                  <span
-                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform duration-200 ${
-                      mutedAudio ? 'translate-x-6' : 'translate-x-1'
-                    }`}
-                  />
-                </button>
-              </div>
-
-              {/* Dark Mode */}
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-3">
-                  {darkMode ? (
-                    <Moon className="w-5 h-5 text-zion-cyan" />
-                  ) : (
-                    <Sun className="w-5 h-5 text-zion-cyan" />
-                  )}
-                  <div>
-                    <label htmlFor="darkMode" className="text-sm font-medium text-white">
-                      Dark Mode
-                    </label>
-                    <p className="text-xs text-gray-400">Dark color scheme</p>
-                  </div>
-                </div>
-                <button
-                  id="darkMode"
-                  onClick={() => handleSettingChange('darkMode', !darkMode)}
-                  className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:ring-offset-2 focus:ring-offset-zion-blue-dark ${
-                    darkMode ? 'bg-zion-cyan' : 'bg-gray-600'
-                  }`}
-                  role="switch"
-                  aria-checked={darkMode}
-                  aria-labelledby="darkMode"
-                >
-                  <span
-                    className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform duration-200 ${
-                      darkMode ? 'translate-x-6' : 'translate-x-1'
-                    }`}
-                  />
+                  {isMuted ? 'Unmute Audio' : 'Mute Audio'}
                 </button>
               </div>
 
               {/* Reset Button */}
-              <div className="pt-4 border-t border-zion-cyan/20">
+              <div className="pt-4 border-t border-gray-700/50">
                 <button
                   onClick={resetSettings}
-                  className="w-full px-4 py-2 text-sm font-medium text-zion-cyan border border-zion-cyan/30 rounded-lg hover:bg-zion-cyan/20 hover:border-zion-cyan/60 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:ring-offset-2 focus:ring-offset-zion-blue-dark"
+                  className="w-full px-4 py-2 bg-gray-800 text-gray-300 rounded-lg hover:bg-gray-700 transition-colors duration-200 font-medium"
                 >
                   Reset to Defaults
                 </button>
               </div>
             </div>
-          </div>
-        </div>
-      )}
-
-      {/* Success Notification */}
-      {showNotifications && (
-        <div className={`fixed ${getPositionClasses()} z-50 flex items-center space-x-2 px-4 py-2 bg-green-600/90 backdrop-blur-sm border border-green-400/30 rounded-lg shadow-lg transition-all duration-300`}>
-          <Check className="w-4 h-4 text-white" />
-          <span className="text-sm text-white">Settings reset successfully</span>
-        </div>
-      )}
-    </>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   );
 };
 

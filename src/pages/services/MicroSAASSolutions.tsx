@@ -220,9 +220,9 @@ export default function MicroSAASSolutions() {
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
       <SEO 
         title="Micro SAAS Solutions - Zion Tech Group" 
-        description="Custom software-as-a-service solutions designed for rapid deployment, scalability, and business growth across industries. Starting at $129/month."
-        keywords="micro SAAS, custom software, subscription management, multi-tenant, API development, business software, AI solutions, cloud software"
-        canonical="https://ziontechgroup.com/services/micro-saas-solutions"
+        description="Custom software-as-a-service solutions designed for rapid deployment, scalability, and business growth across industries."
+        tags={["micro SAAS", "custom software", "subscription management", "multi-tenant", "API development", "business software"]}
+        url="https://ziontechgroup.com/services/micro-saas-solutions"
       />
 
       {/* Hero Section */}

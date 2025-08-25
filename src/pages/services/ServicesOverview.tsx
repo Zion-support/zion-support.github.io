@@ -119,13 +119,13 @@ export default function ServicesOverview() {
   };
 
   return (
-    <>
-      <Helmet>
-        <title>Services Overview - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive overview of all our technology services including AI, cybersecurity, cloud infrastructure, and specialized industry solutions. Discover how we can transform your business." />
-        <meta name="keywords" content="technology services, AI solutions, cybersecurity, cloud computing, Zion Tech Group services overview" />
-        <link rel="canonical" href="https://ziontechgroup.com/services-overview" />
-      </Helmet>
+    <div className="min-h-screen bg-background">
+      <SEO 
+        title="Services - Zion Tech Group" 
+        description="Comprehensive technology services including AI, quantum computing, cybersecurity, and industry solutions."
+        tags={["AI services", "quantum computing", "cybersecurity", "IT infrastructure", "industry solutions"]}
+        url="https://ziontechgroup.com/services"
+      />
 
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
         {/* Hero Section */}

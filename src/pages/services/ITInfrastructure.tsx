@@ -98,8 +98,8 @@ export default function ITInfrastructure() {
       <SEO 
         title="IT Infrastructure - Zion Tech Group" 
         description="Comprehensive IT infrastructure solutions including cloud management, network architecture, data centers, and enterprise storage."
-        keywords="IT infrastructure, cloud management, network architecture, data centers, enterprise storage, virtualization"
-        canonical="https://ziontechgroup.com/services/it-infrastructure"
+        tags={["IT infrastructure", "cloud management", "network architecture", "data centers", "enterprise storage", "virtualization"]}
+        url="https://ziontechgroup.com/services/it-infrastructure"
       />
 
       {/* Hero Section */}

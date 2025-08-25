@@ -118,11 +118,12 @@ const AIAutonomousSystems: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
-      <SEOHead 
-        title="AI Autonomous Systems - Zion Tech Group"
-        description="Transform your business with self-managing AI systems that operate independently. Our autonomous AI solutions drive efficiency, reduce costs, and enable 24/7 operations."
-        keywords="AI autonomous systems, self-managing AI, autonomous decision making, business automation, AI optimization"
+    <div className="min-h-screen bg-background">
+      <SEO 
+        title="AI & Autonomous Systems - Zion Tech Group" 
+        description="Revolutionary AI systems that operate independently and transform business operations across industries."
+        tags={["AI autonomous systems", "artificial intelligence", "machine learning", "business automation"]}
+        url="https://ziontechgroup.com/services/ai-autonomous-systems"
       />
       
       {/* Hero Section */}
