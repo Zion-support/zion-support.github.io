@@ -110,7 +110,7 @@ export default function EnhancedServicesShowcase() {
           >
             All Services
           </Button>
-          {categories.map((category) => (
+          {categories.map((category: string) => (
             <Button
               key={category}
               variant={selectedCategory === category ? 'default' : 'outline'}

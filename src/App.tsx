@@ -1,10 +1,10 @@
 import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
 import Sidebar from './components/Sidebar';
 import { AccessibilityControls } from './components/AccessibilityControls';
-import PerformanceDashboard from './components/PerformanceDashboard';
+import { PerformanceDashboard } from './components/PerformanceDashboard';
 import { AnalyticsDashboard } from './components/AnalyticsDashboard';
 import { AIChatbot } from './components/AIChatbot';
 import { CollaborativeTextEditor } from './components/CollaborativeTextEditor';
@@ -22,10 +22,6 @@ import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
 import EnhancedSEO from './components/EnhancedSEO';
 import EnhancedAccessibility from './components/EnhancedAccessibility';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
-import { ScrollToTop } from './components/ScrollToTop';
-import { ContentQualityEnhancer } from './components/ContentQualityEnhancer';
-import { BrokenLinkFixer } from './components/BrokenLinkFixer';
-import { WebsiteImprovementDashboard } from './components/WebsiteImprovementDashboard';
 
 // Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
@@ -166,24 +162,15 @@ const App: React.FC = () => {
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
-            <PerformanceOptimizer
-              enableMonitoring={true}
-              enableOptimizations={true}
-              showMetrics={import.meta.env.DEV}
-            >
-              <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+            <PerformanceOptimizer />
+            <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
                 {/* Enhanced SEO */}
                 <EnhancedSEO 
-                  seoData={{
-                    title: "Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services",
-                    description: "Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology.",
-                    keywords: ["AI solutions", "quantum computing", "cybersecurity", "digital transformation", "enterprise technology", "machine learning", "cloud services", "IT infrastructure"],
-                    canonicalUrl: "https://ziontechgroup.com",
-                    ogImage: "https://ziontechgroup.com/og-image.jpg",
-                    ogType: "website",
-                    twitterCard: "summary_large_image"
-                  }}
-                  pageType="home"
+                  title="Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services"
+                  description="Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology."
+                  keywords="AI solutions, quantum computing, cybersecurity, digital transformation, enterprise technology, machine learning, cloud services, IT infrastructure"
+                  type="website"
+                  url="https://ziontechgroup.com"
                 />
                 
                 <Header />
@@ -346,8 +333,6 @@ const App: React.FC = () => {
                 
                 <Footer />
                 <SonnerToaster />
-              </div>
-            </PerformanceOptimizer>
                 
                 {/* Enhanced Accessibility Controls */}
                 <EnhancedAccessibility 
@@ -357,16 +342,8 @@ const App: React.FC = () => {
                   enableVoiceCommands={import.meta.env.DEV}
                 />
                 
-                {/* Website Improvement Tools */}
-                <ContentQualityEnhancer />
-                <BrokenLinkFixer />
-                <WebsiteImprovementDashboard />
-                
                 {/* AI Chatbot - Always Available */}
                 <AIChatbot />
-                
-                {/* Scroll to Top Button */}
-                <ScrollToTop />
                 
                 {/* Collaborative Text Editor - Development Mode */}
                 {import.meta.env.DEV && (
@@ -420,7 +397,6 @@ const App: React.FC = () => {
                   </>
                 )}
               </div>
-            </PerformanceOptimizer>
           </Router>
         </WhitelabelProvider>
       </ThemeProvider>
