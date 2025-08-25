@@ -62,12 +62,12 @@ const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 const NewServices = lazy(() => import('./pages/NewServices'));
 
 // Additional missing pages
-const AIAutonomousBusinessManager = lazy(() => import('./pages/ai-autonomous-business-manager'));
-const AIAutonomousBusinessPlatform = lazy(() => import('./pages/ai-autonomous-business-platform'));
-const AIAutonomousResearch = lazy(() => import('./pages/ai-autonomous-research'));
-const AIAutonomousSystemsPlatform = lazy(() => import('./pages/ai-autonomous-systems-platform'));
-const AIAutonomousCodeReview = lazy(() => import('./pages/ai-autonomous-code-review'));
-const AIAutonomousCreativeDirector = lazy(() => import('./pages/ai-autonomous-creative-director'));
+const AIAutonomousBusinessManagerPage = lazy(() => import('./pages/ai-autonomous-business-manager'));
+const AIAutonomousBusinessPlatformPage = lazy(() => import('./pages/ai-autonomous-business-platform'));
+const AIAutonomousResearchPage = lazy(() => import('./pages/ai-autonomous-research'));
+const AIAutonomousSystemsPlatformPage = lazy(() => import('./pages/ai-autonomous-systems-platform'));
+const AIAutonomousCodeReviewPage = lazy(() => import('./pages/ai-autonomous-code-review'));
+const AIAutonomousCreativeDirectorPage = lazy(() => import('./pages/ai-autonomous-creative-director'));
 
 // Company information pages
 const About = lazy(() => import('./pages/About'));
@@ -94,6 +94,8 @@ const InnovativeMicroSaasServices = lazy(() => import('./pages/InnovativeMicroSa
 const ComprehensiveInnovativeServices = lazy(() => import('./pages/ComprehensiveInnovativeServices'));
 const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveServicesOverview'));
 const EnhancedServicesShowcase = lazy(() => import('./pages/EnhancedServicesShowcase'));
+const ComprehensiveServicesShowcase = lazy(() => import('./pages/ComprehensiveServicesShowcase'));
+const NewServicesOverview = lazy(() => import('./pages/NewServicesOverview'));
 
 // Solutions pages
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
@@ -216,12 +218,12 @@ const App: React.FC = () => {
                       <Route path="/new-services" element={<NewServices />} />
                       
                       {/* Additional missing pages */}
-                      <Route path="/ai-autonomous-business-manager" element={<AIAutonomousBusinessManager />} />
-                      <Route path="/ai-autonomous-business-platform" element={<AIAutonomousBusinessPlatform />} />
-                      <Route path="/ai-autonomous-research" element={<AIAutonomousResearch />} />
-                      <Route path="/ai-autonomous-systems-platform" element={<AIAutonomousSystemsPlatform />} />
-                      <Route path="/ai-autonomous-code-review" element={<AIAutonomousCodeReview />} />
-                      <Route path="/ai-autonomous-creative-director" element={<AIAutonomousCreativeDirector />} />
+                      <Route path="/ai-autonomous-business-manager" element={<AIAutonomousBusinessManagerPage />} />
+                      <Route path="/ai-autonomous-business-platform" element={<AIAutonomousBusinessPlatformPage />} />
+                      <Route path="/ai-autonomous-research" element={<AIAutonomousResearchPage />} />
+                      <Route path="/ai-autonomous-systems-platform" element={<AIAutonomousSystemsPlatformPage />} />
+                      <Route path="/ai-autonomous-code-review" element={<AIAutonomousCodeReviewPage />} />
+                      <Route path="/ai-autonomous-creative-director" element={<AIAutonomousCreativeDirectorPage />} />
                       
                       {/* Company Routes */}
                       <Route path="/about" element={<About />} />
@@ -250,8 +252,10 @@ const App: React.FC = () => {
                       <Route path="/comprehensive-innovative-services" element={<ComprehensiveInnovativeServices />} />
                       <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview />} />
                       <Route path="/enhanced-services-showcase" element={<EnhancedServicesShowcase />} />
-                      
-                      {/* New innovative service routes */}
+                                            <Route path="/comprehensive-services-showcase" element={<ComprehensiveServicesShowcase />} />
+                      <Route path="/new-services-overview" element={<NewServicesOverview />} />
+                        
+                        {/* New innovative service routes */}
                       <Route path="/ai-workflow-automation" element={<AIWorkflowAutomation />} />
                       <Route path="/blockchain-enterprise-solutions" element={<BlockchainEnterpriseSolutions />} />
                       <Route path="/iot-data-analytics" element={<IoTDataAnalytics />} />
