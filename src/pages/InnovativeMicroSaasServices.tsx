@@ -1,29 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { COMPREHENSIVE_SERVICES } from '../data/comprehensiveServices';
-import { INNOVATIVE_MICRO_SAAS_SERVICES } from '../data/innovativeMicroSaasServices';
+import { INNOVATIVE_MICRO_SAAS_SERVICES, INNOVATIVE_SERVICE_CATEGORIES } from '../data/innovativeMicroSaasServices';
 
-export function ComprehensiveServicesOverview() {
+export function InnovativeMicroSaasServices() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
-  const [activeTab, setActiveTab] = useState<'comprehensive' | 'innovative'>('comprehensive');
+  const [selectedService, setSelectedService] = useState<any>(null);
+  const [priceRange, setPriceRange] = useState<[number, number]>([0, 5000]);
 
-  const allComprehensiveServices = [...COMPREHENSIVE_SERVICES];
-  const allInnovativeServices = [...INNOVATIVE_MICRO_SAAS_SERVICES];
+  const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES];
   
-  const comprehensiveCategories = ['all', ...Array.from(new Set(allComprehensiveServices.map(service => service.category)))];
-  const innovativeCategories = ['all', ...Array.from(new Set(allInnovativeServices.map(service => service.category)))];
+  const categories = ['all', ...INNOVATIVE_SERVICE_CATEGORIES];
   
-  const currentCategories = activeTab === 'comprehensive' ? comprehensiveCategories : innovativeCategories;
-  const currentServices = activeTab === 'comprehensive' ? allComprehensiveServices : allInnovativeServices;
-  
-  const filteredServices = currentServices.filter(service => {
+  const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
-    return matchesCategory && matchesSearch;
+    const matchesPrice = service.price >= priceRange[0] && service.price <= priceRange[1];
+    return matchesCategory && matchesSearch && matchesPrice;
   });
 
   const containerVariants = {
@@ -46,6 +41,9 @@ export function ComprehensiveServicesOverview() {
       }
     }
   };
+
+  const maxPrice = Math.max(...allServices.map(s => s.price));
+  const minPrice = Math.min(...allServices.map(s => s.price));
 
   return (
     <div className="min-h-screen bg-zion-blue-dark text-white relative overflow-hidden">
@@ -79,64 +77,18 @@ export function ComprehensiveServicesOverview() {
           className="text-center mb-16"
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-holographic-gradient bg-clip-text text-transparent animate-holographic-shift">
-            Comprehensive Services Overview
+            Innovative Micro SAAS Services
           </h1>
           <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            Explore our complete portfolio of technology solutions, from established services to cutting-edge innovations
+            Discover our cutting-edge collection of AI-powered, quantum-ready, and blockchain-enabled micro SAAS solutions designed to transform your business operations
           </p>
-          
-          {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-            <div className="bg-zion-blue-light/20 backdrop-blur-sm rounded-lg p-6 border border-zion-cyan/30">
-              <div className="text-3xl font-bold text-zion-cyan mb-2">{allComprehensiveServices.length}+</div>
-              <div className="text-zion-slate-light">Core Services</div>
-            </div>
-            <div className="bg-zion-blue-light/20 backdrop-blur-sm rounded-lg p-6 border border-zion-cyan/30">
-              <div className="text-3xl font-bold text-zion-cyan mb-2">{allInnovativeServices.length}+</div>
-              <div className="text-zion-slate-light">Innovative Services</div>
-            </div>
-            <div className="bg-zion-blue-light/20 backdrop-blur-sm rounded-lg p-6 border border-zion-cyan/30">
-              <div className="text-3xl font-bold text-zion-cyan mb-2">{comprehensiveCategories.length - 1}</div>
-              <div className="text-zion-slate-light">Categories</div>
-            </div>
-            <div className="bg-zion-blue-light/20 backdrop-blur-sm rounded-lg p-6 border border-zion-cyan/30">
-              <div className="text-3xl font-bold text-zion-cyan mb-2">24/7</div>
-              <div className="text-zion-slate-light">Support</div>
-            </div>
-          </div>
-
-          {/* Tab Navigation */}
-          <div className="flex justify-center mb-8">
-            <div className="bg-zion-blue-light/20 backdrop-blur-sm rounded-lg p-1 border border-zion-cyan/30">
-              <button
-                onClick={() => setActiveTab('comprehensive')}
-                className={`px-6 py-3 rounded-md font-medium transition-all duration-200 ${
-                  activeTab === 'comprehensive'
-                    ? 'bg-zion-cyan text-zion-blue-dark shadow-lg'
-                    : 'text-zion-slate-light hover:text-white'
-                }`}
-              >
-                Core Services ({allComprehensiveServices.length})
-              </button>
-              <button
-                onClick={() => setActiveTab('innovative')}
-                className={`px-6 py-3 rounded-md font-medium transition-all duration-200 ${
-                  activeTab === 'innovative'
-                    ? 'bg-zion-cyan text-zion-blue-dark shadow-lg'
-                    : 'text-zion-slate-light hover:text-white'
-                }`}
-              >
-                Innovative Services ({allInnovativeServices.length})
-              </button>
-            </div>
-          </div>
           
           {/* Search Bar */}
           <div className="max-w-2xl mx-auto mb-8">
             <div className="relative">
               <input
                 type="text"
-                placeholder={`Search ${activeTab === 'comprehensive' ? 'core' : 'innovative'} services...`}
+                placeholder="Search innovative services..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full px-6 py-4 bg-zion-blue-light/20 border border-zion-cyan/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 backdrop-blur-sm"
@@ -150,8 +102,8 @@ export function ComprehensiveServicesOverview() {
           </div>
 
           {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {currentCategories.map((category) => (
+          <div className="flex flex-wrap justify-center gap-3 mb-8">
+            {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
@@ -161,9 +113,34 @@ export function ComprehensiveServicesOverview() {
                     : 'bg-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-light/30 hover:text-white border border-zion-cyan/30'
                 }`}
               >
-                {category === 'all' ? 'All Categories' : category}
+                {category === 'all' ? 'All Services' : category}
               </button>
             ))}
+          </div>
+
+          {/* Price Range Filter */}
+          <div className="max-w-md mx-auto mb-8">
+            <label className="block text-zion-slate-light text-sm font-medium mb-2">
+              Price Range: ${priceRange[0]} - ${priceRange[1]}
+            </label>
+            <div className="flex gap-4 items-center">
+              <input
+                type="range"
+                min={minPrice}
+                max={maxPrice}
+                value={priceRange[0]}
+                onChange={(e) => setPriceRange([parseInt(e.target.value), priceRange[1]])}
+                className="flex-1 h-2 bg-zion-blue-light/20 rounded-lg appearance-none cursor-pointer slider"
+              />
+              <input
+                type="range"
+                min={minPrice}
+                max={maxPrice}
+                value={priceRange[1]}
+                onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
+                className="flex-1 h-2 bg-zion-blue-light/20 rounded-lg appearance-none cursor-pointer slider"
+              />
+            </div>
           </div>
         </motion.div>
 
@@ -178,7 +155,8 @@ export function ComprehensiveServicesOverview() {
             <motion.div
               key={service.id}
               variants={itemVariants}
-              className="group bg-zion-blue-light/10 backdrop-blur-md border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group-hover:-translate-y-2"
+              className="group bg-zion-blue-light/10 backdrop-blur-md border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group-hover:-translate-y-2 cursor-pointer"
+              onClick={() => setSelectedService(service)}
             >
               {/* Service Icon */}
               <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
@@ -240,15 +218,14 @@ export function ComprehensiveServicesOverview() {
               </div>
               
               {/* CTA Button */}
-              <Link
-                to={activeTab === 'innovative' && 'websiteUrl' in service ? service.websiteUrl : `/services/${service.id}`}
+              <button
                 className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-6 rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2 group hover:scale-105"
               >
                 Learn More
                 <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </Link>
+              </button>
             </motion.div>
           ))}
         </motion.div>
@@ -256,46 +233,9 @@ export function ComprehensiveServicesOverview() {
         {/* Service Count */}
         <div className="text-center mb-16">
           <p className="text-zion-slate-light text-lg">
-            Showing {filteredServices.length} of {currentServices.length} {activeTab === 'comprehensive' ? 'core' : 'innovative'} services
+            Showing {filteredServices.length} of {allServices.length} innovative services
           </p>
         </div>
-
-        {/* Navigation CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-center mb-16"
-        >
-          <div className="bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-purple/20 border border-zion-purple/30 rounded-2xl p-12 backdrop-blur-md">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Explore More Services
-            </h2>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Discover our complete range of technology solutions and innovative services
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/services"
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center group hover:scale-105"
-              >
-                View All Services
-                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-              <Link
-                to="/innovative-micro-saas-services"
-                className="px-8 py-4 border-2 border-zion-purple text-zion-purple rounded-xl text-lg font-semibold hover:bg-zion-purple hover:text-white transition-all duration-300 flex items-center gap-2 justify-center group hover:scale-105"
-              >
-                Innovative Services
-                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </motion.div>
 
         {/* CTA Section */}
         <motion.div
@@ -309,7 +249,7 @@ export function ComprehensiveServicesOverview() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Let's discuss how our comprehensive technology solutions can accelerate your growth and 
+              Let's discuss how our innovative technology solutions can accelerate your growth and 
               give you a competitive edge in the market.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -393,8 +333,112 @@ export function ComprehensiveServicesOverview() {
           </div>
         </div>
       </div>
+
+      {/* Service Detail Modal */}
+      {selectedService && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+          <div className="bg-zion-blue-dark border border-zion-cyan/30 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="flex justify-between items-start mb-6">
+              <h2 className="text-3xl font-bold text-white">{selectedService.title}</h2>
+              <button
+                onClick={() => setSelectedService(null)}
+                className="text-zion-slate-light hover:text-white transition-colors"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-xl font-semibold text-zion-cyan mb-3">Description</h3>
+                <p className="text-zion-slate-light">{selectedService.description}</p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <h3 className="text-xl font-semibold text-zion-cyan mb-3">Features</h3>
+                  <ul className="space-y-2">
+                    {selectedService.features.map((feature: string, index: number) => (
+                      <li key={index} className="text-zion-slate-light flex items-center gap-2">
+                        <span className="text-zion-cyan">✓</span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold text-zion-cyan mb-3">Benefits</h3>
+                  <ul className="space-y-2">
+                    {selectedService.benefits.map((benefit: string, index: number) => (
+                      <li key={index} className="text-zion-slate-light flex items-center gap-2">
+                        <span className="text-zion-cyan">→</span>
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                  <h3 className="text-lg font-semibold text-zion-cyan mb-2">Pricing</h3>
+                  <p className="text-2xl font-bold text-white">${selectedService.price.toLocaleString()}</p>
+                  <p className="text-zion-slate-light text-sm">{selectedService.pricingModel}</p>
+                  <p className="text-zion-slate-light text-sm mt-1">Market: {selectedService.marketPrice}</p>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold text-zion-cyan mb-2">Delivery</h3>
+                  <p className="text-white">{selectedService.estimatedDelivery}</p>
+                  <p className="text-zion-slate-light text-sm mt-1">Support: {selectedService.supportLevel}</p>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold text-zion-cyan mb-2">Category</h3>
+                  <p className="text-white">{selectedService.category}</p>
+                  <p className="text-zion-slate-light text-sm mt-1">{selectedService.subcategory}</p>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-zion-cyan mb-3">Use Cases</h3>
+                <div className="flex flex-wrap gap-2">
+                  {selectedService.useCases.map((useCase: string, index: number) => (
+                    <span
+                      key={index}
+                      className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan text-sm rounded-full border border-zion-cyan/20"
+                    >
+                      {useCase}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex gap-4 pt-6">
+                <a
+                  href={selectedService.websiteUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-6 rounded-lg font-semibold text-center hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
+                >
+                  Visit Website
+                </a>
+                <a
+                  href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${selectedService.title}`}
+                  className="flex-1 border-2 border-zion-cyan text-zion-cyan py-3 px-6 rounded-lg font-semibold text-center hover:bg-zion-cyan hover:text-white transition-all duration-300"
+                >
+                  Get Quote
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
 
-export default ComprehensiveServicesOverview;
+export default InnovativeMicroSaasServices;
