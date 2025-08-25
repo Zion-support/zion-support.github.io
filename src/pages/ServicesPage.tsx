@@ -46,6 +46,7 @@ import { Link } from "react-router-dom";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Globe } from "lucide-react";
 import { useState } from "react";
 import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES } from "@/data/comprehensiveServices";
@@ -92,6 +93,13 @@ import { MICRO_SAAS_SERVICES } from "@/data/microSaasServices";
 =======
 // Enhanced service listings with real pricing and descriptions
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
+=======
+import { Globe, ArrowRight } from "lucide-react";
+import { useEffect, useState } from "react";
+import { ENHANCED_SERVICES } from "@/data/enhancedServices";
+
+// Enhanced service listings
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1716
 const SERVICE_LISTINGS: ProductListing[] = [
   // AI & Machine Learning Services
   {

@@ -22,11 +22,17 @@ const categories = [
   },
   {
     title: "Services",
+<<<<<<< HEAD
     description: "On-demand IT support, consulting, development, and more",
 <<<<<<< HEAD
     icon: <Briefcase className="w-8 h-8" />,
     link: "/services",
 <<<<<<< HEAD
+=======
+    description: "Professional IT & AI services, consulting, development, and automation",
+    icon: <Briefcase className="w-10 h-10" />,
+    link: "/all-services",
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1716
     color: "from-purple-500 to-indigo-600",
 =======
 import React from 'react';

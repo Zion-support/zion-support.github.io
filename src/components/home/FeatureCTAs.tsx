@@ -40,6 +40,7 @@ import {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   PenTool,
   Link as LinkIcon,
   Shield,
@@ -70,6 +71,9 @@ import {
   TrendingUp,
   Cloud
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
+=======
+  BarChart3
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1716
 } from "lucide-react";
 =======
   Users, 
@@ -450,6 +454,7 @@ export function FeatureCTAs() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       title: "Services Marketplace",
       description: "Discover professional tech and AI services for your business needs, from development to consulting.",
       icon: <Zap className="h-12 w-12 p-3 rounded-2xl bg-gradient-to-br from-cyan-500 to-cyan-600 text-white shadow-lg" />,
@@ -475,6 +480,22 @@ export function FeatureCTAs() {
       link: "/ai-services",
       badge: "New",
       details: "Transform your business with cutting-edge AI services including machine learning, automation, and intelligent analytics."
+=======
+      title: "Professional Services",
+      description: "Discover comprehensive IT & AI services for your business needs, from development to consulting and automation.",
+      icon: <Zap className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />,
+      link: "/all-services",
+      badge: "New",
+      details: "From AI development to IT infrastructure, cybersecurity, and business automation. Transform your business with cutting-edge technology solutions."
+    },
+    {
+      title: "Transparent Pricing",
+      description: "Clear, competitive pricing for all our services with flexible plans to match your business needs and budget.",
+      icon: <BarChart3 className="h-10 w-10 p-2 rounded-md bg-green-100 text-green-700" />,
+      link: "/pricing",
+      badge: "New",
+      details: "Choose from Basic, Professional, or Enterprise plans. All pricing is transparent with no hidden fees. Get custom quotes for complex projects."
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1716
     },
     {
       title: "IT Services",
