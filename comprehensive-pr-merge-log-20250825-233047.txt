@@ -1,0 +1,22 @@
+2025-08-25 23:30:47 - [0;32m🚀 Starting comprehensive PR merge process...[0m
+2025-08-25 23:30:47 - [0;34m🔒 Creating backup branch: backup-main-20250825-233047[0m
+2025-08-25 23:30:48 - [0;32m✅ Backup branch created successfully[0m
+2025-08-25 23:30:48 - [0;34m🔍 Checking GitHub for open PRs...[0m
+2025-08-25 23:30:49 - [0;32m📋 Found 100 open PRs[0m
+2025-08-25 23:30:49 - [0;32m✅ Successfully retrieved PR information[0m
+2025-08-25 23:30:49 - [0;32m📋 GitHub PRs found, processing...[0m
+2025-08-25 23:30:49 - [0;34m🔄 Processing GitHub PRs...[0m
+2025-08-25 23:30:49 - [0;34m📊 Total PRs to process: 100[0m
+2025-08-25 23:30:49 - [0;34m📋 Processing PR #8329: Expand services and deploy updates (branch: cursor/expand-services-and-deploy-updates-8cbb)[0m
+2025-08-25 23:30:49 - [0;34m🔄 Attempting to merge cursor/expand-services-and-deploy-updates-8cbb...[0m
+2025-08-25 23:30:50 - [1;33m⚠️  Merge conflicts detected in cursor/expand-services-and-deploy-updates-8cbb (attempt 1/3), resolving...[0m
+2025-08-25 23:30:50 - [0;34m📋 Conflicted files: src/App.tsx
+src/pages/ComprehensiveServicesOverview.tsx[0m
+2025-08-25 23:30:50 - [0;34m🔧 Resolving conflicts in src/App.tsx for branch cursor/expand-services-and-deploy-updates-8cbb...[0m
+2025-08-25 23:30:50 - [1;33m⚠️  Found conflicts in src/App.tsx, resolving...[0m
+2025-08-25 23:30:50 - [0;34m💻 Code file detected, attempting intelligent merge...[0m
+2025-08-25 23:30:50 - [0;32m✅ Resolved conflicts in src/App.tsx[0m
+2025-08-25 23:30:50 - [0;34m🔧 Resolving conflicts in src/pages/ComprehensiveServicesOverview.tsx for branch cursor/expand-services-and-deploy-updates-8cbb...[0m
+2025-08-25 23:30:50 - [1;33m⚠️  Found conflicts in src/pages/ComprehensiveServicesOverview.tsx, resolving...[0m
+2025-08-25 23:30:50 - [0;34m💻 Code file detected, attempting intelligent merge...[0m
+2025-08-25 23:30:50 - [0;32m✅ Resolved conflicts in src/pages/ComprehensiveServicesOverview.tsx[0m
