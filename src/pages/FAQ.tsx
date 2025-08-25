@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, Search, HelpCircle, MessageCircle, Phone, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -16,6 +17,13 @@ export default function FAQ() {
 
   const faqData: FAQItem[] = [
     // AI & Technology
+=======
+import React from 'react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion';
+
+export default function FAQ() {
+  const faqs = [
+>>>>>>> origin/cursor/website-audit-and-enhancement-4d8c
     {
       question: "What AI services does Zion Tech Group offer?",
       answer: "We offer comprehensive AI solutions including AI Autonomous Systems, AI Workflow Automation, AI Business Intelligence, AI Marketing Automation, and specialized AI services for various industries. Our AI solutions are designed to automate complex business processes and provide intelligent insights.",
@@ -83,6 +91,7 @@ export default function FAQ() {
       tags: ["support", "maintenance", "monitoring", "training", "24/7"]
     },
     {
+<<<<<<< HEAD
       question: "Do you provide training for our team?",
       answer: "Yes, we provide comprehensive training programs for your team to ensure they can effectively use and maintain the implemented solutions. Training includes hands-on workshops, documentation, video tutorials, and ongoing support.",
       category: "Support & Implementation",
@@ -101,6 +110,18 @@ export default function FAQ() {
       answer: "Yes, our solutions are designed to integrate seamlessly with existing business systems. We use industry-standard APIs and protocols to ensure compatibility with most enterprise software, databases, and cloud platforms.",
       category: "Technical Requirements",
       tags: ["integration", "APIs", "compatibility", "existing systems"]
+=======
+      question: "Do you provide training for your solutions?",
+      answer: "Yes, we provide comprehensive training for your team to ensure they can effectively use and maintain the solutions we implement."
+    },
+    {
+      question: "What technologies and platforms do you work with?",
+      answer: "We work with a wide range of technologies including React, Node.js, Python, AWS, Azure, Google Cloud, and many others. We choose the best technology stack for each specific project."
+    },
+    {
+      question: "How do you handle project communication and updates?",
+      answer: "We maintain regular communication through scheduled meetings, progress reports, and dedicated project management tools. You'll always know the status of your project."
+>>>>>>> origin/cursor/website-audit-and-enhancement-4d8c
     }
   ];
 

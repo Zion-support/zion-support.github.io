@@ -33,12 +33,6 @@ const CloudDevOps = lazy(() => import('./pages/CloudDevOps'));
 const EnterpriseSolutionsPage = lazy(() => import('./pages/EnterpriseSolutions'));
 const DigitalTransformation = lazy(() => import('./pages/DigitalTransformation'));
 
-// New innovative micro SAAS services
-const AIWorkflowAutomation = lazy(() => import('./pages/services/AIWorkflowAutomation'));
-const QuantumComputingAsAService = lazy(() => import('./pages/services/QuantumComputingAsAService'));
-const AICybersecurityPlatform = lazy(() => import('./pages/services/AICybersecurityPlatform'));
-const EdgeComputingPlatform = lazy(() => import('./pages/services/EdgeComputingPlatform'));
-
 // Our enhanced service pages
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
@@ -63,26 +57,12 @@ const SpecializedITInfrastructure = lazy(() => import('./pages/services/Speciali
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
 const HealthcareSolutions = lazy(() => import('./pages/solutions/Healthcare'));
 
-// Sitemap
-const Sitemap = lazy(() => import('./pages/Sitemap'));
-
-// AI Business Intelligence
-const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
-
-// AI Marketing Automation
-const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAutomation'));
-
-// AI HR & Recruitment
-const AIHRRecruitment = lazy(() => import('./pages/services/AIHRRecruitment'));
-
-// AI Legal Tech
-const AILegalTech = lazy(() => import('./pages/services/AILegalTech'));
-
-// AI Healthcare Analytics
-const AIHealthcareAnalytics = lazy(() => import('./pages/services/AIHealthcareAnalytics'));
-
-// AI Financial Analytics
-const AIFinancialAnalytics = lazy(() => import('./pages/services/AIFinancialAnalytics'));
+// Additional pages
+const HelpCenter = lazy(() => import('./pages/HelpCenter'));
+const CaseStudies = lazy(() => import('./pages/CaseStudies'));
+const Webinars = lazy(() => import('./pages/Webinars'));
+const WhitePapers = lazy(() => import('./pages/WhitePapers'));
+const FAQ = lazy(() => import('./pages/FAQ'));
 
 // Loading Component
 const LoadingSpinner = () => (
@@ -131,12 +111,6 @@ const App = () => {
                     <Route path="/enterprise-solutions" element={<EnterpriseSolutionsPage />} />
                     <Route path="/digital-transformation" element={<DigitalTransformation />} />
                     
-                    {/* New innovative micro SAAS service routes */}
-                    <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
-                    <Route path="/services/quantum-computing-as-a-service" element={<QuantumComputingAsAService />} />
-                    <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurityPlatform />} />
-                    <Route path="/services/edge-computing-platform" element={<EdgeComputingPlatform />} />
-                    
                     {/* Our enhanced service routes */}
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
@@ -158,29 +132,15 @@ const App = () => {
                     <Route path="/services/specialized-it-infrastructure" element={<SpecializedITInfrastructure />} />
                     
                     {/* Solutions Routes */}
-                    <Route path="/services/enterprise" element={<EnterpriseSolutions />} />
+                    <Route path="/solutions/enterprise" element={<EnterpriseSolutions />} />
                     <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
                     
-                    {/* Sitemap */}
-                    <Route path="/sitemap" element={<Sitemap />} />
-                    
-                    {/* AI Business Intelligence */}
-                    <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-                    
-                    {/* AI Marketing Automation */}
-                    <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
-                    
-                    {/* AI HR & Recruitment */}
-                    <Route path="/services/ai-hr-recruitment" element={<AIHRRecruitment />} />
-                    
-                    {/* AI Legal Tech */}
-                    <Route path="/services/ai-legal-tech" element={<AILegalTech />} />
-                    
-                    {/* AI Healthcare Analytics */}
-                    <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
-                    
-                    {/* AI Financial Analytics */}
-                    <Route path="/services/ai-financial-analytics" element={<AIFinancialAnalytics />} />
+                    {/* Additional Routes */}
+                    <Route path="/help-center" element={<HelpCenter />} />
+                    <Route path="/case-studies" element={<CaseStudies />} />
+                    <Route path="/webinars" element={<Webinars />} />
+                    <Route path="/white-papers" element={<WhitePapers />} />
+                    <Route path="/faq" element={<FAQ />} />
                   </Routes>
                 </Suspense>
               </main>
