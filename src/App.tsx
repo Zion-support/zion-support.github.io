@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import Sidebar from './components/Sidebar';
@@ -12,7 +12,6 @@ import { AICodeGenerator } from './components/AICodeGenerator';
 import { EnterpriseDashboard } from './components/EnterpriseDashboard';
 import { SecurityComplianceDashboard } from './components/SecurityComplianceDashboard';
 import { MachineLearningDashboard } from './components/MachineLearningDashboard';
-import { WebsiteHealthDashboard } from './components/WebsiteHealthDashboard';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
@@ -28,18 +27,13 @@ const AIMatcherPage = lazy(() => import('./pages/AIMatcher'));
 const TalentDirectory = lazy(() => import('./pages/TalentDirectory'));
 const TalentsPage = lazy(() => import('./pages/TalentsPage'));
 const EmergingTech = lazy(() => import('./pages/EmergingTech'));
+const ServicesComparison = lazy(() => import('./pages/ServicesComparison'));
 // Newly added service pages
 const AIServices = lazy(() => import('./pages/AIServices'));
 const CloudDevOps = lazy(() => import('./pages/CloudDevOps'));
 const EnterpriseSolutionsPage = lazy(() => import('./pages/EnterpriseSolutions'));
 const DigitalTransformation = lazy(() => import('./pages/DigitalTransformation'));
-// AI Autonomous Business Manager pages
-const AIAutonomousBusinessManager = lazy(() => import('./pages/AIAutonomousBusinessManager'));
-const AIAutonomousBusinessManager2029 = lazy(() => import('./pages/AIAutonomousBusinessManager2029'));
-// Quantum Technology pages
-const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/QuantumNeuralNetworkPlatform'));
-// Operations Platform pages
-const AutonomousBusinessOperationsPlatform = lazy(() => import('./pages/AutonomousBusinessOperationsPlatform'));
+const InnovativeNewServices = lazy(() => import('./pages/InnovativeNewServices'));
 
 // Our enhanced service pages
 const About = lazy(() => import('./pages/About'));
@@ -52,19 +46,13 @@ const Partners = lazy(() => import('./pages/Partners'));
 const Blog = lazy(() => import('./pages/Blog'));
 const News = lazy(() => import('./pages/News'));
 const ServicesOverview = lazy(() => import('./pages/services/ServicesOverview'));
+const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveServicesOverview'));
 const AIAutonomousSystems = lazy(() => import('./pages/services/AIAutonomousSystems'));
 const QuantumTechnology = lazy(() => import('./pages/services/QuantumTechnology'));
 const Cybersecurity = lazy(() => import('./pages/services/Cybersecurity'));
 const ITInfrastructure = lazy(() => import('./pages/services/ITInfrastructure'));
 const MicroSAASSolutions = lazy(() => import('./pages/services/MicroSAASSolutions'));
 const IndustrySolutions = lazy(() => import('./pages/services/IndustrySolutions'));
-const InnovativeNewServices = lazy(() => import('./pages/services/InnovativeNewServices'));
-const SpecializedITInfrastructure = lazy(() => import('./pages/services/SpecializedITInfrastructure'));
-const Sitemap = lazy(() => import('./pages/Sitemap'));
-const AIResearchAssistant = lazy(() => import('./pages/AIResearchAssistant'));
-const SOC2ComplianceAutomation = lazy(() => import('./pages/SOC2ComplianceAutomation'));
-const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/QuantumNeuralNetworkPlatform'));
-const AIBusinessSolutions = lazy(() => import('./pages/AIBusinessSolutions'));
 
 // Solutions pages
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
@@ -91,7 +79,8 @@ const App = () => {
     <ErrorBoundary>
       <ThemeProvider>
         <WhitelabelProvider>
-          <div className="App min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+          <Router>
+            <div className="App min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
               <Header />
               <Sidebar isOpen={false} onClose={() => {}} />
               
@@ -108,23 +97,14 @@ const App = () => {
                     <Route path="/talents" element={<TalentsPage />} />
                     <Route path="/emerging-tech" element={<EmergingTech />} />
                     <Route path="/comprehensive-services" element={<Services />} />
-                    <Route path="/services-comparison" element={<Services />} />
+                    <Route path="/services-comparison" element={<ServicesComparison />} />
                     <Route path="/it-onsite-services" element={<Services />} />
                     {/* Newly added explicit service routes */}
                     <Route path="/ai-services" element={<AIServices />} />
                     <Route path="/cloud-devops" element={<CloudDevOps />} />
                     <Route path="/enterprise-solutions" element={<EnterpriseSolutionsPage />} />
                     <Route path="/digital-transformation" element={<DigitalTransformation />} />
-                    
-                    {/* AI Autonomous Business Manager routes */}
-                    <Route path="/ai-autonomous-business-manager" element={<AIAutonomousBusinessManager />} />
-                    <Route path="/ai-autonomous-business-manager-2029" element={<AIAutonomousBusinessManager2029 />} />
-                    
-                    {/* Quantum Technology routes */}
-                    <Route path="/quantum-neural-network-platform" element={<QuantumNeuralNetworkPlatform />} />
-                    
-                    {/* Operations Platform routes */}
-                    <Route path="/autonomous-business-operations-platform" element={<AutonomousBusinessOperationsPlatform />} />
+                    <Route path="/innovative-new-services" element={<InnovativeNewServices />} />
                     
                     {/* Our enhanced service routes */}
                     <Route path="/about" element={<About />} />
@@ -137,23 +117,17 @@ const App = () => {
                     <Route path="/blog" element={<Blog />} />
                     <Route path="/news" element={<News />} />
                     <Route path="/services-overview" element={<ServicesOverview />} />
+                    <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview />} />
                     <Route path="/services/ai-autonomous-systems" element={<AIAutonomousSystems />} />
                     <Route path="/services/quantum-technology" element={<QuantumTechnology />} />
                     <Route path="/services/cybersecurity" element={<Cybersecurity />} />
                     <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                     <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
                     <Route path="/services/industry-solutions" element={<IndustrySolutions />} />
-                    <Route path="/services/innovative-new-services" element={<InnovativeNewServices />} />
-                    <Route path="/services/specialized-it-infrastructure" element={<SpecializedITInfrastructure />} />
                     
                     {/* Solutions Routes */}
-                    <Route path="/services/enterprise" element={<EnterpriseSolutions />} />
+                    <Route path="/solutions/enterprise" element={<EnterpriseSolutions />} />
                     <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
-                    <Route path="/sitemap" element={<Sitemap />} />
-                    <Route path="/ai-research-assistant" element={<AIResearchAssistant />} />
-                    <Route path="/soc2-compliance-automation" element={<SOC2ComplianceAutomation />} />
-                    <Route path="/quantum-neural-network-platform" element={<QuantumNeuralNetworkPlatform />} />
-                    <Route path="/ai-business-solutions" element={<AIBusinessSolutions />} />
                   </Routes>
                 </Suspense>
               </main>
@@ -216,14 +190,10 @@ const App = () => {
                   <div className="fixed top-4 right-4 z-40">
                     <MachineLearningDashboard />
                   </div>
-                  
-                  {/* Website Health Dashboard */}
-                  <div className="fixed top-4 left-1/4 transform -translate-x-1/2 z-40">
-                    <WebsiteHealthDashboard autoScan={true} />
-                  </div>
                 </>
               )}
-                      </div>
+            </div>
+          </Router>
         </WhitelabelProvider>
       </ThemeProvider>
     </ErrorBoundary>
