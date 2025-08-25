@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Network, Brain, BarChart3, Zap, Database, Command } from 'lucide-react';
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 interface SidebarProps {
@@ -31,20 +31,22 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     {
       title: 'Services',
       items: [
-        { name: 'AI & Machine Learning', path: '/services?category=AI%20%26%20Machine%20Learning', icon: Briefcase },
-        { name: 'AI Agent Orchestrator', path: '/ai-agent-orchestrator', icon: Network },
-        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain },
-        { name: 'AI Analytics Copilot', path: '/ai-analytics-copilot', icon: BarChart3 },
-        { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Command },
-        { name: 'Autonomous Business Operations', path: '/autonomous-business-operations-platform', icon: Zap },
-        { name: 'AI-Powered IT Asset Management', path: '/ai-powered-it-asset-management', icon: Database },
-        { name: 'Cybersecurity', path: '/services?category=Cybersecurity', icon: Shield },
-        { name: 'Micro SAAS Solutions', path: '/services?category=Micro%20SAAS%20Solutions', icon: Globe },
-        { name: 'Space Technology', path: '/services?category=Space%20Technology', icon: Globe },
-        { name: 'Healthcare AI', path: '/services?category=Healthcare%20AI', icon: Users },
-        { name: 'Manufacturing AI', path: '/services?category=Manufacturing%20AI', icon: Briefcase },
-        { name: 'Emerging Technology', path: '/services?category=Emerging%20Technology', icon: Globe },
-        { name: 'Autonomous Systems', path: '/services?category=AI%20%26%20Autonomous%20Systems', icon: Users }
+        { name: 'AI Autonomous Systems Platform', path: '/ai-autonomous-systems-platform', icon: Briefcase },
+        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Briefcase },
+        { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
+        { name: 'AI Research Platform', path: '/ai-autonomous-research', icon: Briefcase },
+        { name: 'AI Code Review', path: '/ai-autonomous-code-review', icon: Briefcase },
+        { name: 'AI Business Intelligence', path: '/ai-business-intelligence-suite', icon: Briefcase },
+        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Briefcase },
+        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Briefcase },
+        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Briefcase },
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
+        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Shield },
+        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Briefcase },
+        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Briefcase },
+        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
+        { name: 'Emerging Technology', path: '/emerging-tech', icon: Globe }
       ]
     },
     {
@@ -54,16 +56,18 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         { name: 'Our Team', path: '/team', icon: Users },
         { name: 'Careers', path: '/careers', icon: Briefcase },
         { name: 'Partners', path: '/partners', icon: Handshake },
-        { name: 'Blog', path: '/blog', icon: Globe }
+        { name: 'Blog', path: '/blog', icon: Globe },
+        { name: 'Case Studies', path: '/case-studies', icon: Globe },
+        { name: 'Help Center', path: '/help', icon: Globe }
       ]
     },
     {
       title: 'Support',
       items: [
         { name: 'Help Center', path: '/help', icon: Users },
-        { name: 'Documentation', path: '/docs', icon: Globe },
-        { name: 'Contact Support', path: '/support', icon: Phone },
-        { name: 'Status Page', path: '/status', icon: Globe }
+        { name: 'Contact Us', path: '/contact', icon: Phone },
+        { name: 'FAQ', path: '/faq', icon: Users },
+        { name: 'News', path: '/news', icon: Globe }
       ]
     }
   ];
