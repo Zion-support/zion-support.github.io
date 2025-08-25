@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 
 type Theme = 'light' | 'dark' | 'system';
 
@@ -9,22 +9,19 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-interface ThemeProviderProps {
-  children: ReactNode;
-  defaultTheme?: Theme;
-}
-
-export const ThemeProvider: React.FC<ThemeProviderProps> = ({ 
+export function ThemeProvider({ 
   children, 
-  defaultTheme = 'system' 
-}) => {
+  defaultTheme = 'dark' 
+}: { 
+  children: React.ReactNode;
+  defaultTheme?: Theme;
+}) {
   const [theme, setTheme] = useState<Theme>(defaultTheme);
 
   useEffect(() => {
     const root = window.document.documentElement;
-    
     root.classList.remove('light', 'dark');
-    
+
     if (theme === 'system') {
       const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       root.classList.add(systemTheme);
@@ -33,20 +30,12 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
     }
   }, [theme]);
 
-  const value = {
-    theme,
-    setTheme: (newTheme: Theme) => {
-      setTheme(newTheme);
-      localStorage.setItem('theme', newTheme);
-    }
-  };
-
   return (
-    <ThemeContext.Provider value={value}>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
       {children}
     </ThemeContext.Provider>
   );
-};
+}
 
 export function useTheme() {
   const context = useContext(ThemeContext);
