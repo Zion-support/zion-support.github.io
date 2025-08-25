@@ -1,206 +1,290 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
+import { 
+  Bot, 
+  TrendingUp, 
+  Shield, 
+  Zap, 
+  Users, 
+  BarChart3,
+  Settings,
+  Workflow,
+  Target,
+  Rocket
+} from 'lucide-react';
 
-export default function AutonomousBusinessOperationsPlatform() {
+const AutonomousBusinessOperationsPlatform: React.FC = () => {
+  const features = [
+    {
+      icon: Bot,
+      title: "AI-Powered Automation",
+      description: "Intelligent automation of complex business processes and workflows"
+    },
+    {
+      icon: TrendingUp,
+      title: "Performance Optimization",
+      description: "Continuous monitoring and optimization of business operations"
+    },
+    {
+      icon: Shield,
+      title: "Risk Management",
+      description: "Proactive identification and mitigation of operational risks"
+    },
+    {
+      icon: Zap,
+      title: "Real-time Analytics",
+      description: "Instant insights into business performance and trends"
+    },
+    {
+      icon: Users,
+      title: "Team Collaboration",
+      description: "Enhanced collaboration tools for distributed teams"
+    },
+    {
+      icon: BarChart3,
+      title: "Predictive Insights",
+      description: "AI-driven forecasting and strategic planning"
+    }
+  ];
+
+  const modules = [
+    {
+      title: "Process Automation",
+      description: "Streamline workflows and eliminate manual tasks",
+      features: ["Workflow Designer", "Rule Engine", "Integration Hub"]
+    },
+    {
+      title: "Business Intelligence",
+      description: "Transform data into actionable insights",
+      features: ["Real-time Dashboards", "Custom Reports", "Data Visualization"]
+    },
+    {
+      title: "Resource Management",
+      description: "Optimize resource allocation and utilization",
+      features: ["Resource Planning", "Capacity Management", "Cost Optimization"]
+    },
+    {
+      title: "Compliance & Security",
+      description: "Ensure regulatory compliance and data security",
+      features: ["Audit Trails", "Access Controls", "Compliance Monitoring"]
+    }
+  ];
+
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>Autonomous Business Operations Platform - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary autonomous business operations platform that automates and optimizes all aspects of business operations using advanced AI and machine learning." />
-        <meta name="keywords" content="autonomous business operations, AI automation, business process automation, autonomous systems, AI platform" />
+        <meta name="description" content="Revolutionary autonomous business operations platform powered by AI for seamless business process automation and optimization." />
+        <meta name="keywords" content="business automation, AI operations, process optimization, business intelligence, Zion Tech Group" />
       </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-        {/* Hero Section */}
-        <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
-                Autonomous Business Operations Platform
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Transform your business with fully autonomous operations powered by cutting-edge AI. 
-                Automate, optimize, and scale your business processes like never before.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
-                  Start Free Trial
-                </button>
-                <button className="px-8 py-4 border border-cyan-400 text-cyan-400 font-bold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">
-                  Schedule Demo
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* Key Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-white">
-              Autonomous Business Capabilities
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-20">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20"></div>
+        <div className="relative container mx-auto px-4 text-center">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-5xl md:text-7xl font-bold text-white mb-6"
+          >
+            Autonomous Business
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              Operations Platform
+            </span>
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"
+          >
+            Transform your business operations with AI-powered automation. 
+            Streamline processes, optimize performance, and drive growth with our intelligent platform.
+          </motion.p>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+          >
+            <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
+              Start Free Trial
+            </button>
+            <button className="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
+              Schedule Demo
+            </button>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-black/20">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Platform Features
             </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mb-6">
-                  <span className="text-2xl">🤖</span>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-cyan-400">Fully Autonomous Operations</h3>
-                <p className="text-gray-300">
-                  Self-managing business processes that adapt and optimize in real-time without human intervention.
-                </p>
-              </div>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Comprehensive tools for autonomous business operations
+            </p>
+          </motion.div>
 
-              <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl flex items-center justify-center mb-6">
-                  <span className="text-2xl">📊</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-purple-400">Intelligent Analytics</h3>
-                <p className="text-gray-300">
-                  Advanced AI-powered analytics that provide deep insights and predictive capabilities.
-                </p>
-              </div>
-
-              <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-teal-500 rounded-xl flex items-center justify-center mb-6">
-                  <span className="text-2xl">⚡</span>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-green-400">Process Optimization</h3>
-                <p className="text-gray-300">
-                  Continuous process improvement and optimization using machine learning algorithms.
-                </p>
-              </div>
-            </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Business Areas Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-white">
-              Autonomous Business Areas
+      {/* Modules Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Platform Modules
             </h2>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div>
-                <h3 className="text-2xl font-bold mb-6 text-cyan-400">Operations Management</h3>
-                <ul className="space-y-4 text-gray-300">
-                  <li className="flex items-start space-x-3">
-                    <span className="text-cyan-400 mt-1">•</span>
-                    <span>Supply chain automation</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <span className="text-cyan-400 mt-1">•</span>
-                    <span>Inventory management</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <span className="text-cyan-400 mt-1">•</span>
-                    <span>Quality control systems</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <span className="text-cyan-400 mt-1">•</span>
-                    <span>Production scheduling</span>
-                  </li>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Comprehensive solutions for every aspect of business operations
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {modules.map((module, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                className="bg-gradient-to-r from-blue-600/10 to-cyan-600/10 rounded-xl p-8 border border-blue-500/20"
+              >
+                <h3 className="text-2xl font-semibold text-white mb-4">{module.title}</h3>
+                <p className="text-gray-300 text-lg mb-6">{module.description}</p>
+                <ul className="space-y-2">
+                  {module.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></div>
+                      {feature}
+                    </li>
+                  ))}
                 </ul>
-              </div>
-
-              <div>
-                <h3 className="text-2xl font-bold mb-6 text-cyan-400">Business Intelligence</h3>
-                <ul className="space-y-4 text-gray-300">
-                  <li className="flex items-start space-x-3">
-                    <span className="text-cyan-400 mt-1">•</span>
-                    <span>Financial forecasting</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <span className="text-cyan-400 mt-1">•</span>
-                    <span>Market analysis</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <span className="text-cyan-400 mt-1">•</span>
-                    <span>Customer insights</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <span className="text-cyan-400 mt-1">•</span>
-                    <span>Performance metrics</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
+              </motion.div>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Benefits Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-white">
-              Why Choose Autonomous Operations?
+      {/* Benefits Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Business Benefits
             </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl">💰</span>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-cyan-400">Cost Reduction</h3>
-                <p className="text-gray-300">
-                  Reduce operational costs by up to 40% through intelligent automation and optimization.
-                </p>
-              </div>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Transform your operations and achieve measurable results
+            </p>
+          </motion.div>
 
-              <div className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl">🚀</span>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-purple-400">Scalability</h3>
-                <p className="text-gray-300">
-                  Scale your operations seamlessly without proportional increases in overhead costs.
-                </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="text-center"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <TrendingUp className="w-8 h-8 text-white" />
               </div>
+              <h3 className="text-2xl font-semibold text-white mb-3">30% Efficiency Gain</h3>
+              <p className="text-gray-300">Automate repetitive tasks and optimize workflows</p>
+            </motion.div>
 
-              <div className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl">🎯</span>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-green-400">Efficiency</h3>
-                <p className="text-gray-300">
-                  Achieve operational efficiency improvements of 60% or more through intelligent automation.
-                </p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-center"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Target className="w-8 h-8 text-white" />
               </div>
+              <h3 className="text-2xl font-semibold text-white mb-3">Improved Accuracy</h3>
+              <p className="text-gray-300">Reduce errors with AI-powered validation</p>
+            </motion.div>
 
-              <div className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl">🔮</span>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-yellow-400">Predictive Insights</h3>
-                <p className="text-gray-300">
-                  Leverage predictive analytics to make proactive business decisions and prevent issues.
-                </p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="text-center"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Rocket className="w-8 h-8 text-white" />
               </div>
-            </div>
+              <h3 className="text-2xl font-semibold text-white mb-3">Faster Scaling</h3>
+              <p className="text-gray-300">Scale operations without proportional cost increases</p>
+            </motion.div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-              Ready to Automate Your Business?
+      {/* CTA Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Automate Your Operations?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join the autonomous business revolution and transform your operations with AI-powered automation.
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join thousands of businesses already transforming their operations with our platform
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
-                Get Started Today
+              <button className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300">
+                Get Started Now
               </button>
-              <button className="px-8 py-4 border border-cyan-400 text-cyan-400 font-bold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">
+              <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
                 Contact Sales
               </button>
             </div>
-          </div>
-        </section>
-      </div>
-    </>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
-}
+};
+
+export default AutonomousBusinessOperationsPlatform;
