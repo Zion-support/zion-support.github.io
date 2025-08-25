@@ -86,10 +86,10 @@ export function Footer() {
       fallback: 'https://linkedin.com'
     },
     { 
-      name: 'Twitter', 
-      url: 'https://twitter.com/ziontechgroup', 
-      icon: '🐦',
-      fallback: 'https://twitter.com'
+      name: 'X (Twitter)', 
+      url: 'https://x.com/ziontechgroup', 
+      icon: '𝕏',
+      fallback: 'https://x.com'
     },
     { 
       name: 'GitHub', 

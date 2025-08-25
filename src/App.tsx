@@ -56,18 +56,14 @@ const AutonomousBusinessOperationsPlatform = lazy(() => import('./pages/Autonomo
 const AIPoweredITAssetManagement = lazy(() => import('./pages/AIPoweredITAssetManagement'));
 const SOC2ComplianceAutomation = lazy(() => import('./pages/SOC2ComplianceAutomation'));
 const AIAutonomousResearchAssistant = lazy(() => import('./pages/AIAutonomousResearchAssistant'));
-const FiveGEnterpriseSolutions = lazy(() => import('./pages/5GEnterpriseSolutions'));
+const FiveGEnterpriseSolutions = lazy(() => import('./pages/FiveGEnterpriseSolutions'));
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 const NewServices = lazy(() => import('./pages/NewServices'));
+const AccessibilityAuditor = lazy(() => import('./pages/AccessibilityAuditor'));
+const AIAgentOrchestrator = lazy(() => import('./pages/services/AIAgentOrchestrator'));
 
-// Additional missing pages
-const AIAutonomousBusinessManager = lazy(() => import('./pages/ai-autonomous-business-manager'));
-const AIAutonomousBusinessPlatform = lazy(() => import('./pages/ai-autonomous-business-platform'));
-const AIAutonomousResearch = lazy(() => import('./pages/ai-autonomous-research'));
-const AIAutonomousSystemsPlatform = lazy(() => import('./pages/ai-autonomous-systems-platform'));
-const AIAutonomousCodeReview = lazy(() => import('./pages/ai-autonomous-code-review'));
-const AIAutonomousCreativeDirector = lazy(() => import('./pages/ai-autonomous-creative-director'));
+// Additional missing pages - these are now imported from services directory below
 
 // Company information pages
 const About = lazy(() => import('./pages/About'));
@@ -211,6 +207,8 @@ const App: React.FC = () => {
                       <Route path="/soc2-compliance-automation" element={<SOC2ComplianceAutomation />} />
                       <Route path="/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
                       <Route path="/5g-enterprise-solutions" element={<FiveGEnterpriseSolutions />} />
+                      <Route path="/accessibility-auditor" element={<AccessibilityAuditor />} />
+                      <Route path="/ai-agent-orchestrator" element={<AIAgentOrchestrator />} />
                       <Route path="/case-studies" element={<CaseStudies />} />
                       <Route path="/help" element={<HelpCenter />} />
                       <Route path="/new-services" element={<NewServices />} />
