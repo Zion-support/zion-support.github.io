@@ -226,6 +226,7 @@ export default function Sidebar() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Brain },
         { name: 'AI Autonomous Business Platform', path: '/ai-autonomous-business-platform', icon: Brain },
         { name: 'AI Autonomous Systems Platform', path: '/ai-autonomous-systems-platform', icon: Brain },
@@ -320,6 +321,13 @@ export default function Sidebar() {
         { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Briefcase },
         { name: 'Advanced Research Automation', path: '/advanced-research-automation', icon: Briefcase },
 >>>>>>> origin/cursor/website-audit-and-enhancement-91fb
+=======
+        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Briefcase },
+        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Briefcase },
+        { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', icon: Briefcase },
+        { name: 'AI Legal Tech', path: '/services/ai-legal-tech', icon: Briefcase },
+        { name: 'AI Healthcare Analytics', path: '/services/ai-healthcare-analytics', icon: Briefcase },
+>>>>>>> origin/cursor/website-audit-and-enhancement-500e
         { name: 'Cybersecurity', path: '/services?category=Cybersecurity', icon: Shield },
         { name: 'Advanced Cybersecurity Suite', path: '/advanced-cybersecurity-suite', icon: Shield },
         { name: 'Micro SAAS Solutions', path: '/services?category=Micro%20SAAS%20Solutions', icon: Globe },
