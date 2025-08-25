@@ -1897,6 +1897,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     {
       title: 'Core Services',
       items: [
+<<<<<<< HEAD
         { name: 'AI & Machine Learning', path: '/services?category=AI%20%26%20Machine%20Learning', icon: Briefcase, featured: true },
         { name: 'Cybersecurity', path: '/services?category=Cybersecurity', icon: Shield, featured: true },
         { name: 'Micro SAAS Solutions', path: '/services?category=Micro%20SAAS%20Solutions', icon: Globe, featured: true },
@@ -1914,12 +1915,25 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         { name: 'IoT & Edge Computing', path: '/services?category=IoT%20%26%20Edge%20Computing', icon: Globe, featured: true },
         { name: 'VR/AR Training', path: '/services?category=VR%2FAR%20%26%20Training', icon: Users, featured: false },
         { name: 'Emerging Technology', path: '/emerging-tech', icon: Globe, featured: false }
+=======
+        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
+        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Briefcase },
+        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Briefcase },
+        { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', icon: Users },
+        { name: 'AI Legal Tech', path: '/services/ai-legal-tech', icon: Shield },
+        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Globe },
+        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
+        { name: 'Industry Solutions', path: '/services/industry-solutions', icon: Briefcase }
+>>>>>>> origin/cursor/website-audit-and-enhancement-9620
       ]
     },
     {
       title: 'Company',
       items: [
         { name: 'About Us', path: '/about', icon: Users },
+        { name: 'Our Mission', path: '/mission', icon: Users },
         { name: 'Our Team', path: '/team', icon: Users },
         { name: 'Careers', path: '/careers', icon: Briefcase },
         { name: 'News & Updates', path: '/news', icon: Globe }
