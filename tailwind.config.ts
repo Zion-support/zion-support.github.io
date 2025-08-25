@@ -5,6 +5,7 @@ import plugin from 'tailwindcss/plugin';
 const config: Config = {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   darkMode: 'class',
   content: [
     './pages/**/*.{ts,tsx}',
@@ -14,6 +15,8 @@ const config: Config = {
 =======
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
   darkMode: "class",
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -21,9 +24,12 @@ const config: Config = {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
   ],
   safelist: ['border-border'],
   theme: {
@@ -64,6 +70,7 @@ const config: Config = {
         },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         // Enhanced Zion colors for futuristic design
 <<<<<<< HEAD
 =======
@@ -102,6 +109,8 @@ const config: Config = {
 =======
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
         // Custom Zion colors
         "zion-blue": {
           DEFAULT: "#0a0f1f",
@@ -124,9 +133,12 @@ const config: Config = {
           dark: "#64748B",
         },
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -152,6 +164,7 @@ const config: Config = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
         },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -196,6 +209,8 @@ const config: Config = {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-434d
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
         'gradient-x': {
           '0%, 100%': {
             'background-size': '200% 200%',
@@ -214,6 +229,7 @@ const config: Config = {
           '0%, 100%': { boxShadow: '0 0 20px rgba(0, 229, 255, 0.5)' },
           '50%': { boxShadow: '0 0 40px rgba(0, 229, 255, 0.8)' },
         },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d2d6
@@ -279,6 +295,8 @@ const config: Config = {
 =======
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
         'neon-pulse': {
           '0%, 100%': { 
             textShadow: '0 0 5px #00e5ff, 0 0 10px #00e5ff, 0 0 15px #00e5ff, 0 0 20px #00e5ff' 
@@ -292,6 +310,7 @@ const config: Config = {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         'neon-pulse': 'neon-pulse 2s ease-in-out infinite',
@@ -309,10 +328,13 @@ const config: Config = {
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
         'gradient-x': 'gradient-x 15s ease infinite',
         'float': 'float 6s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
         'neon-pulse': 'neon-pulse 2s ease-in-out infinite alternate',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         'holographic-shift': 'holographic-shift 3s ease infinite',
@@ -339,6 +361,8 @@ const config: Config = {
 =======
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
       }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
     }

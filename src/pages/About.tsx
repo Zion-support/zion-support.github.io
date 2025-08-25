@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -82,6 +83,8 @@ export default function About() {
 =======
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, Award, Globe, Target, TrendingUp, Zap, Shield, Brain, Rocket, Star, CheckCircle, ArrowRight } from 'lucide-react';
@@ -93,13 +96,17 @@ export function About() {
     { label: 'Global Clients', value: '50+', icon: Globe },
     { label: 'Team Members', value: '25+', icon: Users },
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
   ];
 
   const values = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1263,6 +1270,8 @@ const About = () => {
 =======
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
       title: 'Innovation First',
       description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and creative solutions.',
       icon: Rocket,
@@ -1496,13 +1505,17 @@ const About = () => {
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
             {values.map((value, index) => {
               const IconComponent = value.icon;
               return (
                 <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2850,6 +2863,8 @@ const About = () => {
 =======
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
                   key={value.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -2903,15 +2918,19 @@ const About = () => {
                       className="inline-block px-2 py-1 bg-zion-purple/20 border border-zion-purple/30 rounded-full text-xs text-zion-cyan mr-1 mb-1"
                     >
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
                       {skill}
                     </span>
                   ))}
                 </div>
               </motion.div>
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9077
@@ -4044,6 +4063,8 @@ export default About;
 =======
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
           </div>
         </motion.div>
 
@@ -4121,8 +4142,12 @@ export default About;
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
 =======
 }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+}
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81

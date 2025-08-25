@@ -11,6 +11,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-89a0
 import React, { useState } from 'react';
@@ -989,6 +990,8 @@ const Services = () => {
 =======
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { COMPREHENSIVE_SERVICES } from '../data/comprehensiveServices';
@@ -1063,13 +1066,17 @@ export function Services() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1090,6 +1097,8 @@ export function Services() {
 =======
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent animate-neon-pulse">
             Our Services
           </h1>
@@ -1108,9 +1117,12 @@ export function Services() {
             </span>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
         </motion.div>
 
         {/* Search and Filters */}
@@ -1118,6 +1130,7 @@ export function Services() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           className="bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 mb-12"
@@ -2321,6 +2334,8 @@ const Services = () => {
 =======
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
           className="mb-12"
         >
           <div className="bg-zion-blue-light/20 backdrop-blur-md border border-zion-purple/30 rounded-2xl p-6">
@@ -2346,9 +2361,12 @@ const Services = () => {
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="w-full px-3 py-2 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white focus:outline-none focus:border-zion-cyan"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
                 >
                   {categories.map(category => (
                     <option key={category} value={category}>{category}</option>
@@ -2356,6 +2374,7 @@ const Services = () => {
                 </select>
               </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               {/* Price Range Filter */}
@@ -2371,6 +2390,8 @@ const Services = () => {
 =======
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
               {/* Pricing Filter */}
               <div className="flex-1 min-w-48">
                 <label className="block text-zion-slate-light text-sm font-medium mb-2">Pricing Model</label>
@@ -2382,13 +2403,17 @@ const Services = () => {
                   {pricingModels.map(model => (
                     <option key={model} value={model}>{model.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}</option>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
                   ))}
                 </select>
               </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               {/* Sort By */}
@@ -4817,6 +4842,8 @@ export default Services;
 =======
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
               {/* Results Count */}
               <div className="flex items-end">
                 <span className="text-zion-slate-light">
@@ -4973,8 +5000,12 @@ export default Services;
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
 =======
 }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+}
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
