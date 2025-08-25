@@ -88,14 +88,7 @@ export default function ServicesAdvertisingPage() {
   ];
 
   return (
-    <UltraAdvancedFuturisticBackground 
-      intensity="high" 
-      colorScheme="quantum-fusion"
-      particleCount={300}
-      animationSpeed={1.5}
-      enableHolographic={true}
-      enableQuantumEffects={true}
-    >
+    <Layout>
       <Head>
         <title>AI, IT and Micro SaaS Services Advertising | Zion Tech Group</title>
         <meta name="description" content="Explore our AI, IT, and micro SaaS services with features, capabilities, benefits, pricing references, and easy contact options." />
@@ -110,12 +103,12 @@ export default function ServicesAdvertisingPage() {
             </h1>
             <p className="text-gray-300 text-lg">AI platforms, enterprise IT solutions, and real micro SaaS accelerators.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">
+              <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">
                 Talk to Sales <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-              <Button href="/market-pricing" variant="outline" className="px-8 py-4 border border-gray-600 text-gray-200">
+              </a>
+              <a href="/market-pricing" className="px-8 py-4 border border-gray-600 text-gray-200">
                 View Market Pricing <ExternalLink className="w-5 h-5 ml-2" />
-              </Button>
+              </a>
             </div>
           </header>
 
@@ -125,7 +118,7 @@ export default function ServicesAdvertisingPage() {
               {benefits.map((b) => (
                 <div key={b} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
                   <div className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-emerald-400 mt-1" />
+                    <svg className="w-5 h-5 text-emerald-400 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
                     <p className="text-gray-200">{b}</p>
                   </div>
                 </div>
@@ -205,6 +198,26 @@ export default function ServicesAdvertisingPage() {
           </section>
 
           <section>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">New 2025 Launches</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { name: 'Feature Flags at the Edge', price: '$199/mo', href: '/feature-flags-edge' },
+                { name: 'RAG Observability & Evals', price: '$299/mo', href: '/ai-evals' },
+                { name: 'Synthetic Data Studio', price: '$349/mo', href: '/services' },
+                { name: 'Kubernetes Cost Guardrails', price: '$279/mo', href: '/services' },
+                { name: 'API Security Posture', price: '$329/mo', href: '/services' },
+                { name: 'Browser Performance Insights', price: '$149/mo', href: '/browser-performance-monitor' }
+              ].map((o) => (
+                <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
+                  <div className="text-sm text-gray-400 mb-1">From</div>
+                  <div className="text-2xl font-bold text-white">{o.price}</div>
+                  <div className="text-gray-200 mt-2">{o.name}</div>
+                </a>
+              ))}
+            </div>
+          </section>
+
+          <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Benchmark With Market Pricing</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {pricingRefs.map((group) => (
@@ -220,7 +233,60 @@ export default function ServicesAdvertisingPage() {
               ))}
             </div>
             <div className="text-center mt-6">
-              <Button href="/market-pricing" variant="secondary" className="px-8 py-4">Full Market Pricing</Button>
+              <a href="/market-pricing" className="px-8 py-4">Full Market Pricing</a>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Average Market Price Ranges</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[ 
+                { title: 'AI Evaluations & Prompting', range: '$50–$800/mo', links: [
+                  { name: 'Weights & Biases', href: 'https://wandb.ai/site/pricing' },
+                  { name: 'Humanloop', href: 'https://humanloop.com/pricing' },
+                  { name: 'Promptfoo', href: 'https://www.promptfoo.dev/pricing' }
+                ]},
+                { title: 'LLM Platforms', range: '$100–$2,000/mo', links: [
+                  { name: 'OpenAI', href: 'https://openai.com/api/pricing' },
+                  { name: 'Anthropic', href: 'https://www.anthropic.com/pricing' },
+                  { name: 'OpenRouter', href: 'https://openrouter.ai/models' }
+                ]},
+                { title: 'Observability/APM', range: '$50–$2,000/mo', links: [
+                  { name: 'Datadog', href: 'https://www.datadoghq.com/pricing/' },
+                  { name: 'New Relic', href: 'https://newrelic.com/pricing' },
+                  { name: 'Grafana Cloud', href: 'https://grafana.com/pricing/' }
+                ]},
+                { title: 'Security & Compliance', range: '$200–$5,000/mo', links: [
+                  { name: 'Wiz', href: 'https://www.wiz.io/pricing' },
+                  { name: 'Prisma Cloud', href: 'https://www.paloaltonetworks.com/prisma/cloud/pricing' },
+                  { name: 'Vault', href: 'https://www.hashicorp.com/products/vault/pricing' }
+                ]},
+                { title: 'Vector DB & Retrieval', range: '$20–$1,000/mo', links: [
+                  { name: 'Pinecone', href: 'https://www.pinecone.io/pricing/' },
+                  { name: 'Weaviate', href: 'https://weaviate.io/pricing' },
+                  { name: 'Qdrant', href: 'https://qdrant.tech/pricing/' }
+                ]},
+                { title: 'Email Deliverability', range: '$50–$300/mo', links: [
+                  { name: 'Mailgun', href: 'https://www.mailgun.com/pricing/' },
+                  { name: 'SendGrid', href: 'https://sendgrid.com/pricing/' },
+                  { name: 'Postmark', href: 'https://postmarkapp.com/pricing' }
+                ]}
+              ].map((group) => (
+                <div key={group.title} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-xl font-semibold text-white">{group.title}</h3>
+                    <span className="text-sm text-gray-300">{group.range}</span>
+                  </div>
+                  <ul className="text-slate-300 space-y-1">
+                    {group.links.map((l) => (
+                      <li key={l.href}><a className="text-cyan-400 underline" href={l.href} target="_blank" rel="noopener noreferrer">{l.name}</a></li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+            <div className="text-center mt-6">
+              <Button href="/market-pricing" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">More Market References</Button>
             </div>
           </section>
 
@@ -236,18 +302,36 @@ export default function ServicesAdvertisingPage() {
           </section>
 
           <section>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Average SMB Pricing Summary</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="p-6 rounded-2xl bg-black/40 border border-cyan-500/30">
+                <div className="text-white font-semibold mb-2">AI Platforms & Observability</div>
+                <div className="text-slate-300 text-sm">$100–$2,000/month depending on model choice and QPS.</div>
+              </div>
+              <div className="p-6 rounded-2xl bg-black/40 border border-purple-500/30">
+                <div className="text-white font-semibold mb-2">Security & Compliance</div>
+                <div className="text-slate-300 text-sm">$200–$5,000/month based on assets and controls.</div>
+              </div>
+              <div className="p-6 rounded-2xl bg-black/40 border border-emerald-500/30">
+                <div className="text-white font-semibold mb-2">Cloud & K8s Cost</div>
+                <div className="text-slate-300 text-sm">$200–$2,000/month depending on clusters and spend.</div>
+              </div>
+            </div>
+          </section>
+
+          <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Contact Us</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <a href={`tel:${contact.mobile.replace(/[^+\d]/g, '')}`} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 flex items-center gap-3">
-                <Phone className="w-5 h-5 text-cyan-400" />
+                <span className="text-cyan-400">📱</span>
                 <span className="text-gray-200">{contact.mobile}</span>
               </a>
               <a href={`mailto:${contact.email}`} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-purple-500/40 flex items-center gap-3">
-                <Mail className="w-5 h-5 text-purple-400" />
+                <span className="text-purple-400">✉️</span>
                 <span className="text-gray-200">{contact.email}</span>
               </a>
               <a href={`https://maps.google.com/?q=${encodeURIComponent(contact.address)}`} target="_blank" rel="noopener noreferrer" className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-emerald-500/40 flex items-center gap-3">
-                <MapPin className="w-5 h-5 text-emerald-400" />
+                <span className="text-emerald-400">📍</span>
                 <span className="text-gray-200 text-sm">{contact.address}</span>
               </a>
             </div>
@@ -297,6 +381,7 @@ export default function ServicesAdvertisingPage() {
           </section>
         </div>
       </div>
-    </UltraAdvancedFuturisticBackground>
+    </Layout>
   );
 }
+

@@ -283,6 +283,8 @@ export default function ComprehensiveServicesShowcase2025() {
                 </button>
               ))}
             </div>
+          </div>
+        </section>
 
             {/* Price and Sort Controls */}
             <div className="flex flex-wrap items-center space-x-4">

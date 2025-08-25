@@ -20,10 +20,20 @@ const serviceCategories = [
     title: 'AI & Machine Learning',
     icon: Brain,
     services: [
-      { name: 'AI Business Intelligence Elite', href: '/ai-business-intelligence-elite', description: 'Transform data into actionable insights with AI', price: '$299/month' },
-      { name: 'AI Legal Document Automation', href: '/ai-legal-document-automation', description: 'Automate legal document creation and review', price: '$199/month' },
-      { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics', description: 'Revolutionary AI-powered medical diagnostics', price: '$799/month' },
-      { name: 'AI Metaverse Development Platform', href: '/ai-metaverse-development-platform', description: 'Create immersive metaverse experiences with AI', price: '$499/month' }
+      { name: 'AI Consciousness Simulator', href: '/ai-consciousness-simulator', description: 'Simulate human-like consciousness in AI systems', price: '$2,999/month' },
+      { name: 'AI Quantum Hybrid Computing', href: '/ai-quantum-hybrid-computing', description: 'Hybrid AI-Quantum computing for complex problem solving', price: '$4,999/month' },
+      { name: 'AI Multimodal Fusion Platform', href: '/ai-multimodal-fusion-platform', description: 'Unified AI platform for text, image, audio, and video processing', price: '$1,999/month' },
+      { name: 'AI Autonomous Decision Engine', href: '/ai-autonomous-decision-engine', description: 'AI system that makes complex decisions autonomously', price: '$3,499/month' }
+    ]
+  },
+  {
+    title: '2026 AI Services',
+    icon: Sparkles,
+    services: [
+      { name: 'AI Consciousness Simulator Pro', href: '/ai-consciousness-simulator-pro', description: 'Simulate human-like consciousness in AI systems', price: '$4,999/month' },
+      { name: 'AI Quantum Hybrid Computing', href: '/quantum-ai-hybrid-computing', description: 'Hybrid AI-Quantum computing for complex problem solving', price: '$7,999/month' },
+      { name: 'AI Multimodal Fusion Platform', href: '/ai-multimodal-fusion-platform', description: 'Unified AI platform for text, image, audio, and video processing', price: '$2,999/month' },
+      { name: 'AI Autonomous Decision Engine', href: '/ai-autonomous-decision-engine', description: 'AI system that makes complex decisions autonomously', price: '$5,999/month' }
     ]
   },
   {
@@ -80,17 +90,28 @@ const serviceCategories = [
     title: 'Quantum AI Services',
     icon: Atom,
     services: [
-      { name: 'Quantum AI Cognitive Platform', href: '/quantum-ai-cognitive-platform', description: 'Quantum-powered cognitive computing', price: '$2,499/month' },
-      { name: 'Quantum Internet Security Platform', href: '/quantum-internet-security-platform', description: 'Unbreakable quantum encryption', price: '$1,599/month' },
-      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform', description: 'Quantum advantage for financial markets', price: '$2,999/month' },
-      { name: 'Quantum IoT Platform', href: '/quantum-iot-platform', description: 'Quantum-enhanced IoT systems', price: '$899/month' }
+      { name: 'Neuromorphic Computing', href: '/neuromorphic-computing-platform', description: 'Brain-inspired computing for next-generation AI', price: '$6,999/month' },
+      { name: 'DNA Computing Platform', href: '/dna-computing-platform', description: 'Molecular computing for complex problem solving', price: '$11,999/month' },
+      { name: 'Photonic Computing', href: '/photonic-computing-platform', description: 'Light-speed computing with photonic processors', price: '$7,499/month' },
+      { name: 'Holographic Display', href: '/holographic-display-platform', description: 'Next-generation 3D holographic visualization', price: '$5,999/month' }
+    ]
+  },
+  {
+    title: 'Revolutionary 2026 Services',
+    icon: Star,
+    services: [
+      { name: 'AI Consciousness Transfer', href: '/ai-consciousness-transfer', description: 'Transfer consciousness between AI systems and humans', price: '$15,999/month' },
+      { name: 'Quantum Internet Infrastructure', href: '/quantum-internet-infrastructure', description: 'Ultra-secure quantum communication network', price: '$8,999/month' },
+      { name: 'Edge Quantum Computing', href: '/edge-quantum-computing', description: 'Quantum computing at the edge for real-time processing', price: '$4,999/month' },
+      { name: 'AI Space Mining Automation', href: '/ai-space-mining-automation', description: 'Automated space mining using advanced AI', price: '$8,999/month' }
     ]
   }
 ];
 
 const companyLinks = [
   { name: 'About Us', href: '/about' },
-  { name: 'Careers', href: '/careers' },
+  { name: '2026 Services', href: '/2026-services-showcase' },
+  { name: 'Revolutionary 2026', href: '/revolutionary-2026-services-showcase' },
   { name: 'News', href: '/news' },
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Blog', href: '/blog' },

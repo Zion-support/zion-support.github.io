@@ -34,56 +34,87 @@ const UltraFuturisticFooter2034: React.FC = () => {
     website: 'https://ziontechgroup.com'
   };
 
-  const serviceCategories = [
-    {
-      title: 'AI & Machine Learning',
-      icon: Brain,
-      services: [
-        { name: 'AI Content Generation', href: '/ai-content-generator' },
-        { name: 'AI Business Intelligence', href: '/ai-business-intelligence' },
-        { name: 'AI Marketing Automation', href: '/ai-marketing-automation' },
-        { name: 'AI Customer Service', href: '/ai-customer-service' },
-        { name: 'AI Data Analytics', href: '/ai-data-analytics' },
-        { name: 'AI Research Platform', href: '/ai-research-platform' }
-      ]
-    },
-    {
-      title: 'Quantum Computing',
-      icon: Cpu,
-      services: [
-        { name: 'Quantum Computing Platform', href: '/quantum-computing' },
-        { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity' },
-        { name: 'Quantum Machine Learning', href: '/quantum-machine-learning' },
-        { name: 'Quantum Internet Security', href: '/quantum-internet-security' },
-        { name: 'Quantum Financial Trading', href: '/quantum-financial-trading' },
-        { name: 'Quantum Research Services', href: '/quantum-research' }
-      ]
-    },
-    {
-      title: 'Space Technology',
-      icon: Rocket,
-      services: [
-        { name: 'Space Mining Operations', href: '/space-mining-operations' },
-        { name: 'Satellite Management', href: '/satellite-management' },
-        { name: 'Space Tourism Platform', href: '/space-tourism-platform' },
-        { name: 'Astronomical Research', href: '/astronomical-research' },
-        { name: 'Space Debris Monitoring', href: '/space-debris-monitoring' },
-        { name: 'Interplanetary Communications', href: '/interplanetary-communications' }
-      ]
-    },
-    {
-      title: 'Cybersecurity',
-      icon: Shield,
-      services: [
-        { name: 'Zero Trust Architecture', href: '/zero-trust-architecture' },
-        { name: 'Threat Intelligence', href: '/threat-intelligence' },
-        { name: 'Incident Response', href: '/incident-response' },
-        { name: 'Compliance Management', href: '/compliance-management' },
-        { name: 'Security Operations Center', href: '/security-operations-center' },
-        { name: 'Penetration Testing', href: '/penetration-testing' }
-      ]
-    }
-  ];
+const footerSections = [
+  {
+    title: 'AI & Consciousness',
+    links: [
+      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2025' },
+      { name: 'AI Quantum Neural Network', href: '/ai-quantum-neural-network' },
+      { name: 'AI Autonomous Research', href: '/ai-autonomous-research-assistant' },
+      { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-training' },
+      { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance-platform' },
+      { name: 'AI Content Personalization', href: '/ai-content-personalization-engine' },
+      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem-manager' },
+      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance-framework' },
+      { name: 'Cutting-Edge AI Services', href: '/cutting-edge-services-2025', badge: 'New' }
+    ]
+  },
+  {
+    title: 'Quantum & Emerging Tech',
+    links: [
+      { name: 'Space Resource Mining', href: '/space-resource-mining-platform' },
+      { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform' },
+      { name: 'Brain-Computer Interface', href: '/brain-computer-interface-platform' },
+      { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery-platform' },
+      { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai-platform' },
+      { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing-platform' },
+      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' },
+      { name: 'Quantum Robotics', href: '/quantum-robotics' }
+    ]
+  },
+  {
+    title: 'Enterprise IT',
+    links: [
+      { name: 'Quantum-Secure Cloud', href: '/quantum-secure-cloud-infrastructure' },
+      { name: 'Autonomous IT Operations', href: '/autonomous-it-operations-center' },
+      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration-platform' },
+      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' },
+      { name: 'AI-Powered DevOps', href: '/ai-powered-devops-platform' },
+      { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure-platform' },
+      { name: 'Zero Trust Security', href: '/zero-trust-security-platform' },
+      { name: 'Quantum Networking', href: '/quantum-networking' }
+    ]
+  },
+  {
+    title: 'Micro SAAS',
+    links: [
+      { name: 'AI Customer Success', href: '/ai-customer-success-platform' },
+      { name: 'Supply Chain Optimization', href: '/intelligent-supply-chain-optimization' },
+      { name: 'Financial Planning AI', href: '/ai-financial-planning-platform' },
+      { name: 'HR Analytics Platform', href: '/intelligent-hr-analytics-platform' },
+      { name: 'Sales Intelligence AI', href: '/ai-sales-intelligence-platform' },
+      { name: 'AI Decision Engine', href: '/ai-powered-decision-engine' },
+      { name: 'Content Automation', href: '/intelligent-content-automation-platform' },
+      { name: 'Smart CRM Suite', href: '/smart-crm-intelligence-suite' }
+    ]
+  },
+  {
+    title: 'Solutions',
+    links: [
+      { name: 'Healthcare Solutions', href: '/healthcare-solutions' },
+      { name: 'Financial Services', href: '/financial-solutions' },
+      { name: 'Manufacturing AI', href: '/manufacturing-ai-solutions' },
+      { name: 'Retail Technology', href: '/retail-technology-solutions' },
+      { name: 'Education Technology', href: '/education-technology-solutions' },
+      { name: 'Government Solutions', href: '/government-technology-solutions' },
+      { name: 'Energy & Utilities', href: '/energy-utilities-solutions' },
+      { name: 'Transportation & Logistics', href: '/transportation-logistics-solutions' }
+    ]
+  },
+  {
+    title: 'Resources',
+    links: [
+      { name: 'Documentation', href: '/docs' },
+      { name: 'API Reference', href: '/api-documentation' },
+      { name: 'Case Studies', href: '/case-studies' },
+      { name: 'Blog & News', href: '/blog' },
+      { name: 'Support Center', href: '/support' },
+      { name: 'Training & Certification', href: '/training' },
+      { name: 'Community Forum', href: '/community' },
+      { name: 'Developer Resources', href: '/developer-resources' }
+    ]
+  }
+];
 
   const companyLinks = [
     { name: 'About Us', href: '/about' },
