@@ -1,319 +1,205 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  QuestionMarkCircleIcon, 
-  BookOpenIcon, 
-  ChatBubbleLeftRightIcon, 
-  PhoneIcon,
-  EnvelopeIcon,
-  DocumentTextIcon,
-  VideoCameraIcon,
-  AcademicCapIcon
-} from '@heroicons/react/24/outline';
+import { Search, BookOpen, MessageCircle, FileText, Video, Users, Phone, Mail, Clock, CheckCircle, ChevronDown, ChevronRight } from 'lucide-react';
 
-const HelpCenter: React.FC = () => {
-  const faqCategories = [
+const HelpCenter = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
+
+  const toggleCategory = (categoryId: string) => {
+    setExpandedCategories(prev => 
+      prev.includes(categoryId) 
+        ? prev.filter(id => id !== categoryId)
+        : [...prev, categoryId]
+    );
+  };
+
+  const helpCategories = [
     {
-      title: "Getting Started",
-      icon: BookOpenIcon,
-      questions: [
-        {
-          question: "How do I get started with Zion Tech Group services?",
-          answer: "Getting started is easy! Simply contact our team through our contact form or call us directly. We'll schedule a consultation to understand your needs and recommend the best solutions for your business."
-        },
-        {
-          question: "What services do you offer?",
-          answer: "We offer a comprehensive range of AI, 5G, cybersecurity, and digital transformation services. This includes AI autonomous systems, quantum computing solutions, 5G enterprise networks, and much more."
-        },
-        {
-          question: "Do you offer free consultations?",
-          answer: "Yes, we provide free initial consultations to understand your business needs and recommend appropriate solutions. This helps ensure we can provide the most value to your organization."
-        }
-      ]
+      id: 1,
+      question: "What AI solutions does Zion Tech Group offer?",
+      answer: "We offer comprehensive AI solutions including machine learning platforms, natural language processing, computer vision, predictive analytics, and autonomous systems. Our AI solutions are tailored for enterprise needs and can be customized for specific industry requirements.",
+      category: 'ai',
+      tags: ['AI', 'Machine Learning', 'Enterprise']
     },
     {
-      title: "Technical Support",
-      icon: QuestionMarkCircleIcon,
-      questions: [
-        {
-          question: "What kind of technical support do you provide?",
-          answer: "We provide comprehensive technical support including 24/7 monitoring, troubleshooting, system optimization, and ongoing maintenance. Our team of experts is always available to help resolve any technical issues."
-        },
-        {
-          question: "How quickly do you respond to support requests?",
-          answer: "We prioritize support requests based on severity. Critical issues receive immediate attention, while standard requests are typically resolved within 4-8 hours during business days."
-        },
-        {
-          question: "Do you provide training for your solutions?",
-          answer: "Absolutely! We provide comprehensive training programs for all our solutions, including user training, administrator training, and ongoing education to ensure your team gets the most value from our technology."
-        }
-      ]
+      id: 2,
+      question: "How secure are your cloud services?",
+      answer: "Our cloud services implement enterprise-grade security measures including end-to-end encryption, multi-factor authentication, regular security audits, and compliance with industry standards like SOC2, ISO 27001, and GDPR. We also provide 24/7 security monitoring.",
+      category: 'security',
+      tags: ['Security', 'Cloud', 'Compliance']
     },
     {
-      title: "Billing & Pricing",
-      icon: DocumentTextIcon,
-      questions: [
-        {
-          question: "What are your pricing models?",
-          answer: "We offer flexible pricing models including subscription-based services, project-based pricing, and enterprise licensing. We work with you to find the most cost-effective solution for your needs."
-        },
-        {
-          question: "Do you offer volume discounts?",
-          answer: "Yes, we offer volume discounts for enterprise clients and organizations implementing multiple services. Contact our sales team to discuss custom pricing options."
-        },
-        {
-          question: "What payment methods do you accept?",
-          answer: "We accept all major credit cards, bank transfers, and can arrange custom payment terms for enterprise clients. All payments are processed securely through our payment systems."
-        }
-      ]
+      id: 3,
+      question: "What is your typical project timeline?",
+      answer: "Project timelines vary based on complexity and scope. Small projects typically take 4-8 weeks, medium projects 8-16 weeks, and large enterprise solutions 16-32 weeks. We provide detailed project plans and regular updates throughout the process.",
+      category: 'general',
+      tags: ['Project Management', 'Timeline', 'Planning']
+    },
+    {
+      id: 4,
+      question: "Do you provide ongoing support after project completion?",
+      answer: "Yes, we offer comprehensive post-launch support including maintenance, updates, training, and 24/7 technical support. We also provide monitoring, performance optimization, and continuous improvement services to ensure your solution remains effective.",
+      category: 'general',
+      tags: ['Support', 'Maintenance', 'Training']
+    },
+    {
+      id: 5,
+      question: "Can you integrate with our existing systems?",
+      answer: "Absolutely! We specialize in seamless integration with existing enterprise systems. Our solutions are designed with open APIs and can integrate with popular platforms like Salesforce, SAP, Microsoft Dynamics, and custom legacy systems.",
+      category: 'general',
+      tags: ['Integration', 'APIs', 'Legacy Systems']
+    },
+    {
+      id: 6,
+      question: "What quantum computing services do you offer?",
+      answer: "Our quantum computing services include quantum algorithm development, quantum-safe cryptography, quantum simulation platforms, and hybrid quantum-classical computing solutions. We work with leading quantum hardware providers to deliver cutting-edge solutions.",
+      category: 'ai',
+      tags: ['Quantum Computing', 'Algorithms', 'Cryptography']
+    },
+    {
+      id: 7,
+      question: "How do you ensure data privacy and compliance?",
+      answer: "We implement comprehensive data protection measures including data encryption, access controls, audit logging, and compliance frameworks. Our solutions are designed to meet regulatory requirements across industries and jurisdictions.",
+      category: 'security',
+      tags: ['Data Privacy', 'Compliance', 'Encryption']
     }
   ];
 
-  const supportChannels = [
-    {
-      title: "Live Chat",
-      description: "Get instant help from our support team",
-      icon: ChatBubbleLeftRightIcon,
-      action: "Start Chat",
-      color: "from-cyan-500 to-blue-600"
-    },
-    {
-      title: "Phone Support",
-      description: "Speak directly with our experts",
-      icon: PhoneIcon,
-      action: "Call Now",
-      color: "from-green-500 to-emerald-600"
-    },
-    {
-      title: "Email Support",
-      description: "Send us a detailed message",
-      icon: EnvelopeIcon,
-      action: "Send Email",
-      color: "from-purple-500 to-pink-600"
-    },
-    {
-      title: "Documentation",
-      description: "Browse our comprehensive guides",
-      icon: BookOpenIcon,
-      action: "View Docs",
-      color: "from-orange-500 to-red-600"
-    }
-  ];
-
-  const resources = [
-    {
-      title: "User Guides",
-      description: "Step-by-step instructions for all our services",
-      icon: BookOpenIcon,
-      count: "50+"
-    },
-    {
-      title: "Video Tutorials",
-      description: "Visual guides and demonstrations",
-      icon: VideoCameraIcon,
-      count: "100+"
-    },
-    {
-      title: "API Documentation",
-      description: "Technical documentation for developers",
-      icon: DocumentTextIcon,
-      count: "25+"
-    },
-    {
-      title: "Training Materials",
-      description: "Educational resources and courses",
-      icon: AcademicCapIcon,
-      count: "30+"
-    }
-  ];
+  const filteredHelp = helpCategories.filter(item =>
+    item.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    item.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+  );
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      <Helmet>
-        <title>Help Center - Zion Tech Group</title>
-        <meta name="description" content="Get help and support for Zion Tech Group services. Find answers to frequently asked questions, access documentation, and connect with our support team." />
-        <meta name="keywords" content="help center, support, FAQ, documentation, customer service, technical support" />
-        <link rel="canonical" href="https://ziontechgroup.com/help" />
-      </Helmet>
-
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
+      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.h1 
+            className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
           >
-            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">
-              Help Center
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Find answers to your questions, access comprehensive documentation, 
-              and get the support you need to succeed with our technology solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Search Help
-              </button>
-              <button className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300">
-                Contact Support
-              </button>
+            Help Center
+          </motion.h1>
+          <motion.p 
+            className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            Find answers to common questions and get the support you need
+          </motion.p>
+          
+          {/* Search Bar */}
+          <motion.div 
+            className="max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search for help topics..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300"
+              />
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Support Channels Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+      {/* Help Categories */}
+      <section className="pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <motion.div 
+            className="space-y-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              How Can We Help You?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose from multiple support channels to get the help you need, 
-              when you need it.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {supportChannels.map((channel, index) => (
+            {filteredHelp.map((item) => (
               <motion.div
-                key={index}
+                key={item.id}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 overflow-hidden"
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 text-center"
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
               >
-                <div className={`w-16 h-16 bg-gradient-to-r ${channel.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
-                  <channel.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{channel.title}</h3>
-                <p className="text-gray-300 mb-6">{channel.description}</p>
-                <button className={`w-full bg-gradient-to-r ${channel.color} hover:opacity-90 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300`}>
-                  {channel.action}
-                </button>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Find quick answers to common questions about our services, 
-              support, and solutions.
-            </p>
-          </motion.div>
-
-          <div className="space-y-8">
-            {faqCategories.map((category, categoryIndex) => (
-              <motion.div
-                key={categoryIndex}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
-              >
-                <div className="flex items-center mb-6">
-                  <category.icon className="w-8 h-8 text-cyan-400 mr-3" />
-                  <h3 className="text-2xl font-bold text-white">{category.title}</h3>
-                </div>
-                
-                <div className="space-y-6">
-                  {category.questions.map((item, questionIndex) => (
-                    <div key={questionIndex} className="border-b border-gray-700 pb-4 last:border-b-0">
-                      <h4 className="text-lg font-semibold text-white mb-2">
-                        {item.question}
-                      </h4>
-                      <p className="text-gray-300">{item.answer}</p>
+                <button
+                  onClick={() => toggleCategory(item.id.toString())}
+                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-700/30 transition-colors duration-200"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
+                      <BookOpen className="w-5 h-5 text-white" />
                     </div>
-                  ))}
-                </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white">{item.question}</h3>
+                      <div className="flex gap-2 mt-1">
+                        {item.tags.map((tag, index) => (
+                          <span 
+                            key={index}
+                            className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  {expandedCategories.includes(item.id.toString()) ? (
+                    <ChevronDown className="w-5 h-5 text-gray-400" />
+                  ) : (
+                    <ChevronRight className="w-5 h-5 text-gray-400" />
+                  )}
+                </button>
+                
+                {expandedCategories.includes(item.id.toString()) && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="px-6 pb-4 border-t border-gray-700/50"
+                  >
+                    <p className="text-gray-300 mt-4 leading-relaxed">{item.answer}</p>
+                  </motion.div>
+                )}
               </motion.div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Resources Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Learning Resources
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Access comprehensive documentation, tutorials, and training materials 
-              to maximize the value of our solutions.
-            </p>
           </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {resources.map((resource, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 text-center"
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <resource.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{resource.title}</h3>
-                <p className="text-gray-300 mb-4">{resource.description}</p>
-                <div className="text-2xl font-bold text-cyan-400">{resource.count}</div>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
       {/* Contact Support Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600/20 to-blue-600/20">
+      <section className="pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
+          <motion.div 
+            className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl font-bold text-white mb-4">
               Still Need Help?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Our support team is here to help you succeed. Contact us for 
-              personalized assistance and expert guidance.
+            <p className="text-gray-300 mb-6">
+              Our support team is here to help you 24/7
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                 Contact Support
               </button>
-              <button className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">
-                Schedule Call
+              <button className="px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/20 transition-all duration-300">
+                Schedule a Call
               </button>
             </div>
           </motion.div>
