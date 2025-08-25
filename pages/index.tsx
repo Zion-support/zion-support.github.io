@@ -26,8 +26,12 @@ import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-rea
 import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced';
 import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced';
 import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';
-import { innovativeNewServices2025 } from '../data/2025-innovative-new-services';
-import { emergingTechBreakthroughs2025 } from '../data/2025-emerging-tech-breakthroughs';
+import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
+import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services';
+import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions';
+import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
+import { cuttingEdgeITInfrastructure2025 } from '../data/2025-cutting-edge-it-infrastructure';
+import { cuttingEdgeMicroSaas2025 } from '../data/2025-cutting-edge-micro-saas';
 
 export default function HomePage() {
   const heroStats = [
@@ -146,89 +150,81 @@ export default function HomePage() {
     }
   ];
 
-  // Combine all services for comprehensive showcase
-  const allServices = [
-    ...enhancedRealMicroSaasServices,
-    ...innovativeMicroSaasServices,
-    ...extraServices,
-    ...additionalEnhancedServices,
-    ...innovativeAIServices,
-    ...quantumSpaceServices,
-    ...quantumAIServices2025,
-    ...enterpriseITServices,
-    ...professionalServices,
-    ...nextGenerationAIServices,
-    ...emergingTechnologyServices,
-    ...emergingTechServices2025,
-    ...comprehensiveITSolutions,
-    ...realMarketServices,
-    ...serviceExpansions2025,
-    ...verifiedRealServices2025Batch2,
-    ...realOperationalServices,
-    ...newOperationalServices2025,
-    ...innovative2025Services,
-    ...revolutionary2025Services,
-    ...nextGenInnovations2025,
-    ...innovative2026Services,
-    ...emergingTech2026Services,
-    ...enterpriseIT2026Services,
-    ...innovative2026MicroSaasServices,
-    ...innovative2026AIServices,
-    ...innovative2026ITInfrastructureServices,
-    ...emergingTech2026ServicesNew,
-    ...enterpriseIT2026ServicesNew,
-    ...innovative2026MicroSaasServicesV2,
-    ...emergingTech2026ServicesV2,
-    ...enterpriseIT2026ServicesV2,
-    ...revolutionary2026Innovations,
-    ...nextGenAI2026Services,
-    ...aiAutonomousServices2026,
-    ...quantumSpaceTechServices2026,
-    ...metaverseDigitalRealityServices2026,
-    ...innovative2026AIServicesV3,
-    ...emergingTech2026ServicesV3,
-    ...enterpriseIT2026ServicesV3,
-    ...ultimate2026Services,
-    ...cuttingEdge2027Innovations,
-    ...practicalMicroSaas2027,
-    ...revolutionary2026MicroSaasServices,
-    ...revolutionary2026ITServices,
-    ...revolutionary2026AIServices,
-    ...revolutionary2027Services,
-    ...emergingTech2027Services,
-    ...revolutionary2027AIServices,
-    ...revolutionary2027ITServices,
-    ...revolutionary2027MicroSaasServices,
-    ...cuttingEdge2028MicroSaas,
-    ...cuttingEdgeInnovations2029,
-    ...practicalBusinessSolutions2028,
-    ...futuristic2028Services,
-    ...emergingTech2028Services,
-    ...futuristicAIServices2029,
-    ...emergingTech2029Services,
-    ...enterpriseIT2029Services,
-    ...innovativeMicroSaasServices2029,
-    ...innovativeMicroSaasServices2029V2,
-    ...innovativeITServices2029V2,
-    ...innovativeAIServices2029V2,
-    // Add new 2029 services
-    ...cuttingEdgeInnovations2029,
-    ...emergingTechBreakthroughs2029V3,
-    ...aiAutonomousEcosystem2029V2,
-    // Add new 2031 services
-    ...futuristicAIServices2031,
-    ...quantumEmergingTechServices2031,
-    ...enterpriseITServices2031,
-    ...innovativeMicroSaasServices2031,
-    ...researchDevelopmentServices2031,
-    ...spaceMetaverseServices2031,
-    // Add new 2032 services
-    ...futuristicInnovations2032,
-    ...enterpriseInnovations2032,
-    // Add new 2029 and 2030 services
-    ...cuttingEdgeInnovations2029V2,
-    ...futuristicInnovations2030
-  ];
+const serviceCategories = [
+  {
+    title: 'AI & Consciousness',
+    description: 'Revolutionary AI platforms with consciousness and emotional intelligence',
+    services: innovativeAIServicesEnhanced2025.slice(0, 3),
+    icon: Brain,
+    color: 'from-violet-500 to-purple-600',
+    href: '/ai-services',
+    features: ['Emotional Intelligence', 'Self-Awareness', 'Consciousness Evolution']
+  },
+  {
+    title: 'Quantum & Emerging Tech',
+    description: 'Breakthrough quantum computing and space technology solutions',
+    services: emergingTechServicesEnhanced2025.slice(0, 3),
+    icon: Atom,
+    color: 'from-indigo-500 to-blue-600',
+    href: '/quantum-services',
+    features: ['Quantum Computing', 'Space Mining', 'Brain-Computer Interface']
+  },
+  {
+    title: 'Enterprise IT',
+    description: 'Advanced enterprise infrastructure and security solutions',
+    services: innovativeITServicesEnhanced2025.slice(0, 3),
+    icon: Shield,
+    color: 'from-blue-500 to-cyan-600',
+    href: '/enterprise-it',
+    features: ['Zero Trust Security', 'Quantum Cloud', 'Autonomous Operations']
+  },
+  {
+    title: 'Micro SAAS',
+    description: 'Innovative business solutions for modern enterprises',
+    services: innovativeRealMicroSaasServices2025.slice(0, 3),
+    icon: Rocket,
+    color: 'from-teal-500 to-emerald-600',
+    href: '/micro-saas',
+    features: ['Content Automation', 'CRM Intelligence', 'Decision Engine']
+  },
+  {
+    title: 'Advanced AI Automation',
+    description: 'Revolutionary AI automation for development, testing, DevOps, and security',
+    services: advancedAIAutomationServices2025.slice(0, 3),
+    icon: Brain,
+    color: 'from-emerald-500 to-teal-600',
+    href: '/advanced-ai-automation-services',
+    features: ['Code Review AI', 'Testing Automation', 'DevOps Intelligence']
+  },
+  {
+    title: 'Advanced IT Infrastructure',
+    description: 'Next-generation infrastructure with quantum computing and edge computing',
+    services: advancedITInfrastructureServices2025.slice(0, 3),
+    icon: Cloud,
+    color: 'from-indigo-500 to-purple-600',
+    href: '/advanced-it-infrastructure-services',
+    features: ['Quantum Cloud', 'Edge Computing', 'Zero Trust Security']
+  },
+  {
+    title: 'Innovative Business Solutions',
+    description: 'AI-powered business intelligence, marketing, sales, and HR solutions',
+    services: innovativeBusinessSolutions2025.slice(0, 3),
+    icon: Target,
+    color: 'from-green-500 to-emerald-600',
+    href: '/innovative-business-solutions',
+    features: ['Business Intelligence', 'Marketing Automation', 'Sales Intelligence']
+  },
+  {
+    title: 'Cutting-Edge 2025',
+    description: 'Latest revolutionary services with quantum computing and AI breakthroughs',
+    services: [...cuttingEdgeAIServices2025, ...cuttingEdgeITInfrastructure2025, ...cuttingEdgeMicroSaas2025].slice(0, 3),
+    icon: Zap,
+    color: 'from-pink-500 to-purple-600',
+    href: '/cutting-edge-services-2025',
+    features: ['Quantum AI', 'Edge Computing', 'Autonomous Systems'],
+    badge: 'New'
+  }
+];
 
   // Get featured services (most popular and innovative)
   const featuredServices = allServices
@@ -596,9 +592,69 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+      {/* Cutting-Edge Services CTA Section */}
+      <section className="py-20 bg-gradient-to-br from-pink-900/20 via-purple-900/20 to-indigo-900/20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
+              <span className="gradient-text-rainbow">Cutting-Edge Services 2025</span>
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Discover our revolutionary new services featuring quantum computing, AI breakthroughs, and next-generation infrastructure. 
+              Be among the first to experience the future of technology.
+            </p>
+            
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+              <div className="bg-gradient-to-br from-violet-500/20 to-purple-600/20 rounded-3xl p-8 border border-violet-500/30">
+                <Brain className="w-16 h-16 text-violet-400 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-white mb-3">AI & Machine Learning</h3>
+                <p className="text-gray-300 mb-4">Revolutionary AI services with consciousness and quantum computing integration</p>
+                <div className="text-sm text-violet-300">
+                  {cuttingEdgeAIServices2025.length} cutting-edge services
+                </div>
+              </div>
+              
+              <div className="bg-gradient-to-br from-blue-500/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/30">
+                <Cloud className="w-16 h-16 text-blue-400 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-white mb-3">IT Infrastructure</h3>
+                <p className="text-gray-300 mb-4">Next-generation infrastructure with quantum security and edge computing</p>
+                <div className="text-sm text-blue-300">
+                  {cuttingEdgeITInfrastructure2025.length} revolutionary solutions
+                </div>
+              </div>
+              
+              <div className="bg-gradient-to-br from-teal-500/20 to-emerald-600/20 rounded-3xl p-8 border border-teal-500/30">
+                <Rocket className="w-16 h-16 text-teal-400 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-white mb-3">Micro SAAS</h3>
+                <p className="text-gray-300 mb-4">Innovative business solutions powered by AI and automation</p>
+                <div className="text-sm text-teal-300">
+                  {cuttingEdgeMicroSaas2025.length} intelligent platforms
+                </div>
+              </div>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <Link href="/cutting-edge-services-2025" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-full hover:from-pink-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+                <Zap className="mr-2 w-5 h-5" />
+                Explore Cutting-Edge Services
+              </Link>
+              <Link href="/contact" className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <Phone className="mr-2 w-5 h-5" />
+                Get Started
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

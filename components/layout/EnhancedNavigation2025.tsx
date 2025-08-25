@@ -44,7 +44,7 @@ const navigationItems: NavigationItem[] = [
     isNew: true,
     children: [
       { name: 'View All Services', href: '/comprehensive-services-showcase-2025', description: 'Complete services portfolio' },
-      { name: '2025 Innovative Services', href: '/2025-innovative-new-services-showcase', description: 'Latest innovative services for 2025' },
+      { name: 'Cutting-Edge 2025', href: '/cutting-edge-services-2025', description: 'Latest revolutionary services', badge: 'New' },
       { name: 'Service Categories', href: '/comprehensive-services-showcase-2025#categories', description: 'Browse by category' },
       { name: 'Pricing Comparison', href: '/comprehensive-services-showcase-2025#pricing', description: 'Compare service costs' },
       { name: 'Service Search', href: '/comprehensive-services-showcase-2025#search', description: 'Find specific services' }
