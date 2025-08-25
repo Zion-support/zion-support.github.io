@@ -178,9 +178,13 @@ export default function Sidebar() {
         { name: 'Services', path: '/services', icon: Briefcase },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         { name: 'AI Solutions', path: '/ai-solutions', icon: Briefcase },
 >>>>>>> origin/cursor/website-audit-and-enhancement-d426
+=======
+        { name: 'AI Services', path: '/ai-services', icon: Briefcase },
+>>>>>>> origin/cursor/website-audit-and-enhancement-74a8
         { name: 'Solutions', path: '/solutions/enterprise', icon: Briefcase },
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -196,6 +200,7 @@ export default function Sidebar() {
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-a8a0
         { name: 'About', path: '/about', icon: Users },
+<<<<<<< HEAD
 >>>>>>> origin/main
 =======
       title: 'Main Navigation',
@@ -208,6 +213,10 @@ export default function Sidebar() {
         { name: 'About Us', path: '/about', icon: Users },
 >>>>>>> origin/cursor/website-audit-and-enhancement-ac08
         { name: 'Contact', path: '/contact', icon: Phone }
+=======
+        { name: 'Contact', path: '/contact', icon: Phone },
+        { name: 'Sitemap', path: '/sitemap', icon: Globe }
+>>>>>>> origin/cursor/website-audit-and-enhancement-74a8
       ]
     },
     {
@@ -231,6 +240,7 @@ export default function Sidebar() {
       title: 'AI & Autonomous Systems',
 <<<<<<< HEAD
       items: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -366,6 +376,20 @@ export default function Sidebar() {
         { name: 'AI Services', path: '/ai-services', icon: Brain },
         { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
         { name: 'AI Matcher', path: '/match', icon: Brain }
+=======
+        { name: 'AI & Machine Learning', path: '/ai-services', icon: Briefcase },
+        { name: 'AI Research Assistant', path: '/ai-research-assistant', icon: Briefcase },
+        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
+        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Briefcase },
+        { name: 'Quantum Neural Network Platform', path: '/quantum-neural-network-platform', icon: Briefcase },
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
+        { name: 'SOC2 Compliance Automation', path: '/soc2-compliance-automation', icon: Shield },
+        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Briefcase },
+        { name: 'Industry Solutions', path: '/services/industry-solutions', icon: Briefcase },
+        { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Globe },
+        { name: 'Digital Transformation', path: '/digital-transformation', icon: Globe }
+>>>>>>> origin/cursor/website-audit-and-enhancement-74a8
       ]
     },
     {
@@ -1375,8 +1399,12 @@ export default function Sidebar() {
       title: 'Support & Resources',
 >>>>>>> origin/cursor/website-audit-and-enhancement-ea9e
       items: [
+<<<<<<< HEAD
         { name: 'Help Center', path: '/help', icon: Users },
 <<<<<<< HEAD
+=======
+        { name: 'Help Center', path: '/help-center', icon: Users },
+>>>>>>> origin/cursor/website-audit-and-enhancement-74a8
         { name: 'Documentation', path: '/docs', icon: Globe },
         { name: 'Contact Support', path: '/contact', icon: Phone },
         { name: 'Status Page', path: '/status', icon: Globe },
@@ -1645,6 +1673,7 @@ export default function Sidebar() {
         { name: 'FAQ', path: '/faq', icon: MessageCircle },
         { name: 'Contact Support', path: '/support', icon: Phone },
 <<<<<<< HEAD
+<<<<<<< HEAD
         { name: 'Status Page', path: '/status', icon: Globe }
 >>>>>>> origin/cursor/website-audit-and-enhancement-1f82
 =======
@@ -1789,6 +1818,11 @@ export default function Sidebar() {
 =======
         { name: 'Contact Support', path: '/support', icon: Phone }
 >>>>>>> origin/cursor/website-audit-and-enhancement-a8a0
+=======
+        { name: 'Status Page', path: '/status', icon: Globe },
+        { name: 'FAQ', path: '/faq', icon: Users },
+        { name: 'Sitemap', path: '/sitemap', icon: Globe }
+>>>>>>> origin/cursor/website-audit-and-enhancement-74a8
       ]
     }
   ];
