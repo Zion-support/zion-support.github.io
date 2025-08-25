@@ -24,7 +24,11 @@ const HelpCenter: React.FC = () => {
     { id: 'account', name: 'Account Management', icon: QuestionMarkCircleIcon }
   ];
 
+<<<<<<< HEAD
+  const faqs = [
+=======
   const helpCategories = [
+>>>>>>> 8c95c6b43a5f546b82988393b4a85fe051f55a27
     {
       category: 'getting-started',
       question: 'How do I get started with Zion Tech Group services?',

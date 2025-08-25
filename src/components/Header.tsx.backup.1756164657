@@ -54,11 +54,20 @@ export function Header() {
       href: '/services',
       dropdown: [
         { name: 'AI Solutions', href: '/ai-solutions', description: 'Advanced AI and machine learning services' },
+<<<<<<< HEAD
+        { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems-platform', description: 'AI-powered business automation' },
+        { name: 'Quantum Technology', href: '/quantum-technology', description: 'Next-generation quantum computing' },
+        { name: 'Cybersecurity', href: '/cybersecurity', description: 'Comprehensive security solutions' },
+        { name: 'Cloud & DevOps', href: '/cloud-devops', description: 'Scalable cloud infrastructure' },
+        { name: 'Enterprise Solutions', href: '/enterprise-solutions', description: 'Large-scale business solutions' },
+        { name: '5G Solutions', href: '/5g-enterprise-solutions', description: '5G enterprise deployment' }
+=======
         { name: 'Quantum Technology', href: '/quantum-technology', description: 'Next-generation quantum computing' },
         { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Comprehensive security solutions' },
         { name: 'Cloud & DevOps', href: '/cloud-devops', description: 'Scalable cloud infrastructure' },
         { name: 'Enterprise Solutions', href: '/enterprise-solutions', description: 'Large-scale business solutions' },
         { name: 'Micro SAAS', href: '/micro-saas', description: 'Scalable software solutions' }
+>>>>>>> origin/cursor/website-audit-and-enhancement-2305
       ]
     },
     { 
@@ -72,6 +81,12 @@ export function Header() {
       name: 'Company', 
       href: '/about',
       dropdown: [
+<<<<<<< HEAD
+        { name: 'About Us', href: '/about', description: 'Learn about our mission and values' },
+        { name: 'Our Team', href: '/team', description: 'Meet our leadership and experts' },
+        { name: 'Careers', href: '/careers', description: 'Join our growing team' },
+        { name: 'Partners', href: '/partners', description: 'Strategic partnerships' }
+=======
         { name: 'Healthcare', href: '/solutions/healthcare', description: 'AI-powered healthcare solutions' },
         { name: 'Finance', href: '/solutions/finance', description: 'Financial technology innovations' },
         { name: 'Manufacturing', href: '/solutions/manufacturing', description: 'Smart manufacturing systems' },
@@ -90,10 +105,19 @@ export function Header() {
         { name: 'Partners', href: '/partners', description: 'Strategic partnerships' },
         { name: 'News & Blog', href: '/news', description: 'Latest updates and insights' },
         { name: 'Case Studies', href: '/case-studies', description: 'Success stories and results' }
+>>>>>>> origin/cursor/website-audit-and-enhancement-2305
       ]
     },
     { 
       name: 'Resources', 
+<<<<<<< HEAD
+      href: '/blog',
+      dropdown: [
+        { name: 'Blog', href: '/blog', description: 'Latest insights and updates' },
+        { name: 'Documentation', href: '/docs', description: 'Technical guides and APIs' },
+        { name: 'Help Center', href: '/help', description: 'Support and troubleshooting' },
+        { name: 'Community', href: '/community', description: 'Connect with peers' }
+=======
       href: '/docs',
       dropdown: [
         { name: 'Documentation', href: '/docs', description: 'Technical guides and APIs' },
@@ -102,6 +126,7 @@ export function Header() {
         { name: 'White Papers', href: '/white-papers', description: 'Industry insights' },
         { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
         { name: 'Support', href: '/support', description: 'Technical support' }
+>>>>>>> origin/cursor/website-audit-and-enhancement-2305
       ]
     },
     { name: 'Contact', href: '/contact' }
