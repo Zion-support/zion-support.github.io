@@ -35,11 +35,19 @@ import SEOHead from '../components/SEOHead';
 import { SEOConfigs } from '../components/SEOHead';
 
 // Lazy load components for better performance
+// Temporarily commented out for debugging
+/*
 const ModernHeroSection = React.lazy(() => import('../components/home/ModernHeroSection'));
 const LazyServicesSection = React.lazy(() => import('../components/home/ServicesSection'));
 const LazyFeaturesSection = React.lazy(() => import('../components/home/FeaturesSection'));
 const LazyTestimonialsSection = React.lazy(() => import('../components/home/TestimonialsSection'));
 const LazyCTASection = React.lazy(() => import('../components/home/CTASection'));
+*/
+const LazyServicesSection = React.lazy(() => import('../components/home/ServicesSection'));
+const LazyFeaturesSection = React.lazy(() => import('../components/home/FeaturesSection'));
+const LazyTestimonialsSection = React.lazy(() => import('../components/home/TestimonialsSection'));
+const LazyCTASection = React.lazy(() => import('../components/home/CTASection'));
+*/
 
 // Loading fallback component
 const LoadingFallback = ({ message }: { message: string }) => (
@@ -443,140 +451,12 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-              {/* Services Section */}
-        <Suspense fallback={<LoadingFallback message="Loading services..." />}>
-          <LazyServicesSection />
-        </Suspense>
-
-        {/* Innovative Services Showcase */}
-        <section className="py-24 relative overflow-hidden">
-          <div className="absolute inset-0 bg-quantum-gradient opacity-10"></div>
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-holographic-gradient bg-clip-text text-transparent">
-                Innovative Micro SAAS Services
-              </h2>
-              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-                Discover our cutting-edge micro SAAS solutions designed to transform your business operations with AI, automation, and next-generation technology.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "AI Sales Intelligence Platform",
-                  description: "Advanced sales intelligence with AI-powered lead generation and market insights.",
-                  price: "$2,499/mo",
-                  path: "/services/ai-sales-intelligence-platform",
-                  icon: TrendingUp,
-                  category: "AI & Sales Intelligence"
-                },
-                {
-                  title: "AI Fintech Platform",
-                  description: "Comprehensive fintech platform with AI-powered risk assessment and fraud detection.",
-                  price: "$3,999/mo",
-                  path: "/services/ai-fintech-platform",
-                  icon: Shield,
-                  category: "AI & Financial Technology"
-                },
-                {
-                  title: "AI Healthcare Technology",
-                  description: "AI-powered healthcare platform for patient care and medical decision-making.",
-                  price: "$3,499/mo",
-                  path: "/services/ai-healthcare-tech-platform",
-                  icon: Brain,
-                  category: "AI & Healthcare Technology"
-                },
-                {
-                  title: "DevOps Automation Platform",
-                  description: "Enterprise-grade DevOps automation with CI/CD and intelligent workflows.",
-                  price: "$3,999/mo",
-                  path: "/services/devops-automation-cicd-platform",
-                  icon: Code,
-                  category: "DevOps & CI/CD"
-                },
-                {
-                  title: "IoT & Edge Computing Platform",
-                  description: "Comprehensive IoT platform with edge computing and real-time analytics.",
-                  price: "$2,999/mo",
-                  path: "/services/iot-edge-computing-platform",
-                  icon: Network,
-                  category: "IoT & Edge Computing"
-                },
-                {
-                  title: "API Management Platform",
-                  description: "Enterprise API management with security, monitoring, and developer tools.",
-                  price: "$1,999/mo",
-                  path: "/services/api-management-integration-platform",
-                  icon: Globe,
-                  category: "API & Integration"
-                }
-              ].map((service, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="group bg-zion-blue-light/10 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 hover:bg-zion-blue-light/20 transition-all duration-300 hover:transform hover:scale-105"
-                >
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="p-3 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg">
-                      <service.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <span className="text-sm text-zion-cyan font-medium">{service.category}</span>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
-                    {service.title}
-                  </h3>
-                  
-                  <p className="text-zion-slate-light mb-4 line-clamp-3">
-                    {service.description}
-                  </p>
-                  
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-2xl font-bold text-zion-cyan">{service.price}</span>
-                    <div className="flex items-center gap-1">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                      <span className="text-white text-sm">4.8+</span>
-                    </div>
-                  </div>
-                  
-                  <Link
-                    to={service.path}
-                    className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:from-zion-purple hover:to-zion-cyan transition-all duration-300"
-                  >
-                    <span>Learn More</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              viewport={{ once: true }}
-              className="text-center mt-16"
-            >
-              <Link
-                to="/innovative-services-showcase"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:from-zion-purple hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
-              >
-                <span>View All Innovative Services</span>
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </motion.div>
-          </div>
-        </section>
+      {/* Services Section */}
+      {/* Temporarily commented out for debugging
+      <Suspense fallback={<LoadingFallback message="Loading services..." />}>
+        <LazyServicesSection />
+      </Suspense>
+      */}
 
       {/* Features Section */}
       <Suspense fallback={<LoadingFallback message="Loading features..." />}>
@@ -592,6 +472,23 @@ const Home: React.FC = () => {
       <Suspense fallback={<LoadingFallback message="Loading CTA..." />}>
         <LazyCTASection />
       </Suspense>
+      */}
+
+      {/* Features Section */}
+      <Suspense fallback={<LoadingFallback message="Loading features..." />}>
+        <LazyFeaturesSection />
+      </Suspense>
+
+      {/* Testimonials Section */}
+      <Suspense fallback={<LoadingFallback message="Loading testimonials..." />}>
+        <LazyTestimonialsSection />
+      </Suspense>
+
+      {/* CTA Section */}
+      <Suspense fallback={<LoadingFallback message="Loading CTA..." />}>
+        <LazyCTASection />
+      </Suspense>
+      */}
     </div>
   );
 };
