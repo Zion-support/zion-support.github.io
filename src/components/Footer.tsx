@@ -19,11 +19,11 @@ const Footer: React.FC = () => {
       title: "Services",
       links: [
         { name: "AI Solutions", href: "/ai-solutions" },
-        { name: "Cybersecurity", href: "/cybersecurity" },
-        { name: "Cloud & DevOps", href: "/cloud-devops" },
-        { name: "Data Analytics", href: "/data-analytics" },
         { name: "Quantum Technology", href: "/quantum-technology" },
-        { name: "Enterprise Solutions", href: "/enterprise-solutions" }
+        { name: "Cybersecurity", href: "/services/cybersecurity" },
+        { name: "Cloud & DevOps", href: "/cloud-devops" },
+        { name: "Enterprise Solutions", href: "/enterprise-solutions" },
+        { name: "Micro SAAS", href: "/micro-saas" }
       ]
     },
     {
@@ -52,10 +52,10 @@ const Footer: React.FC = () => {
       title: "Resources",
       links: [
         { name: "Documentation", href: "/docs" },
-        { name: "API Reference", href: "/api" },
         { name: "Help Center", href: "/help" },
         { name: "Webinars", href: "/webinars" },
         { name: "White Papers", href: "/white-papers" },
+        { name: "FAQ", href: "/faq" },
         { name: "Support", href: "/support" }
       ]
     }

@@ -1,20 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { COMPREHENSIVE_SERVICES } from '../data/comprehensiveServices';
-import { ADVANCED_INNOVATIVE_SERVICES } from '../data/advancedInnovativeServices';
-import { EMERGING_TECH_SERVICES } from '../data/emergingTechServices';
+import { COMPREHENSIVE_SERVICES, ComprehensiveService } from '../data/comprehensiveServices';
+import { ADVANCED_INNOVATIVE_SERVICES, AdvancedInnovativeService } from '../data/advancedInnovativeServices';
+import { EMERGING_TECH_SERVICES, EmergingTechService } from '../data/emergingTechServices';
 
 export function NewServices() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [selectedService, setSelectedService] = useState<any>(null);
 
-  // Combine all services
+  // Combine all services with proper typing
   const allServices = [
     ...COMPREHENSIVE_SERVICES,
     ...ADVANCED_INNOVATIVE_SERVICES,
     ...EMERGING_TECH_SERVICES
-  ];
+  ] as (ComprehensiveService | AdvancedInnovativeService | EmergingTechService)[];
   
   // Get unique categories
   const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))];
@@ -23,7 +23,7 @@ export function NewServices() {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
+                         ('tags' in service && service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
     return matchesCategory && matchesSearch;
   });
 
@@ -199,7 +199,11 @@ export function NewServices() {
                       {service.category}
                     </span>
                     <span className="text-zion-cyan font-bold text-lg">
-                      ${service.price.toLocaleString()}
+                      ${'price' in service && typeof service.price === 'number' 
+                        ? service.price.toLocaleString() 
+                        : 'price' in service && typeof service.price === 'object' && service.price.monthly
+                        ? service.price.monthly.toLocaleString()
+                        : 'Custom'}
                       <span className="text-sm text-zion-slate-light">/month</span>
                     </span>
                   </div>
@@ -246,10 +250,10 @@ export function NewServices() {
                 <div className="border-t border-zion-cyan/20 pt-4">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-zion-slate-light">
-                      Delivery: {service.estimatedDelivery}
+                      Delivery: {'estimatedDelivery' in service ? service.estimatedDelivery : 'Custom'}
                     </span>
                     <span className="text-zion-cyan font-medium">
-                      {service.supportLevel} support
+                      {'supportLevel' in service ? service.supportLevel : 'Standard'} support
                     </span>
                   </div>
                   <div className="mt-3 text-center">
@@ -260,7 +264,7 @@ export function NewServices() {
                 </div>
 
                 {/* Tags */}
-                {service.tags && (
+                {'tags' in service && service.tags && (
                   <div className="mt-4 flex flex-wrap gap-2">
                     {service.tags.slice(0, 4).map((tag, index) => (
                       <span
@@ -303,7 +307,11 @@ export function NewServices() {
                       {service.category}
                     </span>
                     <span className="text-zion-cyan font-bold text-lg">
-                      ${service.price.toLocaleString()}
+                      ${'price' in service && typeof service.price === 'number' 
+                        ? service.price.toLocaleString() 
+                        : 'price' in service && typeof service.price === 'object' && service.price.monthly
+                        ? service.price.monthly.toLocaleString()
+                        : 'Custom'}
                       <span className="text-sm text-zion-slate-light">/month</span>
                     </span>
                   </div>
@@ -350,10 +358,10 @@ export function NewServices() {
                 <div className="border-t border-zion-cyan/20 pt-4">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-zion-slate-light">
-                      Delivery: {service.estimatedDelivery}
+                      Delivery: {'estimatedDelivery' in service ? service.estimatedDelivery : 'Custom'}
                     </span>
                     <span className="text-zion-cyan font-medium">
-                      {service.supportLevel} support
+                      {'supportLevel' in service ? service.supportLevel : 'Standard'} support
                     </span>
                   </div>
                   <div className="mt-3 text-center">
@@ -364,7 +372,7 @@ export function NewServices() {
                 </div>
 
                 {/* Tags */}
-                {service.tags && (
+                {'tags' in service && service.tags && (
                   <div className="mt-4 flex flex-wrap gap-2">
                     {service.tags.slice(0, 4).map((tag, index) => (
                       <span
@@ -491,15 +499,19 @@ export function NewServices() {
                   </div>
                   <div>
                     <span className="text-zion-cyan font-medium">Price:</span>
-                    <span className="text-white ml-2">${selectedService.price.toLocaleString()}/{selectedService.pricingModel}</span>
+                    <span className="text-white ml-2">${'price' in selectedService && typeof selectedService.price === 'number' 
+                      ? selectedService.price.toLocaleString() 
+                      : 'price' in selectedService && typeof selectedService.price === 'object' && selectedService.price.monthly
+                      ? selectedService.price.monthly.toLocaleString()
+                      : 'Custom'}/{'pricingModel' in selectedService ? selectedService.pricingModel : 'Custom'}</span>
                   </div>
                   <div>
                     <span className="text-zion-cyan font-medium">Delivery:</span>
-                    <span className="text-white ml-2">{selectedService.estimatedDelivery}</span>
+                    <span className="text-white ml-2">{'estimatedDelivery' in selectedService ? selectedService.estimatedDelivery : 'Custom'}</span>
                   </div>
                   <div>
                     <span className="text-zion-cyan font-medium">Support:</span>
-                    <span className="text-white ml-2">{selectedService.supportLevel}</span>
+                    <span className="text-white ml-2">{'supportLevel' in selectedService ? selectedService.supportLevel : 'Standard'}</span>
                   </div>
                 </div>
               </div>
@@ -534,7 +546,7 @@ export function NewServices() {
                 <div className="mb-6">
                   <h4 className="text-white font-medium mb-2">Use Cases:</h4>
                   <ul className="space-y-1">
-                    {selectedService.useCases.map((useCase, index) => (
+                    {'useCases' in selectedService && selectedService.useCases.map((useCase, index) => (
                       <li key={index} className="text-zion-slate-light text-sm flex items-center">
                         <span className="text-zion-cyan mr-2">•</span>
                         {useCase}
@@ -567,8 +579,8 @@ export function NewServices() {
               </div>
               <div className="text-center mt-4">
                 <p className="text-zion-slate-light text-sm">
-                  Market Price: {selectedService.marketPrice} | 
-                  Estimated Delivery: {selectedService.estimatedDelivery}
+                  Market Price: {'marketPrice' in selectedService ? selectedService.marketPrice : 'Custom'} | 
+                  Estimated Delivery: {'estimatedDelivery' in selectedService ? selectedService.estimatedDelivery : 'Custom'}
                 </p>
               </div>
             </div>

@@ -1,246 +1,259 @@
-import React, { useState } from "react";
-import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  MapPinIcon, 
+  PhoneIcon, 
+  EnvelopeIcon, 
+  ClockIcon,
+  ChatBubbleLeftRightIcon
+} from '@heroicons/react/24/outline';
 
-export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
+const Contact: React.FC = () => {
+  const contactMethods = [
+    {
+      name: 'Phone Support',
+      description: 'Speak directly with our technical experts',
+      icon: PhoneIcon,
+      contact: '+1 (302) 464-0950',
+      href: 'tel:+13024640950',
+      available: '24/7'
+    },
+    {
+      name: 'Email Support',
+      description: 'Send us detailed inquiries and get comprehensive responses',
+      icon: EnvelopeIcon,
+      contact: 'info@ziontechgroup.com',
+      href: 'mailto:info@ziontechgroup.com',
+      available: 'Within 4 hours'
+    },
+    {
+      name: 'Live Chat',
+      description: 'Get instant help from our AI-powered support team',
+      icon: ChatBubbleLeftRightIcon,
+      contact: 'Available Now',
+      href: '#',
+      available: '24/7'
+    }
+  ];
 
-  const [errors, setErrors] = useState<{
-    name?: string;
-    email?: string;
-    subject?: string;
-    message?: string;
-  }>({});
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-    
-    // Clear error when user starts typing
-    if (errors[name as keyof typeof errors]) {
-      setErrors(prev => ({
-        ...prev,
-        [name]: undefined
-      }));
+  const officeLocations = [
+    {
+      name: 'Global Headquarters',
+      address: '364 E Main St STE 1008',
+      city: 'Middletown, DE 19709',
+      country: 'United States',
+      icon: MapPinIcon,
+      hours: 'Mon-Fri: 9:00 AM - 6:00 PM EST'
     }
-  };
-
-  const validateForm = () => {
-    const newErrors: typeof errors = {};
-    
-    if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
-    }
-    
-    if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Email is invalid';
-    }
-    
-    if (!formData.subject.trim()) {
-      newErrors.subject = 'Subject is required';
-    }
-    
-    if (!formData.message.trim()) {
-      newErrors.message = 'Message is required';
-    }
-    
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!validateForm()) {
-      return;
-    }
-    
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData);
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
-    
-    // Show success message (you could use a toast notification here)
-    alert('Thank you for your message! We will get back to you soon.');
-  };
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-purple py-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Get in Touch
-            </h1>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Ready to transform your business with AI? Let's discuss how we can help 
-              you achieve your goals with cutting-edge technology solutions.
-            </p>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Header Section */}
+      <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-6xl font-bold text-white mb-6"
+          >
+            Get in Touch
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-xl text-gray-300 max-w-3xl mx-auto"
+          >
+            Ready to transform your business with cutting-edge AI and technology solutions? 
+            Our team is here to help you succeed.
+          </motion.p>
+        </div>
+      </div>
+
+      {/* Contact Methods */}
+      <div className="px-4 sm:px-6 lg:px-8 pb-16">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {contactMethods.map((method, index) => (
+              <motion.div
+                key={method.name}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"
+              >
+                <div className="flex items-center space-x-4 mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <method.icon className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white">{method.name}</h3>
+                    <p className="text-gray-400 text-sm">{method.description}</p>
+                  </div>
+                </div>
+                
+                <div className="space-y-3">
+                  <a 
+                    href={method.href}
+                    className="block text-2xl font-bold text-purple-400 hover:text-purple-300 transition-colors duration-200"
+                  >
+                    {method.contact}
+                  </a>
+                  <p className="text-gray-400 text-sm">
+                    Available: <span className="text-green-400">{method.available}</span>
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Office Locations */}
+      <div className="px-4 sm:px-6 lg:px-8 pb-16">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="text-3xl font-bold text-white text-center mb-12"
+          >
+            Our Offices
+          </motion.h2>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {officeLocations.map((office, index) => (
+              <motion.div
+                key={office.name}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+                    <office.icon className="h-6 w-6 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold text-white mb-2">{office.name}</h3>
+                    <div className="space-y-2 text-gray-300">
+                      <p>{office.address}</p>
+                      <p>{office.city}</p>
+                      <p>{office.country}</p>
+                      <div className="flex items-center space-x-2 mt-3">
+                        <ClockIcon className="h-4 w-4 text-purple-400" />
+                        <span className="text-sm">{office.hours}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
+        </div>
+      </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Information */}
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-2xl font-semibold text-white mb-6">
-                  Contact Information
-                </h2>
-                <p className="text-zion-slate-light mb-8">
-                  We're here to help and answer any questions you might have. 
-                  We look forward to hearing from you.
-                </p>
-              </div>
-
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold mb-1">Phone</h3>
-                    <p className="text-zion-slate-light">+1 (555) 123-4567</p>
-                  </div>
+      {/* Contact Form */}
+      <div className="px-4 sm:px-6 lg:px-8 pb-16">
+        <div className="max-w-4xl mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.0 }}
+            className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"
+          >
+            <h2 className="text-3xl font-bold text-white text-center mb-8">
+              Send us a Message
+            </h2>
+            
+            <form className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-2">
+                    First Name
+                  </label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors duration-200"
+                    placeholder="Enter your first name"
+                  />
                 </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold mb-1">Email</h3>
-                    <p className="text-zion-slate-light">info@ziontechgroup.com</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold mb-1">Office</h3>
-                    <p className="text-zion-slate-light">
-                      123 Innovation Drive<br />
-                      Tech City, TC 12345
-                    </p>
-                  </div>
+                <div>
+                  <label htmlFor="lastName" className="block text-sm font-medium text-gray-300 mb-2">
+                    Last Name
+                  </label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors duration-200"
+                    placeholder="Enter your last name"
+                  />
                 </div>
               </div>
-            </div>
-
-            {/* Contact Form */}
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
-              <h2 className="text-2xl font-semibold text-white mb-6">
-                Send us a Message
-              </h2>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-white font-medium mb-2">
-                    Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-colors ${
-                      errors.name ? 'border-red-400' : 'border-white/20'
-                    }`}
-                    placeholder="Your full name"
-                  />
-                  {errors.name && (
-                    <p className="text-red-400 text-sm mt-1">{errors.name}</p>
-                  )}
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-white font-medium mb-2">
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-colors ${
-                      errors.email ? 'border-red-400' : 'border-white/20'
-                    }`}
-                    placeholder="your.email@example.com"
-                  />
-                  {errors.email && (
-                    <p className="text-red-400 text-sm mt-1">{errors.email}</p>
-                  )}
-                </div>
-
-                <div>
-                  <label htmlFor="subject" className="block text-white font-medium mb-2">
-                    Subject *
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-colors ${
-                      errors.subject ? 'border-red-400' : 'border-white/20'
-                    }`}
-                    placeholder="What can we help you with?"
-                  />
-                  {errors.subject && (
-                    <p className="text-red-400 text-sm mt-1">{errors.subject}</p>
-                  )}
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-white font-medium mb-2">
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={5}
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-colors resize-none ${
-                      errors.message ? 'border-red-400' : 'border-white/20'
-                    }`}
-                    placeholder="Tell us more about your project or inquiry..."
-                  />
-                  {errors.message && (
-                    <p className="text-red-400 text-sm mt-1">{errors.message}</p>
-                  )}
-                </div>
-
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors duration-200"
+                  placeholder="Enter your email address"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                  Company
+                </label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors duration-200"
+                  placeholder="Enter your company name"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={6}
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors duration-200 resize-none"
+                  placeholder="Tell us about your project or inquiry..."
+                />
+              </div>
+              
+              <div className="text-center">
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/30 hover:scale-105"
+                  className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Send Message
                 </button>
-              </form>
-            </div>
-          </div>
+              </div>
+            </form>
+          </motion.div>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default Contact;
