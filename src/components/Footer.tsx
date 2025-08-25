@@ -94,7 +94,7 @@ export function Footer() {
         { label: "Careers", path: "/careers" },
         { label: "Partners", path: "/partners" },
         { label: "Contact", path: "/contact" },
-        { label: "Blog", path: "/blog" }
+        { label: "News", path: "/news" }
       ]
     }
   ];
@@ -114,7 +114,7 @@ export function Footer() {
     },
     { 
       name: 'GitHub', 
-      url: 'https://github.com/ziontechgroup', 
+      url: 'https://github.com/Zion-Holdings', 
       icon: Github,
       fallback: 'https://github.com'
     },
@@ -165,8 +165,8 @@ export function Footer() {
             className="absolute text-cyan-500 text-xs animate-matrix-rain opacity-10"
             style={{
               left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 15}s`,
-              animationDuration: `${15 + Math.random() * 10}s`
+              animationDelay: `${Math.random() * 10}s`,
+              animationDuration: `${10 + Math.random() * 5}s`
             }}
           >
             {Math.random() > 0.5 ? '1' : '0'}
@@ -175,90 +175,79 @@ export function Footer() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main Footer Content */}
-        <div className="py-16">
-          {/* Top Section */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-            {/* Company Info */}
-            <div className="space-y-6">
-              <div className="flex items-center space-x-3">
-                <div className="relative">
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-xl flex items-center justify-center">
-                    <Sparkles className="w-7 h-7 text-white" />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-xl blur-lg opacity-50"></div>
-                </div>
-                <div>
-                  <h2 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
-                    Zion Tech Group
-                  </h2>
-                  <p className="text-sm text-cyan-300 font-medium">Future Technology Solutions</p>
-                </div>
+        {/* Top Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 py-16 border-b border-cyan-500/30">
+          {/* Company Info */}
+          <div className="space-y-6">
+            <div className="flex items-center space-x-3">
+              <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-xl flex items-center justify-center">
+                <Sparkles className="w-7 h-7 text-white" />
               </div>
-              
-              <p className="text-gray-300 leading-relaxed max-w-md">
-                Pioneering the future of technology with revolutionary AI consciousness, 
-                quantum computing, and autonomous solutions that transform businesses worldwide.
-              </p>
-              
-              {/* Contact Information */}
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Phone className="w-4 h-4 text-cyan-400" />
-                  <span>+1 302 464 0950</span>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Mail className="w-4 h-4 text-cyan-400" />
-                  <span>kleber@ziontechgroup.com</span>
-                </div>
-                <div className="flex items-start space-x-3 text-gray-300">
-                  <MapPin className="w-4 h-4 text-cyan-400 mt-1" />
-                  <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-300">
-                  <Globe className="w-4 h-4 text-cyan-400" />
-                  <a 
-                    href="https://ziontechgroup.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="hover:text-cyan-300 transition-colors duration-200"
-                  >
-                    ziontechgroup.com
-                  </a>
-                </div>
+              <div>
+                <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
+                  Zion Tech Group
+                </h3>
+                <p className="text-sm text-cyan-300">Future Technology Solutions</p>
               </div>
             </div>
+            
+            <p className="text-gray-300 leading-relaxed max-w-md">
+              Pioneering the future of technology with revolutionary AI consciousness, 
+              quantum computing, and autonomous solutions that transform businesses worldwide.
+            </p>
 
-            {/* Newsletter Signup */}
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-xl font-semibold text-white mb-2">Stay Updated</h3>
-                <p className="text-gray-300">Get the latest insights on AI, quantum computing, and emerging technologies.</p>
+            {/* Contact Information */}
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3 text-gray-300">
+                <Phone className="w-5 h-5 text-cyan-400" />
+                <span>+1 302 464 0950</span>
               </div>
-              
-              <div className="space-y-4">
-                <div className="flex space-x-3">
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    className="flex-1 futuristic-input"
-                  />
-                  <button className="futuristic-btn neon-glow neon-cyan">
-                    Subscribe
-                  </button>
-                </div>
-                <p className="text-xs text-gray-400">
-                  We respect your privacy. Unsubscribe at any time.
-                </p>
+              <div className="flex items-center space-x-3 text-gray-300">
+                <Mail className="w-5 h-5 text-cyan-400" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-start space-x-3 text-gray-300">
+                <MapPin className="w-5 h-5 text-cyan-400 mt-0.5" />
+                <span className="text-sm">364 E Main St STE 1008<br />Middletown DE 19709</span>
               </div>
             </div>
           </div>
 
-          {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {/* Newsletter Signup */}
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-2">Stay Updated</h3>
+              <p className="text-gray-300">Get the latest insights on AI, quantum computing, and emerging technologies.</p>
+            </div>
+            
+            <form className="space-y-4">
+              <div>
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="w-full futuristic-input"
+                />
+              </div>
+              <button
+                type="submit"
+                className="futuristic-btn neon-glow neon-cyan w-full"
+              >
+                Subscribe to Newsletter
+              </button>
+            </form>
+            
+            <p className="text-xs text-gray-400">
+              We respect your privacy. Unsubscribe at any time.
+            </p>
+          </div>
+        </div>
+
+        {/* Middle Section */}
+        <div className="py-16 border-b border-cyan-500/30">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {footerSections.map((section, index) => (
               <div key={index} className="space-y-4">
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-2">
                   <section.icon className="w-5 h-5 text-cyan-400" />
                   <h3 className="text-lg font-semibold text-white">{section.title}</h3>
                 </div>
@@ -267,9 +256,8 @@ export function Footer() {
                     <li key={linkIndex}>
                       <Link
                         to={link.path}
-                        className="text-gray-300 hover:text-cyan-300 transition-colors duration-200 text-sm flex items-center group"
+                        className="text-gray-300 hover:text-cyan-300 transition-colors duration-200 text-sm"
                       >
-                        <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                         {link.label}
                       </Link>
                     </li>
@@ -278,42 +266,41 @@ export function Footer() {
               </div>
             ))}
           </div>
+        </div>
 
-          {/* Bottom Section */}
-          <div className="border-t border-cyan-500/20 pt-8">
-            <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
-              {/* Copyright */}
-              <div className="text-gray-400 text-sm">
-                © {currentYear} Zion Tech Group. All rights reserved. | 
-                <Link to="/privacy" className="ml-2 hover:text-cyan-300 transition-colors duration-200">Privacy Policy</Link> | 
-                <Link to="/terms" className="ml-2 hover:text-cyan-300 transition-colors duration-200">Terms of Service</Link>
-              </div>
-
-              {/* Social Links */}
-              <div className="flex items-center space-x-4">
-                <span className="text-gray-400 text-sm mr-2">Follow us:</span>
-                {socialLinks.map((social, index) => (
-                  <button
-                    key={index}
-                    onClick={() => handleSocialLink(social)}
-                    className="w-8 h-8 bg-cyan-500/10 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:bg-cyan-500/20 hover:border-cyan-500/50 transition-all duration-200 group"
-                    aria-label={`Follow us on ${social.name}`}
-                  >
-                    <social.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-200" />
-                  </button>
-                ))}
-              </div>
+        {/* Bottom Section */}
+        <div className="py-8">
+          <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
+            <div className="flex items-center space-x-2 text-gray-400">
+              <Heart className="w-4 h-4 text-red-400" />
+              <span>Made with Love by Zion Tech Group</span>
             </div>
-
-            {/* Made with Love */}
-            <div className="text-center mt-6 pt-6 border-t border-cyan-500/20">
-              <p className="text-gray-400 text-sm flex items-center justify-center">
-                Made with <Heart className="w-4 h-4 text-red-400 mx-1" /> by Zion Tech Group
-              </p>
+            
+            <div className="flex items-center space-x-4">
+              {socialLinks.map((link, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleSocialLink(link)}
+                  className="p-2 text-gray-400 hover:text-cyan-300 hover:bg-cyan-500/10 rounded-lg transition-all duration-200 group"
+                  aria-label={`Visit ${link.name}`}
+                >
+                  <link.icon className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
+                </button>
+              ))}
             </div>
+          </div>
+          
+          <div className="mt-6 pt-6 border-t border-cyan-500/30 text-center">
+            <p className="text-gray-400 text-sm">
+              © {currentYear} Zion Tech Group. All rights reserved. | 
+              <Link to="/privacy" className="ml-2 hover:text-cyan-300 transition-colors">Privacy Policy</Link> | 
+              <Link to="/terms" className="ml-2 hover:text-cyan-300 transition-colors">Terms of Service</Link>
+            </p>
           </div>
         </div>
       </div>
     </footer>
   );
 }
+
+export default Footer;
