@@ -2,718 +2,579 @@ export interface SpecializedITService {
   id: string;
   title: string;
   description: string;
-  category: 'Enterprise Infrastructure' | 'Digital Transformation' | 'Industry Solutions' | 'Advanced Analytics' | 'Integration Services' | 'Managed Services' | 'Consulting' | 'Training & Support';
+  category: string;
   subcategory: string;
-  price: {
-    monthly: number;
-    yearly: number;
-    enterprise: number;
-    oneTime: number;
-    currency: string;
-  };
+  price: number;
+  currency: string;
+  pricingModel: string;
   features: string[];
   benefits: string[];
   useCases: string[];
   targetAudience: string[];
-  technologies: string[];
-  integration: string[];
-  pricingTier: 'Starter' | 'Professional' | 'Enterprise' | 'Custom';
-  website: string;
-  contactInfo: {
-    email: string;
-    phone: string;
-    address: string;
-  };
-  rating: number;
-  reviewCount: number;
-  launchDate: string;
-  status: 'Active' | 'Beta' | 'Coming Soon';
-  marketPrice: string;
+  tags: string[];
   estimatedDelivery: string;
   supportLevel: string;
-  industryFocus: string[];
+  marketPrice: string;
+  contactInfo: {
+    phone: string;
+    email: string;
+    website: string;
+  };
+  technology: string[];
+  integrations: string[];
+  compliance: string[];
+  certifications: string[];
 }
 
 export const SPECIALIZED_IT_SERVICES: SpecializedITService[] = [
-  // Enterprise Infrastructure Services
+  // Advanced Cybersecurity Solutions
   {
-    id: 'zion-enterprise-architecture-transformation',
-    title: 'Zion Enterprise Architecture Transformation',
-    description: 'Comprehensive enterprise architecture transformation service that modernizes legacy systems, implements microservices architecture, and establishes scalable digital foundations.',
-    category: 'Enterprise Infrastructure',
-    subcategory: 'Architecture Modernization',
-    price: {
-      monthly: 0,
-      yearly: 0,
-      enterprise: 0,
-      oneTime: 50000,
-      currency: '$'
-    },
+    id: "zero-trust-security-platform",
+    title: "Zero Trust Security Platform",
+    description: "Comprehensive zero trust security platform that implements continuous verification, least privilege access, and micro-segmentation to protect enterprise networks and applications.",
+    category: "Cybersecurity",
+    subcategory: "Zero Trust Security",
+    price: 1200,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      'Legacy system assessment and analysis',
-      'Microservices architecture design',
-      'API-first strategy development',
-      'Data architecture optimization',
-      'Security architecture implementation',
-      'Performance optimization',
-      'Scalability planning',
-      'Migration roadmap creation'
+      "Continuous identity verification",
+      "Least privilege access control",
+      "Micro-segmentation",
+      "Real-time threat detection",
+      "Behavioral analytics",
+      "Multi-factor authentication",
+      "API security",
+      "Compliance reporting"
     ],
     benefits: [
-      'Reduce technical debt by 60%',
-      'Improve system performance by 300%',
-      'Enable rapid feature development',
-      'Enhance system reliability',
-      'Future-proof architecture foundation'
+      "Reduce security breaches by 90%",
+      "Eliminate lateral movement",
+      "Improve compliance posture",
+      "Real-time security monitoring",
+      "Scalable security architecture"
     ],
     useCases: [
-      'Legacy system modernization',
-      'Digital transformation initiatives',
-      'Microservices migration',
-      'API strategy development',
-      'Enterprise scalability planning'
+      "Enterprise networks",
+      "Cloud environments",
+      "Remote workforce",
+      "Critical infrastructure",
+      "Financial services"
     ],
     targetAudience: [
-      'Chief Technology Officers',
-      'Enterprise Architects',
-      'IT Directors',
-      'Digital Transformation Leaders',
-      'System Architects'
+      "CISOs",
+      "Security teams",
+      "IT managers",
+      "Compliance officers",
+      "Enterprise organizations"
     ],
-    technologies: [
-      'Microservices Architecture',
-      'API Management',
-      'Container Technologies',
-      'Cloud Platforms',
-      'DevOps Practices'
-    ],
-    integration: [
-      'Existing enterprise systems',
-      'Cloud platforms',
-      'Monitoring tools',
-      'Security frameworks',
-      'Development tools'
-    ],
-    pricingTier: 'Custom',
-    website: 'https://ziontechgroup.com/enterprise-architecture',
+    tags: ["Zero Trust", "Cybersecurity", "Identity Management", "Network Security", "Compliance"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$1,200 - $3,500/month",
     contactInfo: {
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    rating: 4.9,
-    reviewCount: 45,
-    launchDate: '2024-01-10',
-    status: 'Active',
-    marketPrice: '$50,000 - $500,000',
-    estimatedDelivery: '12-24 weeks',
-    supportLevel: 'Dedicated Enterprise Support Team',
-    industryFocus: ['Financial Services', 'Healthcare', 'Manufacturing', 'Retail', 'Government']
+    technology: ["Identity providers", "Network segmentation", "Behavioral analytics", "AI/ML", "Zero trust architecture"],
+    integrations: ["Active Directory", "LDAP", "SAML", "OAuth", "SIEM systems"],
+    compliance: ["SOC2", "ISO 27001", "NIST", "Zero Trust Framework", "GDPR"]
   },
 
+  // Cloud-Native Development Platform
   {
-    id: 'zion-hybrid-cloud-orchestration-platform',
-    title: 'Zion Hybrid Cloud Orchestration Platform',
-    description: 'Advanced hybrid cloud orchestration platform that seamlessly manages workloads across on-premises, private cloud, and public cloud environments with intelligent resource optimization.',
-    category: 'Enterprise Infrastructure',
-    subcategory: 'Cloud Orchestration',
-    price: {
-      monthly: 899,
-      yearly: 8990,
-      enterprise: 29999,
-      oneTime: 0,
-      currency: '$'
-    },
+    id: "cloud-native-development-platform",
+    title: "Cloud-Native Development Platform",
+    description: "Enterprise-grade cloud-native development platform that provides container orchestration, microservices architecture, and DevOps automation for modern application development.",
+    category: "Cloud Computing",
+    subcategory: "Development Platform",
+    price: 800,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      'Multi-cloud workload management',
-      'Intelligent resource allocation',
-      'Cost optimization algorithms',
-      'Security and compliance automation',
-      'Performance monitoring',
-      'Disaster recovery orchestration',
-      'API management',
-      'Custom dashboards'
+      "Kubernetes orchestration",
+      "Microservices architecture",
+      "CI/CD pipelines",
+      "Container registry",
+      "Service mesh",
+      "Monitoring and logging",
+      "Auto-scaling",
+      "Multi-cloud support"
     ],
     benefits: [
-      'Reduce cloud costs by 40%',
-      'Improve resource utilization by 60%',
-      'Enhance security posture',
-      'Simplify multi-cloud management',
-      'Accelerate deployment cycles'
+      "Accelerate development by 60%",
+      "Improve scalability and reliability",
+      "Reduce infrastructure costs",
+      "Faster time to market",
+      "Modern development practices"
     ],
     useCases: [
-      'Hybrid cloud management',
-      'Multi-cloud operations',
-      'Workload optimization',
-      'Cost management',
-      'Compliance automation'
+      "Web applications",
+      "Mobile backends",
+      "API services",
+      "Microservices",
+      "Cloud-native apps"
     ],
     targetAudience: [
-      'Cloud Architects',
-      'DevOps Engineers',
-      'Infrastructure Managers',
-      'IT Operations Teams',
-      'Security Engineers'
+      "Development teams",
+      "DevOps engineers",
+      "Software architects",
+      "IT managers",
+      "Startups and enterprises"
     ],
-    technologies: [
-      'Kubernetes',
-      'Terraform',
-      'Cloud APIs',
-      'Monitoring tools',
-      'Security frameworks'
-    ],
-    integration: [
-      'AWS, Azure, GCP',
-      'On-premises systems',
-      'Monitoring platforms',
-      'Security tools',
-      'CI/CD pipelines'
-    ],
-    pricingTier: 'Enterprise',
-    website: 'https://ziontechgroup.com/hybrid-cloud',
+    tags: ["Cloud Native", "Kubernetes", "Microservices", "DevOps", "Containers"],
+    estimatedDelivery: "6-8 weeks",
+    supportLevel: "premium",
+    marketPrice: "$800 - $2,000/month",
     contactInfo: {
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    rating: 4.8,
-    reviewCount: 78,
-    launchDate: '2024-02-15',
-    status: 'Active',
-    marketPrice: '$899 - $29,999/month',
-    estimatedDelivery: '4-6 weeks',
-    supportLevel: '24/7 Enterprise Support',
-    industryFocus: ['Technology', 'Financial Services', 'Healthcare', 'Manufacturing', 'Retail']
+    technology: ["Kubernetes", "Docker", "Helm", "Istio", "Prometheus", "Grafana"],
+    integrations: ["AWS", "Azure", "GCP", "GitHub", "GitLab", "Jenkins"],
+    compliance: ["SOC2", "ISO 27001", "Cloud security standards"]
   },
 
-  // Digital Transformation Services
+  // AI-Powered IT Operations
   {
-    id: 'zion-digital-workplace-transformation',
-    title: 'Zion Digital Workplace Transformation',
-    description: 'End-to-end digital workplace transformation service that modernizes collaboration, communication, and productivity tools for the hybrid work environment.',
-    category: 'Digital Transformation',
-    subcategory: 'Workplace Modernization',
-    price: {
-      monthly: 0,
-      yearly: 0,
-      enterprise: 0,
-      oneTime: 75000,
-      currency: '$'
-    },
+    id: "ai-powered-it-operations",
+    title: "AI-Powered IT Operations Platform",
+    description: "Intelligent IT operations platform that uses AI to automate monitoring, predict issues, and optimize performance across complex IT infrastructure and applications.",
+    category: "IT Operations",
+    subcategory: "AI Operations",
+    price: 1500,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      'Collaboration platform implementation',
-      'Communication tools integration',
-      'Productivity suite deployment',
-      'Mobile-first strategy',
-      'Security and compliance',
-      'Change management',
-      'Training and adoption',
-      'Ongoing optimization'
+      "AI-powered monitoring",
+      "Predictive analytics",
+      "Automated incident response",
+      "Performance optimization",
+      "Root cause analysis",
+      "Capacity planning",
+      "Cost optimization",
+      "Real-time dashboards"
     ],
     benefits: [
-      'Increase productivity by 35%',
-      'Improve employee satisfaction',
-      'Reduce operational costs',
-      'Enhance collaboration',
-      'Support hybrid work models'
+      "Reduce downtime by 80%",
+      "Improve performance by 40%",
+      "Automate routine tasks",
+      "Predict and prevent issues",
+      "Optimize resource usage"
     ],
     useCases: [
-      'Remote work enablement',
-      'Collaboration improvement',
-      'Productivity enhancement',
-      'Digital transformation',
-      'Workplace modernization'
+      "Data center operations",
+      "Cloud infrastructure",
+      "Application monitoring",
+      "Network management",
+      "Service desk automation"
     ],
     targetAudience: [
-      'Chief Human Resources Officers',
-      'IT Directors',
-      'Change Management Teams',
-      'Operations Managers',
-      'Employee Experience Leaders'
+      "IT operations teams",
+      "DevOps engineers",
+      "System administrators",
+      "IT managers",
+      "Operations managers"
     ],
-    technologies: [
-      'Microsoft 365',
-      'Google Workspace',
-      'Slack, Teams',
-      'Video conferencing',
-      'Mobile applications'
-    ],
-    integration: [
-      'Existing IT systems',
-      'HR platforms',
-      'Security tools',
-      'Communication systems',
-      'Productivity tools'
-    ],
-    pricingTier: 'Custom',
-    website: 'https://ziontechgroup.com/digital-workplace',
+    tags: ["AI Operations", "IT Operations", "Monitoring", "Automation", "Predictive Analytics"],
+    estimatedDelivery: "8-10 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$1,500 - $4,000/month",
     contactInfo: {
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    rating: 4.7,
-    reviewCount: 92,
-    launchDate: '2024-01-25',
-    status: 'Active',
-    marketPrice: '$75,000 - $300,000',
-    estimatedDelivery: '16-20 weeks',
-    supportLevel: 'Dedicated Transformation Team',
-    industryFocus: ['Professional Services', 'Technology', 'Financial Services', 'Healthcare', 'Education']
+    technology: ["Machine Learning", "Predictive Analytics", "Monitoring tools", "Automation platforms", "AI/ML"],
+    integrations: ["Monitoring tools", "Ticketing systems", "Cloud platforms", "Configuration management"],
+    compliance: ["SOC2", "ISO 27001", "ITIL", "IT operations standards"]
   },
 
+  // Enterprise Data Management
   {
-    id: 'zion-customer-experience-transformation',
-    title: 'Zion Customer Experience Transformation',
-    description: 'Comprehensive customer experience transformation service that leverages AI, analytics, and digital technologies to create seamless, personalized customer journeys.',
-    category: 'Digital Transformation',
-    subcategory: 'Customer Experience',
-    price: {
-      monthly: 0,
-      yearly: 0,
-      enterprise: 0,
-      oneTime: 100000,
-      currency: '$'
-    },
+    id: "enterprise-data-management-platform",
+    title: "Enterprise Data Management Platform",
+    description: "Comprehensive data management platform that provides data governance, quality management, and analytics capabilities for enterprise data assets.",
+    category: "Data Management",
+    subcategory: "Enterprise Data",
+    price: 1000,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      'Customer journey mapping',
-      'Omnichannel strategy',
-      'AI-powered personalization',
-      'Analytics and insights',
-      'Integration services',
-      'Change management',
-      'Performance optimization',
-      'Ongoing support'
+      "Data governance framework",
+      "Data quality management",
+      "Data lineage tracking",
+      "Master data management",
+      "Data catalog",
+      "Privacy and compliance",
+      "Data analytics",
+      "Integration capabilities"
     ],
     benefits: [
-      'Increase customer satisfaction by 45%',
-      'Improve conversion rates by 30%',
-      'Reduce customer churn',
-      'Enhance brand loyalty',
-      'Optimize customer lifetime value'
+      "Improve data quality by 70%",
+      "Ensure regulatory compliance",
+      "Better decision making",
+      "Reduce data silos",
+      "Enhanced data security"
     ],
     useCases: [
-      'Customer experience improvement',
-      'Digital transformation',
-      'Omnichannel strategy',
-      'Personalization implementation',
-      'Customer journey optimization'
+      "Data governance",
+      "Regulatory compliance",
+      "Business intelligence",
+      "Data integration",
+      "Analytics initiatives"
     ],
     targetAudience: [
-      'Chief Customer Officers',
-      'Marketing Directors',
-      'Customer Experience Managers',
-      'Digital Transformation Leaders',
-      'Product Managers'
+      "Data architects",
+      "Data engineers",
+      "Compliance officers",
+      "Business analysts",
+      "IT managers"
     ],
-    technologies: [
-      'Customer Data Platforms',
-      'AI and Machine Learning',
-      'Analytics platforms',
-      'Marketing automation',
-      'CRM systems'
-    ],
-    integration: [
-      'Existing customer systems',
-      'Marketing platforms',
-      'Analytics tools',
-      'CRM systems',
-      'E-commerce platforms'
-    ],
-    pricingTier: 'Custom',
-    website: 'https://ziontechgroup.com/customer-experience',
+    tags: ["Data Management", "Data Governance", "Data Quality", "Compliance", "Analytics"],
+    estimatedDelivery: "10-12 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$1,000 - $3,000/month",
     contactInfo: {
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    rating: 4.9,
-    reviewCount: 67,
-    launchDate: '2024-03-05',
-    status: 'Active',
-    marketPrice: '$100,000 - $500,000',
-    estimatedDelivery: '20-24 weeks',
-    supportLevel: 'Dedicated CX Transformation Team',
-    industryFocus: ['Retail', 'E-commerce', 'Financial Services', 'Healthcare', 'Travel & Hospitality']
+    technology: ["Data governance tools", "ETL platforms", "Data quality tools", "Analytics platforms", "Cloud storage"],
+    integrations: ["Data warehouses", "Business intelligence tools", "CRM systems", "ERP systems"],
+    compliance: ["GDPR", "CCPA", "SOX", "SOC2", "Data privacy regulations"]
   },
 
-  // Industry Solutions
+  // Network Infrastructure Management
   {
-    id: 'zion-healthcare-digital-transformation-suite',
-    title: 'Zion Healthcare Digital Transformation Suite',
-    description: 'Comprehensive digital transformation solution specifically designed for healthcare organizations, including patient engagement, operational efficiency, and compliance automation.',
-    category: 'Industry Solutions',
-    subcategory: 'Healthcare',
-    price: {
-      monthly: 1299,
-      yearly: 12990,
-      enterprise: 39999,
-      oneTime: 0,
-      currency: '$'
-    },
+    id: "network-infrastructure-management",
+    title: "Network Infrastructure Management Platform",
+    description: "Advanced network management platform that provides comprehensive monitoring, automation, and optimization for enterprise network infrastructure.",
+    category: "Network Management",
+    subcategory: "Infrastructure",
+    price: 700,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      'Patient portal and engagement',
-      'Electronic health records integration',
-      'Telemedicine platform',
-      'Compliance automation (HIPAA)',
-      'Operational analytics',
-      'Staff productivity tools',
-      'Security and privacy',
-      'Mobile applications'
+      "Network monitoring",
+      "Traffic analysis",
+      "Performance optimization",
+      "Security monitoring",
+      "Configuration management",
+      "Automated provisioning",
+      "Capacity planning",
+      "Real-time alerts"
     ],
     benefits: [
-      'Improve patient satisfaction by 50%',
-      'Reduce administrative costs by 30%',
-      'Enhance compliance automation',
-      'Streamline operations',
-      'Improve care quality'
+      "Improve network performance by 50%",
+      "Reduce network downtime",
+      "Automate network operations",
+      "Better security visibility",
+      "Optimize network costs"
     ],
     useCases: [
-      'Patient engagement',
-      'Operational efficiency',
-      'Compliance management',
-      'Telemedicine services',
-      'Healthcare analytics'
+      "Enterprise networks",
+      "Data centers",
+      "Cloud networks",
+      "Branch offices",
+      "Network operations"
     ],
     targetAudience: [
-      'Chief Medical Officers',
-      'Healthcare Administrators',
-      'IT Directors',
-      'Compliance Officers',
-      'Clinical Staff'
+      "Network engineers",
+      "Network administrators",
+      "IT managers",
+      "Operations teams",
+      "Network architects"
     ],
-    technologies: [
-      'Healthcare APIs',
-      'HIPAA-compliant platforms',
-      'Telemedicine solutions',
-      'Analytics tools',
-      'Security frameworks'
-    ],
-    integration: [
-      'Electronic Health Records',
-      'Practice management systems',
-      'Billing systems',
-      'Laboratory systems',
-      'Pharmacy systems'
-    ],
-    pricingTier: 'Enterprise',
-    website: 'https://ziontechgroup.com/healthcare-solutions',
+    tags: ["Network Management", "Infrastructure", "Monitoring", "Automation", "Performance"],
+    estimatedDelivery: "6-8 weeks",
+    supportLevel: "premium",
+    marketPrice: "$700 - $2,000/month",
     contactInfo: {
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    rating: 4.8,
-    reviewCount: 156,
-    launchDate: '2024-01-15',
-    status: 'Active',
-    marketPrice: '$1,299 - $39,999/month',
-    estimatedDelivery: '8-12 weeks',
-    supportLevel: 'Healthcare-Specific Support Team',
-    industryFocus: ['Healthcare', 'Medical Practices', 'Hospitals', 'Clinics', 'Healthcare Networks']
+    technology: ["Network monitoring tools", "SDN", "Network automation", "Traffic analysis", "Network security"],
+    integrations: ["Network devices", "Security tools", "Monitoring systems", "Configuration management"],
+    compliance: ["Network security standards", "Industry best practices", "Network compliance"]
   },
 
+  // DevOps Automation Platform
   {
-    id: 'zion-financial-services-innovation-platform',
-    title: 'Zion Financial Services Innovation Platform',
-    description: 'Advanced financial services innovation platform that enables digital banking, fintech integration, regulatory compliance, and customer experience transformation.',
-    category: 'Industry Solutions',
-    subcategory: 'Financial Services',
-    price: {
-      monthly: 1999,
-      yearly: 19990,
-      enterprise: 59999,
-      oneTime: 0,
-      currency: '$'
-    },
+    id: "devops-automation-platform",
+    title: "DevOps Automation Platform",
+    description: "Comprehensive DevOps automation platform that streamlines software development, testing, and deployment processes for faster delivery and improved quality.",
+    category: "DevOps",
+    subcategory: "Automation",
+    price: 600,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      'Digital banking platform',
-      'Fintech integration hub',
-      'Regulatory compliance automation',
-      'Risk management tools',
-      'Customer analytics',
-      'API management',
-      'Security and fraud detection',
-      'Mobile banking applications'
+      "CI/CD pipelines",
+      "Infrastructure as code",
+      "Automated testing",
+      "Deployment automation",
+      "Environment management",
+      "Release management",
+      "Monitoring integration",
+      "Security scanning"
     ],
     benefits: [
-      'Accelerate digital transformation',
-      'Improve regulatory compliance',
-      'Enhance customer experience',
-      'Reduce operational costs',
-      'Enable fintech partnerships'
+      "Accelerate delivery by 80%",
+      "Improve code quality",
+      "Reduce deployment errors",
+      "Automate repetitive tasks",
+      "Better collaboration"
     ],
     useCases: [
-      'Digital banking',
-      'Fintech integration',
-      'Regulatory compliance',
-      'Risk management',
-      'Customer experience'
+      "Software development",
+      "Application deployment",
+      "Infrastructure management",
+      "Testing automation",
+      "Release management"
     ],
     targetAudience: [
-      'Chief Technology Officers',
-      'Chief Risk Officers',
-      'Digital Banking Directors',
-      'Compliance Officers',
-      'Product Managers'
+      "DevOps engineers",
+      "Software developers",
+      "QA engineers",
+      "IT operations",
+      "Development teams"
     ],
-    technologies: [
-      'Banking APIs',
-      'Blockchain technology',
-      'AI and Machine Learning',
-      'Security frameworks',
-      'Compliance tools'
-    ],
-    integration: [
-      'Core banking systems',
-      'Payment processors',
-      'Regulatory reporting systems',
-      'Risk management platforms',
-      'Customer systems'
-    ],
-    pricingTier: 'Enterprise',
-    website: 'https://ziontechgroup.com/financial-services',
+    tags: ["DevOps", "Automation", "CI/CD", "Infrastructure as Code", "Deployment"],
+    estimatedDelivery: "6-8 weeks",
+    supportLevel: "premium",
+    marketPrice: "$600 - $1,800/month",
     contactInfo: {
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    rating: 4.9,
-    reviewCount: 89,
-    launchDate: '2024-02-20',
-    status: 'Active',
-    marketPrice: '$1,999 - $59,999/month',
-    estimatedDelivery: '12-16 weeks',
-    supportLevel: 'Financial Services Expert Support',
-    industryFocus: ['Banks', 'Credit Unions', 'Fintech Companies', 'Investment Firms', 'Insurance Companies']
+    technology: ["Jenkins", "GitLab CI", "Terraform", "Ansible", "Docker", "Kubernetes"],
+    integrations: ["Git repositories", "Cloud platforms", "Monitoring tools", "Security tools"],
+    compliance: ["DevOps best practices", "Security standards", "Quality standards"]
   },
 
-  // Advanced Analytics Services
+  // Application Performance Management
   {
-    id: 'zion-real-time-business-intelligence-platform',
-    title: 'Zion Real-Time Business Intelligence Platform',
-    description: 'Advanced real-time business intelligence platform that provides instant insights, predictive analytics, and automated reporting for data-driven decision making.',
-    category: 'Advanced Analytics',
-    subcategory: 'Business Intelligence',
-    price: {
-      monthly: 599,
-      yearly: 5990,
-      enterprise: 19999,
-      oneTime: 0,
-      currency: '$'
-    },
+    id: "application-performance-management",
+    title: "Application Performance Management Platform",
+    description: "Advanced application performance monitoring platform that provides real-time insights, performance optimization, and user experience monitoring for modern applications.",
+    category: "Application Management",
+    subcategory: "Performance Monitoring",
+    price: 900,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      'Real-time data processing',
-      'Predictive analytics',
-      'Automated reporting',
-      'Interactive dashboards',
-      'Data visualization',
-      'Alert systems',
-      'API access',
-      'Mobile applications'
+      "Real-time monitoring",
+      "Performance analytics",
+      "User experience tracking",
+      "Error tracking",
+      "Performance optimization",
+      "Capacity planning",
+      "Alert management",
+      "Reporting dashboards"
     ],
     benefits: [
-      'Make decisions 10x faster',
-      'Identify opportunities proactively',
-      'Reduce manual reporting time',
-      'Improve data accuracy',
-      'Enable data-driven culture'
+      "Improve application performance by 60%",
+      "Reduce response times",
+      "Better user experience",
+      "Proactive issue detection",
+      "Performance optimization"
     ],
     useCases: [
-      'Business intelligence',
-      'Performance monitoring',
-      'Predictive analytics',
-      'Operational reporting',
-      'Strategic planning'
+      "Web applications",
+      "Mobile apps",
+      "API services",
+      "Microservices",
+      "Cloud applications"
     ],
     targetAudience: [
-      'Business Analysts',
-      'Data Scientists',
-      'Executives',
-      'Operations Managers',
-      'Marketing Teams'
+      "Application developers",
+      "DevOps engineers",
+      "Performance engineers",
+      "IT managers",
+      "Product managers"
     ],
-    technologies: [
-      'Real-time processing',
-      'Machine Learning',
-      'Data visualization',
-      'Cloud computing',
-      'API frameworks'
-    ],
-    integration: [
-      'Data warehouses',
-      'ERP systems',
-      'CRM platforms',
-      'Marketing tools',
-      'Custom data sources'
-    ],
-    pricingTier: 'Professional',
-    website: 'https://ziontechgroup.com/business-intelligence',
+    tags: ["APM", "Performance Monitoring", "User Experience", "Application Management", "Optimization"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "premium",
+    marketPrice: "$900 - $2,500/month",
     contactInfo: {
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    rating: 4.7,
-    reviewCount: 234,
-    launchDate: '2024-01-30',
-    status: 'Active',
-    marketPrice: '$599 - $19,999/month',
-    estimatedDelivery: '4-6 weeks',
-    supportLevel: 'Premium Analytics Support',
-    industryFocus: ['All Industries', 'Technology', 'Financial Services', 'Retail', 'Manufacturing']
+    technology: ["APM tools", "Performance monitoring", "User experience tracking", "Analytics", "Real-time monitoring"],
+    integrations: ["Applications", "Web servers", "Databases", "Cloud platforms", "Monitoring tools"],
+    compliance: ["Performance standards", "User experience guidelines", "Monitoring best practices"]
   },
 
-  // Integration Services
+  // IT Service Management
   {
-    id: 'zion-enterprise-integration-hub',
-    title: 'Zion Enterprise Integration Hub',
-    description: 'Comprehensive enterprise integration platform that connects disparate systems, automates workflows, and enables seamless data flow across the organization.',
-    category: 'Integration Services',
-    subcategory: 'System Integration',
-    price: {
-      monthly: 799,
-      yearly: 7990,
-      enterprise: 24999,
-      oneTime: 0,
-      currency: '$'
-    },
+    id: "it-service-management-platform",
+    title: "IT Service Management Platform",
+    description: "Comprehensive IT service management platform that provides incident management, change management, and service desk capabilities for enterprise IT operations.",
+    category: "IT Service Management",
+    subcategory: "Service Desk",
+    price: 500,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      'API management',
-      'Data transformation',
-      'Workflow automation',
-      'Real-time synchronization',
-      'Error handling',
-      'Monitoring and alerting',
-      'Security and compliance',
-      'Custom connectors'
+      "Incident management",
+      "Change management",
+      "Service desk",
+      "Asset management",
+      "Configuration management",
+      "Knowledge management",
+      "Reporting and analytics",
+      "Workflow automation"
     ],
     benefits: [
-      'Eliminate data silos',
-      'Automate manual processes',
-      'Improve data accuracy',
-      'Reduce integration costs',
-      'Accelerate time to market'
+      "Improve service delivery by 50%",
+      "Reduce incident resolution time",
+      "Better change management",
+      "Enhanced user satisfaction",
+      "Compliance with ITIL"
     ],
     useCases: [
-      'System integration',
-      'Data synchronization',
-      'Workflow automation',
-      'API management',
-      'Legacy system modernization'
+      "IT service desk",
+      "Incident management",
+      "Change management",
+      "Asset tracking",
+      "Service catalog"
     ],
     targetAudience: [
-      'Integration Architects',
-      'DevOps Engineers',
-      'Data Engineers',
-      'IT Managers',
-      'Business Analysts'
+      "IT service managers",
+      "Service desk teams",
+      "IT operations",
+      "Change managers",
+      "IT managers"
     ],
-    technologies: [
-      'API management',
-      'ETL/ELT tools',
-      'Workflow engines',
-      'Message queues',
-      'Data transformation'
-    ],
-    integration: [
-      'ERP systems',
-      'CRM platforms',
-      'Cloud services',
-      'Legacy systems',
-      'Third-party APIs'
-    ],
-    pricingTier: 'Professional',
-    website: 'https://ziontechgroup.com/enterprise-integration',
+    tags: ["ITSM", "Service Desk", "Incident Management", "Change Management", "ITIL"],
+    estimatedDelivery: "8-10 weeks",
+    supportLevel: "standard",
+    marketPrice: "$500 - $1,500/month",
     contactInfo: {
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    rating: 4.8,
-    reviewCount: 167,
-    launchDate: '2024-02-10',
-    status: 'Active',
-    marketPrice: '$799 - $24,999/month',
-    estimatedDelivery: '6-8 weeks',
-    supportLevel: 'Integration Expert Support',
-    industryFocus: ['All Industries', 'Technology', 'Financial Services', 'Healthcare', 'Manufacturing']
+    technology: ["ITSM platforms", "Workflow automation", "Knowledge management", "Reporting tools", "Integration APIs"],
+    integrations: ["Active Directory", "Email systems", "Monitoring tools", "Asset management", "Configuration management"],
+    compliance: ["ITIL", "ISO 20000", "IT service standards", "Best practices"]
   },
 
-  // Managed Services
+  // Cloud Migration Services
   {
-    id: 'zion-24-7-it-operations-center',
-    title: 'Zion 24/7 IT Operations Center',
-    description: 'Comprehensive 24/7 IT operations center that provides proactive monitoring, incident management, and technical support for enterprise IT infrastructure.',
-    category: 'Managed Services',
-    subcategory: 'IT Operations',
-    price: {
-      monthly: 1499,
-      yearly: 14990,
-      enterprise: 49999,
-      oneTime: 0,
-      currency: '$'
-    },
+    id: "cloud-migration-services",
+    title: "Cloud Migration Services Platform",
+    description: "Comprehensive cloud migration platform that provides assessment, planning, and execution tools for migrating enterprise applications and infrastructure to the cloud.",
+    category: "Cloud Services",
+    subcategory: "Migration",
+    price: 2000,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      '24/7 proactive monitoring',
-      'Incident management',
-      'Performance optimization',
-      'Security monitoring',
-      'Backup and recovery',
-      'Capacity planning',
-      'Technical support',
-      'Monthly reporting'
+      "Migration assessment",
+      "Planning and strategy",
+      "Application migration",
+      "Data migration",
+      "Infrastructure migration",
+      "Testing and validation",
+      "Performance optimization",
+      "Post-migration support"
     ],
     benefits: [
-      'Reduce downtime by 80%',
-      'Improve system performance',
-      'Reduce IT staff workload',
-      'Enhance security posture',
-      'Predict and prevent issues'
+      "Reduce migration risks by 70%",
+      "Accelerate cloud adoption",
+      "Optimize cloud costs",
+      "Improve performance",
+      "Enhanced scalability"
     ],
     useCases: [
-      'IT operations management',
-      'Infrastructure monitoring',
-      'Incident response',
-      'Performance optimization',
-      'Security monitoring'
+      "Application migration",
+      "Data center migration",
+      "Legacy system migration",
+      "Hybrid cloud setup",
+      "Multi-cloud strategy"
     ],
     targetAudience: [
-      'IT Directors',
-      'Operations Managers',
-      'System Administrators',
-      'Network Engineers',
-      'Security Teams'
+      "IT architects",
+      "Cloud engineers",
+      "IT managers",
+      "Application teams",
+      "Infrastructure teams"
     ],
-    technologies: [
-      'Monitoring tools',
-      'Automation platforms',
-      'Security tools',
-      'Backup systems',
-      'Communication platforms'
-    ],
-    integration: [
-      'Existing IT systems',
-      'Monitoring tools',
-      'Security platforms',
-      'Communication systems',
-      'Reporting tools'
-    ],
-    pricingTier: 'Enterprise',
-    website: 'https://ziontechgroup.com/it-operations',
+    tags: ["Cloud Migration", "Cloud Services", "Migration Planning", "Application Migration", "Infrastructure"],
+    estimatedDelivery: "12-16 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$2,000 - $8,000/month",
     contactInfo: {
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    rating: 4.9,
-    reviewCount: 123,
-    launchDate: '2024-01-20',
-    status: 'Active',
-    marketPrice: '$1,499 - $49,999/month',
-    estimatedDelivery: '2-4 weeks',
-    supportLevel: '24/7 Operations Center Support',
-    industryFocus: ['All Industries', 'Technology', 'Financial Services', 'Healthcare', 'Manufacturing']
+    technology: ["Migration tools", "Cloud platforms", "Assessment tools", "Planning tools", "Validation tools"],
+    integrations: ["AWS", "Azure", "GCP", "On-premises systems", "Monitoring tools"],
+    compliance: ["Cloud security standards", "Data protection", "Migration best practices"]
+  },
+
+  // Disaster Recovery Platform
+  {
+    id: "disaster-recovery-platform",
+    title: "Disaster Recovery Platform",
+    description: "Comprehensive disaster recovery platform that provides backup, replication, and recovery capabilities for enterprise applications and data with minimal downtime.",
+    category: "Business Continuity",
+    subcategory: "Disaster Recovery",
+    price: 800,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Automated backup",
+      "Data replication",
+      "Recovery testing",
+      "Failover automation",
+      "RTO/RPO management",
+      "Multi-site replication",
+      "Monitoring and alerting",
+      "Compliance reporting"
+    ],
+    benefits: [
+      "Minimize downtime to minutes",
+      "Protect critical data",
+      "Automated recovery processes",
+      "Compliance with regulations",
+      "Business continuity assurance"
+    ],
+    useCases: [
+      "Data protection",
+      "Business continuity",
+      "Compliance requirements",
+      "High availability",
+      "Risk mitigation"
+    ],
+    targetAudience: [
+      "IT managers",
+      "Business continuity managers",
+      "Risk managers",
+      "Compliance officers",
+      "Operations teams"
+    ],
+    tags: ["Disaster Recovery", "Business Continuity", "Backup", "Replication", "High Availability"],
+    estimatedDelivery: "8-10 weeks",
+    supportLevel: "premium",
+    marketPrice: "$800 - $2,500/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technology: ["Backup tools", "Replication software", "Recovery automation", "Monitoring tools", "Storage systems"],
+    integrations: ["Applications", "Databases", "Storage systems", "Cloud platforms", "Monitoring tools"],
+    compliance: ["Business continuity standards", "Data protection regulations", "Recovery time objectives"]
   }
 ];
 

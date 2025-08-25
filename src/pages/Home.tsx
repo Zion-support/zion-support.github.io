@@ -605,7 +605,7 @@ const Home: React.FC = () => {
 
           <div className="text-center">
             <Link 
-              to="/enhanced-services-showcase" 
+              to="/comprehensive-services-showcase" 
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
             >
               View All Enhanced Services

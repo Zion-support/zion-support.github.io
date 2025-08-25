@@ -42,36 +42,36 @@ export default function Services() {
       description: 'Intelligent solutions powered by artificial intelligence',
       services: [
         {
-          name: 'AI Autonomous Systems',
-          path: '/services/ai-autonomous-systems',
-          description: 'Advanced autonomous AI systems that operate independently',
+          name: 'AI Financial Advisor Platform',
+          path: '/comprehensive-services-showcase',
+          description: 'Intelligent financial advisory with AI-powered investment recommendations',
           icon: Brain,
-          features: ['Self-learning algorithms', 'Predictive analytics', 'Automated decision making'],
-          pricing: 'Starting from $5,000/month'
+          features: ['AI investment advice', 'Portfolio optimization', 'Real-time market analysis'],
+          pricing: 'Starting from $299/month'
         },
         {
-          name: 'AI Research Assistant',
-          path: '/ai-autonomous-research-assistant',
-          description: 'AI-powered research automation and insights',
+          name: 'AI Healthcare Diagnostics',
+          path: '/comprehensive-services-showcase',
+          description: 'Advanced medical diagnostic platform using AI',
           icon: Brain,
-          features: ['Data analysis', 'Literature review', 'Trend identification'],
-          pricing: 'Starting from $3,000/month'
+          features: ['Medical image analysis', 'Symptom assessment', 'Treatment recommendations'],
+          pricing: 'Starting from $899/month'
         },
         {
-          name: 'AI Business Intelligence',
-          path: '/services/ai-business-intelligence',
-          description: 'Advanced analytics and business insights',
-          icon: BarChart3,
-          features: ['Real-time dashboards', 'Predictive modeling', 'Performance tracking'],
-          pricing: 'Starting from $4,000/month'
+          name: 'AI Legal Research Assistant',
+          path: '/comprehensive-services-showcase',
+          description: 'AI-powered legal research and case analysis',
+          icon: Brain,
+          features: ['Case law analysis', 'Legal document review', 'Precedent identification'],
+          pricing: 'Starting from $199/month'
         },
         {
-          name: 'AI Marketing Automation',
-          path: '/services/ai-marketing-automation',
-          description: 'Smart marketing optimization and automation',
-          icon: Target,
-          features: ['Customer segmentation', 'Campaign optimization', 'ROI tracking'],
-          pricing: 'Starting from $2,500/month'
+          name: 'AI Manufacturing Optimization',
+          path: '/comprehensive-services-showcase',
+          description: 'Intelligent manufacturing process optimization',
+          icon: Brain,
+          features: ['Production optimization', 'Predictive maintenance', 'Quality control'],
+          pricing: 'Starting from $599/month'
         }
       ]
     },
@@ -83,20 +83,53 @@ export default function Services() {
       description: 'Next-generation quantum computing solutions',
       services: [
         {
-          name: 'Quantum Neural Networks',
-          path: '/quantum-neural-network-platform',
-          description: 'Quantum-powered neural networks for complex problems',
+          name: 'Quantum Machine Learning Platform',
+          path: '/comprehensive-services-showcase',
+          description: 'Revolutionary platform combining quantum computing with ML',
           icon: Brain,
-          features: ['Quantum algorithms', 'Superior performance', 'Future-proof technology'],
-          pricing: 'Starting from $15,000/month'
+          features: ['Quantum ML algorithms', 'Hybrid workflows', 'Performance benchmarking'],
+          pricing: 'Starting from $2,500/month'
         },
         {
-          name: 'Quantum Computing',
-          path: '/services/quantum-technology',
-          description: 'Quantum computing platforms and solutions',
+          name: 'Quantum Internet Platform',
+          path: '/comprehensive-services-showcase',
+          description: 'Ultra-secure quantum communications network',
           icon: Cpu,
-          features: ['Quantum supremacy', 'Complex simulations', 'Cryptography'],
-          pricing: 'Starting from $20,000/month'
+          features: ['Quantum key distribution', 'Unbreakable encryption', 'Quantum networks'],
+          pricing: 'Starting from $4,000/month'
+        }
+      ]
+    },
+    {
+      id: 'emerging-tech',
+      title: 'Emerging Technologies',
+      icon: Rocket,
+      color: 'from-purple-500 to-pink-500',
+      description: 'Cutting-edge technologies of the future',
+      services: [
+        {
+          name: 'Edge AI Computing Platform',
+          path: '/comprehensive-services-showcase',
+          description: 'AI processing at the edge for real-time decisions',
+          icon: Rocket,
+          features: ['Edge AI deployment', 'Low latency processing', 'Privacy-preserving AI'],
+          pricing: 'Starting from $899/month'
+        },
+        {
+          name: 'Neuromorphic Computing',
+          path: '/comprehensive-services-showcase',
+          description: 'Brain-inspired computing for ultra-efficient AI',
+          icon: Rocket,
+          features: ['Spiking neural networks', 'Ultra-low power', 'Cognitive computing'],
+          pricing: 'Starting from $3,500/month'
+        },
+        {
+          name: '6G Network Infrastructure',
+          path: '/comprehensive-services-showcase',
+          description: 'Next-generation 6G network solutions',
+          icon: Rocket,
+          features: ['Terahertz speeds', 'Ultra-low latency', 'AI optimization'],
+          pricing: 'Starting from $5,000/month'
         }
       ]
     },
@@ -133,28 +166,28 @@ export default function Services() {
       description: 'Scalable cloud solutions and infrastructure management',
       services: [
         {
-          name: 'Cloud DevOps',
-          path: '/cloud-devops',
-          description: 'Cloud development and operations automation',
+          name: 'Cloud-Native Development Platform',
+          path: '/comprehensive-services-showcase',
+          description: 'Enterprise-grade cloud-native development platform',
           icon: Cloud,
-          features: ['CI/CD pipelines', 'Infrastructure as code', 'Monitoring & alerting'],
-          pricing: 'Starting from $3,000/month'
+          features: ['Kubernetes orchestration', 'Microservices architecture', 'CI/CD pipelines'],
+          pricing: 'Starting from $800/month'
         },
         {
-          name: 'IT Infrastructure',
-          path: '/services/it-infrastructure',
-          description: 'Complete IT infrastructure solutions',
+          name: 'AI-Powered IT Operations',
+          path: '/comprehensive-services-showcase',
+          description: 'Intelligent IT operations with AI automation',
           icon: Network,
-          features: ['Network design', 'Hardware management', 'Performance optimization'],
-          pricing: 'Starting from $2,500/month'
+          features: ['AI monitoring', 'Predictive analytics', 'Automated incident response'],
+          pricing: 'Starting from $1,500/month'
         },
         {
-          name: '5G Enterprise Solutions',
-          path: '/5g-enterprise-solutions',
-          description: 'High-speed 5G connectivity solutions',
+          name: 'Enterprise Data Management',
+          path: '/comprehensive-services-showcase',
+          description: 'Comprehensive data governance and management',
           icon: Network,
-          features: ['Ultra-fast connectivity', 'Low latency', 'High bandwidth'],
-          pricing: 'Starting from $5,000/month'
+          features: ['Data governance', 'Quality management', 'Compliance monitoring'],
+          pricing: 'Starting from $1,000/month'
         }
       ]
     },
@@ -166,20 +199,20 @@ export default function Services() {
       description: 'Streamlined business process automation',
       services: [
         {
-          name: 'Autonomous Business Platform',
-          path: '/autonomous-business-operations-platform',
-          description: 'Self-operating business systems and automation',
+          name: 'AI Retail Intelligence Platform',
+          path: '/comprehensive-services-showcase',
+          description: 'Comprehensive retail analytics and customer intelligence',
           icon: Building,
-          features: ['Process automation', 'Workflow optimization', 'Performance analytics'],
-          pricing: 'Starting from $6,000/month'
+          features: ['Customer behavior analysis', 'Inventory optimization', 'Personalized recommendations'],
+          pricing: 'Starting from $399/month'
         },
         {
-          name: 'AI Asset Management',
-          path: '/ai-powered-it-asset-management',
-          description: 'Intelligent IT asset management and tracking',
+          name: 'AI Real Estate Analytics',
+          path: '/comprehensive-services-showcase',
+          description: 'Intelligent real estate market analysis and insights',
           icon: Database,
-          features: ['Asset tracking', 'Lifecycle management', 'Cost optimization'],
-          pricing: 'Starting from $2,000/month'
+          features: ['Market trend analysis', 'Property value prediction', 'Investment scoring'],
+          pricing: 'Starting from $299/month'
         }
       ]
     },
@@ -191,28 +224,61 @@ export default function Services() {
       description: 'Tailored solutions for specific industries',
       services: [
         {
-          name: 'Healthcare Technology',
-          path: '/solutions/healthcare',
-          description: 'Technology solutions for healthcare industry',
+          name: 'AI Adaptive Learning Platform',
+          path: '/comprehensive-services-showcase',
+          description: 'Intelligent learning platform with personalized education',
           icon: Heart,
-          features: ['Patient management', 'Medical analytics', 'Compliance'],
-          pricing: 'Starting from $8,000/month'
+          features: ['Personalized learning paths', 'Progress tracking', 'Performance analytics'],
+          pricing: 'Starting from $199/month'
         },
         {
-          name: 'Financial Services',
-          path: '/services/financial-services',
-          description: 'Fintech solutions and financial technology',
+          name: 'AI Logistics Optimization',
+          path: '/comprehensive-services-showcase',
+          description: 'Intelligent logistics and supply chain optimization',
           icon: DollarSign,
-          features: ['Risk management', 'Fraud detection', 'Compliance'],
-          pricing: 'Starting from $7,000/month'
+          features: ['Route optimization', 'Delivery prediction', 'Supply chain analytics'],
+          pricing: 'Starting from $499/month'
         },
         {
-          name: 'Manufacturing Intelligence',
-          path: '/services/manufacturing-intelligence',
-          description: 'Smart manufacturing and Industry 4.0 solutions',
+          name: 'AI Energy Optimization',
+          path: '/comprehensive-services-showcase',
+          description: 'Intelligent energy management and optimization',
           icon: Cpu,
-          features: ['Predictive maintenance', 'Quality control', 'Supply chain optimization'],
-          pricing: 'Starting from $6,500/month'
+          features: ['Energy consumption analysis', 'Cost optimization', 'Sustainability reporting'],
+          pricing: 'Starting from $399/month'
+        }
+      ]
+    },
+    {
+      id: 'specialized-it',
+      title: 'Specialized IT Services',
+      icon: Shield,
+      color: 'from-indigo-500 to-purple-500',
+      description: 'Advanced IT solutions and specialized services',
+      services: [
+        {
+          name: 'Zero Trust Security Platform',
+          path: '/comprehensive-services-showcase',
+          description: 'Comprehensive zero trust security implementation',
+          icon: Shield,
+          features: ['Continuous verification', 'Least privilege access', 'Micro-segmentation'],
+          pricing: 'Starting from $1,200/month'
+        },
+        {
+          name: 'DevOps Automation Platform',
+          path: '/comprehensive-services-showcase',
+          description: 'Comprehensive DevOps automation and CI/CD',
+          icon: Shield,
+          features: ['CI/CD pipelines', 'Infrastructure as code', 'Automated testing'],
+          pricing: 'Starting from $600/month'
+        },
+        {
+          name: 'Application Performance Management',
+          path: '/comprehensive-services-showcase',
+          description: 'Advanced application performance monitoring',
+          icon: Shield,
+          features: ['Real-time monitoring', 'Performance analytics', 'User experience tracking'],
+          pricing: 'Starting from $900/month'
         }
       ]
     }
@@ -364,12 +430,37 @@ export default function Services() {
                 Get Started Today
               </Link>
               <Link
-                to="/request-quote"
+                to="/comprehensive-services-showcase"
                 className="px-8 py-3 border border-cyan-500 text-cyan-400 font-medium rounded-lg hover:bg-cyan-500/10 transition-all duration-200"
               >
-                Request Custom Quote
+                View All Services
               </Link>
             </div>
+          </div>
+        </div>
+
+        {/* Comprehensive Services Showcase CTA */}
+        <div className="text-center mt-12">
+          <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-2xl p-8">
+            <h2 className="text-2xl font-bold text-white mb-4">
+              Discover Our Complete Portfolio
+            </h2>
+            <p className="text-lg text-gray-300 mb-6 max-w-3xl mx-auto">
+              Explore our comprehensive showcase featuring 30+ cutting-edge AI solutions, emerging technologies, and specialized IT services. 
+              From micro SAAS applications to quantum computing platforms, we have the tools you need to stay ahead.
+            </p>
+            <div className="grid md:grid-cols-3 gap-4 mb-6 text-sm text-gray-400">
+              <div>• AI-Powered Business Solutions</div>
+              <div>• Emerging Technology Platforms</div>
+              <div>• Specialized IT Services</div>
+            </div>
+            <Link
+              to="/comprehensive-services-showcase"
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-medium rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 transform hover:scale-105"
+            >
+              Explore Comprehensive Services
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
           </div>
         </div>
       </div>
