@@ -330,6 +330,7 @@ export default function Sidebar() {
 =======
         { name: 'AI & Machine Learning', path: '/services?category=AI%20%26%20Machine%20Learning', icon: Briefcase },
 <<<<<<< HEAD
+<<<<<<< HEAD
         { name: 'AI Agent Orchestrator', path: '/ai-agent-orchestrator', icon: Network },
         { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain },
         { name: 'AI Analytics Copilot', path: '/ai-analytics-copilot', icon: BarChart3 },
@@ -347,6 +348,12 @@ export default function Sidebar() {
         { name: 'AI Legal Tech', path: '/services/ai-legal-tech', icon: Briefcase },
         { name: 'AI Healthcare Analytics', path: '/services/ai-healthcare-analytics', icon: Briefcase },
 >>>>>>> origin/cursor/website-audit-and-enhancement-500e
+=======
+        { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
+        { name: 'AI Business Manager 2029', path: '/ai-autonomous-business-manager-2029', icon: Briefcase },
+        { name: 'Quantum Neural Network Platform', path: '/quantum-neural-network-platform', icon: Briefcase },
+        { name: 'Autonomous Business Operations Platform', path: '/autonomous-business-operations-platform', icon: Briefcase },
+>>>>>>> origin/cursor/website-audit-and-enhancement-79b4
         { name: 'Cybersecurity', path: '/services?category=Cybersecurity', icon: Shield },
         { name: 'Advanced Cybersecurity Suite', path: '/advanced-cybersecurity-suite', icon: Shield },
         { name: 'Micro SAAS Solutions', path: '/services?category=Micro%20SAAS%20Solutions', icon: Globe },
@@ -1847,6 +1854,7 @@ export default function Sidebar() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     { icon: Linkedin, href: 'https://www.linkedin.com/company/zion-tech-group', label: 'LinkedIn' },
 =======
     { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
@@ -1934,6 +1942,12 @@ export default function Sidebar() {
     { icon: Facebook, href: 'https://www.facebook.com/ziontechgroup', label: 'Facebook' },
     { icon: Instagram, href: 'https://www.instagram.com/ziontechgroup', label: 'Instagram' }
 >>>>>>> origin/cursor/website-audit-and-enhancement-a8a0
+=======
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
+    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
+    { icon: Facebook, href: 'https://www.facebook.com/ziontechgroup', label: 'Facebook' },
+    { icon: Instagram, href: 'https://www.instagram.com/ziontechgroup', label: 'Instagram' }
+>>>>>>> origin/cursor/website-audit-and-enhancement-79b4
   ];
 
   const sidebarVariants = {
