@@ -25,638 +25,599 @@ export interface InnovativeNewService {
   compliance: string[];
   roi: string;
   competitors: string[];
-  marketTrend: string;
-  innovationLevel: string;
+  demoUrl?: string;
+  freeTrial?: boolean;
+  setupFee?: number;
 }
 
 export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
-  // AI-Powered Content Creation & Marketing
+  // AI-Powered Content Generation & Marketing
   {
-    id: "ai-content-creation-suite",
-    title: "AI Content Creation & Marketing Suite",
-    description: "Comprehensive AI-powered platform that generates, optimizes, and distributes content across multiple channels with personalized targeting and performance analytics.",
-    category: "AI & Digital Marketing",
+    id: "ai-content-generator-pro",
+    title: "AI Content Generator Pro",
+    description: "Advanced AI-powered content creation platform that generates high-quality blog posts, social media content, and marketing copy in seconds.",
+    category: "AI & Marketing",
     subcategory: "Content Creation",
-    price: 399,
+    price: 99,
     currency: "$",
     pricingModel: "monthly",
     features: [
       "AI-powered content generation",
-      "Multi-format content creation (blogs, social media, videos)",
-      "SEO optimization with AI insights",
-      "Content performance analytics",
-      "Automated content distribution",
-      "Personalized content recommendations",
-      "Multi-language content generation",
-      "Brand voice consistency",
-      "Content calendar automation",
-      "A/B testing for content optimization"
+      "SEO-optimized writing",
+      "Multi-language support",
+      "Brand voice customization",
+      "Plagiarism detection",
+      "Content calendar management",
+      "Social media scheduling",
+      "Performance analytics"
     ],
     benefits: [
-      "Increase content production by 500%",
-      "Improve engagement rates by 60%",
-      "Reduce content creation costs by 70%",
-      "24/7 automated content generation",
-      "Data-driven content strategy",
-      "Multi-channel consistency"
+      "Save 80% of content creation time",
+      "Improve SEO rankings by 40%",
+      "Increase engagement by 60%",
+      "Consistent brand messaging",
+      "Scalable content production"
     ],
     useCases: [
-      "Digital marketing agencies",
-      "E-commerce businesses",
-      "Content creators",
-      "Brand managers",
-      "Social media managers",
-      "SEO specialists"
+      "Blog writing",
+      "Social media posts",
+      "Email marketing",
+      "Product descriptions",
+      "Ad copy creation"
     ],
     targetAudience: [
       "Marketing teams",
       "Content creators",
-      "Digital agencies",
-      "Business owners",
-      "Brand managers"
+      "Small businesses",
+      "Agencies",
+      "E-commerce stores"
     ],
-    tags: ["AI", "Content Creation", "Digital Marketing", "SEO", "Automation", "Content Marketing"],
-    estimatedDelivery: "2-3 weeks",
+    tags: ["AI", "Content Creation", "Marketing", "SEO", "Social Media"],
+    estimatedDelivery: "1 week",
     supportLevel: "premium",
-    marketPrice: "$399 - $1,500/month",
+    marketPrice: "$99 - $299/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technology: ["GPT-4", "Claude", "React", "Node.js", "MongoDB", "AWS"],
-    integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Social Media APIs"],
-    compliance: ["GDPR", "CCPA", "SOC 2"],
+    technology: ["OpenAI GPT-4", "React", "Node.js", "MongoDB", "AWS"],
+    integrations: ["WordPress", "Shopify", "Mailchimp", "Buffer", "Hootsuite"],
+    compliance: ["GDPR", "CCPA"],
     roi: "400% within 3 months",
     competitors: ["Jasper", "Copy.ai", "Writesonic", "ContentBot"],
-    marketTrend: "Rapidly growing market with 300% annual growth",
-    innovationLevel: "Cutting-edge AI technology with advanced NLP capabilities"
+    freeTrial: true,
+    setupFee: 0
   },
 
-  // Quantum-Safe Cybersecurity Platform
+  // AI-Powered Customer Support Automation
   {
-    id: "quantum-safe-cybersecurity",
-    title: "Quantum-Safe Cybersecurity Platform",
-    description: "Next-generation cybersecurity solution that implements post-quantum cryptography to protect against future quantum computing threats while maintaining current security standards.",
-    category: "Cybersecurity",
-    subcategory: "Quantum Security",
-    price: 2500,
+    id: "ai-support-automation-suite",
+    title: "AI Support Automation Suite",
+    description: "Intelligent customer support platform that automates responses, handles inquiries, and provides 24/7 customer service using advanced NLP and machine learning.",
+    category: "AI & Customer Service",
+    subcategory: "Support Automation",
+    price: 199,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Post-quantum cryptography algorithms",
-      "Hybrid encryption systems",
-      "Quantum-resistant key management",
-      "Real-time threat detection",
-      "Zero-trust architecture",
-      "Compliance automation",
-      "Quantum-safe VPN",
-      "Secure communication protocols",
-      "Threat intelligence feeds",
-      "Automated incident response"
+      "Natural language processing",
+      "Multi-language support",
+      "Ticket classification",
+      "Automated responses",
+      "Live chat integration",
+      "Knowledge base management",
+      "Customer sentiment analysis",
+      "Performance analytics"
     ],
     benefits: [
-      "Future-proof security against quantum threats",
-      "Reduce security risks by 95%",
-      "Compliance with emerging quantum standards",
-      "Enhanced data protection",
-      "Competitive advantage in security",
-      "Long-term investment protection"
+      "Reduce support costs by 70%",
+      "Improve response time by 90%",
+      "Increase customer satisfaction by 35%",
+      "24/7 availability",
+      "Scalable support operations"
     ],
     useCases: [
-      "Financial institutions",
-      "Government agencies",
+      "Customer inquiries",
+      "Technical support",
+      "Order status updates",
+      "FAQ responses",
+      "Appointment scheduling"
+    ],
+    targetAudience: [
+      "E-commerce businesses",
+      "SaaS companies",
+      "Service providers",
       "Healthcare organizations",
-      "Defense contractors",
-      "Technology companies",
+      "Educational institutions"
+    ],
+    tags: ["AI", "Customer Service", "Automation", "Chatbot", "Support"],
+    estimatedDelivery: "2-3 weeks",
+    supportLevel: "premium",
+    marketPrice: "$199 - $599/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technology: ["Dialogflow", "React", "Python", "TensorFlow", "WebSocket"],
+    integrations: ["Zendesk", "Intercom", "Slack", "Microsoft Teams", "Salesforce"],
+    compliance: ["GDPR", "HIPAA", "SOC 2"],
+    roi: "300% within 6 months",
+    competitors: ["Intercom", "Zendesk", "Freshdesk", "Help Scout"],
+    freeTrial: true,
+    setupFee: 99
+  },
+
+  // AI-Powered Sales Intelligence Platform
+  {
+    id: "ai-sales-intelligence-platform",
+    title: "AI Sales Intelligence Platform",
+    description: "Comprehensive sales intelligence platform that uses AI to identify prospects, predict buying behavior, and automate sales processes for higher conversion rates.",
+    category: "AI & Sales",
+    subcategory: "Sales Intelligence",
+    price: 299,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Lead scoring and qualification",
+      "Predictive analytics",
+      "Sales forecasting",
+      "Email sequence automation",
+      "Meeting scheduling",
+      "CRM integration",
+      "Performance tracking",
+      "Revenue analytics"
+    ],
+    benefits: [
+      "Increase sales conversion by 45%",
+      "Reduce sales cycle by 30%",
+      "Improve lead quality by 60%",
+      "Automate repetitive tasks",
+      "Data-driven sales decisions"
+    ],
+    useCases: [
+      "Lead generation",
+      "Sales prospecting",
+      "Account management",
+      "Sales forecasting",
+      "Performance optimization"
+    ],
+    targetAudience: [
+      "Sales teams",
+      "B2B companies",
+      "Sales managers",
+      "Business development",
+      "Startups"
+    ],
+    tags: ["AI", "Sales", "Lead Generation", "CRM", "Automation"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "premium",
+    marketPrice: "$299 - $999/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technology: ["Python", "React", "TensorFlow", "PostgreSQL", "Redis"],
+    integrations: ["Salesforce", "HubSpot", "Pipedrive", "Outreach", "LinkedIn Sales Navigator"],
+    compliance: ["GDPR", "CCPA", "SOC 2"],
+    roi: "350% within 6 months",
+    competitors: ["Gong", "Chorus", "Outreach", "SalesLoft"],
+    freeTrial: true,
+    setupFee: 199
+  },
+
+  // AI-Powered HR & Recruitment Platform
+  {
+    id: "ai-hr-recruitment-platform",
+    title: "AI HR & Recruitment Platform",
+    description: "Intelligent HR platform that automates recruitment, employee onboarding, performance management, and HR analytics using AI and machine learning.",
+    category: "AI & HR",
+    subcategory: "Recruitment & Management",
+    price: 249,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered candidate screening",
+      "Resume parsing and matching",
+      "Interview scheduling automation",
+      "Performance tracking",
+      "Employee engagement surveys",
+      "HR analytics dashboard",
+      "Compliance monitoring",
+      "Integration with job boards"
+    ],
+    benefits: [
+      "Reduce hiring time by 50%",
+      "Improve candidate quality by 40%",
+      "Reduce HR administrative work by 60%",
+      "Better employee retention",
+      "Compliance automation"
+    ],
+    useCases: [
+      "Job posting and advertising",
+      "Candidate screening",
+      "Interview management",
+      "Employee onboarding",
+      "Performance reviews"
+    ],
+    targetAudience: [
+      "HR departments",
+      "Recruitment agencies",
+      "Small to medium businesses",
+      "Startups",
+      "Enterprise companies"
+    ],
+    tags: ["AI", "HR", "Recruitment", "Employee Management", "Analytics"],
+    estimatedDelivery: "4-5 weeks",
+    supportLevel: "premium",
+    marketPrice: "$249 - $799/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technology: ["React", "Node.js", "Python", "TensorFlow", "PostgreSQL"],
+    integrations: ["LinkedIn", "Indeed", "Glassdoor", "Workday", "BambooHR"],
+    compliance: ["EEOC", "ADA", "GDPR", "SOC 2"],
+    roi: "250% within 8 months",
+    competitors: ["BambooHR", "Workday", "BambooHR", "Zenefits"],
+    freeTrial: true,
+    setupFee: 149
+  },
+
+  // AI-Powered Financial Planning & Analysis
+  {
+    id: "ai-financial-planning-platform",
+    title: "AI Financial Planning & Analysis Platform",
+    description: "Advanced financial planning platform that uses AI to provide personalized financial advice, budgeting, investment recommendations, and financial forecasting.",
+    category: "AI & Finance",
+    subcategory: "Financial Planning",
+    price: 179,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered financial advice",
+      "Personalized budgeting",
+      "Investment recommendations",
+      "Retirement planning",
+      "Tax optimization",
+      "Financial goal tracking",
+      "Portfolio analysis",
+      "Risk assessment"
+    ],
+    benefits: [
+      "Improve financial decision making",
+      "Optimize tax savings by 25%",
+      "Better investment returns",
+      "Automated financial planning",
+      "Personalized financial guidance"
+    ],
+    useCases: [
+      "Personal financial planning",
+      "Retirement planning",
+      "Investment management",
+      "Tax planning",
+      "Estate planning"
+    ],
+    targetAudience: [
+      "Individuals",
+      "Financial advisors",
+      "Small businesses",
+      "Retirees",
+      "Young professionals"
+    ],
+    tags: ["AI", "Finance", "Investment", "Planning", "Analytics"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "premium",
+    marketPrice: "$179 - $499/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technology: ["React", "Python", "TensorFlow", "PostgreSQL", "AWS"],
+    integrations: ["Plaid", "Yodlee", "TurboTax", "Mint", "Personal Capital"],
+    compliance: ["SEC", "FINRA", "GDPR", "SOC 2"],
+    roi: "200% within 12 months",
+    competitors: ["Personal Capital", "Mint", "YNAB", "Betterment"],
+    freeTrial: true,
+    setupFee: 0
+  },
+
+  // AI-Powered Supply Chain Optimization
+  {
+    id: "ai-supply-chain-optimization",
+    title: "AI Supply Chain Optimization Platform",
+    description: "Intelligent supply chain platform that optimizes inventory management, demand forecasting, logistics, and supplier relationships using AI and machine learning.",
+    category: "AI & Operations",
+    subcategory: "Supply Chain",
+    price: 399,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Demand forecasting",
+      "Inventory optimization",
+      "Supplier management",
+      "Logistics optimization",
+      "Risk assessment",
+      "Performance analytics",
+      "Real-time tracking",
+      "Automated reordering"
+    ],
+    benefits: [
+      "Reduce inventory costs by 30%",
+      "Improve delivery times by 25%",
+      "Reduce stockouts by 60%",
+      "Optimize supplier relationships",
+      "Better demand planning"
+    ],
+    useCases: [
+      "Retail inventory management",
+      "Manufacturing supply chains",
+      "E-commerce logistics",
+      "Distribution optimization",
+      "Supplier relationship management"
+    ],
+    targetAudience: [
+      "Retailers",
+      "Manufacturers",
+      "E-commerce businesses",
+      "Logistics companies",
+      "Distribution centers"
+    ],
+    tags: ["AI", "Supply Chain", "Logistics", "Inventory", "Optimization"],
+    estimatedDelivery: "6-8 weeks",
+    supportLevel: "premium",
+    marketPrice: "$399 - $1,299/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technology: ["Python", "React", "TensorFlow", "PostgreSQL", "Redis"],
+    integrations: ["SAP", "Oracle", "NetSuite", "Shopify", "WMS systems"],
+    compliance: ["ISO 9001", "ISO 14001", "SOC 2"],
+    roi: "400% within 12 months",
+    competitors: ["SAP", "Oracle", "JDA Software", "Manhattan Associates"],
+    freeTrial: true,
+    setupFee: 299
+  },
+
+  // AI-Powered Legal Document Analysis
+  {
+    id: "ai-legal-document-analysis",
+    title: "AI Legal Document Analysis Platform",
+    description: "Advanced legal tech platform that uses AI to analyze contracts, legal documents, and compliance requirements, providing insights and risk assessments.",
+    category: "AI & Legal",
+    subcategory: "Document Analysis",
+    price: 349,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Contract analysis and review",
+      "Legal document classification",
+      "Risk assessment",
+      "Compliance monitoring",
+      "Document comparison",
+      "Legal research automation",
+      "Case law analysis",
+      "Regulatory updates"
+    ],
+    benefits: [
+      "Reduce legal review time by 70%",
+      "Improve risk identification by 50%",
+      "Lower legal costs by 40%",
+      "Better compliance management",
+      "Faster contract negotiations"
+    ],
+    useCases: [
+      "Contract review",
+      "Legal research",
+      "Compliance monitoring",
+      "Risk assessment",
+      "Due diligence"
+    ],
+    targetAudience: [
+      "Law firms",
+      "Corporate legal departments",
+      "Compliance officers",
+      "Contract managers",
+      "Legal consultants"
+    ],
+    tags: ["AI", "Legal Tech", "Document Analysis", "Compliance", "Risk Assessment"],
+    estimatedDelivery: "5-6 weeks",
+    supportLevel: "premium",
+    marketPrice: "$349 - $1,199/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technology: ["Python", "React", "NLP", "TensorFlow", "PostgreSQL"],
+    integrations: ["DocuSign", "Adobe Sign", "Microsoft Office", "Clio", "PracticePanther"],
+    compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001"],
+    roi: "300% within 8 months",
+    competitors: ["Kira Systems", "eBrevia", "Luminance", "LawGeex"],
+    freeTrial: true,
+    setupFee: 199
+  },
+
+  // AI-Powered Healthcare Analytics
+  {
+    id: "ai-healthcare-analytics-platform",
+    title: "AI Healthcare Analytics Platform",
+    description: "Comprehensive healthcare analytics platform that uses AI to analyze patient data, predict outcomes, optimize treatments, and improve healthcare delivery.",
+    category: "AI & Healthcare",
+    subcategory: "Analytics",
+    price: 599,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Patient outcome prediction",
+      "Treatment optimization",
+      "Risk assessment",
+      "Population health analytics",
+      "Clinical decision support",
+      "Healthcare quality metrics",
+      "Cost analysis",
+      "Regulatory compliance"
+    ],
+    benefits: [
+      "Improve patient outcomes by 35%",
+      "Reduce healthcare costs by 25%",
+      "Better treatment decisions",
+      "Population health insights",
+      "Regulatory compliance automation"
+    ],
+    useCases: [
+      "Clinical decision support",
+      "Population health management",
+      "Quality improvement",
+      "Cost optimization",
+      "Research and development"
+    ],
+    targetAudience: [
+      "Hospitals",
+      "Healthcare systems",
+      "Medical practices",
+      "Health insurers",
       "Research institutions"
     ],
-    targetAudience: [
-      "CISOs",
-      "Security architects",
-      "IT directors",
-      "Compliance officers",
-      "Government officials"
-    ],
-    tags: ["Quantum Security", "Cybersecurity", "Post-Quantum Cryptography", "Zero Trust", "Compliance"],
-    estimatedDelivery: "6-8 weeks",
+    tags: ["AI", "Healthcare", "Analytics", "Clinical Decision Support", "Population Health"],
+    estimatedDelivery: "8-10 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$2,500 - $10,000/month",
+    marketPrice: "$599 - $2,999/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technology: ["Post-Quantum Algorithms", "Zero-Trust Architecture", "Blockchain", "AI/ML", "Cloud Native"],
-    integrations: ["Active Directory", "LDAP", "SIEM Systems", "Firewalls", "VPN Solutions"],
-    compliance: ["NIST", "FIPS", "SOC 2", "ISO 27001", "GDPR"],
-    roi: "200% within 12 months",
-    competitors: ["IBM", "Microsoft", "Google", "Cisco"],
-    marketTrend: "Emerging market with 500% projected growth in next 5 years",
-    innovationLevel: "Revolutionary quantum-safe technology ahead of market adoption"
+    technology: ["Python", "React", "TensorFlow", "PostgreSQL", "HIPAA-compliant cloud"],
+    integrations: ["Epic", "Cerner", "Allscripts", "Practice Fusion", "EHR systems"],
+    compliance: ["HIPAA", "HITECH", "SOC 2", "ISO 27001"],
+    roi: "250% within 18 months",
+    competitors: ["IBM Watson Health", "Cerner", "Epic", "Allscripts"],
+    freeTrial: false,
+    setupFee: 999
   },
 
-  // AI-Powered Healthcare Diagnostics
+  // AI-Powered Real Estate Analytics
   {
-    id: "ai-healthcare-diagnostics",
-    title: "AI Healthcare Diagnostics Platform",
-    description: "Advanced AI-powered medical diagnostics platform that analyzes medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations.",
-    category: "AI & Healthcare",
-    subcategory: "Medical Diagnostics",
-    price: 1500,
+    id: "ai-real-estate-analytics",
+    title: "AI Real Estate Analytics Platform",
+    description: "Intelligent real estate platform that uses AI to analyze market trends, property valuations, investment opportunities, and market predictions.",
+    category: "AI & Real Estate",
+    subcategory: "Market Analytics",
+    price: 199,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Medical image analysis (X-rays, MRIs, CT scans)",
-      "Symptom analysis and diagnosis",
-      "Treatment recommendation engine",
-      "Patient risk assessment",
-      "Drug interaction checking",
-      "Medical record integration",
-      "Telemedicine support",
-      "Clinical decision support",
-      "Population health analytics",
-      "Regulatory compliance tools"
+      "Market trend analysis",
+      "Property valuation",
+      "Investment analysis",
+      "Risk assessment",
+      "Market predictions",
+      "Comparative analysis",
+      "ROI calculations",
+      "Portfolio management"
     ],
     benefits: [
-      "Improve diagnostic accuracy by 30%",
-      "Reduce diagnosis time by 60%",
-      "Lower healthcare costs by 25%",
-      "Better patient outcomes",
-      "Enhanced clinical efficiency",
-      "Reduced medical errors"
+      "Improve investment decisions by 40%",
+      "Reduce market research time by 60%",
+      "Better property valuations",
+      "Risk mitigation",
+      "Portfolio optimization"
     ],
     useCases: [
-      "Hospitals and clinics",
-      "Radiology departments",
-      "Primary care practices",
-      "Specialist offices",
-      "Telemedicine platforms",
-      "Medical research institutions"
+      "Property investment",
+      "Market analysis",
+      "Portfolio management",
+      "Risk assessment",
+      "Market predictions"
     ],
     targetAudience: [
-      "Healthcare providers",
-      "Radiologists",
-      "Primary care physicians",
-      "Medical administrators",
-      "Healthcare IT teams"
+      "Real estate investors",
+      "Real estate agents",
+      "Property managers",
+      "Investment firms",
+      "Individual investors"
     ],
-    tags: ["AI", "Healthcare", "Medical Diagnostics", "Machine Learning", "Telemedicine", "Medical Imaging"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$1,500 - $5,000/month",
+    tags: ["AI", "Real Estate", "Analytics", "Investment", "Market Analysis"],
+    estimatedDelivery: "4-5 weeks",
+    supportLevel: "premium",
+    marketPrice: "$199 - $699/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technology: ["TensorFlow", "PyTorch", "DICOM", "HL7 FHIR", "HIPAA-compliant Cloud", "Edge Computing"],
-    integrations: ["EPIC", "Cerner", "Practice Management Systems", "PACS", "EHR Systems"],
-    compliance: ["HIPAA", "FDA", "CE Mark", "SOC 2", "ISO 13485"],
-    roi: "300% within 18 months",
-    competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Siemens Healthineers"],
-    marketTrend: "High-growth market with 400% annual expansion",
-    innovationLevel: "Breakthrough AI technology transforming healthcare delivery"
+    technology: ["Python", "React", "TensorFlow", "PostgreSQL", "AWS"],
+    integrations: ["Zillow", "Redfin", "Realtor.com", "MLS systems", "Property databases"],
+    compliance: ["GDPR", "CCPA", "SOC 2"],
+    roi: "300% within 12 months",
+    competitors: ["Zillow", "Redfin", "RealScout", "PropertyRadar"],
+    freeTrial: true,
+    setupFee: 99
   },
 
-  // Sustainable Energy Management Platform
+  // AI-Powered Energy Management
   {
-    id: "sustainable-energy-management",
-    title: "Sustainable Energy Management Platform",
-    description: "AI-powered energy management system that optimizes energy consumption, integrates renewable sources, and provides real-time monitoring for sustainable business operations.",
-    category: "Sustainability & Energy",
-    subcategory: "Energy Management",
-    price: 800,
+    id: "ai-energy-management-platform",
+    title: "AI Energy Management Platform",
+    description: "Smart energy management platform that uses AI to optimize energy consumption, predict demand, and reduce costs for commercial and industrial facilities.",
+    category: "AI & Energy",
+    subcategory: "Management",
+    price: 299,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Real-time energy consumption monitoring",
-      "AI-powered optimization algorithms",
-      "Renewable energy integration",
-      "Demand response management",
-      "Carbon footprint tracking",
-      "Energy cost analysis",
-      "Predictive maintenance",
-      "Smart grid integration",
-      "Sustainability reporting",
-      "Mobile app access"
+      "Energy consumption optimization",
+      "Demand forecasting",
+      "Cost analysis",
+      "Sustainability tracking",
+      "Real-time monitoring",
+      "Automated controls",
+      "Performance analytics",
+      "Regulatory compliance"
     ],
     benefits: [
-      "Reduce energy costs by 30-40%",
-      "Lower carbon emissions by 50%",
-      "Improve energy efficiency by 35%",
-      "Achieve sustainability goals",
-      "Enhanced corporate social responsibility",
+      "Reduce energy costs by 25%",
+      "Improve energy efficiency by 30%",
+      "Better sustainability metrics",
+      "Automated energy management",
       "Regulatory compliance"
     ],
     useCases: [
-      "Manufacturing facilities",
       "Commercial buildings",
+      "Industrial facilities",
       "Data centers",
-      "Retail chains",
-      "Educational institutions",
-      "Government facilities"
+      "Retail stores",
+      "Manufacturing plants"
     ],
     targetAudience: [
       "Facility managers",
-      "Sustainability officers",
-      "Operations directors",
       "Energy managers",
-      "Corporate executives"
+      "Building owners",
+      "Industrial companies",
+      "Sustainability officers"
     ],
-    tags: ["Sustainability", "Energy Management", "AI", "IoT", "Renewable Energy", "Smart Grid"],
-    estimatedDelivery: "4-6 weeks",
+    tags: ["AI", "Energy", "Sustainability", "IoT", "Automation"],
+    estimatedDelivery: "6-8 weeks",
     supportLevel: "premium",
-    marketPrice: "$800 - $3,000/month",
+    marketPrice: "$299 - $1,199/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technology: ["IoT Sensors", "Machine Learning", "Cloud Computing", "Blockchain", "Edge Computing"],
-    integrations: ["Building Management Systems", "Solar Panels", "Wind Turbines", "Smart Meters", "Utility APIs"],
-    compliance: ["ISO 50001", "LEED", "BREEAM", "Energy Star"],
-    roi: "250% within 12 months",
+    technology: ["Python", "React", "TensorFlow", "IoT sensors", "PostgreSQL"],
+    integrations: ["Building management systems", "IoT devices", "Energy meters", "SCADA systems"],
+    compliance: ["ISO 50001", "LEED", "SOC 2"],
+    roi: "350% within 18 months",
     competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"],
-    marketTrend: "Growing market with 200% annual growth due to sustainability focus",
-    innovationLevel: "Advanced AI and IoT technology for sustainable energy management"
-  },
-
-  // AI-Powered Legal Research & Contract Analysis
-  {
-    id: "ai-legal-research-platform",
-    title: "AI Legal Research & Contract Analysis Platform",
-    description: "Intelligent legal research platform that uses AI to analyze contracts, conduct legal research, and provide legal insights with natural language processing capabilities.",
-    category: "AI & Legal Tech",
-    subcategory: "Legal Research",
-    price: 1200,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI-powered contract analysis",
-      "Legal research automation",
-      "Case law analysis",
-      "Regulatory compliance checking",
-      "Risk assessment tools",
-      "Document generation",
-      "Legal citation management",
-      "Multi-jurisdiction support",
-      "Collaborative workspace",
-      "Mobile app access"
-    ],
-    benefits: [
-      "Reduce legal research time by 80%",
-      "Improve contract review accuracy by 40%",
-      "Lower legal costs by 35%",
-      "Faster due diligence",
-      "Enhanced risk management",
-      "Better compliance tracking"
-    ],
-    useCases: [
-      "Law firms",
-      "Corporate legal departments",
-      "Compliance teams",
-      "Contract managers",
-      "Risk management teams",
-      "Legal consultants"
-    ],
-    targetAudience: [
-      "Attorneys",
-      "Legal professionals",
-      "Compliance officers",
-      "Contract managers",
-      "Risk managers"
-    ],
-    tags: ["AI", "Legal Tech", "Contract Analysis", "Legal Research", "Compliance", "Risk Management"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "premium",
-    marketPrice: "$1,200 - $4,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technology: ["Natural Language Processing", "Machine Learning", "Blockchain", "Cloud Computing", "API Integration"],
-    integrations: ["Document Management Systems", "E-signature Platforms", "Legal Research Databases", "CRM Systems"],
-    compliance: ["GDPR", "SOC 2", "ISO 27001", "Legal Industry Standards"],
-    roi: "350% within 12 months",
-    competitors: ["LexisNexis", "Westlaw", "ContractPodAi", "Evisort"],
-    marketTrend: "High-growth market with 300% annual expansion",
-    innovationLevel: "Advanced AI technology revolutionizing legal research and contract analysis"
-  },
-
-  // Autonomous Supply Chain Optimization
-  {
-    id: "autonomous-supply-chain",
-    title: "Autonomous Supply Chain Optimization Platform",
-    description: "AI-driven supply chain management system that autonomously optimizes inventory, predicts demand, and manages logistics with minimal human intervention.",
-    category: "AI & Supply Chain",
-    subcategory: "Supply Chain Management",
-    price: 2000,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Autonomous inventory management",
-      "AI-powered demand forecasting",
-      "Real-time logistics optimization",
-      "Supplier performance analytics",
-      "Risk assessment and mitigation",
-      "Cost optimization algorithms",
-      "Sustainability tracking",
-      "Multi-warehouse management",
-      "Last-mile delivery optimization",
-      "Predictive analytics dashboard"
-    ],
-    benefits: [
-      "Reduce inventory costs by 25%",
-      "Improve delivery times by 40%",
-      "Lower supply chain risks by 60%",
-      "Increase efficiency by 35%",
-      "Better supplier relationships",
-      "Enhanced customer satisfaction"
-    ],
-    useCases: [
-      "Manufacturing companies",
-      "Retail chains",
-      "E-commerce businesses",
-      "Logistics providers",
-      "Distribution centers",
-      "Import/export companies"
-    ],
-    targetAudience: [
-      "Supply chain managers",
-      "Operations directors",
-      "Logistics coordinators",
-      "Inventory managers",
-      "Procurement teams"
-    ],
-    tags: ["AI", "Supply Chain", "Logistics", "Inventory Management", "Demand Forecasting", "Automation"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$2,000 - $8,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technology: ["Machine Learning", "IoT Sensors", "Blockchain", "Cloud Computing", "Edge Computing"],
-    integrations: ["ERP Systems", "WMS", "TMS", "Supplier Portals", "E-commerce Platforms"],
-    compliance: ["ISO 28000", "C-TPAT", "GDPR", "SOC 2"],
-    roi: "400% within 18 months",
-    competitors: ["SAP", "Oracle", "Manhattan Associates", "JDA Software"],
-    marketTrend: "Growing market with 250% annual growth due to supply chain disruptions",
-    innovationLevel: "Revolutionary autonomous AI technology for supply chain optimization"
-  },
-
-  // AI-Powered Financial Trading Platform
-  {
-    id: "ai-financial-trading",
-    title: "AI Financial Trading & Investment Platform",
-    description: "Advanced AI-powered trading platform that uses machine learning algorithms to analyze market data, predict trends, and execute trades with risk management.",
-    category: "AI & FinTech",
-    subcategory: "Trading & Investment",
-    price: 3000,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI-powered market analysis",
-      "Predictive trading algorithms",
-      "Risk management systems",
-      "Portfolio optimization",
-      "Real-time market data",
-      "Automated trading execution",
-      "Performance analytics",
-      "Compliance monitoring",
-      "Multi-asset support",
-      "Mobile trading app"
-    ],
-    benefits: [
-      "Improve trading performance by 25-40%",
-      "Reduce trading risks by 50%",
-      "24/7 automated trading",
-      "Data-driven decisions",
-      "Enhanced portfolio returns",
-      "Better risk management"
-    ],
-    useCases: [
-      "Investment firms",
-      "Hedge funds",
-      "Individual traders",
-      "Financial advisors",
-      "Institutional investors",
-      "Trading desks"
-    ],
-    targetAudience: [
-      "Traders",
-      "Investment managers",
-      "Financial advisors",
-      "Portfolio managers",
-      "Risk managers"
-    ],
-    tags: ["AI", "FinTech", "Trading", "Investment", "Risk Management", "Machine Learning"],
-    estimatedDelivery: "10-14 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$3,000 - $15,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technology: ["Deep Learning", "Natural Language Processing", "High-Frequency Trading", "Cloud Computing", "Blockchain"],
-    integrations: ["Bloomberg", "Reuters", "Trading APIs", "Brokerage Platforms", "Market Data Feeds"],
-    compliance: ["SEC", "FINRA", "MiFID II", "SOC 2", "PCI DSS"],
-    roi: "500% within 24 months",
-    competitors: ["Bloomberg", "Thomson Reuters", "Interactive Brokers", "TD Ameritrade"],
-    marketTrend: "High-growth market with 400% annual expansion",
-    innovationLevel: "Cutting-edge AI technology revolutionizing financial trading and investment"
-  },
-
-  // Smart City Infrastructure Management
-  {
-    id: "smart-city-infrastructure",
-    title: "Smart City Infrastructure Management Platform",
-    description: "Comprehensive IoT and AI-powered platform for managing urban infrastructure, including traffic, utilities, public safety, and environmental monitoring.",
-    category: "IoT & Smart Cities",
-    subcategory: "Urban Infrastructure",
-    price: 5000,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Traffic management optimization",
-      "Utility monitoring and control",
-      "Public safety monitoring",
-      "Environmental quality tracking",
-      "Smart parking systems",
-      "Waste management optimization",
-      "Energy grid management",
-      "Water quality monitoring",
-      "Air quality sensors",
-      "Citizen engagement portal"
-    ],
-    benefits: [
-      "Reduce traffic congestion by 30%",
-      "Lower utility costs by 25%",
-      "Improve public safety by 40%",
-      "Enhanced citizen satisfaction",
-      "Better resource allocation",
-      "Sustainable urban development"
-    ],
-    useCases: [
-      "City governments",
-      "Municipalities",
-      "Urban planners",
-      "Utility companies",
-      "Transportation departments",
-      "Public safety agencies"
-    ],
-    targetAudience: [
-      "City officials",
-      "Urban planners",
-      "Infrastructure managers",
-      "Public safety directors",
-      "Utility managers"
-    ],
-    tags: ["IoT", "Smart Cities", "Urban Infrastructure", "Public Safety", "Sustainability", "Data Analytics"],
-    estimatedDelivery: "12-16 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$5,000 - $25,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technology: ["IoT Sensors", "5G Networks", "Edge Computing", "Machine Learning", "Cloud Computing"],
-    integrations: ["Traffic Systems", "Utility Networks", "Emergency Services", "Public Transportation", "Weather APIs"],
-    compliance: ["NIST", "ISO 27001", "GDPR", "Local Government Standards"],
-    roi: "300% within 24 months",
-    competitors: ["Siemens", "IBM", "Cisco", "Schneider Electric"],
-    marketTrend: "Emerging market with 600% projected growth in next 10 years",
-    innovationLevel: "Revolutionary IoT and AI technology transforming urban infrastructure management"
-  },
-
-  // AI-Powered Education & Learning Platform
-  {
-    id: "ai-education-learning",
-    title: "AI Education & Personalized Learning Platform",
-    description: "Intelligent educational platform that adapts to individual learning styles, provides personalized content, and tracks progress using advanced AI algorithms.",
-    category: "AI & Education",
-    subcategory: "Personalized Learning",
-    price: 600,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Personalized learning paths",
-      "Adaptive content delivery",
-      "Progress tracking and analytics",
-      "Intelligent tutoring systems",
-      "Multi-modal learning support",
-      "Assessment and feedback",
-      "Collaborative learning tools",
-      "Mobile learning apps",
-      "Content creation tools",
-      "Learning analytics dashboard"
-    ],
-    benefits: [
-      "Improve learning outcomes by 40%",
-      "Reduce learning time by 30%",
-      "Personalized education experience",
-      "Better student engagement",
-      "Data-driven teaching insights",
-      "Scalable learning solutions"
-    ],
-    useCases: [
-      "K-12 schools",
-      "Universities and colleges",
-      "Corporate training programs",
-      "Online education platforms",
-      "Tutoring services",
-      "Professional development"
-    ],
-    targetAudience: [
-      "Educators",
-      "Students",
-      "Training managers",
-      "HR professionals",
-      "Educational administrators"
-    ],
-    tags: ["AI", "Education", "Personalized Learning", "EdTech", "Machine Learning", "Analytics"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "premium",
-    marketPrice: "$600 - $2,500/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technology: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Cloud Computing", "Mobile Apps"],
-    integrations: ["LMS Systems", "Video Conferencing", "Assessment Tools", "Student Information Systems"],
-    compliance: ["FERPA", "COPPA", "GDPR", "SOC 2"],
-    roi: "350% within 12 months",
-    competitors: ["Coursera", "Udemy", "Khan Academy", "Duolingo"],
-    marketTrend: "High-growth market with 300% annual expansion",
-    innovationLevel: "Advanced AI technology revolutionizing personalized education and learning"
-  },
-
-  // Quantum Machine Learning Platform
-  {
-    id: "quantum-machine-learning",
-    title: "Quantum Machine Learning Platform",
-    description: "Cutting-edge platform that combines quantum computing with machine learning to solve complex optimization problems and accelerate AI model training.",
-    category: "Quantum Computing & AI",
-    subcategory: "Quantum ML",
-    price: 8000,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Quantum algorithm optimization",
-      "Hybrid quantum-classical ML",
-      "Quantum neural networks",
-      "Optimization problem solving",
-      "Quantum feature selection",
-      "Model training acceleration",
-      "Quantum error correction",
-      "Performance benchmarking",
-      "API access and integration",
-      "Expert consultation services"
-    ],
-    benefits: [
-      "Accelerate ML training by 1000x",
-      "Solve previously intractable problems",
-      "Quantum advantage in optimization",
-      "Future-proof technology investment",
-      "Competitive advantage in research",
-      "Breakthrough scientific discoveries"
-    ],
-    useCases: [
-      "Research institutions",
-      "Pharmaceutical companies",
-      "Financial services",
-      "Aerospace companies",
-      "Technology companies",
-      "Government agencies"
-    ],
-    targetAudience: [
-      "Quantum researchers",
-      "Data scientists",
-      "ML engineers",
-      "Research directors",
-      "Technology executives"
-    ],
-    tags: ["Quantum Computing", "Machine Learning", "AI", "Optimization", "Research", "Advanced Computing"],
-    estimatedDelivery: "16-20 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$8,000 - $50,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technology: ["Quantum Algorithms", "Hybrid Systems", "Quantum Error Correction", "Cloud Quantum Computing", "Advanced ML"],
-    integrations: ["Quantum Hardware", "ML Frameworks", "Research Tools", "Scientific Computing", "Cloud Platforms"],
-    compliance: ["Research Standards", "Security Protocols", "Data Protection", "Export Controls"],
-    roi: "1000% within 36 months",
-    competitors: ["IBM Quantum", "Google Quantum", "Microsoft Quantum", "D-Wave"],
-    marketTrend: "Emerging market with 1000% projected growth in next 10 years",
-    innovationLevel: "Revolutionary quantum technology at the forefront of scientific advancement"
+    freeTrial: true,
+    setupFee: 299
   }
 ];
