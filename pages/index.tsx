@@ -257,6 +257,45 @@ export default function HomePage() {
                 <div className="text-gray-400 text-sm lg:text-base leading-tight">
                   {stat.label}
                 </div>
+
+                {/* Features */}
+                <div className="mb-6">
+                  <div className="text-sm text-gray-400 mb-3">Key Capabilities:</div>
+                  <div className="grid grid-cols-2 gap-2">
+                    {category.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-center space-x-2 text-xs text-gray-300">
+                        <CheckCircle className="w-3 h-3 text-green-400" />
+                        <span>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Sample Services */}
+                <div className="mb-6">
+                  <div className="text-sm text-gray-400 mb-3">Featured Services:</div>
+                  <div className="space-y-2">
+                    {category.services.slice(0, 3).map((service, idx) => (
+                      <div key={idx} className="flex items-center justify-between text-sm">
+                        <span className="text-gray-300">{service.name}</span>
+                        <span className="text-purple-400 font-semibold">{service.price}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* CTA */}
+                <Link
+                  href={category.href}
+                  className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-medium group-hover:scale-105"
+                >
+                  <span>Explore {category.title}</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+
+                {/* Hover Effects */}
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-2xl" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
               </motion.div>
             ))}
           </motion.div>
@@ -353,6 +392,23 @@ export default function HomePage() {
               </motion.div>
             ))}
           </div>
+
+          {/* View All Services CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
+            <Link
+              href="/innovative-micro-saas-showcase"
+              className="inline-flex items-center space-x-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 hover:scale-105"
+            >
+              <span className="text-lg font-semibold">Explore All Services</span>
+              <ArrowRight className="w-6 h-6" />
+            </Link>
+          </motion.div>
         </div>
       </section>
 

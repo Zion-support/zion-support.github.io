@@ -14,14 +14,7 @@ import {
   Building, Code
 } from 'lucide-react';
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
-
-const serviceCategories = [
+const footerSections = [
   {
     title: '🧠 AI & Consciousness',
     icon: <Brain className="w-5 h-5 text-cyan-400" />,
@@ -68,6 +61,17 @@ const serviceCategories = [
   }
 ];
 
+const quickLinks = [
+  { name: 'All Services Showcase', href: '/innovative-micro-saas-showcase' },
+  { name: 'Pricing Plans', href: '/pricing' },
+  { name: 'Case Studies', href: '/case-studies' },
+  { name: 'Documentation', href: '/docs' },
+  { name: 'Blog & Insights', href: '/blog' },
+  { name: 'Support Center', href: '/support' },
+  { name: 'Contact Sales', href: '/contact' },
+  { name: 'Careers', href: '/careers' }
+];
+
 const companyLinks = [
   { name: 'About Us', href: '/about', description: 'Our mission and vision', icon: <Users className="w-4 h-4" /> },
   { name: 'Careers', href: '/careers', description: 'Join our team', icon: <Award className="w-4 h-4" /> },
@@ -85,6 +89,13 @@ const supportLinks = [
   { name: 'Training', href: '/training', description: 'Learn to use our platforms', icon: <Users className="w-4 h-4" /> },
   { name: 'Community', href: '/community', description: 'Connect with other users', icon: <Globe className="w-4 h-4" /> }
 ];
+
+const contactInfo = {
+  phone: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
 
 const socialLinks = [
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" />, color: 'hover:text-blue-400' },

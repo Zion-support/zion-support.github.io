@@ -46,10 +46,10 @@ const navigationItems: NavigationItem[] = [
     color: 'from-cyan-500 to-blue-600',
     isNew: true,
     children: [
-      { name: 'View All Services', href: '/comprehensive-services-showcase-2025', description: 'Complete services portfolio' },
-      { name: 'Service Categories', href: '/comprehensive-services-showcase-2025#categories', description: 'Browse by category' },
-      { name: 'Pricing Comparison', href: '/comprehensive-services-showcase-2025#pricing', description: 'Compare service costs' },
-      { name: 'Service Search', href: '/comprehensive-services-showcase-2025#search', description: 'Find specific services' }
+      { name: 'View All Services', href: '/innovative-micro-saas-showcase', description: 'Complete services portfolio' },
+      { name: 'Service Categories', href: '/innovative-micro-saas-showcase#categories', description: 'Browse by category' },
+      { name: 'Pricing Comparison', href: '/pricing', description: 'Compare service costs' },
+      { name: 'Service Search', href: '/innovative-micro-saas-showcase#search', description: 'Find specific services' }
     ]
   },
   {
