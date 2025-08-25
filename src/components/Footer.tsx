@@ -112,7 +112,7 @@ export function Footer() {
     },
     { 
       name: 'GitHub', 
-      url: 'https://github.com/Zion-Holdings', 
+      url: 'https://github.com/ziontechgroup', 
       icon: Github,
       fallback: 'https://github.com',
       color: 'hover:bg-gray-600/20 hover:text-gray-400'
