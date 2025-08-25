@@ -1,221 +1,131 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Bot, 
   Brain, 
   Cpu, 
-  Database, 
-  Network, 
-  Shield, 
   Zap, 
+  Shield, 
+  Users, 
+  TrendingUp, 
+  CheckCircle, 
   ArrowRight,
-  CheckCircle,
-  Users,
-  TrendingUp,
-  Globe,
-  Clock,
-  BarChart3,
-  Target,
-  Lightbulb,
-  Rocket,
-  Code,
-  Lock,
+  Bot,
+  Network,
+  Database,
   Cloud,
-  Microchip,
-  Settings,
-  Monitor,
-  AlertTriangle,
-  RefreshCw,
-  Eye,
-  Heart,
-  Star
+  Lock,
+  BarChart3,
+  Clock,
+  Target,
+  Code
 } from 'lucide-react';
-import SEOHead from '../../components/SEOHead';
 
-const AIAutonomousSystems: React.FC = () => {
+export default function AIAutonomousSystems() {
   const features = [
     {
       icon: Brain,
-      title: "Self-Learning Capabilities",
-      description: "Advanced machine learning algorithms that continuously improve performance based on data patterns and user interactions."
+      title: 'Intelligent Decision Making',
+      description: 'AI systems that make autonomous decisions based on real-time data and learned patterns'
     },
     {
-      icon: Bot,
-      title: "Autonomous Decision Making",
-      description: "AI systems that can make complex decisions independently while maintaining human oversight and control."
+              icon: Bot,
+      title: 'Autonomous Operations',
+      description: 'Self-operating systems that require minimal human intervention for routine tasks'
     },
     {
-      icon: RefreshCw,
-      title: "Continuous Optimization",
-      description: "Real-time performance monitoring and automatic system optimization for maximum efficiency."
-    },
-    {
-      icon: Shield,
-      title: "Built-in Security",
-      description: "Enterprise-grade security protocols integrated into every autonomous system component."
-    }
-  ];
-
-  const useCases = [
-    {
-      title: "Business Process Automation",
-      description: "Streamline operations with AI systems that handle repetitive tasks and complex workflows.",
-      icon: Settings,
-      benefits: ["24/7 Operation", "Error Reduction", "Cost Savings", "Scalability"]
-    },
-    {
-      title: "Predictive Analytics",
-      description: "Forecast trends and identify opportunities with autonomous data analysis systems.",
-      icon: BarChart3,
-      benefits: ["Real-time Insights", "Pattern Recognition", "Risk Assessment", "Strategic Planning"]
-    },
-    {
-      title: "Customer Service",
-      description: "Intelligent chatbots and support systems that provide personalized assistance.",
-      icon: Users,
-      benefits: ["Instant Response", "Personalization", "Multi-language Support", "Learning from Interactions"]
-    },
-    {
-      title: "Supply Chain Management",
-      description: "Optimize logistics and inventory with autonomous systems that adapt to market changes.",
       icon: Network,
-      benefits: ["Demand Forecasting", "Route Optimization", "Inventory Management", "Cost Optimization"]
+      title: 'Distributed Intelligence',
+      description: 'Multi-agent systems that collaborate and coordinate across networks'
+    },
+    {
+      icon: Database,
+      title: 'Continuous Learning',
+      description: 'Systems that improve performance through ongoing data analysis and adaptation'
     }
   ];
 
   const benefits = [
+    '24/7 autonomous operation without human supervision',
+    'Real-time decision making and response',
+    'Scalable performance across multiple systems',
+    'Continuous improvement through machine learning',
+    'Reduced operational costs and human error',
+    'Enhanced security and threat detection'
+  ];
+
+  const useCases = [
     {
-      icon: Zap,
-      title: "Increased Efficiency",
-      description: "Automate complex processes and reduce manual intervention by up to 80%"
+      title: 'Manufacturing Automation',
+      description: 'Intelligent production lines that self-optimize and maintain quality standards',
+      icon: Cpu
     },
     {
-      icon: TrendingUp,
-      title: "Cost Reduction",
-      description: "Lower operational costs through automation and optimized resource allocation"
+      title: 'Financial Trading',
+      description: 'AI-powered trading systems that execute strategies autonomously',
+      icon: TrendingUp
     },
     {
-      icon: Clock,
-      title: "24/7 Operation",
-      description: "Continuous operation without breaks, holidays, or human limitations"
+      title: 'Healthcare Monitoring',
+      description: 'Patient monitoring systems that detect issues and alert medical staff',
+      icon: Users
     },
     {
-      icon: Target,
-      title: "Improved Accuracy",
-      description: "Reduce human errors and improve decision-making accuracy by leveraging data"
+      title: 'Cybersecurity',
+      description: 'Threat detection and response systems that protect networks automatically',
+      icon: Shield
     }
   ];
 
   const technologies = [
-    "Machine Learning & Deep Learning",
-    "Natural Language Processing",
-    "Computer Vision",
-    "Robotic Process Automation",
-    "Edge Computing",
-    "IoT Integration",
-    "Blockchain Security",
-    "Quantum Computing Ready"
+    'Machine Learning & Deep Learning',
+    'Neural Networks & AI Algorithms',
+    'IoT & Edge Computing',
+    'Cloud Infrastructure',
+    'Real-time Data Processing',
+    'Blockchain for Security'
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
-      <SEOHead 
-        title="AI Autonomous Systems - Zion Tech Group"
-        description="Transform your business with self-managing AI systems that operate independently. Our autonomous AI solutions drive efficiency, reduce costs, and enable 24/7 operations."
-        keywords="AI autonomous systems, self-managing AI, autonomous decision making, business automation, AI optimization"
-      />
-      
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/30 rounded-full text-cyan-300 text-sm font-medium mb-6">
-              <Bot className="w-4 h-4 mr-2" />
-              AI Autonomous Systems
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Self-Managing AI Systems
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Deploy intelligent systems that operate independently, learn continuously, and optimize your business operations 24/7
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Get Started
-              </Link>
-              <Link 
-                to="/services" 
-                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
-              >
-                View All Services
-              </Link>
-            </div>
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            AI <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Autonomous Systems</span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Build intelligent, self-operating systems that learn, adapt, and make decisions autonomously. 
+            Transform your business operations with cutting-edge AI technology.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+            >
+              Get Started
+            </Link>
+            <Link
+              to="/case-studies"
+              className="px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
+            >
+              View Case Studies
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-black/30">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Core Capabilities
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our autonomous AI systems are built with cutting-edge technology to deliver exceptional performance and reliability
-            </p>
-          </div>
-          
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-16">Core Capabilities</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+              <div key={index} className="text-center p-6 rounded-lg bg-gray-800/50 hover:bg-gray-800/70 transition-all duration-300">
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mx-auto mb-4">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-4">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Real-World Applications
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how autonomous AI systems are transforming industries and revolutionizing business operations
-            </p>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 hover:border-cyan-500 transition-all duration-300">
-                <div className="flex items-start mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mr-6 flex-shrink-0">
-                    <useCase.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold mb-3">{useCase.title}</h3>
-                    <p className="text-gray-300 mb-4">{useCase.description}</p>
-                  </div>
-                </div>
-                <div className="grid grid-cols-2 gap-3">
-                  {useCase.benefits.map((benefit, idx) => (
-                    <div key={idx} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                    </div>
-                  ))}
-                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-400">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -223,75 +133,120 @@ const AIAutonomousSystems: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-black/30">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Why Choose Autonomous AI?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the transformative benefits of deploying self-managing AI systems in your organization
-            </p>
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-6">Why Choose AI Autonomous Systems?</h2>
+              <p className="text-lg text-gray-300 mb-8">
+                Our AI autonomous systems deliver unprecedented efficiency, accuracy, and scalability 
+                while reducing operational costs and human error.
+              </p>
+              <ul className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <li key={index} className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                    {benefit}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="relative">
+              <div className="w-full h-96 bg-gradient-to-r from-cyan-500/20 to-blue-600/20 rounded-lg flex items-center justify-center">
+                <Brain className="w-32 h-32 text-cyan-400" />
+              </div>
+            </div>
           </div>
-          
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-16">Industry Applications</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <benefit.icon className="w-10 h-10 text-white" />
+            {useCases.map((useCase, index) => (
+              <div key={index} className="p-6 rounded-lg bg-gray-800/50 hover:bg-gray-800/70 transition-all duration-300">
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg mb-4">
+                  <useCase.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
-                <p className="text-gray-300">{benefit.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                <p className="text-gray-400 text-sm">{useCase.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Technologies Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Advanced Technologies
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Built on cutting-edge technologies that ensure reliability, security, and performance
-            </p>
+      {/* Technology Stack */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-16">Technology Stack</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {technologies.map((tech, index) => (
+              <div key={index} className="flex items-center p-4 bg-gray-800/50 rounded-lg">
+                <div className="w-3 h-3 bg-cyan-400 rounded-full mr-3"></div>
+                <span className="text-gray-300">{tech}</span>
+              </div>
+            ))}
           </div>
-          
-          <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl border border-gray-700 p-8">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {technologies.map((tech, index) => (
-                <div key={index} className="flex items-center text-gray-300">
-                  <Microchip className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                  {tech}
-                </div>
-              ))}
+        </div>
+      </section>
+
+      {/* Implementation Process */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-16">Implementation Process</h2>
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Target className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Assessment</h3>
+              <p className="text-gray-400">Analyze your current systems and identify automation opportunities</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Brain className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Design</h3>
+              <p className="text-gray-400">Create custom AI architecture and autonomous workflows</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Code className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Development</h3>
+              <p className="text-gray-400">Build and integrate AI systems with your existing infrastructure</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Zap className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Deployment</h3>
+              <p className="text-gray-400">Launch and monitor autonomous systems in production</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-700">
-        <div className="max-w-4xl mx-auto text-center px-6">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            Ready to Deploy Autonomous AI?
-          </h2>
-          <p className="text-xl text-cyan-100 mb-8">
-            Transform your business operations with self-managing AI systems that work around the clock
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">Ready to Automate Your Operations?</h2>
+          <p className="text-lg text-gray-300 mb-8">
+            Let's discuss how AI autonomous systems can transform your business and drive unprecedented efficiency.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="px-8 py-4 bg-white text-cyan-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+            <Link
+              to="/contact"
+              className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
             >
-              Start Your Journey
+              Schedule Consultation
             </Link>
-            <Link 
-              to="/services" 
-              className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"
+            <Link
+              to="/services"
+              className="px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
             >
               Explore All Services
             </Link>
@@ -300,6 +255,4 @@ const AIAutonomousSystems: React.FC = () => {
       </section>
     </div>
   );
-};
-
-export default AIAutonomousSystems;
+}
