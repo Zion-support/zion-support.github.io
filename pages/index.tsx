@@ -109,6 +109,7 @@ export default function HomePage() {
   ];
 
   const featuredOffers = professionalServices.slice(0, 3);
+  const newServices = [...nextGenAIServices, ...nextGenITServices, ...innovativeMicroSaasV2].slice(0, 6);
 
   // Service statistics
   const serviceStats = {

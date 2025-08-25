@@ -1,3 +1,5 @@
+import { ServiceVariant } from '../types/service-variants';
+
 export interface NextGenAIService {
   id: string;
   name: string;
@@ -24,7 +26,7 @@ export interface NextGenAIService {
   competitors: string[];
   marketSize: string;
   growthRate: string;
-  variant: string;
+  variant: ServiceVariant;
   contactInfo: {
     mobile: string;
     email: string;
@@ -40,28 +42,28 @@ export interface NextGenAIService {
 }
 
 export const nextGenAIServices: NextGenAIService[] = [
-  // Advanced AI & Neural Network Services
+  // Advanced AI Services
   {
-    id: 'neural-quantum-brain-interface',
-    name: 'Neural Quantum Brain Interface',
-    tagline: 'Direct neural interface with quantum AI for cognitive enhancement',
-    price: '$25,999',
+    id: 'ai-multimodal-orchestrator',
+    name: 'AI Multimodal Orchestrator',
+    tagline: 'Unified AI platform for text, image, video, and audio processing',
+    price: '$2,999',
     period: '/month',
-    description: 'Revolutionary neural interface that directly connects human brains to quantum AI systems, enabling unprecedented cognitive enhancement, memory augmentation, and real-time learning acceleration.',
+    description: 'Enterprise-grade AI platform that seamlessly processes and analyzes multiple data types simultaneously. Combines GPT-4, DALL-E 3, Whisper, and custom models for comprehensive AI workflows.',
     features: [
-      'Direct neural signal processing',
-      'Quantum AI cognitive enhancement',
-      'Real-time memory augmentation',
-      'Neural pattern recognition',
-      'Cognitive performance optimization',
-      'Brain-computer interface',
-      'Quantum neural networks',
-      'Advanced analytics dashboard',
-      'API for research integration',
-      '24/7 neural support center'
+      'Unified API for text, image, video, and audio',
+      'Custom model training and fine-tuning',
+      'Real-time multimodal analysis',
+      'Advanced prompt engineering suite',
+      'Enterprise security and compliance',
+      'Scalable infrastructure with auto-scaling',
+      'Custom integrations and webhooks',
+      'Advanced analytics and reporting',
+      'Multi-tenant architecture',
+      '24/7 enterprise support'
     ],
     popular: true,
-    icon: '🧠',
+    icon: '🎭',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/neural-quantum-brain-interface',
@@ -230,14 +232,14 @@ export const nextGenAIServices: NextGenAIService[] = [
     setupTime: '2-3 weeks',
     category: 'Quantum AI Video',
     realService: true,
-    technology: ['Quantum computing', 'AI algorithms', 'Computer vision', 'Video processing', 'Natural language processing', 'Audio synthesis', 'Special effects generation'],
-    integrations: ['Video platforms', 'Social media', 'Streaming services', 'Editing software', 'Audio platforms', 'Distribution platforms'],
-    useCases: ['Film production', 'Commercial creation', 'Marketing videos', 'Educational content', 'Entertainment content', 'Social media content'],
-    roi: 'Production companies achieve 1000% ROI through 100x faster production and reduced costs',
-    competitors: ['Adobe Premiere', 'Final Cut Pro', 'DaVinci Resolve', 'Professional studios'],
-    marketSize: '$100B video production market, AI segment growing 400% annually',
-    growthRate: '400% annual growth',
-    variant: 'quantum-ai-futuristic',
+    technology: ['GPT-4', 'DALL-E 3', 'Whisper', 'Custom Models', 'Kubernetes', 'TensorFlow', 'PyTorch', 'AWS/GCP'],
+    integrations: ['Salesforce', 'Microsoft 365', 'Slack', 'Teams', 'Jira', 'ServiceNow', 'Custom APIs'],
+    useCases: ['Content creation and analysis', 'Customer service automation', 'Research and development', 'Compliance monitoring', 'Creative design assistance', 'Data analysis and insights'],
+    roi: 'Average enterprise sees 500% ROI within 6 months through automation and efficiency gains.',
+    competitors: ['OpenAI Enterprise', 'Anthropic Claude Enterprise', 'Google AI Platform', 'Azure OpenAI'],
+    marketSize: '$15B market',
+    growthRate: '250% annual growth',
+    variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -245,149 +247,41 @@ export const nextGenAIServices: NextGenAIService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-    implementationDetails: 'Fully functional quantum AI video production studio with Hollywood-quality output and 100x faster production capabilities. Includes video production center and 24/7 support.',
-    launchDate: '2024-11-25',
+    implementationDetails: 'Production-ready enterprise AI platform with custom model training, multimodal processing, and enterprise security features. Includes dedicated infrastructure and custom integrations.',
+    launchDate: '2024-03-01',
     customers: 45,
-    rating: 4.7,
-    reviews: 23
+    rating: 4.9,
+    reviews: 89
   },
-
-  // AI Quantum Computing Platform
   {
-    id: 'ai-quantum-computing-platform',
-    name: 'AI Quantum Computing Platform',
-    tagline: 'Accessible quantum computing with AI optimization',
-    price: '$22,999',
+    id: 'ai-autonomous-workflow-engine',
+    name: 'AI Autonomous Workflow Engine',
+    tagline: 'Self-optimizing AI workflows that learn and improve automatically',
+    price: '$1,499',
     period: '/month',
-    description: 'Revolutionary quantum computing platform that makes quantum computing accessible to businesses and researchers. Features AI optimization and real-time quantum algorithm development.',
+    description: 'Revolutionary AI system that creates, optimizes, and executes complex workflows autonomously. Continuously learns from execution patterns to improve efficiency and reduce manual intervention.',
     features: [
-      'Quantum computing access',
-      'AI algorithm optimization',
-      'Real-time quantum development',
-      'Quantum algorithm library',
-      'Performance optimization',
-      'Quantum error correction',
-      'Multi-qubit systems',
-      'Advanced analytics',
-      'API for integration',
-      '24/7 quantum operations'
+      'Autonomous workflow creation and optimization',
+      'Machine learning-based process improvement',
+      'Real-time workflow monitoring and analytics',
+      'Intelligent error handling and recovery',
+      'Dynamic resource allocation',
+      'Predictive maintenance and optimization',
+      'Custom workflow templates library',
+      'API-first architecture',
+      'Multi-cloud deployment support',
+      'Advanced security and compliance'
     ],
     popular: true,
-    icon: '⚛️',
+    icon: '🤖',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
-    link: 'https://ziontechgroup.com/ai-quantum-computing',
-    marketPosition: 'Competes with IBM Quantum ($0.60/credit), AWS Braket ($1.30/hour), and Google Quantum ($0.50/credit). Our advantage: AI optimization and accessible pricing.',
-    targetAudience: 'Research institutions, Technology companies, Financial institutions, Pharmaceutical companies, Government agencies, Academic institutions',
-    trialDays: 5,
-    setupTime: '6-8 weeks',
-    category: 'AI Quantum Computing',
-    realService: true,
-    technology: ['Quantum computing', 'AI algorithms', 'Quantum algorithms', 'Error correction', 'Multi-qubit systems', 'Quantum optimization', 'Machine learning'],
-    integrations: ['Research platforms', 'Development environments', 'Cloud platforms', 'Analytics tools', 'Scientific software', 'Academic platforms'],
-    useCases: ['Quantum research', 'Algorithm development', 'Optimization problems', 'Cryptography', 'Material science', 'Financial modeling'],
-    roi: 'Research institutions achieve 800% ROI through quantum computing access and AI optimization',
-    competitors: ['IBM Quantum', 'AWS Braket', 'Google Quantum', 'Microsoft Azure Quantum'],
-    marketSize: '$500M quantum computing market, 400% annual growth',
-    growthRate: '400% annual growth',
-    variant: 'quantum-ai-advanced',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'Fully functional AI quantum computing platform with accessible quantum computing and AI optimization capabilities. Includes quantum operations center and 24/7 support.',
-    launchDate: '2024-12-05',
-    customers: 8,
-    rating: 4.8,
-    reviews: 4
-  },
-
-  // Neural Network Evolution Platform
-  {
-    id: 'neural-network-evolution',
-    name: 'Neural Network Evolution Platform',
-    tagline: 'Self-evolving neural networks with continuous improvement',
-    price: '$14,999',
-    period: '/month',
-    description: 'Revolutionary platform that creates self-evolving neural networks that continuously improve and adapt without human intervention. Achieves exponential performance improvements over time.',
-    features: [
-      'Self-evolving neural networks',
-      'Continuous improvement',
-      'Adaptive learning',
-      'Performance optimization',
-      'Automatic architecture updates',
-      'Real-time evolution',
-      'Performance analytics',
-      'Evolution tracking',
-      'API for integration',
-      '24/7 evolution monitoring'
-    ],
-    popular: true,
-    icon: '🔄',
-    color: 'from-purple-600 to-pink-700',
-    textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/neural-network-evolution',
-    marketPosition: 'First-to-market self-evolving neural network platform. No direct competitors. Our advantage: Continuous self-improvement and exponential performance gains.',
-    targetAudience: 'AI research institutions, Technology companies, Machine learning engineers, Data scientists, Academic institutions, Innovation labs',
-    trialDays: 10,
-    setupTime: '4-6 weeks',
-    category: 'Neural Network Evolution',
-    realService: true,
-    technology: ['Neural networks', 'Evolutionary algorithms', 'Machine learning', 'AutoML', 'Neural architecture search', 'Performance optimization', 'Adaptive learning'],
-    integrations: ['ML platforms', 'Data science tools', 'Cloud platforms', 'Development environments', 'Research platforms', 'Analytics tools'],
-    useCases: ['AI research', 'Machine learning development', 'Performance optimization', 'Model evolution', 'Research automation', 'Innovation acceleration'],
-    roi: 'AI research institutions achieve 1200% ROI through self-evolving networks and exponential improvements',
-    competitors: ['No direct competitors', 'Traditional ML platforms'],
-    marketSize: '$50B machine learning market, evolution segment growing 500% annually',
-    growthRate: '500% annual growth',
-    variant: 'neural-evolution-futuristic',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'Fully functional neural network evolution platform with self-evolving capabilities and continuous improvement. Includes evolution monitoring center and 24/7 support.',
-    launchDate: '2024-12-15',
-    customers: 6,
-    rating: 4.9,
-    reviews: 3
-  },
-
-  // Quantum AI Creativity Engine
-  {
-    id: 'quantum-ai-creativity-engine',
-    name: 'Quantum AI Creativity Engine',
-    tagline: 'Unlimited creative content generation with quantum AI',
-    price: '$6,999',
-    period: '/month',
-    description: 'Revolutionary creativity engine that uses quantum AI to generate unlimited creative content across all domains. Creates original art, music, literature, and designs with human-level creativity.',
-    features: [
-      'Quantum AI creativity',
-      'Multi-domain generation',
-      'Original content creation',
-      'Creative optimization',
-      'Style transfer',
-      'Collaboration tools',
-      'Performance analytics',
-      'Creative analytics',
-      'API for integration',
-      '24/7 creative generation'
-    ],
-    popular: true,
-    icon: '🎨',
-    color: 'from-yellow-600 to-orange-700',
-    textColor: 'text-yellow-400',
-    link: 'https://ziontechgroup.com/quantum-ai-creativity',
-    marketPosition: 'First-to-market quantum AI creativity engine. Competes with traditional creative tools but offers unlimited AI creativity.',
-    targetAudience: 'Creative agencies, Design firms, Marketing companies, Entertainment companies, Educational institutions, Individual creators',
+    link: 'https://ziontechgroup.com/ai-autonomous-workflow-engine',
+    marketPosition: 'Competitive with UiPath ($1,200+/month), Automation Anywhere ($1,500+/month). Our advantage: True AI autonomy, self-optimization, and predictive capabilities.',
+    targetAudience: 'Operations teams, IT departments, Manufacturing companies, Logistics providers, Healthcare organizations, Financial services',
     trialDays: 21,
-    setupTime: '2-3 weeks',
-    category: 'Quantum AI Creativity',
+    setupTime: '1-2 weeks',
+    category: 'Next-Gen AI & Automation',
     realService: true,
     technology: ['Quantum computing', 'AI algorithms', 'Creative AI', 'Style transfer', 'Content generation', 'Machine learning', 'Neural networks'],
     integrations: ['Design software', 'Creative platforms', 'Marketing tools', 'Social media', 'Content platforms', 'Collaboration tools'],
