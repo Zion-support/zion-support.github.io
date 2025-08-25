@@ -1,7 +1,13 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { ArrowUp as ArrowUpIcon } from 'lucide-react';
 
-export function Footer() {
+function Footer() {
   const currentYear = new Date().getFullYear();
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const footerSections = [
     {
@@ -270,3 +276,5 @@ export function Footer() {
     </footer>
   );
 }
+
+export default Footer;

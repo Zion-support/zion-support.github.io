@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -27,7 +28,7 @@ import SEOHead from '../components/SEOHead';
 const QuantumNeuralNetworkPlatform: React.FC = () => {
   const features = [
     {
-      icon: CpuChipIcon,
+      icon: Cpu,
       title: "Quantum Neural Processing",
       description: "Advanced quantum algorithms for neural network optimization and training acceleration"
     },
@@ -105,7 +106,12 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
       <section className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center">
+          <motion.div 
+            className="text-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <div className="flex justify-center mb-6">
               <div className="p-3 bg-purple-500/20 rounded-full">
                 <Atom className="h-12 w-12 text-purple-300" />
