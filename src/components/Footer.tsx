@@ -30,14 +30,12 @@ export function Footer() {
       title: "AI & Technology Services",
       icon: Brain,
       links: [
-        { label: "AI & Autonomous Systems", path: "/services/ai-autonomous-systems" },
-        { label: "AI Research Assistant", path: "/ai-autonomous-research-assistant" },
-        { label: "Quantum Neural Networks", path: "/quantum-neural-network-platform" },
-        { label: "Autonomous Business Platform", path: "/autonomous-business-operations-platform" },
-        { label: "AI Asset Management", path: "/ai-powered-it-asset-management" },
-        { label: "Quantum Technology", path: "/services/quantum-technology" },
-        { label: "Machine Learning Solutions", path: "/services/ai-machine-learning" },
-        { label: "AI Business Intelligence", path: "/services/ai-business-intelligence" }
+        { name: "AI Solutions", href: "/ai-solutions" },
+        { name: "Quantum Technology", href: "/quantum-technology" },
+        { name: "Cybersecurity", href: "/services/cybersecurity" },
+        { name: "Cloud & DevOps", href: "/cloud-devops" },
+        { name: "Enterprise Solutions", href: "/enterprise-solutions" },
+        { name: "Micro SAAS", href: "/micro-saas" }
       ]
     },
     {
@@ -58,28 +56,25 @@ export function Footer() {
       title: "Industry Solutions",
       icon: Building,
       links: [
-        { label: "Enterprise Solutions", path: "/solutions/enterprise" },
-        { label: "Healthcare Solutions", path: "/solutions/healthcare" },
-        { label: "Financial Solutions", path: "/solutions/financial" },
-        { label: "Manufacturing Solutions", path: "/solutions/manufacturing" },
-        { label: "Retail Solutions", path: "/solutions/retail" },
-        { label: "Government Solutions", path: "/solutions/government" },
-        { label: "Digital Transformation", path: "/digital-transformation" },
-        { label: "Micro SAAS Solutions", path: "/services/micro-saas-solutions" }
+        { name: "About Us", href: "/about" },
+        { name: "Our Team", href: "/team" },
+        { name: "Careers", href: "/careers" },
+        { name: "Blog", href: "/blog" },
+        { name: "Case Studies", href: "/case-studies" },
+        { name: "Partners", href: "/partners" }
       ]
     },
     {
       title: "Company & Resources",
       icon: Users,
       links: [
-        { label: "About Us", path: "/about" },
-        { label: "Our Mission", path: "/mission" },
-        { label: "Team", path: "/team" },
-        { label: "Careers", path: "/careers" },
-        { label: "Partners", path: "/partners" },
-        { label: "Blog", path: "/blog" },
-        { label: "Case Studies", path: "/case-studies" },
-        { label: "Help Center", path: "/help" }
+        { name: "Documentation", href: "/docs" },
+        { name: "Help Center", href: "/help" },
+        { name: "Community", href: "/community" },
+        { name: "Webinars", href: "/webinars" },
+        { name: "White Papers", href: "/white-papers" },
+        { name: "FAQ", href: "/faq" },
+        { name: "Support", href: "/support" }
       ]
     }
   ];
@@ -192,6 +187,19 @@ export function Footer() {
                 </a>
               ))}
             </div>
+
+          {/* Marketplace */}
+          <div>
+            <h3 className="text-white font-semibold mb-6 text-lg">Marketplace</h3>
+            <ul className="space-y-3">
+              <li><Link to="/marketplace" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Products</Link></li>
+              <li><Link to="/services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Services</Link></li>
+              <li><Link to="/talent" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Talent</Link></li>
+              <li><Link to="/equipment" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Equipment</Link></li>
+              <li><Link to="/categories" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Categories</Link></li>
+              <li><Link to="/green-it" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Green IT</Link></li>
+              <li><Link to="/ai-matcher" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Matcher</Link></li>
+            </ul>
           </div>
 
           {/* Footer Sections */}

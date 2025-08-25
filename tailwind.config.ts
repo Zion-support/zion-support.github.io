@@ -158,25 +158,77 @@ const config: Config = {
           '0%, 100%': { boxShadow: '0 0 20px rgba(0, 229, 255, 0.5)' },
           '50%': { boxShadow: '0 0 40px rgba(0, 229, 255, 0.8)' },
         },
-        "fade-in": {
-          "0%": { opacity: "0", transform: "translateY(10px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
-        "slide-in-left": {
-          "0%": { opacity: "0", transform: "translateX(-20px)" },
-          "100%": { opacity: "1", transform: "translateX(0)" },
-        },
-        "slide-in-right": {
-          "0%": { opacity: "0", transform: "translateX(20px)" },
-          "100%": { opacity: "1", transform: "translateX(0)" },
-        },
         "float": {
           "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-10px)" },
+          "50%": { transform: "translateY(-20px)" },
         },
         "glow": {
-          "0%, 100%": { boxShadow: "0 0 5px currentColor" },
-          "50%": { boxShadow: "0 0 20px currentColor, 0 0 30px currentColor" },
+          "0%, 100%": { 
+            boxShadow: "0 0 20px rgba(34, 221, 210, 0.5)" 
+          },
+          "50%": { 
+            boxShadow: "0 0 40px rgba(34, 221, 210, 0.8), 0 0 60px rgba(34, 221, 210, 0.4)" 
+          },
+        },
+        "neon-pulse": {
+          "0%, 100%": { 
+            textShadow: "0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor" 
+          },
+          "50%": { 
+            textShadow: "0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor" 
+          },
+        },
+        "cyber-scan": {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100%)" },
+        },
+        "matrix-rain": {
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(100vh)" },
+        },
+        "gradient-shift": {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
+        "fade-in-up": {
+          "0%": { 
+            opacity: "0",
+            transform: "translateY(30px)" 
+          },
+          "100%": { 
+            opacity: "1",
+            transform: "translateY(0)" 
+          },
+        },
+        "fade-in-left": {
+          "0%": { 
+            opacity: "0",
+            transform: "translateX(-30px)" 
+          },
+          "100%": { 
+            opacity: "1",
+            transform: "translateX(0)" 
+          },
+        },
+        "fade-in-right": {
+          "0%": { 
+            opacity: "0",
+            transform: "translateX(30px)" 
+          },
+          "100%": { 
+            opacity: "1",
+            transform: "translateX(0)" 
+          },
+        },
+        "scale-in": {
+          "0%": { 
+            opacity: "0",
+            transform: "scale(0.9)" 
+          },
+          "100%": { 
+            opacity: "1",
+            transform: "scale(1)" 
+          },
         },
       },
       animation: {

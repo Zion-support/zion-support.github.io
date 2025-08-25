@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 
 interface UltraAdvancedFuturisticBackgroundProps {
   children: React.ReactNode;
@@ -11,15 +12,16 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
+  const holographicRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
     const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    if (!canvas || !ctx) return;
 
-    let particles: Array<{
+    const particles: Array<{
       x: number;
       y: number;
       vx: number;
@@ -181,8 +183,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           ctx.stroke();
         }
       }
-      
-      animationFrameId = requestAnimationFrame(animate);
     };
 
     resizeCanvas();
@@ -192,10 +192,12 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
     window.addEventListener('resize', resizeCanvas);
 
     return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
       window.removeEventListener('resize', resizeCanvas);
-      cancelAnimationFrame(animationFrameId);
     };
-  }, [variant]);
+  }, [variant, intensity]);
 
   return (
     <div className="relative min-h-screen overflow-hidden">
@@ -299,11 +301,9 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       )}
 
       {/* Content */}
-      <div className="relative z-30">
+      <div className="relative z-10">
         {children}
       </div>
-      
-      {children}
     </div>
   );
 };

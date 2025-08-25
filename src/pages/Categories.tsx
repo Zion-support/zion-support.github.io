@@ -1,47 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { SEO } from '@/components/SEO';
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
-=======
-import { CategoriesSection } from "@/components/CategoriesSection";
-import { GradientHeading } from "@/components/GradientHeading";
-import { SEO } from "@/components/SEO";
-import { Header } from "@/components/Header";
->>>>>>> origin/cursor/website-audit-and-enhancement-8717
-
-const Categories: React.FC = () => {
-  return (
-    <>
-      <SEO 
-<<<<<<< HEAD
-        title="Categories - Zion Tech Group"
-        description="Browse our service categories"
-        canonical="https://ziontechgroup.com/categories"
-      />
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Categories
-            </h1>
-            <p className="text-xl text-zion-slate-light mb-8">
-              Browse our service categories
-            </p>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 max-w-2xl mx-auto">
-              <p className="text-white">
-                Our categories page is coming soon. You'll be able to browse our comprehensive service categories and find exactly what you need.
-=======
-import React from 'react';
-import { Header } from '@/components/header/Header';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-=======
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { GradientHeading } from "@/components/GradientHeading";
 import { SEO } from "@/components/SEO";
@@ -62,7 +21,6 @@ import {
   Lock,
   BarChart3
 } from "lucide-react";
->>>>>>> origin/cursor/website-audit-and-enhancement-f8cc
 
 export default function Categories() {
   const mainCategories = [
@@ -167,29 +125,6 @@ export default function Categories() {
   return (
     <>
       <SEO
-<<<<<<< HEAD
-        title="Service Categories - Zion Tech Group"
-        description="Browse tech services by category and find what you need."
-        canonical="https://ziontechgroup.com/categories"
-      />
-      <Header />
-      <main className="min-h-screen bg-zion-blue">
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center mb-16">
-            <GradientHeading>Service Categories</GradientHeading>
-            <p className="text-xl text-zion-slate-light mt-6 max-w-3xl mx-auto">
-              Browse our comprehensive range of tech services organized by category.
-            </p>
-          </div>
-          
-          <div className="max-w-6xl mx-auto">
-            <div className="bg-zion-blue-light rounded-lg p-8 border border-zion-blue-lighter">
-              <h2 className="text-2xl font-bold text-white mb-6">Coming Soon</h2>
-              <p className="text-zion-slate-light mb-6">
-                Our category browsing system is currently under development.
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
-              </p>
-=======
         title="Categories - Browse AI & Tech Services | Zion Tech Group"
         description="Explore our comprehensive categories of AI services, software development, IT consulting, and technology solutions. Find the perfect service for your needs."
         keywords="AI categories, tech services, software development, IT consulting, categories"
@@ -200,24 +135,14 @@ export default function Categories() {
           <div className="text-center mb-16">
             <GradientHeading>Browse Categories</GradientHeading>
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-=======
-        title="Browse Categories - Zion AI Marketplace"
-        description="Explore our comprehensive categories of AI services, tech solutions, and professional talent. Find the perfect match for your project needs."
-        keywords="AI categories, tech services, marketplace categories, AI solutions, technology services, professional categories"
-        canonical="https://ziontechgroup.com/categories"
-      />
-      <Header />
-      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <GradientHeading level="h1" className="text-4xl md:text-5xl font-bold mb-4">
-              Browse Categories
-            </GradientHeading>
-            <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
->>>>>>> origin/cursor/website-audit-and-enhancement-8717
               Explore our extensive range of AI services and products organized by category. 
               Find exactly what you're looking for to enhance your business or personal projects.
             </p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 max-w-2xl mx-auto">
+              <p className="text-white">
+                Our categories page is coming soon. You'll be able to browse our comprehensive service categories and find exactly what you need.
+              </p>
+            </div>
           </div>
           
           {/* Main Categories Grid */}
@@ -282,21 +207,12 @@ export default function Categories() {
                   Request Quote
                 </Link>
               </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-f8cc
             </div>
           </div>
         </div>
-<<<<<<< HEAD
       </div>
     </>
   );
 };
 
 export default Categories;
-=======
-      </main>
-      <Footer />
-    </>
-  );
-}
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974

@@ -2,19 +2,16 @@ import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Rocket, Building, Target, Zap, Database, Network, Cloud, Lock, BarChart3, Palette, Smartphone, Server, Github, Youtube } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import { useSidebar } from '../context/SidebarContext';
 
-interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-export default function Sidebar({ isOpen, onClose }: SidebarProps) {
+export default function Sidebar() {
+  const { isSidebarOpen, setIsSidebarOpen } = useSidebar();
   const location = useLocation();
 
   // Close sidebar when route changes
   useEffect(() => {
-    onClose();
-  }, [location.pathname, onClose]);
+    setIsSidebarOpen(false);
+  }, [location.pathname, setIsSidebarOpen]);
 
   const navigationItems = [
     {
@@ -29,29 +26,35 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       ]
     },
     {
-      title: 'AI & Technology',
+      title: 'Core Services',
       items: [
-        { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
-        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Brain },
-        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain },
-        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Rocket },
-        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Database },
-        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
-        { name: 'Machine Learning', path: '/services/ai-machine-learning', icon: Brain },
-        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 }
+        { name: 'AI Solutions', path: '/ai-solutions', icon: Briefcase },
+        { name: 'Quantum Technology', path: '/quantum-technology', icon: Globe },
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
+        { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Briefcase },
+        { name: 'Enterprise Solutions', path: '/enterprise-solutions', icon: Briefcase },
+        { name: 'Micro SAAS', path: '/micro-saas', icon: Globe }
       ]
     },
     {
-      title: 'Infrastructure & Security',
+      title: 'AI & Autonomous Systems',
       items: [
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Server },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Lock },
-        { name: 'Cloud DevOps', path: '/cloud-devops', icon: Cloud },
-        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Network },
-        { name: 'Network Infrastructure', path: '/services/network-infrastructure', icon: Network },
-        { name: 'Managed IT Services', path: '/services/managed-it-services', icon: Server },
-        { name: 'Security Assessment', path: '/services/security-assessment', icon: Shield }
+        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
+        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Briefcase },
+        { name: 'AI Autonomous Research', path: '/ai-autonomous-research', icon: Briefcase },
+        { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
+        { name: 'AI Autonomous Business Platform', path: '/ai-autonomous-business-platform', icon: Briefcase },
+        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Briefcase }
+      ]
+    },
+    {
+      title: 'Advanced Solutions',
+      items: [
+        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Globe },
+        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Briefcase },
+        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Shield },
+        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Briefcase },
+        { name: 'Emerging Technology', path: '/emerging-tech', icon: Globe }
       ]
     },
     {
@@ -73,35 +76,33 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         { name: 'About Us', path: '/about', icon: Users },
         { name: 'Our Mission', path: '/mission', icon: Target },
         { name: 'Our Team', path: '/team', icon: Users },
-        { name: 'Careers', path: '/careers', icon: Briefcase },
+        { name: 'Careers', path: '/careers', icon: Users },
         { name: 'Partners', path: '/partners', icon: Handshake },
-        { name: 'Blog', path: '/blog', icon: Globe },
-        { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
-        { name: 'Help Center', path: '/help', icon: Globe }
+        { name: 'Case Studies', path: '/case-studies', icon: Globe },
+        { name: 'News & Blog', path: '/news', icon: Globe }
       ]
     },
     {
-      title: 'Support & Legal',
+      title: 'Support & Resources',
       items: [
         { name: 'Help Center', path: '/help', icon: Users },
         { name: 'Documentation', path: '/docs', icon: Globe },
-        { name: 'Contact Support', path: '/contact', icon: Phone },
-        { name: 'Status Page', path: '/status', icon: Globe },
-        { name: 'Privacy Policy', path: '/privacy', icon: Lock },
-        { name: 'Terms of Service', path: '/terms', icon: Lock },
-        { name: 'Cookie Policy', path: '/cookies', icon: Lock }
+        { name: 'FAQ', path: '/faq', icon: Globe },
+        { name: 'Contact Support', path: '/support', icon: Phone },
+        { name: 'Webinars', path: '/webinars', icon: Globe },
+        { name: 'White Papers', path: '/white-papers', icon: Globe }
       ]
     }
   ];
 
   const contactInfo = [
     { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
-    { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
+    { icon: Mail, text: 'info@ziontechgroup.com', href: 'mailto:info@ziontechgroup.com' },
     { icon: MapPin, text: '364 E Main St STE 1008 Middletown DE 19709', href: '#' }
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
+    { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Facebook, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' },
     { icon: Instagram, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' },
@@ -113,17 +114,17 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     closed: {
       x: '-100%',
       transition: {
-        type: 'spring' as const,
-        stiffness: 300,
-        damping: 30
+        type: 'tween' as const,
+        duration: 0.3,
+        ease: 'easeInOut' as const
       }
     },
     open: {
       x: 0,
       transition: {
-        type: 'spring' as const,
-        stiffness: 300,
-        damping: 30
+        type: 'tween' as const,
+        duration: 0.3,
+        ease: 'easeInOut' as const
       }
     }
   };
@@ -137,107 +138,114 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
             onClick={onClose}
           />
-
+          
           {/* Sidebar */}
-          <motion.aside
+          <motion.div
             variants={sidebarVariants}
             initial="closed"
             animate="open"
             exit="closed"
-            className="fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-md border-r border-gray-800 z-50 lg:hidden overflow-y-auto"
+            className="fixed left-0 top-0 h-full w-80 bg-slate-900/95 backdrop-blur-md border-r border-white/10 z-50 overflow-y-auto"
           >
             {/* Header */}
-            <div className="flex items-center justify-between p-6 border-b border-gray-800">
+            <div className="flex items-center justify-between p-6 border-b border-white/10">
               <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-lg">Z</span>
                 </div>
-                <span className="text-white font-bold text-lg">Zion Tech Group</span>
+                <span className="text-white font-bold text-xl">Zion Tech</span>
               </div>
               <button
                 onClick={onClose}
-                className="text-gray-400 hover:text-white p-2 rounded-md transition-colors duration-200"
+                className="p-2 text-gray-400 hover:text-white transition-colors duration-200"
               >
-                <X className="w-6 h-6" />
+                <X className="h-6 w-6" />
               </button>
             </div>
 
             {/* Navigation */}
-            <nav className="p-6 space-y-8">
+            <div className="p-6 space-y-8">
               {navigationItems.map((section) => (
                 <div key={section.title}>
                   <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
                     {section.title}
                   </h3>
                   <div className="space-y-2">
-                    {section.items.map((item) => (
-                      <Link
-                        key={item.name}
-                        to={item.path}
-                        className="flex items-center space-x-3 px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-all duration-200"
-                      >
-                        <item.icon className="w-5 h-5 text-cyan-500" />
-                        <span className="text-sm">{item.name}</span>
-                      </Link>
-                    ))}
+                    {section.items.map((item) => {
+                      const Icon = item.icon;
+                      const isActive = location.pathname === item.path;
+                      
+                      return (
+                        <Link
+                          key={item.name}
+                          to={item.path}
+                          className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-all duration-200 group ${
+                            isActive
+                              ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30'
+                              : 'text-gray-300 hover:text-white hover:bg-white/5'
+                          }`}
+                        >
+                          <Icon className={`h-5 w-5 ${
+                            isActive ? 'text-purple-400' : 'text-gray-400 group-hover:text-white'
+                          }`} />
+                          <span className="font-medium">{item.name}</span>
+                        </Link>
+                      );
+                    })}
                   </div>
                 </div>
               ))}
-            </nav>
+            </div>
 
             {/* Contact Information */}
-            <div className="p-6 border-t border-gray-800">
+            <div className="p-6 border-t border-white/10">
               <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
                 Contact Information
               </h3>
               <div className="space-y-3">
-                {contactInfo.map((contact) => (
-                  <a
-                    key={contact.text}
-                    href={contact.href}
-                    className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200"
-                  >
-                    <contact.icon className="w-4 h-4 text-cyan-500" />
-                    <span className="text-sm">{contact.text}</span>
-                  </a>
-                ))}
+                {contactInfo.map((contact, index) => {
+                  const Icon = contact.icon;
+                  return (
+                    <a
+                      key={index}
+                      href={contact.href}
+                      className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200"
+                    >
+                      <Icon className="h-4 w-4 text-purple-400" />
+                      <span className="text-sm">{contact.text}</span>
+                    </a>
+                  );
+                })}
               </div>
             </div>
 
             {/* Social Links */}
-            <div className="p-6 border-t border-gray-800">
+            <div className="p-6 border-t border-white/10">
               <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
                 Follow Us
               </h3>
               <div className="flex space-x-3">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 bg-gray-800 hover:bg-cyan-600 rounded-lg flex items-center justify-center transition-all duration-200"
-                    title={social.label}
-                  >
-                    <social.icon className="w-5 h-5 text-gray-300" />
-                  </a>
-                ))}
+                {socialLinks.map((social, index) => {
+                  const Icon = social.icon;
+                  return (
+                    <a
+                      key={index}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center text-gray-300 hover:text-white transition-all duration-200"
+                      aria-label={social.label}
+                    >
+                      <Icon className="h-5 w-5" />
+                    </a>
+                  );
+                })}
               </div>
             </div>
-
-            {/* CTA Button */}
-            <div className="p-6 border-t border-gray-800">
-              <Link
-                to="/contact"
-                className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-3 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
-              >
-                Get Started
-              </Link>
-            </div>
-          </motion.aside>
+          </motion.div>
         </>
       )}
     </AnimatePresence>

@@ -26,9 +26,7 @@ import {
   Star,
   CheckCircle,
   Clock,
-  TrendingUp,
-  Sparkles,
-  FileText
+  TrendingUp
 } from 'lucide-react';
 
 export default function Services() {
@@ -219,6 +217,15 @@ export default function Services() {
       ]
     }
   ];
+  
+  const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
+  
+  const filteredServices = allServices.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   const filteredCategories = selectedCategory === 'all' 
     ? serviceCategories 
@@ -292,18 +299,33 @@ export default function Services() {
               key={idx}
               className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 group"
             >
-              {/* Service Header */}
-              <div className="flex items-start space-x-4 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <service.icon className="w-6 h-6 text-white" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200">
-                    {service.name}
-                  </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">
-                    {service.description}
-                  </p>
+              {/* Service Icon */}
+              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
+                <span className="text-2xl">
+                  {service.category === 'ai-ml' ? '🤖' : 
+                   service.category === 'cybersecurity' ? '🔒' :
+                   service.category === 'cloud-devops' ? '☁️' :
+                   service.category === 'web-development' ? '🌐' :
+                   service.category === 'data-analytics' ? '📊' : '🚀'}
+                </span>
+              </div>
+              
+              {/* Service Content */}
+              <div className="mb-6">
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-zion-slate-light leading-relaxed mb-4">
+                  {service.description}
+                </p>
+                
+
+                
+                {/* Price */}
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-white">
+                    ${service.price.toLocaleString()}
+                  </span>
                 </div>
               </div>
 
@@ -338,6 +360,102 @@ export default function Services() {
               </Link>
             </div>
           ))}
+        </motion.div>
+
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-center"
+        >
+          <div className="bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20 border border-zion-cyan/30 rounded-2xl p-12 backdrop-blur-md">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+              Let's discuss how our technology solutions can accelerate your growth and 
+              give you a competitive edge in the market.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/request-quote"
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center group hover:scale-105"
+              >
+                Get Free Consultation
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+              <a
+                href="tel:+13024640950"
+                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-xl text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2 justify-center group hover:scale-105"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                Call Sales Team
+              </a>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Footer Section */}
+        <div className="bg-zion-slate-dark py-12 border-t border-zion-blue-light">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              {/* Company Info */}
+              <div className="col-span-1 md:col-span-2">
+                <h3 className="text-xl font-bold text-white mb-4">Zion Tech Group</h3>
+                <p className="text-zion-slate-light mb-4">
+                  Pioneering the future of technology with revolutionary AI consciousness, 
+                  quantum computing, and autonomous solutions that transform businesses worldwide.
+                </p>
+                <div className="flex items-center gap-4 text-zion-slate-light">
+                  <a href="https://ziontechgroup.com" className="hover:text-zion-cyan transition-colors">
+                    ziontechgroup.com
+                  </a>
+                </div>
+              </div>
+
+              {/* Contact Info */}
+              <div>
+                <h4 className="text-lg font-semibold text-white mb-4">Contact</h4>
+                <div className="space-y-2 text-zion-slate-light">
+                  <p>📱 +1 (302) 464-0950</p>
+                  <p>✉️ kleber@ziontechgroup.com</p>
+                  <p>📍 364 E Main St STE 1008<br />Middletown DE 19709</p>
+                </div>
+              </div>
+
+              {/* Quick Links */}
+              <div>
+                <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
+                <div className="space-y-2">
+                  <a href="/comprehensive-services" className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
+                    Comprehensive Services
+                  </a>
+                  <a href="/ai-services" className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
+                    AI Services
+                  </a>
+                  <a href="/enterprise-solutions" className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
+                    Enterprise Solutions
+                  </a>
+                  <a href="/micro-saas-services" className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
+                    Micro SAAS Services
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <div className="border-t border-zion-blue-light mt-8 pt-8 text-center">
+              <p className="text-zion-slate-light text-sm">
+                © 2024 Zion Tech Group. All rights reserved. | 
+                <a href="/privacy" className="ml-2 hover:text-zion-cyan transition-colors">Privacy Policy</a> | 
+                <a href="/terms" className="ml-2 hover:text-zion-cyan transition-colors">Terms of Service</a>
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Empty State */}
@@ -349,109 +467,37 @@ export default function Services() {
           </div>
         )}
 
-        {/* Enhanced Services Section */}
-        <div className="mt-16 mb-16">
-          <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-500/20 rounded-2xl p-8">
-            <div className="text-center mb-8">
-              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-4">
-                <Sparkles className="h-5 w-5 text-purple-400" />
-                <span className="text-purple-400 font-medium">New & Enhanced</span>
-              </div>
+                  {/* CTA Section */}
+          <div className="text-center mt-16">
+            <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-8">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Discover Our Enhanced Innovative Services
+                Ready to Transform Your Business?
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Explore our cutting-edge suite of AI-powered services, quantum solutions, and innovative micro SAAS platforms designed to transform your business operations.
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Let our AI experts help you implement the right technology solutions to drive growth and innovation.
               </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
-                  <FileText className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">AI Legal Contract Analyzer</h3>
-                <p className="text-gray-400 text-sm mb-4">Advanced AI platform for legal contract analysis and risk assessment.</p>
-                <div className="text-2xl font-bold text-purple-400 mb-4">$1,299/month</div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  to="/enhanced-innovative-services"
-                  className="w-full flex items-center justify-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-600 hover:to-cyan-700 transition-all duration-200"
+                  to="/contact"
+                  className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
                 >
-                  <span>Learn More</span>
-                  <ArrowRight className="w-4 h-4" />
+                  Get Started Today
+                </Link>
+                <Link
+                  to="/innovative-services-showcase"
+                  className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-medium rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 transform hover:scale-105"
+                >
+                  View All Innovative Services
+                </Link>
+                <Link
+                  to="/request-quote"
+                  className="px-8 py-3 border border-cyan-500 text-cyan-400 font-medium rounded-lg hover:bg-cyan-500/10 transition-all duration-200"
+                >
+                  Request Custom Quote
                 </Link>
               </div>
-              
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4">
-                  <DollarSign className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Autonomous Financial Advisor</h3>
-                <p className="text-gray-400 text-sm mb-4">AI-driven financial advisory and portfolio optimization platform.</p>
-                <div className="text-2xl font-bold text-purple-400 mb-4">$2,499/month</div>
-                <Link
-                  to="/enhanced-innovative-services"
-                  className="w-full flex items-center justify-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-600 hover:to-cyan-700 transition-all duration-200"
-                >
-                  <span>Learn More</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-              
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
-                <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
-                  <Heart className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">AI Healthcare Diagnostics</h3>
-                <p className="text-gray-400 text-sm mb-4">AI-powered medical image analysis and diagnostic assistance.</p>
-                <div className="text-2xl font-bold text-purple-400 mb-4">$3,999/month</div>
-                <Link
-                  to="/enhanced-innovative-services"
-                  className="w-full flex items-center justify-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-600 hover:to-cyan-700 transition-all duration-200"
-                >
-                  <span>Learn More</span>
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </div>
-            
-            <div className="text-center">
-              <Link
-                to="/enhanced-innovative-services"
-                className="inline-flex items-center space-x-2 px-8 py-3 bg-gradient-to-r from-purple-500 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-600 hover:to-cyan-700 transition-all duration-200 transform hover:scale-105"
-              >
-                <span>View All Enhanced Services</span>
-                <ArrowRight className="w-5 h-5" />
-              </Link>
             </div>
           </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-8">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let our AI experts help you implement the right technology solutions to drive growth and innovation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
-              >
-                Get Started Today
-              </Link>
-              <Link
-                to="/request-quote"
-                className="px-8 py-3 border border-cyan-500 text-cyan-400 font-medium rounded-lg hover:bg-cyan-500/10 transition-all duration-200"
-              >
-                Request Custom Quote
-              </Link>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );

@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 import * as React from "react"
 import { cn } from "@/lib/utils"
 
 interface StepsProps extends React.HTMLAttributes<HTMLDivElement> {
-  children: React.ReactElement<StepProps>[]
+  children: React.ReactNode
   currentStep?: number
 }
 
@@ -19,7 +18,7 @@ const Steps = React.forwardRef<HTMLDivElement, StepsProps>(
       >
         {steps.map((step, index) => {
           if (React.isValidElement(step)) {
-            return React.cloneElement(step as React.ReactElement<StepProps>, {
+            return React.cloneElement(step, {
               key: index,
               isActive: index === currentStep,
               isCompleted: index < currentStep,
@@ -65,7 +64,7 @@ const Step = React.forwardRef<HTMLDivElement, StepProps>(
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             ) : (
-              <span>{React.Children.count(children)}</span>
+              <span>{props.children}</span>
             )}
           </div>
           {!isLast && (
@@ -84,90 +83,3 @@ const Step = React.forwardRef<HTMLDivElement, StepProps>(
 Step.displayName = "Step"
 
 export { Steps, Step }
-=======
-import React from 'react'
-
-interface StepsProps {
-  children: React.ReactNode
-  className?: string
-}
-
-interface StepProps {
-  children: React.ReactNode
-  className?: string
-  isActive?: boolean
-  isCompleted?: boolean
-}
-
-<<<<<<< HEAD
-const Steps = ({ children, className = "" }: StepsProps) => (
-  <div className={`flex items-center ${className}`}>
-    {children}
-  </div>
-)
-=======
-export const Steps: React.FC<StepsProps> = ({ children, className, currentStep = 0 }) => {
-  return (
-    <div className={cn("flex items-center space-x-2", className)}>
-      {React.Children.map(children, (child, index) => {
-        if (React.isValidElement(child)) {
-          const childProps = child.props || {};
-          const isActive = index === currentStep;
-          const isCompleted = index < currentStep;
-          
-          // Only pass props if the child component accepts them
-          const propsToPass: any = {};
-          if ('isActive' in childProps || child.type === Step) {
-            propsToPass.isActive = isActive;
-          }
-          if ('isCompleted' in childProps || child.type === Step) {
-            propsToPass.isCompleted = isCompleted;
-          }
-          
-          return React.cloneElement(child, propsToPass);
-        }
-        return child;
-      })}
-    </div>
-  );
-};
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
-
-const Step = ({ children, className = "", isActive = false, isCompleted = false }: StepProps) => (
-  <div className={`flex items-center ${className}`}>
-    <div
-      className={`flex h-8 w-8 items-center justify-center rounded-full border-2 ${
-        isCompleted
-          ? "border-zion-cyan bg-zion-cyan text-white"
-          : isActive
-          ? "border-zion-cyan bg-white text-zion-cyan"
-          : "border-zion-slate-300 bg-white text-zion-slate-500"
-      }`}
-    >
-      {isCompleted ? (
-        <CheckIcon className="h-4 w-4" />
-      ) : (
-        <span className="text-sm font-medium">{children}</span>
-      )}
-    </div>
-  </div>
-)
-
-const CheckIcon = ({ className = "" }: { className?: string }) => (
-  <svg
-    className={className}
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M5 13l4 4L19 7"
-    />
-  </svg>
-)
-
-export { Steps, Step, CheckIcon }
->>>>>>> origin/cursor/build-and-fix-errors-c9ef

@@ -1,18 +1,115 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Brain, Cpu, Zap, Shield, ArrowRight, Star, Users, Target } from 'lucide-react';
+import { 
+  Brain, 
+  Zap, 
+  Shield, 
+  Cpu, 
+  Database, 
+  Network, 
+  Code, 
+  BarChart3, 
+  Target, 
+  Lightbulb, 
+  Rocket, 
+  Clock, 
+  CheckCircle,
+  Star,
+  Users,
+  TrendingUp,
+  Award,
+  Globe,
+  Microchip,
+  Atom
+} from 'lucide-react';
+import SEOHead from '../components/SEOHead';
+
+const QuantumNeuralNetworkPlatform: React.FC = () => {
+  const features = [
+    {
+      icon: Cpu,
+      title: "Quantum Neural Processing",
+      description: "Advanced quantum algorithms for neural network optimization and training acceleration"
+    },
+    {
+      icon: Zap,
+      title: "Hybrid Quantum-Classical Computing",
+      description: "Seamless integration of quantum and classical computing resources for optimal performance"
+    },
+    {
+      icon: Shield,
+      title: "Quantum-Safe Security",
+      description: "Post-quantum cryptography and quantum-resistant security protocols"
+    },
+    {
+      icon: Cpu,
+      title: "Quantum Error Correction",
+      description: "Advanced error correction algorithms for reliable quantum computations"
+    }
+  ];
+
+  const benefits = [
+    "1000x faster neural network training",
+    "Quantum advantage in complex optimization problems",
+    "Future-proof security with quantum-resistant algorithms",
+    "Scalable architecture for enterprise workloads"
+  ];
+
+  const pricing = [
+    {
+      name: "Starter",
+      price: "$2,500",
+      period: "/month",
+      features: [
+        "Basic quantum neural processing",
+        "Up to 10 qubits",
+        "Standard support",
+        "Basic error correction"
+      ]
+    },
+    {
+      name: "Professional",
+      price: "$7,500",
+      period: "/month",
+      features: [
+        "Advanced quantum algorithms",
+        "Up to 50 qubits",
+        "Priority support",
+        "Advanced error correction",
+        "Custom model training"
+      ]
+    },
+    {
+      name: "Enterprise",
+      price: "Custom",
+      period: "",
+      features: [
+        "Full quantum neural platform",
+        "Unlimited qubits",
+        "24/7 dedicated support",
+        "Custom algorithm development",
+        "On-premise deployment options"
+      ]
+    }
+  ];
 
 export default function QuantumNeuralNetworkPlatform() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-4">
-                <Brain className="w-8 h-8 text-white" />
+      <section className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <motion.div 
+            className="text-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="flex justify-center mb-6">
+              <div className="p-3 bg-purple-500/20 rounded-full">
+                <Atom className="h-12 w-12 text-purple-300" />
               </div>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
