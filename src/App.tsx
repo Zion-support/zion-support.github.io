@@ -167,6 +167,7 @@ const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const AboutPage = React.lazy(() => import('./pages/About'));
 const CareersPage = React.lazy(() => import('./pages/Careers'));
 const SitemapPage = React.lazy(() => import('./pages/Sitemap'));
@@ -285,6 +286,12 @@ const ServicesPricingPage = React.lazy(() => import('./pages/ServicesPricingPage
 const AdvancedServicesPage = React.lazy(() => import('./pages/AdvancedServicesPage'));
 const ServicesComparisonPage = React.lazy(() => import('./pages/ServicesComparisonPage'));
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-1ab5
+=======
+const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
+const CybersecurityServicesPage = React.lazy(() => import('./pages/CybersecurityServicesPage'));
+const CloudServicesPage = React.lazy(() => import('./pages/CloudServicesPage'));
+const DataAnalyticsServicesPage = React.lazy(() => import('./pages/DataAnalyticsServicesPage'));
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-a231
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -399,6 +406,7 @@ const baseRoutes = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   { path: '/enhanced-services', element: <EnhancedServicesPage /> },
   { path: '/pricing', element: <PricingPage /> },
 =======
@@ -411,6 +419,12 @@ const baseRoutes = [
   { path: '/enhanced-services', element: <EnhancedServicesPage /> },
   { path: '/services-comparison', element: <ServicesComparisonPage /> },
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e6db
+=======
+  { path: '/ai-services', element: <AIServicesPage /> },
+  { path: '/cybersecurity-services', element: <CybersecurityServicesPage /> },
+  { path: '/cloud-services', element: <CloudServicesPage /> },
+  { path: '/data-analytics-services', element: <DataAnalyticsServicesPage /> },
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-a231
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
 <<<<<<< HEAD

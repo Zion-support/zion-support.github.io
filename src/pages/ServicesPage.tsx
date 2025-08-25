@@ -557,6 +557,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
     reviewCount: 23,
   },
   {
+<<<<<<< HEAD
     id: "service-15",
     title: "Blockchain & AI Integration",
     description: "Combine blockchain technology with AI for secure, transparent, and intelligent decentralized applications. Build trust and automation in your business processes.",
@@ -709,12 +710,212 @@ const SERVICE_LISTINGS: ProductListing[] = [
     price: 2200,
     currency: "$",
     tags: ["Edge Computing", "Real-time Processing", "IoT", "Low Latency"],
+=======
+    id: "service-7",
+    title: "AI-Powered Customer Support Automation",
+    description: "Implement intelligent chatbots and automated customer service solutions that provide 24/7 support and improve customer satisfaction.",
+    category: "AI Services",
+    price: 2800,
+    currency: "$",
+    tags: ["Chatbots", "Customer Support", "Automation", "AI"],
+    author: {
+      name: "ZionTech Group",
+      id: "ziontech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-15T09:00:00.000Z",
+    aiScore: 96,
+    rating: 4.9,
+    reviewCount: 156,
+  },
+  {
+    id: "service-8",
+    title: "Blockchain Development & Smart Contracts",
+    description: "Custom blockchain solutions, smart contract development, and DeFi applications for modern businesses.",
+    category: "Development",
+    price: 6500,
+    currency: "$",
+    tags: ["Blockchain", "Smart Contracts", "DeFi", "Web3"],
+    author: {
+      name: "BlockChain Solutions",
+      id: "blockchain-solutions",
+      avatarUrl: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-10T14:30:00.000Z",
+    aiScore: 93,
+    rating: 4.8,
+    reviewCount: 89,
+  },
+  {
+    id: "service-9",
+    title: "IoT Platform Development",
+    description: "End-to-end IoT solutions including device management, data collection, and real-time analytics platforms.",
+    category: "Development",
+    price: 4200,
+    currency: "$",
+    tags: ["IoT", "Device Management", "Real-time Analytics", "Platform"],
+    author: {
+      name: "IoT Innovators",
+      id: "iot-innovators",
+      avatarUrl: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-08T11:15:00.000Z",
+    aiScore: 91,
+    rating: 4.7,
+    reviewCount: 67,
+  },
+  {
+    id: "service-10",
+    title: "AI-Powered Predictive Analytics",
+    description: "Advanced predictive modeling and forecasting using machine learning to optimize business decisions and reduce risks.",
+    category: "Analytics",
+    price: 3800,
+    currency: "$",
+    tags: ["Predictive Analytics", "Machine Learning", "Forecasting", "Risk Management"],
+    author: {
+      name: "Predictive Insights Pro",
+      id: "predictive-insights",
+      avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-12T16:45:00.000Z",
+    aiScore: 94,
+    rating: 4.9,
+    reviewCount: 112,
+  },
+  {
+    id: "service-11",
+    title: "Zero-Trust Security Architecture",
+    description: "Implement modern zero-trust security models with continuous verification and least-privilege access controls.",
+    category: "Security",
+    price: 7200,
+    currency: "$",
+    tags: ["Zero-Trust", "Security Architecture", "Access Control", "Compliance"],
+    author: {
+      name: "SecureArch Solutions",
+      id: "securearch",
+      avatarUrl: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-05T13:20:00.000Z",
+    aiScore: 95,
+    rating: 4.9,
+    reviewCount: 78,
+  },
+  {
+    id: "service-12",
+    title: "Multi-Cloud Strategy & Migration",
+    description: "Design and implement multi-cloud architectures for optimal performance, cost efficiency, and disaster recovery.",
+    category: "Management",
+    price: 5500,
+    currency: "$",
+    tags: ["Multi-Cloud", "Migration", "Architecture", "Disaster Recovery"],
+    author: {
+      name: "CloudArchitects",
+      id: "cloud-architects",
+      avatarUrl: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-01T10:00:00.000Z",
+    aiScore: 89,
+    rating: 4.7,
+    reviewCount: 93,
+  },
+  {
+    id: "service-13",
+    title: "AI-Powered Content Generation",
+    description: "Automated content creation tools for marketing, documentation, and creative writing using advanced language models.",
+    category: "AI Services",
+    price: 2200,
+    currency: "$",
+    tags: ["Content Generation", "AI Writing", "Marketing", "Automation"],
+    author: {
+      name: "ContentAI Studio",
+      id: "contentai-studio",
+      avatarUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-14T15:30:00.000Z",
+    aiScore: 97,
+    rating: 4.9,
+    reviewCount: 134,
+  },
+  {
+    id: "service-14",
+    title: "DevOps Automation & CI/CD Pipeline",
+    description: "Streamline software development with automated testing, deployment, and monitoring pipelines for faster delivery.",
+    category: "Management",
+    price: 3400,
+    currency: "$",
+    tags: ["DevOps", "CI/CD", "Automation", "Testing"],
+    author: {
+      name: "DevOps Masters",
+      id: "devops-masters",
+      avatarUrl: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-07T12:15:00.000Z",
+    aiScore: 92,
+    rating: 4.8,
+    reviewCount: 87,
+  },
+  {
+    id: "service-15",
+    title: "AI-Powered Business Process Automation",
+    description: "Intelligent automation of repetitive business processes using RPA and AI to increase efficiency and reduce costs.",
+    category: "AI Services",
+    price: 4800,
+    currency: "$",
+    tags: ["Process Automation", "RPA", "AI", "Efficiency"],
+    author: {
+      name: "AutomatePro",
+      id: "automate-pro",
+      avatarUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-09T09:45:00.000Z",
+    aiScore: 93,
+    rating: 4.8,
+    reviewCount: 95,
+  },
+  {
+    id: "service-16",
+    title: "Quantum Computing Consulting",
+    description: "Strategic guidance on quantum computing applications and preparation for the quantum future in your industry.",
+    category: "Consulting",
+    price: 12000,
+    currency: "$",
+    tags: ["Quantum Computing", "Future Tech", "Strategy", "Innovation"],
+    author: {
+      name: "Quantum Futures",
+      id: "quantum-futures",
+      avatarUrl: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-11T14:00:00.000Z",
+    aiScore: 98,
+    rating: 5.0,
+    reviewCount: 45,
+  },
+  {
+    id: "service-17",
+    title: "Edge Computing Solutions",
+    description: "Deploy edge computing infrastructure for low-latency applications, IoT devices, and real-time data processing.",
+    category: "Development",
+    price: 4100,
+    currency: "$",
+    tags: ["Edge Computing", "IoT", "Low Latency", "Real-time"],
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-a231
     author: {
       name: "EdgeTech Solutions",
       id: "edgetech-solutions",
       avatarUrl: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=100&h=100",
     },
     images: ["https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"],
+<<<<<<< HEAD
     createdAt: "2024-03-17T12:00:00.000Z",
     aiScore: 90,
     rating: 4.6,
@@ -758,6 +959,31 @@ const SERVICE_LISTINGS: ProductListing[] = [
     rating: 4.5,
     reviewCount: 56,
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-7440
+=======
+    createdAt: "2024-03-13T11:30:00.000Z",
+    aiScore: 90,
+    rating: 4.7,
+    reviewCount: 62,
+  },
+  {
+    id: "service-18",
+    title: "AI Ethics & Governance Framework",
+    description: "Develop comprehensive AI ethics policies, governance frameworks, and responsible AI implementation strategies.",
+    category: "Strategy",
+    price: 6800,
+    currency: "$",
+    tags: ["AI Ethics", "Governance", "Responsible AI", "Compliance"],
+    author: {
+      name: "Ethical AI Partners",
+      id: "ethical-ai-partners",
+      avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
+    },
+    images: ["https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-03-06T16:15:00.000Z",
+    aiScore: 96,
+    rating: 4.9,
+    reviewCount: 73,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-a231
   }
 ];
 
@@ -829,6 +1055,7 @@ const SERVICE_FILTERS = [
   { label: 'Consulting', value: 'consulting' },
   { label: 'Strategy', value: 'strategy' },
 <<<<<<< HEAD
+<<<<<<< HEAD
   { label: 'Automation', value: 'automation' },
   { label: 'Edge Computing', value: 'edge computing' },
   { label: 'NLP', value: 'nlp' },
@@ -858,6 +1085,9 @@ const SERVICE_FILTERS = [
   { label: 'IT Services', value: 'it-services' },
   { label: 'IoT Services', value: 'iot-services' },
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
+=======
+  { label: 'AI Services', value: 'ai services' },
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-a231
 ];
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-8fa6
 =======
@@ -1181,6 +1411,7 @@ export default function ServicesPage() {
                 View All Services
               </Button>
             </Link>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Link to="/services-pricing">
               <Button variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">
@@ -2247,6 +2478,32 @@ export default function ServicesPage() {
               </Button>
             </Link>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-32cc
+=======
+            <Link to="/ai-services">
+              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+                <Globe className="h-4 w-4 mr-2" />
+                AI Services
+              </Button>
+            </Link>
+            <Link to="/cybersecurity-services">
+              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+                <Globe className="h-4 w-4 mr-2" />
+                Cybersecurity
+              </Button>
+            </Link>
+            <Link to="/cloud-services">
+              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+                <Globe className="h-4 w-4 mr-2" />
+                Cloud Services
+              </Button>
+            </Link>
+            <Link to="/data-analytics-services">
+              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+                <Globe className="h-4 w-4 mr-2" />
+                Data Analytics
+              </Button>
+            </Link>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-a231
             <Link to="/request-quote">
 <<<<<<< HEAD
               <Button className="bg-white text-zion-blue-dark hover:bg-gray-100 px-8 py-3">

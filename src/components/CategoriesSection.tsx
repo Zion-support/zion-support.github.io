@@ -382,6 +382,7 @@ const specialServices = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     title: "Comprehensive Services",
     link: "/comprehensive-services"
 <<<<<<< HEAD
@@ -399,6 +400,8 @@ const specialServices = [
   },
   {
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-2e79
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-a231
     title: "AI Services",
     link: "/ai-services"
   },
@@ -406,10 +409,14 @@ const specialServices = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-a231
     title: "Cybersecurity Services",
     link: "/cybersecurity-services"
   },
   {
+<<<<<<< HEAD
     title: "Micro SAAS",
     link: "/micro-saas"
   },
@@ -881,6 +888,14 @@ const advancedCategories = [
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-1ab5
+=======
+    title: "Cloud Services",
+    link: "/cloud-services"
+  },
+  {
+    title: "Data Analytics Services",
+    link: "/data-analytics-services"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-a231
   }
 ];
 
