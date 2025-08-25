@@ -1,248 +1,312 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Shield, Lock, CheckCircle, TrendingUp, ArrowRight, Star, Rocket, Globe, Brain, Zap, Users, Database } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Shield, CheckCircle, BarChart3, Zap, Users, Globe, Database, Settings } from 'lucide-react';
 
 const SOC2ComplianceAutomation: React.FC = () => {
-  const features = [
-    {
-      icon: Shield,
-      title: "Automated Compliance Monitoring",
-      description: "Continuous monitoring and automated compliance checks across all systems and processes."
-    },
-    {
-      icon: CheckCircle,
-      title: "Policy Enforcement",
-      description: "Automated enforcement of security policies and compliance requirements."
-    },
-    {
-      icon: BarChart3,
-      title: "Real-time Reporting",
-      description: "Instant compliance reports and dashboards for stakeholders and auditors."
-    },
-    {
-      icon: Zap,
-      title: "Automated Remediation",
-      description: "AI-powered identification and automatic fixing of compliance violations."
-    },
-    {
-      icon: Users,
-      title: "Role-based Access Control",
-      description: "Comprehensive user access management with automated permission reviews."
-    },
-    {
-      icon: Globe,
-      title: "Multi-Environment Support",
-      description: "Unified compliance management across cloud, on-premises, and hybrid environments."
-    }
-  ];
-
-  const complianceAreas = [
-    {
-      title: "Security Controls",
-      description: "Automated monitoring and enforcement of security policies, access controls, and threat detection."
-    },
-    {
-      title: "Availability Monitoring",
-      description: "Continuous monitoring of system availability, performance, and disaster recovery capabilities."
-    },
-    {
-      title: "Processing Integrity",
-      description: "Validation of data processing accuracy, completeness, and authorization controls."
-    },
-    {
-      title: "Confidentiality Protection",
-      description: "Automated encryption, data classification, and access control enforcement."
-    },
-    {
-      title: "Privacy Controls",
-      description: "Compliance with privacy regulations and automated data protection measures."
-    },
-    {
-      title: "Change Management",
-      description: "Automated tracking and approval of system changes with compliance validation."
-    }
-  ];
-
-  const benefits = [
-    {
-      metric: "90%",
-      label: "Time Savings",
-      description: "Automated compliance processes save significant time and resources"
-    },
-    {
-      metric: "24/7",
-      label: "Continuous Monitoring",
-      description: "Round-the-clock compliance monitoring and alerting"
-    },
-    {
-      metric: "100%",
-      label: "Audit Ready",
-      description: "Always prepared for compliance audits and assessments"
-    },
-    {
-      metric: "Real-time",
-      label: "Violation Detection",
-      description: "Instant identification and remediation of compliance issues"
-    }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 quantum-particles"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-cyan-400 text-sm font-medium mb-6">
-              <Shield className="w-4 h-4 mr-2" />
-              SOC2 Compliance Automation
+    <>
+      <Helmet>
+        <title>SOC2 Compliance Automation - Zion Tech Group</title>
+        <meta name="description" content="Automate your SOC2 compliance with our AI-powered platform. Streamline audits, continuous monitoring, and automated reporting for seamless compliance management." />
+        <meta name="keywords" content="SOC2 compliance, compliance automation, SOC2 audit, security compliance, automated compliance, SOC2 reporting" />
+        <link rel="canonical" href="https://ziontechgroup.com/soc2-compliance-automation" />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+        {/* Hero Section */}
+        <section className="relative pt-32 pb-20 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="flex justify-center mb-6">
+                <div className="w-20 h-20 bg-gradient-to-r from-red-500 to-pink-600 rounded-2xl flex items-center justify-center mb-4">
+                  <Shield className="w-10 h-10 text-white" />
+                </div>
+              </div>
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                SOC2 Compliance
+                <span className="block bg-gradient-to-r from-red-400 to-pink-500 bg-clip-text text-transparent">
+                  Automation
+                </span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Streamline your SOC2 compliance process with our AI-powered automation platform. 
+                Achieve continuous compliance with automated monitoring, reporting, and audit preparation.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg text-white font-semibold hover:from-red-600 hover:to-pink-700 transition-all duration-200 transform hover:scale-105"
+                >
+                  <span>Get Started</span>
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+                <Link
+                  to="/services/cybersecurity"
+                  className="inline-flex items-center px-8 py-4 border border-red-500 text-red-400 rounded-lg font-semibold hover:bg-red-500 hover:text-white transition-all duration-200"
+                >
+                  Learn More
+                </Link>
+              </div>
             </div>
-            <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
-              SOC2 Compliance Automation Platform
-            </h1>
-            <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Streamline your SOC2 compliance process with AI-powered automation. Achieve continuous compliance with minimal effort and maximum security.
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Automated Compliance Excellence
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our platform automates every aspect of SOC2 compliance, from continuous monitoring 
+                to audit preparation, ensuring you're always audit-ready.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-red-500 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+                  <Brain className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">AI-Powered Monitoring</h3>
+                <p className="text-gray-300">
+                  Continuous automated monitoring of all SOC2 controls with intelligent anomaly detection and alerting.
+                </p>
+              </div>
+
+              <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-red-500 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Real-time Compliance</h3>
+                <p className="text-gray-300">
+                  Instant visibility into compliance status with real-time dashboards and automated reporting.
+                </p>
+              </div>
+
+              <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-red-500 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
+                  <CheckCircle className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Automated Auditing</h3>
+                <p className="text-gray-300">
+                  Streamlined audit preparation with automated evidence collection and compliance documentation.
+                </p>
+              </div>
+
+              <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-red-500 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+                  <Lock className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Security Controls</h3>
+                <p className="text-gray-300">
+                  Comprehensive security control monitoring and automated policy enforcement across all systems.
+                </p>
+              </div>
+
+              <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-red-500 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-4">
+                  <TrendingUp className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Performance Analytics</h3>
+                <p className="text-gray-300">
+                  Advanced analytics and reporting on compliance performance, trends, and improvement opportunities.
+                </p>
+              </div>
+
+              <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-red-500 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
+                  <Users className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Team Collaboration</h3>
+                <p className="text-gray-300">
+                  Streamlined workflows and collaboration tools for compliance teams and stakeholders.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SOC2 Framework Section */}
+        <section className="py-20 bg-gray-900/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Complete SOC2 Framework Coverage
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our platform covers all five Trust Service Criteria (TSC) with automated controls, 
+                monitoring, and reporting for comprehensive SOC2 compliance.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <Star className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">Security (CC6.1)</h3>
+                    <p className="text-gray-300">
+                      Automated monitoring of access controls, authentication, encryption, and security 
+                      measures with real-time threat detection and response.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <Rocket className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">Availability (CC7.1)</h3>
+                    <p className="text-gray-300">
+                      Continuous monitoring of system availability, performance, and disaster recovery 
+                      capabilities with automated failover and recovery testing.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <Users className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">Processing Integrity (CC8.1)</h3>
+                    <p className="text-gray-300">
+                      Automated validation of data processing accuracy, completeness, and authorization 
+                      with real-time error detection and correction.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <Lock className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">Confidentiality (CC9.1)</h3>
+                    <p className="text-gray-300">
+                      Automated protection of sensitive information through encryption, access controls, 
+                      and data classification with continuous monitoring and compliance validation.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <Globe className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">Privacy (CC10.1)</h3>
+                    <p className="text-gray-300">
+                      Automated privacy controls and data protection measures with consent management, 
+                      data minimization, and privacy impact assessments.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-8 h-8 bg-indigo-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <Database className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">Common Criteria (CC1-5)</h3>
+                    <p className="text-gray-300">
+                      Automated monitoring of control environment, communication, risk assessment, 
+                      monitoring activities, and control activities with comprehensive reporting.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Transform Your Compliance Process
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Experience unprecedented efficiency, accuracy, and confidence in your SOC2 compliance 
+                with our automated platform.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <TrendingUp className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">80%</h3>
+                <p className="text-gray-300">Faster Compliance</p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Zap className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">24/7</h3>
+                <p className="text-gray-300">Continuous Monitoring</p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">99.9%</h3>
+                <p className="text-gray-300">Compliance Rate</p>
+              </div>
+
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">70%</h3>
+                <p className="text-gray-300">Cost Reduction</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gray-900/50">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Automate Your SOC2 Compliance?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join leading organizations that trust our automated platform for seamless SOC2 compliance 
+              and continuous audit readiness.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg text-white font-semibold hover:from-red-600 hover:to-pink-700 transition-all duration-200 transform hover:scale-105"
               >
-                Get Started
+                <span>Schedule a Demo</span>
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <button className="px-8 py-4 border border-cyan-400/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">
-                Schedule Demo
-              </button>
+              <Link
+                to="/pricing"
+                className="inline-flex items-center px-8 py-4 border border-red-500 text-red-400 rounded-lg font-semibold hover:bg-red-500 hover:text-white transition-all duration-200"
+              >
+                View Pricing
+              </Link>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your Compliance Process
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience unprecedented efficiency and accuracy in SOC2 compliance with our automated platform.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className="text-center p-6 bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-cyan-500/30"
-              >
-                <div className="text-4xl font-bold text-cyan-400 mb-2">
-                  {benefit.metric}
-                </div>
-                <div className="text-lg font-semibold text-white mb-2">
-                  {benefit.label}
-                </div>
-                <p className="text-gray-300 text-sm">
-                  {benefit.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black/50 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform provides comprehensive SOC2 compliance automation designed for modern enterprises.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <div
-                  key={index}
-                  className="p-6 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300">
-                    {feature.description}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Compliance Areas Section */}
-      <section className="py-20 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Compliance Coverage
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Cover all SOC2 Trust Service Criteria with automated monitoring and enforcement.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {complianceAreas.map((area, index) => (
-              <div
-                key={index}
-                className="p-8 bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300"
-              >
-                <h3 className="text-2xl font-semibold text-cyan-400 mb-4">
-                  {area.title}
-                </h3>
-                <p className="text-gray-300 text-lg">
-                  {area.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 text-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Automate Your SOC2 Compliance?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join leading organizations that trust our platform for automated compliance management.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105"
-            >
-              Start Free Trial
-            </Link>
-            <Link
-              to="/pricing"
-              className="px-8 py-4 border border-cyan-400/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300"
-            >
-              View Pricing
-            </Link>
-          </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 };
 
