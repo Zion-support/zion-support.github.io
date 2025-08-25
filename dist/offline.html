@@ -4,110 +4,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Offline - Zion Tech Group</title>
-    <meta name="description" content="You're currently offline. Some features may not be available.">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
-            color: #ffffff;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px;
+            color: white;
         }
-        
+
         .offline-container {
             text-align: center;
             max-width: 600px;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            border-radius: 24px;
-            padding: 48px 32px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            padding: 2rem;
         }
-        
+
         .offline-icon {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 32px;
-            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 48px;
+            font-size: 4rem;
+            margin-bottom: 1rem;
             animation: pulse 2s infinite;
         }
 
         @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.05); opacity: 0.8; }
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 16px;
-            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
         }
 
-        .subtitle {
-            font-size: 1.25rem;
-            color: #a0a0a0;
-            margin-bottom: 32px;
+        .offline-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .offline-message {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
             line-height: 1.6;
         }
 
+        .offline-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            box-shadow: 0 4px 15px rgba(238, 90, 36, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(238, 90, 36, 0.6);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
         .status-indicator {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 12px 24px;
-            background: rgba(255, 107, 107, 0.1);
-            border: 1px solid rgba(255, 107, 107, 0.3);
-            border-radius: 50px;
-            margin-bottom: 32px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .status-text {
             font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .retry-countdown {
+            font-weight: bold;
             color: #ff6b6b;
-        }
-
-        .status-dot {
-            width: 8px;
-            height: 8px;
-            background: #ff6b6b;
-            border-radius: 50%;
-            animation: blink 1.5s infinite;
-        }
-
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0.3; }
         }
 
         .features-list {
             text-align: left;
-            margin: 32px 0;
-            padding: 0;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .features-list h3 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .features-list ul {
             list-style: none;
+            padding-left: 0;
         }
 
         .features-list li {
-            padding: 12px 0;
+            padding: 0.5rem 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             display: flex;
             align-items: center;
-            gap: 12px;
         }
 
         .features-list li:last-child {
@@ -115,135 +143,27 @@
         }
 
         .feature-icon {
-            width: 24px;
-            height: 24px;
-            background: linear-gradient(135deg, #4ecdc4, #44a08d);
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            color: white;
-        }
-
-        .retry-button {
-            background: linear-gradient(135deg, #4ecdc4, #44a08d);
-            color: white;
-            border: none;
-            padding: 16px 32px;
-            border-radius: 12px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin: 16px 8px;
-        }
-
-        .retry-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(78, 205, 196, 0.3);
-        }
-
-        .home-button {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 16px 32px;
-            border-radius: 12px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            margin: 16px 8px;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .home-button:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
-        }
-
-        .connection-info {
-            margin-top: 32px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .connection-info h3 {
-            font-size: 1.1rem;
-            margin-bottom: 16px;
-            color: #4ecdc4;
-        }
-
-        .connection-info p {
-            color: #a0a0a0;
-            font-size: 0.9rem;
-            line-height: 1.5;
-            margin-bottom: 8px;
-        }
-
-        .tech-support {
-            margin-top: 24px;
-            padding: 20px;
-            background: linear-gradient(135deg, rgba(78, 205, 196, 0.1), rgba(68, 160, 141, 0.1));
-            border-radius: 12px;
-            border: 1px solid rgba(78, 205, 196, 0.2);
-        }
-
-        .tech-support h3 {
-            font-size: 1.1rem;
-            margin-bottom: 16px;
-            color: #4ecdc4;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: #a0a0a0;
-            font-size: 0.9rem;
-        }
-
-        .contact-icon {
-            width: 16px;
-            height: 16px;
-            background: #4ecdc4;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 8px;
-            color: white;
+            margin-right: 0.75rem;
+            font-size: 1.2rem;
         }
 
         @media (max-width: 768px) {
             .offline-container {
-                padding: 32px 24px;
-                margin: 20px;
+                padding: 1rem;
             }
-            
-            h1 {
+
+            .offline-title {
                 font-size: 2rem;
             }
 
-            .subtitle {
-                font-size: 1.1rem;
+            .offline-actions {
+                flex-direction: column;
+                align-items: center;
             }
 
-            .retry-button,
-            .home-button {
-                display: block;
+            .btn {
                 width: 100%;
-                margin: 8px 0;
+                max-width: 300px;
             }
         }
     </style>
@@ -252,97 +172,123 @@
     <div class="offline-container">
         <div class="offline-icon">📡</div>
         
-        <h1>You're Offline</h1>
-        <p class="subtitle">
-            It looks like you've lost your internet connection. Don't worry - we've got you covered with offline capabilities.
+        <h1 class="offline-title">You're Offline</h1>
+        
+        <p class="offline-message">
+            It looks like you've lost your internet connection. Don't worry! 
+            Zion Tech Group is designed to work offline, and we'll automatically 
+            reconnect when you're back online.
         </p>
 
         <div class="status-indicator">
-            <div class="status-dot"></div>
-            <span>No Internet Connection</span>
-        </div>
-
-        <ul class="features-list">
-            <li>
-                <div class="feature-icon">✓</div>
-                <span>Browse cached pages and content</span>
-            </li>
-            <li>
-                <div class="feature-icon">✓</div>
-                <span>Access previously viewed services</span>
-            </li>
-            <li>
-                <div class="feature-icon">✓</div>
-                <span>View company information and contact details</span>
-            </li>
-            <li>
-                <div class="feature-icon">✓</div>
-                <span>Read cached blog posts and resources</span>
-            </li>
-        </ul>
-
-        <div>
-            <button class="retry-button" onclick="retryConnection()">
-                🔄 Retry Connection
-            </button>
-            <a href="/" class="home-button">
-                🏠 Go to Homepage
-            </a>
-        </div>
-
-        <div class="connection-info">
-            <h3>🔍 Troubleshooting Tips</h3>
-            <p>• Check your Wi-Fi or mobile data connection</p>
-            <p>• Try refreshing the page</p>
-            <p>• Check if other websites are working</p>
-            <p>• Restart your router if the problem persists</p>
-        </div>
-
-        <div class="tech-support">
-            <h3>🆘 Need Help?</h3>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <div class="contact-icon">📧</div>
-                    <span>Email: support@ziontechgroup.com</span>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">📱</div>
-                    <span>Phone: +1 (555) 123-4567</span>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">💬</div>
-                    <span>Live Chat: Available when online</span>
-                </div>
+            <div class="status-text">
+                Connection Status: <span style="color: #ff6b6b;">Offline</span>
             </div>
+            <div class="status-text">
+                Auto-retry in: <span class="retry-countdown" id="countdown">30</span> seconds
+            </div>
+        </div>
+
+        <div class="features-list">
+            <h3>What's Available Offline:</h3>
+            <ul>
+                <li>
+                    <span class="feature-icon">📱</span>
+                    Previously visited pages
+                </li>
+                <li>
+                    <span class="feature-icon">💾</span>
+                    Cached content and resources
+                </li>
+                <li>
+                    <span class="feature-icon">🔍</span>
+                    Service information and details
+                </li>
+                <li>
+                    <span class="feature-icon">📞</span>
+                    Contact information
+                </li>
+            </ul>
+        </div>
+
+        <div class="offline-actions">
+            <button class="btn btn-primary" onclick="retryConnection()">
+                🔄 Try Again
+            </button>
+            <button class="btn btn-secondary" onclick="goToCachedPage()">
+                📚 Browse Cached Content
+            </button>
+        </div>
+
+        <div style="margin-top: 2rem; opacity: 0.7; font-size: 0.9rem;">
+            <p>Need immediate assistance? Contact us:</p>
+            <p style="margin-top: 0.5rem;">
+                📞 +1 (302) 464-0950<br>
+                ✉️ kleber@ziontechgroup.com
+            </p>
         </div>
     </div>
 
     <script>
-        // Check connection status
-        function checkConnection() {
-            if (navigator.onLine) {
-                window.location.reload();
+        let countdown = 30;
+        const countdownElement = document.getElementById('countdown');
+        
+        // Countdown timer
+        const timer = setInterval(() => {
+            countdown--;
+            countdownElement.textContent = countdown;
+            
+            if (countdown <= 0) {
+                clearInterval(timer);
+                retryConnection();
             }
-        }
+        }, 1000);
 
         // Retry connection
         function retryConnection() {
-            const button = event.target;
-            button.innerHTML = '🔄 Checking...';
-            button.disabled = true;
+            countdownElement.textContent = 'Checking...';
+            
+            // Check if we're back online
+            if (navigator.onLine) {
+                window.location.reload();
+            } else {
+                // Reset countdown
+                countdown = 30;
+                countdownElement.textContent = countdown;
+                
+                // Restart timer
+                clearInterval(timer);
+                const newTimer = setInterval(() => {
+                    countdown--;
+                    countdownElement.textContent = countdown;
+                    
+                    if (countdown <= 0) {
+                        clearInterval(newTimer);
+                        retryConnection();
+                    }
+                }, 1000);
+            }
+        }
 
-            // Simulate connection check
-            setTimeout(() => {
-                if (navigator.onLine) {
-                    window.location.reload();
-                } else {
-                    button.innerHTML = '🔴 Still Offline';
-                    setTimeout(() => {
-                        button.innerHTML = '🔄 Retry Connection';
-                        button.disabled = false;
-                    }, 2000);
-                }
-            }, 2000);
+        // Go to cached page
+        function goToCachedPage() {
+            // Try to navigate to a cached page
+            if ('caches' in window) {
+                caches.keys().then(cacheNames => {
+                    if (cacheNames.length > 0) {
+                        // Try to load the homepage from cache
+                        caches.match('/').then(response => {
+                            if (response) {
+                                response.text().then(html => {
+                                    document.open();
+                                    document.write(html);
+                                    document.close();
+                                });
+                            }
+                        });
+                    }
+                });
+            }
         }
 
         // Listen for online/offline events
@@ -353,9 +299,6 @@
         window.addEventListener('offline', () => {
             // Already on offline page
         });
-
-        // Periodic connection check
-        setInterval(checkConnection, 10000);
 
         // Service Worker registration
         if ('serviceWorker' in navigator) {
