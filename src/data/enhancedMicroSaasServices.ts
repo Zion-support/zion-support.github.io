@@ -24,7 +24,6 @@ export interface EnhancedMicroSaasService {
   integrations: string[];
   compliance: string[];
   roi: string;
-  competitors: string[];
 }
 
 export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
@@ -32,43 +31,44 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
   {
     id: "ai-business-intelligence-platform",
     title: "AI Business Intelligence Platform",
-    description: "Advanced AI-powered BI platform that transforms raw data into actionable insights using machine learning and predictive analytics.",
-    category: "AI & Business Intelligence",
-    subcategory: "Data Analytics",
-    price: 299,
+    description: "Real-time business intelligence platform powered by AI that transforms raw data into actionable insights, predictive analytics, and automated reporting.",
+    category: "AI & Analytics",
+    subcategory: "Business Intelligence",
+    price: 2500,
     currency: "$",
     pricingModel: "monthly",
     features: [
       "Real-time data visualization",
-      "Predictive analytics",
-      "Natural language queries",
-      "Automated reporting",
-      "Custom dashboards",
+      "AI-powered predictive analytics",
+      "Automated report generation",
+      "Custom dashboard builder",
       "Data source integration",
       "Mobile-responsive interface",
-      "Role-based access control"
+      "Role-based access control",
+      "API for third-party tools"
     ],
     benefits: [
       "Increase decision-making speed by 40%",
       "Reduce manual reporting time by 70%",
-      "Improve data accuracy by 95%",
-      "Real-time insights for competitive advantage",
-      "Scalable for growing businesses"
+      "Identify trends before competitors",
+      "Improve operational efficiency",
+      "Data-driven strategic planning"
     ],
     useCases: [
       "Sales performance tracking",
-      "Financial forecasting",
-      "Customer behavior analysis",
+      "Financial analysis and forecasting",
+      "Customer behavior insights",
       "Operational efficiency monitoring",
       "Market trend analysis"
     ],
     targetAudience: [
-      "Business analysts",
-      "Data scientists",
-      "Executives",
-      "Operations managers",
-      "Marketing teams"
+      "Business executives",
+      "Data analysts",
+      "Sales managers",
+      "Marketing teams",
+      "Operations managers"
     ],
+<<<<<<< HEAD
     tags: ["AI", "Business Intelligence", "Data Analytics", "Machine Learning", "Predictive Analytics"],
     estimatedDelivery: "2-3 weeks",
     supportLevel: "premium",
@@ -127,14 +127,18 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
       "Service providers"
     ],
     tags: ["AI", "Customer Service", "Automation", "NLP", "24/7 Support"],
+=======
+    tags: ["AI", "Business Intelligence", "Analytics", "Predictive Modeling", "Data Visualization"],
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fbd3
     estimatedDelivery: "3-4 weeks",
     supportLevel: "premium",
-    marketPrice: "$199 - $800/month",
+    marketPrice: "$2,500 - $8,000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
+<<<<<<< HEAD
     technology: ["React", "Python", "OpenAI GPT", "FastAPI", "PostgreSQL"],
     integrations: ["Zendesk", "Intercom", "Slack", "Microsoft Teams", "Zapier"],
     compliance: ["GDPR", "SOC 2", "CCPA"],
@@ -824,12 +828,19 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
     roi: "250% within 12 months",
     competitors: ["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"]
+=======
+    technology: ["React", "Node.js", "Python", "TensorFlow", "PostgreSQL", "Redis"],
+    integrations: ["Salesforce", "HubSpot", "QuickBooks", "Slack", "Microsoft Teams", "Zapier"],
+    compliance: ["GDPR", "SOC 2", "HIPAA", "ISO 27001"],
+    roi: "300% within 12 months"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fbd3
   },
 
   // AI-Powered Marketing Automation
   {
     id: "ai-marketing-automation-suite",
     title: "AI Marketing Automation Suite",
+<<<<<<< HEAD
     description: "Comprehensive marketing automation platform powered by AI for personalized campaigns, lead scoring, and ROI optimization.",
     category: "AI & Marketing",
     subcategory: "Automation",
@@ -1268,13 +1279,55 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     ],
     tags: ["AI", "Education", "Learning Technology", "Personalization", "Analytics"],
     estimatedDelivery: "3-4 weeks",
+=======
+    description: "Comprehensive marketing automation platform that uses AI to optimize campaigns, personalize content, and maximize ROI across all marketing channels.",
+    category: "AI & Marketing",
+    subcategory: "Marketing Automation",
+    price: 1800,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered content personalization",
+      "Multi-channel campaign management",
+      "Predictive lead scoring",
+      "Automated A/B testing",
+      "Customer journey mapping",
+      "Email marketing automation",
+      "Social media scheduling",
+      "ROI tracking and analytics"
+    ],
+    benefits: [
+      "Increase conversion rates by 45%",
+      "Reduce marketing costs by 30%",
+      "Improve customer engagement",
+      "Automate repetitive tasks",
+      "Data-driven campaign optimization"
+    ],
+    useCases: [
+      "Lead generation campaigns",
+      "Customer retention programs",
+      "Product launch marketing",
+      "Seasonal promotions",
+      "Account-based marketing"
+    ],
+    targetAudience: [
+      "Marketing managers",
+      "Digital marketers",
+      "Growth hackers",
+      "E-commerce businesses",
+      "B2B companies"
+    ],
+    tags: ["AI", "Marketing Automation", "Lead Generation", "Personalization", "Analytics"],
+    estimatedDelivery: "2-3 weeks",
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fbd3
     supportLevel: "premium",
-    marketPrice: "$249 - $1,000/month",
+    marketPrice: "$1,800 - $5,500/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
+<<<<<<< HEAD
     technology: ["React", "Python", "TensorFlow", "PostgreSQL", "Redis"],
     integrations: ["Canvas", "Blackboard", "Moodle", "Google Classroom", "Microsoft Teams"],
     compliance: ["FERPA", "COPPA", "SOC 2", "GDPR"],
@@ -1327,11 +1380,65 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     estimatedDelivery: "4-5 weeks",
     supportLevel: "premium",
     marketPrice: "$399 - $1,800/month",
+=======
+    technology: ["Vue.js", "Python", "Machine Learning", "MongoDB", "AWS", "SendGrid"],
+    integrations: ["HubSpot", "Mailchimp", "Facebook Ads", "Google Ads", "LinkedIn", "Twitter"],
+    compliance: ["GDPR", "CAN-SPAM", "CCPA", "SOC 2"],
+    roi: "250% within 8 months"
+  },
+
+  // AI-Powered HR & Recruitment
+  {
+    id: "ai-hr-recruitment-platform",
+    title: "AI HR & Recruitment Platform",
+    description: "Intelligent HR platform that automates recruitment, employee management, and HR processes using AI to find the best talent and optimize workforce performance.",
+    category: "AI & HR",
+    subcategory: "Human Resources",
+    price: 2200,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered candidate matching",
+      "Automated resume screening",
+      "Interview scheduling automation",
+      "Employee performance tracking",
+      "Skills gap analysis",
+      "Compliance monitoring",
+      "Payroll integration",
+      "Employee self-service portal"
+    ],
+    benefits: [
+      "Reduce hiring time by 60%",
+      "Improve candidate quality by 35%",
+      "Reduce HR administrative tasks by 50%",
+      "Better employee retention",
+      "Compliance automation"
+    ],
+    useCases: [
+      "High-volume recruitment",
+      "Technical talent acquisition",
+      "Employee performance management",
+      "Compliance and audit",
+      "Workforce planning"
+    ],
+    targetAudience: [
+      "HR managers",
+      "Recruiters",
+      "Talent acquisition teams",
+      "Small to medium businesses",
+      "Enterprise companies"
+    ],
+    tags: ["AI", "HR", "Recruitment", "Employee Management", "Compliance"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "premium",
+    marketPrice: "$2,200 - $6,500/month",
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fbd3
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
+<<<<<<< HEAD
     technology: ["React", "Python", "TensorFlow", "PostgreSQL", "Redis"],
     integrations: ["Building Management Systems", "IoT Sensors", "Smart Meters", "Solar Panels", "Battery Storage"],
     compliance: ["ISO 50001", "SOC 2", "GDPR"],
@@ -1526,10 +1633,26 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     description: "AI-powered platform that automates and optimizes business operations including decision-making, resource allocation, and process optimization with minimal human intervention.",
     category: "AI & Business Operations",
     subcategory: "Autonomous Operations",
+=======
+    technology: ["React", "Python", "Natural Language Processing", "PostgreSQL", "Redis", "Docker"],
+    integrations: ["Workday", "BambooHR", "Greenhouse", "Lever", "Slack", "Microsoft 365"],
+    compliance: ["EEOC", "ADA", "FMLA", "SOC 2", "ISO 27001"],
+    roi: "280% within 10 months"
+  },
+
+  // AI-Powered Legal Tech
+  {
+    id: "ai-legal-tech-platform",
+    title: "AI Legal Tech Platform",
+    description: "Advanced legal technology platform that automates document review, contract analysis, and legal research using AI to increase efficiency and reduce costs.",
+    category: "AI & Legal",
+    subcategory: "Legal Technology",
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fbd3
     price: 3500,
     currency: "$",
     pricingModel: "monthly",
     features: [
+<<<<<<< HEAD
       "Autonomous decision-making engine",
       "Process automation and optimization",
       "Resource allocation algorithms",
@@ -1568,11 +1691,48 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     estimatedDelivery: "10-14 weeks",
     supportLevel: "enterprise",
     marketPrice: "$3,500 - $15,000/month",
+=======
+      "AI-powered contract analysis",
+      "Document review automation",
+      "Legal research assistance",
+      "Compliance monitoring",
+      "Risk assessment tools",
+      "Case management system",
+      "Client portal",
+      "Billing and time tracking"
+    ],
+    benefits: [
+      "Reduce document review time by 80%",
+      "Lower legal costs by 40%",
+      "Improve accuracy and consistency",
+      "Faster contract negotiations",
+      "Better risk management"
+    ],
+    useCases: [
+      "Contract review and analysis",
+      "Due diligence processes",
+      "Legal research",
+      "Compliance monitoring",
+      "Litigation support"
+    ],
+    targetAudience: [
+      "Law firms",
+      "Corporate legal departments",
+      "Legal consultants",
+      "Compliance officers",
+      "Contract managers"
+    ],
+    tags: ["AI", "Legal Tech", "Contract Analysis", "Compliance", "Document Review"],
+    estimatedDelivery: "4-5 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,500 - $12,000/month",
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fbd3
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
+<<<<<<< HEAD
     technology: ["Machine Learning", "Robotic Process Automation", "IoT", "Cloud Computing", "API Integration"],
     integrations: ["ERP Systems", "CRM Platforms", "Manufacturing Systems", "Supply Chain Tools", "Analytics Platforms"],
     compliance: ["ISO 9001", "SOC 2", "Industry-specific Standards", "Data Privacy"],
@@ -1587,10 +1747,82 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     description: "Comprehensive 5G platform that enables enterprises to leverage ultra-fast connectivity, low latency, and massive IoT connectivity for digital transformation and innovation.",
     category: "5G & Connectivity",
     subcategory: "Enterprise 5G",
+=======
+    technology: ["React", "Python", "BERT", "TensorFlow", "PostgreSQL", "Elasticsearch"],
+    integrations: ["Clio", "PracticePanther", "MyCase", "DocuSign", "Adobe Sign", "Microsoft Office"],
+    compliance: ["SOC 2", "ISO 27001", "HIPAA", "GDPR", "CCPA"],
+    roi: "400% within 15 months"
+  },
+
+  // Quantum-Safe Cybersecurity Platform
+  {
+    id: "quantum-safe-cybersecurity",
+    title: "Quantum-Safe Cybersecurity Platform",
+    description: "Next-generation cybersecurity platform that uses quantum-resistant encryption and AI to protect against current and future cyber threats.",
+    category: "Cybersecurity",
+    subcategory: "Quantum Security",
+    price: 4500,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Quantum-resistant encryption",
+      "AI-powered threat detection",
+      "Real-time security monitoring",
+      "Automated incident response",
+      "Vulnerability assessment",
+      "Compliance reporting",
+      "Security awareness training",
+      "24/7 security operations center"
+    ],
+    benefits: [
+      "Protect against quantum attacks",
+      "Reduce security incidents by 70%",
+      "Automate threat response",
+      "Meet compliance requirements",
+      "Future-proof security"
+    ],
+    useCases: [
+      "Financial institutions",
+      "Healthcare organizations",
+      "Government agencies",
+      "Critical infrastructure",
+      "Enterprise security"
+    ],
+    targetAudience: [
+      "CISOs",
+      "Security managers",
+      "IT directors",
+      "Compliance officers",
+      "Risk managers"
+    ],
+    tags: ["Cybersecurity", "Quantum Computing", "AI", "Encryption", "Compliance"],
+    estimatedDelivery: "6-8 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$4,500 - $15,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technology: ["React", "Python", "Quantum Algorithms", "PostgreSQL", "Kubernetes", "AWS"],
+    integrations: ["SIEM systems", "EDR solutions", "Firewalls", "Identity providers", "Cloud platforms"],
+    compliance: ["SOC 2", "ISO 27001", "NIST", "PCI DSS", "HIPAA", "FedRAMP"],
+    roi: "350% within 18 months"
+  },
+
+  // Blockchain Supply Chain Platform
+  {
+    id: "blockchain-supply-chain",
+    title: "Blockchain Supply Chain Platform",
+    description: "Transparent and secure supply chain management platform using blockchain technology to track products from source to destination with real-time visibility.",
+    category: "Blockchain",
+    subcategory: "Supply Chain",
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fbd3
     price: 2800,
     currency: "$",
     pricingModel: "monthly",
     features: [
+<<<<<<< HEAD
       "Private 5G network deployment",
       "Network slicing and management",
       "Edge computing integration",
@@ -1629,11 +1861,48 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,800 - $12,000/month",
+=======
+      "End-to-end product tracking",
+      "Smart contract automation",
+      "Real-time visibility",
+      "Quality assurance tracking",
+      "Sustainability monitoring",
+      "Compliance reporting",
+      "Supplier management",
+      "Analytics dashboard"
+    ],
+    benefits: [
+      "Increase supply chain transparency",
+      "Reduce fraud and counterfeiting",
+      "Improve compliance tracking",
+      "Optimize inventory management",
+      "Build consumer trust"
+    ],
+    useCases: [
+      "Food and beverage",
+      "Pharmaceuticals",
+      "Luxury goods",
+      "Electronics",
+      "Automotive industry"
+    ],
+    targetAudience: [
+      "Supply chain managers",
+      "Logistics companies",
+      "Manufacturers",
+      "Retailers",
+      "Regulatory bodies"
+    ],
+    tags: ["Blockchain", "Supply Chain", "IoT", "Transparency", "Compliance"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "premium",
+    marketPrice: "$2,800 - $8,500/month",
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fbd3
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
+<<<<<<< HEAD
     technology: ["5G NR", "Network Slicing", "Edge Computing", "IoT Protocols", "Security Protocols"],
     integrations: ["Existing Network Infrastructure", "Cloud Platforms", "IoT Devices", "Enterprise Applications", "Analytics Tools"],
     compliance: ["3GPP Standards", "Security Standards", "Industry Regulations", "Data Privacy"],
@@ -1690,11 +1959,65 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     estimatedDelivery: "4-6 weeks",
     supportLevel: "premium",
     marketPrice: "$450 - $2,000/month",
+=======
+    technology: ["React", "Node.js", "Hyperledger Fabric", "IoT sensors", "PostgreSQL", "Redis"],
+    integrations: ["ERP systems", "WMS", "TMS", "IoT platforms", "Analytics tools"],
+    compliance: ["ISO 9001", "HACCP", "FDA", "EU regulations", "SOC 2"],
+    roi: "320% within 14 months"
+  },
+
+  // IoT Edge Computing Platform
+  {
+    id: "iot-edge-computing-platform",
+    title: "IoT Edge Computing Platform",
+    description: "Intelligent edge computing platform that processes IoT data locally for real-time insights, reduced latency, and improved security.",
+    category: "IoT & Edge",
+    subcategory: "Edge Computing",
+    price: 3200,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Edge data processing",
+      "Real-time analytics",
+      "Device management",
+      "Security monitoring",
+      "Predictive maintenance",
+      "Energy optimization",
+      "Scalable architecture",
+      "Cloud integration"
+    ],
+    benefits: [
+      "Reduce latency by 90%",
+      "Lower bandwidth costs by 60%",
+      "Improve data security",
+      "Enable real-time decisions",
+      "Scale efficiently"
+    ],
+    useCases: [
+      "Smart cities",
+      "Industrial IoT",
+      "Connected vehicles",
+      "Smart buildings",
+      "Healthcare monitoring"
+    ],
+    targetAudience: [
+      "IoT solution providers",
+      "Manufacturing companies",
+      "Smart city planners",
+      "Healthcare providers",
+      "Energy companies"
+    ],
+    tags: ["IoT", "Edge Computing", "Real-time Analytics", "Predictive Maintenance", "Security"],
+    estimatedDelivery: "5-7 weeks",
+    supportLevel: "premium",
+    marketPrice: "$3,200 - $10,000/month",
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fbd3
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
+<<<<<<< HEAD
     technology: ["Machine Learning", "IoT", "Cloud Computing", "API Integration", "Mobile Development"],
     integrations: ["Active Directory", "SCCM", "ServiceNow", "Jira", "Confluence", "Cloud Platforms"],
     compliance: ["ITIL", "ISO 27001", "SOC 2", "Industry Standards"],
@@ -1709,10 +2032,138 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     description: "Automated SOC 2 compliance platform that streamlines the compliance process, automates evidence collection, and provides real-time monitoring of security controls and compliance status.",
     category: "Cybersecurity & Compliance",
     subcategory: "SOC 2 Compliance",
+=======
+    technology: ["React", "Python", "TensorFlow Lite", "Kubernetes", "PostgreSQL", "MQTT"],
+    integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "Industrial protocols", "Analytics platforms"],
+    compliance: ["ISO 27001", "SOC 2", "NIST", "Industry-specific standards"],
+    roi: "380% within 16 months"
+  },
+
+  // AI-Powered Financial Analytics
+  {
+    id: "ai-financial-analytics",
+    title: "AI Financial Analytics Platform",
+    description: "Advanced financial analytics platform that uses AI to provide real-time insights, risk assessment, and predictive modeling for financial decision-making.",
+    category: "AI & Finance",
+    subcategory: "Financial Analytics",
+    price: 3800,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Real-time financial monitoring",
+      "AI-powered risk assessment",
+      "Predictive financial modeling",
+      "Portfolio optimization",
+      "Fraud detection",
+      "Regulatory compliance",
+      "Custom reporting",
+      "API integration"
+    ],
+    benefits: [
+      "Improve investment returns by 25%",
+      "Reduce risk exposure by 40%",
+      "Automate compliance reporting",
+      "Real-time decision support",
+      "Cost-effective operations"
+    ],
+    useCases: [
+      "Investment management",
+      "Risk management",
+      "Trading operations",
+      "Compliance monitoring",
+      "Financial planning"
+    ],
+    targetAudience: [
+      "Investment managers",
+      "Risk managers",
+      "Traders",
+      "Compliance officers",
+      "Financial analysts"
+    ],
+    tags: ["AI", "Financial Analytics", "Risk Management", "Predictive Modeling", "Compliance"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,800 - $12,500/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technology: ["React", "Python", "TensorFlow", "PostgreSQL", "Redis", "Apache Kafka"],
+    integrations: ["Bloomberg", "Reuters", "Trading platforms", "Risk management systems", "Compliance tools"],
+    compliance: ["SOX", "Basel III", "Dodd-Frank", "SOC 2", "ISO 27001"],
+    roi: "450% within 20 months"
+  },
+
+  // AI-Powered Healthcare Platform
+  {
+    id: "ai-healthcare-platform",
+    title: "AI Healthcare Platform",
+    description: "Comprehensive healthcare platform that uses AI for patient monitoring, diagnosis assistance, and healthcare management to improve patient outcomes.",
+    category: "AI & Healthcare",
+    subcategory: "Healthcare Technology",
+    price: 4200,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered diagnosis assistance",
+      "Patient monitoring",
+      "Electronic health records",
+      "Telemedicine integration",
+      "Predictive health analytics",
+      "Medication management",
+      "Appointment scheduling",
+      "Billing automation"
+    ],
+    benefits: [
+      "Improve diagnosis accuracy by 30%",
+      "Reduce administrative costs by 35%",
+      "Better patient outcomes",
+      "Streamlined workflows",
+      "Compliance automation"
+    ],
+    useCases: [
+      "Hospitals",
+      "Clinics",
+      "Telemedicine providers",
+      "Health insurance",
+      "Pharmaceutical companies"
+    ],
+    targetAudience: [
+      "Healthcare providers",
+      "Hospital administrators",
+      "Medical professionals",
+      "Health insurers",
+      "Pharmaceutical companies"
+    ],
+    tags: ["AI", "Healthcare", "Telemedicine", "Patient Care", "Compliance"],
+    estimatedDelivery: "6-8 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$4,200 - $15,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technology: ["React", "Python", "TensorFlow", "PostgreSQL", "HL7 FHIR", "DICOM"],
+    integrations: ["EMR systems", "PACS", "Lab systems", "Pharmacy systems", "Insurance systems"],
+    compliance: ["HIPAA", "HITECH", "SOC 2", "ISO 27001", "FDA regulations"],
+    roi: "400% within 18 months"
+  },
+
+  // AI-Powered Education Platform
+  {
+    id: "ai-education-platform",
+    title: "AI Education Platform",
+    description: "Intelligent education platform that personalizes learning experiences, provides adaptive content, and tracks student progress using AI.",
+    category: "AI & Education",
+    subcategory: "Educational Technology",
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fbd3
     price: 1800,
     currency: "$",
     pricingModel: "monthly",
     features: [
+<<<<<<< HEAD
       "Automated evidence collection",
       "Real-time compliance monitoring",
       "Security control assessment",
@@ -1750,12 +2201,48 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     tags: ["SOC 2", "Compliance", "Automation", "Cybersecurity", "Risk Management", "Audit"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
+=======
+      "Personalized learning paths",
+      "Adaptive content delivery",
+      "Student progress tracking",
+      "Automated assessment",
+      "Learning analytics",
+      "Content management",
+      "Collaborative tools",
+      "Mobile learning"
+    ],
+    benefits: [
+      "Improve learning outcomes by 40%",
+      "Reduce administrative workload by 50%",
+      "Personalized education",
+      "Better student engagement",
+      "Data-driven insights"
+    ],
+    useCases: [
+      "K-12 schools",
+      "Universities",
+      "Corporate training",
+      "Online education",
+      "Skill development"
+    ],
+    targetAudience: [
+      "Educational institutions",
+      "Corporate trainers",
+      "Online educators",
+      "Students",
+      "Parents"
+    ],
+    tags: ["AI", "Education", "Personalized Learning", "Analytics", "Mobile Learning"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "premium",
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fbd3
     marketPrice: "$1,800 - $6,000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
+<<<<<<< HEAD
     technology: ["Automation", "Machine Learning", "API Integration", "Cloud Computing", "Security Tools"],
     integrations: ["SIEM Systems", "Identity Management", "Cloud Platforms", "Security Tools", "GRC Platforms"],
     compliance: ["SOC 2", "ISO 27001", "NIST", "Industry Standards"],
@@ -2495,25 +2982,23 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     compliance: ["EEOC", "OFCCP", "GDPR", "Data Privacy", "Employment Law"],
     roi: "350% within 12 months",
     competitors: ["Workday", "BambooHR", "Greenhouse", "Lever", "SmartRecruiters"]
+=======
+    technology: ["React", "Python", "Machine Learning", "PostgreSQL", "Redis", "WebRTC"],
+    integrations: ["LMS systems", "Video conferencing", "Assessment tools", "Analytics platforms", "Content libraries"],
+    compliance: ["FERPA", "COPPA", "SOC 2", "ISO 27001", "Accessibility standards"],
+    roi: "300% within 12 months"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-fbd3
   }
 ];
+
+export const getServiceById = (id: string) => {
+  return ENHANCED_MICRO_SAAS_SERVICES.find(service => service.id === id);
+};
 
 export const getServicesByCategory = (category: string) => {
   return ENHANCED_MICRO_SAAS_SERVICES.filter(service => service.category === category);
 };
 
-export const getServicesBySubcategory = (subcategory: string) => {
-  return ENHANCED_MICRO_SAAS_SERVICES.filter(service => service.subcategory === subcategory);
-};
-
-export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
-  return ENHANCED_MICRO_SAAS_SERVICES.filter(service => 
-    service.price >= minPrice && service.price <= maxPrice
-  );
-};
-
-export const getServicesByTechnology = (technology: string) => {
-  return ENHANCED_MICRO_SAAS_SERVICES.filter(service => 
-    service.technology.includes(technology)
-  );
+export const getServicesByTag = (tag: string) => {
+  return ENHANCED_MICRO_SAAS_SERVICES.filter(service => service.tags.includes(tag));
 };
