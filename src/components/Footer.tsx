@@ -33,57 +33,36 @@ export function Footer() {
 
   const footerSections = [
     {
-      title: "AI & Micro SAAS",
-      icon: Brain,
-      color: "from-purple-500 to-pink-500",
+      title: "AI & Autonomous Systems",
       links: [
-        { label: "AI & Autonomous Systems", path: "/services/ai-autonomous-systems" },
+        { label: "AI Autonomous Systems", path: "/services/ai-autonomous-systems" },
         { label: "AI Research Assistant", path: "/ai-autonomous-research-assistant" },
         { label: "Quantum Neural Networks", path: "/quantum-neural-network-platform" },
         { label: "Autonomous Business Platform", path: "/autonomous-business-operations-platform" },
         { label: "AI Asset Management", path: "/ai-powered-it-asset-management" },
-        { label: "Quantum Technology", path: "/services/quantum-technology" },
-        { label: "IT Infrastructure", path: "/services/it-infrastructure" },
-        { label: "Micro SAAS Solutions", path: "/services/micro-saas-solutions" },
-        { label: "Cybersecurity", path: "/services/cybersecurity" },
-        { label: "SOC2 Compliance Automation", path: "/soc2-compliance-automation" },
-        { label: "Industry Solutions", path: "/services/industry-solutions" },
-        { label: "AI & Machine Learning", path: "/services#ai-ml" },
-        { label: "Cloud & Infrastructure", path: "/services#cloud" },
-        { label: "5G Enterprise Solutions", path: "/5g-enterprise-solutions" },
-        { label: "Blockchain Solutions", path: "/services#blockchain" },
-        { label: "IoT & Edge Computing", path: "/services#iot" }
+        { label: "New Services", path: "/new-services" }
       ]
     },
     {
-      title: "Solutions",
-      icon: Target,
-      color: "from-blue-500 to-cyan-500",
+      title: "Core Services",
+      links: [
+        { label: "Cybersecurity", path: "/services/cybersecurity" },
+        { label: "IT Infrastructure", path: "/services/it-infrastructure" },
+        { label: "Quantum Technology", path: "/services/quantum-technology" },
+        { label: "Micro SAAS Solutions", path: "/services/micro-saas-solutions" },
+        { label: "Cloud DevOps", path: "/cloud-devops" },
+        { label: "Digital Transformation", path: "/digital-transformation" }
+      ]
+    },
+    {
+      title: "Industry Solutions",
       links: [
         { label: "Enterprise Solutions", path: "/solutions/enterprise" },
         { label: "Healthcare Solutions", path: "/solutions/healthcare" },
         { label: "Financial Solutions", path: "/solutions/financial" },
         { label: "Manufacturing Solutions", path: "/solutions/manufacturing" },
         { label: "Retail Solutions", path: "/solutions/retail" },
-        { label: "Government Solutions", path: "/solutions/government" },
-        { label: "Business Intelligence", path: "/services/business-intelligence" },
-        { label: "Marketing Automation", path: "/services/ai-marketing" },
-        { label: "HR & Recruitment", path: "/services/ai-hr" },
-        { label: "Legal Tech", path: "/services/ai-legal" }
-      ]
-    },
-    {
-      title: "Emerging Tech",
-      icon: Rocket,
-      color: "from-purple-500 to-violet-500",
-      links: [
-        { label: "Quantum Computing", path: "/emerging-tech" },
-        { label: "Blockchain & DeFi", path: "/emerging-tech" },
-        { label: "IoT & Edge Computing", path: "/emerging-tech" },
-        { label: "Extended Reality (XR)", path: "/emerging-tech" },
-        { label: "5G & Networks", path: "/emerging-tech" },
-        { label: "Green Technology", path: "/emerging-tech" },
-        { label: "Digital Twins", path: "/emerging-tech" }
+        { label: "Government Solutions", path: "/solutions/government" }
       ]
     },
     {
@@ -98,7 +77,7 @@ export function Footer() {
         { label: "Careers", path: "/careers" },
         { label: "Partners", path: "/partners" },
         { label: "Contact", path: "/contact" },
-        { label: "Blog", path: "/blog" }
+        { label: "News", path: "/news" }
       ]
     },
     {
@@ -106,11 +85,11 @@ export function Footer() {
       icon: Lightbulb,
       color: "from-orange-500 to-yellow-500",
       links: [
-        { label: "Blog & Articles", path: "/blog" },
         { label: "Case Studies", path: "/case-studies" },
         { label: "Help Center", path: "/help" },
-        { label: "Documentation", path: "/docs" },
-        { label: "Support Center", path: "/support" }
+        { label: "White Papers", path: "/white-papers" },
+        { label: "Webinars", path: "/webinars" },
+        { label: "Emerging Tech", path: "/emerging-tech" }
       ]
     }
   ];
@@ -133,7 +112,7 @@ export function Footer() {
     },
     { 
       name: 'GitHub', 
-      url: 'https://github.com/ziontechgroup', 
+      url: 'https://github.com/Zion-Holdings', 
       icon: Github,
       fallback: 'https://github.com',
       color: 'hover:bg-gray-600/20 hover:text-gray-400'
