@@ -1,130 +1,204 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { SEOHead } from '../components/SEOHead';
+import { Link } from 'react-router-dom';
+import { Building, Brain, Zap, Shield, Database, Network, ArrowRight, Star, Rocket, Target, Users, BarChart3, Clock, Cpu } from 'lucide-react';
 
 export default function AutonomousBusinessOperationsPlatform() {
   return (
     <>
-      <Helmet>
-        <title>Autonomous Business Operations Platform - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary autonomous business operations platform that automates and optimizes all aspects of business operations using advanced AI and machine learning." />
-        <meta name="keywords" content="autonomous business operations, AI automation, business process automation, autonomous systems, AI platform" />
-      </Helmet>
+      <SEOHead
+        title="Autonomous Business Operations Platform | Zion Tech Group"
+        description="Revolutionary AI-powered platform that autonomously manages and optimizes business operations, processes, and workflows for maximum efficiency."
+        keywords="autonomous business operations, AI business automation, business process automation, autonomous systems, AI operations management"
+        canonical="https://ziontechgroup.com/autonomous-business-operations-platform"
+      />
       
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         {/* Hero Section */}
-        <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
+              <div className="flex justify-center mb-6">
+                <div className="p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full">
+                  <Building className="h-8 w-8 text-white" />
+                </div>
+              </div>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Autonomous Business Operations Platform
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Transform your business with fully autonomous operations powered by cutting-edge AI. 
-                Automate, optimize, and scale your business processes like never before.
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Transform your business with our revolutionary AI-powered platform that autonomously 
+                manages, optimizes, and scales your operations. Experience unprecedented efficiency 
+                and growth through intelligent automation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
-                  Start Free Trial
-                </button>
-                <button className="px-8 py-4 border border-cyan-400 text-cyan-400 font-bold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">
-                  Schedule Demo
-                </button>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
+                >
+                  Get Started
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+                <Link
+                  to="/demo"
+                  className="inline-flex items-center px-8 py-4 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
+                >
+                  Request Demo
+                </Link>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Key Features Section */}
+        {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-white">
-              Autonomous Business Capabilities
-            </h2>
-            
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Revolutionary Autonomous Capabilities
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Our platform leverages advanced AI to create truly autonomous business operations 
+                that learn, adapt, and optimize continuously.
+              </p>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mb-6">
-                  <span className="text-2xl">🤖</span>
+              <div className="bg-gradient-to-br from-blue-900/50 to-cyan-900/50 p-8 rounded-xl border border-blue-500/20">
+                <div className="p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg w-fit mb-6">
+                  <Brain className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-cyan-400">Fully Autonomous Operations</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">Intelligent Decision Making</h3>
                 <p className="text-gray-300">
-                  Self-managing business processes that adapt and optimize in real-time without human intervention.
+                  AI-powered decision engines that analyze data, predict outcomes, and make optimal 
+                  business decisions autonomously.
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl flex items-center justify-center mb-6">
-                  <span className="text-2xl">📊</span>
+              <div className="bg-gradient-to-br from-green-900/50 to-emerald-900/50 p-8 rounded-xl border border-green-500/20">
+                <div className="p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg w-fit mb-6">
+                  <Zap className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-purple-400">Intelligent Analytics</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">Process Automation</h3>
                 <p className="text-gray-300">
-                  Advanced AI-powered analytics that provide deep insights and predictive capabilities.
+                  End-to-end automation of complex business processes with intelligent workflow 
+                  optimization and error handling.
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-teal-500 rounded-xl flex items-center justify-center mb-6">
-                  <span className="text-2xl">⚡</span>
+              <div className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 p-8 rounded-xl border border-purple-500/20">
+                <div className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg w-fit mb-6">
+                  <Shield className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-green-400">Process Optimization</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">Autonomous Security</h3>
                 <p className="text-gray-300">
-                  Continuous process improvement and optimization using machine learning algorithms.
+                  Self-monitoring security systems that detect threats, respond to incidents, and 
+                  maintain compliance automatically.
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-br from-indigo-900/50 to-purple-900/50 p-8 rounded-xl border border-indigo-500/20">
+                <div className="p-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg w-fit mb-6">
+                  <Database className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">Data Intelligence</h3>
+                <p className="text-gray-300">
+                  Advanced analytics and insights that drive autonomous decision-making and 
+                  continuous business optimization.
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-br from-yellow-900/50 to-orange-900/50 p-8 rounded-xl border border-yellow-500/20">
+                <div className="p-3 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg w-fit mb-6">
+                  <Network className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">Scalable Infrastructure</h3>
+                <p className="text-gray-300">
+                  Cloud-native architecture that automatically scales resources based on demand 
+                  and business requirements.
+                </p>
+              </div>
+
+              <div className="bg-gradient-to-br from-red-900/50 to-pink-900/50 p-8 rounded-xl border border-red-500/20">
+                <div className="p-3 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg w-fit mb-6">
+                  <Clock className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">24/7 Operations</h3>
+                <p className="text-gray-300">
+                  Continuous autonomous operation with self-healing capabilities and proactive 
+                  maintenance scheduling.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Business Areas Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
+        {/* Business Functions Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/20 to-cyan-900/20">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-white">
-              Autonomous Business Areas
-            </h2>
-            
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Autonomous Business Functions
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Every aspect of your business operations can be managed autonomously with 
+                intelligent AI systems.
+              </p>
+            </div>
+
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div>
-                <h3 className="text-2xl font-bold mb-6 text-cyan-400">Operations Management</h3>
-                <ul className="space-y-4 text-gray-300">
-                  <li className="flex items-start space-x-3">
-                    <span className="text-cyan-400 mt-1">•</span>
-                    <span>Supply chain automation</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <span className="text-cyan-400 mt-1">•</span>
-                    <span>Inventory management</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <span className="text-cyan-400 mt-1">•</span>
-                    <span>Quality control systems</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <span className="text-cyan-400 mt-1">•</span>
-                    <span>Production scheduling</span>
-                  </li>
-                </ul>
+                <h3 className="text-2xl font-semibold text-white mb-6">Core Operations</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <Star className="h-5 w-5 text-blue-400 mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-lg font-medium text-white">Financial Management</h4>
+                      <p className="text-gray-300">Automated accounting, budgeting, and financial reporting</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <Star className="h-5 w-5 text-blue-400 mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-lg font-medium text-white">Human Resources</h4>
+                      <p className="text-gray-300">AI-powered recruitment, performance management, and training</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <Star className="h-5 w-5 text-blue-400 mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-lg font-medium text-white">Supply Chain</h4>
+                      <p className="text-gray-300">Intelligent inventory management and logistics optimization</p>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold mb-6 text-cyan-400">Business Intelligence</h3>
-                <ul className="space-y-4 text-gray-300">
-                  <li className="flex items-start space-x-3">
-                    <span className="text-cyan-400 mt-1">•</span>
-                    <span>Financial forecasting</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <span className="text-cyan-400 mt-1">•</span>
-                    <span>Market analysis</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <span className="text-cyan-400 mt-1">•</span>
-                    <span>Customer insights</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <span className="text-cyan-400 mt-1">•</span>
-                    <span>Performance metrics</span>
-                  </li>
-                </ul>
+                <h3 className="text-2xl font-semibold text-white mb-6">Advanced Functions</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <Target className="h-5 w-5 text-cyan-400 mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-lg font-medium text-white">Customer Service</h4>
+                      <p className="text-gray-300">AI chatbots and intelligent customer support systems</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <Target className="h-5 w-5 text-cyan-400 mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-lg font-medium text-white">Marketing Automation</h4>
+                      <p className="text-gray-300">Intelligent campaign management and customer engagement</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <Target className="h-5 w-5 text-cyan-400 mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="text-lg font-medium text-white">Risk Management</h4>
+                      <p className="text-gray-300">Proactive risk assessment and mitigation strategies</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -133,70 +207,75 @@ export default function AutonomousBusinessOperationsPlatform() {
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-white">
-              Why Choose Autonomous Operations?
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Transformative Business Benefits
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Experience unprecedented growth and efficiency with autonomous business operations.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl">💰</span>
+                <div className="p-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full w-fit mx-auto mb-4">
+                  <BarChart3 className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-cyan-400">Cost Reduction</h3>
-                <p className="text-gray-300">
-                  Reduce operational costs by up to 40% through intelligent automation and optimization.
-                </p>
+                <h3 className="text-xl font-semibold text-white mb-2">300% Efficiency</h3>
+                <p className="text-gray-300">Dramatic increase in operational efficiency</p>
               </div>
 
               <div className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl">🚀</span>
+                <div className="p-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-fit mx-auto mb-4">
+                  <Clock className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-purple-400">Scalability</h3>
-                <p className="text-gray-300">
-                  Scale your operations seamlessly without proportional increases in overhead costs.
-                </p>
+                <h3 className="text-xl font-semibold text-white mb-2">24/7 Operations</h3>
+                <p className="text-gray-300">Continuous business operation without interruption</p>
               </div>
 
               <div className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl">🎯</span>
+                <div className="p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-fit mx-auto mb-4">
+                  <Users className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-green-400">Efficiency</h3>
-                <p className="text-gray-300">
-                  Achieve operational efficiency improvements of 60% or more through intelligent automation.
-                </p>
+                <h3 className="text-xl font-semibold text-white mb-2">90% Cost Reduction</h3>
+                <p className="text-gray-300">Significant reduction in operational costs</p>
               </div>
 
               <div className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl">🔮</span>
+                <div className="p-4 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full w-fit mx-auto mb-4">
+                  <Rocket className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-yellow-400">Predictive Insights</h3>
-                <p className="text-gray-300">
-                  Leverage predictive analytics to make proactive business decisions and prevent issues.
-                </p>
+                <h3 className="text-xl font-semibold text-white mb-2">10x Growth</h3>
+                <p className="text-gray-300">Accelerated business growth and scalability</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Automate Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join the autonomous business revolution and transform your operations with AI-powered automation.
+              Join the autonomous business revolution and unlock unprecedented efficiency, 
+              growth, and competitive advantage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
-                Get Started Today
-              </button>
-              <button className="px-8 py-4 border border-cyan-400 text-cyan-400 font-bold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">
-                Contact Sales
-              </button>
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
+              >
+                Start Your Autonomous Journey
+                <Rocket className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
+              >
+                Schedule a Demo
+              </Link>
             </div>
           </div>
         </section>

@@ -123,8 +123,10 @@ export function Header() {
         { name: 'AI Customer Intelligence', path: '/services/ai-customer-intelligence', description: 'Customer behavior insights', icon: Users },
         { name: 'AI Predictive Analytics', path: '/services/ai-predictive-analytics', description: 'Future-focused analytics', icon: BarChart3 },
         { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', description: 'AI-powered research automation', icon: Brain },
+        { name: 'Advanced Research Automation', path: '/advanced-research-automation', description: 'Comprehensive research automation platform', icon: Brain },
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', description: 'Advanced analytics and insights', icon: BarChart3 },
         { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', description: 'Smart marketing optimization', icon: Target },
+        { name: 'Affiliate Attribution Hub', path: '/affiliate-attribution-hub', description: 'Advanced marketing attribution', icon: BarChart3 },
         { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', description: 'Intelligent talent management', icon: Users },
         { name: 'AI Legal Tech', path: '/services/ai-legal-tech', description: 'Automated legal processes', icon: Shield },
         { name: 'AI Healthcare Analytics', path: '/services/ai-healthcare-analytics', description: 'Patient care optimization', icon: Brain }
@@ -137,6 +139,7 @@ export function Header() {
       color: 'from-blue-500 to-cyan-500',
       services: [
         { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', description: 'Quantum-powered neural networks', icon: Brain },
+        { name: 'Accessibility Auditor', path: '/accessibility-auditor', description: 'Professional accessibility auditing', icon: Eye },
         { name: 'Quantum Computing', path: '/services/quantum-technology', description: 'Quantum computing platforms', icon: Cpu },
         { name: 'Quantum-Safe Security', path: '/services/quantum-security', description: 'Future-proof quantum security', icon: Shield }
       ]
@@ -159,6 +162,7 @@ export function Header() {
       color: 'from-red-500 to-pink-500',
       services: [
         { name: 'Cybersecurity Services', path: '/services/cybersecurity', description: 'Complete security solutions', icon: Shield },
+        { name: 'Advanced Cybersecurity Suite', path: '/advanced-cybersecurity-suite', description: 'Next-generation security platform', icon: Shield },
         { name: 'SOC2 Compliance Automation', path: '/soc2-compliance-automation', description: 'Automated compliance management', icon: Lock },
         { name: 'Security Assessment', path: '/services/security-assessment', description: 'Security audit and testing', icon: Shield },
         { name: 'Compliance & Audit', path: '/services/compliance-audit', description: 'Regulatory compliance support', icon: Lock },

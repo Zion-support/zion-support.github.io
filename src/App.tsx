@@ -59,6 +59,12 @@ const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 const NewServices = lazy(() => import('./pages/NewServices'));
 
+// Additional missing pages to fix broken links
+const AccessibilityAuditor = lazy(() => import('./pages/accessibility-auditor'));
+const AdvancedCybersecuritySuite = lazy(() => import('./pages/advanced-cybersecurity-suite'));
+const AdvancedResearchAutomation = lazy(() => import('./pages/advanced-research-automation'));
+const AffiliateAttributionHub = lazy(() => import('./pages/affiliate-attribution-hub'));
+
 // Company information pages
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
@@ -232,6 +238,12 @@ const App = () => {
                       <Route path="/docs" element={<Docs />} />
                       <Route path="/marketplace" element={<Marketplace />} />
                       <Route path="/community" element={<Community />} />
+                      
+                      {/* New pages to fix broken links */}
+                      <Route path="/accessibility-auditor" element={<AccessibilityAuditor />} />
+                      <Route path="/advanced-cybersecurity-suite" element={<AdvancedCybersecuritySuite />} />
+                      <Route path="/advanced-research-automation" element={<AdvancedResearchAutomation />} />
+                      <Route path="/affiliate-attribution-hub" element={<AffiliateAttributionHub />} />
                     </Routes>
                   </Suspense>
                 </main>
