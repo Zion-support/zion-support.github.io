@@ -69,6 +69,8 @@ const InnovativeNewServices = lazy(() => import('./pages/services/InnovativeNewS
 const SpecializedITInfrastructure = lazy(() => import('./pages/services/SpecializedITInfrastructure'));
 const InnovativeMicroSaasServices = lazy(() => import('./pages/InnovativeMicroSaasServices'));
 const ComprehensiveInnovativeServices = lazy(() => import('./pages/ComprehensiveInnovativeServices'));
+const InnovativeServicesShowcase2025 = lazy(() => import('./pages/InnovativeServicesShowcase2025'));
+const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveServicesOverview'));
 
 // Solutions pages
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
@@ -124,6 +126,8 @@ const App = () => {
                       <Route path="/cloud-devops" element={<CloudDevOps />} />
                       <Route path="/enterprise-solutions" element={<EnterpriseSolutionsPage />} />
                       <Route path="/digital-transformation" element={<DigitalTransformation />} />
+                      <Route path="/innovative-services-2025" element={<InnovativeServicesShowcase2025 />} />
+                      <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview />} />
                       
                       {/* Missing pages from analysis */}
                       <Route path="/quantum-neural-network-platform" element={<QuantumNeuralNetworkPlatform />} />
