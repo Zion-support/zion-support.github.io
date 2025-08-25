@@ -4,7 +4,7 @@ import { ProductListing } from "@/types/listings";
 import { TrustedBySection } from "@/components/TrustedBySection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { Globe, Zap } from "lucide-react";
+import { Globe, Brain, Shield } from "lucide-react";
 import { useEffect, useState } from "react";
 
 // Sample service listings
@@ -240,19 +240,26 @@ export default function ServicesPage() {
           <div className="flex flex-wrap gap-2">
             <Link to="/enhanced-services">
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
-                <Zap className="h-4 w-4 mr-2" />
-                Premium Services
+                <Globe className="h-4 w-4 mr-2" />
+                Enhanced Services Showcase
+              </Button>
+            </Link>
+            <Link to="/ai-services">
+              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+                <Brain className="h-4 w-4 mr-2" />
+                AI Services
+              </Button>
+            </Link>
+            <Link to="/cybersecurity-services">
+              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+                <Shield className="h-4 w-4 mr-2" />
+                Cybersecurity
               </Button>
             </Link>
             <Link to="/it-onsite-services">
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                 <Globe className="h-4 w-4 mr-2" />
                 Global IT Onsite Services
-              </Button>
-            </Link>
-            <Link to="/comprehensive-services">
-              <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-                View All Services
               </Button>
             </Link>
             <Link to="/request-quote">

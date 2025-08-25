@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+=======
+import React, { useState } from 'react';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-017a
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -7,6 +11,7 @@ import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { 
+<<<<<<< HEAD
   Search, 
   Filter, 
   Grid3X3, 
@@ -93,6 +98,40 @@ const EnhancedServicesShowcase: React.FC = () => {
           return 0;
       }
     });
+=======
+  Phone, 
+  Mail, 
+  MapPin, 
+  Globe, 
+  Star, 
+  Clock, 
+  TrendingUp, 
+  Shield, 
+  Zap,
+  Brain,
+  Database,
+  Cloud,
+  Lock,
+  BarChart3,
+  Network,
+  Smartphone,
+  CreditCard,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  ExternalLink
+} from 'lucide-react';
+import { ENHANCED_SERVICES, SERVICE_CATEGORIES, SERVICE_FEATURES, MARKET_PRICING } from '@/data/enhancedServices';
+
+export default function EnhancedServicesShowcase() {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const filteredServices = selectedCategory === 'all' 
+    ? ENHANCED_SERVICES 
+    : ENHANCED_SERVICES.filter(service => 
+        SERVICE_CATEGORIES.find(cat => cat.id === selectedCategory)?.services.includes(service)
+      );
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-017a
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
@@ -164,6 +203,7 @@ const EnhancedServicesShowcase: React.FC = () => {
           >
             All Services
           </Button>
+<<<<<<< HEAD
           {categories.map((category) => (
             <Button
               key={category}
@@ -172,18 +212,74 @@ const EnhancedServicesShowcase: React.FC = () => {
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
             >
               {category}
+=======
+          {SERVICE_CATEGORIES.map((category) => (
+            <Button
+              key={category.id}
+              variant={selectedCategory === category.id ? 'default' : 'outline'}
+              onClick={() => setSelectedCategory(category.id)}
+              className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
+            >
+              <span className="mr-2">{category.icon}</span>
+              {category.name}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-017a
             </Button>
           ))}
         </div>
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
           {finalFilteredServices.map((service) => (
+=======
+          {filteredServices.map((service) => (
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-017a
             <ServiceCard key={service.id} service={service} />
           ))}
         </div>
       </div>
 
+<<<<<<< HEAD
+=======
+      {/* Market Analysis Section */}
+      <div className="bg-white/5 backdrop-blur-sm py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Market Analysis & ROI
+            </h2>
+            <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
+              Understand the market trends, competitive landscape, and expected returns on your technology investments.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {Object.entries(MARKET_PRICING).map(([key, data]) => (
+              <Card key={key} className="bg-white/10 backdrop-blur-sm border-zion-cyan/30">
+                <CardHeader>
+                  <CardTitle className="text-zion-cyan capitalize">{key.replace('-', ' ')}</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <div className="flex items-center gap-2">
+                    <CreditCard className="h-4 w-4 text-zion-purple" />
+                    <span className="text-white">{data.averagePrice}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <TrendingUp className="h-4 w-4 text-green-400" />
+                    <span className="text-zion-cyan-light">{data.marketTrend}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Zap className="h-4 w-4 text-yellow-400" />
+                    <span className="text-zion-cyan-light">{data.roi}</span>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </div>
+
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-017a
       {/* Why Choose Us Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -198,7 +294,11 @@ const EnhancedServicesShowcase: React.FC = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
             <CardContent className="p-8">
+<<<<<<< HEAD
               <Cpu className="h-16 w-16 mx-auto mb-4 text-zion-cyan" />
+=======
+              <Brain className="h-16 w-16 mx-auto mb-4 text-zion-cyan" />
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-017a
               <h3 className="text-2xl font-bold text-white mb-4">AI-First Approach</h3>
               <p className="text-zion-cyan-light">
                 We leverage the latest AI technologies to create intelligent, scalable solutions that adapt to your business needs.
@@ -300,8 +400,11 @@ const EnhancedServicesShowcase: React.FC = () => {
   );
 }
 
+<<<<<<< HEAD
 export default EnhancedServicesShowcase;
 
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-017a
 // Service Card Component
 function ServiceCard({ service }: { service: any }) {
   const [showDetails, setShowDetails] = useState(false);
@@ -313,9 +416,17 @@ function ServiceCard({ service }: { service: any }) {
           <Badge variant="secondary" className="bg-zion-purple/20 text-zion-purple border-zion-purple/30">
             {service.category}
           </Badge>
+<<<<<<< HEAD
           <Badge variant="secondary" className="bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30">
             {service.subcategory}
           </Badge>
+=======
+          {service.featured && (
+            <Badge variant="secondary" className="bg-yellow-500/20 text-yellow-400 border-yellow-500/30">
+              Featured
+            </Badge>
+          )}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-017a
         </div>
         <CardTitle className="text-xl text-white mb-2">{service.title}</CardTitle>
         <CardDescription className="text-zion-cyan-light">
@@ -359,10 +470,17 @@ function ServiceCard({ service }: { service: any }) {
             ))}
           </div>
 
+<<<<<<< HEAD
           {/* Delivery */}
           <div className="flex items-center gap-2 text-zion-cyan-light">
             <Clock className="h-4 w-4" />
             <span className="text-sm">Delivery: {service.estimatedDelivery}</span>
+=======
+          {/* Availability */}
+          <div className="flex items-center gap-2 text-zion-cyan-light">
+            <Clock className="h-4 w-4" />
+            <span className="text-sm">Available: {service.availability}</span>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-017a
           </div>
 
           {/* Action Buttons */}
@@ -389,6 +507,7 @@ function ServiceCard({ service }: { service: any }) {
                   </AccordionTrigger>
                   <AccordionContent className="text-zion-cyan-light">
                     <div className="space-y-2">
+<<<<<<< HEAD
                       <h4 className="font-semibold text-white mb-2">Features:</h4>
                       {service.features.map((feature: string, index: number) => (
                         <div key={index} className="flex items-center gap-2">
@@ -403,6 +522,20 @@ function ServiceCard({ service }: { service: any }) {
                           <span>{benefit}</span>
                         </div>
                       ))}
+=======
+                      <div className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-green-400" />
+                        <span>Advanced AI algorithms</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-green-400" />
+                        <span>24/7 support</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-green-400" />
+                        <span>Custom integration</span>
+                      </div>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-017a
                     </div>
                   </AccordionContent>
                 </AccordionItem>
@@ -416,11 +549,19 @@ function ServiceCard({ service }: { service: any }) {
                       <div className="space-y-2">
                         <div className="flex items-center gap-2">
                           <Phone className="h-4 w-4 text-zion-cyan" />
+<<<<<<< HEAD
                           <span>{service.contactInfo.phone}</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <Mail className="h-4 w-4 text-zion-cyan" />
                           <span>{service.contactInfo.email}</span>
+=======
+                          <span>+1 302 464 0950</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Mail className="h-4 w-4 text-zion-cyan" />
+                          <span>kleber@ziontechgroup.com</span>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-017a
                         </div>
                       </div>
                       <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white">
