@@ -1,169 +1,119 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Search, 
-  BookOpen, 
-  Zap, 
-  Globe, 
-  BarChart3, 
-  Cpu, 
-  Database,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  Clock,
-  Award,
-  Lightbulb,
-  Target,
-  Shield
-} from 'lucide-react';
+import { Brain, Search, BookOpen, Zap, TrendingUp, Users, Globe, ArrowRight, Cpu, Database, Network } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 
-const AIAutonomousResearchAssistant = () => {
+const AIAutonomousResearchAssistant: React.FC = () => {
   const features = [
     {
       icon: Brain,
       title: "Autonomous Research",
-      description: "AI-powered research that works independently to discover insights and patterns"
+      description: "AI-powered research that operates independently to discover new insights and connections."
     },
     {
       icon: Search,
       title: "Intelligent Discovery",
-      description: "Advanced algorithms that find relevant information across multiple data sources"
+      description: "Advanced search algorithms that find relevant information across multiple sources."
     },
     {
       icon: BookOpen,
       title: "Knowledge Synthesis",
-      description: "Automatically synthesize information from multiple sources into coherent insights"
+      description: "Automated synthesis of research findings into comprehensive reports and insights."
     },
     {
       icon: Zap,
-      title: "Real-time Analysis",
-      description: "Instant analysis and insights as new data becomes available"
-    },
-    {
-      icon: Globe,
-      title: "Multi-source Integration",
-      description: "Connect to academic databases, research papers, and industry reports"
-    },
-    {
-      icon: BarChart3,
-      title: "Data Visualization",
-      description: "Transform complex research data into clear, actionable visualizations"
+      title: "Real-time Updates",
+      description: "Continuous monitoring and updates on research topics and emerging trends."
     }
   ];
 
   const capabilities = [
     {
-      title: "Academic Research",
-      description: "Access to peer-reviewed journals, research papers, and academic databases",
-      benefits: ["Literature review automation", "Citation management", "Research gap identification"]
+      title: "Literature Review",
+      description: "Automated comprehensive literature reviews across multiple databases and sources."
     },
     {
-      title: "Market Intelligence",
-      description: "Real-time market analysis and competitive intelligence gathering",
-      benefits: ["Trend analysis", "Competitor monitoring", "Market opportunity identification"]
+      title: "Data Analysis",
+      description: "Advanced data analysis and statistical modeling for research insights."
     },
     {
-      title: "Scientific Discovery",
-      description: "AI-powered hypothesis generation and experimental design",
-      benefits: ["Pattern recognition", "Hypothesis testing", "Experimental optimization"]
+      title: "Trend Identification",
+      description: "AI-powered identification of emerging trends and research opportunities."
     },
     {
-      title: "Patent Analysis",
-      description: "Comprehensive patent research and intellectual property analysis",
-      benefits: ["Patent landscape mapping", "Prior art search", "Innovation tracking"]
+      title: "Collaboration Tools",
+      description: "Seamless collaboration features for research teams and stakeholders."
     }
   ];
 
-  const benefits = [
-    "10x faster research completion",
-    "24/7 autonomous operation",
-    "Multi-language support",
-    "Real-time updates and alerts",
-    "Comprehensive source verification",
-    "Customizable research parameters"
-  ];
-
-  const useCases = [
-    {
-      title: "R&D Departments",
-      description: "Accelerate product development with comprehensive research insights"
-    },
-    {
-      title: "Academic Institutions",
-      description: "Enhance research capabilities and publication quality"
-    },
-    {
-      title: "Consulting Firms",
-      description: "Deliver deeper insights to clients with comprehensive research"
-    },
-    {
-      title: "Legal Teams",
-      description: "Comprehensive case research and precedent analysis"
-    }
+  const researchAreas = [
+    "Scientific Research",
+    "Market Analysis",
+    "Academic Studies",
+    "Technology Trends",
+    "Healthcare Research",
+    "Financial Analysis"
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+      <SEOHead 
+        title="AI Autonomous Research Assistant - Zion Tech Group"
+        description="Revolutionary AI-powered research assistant that autonomously conducts research, analyzes data, and generates insights across multiple domains."
+        keywords="AI research assistant, autonomous research, research automation, AI analysis, research insights, automated research"
+      />
+      
       {/* Hero Section */}
-      <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="flex items-center justify-center mb-6">
-              <Brain className="w-12 h-12 text-cyan-400 mr-3" />
-              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-                AI Autonomous Research Assistant
-              </h1>
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="flex justify-center mb-8">
+            <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full">
+              <Brain className="h-12 w-12 text-white" />
             </div>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Revolutionize your research process with our AI-powered autonomous research assistant. 
-              Discover insights faster, analyze deeper, and stay ahead of the competition with 
-              intelligent research automation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
-                Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link
-                to="/services"
-                className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
-              >
-                View All Services
-              </Link>
-            </div>
+          </div>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            AI Autonomous Research Assistant
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Transform your research capabilities with our revolutionary AI-powered assistant that autonomously 
+            conducts research, analyzes data, and generates insights across multiple domains.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+            >
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+            <Link
+              to="/services/ai-autonomous-systems"
+              className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-500 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
+            >
+              Learn More
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced AI Research Capabilities
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Revolutionary Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI research assistant combines cutting-edge artificial intelligence with 
-              comprehensive data access to deliver unprecedented research capabilities.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our platform combines cutting-edge AI with comprehensive research capabilities.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-8 h-8 text-white" />
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300">
+                <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg w-fit mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
@@ -172,86 +122,71 @@ const AIAutonomousResearchAssistant = () => {
       </section>
 
       {/* Capabilities Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Research Domains & Capabilities
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Advanced Capabilities
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive research coverage across multiple domains with specialized AI capabilities.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Discover the powerful capabilities that make our research assistant truly autonomous.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {capabilities.map((capability, index) => (
-              <div
-                key={index}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
-              >
-                <h3 className="text-2xl font-semibold text-white mb-4">{capability.title}</h3>
-                <p className="text-gray-300 mb-6">{capability.description}</p>
-                <ul className="space-y-2">
-                  {capability.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your research process with AI-powered automation and insights.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className="flex items-center bg-gray-800/50 backdrop-blur-sm rounded-lg p-4 border border-gray-700"
-              >
-                <Star className="w-6 h-6 text-cyan-400 mr-3 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Who Benefits?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI research assistant is designed for organizations that need comprehensive, 
-              fast, and accurate research capabilities.
-            </p>
-          </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-              <div
-                key={index}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
-              >
-                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
-                <p className="text-gray-300">{useCase.description}</p>
+            {capabilities.map((capability, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700">
+                <h3 className="text-2xl font-semibold text-white mb-4">{capability.title}</h3>
+                <p className="text-gray-300 text-lg">{capability.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Research Areas Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Research Domains
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our AI assistant covers a wide range of research areas and disciplines.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {researchAreas.map((area, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-cyan-500 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-white">{area}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technology Stack Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Technology Stack
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Built with cutting-edge technologies for maximum research capabilities and reliability.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+              { icon: Cpu, name: "AI Processing" },
+              { icon: Database, name: "Big Data" },
+              { icon: Network, name: "Cloud Native" },
+              { icon: Brain, name: "Machine Learning" }
+            ].map((tech, index) => (
+              <div key={index} className="text-center">
+                <div className="p-4 bg-gray-800/50 rounded-xl mb-4 mx-auto w-fit">
+                  <tech.icon className="h-8 w-8 text-cyan-500 mx-auto" />
+                </div>
+                <p className="text-white font-medium">{tech.name}</p>
               </div>
             ))}
           </div>
@@ -259,28 +194,27 @@ const AIAutonomousResearchAssistant = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/50 to-purple-900/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Research?
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Revolutionize Your Research?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join the research revolution with AI-powered autonomous research capabilities. 
-            Our expert team is ready to help you implement cutting-edge research automation.
+            Join the AI-powered research revolution and transform your research capabilities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
             >
-              Schedule Demo
-              <ArrowRight className="ml-2 w-5 h-5" />
+              Schedule a Demo
+              <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
-              to="/services"
-              className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
+              to="/services/ai-autonomous-systems"
+              className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-500 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
             >
-              Explore All Services
+              Explore AI Services
             </Link>
           </div>
         </div>

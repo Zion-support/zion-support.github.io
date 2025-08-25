@@ -1,306 +1,226 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Bot, TrendingUp, Users, Shield, Zap, Globe, ArrowRight, BarChart3, Cpu, Network } from 'lucide-react';
+import { Bot, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, Cpu, Database, Network } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 
-export default function AutonomousBusinessOperationsPlatform() {
+const AutonomousBusinessOperationsPlatform: React.FC = () => {
+  const features = [
+    {
+      icon: Bot,
+      title: "AI Autonomous Systems",
+      description: "Self-managing AI systems that operate independently and make intelligent decisions."
+    },
+    {
+      icon: Zap,
+      title: "Real-time Optimization",
+      description: "Continuous monitoring and optimization of business processes for maximum efficiency."
+    },
+    {
+      icon: Shield,
+      title: "Intelligent Security",
+      description: "Advanced threat detection and automated security responses powered by AI."
+    },
+    {
+      icon: TrendingUp,
+      title: "Predictive Analytics",
+      description: "Forecast trends and identify opportunities before they become apparent."
+    }
+  ];
+
+  const capabilities = [
+    {
+      title: "Process Automation",
+      description: "Automate complex business workflows with intelligent decision-making capabilities."
+    },
+    {
+      title: "Resource Management",
+      description: "Optimize resource allocation across departments and projects automatically."
+    },
+    {
+      title: "Customer Intelligence",
+      description: "Deep insights into customer behavior and preferences for personalized experiences."
+    },
+    {
+      title: "Risk Management",
+      description: "Proactive identification and mitigation of business risks using AI algorithms."
+    }
+  ];
+
+  const industries = [
+    "Healthcare",
+    "Finance",
+    "Manufacturing",
+    "Retail",
+    "Logistics",
+    "Technology"
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-blue to-zion-purple">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+      <SEOHead 
+        title="Autonomous Business Operations Platform - Zion Tech Group"
+        description="Revolutionary AI-powered platform that autonomously manages and optimizes business operations for maximum efficiency and growth."
+        keywords="autonomous business operations, AI automation, business intelligence, process optimization, AI management"
+      />
+      
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Autonomous Business
-              <span className="block bg-gradient-to-r from-zion-cyan to-zion-purple-light bg-clip-text text-transparent">
-                Operations Platform
-              </span>
-            </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
-              Transform your business operations with AI-powered automation that works 24/7. 
-              Streamline processes, reduce costs, and increase efficiency with our intelligent platform.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/30 flex items-center justify-center gap-2"
-              >
-                Get Started
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
-                to="/services"
-                className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                View All Services
-              </Link>
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="flex justify-center mb-8">
+            <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full">
+              <Bot className="h-12 w-12 text-white" />
             </div>
+          </div>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            Autonomous Business Operations Platform
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Transform your business with our revolutionary AI-powered platform that autonomously manages 
+            and optimizes operations for unprecedented efficiency and growth.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+            >
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+            <Link
+              to="/services/ai-autonomous-systems"
+              className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-500 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
+            >
+              Learn More
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 bg-white/5 backdrop-blur-sm">
-        <div className="container mx-auto max-w-7xl">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Intelligent Automation Features
+              Revolutionary Features
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Harness the power of AI to automate complex business processes
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our platform combines cutting-edge AI with autonomous decision-making capabilities.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-6">
-                <Bot className="w-8 h-8 text-white" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300">
+                <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg w-fit mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">AI-Powered Automation</h3>
-              <p className="text-zion-slate-light leading-relaxed">
-                Intelligent bots that learn from your business processes and continuously optimize operations.
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-lg flex items-center justify-center mb-6">
-                <TrendingUp className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Performance Analytics</h3>
-              <p className="text-zion-slate-light leading-relaxed">
-                Real-time insights and predictive analytics to optimize business performance and decision-making.
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-blue to-zion-cyan rounded-lg flex items-center justify-center mb-6">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Team Collaboration</h3>
-              <p className="text-zion-slate-light leading-relaxed">
-                Seamless integration with your team workflows and enhanced collaboration tools.
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6">
-                <Shield className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Enterprise Security</h3>
-              <p className="text-zion-slate-light leading-relaxed">
-                Bank-grade security with role-based access control and comprehensive audit trails.
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-blue rounded-lg flex items-center justify-center mb-6">
-                <Zap className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Lightning Fast</h3>
-              <p className="text-zion-slate-light leading-relaxed">
-                Process thousands of operations per second with our optimized AI algorithms.
-              </p>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
-              <div className="w-16 h-16 bg-gradient-to-br from-zion-blue to-zion-purple rounded-lg flex items-center justify-center mb-6">
-                <Globe className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Global Scalability</h3>
-              <p className="text-zion-slate-light leading-relaxed">
-                Scale your operations globally with our distributed cloud infrastructure.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto max-w-7xl">
+      {/* Capabilities Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Business Process Automation
+              Advanced Capabilities
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Automate critical business processes across all departments
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Discover the powerful capabilities that make our platform truly autonomous.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="space-y-8">
-              <div className="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20">
-                <h3 className="text-2xl font-bold text-white mb-4">Finance & Accounting</h3>
-                <p className="text-zion-slate-light leading-relaxed mb-4">
-                  Automate invoice processing, expense management, and financial reporting with AI-powered accuracy.
-                </p>
-                <ul className="space-y-2 text-zion-slate-light">
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                    Automated invoice processing
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                    Expense categorization
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                    Financial reporting automation
-                  </li>
-                </ul>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {capabilities.map((capability, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700">
+                <h3 className="text-2xl font-semibold text-white mb-4">{capability.title}</h3>
+                <p className="text-gray-300 text-lg">{capability.description}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-              <div className="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20">
-                <h3 className="text-2xl font-bold text-white mb-4">Human Resources</h3>
-                <p className="text-zion-slate-light leading-relaxed mb-4">
-                  Streamline recruitment, onboarding, and employee management with intelligent automation.
-                </p>
-                <ul className="space-y-2 text-zion-slate-light">
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                    Resume screening and matching
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                    Onboarding workflow automation
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                    Performance review scheduling
-                  </li>
-                </ul>
+      {/* Industries Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Industry Applications
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our platform is designed to transform operations across diverse industries.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {industries.map((industry, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-cyan-500 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-white">{industry}</h3>
               </div>
-            </div>
-
-            <div className="space-y-8">
-              <div className="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20">
-                <h3 className="text-2xl font-bold text-white mb-4">Customer Service</h3>
-                <p className="text-zion-slate-light leading-relaxed mb-4">
-                  Enhance customer experience with AI-powered support and automated issue resolution.
-                </p>
-                <ul className="space-y-2 text-zion-slate-light">
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                    Intelligent ticket routing
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                    Automated response generation
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                    Customer sentiment analysis
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20">
-                <h3 className="text-2xl font-bold text-white mb-4">Supply Chain Management</h3>
-                <p className="text-zion-slate-light leading-relaxed mb-4">
-                  Optimize inventory, predict demand, and streamline logistics with predictive AI.
-                </p>
-                <ul className="space-y-2 text-zion-slate-light">
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                    Demand forecasting
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                    Inventory optimization
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                    Route optimization
-                  </li>
-                </ul>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Technology Stack Section */}
-      <section className="py-20 px-4 bg-white/5 backdrop-blur-sm">
-        <div className="container mx-auto max-w-7xl">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Technology Stack
+              Technology Stack
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Built with cutting-edge technologies for maximum performance and reliability
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Built with cutting-edge technologies for maximum performance and reliability.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
-                <Cpu className="w-10 h-10 text-white" />
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+              { icon: Cpu, name: "AI Processors" },
+              { icon: Database, name: "Big Data" },
+              { icon: Network, name: "Cloud Native" },
+              { icon: Bot, name: "Machine Learning" }
+            ].map((tech, index) => (
+              <div key={index} className="text-center">
+                <div className="p-4 bg-gray-800/50 rounded-xl mb-4 mx-auto w-fit">
+                  <tech.icon className="h-8 w-8 text-cyan-500 mx-auto" />
+                </div>
+                <p className="text-white font-medium">{tech.name}</p>
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Machine Learning</h3>
-              <p className="text-zion-slate-light text-sm">
-                Advanced ML algorithms for pattern recognition and predictive analytics
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-6">
-                <Network className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Cloud Native</h3>
-              <p className="text-zion-slate-light text-sm">
-                Built on scalable cloud infrastructure for global deployment
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-zion-blue to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-6">
-                <BarChart3 className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Real-time Analytics</h3>
-              <p className="text-zion-slate-light text-sm">
-                Live dashboards and instant insights for decision-making
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6">
-                <Shield className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Enterprise Security</h3>
-              <p className="text-zion-slate-light text-sm">
-                SOC2 compliant with advanced encryption and access controls
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20">
-        <div className="container mx-auto max-w-4xl text-center">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Automate Your Business?
           </h2>
-          <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
-            Join thousands of businesses that have transformed their operations with our AI platform. 
-            Start your automation journey today.
+          <p className="text-xl text-gray-300 mb-8">
+            Join the autonomous business revolution and transform your operations with AI-powered automation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/30 flex items-center justify-center gap-2"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
             >
               Schedule a Demo
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
-              to="/services"
-              className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center gap-2"
+              to="/services/ai-autonomous-systems"
+              className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-500 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
             >
-              Explore All Services
+              Explore AI Services
             </Link>
           </div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default AutonomousBusinessOperationsPlatform;

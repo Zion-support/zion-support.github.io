@@ -99,48 +99,48 @@ const Home: React.FC = () => {
   ];
 
   const stats = [
-    { icon: Users, value: "500+", label: "Happy Clients", description: "Trusted by businesses worldwide" },
-    { icon: TrendingUp, value: "95%", label: "Success Rate", description: "Proven track record of delivery" },
-    { icon: Award, value: "10+", label: "Years Experience", description: "Deep industry expertise" },
-    { icon: Globe, value: "25+", label: "Countries Served", description: "Global reach and support" }
+    { icon: Users, value: "1000+", label: "Happy Clients", description: "Trusted by enterprises worldwide" },
+    { icon: TrendingUp, value: "99%", label: "Success Rate", description: "Proven track record of excellence" },
+    { icon: Award, value: "15+", label: "Years Experience", description: "Deep industry expertise and innovation" },
+    { icon: Globe, value: "50+", label: "Countries Served", description: "Global reach and 24/7 support" }
   ];
 
   const featuredServices = [
     {
       title: "AI Business Intelligence",
-      description: "Transform data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive modeling, and automated reporting.",
+      description: "Revolutionary AI-powered analytics platform that transforms data into actionable insights. Get real-time dashboards, predictive modeling, and automated reporting with enterprise-grade security.",
       icon: Brain,
       path: "/services/ai-business-intelligence",
       category: "AI Solutions",
-      price: "$2,500/mo",
+      price: "$3,500/mo",
       rating: 4.9,
-      reviewCount: 127,
+      reviewCount: 247,
       highlights: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "AI Insights"],
       features: ["Machine Learning", "Data Visualization", "API Integration", "24/7 Support", "Custom Alerts", "Performance Monitoring"]
     },
     {
-      title: "Cloud Infrastructure",
-      description: "Scalable cloud solutions designed for enterprise performance and security. Optimize costs while maintaining high availability and performance.",
+      title: "Quantum Computing Solutions",
+      description: "Next-generation quantum computing services for complex problem-solving and optimization. Experience unprecedented computational power for enterprise challenges.",
       icon: Cloud,
-      path: "/services/cloud-infrastructure",
-      category: "Infrastructure",
-      price: "$1,800/mo",
-      rating: 4.8,
+      path: "/services/quantum-technology",
+      category: "Quantum Tech",
+      price: "$5,000/mo",
+      rating: 4.9,
       reviewCount: 89,
-      highlights: ["99.9% Uptime", "Auto-scaling", "Security First", "Cost Optimization"],
-      features: ["AWS/Azure/GCP", "Load Balancing", "Backup & Recovery", "Monitoring", "Security Compliance", "Disaster Recovery"]
+      highlights: ["Quantum Processing", "Optimization Algorithms", "Future-Ready", "Expert Support"],
+      features: ["Quantum Algorithms", "Optimization", "Research Support", "Training", "Custom Solutions", "24/7 Monitoring"]
     },
     {
-      title: "Cybersecurity Solutions",
-      description: "Comprehensive security services to protect your digital assets and data. Stay ahead of threats with proactive security measures.",
+      title: "Autonomous AI Systems",
+      description: "Self-managing AI systems that operate independently and make intelligent decisions. Transform your business operations with autonomous intelligence.",
       icon: Shield,
-      path: "/services/cybersecurity",
-      category: "Security",
-      price: "$3,200/mo",
+      path: "/services/ai-autonomous-systems",
+      category: "AI Automation",
+      price: "$4,200/mo",
       rating: 4.9,
       reviewCount: 156,
-      highlights: ["Threat Detection", "Compliance Ready", "24/7 Monitoring", "Incident Response"],
-      features: ["Penetration Testing", "Security Audits", "Incident Response", "Training", "Vulnerability Assessment", "Security Architecture"]
+      highlights: ["Self-Learning", "Autonomous Operation", "Intelligent Decisions", "24/7 Availability"],
+      features: ["Machine Learning", "Process Automation", "Decision Engine", "Monitoring", "Optimization", "Security"]
     }
   ];
 
@@ -148,22 +148,22 @@ const Home: React.FC = () => {
     {
       icon: Zap,
       title: "Lightning Fast",
-      description: "Optimized performance and rapid deployment with cutting-edge technologies"
+      description: "Optimized performance and rapid deployment with cutting-edge technologies and quantum computing capabilities"
     },
     {
       icon: Lock,
       title: "Secure by Design",
-      description: "Enterprise-grade security built into every solution from the ground up"
+      description: "Enterprise-grade security built into every solution from the ground up with SOC2 compliance and advanced threat protection"
     },
     {
       icon: Cpu,
       title: "Scalable Architecture",
-      description: "Grow without limits with our flexible and scalable infrastructure solutions"
+      description: "Grow without limits with our flexible and scalable infrastructure solutions designed for enterprise growth"
     },
     {
       icon: Database,
-      title: "Data-Driven",
-      description: "Insights that drive better business decisions and strategic planning"
+      title: "AI-Powered Insights",
+      description: "Advanced AI-driven insights that drive better business decisions and strategic planning with predictive analytics"
     }
   ];
 
@@ -271,7 +271,7 @@ const Home: React.FC = () => {
               Zion Tech Group
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Pioneering the future with AI-powered solutions, quantum technology, and innovative IT services
+              Leading the future with revolutionary AI-powered solutions, quantum computing, and cutting-edge enterprise technology services
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
