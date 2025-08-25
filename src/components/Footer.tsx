@@ -21,6 +21,9 @@ export function Footer() {
         { label: "AI & Machine Learning", path: "/services#ai-ml" },
         { label: "Cloud & Infrastructure", path: "/services#cloud" },
         { label: "5G Enterprise Solutions", path: "/5g-enterprise-solutions" },
+        { label: "5G Enterprise Network", path: "/5g-enterprise-network" },
+        { label: "5G Network Optimization", path: "/5g-network-optimization" },
+        { label: "5G Private Networks", path: "/5g-private-network-solutions" },
         { label: "Blockchain Solutions", path: "/services#blockchain" },
         { label: "IoT & Edge Computing", path: "/services#iot" }
       ]
@@ -63,6 +66,16 @@ export function Footer() {
         { label: "Partners", path: "/partners" },
         { label: "Contact", path: "/contact" },
         { label: "Blog", path: "/blog" }
+      ]
+    },
+    {
+      title: "Accessibility & Compliance",
+      links: [
+        { label: "Accessibility Auditor", path: "/accessibility-auditor" },
+        { label: "WCAG Compliance", path: "/accessibility-auditor" },
+        { label: "ADA Compliance", path: "/accessibility-auditor" },
+        { label: "Accessibility Testing", path: "/accessibility-auditor" },
+        { label: "Compliance Reports", path: "/accessibility-auditor" }
       ]
     },
     {

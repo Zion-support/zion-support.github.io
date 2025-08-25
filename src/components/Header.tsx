@@ -139,6 +139,17 @@ export function Header() {
       ]
     },
     {
+      title: 'Accessibility & Compliance',
+      icon: Shield,
+      description: 'Digital accessibility and compliance solutions',
+      services: [
+        { name: 'Accessibility Auditor', path: '/accessibility-auditor', description: 'Comprehensive accessibility auditing' },
+        { name: 'WCAG Compliance', path: '/accessibility-auditor', description: 'Web accessibility compliance' },
+        { name: 'ADA Compliance', path: '/accessibility-auditor', description: 'Americans with Disabilities Act compliance' },
+        { name: 'Accessibility Testing', path: '/accessibility-auditor', description: 'Automated accessibility testing' }
+      ]
+    },
+    {
       title: 'Cloud & Infrastructure',
       icon: Cpu,
       description: 'Scalable cloud solutions and infrastructure management',
@@ -146,6 +157,9 @@ export function Header() {
         { name: 'Cloud DevOps', path: '/cloud-devops', description: 'Cloud development and operations' },
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', description: 'Complete IT infrastructure solutions' },
         { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', description: 'High-speed 5G connectivity' },
+        { name: '5G Enterprise Network', path: '/5g-enterprise-network', description: 'Enterprise 5G network infrastructure' },
+        { name: '5G Network Optimization', path: '/5g-network-optimization', description: '5G network performance optimization' },
+        { name: '5G Private Networks', path: '/5g-private-network-solutions', description: 'Secure private 5G networks' },
         { name: 'Cloud Migration', path: '/services/cloud-migration', description: 'Seamless cloud transition' },
         { name: 'Network Infrastructure', path: '/services/network-infrastructure', description: 'Robust network solutions' },
         { name: 'Managed IT Services', path: '/services/managed-it-services', description: '24/7 IT support' },
