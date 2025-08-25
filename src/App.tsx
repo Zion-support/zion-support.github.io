@@ -33,6 +33,11 @@ const CloudDevOps = lazy(() => import('./pages/CloudDevOps'));
 const EnterpriseSolutionsPage = lazy(() => import('./pages/EnterpriseSolutions'));
 const DigitalTransformation = lazy(() => import('./pages/DigitalTransformation'));
 
+// Additional innovative services
+const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
+const IoTManagementPlatform = lazy(() => import('./pages/services/IoTManagementPlatform'));
+const BlockchainDeFiSolutions = lazy(() => import('./pages/services/BlockchainDeFiSolutions'));
+
 // Our enhanced service pages
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
@@ -103,6 +108,11 @@ const App = () => {
                     <Route path="/cloud-devops" element={<CloudDevOps />} />
                     <Route path="/enterprise-solutions" element={<EnterpriseSolutionsPage />} />
                     <Route path="/digital-transformation" element={<DigitalTransformation />} />
+                    
+                    {/* Additional innovative service routes */}
+                    <Route path="/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                    <Route path="/iot-management-platform" element={<IoTManagementPlatform />} />
+                    <Route path="/blockchain-defi-solutions" element={<BlockchainDeFiSolutions />} />
                     
                     {/* Our enhanced service routes */}
                     <Route path="/about" element={<About />} />
