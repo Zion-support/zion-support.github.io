@@ -6,4 +6,4 @@
 >>>>>>> a4b0ef56a21d1919a0e2729e4ba64fbc8c4b3f44
 
 // NOTE: This file should not be edited
-// see https://nextjs.org/docs/pages/api-reference/config/typescript for more information.
+// see https://nextjs.org/docs/basic-features/typescript for more information.

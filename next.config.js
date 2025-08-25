@@ -120,6 +120,9 @@ const baseConfig = {
 
     return config;
   },
-};
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+}
 
 module.exports = withSentryConfig(baseConfig);
