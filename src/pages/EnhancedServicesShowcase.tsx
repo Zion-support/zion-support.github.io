@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -7,92 +6,38 @@ import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { 
-  Search, 
-  Filter, 
-  Grid3X3, 
-  List, 
-  ArrowUpDown, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Globe, 
   Star, 
-  Zap, 
+  Clock, 
+  TrendingUp, 
   Shield, 
-  Cpu, 
+  Zap,
+  Brain,
   Database,
-  Globe,
+  Cloud,
   Lock,
-  TrendingUp,
-  Users,
   BarChart3,
-  Lightbulb,
-  Rocket,
-  Target,
-  Award,
+  Network,
+  Smartphone,
+  CreditCard,
+  Users,
   CheckCircle,
-  Clock,
-  DollarSign,
   ArrowRight,
-  Phone,
-  Mail,
-  MapPin
+  ExternalLink
 } from 'lucide-react';
-import SEOHead from '../components/SEOHead';
+import { ENHANCED_SERVICES, SERVICE_CATEGORIES, SERVICE_FEATURES, MARKET_PRICING } from '@/data/enhancedServices';
 
-// Import service data
-import { ADDITIONAL_INNOVATIVE_SERVICES_2025 } from '../data/additionalInnovativeServices2025';
-import { SPECIALIZED_IT_SERVICES_2025 } from '../data/specializedITServices2025';
-import { INNOVATIVE_NEW_SERVICES } from '../data/innovativeNewServices';
-import { ADVANCED_MICRO_SAAS_SERVICES } from '../data/advancedMicroSaasServices';
-import { EMERGING_TECH_SERVICES } from '../data/emergingTechServices';
-import { SPECIALIZED_IT_INFRASTRUCTURE_SERVICES } from '../data/specializedITInfrastructureServices';
-
-const EnhancedServicesShowcase: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+export default function EnhancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState('name');
-
-  // Combine all services
-  const allServices = [
-    ...ADDITIONAL_INNOVATIVE_SERVICES_2025,
-    ...SPECIALIZED_IT_SERVICES_2025,
-    ...INNOVATIVE_NEW_SERVICES,
-    ...ADVANCED_MICRO_SAAS_SERVICES,
-    ...EMERGING_TECH_SERVICES,
-    ...SPECIALIZED_IT_INFRASTRUCTURE_SERVICES
-  ];
-
-  // Get unique categories
-  const categories: string[] = ['all', ...new Set(allServices.map(service => service.category))];
 
   const filteredServices = selectedCategory === 'all' 
-    ? allServices 
-    : allServices.filter(service => service.category.toLowerCase().includes(selectedCategory.toLowerCase()));
-
-  // Filter and sort services
-  const finalFilteredServices = filteredServices
-    .filter(service => {
-      const matchesSearch = searchTerm === '' || 
-        service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
-      
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-      
-      return matchesSearch && matchesCategory;
-    })
-    .sort((a, b) => {
-      switch (sortBy) {
-        case 'price-low':
-          return (a.price || 0) - (b.price || 0);
-        case 'price-high':
-          return (b.price || 0) - (a.price || 0);
-        case 'name':
-          return a.title.localeCompare(b.title);
-        case 'popularity':
-          return (b.tags?.length || 0) - (a.tags?.length || 0);
-        default:
-          return 0;
-      }
-    });
+    ? ENHANCED_SERVICES 
+    : ENHANCED_SERVICES.filter(service => 
+        SERVICE_CATEGORIES.find(cat => cat.id === selectedCategory)?.services.includes(service)
+      );
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
@@ -164,23 +109,62 @@ const EnhancedServicesShowcase: React.FC = () => {
           >
             All Services
           </Button>
-          {categories.map((category) => (
+          {SERVICE_CATEGORIES.map((category) => (
             <Button
-              key={category}
-              variant={selectedCategory === category ? 'default' : 'outline'}
-              onClick={() => setSelectedCategory(category)}
+              key={category.id}
+              variant={selectedCategory === category.id ? 'default' : 'outline'}
+              onClick={() => setSelectedCategory(category.id)}
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
             >
-              {category}
+              <span className="mr-2">{category.icon}</span>
+              {category.name}
             </Button>
           ))}
         </div>
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {finalFilteredServices.map((service) => (
+          {filteredServices.map((service) => (
             <ServiceCard key={service.id} service={service} />
           ))}
+        </div>
+      </div>
+
+      {/* Market Analysis Section */}
+      <div className="bg-white/5 backdrop-blur-sm py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Market Analysis & ROI
+            </h2>
+            <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
+              Understand the market trends, competitive landscape, and expected returns on your technology investments.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {Object.entries(MARKET_PRICING).map(([key, data]) => (
+              <Card key={key} className="bg-white/10 backdrop-blur-sm border-zion-cyan/30">
+                <CardHeader>
+                  <CardTitle className="text-zion-cyan capitalize">{key.replace('-', ' ')}</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <div className="flex items-center gap-2">
+                    <CreditCard className="h-4 w-4 text-zion-purple" />
+                    <span className="text-white">{data.averagePrice}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <TrendingUp className="h-4 w-4 text-green-400" />
+                    <span className="text-zion-cyan-light">{data.marketTrend}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Zap className="h-4 w-4 text-yellow-400" />
+                    <span className="text-zion-cyan-light">{data.roi}</span>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -198,7 +182,7 @@ const EnhancedServicesShowcase: React.FC = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
             <CardContent className="p-8">
-              <Cpu className="h-16 w-16 mx-auto mb-4 text-zion-cyan" />
+              <Brain className="h-16 w-16 mx-auto mb-4 text-zion-cyan" />
               <h3 className="text-2xl font-bold text-white mb-4">AI-First Approach</h3>
               <p className="text-zion-cyan-light">
                 We leverage the latest AI technologies to create intelligent, scalable solutions that adapt to your business needs.
@@ -300,8 +284,6 @@ const EnhancedServicesShowcase: React.FC = () => {
   );
 }
 
-export default EnhancedServicesShowcase;
-
 // Service Card Component
 function ServiceCard({ service }: { service: any }) {
   const [showDetails, setShowDetails] = useState(false);
@@ -313,9 +295,11 @@ function ServiceCard({ service }: { service: any }) {
           <Badge variant="secondary" className="bg-zion-purple/20 text-zion-purple border-zion-purple/30">
             {service.category}
           </Badge>
-          <Badge variant="secondary" className="bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30">
-            {service.subcategory}
-          </Badge>
+          {service.featured && (
+            <Badge variant="secondary" className="bg-yellow-500/20 text-yellow-400 border-yellow-500/30">
+              Featured
+            </Badge>
+          )}
         </div>
         <CardTitle className="text-xl text-white mb-2">{service.title}</CardTitle>
         <CardDescription className="text-zion-cyan-light">
@@ -359,10 +343,10 @@ function ServiceCard({ service }: { service: any }) {
             ))}
           </div>
 
-          {/* Delivery */}
+          {/* Availability */}
           <div className="flex items-center gap-2 text-zion-cyan-light">
             <Clock className="h-4 w-4" />
-            <span className="text-sm">Delivery: {service.estimatedDelivery}</span>
+            <span className="text-sm">Available: {service.availability}</span>
           </div>
 
           {/* Action Buttons */}
@@ -389,20 +373,18 @@ function ServiceCard({ service }: { service: any }) {
                   </AccordionTrigger>
                   <AccordionContent className="text-zion-cyan-light">
                     <div className="space-y-2">
-                      <h4 className="font-semibold text-white mb-2">Features:</h4>
-                      {service.features.map((feature: string, index: number) => (
-                        <div key={index} className="flex items-center gap-2">
-                          <CheckCircle className="h-4 w-4 text-green-400" />
-                          <span>{feature}</span>
-                        </div>
-                      ))}
-                      <h4 className="font-semibold text-white mb-2 mt-4">Benefits:</h4>
-                      {service.benefits.map((benefit: string, index: number) => (
-                        <div key={index} className="flex items-center gap-2">
-                          <CheckCircle className="h-4 w-4 text-green-400" />
-                          <span>{benefit}</span>
-                        </div>
-                      ))}
+                      <div className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-green-400" />
+                        <span>Advanced AI algorithms</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-green-400" />
+                        <span>24/7 support</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-green-400" />
+                        <span>Custom integration</span>
+                      </div>
                     </div>
                   </AccordionContent>
                 </AccordionItem>
@@ -416,11 +398,11 @@ function ServiceCard({ service }: { service: any }) {
                       <div className="space-y-2">
                         <div className="flex items-center gap-2">
                           <Phone className="h-4 w-4 text-zion-cyan" />
-                          <span>{service.contactInfo.phone}</span>
+                          <span>+1 302 464 0950</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <Mail className="h-4 w-4 text-zion-cyan" />
-                          <span>{service.contactInfo.email}</span>
+                          <span>kleber@ziontechgroup.com</span>
                         </div>
                       </div>
                       <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white">
