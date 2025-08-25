@@ -57,6 +57,9 @@ const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 const NewServices = lazy(() => import('./pages/NewServices'));
 
+// Additional missing AI Autonomous pages
+// Note: These are already imported below in the services section
+
 // Company information pages
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
@@ -280,6 +283,9 @@ const App: React.FC = () => {
                       <Route path="/ai-autonomous-vehicles" element={<AIAutonomousVehicles />} />
                       <Route path="/ai-autonomous-venture-capitalist" element={<AIAutonomousVentureCapitalist />} />
                       
+                      {/* Additional AI Autonomous routes */}
+                      <Route path="/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
+                      
                       {/* AI Content Generation routes */}
                       <Route path="/ai-content-generation-automation" element={<AIContentGenerationAutomation />} />
                       <Route path="/ai-content-generation-pro" element={<AIContentGenerationPro />} />
@@ -303,6 +309,13 @@ const App: React.FC = () => {
                       <Route path="/research-development" element={<EmergingTech />} />
                       <Route path="/enterprise-it" element={<ITInfrastructure />} />
                       <Route path="/micro-saas" element={<MicroSAASSolutions />} />
+                      
+                      {/* 5G and Network Solutions */}
+                      <Route path="/5g-enterprise-solutions" element={<FiveGEnterpriseSolutions />} />
+                      <Route path="/5g-enterprise-network" element={<FiveGEnterpriseSolutions />} />
+                      <Route path="/5g-network-optimization" element={<FiveGEnterpriseSolutions />} />
+                      <Route path="/5g-private-network-solutions" element={<FiveGEnterpriseSolutions />} />
+                      <Route path="/5g-private-network-solutions-2026" element={<FiveGEnterpriseSolutions />} />
                     </Routes>
                   </Suspense>
                 </main>

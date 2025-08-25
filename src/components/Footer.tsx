@@ -99,9 +99,21 @@ export function Footer() {
     },
     { 
       name: 'YouTube', 
-      url: 'https://www.youtube.com/@ziontechgroup', 
+      url: 'https://youtube.com/@ziontechgroup', 
       icon: '📺',
       fallback: 'https://youtube.com'
+    },
+    { 
+      name: 'Facebook', 
+      url: 'https://facebook.com/ziontechgroup', 
+      icon: '📘',
+      fallback: 'https://facebook.com'
+    },
+    { 
+      name: 'Instagram', 
+      url: 'https://instagram.com/ziontechgroup', 
+      icon: '📷',
+      fallback: 'https://instagram.com'
     }
   ];
 

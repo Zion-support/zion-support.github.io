@@ -81,6 +81,13 @@ export function Header() {
       hasDropdown: true
     },
     { 
+      path: '/ai-solutions', 
+      label: 'AI Solutions', 
+      icon: '🧠',
+      description: 'Advanced AI and autonomous systems',
+      hasDropdown: true
+    },
+    { 
       path: '/case-studies', 
       label: 'Case Studies', 
       icon: '📊',
@@ -135,6 +142,32 @@ export function Header() {
         { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', description: 'Intelligent talent management', icon: Users },
         { name: 'AI Legal Tech', path: '/services/ai-legal-tech', description: 'Automated legal processes', icon: Shield },
         { name: 'AI Healthcare Analytics', path: '/solutions/healthcare', description: 'Patient care optimization', icon: Heart }
+      ]
+    },
+    {
+      title: 'AI Autonomous Systems',
+      icon: Brain,
+      description: 'Self-operating AI systems for business automation',
+      color: 'from-purple-500 to-pink-500',
+      services: [
+        { name: 'AI Autonomous Data', path: '/ai-autonomous-data', description: 'Intelligent data management', icon: Database },
+        { name: 'AI Autonomous Decision Engine', path: '/ai-autonomous-decision-engine', description: 'Autonomous decision making', icon: Target },
+        { name: 'AI Autonomous Research', path: '/ai-autonomous-research-assistant', description: 'AI-powered research automation', icon: Search },
+        { name: 'AI Autonomous Business Platform', path: '/ai-autonomous-business-platform', description: 'Complete business automation', icon: Building },
+        { name: 'AI Autonomous Code Review', path: '/ai-autonomous-code-review', description: 'Automated code analysis', icon: Code },
+        { name: 'AI Autonomous Creative Director', path: '/ai-autonomous-creative-director', description: 'AI content creation', icon: Palette }
+      ]
+    },
+    {
+      title: 'AI Business Intelligence',
+      icon: BarChart3,
+      description: 'Advanced analytics and business insights',
+      color: 'from-blue-500 to-cyan-500',
+      services: [
+        { name: 'AI Business Intelligence Elite 2026', path: '/ai-business-intelligence-elite-2026', description: 'Premium BI solutions', icon: BarChart3 },
+        { name: 'AI Business Intelligence Suite 2029', path: '/ai-business-intelligence-suite-2029', description: 'Comprehensive BI platform', icon: BarChart3 },
+        { name: 'AI Predictive Analytics', path: '/services/ai-predictive-analytics', description: 'Future-focused insights', icon: BarChart3 },
+        { name: 'AI Market Intelligence', path: '/services/ai-market-intelligence', description: 'Market trend analysis', icon: Globe }
       ]
     },
     {
