@@ -101,7 +101,11 @@ export function Header() {
         { name: 'AI Marketing Automation', path: '/services#ai-marketing', description: 'Smart marketing optimization' },
         { name: 'AI HR & Recruitment', path: '/services#ai-hr', description: 'Intelligent talent management' },
         { name: 'AI Legal Tech', path: '/services#ai-legal', description: 'Automated legal processes' },
-        { name: 'AI Healthcare Analytics', path: '/services#ai-healthcare', description: 'Patient care optimization' }
+        { name: 'AI Healthcare Analytics', path: '/services#ai-healthcare', description: 'Patient care optimization' },
+        { name: 'AI Agent Orchestrator', path: '/ai-agent-orchestrator', description: 'Coordinate multiple AI agents' },
+        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', description: 'Quantum-enhanced AI platform' },
+        { name: 'AI Analytics Copilot', path: '/ai-analytics-copilot', description: 'Intelligent data analysis' },
+        { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', description: 'Intelligent business management' }
       ]
     },
     {
@@ -123,7 +127,9 @@ export function Header() {
         { name: 'Cloud Migration', path: '/services#cloud-migration', description: 'Seamless cloud transition' },
         { name: 'Network Infrastructure', path: '/services#network', description: 'Robust network solutions' },
         { name: 'Managed IT Services', path: '/services#managed-it', description: '24/7 IT support' },
-        { name: 'DevOps Automation', path: '/services#devops', description: 'Streamlined development' }
+        { name: 'DevOps Automation', path: '/services#devops', description: 'Streamlined development' },
+        { name: 'AI-Powered IT Asset Management', path: '/ai-powered-it-asset-management', description: 'Intelligent asset tracking' },
+        { name: 'Autonomous Business Operations', path: '/autonomous-business-operations-platform', description: 'AI-driven process automation' }
       ]
     },
     {

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake } from 'lucide-react';
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Network, Brain, BarChart3, Zap, Database, Command } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 interface SidebarProps {
@@ -32,6 +32,12 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       title: 'Services',
       items: [
         { name: 'AI & Machine Learning', path: '/services?category=AI%20%26%20Machine%20Learning', icon: Briefcase },
+        { name: 'AI Agent Orchestrator', path: '/ai-agent-orchestrator', icon: Network },
+        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain },
+        { name: 'AI Analytics Copilot', path: '/ai-analytics-copilot', icon: BarChart3 },
+        { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Command },
+        { name: 'Autonomous Business Operations', path: '/autonomous-business-operations-platform', icon: Zap },
+        { name: 'AI-Powered IT Asset Management', path: '/ai-powered-it-asset-management', icon: Database },
         { name: 'Cybersecurity', path: '/services?category=Cybersecurity', icon: Shield },
         { name: 'Micro SAAS Solutions', path: '/services?category=Micro%20SAAS%20Solutions', icon: Globe },
         { name: 'Space Technology', path: '/services?category=Space%20Technology', icon: Globe },

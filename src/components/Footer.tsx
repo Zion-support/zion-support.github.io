@@ -33,7 +33,11 @@ export function Footer() {
         { label: "AI Healthcare Analytics", path: "/services#ai-healthcare", description: "Patient care optimization" },
         { label: "AI Financial Analytics", path: "/services#financial", description: "Risk assessment and insights" },
         { label: "AI Supply Chain", path: "/services#supply-chain", description: "Optimization and forecasting" },
-        { label: "AI Manufacturing", path: "/services#manufacturing", description: "Smart production systems" }
+        { label: "AI Manufacturing", path: "/services#manufacturing", description: "Smart production systems" },
+        { label: "AI Agent Orchestrator", path: "/ai-agent-orchestrator", description: "Coordinate multiple AI agents" },
+        { label: "Quantum Neural Networks", path: "/quantum-neural-network-platform", description: "Quantum-enhanced AI platform" },
+        { label: "AI Analytics Copilot", path: "/ai-analytics-copilot", description: "Intelligent data analysis" },
+        { label: "AI Autonomous Business Manager", path: "/ai-autonomous-business-manager", description: "Intelligent business management" }
       ]
     },
     {
@@ -48,7 +52,9 @@ export function Footer() {
         { label: "Retail Technology", path: "/solutions/retail", description: "Digital retail transformation" },
         { label: "Government Solutions", path: "/solutions/government", description: "Public sector innovation" },
         { label: "Education Technology", path: "/solutions/education", description: "Learning innovation" },
-        { label: "Energy Management", path: "/solutions/energy", description: "Sustainable energy solutions" }
+        { label: "Energy Management", path: "/solutions/energy", description: "Sustainable energy solutions" },
+        { label: "Autonomous Business Operations", path: "/autonomous-business-operations-platform", description: "AI-driven process automation" },
+        { label: "AI-Powered IT Asset Management", path: "/ai-powered-it-asset-management", description: "Intelligent asset tracking" }
       ]
     },
     {
