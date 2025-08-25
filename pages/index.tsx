@@ -71,9 +71,11 @@ import { revolutionary2027ITServices } from '../data/revolutionary-2027-it-servi
 import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-micro-saas';
 import { futuristic2028Services } from '../data/2028-futuristic-innovations';
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
-import { cuttingEdge2029Services } from '../data/2029-cutting-edge-innovations';
+import { futuristic2029AIServices } from '../data/2029-futuristic-ai-services';
+import { quantumInnovation2029Services } from '../data/2029-quantum-innovation-services';
 import { emergingTech2029Services } from '../data/2029-emerging-tech-services';
-import { microSaas2029Services } from '../data/2029-micro-saas-innovations';
+import { enterpriseIT2029Services } from '../data/2029-enterprise-it-services';
+import { practicalBusiness2029Solutions } from '../data/2029-practical-business-solutions';
 
 export default function HomePage() {
   const heroStats = [
@@ -244,13 +246,25 @@ export default function HomePage() {
     ...revolutionary2027AIServices,
     ...revolutionary2027ITServices,
     ...revolutionary2027MicroSaasServices,
-    ...cuttingEdge2029Services,
+    ...cuttingEdge2028MicroSaas,
+    ...practicalBusinessSolutions2028,
+    ...futuristic2029AIServices,
+    ...quantumInnovation2029Services,
     ...emergingTech2029Services,
-    ...microSaas2029Services
+    ...enterpriseIT2029Services,
+    ...practicalBusiness2029Solutions
   ];
 
-  // Get featured services (popular ones)
-  const featuredServices = allServices.filter(service => service.popular).slice(0, 12);
+  const featuredOffers = professionalServices.slice(0, 3);
+
+  // Service statistics
+  const serviceStats = {
+    totalServices: allServices.length,
+    aiServices: nextGenerationAIServices.length + innovativeAIServices.length + realMarketServices.filter(s => s.category.includes('AI')).length + revolutionary2025Services.filter(s => s.category.includes('AI')).length + nextGenInnovations2025.filter(s => s.category.includes('AI')).length + innovative2026Services.filter(s => s.category.includes('AI')).length + emergingTech2026Services.filter(s => s.category.includes('AI')).length + innovative2026MicroSaasServices.filter(s => s.category.includes('AI')).length + innovative2026MicroSaasServicesV2.filter(s => s.category.includes('AI')).length + emergingTech2026ServicesV2.filter(s => s.category.includes('AI')).length + enterpriseIT2026ServicesV2.filter(s => s.category.includes('AI')).length + revolutionary2026AIServices.length + revolutionary2027Services.filter(s => s.category.includes('AI')).length + emergingTech2027Services.filter(s => s.category.includes('AI')).length + futuristic2029AIServices.length + emergingTech2029Services.filter(s => s.category.includes('AI')).length + enterpriseIT2029Services.filter(s => s.category.includes('AI')).length + practicalBusiness2029Solutions.filter(s => s.category.includes('AI')).length,
+    quantumServices: quantumSpaceServices.length + quantumAIServices2025.length + revolutionary2027Services.filter(s => s.category.includes('Quantum')).length + quantumInnovation2029Services.length,
+    spaceServices: quantumSpaceServices.length + revolutionary2027Services.filter(s => s.category.includes('Space')).length + emergingTech2029Services.filter(s => s.category.includes('Space')).length,
+    biotechServices: revolutionary2027Services.filter(s => s.category.includes('Biotech')).length + emergingTech2027Services.filter(s => s.category.includes('Biotech')).length + emergingTech2029Services.filter(s => s.category.includes('Biotech')).length
+  };
 
   return (
     <>
@@ -316,8 +330,8 @@ export default function HomePage() {
         {/* Ultra Advanced Navigation */}
         <UltraFuturisticNavigation2029 />
 
-        {/* Ultra Futuristic Hero Section 2029 */}
-        <UltraFuturisticHero2029 />
+                                      {/* Ultra Futuristic Hero Section 2029 */}
+                    <UltraFuturisticHero2029 />
 
         {/* Revolutionary 2027 Hero Section */}
         <Revolutionary2027Hero />
@@ -599,10 +613,10 @@ export default function HomePage() {
             <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
           </div>
         </section>
-
-        {/* Footer */}
-        <UltraFuturisticFooter2029 />
-      </UltraFuturisticBackground2029>
+              </UltraFuturisticBackground2028>
+      
+      {/* Footer */}
+      <UltraFuturisticFooter2029 />
     </>
   );
 }
