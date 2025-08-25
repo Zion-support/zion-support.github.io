@@ -86,30 +86,72 @@ const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveSe
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
 const HealthcareSolutions = lazy(() => import('./pages/solutions/Healthcare'));
 
-// Loading Component with improved accessibility
+// Additional missing pages to fix broken links
+const Privacy = lazy(() => import('./pages/Privacy'));
+const Terms = lazy(() => import('./pages/Terms'));
+const Cookies = lazy(() => import('./pages/Cookies'));
+const FAQ = lazy(() => import('./pages/FAQ'));
+const Events = lazy(() => import('./pages/Events'));
+const Webinars = lazy(() => import('./pages/Webinars'));
+const WhitePapers = lazy(() => import('./pages/WhitePapers'));
+const Testimonials = lazy(() => import('./pages/Testimonials'));
+const Support = lazy(() => import('./pages/HelpCenter'));
+const Docs = lazy(() => import('./pages/HelpCenter'));
+const Marketplace = lazy(() => import('./pages/Marketplace'));
+const Community = lazy(() => import('./pages/Community'));
+
+// AI Autonomous Service pages
+const AIAutonomousBusinessManager = lazy(() => import('./pages/services/AIAutonomousBusinessManager'));
+const AIAutonomousBusinessPlatform = lazy(() => import('./pages/services/AIAutonomousBusinessPlatform'));
+const AIAutonomousCodeReview = lazy(() => import('./pages/services/AIAutonomousCodeReview'));
+const AIAutonomousCreativeDirector = lazy(() => import('./pages/services/AIAutonomousCreativeDirector'));
+const AIAutonomousData = lazy(() => import('./pages/services/AIAutonomousData'));
+const AIAutonomousDecisionEngine = lazy(() => import('./pages/services/AIAutonomousDecisionEngine'));
+const AIAutonomousDecisionPlatform = lazy(() => import('./pages/services/AIAutonomousDecisionPlatform'));
+const AIAutonomousDevOps = lazy(() => import('./pages/services/AIAutonomousDevOps'));
+const AIAutonomousEducationProfessor = lazy(() => import('./pages/services/AIAutonomousEducationProfessor'));
+const AIAutonomousHealthcarePhysician = lazy(() => import('./pages/services/AIAutonomousHealthcarePhysician'));
+const AIAutonomousLearningSystem = lazy(() => import('./pages/services/AIAutonomousLearningSystem'));
+const AIAutonomousLegalCounsel = lazy(() => import('./pages/services/AIAutonomousLegalCounsel'));
+const AIAutonomousLogistics = lazy(() => import('./pages/services/AIAutonomousLogistics'));
+const AIAutonomousManufacturing = lazy(() => import('./pages/services/AIAutonomousManufacturing'));
+const AIAutonomousResearch = lazy(() => import('./pages/services/AIAutonomousResearch'));
+const AIAutonomousRobotics = lazy(() => import('./pages/services/AIAutonomousRobotics'));
+const AIAutonomousScientificResearcher = lazy(() => import('./pages/services/AIAutonomousScientificResearcher'));
+const AIAutonomousSecurity = lazy(() => import('./pages/services/AIAutonomousSecurity'));
+const AIAutonomousSystemsPlatform = lazy(() => import('./pages/services/AIAutonomousSystemsPlatform'));
+const AIAutonomousTesting = lazy(() => import('./pages/services/AIAutonomousTesting'));
+const AIAutonomousVehiclePlatform = lazy(() => import('./pages/services/AIAutonomousVehiclePlatform'));
+const AIAutonomousVehicle = lazy(() => import('./pages/services/AIAutonomousVehicle'));
+const AIAutonomousVehiclesPlatform = lazy(() => import('./pages/services/AIAutonomousVehiclesPlatform'));
+const AIAutonomousVehicles = lazy(() => import('./pages/services/AIAutonomousVehicles'));
+const AIAutonomousVentureCapitalist = lazy(() => import('./pages/services/AIAutonomousVentureCapitalist'));
+
+// AI Content Generation pages
+const AIContentGenerationAutomation = lazy(() => import('./pages/services/AIContentGenerationAutomation'));
+const AIContentGenerationPro = lazy(() => import('./pages/services/AIContentGenerationPro'));
+const AIConsciousnessEvolution = lazy(() => import('./pages/services/AIConsciousnessEvolution'));
+
+// Enhanced AI service pages
+const AIBusinessIntelligenceElite = lazy(() => import('./pages/services/AIBusinessIntelligenceElite'));
+const AIBusinessIntelligenceSuite = lazy(() => import('./pages/services/AIBusinessIntelligenceSuite'));
+
+// Loading spinner component
 const LoadingSpinner = () => (
-  <div 
-    className="flex items-center justify-center min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900"
-    role="status"
-    aria-label="Loading Zion Tech Group application"
-  >
-    <div className="text-center">
-      <div className="relative">
-        <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-        <div className="absolute inset-0 w-16 h-16 border-4 border-purple-500 border-t-transparent rounded-full animate-spin mx-auto" style={{ animationDelay: '-0.5s' }}></div>
-      </div>
-      <p className="text-cyan-400 text-lg font-medium">Loading Zion Tech Group...</p>
-      <p className="text-gray-400 text-sm mt-2">Preparing your experience</p>
-    </div>
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-500"></div>
   </div>
 );
 
-const App = () => {
-  useScrollToTop();
+const App: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  useScrollToTop();
 
   return (
     <EnhancedErrorBoundary>
+      <EnhancedSEO />
+      <EnhancedAccessibility />
+      <PerformanceMonitor />
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
@@ -197,6 +239,71 @@ const App = () => {
                       <Route path="/comprehensive-services" element={<Services />} />
                       <Route path="/services-comparison" element={<Services />} />
                       <Route path="/it-onsite-services" element={<Services />} />
+                      
+                      {/* Additional missing pages to fix broken links */}
+                      <Route path="/privacy" element={<Privacy />} />
+                      <Route path="/terms" element={<Terms />} />
+                      <Route path="/cookies" element={<Cookies />} />
+                      <Route path="/faq" element={<FAQ />} />
+                      <Route path="/events" element={<Events />} />
+                      <Route path="/webinars" element={<Webinars />} />
+                      <Route path="/white-papers" element={<WhitePapers />} />
+                      <Route path="/testimonials" element={<Testimonials />} />
+                      <Route path="/support" element={<Support />} />
+                      <Route path="/docs" element={<Docs />} />
+                      <Route path="/marketplace" element={<Marketplace />} />
+                      <Route path="/community" element={<Community />} />
+                      
+                      {/* AI Autonomous Service routes */}
+                      <Route path="/ai-autonomous-business-manager" element={<AIAutonomousBusinessManager />} />
+                      <Route path="/ai-autonomous-business-platform" element={<AIAutonomousBusinessPlatform />} />
+                      <Route path="/ai-autonomous-code-review" element={<AIAutonomousCodeReview />} />
+                      <Route path="/ai-autonomous-creative-director" element={<AIAutonomousCreativeDirector />} />
+                      <Route path="/ai-autonomous-data" element={<AIAutonomousData />} />
+                      <Route path="/ai-autonomous-decision-engine" element={<AIAutonomousDecisionEngine />} />
+                      <Route path="/ai-autonomous-decision-platform" element={<AIAutonomousDecisionPlatform />} />
+                      <Route path="/ai-autonomous-devops" element={<AIAutonomousDevOps />} />
+                      <Route path="/ai-autonomous-education-professor" element={<AIAutonomousEducationProfessor />} />
+                      <Route path="/ai-autonomous-healthcare-physician" element={<AIAutonomousHealthcarePhysician />} />
+                      <Route path="/ai-autonomous-learning-system" element={<AIAutonomousLearningSystem />} />
+                      <Route path="/ai-autonomous-legal-counsel" element={<AIAutonomousLegalCounsel />} />
+                      <Route path="/ai-autonomous-logistics" element={<AIAutonomousLogistics />} />
+                      <Route path="/ai-autonomous-manufacturing" element={<AIAutonomousManufacturing />} />
+                      <Route path="/ai-autonomous-research" element={<AIAutonomousResearch />} />
+                      <Route path="/ai-autonomous-robotics" element={<AIAutonomousRobotics />} />
+                      <Route path="/ai-autonomous-scientific-researcher" element={<AIAutonomousScientificResearcher />} />
+                      <Route path="/ai-autonomous-security" element={<AIAutonomousSecurity />} />
+                      <Route path="/ai-autonomous-systems-platform" element={<AIAutonomousSystemsPlatform />} />
+                      <Route path="/ai-autonomous-testing" element={<AIAutonomousTesting />} />
+                      <Route path="/ai-autonomous-vehicle-platform" element={<AIAutonomousVehiclePlatform />} />
+                      <Route path="/ai-autonomous-vehicle" element={<AIAutonomousVehicle />} />
+                      <Route path="/ai-autonomous-vehicles-platform" element={<AIAutonomousVehiclesPlatform />} />
+                      <Route path="/ai-autonomous-vehicles" element={<AIAutonomousVehicles />} />
+                      <Route path="/ai-autonomous-venture-capitalist" element={<AIAutonomousVentureCapitalist />} />
+                      
+                      {/* AI Content Generation routes */}
+                      <Route path="/ai-content-generation-automation" element={<AIContentGenerationAutomation />} />
+                      <Route path="/ai-content-generation-pro" element={<AIContentGenerationPro />} />
+                      <Route path="/ai-consciousness-evolution" element={<AIConsciousnessEvolution />} />
+                      
+                      {/* Enhanced AI service routes */}
+                      <Route path="/ai-autonomous-business-manager-2029" element={<AIAutonomousBusinessManager />} />
+                      <Route path="/ai-autonomous-business-platform-2026" element={<AIAutonomousBusinessPlatform />} />
+                      <Route path="/ai-business-intelligence-elite-2026" element={<AIBusinessIntelligenceElite />} />
+                      <Route path="/ai-business-intelligence-suite-2029" element={<AIBusinessIntelligenceSuite />} />
+                      <Route path="/ai-content-generation-automation-2033" element={<AIContentGenerationAutomation />} />
+                      <Route path="/ai-content-generation-pro-2029" element={<AIContentGenerationPro />} />
+                      <Route path="/ai-consciousness-evolution-2025" element={<AIConsciousnessEvolution />} />
+                      <Route path="/ai-consciousness-evolution-2029" element={<AIConsciousnessEvolution />} />
+                      
+                      {/* Quantum and other technology routes */}
+                      <Route path="/quantum-cloud-infrastructure" element={<QuantumTechnology />} />
+                      <Route path="/quantum-financial-trading" element={<QuantumTechnology />} />
+                      <Route path="/quantum-services" element={<QuantumTechnology />} />
+                      <Route path="/space-tech" element={<EmergingTech />} />
+                      <Route path="/research-development" element={<EmergingTech />} />
+                      <Route path="/enterprise-it" element={<ITInfrastructure />} />
+                      <Route path="/micro-saas" element={<MicroSAASSolutions />} />
                     </Routes>
                   </Suspense>
                 </main>
@@ -260,39 +367,6 @@ const App = () => {
                       <MachineLearningDashboard />
                     </div>
                   </>
-                )}
-                
-                {/* Enhanced Performance Monitor - Always Available */}
-                <PerformanceMonitor 
-                  showMetrics={true}
-                  autoRefresh={true}
-                  refreshInterval={30000}
-                  onMetricsUpdate={(metrics) => {
-                    if (import.meta.env.DEV) {
-                      console.log('Performance metrics updated:', metrics);
-                    }
-                  }}
-                  onScoreUpdate={(score) => {
-                    if (import.meta.env.DEV) {
-                      console.log('Performance score updated:', score);
-                    }
-                  }}
-                />
-                
-                {/* Link Health Monitor - Development Mode */}
-                {import.meta.env.DEV && (
-                  <LinkHealthMonitor
-                    links={[
-                      'https://ziontechgroup.com',
-                      'https://www.linkedin.com/company/ziontechgroup',
-                      'https://twitter.com/ziontechgroup',
-                      'https://github.com/ziontechgroup',
-                      'https://www.youtube.com/@ziontechgroup'
-                    ]}
-                    autoCheck={true}
-                    checkInterval={600000} // 10 minutes
-                    timeout={5000} // 5 seconds
-                  />
                 )}
               </div>
             </PerformanceOptimizer>
