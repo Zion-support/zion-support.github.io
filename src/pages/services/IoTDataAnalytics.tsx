@@ -1,574 +1,424 @@
 import React from 'react';
-import { SEO } from '../../components/SEO';
+import { motion } from 'framer-motion';
 import { 
-  Activity, 
-  BarChart3, 
-  Cpu, 
-  Database, 
-  Globe, 
-  Shield, 
-  TrendingUp, 
-  Zap,
-  Target,
-  Cloud,
-  Smartphone,
-  Wifi,
-  Gauge,
-  BarChart,
-  Monitor,
-  AlertTriangle
-} from 'lucide-react';
+  SignalIcon,
+  ChartBarIcon,
+  CloudIcon,
+  CpuChipIcon,
+  BoltIcon,
+  EyeIcon,
+  CheckCircleIcon,
+  ArrowRightIcon,
+  GlobeAltIcon,
+  ShieldCheckIcon,
+  CogIcon,
+  LightBulbIcon
+} from '@heroicons/react/24/outline';
 
-export default function IoTDataAnalytics() {
-  const solutions = [
-    {
-      title: "Real-Time Data Processing",
-      description: "Process and analyze IoT data streams in real-time for instant insights and decision making",
-      icon: Activity,
-      features: ["Stream processing", "Real-time analytics", "Instant alerts", "Live dashboards"]
-    },
-    {
-      title: "Predictive Maintenance",
-      description: "Use machine learning to predict equipment failures and optimize maintenance schedules",
-      icon: TrendingUp,
-      features: ["Failure prediction", "Maintenance optimization", "Cost reduction", "Uptime improvement"]
-    },
-    {
-      title: "Smart City Analytics",
-      description: "Comprehensive analytics for urban infrastructure, traffic, and public services",
-      icon: Globe,
-      features: ["Traffic optimization", "Utility management", "Public safety", "Environmental monitoring"]
-    },
-    {
-      title: "Industrial IoT (IIoT)",
-      description: "Advanced analytics for manufacturing, energy, and industrial operations",
-      icon: Cpu,
-      features: ["Production optimization", "Energy efficiency", "Quality control", "Supply chain analytics"]
-    }
-  ];
-
-  const industries = [
-    {
-      name: "Manufacturing",
-      description: "Production optimization, quality control, and predictive maintenance",
-      icon: Cpu,
-      benefits: ["30% efficiency increase", "25% cost reduction", "90% uptime improvement"]
-    },
-    {
-      name: "Healthcare",
-      description: "Patient monitoring, medical device analytics, and facility management",
-      icon: Shield,
-      benefits: ["Improved patient outcomes", "Reduced medical errors", "Better resource utilization"]
-    },
-    {
-      name: "Retail",
-      description: "Customer behavior analysis, inventory optimization, and store performance",
-      icon: BarChart3,
-      benefits: ["Enhanced customer experience", "Optimized inventory", "Increased sales"]
-    },
-    {
-      name: "Energy",
-      description: "Grid optimization, renewable energy management, and consumption analytics",
-      icon: Zap,
-      benefits: ["Energy efficiency", "Cost savings", "Sustainability goals"]
-    }
-  ];
-
-  const pricingTiers = [
-    {
-      name: "Starter",
-      price: 499,
-      period: "month",
-      description: "Basic IoT analytics for small deployments",
-      features: [
-        "Up to 100 devices",
-        "Basic analytics dashboard",
-        "Standard integrations",
-        "Email support",
-        "Basic reporting"
-      ],
-      cta: "Start Free Trial",
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: 1299,
-      period: "month",
-      description: "Advanced analytics for growing IoT deployments",
-      features: [
-        "Up to 1000 devices",
-        "Advanced analytics",
-        "Machine learning models",
-        "Priority support",
-        "Custom dashboards",
-        "API access",
-        "Data export"
-      ],
-      cta: "Start Free Trial",
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: 2999,
-      period: "month",
-      description: "Full-scale IoT analytics for large organizations",
-      features: [
-        "Unlimited devices",
-        "Custom ML models",
-        "Advanced security",
-        "24/7 dedicated support",
-        "Custom development",
-        "SLA guarantees",
-        "On-premise options"
-      ],
-      cta: "Contact Sales",
-      popular: false
-    }
-  ];
-
+const IoTDataAnalytics: React.FC = () => {
   const features = [
     {
+      icon: SignalIcon,
+      title: "IoT Device Management",
+      description: "Comprehensive platform for managing, monitoring, and maintaining IoT devices across your entire network.",
+      color: "from-blue-500 to-cyan-600"
+    },
+    {
+      icon: ChartBarIcon,
+      title: "Real-time Analytics",
+      description: "Advanced analytics engine that processes IoT data in real-time, providing instant insights and actionable intelligence.",
+      color: "from-green-500 to-emerald-600"
+    },
+    {
+      icon: CloudIcon,
       title: "Edge Computing",
-      description: "Process data at the edge for faster response times and reduced bandwidth usage",
-      icon: Cpu,
-      benefits: ["Low latency", "Bandwidth optimization", "Offline operation", "Real-time processing"]
+      description: "Distributed computing architecture that processes data closer to the source for faster response times and reduced latency.",
+      color: "from-purple-500 to-pink-600"
     },
     {
-      title: "Cloud Integration",
-      description: "Seamless integration with cloud platforms for scalable data storage and processing",
-      icon: Cloud,
-      benefits: ["Scalable storage", "Global access", "Advanced analytics", "Cost optimization"]
-    },
-    {
-      title: "Security & Privacy",
-      description: "Enterprise-grade security with end-to-end encryption and privacy protection",
-      icon: Shield,
-      benefits: ["Data encryption", "Access control", "Compliance", "Audit trails"]
-    },
-    {
-      title: "Mobile Access",
-      description: "Access your IoT analytics anywhere with responsive mobile applications",
-      icon: Smartphone,
-      benefits: ["Mobile dashboards", "Push notifications", "Offline access", "Cross-platform"]
+      icon: CpuChipIcon,
+      title: "AI-Powered Insights",
+      description: "Machine learning algorithms that analyze IoT data patterns to predict trends, detect anomalies, and optimize operations.",
+      color: "from-orange-500 to-red-600"
     }
   ];
 
+  const benefits = [
+    {
+      metric: "50%",
+      description: "Faster decision making",
+      icon: BoltIcon
+    },
+    {
+      metric: "30%",
+      description: "Operational cost reduction",
+      icon: ChartBarIcon
+    },
+    {
+      metric: "99.9%",
+      description: "System reliability",
+      icon: ShieldCheckIcon
+    },
+    {
+      metric: "24/7",
+      description: "Continuous monitoring",
+      icon: EyeIcon
+    }
+  ];
+
+  const useCases = [
+    {
+      industry: "Smart Cities",
+      description: "Comprehensive IoT solutions for urban infrastructure management, traffic optimization, and environmental monitoring",
+      benefits: ["Traffic optimization", "Energy efficiency", "Environmental monitoring", "Public safety"]
+    },
+    {
+      industry: "Manufacturing",
+      description: "Industrial IoT solutions for predictive maintenance, quality control, and production optimization",
+      benefits: ["Predictive maintenance", "Quality control", "Production optimization", "Cost reduction"]
+    },
+    {
+      industry: "Healthcare",
+      description: "IoT-enabled healthcare monitoring systems for patient care, asset tracking, and facility management",
+      benefits: ["Patient monitoring", "Asset tracking", "Facility optimization", "Improved care"]
+    },
+    {
+      industry: "Agriculture",
+      description: "Smart farming solutions with IoT sensors for crop monitoring, irrigation control, and yield optimization",
+      benefits: ["Crop monitoring", "Irrigation control", "Yield optimization", "Resource efficiency"]
+    }
+  ];
+
+  const technologies = [
+    {
+      name: "MQTT Protocol",
+      description: "Lightweight messaging protocol for IoT devices",
+      icon: SignalIcon
+    },
+    {
+      name: "Apache Kafka",
+      description: "High-throughput distributed streaming platform",
+      icon: CloudIcon
+    },
+    {
+      name: "TensorFlow",
+      description: "Machine learning framework for data analysis",
+      icon: CpuChipIcon
+    },
+    {
+      name: "Kubernetes",
+      description: "Container orchestration for scalable deployments",
+      icon: CogIcon
+    }
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
-      <SEO 
-        title="IoT Data Analytics - Zion Tech Group" 
-        description="Transform your IoT data into actionable insights with advanced analytics, machine learning, and real-time processing capabilities."
-        keywords="IoT analytics, IoT data processing, predictive maintenance, smart city analytics, industrial IoT, real-time analytics"
-        canonical="https://ziontechgroup.com/services/iot-data-analytics"
-      />
-
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/80 to-zion-purple/80"></div>
-        <div className="relative z-10 container mx-auto px-4 py-24 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            IoT Data Analytics
-            <span className="block text-3xl md:text-4xl text-zion-cyan mt-2">
-              From Data to Intelligence
-            </span>
-          </h1>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Harness the power of IoT data with advanced analytics, machine learning, and real-time processing 
-            to drive intelligent decision-making and operational excellence.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Start Free Trial
-            </button>
-            <button className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Schedule Demo
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Key Benefits */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
-              Why Choose IoT Data Analytics?
-            </h2>
-            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Transform raw IoT data into actionable intelligence that drives business value and competitive advantage.
+      <section className="pt-32 pb-16 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-8"
+          >
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/50 rounded-full text-blue-400 text-sm font-medium mb-6">
+              <SignalIcon className="w-4 h-4 mr-2" />
+              IoT & Data Analytics
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-cyan-500 to-green-600 bg-clip-text text-transparent mb-6">
+              IoT Data Analytics
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+              Transform your business with intelligent IoT solutions and real-time data analytics that drive actionable insights
             </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
-                <Zap className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
-                Real-Time Insights
-              </h3>
-              <p className="text-zion-slate">
-                Get instant insights from your IoT devices with real-time data processing and analytics
-              </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25">
+                Get Started
+              </button>
+              <button className="px-8 py-4 border border-blue-500 text-blue-400 hover:bg-blue-500/10 rounded-full font-semibold transition-all duration-300">
+                Watch Demo
+              </button>
             </div>
-
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-zion-purple to-zion-pink rounded-full flex items-center justify-center mx-auto mb-6">
-                <TrendingUp className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
-                Predictive Analytics
-              </h3>
-              <p className="text-zion-slate">
-                Use machine learning to predict trends, failures, and opportunities before they happen
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-zion-green to-zion-teal rounded-full flex items-center justify-center mx-auto mb-6">
-                <Target className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
-                Actionable Intelligence
-              </h3>
-              <p className="text-zion-slate">
-                Convert complex data into clear, actionable insights that drive business decisions
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-zion-orange to-zion-red rounded-full flex items-center justify-center mx-auto mb-6">
-                <Shield className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
-                Enterprise Security
-              </h3>
-              <p className="text-zion-slate">
-                Built-in security and compliance features to protect your data and operations
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Solutions Grid */}
-      <section className="py-20 bg-zion-blue-light">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
-              Comprehensive IoT Analytics Solutions
-            </h2>
-            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              End-to-end IoT analytics solutions designed to meet the unique needs of different industries and use cases.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {solutions.map((solution, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 border border-zion-blue-light hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-6">
-                  <solution.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
-                  {solution.title}
-                </h3>
-                <p className="text-zion-slate mb-4">
-                  {solution.description}
-                </p>
-                <ul className="space-y-2">
-                  {solution.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-zion-slate">
-                      <div className="w-2 h-2 bg-zion-cyan rounded-full mr-3"></div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Industry Solutions */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
-              Industry-Specific Solutions
-            </h2>
-            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Tailored IoT analytics solutions designed for the unique requirements of different industries.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {industries.map((industry, index) => (
-              <div key={index} className="bg-zion-blue-light rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <industry.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-zion-blue-dark mb-2">
-                  {industry.name}
-                </h3>
-                <p className="text-sm text-zion-slate mb-4">
-                  {industry.description}
-                </p>
-                <ul className="text-left space-y-1">
-                  {industry.benefits.map((benefit, idx) => (
-                    <li key={idx} className="text-xs text-zion-slate flex items-center">
-                      <Target className="w-3 h-3 text-zion-cyan mr-2 flex-shrink-0" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-zion-blue-light">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
-              Advanced Features
-            </h2>
-            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Powerful features designed to handle the complexity and scale of modern IoT deployments.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 border border-zion-blue-light hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-6">
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-zion-slate mb-4">
-                  {feature.description}
-                </p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-zion-slate">
-                      <div className="w-2 h-2 bg-zion-cyan rounded-full mr-3"></div>
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-bold text-center text-white mb-16"
+          >
+            Powerful IoT Capabilities
+          </motion.h2>
 
-      {/* Pricing Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
-              Flexible Pricing Plans
-            </h2>
-            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Choose the plan that best fits your IoT analytics needs and scale as you grow.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index) => (
-              <div key={index} className={`relative bg-white rounded-2xl shadow-lg p-8 border-2 ${
-                tier.popular ? 'border-zion-cyan scale-105' : 'border-zion-blue-light'
-              }`}>
-                {tier.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-zion-cyan text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          >
+            {features.map((feature, index) => {
+              const Icon = feature.icon;
+              return (
+                <motion.div
+                  key={index}
+                  variants={itemVariants}
+                  className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20"
+                >
+                  <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6`}>
+                    <Icon className="w-8 h-8 text-white" />
                   </div>
-                )}
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-zion-blue-dark mb-2">{tier.name}</h3>
-                  <p className="text-zion-slate mb-4">{tier.description}</p>
-                  <div className="text-4xl font-bold text-zion-cyan">
-                    ${tier.price}
-                    <span className="text-lg text-zion-slate font-normal">/{tier.period}</span>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-bold text-center text-white mb-16"
+          >
+            Measurable Business Impact
+          </motion.h2>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          >
+            {benefits.map((benefit, index) => {
+              const Icon = benefit.icon;
+              return (
+                <motion.div
+                  key={index}
+                  variants={itemVariants}
+                  className="text-center"
+                >
+                  <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Icon className="w-10 h-10 text-white" />
                   </div>
+                  <div className="text-4xl font-bold text-white mb-2">{benefit.metric}</div>
+                  <p className="text-gray-300">{benefit.description}</p>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-bold text-center text-white mb-16"
+          >
+            Industry Applications
+          </motion.h2>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          >
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300"
+              >
+                <h3 className="text-2xl font-bold text-white mb-4">{useCase.industry}</h3>
+                <p className="text-gray-300 mb-6">{useCase.description}</p>
+                <div>
+                  <h4 className="font-semibold text-blue-400 mb-3">Key Benefits:</h4>
+                  <ul className="space-y-2">
+                    {useCase.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-gray-300">
+                        <CheckCircleIcon className="w-5 h-5 text-green-500 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                
-                <ul className="space-y-3 mb-8">
-                  {tier.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-zion-slate">
-                      <div className="w-5 h-5 bg-zion-cyan rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                        <div className="w-2 h-2 bg-white rounded-full"></div>
-                      </div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
-                  tier.popular 
-                    ? 'bg-zion-cyan hover:bg-zion-cyan-light text-white' 
-                    : 'bg-zion-blue-light hover:bg-zion-blue text-white'
-                }`}>
-                  {tier.cta}
-                </button>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Technology Stack */}
-      <section className="py-20 bg-zion-blue-light">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
-              Advanced Technology Stack
-            </h2>
-            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Built on cutting-edge technologies for scalable, secure, and intelligent IoT analytics.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
-                <Gauge className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
-                Multi-Protocol Support
-              </h3>
-              <p className="text-zion-slate">
-                Support for MQTT, CoAP, HTTP, and custom IoT protocols
-              </p>
-            </div>
+      {/* Technologies Section */}
+      <section className="py-16 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-bold text-center text-white mb-16"
+          >
+            Technology Stack
+          </motion.h2>
 
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-zion-purple to-zion-pink rounded-full flex items-center justify-center mx-auto mb-6">
-                <BarChart className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
-                Machine Learning
-              </h3>
-              <p className="text-zion-slate">
-                Advanced ML models for predictive analytics and anomaly detection
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-zion-green to-zion-teal rounded-full flex items-center justify-center mx-auto mb-6">
-                <Monitor className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
-                Real-Time Processing
-              </h3>
-              <p className="text-zion-slate">
-                Stream processing engines for real-time data analysis
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-zion-orange to-zion-red rounded-full flex items-center justify-center mx-auto mb-6">
-                <Wifi className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
-                Edge Computing
-              </h3>
-              <p className="text-zion-slate">
-                Edge processing capabilities for low-latency analytics
-              </p>
-            </div>
-          </div>
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          >
+            {technologies.map((tech, index) => {
+              const Icon = tech.icon;
+              return (
+                <motion.div
+                  key={index}
+                  variants={itemVariants}
+                  className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 text-center hover:border-blue-500/50 transition-all duration-300"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <Icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-2">{tech.name}</h3>
+                  <p className="text-gray-300 text-sm">{tech.description}</p>
+                </motion.div>
+              );
+            })}
+          </motion.div>
         </div>
       </section>
 
-      {/* ROI Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Proven Business Impact
-          </h2>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-12">
-            Our IoT analytics solutions deliver measurable business value and competitive advantages.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-4xl font-bold text-zion-cyan mb-2">25-40%</div>
-              <div className="text-white font-semibold mb-2">Operational Efficiency</div>
-              <p className="text-zion-slate-light text-sm">
-                Significant improvement in operational efficiency and productivity
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-4xl font-bold text-zion-cyan mb-2">30-50%</div>
-              <div className="text-white font-semibold mb-2">Cost Reduction</div>
-              <p className="text-zion-slate-light text-sm">
-                Substantial reduction in operational costs and maintenance expenses
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-4xl font-bold text-zion-cyan mb-2">90%</div>
-              <div className="text-white font-semibold mb-2">Predictive Accuracy</div>
-              <p className="text-zion-slate-light text-sm">
-                High accuracy in predicting failures and optimizing operations
-              </p>
-            </div>
-          </div>
+      {/* How It Works Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-bold text-center text-white mb-16"
+          >
+            Implementation Process
+          </motion.h2>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-4 gap-8"
+          >
+            {[
+              {
+                step: "01",
+                title: "Assessment",
+                description: "Evaluate your current infrastructure and identify IoT opportunities"
+              },
+              {
+                step: "02",
+                title: "Design",
+                description: "Architect the IoT solution and data analytics platform"
+              },
+              {
+                step: "03",
+                title: "Implementation",
+                description: "Deploy IoT devices and analytics infrastructure"
+              },
+              {
+                step: "04",
+                title: "Optimization",
+                description: "Fine-tune the system and provide ongoing support"
+              }
+            ].map((step, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                className="text-center"
+              >
+                <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
+                  {step.step}
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">{step.title}</h3>
+                <p className="text-gray-300">{step.description}</p>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-zion-blue-dark mb-6">
-            Ready to Unlock Your IoT Data?
-          </h2>
-          <p className="text-xl text-zion-slate max-w-3xl mx-auto mb-8">
-            Start your IoT analytics journey today and transform your data into actionable intelligence.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Start Free Trial
-            </button>
-            <button className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Schedule Demo
-            </button>
-            <button className="border-2 border-zion-blue text-zion-blue hover:bg-zion-blue hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Contact Sales
-            </button>
-          </div>
-          
-          <div className="mt-12 bg-zion-blue-light rounded-2xl p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-zion-blue-dark mb-4">Contact Information</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-              <div>
-                <h4 className="text-zion-cyan font-semibold mb-2">Phone</h4>
-                <p className="text-zion-blue-dark">+1 302 464 0950</p>
-              </div>
-              <div>
-                <h4 className="text-zion-cyan font-semibold mb-2">Email</h4>
-                <p className="text-zion-blue-dark">kleber@ziontechgroup.com</p>
-              </div>
-              <div>
-                <h4 className="text-zion-cyan font-semibold mb-2">Website</h4>
-                <p className="text-zion-blue-dark">https://ziontechgroup.com</p>
-              </div>
-              <div>
-                <h4 className="text-zion-cyan font-semibold mb-2">Address</h4>
-                <p className="text-zion-blue-dark">364 E Main St STE 1008<br />Middletown DE 19709</p>
-              </div>
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/30 rounded-3xl p-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Harness IoT Data?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Transform your operations with intelligent IoT solutions and real-time analytics
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 flex items-center justify-center">
+                Start Your IoT Journey
+                <ArrowRightIcon className="w-5 h-5 ml-2" />
+              </button>
+              <button className="px-8 py-4 border border-blue-500 text-blue-400 hover:bg-blue-500/10 rounded-full font-semibold transition-all duration-300">
+                Schedule a Consultation
+              </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default IoTDataAnalytics;

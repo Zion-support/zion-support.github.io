@@ -1,444 +1,354 @@
 import React from 'react';
-import { SEO } from '../../components/SEO';
+import { motion } from 'framer-motion';
 import { 
-  Brain, 
-  Zap, 
-  Workflow, 
-  BarChart3, 
-  Shield, 
-  Users, 
-  Clock, 
-  Target,
-  TrendingUp,
-  Cpu,
-  Database,
-  Cloud,
-  Lock,
-  Globe,
-  Award,
-  ShoppingCart
-} from 'lucide-react';
+  CogIcon,
+  ChartBarIcon,
+  RocketLaunchIcon,
+  ShieldCheckIcon,
+  CloudIcon,
+  CpuChipIcon,
+  BoltIcon,
+  EyeIcon,
+  CheckCircleIcon,
+  ArrowRightIcon
+} from '@heroicons/react/24/outline';
 
-export default function AIWorkflowAutomation() {
+const AIWorkflowAutomation: React.FC = () => {
   const features = [
     {
+      icon: CpuChipIcon,
       title: "Intelligent Process Mapping",
-      description: "AI-powered workflow discovery and mapping that automatically identifies and documents business processes",
-      icon: Workflow,
-      benefits: ["Automated process discovery", "Visual workflow mapping", "Process optimization suggestions", "Real-time process monitoring"]
+      description: "AI automatically analyzes and maps your existing business processes, identifying optimization opportunities and bottlenecks.",
+      color: "from-purple-500 to-pink-600"
     },
     {
-      title: "Smart Decision Automation",
-      description: "AI-driven decision engines that automate complex business decisions based on data and rules",
-      icon: Brain,
-      benefits: ["Rule-based automation", "Machine learning decisions", "Risk assessment", "Compliance checking"]
+      icon: CogIcon,
+      title: "Automated Workflow Generation",
+      description: "Generate optimized workflows automatically based on AI analysis of your business requirements and best practices.",
+      color: "from-blue-500 to-cyan-600"
     },
     {
-      title: "Predictive Analytics",
-      description: "Advanced analytics that predict workflow bottlenecks and optimize resource allocation",
-      icon: BarChart3,
-      benefits: ["Bottleneck prediction", "Resource optimization", "Performance forecasting", "Trend analysis"]
+      icon: ChartBarIcon,
+      title: "Real-time Optimization",
+      description: "Continuously monitor and optimize workflows in real-time using machine learning algorithms and performance analytics.",
+      color: "from-green-500 to-emerald-600"
     },
     {
-      title: "Integration Hub",
-      description: "Seamless integration with existing systems and third-party applications",
-      icon: Cpu,
-      benefits: ["API-first architecture", "Pre-built connectors", "Custom integrations", "Real-time sync"]
+      icon: CloudIcon,
+      title: "Cross-Platform Integration",
+      description: "Seamlessly integrate with existing systems including CRM, ERP, project management tools, and custom applications.",
+      color: "from-orange-500 to-red-600"
     }
   ];
 
-  const pricingTiers = [
+  const benefits = [
     {
-      name: "Starter",
-      price: 299,
-      period: "month",
-      description: "Perfect for small teams and basic workflow automation",
-      features: [
-        "Up to 10 workflows",
-        "Basic AI automation",
-        "Standard integrations",
-        "Email support",
-        "Basic analytics"
-      ],
-      cta: "Start Free Trial",
-      popular: false
+      metric: "80%",
+      description: "Reduction in process time",
+      icon: BoltIcon
     },
     {
-      name: "Professional",
-      price: 799,
-      period: "month",
-      description: "Advanced features for growing businesses",
-      features: [
-        "Up to 50 workflows",
-        "Advanced AI automation",
-        "Premium integrations",
-        "Priority support",
-        "Advanced analytics",
-        "Custom dashboards"
-      ],
-      cta: "Start Free Trial",
-      popular: true
+      metric: "95%",
+      description: "Elimination of manual errors",
+      icon: CheckCircleIcon
     },
     {
-      name: "Enterprise",
-      price: 1999,
-      period: "month",
-      description: "Full-scale automation for large organizations",
-      features: [
-        "Unlimited workflows",
-        "Enterprise AI features",
-        "Custom integrations",
-        "24/7 dedicated support",
-        "Enterprise analytics",
-        "Custom development",
-        "SLA guarantees"
-      ],
-      cta: "Contact Sales",
-      popular: false
+      metric: "3x",
+      description: "Faster decision making",
+      icon: RocketLaunchIcon
+    },
+    {
+      metric: "40%",
+      description: "Cost savings",
+      icon: ChartBarIcon
     }
   ];
 
   const useCases = [
     {
+      industry: "Manufacturing",
+      description: "Automate production workflows, quality control processes, and supply chain management",
+      benefits: ["Reduced downtime", "Improved quality", "Faster delivery"]
+    },
+    {
       industry: "Healthcare",
-      description: "Automate patient intake, appointment scheduling, and medical record processing",
-      icon: Users,
-      benefits: ["Reduce wait times", "Improve accuracy", "Enhance patient experience"]
+      description: "Streamline patient care workflows, appointment scheduling, and medical record management",
+      benefits: ["Better patient care", "Reduced wait times", "Improved accuracy"]
     },
     {
       industry: "Finance",
-      description: "Automate loan processing, compliance checking, and risk assessment",
-      icon: Shield,
-      benefits: ["Faster processing", "Reduced errors", "Better compliance"]
-    },
-    {
-      industry: "Manufacturing",
-      description: "Optimize production workflows, quality control, and supply chain management",
-      icon: Cpu,
-      benefits: ["Increased efficiency", "Quality improvement", "Cost reduction"]
+      description: "Automate loan processing, risk assessment, and compliance workflows",
+      benefits: ["Faster processing", "Reduced risk", "Better compliance"]
     },
     {
       industry: "Retail",
-      description: "Automate inventory management, customer service, and order processing",
-      icon: ShoppingCart,
-      benefits: ["Better inventory control", "Improved customer service", "Faster order fulfillment"]
+      description: "Optimize inventory management, customer service, and order fulfillment processes",
+      benefits: ["Better inventory control", "Improved customer satisfaction", "Faster delivery"]
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
-      <SEO 
-        title="AI Workflow Automation - Zion Tech Group" 
-        description="Transform your business operations with AI-powered workflow automation that increases efficiency, reduces costs, and improves decision-making."
-        keywords="AI workflow automation, business process automation, intelligent automation, workflow optimization, AI decision making"
-        canonical="https://ziontechgroup.com/services/ai-workflow-automation"
-      />
-
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/80 to-zion-purple/80"></div>
-        <div className="relative z-10 container mx-auto px-4 py-24 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Workflow Automation
-            <span className="block text-3xl md:text-4xl text-zion-cyan mt-2">
-              Intelligent Process Optimization
-            </span>
-          </h1>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Transform your business operations with AI-powered workflow automation that learns, adapts, 
-            and continuously optimizes your processes for maximum efficiency and productivity.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Start Free Trial
-            </button>
-            <button className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Schedule Demo
-            </button>
-          </div>
+      <section className="pt-32 pb-16 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-8"
+          >
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/50 rounded-full text-purple-400 text-sm font-medium mb-6">
+              <CogIcon className="w-4 h-4 mr-2" />
+              AI-Powered Automation
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-600 bg-clip-text text-transparent mb-6">
+              AI Workflow Automation
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+              Transform your business operations with intelligent workflow automation that learns, adapts, and optimizes continuously
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 rounded-full font-semibold text-white transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25">
+                Get Started
+              </button>
+              <button className="px-8 py-4 border border-purple-500 text-purple-400 hover:bg-purple-500/10 rounded-full font-semibold transition-all duration-300">
+                Watch Demo
+              </button>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Key Benefits */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
-              Why Choose AI Workflow Automation?
-            </h2>
-            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Experience unprecedented efficiency gains and cost savings with intelligent automation that adapts to your business needs.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
-                <Zap className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
-                Increase Efficiency
-              </h3>
-              <p className="text-zion-slate">
-                Automate repetitive tasks and optimize workflows to achieve 300-500% efficiency gains
-              </p>
-            </div>
+      {/* Features Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-bold text-center text-white mb-16"
+          >
+            Powerful Features
+          </motion.h2>
 
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-zion-purple to-zion-pink rounded-full flex items-center justify-center mx-auto mb-6">
-                <TrendingUp className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
-                Reduce Costs
-              </h3>
-              <p className="text-zion-slate">
-                Cut operational costs by 40-70% through intelligent automation and resource optimization
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-zion-green to-zion-teal rounded-full flex items-center justify-center mx-auto mb-6">
-                <Brain className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
-                Smart Decisions
-              </h3>
-              <p className="text-zion-slate">
-                AI-powered decision making that improves accuracy and reduces human error by 90%
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-br from-zion-orange to-zion-red rounded-full flex items-center justify-center mx-auto mb-6">
-                <Clock className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
-                24/7 Operation
-              </h3>
-              <p className="text-zion-slate">
-                Continuous operation without breaks, holidays, or human limitations
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Grid */}
-      <section className="py-20 bg-zion-blue-light">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
-              Powerful Features
-            </h2>
-            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Comprehensive AI workflow automation features designed to transform your business operations.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 border border-zion-blue-light hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-6">
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
-                  {feature.title}
-                </h3>
-                <p className="text-zion-slate mb-4">
-                  {feature.description}
-                </p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-zion-slate">
-                      <div className="w-2 h-2 bg-zion-cyan rounded-full mr-3"></div>
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
-              Flexible Pricing Plans
-            </h2>
-            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Choose the plan that best fits your business needs and scale as you grow.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index) => (
-              <div key={index} className={`relative bg-white rounded-2xl shadow-lg p-8 border-2 ${
-                tier.popular ? 'border-zion-cyan scale-105' : 'border-zion-blue-light'
-              }`}>
-                {tier.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-zion-cyan text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          >
+            {features.map((feature, index) => {
+              const Icon = feature.icon;
+              return (
+                <motion.div
+                  key={index}
+                  variants={itemVariants}
+                  className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20"
+                >
+                  <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6`}>
+                    <Icon className="w-8 h-8 text-white" />
                   </div>
-                )}
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-zion-blue-dark mb-2">{tier.name}</h3>
-                  <p className="text-zion-slate mb-4">{tier.description}</p>
-                  <div className="text-4xl font-bold text-zion-cyan">
-                    ${tier.price}
-                    <span className="text-lg text-zion-slate font-normal">/{tier.period}</span>
-                  </div>
-                </div>
-                
-                <ul className="space-y-3 mb-8">
-                  {tier.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-zion-slate">
-                      <div className="w-5 h-5 bg-zion-cyan rounded-full flex items-center justify-center mr-3 flex-shrink-0">
-                        <div className="w-2 h-2 bg-white rounded-full"></div>
-                      </div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
-                  tier.popular 
-                    ? 'bg-zion-cyan hover:bg-zion-cyan-light text-white' 
-                    : 'bg-zion-blue-light hover:bg-zion-blue text-white'
-                }`}>
-                  {tier.cta}
-                </button>
-              </div>
-            ))}
-          </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+                </motion.div>
+              );
+            })}
+          </motion.div>
         </div>
       </section>
 
-      {/* Use Cases */}
-      <section className="py-20 bg-zion-blue-light">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
-              Industry Use Cases
-            </h2>
-            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              See how AI workflow automation transforms operations across different industries.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {/* Benefits Section */}
+      <section className="py-16 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-bold text-center text-white mb-16"
+          >
+            Measurable Results
+          </motion.h2>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          >
+            {benefits.map((benefit, index) => {
+              const Icon = benefit.icon;
+              return (
+                <motion.div
+                  key={index}
+                  variants={itemVariants}
+                  className="text-center"
+                >
+                  <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Icon className="w-10 h-10 text-white" />
+                  </div>
+                  <div className="text-4xl font-bold text-white mb-2">{benefit.metric}</div>
+                  <p className="text-gray-300">{benefit.description}</p>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-bold text-center text-white mb-16"
+          >
+            Industry Applications
+          </motion.h2>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          >
             {useCases.map((useCase, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 text-center hover:shadow-lg transition-shadow">
-                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <useCase.icon className="w-8 h-8 text-white" />
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-300"
+              >
+                <h3 className="text-2xl font-bold text-white mb-4">{useCase.industry}</h3>
+                <p className="text-gray-300 mb-6">{useCase.description}</p>
+                <div>
+                  <h4 className="font-semibold text-purple-400 mb-3">Key Benefits:</h4>
+                  <ul className="space-y-2">
+                    {useCase.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-gray-300">
+                        <CheckCircleIcon className="w-5 h-5 text-green-500 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h3 className="text-lg font-semibold text-zion-blue-dark mb-2">
-                  {useCase.industry}
-                </h3>
-                <p className="text-sm text-zion-slate mb-4">
-                  {useCase.description}
-                </p>
-                <ul className="text-left space-y-1">
-                  {useCase.benefits.map((benefit, idx) => (
-                    <li key={idx} className="text-xs text-zion-slate flex items-center">
-                      <Target className="w-3 h-3 text-zion-cyan mr-2 flex-shrink-0" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* ROI Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Proven Return on Investment
-          </h2>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-12">
-            Our clients consistently achieve remarkable results with AI workflow automation.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-4xl font-bold text-zion-cyan mb-2">300-500%</div>
-              <div className="text-white font-semibold mb-2">Efficiency Increase</div>
-              <p className="text-zion-slate-light text-sm">
-                Average improvement in workflow efficiency across all implementations
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-4xl font-bold text-zion-cyan mb-2">40-70%</div>
-              <div className="text-white font-semibold mb-2">Cost Reduction</div>
-              <p className="text-zion-slate-light text-sm">
-                Significant reduction in operational costs and manual processing
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-4xl font-bold text-zion-cyan mb-2">90%</div>
-              <div className="text-white font-semibold mb-2">Error Reduction</div>
-              <p className="text-zion-slate-light text-sm">
-                Dramatic reduction in human errors and process inconsistencies
-              </p>
-            </div>
-          </div>
+      {/* How It Works Section */}
+      <section className="py-16 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-bold text-center text-white mb-16"
+          >
+            How It Works
+          </motion.h2>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          >
+            {[
+              {
+                step: "01",
+                title: "Process Analysis",
+                description: "Our AI analyzes your existing workflows, identifying inefficiencies and optimization opportunities"
+              },
+              {
+                step: "02",
+                title: "Automation Design",
+                description: "We design intelligent automation workflows tailored to your specific business needs"
+              },
+              {
+                step: "03",
+                title: "Implementation & Optimization",
+                description: "Deploy the solution and continuously optimize based on real-time performance data"
+              }
+            ].map((step, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                className="text-center"
+              >
+                <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
+                  {step.step}
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">{step.title}</h3>
+                <p className="text-gray-300">{step.description}</p>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-zion-blue-dark mb-6">
-            Ready to Automate Your Workflows?
-          </h2>
-          <p className="text-xl text-zion-slate max-w-3xl mx-auto mb-8">
-            Start your AI workflow automation journey today and transform your business operations.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Start Free Trial
-            </button>
-            <button className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Schedule Demo
-            </button>
-            <button className="border-2 border-zion-blue text-zion-blue hover:bg-zion-blue hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Contact Sales
-            </button>
-          </div>
-          
-          <div className="mt-12 bg-zion-blue-light rounded-2xl p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-zion-blue-dark mb-4">Contact Information</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
-              <div>
-                <h4 className="text-zion-cyan font-semibold mb-2">Phone</h4>
-                <p className="text-zion-blue-dark">+1 302 464 0950</p>
-              </div>
-              <div>
-                <h4 className="text-zion-cyan font-semibold mb-2">Email</h4>
-                <p className="text-zion-blue-dark">kleber@ziontechgroup.com</p>
-              </div>
-              <div>
-                <h4 className="text-zion-cyan font-semibold mb-2">Website</h4>
-                <p className="text-zion-blue-dark">https://ziontechgroup.com</p>
-              </div>
-              <div>
-                <h4 className="text-zion-cyan font-semibold mb-2">Address</h4>
-                <p className="text-zion-blue-dark">364 E Main St STE 1008<br />Middletown DE 19709</p>
-              </div>
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/30 rounded-3xl p-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Automate Your Workflows?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join leading organizations that have transformed their operations with AI-powered workflow automation
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 rounded-full font-semibold text-white transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/25 flex items-center justify-center">
+                Start Your Automation Journey
+                <ArrowRightIcon className="w-5 h-5 ml-2" />
+              </button>
+              <button className="px-8 py-4 border border-purple-500 text-purple-400 hover:bg-purple-500/10 rounded-full font-semibold transition-all duration-300">
+                Schedule a Consultation
+              </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default AIWorkflowAutomation;
