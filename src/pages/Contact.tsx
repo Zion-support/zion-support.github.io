@@ -65,7 +65,7 @@ export default function Contact() {
     }
     
     // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData);
+    // Form submitted successfully - console.log removed for production
     
     // Reset form
     setFormData({

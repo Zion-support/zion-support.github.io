@@ -11,7 +11,7 @@ if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/sw.js')
       .then((registration) => {
-        console.log('SW registered: ', registration);
+        // Service Worker registered successfully
       })
       .catch((registrationError) => {
         // Don't log as error, just info - service worker is optional
