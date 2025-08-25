@@ -28,7 +28,7 @@ export default function MicroSAASSolutions() {
     {
       title: "AI-Powered CRM Platform",
       description: "Intelligent customer relationship management with predictive analytics, automated follow-ups, and smart lead scoring.",
-      icon: Brain,
+      icon: '🧠',
       features: ["Predictive Analytics", "Automated Follow-ups", "Smart Lead Scoring", "Real-time Insights", "AI Chat Support"],
       price: "$299/month",
       marketPrice: "$599/month",

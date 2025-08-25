@@ -216,6 +216,7 @@ export default function ComprehensiveServicesOverview() {
           title="Comprehensive Services Overview | Zion Tech Group"
           description="Explore our complete portfolio of AI-powered services, IT solutions, and innovative micro SAAS platforms. From legal tech to quantum computing, discover how we can transform your business."
           keywords="AI services, IT solutions, micro SAAS, cybersecurity, quantum computing, legal tech, fintech, healthcare AI, supply chain, energy management, comprehensive services"
+          type="website"
           image="/images/comprehensive-services-overview-og.jpg"
           url="https://ziontechgroup.com/comprehensive-services-overview"
         />

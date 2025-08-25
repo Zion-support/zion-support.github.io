@@ -36,25 +36,26 @@ import { EMERGING_TECH_SERVICES } from '../data/emergingTechServices';
 
 interface Service {
   id: string;
-  title: string;
+  title?: string;
+  name?: string;
   description: string;
   category: string;
-  subcategory: string;
+  subcategory?: string;
   price: number;
-  currency: string;
+  currency?: string;
   pricingModel: string;
   features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
+  benefits?: string[];
+  useCases?: string[];
+  targetAudience?: string[];
+  tags?: string[];
+  estimatedDelivery?: string;
+  supportLevel?: string;
+  marketPrice?: string;
   contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
+    phone?: string;
+    email?: string;
+    website?: string;
   };
   technology?: string[];
   integrations?: string[];
@@ -80,7 +81,8 @@ const InnovativeMicroSaasServices: React.FC = () => {
   
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const serviceTitle = service.title || service.name || '';
+    const matchesSearch = serviceTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
     return matchesCategory && matchesSearch;
@@ -239,7 +241,7 @@ const InnovativeMicroSaasServices: React.FC = () => {
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
+                      <h3 className="text-xl font-bold text-white mb-2">{service.title || service.name}</h3>
                       <p className="text-gray-400 text-sm mb-3">{service.description}</p>
                     </div>
                     <button
@@ -374,7 +376,7 @@ const InnovativeMicroSaasServices: React.FC = () => {
                       <div className="pt-4 border-t border-gray-700">
                         <div className="flex flex-col sm:flex-row gap-3">
                           <a
-                            href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title}`}
+                            href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title || service.name}`}
                             className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg text-center font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center"
                           >
                             <Mail size={20} className="mr-2" />

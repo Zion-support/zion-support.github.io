@@ -566,9 +566,9 @@ export const getEmergingTechServiceBySubcategory = (subcategory: string) => {
 };
 
 export const getFeaturedEmergingTechServices = () => {
-  return EMERGING_TECH_SERVICES.filter(service => service.rating >= 4.7).slice(0, 8);
+  return EMERGING_TECH_SERVICES.filter(service => service.price >= 5000).slice(0, 8);
 };
 
 export const getServicesByInnovationScore = (minScore: number) => {
-  return EMERGING_TECH_SERVICES.filter(service => service.innovationScore >= minScore);
+  return EMERGING_TECH_SERVICES.filter(service => service.price >= minScore);
 };
