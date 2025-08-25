@@ -3873,6 +3873,7 @@ export const SERVICE_CATEGORIES = [
 export const SERVICE_SUBCATEGORIES = [
   "Business Applications",
   "Quantum Computing",
+<<<<<<< HEAD
   "Digital Marketing",
   "Smart Contracts",
   "Threat Intelligence",
@@ -3897,4 +3898,553 @@ export const SERVICE_SUBCATEGORIES = [
   "Process Automation",
 =======
 >>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fe6d
+=======
+  "Healthcare Technology",
+  "Creative Design",
+  "Education Technology",
+  "Legal Technology"
+];
+
+// NEW INNOVATIVE SERVICES ADDED
+export const NEW_INNOVATIVE_SERVICES: ComprehensiveService[] = [
+  // AI-Powered Content Creation & Marketing
+  {
+    id: "ai-content-creation-suite",
+    title: "AI-Powered Content Creation & Marketing Suite",
+    description: "Comprehensive AI platform that generates, optimizes, and distributes high-quality content across multiple channels with intelligent targeting and performance analytics.",
+    category: "AI & Machine Learning",
+    subcategory: "Content Creation",
+    price: 399,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI content generation (blogs, social media, emails)",
+      "Multi-language content creation",
+      "SEO optimization with AI insights",
+      "Content performance analytics",
+      "Automated content scheduling",
+      "Brand voice consistency",
+      "Plagiarism detection",
+      "Content calendar management",
+      "Social media automation",
+      "A/B testing for content"
+    ],
+    benefits: [
+      "Increase content production by 300%",
+      "Improve SEO rankings by 45%",
+      "Reduce content creation costs by 60%",
+      "24/7 automated content generation",
+      "Multi-platform content distribution"
+    ],
+    useCases: [
+      "Digital marketing agencies",
+      "E-commerce businesses",
+      "Content creators",
+      "B2B companies",
+      "Educational institutions"
+    ],
+    targetAudience: [
+      "Content marketers",
+      "Social media managers",
+      "SEO specialists",
+      "Business owners",
+      "Marketing directors"
+    ],
+    tags: ["AI", "Content Creation", "Marketing Automation", "SEO", "Social Media"],
+    estimatedDelivery: "1-2 weeks",
+    supportLevel: "premium",
+    marketPrice: "$399 - $1,299/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // Advanced Customer Experience Platform
+  {
+    id: "advanced-customer-experience-platform",
+    title: "Advanced Customer Experience & Journey Analytics Platform",
+    description: "Intelligent CX platform that maps, analyzes, and optimizes customer journeys using AI to deliver personalized experiences and increase customer lifetime value.",
+    category: "Customer Experience",
+    subcategory: "Journey Analytics",
+    price: 599,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Customer journey mapping",
+      "Real-time behavior tracking",
+      "AI-powered personalization",
+      "Omnichannel experience management",
+      "Customer sentiment analysis",
+      "Predictive customer churn",
+      "Automated customer service",
+      "Loyalty program management",
+      "Customer feedback automation",
+      "ROI measurement tools"
+    ],
+    benefits: [
+      "Increase customer satisfaction by 35%",
+      "Reduce customer churn by 25%",
+      "Improve conversion rates by 40%",
+      "Personalized customer experiences",
+      "Data-driven CX optimization"
+    ],
+    useCases: [
+      "E-commerce platforms",
+      "SaaS companies",
+      "Financial services",
+      "Healthcare providers",
+      "Retail chains"
+    ],
+    targetAudience: [
+      "Customer experience managers",
+      "Marketing directors",
+      "Product managers",
+      "Customer success teams",
+      "Business analysts"
+    ],
+    tags: ["Customer Experience", "Journey Analytics", "Personalization", "Customer Analytics", "AI"],
+    estimatedDelivery: "2-3 weeks",
+    supportLevel: "premium",
+    marketPrice: "$599 - $2,499/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // Intelligent Supply Chain Optimization
+  {
+    id: "intelligent-supply-chain-optimization",
+    title: "Intelligent Supply Chain Optimization & Risk Management",
+    description: "AI-powered supply chain platform that optimizes inventory, predicts demand, manages suppliers, and mitigates risks using advanced analytics and machine learning.",
+    category: "Supply Chain Management",
+    subcategory: "Optimization",
+    price: 899,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Demand forecasting with AI",
+      "Inventory optimization",
+      "Supplier performance monitoring",
+      "Risk assessment and mitigation",
+      "Real-time supply chain visibility",
+      "Automated reordering",
+      "Cost optimization analytics",
+      "Sustainability tracking",
+      "Compliance monitoring",
+      "Performance benchmarking"
+    ],
+    benefits: [
+      "Reduce inventory costs by 30%",
+      "Improve forecast accuracy by 45%",
+      "Reduce supply chain risks by 60%",
+      "Optimize supplier relationships",
+      "Increase operational efficiency"
+    ],
+    useCases: [
+      "Manufacturing companies",
+      "Retail chains",
+      "E-commerce platforms",
+      "Distribution centers",
+      "Food and beverage companies"
+    ],
+    targetAudience: [
+      "Supply chain managers",
+      "Operations directors",
+      "Procurement managers",
+      "Logistics coordinators",
+      "Business executives"
+    ],
+    tags: ["Supply Chain", "Inventory Management", "Risk Management", "AI", "Optimization"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$899 - $3,999/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // Advanced HR Technology Platform
+  {
+    id: "advanced-hr-technology-platform",
+    title: "Advanced HR Technology & Talent Management Platform",
+    description: "Comprehensive HR platform that streamlines recruitment, employee management, performance tracking, and workforce analytics using AI and automation.",
+    category: "Human Resources",
+    subcategory: "Talent Management",
+    price: 499,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered recruitment automation",
+      "Applicant tracking system",
+      "Employee performance management",
+      "Learning and development tracking",
+      "Workforce analytics dashboard",
+      "Payroll integration",
+      "Benefits administration",
+      "Employee self-service portal",
+      "Compliance monitoring",
+      "Diversity and inclusion analytics"
+    ],
+    benefits: [
+      "Reduce hiring time by 50%",
+      "Improve employee retention by 30%",
+      "Streamline HR processes by 70%",
+      "Data-driven HR decisions",
+      "Enhanced employee experience"
+    ],
+    useCases: [
+      "Growing companies",
+      "Remote-first organizations",
+      "Enterprise businesses",
+      "Startups",
+      "Non-profit organizations"
+    ],
+    targetAudience: [
+      "HR managers",
+      "Recruiters",
+      "Business owners",
+      "Operations directors",
+      "Talent acquisition specialists"
+    ],
+    tags: ["HR Technology", "Talent Management", "Recruitment", "Performance Management", "AI"],
+    estimatedDelivery: "2-3 weeks",
+    supportLevel: "premium",
+    marketPrice: "$499 - $1,999/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // Intelligent Financial Planning Platform
+  {
+    id: "intelligent-financial-planning-platform",
+    title: "Intelligent Financial Planning & Wealth Management Platform",
+    description: "AI-powered financial planning platform that provides personalized investment advice, portfolio optimization, and comprehensive financial planning for individuals and businesses.",
+    category: "Financial Technology",
+    subcategory: "Wealth Management",
+    price: 299,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered investment recommendations",
+      "Portfolio optimization",
+      "Risk assessment and management",
+      "Financial goal planning",
+      "Tax optimization strategies",
+      "Retirement planning tools",
+      "Real-time market analysis",
+      "Automated rebalancing",
+      "Financial education resources",
+      "Multi-account aggregation"
+    ],
+    benefits: [
+      "Optimize investment returns by 20%",
+      "Reduce financial planning costs by 60%",
+      "Personalized financial advice",
+      "Automated portfolio management",
+      "Comprehensive financial planning"
+    ],
+    useCases: [
+      "Individual investors",
+      "Small business owners",
+      "Financial advisors",
+      "Retirement planning",
+      "Tax optimization"
+    ],
+    targetAudience: [
+      "Individual investors",
+      "Financial advisors",
+      "Business owners",
+      "Retirement planners",
+      "Tax professionals"
+    ],
+    tags: ["Financial Technology", "Wealth Management", "Investment", "AI", "Financial Planning"],
+    estimatedDelivery: "2-3 weeks",
+    supportLevel: "premium",
+    marketPrice: "$299 - $1,499/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // Advanced Legal Technology Platform
+  {
+    id: "advanced-legal-technology-platform",
+    title: "Advanced Legal Technology & Document Automation Platform",
+    description: "Comprehensive legal tech platform that automates document creation, contract management, legal research, and compliance monitoring using AI and machine learning.",
+    category: "Legal Technology",
+    subcategory: "Document Automation",
+    price: 799,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered document generation",
+      "Contract lifecycle management",
+      "Legal research automation",
+      "Compliance monitoring",
+      "E-signature integration",
+      "Document version control",
+      "Legal workflow automation",
+      "Risk assessment tools",
+      "Client portal",
+      "Billing and time tracking"
+    ],
+    benefits: [
+      "Reduce document creation time by 80%",
+      "Improve compliance accuracy by 90%",
+      "Streamline legal workflows by 70%",
+      "Reduce legal costs by 40%",
+      "Enhanced client service"
+    ],
+    useCases: [
+      "Law firms",
+      "Corporate legal departments",
+      "Legal consultants",
+      "Compliance officers",
+      "Contract managers"
+    ],
+    targetAudience: [
+      "Lawyers",
+      "Legal professionals",
+      "Compliance managers",
+      "Contract administrators",
+      "Legal operations managers"
+    ],
+    tags: ["Legal Technology", "Document Automation", "Contract Management", "Compliance", "AI"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$799 - $3,999/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // Intelligent Real Estate Technology Platform
+  {
+    id: "intelligent-real-estate-technology-platform",
+    title: "Intelligent Real Estate Technology & Property Management Platform",
+    description: "AI-powered real estate platform that streamlines property management, tenant screening, maintenance tracking, and market analysis for property owners and managers.",
+    category: "Real Estate Technology",
+    subcategory: "Property Management",
+    price: 399,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered tenant screening",
+      "Property maintenance tracking",
+      "Rent collection automation",
+      "Market analysis and pricing",
+      "Property performance analytics",
+      "Tenant portal and communication",
+      "Maintenance request management",
+      "Financial reporting",
+      "Document management",
+      "Mobile app for tenants"
+    ],
+    benefits: [
+      "Reduce vacancy rates by 25%",
+      "Improve maintenance efficiency by 40%",
+      "Streamline rent collection by 80%",
+      "Optimize rental pricing by 15%",
+      "Enhanced tenant satisfaction"
+    ],
+    useCases: [
+      "Property management companies",
+      "Real estate investors",
+      "Landlords",
+      "Property developers",
+      "Real estate agents"
+    ],
+    targetAudience: [
+      "Property managers",
+      "Real estate investors",
+      "Landlords",
+      "Property developers",
+      "Real estate professionals"
+    ],
+    tags: ["Real Estate Technology", "Property Management", "Tenant Screening", "Maintenance", "AI"],
+    estimatedDelivery: "2-3 weeks",
+    supportLevel: "premium",
+    marketPrice: "$399 - $1,999/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // Advanced Healthcare Technology Platform
+  {
+    id: "advanced-healthcare-technology-platform",
+    title: "Advanced Healthcare Technology & Patient Management Platform",
+    description: "Comprehensive healthcare platform that streamlines patient care, appointment scheduling, medical records management, and telehealth services using AI and automation.",
+    category: "Healthcare Technology",
+    subcategory: "Patient Management",
+    price: 699,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered patient scheduling",
+      "Electronic health records (EHR)",
+      "Telehealth platform",
+      "Patient portal and communication",
+      "Medical billing automation",
+      "Prescription management",
+      "Lab results tracking",
+      "Appointment reminders",
+      "Patient analytics dashboard",
+      "HIPAA compliance tools"
+    ],
+    benefits: [
+      "Reduce administrative overhead by 50%",
+      "Improve patient satisfaction by 35%",
+      "Streamline appointment scheduling by 70%",
+      "Enhance patient care coordination",
+      "Reduce medical errors"
+    ],
+    useCases: [
+      "Medical practices",
+      "Healthcare clinics",
+      "Dental offices",
+      "Specialty practices",
+      "Healthcare networks"
+    ],
+    targetAudience: [
+      "Healthcare administrators",
+      "Medical practice managers",
+      "Healthcare IT professionals",
+      "Medical practitioners",
+      "Healthcare consultants"
+    ],
+    tags: ["Healthcare Technology", "Patient Management", "EHR", "Telehealth", "Medical Billing"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$699 - $3,999/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // Intelligent Energy Management Platform
+  {
+    id: "intelligent-energy-management-platform",
+    title: "Intelligent Energy Management & Sustainability Platform",
+    description: "AI-powered energy management platform that optimizes energy consumption, monitors sustainability metrics, and provides renewable energy solutions for businesses and organizations.",
+    category: "Energy Management",
+    subcategory: "Sustainability",
+    price: 599,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Real-time energy monitoring",
+      "AI-powered consumption optimization",
+      "Sustainability reporting",
+      "Carbon footprint tracking",
+      "Renewable energy integration",
+      "Energy cost analysis",
+      "Predictive maintenance",
+      "Compliance monitoring",
+      "Energy efficiency recommendations",
+      "Green building certification support"
+    ],
+    benefits: [
+      "Reduce energy costs by 25%",
+      "Improve sustainability scores by 40%",
+      "Optimize energy consumption by 30%",
+      "Meet regulatory compliance",
+      "Enhanced corporate social responsibility"
+    ],
+    useCases: [
+      "Commercial buildings",
+      "Manufacturing facilities",
+      "Data centers",
+      "Educational institutions",
+      "Government buildings"
+    ],
+    targetAudience: [
+      "Facility managers",
+      "Sustainability officers",
+      "Energy managers",
+      "Building owners",
+      "Environmental consultants"
+    ],
+    tags: ["Energy Management", "Sustainability", "Energy Optimization", "Carbon Tracking", "AI"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$599 - $2,999/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // Advanced Creative Design Platform
+  {
+    id: "advanced-creative-design-platform",
+    title: "Advanced Creative Design & Brand Management Platform",
+    description: "AI-powered creative design platform that generates logos, marketing materials, brand assets, and design templates with intelligent customization and brand consistency.",
+    category: "Creative Design",
+    subcategory: "Brand Management",
+    price: 199,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered logo generation",
+      "Brand asset management",
+      "Marketing material templates",
+      "Social media design tools",
+      "Brand consistency monitoring",
+      "Design collaboration tools",
+      "Asset library management",
+      "Brand guidelines automation",
+      "Design analytics",
+      "Multi-format export options"
+    ],
+    benefits: [
+      "Reduce design costs by 70%",
+      "Speed up design production by 300%",
+      "Maintain brand consistency",
+      "Professional design quality",
+      "Scalable design operations"
+    ],
+    useCases: [
+      "Small businesses",
+      "Startups",
+      "Marketing agencies",
+      "Brand managers",
+      "Entrepreneurs"
+    ],
+    targetAudience: [
+      "Marketing managers",
+      "Brand managers",
+      "Small business owners",
+      "Designers",
+      "Entrepreneurs"
+    ],
+    tags: ["Creative Design", "Brand Management", "Logo Design", "Marketing Materials", "AI"],
+    estimatedDelivery: "1-2 weeks",
+    supportLevel: "standard",
+    marketPrice: "$199 - $799/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  }
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2669
 ];
