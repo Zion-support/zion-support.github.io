@@ -20,38 +20,38 @@ export interface AdvancedMicroSaasService {
     email: string;
     website: string;
   };
-  websiteUrl: string;
-  demoUrl?: string;
-  documentationUrl?: string;
+  technology: string[];
+  integrations: string[];
+  compliance: string[];
 }
 
 export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSaasService[] = [
-  // AI-Powered Financial Services
+  // AI-Powered Business Intelligence & Analytics
   {
-    id: "ai-financial-advisory-platform",
-    title: "AI Financial Advisory Platform",
-    description: "Intelligent financial advisory platform that provides personalized investment recommendations, portfolio optimization, and risk management using advanced AI algorithms.",
-    category: "Financial Technology",
-    subcategory: "AI Advisory",
-    price: 1200,
+    id: "ai-financial-advisor-platform",
+    title: "AI Financial Advisor Platform",
+    description: "Intelligent financial advisory platform that provides personalized investment recommendations, portfolio optimization, and real-time market analysis using advanced AI algorithms.",
+    category: "AI & Financial Technology",
+    subcategory: "Financial Advisory",
+    price: 299,
     currency: "$",
     pricingModel: "monthly",
     features: [
       "AI-powered investment recommendations",
-      "Portfolio optimization algorithms",
-      "Risk assessment and management",
+      "Portfolio risk assessment",
       "Real-time market analysis",
       "Tax optimization strategies",
-      "Retirement planning tools",
-      "Goal-based investing",
-      "Automated rebalancing"
+      "Goal-based financial planning",
+      "Automated rebalancing",
+      "Performance tracking",
+      "Regulatory compliance monitoring"
     ],
     benefits: [
       "Increase portfolio returns by 15-25%",
       "Reduce investment risk through AI analysis",
-      "Automated portfolio management",
-      "Tax-efficient investment strategies",
-      "Personalized financial planning"
+      "Automated tax optimization",
+      "24/7 market monitoring",
+      "Personalized financial advice"
     ],
     useCases: [
       "Individual investors",
@@ -61,315 +61,327 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSaasService[] = [
       "Tax optimization"
     ],
     targetAudience: [
-      "High-net-worth individuals",
+      "Individual investors",
       "Financial advisors",
-      "Investment firms",
+      "Wealth managers",
       "Retirement planners",
       "Tax professionals"
     ],
-    tags: ["AI", "Financial Advisory", "Investment Management", "Portfolio Optimization", "Risk Management"],
-    estimatedDelivery: "3-4 weeks",
+    tags: ["AI", "Financial Technology", "Investment", "Portfolio Management", "Tax Optimization"],
+    estimatedDelivery: "2-3 weeks",
     supportLevel: "premium",
-    marketPrice: "$1,200 - $3,500/month",
+    marketPrice: "$299 - $799/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    websiteUrl: "https://ziontechgroup.com/ai-financial-advisory"
+    technology: ["Machine Learning", "Natural Language Processing", "Predictive Analytics", "Blockchain"],
+    integrations: ["Trading platforms", "Banking APIs", "Tax software", "CRM systems"],
+    compliance: ["SEC", "FINRA", "GDPR", "SOC2"]
   },
 
-  // AI-Powered Healthcare Solutions
+  // Healthcare AI Solutions
   {
-    id: "ai-healthcare-diagnostic-platform",
-    title: "AI Healthcare Diagnostic Platform",
-    description: "Advanced healthcare diagnostic platform that uses AI to analyze medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations.",
-    category: "Healthcare Technology",
-    subcategory: "AI Diagnostics",
-    price: 2500,
+    id: "ai-healthcare-diagnostics-platform",
+    title: "AI Healthcare Diagnostics Platform",
+    description: "Advanced medical diagnostic platform that uses AI to analyze medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations.",
+    category: "AI & Healthcare",
+    subcategory: "Medical Diagnostics",
+    price: 899,
     currency: "$",
     pricingModel: "monthly",
     features: [
       "AI-powered medical image analysis",
-      "Symptom analysis and diagnosis",
+      "Symptom assessment algorithms",
+      "Patient data analytics",
       "Treatment recommendation engine",
-      "Patient data integration",
+      "Drug interaction checking",
       "Clinical decision support",
-      "Medical record management",
-      "Telemedicine integration",
-      "Compliance and security"
+      "Patient monitoring",
+      "HIPAA-compliant data handling"
     ],
     benefits: [
-      "Improve diagnostic accuracy by 30%",
-      "Reduce diagnosis time by 50%",
+      "Improve diagnostic accuracy by 30-40%",
+      "Reduce diagnosis time by 60%",
       "Lower healthcare costs",
       "Better patient outcomes",
-      "Streamlined clinical workflows"
+      "24/7 diagnostic support"
     ],
     useCases: [
       "Hospitals and clinics",
       "Radiology departments",
-      "Primary care practices",
-      "Specialist offices",
+      "Primary care physicians",
+      "Specialists",
       "Telemedicine platforms"
     ],
     targetAudience: [
       "Healthcare providers",
-      "Medical imaging centers",
+      "Medical institutions",
       "Telemedicine companies",
-      "Healthcare systems",
-      "Medical device companies"
+      "Health insurance companies",
+      "Medical researchers"
     ],
-    tags: ["AI", "Healthcare", "Medical Diagnostics", "Image Analysis", "Clinical Decision Support"],
+    tags: ["AI", "Healthcare", "Medical Diagnostics", "Telemedicine", "Medical Imaging"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$2,500 - $8,000/month",
+    marketPrice: "$899 - $2,500/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    websiteUrl: "https://ziontechgroup.com/ai-healthcare-diagnostics"
+    technology: ["Computer Vision", "Deep Learning", "Natural Language Processing", "Medical AI"],
+    integrations: ["PACS systems", "EMR/EHR", "Lab systems", "Telemedicine platforms"],
+    compliance: ["HIPAA", "FDA", "SOC2", "ISO 27001"]
   },
 
-  // AI-Powered Legal Technology
+  // Legal Technology Solutions
   {
-    id: "ai-legal-research-platform",
-    title: "AI Legal Research Platform",
-    description: "Intelligent legal research platform that uses AI to analyze case law, statutes, and legal documents to provide comprehensive legal insights and precedents.",
-    category: "Legal Technology",
-    subcategory: "AI Research",
-    price: 800,
+    id: "ai-legal-research-assistant",
+    title: "AI Legal Research Assistant",
+    description: "Intelligent legal research platform that uses AI to analyze case law, statutes, and legal documents to provide comprehensive legal insights and research assistance.",
+    category: "AI & Legal Technology",
+    subcategory: "Legal Research",
+    price: 199,
     currency: "$",
     pricingModel: "monthly",
     features: [
       "AI-powered case law analysis",
       "Statute interpretation",
-      "Legal precedent identification",
-      "Document comparison tools",
-      "Citation analysis",
-      "Legal trend analysis",
-      "Multi-jurisdiction research",
-      "Collaborative research tools"
+      "Legal document review",
+      "Precedent identification",
+      "Citation checking",
+      "Legal writing assistance",
+      "Case outcome prediction",
+      "Regulatory compliance tracking"
     ],
     benefits: [
       "Reduce research time by 70%",
-      "Improve case outcome predictions",
-      "Comprehensive legal analysis",
-      "Stay updated with legal trends",
-      "Collaborative research capabilities"
+      "Improve case outcomes",
+      "Stay updated on legal changes",
+      "Better client service",
+      "Cost-effective research"
     ],
     useCases: [
       "Law firms",
       "Corporate legal departments",
-      "Legal research organizations",
-      "Law schools",
-      "Government agencies"
+      "Government agencies",
+      "Legal researchers",
+      "Law schools"
     ],
     targetAudience: [
       "Attorneys",
-      "Legal researchers",
-      "Law students",
+      "Legal professionals",
+      "Law firms",
       "Corporate counsel",
-      "Legal consultants"
+      "Legal researchers"
     ],
-    tags: ["AI", "Legal Technology", "Case Law Analysis", "Legal Research", "Document Analysis"],
+    tags: ["AI", "Legal Technology", "Legal Research", "Case Law", "Compliance"],
     estimatedDelivery: "2-3 weeks",
     supportLevel: "premium",
-    marketPrice: "$800 - $2,500/month",
+    marketPrice: "$199 - $599/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    websiteUrl: "https://ziontechgroup.com/ai-legal-research"
+    technology: ["Natural Language Processing", "Machine Learning", "Text Analytics", "Knowledge Graphs"],
+    integrations: ["Legal databases", "Document management", "Case management", "Billing systems"],
+    compliance: ["GDPR", "SOC2", "ISO 27001", "Legal industry standards"]
   },
 
-  // AI-Powered Supply Chain Management
+  // Manufacturing Intelligence
   {
-    id: "ai-supply-chain-optimization",
-    title: "AI Supply Chain Optimization Platform",
-    description: "Intelligent supply chain management platform that uses AI to optimize inventory, predict demand, and streamline logistics operations for maximum efficiency.",
-    category: "Supply Chain Technology",
-    subcategory: "AI Optimization",
-    price: 1800,
+    id: "ai-manufacturing-optimization-platform",
+    title: "AI Manufacturing Optimization Platform",
+    description: "Intelligent manufacturing platform that uses AI to optimize production processes, predict maintenance needs, and improve quality control across manufacturing operations.",
+    category: "AI & Manufacturing",
+    subcategory: "Process Optimization",
+    price: 599,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "AI-powered demand forecasting",
-      "Inventory optimization",
-      "Route optimization",
-      "Supplier performance analysis",
-      "Risk assessment and mitigation",
-      "Real-time tracking and monitoring",
-      "Cost optimization",
-      "Sustainability metrics"
+      "Production process optimization",
+      "Predictive maintenance",
+      "Quality control automation",
+      "Supply chain optimization",
+      "Energy efficiency monitoring",
+      "Real-time analytics dashboard",
+      "IoT device integration",
+      "Performance benchmarking"
     ],
     benefits: [
-      "Reduce inventory costs by 20-30%",
-      "Improve delivery times by 25%",
-      "Optimize supply chain efficiency",
-      "Reduce waste and environmental impact",
-      "Better supplier relationships"
+      "Increase production efficiency by 25-35%",
+      "Reduce maintenance costs by 40%",
+      "Improve product quality",
+      "Optimize energy usage",
+      "Real-time monitoring"
     ],
     useCases: [
+      "Manufacturing plants",
+      "Production facilities",
+      "Quality control departments",
+      "Operations management",
+      "Supply chain optimization"
+    ],
+    targetAudience: [
       "Manufacturing companies",
-      "Retail chains",
-      "E-commerce businesses",
-      "Logistics providers",
-      "Distribution centers"
+      "Operations managers",
+      "Quality control teams",
+      "Plant managers",
+      "Supply chain professionals"
     ],
-    targetAudience: [
-      "Supply chain managers",
-      "Operations directors",
-      "Logistics coordinators",
-      "Procurement managers",
-      "Business owners"
-    ],
-    tags: ["AI", "Supply Chain", "Inventory Management", "Logistics", "Demand Forecasting"],
+    tags: ["AI", "Manufacturing", "IoT", "Predictive Analytics", "Quality Control"],
     estimatedDelivery: "3-4 weeks",
-    supportLevel: "premium",
-    marketPrice: "$1,800 - $4,500/month",
+    supportLevel: "enterprise",
+    marketPrice: "$599 - $1,500/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    websiteUrl: "https://ziontechgroup.com/ai-supply-chain"
+    technology: ["Machine Learning", "IoT", "Computer Vision", "Predictive Analytics"],
+    integrations: ["ERP systems", "MES", "SCADA", "Quality management systems"],
+    compliance: ["ISO 9001", "ISO 14001", "SOC2", "Industry 4.0 standards"]
   },
 
-  // AI-Powered Human Resources
+  // Retail Intelligence Platform
   {
-    id: "ai-hr-talent-management",
-    title: "AI HR Talent Management Platform",
-    description: "Comprehensive HR platform that uses AI to streamline recruitment, employee development, performance management, and workforce analytics.",
-    category: "Human Resources",
-    subcategory: "AI Management",
-    price: 950,
+    id: "ai-retail-intelligence-platform",
+    title: "AI Retail Intelligence Platform",
+    description: "Comprehensive retail analytics platform that uses AI to analyze customer behavior, optimize inventory, and personalize shopping experiences for increased sales and customer satisfaction.",
+    category: "AI & Retail Technology",
+    subcategory: "Customer Intelligence",
+    price: 399,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "AI-powered candidate screening",
-      "Skills gap analysis",
-      "Performance prediction",
-      "Employee engagement monitoring",
-      "Learning path recommendations",
-      "Succession planning",
-      "Diversity and inclusion analytics",
-      "Workforce planning tools"
+      "Customer behavior analysis",
+      "Personalized recommendations",
+      "Inventory optimization",
+      "Demand forecasting",
+      "Price optimization",
+      "Customer segmentation",
+      "Loyalty program management",
+      "Omnichannel analytics"
     ],
     benefits: [
-      "Improve hiring quality by 40%",
-      "Reduce time-to-hire by 50%",
-      "Increase employee retention",
-      "Better performance management",
-      "Data-driven HR decisions"
+      "Increase sales by 20-30%",
+      "Improve customer retention",
+      "Optimize inventory levels",
+      "Better pricing strategies",
+      "Enhanced customer experience"
     ],
     useCases: [
-      "HR departments",
-      "Recruitment agencies",
-      "Corporate training",
-      "Performance management",
-      "Workforce planning"
+      "E-commerce platforms",
+      "Retail stores",
+      "Online marketplaces",
+      "Brand manufacturers",
+      "Retail chains"
     ],
     targetAudience: [
-      "HR professionals",
-      "Recruiters",
-      "Training managers",
-      "Business leaders",
-      "HR consultants"
+      "Retailers",
+      "E-commerce businesses",
+      "Marketing teams",
+      "Merchandising teams",
+      "Customer experience managers"
     ],
-    tags: ["AI", "Human Resources", "Talent Management", "Recruitment", "Performance Analytics"],
+    tags: ["AI", "Retail", "E-commerce", "Customer Analytics", "Personalization"],
     estimatedDelivery: "2-3 weeks",
     supportLevel: "premium",
-    marketPrice: "$950 - $2,800/month",
+    marketPrice: "$399 - $999/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    websiteUrl: "https://ziontechgroup.com/ai-hr-talent"
+    technology: ["Machine Learning", "Recommendation Systems", "Predictive Analytics", "Big Data"],
+    integrations: ["E-commerce platforms", "POS systems", "CRM", "Marketing automation"],
+    compliance: ["GDPR", "CCPA", "SOC2", "PCI DSS"]
   },
 
-  // AI-Powered Real Estate Technology
+  // Real Estate Technology
   {
-    id: "ai-real-estate-analytics",
+    id: "ai-real-estate-analytics-platform",
     title: "AI Real Estate Analytics Platform",
-    description: "Advanced real estate platform that uses AI to analyze market trends, property valuations, investment opportunities, and market predictions.",
-    category: "Real Estate Technology",
-    subcategory: "AI Analytics",
-    price: 1200,
+    description: "Intelligent real estate platform that uses AI to analyze market trends, predict property values, and provide investment insights for real estate professionals and investors.",
+    category: "AI & Real Estate",
+    subcategory: "Market Analytics",
+    price: 299,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "AI-powered property valuation",
       "Market trend analysis",
-      "Investment opportunity identification",
-      "Risk assessment",
-      "Comparative market analysis",
-      "Rental yield predictions",
-      "Market forecasting",
-      "Portfolio optimization"
+      "Property value prediction",
+      "Investment opportunity scoring",
+      "Neighborhood analytics",
+      "Rental market insights",
+      "Property comparison tools",
+      "Investment portfolio tracking",
+      "Market forecasting"
     ],
     benefits: [
-      "Improve investment decisions by 35%",
-      "Accurate property valuations",
+      "Make better investment decisions",
       "Identify market opportunities",
+      "Optimize property pricing",
       "Reduce investment risk",
-      "Optimize real estate portfolios"
+      "Stay ahead of market trends"
     ],
     useCases: [
-      "Real estate investors",
-      "Property managers",
       "Real estate agents",
-      "Investment firms",
-      "Property developers"
+      "Property investors",
+      "Real estate companies",
+      "Property managers",
+      "Financial institutions"
     ],
     targetAudience: [
-      "Real estate investors",
-      "Property managers",
       "Real estate professionals",
-      "Investment advisors",
-      "Property developers"
+      "Property investors",
+      "Real estate companies",
+      "Property managers",
+      "Financial advisors"
     ],
-    tags: ["AI", "Real Estate", "Property Analytics", "Investment Analysis", "Market Forecasting"],
+    tags: ["AI", "Real Estate", "Market Analytics", "Investment", "Predictive Analytics"],
     estimatedDelivery: "2-3 weeks",
     supportLevel: "premium",
-    marketPrice: "$1,200 - $3,200/month",
+    marketPrice: "$299 - $799/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    websiteUrl: "https://ziontechgroup.com/ai-real-estate"
+    technology: ["Machine Learning", "Predictive Analytics", "Geospatial Analysis", "Big Data"],
+    integrations: ["MLS systems", "Property databases", "Financial platforms", "CRM systems"],
+    compliance: ["GDPR", "SOC2", "Real estate regulations", "Financial compliance"]
   },
 
-  // AI-Powered Education Technology
+  // Education Technology
   {
     id: "ai-adaptive-learning-platform",
     title: "AI Adaptive Learning Platform",
-    description: "Intelligent learning platform that adapts to individual student needs, providing personalized learning experiences and real-time performance analytics.",
-    category: "Education Technology",
-    subcategory: "AI Learning",
-    price: 750,
+    description: "Intelligent learning platform that uses AI to personalize educational content, track student progress, and adapt learning paths for optimal educational outcomes.",
+    category: "AI & Education Technology",
+    subcategory: "Personalized Learning",
+    price: 199,
     currency: "$",
     pricingModel: "monthly",
     features: [
       "Personalized learning paths",
       "Adaptive content delivery",
-      "Real-time performance tracking",
-      "Learning style identification",
-      "Automated assessment",
-      "Progress analytics",
-      "Collaborative learning tools",
-      "Parent and teacher dashboards"
+      "Progress tracking",
+      "Performance analytics",
+      "Content recommendation",
+      "Assessment automation",
+      "Learning analytics dashboard",
+      "Multi-modal learning support"
     ],
     benefits: [
-      "Improve learning outcomes by 45%",
-      "Personalized education experience",
-      "Better student engagement",
-      "Efficient learning progress",
-      "Data-driven teaching strategies"
+      "Improve learning outcomes by 40%",
+      "Personalize education experience",
+      "Track student progress",
+      "Optimize content delivery",
+      "Increase engagement"
     ],
     useCases: [
       "K-12 schools",
@@ -381,73 +393,187 @@ export const ADVANCED_MICRO_SAAS_SERVICES: AdvancedMicroSaasService[] = [
     targetAudience: [
       "Educational institutions",
       "Teachers and instructors",
-      "Corporate trainers",
-      "Online educators",
-      "Educational technology companies"
+      "Training departments",
+      "EdTech companies",
+      "Students and learners"
     ],
-    tags: ["AI", "Education", "Adaptive Learning", "Personalized Education", "Learning Analytics"],
+    tags: ["AI", "Education", "Personalized Learning", "Adaptive Learning", "EdTech"],
     estimatedDelivery: "2-3 weeks",
     supportLevel: "premium",
-    marketPrice: "$750 - $2,200/month",
+    marketPrice: "$199 - $599/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    websiteUrl: "https://ziontechgroup.com/ai-adaptive-learning"
+    technology: ["Machine Learning", "Natural Language Processing", "Adaptive Algorithms", "Learning Analytics"],
+    integrations: ["LMS systems", "Student information systems", "Content management", "Assessment platforms"],
+    compliance: ["FERPA", "COPPA", "GDPR", "SOC2"]
   },
 
-  // AI-Powered Manufacturing
+  // Logistics & Supply Chain
   {
-    id: "ai-manufacturing-optimization",
-    title: "AI Manufacturing Optimization Platform",
-    description: "Intelligent manufacturing platform that uses AI to optimize production processes, predict maintenance needs, and improve quality control.",
-    category: "Manufacturing Technology",
-    subcategory: "AI Optimization",
-    price: 2200,
+    id: "ai-logistics-optimization-platform",
+    title: "AI Logistics Optimization Platform",
+    description: "Intelligent logistics platform that uses AI to optimize routes, predict delivery times, and manage supply chain operations for maximum efficiency and cost savings.",
+    category: "AI & Logistics",
+    subcategory: "Supply Chain Optimization",
+    price: 499,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Predictive maintenance",
-      "Quality control automation",
-      "Production optimization",
-      "Supply chain integration",
-      "Real-time monitoring",
-      "Performance analytics",
-      "Energy optimization",
-      "Safety monitoring"
+      "Route optimization",
+      "Delivery time prediction",
+      "Supply chain analytics",
+      "Inventory management",
+      "Fleet management",
+      "Real-time tracking",
+      "Cost optimization",
+      "Performance analytics"
     ],
     benefits: [
-      "Reduce downtime by 30%",
-      "Improve product quality by 25%",
-      "Increase production efficiency",
-      "Lower operational costs",
-      "Better safety compliance"
+      "Reduce logistics costs by 25-35%",
+      "Improve delivery accuracy",
+      "Optimize routes",
+      "Better inventory management",
+      "Real-time visibility"
     ],
     useCases: [
-      "Manufacturing plants",
-      "Production facilities",
-      "Quality control departments",
-      "Maintenance teams",
-      "Operations management"
+      "Logistics companies",
+      "E-commerce businesses",
+      "Manufacturing companies",
+      "Retail chains",
+      "Distribution centers"
     ],
     targetAudience: [
-      "Manufacturing managers",
-      "Operations directors",
-      "Quality control managers",
-      "Maintenance supervisors",
-      "Plant managers"
+      "Logistics managers",
+      "Supply chain professionals",
+      "Operations teams",
+      "Fleet managers",
+      "Business owners"
     ],
-    tags: ["AI", "Manufacturing", "Predictive Maintenance", "Quality Control", "Production Optimization"],
-    estimatedDelivery: "4-6 weeks",
+    tags: ["AI", "Logistics", "Supply Chain", "Route Optimization", "Fleet Management"],
+    estimatedDelivery: "3-4 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$2,200 - $6,500/month",
+    marketPrice: "$499 - $1,200/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    websiteUrl: "https://ziontechgroup.com/ai-manufacturing"
+    technology: ["Machine Learning", "Optimization Algorithms", "IoT", "Predictive Analytics"],
+    integrations: ["WMS", "TMS", "ERP systems", "GPS tracking", "Inventory systems"],
+    compliance: ["ISO 28000", "SOC2", "Supply chain security", "Transportation regulations"]
+  },
+
+  // Energy Management
+  {
+    id: "ai-energy-optimization-platform",
+    title: "AI Energy Optimization Platform",
+    description: "Intelligent energy management platform that uses AI to optimize energy consumption, predict usage patterns, and reduce costs for commercial and industrial facilities.",
+    category: "AI & Energy Technology",
+    subcategory: "Energy Management",
+    price: 399,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Energy consumption analysis",
+      "Usage pattern prediction",
+      "Cost optimization",
+      "Renewable energy integration",
+      "Demand response management",
+      "Real-time monitoring",
+      "Performance analytics",
+      "Sustainability reporting"
+    ],
+    benefits: [
+      "Reduce energy costs by 20-30%",
+      "Improve energy efficiency",
+      "Optimize renewable energy usage",
+      "Better sustainability",
+      "Real-time monitoring"
+    ],
+    useCases: [
+      "Commercial buildings",
+      "Industrial facilities",
+      "Data centers",
+      "Retail stores",
+      "Office buildings"
+    ],
+    targetAudience: [
+      "Facility managers",
+      "Energy managers",
+      "Sustainability officers",
+      "Building owners",
+      "Operations teams"
+    ],
+    tags: ["AI", "Energy", "Sustainability", "Smart Buildings", "IoT"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "premium",
+    marketPrice: "$399 - $999/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technology: ["Machine Learning", "IoT", "Predictive Analytics", "Energy Analytics"],
+    integrations: ["Building management systems", "Smart meters", "Renewable energy systems", "Utility APIs"],
+    compliance: ["ISO 50001", "LEED", "SOC2", "Energy regulations"]
+  },
+
+  // Marketing Intelligence
+  {
+    id: "ai-marketing-intelligence-platform",
+    title: "AI Marketing Intelligence Platform",
+    description: "Comprehensive marketing analytics platform that uses AI to analyze customer behavior, optimize campaigns, and provide actionable insights for better marketing ROI.",
+    category: "AI & Marketing Technology",
+    subcategory: "Marketing Analytics",
+    price: 299,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Customer behavior analysis",
+      "Campaign optimization",
+      "ROI tracking",
+      "Customer segmentation",
+      "Predictive analytics",
+      "A/B testing automation",
+      "Multi-channel attribution",
+      "Performance reporting"
+    ],
+    benefits: [
+      "Increase marketing ROI by 30-50%",
+      "Optimize campaign performance",
+      "Better customer targeting",
+      "Data-driven decisions",
+      "Automated optimization"
+    ],
+    useCases: [
+      "Marketing agencies",
+      "E-commerce businesses",
+      "B2B companies",
+      "SaaS companies",
+      "Retail brands"
+    ],
+    targetAudience: [
+      "Marketing professionals",
+      "Digital marketers",
+      "Marketing managers",
+      "Business owners",
+      "Growth teams"
+    ],
+    tags: ["AI", "Marketing", "Analytics", "Customer Intelligence", "ROI Optimization"],
+    estimatedDelivery: "2-3 weeks",
+    supportLevel: "premium",
+    marketPrice: "$299 - $799/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technology: ["Machine Learning", "Predictive Analytics", "Customer Analytics", "Marketing Automation"],
+    integrations: ["CRM systems", "Marketing platforms", "Analytics tools", "Social media platforms"],
+    compliance: ["GDPR", "CCPA", "SOC2", "Marketing regulations"]
   }
 ];
 
