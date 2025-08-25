@@ -1,5 +1,20 @@
 {
   "summary": {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    "totalFiles": 4,
+    "filesWithIssues": 4,
+    "totalIssues": 0,
+    "totalWarnings": 4,
+    "buildBreakingFiles": 0,
+    "canBuild": true
+  },
+  "results": [
+    {
+      "file": "pages/api/email-validator.ts",
+=======
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
     "totalFiles": 36,
     "filesWithIssues": 36,
     "totalIssues": 31,
@@ -10,6 +25,7 @@
   "results": [
     {
       "file": "pages/_app.js",
+<<<<<<< HEAD
       "issues": [],
               "warnings": [
           {
@@ -25,36 +41,104 @@
         "file": "pages/admin/kpi.tsx",
       "issues": [],
               "warnings": [
+=======
+>>>>>>> a8e698aa2a3f65846644470f902bc566286f2743
+      "issues": [],
+      "warnings": [
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
         {
           "type": "WARNING",
           "code": "INCOMPLETE_HTML",
           "message": "Incomplete HTML tags detected",
+<<<<<<< HEAD
           "line": 0,
+=======
+<<<<<<< HEAD
+          "line": 81,
+=======
+          "line": 0,
+>>>>>>> a8e698aa2a3f65846644470f902bc566286f2743
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
           "severity": "warning"
         }
       ]
     },
     {
+<<<<<<< HEAD
       "file": "pages/ai-consciousness-evolution-2025.tsx",
       "issues": [],
               "warnings": [
+=======
+<<<<<<< HEAD
+      "file": "pages/api/password-strength.ts",
+=======
+      "file": "pages/admin/kpi.tsx",
+>>>>>>> a8e698aa2a3f65846644470f902bc566286f2743
+      "issues": [],
+      "warnings": [
         {
           "type": "WARNING",
           "code": "INCOMPLETE_HTML",
           "message": "Incomplete HTML tags detected",
-          "line": 6,
+<<<<<<< HEAD
+          "line": 68,
+=======
+          "line": 0,
+>>>>>>> a8e698aa2a3f65846644470f902bc566286f2743
           "severity": "warning"
         }
       ]
     },
     {
-      "file": "pages/ai-customer-service-platform.tsx",
+<<<<<<< HEAD
+      "file": "pages/api/text-analyzer.ts",
+=======
+      "file": "pages/ai-consciousness-evolution-2025.tsx",
+>>>>>>> a8e698aa2a3f65846644470f902bc566286f2743
       "issues": [],
-              "warnings": [
+      "warnings": [
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
         {
           "type": "WARNING",
           "code": "INCOMPLETE_HTML",
           "message": "Incomplete HTML tags detected",
+<<<<<<< HEAD
+          "line": 6,
+=======
+<<<<<<< HEAD
+          "line": 71,
+=======
+          "line": 6,
+>>>>>>> a8e698aa2a3f65846644470f902bc566286f2743
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+          "severity": "warning"
+        }
+      ]
+    },
+    {
+<<<<<<< HEAD
+      "file": "pages/ai-customer-service-platform.tsx",
+      "issues": [],
+              "warnings": [
+=======
+<<<<<<< HEAD
+      "file": "pages/api/url-shortener.ts",
+=======
+      "file": "pages/ai-customer-service-platform.tsx",
+>>>>>>> a8e698aa2a3f65846644470f902bc566286f2743
+      "issues": [],
+      "warnings": [
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+        {
+          "type": "WARNING",
+          "code": "INCOMPLETE_HTML",
+          "message": "Incomplete HTML tags detected",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          "line": 31,
+=======
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
           "line": 6,
           "severity": "warning"
         }
@@ -700,11 +784,25 @@
           "code": "PAGE_TOO_SHORT",
           "message": "Page content seems too short, may be incomplete",
           "line": 0,
+<<<<<<< HEAD
+=======
+>>>>>>> a8e698aa2a3f65846644470f902bc566286f2743
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
           "severity": "warning"
         }
       ]
     }
   ],
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  "results": [],
+  "buildBreakingFiles": [],
+  "generatedAt": "2025-08-20T19:21:03.555Z"
+=======
+  "generatedAt": "2025-08-20T20:44:48.331Z"
+=======
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
   "buildBreakingFiles": [
     "pages/features/ai-content-generation.tsx",
     "pages/franchise-portal/index.tsx",
@@ -719,4 +817,8 @@
     "pages/zion/ipfs.tsx"
   ],
   "generatedAt": "2025-08-24T03:18:48.442Z"
+<<<<<<< HEAD
+=======
+>>>>>>> a8e698aa2a3f65846644470f902bc566286f2743
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 }

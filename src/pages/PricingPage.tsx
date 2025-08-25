@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { SEO } from '@/components/SEO';
 import { Check, Star, Zap, Brain, Server, Shield } from 'lucide-react';
+=======
+import { Phone, Mail, CheckCircle, ArrowRight } from 'lucide-react';
+import { SERVICE_PRICING_TIERS, CONTACT_INFO, SERVICE_GUARANTEES } from '../data/comprehensiveServices';
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 
 const PricingPage: React.FC = () => {
   const [selectedPlan, setSelectedPlan] = useState('monthly');

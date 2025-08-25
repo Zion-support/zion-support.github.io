@@ -100,48 +100,49 @@ export function Header() {
       ]
     },
     {
-      title: 'Emerging Technologies',
-      icon: Rocket,
-      description: 'Cutting-edge technology solutions for the future',
-      color: 'from-green-500 to-emerald-500',
+      title: 'Cybersecurity & Compliance',
+      icon: Shield,
+      description: 'Advanced security and compliance solutions',
+      color: 'from-red-500 to-orange-500',
       services: [
-        { name: 'Quantum Computing', path: '/services/quantum-computing', description: 'Next-generation computing power', icon: Cpu },
-        { name: 'Blockchain Solutions', path: '/services/blockchain', description: 'Decentralized technology solutions', icon: Lock },
-        { name: 'IoT & Smart Cities', path: '/services/iot-smart-cities', description: 'Connected urban infrastructure', icon: Globe },
-        { name: '5G & Connectivity', path: '/services/5g-connectivity', description: 'High-speed network solutions', icon: Network },
-        { name: 'Augmented Reality', path: '/services/augmented-reality', description: 'Immersive technology experiences', icon: Palette }
+        { name: 'Threat Detection', path: '/services/threat-detection', description: 'Advanced threat intelligence', icon: Shield },
+        { name: 'Compliance Automation', path: '/soc2-compliance-automation', description: 'Automated compliance management', icon: Lock },
+        { name: 'Zero Trust Security', path: '/zero-trust-network-architecture', description: 'Modern security architecture', icon: Shield },
+        { name: 'Security Analytics', path: '/services/security-analytics', description: 'Security intelligence platform', icon: BarChart3 }
       ]
     }
   ];
 
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      // Implement search functionality
-      console.log('Searching for:', searchQuery);
-    }
-  };
-
-  const toggleDropdown = (dropdownName: string) => {
-    setActiveDropdown(activeDropdown === dropdownName ? null : dropdownName);
+  const toggleDropdown = (name: string) => {
+    setActiveDropdown(activeDropdown === name ? null : name);
   };
 
   const closeDropdowns = () => {
     setActiveDropdown(null);
   };
 
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      // Handle search logic here
+      console.log('Searching for:', searchQuery);
+    }
+  };
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-zion-slate/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      isScrolled ? 'bg-zion-slate-dark/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">Z</span>
+              <Brain className="w-6 h-6 text-white" />
             </div>
-            <span className="text-white font-bold text-xl lg:text-2xl">Zion Tech Group</span>
+            <span className="text-2xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+              ZION
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -149,59 +150,46 @@ export function Header() {
             {navigation.map((item) => (
               <div key={item.name} className="relative">
                 {item.dropdown ? (
-                  <button
-                    onClick={() => toggleDropdown(item.name)}
-                    onMouseEnter={() => setActiveDropdown(item.name)}
-                    onMouseLeave={closeDropdowns}
-                    className="flex items-center space-x-1 text-white hover:text-zion-cyan transition-colors py-2"
-                  >
-                    <span>{item.name}</span>
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </button>
-                ) : (
-                  <Link
-                    to={item.href}
-                    className="text-white hover:text-zion-cyan transition-colors py-2"
-                  >
-                    {item.name}
-                  </Link>
-                )}
-
-                {/* Dropdown Menu */}
-                {item.dropdown && activeDropdown === item.name && (
                   <div
-                    className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark border border-zion-blue-light/30 rounded-lg shadow-xl backdrop-blur-md"
                     onMouseEnter={() => setActiveDropdown(item.name)}
                     onMouseLeave={closeDropdowns}
                   >
-                    <div className="p-4">
-                      <div className="grid grid-cols-1 gap-3">
-                        {item.dropdown.map((dropdownItem) => (
-                          <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.href}
-                            className="flex items-start space-x-3 p-3 rounded-lg hover:bg-zion-slate-light/20 transition-colors group"
-                          >
-                            <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0">
-                              <span className="text-white text-sm font-semibold">
-                                {dropdownItem.name.charAt(0)}
-                              </span>
-                            </div>
-                            <div>
+                    <button className="flex items-center space-x-1 text-white hover:text-zion-cyan transition-colors py-2">
+                      <span>{item.name}</span>
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                    {activeDropdown === item.name && (
+                      <div className="absolute top-full left-0 mt-2 w-64 bg-zion-slate-dark border border-zion-blue-light/30 rounded-lg shadow-xl backdrop-blur-md">
+                        <div className="p-4 space-y-2">
+                          {item.dropdown.map((dropdownItem) => (
+                            <Link
+                              key={dropdownItem.name}
+                              to={dropdownItem.href}
+                              className="block p-3 rounded-lg hover:bg-zion-slate-light/20 transition-colors group"
+                            >
                               <div className="font-medium text-white group-hover:text-zion-cyan transition-colors">
                                 {dropdownItem.name}
                               </div>
-                              <div className="text-sm text-zion-slate-light">
+                              <div className="text-sm text-zion-slate-light mt-1">
                                 {dropdownItem.description}
                               </div>
-                            </div>
-                          </Link>
-                        ))}
+                            </Link>
+                          ))}
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </div>
+                ) : (
+                  <Link
+                    to={item.href}
+                    className={`text-white hover:text-zion-cyan transition-colors py-2 ${
+                      location.pathname === item.href ? 'text-zion-cyan' : ''
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
                 )}
               </div>
             ))}
@@ -380,3 +368,5 @@ export function Header() {
     </header>
   );
 }
+
+export default Header;

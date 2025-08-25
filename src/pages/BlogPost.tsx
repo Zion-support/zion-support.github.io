@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -19,6 +20,7 @@ import {
   Link
 } from 'lucide-react';
 
+<<<<<<< HEAD
 const BlogPost = () => {
   const blogPost = {
     id: 1,
@@ -26,6 +28,32 @@ const BlogPost = () => {
     excerpt: "Discover how artificial intelligence is reshaping industries and what businesses need to know to stay competitive in the AI revolution.",
     content: `
       <p class="mb-6">Artificial Intelligence has evolved from a futuristic concept to a fundamental business tool that's transforming industries across the globe. As we move through 2024, the pace of AI adoption is accelerating, and businesses that fail to adapt risk being left behind.</p>
+=======
+import { useState, useEffect } from "react";
+import { useParams, Link, useNavigate } from "react-router-dom";
+import { SEO } from "@/components/SEO";
+import { Button } from "@/components/ui/Button";
+import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from "lucide-react";
+import type { BlogPost as BlogPostType } from "@/types/blog";
+import { Separator } from "@/components/ui/separator";
+
+// Importing the sample blog posts - in a real app, you would fetch this from an API
+import { BLOG_POSTS } from "@/data/blog-posts";
+
+export default function BlogPost() {
+  const { slug } = useParams() as { slug: string };
+  const navigate = useNavigate();
+  const [post, setPost] = useState<BlogPostType | null>(null);
+  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
+  const [showShareMenu, setShowShareMenu] = useState(false);
+  
+  useEffect(() => {
+    // Find the current post by slug
+    const currentPost = BLOG_POSTS.find(p => p.slug === slug);
+    
+    if (currentPost) {
+      setPost(currentPost);
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
       
       <h2 class="text-2xl font-bold text-white mb-4 mt-8">Key AI Trends Shaping 2024</h2>
       
@@ -123,6 +151,9 @@ const BlogPost = () => {
       replies: 1
     }
   ];
+=======
+
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
 
   return (
     <div className="min-h-screen bg-background py-20">

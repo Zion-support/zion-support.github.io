@@ -1,96 +1,289 @@
 {
-  "name": "Zion Tech Group",
+<<<<<<< HEAD
+<<<<<<< HEAD
+  "name": "Zion Tech Group - Micro SAAS Services",
   "short_name": "Zion Tech",
-  "description": "AI-Powered Technology Solutions & Enterprise Services",
+  "description": "Transform your business with Zion Tech Group's micro SAAS services. AI-powered solutions for productivity, finance, marketing, CRM, analytics, and more.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#000000",
+  "background_color": "#0f172a",
+  "theme_color": "#10B981",
+<<<<<<< HEAD
+=======
+  "name": "Zion Tech Group - AI-Powered Business Solutions",
+  "short_name": "Zion Tech",
+  "description": "Transform your business with cutting-edge artificial intelligence solutions, comprehensive IT services, and innovative micro-SaaS platforms.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#667eea",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
+=======
+  "name": "Zion Tech Group - AI-Powered Innovation & Enterprise IT Solutions",
+  "short_name": "Zion Tech Group",
+  "description": "Transform your business with cutting-edge AI solutions, comprehensive IT services, and innovative micro SAAS applications. Expert consulting, cybersecurity, and digital transformation.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e40af",
   "theme_color": "#1e40af",
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en",
-  "categories": ["business", "productivity", "technology"],
+  "dir": "ltr",
+  "categories": [
+    "business",
+    "productivity",
+    "technology",
+    "utilities"
+  ],
   "icons": [
     {
-      "src": "/images/zion-tech-group-logo-192.png",
-      "sizes": "192x192",
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      "src": "/icons/icon-72x72.png",
+=======
+      "src": "/images/icon-72x72.png",
+>>>>>>> origin/main
+      "sizes": "72x72",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "maskable any"
     },
     {
-      "src": "/images/zion-tech-group-logo-512.png",
+      "src": "/images/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/images/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/images/icon-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/images/icon-152x152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+<<<<<<< HEAD
+      "src": "/icons/icon-192x192.png",
+<<<<<<< HEAD
+=======
+      "src": "/logo192.png",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
+=======
+      "src": "/images/icon-192x192.png",
+>>>>>>> origin/main
+=======
+>>>>>>> origin/main
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      "src": "/icons/icon-384x384.png",
+=======
+      "src": "/images/icon-384x384.png",
+>>>>>>> origin/main
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+<<<<<<< HEAD
+=======
+      "src": "/logo512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/images/zion-tech-group-logo-1024.png",
-      "sizes": "1024x1024",
+      "src": "/logo192.png",
+      "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "/logo512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Zion Tech Group Homepage"
+    },
+    {
+      "src": "/screenshot-narrow.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Zion Tech Group Mobile View"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/images/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Zion Tech Group Homepage"
+    },
+    {
+      "src": "/images/screenshot-narrow.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Zion Tech Group Mobile View"
+=======
+>>>>>>> origin/main
     }
   ],
   "shortcuts": [
     {
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "name": "Micro SAAS Services",
+      "short_name": "Services",
+      "description": "Browse our micro SAAS services",
+      "url": "/micro-saas-services",
+=======
       "name": "AI Solutions",
-      "short_name": "AI",
+      "short_name": "AI Solutions",
       "description": "Explore our AI-powered solutions",
       "url": "/ai-solutions",
+>>>>>>> origin/main
       "icons": [
         {
           "src": "/images/ai-solutions-icon.png",
           "sizes": "96x96"
+=======
+      "name": "AI Solutions",
+      "short_name": "AI",
+      "description": "Explore our AI-powered business solutions",
+      "url": "/ai-solutions",
+      "icons": [
+        {
+          "src": "/logo192.png",
+          "sizes": "192x192"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
         }
       ]
     },
     {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      "name": "Pricing",
+      "short_name": "Pricing",
+      "description": "View pricing plans",
+      "url": "/pricing",
+=======
       "name": "Services",
       "short_name": "Services",
-      "description": "View all our services",
+      "description": "View our comprehensive services",
+      "url": "/services",
+>>>>>>> origin/main
+      "icons": [
+        {
+<<<<<<< HEAD
+          "src": "/images/services-icon.png",
+=======
+          "src": "/icons/icon-96x96.png",
+>>>>>>> origin/main
+          "sizes": "96x96"
+=======
+      "name": "Services",
+      "short_name": "Services",
+      "description": "View our comprehensive IT services",
       "url": "/services",
       "icons": [
         {
-          "src": "/images/services-icon.png",
-          "sizes": "96x96"
+          "src": "/logo192.png",
+          "sizes": "192x192"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
         }
       ]
     },
     {
       "name": "Contact",
       "short_name": "Contact",
+<<<<<<< HEAD
       "description": "Get in touch with us",
       "url": "/contact",
       "icons": [
         {
+<<<<<<< HEAD
           "src": "/images/contact-icon.png",
+=======
+          "src": "/icons/icon-96x96.png",
+>>>>>>> origin/main
           "sizes": "96x96"
+=======
+      "description": "Get in touch with our team",
+      "url": "/contact",
+      "icons": [
+        {
+          "src": "/logo192.png",
+          "sizes": "192x192"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
         }
       ]
     }
   ],
+<<<<<<< HEAD
+<<<<<<< HEAD
   "screenshots": [
     {
-      "src": "/images/screenshot-home.png",
+      "src": "/screenshots/desktop-1.png",
       "sizes": "1280x720",
       "type": "image/png",
       "form_factor": "wide",
-      "label": "Home page showcasing our AI solutions"
+      "label": "Homepage - Desktop View"
     },
     {
-      "src": "/images/screenshot-services.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "Services page with detailed offerings"
-    },
-    {
-      "src": "/images/screenshot-mobile.png",
-      "sizes": "750x1334",
+      "src": "/screenshots/mobile-1.png",
+      "sizes": "390x844",
       "type": "image/png",
       "form_factor": "narrow",
-      "label": "Mobile-optimized interface"
+      "label": "Homepage - Mobile View"
     }
   ],
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
+=======
+>>>>>>> origin/main
   "related_applications": [
     {
       "platform": "webapp",
@@ -105,23 +298,49 @@
     "client_mode": "navigate-existing"
   },
   "handle_links": "preferred",
-  "capture_links": "existing-client-navigate",
-  "file_handlers": [
-    {
-      "action": "/file-handler",
-      "accept": {
-        "text/*": [".txt", ".md", ".json"],
-        "application/pdf": [".pdf"],
-        "image/*": [".png", ".jpg", ".jpeg", ".gif", ".webp"]
-      }
-    }
-  ],
+<<<<<<< HEAD
+  "capture_links": "new-client",
+=======
   "protocol_handlers": [
     {
       "protocol": "web+zion",
-      "url": "/protocol-handler?url=%s"
+      "url": "/?protocol=%s"
     }
   ],
+>>>>>>> origin/main
+  "file_handlers": [
+    {
+<<<<<<< HEAD
+      "action": "/file-handler",
+      "accept": {
+        "text/*": [".txt", ".md", ".json", ".xml", ".html", ".css", ".js", ".ts", ".jsx", ".tsx"],
+        "application/pdf": [".pdf"],
+<<<<<<< HEAD
+        "image/*": [".png", ".jpg", ".jpeg", ".gif", ".webp"]
+=======
+      "action": "/",
+      "accept": {
+        "text/*": [".txt", ".md", ".json"],
+        "application/pdf": [".pdf"],
+        "image/*": [".png", ".jpg", ".jpeg", ".gif", ".svg"]
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
+=======
+        "image/*": [".png", ".jpg", ".jpeg", ".gif", ".svg", ".webp"],
+        "application/json": [".json"],
+        "text/markdown": [".md"]
+>>>>>>> origin/main
+      }
+    }
+  ],
+<<<<<<< HEAD
+  "protocol_handlers": [
+    {
+      "protocol": "web+zion",
+      "url": "/protocol-handler?protocol=%s"
+    }
+  ],
+=======
+>>>>>>> origin/main
   "share_target": {
     "action": "/share",
     "method": "POST",
@@ -137,5 +356,53 @@
         }
       ]
     }
-  }
+  },
+<<<<<<< HEAD
+  "permissions": [
+    "notifications",
+    "background-sync",
+    "storage"
+  ],
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+  "background": {
+    "service_worker": "/sw.js",
+    "type": "module"
+  },
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
+=======
+  "permissions": [
+    "notifications",
+    "geolocation",
+    "camera",
+    "microphone",
+    "storage"
+  ],
+>>>>>>> origin/main
+  "features": [
+    "Cross Platform",
+    "fast",
+    "simple",
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "responsive",
+    "offline-capable"
+=======
+    "AI-Powered",
+    "Offline Support"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
+=======
+    "AI-Powered",
+    "Enterprise Ready"
+>>>>>>> origin/main
+  ],
+  "developer": {
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com"
+  },
+  "version": "2.0.0",
+  "minimum_version": "1.0.0"
 }

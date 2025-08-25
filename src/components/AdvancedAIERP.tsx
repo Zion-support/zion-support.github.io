@@ -7,7 +7,7 @@ import {
   Flag, AlertTriangle, Info, Star, Award, Trophy, Rocket, Lightbulb,
   DollarSign, Package, Truck, Warehouse, ShoppingCart, CreditCard, Receipt,
   Calculator, PieChart, LineChart, BarChart, Eye, EyeOff, Download, RefreshCw,
-  MoreVertical, Edit3, Trash2, Database, Server, Network, Cpu, HardDrive
+  MoreVertical, Edit3, Trash2, Database, Server, Network, Cpu, HardDrive, Minus
 } from 'lucide-react';
 
 interface ERPModule {

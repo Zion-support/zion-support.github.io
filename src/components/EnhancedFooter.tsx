@@ -1,19 +1,14 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
+=======
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 import { motion } from 'framer-motion';
+=======
+
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
 import { Link } from 'react-router-dom';
-import { 
-  Twitter, 
-  Linkedin, 
-  Github, 
-  Mail, 
-  Phone, 
-  MapPin,
-  ArrowUp,
-  Globe,
-  Shield,
-  Users,
-  Zap
-} from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 
 export function EnhancedFooter() {
   const scrollToTop = () => {

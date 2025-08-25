@@ -1,4 +1,7 @@
-import React from 'react';
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 
 interface TableProps {
   children: React.ReactNode;
