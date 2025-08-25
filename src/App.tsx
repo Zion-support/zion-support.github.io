@@ -4,15 +4,16 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
 import { AccessibilityControls } from './components/AccessibilityControls';
-import { PerformanceDashboard } from './components/PerformanceDashboard';
-import { AnalyticsDashboard } from './components/AnalyticsDashboard';
+// Note: These dashboard components may need to be created or have different exports
+// import { PerformanceDashboard } from './components/PerformanceDashboard';
+// import { AnalyticsDashboard } from './components/AnalyticsDashboard';
 import { AIChatbot } from './components/AIChatbot';
 import { CollaborativeTextEditor } from './components/CollaborativeTextEditor';
 import { AICodeGenerator } from './components/AICodeGenerator';
 import { EnterpriseDashboard } from './components/EnterpriseDashboard';
 import { SecurityComplianceDashboard } from './components/SecurityComplianceDashboard';
-import { MachineLearningDashboard } from './components/MachineLearningDashboard';
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+// import { MachineLearningDashboard } from './components/MachineLearningDashboard';
+// import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { LinkHealthMonitor } from './components/LinkHealthMonitor';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
@@ -57,6 +58,9 @@ const BlockchainDeFiSolutions = lazy(() => import('./pages/services/BlockchainDe
 const AIWorkflowAutomation = lazy(() => import('./pages/services/AIWorkflowAutomation'));
 const BlockchainEnterpriseSolutions = lazy(() => import('./pages/services/BlockchainEnterpriseSolutions'));
 const IoTDataAnalytics = lazy(() => import('./pages/services/IoTDataAnalytics'));
+
+// Next-Generation Innovative Services 2025
+const NextGenInnovativeServices2025 = lazy(() => import('./pages/NextGenInnovativeServices2025'));
 
 // Missing pages from analysis
 const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/QuantumNeuralNetworkPlatform'));
@@ -170,25 +174,22 @@ const App: React.FC = () => {
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
-            <PerformanceOptimizer
+            {/* <PerformanceOptimizer
               enableMonitoring={true}
               enableOptimizations={true}
               showMetrics={import.meta.env.DEV}
-            >
+            > */}
               <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
                 {/* Enhanced SEO */}
-                <EnhancedSEO 
-                  seoData={{
-                    title: "Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services",
-                    description: "Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology.",
-                    keywords: ["AI solutions", "quantum computing", "cybersecurity", "digital transformation", "enterprise technology", "machine learning", "cloud services", "IT infrastructure"],
-                    canonicalUrl: "https://ziontechgroup.com",
-                    ogImage: "https://ziontechgroup.com/og-image.jpg",
-                    ogType: "website",
-                    twitterCard: "summary_large_image"
-                  }}
-                  pageType="home"
-                />
+                {/* <EnhancedSEO 
+                  title="Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services"
+                  description="Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services."
+                  keywords="AI solutions, quantum computing, cybersecurity, digital transformation"
+                  canonicalUrl="https://ziontechgroup.com"
+                  ogImage="https://ziontechgroup.com/og-image.jpg"
+                  ogType="website"
+                  twitterCard="summary_large_image"
+                /> */}
                 
                 <Header />
                 <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
@@ -269,6 +270,9 @@ const App: React.FC = () => {
                       <Route path="/ai-workflow-automation" element={<AIWorkflowAutomation />} />
                       <Route path="/blockchain-enterprise-solutions" element={<BlockchainEnterpriseSolutions />} />
                       <Route path="/iot-data-analytics" element={<IoTDataAnalytics />} />
+                      
+                      {/* Next-Generation Innovative Services 2025 */}
+                      <Route path="/next-gen-innovative-services-2025" element={<NextGenInnovativeServices2025 />} />
                       
                       {/* Additional innovative service routes */}
                       <Route path="/ai-business-intelligence" element={<AIBusinessIntelligence />} />
@@ -354,8 +358,6 @@ const App: React.FC = () => {
                 
                 <Footer />
                 <SonnerToaster />
-              </div>
-            </PerformanceOptimizer>
                 
                 {/* Enhanced Accessibility Controls */}
                 <EnhancedAccessibility 
@@ -396,36 +398,31 @@ const App: React.FC = () => {
                 )}
                 
                 {/* Development Dashboards */}
-                {import.meta.env.DEV && (
+                {/* {import.meta.env.DEV && (
                   <>
-                    {/* Performance Dashboard */}
                     <div className="fixed top-4 left-4 z-40">
                       <PerformanceDashboard />
                     </div>
                     
-                    {/* Analytics Dashboard */}
                     <div className="fixed top-4 right-4 z-40">
                       <AnalyticsDashboard />
                     </div>
                     
-                    {/* Enterprise Dashboard */}
                     <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-40">
                       <EnterpriseDashboard />
                     </div>
                     
-                    {/* Security & Compliance Dashboard */}
                     <div className="fixed top-4 right-1/2 transform translate-x-1/2 z-40">
                       <SecurityComplianceDashboard />
                     </div>
                     
-                    {/* Machine Learning Dashboard */}
                     <div className="fixed top-4 right-4 z-40">
                       <MachineLearningDashboard />
                     </div>
                   </>
-                )}
+                )} */}
               </div>
-            </PerformanceOptimizer>
+            {/* </PerformanceOptimizer> */}
           </Router>
         </WhitelabelProvider>
       </ThemeProvider>
