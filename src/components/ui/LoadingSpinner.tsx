@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { cn } from '@/lib/utils';
 
 interface LoadingSpinnerProps {
@@ -31,10 +32,18 @@ interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
   text?: string;
   variant?: 'default' | 'pulse' | 'orbit' | 'matrix';
+=======
+
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg';
+  color?: 'primary' | 'secondary' | 'white';
+  text?: string;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-434d
 }
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
+<<<<<<< HEAD
   text = 'Loading...',
   variant = 'default'
 }) => {
@@ -272,11 +281,45 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           {text}
         </motion.div>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6e83
+=======
+  color = 'primary',
+  text 
+}) => {
+  const sizeClasses = {
+    sm: 'w-6 h-6',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+  };
+
+  const colorClasses = {
+    primary: 'border-zion-cyan',
+    secondary: 'border-zion-purple',
+    white: 'border-white'
+  };
+
+  return (
+    <div className="flex flex-col items-center justify-center gap-4">
+      <motion.div
+        className={`${sizeClasses[size]} border-2 border-t-transparent ${colorClasses[color]} rounded-full`}
+        animate={{ rotate: 360 }}
+        transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+      />
+      {text && (
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="text-zion-slate-light text-sm font-medium"
+        >
+          {text}
+        </motion.p>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-434d
       )}
     </div>
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Full screen loading overlay
 export const LoadingOverlay: React.FC<{
@@ -307,10 +350,14 @@ export const LoadingOverlay: React.FC<{
 =======
 // Full page loading component
 export const FullPageLoader: React.FC<{ text?: string }> = ({ text = 'Loading Zion Tech Group...' }) => {
+=======
+export const PageLoader: React.FC = () => {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-434d
   return (
     <div className="min-h-screen bg-zion-blue-dark flex items-center justify-center">
       <div className="text-center">
         <motion.div
+<<<<<<< HEAD
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
@@ -370,3 +417,37 @@ export const InlineLoader: React.FC<{ size?: 'sm' | 'md' | 'lg' }> = ({ size = '
   );
 };
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6e83
+=======
+          className="w-16 h-16 border-4 border-t-transparent border-zion-cyan rounded-full mb-6"
+          animate={{ rotate: 360 }}
+          transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+        />
+        <motion.h2
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+          className="text-2xl font-bold text-white mb-2"
+        >
+          Zion Tech Group
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
+          className="text-zion-slate-light"
+        >
+          Loading amazing things...
+        </motion.p>
+      </div>
+    </div>
+  );
+};
+
+export const SkeletonLoader: React.FC<{ className?: string }> = ({ className = '' }) => {
+  return (
+    <div className={`animate-pulse bg-zion-blue-light/20 rounded-lg ${className}`}>
+      <div className="h-full w-full bg-gradient-to-r from-transparent via-zion-cyan/10 to-transparent animate-shimmer"></div>
+    </div>
+  );
+};
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-434d

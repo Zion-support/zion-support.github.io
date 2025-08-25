@@ -47,7 +47,6 @@ const config: Config = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
-<<<<<<< HEAD
         // Enhanced Zion colors for futuristic design
 =======
         // Zion color palette (consolidated)
@@ -106,7 +105,41 @@ const config: Config = {
           to: { height: '0' },
         },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+        'neon-pulse': {
+          '0%, 100%': { 
+            textShadow: '0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor',
+            opacity: '1'
+          },
+          '50%': { 
+            textShadow: '0 0 2px currentColor, 0 0 5px currentColor, 0 0 7px currentColor',
+            opacity: '0.8'
+          },
+        },
+        'quantum-float': {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+        'holographic-shift': {
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
+        },
+        'matrix-rain': {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(100vh)' },
+        },
+        'neon-flicker': {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.8' },
+        },
+        'quantum-spin': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-434d
         'gradient-x': {
           '0%, 100%': {
             'background-size': '200% 200%',
@@ -125,6 +158,7 @@ const config: Config = {
           '0%, 100%': { boxShadow: '0 0 20px rgba(0, 229, 255, 0.5)' },
           '50%': { boxShadow: '0 0 40px rgba(0, 229, 255, 0.8)' },
         },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d2d6
         'neon-pulse': {
           '0%, 100%': { 
@@ -174,11 +208,16 @@ const config: Config = {
         },
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d2d6
+=======
+        'shimmer': {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-434d
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-<<<<<<< HEAD
         'neon-pulse': 'neon-pulse 2s ease-in-out infinite',
         'quantum-float': 'quantum-float 6s ease-in-out infinite',
         'holographic-shift': 'holographic-shift 3s ease infinite',
@@ -188,6 +227,7 @@ const config: Config = {
         'gradient-x': 'gradient-x 15s ease infinite',
         'float': 'float 6s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
+<<<<<<< HEAD
 =======
         'gradient-x': 'gradient-x 15s ease infinite',
         'float': 'float 6s ease-in-out infinite',
@@ -195,6 +235,9 @@ const config: Config = {
         'neon-pulse': 'neon-pulse 2s ease-in-out infinite alternate',
         'holographic-shift': 'holographic-shift 3s ease infinite',
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d2d6
+=======
+        'shimmer': 'shimmer 2s ease infinite',
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-434d
       },
       backgroundImage: {
         'quantum-gradient': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
