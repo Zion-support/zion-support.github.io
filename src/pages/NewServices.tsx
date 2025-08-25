@@ -1,95 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ADDITIONAL_INNOVATIVE_SERVICES_2025 } from '../data/additionalInnovativeServices2025';
-import { SPECIALIZED_IT_SERVICES_2025 } from '../data/specializedITServices2025';
+import { COMPREHENSIVE_SERVICES } from '../data/comprehensiveServices';
+import { ADVANCED_INNOVATIVE_SERVICES } from '../data/advancedInnovativeServices';
+import { EMERGING_TECH_SERVICES } from '../data/emergingTechServices';
 
 export function NewServices() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-  const [sortBy, setSortBy] = useState('innovation');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchTerm, setSearchTerm] = useState<string>('');
   const [selectedService, setSelectedService] = useState<any>(null);
 
   // Combine all services
   const allServices = [
-    ...ADDITIONAL_INNOVATIVE_SERVICES_2025,
-    ...SPECIALIZED_IT_SERVICES_2025
+    ...COMPREHENSIVE_SERVICES,
+    ...ADVANCED_INNOVATIVE_SERVICES,
+    ...EMERGING_TECH_SERVICES
   ];
-
+  
   // Get unique categories
-  const categories = ['all', ...new Set(allServices.map(service => service.category))];
-
-  // Price ranges
-  const priceRanges = [
-    { value: 'all', label: 'All Prices' },
-    { value: '0-500', label: '$0 - $500/month' },
-    { value: '500-1000', label: '$500 - $1,000/month' },
-    { value: '1000-2000', label: '$1,000 - $2,000/month' },
-    { value: '2000+', label: '$2,000+/month' }
-  ];
-
-  // Helper function to get service price
-  const getServicePrice = (service: any) => {
-    if (typeof service.price === 'number') {
-      return service.price;
-    }
-    if (service.price && typeof service.price === 'object' && service.price.monthly) {
-      return service.price.monthly;
-    }
-    return 0;
-  };
-
-  // Helper function to get service tags
-  const getServiceTags = (service: any) => {
-    if (service.tags && Array.isArray(service.tags)) {
-      return service.tags;
-    }
-    return [];
-  };
-
-  // Helper function to get service title
-  const getServiceTitle = (service: any) => {
-    return service.title || service.name || 'Untitled Service';
-  };
-
-  // Filter and sort services
-  const filteredServices = allServices
-    .filter(service => {
-      const serviceTitle = getServiceTitle(service);
-      const matchesSearch = serviceTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           getServiceTags(service).some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-      
-      const servicePrice = getServicePrice(service);
-      const matchesPrice = selectedPriceRange === 'all' || 
-        (selectedPriceRange === '0-500' && servicePrice <= 500) ||
-        (selectedPriceRange === '500-1000' && servicePrice > 500 && servicePrice <= 1000) ||
-        (selectedPriceRange === '1000-2000' && servicePrice > 1000 && servicePrice <= 2000) ||
-        (selectedPriceRange === '2000+' && servicePrice > 2000);
-      
-      return matchesSearch && matchesCategory && matchesPrice;
-    })
-    .sort((a, b) => {
-      switch (sortBy) {
-        case 'price-low':
-          return getServicePrice(a) - getServicePrice(b);
-        case 'price-high':
-          return getServicePrice(b) - getServicePrice(a);
-        case 'innovation':
-          const aTags = getServiceTags(a);
-          const bTags = getServiceTags(b);
-          return bTags.filter(tag => ['AI', 'Quantum', 'Autonomous', 'Innovation'].includes(tag)).length - 
-                 aTags.filter(tag => ['AI', 'Quantum', 'Autonomous', 'Innovation'].includes(tag)).length;
-        case 'name':
-          const aTitle = getServiceTitle(a);
-          const bTitle = getServiceTitle(b);
-          return aTitle.localeCompare(bTitle);
-        default:
-          return 0;
-      }
-    });
+  const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))];
+  
+  const filteredServices = allServices.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         ('tags' in service && service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
+    return matchesCategory && matchesSearch;
+  });
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -268,7 +204,7 @@ export function NewServices() {
                     </span>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
-                    {getServiceTitle(service)}
+                    {service.title}
                   </h3>
                   <p className="text-zion-slate-light text-sm leading-relaxed">
                     {service.description}
@@ -310,23 +246,23 @@ export function NewServices() {
                 <div className="border-t border-zion-cyan/20 pt-4">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-zion-slate-light">
-                      Delivery: {service.estimatedDelivery || '2-4 weeks'}
+                      Delivery: {service.estimatedDelivery}
                     </span>
                     <span className="text-zion-cyan font-medium">
-                      {service.supportLevel || 'Standard'} support
+                      {service.supportLevel} support
                     </span>
                   </div>
                   <div className="mt-3 text-center">
                     <span className="text-zion-slate-light text-sm">
-                      Market Price: {service.marketPrice || 'Contact for pricing'}
+                      Market Price: {service.marketPrice}
                     </span>
                   </div>
                 </div>
 
                 {/* Tags */}
-                {getServiceTags(service).length > 0 && (
+                {service.tags && (
                   <div className="mt-4 flex flex-wrap gap-2">
-                    {getServiceTags(service).slice(0, 4).map((tag, index) => (
+                    {service.tags.slice(0, 4).map((tag, index) => (
                       <span
                         key={index}
                         className="text-xs px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light rounded-full"
@@ -372,7 +308,7 @@ export function NewServices() {
                     </span>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
-                    {getServiceTitle(service)}
+                    {service.title}
                   </h3>
                   <p className="text-zion-slate-light text-sm leading-relaxed">
                     {service.description}
@@ -414,23 +350,23 @@ export function NewServices() {
                 <div className="border-t border-zion-cyan/20 pt-4">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-zion-slate-light">
-                      Delivery: {service.estimatedDelivery || '2-4 weeks'}
+                      Delivery: {service.estimatedDelivery}
                     </span>
                     <span className="text-zion-cyan font-medium">
-                      {service.supportLevel || 'Standard'} support
+                      {service.supportLevel} support
                     </span>
                   </div>
                   <div className="mt-3 text-center">
                     <span className="text-zion-slate-light text-sm">
-                      Market Price: {service.marketPrice || 'Contact for pricing'}
+                      Market Price: {service.marketPrice}
                     </span>
                   </div>
                 </div>
 
                 {/* Tags */}
-                {getServiceTags(service).length > 0 && (
+                {service.tags && (
                   <div className="mt-4 flex flex-wrap gap-2">
-                    {getServiceTags(service).slice(0, 4).map((tag, index) => (
+                    {service.tags.slice(0, 4).map((tag, index) => (
                       <span
                         key={index}
                         className="text-xs px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light rounded-full"
