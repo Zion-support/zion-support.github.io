@@ -39,6 +39,7 @@ import {
 import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
 import { TrustedBySection } from "@/components/TrustedBySection";
+import { ServicesOverview } from "@/components/services/ServicesOverview";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 <<<<<<< HEAD
@@ -2571,6 +2572,7 @@ export default function ServicesPage() {
         initialPrice={{ min: 1000, max: 10000 }}
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-936f
       />
+<<<<<<< HEAD
       <Header />
       <main className="min-h-screen bg-zion-blue">
         <div className="container mx-auto px-4 py-20">
@@ -2630,6 +2632,10 @@ export default function ServicesPage() {
         </div>
       </main>
       <Footer />
+=======
+      <ServicesOverview />
+      <TrustedBySection />
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-0682
     </>
 >>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
   );

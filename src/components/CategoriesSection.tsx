@@ -258,6 +258,7 @@ const specialServices = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     title: "Comprehensive Services",
     link: "/comprehensive-services"
 <<<<<<< HEAD
@@ -704,6 +705,14 @@ const advancedCategories = [
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-da9e
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
+=======
+    title: "Micro SAAS Services",
+    link: "/micro-saas-services"
+  },
+  {
+    title: "Services Pricing",
+    link: "/services-pricing"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-0682
   }
 ];
 

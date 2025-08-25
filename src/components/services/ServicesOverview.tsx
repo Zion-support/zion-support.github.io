@@ -1,11 +1,33 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-0682
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+<<<<<<< HEAD
 // import { getFeaturedServices, getServicesByCategory } from '@/data/microSaasServices';
 import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
 import { CheckCircle, ArrowRight, Mail, Phone } from 'lucide-react';
+=======
+import { getFeaturedServices, getServicesByCategory } from '@/data/microSaasServices';
+import { 
+  Brain, 
+  Cloud, 
+  Zap, 
+  Star, 
+  CheckCircle, 
+  ArrowRight,
+  Mail,
+  Phone,
+  ExternalLink,
+  Eye,
+  Clock,
+  Globe
+} from 'lucide-react';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-0682
 
 const categoryIcons = {
   'AI Services': <Brain className="w-6 h-6" />,
@@ -26,10 +48,17 @@ const categoryDescriptions = {
 };
 
 export function ServicesOverview() {
+<<<<<<< HEAD
   const featuredServices = COMPREHENSIVE_SERVICES.filter(service => service.featured).slice(0, 3);
   const aiServices = COMPREHENSIVE_SERVICES.filter(service => service.category === 'ai-ml').slice(0, 3);
   const itServices = COMPREHENSIVE_SERVICES.filter(service => service.category === 'cloud-devops').slice(0, 3);
   const innovativeServices = COMPREHENSIVE_SERVICES.filter(service => service.category === 'cybersecurity').slice(0, 3);
+=======
+  const featuredServices = getFeaturedServices();
+  const aiServices = getServicesByCategory('AI Services');
+  const itServices = getServicesByCategory('IT Services');
+  const innovativeServices = getServicesByCategory('Innovative Solutions');
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-0682
 
   const formatPrice = (price: number, model: string) => {
     if (model === 'monthly') return `$${price}/month`;
@@ -104,9 +133,20 @@ export function ServicesOverview() {
                   {/* Pricing */}
                   <div className="mb-4">
                     <div className="text-2xl font-bold text-zion-purple">
+<<<<<<< HEAD
                       {formatPrice(parseInt(service.price.replace(/[^0-9]/g, '')), service.pricingModel || 'project-based')}
                     </div>
                     {/* Free trial removed - not available in current service structure */}
+=======
+                      {formatPrice(service.price, service.pricingModel)}
+                    </div>
+                    {service.freeTrial && (
+                      <div className="text-sm text-green-600 flex items-center gap-1">
+                        <CheckCircle className="w-4 h-4" />
+                        {service.freeTrialDays}-day free trial
+                      </div>
+                    )}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-0682
                   </div>
 
                   {/* Key Benefits */}
@@ -137,7 +177,22 @@ export function ServicesOverview() {
                       Get Started
                     </Button>
                     <div className="flex gap-2">
+<<<<<<< HEAD
                       {/* Website and demo removed - not available in current service structure */}
+=======
+                      {service.website && (
+                        <Button variant="outline" size="sm" className="flex-1">
+                          <ExternalLink className="w-4 h-4 mr-1" />
+                          Website
+                        </Button>
+                      )}
+                      {service.demoUrl && (
+                        <Button variant="outline" size="sm" className="flex-1">
+                          <Eye className="w-4 h-4 mr-1" />
+                          Demo
+                        </Button>
+                      )}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-0682
                     </div>
                   </div>
                 </CardContent>

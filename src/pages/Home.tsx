@@ -219,6 +219,7 @@ import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { EnhancedServicesShowcase } from "@/components/home/EnhancedServicesShowcase";
 import { BottomNavigation } from "@/components/MobileNavigation";
 import { MicroSaasServicesSection } from "@/components/home/MicroSaasServicesSection";
@@ -410,6 +411,9 @@ import { ComprehensiveServicesShowcase } from "@/components/home/ComprehensiveSe
 =======
 import { ServicesShowcase } from "@/components/home/ServicesShowcase";
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
+=======
+import { ServicesShowcase } from "@/components/home/ServicesShowcase";
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-0682
 
 export default function Home() {
   const features = [
@@ -819,6 +823,7 @@ export default function Home() {
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-8a54
       
       <CategoriesSection />
+      <ServicesShowcase />
       <BenefitsSection />
       <HowItWorksSection />
       <FeaturedListingsSection />
