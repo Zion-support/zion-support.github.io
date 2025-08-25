@@ -14,7 +14,7 @@ export function Footer() {
         { label: "Cybersecurity", path: "/services/cybersecurity" },
         { label: "Industry Solutions", path: "/services/industry-solutions" },
         { label: "AI & Machine Learning", path: "/ai-solutions" },
-        { label: "Cloud & Infrastructure", path: "/services/cloud-devops" },
+        { label: "Cloud & DevOps", path: "/cloud-devops" },
         { label: "Digital Transformation", path: "/digital-transformation" },
         { label: "Enterprise Solutions", path: "/enterprise-solutions" }
       ]
@@ -28,22 +28,18 @@ export function Footer() {
         { label: "Manufacturing Solutions", path: "/solutions/manufacturing" },
         { label: "Retail Solutions", path: "/solutions/retail" },
         { label: "Government Solutions", path: "/solutions/government" },
-        { label: "Business Intelligence", path: "/services/business-intelligence" },
-        { label: "Marketing Automation", path: "/services/ai-marketing" },
-        { label: "HR & Recruitment", path: "/services/ai-hr" },
-        { label: "Legal Tech", path: "/services/ai-legal" }
+        { label: "Case Studies", path: "/case-studies" },
+        { label: "Emerging Technology", path: "/emerging-tech" }
       ]
     },
     {
-      title: "Emerging Tech",
+      title: "Support & Resources",
       links: [
-        { label: "Quantum Computing", path: "/emerging-tech" },
-        { label: "Blockchain & DeFi", path: "/emerging-tech" },
-        { label: "IoT & Edge Computing", path: "/emerging-tech" },
-        { label: "Extended Reality (XR)", path: "/emerging-tech" },
-        { label: "5G & Networks", path: "/emerging-tech" },
-        { label: "Green Technology", path: "/emerging-tech" },
-        { label: "Digital Twins", path: "/emerging-tech" }
+        { label: "Help Center", path: "/help" },
+        { label: "Documentation", path: "/docs" },
+        { label: "Support Center", path: "/support" },
+        { label: "System Status", path: "/status" },
+        { label: "Contact Support", path: "/contact" }
       ]
     },
     {
@@ -53,19 +49,8 @@ export function Footer() {
         { label: "Our Mission", path: "/mission" },
         { label: "Team", path: "/team" },
         { label: "Pricing", path: "/pricing" },
-        { label: "Careers", path: "/careers" },
         { label: "Partners", path: "/partners" },
-        { label: "Contact", path: "/contact" },
-        { label: "Blog", path: "/blog" }
-      ]
-    },
-    {
-      title: "Resources",
-      links: [
-        { label: "Blog & Articles", path: "/blog" },
-        { label: "Case Studies", path: "/case-studies" },
-        { label: "Documentation", path: "/docs" },
-        { label: "Support Center", path: "/support" }
+        { label: "Contact", path: "/contact" }
       ]
     }
   ];

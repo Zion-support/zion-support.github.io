@@ -26,15 +26,21 @@ export function Header() {
     },
     { 
       path: '/services', 
-      label: 'AI Services', 
+      label: 'Services', 
       icon: '🤖',
-      description: 'Explore our AI service offerings'
+      description: 'Explore our service offerings'
     },
     { 
       path: '/solutions/enterprise', 
       label: 'Solutions', 
       icon: '💼',
       description: 'Industry-specific solutions'
+    },
+    { 
+      path: '/case-studies', 
+      label: 'Case Studies', 
+      icon: '📊',
+      description: 'Success stories and results'
     },
     { 
       path: '/pricing', 
@@ -49,18 +55,6 @@ export function Header() {
       description: 'Learn about our company'
     },
     { 
-      path: '/careers', 
-      label: 'Careers', 
-      icon: '🚀',
-      description: 'Join our team'
-    },
-    { 
-      path: '/blog', 
-      label: 'Blog', 
-      icon: '📝',
-      description: 'Latest insights and news'
-    },
-    { 
       path: '/contact', 
       label: 'Contact', 
       icon: '📞',
@@ -72,6 +66,7 @@ export function Header() {
     {
       title: 'AI & Machine Learning',
       services: [
+        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems' },
         { name: 'AI Business Intelligence', path: '/services#ai-bi' },
         { name: 'AI Marketing Automation', path: '/services#ai-marketing' },
         { name: 'AI HR & Recruitment', path: '/services#ai-hr' },
@@ -81,6 +76,7 @@ export function Header() {
     {
       title: 'Cybersecurity',
       services: [
+        { name: 'Cybersecurity Services', path: '/services/cybersecurity' },
         { name: 'Quantum-Safe Security', path: '/services#quantum-security' },
         { name: 'Security Assessment', path: '/services#security-assessment' },
         { name: 'Compliance & Audit', path: '/services#compliance' }
@@ -89,6 +85,8 @@ export function Header() {
     {
       title: 'Cloud & Infrastructure',
       services: [
+        { name: 'Cloud & DevOps', path: '/cloud-devops' },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure' },
         { name: 'Cloud Migration', path: '/services#cloud-migration' },
         { name: 'Network Infrastructure', path: '/services#network' },
         { name: 'Managed IT Services', path: '/services#managed-it' }
@@ -97,9 +95,10 @@ export function Header() {
     {
       title: 'Emerging Tech',
       services: [
+        { name: 'Quantum Technology', path: '/services/quantum-technology' },
         { name: 'Blockchain Solutions', path: '/services#blockchain' },
         { name: 'IoT Integration', path: '/services#iot' },
-        { name: 'Quantum Computing', path: '/services#quantum' }
+        { name: 'Emerging Technology', path: '/emerging-tech' }
       ]
     }
   ];
@@ -176,26 +175,72 @@ export function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex space-x-8">
             {navigationItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`relative group px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
-                  location.pathname === item.path
-                    ? 'text-cyan-400 bg-cyan-400/10'
-                    : 'text-gray-300 hover:text-white hover:bg-white/10'
-                }`}
-              >
-                <span className="flex items-center space-x-2">
-                  <span>{item.icon}</span>
-                  <span>{item.label}</span>
-                </span>
-                
-                {/* Tooltip */}
-                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-black text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50">
-                  {item.description}
-                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black"></div>
-                </div>
-              </Link>
+              <div key={item.path} className="relative group">
+                {item.path === '/services' ? (
+                  <>
+                    {/* Services dropdown */}
+                    <button className="flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 text-gray-300 hover:text-white hover:bg-white/10">
+                      <span>{item.icon}</span>
+                      <span>{item.label}</span>
+                      <span className="text-xs">▼</span>
+                    </button>
+                    
+                    {/* Services Dropdown */}
+                    <div className="absolute top-full left-0 mt-2 w-96 bg-black/95 backdrop-blur-md border border-gray-700 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none group-hover:pointer-events-auto z-50">
+                      <div className="p-4">
+                        <div className="grid grid-cols-2 gap-4">
+                          {serviceCategories.map((category) => (
+                            <div key={category.title}>
+                              <h4 className="text-sm font-semibold text-cyan-400 mb-2">{category.title}</h4>
+                              <ul className="space-y-1">
+                                {category.services.map((service) => (
+                                  <li key={service.name}>
+                                    <Link
+                                      to={service.path}
+                                      className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1"
+                                    >
+                                      {service.name}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                        <div className="mt-4 pt-4 border-t border-gray-700">
+                          <Link
+                            to="/services"
+                            className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-center"
+                          >
+                            View All Services →
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    {/* Regular navigation item */}
+                    <Link
+                      to={item.path}
+                      className={`flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                        location.pathname === item.path
+                          ? 'text-cyan-400 bg-cyan-400/10'
+                          : 'text-gray-300 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      <span>{item.icon}</span>
+                      <span>{item.label}</span>
+                    </Link>
+                    
+                    {/* Tooltip for non-dropdown items */}
+                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-black text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50">
+                      {item.description}
+                      <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black"></div>
+                    </div>
+                  </>
+                )}
+              </div>
             ))}
           </nav>
 
