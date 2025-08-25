@@ -2,13 +2,11 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
 import { visualizer } from 'rollup-plugin-visualizer'
-import { splitVendorChunkPlugin } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig(async () => ({
   plugins: [
     react(),
-    splitVendorChunkPlugin(),
     visualizer({
       filename: 'dist/stats.html',
       open: false,
@@ -36,10 +34,6 @@ export default defineConfig(async () => ({
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug'],
-        passes: 2,
-      },
-      mangle: {
-        toplevel: true,
       },
     },
     rollupOptions: {
@@ -50,7 +44,7 @@ export default defineConfig(async () => ({
             return 'react-vendor';
           }
           
-          // UI Component libraries - group by size
+          // UI Component libraries
           if (id.includes('@radix-ui')) {
             return 'ui-vendor';
           }
@@ -120,20 +114,9 @@ export default defineConfig(async () => ({
             return 'query-vendor';
           }
           
-          // Page-specific chunks for better caching
-          if (id.includes('/pages/')) {
-            const pageName = id.split('/pages/')[1]?.split('.')[0];
-            if (pageName) {
-              return `page-${pageName}`;
-            }
-          }
-          
-          // Component-specific chunks
-          if (id.includes('/components/')) {
-            const componentName = id.split('/components/')[1]?.split('.')[0];
-            if (componentName) {
-              return `component-${componentName}`;
-            }
+          // Default vendor chunk for other dependencies
+          if (id.includes('node_modules')) {
+            return 'vendor';
           }
         },
         chunkFileNames: (chunkInfo) => {
@@ -153,11 +136,14 @@ export default defineConfig(async () => ({
         },
       },
     },
-    chunkSizeWarningLimit: 500, // Reduced from 1000
+    chunkSizeWarningLimit: 1000,
     sourcemap: false,
+    // Enable CSS code splitting
     cssCodeSplit: true,
-    reportCompressedSize: true,
-    emptyOutDir: true,
+    // Optimize dependencies
+    commonjsOptions: {
+      include: [/node_modules/],
+    },
   },
   optimizeDeps: {
     include: [
@@ -213,7 +199,8 @@ export default defineConfig(async () => ({
       '@supabase/supabase-js',
       '@tanstack/react-query',
     ],
-    exclude: ['@vite/client', '@vite/env'],
+    // Exclude problematic packages from optimization
+    exclude: ['@cypress/request'],
   },
   server: {
     port: 3000,
@@ -234,9 +221,5 @@ export default defineConfig(async () => ({
   },
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
-  },
-  esbuild: {
-    drop: ['console', 'debugger'],
-    pure: ['console.log', 'console.info', 'console.debug'],
   },
 }))
