@@ -196,93 +196,102 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.05),transparent_50%)]"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.05),transparent_50%)]"></div>
+    <footer className="bg-black text-white relative overflow-hidden">
+      {/* Enhanced Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-zion-blue-dark to-black"></div>
+      <div className="absolute inset-0 bg-quantum-mesh opacity-20"></div>
       
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Trust Signals Section */}
-        <div className="py-12 border-b border-gray-700/50">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-white mb-2">Why Trust Zion Tech Group?</h3>
-            <p className="text-gray-400">We're committed to your success</p>
+      {/* Matrix Rain Effect */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(25)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute text-zion-cyan text-xs animate-matrix-rain"
+            style={{
+              left: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 30}s`,
+              animationDuration: `${25 + Math.random() * 15}s`
+            }}
+          >
+            {Math.random() > 0.5 ? '1' : '0'}
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {trustSignals.map((signal, index) => (
-              <div key={index} className="text-center group">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-lg mb-3 group-hover:scale-110 transition-transform duration-300">
-                  <signal.icon className="w-6 h-6 text-cyan-400" />
-                </div>
-                <div className="text-sm font-semibold text-white mb-1">{signal.label}</div>
-                <div className="text-xs text-gray-400">{signal.description}</div>
-              </div>
-            ))}
-          </div>
-        </div>
+        ))}
+      </div>
 
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
             {/* Company Info */}
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-1">
               <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-2xl">Z</span>
+                <div className="relative">
+                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center">
+                    <span className="text-2xl font-bold text-white">Z</span>
+                  </div>
+                  <div className="absolute inset-0 w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl opacity-50 blur-xl"></div>
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white">Zion Tech Group</h3>
-                  <p className="text-sm text-gray-400">The Tech & AI Marketplace</p>
+                  <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>
+                  <p className="text-sm text-zion-slate-light">Innovation • Technology • Future</p>
                 </div>
               </div>
               
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                Empowering businesses with cutting-edge AI solutions, cybersecurity, and digital transformation services. 
-                We help organizations thrive in the digital age with innovative technology solutions.
+              <p className="text-zion-slate-light mb-6 leading-relaxed">
+                Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.
               </p>
-
-              {/* Contact Info */}
-              <div className="space-y-3">
-                <button
-                  onClick={() => handleContactClick('phone')}
-                  className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors duration-200 group"
-                >
-                  <Phone className="w-4 h-4 mr-3 text-cyan-400 group-hover:scale-110 transition-transform duration-200" />
-                  {contactInfo.phone}
-                </button>
-                <button
-                  onClick={() => handleContactClick('email')}
-                  className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors duration-200 group"
-                >
-                  <Mail className="w-4 h-4 mr-3 text-cyan-400 group-hover:scale-110 transition-transform duration-200" />
-                  {contactInfo.email}
-                </button>
-                <div className="flex items-start text-gray-300">
-                  <MapPin className="w-4 h-4 mr-3 mt-1 text-cyan-400 flex-shrink-0" />
-                  <span className="text-sm">{contactInfo.address}</span>
+              
+              {/* Contact Information */}
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center space-x-3 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 cursor-pointer">
+                  <Phone className="w-4 h-4" />
+                  <span className="text-sm">+1 302 464 0950</span>
                 </div>
+                <div className="flex items-center space-x-3 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 cursor-pointer">
+                  <Mail className="w-4 h-4" />
+                  <span className="text-sm">kleber@ziontechgroup.com</span>
+                </div>
+                <div className="flex items-center space-x-3 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 cursor-pointer">
+                  <MapPin className="w-4 h-4" />
+                  <span className="text-sm">364 E Main St STE 1008<br />Middletown DE 19709</span>
+                </div>
+              </div>
+
+              {/* Social Links */}
+              <div className="flex space-x-4">
+                <a href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer" className="p-2 bg-zion-blue-light/20 border border-zion-cyan/30 rounded-lg text-zion-cyan hover:bg-zion-cyan hover:text-black transition-all duration-300">
+                  <Linkedin className="w-5 h-5" />
+                </a>
+                <a href="https://twitter.com/ziontechgroup" target="_blank" rel="noopener noreferrer" className="p-2 bg-zion-blue-light/20 border border-zion-cyan/30 rounded-lg text-zion-cyan hover:bg-zion-cyan hover:text-black transition-all duration-300">
+                  <Twitter className="w-5 h-5" />
+                </a>
+                <a href="https://github.com/ziontechgroup" target="_blank" rel="noopener noreferrer" className="p-2 bg-zion-blue-light/20 border border-zion-cyan/30 rounded-lg text-zion-cyan hover:bg-zion-cyan hover:text-black transition-all duration-300">
+                  <Github className="w-5 h-5" />
+                </a>
+                <a href="https://youtube.com/@ziontechgroup" target="_blank" rel="noopener noreferrer" className="p-2 bg-zion-blue-light/20 border border-zion-cyan/30 rounded-lg text-zion-cyan hover:bg-zion-cyan hover:text-black transition-all duration-300">
+                  <Youtube className="w-5 h-5" />
+                </a>
               </div>
             </div>
 
             {/* Footer Sections */}
             {footerSections.map((section) => (
-              <div key={section.title}>
+              <div key={section.title} className="space-y-4">
                 <div className="flex items-center space-x-2 mb-4">
                   <div className={`p-2 bg-gradient-to-r ${section.color} rounded-lg`}>
-                    <section.icon className="w-4 h-4 text-white" />
+                    <section.icon className="w-5 h-5 text-white" />
                   </div>
-                  <h4 className="text-lg font-semibold text-white">{section.title}</h4>
+                  <h3 className="font-semibold text-white text-lg">{section.title}</h3>
                 </div>
+                
                 <ul className="space-y-2">
                   {section.links.map((link) => (
-                    <li key={link.label}>
+                    <li key={link.path}>
                       <Link
                         to={link.path}
-                        className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm group flex items-center"
+                        className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm hover:translate-x-1 transform transition-transform duration-300 inline-block"
                       >
-                        <span className="group-hover:translate-x-1 transition-transform duration-200">
-                          {link.label}
-                        </span>
+                        {link.label}
                       </Link>
                     </li>
                   ))}
@@ -292,64 +301,60 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Newsletter Section */}
-        <div className="py-8 border-t border-gray-700/50">
+        {/* Enhanced CTA Section */}
+        <div className="border-t border-zion-cyan/20 py-8">
           <div className="text-center">
-            <h3 className="text-xl font-semibold text-white mb-2">Stay Updated</h3>
-            <p className="text-gray-400 mb-4">Get the latest insights on AI, technology, and business transformation</p>
-            <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-2 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
-              />
-              <button className="px-6 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105">
-                Subscribe
-              </button>
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Ready to Transform Your Business?
+            </h3>
+            <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
+              Join hundreds of companies already leveraging our cutting-edge AI and technology solutions to drive innovation and growth.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center space-x-2 bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan/90 hover:to-zion-blue/90 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25"
+              >
+                <span>Get Started Today</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                to="/pricing"
+                className="inline-flex items-center space-x-2 border border-zion-cyan/50 text-zion-cyan hover:bg-zion-cyan hover:text-black px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:scale-105"
+              >
+                <span>View Pricing</span>
+                <Eye className="w-4 h-4" />
+              </Link>
             </div>
           </div>
         </div>
 
-        {/* Bottom Section */}
-        <div className="border-t border-gray-700/50 py-8">
-          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-            {/* Copyright */}
-            <div className="text-gray-400 text-sm">
+        {/* Bottom Footer */}
+        <div className="border-t border-zion-cyan/20 py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="flex items-center space-x-2 text-zion-slate-light text-sm">
+              <Heart className="w-4 h-4 text-red-500" />
+              <span>Made with innovation by Zion Tech Group</span>
+            </div>
+            
+            <div className="flex items-center space-x-6 text-sm text-zion-slate-light">
+              <Link to="/privacy" className="hover:text-zion-cyan transition-colors duration-300">
+                Privacy Policy
+              </Link>
+              <Link to="/terms" className="hover:text-zion-cyan transition-colors duration-300">
+                Terms of Service
+              </Link>
+              <Link to="/cookies" className="hover:text-zion-cyan transition-colors duration-300">
+                Cookie Policy
+              </Link>
+              <Link to="/accessibility" className="hover:text-zion-cyan transition-colors duration-300">
+                Accessibility
+              </Link>
+            </div>
+            
+            <div className="text-zion-slate-light text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-
-            {/* Social Links */}
-            <div className="flex items-center space-x-4">
-              {socialLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.url}
-                  onClick={(e) => handleSocialLinkClick(link, e)}
-                  className={`p-3 text-gray-400 hover:text-white transition-all duration-200 rounded-lg border border-gray-700/50 hover:border-gray-600/50 ${link.color}`}
-                  title={link.name}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <link.icon className="w-5 h-5" />
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {/* Additional Links */}
-          <div className="flex flex-wrap items-center justify-center space-x-6 mt-6 text-sm text-gray-500">
-            <Link to="/privacy" className="hover:text-cyan-400 transition-colors duration-200">
-              Privacy Policy
-            </Link>
-            <Link to="/terms" className="hover:text-cyan-400 transition-colors duration-200">
-              Terms of Service
-            </Link>
-            <Link to="/cookies" className="hover:text-cyan-400 transition-colors duration-200">
-              Cookie Policy
-            </Link>
-            <Link to="/accessibility" className="hover:text-cyan-400 transition-colors duration-200">
-              Accessibility
-            </Link>
           </div>
         </div>
       </div>
