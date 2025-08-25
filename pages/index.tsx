@@ -186,6 +186,54 @@ export default function HomePage() {
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709'
       }
+    },
+    {
+      title: '🔐 Quantum Internet Security Platform',
+      description: 'Next-generation quantum-secured internet infrastructure with unbreakable encryption and quantum key distribution for enterprise networks.',
+      price: 'Starting at $8,999/month',
+      features: ['Quantum key distribution (QKD)', 'Post-quantum cryptography', 'Quantum-resistant VPN tunnels', 'Real-time threat detection', 'Multi-node quantum network management', 'Quantum-safe API endpoints', 'Advanced intrusion prevention', 'NIST compliance', 'Global quantum network nodes', '24/7 quantum security monitoring'],
+      link: 'https://ziontechgroup.com/quantum-internet-security-platform',
+      color: 'from-indigo-600 to-purple-700',
+      marketData: '$200B cybersecurity market, 500% annual growth',
+      competitors: 'Traditional cybersecurity vendors, Government quantum initiatives',
+      savings: 'Quantum-safe protection that traditional solutions cannot provide',
+      contactInfo: {
+        mobile: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+      }
+    },
+    {
+      title: '🧠 Neural Quantum Cyberpunk Platform',
+      description: 'Groundbreaking fusion of neural networks with quantum computing for cyberpunk applications including neural implants and cybernetic augmentation.',
+      price: 'Starting at $6,999/month',
+      features: ['Neural implant management', 'Quantum-enhanced prosthetics control', 'Cyberpunk augmentation systems', 'Neural-quantum interface', 'Real-time neural data processing', 'Quantum neural network training', 'Cybernetic enhancement monitoring', 'Neural security protocols', 'Quantum neural encryption', 'Advanced augmentation analytics'],
+      link: 'https://ziontechgroup.com/neural-quantum-cyberpunk-platform',
+      color: 'from-purple-600 to-pink-700',
+      marketData: '$35B neural interface market, 700% annual growth',
+      competitors: 'Academic research, Medical device companies, Gaming companies',
+      savings: 'First-to-market neural-quantum cyberpunk platform',
+      contactInfo: {
+        mobile: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+      }
+    },
+    {
+      title: '🚀 Quantum Space Logistics Platform',
+      description: 'Revolutionary quantum-powered space logistics platform for managing interplanetary supply chains and orbital resource distribution.',
+      price: 'Starting at $12,999/month',
+      features: ['Interplanetary supply chain management', 'Orbital resource distribution', 'Quantum route optimization', 'Space manufacturing coordination', 'Real-time space traffic management', 'Quantum logistics algorithms', 'Space resource tracking', 'Interplanetary communication', 'Space manufacturing automation', 'Quantum logistics analytics'],
+      link: 'https://ziontechgroup.com/quantum-space-logistics-platform',
+      color: 'from-cyan-600 to-blue-700',
+      marketData: '$600B space economy, 1000% annual growth',
+      competitors: 'Traditional logistics companies, Space agencies, Academic research',
+      savings: 'Complete mission management platform for commercial space',
+      contactInfo: {
+        mobile: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+      }
     }
   ];
 
