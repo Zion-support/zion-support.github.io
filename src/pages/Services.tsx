@@ -347,31 +347,37 @@ export default function Services() {
           </div>
         )}
 
-        {/* CTA Section */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-8">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let our AI experts help you implement the right technology solutions to drive growth and innovation.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
-              >
-                Get Started Today
-              </Link>
-              <Link
-                to="/request-quote"
-                className="px-8 py-3 border border-cyan-500 text-cyan-400 font-medium rounded-lg hover:bg-cyan-500/10 transition-all duration-200"
-              >
-                Request Custom Quote
-              </Link>
+                  {/* CTA Section */}
+          <div className="text-center mt-16">
+            <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-8">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                Let our AI experts help you implement the right technology solutions to drive growth and innovation.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
+                >
+                  Get Started Today
+                </Link>
+                <Link
+                  to="/innovative-services-showcase"
+                  className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-medium rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 transform hover:scale-105"
+                >
+                  View All Innovative Services
+                </Link>
+                <Link
+                  to="/request-quote"
+                  className="px-8 py-3 border border-cyan-500 text-cyan-400 font-medium rounded-lg hover:bg-cyan-500/10 transition-all duration-200"
+                >
+                  Request Custom Quote
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
       </div>
     </div>
   );
