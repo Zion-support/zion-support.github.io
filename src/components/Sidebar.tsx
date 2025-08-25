@@ -206,6 +206,7 @@ export default function Sidebar() {
         { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Briefcase },
         { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Briefcase },
         { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
+<<<<<<< HEAD
 =======
       title: 'AI Services',
       items: [
@@ -241,6 +242,18 @@ export default function Sidebar() {
         { name: 'AI Autonomous Vehicles Platform', path: '/ai-autonomous-vehicles-platform', icon: Rocket },
         { name: 'AI Autonomous Vehicles', path: '/ai-autonomous-vehicles', icon: Rocket },
         { name: 'AI Autonomous Venture Capitalist', path: '/ai-autonomous-venture-capitalist', icon: Users }
+=======
+        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Shield },
+        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Briefcase },
+        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Briefcase },
+        { name: '5G Enterprise Network', path: '/5g-enterprise-network', icon: Briefcase },
+        { name: '5G Network Optimization', path: '/5g-network-optimization', icon: Briefcase },
+        { name: '5G Private Networks', path: '/5g-private-network-solutions', icon: Briefcase },
+        { name: 'Accessibility Auditor', path: '/accessibility-auditor', icon: Shield },
+        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
+        { name: 'Emerging Technology', path: '/emerging-tech', icon: Globe }
+>>>>>>> origin/cursor/website-audit-and-enhancement-e94a
       ]
     },
     {
