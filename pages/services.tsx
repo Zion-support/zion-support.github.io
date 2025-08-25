@@ -273,7 +273,7 @@ export default function ServicesPage() {
                 }
               >
                 {filteredServices.map((service, index) => (
-                  <motion.div
+                  <EnhancedServiceCard
                     key={service.id}
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}

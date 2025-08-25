@@ -201,7 +201,6 @@ const EnhancedNavigation: React.FC = () => {
                 </AnimatePresence>
               </div>
             ))}
-          </div>
 
           {/* Right side - Contact & Search */}
           <div className="hidden lg:flex items-center space-x-6">
@@ -248,6 +247,7 @@ const EnhancedNavigation: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/30"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
@@ -318,11 +318,29 @@ const EnhancedNavigation: React.FC = () => {
                   Get Started Today
                 </Link>
               </div>
+
+              {/* Mobile Contact Info */}
+              <div className="pt-6 border-t border-purple-500/30">
+                <div className="space-y-3 text-sm text-gray-400">
+                  <div className="flex items-center space-x-2">
+                    <span className="text-cyan-400">📱</span>
+                    <span>{contactInfo.mobile}</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-purple-400">✉️</span>
+                    <span>{contactInfo.email}</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-pink-400">📍</span>
+                    <span>{contactInfo.address}</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+    </motion.nav>
   );
 };
 
