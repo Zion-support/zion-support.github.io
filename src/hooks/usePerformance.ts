@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 interface PerformanceMetrics {
   fcp: number | null;
@@ -6,29 +6,14 @@ interface PerformanceMetrics {
   fid: number | null;
   cls: number | null;
   ttfb: number | null;
+  tti: number | null;
   overallScore: number;
   isLoaded: boolean;
 }
 
-interface PerformanceEntry {
-  name: string;
-  entryType: string;
-  startTime: number;
-  duration: number;
-  value?: number;
-}
-
-// Performance API types
-interface PerformanceEventTiming extends PerformanceEntry {
-  processingStart: number;
-  processingEnd: number;
-  target: EventTarget | null;
-}
-
-interface LayoutShift extends PerformanceEntry {
-  value: number;
-  hadRecentInput: boolean;
-  lastInputTime: number;
+interface PerformanceObserver {
+  observe: (entry: any) => void;
+  disconnect: () => void;
 }
 
 export const usePerformance = (): PerformanceMetrics => {
@@ -38,160 +23,241 @@ export const usePerformance = (): PerformanceMetrics => {
     fid: null,
     cls: null,
     ttfb: null,
+    tti: null,
     overallScore: 0,
-    isLoaded: false
+    isLoaded: false,
   });
 
-  const calculateScore = useCallback((fcp: number, lcp: number, fid: number, cls: number): number => {
+  // Calculate overall performance score
+  const calculateScore = useCallback((currentMetrics: Partial<PerformanceMetrics>): number => {
     let score = 100;
+    let factors = 0;
 
     // FCP scoring (0-25 points)
-    if (fcp <= 1800) score -= 0;
-    else if (fcp <= 3000) score -= 10;
-    else score -= 25;
+    if (currentMetrics.fcp !== null && currentMetrics.fcp !== undefined) {
+      factors++;
+      if (currentMetrics.fcp <= 1800) score -= 0;
+      else if (currentMetrics.fcp <= 3000) score -= 10;
+      else score -= 25;
+    }
 
     // LCP scoring (0-25 points)
-    if (lcp <= 2500) score -= 0;
-    else if (lcp <= 4000) score -= 10;
-    else score -= 25;
+    if (currentMetrics.lcp !== null && currentMetrics.lcp !== undefined) {
+      factors++;
+      if (currentMetrics.lcp <= 2500) score -= 0;
+      else if (currentMetrics.lcp <= 4000) score -= 10;
+      else score -= 25;
+    }
 
     // FID scoring (0-25 points)
-    if (fid <= 100) score -= 0;
-    else if (fid <= 300) score -= 10;
-    else score -= 25;
+    if (currentMetrics.fid !== null && currentMetrics.fid !== undefined) {
+      factors++;
+      if (currentMetrics.fid <= 100) score -= 0;
+      else if (currentMetrics.fid <= 300) score -= 10;
+      else score -= 25;
+    }
 
     // CLS scoring (0-25 points)
-    if (cls <= 0.1) score -= 0;
-    else if (cls <= 0.25) score -= 10;
-    else score -= 25;
+    if (currentMetrics.cls !== null && currentMetrics.cls !== undefined) {
+      factors++;
+      if (currentMetrics.cls <= 0.1) score -= 0;
+      else if (currentMetrics.cls <= 0.25) score -= 10;
+      else score -= 25;
+    }
 
-    return Math.max(0, score);
+    // TTFB scoring (bonus points)
+    if (currentMetrics.ttfb !== null && currentMetrics.ttfb !== undefined) {
+      if (currentMetrics.ttfb <= 800) score += 5;
+      else if (currentMetrics.ttfb <= 1800) score += 2;
+    }
+
+    // TTI scoring (bonus points)
+    if (currentMetrics.tti !== null && currentMetrics.tti !== undefined) {
+      if (currentMetrics.tti <= 3800) score += 5;
+      else if (currentMetrics.tti <= 7300) score += 2;
+    }
+
+    // Normalize score based on available factors
+    return factors > 0 ? Math.max(0, Math.min(100, score)) : 0;
   }, []);
 
+  // Update metrics and recalculate score
   const updateMetrics = useCallback((newMetrics: Partial<PerformanceMetrics>) => {
     setMetrics(prev => {
       const updated = { ...prev, ...newMetrics };
-      
-      // Calculate overall score when we have all metrics
-      if (updated.fcp && updated.lcp && updated.fid && updated.cls) {
-        updated.overallScore = calculateScore(updated.fcp, updated.lcp, updated.fid, updated.cls);
-      }
-      
-      return updated;
+      const score = calculateScore(updated);
+      return { ...updated, overallScore: score };
     });
   }, [calculateScore]);
 
-  useEffect(() => {
-    // Check if Performance Observer is supported
-    if (!('PerformanceObserver' in window)) {
-      console.warn('Performance Observer not supported');
-      return;
-    }
-
-    // First Contentful Paint (FCP)
-    const fcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
-      if (fcpEntry) {
-        const fcp = Math.round(fcpEntry.startTime);
-        updateMetrics({ fcp });
-        if (import.meta.env.DEV) {
-          console.log('FCP:', fcp, 'ms');
-        }
-      }
-    });
-
-    // Largest Contentful Paint (LCP)
-    const lcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      const lcpEntry = entries[entries.length - 1]; // Get the latest LCP entry
-      if (lcpEntry) {
-        const lcp = Math.round(lcpEntry.startTime);
-        updateMetrics({ lcp });
-        if (import.meta.env.DEV) {
-          console.log('LCP:', lcp, 'ms');
-        }
-      }
-    });
-
-    // First Input Delay (FID)
-    const fidObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach(entry => {
-        const fidEntry = entry as unknown as PerformanceEventTiming;
-        if (fidEntry.processingStart) {
-          const fid = Math.round(fidEntry.processingStart - fidEntry.startTime);
-          updateMetrics({ fid });
-          if (import.meta.env.DEV) {
-            console.log('FID:', fid, 'ms');
+  // Measure First Contentful Paint (FCP)
+  const measureFCP = useCallback(() => {
+    if ('PerformanceObserver' in window) {
+      try {
+        const observer = new (window as any).PerformanceObserver((list: any) => {
+          const entries = list.getEntries();
+          const fcpEntry = entries.find((entry: any) => entry.name === 'first-contentful-paint');
+          if (fcpEntry) {
+            updateMetrics({ fcp: fcpEntry.startTime });
+            observer.disconnect();
           }
-        }
-      });
-    });
-
-    // Cumulative Layout Shift (CLS)
-    let clsValue = 0;
-    const clsObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach(entry => {
-        const clsEntry = entry as unknown as LayoutShift;
-        if (!clsEntry.hadRecentInput) {
-          clsValue += clsEntry.value;
-          updateMetrics({ cls: Math.round(clsValue * 1000) / 1000 });
-          if (import.meta.env.DEV) {
-            console.log('CLS:', Math.round(clsValue * 1000) / 1000);
-          }
-        }
-      });
-    });
-
-    // Time to First Byte (TTFB)
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigationEntry) {
-      const ttfb = Math.round(navigationEntry.responseStart - navigationEntry.requestStart);
-      updateMetrics({ ttfb });
-      if (import.meta.env.DEV) {
-        console.log('TTFB:', ttfb, 'ms');
+        });
+        observer.observe({ entryTypes: ['paint'] });
+      } catch (error) {
+        console.warn('FCP measurement failed:', error);
       }
     }
-
-    // Start observing
-    try {
-      fcpObserver.observe({ entryTypes: ['paint'] });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-    } catch (error) {
-      console.warn('Error setting up performance observers:', error);
-    }
-
-    // Mark as loaded after a delay to ensure metrics are collected
-    const timer = setTimeout(() => {
-      updateMetrics({ isLoaded: true });
-    }, 5000);
-
-    return () => {
-      fcpObserver.disconnect();
-      lcpObserver.disconnect();
-      fidObserver.disconnect();
-      clsObserver.disconnect();
-      clearTimeout(timer);
-    };
   }, [updateMetrics]);
 
-  // Performance monitoring for development
-  useEffect(() => {
-    if (import.meta.env.DEV && metrics.isLoaded) {
-      console.group('🚀 Performance Metrics');
-      console.log('FCP:', metrics.fcp, 'ms');
-      console.log('LCP:', metrics.lcp, 'ms');
-      console.log('FID:', metrics.fid, 'ms');
-      console.log('CLS:', metrics.cls);
-      console.log('TTFB:', metrics.ttfb, 'ms');
-      console.log('Overall Score:', metrics.overallScore, '/100');
-      console.groupEnd();
+  // Measure Largest Contentful Paint (LCP)
+  const measureLCP = useCallback(() => {
+    if ('PerformanceObserver' in window) {
+      try {
+        let lcpValue = 0;
+        const observer = new (window as any).PerformanceObserver((list: any) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          if (lastEntry) {
+            lcpValue = lastEntry.startTime;
+            updateMetrics({ lcp: lcpValue });
+          }
+        });
+        observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      } catch (error) {
+        console.warn('LCP measurement failed:', error);
+      }
     }
-  }, [metrics]);
+  }, [updateMetrics]);
+
+  // Measure First Input Delay (FID)
+  const measureFID = useCallback(() => {
+    if ('PerformanceObserver' in window) {
+      try {
+        const observer = new (window as any).PerformanceObserver((list: any) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: any) => {
+            if (entry.entryType === 'first-input') {
+              updateMetrics({ fid: entry.processingStart - entry.startTime });
+              observer.disconnect();
+            }
+          });
+        });
+        observer.observe({ entryTypes: ['first-input'] });
+      } catch (error) {
+        console.warn('FID measurement failed:', error);
+      }
+    }
+  }, [updateMetrics]);
+
+  // Measure Cumulative Layout Shift (CLS)
+  const measureCLS = useCallback(() => {
+    if ('PerformanceObserver' in window) {
+      try {
+        let clsValue = 0;
+        const observer = new (window as any).PerformanceObserver((list: any) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: any) => {
+            if (!entry.hadRecentInput) {
+              clsValue += (entry as any).value;
+              updateMetrics({ cls: clsValue });
+            }
+          });
+        });
+        observer.observe({ entryTypes: ['layout-shift'] });
+      } catch (error) {
+        console.warn('CLS measurement failed:', error);
+      }
+    }
+  }, [updateMetrics]);
+
+  // Measure Time to First Byte (TTFB)
+  const measureTTFB = useCallback(() => {
+    if ('PerformanceObserver' in window) {
+      try {
+        const observer = new (window as any).PerformanceObserver((list: any) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: any) => {
+            if (entry.entryType === 'navigation') {
+              updateMetrics({ ttfb: entry.responseStart - entry.requestStart });
+            }
+          });
+        });
+        observer.observe({ entryTypes: ['navigation'] });
+      } catch (error) {
+        console.warn('TTFB measurement failed:', error);
+      }
+    }
+  }, [updateMetrics]);
+
+  // Measure Time to Interactive (TTI)
+  const measureTTI = useCallback(() => {
+    if ('PerformanceObserver' in window) {
+      try {
+        const observer = new (window as any).PerformanceObserver((list: any) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: any) => {
+            if (entry.entryType === 'measure' && entry.name === 'tti') {
+              updateMetrics({ tti: entry.startTime });
+            }
+          });
+        });
+        observer.observe({ entryTypes: ['measure'] });
+      } catch (error) {
+        console.warn('TTI measurement failed:', error);
+      }
+    }
+  }, [updateMetrics]);
+
+  // Measure TTI using a polyfill approach
+  const measureTTIPolyfill = useCallback(() => {
+    if (document.readyState === 'complete') {
+      // Use a simple heuristic for TTI
+      const tti = performance.now();
+      updateMetrics({ tti });
+    } else {
+      window.addEventListener('load', () => {
+        const tti = performance.now();
+        updateMetrics({ tti });
+      });
+    }
+  }, [updateMetrics]);
+
+  // Initialize performance monitoring
+  useEffect(() => {
+    // Start measuring when component mounts
+    measureFCP();
+    measureLCP();
+    measureFID();
+    measureCLS();
+    measureTTFB();
+    measureTTIPolyfill();
+
+    // Mark as loaded after a reasonable delay
+    const timer = setTimeout(() => {
+      updateMetrics({ isLoaded: true });
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, [measureFCP, measureLCP, measureFID, measureCLS, measureTTFB, measureTTIPolyfill, updateMetrics]);
+
+  // Add performance marks for custom measurements
+  useEffect(() => {
+    if ('performance' in window) {
+      // Mark key application events
+      performance.mark('app-mount');
+      
+      // Measure time to mount
+      setTimeout(() => {
+        performance.mark('app-ready');
+        performance.measure('app-mount-time', 'app-mount', 'app-ready');
+        
+        const measure = performance.getEntriesByName('app-mount-time')[0];
+        if (measure) {
+          updateMetrics({ tti: measure.duration });
+        }
+      }, 100);
+    }
+  }, [updateMetrics]);
 
   return metrics;
 };

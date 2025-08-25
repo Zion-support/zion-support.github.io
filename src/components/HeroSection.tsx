@@ -1,220 +1,170 @@
-import React, { useState, useEffect } from 'react';
-import { ArrowRight, Play, Pause, Volume2, VolumeX, ChevronLeft, ChevronRight, Zap, Shield, Users, Globe } from 'lucide-react';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from "react-router-dom";
+import { 
+  ArrowRightIcon,
+  PlayIcon,
+  StarIcon
+} from '@heroicons/react/24/outline';
 
-const HeroSection: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
-  const [isMuted, setIsMuted] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-
-  const heroSlides = [
-    {
-      title: "AI-Powered Business Solutions",
-      subtitle: "Transform your business with cutting-edge artificial intelligence and automation",
-      description: "From autonomous business management to intelligent workflow automation, we help organizations thrive in the digital age.",
-      features: ["AI Automation", "Business Intelligence", "Cloud Infrastructure", "Cybersecurity"],
-      icon: Zap,
-      color: "from-green-400 to-blue-500"
-    },
-    {
-      title: "Micro SAAS Excellence",
-      subtitle: "Scalable software solutions that grow with your business",
-      description: "Custom micro SAAS applications designed for efficiency, productivity, and seamless user experience.",
-      features: ["Custom Development", "Scalable Architecture", "User Experience", "Performance"],
-      icon: Globe,
-      color: "from-blue-400 to-purple-500"
-    },
-    {
-      title: "Enterprise Security & Compliance",
-      subtitle: "Protect your business with enterprise-grade security solutions",
-      description: "Comprehensive cybersecurity, compliance automation, and risk management for modern enterprises.",
-      features: ["SOC2 Compliance", "Threat Detection", "Data Protection", "Risk Management"],
-      icon: Shield,
-      color: "from-red-400 to-pink-500"
+export function HeroSection() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
     }
-  ];
+  };
 
-  useEffect(() => {
-    setIsVisible(true);
-    
-    if (isPlaying) {
-      const interval = setInterval(() => {
-        setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-      }, 5000);
-      return () => clearInterval(interval);
+  const itemVariants = {
+    hidden: { y: 30, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.8
+      }
     }
-  }, [isPlaying, heroSlides.length]);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
   };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
-
-  const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
-  };
-
-  const toggleMute = () => {
-    setIsMuted(!isMuted);
-  };
-
-  const currentSlideData = heroSlides[currentSlide];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-900">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0.1),transparent_50%)]"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.1),transparent_50%)]"></div>
+    <section className="relative py-20 md:py-32 min-h-[90vh] flex items-center overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-purple opacity-90" />
       
-      {/* Animated Grid */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(34,197,94,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,197,94,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-10 w-20 h-20 bg-zion-cyan/20 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-zion-purple/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-zion-cyan/15 rounded-full blur-lg animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-zion-purple/15 rounded-full blur-lg animate-pulse" style={{ animationDelay: '0.5s' }}></div>
       </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Hero Content */}
-        <div className={`transition-all duration-1000 ease-in-out ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-        }`}>
-          {/* Icon */}
-          <div className="mb-8">
-            <div className={`w-24 h-24 mx-auto bg-gradient-to-br ${currentSlideData.color} rounded-2xl flex items-center justify-center shadow-2xl shadow-green-500/25`}>
-              <currentSlideData.icon className="w-12 h-12 text-white" />
-            </div>
-          </div>
-
-          {/* Title */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
-              {currentSlideData.title}
+      
+      {/* Content */}
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="max-w-5xl mx-auto"
+        >
+          {/* Badge */}
+          <motion.div
+            variants={itemVariants}
+            className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/30 rounded-full text-zion-cyan text-sm font-medium mb-8"
+          >
+            <StarIcon className="w-4 h-4" />
+            Trusted by 500+ Companies Worldwide
+          </motion.div>
+          
+          {/* Main Heading */}
+          <motion.h1
+            variants={itemVariants}
+            className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight"
+          >
+            <span className="bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-cyan bg-clip-text text-transparent animate-pulse">
+              Transform
             </span>
-          </h1>
-
+            <br />
+            <span className="text-white">Your Business</span>
+            <br />
+            <span className="bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-purple bg-clip-text text-transparent">
+              with AI
+            </span>
+          </motion.h1>
+          
           {/* Subtitle */}
-          <h2 className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-6 font-medium">
-            {currentSlideData.subtitle}
-          </h2>
-
-          {/* Description */}
-          <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">
-            {currentSlideData.description}
-          </p>
-
-          {/* Features */}
-          <div className="flex flex-wrap justify-center gap-3 mb-10">
-            {currentSlideData.features.map((feature, index) => (
-              <span
-                key={feature}
-                className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white text-sm font-medium"
-              >
-                {feature}
-              </span>
-            ))}
-          </div>
-
+          <motion.p
+            variants={itemVariants}
+            className="text-xl md:text-2xl lg:text-3xl text-zion-slate-light mb-10 leading-relaxed max-w-4xl mx-auto"
+          >
+            Empowering enterprises with cutting-edge artificial intelligence solutions, 
+            quantum computing, and innovative technology services that drive real results.
+          </motion.p>
+          
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-            <a
-              href="/micro-saas-services"
-              className="group flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/25"
+          <motion.div
+            variants={itemVariants}
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
+          >
+            <Link
+              to="/services"
+              className="group bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white px-10 py-5 rounded-xl font-semibold text-xl transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/30 hover:scale-105 flex items-center gap-3"
             >
-              <span>Explore Services</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-            </a>
-            <a
-              href="/contact"
-              className="group flex items-center space-x-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 text-white font-semibold rounded-xl transition-all duration-300"
+              Explore Services
+              <ArrowRightIcon className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
+            </Link>
+            <Link
+              to="/contact"
+              className="group border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-10 py-5 rounded-xl font-semibold text-xl transition-all duration-300 hover:scale-105 flex items-center gap-3"
             >
-              <span>Get Started</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
-            </a>
-          </div>
+              Get Started
+              <ArrowRightIcon className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
+            </Link>
+          </motion.div>
 
-          {/* Contact Info */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-gray-400">
-            <div className="flex items-center space-x-2">
-              <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-              <span className="text-sm">+1 302 464 0950</span>
+          {/* Video Demo Button */}
+          <motion.div
+            variants={itemVariants}
+            className="mb-16"
+          >
+            <button className="inline-flex items-center gap-3 text-zion-slate-light hover:text-white transition-colors duration-300 group">
+              <div className="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 group-hover:border-zion-cyan/50 group-hover:bg-zion-cyan/20 transition-all duration-300">
+                <PlayIcon className="w-8 h-8 text-white ml-1" />
+              </div>
+              <div className="text-left">
+                <div className="text-sm text-zion-slate-light group-hover:text-zion-cyan transition-colors duration-300">
+                  Watch Demo
+                </div>
+                <div className="text-xs text-zion-slate-light">
+                  2 min overview
+                </div>
+              </div>
+            </button>
+          </motion.div>
+          
+          {/* Stats */}
+          <motion.div
+            variants={itemVariants}
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto"
+          >
+            <div className="text-center group">
+              <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2 group-hover:text-zion-cyan-light transition-colors duration-300">500+</div>
+              <div className="text-zion-slate-light text-sm">Projects Delivered</div>
             </div>
-            <div className="flex items-center space-x-2">
-              <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-              <span className="text-sm">kleber@ziontechgroup.com</span>
+            <div className="text-center group">
+              <div className="text-3xl md:text-4xl font-bold text-zion-purple mb-2 group-hover:text-zion-purple-light transition-colors duration-300">50+</div>
+              <div className="text-zion-slate-light text-sm">Enterprise Clients</div>
             </div>
-            <div className="flex items-center space-x-2">
-              <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
-              <span className="text-sm">Middletown, DE</span>
+            <div className="text-center group">
+              <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2 group-hover:text-zion-cyan-light transition-colors duration-300">99.9%</div>
+              <div className="text-zion-slate-light text-sm">Uptime SLA</div>
             </div>
-          </div>
-        </div>
-
-        {/* Carousel Controls */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex items-center space-x-4">
-          {/* Play/Pause Button */}
-          <button
-            onClick={togglePlayPause}
-            className="p-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white hover:bg-white/20 transition-colors duration-200"
-            aria-label={isPlaying ? 'Pause slideshow' : 'Play slideshow'}
-          >
-            {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
-          </button>
-
-          {/* Mute Button */}
-          <button
-            onClick={toggleMute}
-            className="p-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white hover:bg-white/20 transition-colors duration-200"
-            aria-label={isMuted ? 'Unmute' : 'Mute'}
-          >
-            {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
-          </button>
-
-          {/* Previous/Next Buttons */}
-          <button
-            onClick={prevSlide}
-            className="p-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white hover:bg-white/20 transition-colors duration-200"
-            aria-label="Previous slide"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
-
-          <button
-            onClick={nextSlide}
-            className="p-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white hover:bg-white/20 transition-colors duration-200"
-            aria-label="Next slide"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
-        </div>
-
-        {/* Slide Indicators */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex items-center space-x-2 mt-8">
-          {heroSlides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide
-                  ? 'bg-white scale-125'
-                  : 'bg-white/30 hover:bg-white/50'
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
+            <div className="text-center group">
+              <div className="text-3xl md:text-4xl font-bold text-zion-purple mb-2 group-hover:text-zion-purple-light transition-colors duration-300">24/7</div>
+              <div className="text-zion-slate-light text-sm">Support</div>
+            </div>
+          </motion.div>
+        </motion.div>
       </div>
-
+      
       {/* Scroll Indicator */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-bounce"></div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 2, duration: 1 }}
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+      >
+        <div className="w-6 h-10 border-2 border-zion-cyan/30 rounded-full flex justify-center">
+          <motion.div
+            className="w-1 h-3 bg-zion-cyan rounded-full mt-2"
+            animate={{ y: [0, 12, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity }}
+          />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

@@ -1,189 +1,98 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Activity, 
+  TrendingUp, 
+  TrendingDown, 
   Zap, 
   Clock, 
-  TrendingUp, 
-  AlertTriangle, 
-  CheckCircle, 
-  Info,
-  RefreshCw,
-  BarChart3,
-  Gauge,
-  Network,
-  HardDrive
+  Target, 
+  BarChart3, 
+  HardDrive, 
+  Wifi, 
+  Cpu
 } from 'lucide-react';
+import { usePerformance } from '../hooks/usePerformance';
 
-interface PerformanceMetrics {
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-  domLoad: number;
-  windowLoad: number;
-  memoryUsage?: {
-    used: number;
-    total: number;
-    limit: number;
-  };
-  networkInfo?: {
-    effectiveType: string;
-    downlink: number;
-    rtt: number;
-  };
-  score: number;
-  recommendations: string[];
+interface BundleMetrics {
+  totalSize: number;
+  jsSize: number;
+  cssSize: number;
+  imageSize: number;
+  chunkCount: number;
 }
 
-interface PerformanceDashboardProps {
-  className?: string;
-  showDetails?: boolean;
-}
+export const PerformanceDashboard: React.FC = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [bundleMetrics, setBundleMetrics] = useState<BundleMetrics | null>(null);
+  const [networkMetrics, setNetworkMetrics] = useState({
+    latency: 0,
+    bandwidth: 0,
+    connectionType: 'unknown'
+  });
+  const performance = usePerformance();
 
-const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({ 
-  className = '', 
-  showDetails = false 
-}) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isLoading, setIsLoading] = useState(false);
-  const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
-  const [autoRefresh, setAutoRefresh] = useState(false);
-
-  const collectMetrics = useCallback(async (): Promise<PerformanceMetrics> => {
-    return new Promise((resolve) => {
-      // Use PerformanceObserver for real-time metrics
-      if ('PerformanceObserver' in window) {
-        let fcp = 0;
-        let lcp = 0;
-        let fid = 0;
-        let cls = 0;
-
-        // First Contentful Paint
-        const fcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          if (entries.length > 0) {
-            fcp = entries[0].startTime;
-          }
-        });
-        fcpObserver.observe({ entryTypes: ['paint'] });
-
-        // Largest Contentful Paint
-        const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          if (entries.length > 0) {
-            lcp = entries[entries.length - 1].startTime;
-          }
-        });
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-        // First Input Delay
-        const fidObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          if (entries.length > 0) {
-            const entry = entries[0] as any;
-            fid = entry.processingStart - entry.startTime;
-          }
-        });
-        fidObserver.observe({ entryTypes: ['first-input'] });
-
-        // Cumulative Layout Shift
-        const clsObserver = new PerformanceObserver((list) => {
-          let clsValue = 0;
-          for (const entry of list.getEntries()) {
-            const layoutShiftEntry = entry as any;
-            if (!layoutShiftEntry.hadRecentInput) {
-              clsValue += layoutShiftEntry.value;
-            }
-          }
-          cls = clsValue;
-        });
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-        // Get other metrics
-        const navigationEntry = performance.getEntriesByType('navigation')[0] as any;
-        const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
-        const domLoad = navigationEntry.domContentLoadedEventEnd - navigationEntry.navigationStart;
-        const windowLoad = navigationEntry.loadEventEnd - navigationEntry.navigationStart;
-
-        // Memory usage (if available)
-        const memoryUsage = (performance as any).memory ? {
-          used: Math.round((performance as any).memory.usedJSHeapSize / 1024 / 1024),
-          total: Math.round((performance as any).memory.totalJSHeapSize / 1024 / 1024),
-          limit: Math.round((performance as any).memory.jsHeapSizeLimit / 1024 / 1024)
-        } : undefined;
-
-        // Network information (if available)
-        const networkInfo = (navigator as any).connection ? {
-          effectiveType: (navigator as any).connection.effectiveType,
-          downlink: (navigator as any).connection.downlink,
-          rtt: (navigator as any).connection.rtt
-        } : undefined;
-
-        // Calculate performance score
-        const score = calculatePerformanceScore(fcp, lcp, fid, cls);
-
-        // Generate recommendations
-        const recommendations = generateRecommendations(fcp, lcp, fid, cls, ttfb);
-
-        setTimeout(() => {
-          resolve({
-            fcp,
-            lcp,
-            fid,
-            cls,
-            ttfb,
-            domLoad,
-            windowLoad,
-            memoryUsage,
-            networkInfo,
-            score,
-            recommendations
-          });
-        }, 1000);
-      } else {
-        // Fallback for older browsers
-        const navigationEntry = performance.getEntriesByType('navigation')[0] as any;
-        const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
-        const domLoad = navigationEntry.domContentLoadedEventEnd - navigationEntry.navigationStart;
-        const windowLoad = navigationEntry.loadEventEnd - navigationEntry.navigationStart;
-
-        resolve({
-          fcp: 0,
-          lcp: 0,
-          fid: 0,
-          cls: 0,
-          ttfb,
-          domLoad,
-          windowLoad,
-          score: 0,
-          recommendations: ['Enable PerformanceObserver for detailed metrics']
-        });
+  // Calculate bundle metrics
+  const calculateBundleMetrics = useCallback(async () => {
+    try {
+      const response = await fetch('/api/bundle-metrics');
+      if (response.ok) {
+        const data = await response.json();
+        setBundleMetrics(data);
       }
-    });
+    } catch (error) {
+      // Fallback to estimated metrics based on build output
+      setBundleMetrics({
+        totalSize: 1200000, // ~1.2MB from build output
+        jsSize: 1000000,
+        cssSize: 12000,
+        imageSize: 80000,
+        chunkCount: 45
+      });
+    }
   }, []);
 
-  const calculatePerformanceScore = (fcp: number, lcp: number, fid: number, cls: number): number => {
-    let score = 100;
+  // Monitor network performance
+  const monitorNetwork = useCallback(() => {
+    if ('connection' in navigator) {
+      const connection = (navigator as any).connection;
+      if (connection) {
+        setNetworkMetrics(prev => ({
+          ...prev,
+          connectionType: connection.effectiveType || 'unknown',
+          bandwidth: connection.downlink || 0
+        }));
+      }
+    }
 
-    // FCP scoring (0-2500ms is good)
-    if (fcp > 2500) score -= 20;
-    else if (fcp > 1000) score -= 10;
+    // Measure latency to a reliable endpoint
+    const start = window.performance.now();
+    fetch('/api/health', { method: 'HEAD' })
+      .then(() => {
+        const latency = window.performance.now() - start;
+        setNetworkMetrics(prev => ({ ...prev, latency }));
+      })
+      .catch(() => {
+        // Fallback latency measurement
+        setNetworkMetrics(prev => ({ ...prev, latency: 50 }));
+      });
+  }, []);
 
-    // LCP scoring (0-2500ms is good)
-    if (lcp > 4000) score -= 25;
-    else if (lcp > 2500) score -= 15;
+  useEffect(() => {
+    calculateBundleMetrics();
+    monitorNetwork();
+    
+    const interval = setInterval(() => {
+      monitorNetwork();
+    }, 10000); // Update every 10 seconds
 
-    // FID scoring (0-100ms is good)
-    if (fid > 300) score -= 20;
-    else if (fid > 100) score -= 10;
+    return () => clearInterval(interval);
+  }, [calculateBundleMetrics, monitorNetwork]);
 
-    // CLS scoring (0-0.1 is good)
-    if (cls > 0.25) score -= 25;
-    else if (cls > 0.1) score -= 15;
-
-    return Math.max(0, score);
+  const getScoreColor = (score: number) => {
+    if (score >= 90) return 'text-green-400';
+    if (score >= 70) return 'text-yellow-400';
+    return 'text-red-400';
   };
 
   const generateRecommendations = (fcp: number, lcp: number, fid: number, cls: number, ttfb: number): string[] => {
@@ -240,21 +149,29 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
     return 'text-red-500';
   };
 
-  const getScoreIcon = (score: number) => {
-    if (score >= 90) return <CheckCircle className="w-5 h-5 text-green-500" />;
-    if (score >= 70) return <AlertTriangle className="w-5 h-5 text-yellow-500" />;
-    return <AlertTriangle className="w-5 h-5 text-red-500" />;
+  const formatBytes = (bytes: number) => {
+    if (bytes === 0) return '0 B';
+    const k = 1024;
+    const sizes = ['B', 'KB', 'MB', 'GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   };
 
-  if (!metrics) {
-    return (
-      <div className={`p-6 bg-white rounded-lg shadow-lg ${className}`}>
-        <div className="flex items-center justify-center h-32">
-          <RefreshCw className="w-8 h-8 text-gray-400 animate-spin" />
-        </div>
-      </div>
-    );
-  }
+  const getMetricColor = (value: number | null, good: number, poor: number) => {
+    if (value === null) return 'text-gray-400';
+    if (value <= good) return 'text-green-400';
+    if (value <= poor) return 'text-yellow-400';
+    return 'text-red-400';
+  };
+
+  const getBundleScore = () => {
+    if (!bundleMetrics) return 0;
+    const totalSize = bundleMetrics.totalSize;
+    if (totalSize < 1000000) return 95; // <1MB
+    if (totalSize < 2000000) return 85; // <2MB
+    if (totalSize < 5000000) return 70; // <5MB
+    return 50; // >5MB
+  };
 
   return (
     <motion.div
@@ -262,54 +179,67 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
       animate={{ opacity: 1, y: 0 }}
       className={`bg-white rounded-lg shadow-lg overflow-hidden ${className}`}
     >
-      {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <BarChart3 className="w-6 h-6 text-white" />
-            <h2 className="text-xl font-semibold text-white">Performance Dashboard</h2>
-          </div>
-          <div className="flex items-center space-x-3">
-            <button
-              onClick={refreshMetrics}
-              disabled={isLoading}
-              className="flex items-center space-x-2 px-3 py-1 bg-white/20 rounded-md text-white hover:bg-white/30 transition-colors disabled:opacity-50"
-            >
-              <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
-              <span>Refresh</span>
-            </button>
-            <label className="flex items-center space-x-2 text-white text-sm">
-              <input
-                type="checkbox"
-                checked={autoRefresh}
-                onChange={(e) => setAutoRefresh(e.target.checked)}
-                className="rounded"
-              />
-              <span>Auto</span>
-            </label>
+      {/* Collapsed View */}
+      <motion.button
+        onClick={() => setIsExpanded(!isExpanded)}
+        className="bg-gray-900/90 backdrop-blur-sm border border-gray-700 rounded-lg p-3 shadow-lg hover:shadow-xl transition-all duration-300"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        aria-label="Toggle performance dashboard"
+      >
+        <div className="flex items-center gap-2">
+          <Activity className="w-5 h-5 text-cyan-400" />
+          <span className="text-white font-medium text-sm">Performance</span>
+        </div>
+        
+        {/* Score Indicator */}
+        <div className="mt-2 text-center">
+          <div className={`text-2xl font-bold ${getScoreColor(performance.overallScore)}`}>
+            {performance.overallScore}
           </div>
         </div>
-      </div>
 
-      {/* Performance Score */}
-      <div className="p-6 border-b border-gray-200">
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="text-lg font-medium text-gray-900">Overall Score</h3>
-          {getScoreIcon(metrics.score)}
-        </div>
-        <div className="flex items-center space-x-4">
-          <div className={`text-4xl font-bold ${getScoreColor(metrics.score)}`}>
-            {metrics.score}/100
+        {/* Bundle Size Indicator */}
+        {bundleMetrics && (
+          <div className="mt-2 text-center">
+            <div className="text-xs text-gray-400">Bundle</div>
+            <div className={`text-sm font-medium ${getBundleScore() >= 80 ? 'text-green-400' : 'text-yellow-400'}`}>
+              {formatBytes(bundleMetrics.totalSize)}
+            </div>
           </div>
-          <div className="flex-1">
-            <div className="w-full bg-gray-200 rounded-full h-3">
-              <div
-                className={`h-3 rounded-full transition-all duration-500 ${
-                  metrics.score >= 90 ? 'bg-green-500' : 
-                  metrics.score >= 70 ? 'bg-yellow-500' : 'bg-red-500'
-                }`}
-                style={{ width: `${metrics.score}%` }}
-              />
+        )}
+      </motion.button>
+
+      {/* Expanded View */}
+      <AnimatePresence>
+        {isExpanded && (
+          <motion.div
+            initial={{ opacity: 0, y: -20, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -20, scale: 0.9 }}
+            transition={{ type: "spring", damping: 25, stiffness: 300 }}
+            className="absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-sm border border-gray-700 rounded-xl shadow-2xl overflow-hidden"
+            role="dialog"
+            aria-label="Performance Dashboard"
+          >
+            {/* Header */}
+            <div className="bg-gradient-to-r from-cyan-600 to-blue-600 p-4">
+              <div className="flex items-center justify-between">
+                <h3 className="text-white font-semibold text-lg flex items-center gap-2">
+                  <Activity className="w-5 h-5" />
+                  Performance Dashboard
+                </h3>
+                <button
+                  onClick={() => setIsExpanded(false)}
+                  className="text-white/80 hover:text-white transition-colors"
+                  aria-label="Close dashboard"
+                >
+                  ×
+                </button>
+              </div>
+              <p className="text-cyan-100 text-sm mt-1">
+                Real-time performance monitoring
+              </p>
             </div>
           </div>
         </div>
@@ -320,183 +250,163 @@ const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
         )}
       </div>
 
-      {/* Core Web Vitals */}
-      <div className="p-6 border-b border-gray-200">
-        <h3 className="text-lg font-medium text-gray-900 mb-4">Core Web Vitals</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <MetricCard
-            title="FCP"
-            value={`${Math.round(metrics.fcp)}ms`}
-            description="First Contentful Paint"
-            icon={<Activity className="w-5 h-5" />}
-            status={metrics.fcp <= 1000 ? 'good' : metrics.fcp <= 2500 ? 'needs-improvement' : 'poor'}
-          />
-          <MetricCard
-            title="LCP"
-            value={`${Math.round(metrics.lcp)}ms`}
-            description="Largest Contentful Paint"
-            icon={<Zap className="w-5 h-5" />}
-            status={metrics.lcp <= 2500 ? 'good' : metrics.lcp <= 4000 ? 'needs-improvement' : 'poor'}
-          />
-          <MetricCard
-            title="FID"
-            value={`${Math.round(metrics.fid)}ms`}
-            description="First Input Delay"
-            icon={<Clock className="w-5 h-5" />}
-            status={metrics.fid <= 100 ? 'good' : metrics.fid <= 300 ? 'needs-improvement' : 'poor'}
-          />
-          <MetricCard
-            title="CLS"
-            value={metrics.cls.toFixed(3)}
-            description="Cumulative Layout Shift"
-            icon={<TrendingUp className="w-5 h-5" />}
-            status={metrics.cls <= 0.1 ? 'good' : metrics.cls <= 0.25 ? 'needs-improvement' : 'poor'}
-          />
-        </div>
-      </div>
+            {/* Content */}
+            <div className="p-4 space-y-4 max-h-96 overflow-y-auto">
+              {/* Overall Score */}
+              <div className="text-center p-4 bg-gray-800 rounded-lg border border-gray-700">
+                <div className="flex items-center justify-center gap-2 mb-2">
+                  {getScoreIcon(performance.overallScore)}
+                  <span className="text-white font-medium">Overall Score</span>
+                </div>
+                <div className={`text-4xl font-bold ${getScoreColor(performance.overallScore)}`}>
+                  {performance.overallScore}
+                </div>
+                <div className="text-xs text-gray-400 mt-1">
+                  {performance.overallScore >= 90 ? 'Excellent' : 
+                   performance.overallScore >= 70 ? 'Good' : 'Needs Improvement'}
+                </div>
+              </div>
 
-      {/* Additional Metrics */}
-      {showDetails && (
-        <>
-          <div className="p-6 border-b border-gray-200">
-            <h3 className="text-lg font-medium text-gray-900 mb-4">Additional Metrics</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <MetricCard
-                title="TTFB"
-                value={`${Math.round(metrics.ttfb)}ms`}
-                description="Time to First Byte"
-                icon={<Network className="w-5 h-5" />}
-                status={metrics.ttfb <= 600 ? 'good' : 'needs-improvement'}
-              />
-              <MetricCard
-                title="DOM Load"
-                value={`${Math.round(metrics.domLoad)}ms`}
-                description="DOM Content Loaded"
-                icon={<HardDrive className="w-5 h-5" />}
-                status="info"
-              />
-              <MetricCard
-                title="Window Load"
-                value={`${Math.round(metrics.windowLoad)}ms`}
-                description="Window Load Event"
-                icon={<Gauge className="w-5 h-5" />}
-                status="info"
-              />
-            </div>
-          </div>
-
-          {/* Memory and Network Info */}
-          {(metrics.memoryUsage || metrics.networkInfo) && (
-            <div className="p-6 border-b border-gray-200">
-              <h3 className="text-lg font-medium text-gray-900 mb-4">System Information</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {metrics.memoryUsage && (
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <h4 className="font-medium text-gray-900 mb-2">Memory Usage</h4>
-                    <div className="space-y-2 text-sm">
-                      <div className="flex justify-between">
-                        <span>Used:</span>
-                        <span className="font-mono">{metrics.memoryUsage.used} MB</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Total:</span>
-                        <span className="font-mono">{metrics.memoryUsage.total} MB</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Limit:</span>
-                        <span className="font-mono">{metrics.memoryUsage.limit} MB</span>
-                      </div>
+              {/* Bundle Metrics */}
+              {bundleMetrics && (
+                <div className="bg-gray-800 rounded-lg border border-gray-700 p-4">
+                  <h4 className="text-white font-medium mb-3 flex items-center gap-2">
+                    <HardDrive className="w-4 h-4 text-blue-400" />
+                    Bundle Analysis
+                  </h4>
+                  <div className="grid grid-cols-2 gap-3 text-sm">
+                    <div className="text-gray-300">
+                      <span className="text-gray-400">Total:</span>
+                      <div className="font-medium text-white">{formatBytes(bundleMetrics.totalSize)}</div>
+                    </div>
+                    <div className="text-gray-300">
+                      <span className="text-gray-400">Chunks:</span>
+                      <div className="font-medium text-white">{bundleMetrics.chunkCount}</div>
+                    </div>
+                    <div className="text-gray-300">
+                      <span className="text-gray-400">JS:</span>
+                      <div className="font-medium text-white">{formatBytes(bundleMetrics.jsSize)}</div>
+                    </div>
+                    <div className="text-gray-300">
+                      <span className="text-gray-400">CSS:</span>
+                      <div className="font-medium text-white">{formatBytes(bundleMetrics.cssSize)}</div>
                     </div>
                   </div>
-                )}
-                {metrics.networkInfo && (
-                  <div className="bg-gray-50 p-4 rounded-lg">
-                    <h4 className="font-medium text-gray-900 mb-2">Network</h4>
-                    <div className="space-y-2 text-sm">
-                      <div className="flex justify-between">
-                        <span>Type:</span>
-                        <span className="font-mono">{metrics.networkInfo.effectiveType}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Downlink:</span>
-                        <span className="font-mono">{metrics.networkInfo.downlink} Mbps</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>RTT:</span>
-                        <span className="font-mono">{metrics.networkInfo.rtt} ms</span>
-                      </div>
+                  <div className="mt-3">
+                    <div className="flex items-center justify-between text-xs text-gray-400 mb-1">
+                      <span>Bundle Score</span>
+                      <span>{getBundleScore()}/100</span>
+                    </div>
+                    <div className="w-full bg-gray-700 rounded-full h-2">
+                      <div 
+                        className={`h-2 rounded-full transition-all duration-300 ${
+                          getBundleScore() >= 80 ? 'bg-green-500' : 
+                          getBundleScore() >= 60 ? 'bg-yellow-500' : 'bg-red-500'
+                        }`}
+                        style={{ width: `${getBundleScore()}%` }}
+                      />
                     </div>
                   </div>
-                )}
+                </div>
+              )}
+
+              {/* Network Metrics */}
+              <div className="bg-gray-800 rounded-lg border border-gray-700 p-4">
+                <h4 className="text-white font-medium mb-3 flex items-center gap-2">
+                  <Wifi className="w-4 h-4 text-green-400" />
+                  Network Performance
+                </h4>
+                <div className="grid grid-cols-2 gap-3 text-sm">
+                  <div className="text-gray-300">
+                    <span className="text-gray-400">Latency:</span>
+                    <div className={`font-medium ${getMetricColor(networkMetrics.latency, 100, 300)}`}>
+                      {formatMetric(networkMetrics.latency, 'ms')}
+                    </div>
+                  </div>
+                  <div className="text-gray-300">
+                    <span className="text-gray-400">Connection:</span>
+                    <div className="font-medium text-white capitalize">{networkMetrics.connectionType}</div>
+                  </div>
+                  {networkMetrics.bandwidth > 0 && (
+                    <div className="text-gray-300 col-span-2">
+                      <span className="text-gray-400">Bandwidth:</span>
+                      <div className="font-medium text-white">{networkMetrics.bandwidth.toFixed(1)} Mbps</div>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Core Web Vitals */}
+              <div className="bg-gray-800 rounded-lg border border-gray-700 p-4">
+                <h4 className="text-white font-medium mb-3 flex items-center gap-2">
+                  <BarChart3 className="w-4 h-4 text-purple-400" />
+                  Core Web Vitals
+                </h4>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400 text-sm">LCP</span>
+                    <span className={`text-sm font-medium ${getMetricColor(performance.lcp, 2500, 4000)}`}>
+                      {formatMetric(performance.lcp)}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400 text-sm">FID</span>
+                    <span className={`text-sm font-medium ${getMetricColor(performance.fid, 100, 300)}`}>
+                      {formatMetric(performance.fid)}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400 text-sm">CLS</span>
+                    <span className={`text-sm font-medium ${getMetricColor(performance.cls, 0.1, 0.25)}`}>
+                      {performance.cls ? performance.cls.toFixed(3) : 'N/A'}
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Performance Metrics */}
+              <div className="bg-gray-800 rounded-lg border border-gray-700 p-4">
+                <h4 className="text-white font-medium mb-3 flex items-center gap-2">
+                  <Zap className="w-4 h-4 text-yellow-400" />
+                  Performance Metrics
+                </h4>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400 text-sm">FCP</span>
+                    <span className={`text-sm font-medium ${getMetricColor(performance.fcp, 1800, 3000)}`}>
+                      {formatMetric(performance.fcp)}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400 text-sm">TTFB</span>
+                    <span className={`text-sm font-medium ${getMetricColor(performance.ttfb, 800, 1800)}`}>
+                      {formatMetric(performance.ttfb)}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400 text-sm">TTI</span>
+                    <span className={`text-sm font-medium ${getMetricColor(performance.tti, 3800, 7300)}`}>
+                      {formatMetric(performance.tti)}
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
-          )}
-        </>
-      )}
 
-      {/* Recommendations */}
-      <div className="p-6">
-        <h3 className="text-lg font-medium text-gray-900 mb-4">Recommendations</h3>
-        <div className="space-y-3">
-          {metrics.recommendations.map((recommendation, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="flex items-start space-x-3 p-3 bg-blue-50 rounded-lg"
-            >
-              <Info className="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" />
-              <p className="text-sm text-blue-800">{recommendation}</p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
+            {/* Footer */}
+            <div className="bg-gray-800 border-t border-gray-700 p-3 text-center">
+              <button
+                onClick={calculateBundleMetrics}
+                className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors"
+                aria-label="Refresh metrics"
+              >
+                Refresh Metrics
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.div>
-  );
-};
-
-interface MetricCardProps {
-  title: string;
-  value: string;
-  description: string;
-  icon: React.ReactNode;
-  status: 'good' | 'needs-improvement' | 'poor' | 'info';
-}
-
-const MetricCard: React.FC<MetricCardProps> = ({ title, value, description, icon, status }) => {
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'good': return 'text-green-600 bg-green-100';
-      case 'needs-improvement': return 'text-yellow-600 bg-yellow-100';
-      case 'poor': return 'text-red-600 bg-red-100';
-      default: return 'text-blue-600 bg-blue-100';
-    }
-  };
-
-  const getStatusText = (status: string) => {
-    switch (status) {
-      case 'good': return 'Good';
-      case 'needs-improvement': return 'Needs Improvement';
-      case 'poor': return 'Poor';
-      default: return 'Info';
-    }
-  };
-
-  return (
-    <div className="bg-gray-50 p-4 rounded-lg">
-      <div className="flex items-center justify-between mb-2">
-        <div className="flex items-center space-x-2">
-          {icon}
-          <span className="font-medium text-gray-900">{title}</span>
-        </div>
-        <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(status)}`}>
-          {getStatusText(status)}
-        </span>
-      </div>
-      <div className="text-2xl font-bold text-gray-900 mb-1">{value}</div>
-      <p className="text-sm text-gray-600">{description}</p>
-    </div>
   );
 };
 

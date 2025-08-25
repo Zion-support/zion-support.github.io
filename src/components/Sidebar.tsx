@@ -2,19 +2,16 @@ import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Rocket, Building, Target, Zap, Database, Network, Cloud, Lock, BarChart3, Palette, Smartphone, Server, Github, Youtube } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import { useSidebar } from '../context/SidebarContext';
 
-interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-export default function Sidebar({ isOpen, onClose }: SidebarProps) {
+export default function Sidebar() {
+  const { isSidebarOpen, setIsSidebarOpen } = useSidebar();
   const location = useLocation();
 
   // Close sidebar when route changes
   useEffect(() => {
-    onClose();
-  }, [location.pathname, onClose]);
+    setIsSidebarOpen(false);
+  }, [location.pathname, setIsSidebarOpen]);
 
   const navigationItems = [
     {
@@ -129,20 +126,23 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   };
 
   return (
-    <AnimatePresence>
-      {isOpen && (
-        <>
-          {/* Backdrop */}
+    <>
+      {/* Overlay */}
+      <AnimatePresence>
+        {isSidebarOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 z-40 lg:hidden"
-            onClick={onClose}
+            variants={overlayVariants}
+            initial="closed"
+            animate="open"
+            exit="closed"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
+            onClick={() => setIsSidebarOpen(false)}
           />
 
-          {/* Sidebar */}
-          <motion.aside
+      {/* Sidebar */}
+      <AnimatePresence>
+        {isSidebarOpen && (
+          <motion.div
             variants={sidebarVariants}
             initial="closed"
             animate="open"
@@ -155,7 +155,12 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                 <div className="w-8 h-8 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-lg">Z</span>
                 </div>
-                <span className="text-white font-bold text-lg">Zion Tech Group</span>
+                <button
+                  onClick={() => setIsSidebarOpen(false)}
+                  className="p-2 futuristic-card hover:bg-white/20 rounded-lg transition-colors group"
+                >
+                  <X className="w-5 h-5 text-zion-slate-light group-hover:neon-text transition-colors" />
+                </button>
               </div>
               <button
                 onClick={onClose}

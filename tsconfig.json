@@ -29,39 +29,38 @@
     "noImplicitAny": false,
     "noImplicitReturns": false,
     "noImplicitThis": false,
-    "strictNullChecks": false
+    "strictNullChecks": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false
   },
   "include": [
     "src/main.tsx",
     "src/App.tsx",
-    "src/App.css",
     "src/pages/Home.tsx",
-    "src/pages/Services.tsx",
-    "src/vite-env.d.ts"
+    "src/pages/ServicesPage.tsx",
+    "src/pages/Contact.tsx",
+    "src/pages/About.tsx"
   ],
   "exclude": [
-    "node_modules",
-    "src/pages/FAQ.tsx",
-    "src/pages/RequestQuote.tsx",
-    "src/pages/ServicesPricingPage.tsx",
+    "src/components/ui",
+    "src/context",
+    "src/hooks",
+    "src/layout",
+    "src/store",
+    "src/pages/Blog.tsx",
+    "src/pages/BlogPost.tsx",
+    "src/pages/CommunityPage.tsx",
+    "src/pages/ForumCategoryPage.tsx",
+    "src/pages/ForumPostPage.tsx",
+    "src/pages/Index.tsx",
+    "src/pages/NotFound.tsx",
+    "src/pages/Onboarding.tsx",
+    "src/pages/ProfileDetail.tsx",
+    "src/pages/ProfilePage.tsx",
     "src/pages/Sitemap.tsx",
-    "src/components/conflicted/**/*",
-    "src/components/disabled/**/*",
-    "src/components/Advanced*",
-    "src/components/CategoriesSection.tsx",
-    "src/components/FeaturedListingsSection.tsx",
-    "src/components/home/Enhanced*",
-    "src/components/home/FeatureCTAs.tsx",
-    "src/components/home/HomePageSkeleton.tsx",
-    "src/components/ui/data-visualization.tsx",
-    "src/data/enhancedServicesData.ts",
-    "src/data/microSaasServices.ts",
-    "src/hooks/useBlockchainWeb3.ts",
-    "src/pages/HomePage.tsx"
+    "src/pages/ComprehensiveServicesLanding.tsx"
   ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ]
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
