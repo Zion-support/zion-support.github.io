@@ -19,7 +19,19 @@ import {
   Globe,
   Rocket,
   Star,
-  ArrowRight
+  ArrowRight,
+  Sparkles,
+  Layers,
+  Network,
+  Database,
+  Cloud,
+  Lock,
+  BarChart3,
+  Palette,
+  Code,
+  Smartphone,
+  Monitor,
+  Server
 } from 'lucide-react';
 
 export function Header() {
@@ -27,6 +39,7 @@ export function Header() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
   const location = useLocation();
 
   useEffect(() => {
@@ -96,273 +109,247 @@ export function Header() {
       title: 'AI & Machine Learning',
       icon: Brain,
       description: 'Intelligent solutions powered by artificial intelligence',
+      color: 'from-cyan-500 to-blue-600',
       services: [
-        { name: 'AI Business Intelligence', path: '/services#ai-bi', description: 'Advanced analytics and insights' },
-        { name: 'AI Marketing Automation', path: '/services#ai-marketing', description: 'Smart marketing optimization' },
-        { name: 'AI HR & Recruitment', path: '/services#ai-hr', description: 'Intelligent talent management' },
-        { name: 'AI Legal Tech', path: '/services#ai-legal', description: 'Automated legal processes' },
-        { name: 'AI Healthcare Analytics', path: '/services#ai-healthcare', description: 'Patient care optimization' }
+        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', description: 'Advanced analytics and insights', price: '$299-1,200/month' },
+        { name: 'AI Customer Service', path: '/services/ai-customer-service', description: 'Automated support solutions', price: '$199-800/month' },
+        { name: 'AI Marketing Automation', path: '/services/ai-marketing', description: 'Smart marketing optimization', price: '$399-1,200/month' },
+        { name: 'AI Healthcare Analytics', path: '/services/ai-healthcare', description: 'Patient care optimization', price: '$799-2,500/month' },
+        { name: 'AI Financial Analytics', path: '/services/ai-financial', description: 'Risk assessment and insights', price: '$649-1,800/month' },
+        { name: 'AI Manufacturing', path: '/services/ai-manufacturing', description: 'Smart production systems', price: '$749-2,200/month' }
       ]
     },
     {
-      title: 'Cybersecurity & Compliance',
+      title: 'Cybersecurity & Quantum',
       icon: Shield,
-      description: 'Protect your digital assets with cutting-edge security',
+      description: 'Next-generation security solutions',
+      color: 'from-purple-500 to-pink-600',
       services: [
-        { name: 'Quantum-Safe Security', path: '/services#quantum-security', description: 'Future-proof protection' },
-        { name: 'Security Assessment', path: '/services#security-assessment', description: 'Comprehensive security audit' },
-        { name: 'Compliance & Audit', path: '/services#compliance', description: 'Regulatory compliance solutions' },
-        { name: 'Threat Detection', path: '/services#threat-detection', description: 'Real-time security monitoring' }
+        { name: 'Quantum-Ready Security', path: '/services/quantum-cybersecurity', description: 'Future-proof protection', price: '$899-2,500/month' },
+        { name: 'AI Threat Detection', path: '/services/ai-threat-detection', description: 'Intelligent security monitoring', price: '$599-1,800/month' },
+        { name: 'Zero Trust Architecture', path: '/services/zero-trust', description: 'Advanced security framework', price: '$699-2,000/month' },
+        { name: 'Compliance Automation', path: '/services/compliance', description: 'Regulatory compliance tools', price: '$449-1,200/month' }
       ]
     },
     {
-      title: 'Cloud & Infrastructure',
+      title: 'Emerging Technology',
+      icon: Zap,
+      description: 'Cutting-edge technologies for tomorrow',
+      color: 'from-green-500 to-emerald-600',
+      services: [
+        { name: 'Quantum Computing', path: '/services/quantum-computing', description: 'Next-generation computing', price: '$2,499-6,000/month' },
+        { name: 'Neuromorphic Computing', path: '/services/neuromorphic', description: 'Brain-inspired AI', price: '$1,499-3,500/month' },
+        { name: 'Digital Twins', path: '/services/digital-twins', description: 'Virtual asset replicas', price: '$799-2,200/month' },
+        { name: 'Blockchain DeFi', path: '/services/blockchain-defi', description: 'Decentralized finance', price: '$399-1,200/month' },
+        { name: '5G Optimization', path: '/services/5g-optimization', description: 'Network performance', price: '$699-2,000/month' },
+        { name: 'Space Technology', path: '/services/space-technology', description: 'Satellite and space solutions', price: '$1,999-5,000/month' }
+      ]
+    },
+    {
+      title: 'Micro SAAS Solutions',
       icon: Cpu,
-      description: 'Scalable cloud solutions and infrastructure management',
+      description: 'Scalable software solutions for every business',
+      color: 'from-orange-500 to-red-600',
       services: [
-        { name: 'Cloud Migration', path: '/services#cloud-migration', description: 'Seamless cloud transition' },
-        { name: 'Network Infrastructure', path: '/services#network', description: 'Robust network solutions' },
-        { name: 'Managed IT Services', path: '/services#managed-it', description: '24/7 IT support' },
-        { name: 'DevOps Automation', path: '/services#devops', description: 'Streamlined development' }
-      ]
-    },
-    {
-      title: 'Emerging Technologies',
-      icon: Rocket,
-      description: 'Cutting-edge solutions for tomorrow\'s challenges',
-      services: [
-        { name: 'Blockchain Solutions', path: '/services#blockchain', description: 'Decentralized applications' },
-        { name: 'IoT Platforms', path: '/services#iot', description: 'Connected device management' },
-        { name: 'Quantum Computing', path: '/services#quantum', description: 'Next-generation computing' },
-        { name: 'AR/VR Solutions', path: '/services#ar-vr', description: 'Immersive experiences' }
+        { name: 'Custom SAAS Development', path: '/services/custom-saas', description: 'Tailored software solutions', price: '$500-2,000/month' },
+        { name: 'Multi-tenant Architecture', path: '/services/multi-tenant', description: 'Efficient resource sharing', price: '$400-1,500/month' },
+        { name: 'Subscription Management', path: '/services/subscription-management', description: 'Billing and renewal systems', price: '$300-1,000/month' },
+        { name: 'API Development', path: '/services/api-development', description: 'Integration solutions', price: '$600-1,800/month' }
       ]
     },
     {
       title: 'Industry Solutions',
       icon: Building,
-      description: 'Tailored solutions for specific industries',
+      description: 'Specialized solutions for your industry',
+      color: 'from-indigo-500 to-purple-600',
       services: [
-        { name: 'Healthcare Technology', path: '/solutions/healthcare', description: 'Medical innovation' },
-        { name: 'Financial Services', path: '/services#financial', description: 'Fintech solutions' },
-        { name: 'Manufacturing Intelligence', path: '/services#manufacturing', description: 'Smart manufacturing' },
-        { name: 'Retail Technology', path: '/services#retail', description: 'Digital retail transformation' }
+        { name: 'Healthcare Technology', path: '/solutions/healthcare', description: 'Medical innovation solutions', price: '$800-3,000/month' },
+        { name: 'Financial Services', path: '/solutions/financial', description: 'Fintech and banking solutions', price: '$700-2,500/month' },
+        { name: 'Manufacturing Intelligence', path: '/solutions/manufacturing', description: 'Smart manufacturing systems', price: '$900-3,500/month' },
+        { name: 'Retail Technology', path: '/solutions/retail', description: 'Digital retail transformation', price: '$600-2,000/month' },
+        { name: 'Government Solutions', path: '/solutions/government', description: 'Public sector innovation', price: '$1,000-4,000/month' },
+        { name: 'Education Technology', path: '/solutions/education', description: 'Learning innovation platforms', price: '$500-1,800/month' }
       ]
     }
   ];
 
-  const solutionCategories = [
-    {
-      title: 'Enterprise Solutions',
-      icon: Building,
-      description: 'Large-scale business transformation',
-      solutions: [
-        { name: 'Digital Transformation', path: '/digital-transformation', description: 'Complete business modernization' },
-        { name: 'Enterprise AI', path: '/solutions/enterprise', description: 'AI-powered enterprise solutions' },
-        { name: 'Data Analytics', path: '/services#analytics', description: 'Business intelligence platform' }
-      ]
-    },
-    {
-      title: 'SMB Solutions',
-      icon: Users,
-      description: 'Scalable solutions for growing businesses',
-      solutions: [
-        { name: 'Micro SAAS', path: '/services/micro-saas-solutions', description: 'Custom software solutions' },
-        { name: 'Cloud Migration', path: '/cloud-devops', description: 'Affordable cloud solutions' },
-        { name: 'IT Support', path: '/services#it-support', description: 'Managed IT services' }
-      ]
-    },
-    {
-      title: 'Startup Solutions',
-      icon: Rocket,
-      description: 'Accelerate your startup growth',
-      solutions: [
-        { name: 'MVP Development', path: '/services#mvp', description: 'Rapid prototype development' },
-        { name: 'AI Integration', path: '/ai-solutions', description: 'AI-powered features' },
-        { name: 'Scalable Architecture', path: '/services#architecture', description: 'Growth-ready infrastructure' }
-      ]
-    }
-  ];
-
-  const handleDropdownToggle = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  const contactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008, Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
   };
 
-  const closeDropdowns = () => {
-    setActiveDropdown(null);
+  const handleServiceSearch = (query: string) => {
+    setSearchQuery(query);
+    // Implement search functionality
   };
-
-  const isActive = (path: string) => location.pathname === path;
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-zion-blue-dark/95 backdrop-blur-md border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' 
-        : 'bg-transparent'
+        ? 'bg-black/90 backdrop-blur-xl border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' 
+        : 'bg-gradient-to-r from-zion-blue-dark/95 via-zion-blue/95 to-zion-purple/95 backdrop-blur-sm'
     }`}>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
-            <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Rocket className="w-7 h-7 text-white" />
-              </div>
-              <div className="absolute -inset-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl blur opacity-25 group-hover:opacity-40 transition-opacity duration-300"></div>
-            </div>
-            <div className="hidden md:block">
-              <div className="text-2xl font-bold text-white group-hover:text-zion-cyan transition-colors">
-                Zion Tech Group
-              </div>
-              <div className="text-xs text-zion-slate-light">Revolutionary Technology Solutions</div>
-            </div>
-          </Link>
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-0 left-0 w-32 h-32 bg-zion-cyan/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-0 right-0 w-40 h-40 bg-zion-purple/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-0 left-1/2 w-24 h-24 bg-zion-cyan/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((item) => (
-              <div key={item.path} className="relative">
-                {item.hasDropdown ? (
-                  <button
-                    onClick={() => handleDropdownToggle(item.label.toLowerCase())}
-                    className="flex items-center space-x-1 text-white hover:text-zion-cyan transition-colors py-2 px-3 rounded-lg hover:bg-white/10"
-                  >
-                    <span>{item.label}</span>
-                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                      activeDropdown === item.label.toLowerCase() ? 'rotate-180' : ''
-                    }`} />
-                  </button>
-                ) : (
-                  <Link
-                    to={item.path}
-                    className="text-white hover:text-zion-cyan transition-colors py-2 px-3 rounded-lg hover:bg-white/10"
-                  >
-                    {item.label}
-                  </Link>
-                )}
-
-                {/* Services Dropdown */}
-                {item.hasDropdown && item.label === 'Services' && activeDropdown === 'services' && (
-                  <div className="absolute top-full left-0 mt-2 w-96 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/25 p-6">
-                    <div className="grid grid-cols-1 gap-4">
-                      {serviceCategories.map((category) => (
-                        <div key={category.title} className="group">
-                          <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/10 transition-colors">
-                            <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
-                              <category.icon className="w-5 h-5 text-white" />
-                            </div>
-                            <div className="flex-1">
-                              <h4 className="font-semibold text-white group-hover:text-zion-cyan transition-colors">
-                                {category.title}
-                              </h4>
-                              <p className="text-sm text-zion-slate-light">{category.description}</p>
-                            </div>
-                          </div>
-                          <div className="ml-13 pl-4 border-l border-zion-cyan/20">
-                            {category.services.map((service) => (
-                              <Link
-                                key={service.name}
-                                to={service.path}
-                                onClick={closeDropdowns}
-                                className="block p-2 rounded-lg hover:bg-white/5 transition-colors"
-                              >
-                                <div className="font-medium text-white hover:text-zion-cyan transition-colors">
-                                  {service.name}
-                                </div>
-                                <div className="text-sm text-zion-slate-light">{service.description}</div>
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="mt-4 pt-4 border-t border-zion-cyan/20">
-                      <Link
-                        to="/services-showcase"
-                        onClick={closeDropdowns}
-                        className="flex items-center justify-center w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
-                      >
-                        <span>View All Services</span>
-                        <ArrowRight className="ml-2 w-4 h-4" />
-                      </Link>
-                    </div>
-                  </div>
-                )}
-
-                {/* Solutions Dropdown */}
-                {item.hasDropdown && item.label === 'Solutions' && activeDropdown === 'solutions' && (
-                  <div className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/25 p-6">
-                    <div className="space-y-4">
-                      {solutionCategories.map((category) => (
-                        <div key={category.title} className="group">
-                          <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/10 transition-colors">
-                            <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
-                              <category.icon className="w-5 h-5 text-white" />
-                            </div>
-                            <div className="flex-1">
-                              <h4 className="font-semibold text-white group-hover:text-zion-cyan transition-colors">
-                                {category.title}
-                              </h4>
-                              <p className="text-sm text-zion-slate-light">{category.description}</p>
-                            </div>
-                          </div>
-                          <div className="ml-13 pl-4 border-l border-zion-cyan/20">
-                            {category.solutions.map((solution) => (
-                              <Link
-                                key={solution.name}
-                                to={solution.path}
-                                onClick={closeDropdowns}
-                                className="block p-2 rounded-lg hover:bg-white/5 transition-colors"
-                              >
-                                <div className="font-medium text-white hover:text-zion-cyan transition-colors">
-                                  {solution.name}
-                                </div>
-                                <div className="text-sm text-zion-slate-light">{solution.description}</div>
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
+      <div className="relative z-10">
+        {/* Top contact bar */}
+        <div className="bg-zion-blue-dark/80 border-b border-zion-cyan/20">
+          <div className="container mx-auto px-4 py-2">
+            <div className="flex flex-wrap items-center justify-between text-sm text-zion-slate-light">
+              <div className="flex items-center space-x-6">
+                <a href={`tel:${contactInfo.phone}`} className="flex items-center space-x-2 hover:text-zion-cyan transition-colors">
+                  <Phone className="w-4 h-4" />
+                  <span>{contactInfo.phone}</span>
+                </a>
+                <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover:text-zion-cyan transition-colors">
+                  <Mail className="w-4 h-4" />
+                  <span>{contactInfo.email}</span>
+                </a>
               </div>
-            ))}
-          </nav>
-
-          {/* Contact Info & CTA */}
-          <div className="hidden lg:flex items-center space-x-6">
-            {/* Contact Info */}
-            <div className="flex items-center space-x-4 text-zion-slate-light">
-              <div className="flex items-center space-x-2 hover:text-zion-cyan transition-colors cursor-pointer">
-                <Phone className="w-4 h-4" />
-                <span className="text-sm">+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-2 hover:text-zion-cyan transition-colors cursor-pointer">
-                <Mail className="w-4 h-4" />
-                <span className="text-sm">kleber@ziontechgroup.com</span>
+              <div className="flex items-center space-x-4">
+                <span className="flex items-center space-x-2">
+                  <MapPin className="w-4 h-4" />
+                  <span className="hidden md:inline">{contactInfo.address}</span>
+                  <span className="md:hidden">Middletown, DE</span>
+                </span>
+                <div className="flex items-center space-x-2">
+                  <Sparkles className="w-4 h-4 text-zion-cyan animate-pulse" />
+                  <span className="text-zion-cyan font-medium">Innovation Hub</span>
+                </div>
               </div>
             </div>
-
-            {/* CTA Button */}
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25"
-            >
-              Get Started
-            </Link>
           </div>
+        </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsSidebarOpen(true)}
-            className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors"
-          >
-            <Menu className="w-6 h-6" />
-          </button>
+        {/* Main navigation */}
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            {/* Logo */}
+            <Link to="/" className="flex items-center space-x-3 group">
+              <div className="relative">
+                <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg shadow-zion-cyan/25 group-hover:shadow-zion-cyan/40 transition-all duration-300">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <div className="absolute inset-0 w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl opacity-20 blur-xl group-hover:opacity-40 transition-all duration-300"></div>
+              </div>
+              <div className="hidden md:block">
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                  Zion Tech Group
+                </h1>
+                <p className="text-xs text-zion-slate-light">Future-Ready Solutions</p>
+              </div>
+            </Link>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center space-x-8">
+              {navigationItems.map((item) => (
+                <div key={item.path} className="relative group">
+                  {item.hasDropdown ? (
+                    <button
+                      className="flex items-center space-x-2 text-zion-slate-light hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-white/10"
+                      onMouseEnter={() => setActiveDropdown(item.path)}
+                      onMouseLeave={() => setActiveDropdown(null)}
+                    >
+                      <span>{item.icon}</span>
+                      <span>{item.label}</span>
+                      <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+                    </button>
+                  ) : (
+                    <Link
+                      to={item.path}
+                      className="flex items-center space-x-2 text-zion-slate-light hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-white/10"
+                    >
+                      <span>{item.icon}</span>
+                      <span>{item.label}</span>
+                    </Link>
+                  )}
+
+                  {/* Dropdown Menu */}
+                  {item.hasDropdown && activeDropdown === item.path && (
+                    <div className="absolute top-full left-0 mt-2 w-96 bg-black/95 backdrop-blur-xl border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/20 z-50">
+                      <div className="p-6">
+                        <div className="grid grid-cols-1 gap-4">
+                          {serviceCategories.map((category) => (
+                            <div key={category.title} className="group">
+                              <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-zion-cyan/10 transition-colors">
+                                <div className={`w-10 h-10 bg-gradient-to-br ${category.color} rounded-lg flex items-center justify-center`}>
+                                  <category.icon className="w-5 h-5 text-white" />
+                                </div>
+                                <div className="flex-1">
+                                  <h3 className="font-semibold text-white group-hover:text-zion-cyan transition-colors">
+                                    {category.title}
+                                  </h3>
+                                  <p className="text-sm text-zion-slate-light">{category.description}</p>
+                                </div>
+                                <ArrowRight className="w-4 h-4 text-zion-slate-light group-hover:text-zion-cyan transition-colors" />
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                        <div className="mt-4 pt-4 border-t border-zion-cyan/20">
+                          <Link
+                            to="/services"
+                            className="flex items-center justify-center space-x-2 w-full py-3 px-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover:from-zion-cyan-light hover:to-zion-purple-light transition-all duration-200"
+                          >
+                            <span>View All Services</span>
+                            <ArrowRight className="w-4 h-4" />
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </nav>
+
+            {/* Search and CTA */}
+            <div className="hidden lg:flex items-center space-x-4">
+              {/* Search */}
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
+                <input
+                  type="text"
+                  placeholder="Search services..."
+                  value={searchQuery}
+                  onChange={(e) => handleServiceSearch(e.target.value)}
+                  className="w-64 pl-10 pr-4 py-2 bg-white/10 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:bg-white/20 transition-all duration-200"
+                />
+              </div>
+
+              {/* CTA Buttons */}
+              <Link
+                to="/contact"
+                className="px-6 py-2 bg-zion-cyan hover:bg-zion-cyan-light text-white rounded-lg font-semibold transition-colors duration-200 shadow-lg shadow-zion-cyan/25 hover:shadow-zion-cyan/40"
+              >
+                Get Started
+              </Link>
+              <Link
+                to="/pricing"
+                className="px-6 py-2 border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white rounded-lg font-semibold transition-all duration-200"
+              >
+                View Pricing
+              </Link>
+            </div>
+
+            {/* Mobile menu button */}
+            <button
+              onClick={() => setIsSidebarOpen(true)}
+              className="lg:hidden p-2 text-zion-slate-light hover:text-white transition-colors"
+            >
+              <Menu className="w-6 h-6" />
+            </button>
+          </div>
         </div>
       </div>
 
-      {/* Mobile Sidebar */}
+      {/* Sidebar */}
       <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
     </header>
   );
