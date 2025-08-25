@@ -1,18 +1,79 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-e276
+=======
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
 import React, { useState } from 'react';
 import { Mail, ArrowRight, CheckCircle } from 'lucide-react';
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 
+<<<<<<< HEAD
+export const FooterNewsletter: React.FC = () => {
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setMessage('');
+
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      setMessage('Thank you for subscribing! We\'ll keep you updated with the latest tech insights.');
+      setEmail('');
+    } catch (error) {
+      setMessage('Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <div className="space-y-4">
+      <h3 className="text-lg font-semibold text-white">Stay Updated</h3>
+      <p className="text-sm text-gray-300">
+        Get the latest insights on AI, cybersecurity, and tech innovation.
+      </p>
+      
+      <form onSubmit={handleSubmit} className="flex gap-2">
+=======
 export const FooterNewsletter = () => {
+=======
+import React, { useState } from 'react';
+import { Button } from '@/components/ui/Button';
+import { Input } from '@/components/ui/Input';
+import { Mail } from 'lucide-react';
+
+export function FooterNewsletter() {
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+<<<<<<< HEAD
     if (!email) return;
+=======
+    if (!email.trim()) return;
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 
     setIsLoading(true);
     
     // Simulate API call
+<<<<<<< HEAD
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     setIsSubscribed(true);
@@ -21,19 +82,39 @@ export const FooterNewsletter = () => {
     
     // Reset after 3 seconds
     setTimeout(() => setIsSubscribed(false), 3000);
+=======
+    setTimeout(() => {
+      setIsSubscribed(true);
+      setIsLoading(false);
+      setEmail('');
+    }, 1000);
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
   };
 
   if (isSubscribed) {
     return (
+<<<<<<< HEAD
       <div className="bg-zion-cyan/10 border border-zion-cyan/30 rounded-xl p-6 text-center">
         <CheckCircle className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
         <h4 className="text-lg font-semibold text-white mb-2">Successfully Subscribed!</h4>
         <p className="text-zion-slate-light">
           Thank you for subscribing to our newsletter. You'll receive updates soon!
+=======
+      <div className="text-center p-4 bg-zion-purple/10 rounded-lg border border-zion-purple/20">
+        <p className="text-zion-cyan text-sm font-medium">
+          Thank you for subscribing! 🎉
+        </p>
+        <p className="text-zion-slate-light text-xs mt-1">
+          You'll receive our latest updates soon.
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
         </p>
       </div>
     );
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
 
   return (
     <form onSubmit={handleSubmit} className="max-w-md mx-auto">
@@ -71,4 +152,65 @@ export const FooterNewsletter = () => {
       </p>
     </form>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
 };
+<<<<<<< HEAD
+=======
+};
+>>>>>>> origin/cursor/check-and-fix-github-actions-e92c
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-e276
+=======
+};
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
+=======
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-3">
+      <div className="relative">
+        <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+        <Input
+          type="email"
+          placeholder="Enter your email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+<<<<<<< HEAD
+          required
+          className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:bg-white/20"
+        />
+        <Button 
+          type="submit" 
+          disabled={isSubmitting}
+          className="bg-blue-600 hover:bg-blue-700 text-white"
+        >
+          {isSubmitting ? 'Subscribing...' : 'Subscribe'}
+        </Button>
+      </form>
+      
+      {message && (
+        <p className={`text-sm ${message.includes('Thank you') ? 'text-green-400' : 'text-red-400'}`}>
+          {message}
+        </p>
+      )}
+    </div>
+  );
+};
+=======
+          className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"
+          required
+        />
+      </div>
+      <Button
+        type="submit"
+        disabled={isLoading || !email.trim()}
+        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple disabled:opacity-50 disabled:cursor-not-allowed"
+      >
+        {isLoading ? 'Subscribing...' : 'Subscribe'}
+      </Button>
+    </form>
+  );
+}
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

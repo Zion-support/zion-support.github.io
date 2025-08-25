@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+=======
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, Calendar, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, BookOpen, Target, TrendingUp, PieChart, Activity, Zap as ZapIcon2, Package, Server, Lock, Code, Monitor, Smartphone, Wifi, Database as DatabaseIcon2, Globe as GlobeIcon, Shield as ShieldIcon2, Cpu as CpuIcon } from 'lucide-react';
 
@@ -160,148 +166,214 @@ const ITServices: React.FC = () => {
       default: return 'text-gray-400';
     }
   };
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 
+export default function ITServices() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-      <div className="container mx-auto px-4 py-8">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent mb-4">
-            Enterprise IT Services
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Comprehensive IT solutions designed to transform your business infrastructure, enhance security, and drive digital innovation
-          </p>
-        </div>
+    <>
+      <Helmet>
+        <title>IT Services - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive IT services including infrastructure, cybersecurity, cloud solutions, and digital transformation. Zion Tech Group delivers enterprise-grade technology solutions." />
+        <meta name="keywords" content="IT services, infrastructure, cybersecurity, cloud solutions, digital transformation, Zion Tech Group" />
+        <link rel="canonical" href="https://ziontechgroup.com/it-services" />
+      </Helmet>
 
-        {/* Search and Filters */}
-        <div className="mb-8 space-y-4">
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-            <input
-              type="text"
-              placeholder="Search IT services..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            />
-          </div>
-          
-          <div className="flex flex-wrap gap-4">
-            <select
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              {categories.map(category => (
-                <option key={category} value={category} className="bg-gray-800 text-white">
-                  {category === 'all' ? 'All Categories' : category}
-                </option>
-              ))}
-            </select>
-          </div>
-        </div>
-
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredServices.map((service) => (
-            <div key={service.id} className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20">
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className={`${getCategoryColor(service.category)}`}>
-                    {getCategoryIcon(service.category)}
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white">{service.name}</h3>
-                    <div className="flex items-center gap-2">
-                      <span className={`px-2 py-1 text-xs font-medium rounded-full ${getCategoryColor(service.category)} bg-opacity-20 bg-current`}>
-                        {service.category}
-                      </span>
-                      <span className="px-2 py-1 text-xs font-medium rounded-full text-blue-400 bg-blue-400 bg-opacity-20">
-                        {service.pricing}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <p className="text-gray-300 mb-4">{service.description}</p>
-              
-              <div className="mb-4">
-                <div className="text-2xl font-bold text-white mb-2">
-                  {service.marketPrice}
-                </div>
-                <div className="text-sm text-gray-400">Implementation: {service.implementationTime}</div>
-              </div>
-
-              <div className="mb-4">
-                <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
-                <div className="flex flex-wrap gap-2">
-                  {service.features.slice(0, 3).map((feature, index) => (
-                    <span key={index} className="px-2 py-1 text-xs bg-blue-500/20 text-blue-300 rounded">
-                      {feature}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mb-4">
-                <h4 className="text-sm font-semibold text-white mb-2">Perfect For:</h4>
-                <div className="flex flex-wrap gap-2">
-                  {service.targetAudience.slice(0, 2).map((audience, index) => (
-                    <span key={index} className="px-2 py-1 text-xs bg-cyan-500/20 text-cyan-300 rounded">
-                      {audience}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="border-t border-gray-600 pt-4">
-                <div className="flex items-center justify-between text-sm text-gray-400">
-                  <span>Support: {service.supportLevel}</span>
-                  <a 
-                    href={service.contactInfo.website}
-                    className="text-blue-400 hover:text-blue-300 transition-colors"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Get Quote →
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Contact Information */}
-        <div className="mt-16 text-center">
-          <div className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-8">
-            <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your IT Infrastructure?</h2>
-            <p className="text-gray-300 mb-6">
-              Our enterprise IT solutions are designed to scale with your business needs and drive digital transformation
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
+        {/* Hero Section */}
+        <section className="pt-24 pb-16 px-4">
+          <div className="container mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              IT <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Services</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
+              Comprehensive technology solutions that drive business growth and digital transformation. 
+              From infrastructure to cybersecurity, we've got you covered.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-              <div>
-                <Phone className="w-8 h-8 text-blue-400 mx-auto mb-2" />
-                <p className="text-white font-semibold">Phone</p>
-                <p className="text-gray-300">{itServices[0].contactInfo.phone}</p>
+          </div>
+        </section>
+
+        {/* Services Overview */}
+        <section className="py-16 px-4">
+          <div className="container mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Our IT Services</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-zion-blue-light/20 rounded-xl p-6 border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
+                <Server className="w-12 h-12 text-zion-cyan mb-4" />
+                <h3 className="text-xl font-bold text-white mb-3">Infrastructure Management</h3>
+                <p className="text-zion-slate-light mb-4">
+                  Complete infrastructure setup, monitoring, and maintenance for optimal performance.
+                </p>
+                <ul className="text-zion-slate-light text-sm mb-4 space-y-1">
+                  <li>• Network Design & Implementation</li>
+                  <li>• Server Management</li>
+                  <li>• Data Center Operations</li>
+                </ul>
+                <Link to="/services/infrastructure" className="text-zion-cyan hover:text-zion-cyan-light flex items-center group">
+                  Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </div>
-              <div>
-                <Mail className="w-8 h-8 text-blue-400 mx-auto mb-2" />
-                <p className="text-white font-semibold">Email</p>
-                <p className="text-gray-300">{itServices[0].contactInfo.email}</p>
+
+              <div className="bg-zion-blue-light/20 rounded-xl p-6 border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
+                <Shield className="w-12 h-12 text-zion-cyan mb-4" />
+                <h3 className="text-xl font-bold text-white mb-3">Cybersecurity</h3>
+                <p className="text-zion-slate-light mb-4">
+                  Comprehensive security solutions to protect your business from cyber threats.
+                </p>
+                <ul className="text-zion-slate-light text-sm mb-4 space-y-1">
+                  <li>• Security Audits & Assessments</li>
+                  <li>• Threat Detection & Response</li>
+                  <li>• Compliance Management</li>
+                </ul>
+                <Link to="/services/cybersecurity" className="text-zion-cyan hover:text-zion-cyan-light flex items-center group">
+                  Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </div>
-              <div>
-                <MapPin className="w-8 h-8 text-blue-400 mx-auto mb-2" />
-                <p className="text-white font-semibold">Address</p>
-                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+
+              <div className="bg-zion-blue-light/20 rounded-xl p-6 border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
+                <Cloud className="w-12 h-12 text-zion-cyan mb-4" />
+                <h3 className="text-xl font-bold text-white mb-3">Cloud Solutions</h3>
+                <p className="text-zion-slate-light mb-4">
+                  Cloud migration, optimization, and management for scalable business operations.
+                </p>
+                <ul className="text-zion-slate-light text-sm mb-4 space-y-1">
+                  <li>• Cloud Migration Strategy</li>
+                  <li>• Multi-Cloud Management</li>
+                  <li>• Cost Optimization</li>
+                </ul>
+                <Link to="/services/cloud" className="text-zion-cyan hover:text-zion-cyan-light flex items-center group">
+                  Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+
+              <div className="bg-zion-blue-light/20 rounded-xl p-6 border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
+                <Database className="w-12 h-12 text-zion-cyan mb-4" />
+                <h3 className="text-xl font-bold text-white mb-3">Data Management</h3>
+                <p className="text-zion-slate-light mb-4">
+                  Data strategy, governance, and analytics to unlock business insights.
+                </p>
+                <ul className="text-zion-slate-light text-sm mb-4 space-y-1">
+                  <li>• Data Strategy & Architecture</li>
+                  <li>• Business Intelligence</li>
+                  <li>• Data Governance</li>
+                </ul>
+                <Link to="/services/data-management" className="text-zion-cyan hover:text-zion-cyan-light flex items-center group">
+                  Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+
+              <div className="bg-zion-blue-light/20 rounded-xl p-6 border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
+                <Code className="w-12 h-12 text-zion-cyan mb-4" />
+                <h3 className="text-xl font-bold text-white mb-3">Software Development</h3>
+                <p className="text-zion-slate-light mb-4">
+                  Custom software solutions tailored to your business requirements.
+                </p>
+                <ul className="text-zion-slate-light text-sm mb-4 space-y-1">
+                  <li>• Custom Applications</li>
+                  <li>• API Development</li>
+                  <li>• System Integration</li>
+                </ul>
+                <Link to="/services/software-development" className="text-zion-cyan hover:text-zion-cyan-light flex items-center group">
+                  Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+
+              <div className="bg-zion-blue-light/20 rounded-xl p-6 border border-zion-purple/30 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
+                <Users className="w-12 h-12 text-zion-cyan mb-4" />
+                <h3 className="text-xl font-bold text-white mb-3">IT Consulting</h3>
+                <p className="text-zion-slate-light mb-4">
+                  Strategic technology consulting to align IT with business objectives.
+                </p>
+                <ul className="text-zion-slate-light text-sm mb-4 space-y-1">
+                  <li>• Technology Strategy</li>
+                  <li>• Digital Transformation</li>
+                  <li>• Vendor Management</li>
+                </ul>
+                <Link to="/services/it-consulting" className="text-zion-cyan hover:text-zion-cyan-light flex items-center group">
+                  Learn More <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+        </section>
 
-export default ITServices;
+        {/* Why Choose Us */}
+        <section className="py-16 px-4">
+          <div className="container mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Why Choose Zion Tech Group?</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="bg-zion-cyan/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Globe className="w-8 h-8 text-zion-cyan" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Global Expertise</h3>
+                <p className="text-zion-slate-light">
+                  Access to world-class IT professionals from around the globe.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="bg-zion-cyan/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Shield className="w-8 h-8 text-zion-cyan" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Proven Track Record</h3>
+                <p className="text-zion-slate-light">
+                  Successfully delivered IT solutions to businesses of all sizes.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="bg-zion-cyan/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Zap className="w-8 h-8 text-zion-cyan" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Innovation Focus</h3>
+                <p className="text-zion-slate-light">
+                  Cutting-edge solutions using the latest technologies and best practices.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="bg-zion-cyan/20 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-zion-cyan" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">24/7 Support</h3>
+                <p className="text-zion-slate-light">
+                  Round-the-clock support and monitoring for your IT infrastructure.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4">
+          <div className="container mx-auto text-center">
+            <div className="bg-zion-blue-light/20 rounded-2xl p-12 border border-zion-purple/30 max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Transform Your IT Infrastructure?
+              </h2>
+              <p className="text-lg text-zion-slate-light mb-8">
+                Let our IT experts help you build a robust, scalable, and secure technology foundation.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/request-quote"
+                  className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-blue-dark font-bold py-3 px-8 rounded-lg transition-colors"
+                >
+                  Get IT Quote
+                </Link>
+                <Link
+                  to="/contact"
+                  className="bg-transparent hover:bg-zion-purple/20 text-zion-cyan border-2 border-zion-cyan font-bold py-3 px-8 rounded-lg transition-colors"
+                >
+                  Schedule Consultation
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+}

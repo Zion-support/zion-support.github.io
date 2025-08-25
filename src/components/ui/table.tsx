@@ -1,4 +1,10 @@
-import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 
 interface TableProps {
   children: React.ReactNode;
@@ -25,7 +31,6 @@ interface TableHeadProps {
 
 interface TableCellProps {
   children: React.ReactNode;
-  className?: string;
 }
 
 export function Table({ children, className }: TableProps) {
@@ -70,9 +75,9 @@ export function TableHead({ children, className }: TableHeadProps) {
   );
 }
 
-export function TableCell({ children, className }: TableCellProps) {
+export function TableCell({ children }: TableCellProps) {
   return (
-    <td className={`px-4 py-3 text-zion-slate ${className || ''}`}>
+    <td className="px-4 py-3 text-zion-slate">
       {children}
     </td>
   );

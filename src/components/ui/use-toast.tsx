@@ -1,7 +1,65 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { useState } from 'react'
+
+interface Toast {
+  id: string
+  title: string
+  description?: string
+  type?: 'success' | 'error' | 'warning' | 'info'
+  duration?: number
+}
+
+interface ToastOptions {
+  title: string
+  description?: string
+  type?: 'success' | 'error' | 'warning' | 'info'
+  duration?: number
+}
+
+export function useToast() {
+  const [toasts, setToasts] = useState<Toast[]>([])
+
+  const addToast = (options: ToastOptions) => {
+    const id = Math.random().toString(36).substr(2, 9)
+    const toast: Toast = {
+      id,
+      title: options.title,
+      description: options.description,
+      type: options.type || 'info',
+      duration: options.duration || 5000
+    }
+
+    setToasts(prev => [...prev, toast])
+
+    // Auto remove toast after duration
+    setTimeout(() => {
+      removeToast(id)
+    }, toast.duration)
+
+    return id
+  }
+
+  const removeToast = (id: string) => {
+    setToasts(prev => prev.filter(toast => toast.id !== id))
+  }
+
+  const clearToasts = () => {
+    setToasts([])
+  }
+
+  return {
+    toasts,
+    addToast,
+    removeToast,
+    clearToasts
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 import * as React from "react"
 import * as ToastPrimitives from "@radix-ui/react-toast"
 import { cva, type VariantProps } from "class-variance-authority"
-import { X } from "lucide-react"
+import { X } from 'lucide-react';
 import { cn } from "@/lib/utils"
 
 const ToastProvider = ToastPrimitives.Provider
@@ -143,5 +201,9 @@ export function toast({
     action,
     variant,
     ...props,
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   }
 }

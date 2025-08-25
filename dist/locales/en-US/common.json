@@ -21,10 +21,18 @@
   "nav": {
     "home": "Home",
     "marketplace": "Marketplace",
+<<<<<<< HEAD
+    "categories": "Categories",
+=======
+<<<<<<< HEAD
     "micro-saas": "Micro SAAS",
     "categories": "Categories",
     "services": "Services",
     "micro-saas": "Micro SAAS",
+=======
+    "categories": "Categories",
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     "talent": "Talent",
     "equipment": "Equipment",
     "community": "Community",

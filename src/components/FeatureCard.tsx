@@ -1,6 +1,23 @@
-import React from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight } from 'lucide-react';
+=======
+<<<<<<< HEAD
+import React from 'react';
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
+import { motion } from 'framer-motion';
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { CheckCircle, ArrowRight } from 'lucide-react';
+=======
+import { ArrowRight } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d0e7
+=======
+import { ArrowRight } from 'lucide-react';
+>>>>>>> origin/main
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 
 interface FeatureCardProps {
   title: string;
@@ -64,5 +81,32 @@ export function FeatureCard({
       {/* Hover Effect */}
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-zion-cyan/0 via-zion-cyan/5 to-zion-purple/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
     </motion.div>
+<<<<<<< HEAD
   );
 }
+=======
+  );
+}
+=======
+import { LucideIcon } from 'lucide-react';
+
+interface FeatureCardProps {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+  className?: string;
+}
+
+export function FeatureCard({ icon: Icon, title, description, className = '' }: FeatureCardProps) {
+  return (
+    <div className={`bg-zion-blue-light rounded-lg p-6 border border-zion-blue-lighter ${className}`}>
+      <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
+        <Icon className="h-6 w-6 text-zion-cyan" />
+      </div>
+      <h3 className="text-lg font-semibold text-white mb-2">{title}</h3>
+      <p className="text-zion-slate-light text-sm">{description}</p>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

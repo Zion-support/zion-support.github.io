@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+
+=======
 import React from 'react';
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronRight, Home } from 'lucide-react';
 import { cn } from '@/lib/utils';

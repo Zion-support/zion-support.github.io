@@ -16,6 +16,7 @@ export default [
       globals: {
         ...globals.browser,
         ...globals.node,
+        React: 'readonly',
         process: 'readonly',
         console: 'readonly',
         module: 'readonly',
@@ -50,9 +51,28 @@ export default [
     languageOptions: {
       ecmaVersion: 2020,
       sourceType: 'module',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
       globals: {
         ...globals.browser,
         ...globals.node,
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+      parser: tsparser,
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true
+        }
+      },
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        React: 'readonly',
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
         process: 'readonly',
         console: 'readonly',
         module: 'readonly',
@@ -63,6 +83,9 @@ export default [
         setInterval: 'readonly',
         clearTimeout: 'readonly',
         clearInterval: 'readonly'
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
       },
       parser: tsparser,
       parserOptions: {
@@ -71,6 +94,9 @@ export default [
         ecmaFeatures: {
           jsx: true
         }
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       }
     },
     plugins: {
@@ -104,10 +130,24 @@ export default [
       '**/*.cjs',
       '**/*.disabled/**',
       '**/tests.disabled/**',
+<<<<<<< HEAD
+      '**/typechain-types.disabled/**',
+=======
+<<<<<<< HEAD
+=======
+      '**/typechain-types.disabled/**',
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       '**/types.disabled/**',
       '**/utils.disabled/**',
       '**/zion-os.disabled/**',
       '**/zion_academy/**',
+<<<<<<< HEAD
+      'test*.js',
+      'test*.ts',
+      'test*.tsx'
+=======
+<<<<<<< HEAD
       '**/src_backup/**',
       '**/src_disabled/**',
       '**/services.disabled.temp/**',
@@ -178,6 +218,12 @@ export default [
       '**/comprehensive-automation-test.js',
       '**/debug-paths.js',
       '**/pages/**'
+=======
+      'test*.js',
+      'test*.ts',
+      'test*.tsx'
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     ]
   }
 ];

@@ -1,5 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 import { 
   Brain, 
   TrendingUp, 
@@ -14,12 +19,106 @@ import {
   Star,
   Award,
   Rocket,
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+import { 
+  Brain, 
+  Search, 
+  TestTube, 
+  BookOpen, 
+  TrendingUp, 
+  Users, 
+  BarChart3, 
+  Clock,
+  CheckCircle,
+  ArrowRight,
+  Play,
+  Star,
+  Award,
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   Globe,
   Cpu,
   Database,
   Network,
   Lock,
   Eye,
+<<<<<<< HEAD
+  BarChart,
+  Rocket,
+  Layers,
+  Workflow,
+  Monitor,
+  Settings,
+  Cloud,
+  Server,
+  Microscope,
+  Atom,
+  Dna
+} from 'lucide-react';
+
+const AIAutonomousResearch = () => {
+  const researchCapabilities = [
+    {
+      icon: Search,
+      title: "Intelligent Literature Review",
+      description: "AI-powered analysis of scientific papers, patents, and research documents across multiple databases"
+    },
+    {
+      icon: TestTube,
+      title: "Hypothesis Generation",
+      description: "Machine learning algorithms that generate novel research hypotheses based on existing data and trends"
+    },
+    {
+      icon: BarChart3,
+      title: "Data Analysis & Visualization",
+      description: "Advanced statistical analysis and interactive visualizations for complex research data"
+    },
+    {
+      icon: Network,
+      title: "Cross-Domain Research",
+      description: "AI that identifies connections between different research fields and disciplines"
+    },
+    {
+      icon: TrendingUp,
+      title: "Trend Prediction",
+      description: "Predictive analytics to forecast research trends and emerging technologies"
+    },
+    {
+      icon: Users,
+      title: "Collaborative Research",
+      description: "AI-facilitated collaboration between researchers and institutions worldwide"
+    }
+  ];
+
+  const researchAreas = [
+    {
+      title: "Biomedical Research",
+      description: "Drug discovery, genomics, and medical technology innovation",
+      icon: Dna,
+      applications: ["Drug discovery", "Genetic research", "Clinical trials", "Medical imaging"]
+    },
+    {
+      title: "Quantum Computing",
+      description: "Quantum algorithms, quantum materials, and quantum information science",
+      icon: Atom,
+      applications: ["Quantum algorithms", "Quantum materials", "Quantum cryptography", "Quantum simulation"]
+    },
+    {
+      title: "Climate Science",
+      description: "Climate modeling, renewable energy, and environmental sustainability",
+      icon: Globe,
+      applications: ["Climate modeling", "Renewable energy", "Carbon capture", "Environmental monitoring"]
+    },
+    {
+      title: "Artificial Intelligence",
+      description: "Machine learning, neural networks, and AI ethics research",
+      icon: Brain,
+      applications: ["Neural networks", "AI ethics", "Robotics", "Natural language processing"]
+=======
+<<<<<<< HEAD
   BarChart
 } from 'lucide-react';
 
@@ -54,10 +153,13 @@ const AIAutonomousResearch: React.FC = () => {
       icon: Users,
       title: "User Experience",
       description: "Intuitive interfaces and seamless integration that enhance user experience across all  a i autonomous research touchpoints."
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     }
   ];
 
   const benefits = [
+<<<<<<< HEAD
+=======
     "Increase efficiency by up to 300%",
     "Reduce operational costs by 40%",
     "Improve accuracy and reduce errors",
@@ -125,13 +227,191 @@ const AIAutonomousResearch: React.FC = () => {
         "Custom AI model training"
       ]
     }
+=======
+import { Search, Brain, Zap, Shield, BarChart3, Users, ArrowRight, CheckCircle, Star, Flask } from 'lucide-react';
+
+export default function AIAutonomousResearch() {
+  const features = [
+    {
+      icon: Search,
+      title: 'Intelligent Research Discovery',
+      description: 'AI systems that autonomously discover and analyze research opportunities'
+    },
+    {
+      icon: Brain,
+      title: 'Automated Literature Review',
+      description: 'Comprehensive analysis of existing research with intelligent insights'
+    },
+    {
+      icon: Zap,
+      title: 'Hypothesis Generation',
+      description: 'AI-powered hypothesis development based on data patterns and trends'
+    },
+    {
+      icon: Shield,
+      title: 'Quality Assurance',
+      description: 'Automated validation and verification of research methodologies'
+    },
+    {
+      icon: BarChart3,
+      title: 'Predictive Analytics',
+      description: 'Forecast research outcomes and identify promising directions'
+    },
+    {
+      icon: Users,
+      title: 'Collaborative Research',
+      description: 'Enable seamless collaboration between human researchers and AI systems'
+=======
+  BarChart,
+  Rocket,
+  Layers,
+  Workflow,
+  Monitor,
+  Settings,
+  Cloud,
+  Server,
+  Microscope,
+  Atom,
+  Dna
+} from 'lucide-react';
+
+const AIAutonomousResearch = () => {
+  const researchCapabilities = [
+    {
+      icon: Search,
+      title: "Intelligent Literature Review",
+      description: "AI-powered analysis of scientific papers, patents, and research documents across multiple databases"
+    },
+    {
+      icon: TestTube,
+      title: "Hypothesis Generation",
+      description: "Machine learning algorithms that generate novel research hypotheses based on existing data and trends"
+    },
+    {
+      icon: BarChart3,
+      title: "Data Analysis & Visualization",
+      description: "Advanced statistical analysis and interactive visualizations for complex research data"
+    },
+    {
+      icon: Network,
+      title: "Cross-Domain Research",
+      description: "AI that identifies connections between different research fields and disciplines"
+    },
+    {
+      icon: TrendingUp,
+      title: "Trend Prediction",
+      description: "Predictive analytics to forecast research trends and emerging technologies"
+    },
+    {
+      icon: Users,
+      title: "Collaborative Research",
+      description: "AI-facilitated collaboration between researchers and institutions worldwide"
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+    }
+  ];
+
+  const researchAreas = [
+<<<<<<< HEAD
+    'Scientific Research',
+    'Market Research',
+    'Medical Research',
+    'Technology Research',
+    'Social Sciences',
+    'Environmental Studies',
+    'Business Intelligence',
+    'Academic Research'
+  ];
+
+  const benefits = [
+    'Accelerate research timelines by 3-5x',
+    'Reduce research costs by 40-60%',
+    'Improve research quality and accuracy',
+    'Enable 24/7 research operations',
+    'Discover hidden patterns and insights',
+    'Scale research capabilities exponentially'
+  ];
+
+  const capabilities = [
+    'Data Collection & Processing',
+    'Literature Analysis',
+    'Pattern Recognition',
+    'Statistical Analysis',
+    'Report Generation',
+    'Trend Prediction',
+    'Cross-reference Validation',
+    'Research Optimization'
+>>>>>>> origin/cursor/website-audit-and-enhancement-9ceb
+=======
+    {
+      title: "Biomedical Research",
+      description: "Drug discovery, genomics, and medical technology innovation",
+      icon: Dna,
+      applications: ["Drug discovery", "Genetic research", "Clinical trials", "Medical imaging"]
+    },
+    {
+      title: "Quantum Computing",
+      description: "Quantum algorithms, quantum materials, and quantum information science",
+      icon: Atom,
+      applications: ["Quantum algorithms", "Quantum materials", "Quantum cryptography", "Quantum simulation"]
+    },
+    {
+      title: "Climate Science",
+      description: "Climate modeling, renewable energy, and environmental sustainability",
+      icon: Globe,
+      applications: ["Climate modeling", "Renewable energy", "Carbon capture", "Environmental monitoring"]
+    },
+    {
+      title: "Artificial Intelligence",
+      description: "Machine learning, neural networks, and AI ethics research",
+      icon: Brain,
+      applications: ["Neural networks", "AI ethics", "Robotics", "Natural language processing"]
+    }
+  ];
+
+  const benefits = [
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+    "Accelerate research timelines by 10x",
+    "Reduce research costs by 60%",
+    "Discover hidden research connections",
+    "24/7 autonomous research operation",
+    "Real-time collaboration capabilities",
+    "Predictive research insights",
+    "Automated data validation",
+    "Cross-disciplinary innovation"
+  ];
+
+  const features = [
+    {
+      title: "Multi-Database Access",
+      description: "Access to PubMed, arXiv, IEEE, ACM, and other major research databases"
+    },
+    {
+      title: "Natural Language Processing",
+      description: "Advanced NLP for understanding research papers and generating insights"
+    },
+    {
+      title: "Machine Learning Models",
+      description: "Custom ML models trained on domain-specific research data"
+    },
+    {
+      title: "Real-Time Updates",
+      description: "Continuous monitoring of new research publications and breakthroughs"
+    }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
           <div className="text-center">
             <div className="flex items-center justify-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mb-4">
@@ -151,22 +431,212 @@ const AIAutonomousResearch: React.FC = () => {
               </button>
               <button className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">
                 Schedule Demo
+=======
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              AI Autonomous Research
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Transform your research capabilities with AI systems that work autonomously 
+              to discover, analyze, and generate insights 24/7, accelerating breakthroughs 
+              across all fields of study.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
+                Start Research
+              </button>
+              <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400/20 transition-all duration-300">
+                View Demo
+>>>>>>> origin/cursor/website-audit-and-enhancement-9ceb
+              </button>
+            </div>
+=======
+import { Brain, Zap, Shield, TrendingUp, Users, Globe, ArrowRight } from 'lucide-react';
+
+const AIAutonomousResearch: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-blue-900/20"></div>
+        <div className="absolute inset-0 bg-gray-800/20 opacity-30"></div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto text-center">
+          <div className="mb-8">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-400/50 text-cyan-400 text-sm font-medium mb-6">
+              <Brain className="w-4 h-4 mr-2" />
+              AI Innovation
+            </div>
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
+              A I Autonomous Research
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Leverage the power of artificial intelligence with our advanced a i autonomous research platform. Automate, optimize, and innovate like never before.
+            </p>
+          </div>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Link
+              to="/contact"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30"
+            >
+              Get Started Today
+            </Link>
+            <button className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400/20 transition-all duration-300">
+              Watch Demo
+            </button>
+>>>>>>> origin/cursor/website-audit-and-enhancement-ac08
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+      <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <div className="flex items-center justify-center mb-6">
+              <Microscope className="w-12 h-12 text-cyan-400 mr-3" />
+              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                AI Autonomous Research
+              </h1>
+            </div>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+              Revolutionize your research capabilities with AI-powered autonomous research systems that work 24/7 
+              to discover breakthroughs and accelerate innovation
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Start Research Project
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <button className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300">
+                <Play className="mr-2 w-5 h-5" />
+                Research Demo
               </button>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Research Capabilities */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Advanced Research Capabilities
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI Autonomous Research system combines cutting-edge artificial intelligence with deep scientific 
+              knowledge to accelerate research across all domains
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {researchCapabilities.map((capability, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+                  <capability.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{capability.title}</h3>
+                <p className="text-gray-300">{capability.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Research Areas */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Research Domains
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI research system covers a wide range of scientific disciplines, from biomedical research 
+              to quantum computing and climate science
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {researchAreas.map((area, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mr-4">
+                    <area.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white">{area.title}</h3>
+                    <p className="text-gray-300 text-sm">{area.description}</p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-2">
+                  {area.applications.map((application, appIndex) => (
+                    <div key={appIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                      {application}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Research Transformation
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience unprecedented research efficiency and discovery with our AI Autonomous Research system
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-cyan-500 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <CheckCircle className="w-8 h-8 text-white" />
+                </div>
+                <p className="text-gray-300">{benefit}</p>
+              </div>
+            ))}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
+<<<<<<< HEAD
+<<<<<<< HEAD
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Revolutionary Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our  A I Autonomous Research combines cutting-edge artificial intelligence with 
               advanced business logic to create the most intelligent solution in the market.
+=======
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+              Autonomous Research Intelligence
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Our AI research systems operate independently, continuously learning and 
+              improving to deliver breakthrough insights and discoveries.
+>>>>>>> origin/cursor/website-audit-and-enhancement-9ceb
             </p>
           </div>
           
@@ -174,6 +644,7 @@ const AIAutonomousResearch: React.FC = () => {
             {features.map((feature, index) => {
               const Icon = feature.icon;
               return (
+<<<<<<< HEAD
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
                     <Icon className="w-8 h-8 text-white" />
@@ -184,6 +655,14 @@ const AIAutonomousResearch: React.FC = () => {
                   <p className="text-gray-300">
                     {feature.description}
                   </p>
+=======
+                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">
+                    <Icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-4 text-white">{feature.title}</h3>
+                  <p className="text-gray-400 leading-relaxed">{feature.description}</p>
+>>>>>>> origin/cursor/website-audit-and-enhancement-9ceb
                 </div>
               );
             })}
@@ -191,6 +670,7 @@ const AIAutonomousResearch: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
@@ -207,13 +687,147 @@ const AIAutonomousResearch: React.FC = () => {
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-4">
                 <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
-                <span className="text-lg text-gray-300">{benefit}</span>
+=======
+      {/* Research Areas */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+              Comprehensive Research Coverage
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              From scientific discovery to market intelligence, our AI systems excel across all research domains
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {researchAreas.map((area, index) => (
+              <div key={index} className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center">
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Flask className="w-6 h-6 text-white" />
+                </div>
+                <span className="text-lg font-medium text-white">{area}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+              Research Transformation Benefits
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              See the measurable impact of AI-powered autonomous research on your organization
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Research Platform Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive tools and capabilities designed to accelerate your research and discovery process
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-4">
+                <Star className="w-6 h-6 text-yellow-400 mt-1 flex-shrink-0" />
+>>>>>>> origin/cursor/website-audit-and-enhancement-9ceb
+                <span className="text-lg text-gray-300">{benefit}</span>
+              </div>
+            ))}
+=======
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Revolutionary Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our platform delivers cutting-edge capabilities to transform your business operations.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-cyan-500/30 hover:border-cyan-400/60 transition-all duration-300 group">
+              <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Zap className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Advanced Technology</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Built with cutting-edge technology to deliver exceptional performance and reliability.
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-cyan-500/30 hover:border-cyan-400/60 transition-all duration-300 group">
+              <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Zap className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Scalable Solutions</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Grow your operations seamlessly with our scalable and flexible platform.
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-cyan-500/30 hover:border-cyan-400/60 transition-all duration-300 group">
+              <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Zap className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Expert Support</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Get 24/7 support from our team of experts to ensure your success.
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-cyan-500/30 hover:border-cyan-400/60 transition-all duration-300 group">
+              <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Zap className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Secure & Compliant</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Enterprise-grade security and compliance built into every solution.
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-cyan-500/30 hover:border-cyan-400/60 transition-all duration-300 group">
+              <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Zap className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Easy Integration</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Seamlessly integrate with your existing systems and workflows.
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-cyan-500/30 hover:border-cyan-400/60 transition-all duration-300 group">
+              <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Zap className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">Continuous Innovation</h3>
+              <p className="text-gray-300 leading-relaxed">
+                Stay ahead with regular updates and new features.
+              </p>
+            </div>
+            
+>>>>>>> origin/cursor/website-audit-and-enhancement-ac08
+          </div>
+        </div>
+      </section>
+
+<<<<<<< HEAD
+<<<<<<< HEAD
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -285,33 +899,324 @@ const AIAutonomousResearch: React.FC = () => {
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${plan.popular ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-400 hover:to-blue-400' : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400/20'}`}>
                   {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
                 </button>
+=======
+      {/* Capabilities Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+              Advanced Research Capabilities
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Our AI systems provide comprehensive research capabilities that go beyond human limitations
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {capabilities.map((capability, index) => (
+              <div key={index} className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center">
+                <span className="text-lg font-medium text-white">{capability}</span>
+>>>>>>> origin/cursor/website-audit-and-enhancement-9ceb
               </div>
             ))}
+=======
+      {/* Use Cases Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900/50 to-black/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Transform Your Industry
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover how our solutions are revolutionizing various sectors
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="space-y-8">
+              
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-bold text-lg">1</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Enterprise Solutions</h3>
+                  <p className="text-gray-300">
+                    Transform large-scale operations with enterprise-grade capabilities and support.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-bold text-lg">2</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Small Business</h3>
+                  <p className="text-gray-300">
+                    Level the playing field with affordable, powerful solutions designed for growth.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-bold text-lg">3</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Startups</h3>
+                  <p className="text-gray-300">
+                    Accelerate your growth with innovative solutions that scale with your business.
+                  </p>
+                </div>
+              </div>
+              
+            </div>
+
+            <div className="space-y-8">
+              
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-bold text-lg">4</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Government</h3>
+                  <p className="text-gray-300">
+                    Meet strict compliance requirements while delivering exceptional citizen services.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-bold text-lg">5</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Healthcare</h3>
+                  <p className="text-gray-300">
+                    Improve patient outcomes with secure, compliant, and innovative solutions.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-white font-bold text-lg">6</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-2">Education</h3>
+                  <p className="text-gray-300">
+                    Enhance learning experiences with cutting-edge technology and tools.
+                  </p>
+                </div>
+              </div>
+              
+            </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-ac08
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+            {features.map((feature, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/50 to-blue-900/50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Accelerate Your Research?
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Transform Your Business?
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Join thousands of businesses already using AI to automate and optimize their operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
+=======
             <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
               Start Free Trial
             </button>
             <Link to="/contact" className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">
               Contact Us
+=======
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+            Ready to Revolutionize Your Research?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join the future of autonomous research and accelerate your discoveries today
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
+              Start Free Trial
+            </button>
+            <Link to="/contact" className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400/20 transition-all duration-300 flex items-center justify-center">
+              Schedule Consultation
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Services */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+              Related Services
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Explore our other AI and research solutions
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Link to="/services/ai-autonomous-systems" className="group">
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50 group-hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                <h3 className="text-xl font-semibold mb-4 text-white group-hover:text-cyan-400 transition-colors">
+                  AI Autonomous Systems
+                </h3>
+                <p className="text-gray-400 mb-4">
+                  Build intelligent systems that operate independently
+                </p>
+                <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                  <span>Learn More</span>
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </Link>
+            
+            <Link to="/services/ai-autonomous-business-operations" className="group">
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50 group-hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                <h3 className="text-xl font-semibold mb-4 text-white group-hover:text-cyan-400 transition-colors">
+                  AI Autonomous Business Operations
+                </h3>
+                <p className="text-gray-400 mb-4">
+                  Automate complex business processes with intelligent AI agents
+                </p>
+                <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                  <span>Learn More</span>
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </Link>
+            
+            <Link to="/services/ai-autonomous-ecosystem" className="group">
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50 group-hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                <h3 className="text-xl font-semibold mb-4 text-white group-hover:text-cyan-400 transition-colors">
+                  AI Autonomous Ecosystem
+                </h3>
+                <p className="text-gray-400 mb-4">
+                  Create interconnected AI systems for comprehensive automation
+                </p>
+                <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                  <span>Learn More</span>
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-9ceb
+            </Link>
+=======
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-br from-cyan-900/30 via-blue-900/30 to-purple-900/30 rounded-3xl p-12 border border-cyan-500/30">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Transform your business with our cutting-edge AI solutions today.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30 inline-flex items-center"
+              >
+                Start Your Journey
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/services"
+                className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400/20 transition-all duration-300"
+              >
+                Explore All Services
+              </Link>
+            </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-ac08
+=======
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/50 to-blue-900/50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Accelerate Your Research?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join the future of scientific research with our AI Autonomous Research system. Start your research 
+            project today and discover breakthroughs faster than ever before.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+            >
+              Start Research Project
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+            <Link
+              to="/pricing"
+              className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300"
+            >
+              View Research Plans
+            </Link>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
           </div>
         </div>
       </section>
     </div>
   );
+<<<<<<< HEAD
 };
 
 export default AIAutonomousResearch;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+};
+
+export default AIAutonomousResearch;
+=======
+}
+>>>>>>> origin/cursor/website-audit-and-enhancement-9ceb
+=======
+};
+
+export default AIAutonomousResearch;
+>>>>>>> origin/cursor/website-audit-and-enhancement-ac08
+=======
+};
+
+export default AIAutonomousResearch;
+>>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

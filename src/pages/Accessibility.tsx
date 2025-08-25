@@ -1,7 +1,34 @@
-import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Accessibility, Eye, Ear, Hand, Brain, CheckCircle } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+=======
+<<<<<<< HEAD
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { 
+  Eye, 
+  Ear, 
+  MousePointer, 
+  Keyboard, 
+  Brain, 
+  Heart,
+  CheckCircle,
+  AlertCircle,
+  Info,
+  ArrowRight,
+  Accessibility,
+  Users,
+  Shield,
+  Globe,
+  Settings
+} from 'lucide-react';
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { CheckCircle } from 'lucide-react';
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 
 export default function AccessibilityPage() {
   return (
