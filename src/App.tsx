@@ -170,12 +170,8 @@ const App: React.FC = () => {
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
-            <PerformanceOptimizer
-              enableMonitoring={true}
-              enableOptimizations={true}
-              showMetrics={import.meta.env.DEV}
-            >
-              <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+            <PerformanceOptimizer />
+            <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
                 {/* Enhanced SEO */}
                 <EnhancedSEO 
                   seoData={{
@@ -444,12 +440,11 @@ const App: React.FC = () => {
                   />
                 )}
               </div>
-            </PerformanceOptimizer>
-          </Router>
-        </WhitelabelProvider>
-      </ThemeProvider>
-    </EnhancedErrorBoundary>
-  );
-};
+            </Router>
+          </WhitelabelProvider>
+        </ThemeProvider>
+      </EnhancedErrorBoundary>
+    );
+  };
 
 export default App;
