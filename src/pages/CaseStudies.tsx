@@ -1,15 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  CheckCircleIcon, 
-  ChartBarIcon, 
-  UserGroupIcon, 
-  GlobeAltIcon,
-  LightBulbIcon,
-  CogIcon
-} from '@heroicons/react/24/outline';
+import { CheckCircle, TrendingUp, Users, DollarSign, Clock, Target } from 'lucide-react';
 
-const CaseStudies: React.FC = () => {
+const CaseStudies = () => {
   const caseStudies = [
     {
       id: 1,
@@ -95,150 +88,146 @@ const CaseStudies: React.FC = () => {
       solution: "Blockchain-based supply chain tracking system",
       results: [
         "100% supply chain visibility",
-        "45% reduction in fraud",
-        "Real-time tracking and verification"
+        "45% reduction in fraud incidents",
+        "Real-time tracking across 50+ countries"
       ],
-      technologies: ["Blockchain", "Supply Chain", "Smart Contracts", "IoT Integration"],
+      technologies: ["Blockchain", "Supply Chain", "IoT", "Smart Contracts"],
       image: "/images/case-studies/blockchain-logistics.jpg"
     }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5
-      }
-    }
-  };
+  const stats = [
+    { icon: CheckCircle, label: "Projects Completed", value: "150+" },
+    { icon: TrendingUp, label: "Success Rate", value: "98%" },
+    { icon: Users, label: "Happy Clients", value: "120+" },
+    { icon: DollarSign, label: "ROI Average", value: "340%" },
+    { icon: Clock, label: "Delivery Time", value: "2.5x Faster" },
+    { icon: Target, label: "Goal Achievement", value: "95%" }
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate-darker">
       {/* Hero Section */}
-      <section className="pt-32 pb-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-zion-blue/20 to-zion-purple/20"></div>
+        <div className="relative container mx-auto text-center">
           <motion.h1 
-            className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="text-5xl md:text-6xl font-bold text-white mb-6"
           >
-            Success Stories
+            Case Studies
           </motion.h1>
           <motion.p 
-            className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8"
           >
-            Discover how Zion Tech Group has transformed businesses across industries with cutting-edge technology solutions
+            Discover how we've transformed businesses across industries with cutting-edge AI solutions and innovative technology implementations.
           </motion.p>
           <motion.div 
-            className="flex flex-wrap justify-center gap-4"
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex flex-wrap justify-center gap-4"
           >
-            <span className="px-4 py-2 bg-cyan-500/20 border border-cyan-500 rounded-full text-cyan-400">
-              AI/ML Solutions
-            </span>
-            <span className="px-4 py-2 bg-blue-500/20 border border-blue-500 rounded-full text-blue-400">
-              Quantum Computing
-            </span>
-            <span className="px-4 py-2 bg-purple-500/20 border border-purple-500 rounded-full text-purple-400">
-              Cybersecurity
-            </span>
-            <span className="px-4 py-2 bg-green-500/20 border border-green-500 rounded-full text-green-400">
-              Digital Transformation
-            </span>
+            <button className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
+              View All Projects
+            </button>
+            <button className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
+              Get Your Quote
+            </button>
           </motion.div>
         </div>
       </section>
 
+      {/* Stats Section */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="bg-gradient-to-br from-zion-blue to-zion-purple p-4 rounded-xl inline-block mb-4">
+                  <stat.icon className="h-8 w-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                <div className="text-zion-slate-light text-sm">{stat.label}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Case Studies Grid */}
-      <section className="pb-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div 
-            className="grid grid-cols-1 lg:grid-cols-2 gap-8"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
+      <section className="py-20 px-4">
+        <div className="container mx-auto">
+          <motion.h2 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-4xl font-bold text-white text-center mb-16"
           >
+            Success Stories
+          </motion.h2>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {caseStudies.map((study, index) => (
               <motion.div
                 key={study.id}
-                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20"
-                variants={itemVariants}
-                whileHover={{ y: -5 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-zion-slate-light/10 backdrop-blur-md border border-zion-blue-light/20 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300 hover:scale-105"
               >
-                <div className="flex items-start justify-between mb-6">
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{study.title}</h3>
-                    <p className="text-gray-400">{study.client}</p>
-                    <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm mt-2">
-                      {study.industry}
-                    </span>
-                  </div>
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center">
-                    <span className="text-2xl font-bold">{index + 1}</span>
-                  </div>
+                <div className="flex items-center justify-between mb-6">
+                  <span className="bg-gradient-to-r from-zion-blue to-zion-purple text-white px-4 py-2 rounded-full text-sm font-medium">
+                    {study.industry}
+                  </span>
+                  <span className="text-zion-slate-light text-sm">{study.client}</span>
                 </div>
-
+                
+                <h3 className="text-2xl font-bold text-white mb-4">{study.title}</h3>
+                
                 <div className="space-y-4 mb-6">
                   <div>
-                    <h4 className="font-semibold text-cyan-400 mb-2 flex items-center">
-                      <LightBulbIcon className="w-5 h-5 mr-2" />
-                      Challenge
-                    </h4>
-                    <p className="text-gray-300">{study.challenge}</p>
+                    <h4 className="text-zion-cyan font-semibold mb-2">Challenge</h4>
+                    <p className="text-zion-slate-light">{study.challenge}</p>
                   </div>
-                  
                   <div>
-                    <h4 className="font-semibold text-blue-400 mb-2 flex items-center">
-                      <CogIcon className="w-5 h-5 mr-2" />
-                      Solution
-                    </h4>
-                    <p className="text-gray-300">{study.solution}</p>
+                    <h4 className="text-zion-cyan font-semibold mb-2">Solution</h4>
+                    <p className="text-zion-slate-light">{study.solution}</p>
                   </div>
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="font-semibold text-green-400 mb-3 flex items-center">
-                    <ChartBarIcon className="w-5 h-5 mr-2" />
-                    Results
-                  </h4>
+                  <h4 className="text-zion-cyan font-semibold mb-3">Results</h4>
                   <ul className="space-y-2">
-                    {study.results.map((result, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300">
-                        <CheckCircleIcon className="w-5 h-5 text-green-500 mr-2 flex-shrink-0" />
-                        {result}
+                    {study.results.map((result, resultIndex) => (
+                      <li key={resultIndex} className="flex items-center space-x-2 text-zion-slate-light">
+                        <CheckCircle className="h-5 w-5 text-zion-cyan flex-shrink-0" />
+                        <span>{result}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="font-semibold text-purple-400 mb-3 flex items-center">
-                    <GlobeAltIcon className="w-5 h-5 mr-2" />
-                    Technologies Used
-                  </h4>
+                  <h4 className="text-zion-cyan font-semibold mb-3">Technologies Used</h4>
                   <div className="flex flex-wrap gap-2">
-                    {study.technologies.map((tech, idx) => (
+                    {study.technologies.map((tech, techIndex) => (
                       <span 
-                        key={idx}
-                        className="px-3 py-1 bg-gray-700/50 text-gray-300 rounded-full text-sm border border-gray-600"
+                        key={techIndex}
+                        className="bg-zion-slate-light/20 text-zion-slate-light px-3 py-1 rounded-full text-sm border border-zion-blue-light/30"
                       >
                         {tech}
                       </span>
@@ -247,32 +236,32 @@ const CaseStudies: React.FC = () => {
                 </div>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 px-4">
+        <div className="container mx-auto text-center">
           <motion.div 
-            className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-3xl p-12"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="bg-gradient-to-r from-zion-blue to-zion-purple rounded-3xl p-12 max-w-4xl mx-auto"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Start Your Success Story?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our innovative solutions can drive your success story
+            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
+              Let's discuss how our AI solutions and technology expertise can transform your business and deliver exceptional results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-white transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25">
+              <button className="bg-white text-zion-blue hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
                 Schedule a Consultation
               </button>
-              <button className="px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 rounded-full font-semibold transition-all duration-300">
-                View More Case Studies
+              <button className="border-2 border-white text-white hover:bg-white hover:text-zion-blue px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
+                View Our Services
               </button>
             </div>
           </motion.div>
