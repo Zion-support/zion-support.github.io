@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake } from 'lucide-react';
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Rocket, Zap, ChevronRight, ChevronDown } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import { useState } from 'react';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -10,279 +11,279 @@ interface SidebarProps {
 
 export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   const location = useLocation();
+  const [expandedSections, setExpandedSections] = useState<string[]>(['main']);
 
   // Close sidebar when route changes
   useEffect(() => {
     onClose();
   }, [location.pathname, onClose]);
 
+  const toggleSection = (sectionTitle: string) => {
+    setExpandedSections(prev => 
+      prev.includes(sectionTitle) 
+        ? prev.filter(s => s !== sectionTitle)
+        : [...prev, sectionTitle]
+    );
+  };
+
   const navigationItems = [
     {
       title: 'Main',
+      icon: Home,
       items: [
-        { name: 'Home', path: '/', icon: Home },
-        { name: 'Services', path: '/services', icon: Briefcase },
-        { name: 'Solutions', path: '/solutions/enterprise', icon: Briefcase },
-        { name: 'Pricing', path: '/pricing', icon: Briefcase },
-        { name: 'About', path: '/about', icon: Users },
-        { name: 'Contact', path: '/contact', icon: Phone }
+        { name: 'Home', path: '/', icon: Home, description: 'Welcome to Zion Tech Group' },
+        { name: 'Services', path: '/services', icon: Briefcase, description: 'Explore our AI services' },
+        { name: 'Solutions', path: '/solutions/enterprise', icon: Rocket, description: 'Industry solutions' },
+        { name: 'Pricing', path: '/pricing', icon: Briefcase, description: 'Service plans and pricing' },
+        { name: 'About', path: '/about', icon: Users, description: 'Learn about our company' },
+        { name: 'Contact', path: '/contact', icon: Phone, description: 'Get in touch with us' }
       ]
     },
     {
-      title: 'Services',
+      title: 'AI & Micro SAAS Services',
+      icon: Brain,
       items: [
-        { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
-        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Briefcase },
-        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Briefcase },
-        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Briefcase },
-        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Briefcase },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Shield },
-        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Briefcase },
-        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Briefcase },
-        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
-        { name: 'Emerging Technology', path: '/emerging-tech', icon: Globe }
+        { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain, description: 'Intelligent automation solutions' },
+        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Brain, description: 'Autonomous research platform' },
+        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain, description: 'Quantum AI training' },
+        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Rocket, description: 'Self-optimizing operations' },
+        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Cpu, description: 'Intelligent IT asset tracking' },
+        { name: 'AI Project Management', path: '/services/ai-powered-project-management', icon: Rocket, description: 'Intelligent project oversight' },
+        { name: 'AI Content Generation', path: '/services/ai-content-generation-engine', icon: Brain, description: 'Automated content creation' },
+        { name: 'AI Sales Intelligence', path: '/services/ai-sales-intelligence-platform', icon: Rocket, description: 'Lead scoring and forecasting' },
+        { name: 'AI Risk Management', path: '/services/ai-risk-management-platform', icon: Shield, description: 'Comprehensive risk assessment' },
+        { name: 'AI HR Analytics Suite', path: '/services/ai-hr-analytics-suite', icon: Users, description: 'Employee performance insights' },
+        { name: 'AI Financial Analytics', path: '/services/ai-powered-financial-analytics', icon: Briefcase, description: 'Real-time market insights' },
+        { name: 'AI Marketing Orchestrator', path: '/services/autonomous-marketing-orchestrator', icon: Rocket, description: 'AI-driven campaign optimization' }
       ]
     },
     {
-      title: 'Company',
+      title: 'Cybersecurity & Quantum',
+      icon: Shield,
       items: [
-        { name: 'About Us', path: '/about', icon: Users },
-        { name: 'Our Team', path: '/team', icon: Users },
-        { name: 'Partners', path: '/partners', icon: Handshake },
-        { name: 'Case Studies', path: '/case-studies', icon: Globe },
-        { name: 'Help Center', path: '/help', icon: Globe }
+        { name: 'Quantum Encryption', path: '/services/quantum-encryption-platform', icon: Shield, description: 'Future-proof security' },
+        { name: 'Quantum Cybersecurity', path: '/services/quantum-enhanced-cybersecurity', icon: Shield, description: 'Post-quantum protection' },
+        { name: 'Quantum Communication', path: '/services/quantum-secure-communication', icon: Shield, description: 'Unhackable messaging' },
+        { name: 'Quantum Identity Management', path: '/services/quantum-secure-identity-management', icon: Shield, description: 'Quantum-secured identities' },
+        { name: 'Real-Time Fraud Detection', path: '/services/real-time-fraud-detection', icon: Shield, description: 'ML-powered fraud prevention' },
+        { name: 'Smart Compliance Monitoring', path: '/services/smart-compliance-monitoring', icon: Shield, description: 'Regulatory compliance tracking' },
+        { name: 'Cybersecurity Services', path: '/services/cybersecurity', icon: Shield, description: 'Advanced security solutions' },
+        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Shield, description: 'Automated compliance' }
       ]
     },
     {
-      title: 'Support',
+      title: 'Cloud & Infrastructure',
+      icon: Cpu,
       items: [
-        { name: 'Help Center', path: '/help', icon: Users },
-        { name: 'Documentation', path: '/docs', icon: Globe },
-        { name: 'Contact Support', path: '/support', icon: Phone },
-        { name: 'Status Page', path: '/status', icon: Globe }
+        { name: 'Cloud Cost Optimization', path: '/services/cloud-optimization', icon: Cpu, description: 'AI-driven cost management' },
+        { name: 'Autonomous IT Operations', path: '/services/autonomous-it-operations-platform', icon: Cpu, description: 'Self-healing infrastructure' },
+        { name: 'Smart Energy Management', path: '/services/smart-energy-management', icon: Cpu, description: 'AI-driven optimization' },
+        { name: 'Predictive Maintenance', path: '/services/predictive-maintenance-platform', icon: Cpu, description: 'IoT-powered monitoring' },
+        { name: 'Autonomous Data Pipeline', path: '/services/autonomous-data-pipeline-orchestrator', icon: Cpu, description: 'Self-healing workflows' },
+        { name: 'Smart Vendor Management', path: '/services/smart-vendor-management-system', icon: Cpu, description: 'AI-powered evaluation' },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Cpu, description: 'Modern infrastructure services' },
+        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Cpu, description: 'Next-gen networking' }
+      ]
+    },
+    {
+      title: 'Business Solutions',
+      icon: Rocket,
+      items: [
+        { name: 'Smart Inventory Management', path: '/services/smart-inventory-management', icon: Rocket, description: 'AI-driven forecasting' },
+        { name: 'Autonomous Supply Chain', path: '/services/autonomous-supply-chain-platform', icon: Rocket, description: 'Self-optimizing logistics' },
+        { name: 'AI Customer Intelligence', path: '/services/ai-customer-intelligence', icon: Users, description: 'Customer behavior insights' },
+        { name: 'Smart Contract Management', path: '/services/smart-contract-management', icon: Briefcase, description: 'Automated contract oversight' },
+        { name: 'AI Legal Research', path: '/services/ai-legal-research-assistant', icon: Shield, description: 'Legal document analysis' },
+        { name: 'Autonomous Accounting', path: '/services/autonomous-accounting-platform', icon: Briefcase, description: 'AI-powered bookkeeping' },
+        { name: 'Smart HR Management', path: '/services/smart-hr-management-system', icon: Users, description: 'Employee lifecycle automation' },
+        { name: 'AI Market Research', path: '/services/ai-market-research-platform', icon: Globe, description: 'Market trend analysis' }
+      ]
+    },
+    {
+      title: 'Industry Solutions',
+      icon: Globe,
+      items: [
+        { name: 'Healthcare AI', path: '/solutions/healthcare', icon: Shield, description: 'Medical technology solutions' },
+        { name: 'Financial Services', path: '/solutions/financial', icon: Briefcase, description: 'Fintech and banking solutions' },
+        { name: 'Manufacturing Intelligence', path: '/solutions/manufacturing', icon: Cpu, description: 'Industry 4.0 solutions' },
+        { name: 'Retail Technology', path: '/solutions/retail', icon: Rocket, description: 'E-commerce and retail tech' },
+        { name: 'Government Solutions', path: '/solutions/government', icon: Shield, description: 'Public sector technology' },
+        { name: 'Education Technology', path: '/solutions/education', icon: Brain, description: 'AI-powered learning platforms' },
+        { name: 'Real Estate Tech', path: '/solutions/real-estate', icon: Globe, description: 'Property management solutions' },
+        { name: 'Transportation & Logistics', path: '/solutions/transportation', icon: Rocket, description: 'Smart mobility solutions' }
       ]
     }
   ];
 
   const contactInfo = [
-    { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
-    { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
-    { icon: MapPin, text: '364 E Main St STE 1008 Middletown DE 19709', href: '#' }
+    { icon: Phone, label: '+1 (302) 464-0950', href: 'tel:+13024640950' },
+    { icon: Mail, label: 'info@ziontechgroup.com', href: 'mailto:info@ziontechgroup.com' },
+    { icon: MapPin, label: 'Wilmington, DE, USA', href: '#' }
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: 'https://linkedin.com/company/zion-tech-group', label: 'LinkedIn' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Facebook, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' },
     { icon: Instagram, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' }
   ];
 
-  const sidebarVariants = {
-    closed: {
-      x: '-100%',
-      transition: {
-        type: 'spring' as const,
-        stiffness: 300,
-        damping: 30
-      }
-    },
-    open: {
-      x: 0,
-      transition: {
-        type: 'spring' as const,
-        stiffness: 300,
-        damping: 30
-      }
-    }
-  };
-
-  const overlayVariants = {
-    closed: { opacity: 0 },
-    open: { opacity: 1 }
-  };
-
   return (
-    <>
-      {/* Overlay */}
-      <AnimatePresence>
-        {isOpen && (
+    <AnimatePresence>
+      {isOpen && (
+        <>
+          {/* Backdrop */}
           <motion.div
-            variants={overlayVariants}
-            initial="closed"
-            animate="open"
-            exit="closed"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
             onClick={onClose}
           />
-        )}
-      </AnimatePresence>
 
-      {/* Sidebar */}
-      <AnimatePresence>
-        {isOpen && (
+          {/* Sidebar */}
           <motion.div
-            variants={sidebarVariants}
-            initial="closed"
-            animate="open"
-            exit="closed"
-            className="fixed left-0 top-0 h-full w-80 max-w-[90vw] z-50 overflow-hidden"
+            initial={{ x: '-100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '-100%' }}
+            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            className="fixed left-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-r border-gray-800/50 z-50 overflow-y-auto"
           >
-            {/* Futuristic Background */}
-            <div className="absolute inset-0 futuristic-bg opacity-80"></div>
-            <div className="absolute inset-0 cyber-grid-bg opacity-30"></div>
-            
-            {/* Neural Network Lines */}
-            <div className="absolute inset-0 pointer-events-none">
-              <div className="neural-line" style={{ top: '20%', width: '60%', left: '20%', animationDelay: '0s' }}></div>
-              <div className="neural-line" style={{ top: '40%', width: '40%', left: '10%', animationDelay: '1s' }}></div>
-              <div className="neural-line" style={{ top: '60%', width: '70%', left: '15%', animationDelay: '2s' }}></div>
-              <div className="neural-line" style={{ top: '80%', width: '50%', left: '25%', animationDelay: '3s' }}></div>
-            </div>
-
-            {/* Floating Quantum Elements */}
-            <div className="absolute inset-0 pointer-events-none">
-              <div className="quantum-particle" style={{ top: '15%', left: '80%', animationDelay: '0s' }}></div>
-              <div className="quantum-particle" style={{ top: '35%', left: '85%', animationDelay: '1s' }}></div>
-              <div className="quantum-particle" style={{ top: '55%', left: '90%', animationDelay: '2s' }}></div>
-              <div className="quantum-particle" style={{ top: '75%', left: '88%', animationDelay: '3s' }}></div>
-            </div>
-
-            <div className="relative h-full flex flex-col">
-              {/* Header */}
-              <div className="flex items-center justify-between p-6 border-b border-zion-cyan/30">
-                <div className="flex items-center gap-3">
-                  <div className="relative">
-                    <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center animate-quantum-float">
-                      <span className="text-white font-bold text-xl">Z</span>
-                    </div>
-                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-zion-cyan rounded-full animate-ping"></div>
-                  </div>
-                  <div>
-                    <h2 className="text-xl font-bold neon-text">Zion Tech</h2>
-                    <p className="text-sm text-zion-slate-light">Navigation</p>
-                  </div>
+            {/* Header */}
+            <div className="flex items-center justify-between p-6 border-b border-gray-800/50">
+              <div className="flex items-center space-x-2">
+                <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">Z</span>
                 </div>
-                <button
-                  onClick={onClose}
-                  className="p-2 futuristic-card hover:bg-white/20 rounded-lg transition-colors group"
-                >
-                  <X className="w-5 h-5 text-zion-slate-light group-hover:neon-text transition-colors" />
-                </button>
+                <span className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                  Zion Tech Group
+                </span>
               </div>
+              <button
+                onClick={onClose}
+                className="p-2 text-gray-400 hover:text-white hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
 
-              {/* Navigation Content */}
-              <div className="flex-1 overflow-y-auto p-6 space-y-6">
-                {/* Main Navigation */}
-                {navigationItems.map((section) => (
+            {/* Navigation */}
+            <div className="p-6 space-y-6">
+              {navigationItems.map((section) => {
+                const Icon = section.icon;
+                const isExpanded = expandedSections.includes(section.title);
+                
+                return (
                   <div key={section.title} className="space-y-3">
-                    <h3 className="text-sm font-semibold text-zion-cyan uppercase tracking-wider neon-text">
-                      {section.title}
-                    </h3>
-                    <div className="space-y-1">
-                      {section.items.map((item) => {
-                        const Icon = item.icon;
-                        const isActive = location.pathname === item.path;
-                        
-                        return (
-                          <Link
-                            key={item.name}
-                            to={item.path}
-                            className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 group ${
-                              isActive
-                                ? 'quantum-button shadow-lg shadow-zion-cyan/30'
-                                : 'futuristic-card text-zion-slate-light hover:bg-white/20 hover:neon-text'
-                            }`}
-                          >
-                            <Icon className={`w-4 h-4 ${
-                              isActive ? 'text-white' : 'text-zion-cyan group-hover:neon-text'
-                            }`} />
-                            <span className="flex-1">{item.name}</span>
-                            {isActive && (
-                              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                            )}
-                          </Link>
-                        );
-                      })}
-                    </div>
+                    <button
+                      onClick={() => toggleSection(section.title)}
+                      className="flex items-center justify-between w-full p-3 text-left hover:bg-gray-800/50 rounded-lg transition-colors duration-200 group"
+                    >
+                      <div className="flex items-center space-x-3">
+                        <div className="w-6 h-6 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
+                          <Icon className="w-3 h-3 text-white" />
+                        </div>
+                        <span className="font-medium text-white group-hover:text-cyan-400 transition-colors duration-200">
+                          {section.title}
+                        </span>
+                      </div>
+                      <ChevronDown 
+                        className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
+                          isExpanded ? 'rotate-180' : ''
+                        }`} 
+                      />
+                    </button>
+                    
+                    {isExpanded && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="ml-6 space-y-2"
+                      >
+                        {section.items.map((item) => {
+                          const ItemIcon = item.icon;
+                          const isActive = location.pathname === item.path;
+                          
+                          return (
+                            <Link
+                              key={item.path}
+                              to={item.path}
+                              className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-200 group ${
+                                isActive 
+                                  ? 'bg-cyan-500/20 border border-cyan-500/30 text-cyan-400' 
+                                  : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
+                              }`}
+                              onClick={onClose}
+                            >
+                              <ItemIcon className="w-4 h-4" />
+                              <div className="flex-1 min-w-0">
+                                <div className="font-medium">{item.name}</div>
+                                {item.description && (
+                                  <div className="text-xs text-gray-400 mt-1 truncate">
+                                    {item.description}
+                                  </div>
+                                )}
+                              </div>
+                              <ChevronRight className="w-3 h-3 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />
+                            </Link>
+                          );
+                        })}
+                      </motion.div>
+                    )}
                   </div>
-                ))}
+                );
+              })}
+            </div>
 
-                {/* Quick Actions */}
-                <div className="space-y-3">
-                  <h3 className="text-sm font-semibold text-zion-cyan uppercase tracking-wider neon-text">
-                    Quick Actions
-                  </h3>
-                  <div className="space-y-2">
-                    <button className="w-full quantum-button py-3 px-4 rounded-lg font-medium transform hover:scale-105 transition-transform">
-                      Get Free Quote
-                    </button>
-                    <button className="w-full futuristic-card border border-zion-cyan/30 text-zion-cyan py-3 px-4 rounded-lg font-medium hover:bg-zion-cyan/10 transition-colors">
-                      Schedule Demo
-                    </button>
-                  </div>
+            {/* Contact & Social */}
+            <div className="p-6 border-t border-gray-800/50 space-y-6">
+              {/* Contact Info */}
+              <div className="space-y-3">
+                <h4 className="text-sm font-semibold text-white uppercase tracking-wider">Contact</h4>
+                <div className="space-y-2">
+                  {contactInfo.map((contact, index) => {
+                    const Icon = contact.icon;
+                    return (
+                      <a
+                        key={index}
+                        href={contact.href}
+                        className="flex items-center space-x-3 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200"
+                      >
+                        <Icon className="w-4 h-4" />
+                        <span>{contact.label}</span>
+                      </a>
+                    );
+                  })}
                 </div>
               </div>
 
-              {/* Footer */}
-              <div className="border-t border-zion-cyan/30 p-6 space-y-4">
-                {/* Contact Info */}
-                <div className="space-y-3">
-                  <h4 className="text-sm font-semibold text-zion-cyan neon-text">Contact Info</h4>
-                  <div className="space-y-2">
-                    {contactInfo.map((contact, index) => {
-                      const Icon = contact.icon;
-                      return (
-                        <a
-                          key={index}
-                          href={contact.href}
-                          className="flex items-center gap-3 text-sm text-zion-slate-light hover:neon-text transition-colors group"
-                        >
-                          <Icon className="w-4 h-4 text-zion-cyan group-hover:neon-text" />
-                          <span className="flex-1">{contact.text}</span>
-                        </a>
-                      );
-                    })}
-                  </div>
-                </div>
-
-                {/* Social Links */}
-                <div className="space-y-3">
-                  <h4 className="text-sm font-semibold text-zion-cyan neon-text">Follow Us</h4>
-                  <div className="flex gap-3">
-                    {socialLinks.map((social, index) => {
-                      const Icon = social.icon;
-                      return (
-                        <a
-                          key={index}
-                          href={social.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-2 futuristic-card hover:bg-white/20 rounded-lg transition-colors group"
-                          aria-label={social.label}
-                        >
-                          <Icon className="w-4 h-4 text-zion-slate-light group-hover:neon-text transition-colors" />
-                        </a>
-                      );
-                    })}
-                  </div>
-                </div>
-
-                {/* Company Info */}
-                <div className="text-center pt-4 border-t border-zion-cyan/20">
-                  <p className="text-xs text-zion-slate-light">
-                    © 2024 Zion Tech Group
-                  </p>
-                  <p className="text-xs text-zion-slate-light mt-1">
-                    Transforming Business with AI & Tech
-                  </p>
+              {/* Social Links */}
+              <div className="space-y-3">
+                <h4 className="text-sm font-semibold text-white uppercase tracking-wider">Follow Us</h4>
+                <div className="flex space-x-3">
+                  {socialLinks.map((social, index) => {
+                    const Icon = social.icon;
+                    return (
+                      <a
+                        key={index}
+                        href={social.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-8 h-8 bg-gray-800 hover:bg-cyan-500/20 border border-gray-700 hover:border-cyan-500/50 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 transition-all duration-200"
+                        title={social.label}
+                      >
+                        <Icon className="w-4 h-4" />
+                      </a>
+                    );
+                  })}
                 </div>
               </div>
             </div>
           </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+        </>
+      )}
+    </AnimatePresence>
   );
 }
