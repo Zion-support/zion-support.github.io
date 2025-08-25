@@ -214,6 +214,49 @@ const HeroSection: React.FC = () => {
         <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-bounce"></div>
         </div>
+
+        {/* Enhanced Stats Section */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          <div className="text-center">
+            <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">500+</div>
+            <div className="text-sm text-zion-slate-light">AI Services</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl md:text-4xl font-bold text-zion-purple mb-2">10K+</div>
+            <div className="text-sm text-zion-slate-light">Tech Experts</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">50+</div>
+            <div className="text-sm text-zion-slate-light">Countries</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">99.9%</div>
+            <div className="text-sm text-zion-slate-light">Uptime</div>
+          </div>
+        </div>
+
+        {/* Enhanced Trust Indicators */}
+        <div className="mt-16 pt-8 border-t border-zion-purple/20">
+          <p className="text-zion-slate-light text-sm mb-4">Trusted by leading companies worldwide</p>
+          <div className="flex flex-wrap justify-center gap-8 opacity-60">
+            <div className="flex items-center space-x-2 text-zion-cyan">
+              <Shield className="w-5 h-5" />
+              <span className="text-sm font-medium">SOC2 Certified</span>
+            </div>
+            <div className="flex items-center space-x-2 text-zion-purple">
+              <Cloud className="w-5 h-5" />
+              <span className="text-sm font-medium">Cloud Native</span>
+            </div>
+            <div className="flex items-center space-x-2 text-green-400">
+              <Users className="w-5 h-5" />
+              <span className="text-sm font-medium">24/7 Support</span>
+            </div>
+            <div className="flex items-center space-x-2 text-yellow-400">
+              <Code className="w-5 h-5" />
+              <span className="text-sm font-medium">Open Source</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

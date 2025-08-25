@@ -4,6 +4,18 @@ import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
 import type { TalentProfile as TalentProfileType } from '@/types/talent';
 import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
 
+// Custom error component
+const ErrorPage: React.FC<{ statusCode: number }> = ({ statusCode }) => (
+  <div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
+    <div className="text-center">
+      <h1 className="text-6xl font-bold text-zion-purple mb-4">{statusCode}</h1>
+      <p className="text-xl text-zion-slate-light">
+        {statusCode === 404 ? 'Page not found' : 'Something went wrong'}
+      </p>
+    </div>
+  </div>
+);
+
 interface TalentProfileWithSocial extends TalentProfileType {
   social?: Record<string, string>;
 }
