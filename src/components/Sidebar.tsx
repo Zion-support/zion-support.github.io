@@ -9,6 +9,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { 
   X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, 
   Shield, Handshake, ChevronDown, ChevronRight, Brain, Cpu, Database, Network, Code, Palette, 
@@ -44,6 +45,9 @@ import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitte
 =======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Cloud, Database, Network, Settings, BookOpen, MessageCircle, FileText, Star, Rocket, Target, Lightbulb, CheckCircle, Eye } from 'lucide-react';
 >>>>>>> origin/cursor/website-audit-and-enhancement-1f82
+=======
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Github, Youtube, Shield, Handshake } from 'lucide-react';
+>>>>>>> origin/cursor/website-audit-and-enhancement-2b07
 import { Link, useLocation } from 'react-router-dom';
 import { useSidebar } from '../context/SidebarContext';
 
@@ -1142,6 +1146,7 @@ export default function Sidebar() {
 =======
     { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
+<<<<<<< HEAD
     { icon: Facebook, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' },
     { icon: Instagram, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' },
     { icon: Github, href: 'https://github.com/ziontechgroup', label: 'GitHub' },
@@ -1149,6 +1154,10 @@ export default function Sidebar() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-a3a9
+=======
+    { icon: Github, href: 'https://github.com/Zion-Holdings', label: 'GitHub' },
+    { icon: Youtube, href: 'https://www.youtube.com/@ziontechgroup', label: 'YouTube' }
+>>>>>>> origin/cursor/website-audit-and-enhancement-2b07
   ];
 
   const sidebarVariants = {
