@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -79,6 +80,8 @@ export default function About() {
     { label: 'Countries Served', value: '25+', icon: Globe },
 >>>>>>> origin/cursor/website-audit-and-enhancement-54e3
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Users, Award, Globe, Target, TrendingUp, Zap, Shield, Brain, Rocket, Star, CheckCircle, ArrowRight } from 'lucide-react';
@@ -89,11 +92,15 @@ export function About() {
     { label: 'Projects Completed', value: '500+', icon: CheckCircle },
     { label: 'Global Clients', value: '50+', icon: Globe },
     { label: 'Team Members', value: '25+', icon: Users },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
   ];
 
   const values = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       icon: Brain,
@@ -1254,6 +1261,8 @@ const About = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 >>>>>>> origin/cursor/website-audit-and-enhancement-796c
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
       title: 'Innovation First',
       description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and creative solutions.',
       icon: Rocket,
@@ -1486,11 +1495,15 @@ const About = () => {
             Our Core Values
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
             {values.map((value, index) => {
               const IconComponent = value.icon;
               return (
                 <motion.div
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   key={value.title}
@@ -2835,6 +2848,8 @@ const About = () => {
                   {member.expertise.slice(0, 2).map((skill, idx) => (
                     <span key={idx} className="bg-white/10 text-zion-slate-light text-xs px-2 py-1 rounded-full">
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
                   key={value.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -2887,13 +2902,17 @@ const About = () => {
                       key={idx}
                       className="inline-block px-2 py-1 bg-zion-purple/20 border border-zion-purple/30 rounded-full text-xs text-zion-cyan mr-1 mb-1"
                     >
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
                       {skill}
                     </span>
                   ))}
                 </div>
               </motion.div>
             ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9077
           </div>
@@ -4023,6 +4042,8 @@ export default About;
 }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9077
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
           </div>
         </motion.div>
 
@@ -4099,5 +4120,9 @@ export default About;
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+}
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef

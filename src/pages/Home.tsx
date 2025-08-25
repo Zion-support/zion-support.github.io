@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Star, Users, Award, Globe, Zap, Brain, Shield, Cloud, Code, ChartBar, Rocket, CheckCircle, Play } from 'lucide-react';
+import { ArrowRight, Star, Users, Award, Globe, Zap, Brain, Shield, Cloud, Code, BarChart3, Rocket, CheckCircle, Play } from 'lucide-react';
 
 export function Home() {
   const featuredServices = [
@@ -193,12 +193,12 @@ export function Home() {
                     <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors">
                       {service.title}
                     </h3>
-                    <p className="text-zion-slate-light mb-4 text-sm">
+                    <p className="text-zion-slate-light mb-4 leading-relaxed">
                       {service.description}
                     </p>
                     <Link
                       to={service.link}
-                      className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors text-sm font-medium"
+                      className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors group-hover:translate-x-1 transition-transform duration-300"
                     >
                       Learn More
                       <ArrowRight className="w-4 h-4" />
@@ -240,7 +240,7 @@ export function Home() {
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-                We combine cutting-edge technology with proven expertise to deliver solutions that drive real business value.
+                We combine cutting-edge technology with proven expertise to deliver exceptional results.
               </p>
             </motion.div>
 
@@ -286,7 +286,7 @@ export function Home() {
                 What Our Clients Say
               </h2>
               <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-                Don't just take our word for it. Here's what our clients have to say about working with Zion Tech Group.
+                Don't just take our word for it. Here's what our clients have to say about working with us.
               </p>
             </motion.div>
 
@@ -298,14 +298,14 @@ export function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-6 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300"
+                  className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300"
                 >
                   <div className="flex items-center gap-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-zion-slate-light mb-6 italic">
+                  <p className="text-zion-slate-light mb-6 leading-relaxed italic">
                     "{testimonial.content}"
                   </p>
                   <div>
@@ -318,9 +318,9 @@ export function Home() {
           </div>
         </section>
 
-        {/* Call to Action Section */}
+        {/* CTA Section */}
         <section className="py-24 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -332,7 +332,7 @@ export function Home() {
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                   Ready to Transform Your Business?
                 </h2>
-                <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
+                <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
                   Let's discuss how our cutting-edge solutions can drive innovation and growth for your organization.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -344,12 +344,14 @@ export function Home() {
                     Get Free Consultation
                     <ArrowRight className="w-5 h-5" />
                   </motion.button>
-                  <Link
-                    to="/contact"
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                     className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2 justify-center"
                   >
-                    Contact Us
-                  </Link>
+                    View Our Work
+                    <ArrowRight className="w-5 h-5" />
+                  </motion.button>
                 </div>
               </div>
             </motion.div>

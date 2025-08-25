@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -265,18 +266,24 @@ export default function Contact() {
 
 export default function Contact() {
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock, MessageSquare, Globe, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 export function Contact() {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     phone: '',
     service: '',
+<<<<<<< HEAD
 <<<<<<< HEAD
     message: ''
   });
@@ -419,6 +426,8 @@ export function Contact() {
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
     message: '',
     budget: '',
     timeline: ''
@@ -434,12 +443,16 @@ export function Contact() {
     }));
   };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
     // Simulate form submission
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9077
     await new Promise(resolve => setTimeout(resolve, 2000));
@@ -469,16 +482,22 @@ export function Contact() {
         name: '',
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9077
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitStatus('success');
       setFormData({
         name: '',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
         email: '',
         company: '',
         phone: '',
         service: '',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -539,10 +558,13 @@ export function Contact() {
         service: '',
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
         message: '',
         budget: '',
         timeline: ''
       });
+<<<<<<< HEAD
 <<<<<<< HEAD
     }, 3000);
 >>>>>>> origin/cursor/check-and-fix-github-actions-e92c
@@ -550,15 +572,21 @@ export function Contact() {
     }, 3000);
 >>>>>>> origin/cursor/build-and-fix-errors-e276
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
       
       // Reset success message after 5 seconds
       setTimeout(() => setSubmitStatus('idle'), 5000);
     }, 2000);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
   };
 
   const contactMethods = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -589,17 +617,23 @@ export function Contact() {
       color: 'from-green-500 to-emerald-500'
 >>>>>>> origin/cursor/build-and-fix-errors-e276
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
       icon: Phone,
       title: 'Phone',
       value: '+1 302 464 0950',
       description: 'Available 24/7 for urgent inquiries',
       action: 'tel:+13024640950',
       color: 'from-zion-cyan to-zion-cyan-dark'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
     },
     {
       icon: Mail,
       title: 'Email',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       details: ['info@ziontechgroup.com', 'support@ziontechgroup.com'],
@@ -657,16 +691,22 @@ export function Contact() {
 >>>>>>> origin/cursor/build-and-fix-errors-e276
       color: 'from-blue-500 to-cyan-500'
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
       value: 'kleber@ziontechgroup.com',
       description: 'Get a response within 2 hours',
       action: 'mailto:kleber@ziontechgroup.com',
       color: 'from-zion-purple to-zion-purple-dark'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
     },
     {
       icon: MapPin,
       title: 'Office',
       value: '364 E Main St STE 1008, Middletown DE 19709',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       description: 'Visit our headquarters in Delaware',
@@ -677,10 +717,16 @@ export function Contact() {
       action: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',
       color: 'from-zion-cyan to-zion-purple'
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+      description: 'Visit us for in-person consultations',
+      action: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',
+      color: 'from-zion-cyan to-zion-purple'
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
     },
     {
       icon: Clock,
       title: 'Business Hours',
+<<<<<<< HEAD
 <<<<<<< HEAD
       value: 'Monday - Friday: 9:00 AM - 6:00 PM EST',
       description: '24/7 emergency support available',
@@ -811,15 +857,21 @@ export function Contact() {
       action: null
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9077
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
       value: 'Mon-Fri: 9AM-6PM EST',
       description: 'Extended hours available by appointment',
       action: null,
       color: 'from-zion-purple to-zion-cyan'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
     }
   ];
 
   const services = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -927,6 +979,8 @@ export function Contact() {
     'Custom Software Development',
     'Consulting Services'
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
     'AI & Machine Learning',
     'Cybersecurity',
     'Cloud Computing',
@@ -940,23 +994,32 @@ export function Contact() {
     'IT Consulting',
     'Software Testing',
     'Other'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
   ];
 
   const budgets = [
     'Under $10,000',
+<<<<<<< HEAD
 <<<<<<< HEAD
     '$10,000 - $50,000',
     '$50,000 - $100,000',
     '$100,000 - $500,000',
     'Over $500,000'
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
     '$10,000 - $25,000',
     '$25,000 - $50,000',
     '$50,000 - $100,000',
     '$100,000 - $250,000',
     '$250,000+'
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
   ];
 
   const timelines = [
@@ -965,6 +1028,7 @@ export function Contact() {
     'Standard (3-6 months)',
     'Extended (6+ months)',
     'Flexible'
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     "AI & Machine Learning",
@@ -1138,6 +1202,8 @@ export function Contact() {
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
   ];
 
   return (
@@ -1273,11 +1339,15 @@ export function Contact() {
                   </div>
                   <div>
                     <label className="block text-zion-slate-light text-sm font-medium mb-2">
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
                       Email *
                     </label>
                     <input
                       type="email"
+<<<<<<< HEAD
 <<<<<<< HEAD
                       id="email"
                       name="email"
@@ -1888,10 +1958,13 @@ export function Contact() {
                       id="email"
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
                       required
+<<<<<<< HEAD
 <<<<<<< HEAD
                       className="w-full px-4 py-3 border border-zion-blue-light rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all"
                       placeholder="Enter your email address"
@@ -2584,11 +2657,15 @@ export function Contact() {
 =======
                       className="w-full px-4 py-3 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+                      className="w-full px-4 py-3 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
                       placeholder="Enter your email"
                     />
                   </div>
                 </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   <button
@@ -3010,10 +3087,16 @@ export function Contact() {
                   <div>
                     <label className="block text-zion-slate-light text-sm font-medium mb-2">
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-zion-slate-light text-sm font-medium mb-2">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
                       Company
                     </label>
                     <input
                       type="text"
+<<<<<<< HEAD
 <<<<<<< HEAD
                       id="company"
                       name="company"
@@ -3021,15 +3104,21 @@ export function Contact() {
                       onChange={handleChange}
                       className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
                       placeholder="Enter company name"
                     />
                   </div>
                   <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <label htmlFor="phone" className="block text-white font-medium mb-2">
                       Phone Number
@@ -3042,6 +3131,8 @@ export function Contact() {
                       onChange={handleChange}
                       className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
                     <label className="block text-zion-slate-light text-sm font-medium mb-2">
                       Phone
                     </label>
@@ -3051,12 +3142,16 @@ export function Contact() {
                       value={formData.phone}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
                       placeholder="Enter phone number"
                     />
                   </div>
                 </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <div>
                   <label htmlFor="service" className="block text-white font-medium mb-2">
@@ -3078,6 +3173,8 @@ export function Contact() {
                     <option value="consulting">Technology Consulting</option>
                     <option value="other">Other</option>
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-zion-slate-light text-sm font-medium mb-2">
@@ -3128,11 +3225,15 @@ export function Contact() {
                     {timelines.map(timeline => (
                       <option key={timeline} value={timeline}>{timeline}</option>
                     ))}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
                   </select>
                 </div>
 
                 <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                   <label htmlFor="message" className="block text-white font-medium mb-2">
                     Message *
@@ -4672,6 +4773,8 @@ export default Contact;
 }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9077
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
                   <label className="block text-zion-slate-light text-sm font-medium mb-2">
                     Message *
                   </label>
@@ -4832,5 +4935,9 @@ export default Contact;
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+}
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef

@@ -4,6 +4,7 @@ import plugin from 'tailwindcss/plugin';
 
 const config: Config = {
 <<<<<<< HEAD
+<<<<<<< HEAD
   darkMode: 'class',
   content: [
     './pages/**/*.{ts,tsx}',
@@ -11,13 +12,18 @@ const config: Config = {
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
   darkMode: "class",
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
   ],
   safelist: ['border-border'],
   theme: {
@@ -57,6 +63,7 @@ const config: Config = {
           foreground: 'hsl(var(--card-foreground))',
         },
 <<<<<<< HEAD
+<<<<<<< HEAD
         // Enhanced Zion colors for futuristic design
 <<<<<<< HEAD
 =======
@@ -93,6 +100,8 @@ const config: Config = {
         'quantum-purple': '#7c3aed',
         'quantum-cyan': '#0891b2',
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
         // Custom Zion colors
         "zion-blue": {
           DEFAULT: "#0a0f1f",
@@ -114,7 +123,10 @@ const config: Config = {
           light: "#CBD5E1",
           dark: "#64748B",
         },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -140,6 +152,7 @@ const config: Config = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
         },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -181,6 +194,8 @@ const config: Config = {
         },
 <<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-434d
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
         'gradient-x': {
           '0%, 100%': {
             'background-size': '200% 200%',
@@ -199,6 +214,7 @@ const config: Config = {
           '0%, 100%': { boxShadow: '0 0 20px rgba(0, 229, 255, 0.5)' },
           '50%': { boxShadow: '0 0 40px rgba(0, 229, 255, 0.8)' },
         },
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d2d6
         'neon-pulse': {
@@ -261,6 +277,8 @@ const config: Config = {
 =======
 >>>>>>> origin/cursor/build-and-fix-errors-e276
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
         'neon-pulse': {
           '0%, 100%': { 
             textShadow: '0 0 5px #00e5ff, 0 0 10px #00e5ff, 0 0 15px #00e5ff, 0 0 20px #00e5ff' 
@@ -275,6 +293,7 @@ const config: Config = {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
 <<<<<<< HEAD
+<<<<<<< HEAD
         'neon-pulse': 'neon-pulse 2s ease-in-out infinite',
         'quantum-float': 'quantum-float 6s ease-in-out infinite',
         'holographic-shift': 'holographic-shift 3s ease infinite',
@@ -288,10 +307,13 @@ const config: Config = {
 =======
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
         'gradient-x': 'gradient-x 15s ease infinite',
         'float': 'float 6s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
         'neon-pulse': 'neon-pulse 2s ease-in-out infinite alternate',
+<<<<<<< HEAD
 <<<<<<< HEAD
         'holographic-shift': 'holographic-shift 3s ease infinite',
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d2d6
@@ -315,6 +337,8 @@ const config: Config = {
         'holographic': '0 0 30px rgba(168, 85, 247, 0.6), 0 0 60px rgba(168, 85, 247, 0.4)',
       },
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
       }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
     }
