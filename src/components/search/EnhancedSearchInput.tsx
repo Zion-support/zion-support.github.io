@@ -1,16 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Search, X } from 'lucide-react';
+import { Input } from '@/components/ui/Input';
 
 interface SearchSuggestion {
   id: string;
   text: string;
-  type: string;
+  type: 'talent' | 'service' | 'equipment' | 'category';
 }
 
 interface EnhancedSearchInputProps {
   value: string;
   onChange: (value: string) => void;
-  onSelectSuggestion: (text: string) => void;
+  onSelectSuggestion: (suggestion: string) => void;
   searchSuggestions: SearchSuggestion[];
   placeholder?: string;
   className?: string;
@@ -21,32 +22,32 @@ export function EnhancedSearchInput({
   onChange,
   onSelectSuggestion,
   searchSuggestions,
-  placeholder = "Search services, solutions...",
+  placeholder = "Search...",
   className = ""
 }: EnhancedSearchInputProps) {
-  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const suggestionsRef = useRef<HTMLDivElement>(null);
+  const wrapperRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (value.trim()) {
       const filtered = searchSuggestions.filter(suggestion =>
         suggestion.text.toLowerCase().includes(value.toLowerCase())
-      );
-      setFilteredSuggestions(filtered.slice(0, 5));
-      setShowSuggestions(true);
+      ).slice(0, 5);
+      setFilteredSuggestions(filtered);
+      setIsOpen(filtered.length > 0);
     } else {
-      setShowSuggestions(false);
+      setFilteredSuggestions([]);
+      setIsOpen(false);
     }
   }, [value, searchSuggestions]);
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (suggestionsRef.current && !suggestionsRef.current.contains(event.target as Node)) {
-        setShowSuggestions(false);
+    function handleClickOutside(event: MouseEvent) {
+      if (wrapperRef.current && !wrapperRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
       }
-    };
+    }
 
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
@@ -54,52 +55,64 @@ export function EnhancedSearchInput({
 
   const handleSuggestionClick = (suggestion: SearchSuggestion) => {
     onSelectSuggestion(suggestion.text);
-    setShowSuggestions(false);
+    setIsOpen(false);
   };
 
-  const clearSearch = () => {
+  const handleClear = () => {
     onChange('');
-    setShowSuggestions(false);
-    inputRef.current?.focus();
+    setIsOpen(false);
+  };
+
+  const getTypeIcon = (type: string) => {
+    switch (type) {
+      case 'talent':
+        return '👤';
+      case 'service':
+        return '🔧';
+      case 'equipment':
+        return '💻';
+      case 'category':
+        return '📁';
+      default:
+        return '🔍';
+    }
   };
 
   return (
-    <div className={`relative ${className}`} ref={suggestionsRef}>
+    <div ref={wrapperRef} className={`relative ${className}`}>
       <div className="relative">
-        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
-        <input
-          ref={inputRef}
+        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
+        <Input
           type="text"
           value={value}
           onChange={(e) => onChange(e.target.value)}
           placeholder={placeholder}
-          className="w-full pl-10 pr-10 py-2 bg-zion-blue-light/20 border border-zion-blue-light/30 rounded-lg text-white placeholder:text-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-          onFocus={() => value.trim() && setShowSuggestions(true)}
+          className="pl-10 pr-10 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"
+          onFocus={() => value.trim() && filteredSuggestions.length > 0 && setIsOpen(true)}
         />
         {value && (
           <button
-            onClick={clearSearch}
+            onClick={handleClear}
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-white transition-colors"
+            aria-label="Clear search"
           >
-            <X className="w-4 h-4" />
+            <X className="h-4 w-4" />
           </button>
         )}
       </div>
 
-      {showSuggestions && filteredSuggestions.length > 0 && (
-        <div className="absolute top-full left-0 right-0 mt-1 bg-zion-blue-light/95 backdrop-blur-sm border border-zion-blue-light/30 rounded-lg shadow-xl z-50">
+      {isOpen && filteredSuggestions.length > 0 && (
+        <div className="absolute top-full left-0 right-0 mt-1 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-lg z-50 max-h-64 overflow-y-auto">
           {filteredSuggestions.map((suggestion) => (
             <button
               key={suggestion.id}
               onClick={() => handleSuggestionClick(suggestion)}
-              className="w-full px-4 py-3 text-left text-white hover:bg-zion-blue-light/30 transition-colors first:rounded-t-lg last:rounded-b-lg"
+              className="flex items-center w-full px-4 py-3 text-left hover:bg-zion-blue transition-colors"
             >
-              <div className="flex items-center gap-3">
-                <Search className="w-4 h-4 text-zion-cyan" />
-                <div>
-                  <div className="font-medium">{suggestion.text}</div>
-                  <div className="text-sm text-zion-slate-light capitalize">{suggestion.type}</div>
-                </div>
+              <span className="mr-3 text-lg">{getTypeIcon(suggestion.type)}</span>
+              <div className="flex-1">
+                <div className="text-white font-medium">{suggestion.text}</div>
+                <div className="text-zion-slate-light text-sm capitalize">{suggestion.type}</div>
               </div>
             </button>
           ))}

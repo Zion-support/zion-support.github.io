@@ -1,103 +1,73 @@
-import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import './App.css';
 import { ThemeProvider } from "./components/ThemeProvider";
-import { useScrollToTop } from "./hooks/useScrollToTop";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
-import { ToasterProvider } from "./components/Toaster";
-import { Sonner } from "./components/Sonner";
+import { Toaster } from "./components/ui/toaster";
+import { Toaster as SonnerToaster } from "./components/ui/sonner";
+import { PageLoader } from "./components/ui/loading-spinner";
+import { AppLayout } from "./layout/AppLayout";
 
-// Lazy load pages that exist
-const Home = React.lazy(() => import('./pages/Home'));
-const Sitemap = React.lazy(() => import('./pages/Sitemap'));
-const Services = React.lazy(() => import('./pages/Services'));
-const AISolutionsPage = React.lazy(() => import('./pages/AISolutions'));
-const ITServicesPage = React.lazy(() => import('./pages/ITServices'));
-const EnterprisePage = React.lazy(() => import('./pages/Enterprise'));
-const DeveloperPortalPage = React.lazy(() => import('./pages/DeveloperPortal'));
-const HelpCenterPage = React.lazy(() => import('./pages/HelpCenter'));
-const CookiesPage = React.lazy(() => import('./pages/Cookies'));
-const AccessibilityPage = React.lazy(() => import('./pages/Accessibility'));
+// Lazy load pages with proper error boundaries
+const Home = React.lazy(() => import('./pages/Home').catch(() => ({ default: () => <div>Error loading page</div> })));
+const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher').catch(() => ({ default: () => <div>Error loading page</div> })));
+const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory').catch(() => ({ default: () => <div>Error loading page</div> })));
+const TalentsPage = React.lazy(() => import('./pages/TalentsPage').catch(() => ({ default: () => <div>Error loading page</div> })));
+const ServicesPage = React.lazy(() => import('./pages/ServicesPage').catch(() => ({ default: () => <div>Error loading page</div> })));
+const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage').catch(() => ({ default: () => <div>Error loading page</div> })));
+const EquipmentDetail = React.lazy(() => import('./pages/EquipmentDetail').catch(() => ({ default: () => <div>Error loading page</div> })));
+const Analytics = React.lazy(() => import('./pages/Analytics').catch(() => ({ default: () => <div>Error loading page</div> })));
+const MobileLaunchPage = React.lazy(() => import('./pages/MobileLaunchPage').catch(() => ({ default: () => <div>Error loading page</div> })));
+const CommunityPage = React.lazy(() => import('./pages/CommunityPage').catch(() => ({ default: () => <div>Error loading page</div> })));
+const Categories = React.lazy(() => import('./pages/Categories').catch(() => ({ default: () => <div>Error loading page</div> })));
+const Blog = React.lazy(() => import('./pages/Blog').catch(() => ({ default: () => <div>Error loading page</div> })));
+const BlogPost = React.lazy(() => import('./pages/BlogPost').catch(() => ({ default: () => <div>Error loading page</div> })));
+const PartnersPage = React.lazy(() => import('./pages/Partners').catch(() => ({ default: () => <div>Error loading page</div> })));
+const Login = React.lazy(() => import('./pages/Login').catch(() => ({ default: () => <div>Error loading page</div> })));
+const Signup = React.lazy(() => import('./pages/Signup').catch(() => ({ default: () => <div>Error loading page</div> })));
+const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage').catch(() => ({ default: () => <div>Error loading page</div> })));
+const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect').catch(() => ({ default: () => <div>Error loading page</div> })));
+const ContactPage = React.lazy(() => import('./pages/Contact').catch(() => ({ default: () => <div>Error loading page</div> })));
+const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI').catch(() => ({ default: () => <div>Error loading page</div> })));
+const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote').catch(() => ({ default: () => <div>Error loading page</div> })));
 
-// Our comprehensive services pages that exist
-const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServicesPage'));
-const ServiceDetailPage = React.lazy(() => import('./pages/ServiceDetailPage'));
-const PricingPage = React.lazy(() => import('./pages/PricingPage'));
-
-// Additional service pages that exist
-const AdvancedTechServices = React.lazy(() => import('./pages/AdvancedTechServices'));
-const InnovativeServicesShowcase = React.lazy(() => import('./pages/InnovativeServicesShowcase'));
-const ServiceComparison = React.lazy(() => import('./pages/ServiceComparison'));
-const ServiceRecommendations = React.lazy(() => import('./pages/ServiceRecommendations'));
-const ServicePortfolioDashboard = React.lazy(() => import('./pages/ServicePortfolioDashboard'));
-const ServiceInnovationHub = React.lazy(() => import('./pages/ServiceInnovationHub'));
-const NotFound = React.lazy(() => import('./pages/NotFound'));
-
-const baseRoutes = [
-  { path: '/', element: <Home /> },
-  { path: '/services', element: <Services /> },
-  { path: '/sitemap', element: <Sitemap /> },
-  { path: '/ai-solutions', element: <AISolutionsPage /> },
-  { path: '/it-services', element: <ITServicesPage /> },
-  { path: '/enterprise', element: <EnterprisePage /> },
-  { path: '/developers', element: <DeveloperPortalPage /> },
-  { path: '/help-center', element: <HelpCenterPage /> },
-  { path: '/cookies', element: <CookiesPage /> },
-  { path: '/accessibility', element: <AccessibilityPage /> },
-  // Our comprehensive services routes
-  { path: '/comprehensive-services', element: <ComprehensiveServicesPage /> },
-  { path: '/services/:id', element: <ServiceDetailPage /> },
-  { path: '/pricing', element: <PricingPage /> },
-  // Additional service routes that exist
-  { path: '/advanced-tech-services', element: <AdvancedTechServices /> },
-  { path: '/innovative-services', element: <InnovativeServicesShowcase /> },
-  { path: '/service-comparison', element: <ServiceComparison /> },
-  { path: '/service-recommendations', element: <ServiceRecommendations /> },
-  { path: '/service-portfolio-dashboard', element: <ServicePortfolioDashboard /> },
-  { path: '/service-innovation-hub', element: <ServiceInnovationHub /> },
-  // Catch-all route
-  { path: '*', element: <NotFound /> },
-];
-
-// Enhanced loading component with better UX
-function EnhancedSuspenseFallback() {
+const App = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
-      <div className="text-center">
-        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-zion-gold mx-auto mb-4"></div>
-        <h2 className="text-2xl font-bold text-white mb-2">Loading Zion Tech Group...</h2>
-        <p className="text-zion-slate-light">Please wait while we prepare your experience</p>
-      </div>
-    </div>
+    <WhitelabelProvider>
+      <ThemeProvider defaultTheme="dark">
+        <AppLayout>
+          <React.Suspense fallback={<PageLoader />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/match" element={<AIMatcherPage />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/talent" element={<TalentDirectory />} />
+              <Route path="/talents" element={<TalentsPage />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/it-onsite-services" element={<ITOnsiteServicesPage />} />
+              <Route path="/categories" element={<Categories />} />
+              <Route path="/equipment" element={<EquipmentPage />} />
+              <Route path="/equipment/:id" element={<EquipmentDetail />} />
+              <Route path="/analytics" element={<Analytics />} />
+              <Route path="/mobile-launch" element={<MobileLaunchPage />} />
+              <Route path="/open-app" element={<OpenAppRedirect />} />
+              <Route path="/community" element={<CommunityPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/partners" element={<PartnersPage />} />
+              <Route path="/zion-hire-ai" element={<ZionHireAI />} />
+              <Route path="/hire-ai" element={<ZionHireAI />} />
+              <Route path="/request-quote" element={<RequestQuotePage />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/:slug" element={<BlogPost />} />
+            </Routes>
+          </React.Suspense>
+        </AppLayout>
+        <Toaster />
+        <SonnerToaster />
+      </ThemeProvider>
+    </WhitelabelProvider>
   );
-}
-
-// Simple Error Boundary Component
-function ErrorBoundary({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
-}
-
-function App() {
-  return (
-    <ErrorBoundary>
-      <WhitelabelProvider>
-        <ThemeProvider>
-          <Router>
-            <Suspense fallback={<EnhancedSuspenseFallback />}>
-              <Routes>
-                {baseRoutes.map(({ path, element }) => (
-                  <Route key={path} path={path} element={element} />
-                ))}
-              </Routes>
-            </Suspense>
-            <ToasterProvider>
-              <Sonner />
-            </ToasterProvider>
-          </Router>
-        </ThemeProvider>
-      </WhitelabelProvider>
-    </ErrorBoundary>
-  );
-}
+};
 
 export default App;

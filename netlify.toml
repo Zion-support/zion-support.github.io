@@ -1,34 +1,13 @@
 [build]
-  command = "npm ci && npm run build"
-  publish = "dist"
+  command = "yarn install && yarn run build"
+  publish = "out"
+  functions = "netlify/functions"
 
 [build.environment]
   NODE_OPTIONS = "--max-old-space-size=6144 --openssl-legacy-provider"
-  NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
-# SPA routing redirects for Vite
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
-# Headers for static assets
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.js"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.css"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.html"
-  [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
