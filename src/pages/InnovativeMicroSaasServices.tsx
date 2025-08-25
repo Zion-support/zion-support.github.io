@@ -63,6 +63,16 @@ interface Service {
   competitors?: string[];
   marketTrend?: string;
   innovationLevel?: string;
+  // Optional properties for compatibility with different service types
+  name?: string;
+  userLimit?: string;
+  demoUrl?: string;
+  documentationUrl?: string;
+  freeTrial?: boolean;
+  freeTrialDays?: number;
+  rating?: number;
+  reviewCount?: number;
+  address?: string;
 }
 
 const InnovativeMicroSaasServices: React.FC = () => {
@@ -70,10 +80,67 @@ const InnovativeMicroSaasServices: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [expandedService, setExpandedService] = useState<string | null>(null);
 
-  // Combine all services
+  // Combine all services with proper type mapping
   const allServices: Service[] = [
-    ...ADVANCED_MICRO_SAAS_SERVICES,
-    ...EMERGING_TECH_SERVICES
+    ...ADVANCED_MICRO_SAAS_SERVICES.map(service => ({
+      id: service.id,
+      title: service.name,
+      description: service.description,
+      category: service.category,
+      subcategory: service.subcategory,
+      price: service.price,
+      currency: '$',
+      pricingModel: service.pricingModel,
+      features: service.features,
+      benefits: service.benefits,
+      useCases: service.features,
+      targetAudience: service.targetAudience,
+      tags: service.tags,
+      estimatedDelivery: service.estimatedDelivery,
+      supportLevel: service.supportLevel,
+      marketPrice: service.marketPrice,
+      contactInfo: service.contactInfo,
+      technology: service.technology,
+      integrations: service.integrations,
+      compliance: service.compliance,
+      roi: service.roi,
+      competitors: service.competitors,
+      innovationLevel: 'Advanced',
+      marketTrend: 'Growing',
+      name: service.name,
+      userLimit: service.userLimit,
+      demoUrl: service.demoUrl,
+      documentationUrl: service.documentationUrl,
+      freeTrial: service.freeTrial,
+      freeTrialDays: service.freeTrialDays,
+      address: service.contactInfo.address
+    })),
+    ...EMERGING_TECH_SERVICES.map(service => ({
+      id: service.id,
+      title: service.title,
+      description: service.description,
+      category: service.category,
+      subcategory: service.subcategory,
+      price: service.price,
+      currency: service.currency,
+      pricingModel: service.pricingModel,
+      features: service.features,
+      benefits: service.benefits,
+      useCases: service.useCases,
+      targetAudience: service.targetAudience,
+      tags: service.tags,
+      estimatedDelivery: service.estimatedDelivery,
+      supportLevel: service.supportLevel,
+      marketPrice: service.marketPrice,
+      contactInfo: service.contactInfo,
+      technology: [],
+      integrations: [],
+      compliance: [],
+      roi: '',
+      competitors: [],
+      innovationLevel: 'Emerging',
+      marketTrend: 'Growing'
+    }))
   ];
 
   const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];

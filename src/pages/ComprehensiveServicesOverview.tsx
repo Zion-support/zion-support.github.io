@@ -218,6 +218,7 @@ export default function ComprehensiveServicesOverview() {
           keywords="AI services, IT solutions, micro SAAS, cybersecurity, quantum computing, legal tech, fintech, healthcare AI, supply chain, energy management, comprehensive services"
           image="/images/comprehensive-services-overview-og.jpg"
           url="https://ziontechgroup.com/comprehensive-services-overview"
+          type="website"
         />
       
       <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">

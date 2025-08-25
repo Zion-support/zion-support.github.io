@@ -74,6 +74,22 @@ export default function Services() {
           icon: Target,
           features: ['Customer segmentation', 'Campaign optimization', 'ROI tracking'],
           pricing: 'Starting from $2,500/month'
+        },
+        {
+          name: 'Multimodal AI Platform',
+          path: '/comprehensive-services-showcase',
+          description: 'Advanced AI platform processing text, images, audio, and video',
+          icon: Brain,
+          features: ['Cross-modal understanding', 'Real-time analysis', 'Custom model training'],
+          pricing: 'Starting from $1,500/month'
+        },
+        {
+          name: 'AI Drug Discovery Platform',
+          path: '/comprehensive-services-showcase',
+          description: 'Revolutionary AI platform accelerating drug discovery',
+          icon: Brain,
+          features: ['Molecular modeling', 'Drug-target interaction', 'Toxicity prediction'],
+          pricing: 'Starting from $25,000/month'
         }
       ]
     },
@@ -99,6 +115,22 @@ export default function Services() {
           icon: Cpu,
           features: ['Quantum supremacy', 'Complex simulations', 'Cryptography'],
           pricing: 'Starting from $20,000/month'
+        },
+        {
+          name: 'Quantum Internet Infrastructure',
+          path: '/comprehensive-services-showcase',
+          description: 'Next-generation quantum internet for ultra-secure communication',
+          icon: Brain,
+          features: ['Quantum key distribution', 'Quantum repeaters', 'Secure communication'],
+          pricing: 'Starting from $50,000/month'
+        },
+        {
+          name: 'Quantum-Ready Data Analytics',
+          path: '/comprehensive-services-showcase',
+          description: 'Future-proof analytics platform with hybrid quantum-classical algorithms',
+          icon: Brain,
+          features: ['Hybrid algorithms', 'Quantum optimization', 'Future-proof technology'],
+          pricing: 'Starting from $799/month'
         }
       ]
     },
@@ -215,6 +247,88 @@ export default function Services() {
           icon: Cpu,
           features: ['Predictive maintenance', 'Quality control', 'Supply chain optimization'],
           pricing: 'Starting from $6,500/month'
+        }
+      ]
+    },
+    {
+      id: 'emerging-tech',
+      title: 'Emerging Technologies',
+      icon: Rocket,
+      color: 'from-indigo-500 to-purple-500',
+      description: 'Cutting-edge technologies of the future',
+      services: [
+        {
+          name: 'Space Technology Platform',
+          path: '/comprehensive-services-showcase',
+          description: 'Comprehensive platform for space technology development',
+          icon: Rocket,
+          features: ['Satellite design tools', 'Orbital mechanics', 'Space operations'],
+          pricing: 'Starting from $25,000/month'
+        },
+        {
+          name: 'Biotechnology Innovation',
+          path: '/comprehensive-services-showcase',
+          description: 'Advanced platform for genetic engineering and bio-manufacturing',
+          icon: Heart,
+          features: ['CRISPR technology', 'Synthetic biology', 'Lab automation'],
+          pricing: 'Starting from $15,000/month'
+        },
+        {
+          name: 'Neuromorphic Computing',
+          path: '/comprehensive-services-showcase',
+          description: 'Brain-inspired computing for ultra-efficient AI processing',
+          icon: Cpu,
+          features: ['Neuromorphic processors', 'Spiking neural networks', 'Low-power AI'],
+          pricing: 'Starting from $30,000/month'
+        },
+        {
+          name: 'Fusion Energy Technology',
+          path: '/comprehensive-services-showcase',
+          description: 'Advanced platform for fusion energy research and development',
+          icon: Zap,
+          features: ['Plasma physics simulation', 'Fusion reactor design', 'Energy optimization'],
+          pricing: 'Starting from $75,000/month'
+        }
+      ]
+    },
+    {
+      id: 'micro-saas',
+      title: 'Micro SAAS Solutions',
+      icon: Code,
+      color: 'from-green-500 to-emerald-500',
+      description: 'Scalable software-as-a-service solutions',
+      services: [
+        {
+          name: 'AI Content Creation Suite',
+          path: '/comprehensive-services-showcase',
+          description: 'Next-generation AI content creation platform',
+          icon: Code,
+          features: ['GPT-5 powered generation', 'Multi-format content', 'SEO optimization'],
+          pricing: 'Starting from $299/month'
+        },
+        {
+          name: 'Autonomous Business Process Automation',
+          path: '/comprehensive-services-showcase',
+          description: 'AI-powered platform for automated process optimization',
+          icon: Code,
+          features: ['Process discovery', 'Automated optimization', 'Real-time monitoring'],
+          pricing: 'Starting from $599/month'
+        },
+        {
+          name: 'AI Customer Experience Platform',
+          path: '/comprehensive-services-showcase',
+          description: 'Intelligent platform for personalized customer experiences',
+          icon: Code,
+          features: ['Real-time personalization', 'Behavioral analytics', 'Predictive recommendations'],
+          pricing: 'Starting from $399/month'
+        },
+        {
+          name: 'Blockchain Identity Management',
+          path: '/comprehensive-services-showcase',
+          description: 'Decentralized identity management using blockchain technology',
+          icon: Code,
+          features: ['Decentralized identity', 'Zero-knowledge proofs', 'Multi-factor authentication'],
+          pricing: 'Starting from $199/month'
         }
       ]
     }
@@ -415,7 +529,7 @@ export default function Services() {
               </div>
             </div>
             
-            <div className="text-center">
+            <div className="text-center space-y-4">
               <Link
                 to="/enhanced-innovative-services"
                 className="inline-flex items-center space-x-2 px-8 py-3 bg-gradient-to-r from-purple-500 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-600 hover:to-cyan-700 transition-all duration-200 transform hover:scale-105"
@@ -423,6 +537,16 @@ export default function Services() {
                 <span>View All Enhanced Services</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
+              
+              <div className="text-center">
+                <Link
+                  to="/comprehensive-services-showcase"
+                  className="inline-flex items-center space-x-2 px-8 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-medium rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 transform hover:scale-105"
+                >
+                  <span>View Complete Services Portfolio</span>
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>

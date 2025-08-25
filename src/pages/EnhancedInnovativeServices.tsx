@@ -11,6 +11,7 @@ export default function EnhancedInnovativeServicesPage() {
           keywords="AI services, quantum computing, micro SAAS, cybersecurity, healthcare AI, fintech, supply chain optimization, energy management, customer experience, data governance, talent acquisition"
           image="/images/enhanced-innovative-services-og.jpg"
           url="https://ziontechgroup.com/enhanced-innovative-services"
+          type="website"
         />
       
       <EnhancedInnovativeServicesShowcase />
