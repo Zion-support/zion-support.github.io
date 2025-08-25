@@ -658,5 +658,446 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
     competitors: ["IBM Quantum", "Google Quantum", "Microsoft Quantum", "D-Wave"],
     marketTrend: "Emerging market with 1000% projected growth in next 10 years",
     innovationLevel: "Revolutionary quantum technology at the forefront of scientific advancement"
+  },
+
+  // AI Business Intelligence Platform
+  {
+    id: "ai-business-intelligence",
+    title: "AI Business Intelligence & Analytics Platform",
+    description: "Transform your business data into actionable intelligence with our AI-powered analytics platform. Get predictive insights, real-time dashboards, and automated reporting.",
+    category: "AI & Business Intelligence",
+    subcategory: "Analytics Platform",
+    price: 799,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Predictive analytics engine",
+      "Real-time data processing",
+      "Natural language querying",
+      "Automated reporting",
+      "Multi-source data integration",
+      "Advanced visualization",
+      "Custom dashboards",
+      "Mobile app access",
+      "API integration",
+      "Real-time alerts"
+    ],
+    benefits: [
+      "10x faster insights delivery",
+      "40% better decision making",
+      "25-40% cost reduction",
+      "Competitive market advantage",
+      "Automated anomaly detection",
+      "Data democratization"
+    ],
+    useCases: [
+      "Retail analytics",
+      "Financial services",
+      "Healthcare analytics",
+      "Manufacturing optimization",
+      "Marketing intelligence",
+      "Operational analytics"
+    ],
+    targetAudience: [
+      "Business analysts",
+      "Data scientists",
+      "Executives",
+      "Operations managers",
+      "Marketing teams"
+    ],
+    tags: ["AI Analytics", "Business Intelligence", "Predictive Analytics", "Data Visualization", "Machine Learning"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "premium",
+    marketPrice: "$799 - $3,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technology: ["Machine Learning", "Real-time Processing", "Cloud Native", "API First", "Advanced Analytics"],
+    integrations: ["ERP Systems", "CRM Platforms", "Database Systems", "Cloud Services", "Business Applications"],
+    compliance: ["GDPR", "SOC 2", "ISO 27001", "Industry Standards"],
+    roi: "400% within 12 months",
+    competitors: ["Tableau", "Power BI", "Looker", "Qlik"],
+    marketTrend: "High-growth market with 300% annual expansion",
+    innovationLevel: "Advanced AI technology revolutionizing business intelligence and analytics"
+  },
+
+  // IoT Management Platform
+  {
+    id: "iot-management-platform",
+    title: "IoT & Smart Device Management Platform",
+    description: "Comprehensive IoT management platform for smart cities, industrial IoT, smart buildings, and connected vehicles. Manage thousands of devices with real-time monitoring and analytics.",
+    category: "IoT & Smart Cities",
+    subcategory: "Device Management",
+    price: 599,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Device management & provisioning",
+      "Real-time data collection",
+      "Advanced security & authentication",
+      "Scalable cloud infrastructure",
+      "Data analytics & insights",
+      "Integration & APIs",
+      "Edge computing support",
+      "Multi-protocol support",
+      "Mobile app access",
+      "Custom dashboards"
+    ],
+    benefits: [
+      "40-60% operational efficiency improvement",
+      "25-40% cost reduction",
+      "Real-time visibility across operations",
+      "Unlimited scalability",
+      "Enhanced security",
+      "Predictive maintenance"
+    ],
+    useCases: [
+      "Smart cities",
+      "Industrial IoT",
+      "Smart buildings",
+      "Connected vehicles",
+      "Agriculture",
+      "Energy management"
+    ],
+    targetAudience: [
+      "IoT engineers",
+      "Facility managers",
+      "Operations directors",
+      "City planners",
+      "Manufacturing managers"
+    ],
+    tags: ["IoT Platform", "Smart Device Management", "Industrial IoT", "Smart Cities", "Connected Devices"],
+    estimatedDelivery: "6-8 weeks",
+    supportLevel: "premium",
+    marketPrice: "$599 - $2,999/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technology: ["Edge Computing", "5G Networks", "Machine Learning", "Blockchain", "Cloud Native"],
+    integrations: ["Industrial Systems", "Cloud Platforms", "Analytics Tools", "Security Systems", "Mobile Apps"],
+    compliance: ["ISO 27001", "SOC 2", "Industry Standards", "Data Privacy"],
+    roi: "300% within 18 months",
+    competitors: ["PTC ThingWorx", "Siemens Mindsphere", "GE Predix", "Microsoft Azure IoT"],
+    marketTrend: "High-growth market with 250% annual expansion",
+    innovationLevel: "Cutting-edge IoT technology with advanced edge computing and AI capabilities"
+  },
+
+  // AI Workflow Automation Platform
+  {
+    id: "ai-workflow-automation",
+    title: "AI Workflow Automation Platform",
+    description: "Intelligent workflow automation platform that uses AI to optimize business processes, reduce manual work, and increase operational efficiency.",
+    category: "AI & Business Automation",
+    subcategory: "Workflow Automation",
+    price: 599,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered process mapping",
+      "Intelligent workflow optimization",
+      "Predictive analytics",
+      "Automated decision making",
+      "Real-time monitoring",
+      "Custom workflow creation",
+      "Integration capabilities",
+      "Performance analytics",
+      "Mobile access",
+      "API access"
+    ],
+    benefits: [
+      "Increase efficiency by 300-500%",
+      "Reduce operational costs by 40-70%",
+      "Eliminate human errors by 90%",
+      "24/7 automated operation",
+      "Faster decision making",
+      "Improved compliance"
+    ],
+    useCases: [
+      "Business process automation",
+      "Customer service automation",
+      "HR process automation",
+      "Financial process automation",
+      "Supply chain automation",
+      "Quality control automation"
+    ],
+    targetAudience: [
+      "Operations managers",
+      "Process improvement teams",
+      "Business analysts",
+      "IT managers",
+      "Business owners"
+    ],
+    tags: ["AI", "Workflow Automation", "Business Process", "Efficiency", "Automation", "Productivity"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "premium",
+    marketPrice: "$599 - $2,500/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technology: ["Machine Learning", "Natural Language Processing", "Process Mining", "RPA", "Cloud Computing"],
+    integrations: ["ERP Systems", "CRM Platforms", "HR Systems", "Accounting Software", "Custom APIs"],
+    compliance: ["SOC 2", "ISO 27001", "GDPR", "Industry Standards"],
+    roi: "400% within 6 months",
+    competitors: ["UiPath", "Automation Anywhere", "Blue Prism", "Microsoft Power Automate"],
+    marketTrend: "High-growth market with 400% annual expansion",
+    innovationLevel: "Advanced AI technology revolutionizing business process automation"
+  },
+
+  // Blockchain & DeFi Solutions
+  {
+    id: "blockchain-defi-solutions",
+    title: "Blockchain & DeFi Solutions Platform",
+    description: "Comprehensive blockchain and DeFi development services including smart contracts, DeFi protocols, cross-chain solutions, and enterprise blockchain applications.",
+    category: "Blockchain & DeFi",
+    subcategory: "Development Platform",
+    price: 1499,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Smart contract development",
+      "DeFi protocol development",
+      "Cross-chain interoperability",
+      "Enterprise blockchain solutions",
+      "NFT & metaverse platforms",
+      "DeFi analytics & monitoring",
+      "Security auditing",
+      "Multi-chain support",
+      "Custom integrations",
+      "24/7 support"
+    ],
+    benefits: [
+      "Innovation leadership in blockchain",
+      "30-70% cost reduction in transactions",
+      "100% transparency and security",
+      "Global accessibility for financial services",
+      "Competitive advantage",
+      "Future-proof technology investment"
+    ],
+    useCases: [
+      "DeFi protocols",
+      "Enterprise blockchain",
+      "NFT & gaming platforms",
+      "Cross-chain solutions",
+      "Supply chain tracking",
+      "Identity management"
+    ],
+    targetAudience: [
+      "Blockchain developers",
+      "DeFi entrepreneurs",
+      "Enterprise executives",
+      "Financial institutions",
+      "Technology companies"
+    ],
+    tags: ["Blockchain Development", "DeFi Protocols", "Smart Contracts", "NFT Platforms", "Cross-Chain Solutions"],
+    estimatedDelivery: "8-12 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,499 - $8,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technology: ["Ethereum", "Polygon", "Solana", "Polkadot", "Cosmos", "Avalanche"],
+    integrations: ["DeFi Protocols", "Wallet Systems", "Exchange APIs", "Oracle Networks", "Enterprise Systems"],
+    compliance: ["Security Standards", "Regulatory Compliance", "Industry Standards", "Best Practices"],
+    roi: "500-1000% within 24 months",
+    competitors: ["ConsenSys", "Chainlink", "OpenZeppelin", "Truffle"],
+    marketTrend: "High-growth market with 400% annual expansion",
+    innovationLevel: "Cutting-edge blockchain technology for decentralized finance and enterprise applications"
+  },
+
+  // Blockchain Enterprise Solutions
+  {
+    id: "blockchain-enterprise-solutions",
+    title: "Blockchain Enterprise Solutions",
+    description: "Enterprise-grade blockchain solutions that provide transparency, security, and efficiency for complex business operations and supply chains.",
+    category: "Blockchain & Enterprise",
+    subcategory: "Enterprise Blockchain",
+    price: 2500,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Multi-chain architecture",
+      "Smart contract development",
+      "Supply chain transparency",
+      "Digital identity management",
+      "Asset tokenization",
+      "Regulatory compliance",
+      "Enterprise security",
+      "Scalable infrastructure",
+      "Custom development",
+      "24/7 support"
+    ],
+    benefits: [
+      "Enhanced security by 99.9%",
+      "Reduce costs by 30-50%",
+      "Improve transparency by 100%",
+      "Increase efficiency by 60-80%",
+      "Better compliance",
+      "Competitive advantage"
+    ],
+    useCases: [
+      "Supply chain management",
+      "Financial services",
+      "Healthcare records",
+      "Real estate",
+      "Government services",
+      "Intellectual property"
+    ],
+    targetAudience: [
+      "Enterprise executives",
+      "Supply chain managers",
+      "Financial officers",
+      "Technology directors",
+      "Compliance officers"
+    ],
+    tags: ["Blockchain", "Enterprise", "Supply Chain", "Smart Contracts", "Security", "Transparency"],
+    estimatedDelivery: "8-12 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$2,500 - $15,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technology: ["Ethereum", "Hyperledger", "Corda", "Smart Contracts", "Zero-Knowledge Proofs"],
+    integrations: ["ERP Systems", "Supply Chain Platforms", "Financial Systems", "Government APIs", "Custom Solutions"],
+    compliance: ["GDPR", "SOC 2", "ISO 27001", "Industry Standards", "Regulatory Requirements"],
+    roi: "300% within 18 months",
+    competitors: ["IBM Blockchain", "Microsoft Azure Blockchain", "Amazon Managed Blockchain", "ConsenSys"],
+    marketTrend: "Growing market with 300% annual expansion",
+    innovationLevel: "Advanced blockchain technology transforming enterprise operations"
+  },
+
+  // IoT Data Analytics Platform
+  {
+    id: "iot-data-analytics",
+    title: "IoT Data Analytics Platform",
+    description: "Comprehensive IoT analytics platform that transforms sensor data into actionable insights for predictive maintenance and operational optimization.",
+    category: "IoT & Analytics",
+    subcategory: "IoT Analytics",
+    price: 799,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Real-time data processing",
+      "Predictive maintenance",
+      "Edge computing",
+      "Machine learning analytics",
+      "Multi-protocol support",
+      "Custom dashboards",
+      "Mobile applications",
+      "API access",
+      "Data visualization",
+      "Alert systems"
+    ],
+    benefits: [
+      "Improve efficiency by 25-40%",
+      "Reduce costs by 30-50%",
+      "Predict failures with 90% accuracy",
+      "Real-time insights",
+      "Better resource utilization",
+      "Proactive maintenance"
+    ],
+    useCases: [
+      "Manufacturing optimization",
+      "Smart city management",
+      "Healthcare monitoring",
+      "Energy management",
+      "Retail analytics",
+      "Transportation optimization"
+    ],
+    targetAudience: [
+      "Operations managers",
+      "Data scientists",
+      "IoT engineers",
+      "Facility managers",
+      "Technology directors"
+    ],
+    tags: ["IoT", "Data Analytics", "Predictive Maintenance", "Edge Computing", "Machine Learning", "Real-time"],
+    estimatedDelivery: "6-8 weeks",
+    supportLevel: "premium",
+    marketPrice: "$799 - $3,500/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technology: ["Edge Computing", "Machine Learning", "Stream Processing", "IoT Protocols", "Cloud Computing"],
+    integrations: ["IoT Devices", "Cloud Platforms", "Enterprise Systems", "Mobile Apps", "Custom APIs"],
+    compliance: ["ISO 27001", "SOC 2", "Industry Standards", "Data Protection"],
+    roi: "350% within 12 months",
+    competitors: ["AWS IoT Analytics", "Microsoft Azure IoT", "Google Cloud IoT", "IBM Watson IoT"],
+    marketTrend: "High-growth market with 250% annual expansion",
+    innovationLevel: "Advanced IoT analytics technology for operational intelligence"
+  },
+
+  // AI-Powered Cybersecurity Platform
+  {
+    id: "ai-cybersecurity-platform",
+    title: "AI-Powered Cybersecurity Platform",
+    description: "Next-generation cybersecurity platform that uses artificial intelligence to detect, prevent, and respond to cyber threats in real-time.",
+    category: "AI & Cybersecurity",
+    subcategory: "AI Security",
+    price: 1800,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI threat detection",
+      "Behavioral analysis",
+      "Automated response",
+      "Threat intelligence",
+      "Zero-day protection",
+      "Compliance monitoring",
+      "Incident management",
+      "Security analytics",
+      "Mobile security",
+      "Cloud security"
+    ],
+    benefits: [
+      "Detect threats 10x faster",
+      "Reduce false positives by 80%",
+      "Automate 90% of responses",
+      "24/7 protection",
+      "Better compliance",
+      "Reduced security costs"
+    ],
+    useCases: [
+      "Enterprise security",
+      "Cloud security",
+      "Endpoint protection",
+      "Network security",
+      "Application security",
+      "Data protection"
+    ],
+    targetAudience: [
+      "CISOs",
+      "Security managers",
+      "IT directors",
+      "Compliance officers",
+      "Security analysts"
+    ],
+    tags: ["AI", "Cybersecurity", "Threat Detection", "Machine Learning", "Security Automation", "Compliance"],
+    estimatedDelivery: "8-10 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$1,800 - $8,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technology: ["Machine Learning", "Deep Learning", "Natural Language Processing", "Behavioral Analytics", "Threat Intelligence"],
+    integrations: ["SIEM Systems", "Firewalls", "Endpoint Protection", "Cloud Platforms", "Security Tools"],
+    compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "Industry Standards"],
+    roi: "400% within 12 months",
+    competitors: ["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],
+    marketTrend: "High-growth market with 350% annual expansion",
+    innovationLevel: "Advanced AI technology revolutionizing cybersecurity"
   }
 ];
