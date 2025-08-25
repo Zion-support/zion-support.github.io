@@ -147,7 +147,7 @@ export default function AboutPage() {
             </button>
           </motion.div>
         </div>
-      </section>
-    </>
+      </div>
+    </UltraAdvancedFuturisticBackground>
   );
 }
