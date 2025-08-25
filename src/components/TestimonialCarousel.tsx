@@ -159,6 +159,32 @@ export const TestimonialCarousel: React.FC = () => {
             />
           ))}
         </div>
+
+        {/* Stats section */}
+        <motion.div 
+          className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <div className="text-zion-cyan">
+            <div className="text-3xl md:text-4xl font-bold mb-2">98%</div>
+            <div className="text-zion-slate-light">Client Satisfaction</div>
+          </div>
+          <div className="text-zion-purple">
+            <div className="text-3xl md:text-4xl font-bold mb-2">500+</div>
+            <div className="text-zion-slate-light">Companies Served</div>
+          </div>
+          <div className="text-zion-cyan-light">
+            <div className="text-3xl md:text-4xl font-bold mb-2">10K+</div>
+            <div className="text-zion-slate-light">Projects Completed</div>
+          </div>
+          <div className="text-zion-purple-light">
+            <div className="text-3xl md:text-4xl font-bold mb-2">24/7</div>
+            <div className="text-zion-slate-light">Support Available</div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -11,6 +11,36 @@ export const ITServiceRequestHero = () => {
     { icon: Shield, value: '24/7', label: 'Support' },
   ];
 
+  const features = [
+    { icon: <Clock className="w-5 h-5" />, text: "24/7 Availability" },
+    { icon: <Globe className="w-5 h-5" />, text: "Global Coverage" },
+    { icon: <Shield className="w-5 h-5" />, text: "Certified Technicians" },
+    { icon: <CheckCircle className="w-5 h-5" />, text: "Guaranteed Service" }
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Elements */}
