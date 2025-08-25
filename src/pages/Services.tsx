@@ -343,6 +343,29 @@ export function Services() {
             Discover our comprehensive range of cutting-edge technology solutions designed to transform your business
           </p>
           
+          {/* Next-Gen Services CTA */}
+          <div className="max-w-4xl mx-auto mb-8">
+            <div className="bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-purple/20 border border-zion-purple/30 rounded-2xl p-6 backdrop-blur-md">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                <div className="text-center md:text-left">
+                  <h3 className="text-2xl font-bold text-white mb-2">🚀 Explore Next-Gen Services 2025</h3>
+                  <p className="text-zion-slate-light">
+                    Discover revolutionary AI, quantum computing, neural interfaces, and sustainable technology solutions
+                  </p>
+                </div>
+                <Link
+                  to="/next-gen-services"
+                  className="px-6 py-3 bg-gradient-to-r from-zion-purple to-zion-cyan text-white rounded-xl font-semibold hover:shadow-xl hover:shadow-zion-purple/25 transition-all duration-300 flex items-center gap-2 group hover:scale-105"
+                >
+                  View Next-Gen Services
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          </div>
+          
           {/* Search Bar */}
           <div className="max-w-2xl mx-auto mb-8">
             <div className="relative">
