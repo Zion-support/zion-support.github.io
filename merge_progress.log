@@ -1587,3 +1587,64 @@ src/layout/MainNavigation.tsx
 [2025-08-25 23:35:56] Processing unmerged file: src/layout/MainNavigation.tsx
 [2025-08-25 23:35:56] File exists in HEAD, keeping it
 [2025-08-25 23:35:57] Still have unmerged paths, attempting additional resolution...
+[main 9ab0cd04f04] Merge PR #6619: cursor/enhance-app-with-new-services-and-futuristic-design-da9e (advanced conflict resolution)
+[2025-08-25 23:35:58] ✓ Advanced conflict resolution successful for PR #6619
+[2025-08-25 23:35:58] ✓ PR #6619 processed successfully
+==========================================
+
+
+==========================================
+[2025-08-25 23:35:58] Processing PR #6616 from branch: cursor/analyze-improve-and-deploy-ziontechgroup-app-7eea
+==========================================
+[2025-08-25 23:35:58] Processing PR #6616 from branch: cursor/analyze-improve-and-deploy-ziontechgroup-app-7eea
+[2025-08-25 23:35:58] Attempting regular merge...
+Already up to date.
+[2025-08-25 23:35:58] ✓ Successfully merged PR #6616
+[2025-08-25 23:35:58] ✓ PR #6616 processed successfully
+==========================================
+
+
+==========================================
+[2025-08-25 23:35:58] Processing PR #6615 from branch: cursor/analyze-improve-and-deploy-ziontechgroup-app-f4cb
+==========================================
+[2025-08-25 23:35:58] Processing PR #6615 from branch: cursor/analyze-improve-and-deploy-ziontechgroup-app-f4cb
+[2025-08-25 23:35:59] Attempting regular merge...
+Auto-merging automation/backups/file-sync/2025-08-25T15-27-30-943Z/public/locales/en-US/common.json
+Auto-merging package-lock.json
+CONFLICT (content): Merge conflict in package-lock.json
+Auto-merging package.json
+CONFLICT (content): Merge conflict in package.json
+Auto-merging pages/talent/[id].tsx
+CONFLICT (content): Merge conflict in pages/talent/[id].tsx
+Auto-merging src/App.tsx
+CONFLICT (content): Merge conflict in src/App.tsx
+Auto-merging src/components/GradientHeading.tsx
+CONFLICT (content): Merge conflict in src/components/GradientHeading.tsx
+Auto-merging src/components/HeroSection.tsx
+CONFLICT (content): Merge conflict in src/components/HeroSection.tsx
+Auto-merging src/components/ui/error-boundary.tsx
+CONFLICT (add/add): Merge conflict in src/components/ui/error-boundary.tsx
+Auto-merging src/components/ui/scroll-to-top.tsx
+CONFLICT (add/add): Merge conflict in src/components/ui/scroll-to-top.tsx
+Automatic merge failed; fix conflicts and then commit the result.
+[2025-08-25 23:36:00] ✗ Merge failed for PR #6615, attempting advanced conflict resolution...
+[2025-08-25 23:36:00] Resolving complex conflicts for PR #6615 (cursor/analyze-improve-and-deploy-ziontechgroup-app-f4cb)...
+[2025-08-25 23:36:00] Found unmerged files: package-lock.json
+package.json
+pages/talent/[id].tsx
+src/App.tsx
+src/components/GradientHeading.tsx
+src/components/HeroSection.tsx
+[2025-08-25 23:36:00] Processing unmerged file: package-lock.json
+[2025-08-25 23:36:00] File exists in HEAD, keeping it
+[2025-08-25 23:36:00] Processing unmerged file: package.json
+[2025-08-25 23:36:00] File exists in HEAD, keeping it
+[2025-08-25 23:36:00] Processing unmerged file: pages/talent/[id].tsx
+[2025-08-25 23:36:00] File exists in HEAD, keeping it
+[2025-08-25 23:36:00] Processing unmerged file: src/App.tsx
+[2025-08-25 23:36:00] File exists in HEAD, keeping it
+[2025-08-25 23:36:00] Processing unmerged file: src/components/GradientHeading.tsx
+[2025-08-25 23:36:00] File exists in HEAD, keeping it
+[2025-08-25 23:36:00] Processing unmerged file: src/components/HeroSection.tsx
+[2025-08-25 23:36:00] File exists in HEAD, keeping it
+[2025-08-25 23:36:00] Still have unmerged paths, attempting additional resolution...

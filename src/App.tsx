@@ -82,6 +82,9 @@ import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster } from "./components/ui/toaster";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
+import { ScrollToTop } from "./components/ui/scroll-to-top";
+import { ErrorBoundary } from "./components/ui/error-boundary";
+import { FullScreenLoading } from "./components/ui/loading-fallback";
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -356,6 +359,7 @@ const App = () => {
   useScrollToTop();
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <WhitelabelProvider>
       <ThemeProvider defaultTheme="dark">
         <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
@@ -381,6 +385,35 @@ const App = () => {
       </ThemeProvider>
     </WhitelabelProvider>
 >>>>>>> origin/cursor/website-audit-and-enhancement-ba38
+=======
+    <ErrorBoundary>
+      <WhitelabelProvider>
+        <ThemeProvider defaultTheme="dark">
+          <Suspense fallback={<FullScreenLoading />}>
+            <Routes>
+              {baseRoutes.map(({ path, element }) => (
+                <Route key={path} path={path} element={element} />
+              ))}
+              <Route path="/auth/*" element={<AuthRoutes />} />
+              <Route path="/dashboard/*" element={<DashboardRoutes />} />
+              <Route path="/marketplace/*" element={<MarketplaceRoutes />} />
+              <Route path="/talent/*" element={<TalentRoutes />} />
+              <Route path="/admin/*" element={<AdminRoutes />} />
+              <Route path="/mobile/*" element={<MobileAppRoutes />} />
+              <Route path="/content/*" element={<ContentRoutes />} />
+              <Route path="/enterprise/*" element={<EnterpriseRoutes />} />
+              <Route path="/community/*" element={<CommunityRoutes />} />
+              <Route path="/developers/*" element={<DeveloperRoutes />} />
+              <Route path="*" element={<ErrorRoutes />} />
+            </Routes>
+          </Suspense>
+          <Toaster />
+          <SonnerToaster position="top-right" />
+          <ScrollToTop />
+        </ThemeProvider>
+      </WhitelabelProvider>
+    </ErrorBoundary>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f4cb
   );
 };
 =======

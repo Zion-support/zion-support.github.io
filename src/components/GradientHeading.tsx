@@ -2,6 +2,7 @@
 interface GradientHeadingProps {
   children: React.ReactNode;
   className?: string;
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -17,6 +18,23 @@ export function GradientHeading({ children, className = '' }: GradientHeadingPro
 =======
     <h2 className={`text-4xl md:text-5xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent ${className}`}>
 >>>>>>> origin/cursor/website-audit-and-enhancement-ba38
+=======
+  level?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  id?: string;
+}
+
+export function GradientHeading({ children, className, level = "h2", id }: GradientHeadingProps) {
+  const Tag = level;
+  
+  return (
+    <Tag 
+      id={id}
+      className={cn(
+        "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",
+        className
+      )}
+    >
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f4cb
       {children}
     </h1>
   );
