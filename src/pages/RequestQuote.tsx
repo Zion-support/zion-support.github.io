@@ -9,11 +9,16 @@
 import React from 'react';
 import QuoteRequestForm from "@/components/QuoteRequestForm";
 import { SEO } from "@/components/SEO";
+<<<<<<< HEAD
 import { MainNavigation } from "@/layout/MainNavigation";
 import Footer from "@/components/Footer";
 =======
 import React, { useState } from 'react';
 >>>>>>> origin/cursor/website-audit-and-enhancement-bc98
+=======
+import { AppHeader } from "@/layout/AppHeader";
+import Footer from "@/components/Footer";
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
 
 export default function RequestQuote() {
   const [form, setForm] = useState({

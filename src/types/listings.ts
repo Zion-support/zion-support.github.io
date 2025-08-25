@@ -4,6 +4,9 @@ export interface ProductListing {
   description: string;
   category: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
   subcategory?: string;
   price: number | null;
   currency: string;
@@ -29,6 +32,7 @@ export interface ServiceCategory {
   value: string;
   description?: string;
   icon?: string;
+<<<<<<< HEAD
 =======
   price: number;
   rating: number;
@@ -48,4 +52,6 @@ export interface ServiceCategory {
   monthly?: boolean;
   billing_frequency?: string;
 >>>>>>> origin/cursor/build-and-fix-errors-e276
+=======
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
 }

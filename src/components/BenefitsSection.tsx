@@ -1,11 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
 import { GradientHeading } from "./GradientHeading";
 import { FeatureCard } from "./FeatureCard";
 import { Bot, Clock, Globe, TrendingDown, Zap, Shield, Users, Award } from "lucide-react";
 import { motion } from "framer-motion";
+<<<<<<< HEAD
 import React from "react";
+=======
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
 
 const benefits = [
   {
@@ -109,8 +116,26 @@ export function BenefitsSection() {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
+<<<<<<< HEAD
       y: 0,
       transition: { duration: 0.5 }
+=======
+      transition: {
+        duration: 0.6,
+        ease: "easeOut" as const
+      }
+    }
+  };
+
+  const cardVariants = {
+    hover: {
+      y: -8,
+      scale: 1.02,
+      transition: {
+        duration: 0.3,
+        ease: "easeOut" as const
+      }
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
     }
   };
 

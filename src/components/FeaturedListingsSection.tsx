@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Star, Eye, Heart, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
 
 import { ProductListingCard } from "@/components/ProductListingCard";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -55,6 +60,7 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       badgeColor: "from-zion-cyan to-zion-blue"
     },
     {
+<<<<<<< HEAD
       id: "fullstack-ai-dev",
       title: "Full-Stack AI Development",
       description: "End-to-end development for AI-powered applications with deployment support",
@@ -120,6 +126,16 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       transition: { duration: 0.5 }
     }
   };
+=======
+      id: 'cybersecurity-audit',
+      title: 'Cybersecurity Audit',
+      description: 'Comprehensive security assessment and recommendations',
+      category: 'Cybersecurity',
+      price: '$3,499',
+      image: '/images/cybersecurity-audit.jpg'
+    }
+  ];
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
 
   return (
     <section id="featured" className="py-24 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -106,6 +107,37 @@ export function HowItWorksSection() {
 >>>>>>> origin/cursor/build-and-fix-errors-e276
     }
   };
+=======
+import React from 'react';
+
+export const HowItWorksSection: React.FC = () => {
+  const steps = [
+    {
+      number: '01',
+      title: 'Discovery & Planning',
+      description: 'We analyze your requirements and create a comprehensive project plan',
+      icon: '🔍'
+    },
+    {
+      number: '02',
+      title: 'Design & Development',
+      description: 'Our expert team builds your solution using cutting-edge technologies',
+      icon: '⚙️'
+    },
+    {
+      number: '03',
+      title: 'Testing & Quality Assurance',
+      description: 'Rigorous testing ensures your solution meets the highest standards',
+      icon: '✅'
+    },
+    {
+      number: '04',
+      title: 'Deployment & Support',
+      description: 'Smooth deployment with ongoing support and maintenance',
+      icon: '🚀'
+    }
+  ];
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
 
   return (
 <<<<<<< HEAD

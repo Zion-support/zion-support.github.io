@@ -27,4 +27,8 @@ export function generateSearchSuggestions(): SearchSuggestion[] {
     { id: '19', text: 'Cybersecurity Audit', type: 'service' },
     { id: '20', text: 'Cloud Migration', type: 'service' }
   ];
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802

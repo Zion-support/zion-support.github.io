@@ -1,7 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/build-and-fix-errors-e276
+=======
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
 import React, { useState } from 'react';
 import { Mail, ArrowRight, CheckCircle } from 'lucide-react';
 
@@ -79,6 +82,7 @@ export const FooterNewsletter = () => {
     </form>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 <<<<<<< HEAD
 =======
@@ -86,3 +90,6 @@ export const FooterNewsletter = () => {
 >>>>>>> origin/cursor/check-and-fix-github-actions-e92c
 =======
 >>>>>>> origin/cursor/build-and-fix-errors-e276
+=======
+};
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802

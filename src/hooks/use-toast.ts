@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
 import * as React from "react"
 =======
 import { useState, useRef, useEffect } from 'react'
@@ -381,4 +384,8 @@ function useToast() {
   }
 }
 
+<<<<<<< HEAD
 export { useToast, toast }
+=======
+export { useToast, toast }
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802

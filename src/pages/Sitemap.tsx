@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
@@ -15,6 +16,21 @@ import {
   Home, 
   Briefcase, 
   Users, 
+=======
+import React from 'react';
+import { SEO } from '../components/SEO';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../components/ui/card.js';
+import { Badge } from '../components/ui/badge.js';
+import { 
+  Home, 
+  HelpCircle, 
+  MessageCircle, 
+  Zap, 
+  Globe, 
+  Database, 
+  Lock, 
+  BookOpen, 
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
   Phone, 
   FileText, 
   Shield, 

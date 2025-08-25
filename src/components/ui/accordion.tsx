@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "use client"
 
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-4d8c
+=======
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
 import * as React from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
 import { ChevronDown } from "lucide-react"
@@ -227,4 +230,7 @@ export const AccordionContent: React.FC<AccordionContentProps> = ({ children, cl
 AccordionContent.displayName = AccordionPrimitive.Content.displayName
 
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/build-and-fix-errors-e276
+=======
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802

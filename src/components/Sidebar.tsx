@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
@@ -39,6 +40,9 @@ import { motion } from 'framer-motion';
 =======
 import React from 'react';
 >>>>>>> origin/cursor/build-and-fix-errors-e276
+=======
+import React, { useState } from 'react';
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { 
@@ -4050,6 +4054,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
           ))}
         </div>
       </div>
+<<<<<<< HEAD
 
       {/* Navigation */}
       <div className="p-6 space-y-8">
@@ -4133,6 +4138,9 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       </div>
     </motion.aside>
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
+=======
+    </aside>
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
   );
 }
 

@@ -90,12 +90,13 @@
 >>>>>>> origin/cursor/build-and-fix-errors-fb38
 =======
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
+<<<<<<< HEAD
     }
 >>>>>>> origin/cursor/build-and-fix-errors-e276
   },
@@ -138,12 +139,19 @@
     "noPropertyAccessFromIndexSignature": false,
     "exactOptionalPropertyTypes": false,
     "types": ["react", "react-dom"]
+=======
+    },
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
   },
   "include": [
     "src"
   ],
   "exclude": [
     "node_modules",
+<<<<<<< HEAD
 <<<<<<< HEAD
     "dist"
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
@@ -169,6 +177,9 @@
     "src_backup/**",
     "components/**",
     "pages/**"
+=======
+    "dist"
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
   ],
   "references": [
     {

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, Search, HelpCircle, MessageCircle, Phone, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -12,6 +13,13 @@ interface FAQItem {
   category: string;
   tags: string[];
 }
+=======
+import React from 'react';
+import { FaqSection } from "@/components/FaqSection";
+import { SEO } from "@/components/SEO";
+import { AppHeader } from "@/layout/AppHeader";
+import Footer from "@/components/Footer";
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
 
 export default function FAQ() {
   const [searchQuery, setSearchQuery] = useState('');
