@@ -59,6 +59,7 @@ export default defineConfig(async () => ({
     },
     rollupOptions: {
       output: {
+<<<<<<< HEAD
         manualChunks: (id) => {
 <<<<<<< HEAD
           // Core React libraries
@@ -161,6 +162,75 @@ export default defineConfig(async () => ({
             return 'vendor';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
           }
+=======
+        manualChunks: {
+          // Core React chunks
+          'react-core': ['react', 'react-dom'],
+          'react-router': ['react-router-dom'],
+          
+          // UI Component chunks - grouped by usage frequency
+          'ui-core': [
+            '@radix-ui/react-dialog',
+            '@radix-ui/react-dropdown-menu',
+            '@radix-ui/react-select',
+            '@radix-ui/react-tabs'
+          ],
+          'ui-forms': [
+            '@radix-ui/react-checkbox',
+            '@radix-ui/react-radio-group',
+            '@radix-ui/react-switch',
+            'react-hook-form',
+            '@hookform/resolvers',
+            'zod'
+          ],
+          'ui-layout': [
+            '@radix-ui/react-accordion',
+            '@radix-ui/react-aspect-ratio',
+            '@radix-ui/react-avatar',
+            '@radix-ui/react-separator',
+            '@radix-ui/react-scroll-area'
+          ],
+          'ui-overlays': [
+            '@radix-ui/react-alert-dialog',
+            '@radix-ui/react-context-menu',
+            '@radix-ui/react-popover',
+            '@radix-ui/react-tooltip',
+            '@radix-ui/react-toast'
+          ],
+          'ui-controls': [
+            '@radix-ui/react-label',
+            '@radix-ui/react-progress',
+            '@radix-ui/react-slider',
+            '@radix-ui/react-slot'
+          ],
+          
+          // Animation and interaction
+          'animation': ['framer-motion', 'embla-carousel-react'],
+          
+          // Utility libraries
+          'utils': ['clsx', 'class-variance-authority', 'tailwind-merge', 'date-fns'],
+          
+          // Icons
+          'icons': ['lucide-react', 'react-icons'],
+          
+          // State management
+          'state': ['@reduxjs/toolkit', 'react-redux'],
+          
+          // Data fetching
+          'data': ['@tanstack/react-query', '@supabase/supabase-js'],
+          
+          // External integrations
+          'integrations': ['@stripe/stripe-js', 'jspdf', 'jspdf-autotable'],
+          
+          // Specialized features
+          'features': ['@hello-pangea/dnd', 'input-otp', 'vaul', 'cmdk', 'sonner'],
+          
+          // Charts and visualization
+          'charts': ['recharts'],
+          
+          // Internationalization
+          'i18n': ['i18next', 'i18next-browser-languagedetector', 'react-i18next']
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6685
         },
         chunkFileNames: (chunkInfo) => {
           const facadeModuleId = chunkInfo.facadeModuleId ? chunkInfo.facadeModuleId.split('/').pop() : 'chunk';
@@ -198,6 +268,7 @@ export default defineConfig(async () => ({
     },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     chunkSizeWarningLimit: 500, // Reduced from 1000
     sourcemap: false,
 <<<<<<< HEAD
@@ -210,6 +281,19 @@ export default defineConfig(async () => ({
     // Optimize dependencies
     commonjsOptions: {
       include: [/node_modules/],
+=======
+    chunkSizeWarningLimit: 500, // Reduced from 1000 for better optimization
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        passes: 2
+      },
+      mangle: {
+        toplevel: true
+      }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6685
     },
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
 =======
@@ -276,6 +360,7 @@ export default defineConfig(async () => ({
       '@tanstack/react-query',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
     exclude: ['@vite/client', '@vite/env'],
 =======
     // Exclude problematic packages from optimization
@@ -304,6 +389,9 @@ export default defineConfig(async () => ({
     }
 =======
 >>>>>>> origin/main
+=======
+    exclude: ['@stripe/stripe-js'], // Exclude Stripe from pre-bundling
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6685
   },
   optimizeDeps: {
     esbuildOptions: {
@@ -317,6 +405,7 @@ export default defineConfig(async () => ({
     minifySyntax: true,
     minifyWhitespace: true
   },
+<<<<<<< HEAD
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
 <<<<<<< HEAD
@@ -331,3 +420,20 @@ export default defineConfig(async () => ({
   }
 });
 >>>>>>> origin/main
+=======
+  // Performance optimizations
+  define: {
+    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
+  },
+  // Experimental features for better performance
+  experimental: {
+    renderBuiltUrl(filename, { hostType }) {
+      if (hostType === 'js') {
+        return { js: `/${filename}` }
+      } else {
+        return { relative: true }
+      }
+    }
+  }
+})
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6685
