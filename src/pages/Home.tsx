@@ -197,7 +197,7 @@ const Home: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
-      <SEOHead {...SEOConfigs.home} />
+      <SEOHead configKey="home" />
       
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
