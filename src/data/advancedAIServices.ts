@@ -20,6 +20,7 @@ export interface AdvancedAIService {
     email: string;
     website: string;
   };
+<<<<<<< HEAD
   websiteUrl: string;
   demoUrl?: string;
   documentationUrl?: string;
@@ -60,10 +61,90 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
       "Ensure compliance with regulations",
       "Lower legal costs significantly",
       "Improve contract negotiation outcomes"
+=======
+}
+
+export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
+  // AI-Powered Financial Services
+  {
+    id: "ai-financial-advisor",
+    title: "AI-Powered Financial Advisory Platform",
+    description: "Intelligent financial planning and investment advisory system that provides personalized financial recommendations using advanced machine learning algorithms.",
+    category: "AI & Financial Services",
+    subcategory: "Financial Advisory",
+    price: 2500,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Personalized investment portfolios",
+      "Risk assessment algorithms",
+      "Market trend analysis",
+      "Automated rebalancing",
+      "Tax optimization strategies",
+      "Real-time portfolio monitoring"
+    ],
+    benefits: [
+      "Increase investment returns by 15-25%",
+      "Reduce financial planning time by 80%",
+      "Minimize tax liabilities",
+      "Professional-grade financial advice",
+      "24/7 portfolio management"
+    ],
+    useCases: [
+      "Individual investors",
+      "Financial advisors",
+      "Wealth management firms",
+      "Retirement planning",
+      "Tax optimization"
+    ],
+    targetAudience: [
+      "High-net-worth individuals",
+      "Financial advisors",
+      "Investment firms",
+      "Retirement planners",
+      "Tax professionals"
+    ],
+    tags: ["AI", "Financial Advisory", "Investment Management", "Portfolio Optimization", "Tax Planning"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "premium",
+    marketPrice: "$2,500 - $8,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+
+  // AI-Powered Legal Research
+  {
+    id: "ai-legal-research-assistant",
+    title: "AI Legal Research & Document Analysis Platform",
+    description: "Advanced legal research platform that uses natural language processing to analyze case law, contracts, and legal documents for faster, more accurate legal research.",
+    category: "AI & Legal Services",
+    subcategory: "Legal Research",
+    price: 1800,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Case law analysis",
+      "Contract review automation",
+      "Legal precedent identification",
+      "Document similarity matching",
+      "Regulatory compliance checking",
+      "Legal citation validation"
+    ],
+    benefits: [
+      "Reduce research time by 70%",
+      "Improve case outcome prediction",
+      "Enhance contract review accuracy",
+      "Stay updated on legal changes",
+      "Reduce legal research costs"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-3b7b
     ],
     useCases: [
       "Law firms",
       "Corporate legal departments",
+<<<<<<< HEAD
       "Contract management teams",
       "Compliance officers",
       "Risk management departments"
@@ -79,10 +160,28 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     estimatedDelivery: "3-4 weeks",
     supportLevel: "enterprise",
     marketPrice: "$1,800 - $4,500/month",
+=======
+      "Legal researchers",
+      "Compliance officers",
+      "Contract managers"
+    ],
+    targetAudience: [
+      "Law firms",
+      "Corporate legal teams",
+      "Legal researchers",
+      "Compliance professionals",
+      "Contract administrators"
+    ],
+    tags: ["AI", "Legal Research", "Document Analysis", "Case Law", "Contract Review"],
+    estimatedDelivery: "2-3 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,800 - $5,000/month",
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-3b7b
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
+<<<<<<< HEAD
     },
     websiteUrl: "https://ziontechgroup.com/ai-legal-analyzer"
   },
@@ -138,11 +237,15 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
       website: "https://ziontechgroup.com"
     },
     websiteUrl: "https://ziontechgroup.com/ai-fraud-detection"
+=======
+    }
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-3b7b
   },
 
   // AI-Powered Healthcare Diagnostics
   {
     id: "ai-healthcare-diagnostics",
+<<<<<<< HEAD
     title: "AI Healthcare Diagnostics Assistant",
     description: "Advanced AI platform that assists healthcare professionals in diagnosing diseases, analyzing medical images, and providing treatment recommendations based on patient data and medical literature.",
     category: "AI & Healthcare",
@@ -193,10 +296,17 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     description: "Advanced AI-powered medical diagnosis platform that assists healthcare professionals with accurate diagnosis, treatment recommendations, and patient monitoring using machine learning algorithms trained on extensive medical databases.",
     category: "AI Healthcare",
     subcategory: "Medical Diagnosis",
+=======
+    title: "AI Healthcare Diagnostic Imaging Platform",
+    description: "Advanced medical imaging analysis platform that uses deep learning to detect diseases, analyze medical scans, and provide diagnostic recommendations.",
+    category: "AI & Healthcare",
+    subcategory: "Medical Diagnostics",
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-3b7b
     price: 3500,
     currency: "$",
     pricingModel: "monthly",
     features: [
+<<<<<<< HEAD
       "Symptom analysis engine",
       "Medical image recognition",
       "Treatment recommendation system",
@@ -232,10 +342,45 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     supportLevel: "enterprise",
     marketPrice: "$3,500 - $8,000/month",
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-9864
+=======
+      "Medical image analysis",
+      "Disease detection algorithms",
+      "Diagnostic recommendations",
+      "Patient data integration",
+      "Radiology workflow automation",
+      "Clinical decision support"
+    ],
+    benefits: [
+      "Improve diagnostic accuracy by 25%",
+      "Reduce diagnosis time by 60%",
+      "Enhance patient outcomes",
+      "Optimize radiology workflows",
+      "Reduce healthcare costs"
+    ],
+    useCases: [
+      "Hospitals",
+      "Radiology centers",
+      "Medical clinics",
+      "Research institutions",
+      "Telemedicine platforms"
+    ],
+    targetAudience: [
+      "Healthcare providers",
+      "Radiologists",
+      "Medical imaging centers",
+      "Hospital administrators",
+      "Healthcare IT teams"
+    ],
+    tags: ["AI", "Healthcare", "Medical Imaging", "Diagnostics", "Radiology"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,500 - $12,000/month",
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-3b7b
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
+<<<<<<< HEAD
     },
 <<<<<<< HEAD
     websiteUrl: "https://ziontechgroup.com/ai-healthcare-diagnostics"
@@ -295,10 +440,14 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     },
     websiteUrl: "https://ziontechgroup.com/ai-trading-platform"
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-9864
+=======
+    }
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-3b7b
   },
 
   // AI-Powered Supply Chain Optimization
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     id: "ai-supply-chain-optimization",
     title: "AI Supply Chain Optimization Platform",
@@ -313,6 +462,14 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     subcategory: "Supply Chain Management",
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-9864
     price: 2800,
+=======
+    id: "ai-supply-chain-optimization",
+    title: "AI Supply Chain Optimization Platform",
+    description: "Intelligent supply chain management system that uses predictive analytics and machine learning to optimize inventory, reduce costs, and improve efficiency.",
+    category: "AI & Supply Chain",
+    subcategory: "Supply Chain Management",
+    price: 2200,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-3b7b
     currency: "$",
     pricingModel: "monthly",
     features: [
@@ -321,6 +478,7 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
       "Route optimization",
       "Supplier performance analysis",
       "Risk assessment",
+<<<<<<< HEAD
 <<<<<<< HEAD
       "Cost optimization",
       "Real-time tracking",
@@ -338,6 +496,13 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
       "Reduce inventory costs by 20-30%",
       "Improve delivery times",
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-9864
+=======
+      "Real-time monitoring"
+    ],
+    benefits: [
+      "Reduce inventory costs by 20-30%",
+      "Improve delivery times by 25%",
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-3b7b
       "Optimize supplier relationships",
       "Reduce supply chain risks",
       "Increase operational efficiency"
@@ -345,6 +510,7 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     useCases: [
       "Manufacturing companies",
       "Retail chains",
+<<<<<<< HEAD
 <<<<<<< HEAD
       "Logistics providers",
       "Distribution centers",
@@ -354,11 +520,17 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
       "Logistics providers",
       "Distribution centers"
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-9864
+=======
+      "Logistics providers",
+      "E-commerce businesses",
+      "Distribution centers"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-3b7b
     ],
     targetAudience: [
       "Supply chain managers",
       "Operations directors",
       "Logistics coordinators",
+<<<<<<< HEAD
 <<<<<<< HEAD
       "Inventory managers",
       "Business analysts"
@@ -487,10 +659,20 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     estimatedDelivery: "3-4 weeks",
     supportLevel: "premium",
     marketPrice: "$899 - $2,999/month",
+=======
+      "Inventory managers",
+      "Procurement teams"
+    ],
+    tags: ["AI", "Supply Chain", "Inventory Management", "Logistics", "Predictive Analytics"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "premium",
+    marketPrice: "$2,200 - $6,500/month",
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-3b7b
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
+<<<<<<< HEAD
     },
     websiteUrl: "https://ziontechgroup.com/ai-video-production-suite"
   },
@@ -606,10 +788,14 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     websiteUrl: "https://ziontechgroup.com/ai-customer-service"
 =======
     websiteUrl: "https://ziontechgroup.com/ai-legal-analyzer"
+=======
+    }
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-3b7b
   },
 
   // AI-Powered Energy Management
   {
+<<<<<<< HEAD
     id: "ai-energy-optimization-platform",
     title: "AI Energy Optimization Platform",
     description: "Intelligent energy management system that uses AI to optimize energy consumption, predict demand, integrate renewable sources, and reduce costs for commercial and industrial facilities.",
@@ -634,6 +820,30 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
       "Optimize renewable energy usage",
       "Reduce carbon emissions",
       "Enhanced operational efficiency"
+=======
+    id: "ai-energy-management",
+    title: "AI Energy Management & Optimization Platform",
+    description: "Smart energy management system that uses AI to optimize energy consumption, predict demand, and reduce costs for commercial and industrial facilities.",
+    category: "AI & Energy",
+    subcategory: "Energy Management",
+    price: 1900,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Energy consumption monitoring",
+      "Demand forecasting",
+      "Peak load management",
+      "Renewable energy integration",
+      "Cost optimization",
+      "Sustainability reporting"
+    ],
+    benefits: [
+      "Reduce energy costs by 15-25%",
+      "Improve energy efficiency",
+      "Optimize renewable energy usage",
+      "Reduce carbon footprint",
+      "Comply with regulations"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-3b7b
     ],
     useCases: [
       "Commercial buildings",
@@ -646,6 +856,7 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
       "Facility managers",
       "Energy managers",
       "Sustainability officers",
+<<<<<<< HEAD
       "Operations directors",
       "Building owners"
     ],
@@ -653,10 +864,20 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     estimatedDelivery: "5-7 weeks",
     supportLevel: "premium",
     marketPrice: "$3,200 - $7,500/month",
+=======
+      "Building owners",
+      "Operations managers"
+    ],
+    tags: ["AI", "Energy Management", "Sustainability", "Cost Optimization", "Renewable Energy"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,900 - $5,500/month",
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-3b7b
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
+<<<<<<< HEAD
     },
     websiteUrl: "https://ziontechgroup.com/ai-energy-optimization"
   },
@@ -930,5 +1151,8 @@ export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
     },
     websiteUrl: "https://ziontechgroup.com/ai-healthcare-analytics-platform"
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-50ba
+=======
+    }
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-3b7b
   }
 ];

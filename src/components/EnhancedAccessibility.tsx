@@ -85,6 +85,7 @@ interface AccessibilitySettings {
   keyboardNavigation: boolean;
   focusIndicator: boolean;
   colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
+<<<<<<< HEAD
   fontSize: 'small' | 'medium' | 'large' | 'xlarge';
 }
 
@@ -95,6 +96,17 @@ interface AccessibilityIssue {
   element?: string;
   severity: 'low' | 'medium' | 'high';
   fix?: string;
+=======
+  dyslexia: boolean;
+  highContrastText: boolean;
+  largeCursor: boolean;
+  soundEffects: boolean;
+  autoPlay: boolean;
+  showFocusRings: boolean;
+  showKeyboardShortcuts: boolean;
+  showScreenReaderHints: boolean;
+  showAccessibilityInfo: boolean;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-3b7b
 }
 
 interface EnhancedAccessibilityProps {
@@ -135,8 +147,21 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     voiceCommands: false,
     screenReader: false,
     keyboardNavigation: false,
+<<<<<<< HEAD
     focusIndicator: true,
     colorBlindSupport: false,
+=======
+    colorBlindness: 'none',
+    dyslexia: false,
+    highContrastText: false,
+    largeCursor: false,
+    soundEffects: false,
+    autoPlay: false,
+    showFocusRings: true,
+    showKeyboardShortcuts: false,
+    showScreenReaderHints: false,
+    showAccessibilityInfo: false
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-3b7b
   });
   const [activeTab, setActiveTab] = useState<'quick' | 'advanced' | 'help'>('quick');
   const [announcement, setAnnouncement] = useState<string>('');
@@ -1575,9 +1600,20 @@ const EnhancedAccessibility: React.FC = () => {
       keyboardNavigation: false,
       focusIndicator: false,
       dyslexia: false,
+<<<<<<< HEAD
       lineSpacing: 1.5,
       wordSpacing: 1.0,
       letterSpacing: 0.0
+=======
+      highContrastText: false,
+      largeCursor: false,
+      soundEffects: false,
+      autoPlay: false,
+      showFocusRings: true,
+      showKeyboardShortcuts: false,
+      showScreenReaderHints: false,
+      showAccessibilityInfo: false
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-3b7b
     });
   }, []);
 
