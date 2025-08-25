@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { SEO } from '@/components/SEO';
-import { Check, Star, Zap, Brain, Server, Shield } from 'lucide-react';
+import { Check, Star, Zap, Brain, Server, Shield, Building } from 'lucide-react';
 
 const PricingPage: React.FC = () => {
   const [selectedPlan, setSelectedPlan] = useState('monthly');
@@ -67,33 +67,55 @@ const PricingPage: React.FC = () => {
       name: 'Micro SAAS Solutions',
       icon: Zap,
       services: [
-        { name: 'AI-Powered Lead Scoring', price: '$299/month' },
-        { name: 'SmartContract AI', price: '$499/month' },
-        { name: 'Quantum Analytics', price: '$799/month' },
-        { name: 'Blockchain Supply Chain', price: '$599/month' },
-        { name: 'AR/VR Business Solutions', price: '$899/month' }
+        { name: 'AI-Powered Lead Scoring', price: '$299/month', features: ['Predictive analytics', 'Automated scoring', 'CRM integration'] },
+        { name: 'SmartContract AI', price: '$499/month', features: ['AI contract review', 'Risk assessment', 'Compliance checking'] },
+        { name: 'Quantum Analytics', price: '$799/month', features: ['Quantum algorithms', 'Complex optimization', 'Research tools'] },
+        { name: 'Blockchain Supply Chain', price: '$599/month', features: ['Transparent tracking', 'Smart contracts', 'Audit trails'] },
+        { name: 'AR/VR Business Solutions', price: '$899/month', features: ['Immersive training', '3D visualization', 'Interactive experiences'] }
       ]
     },
     {
       name: 'AI Services',
       icon: Brain,
       services: [
-        { name: 'Quantum Machine Learning', price: '$1,299/month' },
-        { name: 'AI Ethics & Governance', price: '$899/month' },
-        { name: 'Edge AI & IoT Intelligence', price: '$699/month' },
-        { name: 'AI-Powered Cybersecurity', price: '$799/month' },
-        { name: 'Generative AI & Content Creation', price: '$599/month' }
+        { name: 'Quantum Machine Learning', price: '$1,299/month', features: ['Quantum algorithms', 'ML optimization', 'Research platform'] },
+        { name: 'AI Ethics & Governance', price: '$899/month', features: ['Ethical AI framework', 'Bias detection', 'Compliance tools'] },
+        { name: 'Edge AI & IoT Intelligence', price: '$699/month', features: ['Edge processing', 'Real-time AI', 'IoT analytics'] },
+        { name: 'AI-Powered Cybersecurity', price: '$799/month', features: ['Threat detection', 'AI analysis', 'Incident response'] },
+        { name: 'Generative AI & Content Creation', price: '$599/month', features: ['Content generation', 'AI writing', 'Creative tools'] }
       ]
     },
     {
       name: 'IT Infrastructure',
       icon: Server,
       services: [
-        { name: 'Enterprise Network Infrastructure', price: 'From $5,000' },
-        { name: 'Cybersecurity Assessment', price: 'From $3,000' },
-        { name: 'Cloud Migration & Optimization', price: 'From $8,000' },
-        { name: 'Data Center Design', price: 'From $15,000' },
-        { name: 'IT Support & Managed Services', price: 'From $2,500/month' }
+        { name: 'Enterprise Network Infrastructure', price: 'From $5,000', features: ['Network design', 'Security implementation', 'Performance optimization'] },
+        { name: 'Cybersecurity Assessment', price: 'From $3,000', features: ['Security audit', 'Vulnerability assessment', 'Compliance review'] },
+        { name: 'Cloud Migration & Optimization', price: 'From $8,000', features: ['Cloud strategy', 'Migration planning', 'Cost optimization'] },
+        { name: 'Data Center Design', price: 'From $15,000', features: ['Infrastructure design', 'Capacity planning', 'Energy efficiency'] },
+        { name: 'IT Support & Managed Services', price: 'From $2,500/month', features: ['24/7 monitoring', 'Proactive maintenance', 'Help desk support'] }
+      ]
+    },
+    {
+      name: 'Emerging Technologies',
+      icon: Zap,
+      services: [
+        { name: 'Quantum Computing Solutions', price: '$2,500/month', features: ['Quantum simulation', 'Algorithm development', 'Research support'] },
+        { name: 'Blockchain Development', price: '$1,800/month', features: ['Smart contracts', 'DApp development', 'DeFi solutions'] },
+        { name: 'IoT Platform Management', price: '$950/month', features: ['Device management', 'Data analytics', 'Predictive maintenance'] },
+        { name: 'Edge Computing Solutions', price: '$1,200/month', features: ['Edge AI', 'Real-time processing', 'Low latency'] },
+        { name: 'AR/VR Development', price: '$1,500/month', features: ['Immersive experiences', '3D modeling', 'Interactive applications'] }
+      ]
+    },
+    {
+      name: 'Industry Solutions',
+      icon: Building,
+      services: [
+        { name: 'Healthcare IT Solutions', price: 'From $4,500/month', features: ['HIPAA compliance', 'Patient management', 'Telemedicine platform'] },
+        { name: 'Financial Technology', price: 'From $3,800/month', features: ['Digital banking', 'Payment processing', 'Regulatory compliance'] },
+        { name: 'Manufacturing Intelligence', price: 'From $2,900/month', features: ['Industry 4.0', 'Predictive maintenance', 'Quality control'] },
+        { name: 'Retail Technology', price: 'From $2,200/month', features: ['E-commerce platform', 'Inventory management', 'Customer analytics'] },
+        { name: 'Education Technology', price: 'From $1,800/month', features: ['LMS platform', 'Online learning', 'Student management'] }
       ]
     }
   ];
@@ -122,6 +144,30 @@ const PricingPage: React.FC = () => {
       description: 'Round-the-clock technical support and system monitoring',
       price: 'From $2,000/month',
       icon: Server
+    },
+    {
+      name: 'Quantum Computing Consultation',
+      description: 'Expert guidance on quantum computing implementation',
+      price: 'From $8,000',
+      icon: Brain
+    },
+    {
+      name: 'Blockchain Strategy & Development',
+      description: 'Complete blockchain solution design and implementation',
+      price: 'From $12,000',
+      icon: Shield
+    },
+    {
+      name: 'IoT Platform Customization',
+      description: 'Tailored IoT solutions for your industry needs',
+      price: 'From $6,000',
+      icon: Server
+    },
+    {
+      name: 'AR/VR Content Creation',
+      description: 'Custom immersive content and applications',
+      price: 'From $4,500',
+      icon: Zap
     }
   ];
 
@@ -233,9 +279,20 @@ const PricingPage: React.FC = () => {
                     </div>
                     <div className="space-y-4">
                       {category.services.map((service, serviceIndex) => (
-                        <div key={serviceIndex} className="flex justify-between items-center py-2 border-b border-zion-blue-light/30">
-                          <span className="text-zion-slate-light">{service.name}</span>
-                          <span className="text-zion-cyan font-semibold">{service.price}</span>
+                        <div key={serviceIndex} className="py-3 border-b border-zion-blue-light/30 last:border-b-0">
+                          <div className="flex justify-between items-start mb-2">
+                            <span className="text-zion-slate-light font-medium">{service.name}</span>
+                            <span className="text-zion-cyan font-semibold text-sm">{service.price}</span>
+                          </div>
+                          {service.features && (
+                            <div className="flex flex-wrap gap-1 mt-2">
+                              {service.features.map((feature, featureIndex) => (
+                                <span key={featureIndex} className="px-2 py-1 text-xs bg-zion-blue-light/20 text-zion-slate-light rounded">
+                                  {feature}
+                                </span>
+                              ))}
+                            </div>
+                          )}
                         </div>
                       ))}
                     </div>
