@@ -33,6 +33,13 @@ const CloudDevOps = lazy(() => import('./pages/CloudDevOps'));
 const EnterpriseSolutionsPage = lazy(() => import('./pages/EnterpriseSolutions'));
 const DigitalTransformation = lazy(() => import('./pages/DigitalTransformation'));
 
+// New micro SAAS services
+const AIWorkflowAutomation = lazy(() => import('./pages/services/AIWorkflowAutomation'));
+const AICustomerIntelligence = lazy(() => import('./pages/services/AICustomerIntelligence'));
+const AISecurityCompliance = lazy(() => import('./pages/services/AISecurityCompliance'));
+const AIDataAnalytics = lazy(() => import('./pages/services/AIDataAnalytics'));
+const ComprehensiveServicesOverview = lazy(() => import('./pages/services/ComprehensiveServicesOverview'));
+
 // Our enhanced service pages
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
@@ -101,6 +108,15 @@ const App = () => {
                     <Route path="/cloud-devops" element={<CloudDevOps />} />
                     <Route path="/enterprise-solutions" element={<EnterpriseSolutionsPage />} />
                     <Route path="/digital-transformation" element={<DigitalTransformation />} />
+                    
+                    {/* New micro SAAS service routes */}
+                    <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
+                    <Route path="/services/ai-customer-intelligence" element={<AICustomerIntelligence />} />
+                    <Route path="/services/ai-security-compliance" element={<AISecurityCompliance />} />
+                    <Route path="/services/ai-data-analytics" element={<AIDataAnalytics />} />
+                    
+                    {/* Comprehensive Services Overview */}
+                    <Route path="/services/comprehensive-services-overview" element={<ComprehensiveServicesOverview />} />
                     
                     {/* Our enhanced service routes */}
                     <Route path="/about" element={<About />} />

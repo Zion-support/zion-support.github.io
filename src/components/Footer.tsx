@@ -7,19 +7,16 @@ export function Footer() {
     {
       title: "AI & Micro SAAS",
       links: [
+        { label: "AI Workflow Automation", path: "/services/ai-workflow-automation" },
+        { label: "AI Customer Intelligence", path: "/services/ai-customer-intelligence" },
+        { label: "AI Security & Compliance", path: "/services/ai-security-compliance" },
+        { label: "AI Data Analytics", path: "/services/ai-data-analytics" },
         { label: "AI & Autonomous Systems", path: "/services/ai-autonomous-systems" },
         { label: "Quantum Technology", path: "/services/quantum-technology" },
         { label: "IT Infrastructure", path: "/services/it-infrastructure" },
         { label: "Micro SAAS Solutions", path: "/services/micro-saas-solutions" },
         { label: "Cybersecurity", path: "/services/cybersecurity" },
-        { label: "Industry Solutions", path: "/services/industry-solutions" },
-        { label: "Marketplace", path: "/marketplace" },
-        { label: "AI & Machine Learning", path: "/services#ai-ml" },
-        { label: "Cloud & Infrastructure", path: "/services#cloud" },
-        { label: "Blockchain Solutions", path: "/services#blockchain" },
-        { label: "IoT & Edge Computing", path: "/services#iot" },
-        { label: "IT Consulting", path: "/services#consulting" },
-        { label: "Managed Services", path: "/services#managed" }
+        { label: "Industry Solutions", path: "/services/industry-solutions" }
       ]
     },
     {

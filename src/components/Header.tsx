@@ -72,15 +72,16 @@ export function Header() {
     {
       title: 'AI & Machine Learning',
       services: [
-        { name: 'AI Business Intelligence', path: '/services#ai-bi' },
-        { name: 'AI Marketing Automation', path: '/services#ai-marketing' },
-        { name: 'AI HR & Recruitment', path: '/services#ai-hr' },
-        { name: 'AI Legal Tech', path: '/services#ai-legal' }
+        { name: 'AI Workflow Automation', path: '/services/ai-workflow-automation' },
+        { name: 'AI Customer Intelligence', path: '/services/ai-customer-intelligence' },
+        { name: 'AI Data Analytics', path: '/services/ai-data-analytics' },
+        { name: 'AI Business Intelligence', path: '/services#ai-bi' }
       ]
     },
     {
-      title: 'Cybersecurity',
+      title: 'Cybersecurity & Compliance',
       services: [
+        { name: 'AI Security & Compliance', path: '/services/ai-security-compliance' },
         { name: 'Quantum-Safe Security', path: '/services#quantum-security' },
         { name: 'Security Assessment', path: '/services#security-assessment' },
         { name: 'Compliance & Audit', path: '/services#compliance' }

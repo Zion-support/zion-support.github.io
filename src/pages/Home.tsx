@@ -14,7 +14,8 @@ import {
   CheckCircle,
   Clock,
   ChevronRight,
-  ChevronLeft
+  ChevronLeft,
+  BarChart3
 } from 'lucide-react';
 
 const Home: React.FC = () => {
@@ -61,46 +62,58 @@ const Home: React.FC = () => {
 
   const featuredServices = [
     {
-      id: "ai-powered-crm",
-      title: "AI-Powered CRM",
-      description: "Intelligent customer relationship management with predictive analytics and automated insights",
-      price: "$1,500/month",
-      features: ["Predictive Analytics", "Automated Follow-ups", "Smart Lead Scoring", "Real-time Insights"],
+      id: "ai-workflow-automation",
+      title: "AI Workflow Automation",
+      description: "Transform business processes with AI-powered workflow automation that learns and optimizes",
+      price: "$299/month",
+      features: ["Intelligent Process Mapping", "Smart Task Automation", "Predictive Analytics", "Integration Hub"],
       icon: Brain,
-      category: "AI & Machine Learning",
+      category: "AI & Automation",
       rating: 4.9,
-      reviewCount: 342,
-      path: "/services/ai-powered-crm"
+      reviewCount: 456,
+      path: "/services/ai-workflow-automation"
     },
     {
-      id: "cybersecurity-platform",
-      title: "Cybersecurity Platform",
-      description: "Comprehensive threat detection and response system with AI-powered security intelligence",
-      price: "$1,800/month",
-      features: ["Threat Detection", "Incident Response", "Compliance Monitoring", "24/7 Protection"],
+      id: "ai-customer-intelligence",
+      title: "AI Customer Intelligence",
+      description: "Understand customers like never before with AI-powered behavior prediction and insights",
+      price: "$199/month",
+      features: ["Predictive Behavior", "Real-time Sentiment", "Smart Segmentation", "Journey Mapping"],
+      icon: Users,
+      category: "AI & Analytics",
+      rating: 4.8,
+      reviewCount: 389,
+      path: "/services/ai-customer-intelligence"
+    },
+    {
+      id: "ai-security-compliance",
+      title: "AI Security & Compliance",
+      description: "Protect your business with AI-powered security and automated compliance solutions",
+      price: "$399/month",
+      features: ["Threat Detection", "Compliance Automation", "Risk Assessment", "Zero-Trust Security"],
       icon: Shield,
       category: "Cybersecurity",
-      rating: 4.8,
-      reviewCount: 189,
-      path: "/services/cybersecurity-platform"
+      rating: 4.9,
+      reviewCount: 267,
+      path: "/services/ai-security-compliance"
     },
     {
-      id: "cloud-optimization",
-      title: "Cloud Cost Optimization",
-      description: "AI-driven cloud cost management that reduces spending by 30-50% automatically",
-      price: "$350/month",
-      features: ["Cost Analysis", "Automated Optimization", "Resource Scheduling", "Budget Management"],
-      icon: Cpu,
-      category: "Cloud Computing",
-      rating: 4.7,
-      reviewCount: 234,
-      path: "/services/cloud-optimization"
+      id: "ai-data-analytics",
+      title: "AI Data Analytics",
+      description: "Transform data into actionable insights with AI-powered predictive analytics",
+      price: "$249/month",
+      features: ["Predictive Analytics", "Real-time Dashboards", "Natural Language Query", "Automated Insights"],
+      icon: BarChart3,
+      category: "Data & Analytics",
+      rating: 4.8,
+      reviewCount: 312,
+      path: "/services/ai-data-analytics"
     }
   ];
 
   const stats = [
-    { label: "AI Services", value: "25+", icon: Brain, color: "text-cyan-400" },
-    { label: "Happy Clients", value: "100+", icon: Users, color: "text-purple-400" },
+    { label: "AI Services", value: "30+", icon: Brain, color: "text-cyan-400" },
+    { label: "Happy Clients", value: "150+", icon: Users, color: "text-purple-400" },
     { label: "Uptime", value: "99.9%", icon: Shield, color: "text-green-400" },
     { label: "Support", value: "24/7", icon: Clock, color: "text-yellow-400" }
   ];
