@@ -1,11 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import { 
   ArrowRightIcon,
   PlayIcon,
   StarIcon
 } from '@heroicons/react/24/outline';
+=======
+import { motion } from "framer-motion";
+import { ArrowRight, Sparkles, Users, Zap, Shield, Globe, Cpu, Brain, Star, CheckCircle } from "lucide-react";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-59b2
 
 export function HeroSection() {
   const containerVariants = {
@@ -62,10 +67,22 @@ export function HeroSection() {
   ], []);
 >>>>>>> origin/cursor/website-audit-and-enhancement-803a
 
+  const socialProof = [
+    { text: "Trusted by 500+ companies worldwide", icon: CheckCircle },
+    { text: "98% client satisfaction rate", icon: Star },
+    { text: "24/7 expert support available", icon: Shield }
+  ];
+
   return (
+<<<<<<< HEAD
     <section className="relative py-20 md:py-32 min-h-[90vh] flex items-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-purple opacity-90" />
+=======
+    <section className="relative overflow-hidden py-20 md:py-32 min-h-[90vh] flex items-center" role="banner" aria-label="Hero Section">
+      {/* Background Layers */}
+      <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple opacity-95" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-59b2
       
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
@@ -109,6 +126,7 @@ export function HeroSection() {
           </motion.h1>
           
           {/* Subtitle */}
+<<<<<<< HEAD
           <motion.p
             variants={itemVariants}
             className="text-xl md:text-2xl lg:text-3xl text-zion-slate-light mb-10 leading-relaxed max-w-4xl mx-auto"
@@ -117,6 +135,51 @@ export function HeroSection() {
             quantum computing, and innovative technology services that drive real results.
           </motion.p>
           
+=======
+          <motion.div variants={itemVariants} className="mb-12">
+            <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
+              Discover cutting-edge AI solutions, connect with top tech talent, and access innovative micro SAAS services 
+              that transform your business operations and drive digital transformation.
+            </p>
+          </motion.div>
+
+          {/* Social Proof */}
+          <motion.div variants={itemVariants} className="mb-8">
+            <div className="flex flex-wrap justify-center gap-4 mb-6">
+              {socialProof.map((proof, index) => {
+                const IconComponent = proof.icon;
+                return (
+                  <div
+                    key={proof.text}
+                    className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-md rounded-full px-4 py-2 border border-white/10 text-zion-slate-light"
+                  >
+                    <IconComponent className="w-4 h-4 text-zion-cyan" />
+                    <span className="text-sm font-medium">{proof.text}</span>
+                  </div>
+                );
+              })}
+            </div>
+          </motion.div>
+
+          {/* Feature Pills */}
+          <motion.div variants={itemVariants} className="mb-12">
+            <div className="flex flex-wrap justify-center gap-4">
+              {features.map((feature, index) => {
+                const IconComponent = feature.icon;
+                return (
+                  <div
+                    key={feature.text}
+                    className={`inline-flex items-center gap-2 bg-gradient-to-r ${feature.color} bg-opacity-20 backdrop-blur-md rounded-full px-4 py-2 border border-white/20`}
+                  >
+                    <IconComponent className="w-4 h-4 text-white" />
+                    <span className="text-sm text-white font-medium">{feature.text}</span>
+                  </div>
+ );
+              })}
+            </div>
+          </motion.div>
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-59b2
           {/* CTA Buttons */}
           <motion.div
             variants={itemVariants}
@@ -126,12 +189,24 @@ export function HeroSection() {
               to="/services"
               className="group bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white px-10 py-5 rounded-xl font-semibold text-xl transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/30 hover:scale-105 flex items-center gap-3"
             >
+<<<<<<< HEAD
               Explore Services
               <ArrowRightIcon className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
             <Link
               to="/contact"
               className="group border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-10 py-5 rounded-xl font-semibold text-xl transition-all duration-300 hover:scale-105 flex items-center gap-3"
+=======
+              <Link to="/signup" role="button" aria-label="Get Started Today">
+                Get Started Today
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+            </Button>
+            
+            <Link 
+              to="/marketplace"
+              className="group border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark text-lg py-6 px-8 rounded-xl inline-flex items-center justify-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25 backdrop-blur-md bg-white/5"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-59b2
             >
               Get Started
               <ArrowRightIcon className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
