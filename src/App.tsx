@@ -152,6 +152,7 @@ const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const AboutPage = React.lazy(() => import('./pages/About'));
 const CareersPage = React.lazy(() => import('./pages/Careers'));
 const SitemapPage = React.lazy(() => import('./pages/Sitemap'));
@@ -225,6 +226,16 @@ const Terms = React.lazy(() => import('./pages/Terms'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 const Accessibility = React.lazy(() => import('./pages/Accessibility'));
 >>>>>>> origin/cursor/website-audit-and-enhancement-b7ac
+=======
+const About = React.lazy(() => import('./pages/About'));
+const Careers = React.lazy(() => import('./pages/Careers'));
+const Privacy = React.lazy(() => import('./pages/Privacy'));
+const Terms = React.lazy(() => import('./pages/Terms'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const GreenIT = React.lazy(() => import('./pages/GreenIT'));
+const HelpCenter = React.lazy(() => import('./pages/HelpCenter'));
+const ApiDocs = React.lazy(() => import('./pages/ApiDocs'));
+>>>>>>> origin/cursor/website-audit-and-enhancement-ab27
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -318,6 +329,7 @@ const baseRoutes = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   { path: '/about', element: <AboutPage /> },
   { path: '/careers', element: <CareersPage /> },
   { path: '/sitemap', element: <SitemapPage /> },
@@ -380,6 +392,16 @@ const baseRoutes = [
   { path: '/cookies', element: <Cookies /> },
   { path: '/accessibility', element: <Accessibility /> },
 >>>>>>> origin/cursor/website-audit-and-enhancement-b7ac
+=======
+  { path: '/about', element: <About /> },
+  { path: '/careers', element: <Careers /> },
+  { path: '/privacy', element: <Privacy /> },
+  { path: '/terms', element: <Terms /> },
+  { path: '/sitemap', element: <Sitemap /> },
+  { path: '/green-it', element: <GreenIT /> },
+  { path: '/help', element: <HelpCenter /> },
+  { path: '/api-docs', element: <ApiDocs /> },
+>>>>>>> origin/cursor/website-audit-and-enhancement-ab27
 ];
 
 const App = () => {
