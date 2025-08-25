@@ -213,12 +213,17 @@ export default function ComprehensiveServicesOverview() {
   return (
     <>
               <EnhancedSEO
-          title="Comprehensive Services Overview | Zion Tech Group"
-          description="Explore our complete portfolio of AI-powered services, IT solutions, and innovative micro SAAS platforms. From legal tech to quantum computing, discover how we can transform your business."
-          keywords="AI services, IT solutions, micro SAAS, cybersecurity, quantum computing, legal tech, fintech, healthcare AI, supply chain, energy management, comprehensive services"
-          image="/images/comprehensive-services-overview-og.jpg"
-          url="https://ziontechgroup.com/comprehensive-services-overview"
-        />
+                seoData={{
+                  title: "Comprehensive Services Overview | Zion Tech Group",
+                  description: "Explore our complete portfolio of AI-powered services, IT solutions, and innovative micro SAAS platforms. From legal tech to quantum computing, discover how we can transform your business.",
+                  keywords: ["AI services", "IT solutions", "micro SAAS", "cybersecurity", "quantum computing", "legal tech", "fintech", "healthcare AI", "supply chain", "energy management", "comprehensive services"],
+                  canonicalUrl: "https://ziontechgroup.com/comprehensive-services-overview",
+                  ogImage: "/images/comprehensive-services-overview-og.jpg",
+                  ogType: "website",
+                  twitterCard: "summary_large_image"
+                }}
+                pageType="service"
+              />
       
       <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">
         {/* Animated Background */}
