@@ -28,17 +28,17 @@ import {
   ArrowRight,
   ExternalLink
 } from 'lucide-react';
-import { comprehensiveServices } from '@/data/comprehensiveServices';
+import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
 
 export default function EnhancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const filteredServices = selectedCategory === 'all' 
-    ? comprehensiveServices 
-    : comprehensiveServices.filter(service => service.category.toLowerCase().includes(selectedCategory.toLowerCase()));
+    ? COMPREHENSIVE_SERVICES 
+    : COMPREHENSIVE_SERVICES.filter(service => service.category.toLowerCase().includes(selectedCategory.toLowerCase()));
 
   // Get unique categories
-  const categories = [...new Set(comprehensiveServices.map(service => service.category))];
+  const categories = [...new Set(COMPREHENSIVE_SERVICES.map(service => service.category))];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
@@ -110,7 +110,7 @@ export default function EnhancedServicesShowcase() {
           >
             All Services
           </Button>
-          {categories.map((category) => (
+          {categories.map((category: string) => (
             <Button
               key={category}
               variant={selectedCategory === category ? 'default' : 'outline'}
