@@ -9,6 +9,8 @@ export function Footer() {
       links: [
         { label: "AI & Autonomous Systems", path: "/services/ai-autonomous-systems" },
         { label: "AI Research Assistant", path: "/ai-autonomous-research-assistant" },
+        { label: "AI Business Intelligence", path: "/services/ai-business-intelligence" },
+        { label: "AI Marketing Automation", path: "/services/ai-marketing-automation" },
         { label: "Quantum Neural Networks", path: "/quantum-neural-network-platform" },
         { label: "Autonomous Business Platform", path: "/autonomous-business-operations-platform" },
         { label: "AI Asset Management", path: "/ai-powered-it-asset-management" },
@@ -34,10 +36,10 @@ export function Footer() {
         { label: "Manufacturing Solutions", path: "/solutions/manufacturing" },
         { label: "Retail Solutions", path: "/solutions/retail" },
         { label: "Government Solutions", path: "/solutions/government" },
-        { label: "Business Intelligence", path: "/services/business-intelligence" },
-        { label: "Marketing Automation", path: "/services/ai-marketing" },
-        { label: "HR & Recruitment", path: "/services/ai-hr" },
-        { label: "Legal Tech", path: "/services/ai-legal" }
+        { label: "Business Intelligence", path: "/services/ai-business-intelligence" },
+        { label: "Marketing Automation", path: "/services/ai-marketing-automation" },
+        { label: "HR & Recruitment", path: "/services/ai-hr-recruitment" },
+        { label: "Legal Tech", path: "/services/ai-legal-tech" }
       ]
     },
     {
