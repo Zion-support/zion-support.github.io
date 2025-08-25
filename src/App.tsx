@@ -317,84 +317,6 @@ const App: React.FC = () => {
                 {/* Enhanced Accessibility Controls */}
                 <EnhancedAccessibility position="bottom-right" />
                 
-<<<<<<< HEAD
-            {/* Collaborative Text Editor - Development Mode */}
-            {import.meta.env.DEV && (
-              <div className="fixed bottom-24 left-6 z-40 w-96">
-                <CollaborativeTextEditor
-                  roomId="dev-editor"
-                  userId="dev-user"
-                  userName="Developer"
-                  initialContent="Welcome to the collaborative text editor! Start typing to see AI suggestions and real-time collaboration features."
-                  enableAI={true}
-                  enableCollaboration={true}
-                  enableVersioning={true}
-                />
-              </div>
-            )}
-            
-            {/* AI Code Generator - Development Mode */}
-            {import.meta.env.DEV && (
-              <div className="fixed bottom-24 right-6 z-40 w-96">
-                <AICodeGenerator />
-              </div>
-            )}
-            
-            {/* Development Dashboards */}
-            {import.meta.env.DEV && (
-              <>
-                {/* Performance Dashboard */}
-                <div className="fixed top-4 left-4 z-40">
-                  <PerformanceDashboard />
-                </div>
-                
-                {/* Analytics Dashboard */}
-                <div className="fixed top-4 right-4 z-40">
-                  <AnalyticsDashboard />
-                </div>
-                
-                {/* Enterprise Dashboard */}
-                <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-40">
-                  <EnterpriseDashboard />
-                </div>
-                
-                {/* Security & Compliance Dashboard */}
-                <div className="fixed top-4 right-1/2 transform translate-x-1/2 z-40">
-                  <SecurityComplianceDashboard />
-                </div>
-                
-                {/* Machine Learning Dashboard */}
-                <div className="fixed top-4 right-4 z-40">
-                  <MachineLearningDashboard />
-                </div>
-              </>
-            )}
-            
-            {/* Enhanced Performance Monitor - Always Available */}
-            <PerformanceMonitor />
-            
-            {/* Link Health Monitor - Development Mode */}
-            {import.meta.env.DEV && (
-              <LinkHealthMonitor
-                links={[
-                  'https://ziontechgroup.com',
-                  'https://www.linkedin.com/company/ziontechgroup',
-                  'https://twitter.com/ziontechgroup',
-                  'https://github.com/ziontechgroup',
-                  'https://www.youtube.com/@ziontechgroup'
-                ]}
-                autoCheck={true}
-                checkInterval={600000} // 10 minutes
-                timeout={5000} // 5 seconds
-              />
-            )}
-          </div>
-        </Router>
-      </WhitelabelProvider>
-    </ThemeProvider>
-  </EnhancedErrorBoundary>
-);
-=======
                 {/* AI Chatbot - Always Available */}
                 <AIChatbot />
                 
@@ -449,14 +371,30 @@ const App: React.FC = () => {
                     </div>
                   </>
                 )}
+                
+                {/* Enhanced Performance Monitor - Always Available */}
+                <PerformanceMonitor />
+                
+                {/* Link Health Monitor - Development Mode */}
+                {import.meta.env.DEV && (
+                  <LinkHealthMonitor
+                    links={[
+                      'https://ziontechgroup.com',
+                      'https://www.linkedin.com/company/ziontechgroup',
+                      'https://twitter.com/ziontechgroup',
+                      'https://github.com/ziontechgroup',
+                      'https://www.youtube.com/@ziontechgroup'
+                    ]}
+                    autoCheck={true}
+                    checkInterval={600000} // 10 minutes
+                    timeout={5000} // 5 seconds
+                  />
+                )}
               </div>
-            </PerformanceOptimizer>
-          </Router>
-        </WhitelabelProvider>
-      </ThemeProvider>
-    </EnhancedErrorBoundary>
-  );
-};
->>>>>>> b0a80a7d62a0e2782286e7d0863429eb2e0add28
+            </Router>
+          </WhitelabelProvider>
+        </ThemeProvider>
+      </EnhancedErrorBoundary>
+    );
 
 export default App;
