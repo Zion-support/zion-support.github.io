@@ -16,6 +16,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 import { 
@@ -74,6 +75,9 @@ import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitte
 =======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Rocket, BookOpen, FileText, TrendingUp, ArrowRight, Cloud, Calendar } from 'lucide-react';
 >>>>>>> origin/cursor/website-audit-and-enhancement-ac08
+=======
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Network, Brain, BarChart3, Zap, Database, Command } from 'lucide-react';
+>>>>>>> origin/cursor/website-audit-and-enhancement-fc31
 import { Link, useLocation } from 'react-router-dom';
 import { useSidebar } from '../context/SidebarContext';
 
@@ -207,6 +211,7 @@ export default function Sidebar() {
       items: [
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Brain },
         { name: 'AI Autonomous Business Platform', path: '/ai-autonomous-business-platform', icon: Brain },
         { name: 'AI Autonomous Systems Platform', path: '/ai-autonomous-systems-platform', icon: Brain },
@@ -269,6 +274,22 @@ export default function Sidebar() {
         { name: 'Digital Transformation', path: '/digital-transformation', icon: Globe },
         { name: 'Emerging Technology', path: '/emerging-tech', icon: Globe }
 >>>>>>> origin/cursor/website-audit-and-enhancement-4b12
+=======
+        { name: 'AI & Machine Learning', path: '/services?category=AI%20%26%20Machine%20Learning', icon: Briefcase },
+        { name: 'AI Agent Orchestrator', path: '/ai-agent-orchestrator', icon: Network },
+        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain },
+        { name: 'AI Analytics Copilot', path: '/ai-analytics-copilot', icon: BarChart3 },
+        { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Command },
+        { name: 'Autonomous Business Operations', path: '/autonomous-business-operations-platform', icon: Zap },
+        { name: 'AI-Powered IT Asset Management', path: '/ai-powered-it-asset-management', icon: Database },
+        { name: 'Cybersecurity', path: '/services?category=Cybersecurity', icon: Shield },
+        { name: 'Micro SAAS Solutions', path: '/services?category=Micro%20SAAS%20Solutions', icon: Globe },
+        { name: 'Space Technology', path: '/services?category=Space%20Technology', icon: Globe },
+        { name: 'Healthcare AI', path: '/services?category=Healthcare%20AI', icon: Users },
+        { name: 'Manufacturing AI', path: '/services?category=Manufacturing%20AI', icon: Briefcase },
+        { name: 'Emerging Technology', path: '/services?category=Emerging%20Technology', icon: Globe },
+        { name: 'Autonomous Systems', path: '/services?category=AI%20%26%20Autonomous%20Systems', icon: Users }
+>>>>>>> origin/cursor/website-audit-and-enhancement-fc31
       ]
     },
     {
