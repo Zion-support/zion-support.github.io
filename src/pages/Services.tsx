@@ -27,12 +27,20 @@ import {
   Sparkles,
   ArrowRight,
   CheckCircle,
+<<<<<<< HEAD
   TrendingUp,
   Target,
   Award,
   Phone,
   Mail,
   MapPin
+=======
+  Clock,
+  TrendingUp,
+  FileText,
+  MessageCircle,
+  Truck
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-50ba
 } from 'lucide-react';
 
 export function Services() {
@@ -81,12 +89,61 @@ export function Services() {
           pricing: 'Starting from $199/month'
         },
         {
+<<<<<<< HEAD
           name: 'AI Manufacturing Optimization',
           path: '/comprehensive-services-showcase',
           description: 'Intelligent manufacturing process optimization',
           icon: Brain,
           features: ['Production optimization', 'Predictive maintenance', 'Quality control'],
           pricing: 'Starting from $599/month'
+=======
+          name: 'AI Marketing Automation',
+          path: '/services/ai-marketing-automation',
+          description: 'Smart marketing optimization and automation',
+          icon: Target,
+          features: ['Customer segmentation', 'Campaign optimization', 'ROI tracking'],
+          pricing: 'Starting from $2,500/month'
+        },
+        {
+          name: 'AI Legal Document Automation',
+          path: '/services/ai-legal-document-automation',
+          description: 'AI-powered legal document generation and compliance',
+          icon: FileText,
+          features: ['Smart document generation', 'Compliance monitoring', 'Legal research automation'],
+          pricing: 'Starting from $299/month'
+        },
+        {
+          name: 'AI Healthcare Analytics',
+          path: '/services/ai-healthcare-analytics',
+          description: 'AI-powered healthcare diagnostics and patient monitoring',
+          icon: Heart,
+          features: ['Predictive diagnostics', 'Real-time monitoring', 'Population health analytics'],
+          pricing: 'Starting from $799/month'
+        },
+        {
+          name: 'AI Financial Trading',
+          path: '/services/ai-financial-trading',
+          description: 'AI-powered trading algorithms and portfolio optimization',
+          icon: TrendingUp,
+          features: ['AI trading algorithms', 'Risk management', 'High-frequency trading'],
+          pricing: 'Starting from $99/month'
+        },
+        {
+          name: 'AI Supply Chain Optimization',
+          path: '/services/ai-supply-chain-optimization',
+          description: 'AI-powered supply chain management and optimization',
+          icon: Truck,
+          features: ['Demand forecasting', 'Route optimization', 'Inventory management'],
+          pricing: 'Starting from $499/month'
+        },
+        {
+          name: 'AI Customer Service Automation',
+          path: '/services/ai-customer-service-automation',
+          description: 'AI-powered customer support and service automation',
+          icon: MessageCircle,
+          features: ['AI chatbots', 'Multi-channel support', 'Smart routing'],
+          pricing: 'Starting from $199/month'
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-50ba
         }
       ]
     },

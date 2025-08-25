@@ -51,6 +51,13 @@ const AIWorkflowAutomation = lazy(() => import('./pages/services/AIWorkflowAutom
 const BlockchainEnterpriseSolutions = lazy(() => import('./pages/services/BlockchainEnterpriseSolutions'));
 const IoTDataAnalytics = lazy(() => import('./pages/services/IoTDataAnalytics'));
 
+// Additional innovative micro SAAS services
+const AILegalDocumentAutomation = lazy(() => import('./pages/services/AILegalDocumentAutomation'));
+const AIHealthcareAnalytics = lazy(() => import('./pages/services/AIHealthcareAnalytics'));
+const AIFinancialTrading = lazy(() => import('./pages/services/AIFinancialTrading'));
+const AISupplyChainOptimization = lazy(() => import('./pages/services/AISupplyChainOptimization'));
+const AICustomerServiceAutomation = lazy(() => import('./pages/services/AICustomerServiceAutomation'));
+
 // Missing pages from analysis
 const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/QuantumNeuralNetworkPlatform'));
 const AutonomousBusinessOperationsPlatform = lazy(() => import('./pages/AutonomousBusinessOperationsPlatform'));
@@ -249,6 +256,13 @@ const App: React.FC = () => {
                       <Route path="/ai-workflow-automation" element={<AIWorkflowAutomation />} />
                       <Route path="/blockchain-enterprise-solutions" element={<BlockchainEnterpriseSolutions />} />
                       <Route path="/iot-data-analytics" element={<IoTDataAnalytics />} />
+                      
+                      {/* Additional innovative micro SAAS service routes */}
+                      <Route path="/services/ai-legal-document-automation" element={<AILegalDocumentAutomation />} />
+                      <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
+                      <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
+                      <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+                      <Route path="/services/ai-customer-service-automation" element={<AICustomerServiceAutomation />} />
                       
                       {/* Additional innovative service routes */}
                       <Route path="/ai-business-intelligence" element={<AIBusinessIntelligence />} />
