@@ -158,6 +158,7 @@ const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const AboutPage = React.lazy(() => import('./pages/About'));
 const CareersPage = React.lazy(() => import('./pages/Careers'));
 const SitemapPage = React.lazy(() => import('./pages/Sitemap'));
@@ -259,6 +260,15 @@ const ExpandedServicesPage = React.lazy(() => import('./pages/ExpandedServicesPa
 const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
 const CybersecurityServicesPage = React.lazy(() => import('./pages/CybersecurityServicesPage'));
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-2e79
+=======
+const HelpCenterPage = React.lazy(() => import('./pages/HelpCenterPage'));
+const AboutPage = React.lazy(() => import('./pages/About'));
+const CareersPage = React.lazy(() => import('./pages/Careers'));
+const PrivacyPage = React.lazy(() => import('./pages/Privacy'));
+const TermsPage = React.lazy(() => import('./pages/Terms'));
+const SitemapPage = React.lazy(() => import('./pages/Sitemap'));
+const GreenITPage = React.lazy(() => import('./pages/GreenIT'));
+>>>>>>> origin/cursor/website-audit-and-enhancement-050f
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -375,6 +385,7 @@ const baseRoutes = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   { path: '/about', element: <AboutPage /> },
   { path: '/careers', element: <CareersPage /> },
   { path: '/sitemap', element: <SitemapPage /> },
@@ -447,6 +458,15 @@ const baseRoutes = [
   { path: '/help', element: <HelpCenter /> },
   { path: '/api-docs', element: <ApiDocs /> },
 >>>>>>> origin/cursor/website-audit-and-enhancement-ab27
+=======
+  { path: '/help-center', element: <HelpCenterPage /> },
+  { path: '/about', element: <AboutPage /> },
+  { path: '/careers', element: <CareersPage /> },
+  { path: '/privacy', element: <PrivacyPage /> },
+  { path: '/terms', element: <TermsPage /> },
+  { path: '/sitemap', element: <SitemapPage /> },
+  { path: '/green-it', element: <GreenITPage /> },
+>>>>>>> origin/cursor/website-audit-and-enhancement-050f
 ];
 
 const App = () => {

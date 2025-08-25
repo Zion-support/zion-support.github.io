@@ -228,6 +228,7 @@ export function Footer() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <footer className="bg-zion-blue-dark border-t border-zion-blue-light pt-12 pb-8 relative overflow-hidden">
       {/* Futuristic Background Effects */}
@@ -269,6 +270,9 @@ export function Footer() {
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-ab27
           <div>
+=======
+          <div className="lg:col-span-2">
+>>>>>>> origin/cursor/website-audit-and-enhancement-050f
             <div className="mb-4">
               <span className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">ZION</span>
 <<<<<<< HEAD
@@ -376,7 +380,7 @@ export function Footer() {
 =======
             </div>
             <p className="text-zion-slate-light mb-4 max-w-xs">
-              The world's first free marketplace dedicated to high-tech and artificial intelligence.
+              The world's first free marketplace dedicated to high-tech and artificial intelligence. Publish, connect, and thrive — all in one place.
             </p>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
             <div className="flex space-x-4">
@@ -576,6 +580,7 @@ export function Footer() {
           </div>
 
           <div>
+<<<<<<< HEAD
             <h3 className="text-white font-semibold mb-4 text-lg">Resources</h3>
             <ul className="space-y-2">
               <li><Link to="/zion-hire-ai" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Hiring</Link></li>
@@ -583,10 +588,19 @@ export function Footer() {
               <li><Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Help Center</Link></li>
               <li><Link to="/api-docs" className="text-zion-slate-light hover:text-zion-cyan transition-colors">API Docs</Link></li>
 >>>>>>> origin/cursor/website-audit-and-enhancement-ab27
+=======
+            <h3 className="text-white font-semibold mb-4 text-lg">Resources & Support</h3>
+            <ul className="space-y-2">
+              <li><Link to="/help-center" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Help Center</Link></li>
+              <li><Link to="/blog" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Blog & News</Link></li>
+              <li><Link to="/sitemap" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Sitemap</Link></li>
+              <li><Link to="/green-it" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Green IT</Link></li>
+>>>>>>> origin/cursor/website-audit-and-enhancement-050f
             </ul>
           </div>
 
           <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
             <h3 className="text-white font-semibold mb-6 text-lg">Support</h3>
             <ul className="space-y-3">
@@ -615,6 +629,8 @@ export function Footer() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-b7ac
             </ul>
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-050f
             <h3 className="text-white font-semibold mb-4 text-lg">Subscribe to our newsletter</h3>
             <p className="text-zion-slate-light mb-4">
               Stay updated with the latest news on tech, AI, and marketplace opportunities.

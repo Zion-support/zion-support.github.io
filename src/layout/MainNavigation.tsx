@@ -227,9 +227,9 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith('/marketplace')
     },
     {
-      key: 'categories',
-      href: '/categories',
-      matches: (path: string) => path.startsWith('/categories')
+      key: 'services',
+      href: '/services',
+      matches: (path: string) => path.startsWith('/services')
     },
     {
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
@@ -350,7 +350,20 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'community',
       href: '/community',
       matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
+=======
+    },
+    {
+      key: 'about',
+      href: '/about',
+      matches: (path: string) => path.startsWith('/about')
+    },
+    {
+      key: 'contact',
+      href: '/contact',
+      matches: (path: string) => path.startsWith('/contact')
+>>>>>>> origin/cursor/website-audit-and-enhancement-050f
     }
   ];
 

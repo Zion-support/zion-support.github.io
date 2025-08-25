@@ -2219,3 +2219,76 @@ src/components/CategoriesSection.tsx
 [2025-08-25 23:36:30] Processing unmerged file: src/components/CategoriesSection.tsx
 [2025-08-25 23:36:30] File exists in HEAD, keeping it
 [2025-08-25 23:36:30] Still have unmerged paths, attempting additional resolution...
+[main 83f38d8ebed] Merge PR #6577: cursor/expand-services-and-deploy-updates-2e79 (advanced conflict resolution)
+[2025-08-25 23:36:31] ✓ Advanced conflict resolution successful for PR #6577
+[2025-08-25 23:36:31] ✓ PR #6577 processed successfully
+==========================================
+
+
+==========================================
+[2025-08-25 23:36:31] Processing PR #6569 from branch: cursor/enhance-app-with-new-services-and-futuristic-design-d704
+==========================================
+[2025-08-25 23:36:31] Processing PR #6569 from branch: cursor/enhance-app-with-new-services-and-futuristic-design-d704
+[2025-08-25 23:36:32] Attempting regular merge...
+Already up to date.
+[2025-08-25 23:36:32] ✓ Successfully merged PR #6569
+[2025-08-25 23:36:32] ✓ PR #6569 processed successfully
+==========================================
+
+
+==========================================
+[2025-08-25 23:36:32] Processing PR #6567 from branch: cursor/expand-services-and-deploy-updates-9abe
+==========================================
+[2025-08-25 23:36:32] Processing PR #6567 from branch: cursor/expand-services-and-deploy-updates-9abe
+[2025-08-25 23:36:32] Attempting regular merge...
+Already up to date.
+[2025-08-25 23:36:33] ✓ Successfully merged PR #6567
+[2025-08-25 23:36:33] ✓ PR #6567 processed successfully
+==========================================
+
+
+==========================================
+[2025-08-25 23:36:33] Processing PR #6566 from branch: cursor/website-audit-and-enhancement-050f
+==========================================
+[2025-08-25 23:36:33] Processing PR #6566 from branch: cursor/website-audit-and-enhancement-050f
+[2025-08-25 23:36:33] Attempting regular merge...
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Auto-merging package-lock.json
+CONFLICT (content): Merge conflict in package-lock.json
+CONFLICT (modify/delete): pages/talent/[id].tsx deleted in origin/cursor/website-audit-and-enhancement-050f and modified in HEAD.  Version HEAD of pages/talent/[id].tsx left in tree.
+Auto-merging src/App.tsx
+CONFLICT (content): Merge conflict in src/App.tsx
+Auto-merging src/components/Footer.tsx
+CONFLICT (content): Merge conflict in src/components/Footer.tsx
+Auto-merging src/components/Sidebar.tsx
+CONFLICT (add/add): Merge conflict in src/components/Sidebar.tsx
+Auto-merging src/layout/AppHeader.tsx
+CONFLICT (content): Merge conflict in src/layout/AppHeader.tsx
+Auto-merging src/layout/MainNavigation.tsx
+CONFLICT (content): Merge conflict in src/layout/MainNavigation.tsx
+Automatic merge failed; fix conflicts and then commit the result.
+[2025-08-25 23:36:33] ✗ Merge failed for PR #6566, attempting advanced conflict resolution...
+[2025-08-25 23:36:33] Resolving complex conflicts for PR #6566 (cursor/website-audit-and-enhancement-050f)...
+[2025-08-25 23:36:34] Found unmerged files: index.html
+package-lock.json
+pages/talent/[id].tsx
+src/App.tsx
+src/components/Footer.tsx
+src/layout/AppHeader.tsx
+src/layout/MainNavigation.tsx
+[2025-08-25 23:36:34] Processing unmerged file: index.html
+[2025-08-25 23:36:34] File exists in HEAD, keeping it
+[2025-08-25 23:36:34] Processing unmerged file: package-lock.json
+[2025-08-25 23:36:34] File exists in HEAD, keeping it
+[2025-08-25 23:36:34] Processing unmerged file: pages/talent/[id].tsx
+[2025-08-25 23:36:34] File exists in HEAD, keeping it
+[2025-08-25 23:36:34] Processing unmerged file: src/App.tsx
+[2025-08-25 23:36:34] File exists in HEAD, keeping it
+[2025-08-25 23:36:34] Processing unmerged file: src/components/Footer.tsx
+[2025-08-25 23:36:34] File exists in HEAD, keeping it
+[2025-08-25 23:36:34] Processing unmerged file: src/layout/AppHeader.tsx
+[2025-08-25 23:36:34] File exists in HEAD, keeping it
+[2025-08-25 23:36:34] Processing unmerged file: src/layout/MainNavigation.tsx
+[2025-08-25 23:36:34] File exists in HEAD, keeping it
+[2025-08-25 23:36:34] Still have unmerged paths, attempting additional resolution...

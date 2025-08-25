@@ -15,12 +15,16 @@ import { useIsMobile } from '@/hooks/use-mobile';
 import { MobileBottomNav } from '@/components/header/MobileBottomNav';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { motion, AnimatePresence } from 'framer-motion';
 >>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 =======
 import { MainSidebar } from '@/components/layout/MainSidebar';
 >>>>>>> origin/cursor/website-audit-and-enhancement-ab27
+=======
+import { Sidebar } from '@/components/Sidebar';
+>>>>>>> origin/cursor/website-audit-and-enhancement-050f
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -89,7 +93,11 @@ export function AppHeader() {
           {/* Sidebar Toggle */}
           <button
             onClick={() => setSidebarOpen(!sidebarOpen)}
+<<<<<<< HEAD
             className="mr-4 p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 rounded-md transition-colors"
+=======
+            className="mr-4 p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 rounded-md lg:hidden"
+>>>>>>> origin/cursor/website-audit-and-enhancement-050f
             aria-label="Toggle sidebar"
           >
             <PanelLeft className="h-5 w-5" />
@@ -175,6 +183,9 @@ export function AppHeader() {
         </div>
       )}
 
+      {/* Sidebar */}
+      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+      
       {/* Mobile Bottom Navigation */}
 <<<<<<< HEAD
       {isMobile && <MobileBottomNav />}
