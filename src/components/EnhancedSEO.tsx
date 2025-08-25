@@ -9,6 +9,7 @@ import { useLocation } from 'react-router-dom';
 interface SEOProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   title: string;
   description: string;
 <<<<<<< HEAD
@@ -93,6 +94,12 @@ interface EnhancedSEOProps {
   description: string;
   keywords: string;
   type: 'website' | 'article' | 'product' | 'service';
+=======
+  title: string;
+  description: string;
+  keywords?: string;
+  type?: 'website' | 'article' | 'product' | 'service';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4e87
   url: string;
   image?: string;
   author?: string;
@@ -100,6 +107,7 @@ interface EnhancedSEOProps {
   modifiedTime?: string;
   section?: string;
   tags?: string[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   canonical?: string;
@@ -394,12 +402,54 @@ export const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   
   // Default structured data for Zion Tech Group
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7a35
+=======
+  canonicalUrl?: string;
+  noindex?: boolean;
+  nofollow?: boolean;
+  structuredData?: object;
+  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
+  twitterCreator?: string;
+  twitterSite?: string;
+  facebookAppId?: string;
+  additionalMeta?: Array<{ name: string; content: string }>;
+  additionalLinks?: Array<{ rel: string; href: string }>;
+}
+
+const EnhancedSEO: React.FC<SEOProps> = ({
+  title,
+  description,
+  keywords,
+  type = 'website',
+  url,
+  image,
+  author,
+  publishedTime,
+  modifiedTime,
+  section,
+  tags,
+  canonicalUrl,
+  noindex = false,
+  nofollow = false,
+  structuredData,
+  twitterCard = 'summary_large_image',
+  twitterCreator = '@ziontechgroup',
+  twitterSite = '@ziontechgroup',
+  facebookAppId,
+  additionalMeta = [],
+  additionalLinks = []
+}) => {
+  // Default image if none provided
+  const defaultImage = image || 'https://ziontechgroup.com/images/zion-tech-group-og-image.jpg';
+  
+  // Default structured data for Zion Tech Group
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4e87
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     "description": "Leading provider of AI-powered technology solutions, quantum computing, and comprehensive IT services for modern businesses.",
@@ -411,6 +461,9 @@ export const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
     "description": "Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.",
     "foundingDate": "2020",
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7a35
+=======
+    "description": "Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4e87
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "US",
@@ -427,6 +480,7 @@ export const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       "https://linkedin.com/company/ziontechgroup",
       "https://twitter.com/ziontechgroup",
 <<<<<<< HEAD
+<<<<<<< HEAD
       "https://github.com/Zion-Holdings"
     ],
 <<<<<<< HEAD
@@ -440,6 +494,13 @@ export const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       "https://youtube.com/@ziontechgroup"
     ],
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7a35
+=======
+      "https://github.com/ziontechgroup"
+    ],
+    "foundingDate": "2015",
+    "numberOfEmployees": "50-100",
+    "serviceArea": "Worldwide",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4e87
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Technology Services",
@@ -448,6 +509,7 @@ export const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
             "name": "AI Autonomous Systems",
@@ -460,6 +522,10 @@ export const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
             "name": "AI Business Intelligence",
             "description": "Transform data into actionable insights with our AI-powered analytics platform."
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7a35
+=======
+            "name": "AI Solutions",
+            "description": "Artificial intelligence and machine learning solutions"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4e87
           }
         },
         {
@@ -481,6 +547,7 @@ export const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
           "itemOffered": {
             "@type": "Service",
 <<<<<<< HEAD
+<<<<<<< HEAD
             "name": "Cybersecurity Services",
 =======
             "name": "Cybersecurity",
@@ -499,12 +566,17 @@ export const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
             "name": "Cybersecurity Solutions",
             "description": "Comprehensive security services to protect your digital assets and data."
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7a35
+=======
+            "name": "Cybersecurity",
+            "description": "Advanced security and compliance solutions"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4e87
           }
         }
       ]
     }
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   const finalStructuredData = structuredData || defaultStructuredData;
@@ -899,6 +971,36 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
     }
   }, [title, description, fullUrl]);
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7a35
+=======
+  // Merge custom structured data with default
+  const finalStructuredData = structuredData ? { ...defaultStructuredData, ...structuredData } : defaultStructuredData;
+
+  // Generate meta robots content
+  const robotsContent = [
+    noindex ? 'noindex' : 'index',
+    nofollow ? 'nofollow' : 'follow'
+  ].join(',');
+
+  // Set page title with brand
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+
+  useEffect(() => {
+    // Update document title for better accessibility
+    document.title = fullTitle;
+    
+    // Add structured data to page
+    if (finalStructuredData) {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.text = JSON.stringify(finalStructuredData);
+      document.head.appendChild(script);
+      
+      return () => {
+        document.head.removeChild(script);
+      };
+    }
+  }, [fullTitle, finalStructuredData]);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4e87
 
   return (
     <Helmet>
@@ -933,8 +1035,9 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <title>{title}</title>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7a35
       <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
-      <meta name="author" content={author} />
+      {keywords && <meta name="keywords" content={keywords} />}
+      <meta name="author" content={author || "Zion Tech Group"} />
+      <meta name="robots" content={robotsContent} />
       
       {/* Robots Meta */}
 <<<<<<< HEAD
@@ -945,6 +1048,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7a35
       
       {/* Canonical URL */}
+<<<<<<< HEAD
       <link rel="canonical" href={fullUrl} />
 =======
       <title>{seo.title}</title>
@@ -1053,11 +1157,63 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
           ))}
         </>
       )}
+=======
+      <link rel="canonical" href={canonicalUrl || url} />
+      
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content={type} />
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:url" content={url} />
+      <meta property="og:image" content={defaultImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={title} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
+      {author && <meta property="og:author" content={author} />}
+      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+      {section && <meta property="article:section" content={section} />}
+      {tags && tags.map((tag, index) => (
+        <meta key={index} property="article:tag" content={tag} />
+      ))}
+      {facebookAppId && <meta property="fb:app_id" content={facebookAppId} />}
+      
+      {/* Twitter Card */}
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:site" content={twitterSite} />
+      <meta name="twitter:creator" content={twitterCreator} />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={defaultImage} />
+      <meta name="twitter:image:alt" content={title} />
+      
+      {/* Additional Meta Tags */}
+      {additionalMeta.map((meta, index) => (
+        <meta key={index} name={meta.name} content={meta.content} />
+      ))}
+      
+      {/* Additional Links */}
+      {additionalLinks.map((link, index) => (
+        <link key={index} rel={link.rel} href={link.href} />
+      ))}
+      
+      {/* Performance and Security Meta Tags */}
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+      <meta name="theme-color" content="#0ea5e9" />
+      <meta name="msapplication-TileColor" content="#0ea5e9" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4e87
       
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7a35
       {/* Preconnect to external domains for performance */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+<<<<<<< HEAD
       <link rel="preconnect" href="https://www.google-analytics.com" />
 <<<<<<< HEAD
       <link rel="preconnect" href="https://www.googletagmanager.com" />
@@ -1121,20 +1277,35 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+=======
+      <link rel="preconnect" href="https://api.ziontechgroup.com" />
+      
+      {/* DNS prefetch for performance */}
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+      
+      {/* Manifest for PWA */}
+      <link rel="manifest" href="/manifest.json" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4e87
       
       {/* Favicon and App Icons */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<<<<<<< HEAD
       <link rel="manifest" href="/site.webmanifest" />
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7a35
+=======
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0ea5e9" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4e87
       
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
       </script>
       
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Additional Performance Optimizations */}
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -1306,6 +1477,9 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       
       {/* Breadcrumb structured data */}
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7a35
+=======
+      {/* Additional Structured Data for Breadcrumbs */}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4e87
       <script type="application/ld+json">
         {JSON.stringify({
           '@context': 'https://schema.org',
@@ -1332,13 +1506,19 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
 =======
               "@type": "ListItem",
               "position": 2,
+<<<<<<< HEAD
               "name": type === 'service' ? 'Services' : type === 'article' ? 'Blog' : 'Page',
               "item": fullUrl
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7a35
+=======
+              "name": title,
+              "item": url
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4e87
             }
           ]
         })}
       </script>
+<<<<<<< HEAD
 
       {/* Structured Data for Local Business */}
       <script type="application/ld+json">
@@ -1613,6 +1793,8 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
         })}
       </script>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7a35
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4e87
     </Helmet>
   );
 };
