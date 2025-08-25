@@ -213,6 +213,8 @@
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --browser chrome",
     "test:accessibility": "vitest run tests/Accessibility.test.tsx",
+    "performance:analyze": "node scripts/performance-optimizer.js",
+    "performance:optimize": "npm run build && npm run performance:analyze",
     "pm2:setup": "pm2 install pm2-logrotate && pm2 set pm2-logrotate:max_size 10M && pm2 set pm2-logrotate:retain 30 && pm2 set pm2-logrotate:compress true && pm2 save",
     "pm2:startup": "pm2 startup && pm2 save",
     "pm2:start": "pm2 start ecosystem.config.cjs --env production && pm2 save",
