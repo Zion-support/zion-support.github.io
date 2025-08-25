@@ -33,9 +33,10 @@ const CloudDevOps = lazy(() => import('./pages/CloudDevOps'));
 const EnterpriseSolutionsPage = lazy(() => import('./pages/EnterpriseSolutions'));
 const DigitalTransformation = lazy(() => import('./pages/DigitalTransformation'));
 
-// New innovative service pages
-const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
-const QuantumCybersecurity = lazy(() => import('./pages/services/QuantumCybersecurity'));
+// Enhanced AI and IT Services
+const AIWorkflowAutomation = lazy(() => import('./pages/services/AIWorkflowAutomation'));
+const AICustomerExperience = lazy(() => import('./pages/services/AICustomerExperience'));
+const ITInfrastructureAsService = lazy(() => import('./pages/services/ITInfrastructureAsService'));
 
 // Our enhanced service pages
 const About = lazy(() => import('./pages/About'));
@@ -56,18 +57,10 @@ const MicroSAASSolutions = lazy(() => import('./pages/services/MicroSAASSolution
 const IndustrySolutions = lazy(() => import('./pages/services/IndustrySolutions'));
 const InnovativeNewServices = lazy(() => import('./pages/services/InnovativeNewServices'));
 const SpecializedITInfrastructure = lazy(() => import('./pages/services/SpecializedITInfrastructure'));
-const InnovativeServicesShowcase = lazy(() => import('./pages/services/InnovativeServicesShowcase'));
 
 // Solutions pages
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
 const HealthcareSolutions = lazy(() => import('./pages/solutions/Healthcare'));
-
-// Support and documentation pages
-const HelpCenter = lazy(() => import('./pages/HelpCenter'));
-const Documentation = lazy(() => import('./pages/Documentation'));
-const Support = lazy(() => import('./pages/Support'));
-const Status = lazy(() => import('./pages/Status'));
-const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 
 // Loading Component
 const LoadingSpinner = () => (
@@ -116,9 +109,10 @@ const App = () => {
                     <Route path="/enterprise-solutions" element={<EnterpriseSolutionsPage />} />
                     <Route path="/digital-transformation" element={<DigitalTransformation />} />
                     
-                    {/* New innovative service routes */}
-                    <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-                    <Route path="/services/quantum-cybersecurity" element={<QuantumCybersecurity />} />
+                    {/* Enhanced AI and IT Service Routes */}
+                    <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
+                    <Route path="/services/ai-customer-experience" element={<AICustomerExperience />} />
+                    <Route path="/services/it-infrastructure-as-service" element={<ITInfrastructureAsService />} />
                     
                     {/* Our enhanced service routes */}
                     <Route path="/about" element={<About />} />
@@ -139,18 +133,10 @@ const App = () => {
                     <Route path="/services/industry-solutions" element={<IndustrySolutions />} />
                     <Route path="/services/innovative-new-services" element={<InnovativeNewServices />} />
                     <Route path="/services/specialized-it-infrastructure" element={<SpecializedITInfrastructure />} />
-                    <Route path="/services/innovative-services-showcase" element={<InnovativeServicesShowcase />} />
                     
                     {/* Solutions Routes */}
                     <Route path="/services/enterprise" element={<EnterpriseSolutions />} />
                     <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
-                    
-                    {/* Support and Documentation Routes */}
-                    <Route path="/help" element={<HelpCenter />} />
-                    <Route path="/docs" element={<Documentation />} />
-                    <Route path="/support" element={<Support />} />
-                    <Route path="/status" element={<Status />} />
-                    <Route path="/case-studies" element={<CaseStudies />} />
                   </Routes>
                 </Suspense>
               </main>

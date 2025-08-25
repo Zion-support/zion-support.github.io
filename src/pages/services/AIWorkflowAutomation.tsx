@@ -1,6 +1,7 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { 
   CogIcon,
@@ -69,11 +70,37 @@ import {
   CheckCircle,
   ArrowRight
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a346
+=======
+import { SEO } from '../../components/SEO';
+import { 
+  Brain, 
+  Zap, 
+  Workflow, 
+  BarChart3, 
+  Users, 
+  Shield, 
+  Globe, 
+  TrendingUp, 
+  Cpu, 
+  Target,
+  Clock,
+  DollarSign,
+  CheckCircle,
+  ArrowRight,
+  Play,
+  Pause,
+  Settings,
+  Monitor,
+  AlertTriangle,
+  FileText,
+  Building
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
 } from 'lucide-react';
 
 export default function AIWorkflowAutomation() {
   const features = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       title: "Intelligent Process Discovery",
       description: "AI automatically identifies and maps your existing business processes",
@@ -191,11 +218,64 @@ export default function AIWorkflowAutomation() {
         "Email support",
         "Standard integrations",
         "5 team members"
+=======
+      title: "Intelligent Process Discovery",
+      description: "AI automatically identifies and maps your existing workflows for optimization",
+      icon: Brain,
+      benefits: ["Process visibility", "Bottleneck identification", "Automation opportunities"]
+    },
+    {
+      title: "Smart Workflow Design",
+      description: "AI-powered workflow builder with drag-and-drop interface and intelligent suggestions",
+      icon: Workflow,
+      benefits: ["Visual workflow builder", "AI suggestions", "Best practice templates"]
+    },
+    {
+      title: "Predictive Analytics",
+      description: "Machine learning algorithms predict workflow performance and suggest improvements",
+      icon: BarChart3,
+      benefits: ["Performance forecasting", "Optimization insights", "Risk prediction"]
+    },
+    {
+      title: "Automated Decision Making",
+      description: "AI makes intelligent decisions based on business rules and historical data",
+      icon: Cpu,
+      benefits: ["Rule-based automation", "Data-driven decisions", "Consistent outcomes"]
+    },
+    {
+      title: "Real-time Monitoring",
+      description: "Live dashboard with real-time workflow status and performance metrics",
+      icon: Monitor,
+      benefits: ["Live status updates", "Performance tracking", "Instant alerts"]
+    },
+    {
+      title: "Integration Hub",
+      description: "Seamlessly connect with 500+ business applications and systems",
+      icon: Globe,
+      benefits: ["Wide compatibility", "Easy setup", "Unified workflow"]
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: 299,
+      period: "month",
+      description: "Perfect for small teams getting started with workflow automation",
+      features: [
+        "Up to 10 workflows",
+        "Basic AI suggestions",
+        "5 integrations",
+        "Email support",
+        "Standard templates",
+        "Basic analytics"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
       ],
       cta: "Start Free Trial",
       popular: false
     },
     {
+<<<<<<< HEAD
       plan: "Professional",
       price: "$799/month",
       description: "Ideal for growing businesses with complex workflow needs",
@@ -206,17 +286,39 @@ export default function AIWorkflowAutomation() {
         "Custom integrations",
         "Unlimited team members",
         "Advanced reporting"
+=======
+      name: "Professional",
+      price: 799,
+      period: "month",
+      description: "Ideal for growing businesses with complex workflow needs",
+      features: [
+        "Up to 50 workflows",
+        "Advanced AI insights",
+        "25 integrations",
+        "Priority support",
+        "Custom templates",
+        "Advanced analytics",
+        "Team collaboration",
+        "API access"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
+<<<<<<< HEAD
       plan: "Enterprise",
       price: "$1,999/month",
+=======
+      name: "Enterprise",
+      price: 1999,
+      period: "month",
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
       description: "For large organizations requiring enterprise-grade automation",
       features: [
         "Unlimited workflows",
         "Custom AI models",
+<<<<<<< HEAD
         "24/7 dedicated support",
         "White-label options",
         "Advanced security",
@@ -225,6 +327,17 @@ export default function AIWorkflowAutomation() {
       cta: "Contact Sales",
       popular: false
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a346
+=======
+        "Unlimited integrations",
+        "24/7 dedicated support",
+        "Custom development",
+        "Advanced security",
+        "Multi-tenant support",
+        "SLA guarantees"
+      ],
+      cta: "Contact Sales",
+      popular: false
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
     }
   ];
 
@@ -232,30 +345,58 @@ export default function AIWorkflowAutomation() {
     {
       industry: "Healthcare",
 <<<<<<< HEAD
+<<<<<<< HEAD
       examples: [
         "Patient appointment scheduling",
         "Medical record processing",
         "Insurance claim workflows",
         "Pharmacy order management"
       ]
+=======
+      examples: [
+        "Patient appointment scheduling",
+        "Medical record processing",
+        "Insurance claim automation",
+        "Prescription management"
+      ],
+      roi: "40-60% efficiency improvement"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
     },
     {
       industry: "Finance",
       examples: [
+<<<<<<< HEAD
         "Loan approval processes",
         "KYC verification workflows",
         "Fraud detection automation",
         "Compliance reporting"
       ]
+=======
+        "Loan application processing",
+        "KYC verification workflows",
+        "Fraud detection automation",
+        "Compliance reporting"
+      ],
+      roi: "50-70% cost reduction"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
     },
     {
       industry: "Manufacturing",
       examples: [
+<<<<<<< HEAD
         "Quality control workflows",
         "Supply chain management",
         "Maintenance scheduling",
         "Inventory optimization"
       ]
+=======
+        "Quality control processes",
+        "Supply chain management",
+        "Maintenance scheduling",
+        "Inventory optimization"
+      ],
+      roi: "30-50% productivity increase"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
     },
     {
       industry: "Retail",
@@ -263,15 +404,22 @@ export default function AIWorkflowAutomation() {
         "Order fulfillment",
         "Customer service routing",
         "Inventory management",
+<<<<<<< HEAD
         "Returns processing"
       ]
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fbd9
+=======
+        "Marketing campaign automation"
+      ],
+      roi: "35-55% operational efficiency"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
     }
   ];
 
   const benefits = [
     {
       metric: "80%",
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: "Reduction in process time",
       icon: BoltIcon
@@ -348,10 +496,20 @@ export default function AIWorkflowAutomation() {
       metric: "60%",
       description: "Faster process completion",
       icon: Clock
+=======
+      description: "Faster process completion",
+      icon: Zap
+    },
+    {
+      metric: "65%",
+      description: "Reduced manual errors",
+      icon: CheckCircle
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
     },
     {
       metric: "45%",
       description: "Cost savings",
+<<<<<<< HEAD
       icon: TrendingUp
     },
     {
@@ -382,10 +540,19 @@ export default function AIWorkflowAutomation() {
       icon: Building,
       benefits: ["Better inventory control", "Improved customer service", "Faster order fulfillment", "Cost optimization"]
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a346
+=======
+      icon: DollarSign
+    },
+    {
+      metric: "90%",
+      description: "Improved accuracy",
+      icon: Target
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
     }
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
@@ -662,10 +829,18 @@ export default AIWorkflowAutomation;
         description="Transform your business processes with AI-powered workflow automation. Reduce manual work, increase efficiency, and drive growth."
         keywords="AI workflow automation, business process automation, intelligent automation, workflow optimization, AI business solutions"
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a346
+=======
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
+      <SEO 
+        title="AI Workflow Automation - Zion Tech Group" 
+        description="Transform your business processes with AI-powered workflow automation. Reduce costs, improve efficiency, and eliminate manual errors with intelligent process management."
+        keywords="AI workflow automation, business process automation, workflow optimization, intelligent automation, process management"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
         canonical="https://ziontechgroup.com/services/ai-workflow-automation"
       />
 
       {/* Hero Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/80 to-zion-purple/80"></div>
@@ -693,6 +868,37 @@ export default AIWorkflowAutomation;
             >
               Call +1 302 464 0950
             </a>
+=======
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/80 to-zion-purple/80"></div>
+        <div className="relative z-10 container mx-auto px-4 py-24 text-center">
+          <div className="flex items-center justify-center mb-6">
+            <div className="bg-zion-cyan/20 backdrop-blur-sm rounded-full px-6 py-3 border border-zion-cyan mr-4">
+              <span className="text-zion-cyan font-semibold">AI-Powered</span>
+            </div>
+            <div className="bg-zion-purple/20 backdrop-blur-sm rounded-full px-6 py-3 border border-zion-purple">
+              <span className="text-zion-purple font-semibold">Workflow Automation</span>
+            </div>
+          </div>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            AI Workflow Automation
+            <span className="block text-3xl md:text-4xl text-zion-cyan mt-2">
+              Transform Your Business Processes
+            </span>
+          </h1>
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
+            Leverage artificial intelligence to automate complex workflows, eliminate manual processes, 
+            and achieve unprecedented efficiency gains across your organization.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <button className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center">
+              <Play className="w-5 h-5 mr-2" />
+              Start Free Trial
+            </button>
+            <button className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+              Schedule Demo
+            </button>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
           </div>
         </div>
       </section>
@@ -705,7 +911,12 @@ export default AIWorkflowAutomation;
               Transform Your Business with AI Automation
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
+<<<<<<< HEAD
               Our AI-powered workflow automation platform delivers measurable results that impact your bottom line
+=======
+              Experience dramatic improvements in efficiency, accuracy, and cost savings with our 
+              AI-powered workflow automation platform.
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
             </p>
           </div>
           
@@ -723,6 +934,7 @@ export default AIWorkflowAutomation;
                 </p>
               </div>
             ))}
+<<<<<<< HEAD
 =======
       <section className="relative overflow-hidden pt-20 pb-16">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-blue-600/20 to-purple-600/20"></div>
@@ -749,12 +961,17 @@ export default AIWorkflowAutomation;
               </button>
             </div>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a346
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
           </div>
         </div>
       </section>
 
       {/* Features Grid */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
       <section className="py-20 bg-zion-blue-light">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -762,7 +979,12 @@ export default AIWorkflowAutomation;
               Powerful AI-Powered Features
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
+<<<<<<< HEAD
               Everything you need to automate and optimize your business workflows
+=======
+              Our platform combines cutting-edge AI technology with intuitive design to deliver 
+              the most advanced workflow automation solution available.
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
             </p>
           </div>
           
@@ -776,6 +998,7 @@ export default AIWorkflowAutomation;
                   {feature.title}
                 </h3>
                 <p className="text-zion-slate mb-4">
+<<<<<<< HEAD
 =======
       <section className="py-20 bg-gray-900/50">
         <div className="container mx-auto px-4">
@@ -800,10 +1023,13 @@ export default AIWorkflowAutomation;
                 </h3>
                 <p className="text-gray-300 mb-4">
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a346
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
                   {feature.description}
                 </p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
                     <li key={idx} className="flex items-center text-sm text-zion-slate">
                       <div className="w-2 h-2 bg-zion-cyan rounded-full mr-3"></div>
@@ -811,6 +1037,10 @@ export default AIWorkflowAutomation;
                     <li key={idx} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a346
+=======
+                    <li key={idx} className="flex items-center text-sm text-zion-slate">
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
                       {benefit}
                     </li>
                   ))}
@@ -821,8 +1051,12 @@ export default AIWorkflowAutomation;
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Pricing Section */}
 <<<<<<< HEAD
+=======
+      {/* Pricing Plans */}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -830,6 +1064,7 @@ export default AIWorkflowAutomation;
               Flexible Pricing Plans
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
+<<<<<<< HEAD
               Choose the plan that fits your business needs and scale as you grow
 =======
       <section className="py-20 bg-gray-800/30">
@@ -841,10 +1076,14 @@ export default AIWorkflowAutomation;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the plan that best fits your business needs. All plans include a 14-day free trial.
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a346
+=======
+              Choose the plan that best fits your business needs. All plans include a 14-day free trial.
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+<<<<<<< HEAD
 <<<<<<< HEAD
             {pricingTiers.map((tier, index) => (
               <div key={index} className={`bg-white rounded-xl shadow-lg p-8 border-2 ${
@@ -888,17 +1127,50 @@ export default AIWorkflowAutomation;
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
                   <div className="text-4xl font-bold text-cyan-400 mb-2">{plan.price}</div>
                   <p className="text-gray-400">{plan.description}</p>
+=======
+            {pricingPlans.map((plan, index) => (
+              <div key={index} className={`relative bg-white rounded-2xl shadow-lg p-8 border-2 ${
+                plan.popular 
+                  ? 'border-zion-cyan scale-105' 
+                  : 'border-zion-blue-light'
+              }`}>
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-zion-cyan text-white px-6 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </div>
+                  </div>
+                )}
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-zion-blue-dark mb-2">
+                    {plan.name}
+                  </h3>
+                  <p className="text-zion-slate mb-4">
+                    {plan.description}
+                  </p>
+                  <div className="text-4xl font-bold text-zion-cyan">
+                    ${plan.price}
+                    <span className="text-lg text-zion-slate font-normal">/{plan.period}</span>
+                  </div>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
                 </div>
                 
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
+<<<<<<< HEAD
                     <li key={idx} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a346
+=======
+                    <li key={idx} className="flex items-center text-zion-slate">
+                      <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
                       {feature}
                     </li>
                   ))}
                 </ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 <a
                   href={`mailto:kleber@ziontechgroup.com?subject=AI Workflow Automation - ${tier.name} Plan Inquiry`}
@@ -920,6 +1192,16 @@ export default AIWorkflowAutomation;
                   {plan.cta}
                 </button>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a346
+=======
+                
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
+                  plan.popular
+                    ? 'bg-zion-cyan hover:bg-zion-cyan-light text-white'
+                    : 'bg-zion-blue-light hover:bg-zion-blue text-white'
+                }`}>
+                  {plan.cta}
+                </button>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
               </div>
             ))}
           </div>
@@ -927,11 +1209,16 @@ export default AIWorkflowAutomation;
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Use Cases */}
+=======
+      {/* Industry Use Cases */}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
       <section className="py-20 bg-zion-blue-light">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
+<<<<<<< HEAD
               Industry-Specific Use Cases
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
@@ -947,11 +1234,19 @@ export default AIWorkflowAutomation;
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI workflow automation adapts to your industry's unique requirements and compliance needs.
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a346
+=======
+              Industry-Specific Solutions
+            </h2>
+            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
+              Our AI workflow automation platform is designed to meet the unique needs of various industries, 
+              delivering measurable ROI and operational improvements.
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
+<<<<<<< HEAD
 <<<<<<< HEAD
               <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
                 <h3 className="text-xl font-semibold text-zion-blue-dark mb-4 text-center">
@@ -982,6 +1277,28 @@ export default AIWorkflowAutomation;
                     </li>
                   ))}
                 </ul>
+=======
+              <div key={index} className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Building className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-zion-blue-dark mb-3 text-center">
+                  {useCase.industry}
+                </h3>
+                <ul className="space-y-2 mb-4">
+                  {useCase.examples.map((example, idx) => (
+                    <li key={idx} className="text-sm text-zion-slate flex items-start">
+                      <ArrowRight className="w-3 h-3 text-zion-cyan mr-2 mt-1 flex-shrink-0" />
+                      {example}
+                    </li>
+                  ))}
+                </ul>
+                <div className="text-center">
+                  <div className="text-sm font-semibold text-zion-cyan">
+                    {useCase.roi}
+                  </div>
+                </div>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
               </div>
             ))}
           </div>
@@ -989,11 +1306,16 @@ export default AIWorkflowAutomation;
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Market Information */}
+=======
+      {/* Market Comparison */}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
+<<<<<<< HEAD
               Market Analysis & ROI
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
@@ -1052,6 +1374,53 @@ export default AIWorkflowAutomation;
                     <h4 className="text-lg font-semibold text-zion-blue-dark">Rapid Implementation</h4>
                     <p className="text-zion-slate">Deploy workflows in days, not months</p>
                   </div>
+=======
+              Why Choose Zion Tech Group?
+            </h2>
+            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
+              Our AI workflow automation platform stands out from the competition with advanced features, 
+              superior performance, and exceptional support.
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-zion-blue-light rounded-xl p-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Brain className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-zion-blue-dark mb-2">
+                    Advanced AI Technology
+                  </h3>
+                  <p className="text-zion-slate text-sm">
+                    State-of-the-art machine learning algorithms that continuously improve and adapt to your business needs.
+                  </p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Shield className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-zion-blue-dark mb-2">
+                    Enterprise Security
+                  </h3>
+                  <p className="text-zion-slate text-sm">
+                    Bank-level security with SOC 2 compliance, encryption, and advanced access controls.
+                  </p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-zion-blue-dark mb-2">
+                    24/7 Expert Support
+                  </h3>
+                  <p className="text-zion-slate text-sm">
+                    Dedicated support team with deep expertise in workflow automation and AI technology.
+                  </p>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
                 </div>
               </div>
             </div>
@@ -1061,14 +1430,18 @@ export default AIWorkflowAutomation;
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
+<<<<<<< HEAD
 =======
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-900/50 to-blue-900/50">
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a346
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Automate Your Workflows?
           </h2>
+<<<<<<< HEAD
 <<<<<<< HEAD
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
             Join thousands of businesses that have transformed their operations with AI-powered workflow automation
@@ -1086,6 +1459,20 @@ export default AIWorkflowAutomation;
             >
               Call +1 302 464 0950
             </a>
+=======
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
+            Join thousands of businesses that have transformed their operations with AI-powered workflow automation. 
+            Start your free trial today and see the difference.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <button className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center">
+              <Play className="w-5 h-5 mr-2" />
+              Start Free Trial
+            </button>
+            <button className="border-2 border-white text-white hover:bg-white hover:text-zion-blue-dark px-8 py-3 rounded-lg font-semibold transition-colors">
+              Schedule Demo
+            </button>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
           </div>
           
           <div className="mt-12 bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-2xl mx-auto">
@@ -1108,6 +1495,7 @@ export default AIWorkflowAutomation;
                 <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
             </div>
+<<<<<<< HEAD
 =======
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Join thousands of businesses that have already transformed their operations with AI-powered workflow automation.
@@ -1120,14 +1508,20 @@ export default AIWorkflowAutomation;
               Schedule Consultation
             </button>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a346
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
           </div>
         </div>
       </section>
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fbd9
 =======
 }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a346
+=======
+}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0

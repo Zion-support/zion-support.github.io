@@ -45,6 +45,7 @@ export default function MicroSAASSolutions() {
   const services = [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       title: "AI-Powered CRM Platform",
       description: "Intelligent customer relationship management with predictive analytics, automated follow-ups, and smart lead scoring.",
       icon: Brain,
@@ -55,6 +56,14 @@ export default function MicroSAASSolutions() {
       category: "Customer Management",
       rating: 4.9,
       reviewCount: 342
+=======
+      title: "Custom SAAS Development",
+      description: "Tailored software-as-a-service solutions designed specifically for your business needs and industry requirements.",
+      icon: Code,
+      features: ["Custom workflows", "API integration", "User management", "Scalable architecture"],
+      price: "From $15,000",
+      delivery: "6-12 weeks"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
     },
     {
       title: "Cybersecurity Threat Detection",
@@ -84,6 +93,7 @@ export default function MicroSAASSolutions() {
       title: "HR & Recruitment AI",
       description: "Intelligent talent management platform with AI-powered candidate screening, automated interviews, and performance analytics.",
       icon: Users,
+<<<<<<< HEAD
       features: ["AI Screening", "Automated Interviews", "Performance Analytics", "Skill Assessment", "Talent Pipeline"],
       price: "$399/month",
       marketPrice: "$800/month",
@@ -91,11 +101,17 @@ export default function MicroSAASSolutions() {
       category: "Human Resources",
       rating: 4.6,
       reviewCount: 156
+=======
+      features: ["Data isolation", "Resource sharing", "Customization options", "Performance optimization"],
+      price: "From $25,000",
+      delivery: "8-16 weeks"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
     },
     {
       title: "Financial Analytics Dashboard",
       description: "Real-time financial insights with AI-powered forecasting, expense tracking, and automated reporting for better decision making.",
       icon: BarChart3,
+<<<<<<< HEAD
       features: ["Real-time Analytics", "AI Forecasting", "Expense Tracking", "Automated Reports", "KPI Monitoring"],
       price: "$249/month",
       marketPrice: "$600/month",
@@ -103,6 +119,11 @@ export default function MicroSAASSolutions() {
       category: "Finance",
       rating: 4.8,
       reviewCount: 203
+=======
+      features: ["Flexible pricing", "Automated billing", "Usage tracking", "Payment processing"],
+      price: "From $8,000",
+      delivery: "4-8 weeks"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
     },
     {
       title: "Inventory Management System",
@@ -209,6 +230,7 @@ export default function MicroSAASSolutions() {
       title: "Predictive Maintenance System",
       description: "IoT-enabled predictive maintenance platform that prevents equipment failures and optimizes maintenance schedules.",
       icon: Cpu,
+<<<<<<< HEAD
       features: ["IoT Integration", "Failure Prediction", "Maintenance Optimization", "Cost Analytics"],
       price: "$2,200/month",
       category: "IoT & Maintenance",
@@ -249,6 +271,19 @@ export default function MicroSAASSolutions() {
       reviewCount: 78,
       path: "/services/energy-management"
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-bfbe
+=======
+      features: ["RESTful APIs", "GraphQL support", "Webhook integration", "API documentation"],
+      price: "From $12,000",
+      delivery: "6-10 weeks"
+    },
+    {
+      title: "Analytics & Reporting",
+      description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",
+      icon: TrendingUp,
+      features: ["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"],
+      price: "From $10,000",
+      delivery: "5-8 weeks"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
     }
   ];
 
@@ -590,6 +625,7 @@ export default function MicroSAASSolutions() {
                   {service.description}
                 </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <div className="mb-4">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-2xl font-bold text-zion-cyan">{service.price}</span>
@@ -598,6 +634,9 @@ export default function MicroSAASSolutions() {
                   <span className="text-sm text-green-600 font-medium">{service.savings}</span>
                 </div>
                 <ul className="space-y-2 mb-6">
+=======
+                <ul className="space-y-2 mb-4">
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-sm text-zion-slate">
                       <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
@@ -605,6 +644,7 @@ export default function MicroSAASSolutions() {
                     </li>
                   ))}
                 </ul>
+<<<<<<< HEAD
                 <button className="w-full bg-zion-cyan hover:bg-zion-cyan-light text-white py-3 rounded-lg font-semibold transition-colors flex items-center justify-center">
                   Get Started
                   <ArrowRight className="w-4 h-4 ml-2" />
@@ -636,6 +676,12 @@ export default function MicroSAASSolutions() {
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                 </a>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-bfbe
+=======
+                <div className="flex justify-between items-center pt-4 border-t border-zion-blue-light">
+                  <div className="text-zion-cyan font-semibold">{service.price}</div>
+                  <div className="text-sm text-zion-slate">Delivery: {service.delivery}</div>
+                </div>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7aa0
               </div>
             ))}
           </div>
