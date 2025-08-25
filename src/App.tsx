@@ -50,6 +50,35 @@ const AIWorkflowAutomation = lazy(() => import('./pages/services/AIWorkflowAutom
 const BlockchainEnterpriseSolutions = lazy(() => import('./pages/services/BlockchainEnterpriseSolutions'));
 const IoTDataAnalytics = lazy(() => import('./pages/services/IoTDataAnalytics'));
 
+// New Advanced Innovative Services 2025
+const AIPoweredBusinessIntelligenceSuite = lazy(() => import('./pages/services/AIPoweredBusinessIntelligenceSuite'));
+const QuantumSecureCloudInfrastructure = lazy(() => import('./pages/services/QuantumSecureCloudInfrastructure'));
+const AutonomousDevOpsPlatform = lazy(() => import('./pages/services/AutonomousDevOpsPlatform'));
+const BlockchainSupplyChainPlatform = lazy(() => import('./pages/services/BlockchainSupplyChainPlatform'));
+const AIPoweredMarketingAutomationSuite = lazy(() => import('./pages/services/AIPoweredMarketingAutomationSuite'));
+const IoTDataAnalyticsPlatform = lazy(() => import('./pages/services/IoTDataAnalyticsPlatform'));
+const AutonomousCustomerServicePlatform = lazy(() => import('./pages/services/AutonomousCustomerServicePlatform'));
+const QuantumFinancialTradingPlatform = lazy(() => import('./pages/services/QuantumFinancialTradingPlatform'));
+const AIPoweredHealthcareAnalyticsPlatform = lazy(() => import('./pages/services/AIPoweredHealthcareAnalyticsPlatform'));
+
+// New Specialized Industry Solutions
+const AutonomousAgriculturePlatform = lazy(() => import('./pages/services/AutonomousAgriculturePlatform'));
+const SmartCityInfrastructurePlatform = lazy(() => import('./pages/services/SmartCityInfrastructurePlatform'));
+const AutonomousManufacturingPlatform = lazy(() => import('./pages/services/AutonomousManufacturingPlatform'));
+const AutonomousLogisticsPlatform = lazy(() => import('./pages/services/AutonomousLogisticsPlatform'));
+const AutonomousEnergyManagementPlatform = lazy(() => import('./pages/services/AutonomousEnergyManagementPlatform'));
+const AutonomousEducationPlatform = lazy(() => import('./pages/services/AutonomousEducationPlatform'));
+const AutonomousLegalPlatform = lazy(() => import('./pages/services/AutonomousLegalPlatform'));
+
+// New Cutting-Edge AI Services
+const AIPoweredContentCreationStudio = lazy(() => import('./pages/services/AIPoweredContentCreationStudio'));
+const AIPoweredVideoProductionPlatform = lazy(() => import('./pages/services/AIPoweredVideoProductionPlatform'));
+const AIPoweredVoiceAssistantPlatform = lazy(() => import('./pages/services/AIPoweredVoiceAssistantPlatform'));
+const AIPoweredDataAnalyticsPlatform = lazy(() => import('./pages/services/AIPoweredDataAnalyticsPlatform'));
+const AIPoweredCybersecurityPlatform = lazy(() => import('./pages/services/AIPoweredCybersecurityPlatform'));
+const AIPoweredFinancialAnalysisPlatform = lazy(() => import('./pages/services/AIPoweredFinancialAnalysisPlatform'));
+const AIPoweredResearchAssistantPlatform = lazy(() => import('./pages/services/AIPoweredResearchAssistantPlatform'));
+
 // Missing pages from analysis
 const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/QuantumNeuralNetworkPlatform'));
 const AutonomousBusinessOperationsPlatform = lazy(() => import('./pages/AutonomousBusinessOperationsPlatform'));
@@ -202,6 +231,35 @@ const App: React.FC = () => {
                       <Route path="/cloud-devops" element={<CloudDevOps />} />
                       <Route path="/enterprise-solutions" element={<EnterpriseSolutionsPage />} />
                       <Route path="/digital-transformation" element={<DigitalTransformation />} />
+                      
+                      {/* New Advanced Innovative Services 2025 */}
+                      <Route path="/ai-powered-business-intelligence-suite" element={<AIPoweredBusinessIntelligenceSuite />} />
+                      <Route path="/quantum-secure-cloud-infrastructure" element={<QuantumSecureCloudInfrastructure />} />
+                      <Route path="/autonomous-devops-platform" element={<AutonomousDevOpsPlatform />} />
+                      <Route path="/blockchain-supply-chain-platform" element={<BlockchainSupplyChainPlatform />} />
+                      <Route path="/ai-powered-marketing-automation-suite" element={<AIPoweredMarketingAutomationSuite />} />
+                      <Route path="/iot-data-analytics-platform" element={<IoTDataAnalyticsPlatform />} />
+                      <Route path="/autonomous-customer-service-platform" element={<AutonomousCustomerServicePlatform />} />
+                      <Route path="/quantum-financial-trading-platform" element={<QuantumFinancialTradingPlatform />} />
+                      <Route path="/ai-powered-healthcare-analytics-platform" element={<AIPoweredHealthcareAnalyticsPlatform />} />
+                      
+                      {/* New Specialized Industry Solutions */}
+                      <Route path="/autonomous-agriculture-platform" element={<AutonomousAgriculturePlatform />} />
+                      <Route path="/smart-city-infrastructure-platform" element={<SmartCityInfrastructurePlatform />} />
+                      <Route path="/autonomous-manufacturing-platform" element={<AutonomousManufacturingPlatform />} />
+                      <Route path="/autonomous-logistics-platform" element={<AutonomousLogisticsPlatform />} />
+                      <Route path="/autonomous-energy-management-platform" element={<AutonomousEnergyManagementPlatform />} />
+                      <Route path="/autonomous-education-platform" element={<AutonomousEducationPlatform />} />
+                      <Route path="/autonomous-legal-platform" element={<AutonomousLegalPlatform />} />
+                      
+                      {/* New Cutting-Edge AI Services */}
+                      <Route path="/ai-powered-content-creation-studio" element={<AIPoweredContentCreationStudio />} />
+                      <Route path="/ai-powered-video-production-platform" element={<AIPoweredVideoProductionPlatform />} />
+                      <Route path="/ai-powered-voice-assistant-platform" element={<AIPoweredVoiceAssistantPlatform />} />
+                      <Route path="/ai-powered-data-analytics-platform" element={<AIPoweredDataAnalyticsPlatform />} />
+                      <Route path="/ai-powered-cybersecurity-platform" element={<AIPoweredCybersecurityPlatform />} />
+                      <Route path="/ai-powered-financial-analysis-platform" element={<AIPoweredFinancialAnalysisPlatform />} />
+                      <Route path="/ai-powered-research-assistant-platform" element={<AIPoweredResearchAssistantPlatform />} />
                       
                       {/* Missing pages from analysis */}
                       <Route path="/quantum-neural-network-platform" element={<QuantumNeuralNetworkPlatform />} />
