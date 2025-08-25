@@ -222,6 +222,20 @@ export function Header() {
                               </div>
                             ))}
                           </div>
+                          <div className="mt-4 pt-4 border-t border-cyan-500/30">
+                            <Link
+                              to="/comprehensive-services-overview"
+                              className="block px-3 py-2 text-sm font-medium text-cyan-400 hover:text-white hover:bg-cyan-500/20 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+                            >
+                              View All Services Overview →
+                            </Link>
+                            <Link
+                              to="/innovative-micro-saas-services"
+                              className="block px-3 py-2 text-sm font-medium text-cyan-400 hover:text-white hover:bg-cyan-500/20 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+                            >
+                              Innovative Micro SAAS Services →
+                            </Link>
+                          </div>
                         </div>
                       )}
                     </div>
@@ -323,6 +337,20 @@ export function Header() {
                                 </ul>
                               </div>
                             ))}
+                            <div className="pt-4 border-t border-cyan-500/30 mt-4">
+                              <Link
+                                to="/comprehensive-services-overview"
+                                className="block px-4 py-2 text-sm font-medium text-cyan-400 hover:text-white hover:bg-cyan-500/20 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+                              >
+                                View All Services Overview →
+                              </Link>
+                              <Link
+                                to="/innovative-micro-saas-services"
+                                className="block px-4 py-2 text-sm font-medium text-cyan-400 hover:text-white hover:bg-cyan-500/20 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+                              >
+                                Innovative Micro SAAS Services →
+                              </Link>
+                            </div>
                           </div>
                         )}
                       </div>

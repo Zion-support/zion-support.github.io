@@ -159,8 +159,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 
   // Set page title and meta description for analytics
   useEffect(() => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', 'GA_MEASUREMENT_ID', {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
         page_title: finalConfig.title,
         page_location: finalConfig.url
       });
