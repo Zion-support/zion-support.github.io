@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import { Search, Filter, Server, Cloud, Shield, Database, Network, Zap, Users, TrendingUp, BarChart3, MessageSquare, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Star, Clock, DollarSign, Globe, Bot, Cpu, Settings, Monitor, HardDrive, Wifi, Lock } from 'lucide-react';
 
 const ITServicesPage: React.FC = () => {
@@ -30,7 +25,6 @@ const ITServicesPage: React.FC = () => {
       marketPrice: "$150/month (Industry average: $280/month)",
       roi: "300% ROI within 6 months",
       implementationTime: "2-3 weeks",
-=======
 import { 
   Server, Cloud, Shield, Database, Wifi, Lock, Brain, Zap, Rocket, Globe, 
   Building, Users, BarChart3, Palette, Code, Monitor, Smartphone, Tablet, 
@@ -118,7 +112,7 @@ const ITServicesPage: React.FC = () => {
       duration: "8-16 weeks",
       expertise: "Senior Cloud Architects",
       technologies: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "Terraform"],
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3158
+=======
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
@@ -127,7 +121,6 @@ const ITServicesPage: React.FC = () => {
     },
     {
       id: 2,
-<<<<<<< HEAD
       name: "Cybersecurity Defense Suite",
       category: "Security",
       subcategory: "Threat Protection",
@@ -143,7 +136,6 @@ const ITServicesPage: React.FC = () => {
       marketPrice: "$200/month (Industry average: $400/month)",
       roi: "250% ROI within 8 months",
       implementationTime: "3-4 weeks",
-=======
       name: "Managed IT Services",
       category: "infrastructure",
       description: "Complete IT infrastructure management and monitoring for businesses",
@@ -167,7 +159,7 @@ const ITServicesPage: React.FC = () => {
       duration: "Ongoing",
       expertise: "IT Operations Specialists",
       technologies: ["Monitoring Tools", "Automation", "Cloud Platforms", "Security Tools"],
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3158
+=======
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
@@ -176,7 +168,6 @@ const ITServicesPage: React.FC = () => {
     },
     {
       id: 3,
-<<<<<<< HEAD
       name: "Network Performance Monitor",
       category: "Networking",
       subcategory: "Performance Monitoring",
@@ -192,7 +183,6 @@ const ITServicesPage: React.FC = () => {
       marketPrice: "$120/month (Industry average: $220/month)",
       roi: "280% ROI within 5 months",
       implementationTime: "1-2 weeks",
-=======
       name: "Network Infrastructure Design",
       category: "infrastructure",
       description: "Enterprise-grade network architecture and implementation",
@@ -216,14 +206,13 @@ const ITServicesPage: React.FC = () => {
       duration: "4-8 weeks",
       expertise: "Network Engineers",
       technologies: ["Cisco", "Juniper", "Aruba", "SD-WAN", "WiFi 6", "5G"],
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3158
+=======
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
       }
     },
-<<<<<<< HEAD
     {
       id: 4,
       name: "Data Backup & Recovery Pro",
@@ -241,7 +230,6 @@ const ITServicesPage: React.FC = () => {
       marketPrice: "$95/month (Industry average: $180/month)",
       roi: "400% ROI within 3 months",
       implementationTime: "1 week",
-=======
 
     // Cybersecurity Services
     {
@@ -269,7 +257,7 @@ const ITServicesPage: React.FC = () => {
       duration: "2-4 weeks",
       expertise: "Security Analysts",
       technologies: ["Nessus", "Metasploit", "Burp Suite", "Wireshark", "Nmap"],
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3158
+=======
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
@@ -278,7 +266,6 @@ const ITServicesPage: React.FC = () => {
     },
     {
       id: 5,
-<<<<<<< HEAD
       name: "DevOps Automation Platform",
       category: "DevOps",
       subcategory: "Automation",
@@ -294,7 +281,6 @@ const ITServicesPage: React.FC = () => {
       marketPrice: "$180/month (Industry average: $320/month)",
       roi: "350% ROI within 6 months",
       implementationTime: "2-3 weeks",
-=======
       name: "Security Operations Center (SOC)",
       category: "security",
       description: "24/7 security monitoring and incident response services",
@@ -318,14 +304,13 @@ const ITServicesPage: React.FC = () => {
       duration: "Ongoing",
       expertise: "Security Engineers",
       technologies: ["SIEM", "EDR", "SOAR", "Threat Intel", "Analytics"],
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3158
+=======
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
         website: "https://ziontechgroup.com"
       }
     },
-<<<<<<< HEAD
     {
       id: 6,
       name: "IT Asset Management System",
@@ -343,7 +328,6 @@ const ITServicesPage: React.FC = () => {
       marketPrice: "$85/month (Industry average: $160/month)",
       roi: "300% ROI within 4 months",
       implementationTime: "1-2 weeks",
-=======
 
     // AI & ML Services
     {
@@ -371,7 +355,7 @@ const ITServicesPage: React.FC = () => {
       duration: "12-24 weeks",
       expertise: "AI Specialists",
       technologies: ["TensorFlow", "PyTorch", "Azure ML", "AWS SageMaker", "Python"],
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3158
+=======
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
@@ -380,7 +364,6 @@ const ITServicesPage: React.FC = () => {
     },
     {
       id: 7,
-<<<<<<< HEAD
       name: "Help Desk & Support Platform",
       category: "Support Services",
       subcategory: "Help Desk",
@@ -396,7 +379,6 @@ const ITServicesPage: React.FC = () => {
       marketPrice: "$75/month (Industry average: $140/month)",
       roi: "280% ROI within 5 months",
       implementationTime: "1-2 weeks",
-=======
       name: "Machine Learning Models",
       category: "ai-ml",
       description: "Custom ML model development and deployment",
@@ -453,7 +435,7 @@ const ITServicesPage: React.FC = () => {
       duration: "4-8 weeks",
       expertise: "DevOps Engineers",
       technologies: ["Jenkins", "GitLab CI", "GitHub Actions", "Docker", "Kubernetes"],
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3158
+=======
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
@@ -461,7 +443,6 @@ const ITServicesPage: React.FC = () => {
       }
     },
     {
-<<<<<<< HEAD
       id: 8,
       name: "Database Performance Optimizer",
       category: "Database",
@@ -478,7 +459,6 @@ const ITServicesPage: React.FC = () => {
       marketPrice: "$140/month (Industry average: $250/month)",
       roi: "320% ROI within 6 months",
       implementationTime: "2-3 weeks",
-=======
       id: 9,
       name: "Infrastructure as Code",
       category: "devops",
@@ -600,7 +580,7 @@ const ITServicesPage: React.FC = () => {
       duration: "16-32 weeks",
       expertise: "Digital Transformation Consultants",
       technologies: ["Cloud", "AI/ML", "IoT", "Automation", "Analytics"],
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3158
+=======
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
@@ -609,7 +589,6 @@ const ITServicesPage: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
   const categories = ['all', 'Cloud Services', 'Security', 'Networking', 'Data Management', 'DevOps', 'Asset Management', 'Support Services', 'Database'];
   const pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];
 
@@ -671,46 +650,6 @@ const ITServicesPage: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Comprehensive IT infrastructure, security, and technical solutions designed to modernize and optimize your business technology operations
           </p>
-        </div>
-
-        {/* Search and Filters */}
-        <div className="mb-8 space-y-4">
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-            <input
-              type="text"
-              placeholder="Search IT services..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            />
-          </div>
-          
-          <div className="flex flex-wrap gap-4">
-            <select
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              {categories.map(category => (
-                <option key={category} value={category} className="bg-gray-800 text-white">
-                  {category === 'all' ? 'All Categories' : category}
-                </option>
-              ))}
-            </select>
-            
-            <select
-              value={selectedPricing}
-              onChange={(e) => setSelectedPricing(e.target.value)}
-              className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              {pricingModels.map(pricing => (
-                <option key={pricing} value={pricing} className="bg-gray-800 text-white">
-                  {pricing === 'all' ? 'All Pricing Models' : pricing}
-                </option>
-              ))}
-            </select>
-=======
   const filteredServices = selectedCategory === 'all' 
     ? itServices 
     : itServices.filter(service => service.category === selectedCategory);
@@ -804,117 +743,10 @@ const ITServicesPage: React.FC = () => {
                 </div>
               </div>
             ))}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3158
           </div>
         </div>
 
         {/* Services Grid */}
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredServices.map((service) => (
-            <div key={service.id} className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20">
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="text-blue-400">
-                    {getCategoryIcon(service.category)}
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white">{service.name}</h3>
-                    <div className="flex items-center gap-2">
-                      <span className={`px-2 py-1 text-xs font-medium rounded-full ${getPricingColor(service.pricing)} bg-opacity-20 bg-current`}>
-                        {service.pricing}
-                      </span>
-                      <span className="px-2 py-1 text-xs font-medium rounded-full text-blue-400 bg-blue-400 bg-opacity-20">
-                        {service.category}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <p className="text-gray-300 mb-4">{service.description}</p>
-              
-              <div className="mb-4">
-                <div className="text-2xl font-bold text-white mb-2">
-                  {formatPrice(service.price, service.pricingModel)}
-                </div>
-                <div className="text-sm text-gray-400">{service.userLimit}</div>
-                <div className="text-sm text-green-400 font-medium">{service.marketPrice}</div>
-              </div>
-
-              <div className="mb-4">
-                <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
-                <div className="flex flex-wrap gap-2">
-                  {service.features.slice(0, 3).map((feature, index) => (
-                    <span key={index} className="px-2 py-1 text-xs bg-blue-500/20 text-blue-300 rounded">
-                      {feature}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mb-4">
-                <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
-                <div className="flex flex-wrap gap-2">
-                  {service.benefits.slice(0, 2).map((benefit, index) => (
-                    <span key={index} className="px-2 py-1 text-xs bg-green-500/20 text-green-300 rounded">
-                      {benefit}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mb-4">
-                <h4 className="text-sm font-semibold text-white mb-2">Perfect For:</h4>
-                <div className="flex flex-wrap gap-2">
-                  {service.targetAudience.slice(0, 2).map((audience, index) => (
-                    <span key={index} className="px-2 py-1 text-xs bg-purple-500/20 text-purple-300 rounded">
-                      {audience}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="border-t border-gray-600 pt-4">
-                <div className="flex items-center justify-between text-sm text-gray-400">
-                  <span>Start your free trial today</span>
-                  <a 
-                    href={service.contactInfo.website}
-                    className="text-blue-400 hover:text-blue-300 transition-colors"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Get Started →
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Contact Information */}
-        <div className="mt-16 text-center">
-          <div className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-8">
-            <h2 className="text-2xl font-bold text-white mb-4">Ready to Modernize Your IT Infrastructure?</h2>
-            <p className="text-gray-300 mb-6">
-              Our IT solutions are designed to scale with your business and provide enterprise-grade reliability
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-              <div>
-                <Phone className="w-8 h-8 text-blue-400 mx-auto mb-2" />
-                <p className="text-white font-semibold">Phone</p>
-                <p className="text-gray-300">+1 302 464 0950</p>
-              </div>
-              <div>
-                <Mail className="w-8 h-8 text-blue-400 mx-auto mb-2" />
-                <p className="text-white font-semibold">Email</p>
-                <p className="text-gray-300">kleber@ziontechgroup.com</p>
-              </div>
-              <div>
-                <MapPin className="w-8 h-8 text-blue-400 mx-auto mb-2" />
-                <p className="text-white font-semibold">Address</p>
-                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
-=======
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             {selectedCategory === 'all' ? 'All Services' : `${serviceCategories.find(cat => cat.id === selectedCategory)?.name} Services`}
@@ -1019,14 +851,11 @@ const ITServicesPage: React.FC = () => {
                   <Phone className="w-5 h-5" />
                   Call Now
                 </a>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3158
               </div>
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
 
       {/* Service Detail Modal */}
       {selectedService && (
@@ -1112,7 +941,6 @@ const ITServicesPage: React.FC = () => {
           </div>
         </div>
       )}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3158
     </div>
   );
 };
@@ -1125,10 +953,8 @@ import React from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { SEO } from '@/components/SEO';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4df9
 =======
 import React from 'react';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -1136,214 +962,6 @@ import { Link } from 'react-router-dom';
 import { 
   Cloud, 
   Shield, 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    Server,
-  Zap,
-  Database,
-  Globe,
-  Code,
-  Monitor,
-  Smartphone,
-  Lock,
-  Settings,
-  Users,
-  BarChart3,
-  MessageSquare,
-  FileText,
-  CheckCircle,
-  TrendingUp,
-  Eye,
-  Mic,
-  Video,
-  Search,
-  Building,
-  HardDrive
-} from 'lucide-react';
-
-const ITServices = [
-  {
-    title: "Cloud Infrastructure Management",
-    description: "Comprehensive cloud services including AWS, Azure, and Google Cloud",
-    price: "$1,500 - $8,000/month",
-    features: ["24/7 monitoring", "Cost optimization", "Security compliance", "Auto-scaling"],
-    icon: <Cloud className="h-8 w-8 text-zion-cyan" />,
-    category: "Cloud",
-    badge: "Popular",
-    link: "/request-quote?service=cloud-infrastructure"
-  },
-  {
-    title: "Cybersecurity Services",
-    description: "Complete security solutions to protect your digital assets",
-    price: "$2,000 - $15,000",
-    features: ["Security audits", "Penetration testing", "Incident response", "Compliance"],
-    icon: <Shield className="h-8 w-8 text-zion-purple" />,
-    category: "Security",
-    badge: "Premium",
-    link: "/request-quote?service=cybersecurity"
-  },
-  {
-    title: "DevOps & CI/CD",
-    description: "Streamline development and deployment processes",
-    price: "$3,000 - $12,000/month",
-    features: ["Pipeline automation", "Infrastructure as code", "Monitoring", "Performance optimization"],
-    icon: <Zap className="h-8 w-8 text-zion-blue" />,
-    category: "DevOps",
-    link: "/request-quote?service=devops"
-  },
-  {
-    title: "Database Management",
-    description: "Expert database administration and optimization",
-    price: "$1,000 - $6,000/month",
-    features: ["Performance tuning", "Backup & recovery", "Security hardening", "Migration support"],
-    icon: <Database className="h-8 w-8 text-zion-cyan" />,
-    category: "Database",
-    link: "/request-quote?service=database-management"
-  },
-  {
-    title: "Network Infrastructure",
-    description: "Design, implement, and maintain robust network solutions",
-    price: "$2,500 - $20,000",
-    features: ["Network design", "Security implementation", "Monitoring", "24/7 support"],
-          icon: <Globe className="h-8 w-8 text-zion-purple" />,
-    category: "Networking",
-    link: "/request-quote?service=network-infrastructure"
-  },
-  {
-    title: "IT Consulting & Strategy",
-    description: "Strategic IT planning and digital transformation guidance",
-    price: "$150 - $300/hour",
-    features: ["Technology assessment", "Roadmap planning", "Vendor selection", "ROI analysis"],
-          icon: <CheckCircle className="h-8 w-8 text-zion-blue" />,
-    category: "Consulting",
-    link: "/request-quote?service=it-consulting"
-  },
-  {
-    title: "Managed IT Services",
-    description: "Complete IT management for small to enterprise businesses",
-    price: "$500 - $5,000/month",
-    features: ["Help desk support", "System administration", "Security management", "Backup services"],
-    icon: <Settings className="h-8 w-8 text-zion-cyan" />,
-    category: "Managed Services",
-    badge: "New",
-    link: "/request-quote?service=managed-it"
-  },
-  {
-    title: "Data Center Services",
-    description: "On-premise and colocation data center solutions",
-    price: "$1,000 - $10,000/month",
-    features: ["Hardware provisioning", "Environmental monitoring", "Power management", "Security"],
-    icon: <Server className="h-8 w-8 text-zion-purple" />,
-    category: "Data Center",
-    link: "/request-quote?service=data-center"
-  },
-  {
-    title: "Mobile App Development",
-    description: "Custom mobile applications for iOS and Android",
-    price: "$15,000 - $100,000",
-    features: ["UI/UX design", "Native development", "Testing", "App store deployment"],
-    icon: <Smartphone className="h-8 w-8 text-zion-blue" />,
-    category: "Development",
-    link: "/request-quote?service=mobile-development"
-  },
-  {
-    title: "Web Development",
-    description: "Modern web applications and e-commerce solutions",
-    price: "$10,000 - $75,000",
-    features: ["Responsive design", "SEO optimization", "Performance tuning", "Maintenance"],
-    icon: <Globe className="h-8 w-8 text-zion-cyan" />,
-    category: "Development",
-    link: "/request-quote?service=web-development"
-  },
-  {
-    title: "IT Training & Workshops",
-    description: "Custom training programs for your IT team",
-    price: "$500 - $2,500 per person",
-    features: ["Hands-on workshops", "Certification prep", "Custom curriculum", "Ongoing support"],
-    icon: <Users className="h-8 w-8 text-zion-purple" />,
-    category: "Training",
-    link: "/request-quote?service=it-training"
-  },
-  {
-    title: "Disaster Recovery",
-    description: "Comprehensive backup and recovery solutions",
-    price: "$1,500 - $8,000/month",
-    features: ["Automated backups", "Off-site storage", "Recovery testing", "24/7 support"],
-    icon: <HardDrive className="h-8 w-8 text-zion-blue" />,
-    category: "Recovery",
-    link: "/request-quote?service=disaster-recovery"
-  },
-  {
-    title: "IT Audit & Compliance",
-    description: "Ensure your IT systems meet industry standards",
-    price: "$3,000 - $20,000",
-    features: ["Compliance assessment", "Risk analysis", "Documentation", "Remediation"],
-    icon: <FileText className="h-8 w-8 text-zion-cyan" />,
-    category: "Compliance",
-    link: "/request-quote?service=it-audit"
-  },
-  {
-    title: "Hardware Procurement",
-    description: "Strategic hardware sourcing and deployment",
-    price: "15-25% of hardware cost",
-    features: ["Vendor management", "Volume discounts", "Installation", "Warranty support"],
-          icon: <Server className="h-8 w-8 text-zion-purple" />,
-    category: "Hardware",
-    link: "/request-quote?service=hardware-procurement"
-  },
-  {
-    title: "IT Project Management",
-    description: "Professional project management for IT initiatives",
-    price: "$100 - $200/hour",
-    features: ["Project planning", "Resource management", "Risk mitigation", "Delivery assurance"],
-    icon: <BarChart3 className="h-8 w-8 text-zion-blue" />,
-    category: "Project Management",
-    link: "/request-quote?service=it-project-management"
-  },
-  {
-    title: "24/7 IT Support",
-    description: "Round-the-clock technical support and monitoring",
-    price: "$2,000 - $8,000/month",
-    features: ["Help desk", "Remote support", "On-site visits", "SLA guarantees"],
-    icon: <Monitor className="h-8 w-8 text-zion-cyan" />,
-    category: "Support",
-    badge: "Featured",
-    link: "/request-quote?service=24-7-support"
-  }
-];
-
-const categories = [
-  { name: "All", value: "all", icon: <Globe className="h-4 w-4" /> },
-  { name: "Cloud", value: "cloud", icon: <Cloud className="h-4 w-4" /> },
-  { name: "Security", value: "security", icon: <Shield className="h-4 w-4" /> },
-  { name: "DevOps", value: "devops", icon: <Zap className="h-4 w-4" /> },
-  { name: "Database", value: "database", icon: <Database className="h-4 w-4" /> },
-  { name: "Networking", value: "networking", icon: <Globe className="h-4 w-4" /> },
-  { name: "Consulting", value: "consulting", icon: <CheckCircle className="h-4 w-4" /> },
-  { name: "Managed Services", value: "managed services", icon: <Settings className="h-4 w-4" /> },
-  { name: "Data Center", value: "data center", icon: <Server className="h-4 w-4" /> },
-  { name: "Development", value: "development", icon: <Code className="h-4 w-4" /> },
-  { name: "Training", value: "training", icon: <Users className="h-4 w-4" /> },
-  { name: "Recovery", value: "recovery", icon: <HardDrive className="h-4 w-4" /> },
-  { name: "Compliance", value: "compliance", icon: <FileText className="h-4 w-4" /> },
-  { name: "Hardware", value: "hardware", icon: <Server className="h-4 w-4" /> },
-  { name: "Project Management", value: "project management", icon: <BarChart3 className="h-4 w-4" /> },
-  { name: "Support", value: "support", icon: <Monitor className="h-4 w-4" /> }
-];
-
-export default function ITServicesPage() {
-  const [selectedCategory, setSelectedCategory] = React.useState("all");
-
-  const filteredServices = selectedCategory === "all" 
-    ? ITServices 
-    : ITServices.filter(service => service.category.toLowerCase() === selectedCategory);
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-blue-dark to-zion-slate">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-cyan py-20">
-        <div className="absolute inset-0 bg-black/20"></div>
-=======
   Server, 
   Database, 
   Network, 
@@ -1562,25 +1180,10 @@ export default function ITServicesPage() {
       <div className="relative overflow-hidden bg-gradient-to-r from-zion-blue-dark to-zion-purple-dark py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
         <div className="relative container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             IT Services & Solutions
           </h1>
-<<<<<<< HEAD
-          <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto mb-8">
-            Comprehensive IT services to modernize, secure, and optimize your technology infrastructure. 
-            From cloud migration to cybersecurity, we've got you covered.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-slate font-semibold">
-              <Search className="h-5 w-5 mr-2" />
-              Explore Services
-            </Button>
-            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-              <MessageSquare className="h-5 w-5 mr-2" />
-              Get Consultation
-=======
 import React from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -1950,7 +1553,6 @@ export default function ITServicesPage() {
             <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
               <Settings className="h-5 w-5 mr-2" />
               Get IT Consultation
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2048
 =======
           <p className="text-xl text-zion-cyan max-w-3xl mx-auto mb-8">
             Comprehensive IT services to modernize your infrastructure, enhance security, 
@@ -1962,98 +1564,11 @@ export default function ITServicesPage() {
             </Button>
             <Button asChild size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
               <Link to="/contact">Schedule Consultation</Link>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
             </Button>
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {/* Category Filter */}
-      <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-wrap justify-center gap-2 mb-8">
-          {categories.map((category) => (
-            <Button
-              key={category.value}
-              variant={selectedCategory === category.value ? "default" : "outline"}
-              onClick={() => setSelectedCategory(category.value)}
-              className={`flex items-center gap-2 ${
-                selectedCategory === category.value 
-                  ? "bg-zion-blue text-white" 
-                  : "border-zion-blue text-zion-blue hover:bg-zion-blue/10"
-              }`}
-            >
-              {category.icon}
-              {category.name}
-            </Button>
-          ))}
-        </div>
-
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {filteredServices.map((service, index) => (
-            <Card key={index} className="group hover:shadow-2xl transition-all duration-300 border-zion-blue/20 hover:border-zion-blue/50 bg-zion-blue-dark/50 backdrop-blur-sm">
-              <CardHeader className="pb-3">
-                <div className="flex justify-between items-start mb-3">
-                  <div className="p-3 rounded-lg bg-zion-blue/10 group-hover:bg-zion-blue/20 transition-colors">
-                    {service.icon}
-                  </div>
-                  {service.badge && (
-                    <Badge variant="secondary" className="bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30">
-                      {service.badge}
-                    </Badge>
-                  )}
-                </div>
-                <CardTitle className="text-xl text-white group-hover:text-zion-cyan transition-colors">
-                  {service.title}
-                </CardTitle>
-                <CardDescription className="text-zion-slate-light">
-                  {service.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="pb-4">
-                <div className="mb-4">
-                  <p className="text-2xl font-bold text-zion-cyan mb-2">{service.price}</p>
-                  <p className="text-sm text-zion-slate-light">Starting price</p>
-                </div>
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-zion-slate-light">
-                      <div className="w-2 h-2 bg-zion-cyan rounded-full mr-3"></div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-              <div className="px-6 pb-6">
-                <Button asChild className="w-full bg-gradient-to-r from-zion-blue to-zion-cyan hover:from-zion-blue-light hover:to-zion-cyan-light text-white">
-                  <Link to={service.link}>
-                    Get Started
-                  </Link>
-                </Button>
-              </div>
-            </Card>
-          ))}
-        </div>
-
-        {/* CTA Section */}
-        <div className="text-center py-12">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Need Custom IT Solutions?
-          </h2>
-          <p className="text-lg text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Our expert team can design and implement custom IT solutions tailored to your specific business needs.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-zion-blue hover:bg-zion-blue-light text-white">
-              <MessageSquare className="h-5 w-5 mr-2" />
-              Schedule Consultation
-            </Button>
-            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-              <Code className="h-5 w-5 mr-2" />
-              View Case Studies
-=======
       {/* Contact Info Banner */}
       <div className="bg-zion-blue-dark/80 border-b border-zion-blue-light">
         <div className="container mx-auto px-4 py-6">
@@ -2071,6 +1586,7 @@ export default function ITServicesPage() {
               <span className="text-white">364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
+=======
         </div>
       </div>
 
@@ -2103,25 +1619,11 @@ export default function ITServicesPage() {
                 <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
                 <p className="text-zion-cyan/80">{benefit.description}</p>
               </div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
             ))}
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
-      {/* Services Grid */}
-      <div className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service) => (
-              <Card key={service.id} className="group overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-zion-purple/20 hover:scale-105 border-zion-blue-light/20 bg-zion-blue-dark/50 backdrop-blur-sm">
-                <CardHeader className="pb-4">
-                  <div className="flex justify-between items-start mb-4">
-                    <div className="p-3 rounded-lg bg-zion-blue-dark/50 group-hover:bg-zion-purple/20 transition-colors">
-                      {service.icon}
-                    </div>
-=======
       {/* Categories Overview */}
       <div className="py-16 bg-zion-slate">
         <div className="container mx-auto px-4">
@@ -2155,61 +1657,12 @@ export default function ITServicesPage() {
                 <CardHeader className="pb-4">
                   <div className="flex justify-between items-start mb-3">
                     {service.icon}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
                     {service.badge && (
                       <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30">
                         {service.badge}
                       </Badge>
                     )}
                   </div>
-<<<<<<< HEAD
-                  <CardTitle className="text-xl text-white group-hover:text-zion-cyan transition-colors">
-                    {service.title}
-                  </CardTitle>
-                  <CardDescription className="text-zion-slate-light text-base">
-                    {service.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="pb-4">
-                  <div className="mb-4">
-                    <p className="text-sm text-zion-slate-light mb-3">{service.details}</p>
-                    <div className="grid grid-cols-2 gap-2 mb-4">
-                      {service.features.slice(0, 4).map((feature, index) => (
-                        <div key={index} className="flex items-center text-xs text-zion-cyan">
-                          <CheckCircle className="w-3 h-3 mr-2" />
-                          {feature}
-                        </div>
-                      ))}
-                    </div>
-                    <div className="flex items-center justify-between text-sm text-zion-slate-light mb-3">
-                      <span>Starting at:</span>
-                      <span className="text-zion-cyan font-semibold">{service.averagePrice}</span>
-                    </div>
-                    <div className="flex items-center justify-between text-sm text-zion-slate-light mb-3">
-                      <span>Delivery:</span>
-                      <span className="text-zion-cyan font-semibold">{service.deliveryTime}</span>
-                    </div>
-                    <div className="flex items-center justify-center gap-1 mb-3">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-zion-slate-light'}`} />
-                      ))}
-                      <span className="text-sm text-zion-slate-light ml-2">({service.reviewCount})</span>
-                    </div>
-                  </div>
-                  <div className="text-center mb-4">
-                    <span className="text-3xl font-bold text-zion-cyan">{service.currency}{service.price.toLocaleString()}</span>
-                    <span className="text-zion-slate-light">/project</span>
-                  </div>
-                </CardContent>
-                <CardFooter className="pt-0">
-                  <Button asChild className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white group-hover:shadow-lg group-hover:shadow-zion-purple/25 transition-all">
-                    <a href={service.link} target="_blank" rel="noopener noreferrer">
-                      <TrendingUp className="h-4 w-4 mr-2" />
-                      Get Started
-                    </a>
-                  </Button>
-                </CardFooter>
-=======
                   <CardTitle className="text-xl text-white">{service.title}</CardTitle>
                   <CardDescription className="text-zion-cyan/80">{service.description}</CardDescription>
                 </CardHeader>
@@ -2254,36 +1707,101 @@ export default function ITServicesPage() {
                     </Button>
                   </div>
                 </CardContent>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
               </Card>
             ))}
+=======
+                </div>
+              </div>
+              
+              <p className="text-gray-300 mb-4">{service.description}</p>
+              
+              <div className="mb-4">
+                <div className="text-2xl font-bold text-white mb-2">
+                  {formatPrice(service.price, service.pricingModel)}
+                </div>
+                <div className="text-sm text-gray-400">{service.userLimit}</div>
+                <div className="text-sm text-green-400 font-medium">{service.marketPrice}</div>
+              </div>
+
+              <div className="mb-4">
+                <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {service.features.slice(0, 3).map((feature, index) => (
+                    <span key={index} className="px-2 py-1 text-xs bg-blue-500/20 text-blue-300 rounded">
+                      {feature}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mb-4">
+                <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {service.benefits.slice(0, 2).map((benefit, index) => (
+                    <span key={index} className="px-2 py-1 text-xs bg-green-500/20 text-green-300 rounded">
+                      {benefit}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mb-4">
+                <h4 className="text-sm font-semibold text-white mb-2">Perfect For:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {service.targetAudience.slice(0, 2).map((audience, index) => (
+                    <span key={index} className="px-2 py-1 text-xs bg-purple-500/20 text-purple-300 rounded">
+                      {audience}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="border-t border-gray-600 pt-4">
+                <div className="flex items-center justify-between text-sm text-gray-400">
+                  <span>Start your free trial today</span>
+                  <a 
+                    href={service.contactInfo.website}
+                    className="text-blue-400 hover:text-blue-300 transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Get Started →
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Contact Information */}
+        <div className="mt-16 text-center">
+          <div className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-white mb-4">Ready to Modernize Your IT Infrastructure?</h2>
+            <p className="text-gray-300 mb-6">
+              Our IT solutions are designed to scale with your business and provide enterprise-grade reliability
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <div>
+                <Phone className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+                <p className="text-white font-semibold">Phone</p>
+                <p className="text-gray-300">+1 302 464 0950</p>
+              </div>
+              <div>
+                <Mail className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+                <p className="text-white font-semibold">Email</p>
+                <p className="text-gray-300">kleber@ziontechgroup.com</p>
+              </div>
+              <div>
+                <MapPin className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+                <p className="text-white font-semibold">Address</p>
+                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-      <div className="py-20 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6 text-white">
-            Ready to Transform Your IT Infrastructure?
-          </h2>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Our IT experts are ready to help you modernize your technology, enhance security, and drive business growth. 
-            Get a free consultation and discover how our IT services can benefit your organization.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3">
-              <Settings className="h-5 w-5 mr-2" />
-              Free IT Consultation
-            </Button>
-            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3">
-              <Phone className="h-5 w-5 mr-2" />
-              Call +1 302 464 0950
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2048
-            </Button>
-          </div>
-=======
       <div className="py-20 bg-gradient-to-r from-zion-purple-dark to-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your IT Infrastructure?</h2>
@@ -2302,16 +1820,10 @@ export default function ITServicesPage() {
             <p>Mobile: +1 302 464 0950 | Email: kleber@ziontechgroup.com</p>
             <p>Address: 364 E Main St STE 1008 Middletown DE 19709</p>
           </div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
-=======
   Server, 
   Database, 
   Code, 
@@ -2669,10 +2181,11 @@ export default function ITServicesPage() {
     </>
   );
 }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4df9
 =======
 }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2048
 =======
 }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
+=======
+};
+
+export default ITServicesPage;

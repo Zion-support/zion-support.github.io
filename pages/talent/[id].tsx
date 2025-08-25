@@ -1,77 +1,34 @@
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useParams } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-3805
 =======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fb01
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-8a54
 =======
 import { ErrorPage } from '@/components/ErrorPage';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-217b
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f4cb
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e6db
 =======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a2e5
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-1baf
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-1ab5
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-a231
 =======
 import { useRouter } from 'next/router';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2f34
 =======
 import { useParams } from 'react-router-dom';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-dfab
 =======
 import { useParams } from 'react-router-dom';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d816
+=======
+import { useParams, Navigate } from 'react-router-dom';
 import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
 import type { TalentProfile as TalentProfileType } from '@/types/talent';
 import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-cbd5
 =======
 import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
 import type { TalentProfile as TalentProfileType } from '@/types/talent';
 import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
 import NotFound from '@/pages/NotFound';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-302a
 
-<<<<<<< HEAD
-interface TalentProfile {
-  full_name: string;
-  skills?: string[];
-  availability_type?: string;
-}
-
-interface TalentProfileWithSocial extends TalentProfile {
-=======
 // Create a simple ErrorPage component
 const ErrorPage = ({ statusCode }: { statusCode: number }) => (
   <div className="min-h-screen flex items-center justify-center bg-zion-blue-dark">
@@ -91,7 +48,6 @@ const ErrorPage = ({ statusCode }: { statusCode: number }) => (
 );
 
 interface TalentProfileWithSocial extends TalentProfileType {
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a2e5
   social?: Record<string, string>;
 }
 
@@ -118,39 +74,21 @@ const ProfileLoadingState: React.FC = () => (
 );
 
 const TalentProfilePage: React.FC = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const { id } = useParams();
-=======
   const { id } = useParams() as { id?: string };
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f4cb
 =======
   const { id } = useParams();
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e6db
 =======
   const { id } = useParams();
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a2e5
 =======
   const { id } = useParams();
->>>>>>> origin/cursor/expand-services-and-deploy-updates-1baf
 =======
   const { id } = useParams();
->>>>>>> origin/cursor/expand-services-and-deploy-updates-1ab5
 =======
   const { id } = useParams();
->>>>>>> origin/cursor/expand-services-and-deploy-updates-a231
 =======
   const { id } = useParams();
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-dfab
 =======
   const { id } = useParams();
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d816
   const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -188,63 +126,35 @@ const TalentProfilePage: React.FC = () => {
   }, [id]);
 
   if (loading) return <ProfileLoadingState />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
+  if (error || !profile) return <ProfileErrorState error={error} />;
 =======
   if (error || !profile) return <ProfileErrorState error={error} />;
->>>>>>> origin/cursor/website-audit-and-enhancement-3805
-=======
-  if (error || !profile) return <ProfileErrorState error={error} />;
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
 =======
   if (error || !profile) return <NotFound />;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-302a
 =======
   if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
 =======
   if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fb01
 =======
   if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-8a54
 =======
   if (error || !profile) return <ProfileErrorState error={error} />;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f4cb
 =======
   if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e6db
 =======
   if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-1baf
 =======
   if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-1ab5
 =======
   if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-a231
 =======
   if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2f34
 =======
   if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-dfab
 =======
   if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d816
+=======
+  if (error || !profile) return <Navigate to="/404" replace />;
 
   return (
     <main className="min-h-screen bg-zion-blue py-8 text-white">

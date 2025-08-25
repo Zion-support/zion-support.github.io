@@ -20,61 +20,6 @@ export interface EmergingTechService {
     email: string;
     website: string;
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  websiteUrl: string;
-  demoUrl?: string;
-  documentationUrl?: string;
-}
-
-export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
-  // AI-Powered Edge Computing Platform
-  {
-    id: "ai-edge-computing-platform",
-    title: "AI-Powered Edge Computing Platform",
-    description: "Revolutionary edge computing platform that brings AI processing closer to data sources for real-time decision making and reduced latency.",
-    category: "Edge Computing",
-    subcategory: "AI Processing",
-    price: 5500,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Edge AI processing",
-      "Real-time analytics",
-      "Low latency computing",
-      "Distributed intelligence",
-      "Edge device management",
-      "Data synchronization",
-      "API gateway",
-      "Security protocols"
-    ],
-    benefits: [
-      "Reduce latency by 90%",
-      "Lower bandwidth costs",
-      "Real-time decision making",
-      "Improved privacy",
-      "Scalable edge deployment"
-    ],
-    useCases: [
-      "IoT applications",
-      "Autonomous vehicles",
-      "Smart cities",
-      "Industrial automation",
-      "Healthcare monitoring"
-    ],
-    targetAudience: [
-      "IoT companies",
-      "Manufacturing firms",
-      "Smart city developers",
-      "Healthcare providers",
-      "Automotive industry"
-    ],
-    tags: ["Edge Computing", "AI", "IoT", "Real-time", "Low Latency"],
-    estimatedDelivery: "3-4 weeks",
-    supportLevel: "premium",
-    marketPrice: "$5,500 - $18,000/month",
-=======
 =======
   innovationScore: number;
   rating: number;
@@ -84,64 +29,11 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
   availability: string;
   demoUrl: string;
   documentationUrl: string;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-3629
   technology: string[];
   integrations: string[];
   compliance: string[];
   roi: string;
   competitors: string[];
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-
-export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
-  // Neuromorphic Computing Platform
-  {
-    id: "neuromorphic-computing-platform",
-    title: "Neuromorphic Computing Platform",
-    description: "Brain-inspired computing platform that mimics neural networks for ultra-efficient AI processing, enabling edge AI with minimal power consumption.",
-    category: "Neuromorphic Computing",
-    subcategory: "AI Processing",
-    price: 1299,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Spiking neural networks",
-      "Ultra-low power consumption",
-      "Real-time learning",
-      "Edge AI processing",
-      "Neuromorphic chips support",
-      "Adaptive algorithms",
-      "Bio-inspired computing",
-      "Scalable architecture"
-    ],
-    benefits: [
-      "Reduce power consumption by 90%",
-      "Enable real-time AI at the edge",
-      "Improve learning efficiency",
-      "Support battery-powered devices",
-      "Revolutionary computing paradigm"
-    ],
-    useCases: [
-      "IoT device intelligence",
-      "Autonomous vehicles",
-      "Robotics",
-      "Medical devices",
-      "Smart sensors"
-    ],
-    targetAudience: [
-      "IoT manufacturers",
-      "Automotive companies",
-      "Robotics companies",
-      "Medical device companies",
-      "Research institutions"
-    ],
-    tags: ["Neuromorphic", "AI", "Edge Computing", "Low Power", "Neural Networks"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$1,299 - $5,000/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-d34b
-=======
   technology: string[];
   integrations: string[];
   compliance: string[];
@@ -201,7 +93,6 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
     marketPrice: "$1,200 - $5,000/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
 =======
   researchPartners: string[];
   patents: string[];
@@ -257,64 +148,11 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     estimatedDelivery: "12-24 weeks",
     supportLevel: "enterprise",
     marketPrice: "$5,000 - $25,000/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-3629
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    websiteUrl: "https://ziontechgroup.com/ai-edge-computing"
-  },
-
-  // Quantum Internet Infrastructure
-  {
-    id: "quantum-internet-infrastructure",
-    title: "Quantum Internet Infrastructure Platform",
-    description: "Next-generation quantum internet infrastructure that enables ultra-secure, high-speed quantum communication networks.",
-    category: "Quantum Technology",
-    subcategory: "Quantum Internet",
-    price: 35000,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Quantum network nodes",
-      "Quantum repeaters",
-      "Quantum memory systems",
-      "Quantum routing protocols",
-      "Network management",
-      "Security monitoring",
-      "API integration",
-      "Compliance tools"
-    ],
-    benefits: [
-      "Unhackable communication",
-      "Quantum advantage",
-      "Future-proof infrastructure",
-      "Regulatory compliance",
-      "Competitive edge"
-    ],
-    useCases: [
-      "Government networks",
-      "Financial systems",
-      "Healthcare data",
-      "Military communications",
-      "Research institutions"
-    ],
-    targetAudience: [
-      "Government agencies",
-      "Financial institutions",
-      "Defense contractors",
-      "Research organizations",
-      "Critical infrastructure"
-    ],
-    tags: ["Quantum Internet", "Infrastructure", "Security", "Networking", "Government"],
-    estimatedDelivery: "12-16 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$35,000 - $100,000/month",
-=======
     technology: ["Spiking Neural Networks", "Neuromorphic Chips", "Python", "C++", "Custom Hardware"],
     integrations: ["Intel Loihi", "IBM TrueNorth", "BrainChip", "Custom neuromorphic hardware"],
     compliance: ["ISO 27001", "SOC 2", "Industry-specific standards"],
@@ -367,7 +205,6 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,499 - $10,000/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-d34b
 =======
     technology: ["Python", "PyTorch", "TensorFlow", "C++", "CUDA", "FPGA", "ASIC"],
     integrations: ["AWS", "Azure", "Google Cloud", "Edge devices", "IoT platforms"],
@@ -493,73 +330,11 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     estimatedDelivery: "8-16 weeks",
     supportLevel: "premium",
     marketPrice: "$2,800 - $12,000/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-3629
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-    technology: ["Python", "BioPython", "React", "Node.js", "MongoDB", "AWS", "Machine Learning"],
-    integrations: ["Lab automation systems", "DNA synthesizers", "Sequencing platforms", "LIMS systems"],
-    compliance: ["FDA", "EPA", "USDA", "ISO 13485", "GMP"],
-    roi: "400% within 18 months",
-    competitors: ["Benchling", "DNA Script", "Twist Bioscience", "Ginkgo Bioworks"],
-    marketTrend: "Rapid growth with increasing biotech investment",
-    innovationLevel: "Advanced AI-driven synthetic biology platform",
-    uniqueValue: "First comprehensive platform combining computational biology with lab automation"
-  },
-
-  // Space Technology Platform
-  {
-    id: "space-technology-platform",
-    title: "Space Technology Platform",
-    description: "Comprehensive platform for satellite operations, space data analytics, and space-based services including Earth observation and communications.",
-    category: "Space Technology",
-    subcategory: "Satellite Operations",
-    price: 1500,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Satellite mission planning",
-      "Ground station management",
-      "Space data analytics",
-      "Earth observation tools",
-      "Communication services",
-      "Orbital mechanics",
-      "Space weather monitoring",
-      "Satellite tracking",
-      "Data processing pipeline",
-      "API integration suite"
-    ],
-    benefits: [
-      "Reduce satellite costs by 70%",
-      "Improve mission success by 90%",
-      "Enable rapid deployment",
-      "Optimize operations",
-      "Access space data easily"
-    ],
-    useCases: [
-      "Earth observation",
-      "Satellite communications",
-      "Climate monitoring",
-      "Disaster response",
-      "Agricultural monitoring",
-      "Navigation services"
-    ],
-    targetAudience: [
-      "Space companies",
-      "Government agencies",
-      "Telecommunications firms",
-      "Environmental organizations",
-      "Research institutions"
-    ],
-    tags: ["Space Technology", "Satellites", "Earth Observation", "Communications", "Space Data", "Orbital Mechanics"],
-    estimatedDelivery: "10-14 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$1,500 - $6,000/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
-=======
     innovationScore: 95,
     rating: 4.8,
     reviewCount: 178,
@@ -625,64 +400,11 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     estimatedDelivery: "6-12 weeks",
     supportLevel: "standard",
     marketPrice: "$1,200 - $4,500/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-3629
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    websiteUrl: "https://ziontechgroup.com/quantum-internet-infrastructure"
-  },
-
-  // Neuromorphic AI Chips
-  {
-    id: "neuromorphic-ai-chips",
-    title: "Neuromorphic AI Chip Design Platform",
-    description: "Advanced platform for designing and manufacturing brain-inspired neuromorphic AI chips that mimic neural networks for ultra-efficient processing.",
-    category: "Hardware AI",
-    subcategory: "Chip Design",
-    price: 45000,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Neuromorphic architecture design",
-      "Chip fabrication support",
-      "Power optimization",
-      "Performance testing",
-      "Integration tools",
-      "Development SDK",
-      "Technical support",
-      "Custom solutions"
-    ],
-    benefits: [
-      "100x more energy efficient",
-      "Real-time learning",
-      "Superior pattern recognition",
-      "Future-proof technology",
-      "Competitive advantage"
-    ],
-    useCases: [
-      "Edge AI devices",
-      "IoT applications",
-      "Autonomous systems",
-      "Robotics",
-      "Medical devices"
-    ],
-    targetAudience: [
-      "Semiconductor companies",
-      "IoT manufacturers",
-      "Robotics companies",
-      "Medical device makers",
-      "Research institutions"
-    ],
-    tags: ["Neuromorphic", "AI Chips", "Hardware", "Energy Efficient", "IoT"],
-    estimatedDelivery: "16-20 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$45,000 - $150,000/month",
-=======
     technology: ["DNA Synthesis", "Sequencing", "Bioinformatics", "Python", "Custom Algorithms"],
     integrations: ["Cloud platforms", "Data centers", "Bioinformatics tools", "Security systems"],
     compliance: ["FDA", "ISO 13485", "GDPR", "Industry-specific standards"],
@@ -735,7 +457,6 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     estimatedDelivery: "16-20 weeks",
     supportLevel: "enterprise",
     marketPrice: "$1,999 - $8,000/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-d34b
 =======
     technology: ["Python", "React", "Node.js", "MongoDB", "AWS", "Kubernetes", "Satellite APIs"],
     integrations: ["Ground stations", "Satellite networks", "GIS systems", "Weather services"],
@@ -858,63 +579,11 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     estimatedDelivery: "8-12 weeks",
     supportLevel: "enterprise",
     marketPrice: "$1,100 - $4,500/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-    websiteUrl: "https://ziontechgroup.com/neuromorphic-ai-chips"
-  },
-
-  // Synthetic Biology Platform
-  {
-    id: "synthetic-biology-platform",
-    title: "Synthetic Biology Design Platform",
-    description: "Revolutionary platform for designing, simulating, and optimizing synthetic biological systems using AI and computational biology.",
-    category: "Biotechnology",
-    subcategory: "Synthetic Biology",
-    price: 28000,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "DNA sequence design",
-      "Protein engineering",
-      "Metabolic pathway design",
-      "Biological simulation",
-      "Optimization algorithms",
-      "Compliance tools",
-      "API integration",
-      "Expert consultation"
-    ],
-    benefits: [
-      "Accelerate bioengineering",
-      "Reduce development costs",
-      "Improve success rates",
-      "Regulatory compliance",
-      "Innovation leadership"
-    ],
-    useCases: [
-      "Pharmaceutical development",
-      "Agricultural biotechnology",
-      "Industrial enzymes",
-      "Biofuels",
-      "Medical therapeutics"
-    ],
-    targetAudience: [
-      "Biotech companies",
-      "Pharmaceutical firms",
-      "Agricultural companies",
-      "Research institutions",
-      "Government agencies"
-    ],
-    tags: ["Synthetic Biology", "Biotechnology", "AI", "DNA Design", "Bioengineering"],
-    estimatedDelivery: "8-10 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$28,000 - $80,000/month",
-=======
     technology: ["Quantum Key Distribution", "Quantum Networks", "Quantum Repeaters", "Custom Hardware"],
     integrations: ["Classical networks", "Security systems", "Cloud platforms", "IoT devices"],
     compliance: ["NIST", "ISO 27001", "Government standards", "Industry regulations"],
@@ -967,7 +636,6 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     estimatedDelivery: "10-14 weeks",
     supportLevel: "enterprise",
     marketPrice: "$3,499 - $15,000/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-d34b
 =======
     technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "MongoDB", "Signal Processing"],
     integrations: ["EEG devices", "Medical equipment", "Mobile apps", "Cloud platforms"],
@@ -1147,72 +815,11 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     estimatedDelivery: "8-16 weeks",
     supportLevel: "premium",
     marketPrice: "$2,200 - $8,500/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-3629
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-    technology: ["5G NR", "Network Slicing", "Edge Computing", "SDN/NFV", "Network Security"],
-    integrations: ["Enterprise Systems", "IoT Platforms", "Cloud Services", "Security Solutions"],
-    compliance: ["3GPP Standards", "Security Protocols", "Industry-specific regulations"],
-    roi: "700% within 18 months",
-    competitors: ["Ericsson", "Nokia", "Huawei", "Cisco"],
-    freeTrial: true,
-    freeTrialDays: 14,
-    demoUrl: "https://demo.ziontechgroup.com/5g-networks",
-    technologyTrend: "Early Adoption Phase",
-    marketMaturity: "Growing"
-  },
-
-  // Quantum Internet & Communication
-  {
-    id: "quantum-internet-platform",
-    title: "Quantum Internet & Secure Communication Platform",
-    description: "Quantum internet infrastructure with quantum key distribution, quantum networks, and ultra-secure communication capabilities.",
-    category: "Quantum Internet",
-    subcategory: "Secure Communication",
-    price: 4999,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Quantum key distribution",
-      "Quantum networks",
-      "Quantum cryptography",
-      "Secure communication",
-      "Quantum repeaters",
-      "Network management",
-      "Performance monitoring",
-      "Security protocols"
-    ],
-    benefits: [
-      "Unbreakable encryption",
-      "Quantum-secure communication",
-      "Future-proof security",
-      "High-speed quantum networks",
-      "Competitive advantage"
-    ],
-    useCases: [
-      "Financial institutions",
-      "Government agencies",
-      "Healthcare organizations",
-      "Defense contractors",
-      "Research institutions"
-    ],
-    targetAudience: [
-      "Banks and financial institutions",
-      "Government agencies",
-      "Healthcare organizations",
-      "Defense contractors",
-      "Technology companies"
-    ],
-    tags: ["Quantum Internet", "Quantum Cryptography", "Secure Communication", "Quantum Networks", "QKD"],
-    estimatedDelivery: "12-16 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$4,999 - $50,000/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-9c54
-=======
     innovationScore: 94,
     rating: 4.8,
     reviewCount: 156,
@@ -1278,74 +885,11 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     estimatedDelivery: "12-20 weeks",
     supportLevel: "enterprise",
     marketPrice: "$3,500 - $15,000/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-3629
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-    technology: ["Qiskit", "Cirq", "Python", "React", "Node.js", "Quantum Hardware", "Network Protocols"],
-    integrations: ["Quantum hardware", "Classical networks", "Security systems", "Cloud platforms"],
-    compliance: ["NIST", "ISO 27001", "FedRAMP", "Government standards"],
-    roi: "800% within 36 months",
-    competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "D-Wave"],
-    marketTrend: "Emerging technology with massive long-term potential",
-    innovationLevel: "Pioneering quantum internet infrastructure platform",
-    uniqueValue: "First commercial platform for quantum internet development and deployment"
-  },
-
-  // Digital Twin Platform
-  {
-    id: "digital-twin-platform",
-    title: "Digital Twin Platform",
-    description: "Comprehensive platform for creating, managing, and optimizing digital twins of physical assets, processes, and systems.",
-    category: "Digital Twins",
-    subcategory: "Asset Management",
-    price: 649,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "3D modeling and visualization",
-      "Real-time data integration",
-      "Predictive analytics",
-      "Simulation engine",
-      "IoT connectivity",
-      "Performance monitoring",
-      "Optimization algorithms",
-      "Collaborative tools",
-      "API integration",
-      "Mobile applications"
-    ],
-    benefits: [
-      "Improve asset performance by 40%",
-      "Reduce maintenance costs by 50%",
-      "Enable predictive maintenance",
-      "Optimize operations",
-      "Enhance decision making"
-    ],
-    useCases: [
-      "Manufacturing plants",
-      "Smart buildings",
-      "Infrastructure management",
-      "Healthcare facilities",
-      "Energy systems",
-      "Transportation networks"
-    ],
-    targetAudience: [
-      "Manufacturing companies",
-      "Facility managers",
-      "Infrastructure operators",
-      "Healthcare organizations",
-      "Energy companies"
-    ],
-    tags: ["Digital Twins", "IoT", "3D Modeling", "Predictive Analytics", "Asset Management", "Simulation"],
-    estimatedDelivery: "6-10 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$649 - $2,800/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
-=======
     innovationScore: 96,
     rating: 4.9,
     reviewCount: 89,
@@ -1411,64 +955,11 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     estimatedDelivery: "6-12 weeks",
     supportLevel: "standard",
     marketPrice: "$1,800 - $6,500/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-3629
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    websiteUrl: "https://ziontechgroup.com/synthetic-biology"
-  },
-
-  // Quantum Sensing Platform
-  {
-    id: "quantum-sensing-platform",
-    title: "Quantum Sensing and Measurement Platform",
-    description: "Advanced quantum sensing platform that provides unprecedented precision in measurement and detection across various applications.",
-    category: "Quantum Technology",
-    subcategory: "Quantum Sensing",
-    price: 18000,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Quantum sensors",
-      "Ultra-precise measurement",
-      "Quantum imaging",
-      "Sensing algorithms",
-      "Data processing",
-      "Integration APIs",
-      "Calibration tools",
-      "Performance monitoring"
-    ],
-    benefits: [
-      "1000x more precise measurements",
-      "Quantum advantage in sensing",
-      "New detection capabilities",
-      "Competitive edge",
-      "Future-proof technology"
-    ],
-    useCases: [
-      "Medical imaging",
-      "Environmental monitoring",
-      "Security detection",
-      "Scientific research",
-      "Industrial inspection"
-    ],
-    targetAudience: [
-      "Medical device companies",
-      "Environmental firms",
-      "Security companies",
-      "Research institutions",
-      "Manufacturing companies"
-    ],
-    tags: ["Quantum Sensing", "Measurement", "Precision", "Detection", "Imaging"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$18,000 - $50,000/month",
-=======
     technology: ["EEG", "Signal Processing", "Machine Learning", "Python", "Custom Hardware"],
     integrations: ["Medical devices", "Mobile apps", "Research platforms", "Analytics tools"],
     compliance: ["FDA", "CE Mark", "HIPAA", "Medical device regulations"],
@@ -1521,7 +1012,6 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     estimatedDelivery: "8-12 weeks",
     supportLevel: "enterprise",
     marketPrice: "$1,799 - $7,000/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-d34b
 =======
     technology: ["Unity3D", "Unreal Engine", "Python", "React", "Node.js", "MongoDB", "IoT Platforms"],
     integrations: ["IoT devices", "CAD systems", "ERP systems", "Building management systems"],
@@ -1639,73 +1129,11 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     estimatedDelivery: "10-14 weeks",
     supportLevel: "enterprise",
     marketPrice: "$3,999 - $30,000/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-9c54
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-    technology: ["TensorFlow Lite", "ONNX", "Python", "React", "Node.js", "Docker", "Kubernetes"],
-    integrations: ["IoT platforms", "Cloud services", "Edge devices", "AI frameworks"],
-    compliance: ["ISO 27001", "SOC 2", "GDPR", "Industry standards"],
-    roi: "300% within 8 months",
-    competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "NVIDIA Jetson"],
-    marketTrend: "Growing rapidly with increasing IoT adoption",
-    innovationLevel: "Advanced edge AI platform with real-time optimization",
-    uniqueValue: "First comprehensive platform for deploying and managing AI models at the edge"
-  },
-
-  // Holographic Display Platform
-  {
-    id: "holographic-display-platform",
-    title: "Holographic Display Platform",
-    description: "Advanced platform for creating, managing, and displaying holographic content for entertainment, education, and business applications.",
-    category: "Holographic Technology",
-    subcategory: "Display & Content",
-    price: 599,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "3D content creation",
-      "Holographic rendering",
-      "Display management",
-      "Content distribution",
-      "Interactive features",
-      "Multi-user support",
-      "Content library",
-      "API integration",
-      "Mobile applications",
-      "Analytics dashboard"
-    ],
-    benefits: [
-      "Enhance user engagement by 80%",
-      "Improve learning outcomes by 60%",
-      "Create immersive experiences",
-      "Enable remote collaboration",
-      "Differentiate products and services"
-    ],
-    useCases: [
-      "Entertainment venues",
-      "Educational institutions",
-      "Business presentations",
-      "Healthcare training",
-      "Retail experiences",
-      "Virtual events"
-    ],
-    targetAudience: [
-      "Entertainment companies",
-      "Educational institutions",
-      "Businesses",
-      "Healthcare organizations",
-      "Retail companies"
-    ],
-    tags: ["Holographic Technology", "3D Display", "Immersive Technology", "Entertainment", "Education", "Business"],
-    estimatedDelivery: "6-10 weeks",
-    supportLevel: "premium",
-    marketPrice: "$599 - $2,400/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
-=======
     technology: ["Spiking Neural Networks", "Neuromorphic Chips", "Cognitive Algorithms", "Adaptive Learning"],
     integrations: ["AI Platforms", "IoT Systems", "Robotics Platforms", "Edge Computing"],
     compliance: ["AI Ethics", "Data Privacy", "Industry Standards"],
@@ -1825,64 +1253,11 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
     marketPrice: "$3,499 - $40,000/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-9c54
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    websiteUrl: "https://ziontechgroup.com/quantum-sensing"
-  },
-
-  // AI-Powered Space Technology
-  {
-    id: "ai-space-technology",
-    title: "AI-Powered Space Technology Platform",
-    description: "Innovative platform that combines artificial intelligence with space technology for satellite operations, space exploration, and Earth observation.",
-    category: "Space Technology",
-    subcategory: "AI Integration",
-    price: 42000,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Satellite AI operations",
-      "Space data analytics",
-      "Autonomous navigation",
-      "Earth observation AI",
-      "Space debris tracking",
-      "Mission planning",
-      "API integration",
-      "Real-time monitoring"
-    ],
-    benefits: [
-      "Autonomous space operations",
-      "Real-time space analytics",
-      "Improved mission success",
-      "Cost reduction",
-      "Innovation leadership"
-    ],
-    useCases: [
-      "Satellite operations",
-      "Space exploration",
-      "Earth observation",
-      "Space debris management",
-      "Planetary research"
-    ],
-    targetAudience: [
-      "Space agencies",
-      "Satellite companies",
-      "Aerospace firms",
-      "Research institutions",
-      "Government agencies"
-    ],
-    tags: ["Space Technology", "AI", "Satellites", "Space Exploration", "Earth Observation"],
-    estimatedDelivery: "10-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$42,000 - $120,000/month",
-=======
     technology: ["CRISPR", "Gene Editing", "Bioinformatics", "Python", "Laboratory Automation"],
     integrations: ["Laboratory equipment", "Data analysis tools", "Research databases", "Compliance systems"],
     compliance: ["FDA", "EPA", "USDA", "International regulations", "Biosafety standards"],
@@ -1935,7 +1310,6 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     estimatedDelivery: "20-24 weeks",
     supportLevel: "enterprise",
     marketPrice: "$3,999 - $20,000/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-d34b
 =======
     technology: ["Satellite Technology", "Earth Observation", "Space Communications", "Navigation Systems"],
     integrations: ["Ground Stations", "Data Centers", "Communication Networks"],
@@ -1994,63 +1368,11 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     estimatedDelivery: "14-18 weeks",
     supportLevel: "enterprise",
     marketPrice: "$4,499 - $60,000/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-9c54
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-    websiteUrl: "https://ziontechgroup.com/ai-space-technology"
-  },
-
-  // Quantum Machine Learning Hardware
-  {
-    id: "quantum-ml-hardware",
-    title: "Quantum Machine Learning Hardware Platform",
-    description: "Revolutionary hardware platform that combines quantum computing with machine learning for unprecedented computational power.",
-    category: "Quantum Computing",
-    subcategory: "Hardware",
-    price: 65000,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Quantum processors",
-      "Quantum memory systems",
-      "Quantum error correction",
-      "ML acceleration",
-      "Hardware optimization",
-      "Performance monitoring",
-      "Integration support",
-      "Custom solutions"
-    ],
-    benefits: [
-      "1000x faster ML training",
-      "Quantum advantage",
-      "Breakthrough capabilities",
-      "Future-proof investment",
-      "Competitive edge"
-    ],
-    useCases: [
-      "AI research",
-      "Drug discovery",
-      "Financial modeling",
-      "Climate simulation",
-      "Cryptography"
-    ],
-    targetAudience: [
-      "Research institutions",
-      "Technology companies",
-      "Financial institutions",
-      "Government agencies",
-      "Pharmaceutical companies"
-    ],
-    tags: ["Quantum Computing", "Machine Learning", "Hardware", "AI", "Research"],
-    estimatedDelivery: "20-24 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$65,000 - $200,000/month",
-=======
     technology: ["Plasma Physics", "Control Systems", "Machine Learning", "Real-time Computing", "Custom Hardware"],
     integrations: ["Power grid systems", "Research equipment", "Safety systems", "Analytics platforms"],
     compliance: ["Nuclear regulations", "Safety standards", "Environmental regulations", "Industry standards"],
@@ -2103,62 +1425,11 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,999 - $12,000/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-d34b
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-    websiteUrl: "https://ziontechgroup.com/quantum-ml-hardware"
-  },
-
-  // Autonomous Robotics Platform
-  {
-    id: "autonomous-robotics-platform",
-    title: "Autonomous Robotics Development Platform",
-    description: "Advanced platform for developing, testing, and deploying autonomous robots with AI-powered decision making and learning capabilities.",
-    category: "Robotics",
-    subcategory: "Autonomous Systems",
-    price: 8500,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Robot development tools",
-      "AI decision making",
-      "Autonomous navigation",
-      "Learning algorithms",
-      "Simulation environment",
-      "Hardware integration",
-      "API framework",
-      "Deployment tools"
-    ],
-    benefits: [
-      "Accelerate robot development",
-      "Reduce development costs",
-      "Improve robot intelligence",
-      "Scalable deployment",
-      "Competitive advantage"
-    ],
-    useCases: [
-      "Manufacturing automation",
-      "Service robots",
-      "Autonomous vehicles",
-      "Healthcare robotics",
-      "Agricultural automation"
-    ],
-    targetAudience: [
-      "Manufacturing companies",
-      "Robotics startups",
-      "Healthcare providers",
-      "Agricultural firms",
-      "Research institutions"
-    ],
-    tags: ["Robotics", "Autonomous Systems", "AI", "Automation", "Manufacturing"],
-    estimatedDelivery: "4-6 weeks",
-    supportLevel: "premium",
-    marketPrice: "$8,500 - $25,000/month",
-=======
     technology: ["Orbital Mechanics", "Satellite Technology", "Ground Station Systems", "Data Processing", "Custom Software"],
     integrations: ["Launch providers", "Ground stations", "Data centers", "Research platforms"],
     compliance: ["FCC", "ITU", "Space regulations", "International treaties"],
@@ -2211,7 +1482,6 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     estimatedDelivery: "6-10 weeks",
     supportLevel: "premium",
     marketPrice: "$1,599 - $6,000/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-d34b
 =======
     technology: ["Neural Signal Processing", "Machine Learning", "Signal Analysis", "Safety Protocols"],
     integrations: ["Medical Devices", "Research Equipment", "Data Analysis Tools"],
@@ -2332,128 +1602,16 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     estimatedDelivery: "6-10 weeks",
     supportLevel: "premium",
     marketPrice: "$1,899 - $20,000/month",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-9c54
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-    websiteUrl: "https://ziontechgroup.com/autonomous-robotics"
-  },
-
-  // Quantum Cryptography Platform
-  {
-    id: "quantum-cryptography-platform",
-    title: "Quantum Cryptography and Security Platform",
-    description: "Next-generation security platform that uses quantum mechanics to provide unbreakable encryption and secure communication.",
-    category: "Cybersecurity",
-    subcategory: "Quantum Security",
-    price: 25000,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Quantum key distribution",
-      "Quantum random number generation",
-      "Post-quantum cryptography",
-      "Secure communication",
-      "Key management",
-      "Compliance tools",
-      "API security",
-      "Integration support"
-    ],
-    benefits: [
-      "Unbreakable encryption",
-      "Future-proof security",
-      "Quantum advantage",
-      "Regulatory compliance",
-      "Competitive edge"
-    ],
-    useCases: [
-      "Government communications",
-      "Financial transactions",
-      "Healthcare data",
-      "Military applications",
-      "Critical infrastructure"
-    ],
-    targetAudience: [
-      "Government agencies",
-      "Financial institutions",
-      "Healthcare providers",
-      "Defense contractors",
-      "Critical infrastructure"
-    ],
-    tags: ["Quantum Cryptography", "Cybersecurity", "Encryption", "Security", "Government"],
-    estimatedDelivery: "8-10 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$25,000 - $80,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/quantum-cryptography"
-  },
-
-  // AI-Powered Climate Technology
-  {
-    id: "ai-climate-technology",
-    title: "AI-Powered Climate Technology Platform",
-    description: "Innovative platform that uses artificial intelligence to address climate change through monitoring, prediction, and mitigation strategies.",
-    category: "Climate Technology",
-    subcategory: "AI Solutions",
-    price: 12000,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Climate monitoring",
-      "Predictive modeling",
-      "Carbon tracking",
-      "Sustainability analytics",
-      "Policy recommendations",
-      "Impact assessment",
-      "API integration",
-      "Reporting tools"
-    ],
-    benefits: [
-      "Accurate climate predictions",
-      "Effective mitigation strategies",
-      "Regulatory compliance",
-      "Sustainability leadership",
-      "Cost savings"
-    ],
-    useCases: [
-      "Climate research",
-      "Policy making",
-      "Corporate sustainability",
-      "Environmental monitoring",
-      "Disaster preparedness"
-    ],
-    targetAudience: [
-      "Government agencies",
-      "Environmental organizations",
-      "Corporations",
-      "Research institutions",
-      "Policy makers"
-    ],
-    tags: ["Climate Technology", "AI", "Sustainability", "Environmental", "Monitoring"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "premium",
-    marketPrice: "$12,000 - $35,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/ai-climate-technology"
-=======
     technology: ["Material Science", "Simulation", "Data Analytics", "Machine Learning", "Custom Software"],
     integrations: ["Laboratory equipment", "Testing facilities", "Research databases", "Manufacturing systems"],
     compliance: ["Industry standards", "Safety regulations", "Quality standards", "International regulations"],
     roi: "350% within 18 months",
     competitors: ["3M", "DuPont", "BASF", "Dow", "Corning"]
->>>>>>> origin/cursor/expand-services-and-deploy-updates-d34b
 =======
     technology: ["3D Modeling", "IoT", "Machine Learning", "Cloud Computing", "Real-time Processing"],
     integrations: ["IoT Platforms", "ERP Systems", "SCADA Systems", "Analytics Tools"],
@@ -2465,7 +1623,6 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     demoUrl: "https://demo.ziontechgroup.com/digital-twin",
     technologyTrend: "Growing Adoption",
     marketMaturity: "Established"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-9c54
 =======
     innovationScore: 93,
     rating: 4.7,
@@ -2482,7 +1639,6 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     competitors: ["Siemens Mindsphere", "GE Digital Twin", "PTC ThingWorx", "Microsoft Azure Digital Twins"],
     researchPartners: ["MIT Digital Twin Initiative", "Stanford Digital Twin Lab", "Research Institutions"],
     patents: ["Digital Twin Architecture", "Real-time Simulation", "Predictive Analytics Engine"]
->>>>>>> origin/cursor/expand-services-and-deploy-updates-3629
   }
 ];
 
@@ -2495,13 +1651,11 @@ export const getEmergingTechServiceBySubcategory = (subcategory: string) => {
 };
 
 export const getFeaturedEmergingTechServices = () => {
+  // Return first 8 services since rating property doesn't exist
   return EMERGING_TECH_SERVICES.slice(0, 8);
 };
 
 export const getServicesByInnovationScore = (minScore: number) => {
-  return EMERGING_TECH_SERVICES.slice(0, Math.max(1, Math.floor(EMERGING_TECH_SERVICES.length * (minScore / 100))));
-};
-=======
     technology: ["Unity3D", "Unreal Engine", "React", "Node.js", "WebGL", "WebXR", "3D Graphics"],
     integrations: ["Display hardware", "Content management systems", "Streaming platforms", "Mobile apps"],
     compliance: ["Content standards", "Accessibility guidelines", "Industry regulations"],
@@ -2514,4 +1668,8 @@ export const getServicesByInnovationScore = (minScore: number) => {
 ];
 
 export default EMERGING_TECH_SERVICES;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
+=======
+  // Return all services since innovationScore property doesn't exist
+  // In the future, this could be enhanced with actual innovation scoring
+  return EMERGING_TECH_SERVICES;
+};

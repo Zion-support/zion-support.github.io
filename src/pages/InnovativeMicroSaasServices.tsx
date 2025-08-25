@@ -41,9 +41,9 @@ interface Service {
   description: string;
   category: string;
   subcategory: string;
-  price: number | { monthly?: number; yearly?: number; oneTime?: number; currency: string; pricingModel: string };
+  price: number;
   currency?: string;
-  pricingModel?: string;
+  pricingModel: string;
   features: string[];
   benefits: string[];
   useCases?: string[];
@@ -93,7 +93,8 @@ const InnovativeMicroSaasServices: React.FC = () => {
   
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = (service.title || service.name || '').toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const serviceTitle = service.title || service.name || '';
+    const matchesSearch = serviceTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
     return matchesCategory && matchesSearch;
@@ -262,7 +263,7 @@ const InnovativeMicroSaasServices: React.FC = () => {
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
-                                              <h3 className="text-xl font-bold text-white mb-2">{service.title || service.name}</h3>
+                      <h3 className="text-xl font-bold text-white mb-2">{service.title || service.name}</h3>
                       <p className="text-gray-400 text-sm mb-3">{service.description}</p>
                     </div>
                     <button

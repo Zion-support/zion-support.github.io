@@ -1,38 +1,18 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-=======
 import { Link } from 'react-router-dom';
->>>>>>> origin/main
 import { 
-<<<<<<< HEAD
-=======
   Brain, 
->>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
-  Target, 
-  BarChart3, 
-  Users, 
-  TrendingUp, 
-  Zap, 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  Eye,
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Brain,
-  Mail,
 =======
+import { motion } from 'framer-motion';
+import { 
+  Brain, 
+  Target, 
+  TrendingUp, 
+  Users, 
+  BarChart3, 
+  Zap, 
   Brain, 
   Mail, 
->>>>>>> origin/main
   MessageSquare,
   Calendar,
   Analytics,
@@ -48,38 +28,16 @@ import {
   DollarSign
 } from 'lucide-react';
 
-<<<<<<< HEAD
-const AIMarketingAutomation = () => {
 =======
   Shield, 
 =======
 =======
->>>>>>> origin/cursor/website-audit-and-enhancement-9620
 import { Link } from 'react-router-dom';
 import { 
   Target, 
   TrendingUp, 
   Users, 
-<<<<<<< HEAD
-  BarChart3, 
-  Mail, 
-  MessageSquare,
-  Zap,
-  Shield,
->>>>>>> origin/cursor/website-audit-and-enhancement-8a01
-  Globe,
-  ArrowRight,
-  CheckCircle,
-  Star,
-<<<<<<< HEAD
-  Rocket
-} from 'lucide-react';
-
-export default function AIMarketingAutomation() {
->>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
-=======
 const AIMarketingAutomation: React.FC = () => {
->>>>>>> origin/main
 =======
   Clock,
   Award,
@@ -92,28 +50,10 @@ const AIMarketingAutomation: React.FC = () => {
 } from 'lucide-react';
 
 const AIMarketingAutomation = () => {
->>>>>>> origin/cursor/website-audit-and-enhancement-8a01
   const features = [
     {
       icon: Brain,
       title: "AI-Powered Campaign Optimization",
-<<<<<<< HEAD
-      description: "Intelligent algorithms that automatically optimize marketing campaigns for maximum ROI and engagement.",
-      benefits: ["Real-time performance analysis", "Automated A/B testing", "Predictive analytics"]
-    },
-    {
-      icon: Target,
-<<<<<<< HEAD
-      title: "Intelligent Audience Targeting",
-<<<<<<< HEAD
-      description: "AI-powered segmentation and targeting for maximum campaign effectiveness",
-      benefits: [
-        "Behavioral pattern analysis",
-        "Predictive customer modeling",
-        "Real-time audience optimization",
-        "Cross-channel targeting"
-      ]
-=======
 import { Link } from 'react-router-dom';
 import { 
   Target, 
@@ -126,41 +66,10 @@ import {
   TrendingUp, 
   Users, 
   Mail, 
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-459c
   MessageSquare, 
   BarChart3, 
   Zap, 
   Globe,
-<<<<<<< HEAD
-  CheckCircle,
-  ArrowRight,
-  Mail,
-  Smartphone,
-  Monitor,
-  Calendar,
-  DollarSign
-} from 'lucide-react';
-
-export default function AIMarketingAutomation() {
-  const features = [
-    {
-      icon: Target,
-      title: "Smart Audience Segmentation",
-      description: "AI-powered customer segmentation that automatically identifies and targets high-value prospects."
->>>>>>> origin/cursor/website-audit-and-enhancement-500e
-    },
-    {
-      icon: TrendingUp,
-      title: "Predictive Campaign Optimization",
-<<<<<<< HEAD
-      description: "Automated campaign performance prediction and optimization",
-      benefits: [
-        "ROI forecasting",
-        "A/B testing automation",
-        "Budget optimization",
-        "Performance prediction"
-      ]
-=======
       description: "Machine learning algorithms that automatically optimize marketing campaigns for maximum ROI",
       benefits: ["Real-time optimization", "A/B testing automation", "Performance prediction", "Budget allocation"]
     },
@@ -175,35 +84,12 @@ export default function AIMarketingAutomation() {
       title: "Predictive Analytics",
       description: "Forecast customer behavior and campaign performance using historical data analysis",
       benefits: ["Churn prediction", "Lifetime value forecasting", "Campaign success prediction", "Market trend analysis"]
->>>>>>> origin/cursor/website-audit-and-enhancement-8a01
 =======
       description: "Machine learning algorithms that continuously optimize campaigns for maximum ROI and engagement."
->>>>>>> origin/cursor/website-audit-and-enhancement-500e
     },
     {
       icon: Users,
       title: "Personalized Content Generation",
-<<<<<<< HEAD
-<<<<<<< HEAD
-      description: "AI-generated personalized content for each customer segment",
-      benefits: [
-        "Dynamic content creation",
-        "Personalized messaging",
-        "Multi-language support",
-        "Brand voice consistency"
-      ]
-    },
-    {
-      icon: BarChart3,
-      title: "Real-time Analytics & Insights",
-      description: "Live campaign performance monitoring and actionable insights",
-      benefits: [
-        "Real-time dashboards",
-        "Predictive analytics",
-        "Competitive intelligence",
-        "Performance alerts"
-      ]
-=======
 import { Link } from 'react-router-dom';
 import { 
   Target, 
@@ -234,50 +120,11 @@ import {
 =======
 import { Link } from 'react-router-dom';
 import { Brain, Target, Users, BarChart3, Zap, Shield, ArrowRight, CheckCircle, TrendingUp } from 'lucide-react';
->>>>>>> origin/cursor/website-audit-and-enhancement-ea9e
 
 export default function AIMarketingAutomation() {
   const features = [
     {
       icon: Brain,
-<<<<<<< HEAD
-      title: "AI-Powered Campaign Optimization",
-      description: "Intelligent algorithms that automatically optimize marketing campaigns for maximum ROI and engagement."
-    },
-    {
-      icon: Target,
-      title: "Precision Audience Targeting",
-      description: "Advanced segmentation and targeting using machine learning to identify high-value prospects."
-    },
-    {
-      icon: BarChart3,
-      title: "Real-Time Analytics & Insights",
-      description: "Comprehensive dashboards providing actionable insights and performance metrics."
->>>>>>> origin/cursor/website-audit-and-enhancement-82f7
-    },
-    {
-      icon: Zap,
-      title: "Automated Workflow Management",
-<<<<<<< HEAD
-      description: "Streamlined marketing operations with intelligent automation",
-      benefits: [
-        "Campaign scheduling",
-        "Lead nurturing automation",
-        "Email sequence optimization",
-        "Social media automation"
-      ]
-    },
-    {
-      icon: Eye,
-      title: "Advanced Attribution Modeling",
-      description: "Multi-touch attribution for accurate ROI measurement",
-      benefits: [
-        "Cross-channel attribution",
-        "Customer journey mapping",
-        "Conversion tracking",
-        "ROI optimization"
-      ]
-=======
       title: "Precision Audience Targeting",
       description: "Advanced AI algorithms that identify and target the most valuable customer segments with laser precision.",
       benefits: ["Behavioral analysis", "Predictive segmentation", "Dynamic audience optimization"]
@@ -290,48 +137,15 @@ export default function AIMarketingAutomation() {
 =======
       description: "AI-generated personalized content that resonates with individual customer preferences",
       benefits: ["Dynamic content", "Personalized messaging", "Multi-language support", "Brand voice consistency"]
->>>>>>> origin/cursor/website-audit-and-enhancement-8a01
     },
     {
       icon: Zap,
       title: "Automated Workflows",
-<<<<<<< HEAD
-      description: "Streamlined marketing processes that run automatically, saving time and ensuring consistency across campaigns.",
-      benefits: ["Multi-channel automation", "Trigger-based campaigns", "Workflow optimization"]
->>>>>>> origin/main
-    }
-  ];
-
-  const useCases = [
-    {
-      title: "Email Marketing Automation",
-      description: "Intelligent email campaigns that adapt to recipient behavior and preferences.",
-      icon: Mail,
-      features: ["Personalized content", "Optimal send times", "Behavioral triggers"]
-    },
-    {
-      title: "Social Media Management",
-      description: "AI-powered social media campaigns that engage audiences across all platforms.",
-      icon: MessageSquare,
-      features: ["Content optimization", "Audience engagement", "Performance tracking"]
-    },
-    {
-      title: "Content Marketing",
-      description: "Data-driven content strategies that resonate with target audiences and drive conversions.",
-      icon: Eye,
-      features: ["Topic optimization", "Content performance", "SEO integration"]
-    },
-    {
-<<<<<<< HEAD
-      industry: "Financial Services",
-      applications: [
-        "Customer retention campaigns",
-        "Product cross-selling",
-        "Risk-based messaging",
-        "Compliance-aware marketing"
-      ],
-      icon: TrendingUp
 =======
+  const features = [
+    {
+      icon: Target,
+      title: "Intelligent Audience Targeting",
       description: "AI-powered audience segmentation and targeting for maximum campaign effectiveness"
     },
     {
@@ -356,15 +170,10 @@ export default function AIMarketingAutomation() {
 =======
       description: "Intelligent automation of repetitive marketing tasks and customer journey management",
       benefits: ["Lead nurturing", "Email automation", "Social media management", "Customer onboarding"]
->>>>>>> origin/cursor/website-audit-and-enhancement-8a01
     },
     {
       icon: Shield,
       title: "Compliance & Security",
-<<<<<<< HEAD
-      description: "Built-in compliance features and enterprise-grade security"
->>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
-=======
       description: "Streamlined marketing processes with intelligent automation and workflow optimization."
     },
     {
@@ -376,7 +185,6 @@ export default function AIMarketingAutomation() {
       icon: TrendingUp,
       title: "Predictive Performance Modeling",
       description: "AI-driven forecasting to predict campaign performance and optimize strategies."
->>>>>>> origin/cursor/website-audit-and-enhancement-82f7
 =======
 import { Link } from 'react-router-dom';
 import { 
@@ -480,7 +288,6 @@ export default function AIMarketingAutomation() {
       description: 'Mobile-first marketing automation and push notification optimization',
       icon: Smartphone,
       features: ['Push notifications', 'In-app messaging', 'Location targeting', 'Mobile analytics']
->>>>>>> origin/cursor/website-audit-and-enhancement-0445
 =======
       title: 'AI-Powered Targeting',
       description: 'Advanced algorithms that identify and target your ideal customers with precision.'
@@ -509,7 +316,6 @@ export default function AIMarketingAutomation() {
       icon: Shield,
       title: 'Compliance & Security',
       description: 'Built-in compliance features for GDPR, CCPA, and other privacy regulations.'
->>>>>>> origin/cursor/website-audit-and-enhancement-ea9e
 =======
       description: "AI creates personalized marketing content based on customer behavior and preferences."
     },
@@ -546,20 +352,10 @@ const AIMarketingAutomation = () => {
       icon: MessageSquare,
       title: "Chatbot Marketing",
       description: "Intelligent chatbots that qualify leads and guide customers through the sales funnel."
->>>>>>> origin/cursor/website-audit-and-enhancement-9620
     },
     {
       icon: BarChart3,
       title: "Real-Time Analytics",
-<<<<<<< HEAD
-      description: "Live performance tracking with actionable insights and automated reporting."
-    },
-    {
-      icon: Zap,
-      title: "Intelligent A/B Testing",
-      description: "Automated testing of multiple campaign variations to find the best performing elements."
->>>>>>> origin/cursor/website-audit-and-enhancement-500e
-=======
       description: "Live performance tracking with AI insights to optimize campaigns in real-time."
     },
     {
@@ -594,18 +390,11 @@ const AIMarketingAutomation = () => {
       title: "Social Media Marketing",
       description: "Automated social media posting, engagement, and audience growth strategies.",
       icon: Globe
->>>>>>> origin/cursor/website-audit-and-enhancement-9620
+=======
     }
   ];
 
   const benefits = [
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       title: "Lead Generation",
       description: "Automated lead scoring and nurturing processes that convert prospects into customers.",
       icon: Users,
@@ -639,73 +428,10 @@ const AIMarketingAutomation = () => {
       industry: "Education",
       description: "Student recruitment, course recommendations, and alumni engagement",
       metrics: ["Enrollment Rate", "Course Completion", "Alumni Engagement"]
->>>>>>> origin/cursor/website-audit-and-enhancement-500e
     }
   ];
 
   const pricing = [
-<<<<<<< HEAD
->>>>>>> origin/main
-    {
-      name: "Starter",
-      price: "$299",
-      period: "/month",
-      description: "Perfect for small businesses starting with marketing automation",
-      features: [
-        "Basic AI campaign optimization",
-        "Email automation (up to 10,000 contacts)",
-        "Social media scheduling",
-        "Basic analytics dashboard",
-        "Email support"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$599",
-      period: "/month",
-      description: "Ideal for growing businesses with advanced automation needs",
-      features: [
-        "Advanced AI optimization",
-        "Unlimited email automation",
-        "Multi-channel campaigns",
-        "Advanced analytics & reporting",
-        "Predictive analytics",
-        "Priority support"
-      ],
-      popular: true
-    },
-    {
-<<<<<<< HEAD
-      metric: "$1.2M",
-      description: "Average annual ROI",
-      icon: BarChart3
-    },
-    {
-      metric: "24/7",
-      description: "Campaign optimization",
-      icon: Eye
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      title: "Marketing Director, E-commerce Retailer",
-      quote: "The AI marketing automation platform increased our conversion rates by 300% while reducing our manual workload by 85%.",
-      rating: 5
-    },
-    {
-      name: "Michael Chen",
-      title: "VP Marketing, B2B SaaS Company",
-      quote: "Our lead generation and nurturing processes are now completely automated and optimized for maximum ROI.",
-      rating: 5
-    },
-    {
-      name: "Alex Rodriguez",
-      title: "CMO, Healthcare Network",
-      quote: "The personalized patient engagement campaigns have significantly improved our patient satisfaction scores.",
-      rating: 5
 =======
     "Increase conversion rates by up to 300%",
     "Reduce marketing costs by 40-60%",
@@ -819,31 +545,11 @@ export default function AIMarketingAutomation() {
     {
       name: "Starter",
       price: "$199/month",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-459c
       description: "Perfect for small businesses starting with marketing automation",
       features: [
         "Up to 5,000 contacts",
         "Basic email automation",
         "Social media scheduling",
-<<<<<<< HEAD
-        "Standard analytics",
->>>>>>> origin/cursor/website-audit-and-enhancement-500e
-        "Email support"
-      ]
-    },
-    {
-      name: "Professional",
-<<<<<<< HEAD
-      price: "$599",
-      period: "/month",
-      description: "Ideal for growing companies",
-      features: [
-        "Advanced AI optimization",
-        "Multi-channel automation",
-        "Advanced segmentation",
-        "Predictive analytics",
-        "Up to 25,000 contacts",
-=======
       price: "$4,500",
       period: "/month",
       description: "Ideal for growing companies with advanced marketing needs",
@@ -852,7 +558,6 @@ export default function AIMarketingAutomation() {
         "Advanced AI personalization",
         "Multi-channel automation",
         "Predictive analytics",
->>>>>>> origin/cursor/website-audit-and-enhancement-500e
         "Priority support",
         "Custom integrations"
       ],
@@ -860,51 +565,16 @@ export default function AIMarketingAutomation() {
     },
     {
       name: "Enterprise",
-<<<<<<< HEAD
-      price: "$1,299",
-      period: "/month",
-      description: "For large organizations",
-      features: [
-        "Full AI suite access",
-        "Custom AI models",
-        "Advanced attribution",
-        "Dedicated account manager",
-        "Unlimited contacts",
-        "24/7 phone support",
-        "Custom development"
-      ]
-    }
->>>>>>> origin/cursor/website-audit-and-enhancement-82f7
-=======
     'Increase conversion rates by 40-60% with personalized campaigns',
     'Reduce customer acquisition costs by 25-35%',
     'Improve customer lifetime value by 30-50%',
     'Automate 80% of repetitive marketing tasks',
     'Achieve 3x better ROI on marketing spend',
     'Reduce time-to-market for campaigns by 70%'
->>>>>>> origin/cursor/website-audit-and-enhancement-ea9e
   ];
 
   const useCases = [
     {
-<<<<<<< HEAD
-      title: "E-commerce Marketing",
-<<<<<<< HEAD
-      description: "Personalized product recommendations and dynamic pricing optimization"
-    },
-    {
-      title: "B2B Lead Generation",
-      description: "Intelligent lead scoring and nurturing campaigns"
-    },
-    {
-      title: "Content Marketing",
-      description: "AI-generated content and automated content distribution"
-    },
-    {
-      title: "Social Media Marketing",
-      description: "Automated social media management and engagement optimization"
->>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
-=======
       description: "Automated product recommendations, abandoned cart recovery, and personalized shopping experiences.",
       icon: ShoppingCart
     },
@@ -922,7 +592,6 @@ export default function AIMarketingAutomation() {
       title: "Social Media Management",
       description: "Automated posting, engagement monitoring, and trend analysis across all platforms.",
       icon: Share2
->>>>>>> origin/cursor/website-audit-and-enhancement-82f7
 =======
       name: "Enterprise",
       price: "$1,299",
@@ -937,7 +606,6 @@ export default function AIMarketingAutomation() {
         "Custom training & onboarding"
       ],
       popular: false
->>>>>>> origin/main
 =======
     {
       title: 'Increased ROI',
@@ -958,7 +626,6 @@ export default function AIMarketingAutomation() {
       title: 'Data-Driven Decisions',
       description: 'Make informed marketing decisions based on real-time analytics',
       icon: Brain
->>>>>>> origin/cursor/website-audit-and-enhancement-0445
 =======
       description: "Built-in compliance features for GDPR, CAN-SPAM, and other marketing regulations",
       benefits: ["GDPR compliance", "Data privacy", "Audit trails", "Secure data handling"]
@@ -1077,28 +744,10 @@ export default function AIMarketingAutomation() {
         "A/B testing"
       ],
       cta: "Start Free Trial",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-459c
       popular: true
     },
     {
       name: "Enterprise",
-<<<<<<< HEAD
-      price: "Custom",
-      period: "",
-      description: "Full-scale AI marketing automation for large organizations",
-      features: [
-        "Unlimited contacts",
-        "Full AI capabilities",
-        "Custom AI models",
-        "Advanced reporting",
-        "24/7 dedicated support",
-        "White-label solutions",
-        "On-premise options",
-        "Custom development"
-      ],
-      popular: false
->>>>>>> origin/cursor/website-audit-and-enhancement-8a01
-=======
       title: 'Email Marketing',
       description: 'AI-powered email campaigns with dynamic content and optimal send times.',
       icon: '📧'
@@ -1117,7 +766,6 @@ export default function AIMarketingAutomation() {
       title: 'Lead Nurturing',
       description: 'Intelligent lead scoring and automated nurturing sequences.',
       icon: '🎯'
->>>>>>> origin/cursor/website-audit-and-enhancement-ea9e
 =======
       price: "Custom",
       period: "",
@@ -1130,7 +778,6 @@ export default function AIMarketingAutomation() {
         "Advanced security",
         "API access"
       ]
->>>>>>> origin/cursor/website-audit-and-enhancement-500e
 =======
       price: "$1,299/month",
       description: "For large organizations requiring enterprise-grade marketing automation",
@@ -1171,55 +818,35 @@ export default function AIMarketingAutomation() {
       metric: "5.2x",
       description: "ROI improvement",
       detail: "Automated optimization and personalization"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-459c
+=======
     }
   ];
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
-<<<<<<< HEAD
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
 =======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
->>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-<<<<<<< HEAD
-            <div className="inline-flex items-center px-4 py-2 bg-orange-500/20 border border-orange-500/50 rounded-full text-orange-400 text-sm font-medium mb-6">
-              <Target className="w-4 h-4 mr-2" />
-              AI-Powered Marketing
-=======
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
               AI-Powered Marketing Automation
->>>>>>> origin/main
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Transform Your Marketing with
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> AI Intelligence</span>
             </h1>
-<<<<<<< HEAD
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your marketing with intelligent automation that personalizes campaigns, optimizes performance, 
-              and delivers measurable ROI. Let AI handle the complexity while you focus on strategy.
-=======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -1238,12 +865,10 @@ export default function AIMarketingAutomation() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Automate your marketing campaigns with cutting-edge AI that learns, optimizes, and delivers results. 
               From email marketing to social media, our platform handles it all intelligently.
->>>>>>> origin/cursor/website-audit-and-enhancement-82f7
 =======
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Leverage the power of artificial intelligence to automate, optimize, and scale your marketing campaigns. 
               Our AI-driven platform delivers personalized experiences that convert prospects into loyal customers.
->>>>>>> origin/main
 =======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
@@ -1263,18 +888,11 @@ export default function AIMarketingAutomation() {
             <p className="text-xl md:text-2xl text-gray-300 mb-8">
               Transform your marketing campaigns with intelligent automation that learns, 
               optimizes, and delivers personalized experiences at scale.
->>>>>>> origin/cursor/website-audit-and-enhancement-8a01
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                className="bg-gradient-to-r from-orange-500 to-yellow-600 hover:from-orange-600 hover:to-yellow-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-200 transform hover:scale-105"
-=======
                 className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200 transform hover:scale-105"
->>>>>>> origin/main
               >
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -1285,6 +903,7 @@ export default function AIMarketingAutomation() {
               >
                 View Case Studies
               </Link>
+=======
 =======
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center">
@@ -1305,52 +924,18 @@ export default function AIMarketingAutomation() {
               <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200">
                 Watch Demo
               </button>
->>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
             </div>
-<<<<<<< HEAD
           </motion.div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Key Benefits */}
+      {/* Features Section */}
 =======
       {/* Features Section */}
->>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Marketing That Works Smarter
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI marketing automation platform delivers unprecedented results through intelligent optimization.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 + index * 0.1 }}
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center hover:border-orange-400/50 transition-all duration-300"
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-3xl font-bold text-orange-400 mb-2">{benefit.metric}</div>
-                <p className="text-gray-300">{benefit.description}</p>
-              </motion.div>
-            ))}
-=======
                 className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial
@@ -1363,7 +948,6 @@ export default function AIMarketingAutomation() {
                 Watch Demo
               </Link>
             </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-82f7
 =======
           </div>
           
@@ -1385,19 +969,12 @@ export default function AIMarketingAutomation() {
               <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
               <div className="text-gray-400">Automated Optimization</div>
             </div>
->>>>>>> origin/main
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {/* Features Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-=======
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
->>>>>>> origin/main
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1462,7 +1039,6 @@ export default function AIMarketingAutomation() {
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
->>>>>>> origin/cursor/website-audit-and-enhancement-8a01
 =======
     <div className="min-h-screen bg-gradient-to-br from-black via-purple-900 to-pink-900">
       <SEO 
@@ -1563,14 +1139,10 @@ export default function AIMarketingAutomation() {
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-400">
                       <div className="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-459c
                       {benefit}
                     </li>
                   ))}
                 </ul>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1601,9 +1173,6 @@ export default function AIMarketingAutomation() {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
->>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
-              </motion.div>
-=======
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1629,36 +1198,25 @@ export default function AIMarketingAutomation() {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-82f7
 =======
               </div>
->>>>>>> origin/main
 =======
               </div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-459c
+=======
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {/* Use Cases */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-=======
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
->>>>>>> origin/main
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Comprehensive Marketing Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-<<<<<<< HEAD
-              See how AI marketing automation transforms campaigns across different industries.
 =======
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
@@ -1676,19 +1234,15 @@ export default function AIMarketingAutomation() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the future of marketing with intelligent automation that learns, adapts, and optimizes 
               your campaigns for maximum impact.
->>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-<<<<<<< HEAD
-=======
               From email campaigns to social media management, our AI platform handles every aspect of your marketing strategy.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
->>>>>>> origin/main
             {useCases.map((useCase, index) => (
               <div key={index} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-purple-500/50 transition-all duration-300 text-center">
                 <div className="p-4 rounded-lg bg-purple-500/20 inline-block mb-4">
@@ -1703,9 +1257,6 @@ export default function AIMarketingAutomation() {
                     </li>
                   ))}
                 </ul>
-<<<<<<< HEAD
-              </motion.div>
-=======
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
         <div className="max-w-7xl mx-auto">
@@ -1769,37 +1320,10 @@ export default function AIMarketingAutomation() {
                 </ul>
               </div>
             ))}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-459c
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Perfect For Every Industry
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI marketing automation platform adapts to your specific needs and industry requirements.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-              <div
-                key={index}
-                className="p-6 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
-              >
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center mb-4">
-                  <useCase.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                <p className="text-gray-300">{useCase.description}</p>
-=======
->>>>>>> origin/main
 =======
       {/* Success Metrics Section */}
       <section className="py-20 bg-black/50">
@@ -1819,7 +1343,6 @@ export default function AIMarketingAutomation() {
                 <div className="text-4xl font-bold text-purple-400 mb-2">{metric.metric}</div>
                 <div className="text-white font-semibold mb-2">{metric.description}</div>
                 <div className="text-gray-400 text-sm">{metric.detail}</div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-459c
               </div>
             ))}
           </div>
@@ -1827,144 +1350,6 @@ export default function AIMarketingAutomation() {
       </section>
 
       {/* Pricing Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Choose Your Plan
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Flexible pricing options designed to scale with your business growth.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-              <div
-                key={index}
-                className={`p-8 rounded-xl border transition-all duration-300 ${
-                  plan.popular
-                    ? 'bg-gradient-to-br from-purple-900/50 to-pink-900/50 border-purple-500/50 transform scale-105'
-                    : 'bg-gradient-to-br from-gray-800/50 to-gray-900/50 border-gray-700/50'
-                }`}
-              >
-                {plan.popular && (
-                  <div className="text-center mb-4">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-500 text-white">
-                      <Star className="w-3 h-3 mr-1" />
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
-                  </div>
-                  <p className="text-gray-300 mt-2">{plan.description}</p>
-                </div>
-                
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                
-                <Link
-                  to="/contact"
-                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600'
-                      : 'border border-gray-600 text-white hover:border-purple-500 hover:text-purple-400'
-                  }`}
-                >
-                  Get Started
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-              </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-82f7
-            ))}
-          </div>
-        </div>
-      </section>
-
-<<<<<<< HEAD
-      {/* How It Works */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              How It Works
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              A simple three-step process to revolutionize your marketing.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.9 }}
-              className="text-center"
-            >
-              <div className="w-20 h-20 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">1. Connect & Analyze</h3>
-              <p className="text-gray-300">
-                Connect your data sources and let AI analyze customer behavior patterns and preferences.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.0 }}
-              className="text-center"
-            >
-              <div className="w-20 h-20 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Brain className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">2. AI Optimization</h3>
-              <p className="text-gray-300">
-                AI automatically optimizes campaigns, personalizes content, and targets the right audiences.
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.1 }}
-              className="text-center"
-            >
-              <div className="w-20 h-20 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <BarChart3 className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">3. Measure & Scale</h3>
-              <p className="text-gray-300">
-                Track performance in real-time and scale successful campaigns automatically.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-=======
->>>>>>> origin/main
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -2008,27 +1393,11 @@ export default function AIMarketingAutomation() {
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-459c
                       Most Popular
                     </span>
                   </div>
                 )}
                 
-<<<<<<< HEAD
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
-                  </div>
-                  <p className="text-gray-300 mt-2">{plan.description}</p>
-                </div>
-                
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-=======
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="text-4xl font-bold text-purple-400 mb-2">{plan.price}</div>
@@ -2039,26 +1408,11 @@ export default function AIMarketingAutomation() {
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-purple-500 mr-3 flex-shrink-0" />
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-459c
                       {feature}
                     </li>
                   ))}
                 </ul>
                 
-<<<<<<< HEAD
-                <Link
-                  to="/contact"
-                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600'
-                      : 'border border-gray-600 text-gray-300 hover:text-white hover:border-gray-500'
-                  }`}
-                >
-                  Get Started
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-              </div>
-            ))}
 =======
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -2093,8 +1447,6 @@ export default function AIMarketingAutomation() {
                 ))}
               </div>
             </motion.div>
->>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
-=======
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular
                     ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:scale-105'
@@ -2104,28 +1456,12 @@ export default function AIMarketingAutomation() {
                 </button>
               </div>
             ))}
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-459c
+=======
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.4 }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Marketing?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join leading organizations that are already leveraging AI to automate and optimize their marketing campaigns.
-=======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -2138,26 +1474,15 @@ export default function AIMarketingAutomation() {
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Transform your marketing with AI-powered automation that personalizes experiences, 
               optimizes campaigns, and drives measurable results across all channels.
->>>>>>> origin/cursor/website-audit-and-enhancement-0445
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-<<<<<<< HEAD
-                className="bg-gradient-to-r from-orange-500 to-yellow-600 hover:from-orange-600 hover:to-yellow-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-200 transform hover:scale-105"
-=======
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
->>>>>>> origin/cursor/website-audit-and-enhancement-0445
               >
                 Start Your Free Trial
               </Link>
               <Link
-<<<<<<< HEAD
-                to="/demo"
-                className="border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-white font-semibold py-3 px-8 rounded-full transition-all duration-200"
-              >
-                Schedule Demo
-              </Link>
 =======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -2181,10 +1506,6 @@ export default function AIMarketingAutomation() {
               <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200">
                 Schedule Demo
               </button>
->>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
-            </div>
-          </motion.div>
-=======
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -2202,7 +1523,6 @@ export default function AIMarketingAutomation() {
           <p className="text-xl text-gray-300 mb-8">
             Join thousands of businesses that have already revolutionized their marketing with AI-powered automation. 
             Start your free trial today and see the difference AI can make.
->>>>>>> origin/main
 =======
                 to="/case-studies"
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
@@ -2304,44 +1624,10 @@ export default function AIMarketingAutomation() {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Discover how AI marketing automation is revolutionizing customer engagement across industries
->>>>>>> origin/cursor/website-audit-and-enhancement-9620
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-<<<<<<< HEAD
-            {services.map((service, index) => {
-              const Icon = service.icon;
-              return (
-                <div key={index} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
-                  <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mr-4">
-                      <Icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-white">{service.title}</h3>
-                      <p className="text-gray-400">{service.price}</p>
-                    </div>
-                  </div>
-                  
-                  <p className="text-gray-300 mb-6">{service.description}</p>
-                  
-                  <ul className="space-y-3 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <div className="w-2 h-2 bg-cyan-500 rounded-full mr-3"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <Link
-                    to="/contact"
-                    className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-                  >
-                    Get Started
-                  </Link>
-=======
             {useCases.map((useCase, index) => {
               const Icon = useCase.icon;
               return (
@@ -2355,74 +1641,11 @@ export default function AIMarketingAutomation() {
                       <p className="text-gray-300">{useCase.description}</p>
                     </div>
                   </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-9620
                 </div>
               );
             })}
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
-
-      {/* Marketing Channels Section */}
-      <div className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Omnichannel Marketing Automation</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Seamlessly integrate and automate marketing across all customer touchpoints
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {channels.map((channel, index) => {
-              const Icon = channel.icon;
-              return (
-                <div key={index} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-6 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-white">{channel.title}</h3>
-                  <p className="text-gray-300 mb-4 text-sm">{channel.description}</p>
-                  <ul className="space-y-2 text-sm">
-                    {channel.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="text-gray-400">
-                        • {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-
-      {/* Benefits Section */}
-      <div className="py-20 bg-black/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Why Choose AI Marketing Automation?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the future of marketing with intelligent automation and AI-powered insights
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => {
-              const Icon = benefit.icon;
-              return (
-                <div key={index} className="text-center group">
-                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
-                    <Icon className="w-10 h-10 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-white">{benefit.title}</h3>
-                  <p className="text-gray-300">{benefit.description}</p>
-                </div>
-              );
-            })}
-          </div>
-=======
               </div>
             );
           })}
@@ -2546,19 +1769,10 @@ export default function AIMarketingAutomation() {
               </Link>
             </div>
           ))}
->>>>>>> origin/cursor/website-audit-and-enhancement-8a01
         </div>
       </div>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-      <div className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold mb-6">Ready to Automate Your Marketing?</h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join the marketing revolution with AI-powered automation that delivers results.
->>>>>>> origin/cursor/website-audit-and-enhancement-0445
-=======
       <div className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 rounded-3xl p-12 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
@@ -2567,7 +1781,6 @@ export default function AIMarketingAutomation() {
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Join leading organizations that are already leveraging AI-powered marketing 
             automation to drive growth and customer engagement.
->>>>>>> origin/cursor/website-audit-and-enhancement-8a01
 =======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
@@ -2584,7 +1797,6 @@ export default function AIMarketingAutomation() {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Revolutionize your marketing with AI-powered automation that delivers personalized experiences, 
             optimizes campaigns in real-time, and drives unprecedented growth for your business.
->>>>>>> origin/cursor/website-audit-and-enhancement-ea9e
 =======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
       <div className="container mx-auto px-4 py-12">
@@ -2601,25 +1813,10 @@ export default function AIMarketingAutomation() {
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8">
             Transform your marketing with intelligent automation that personalizes campaigns, 
             optimizes performance, and drives results across all channels.
->>>>>>> origin/cursor/website-audit-and-enhancement-500e
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-              className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
-            >
-              Start Your Free Trial
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
-              to="/demo"
-              className="inline-flex items-center px-8 py-4 rounded-lg border border-gray-600 text-white font-semibold hover:border-purple-500 hover:text-purple-400 transition-all duration-300"
-=======
               className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200 transform hover:scale-105"
             >
               Start Free Trial
@@ -2628,15 +1825,10 @@ export default function AIMarketingAutomation() {
             <Link
               to="/demo"
               className="inline-flex items-center px-8 py-4 rounded-lg border border-gray-600 text-gray-300 hover:text-white hover:border-gray-500 transition-all duration-200"
->>>>>>> origin/main
             >
               Schedule Demo
             </Link>
           </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-82f7
-=======
->>>>>>> origin/main
 =======
       <section className="py-20 bg-gradient-to-r from-purple-900/50 via-pink-900/50 to-cyan-900/50">
         <div className="container mx-auto px-4 text-center">
@@ -2662,23 +1854,16 @@ export default function AIMarketingAutomation() {
               Need enterprise pricing? <a href="/contact" className="text-purple-400 hover:text-purple-300 underline">Contact our sales team</a>
             </p>
           </div>
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-459c
+=======
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-};
-
-export default AIMarketingAutomation;
+}
 =======
 }
->>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
-=======
-}
->>>>>>> origin/cursor/website-audit-and-enhancement-82f7
 =======
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
             >
@@ -2699,70 +1884,22 @@ export default AIMarketingAutomation;
               className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-white transition-all duration-300"
             >
               View Case Studies
->>>>>>> origin/cursor/website-audit-and-enhancement-8a01
             </Link>
 =======
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 font-semibold text-lg"
 =======
               className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
->>>>>>> origin/cursor/website-audit-and-enhancement-500e
             >
               Start Free Trial
             </Link>
             <Link
-<<<<<<< HEAD
-              to="/demo"
-              className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold text-lg"
-=======
               to="/request-quote"
               className="bg-transparent border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
->>>>>>> origin/cursor/website-audit-and-enhancement-500e
             >
               Request Demo
             </Link>
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
-
-      {/* Features Section */}
-      <div className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Intelligent Marketing Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI Marketing Automation platform combines cutting-edge artificial intelligence 
-              with proven marketing strategies to deliver exceptional results.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-gray-800/50 border border-gray-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 group">
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Benefits Section */}
-      <div className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Proven Business Results
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              See measurable improvements across all your marketing metrics with our 
-              AI-powered automation platform.
-=======
       </section>
 
       {/* Benefits Section */}
@@ -2774,47 +1911,18 @@ export default AIMarketingAutomation;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Transform your marketing from manual processes to intelligent, automated systems that scale
->>>>>>> origin/cursor/website-audit-and-enhancement-9620
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
-<<<<<<< HEAD
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
-=======
               <div key={index} className="flex items-center space-x-4">
                 <CheckCircle className="w-6 h-6 text-purple-400 flex-shrink-0" />
->>>>>>> origin/cursor/website-audit-and-enhancement-9620
                 <span className="text-gray-300 text-lg">{benefit}</span>
               </div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
-
-      {/* Use Cases Section */}
-      <div className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Marketing Applications
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              From email campaigns to social media management, our AI platform 
-              optimizes every aspect of your marketing strategy.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-gray-800/50 border border-gray-700 rounded-xl p-6 text-center hover:border-cyan-500/50 transition-all duration-300">
-                <div className="text-4xl mb-4">{useCase.icon}</div>
-                <h3 className="text-xl font-semibold mb-3 text-white">{useCase.title}</h3>
-                <p className="text-gray-300 text-sm leading-relaxed">{useCase.description}</p>
-=======
 
         {/* Features Grid */}
         <div className="mb-20">
@@ -2873,25 +1981,10 @@ export default AIMarketingAutomation;
                     </div>
                   ))}
                 </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-500e
               </div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
-
-      {/* CTA Section */}
-      <div className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 border border-cyan-500/30 rounded-2xl p-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Automate Your Marketing?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses that have transformed their marketing 
-              with AI-powered automation. Start your journey today.
-=======
 
         {/* Pricing */}
         <div className="mb-20">
@@ -2950,26 +2043,10 @@ export default AIMarketingAutomation;
             <p className="text-zion-slate-light text-lg mb-6 max-w-2xl mx-auto">
               Join thousands of marketers already using our AI-powered automation platform 
               to create personalized campaigns that convert.
->>>>>>> origin/cursor/website-audit-and-enhancement-500e
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-<<<<<<< HEAD
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 font-semibold text-lg flex items-center justify-center space-x-2"
-              >
-                <span>Get Started Now</span>
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
-                to="/pricing"
-                className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold text-lg"
-              >
-                View Pricing Plans
-              </Link>
-            </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-ea9e
-=======
                 className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial
@@ -2981,31 +2058,20 @@ export default AIMarketingAutomation;
                 Schedule Consultation
               </Link>
             </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-500e
           </div>
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/website-audit-and-enhancement-0445
-=======
 };
 
 export default AIMarketingAutomation;
->>>>>>> origin/cursor/website-audit-and-enhancement-8a01
 =======
 }
->>>>>>> origin/cursor/website-audit-and-enhancement-ea9e
 =======
 }
->>>>>>> origin/cursor/website-audit-and-enhancement-500e
 =======
 }
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-459c
 =======
       </section>
 
@@ -3081,4 +2147,5 @@ export default AIMarketingAutomation;
 };
 
 export default AIMarketingAutomation;
->>>>>>> origin/cursor/website-audit-and-enhancement-9620
+=======
+}

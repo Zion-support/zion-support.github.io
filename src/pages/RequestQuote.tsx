@@ -1,35 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import QuoteRequestForm from "@/components/QuoteRequestForm";
-=======
 import { QuoteRequestForm } from "@/components/QuoteRequestForm";
-<<<<<<< HEAD
->>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
-import { SEO } from "@/components/SEO";
-<<<<<<< HEAD
-import { MainNavigation } from "@/layout/MainNavigation";
-import Footer from "@/components/Footer";
-=======
 import React, { useState } from 'react';
->>>>>>> origin/cursor/website-audit-and-enhancement-bc98
 =======
 import { AppHeader } from "@/layout/AppHeader";
 import Footer from "@/components/Footer";
->>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
 =======
 import { SEO } from "@/components/SEO";
 import { Header } from "@/components/Header";
->>>>>>> origin/cursor/website-audit-and-enhancement-8717
+=======
+import { Footer } from "@/components/Footer";
 
 export default function RequestQuote() {
   const [form, setForm] = useState({
@@ -55,10 +34,6 @@ export default function RequestQuote() {
   };
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="min-h-screen bg-background">
-=======
 import React, { useState } from 'react';
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -73,7 +48,6 @@ import { Checkbox } from "@/components/ui/checkbox";
 =======
 import { useState } from 'react';
 import { motion } from 'framer-motion';
->>>>>>> origin/cursor/build-and-fix-errors-e276
 import { 
   HardDrive, 
   DollarSign, 
@@ -309,7 +283,6 @@ export default function RequestQuote() {
 
   return (
     <>
->>>>>>> origin/cursor/check-and-fix-github-actions-e92c
       <SEO 
         title="Request Quote - Zion Tech Group" 
         description="Get a customized quote for AI, cybersecurity, cloud, and digital transformation services. Professional consultation and transparent pricing."
@@ -317,20 +290,6 @@ export default function RequestQuote() {
       />
       <Header />
       
-<<<<<<< HEAD
-      <MainNavigation />
-      
-      <main className="pt-16">
-        {/* Hero Section */}
-        <section className="bg-zion-blue py-20">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Get Your Custom Quote
-            </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Tell us about your project requirements and we'll provide you with a detailed quote tailored to your needs. 
-              Whether it's AI development, IT services, or equipment solutions, we've got you covered.
-=======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
@@ -339,7 +298,6 @@ export default function RequestQuote() {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Request a Quote</h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Tell us about your project and we\'ll send a tailored proposal within 24 hours.
->>>>>>> origin/cursor/website-audit-and-enhancement-bc98
             </p>
           </div>
 
@@ -868,13 +826,8 @@ export default function RequestQuote() {
       
       <Footer />
     </>
->>>>>>> origin/cursor/check-and-fix-github-actions-e92c
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/build-and-fix-errors-e276
 =======
 import React from 'react';
 import { Header } from '@/components/header/Header';
@@ -889,7 +842,6 @@ import { QuoteRequestForm } from "@/components/QuoteRequestForm";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Clock, Users, Shield, Zap } from 'lucide-react';
->>>>>>> origin/cursor/website-audit-and-enhancement-6664
 
 export default function RequestQuote() {
   const benefits = [
@@ -916,30 +868,6 @@ export default function RequestQuote() {
   ];
 
   return (
-<<<<<<< HEAD
-    <>
-      <SEO
-        title="Request Quote - Zion Tech Group"
-        description="Get a custom quote for your tech project from our expert team."
-        canonical="https://ziontechgroup.com/request-quote"
-      />
-      <Header />
-      <main className="min-h-screen bg-zion-blue">
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center mb-16">
-            <GradientHeading>Request Quote</GradientHeading>
-            <p className="text-xl text-zion-slate-light mt-6 max-w-3xl mx-auto">
-              Get a custom quote for your tech project from our expert team.
-            </p>
-          </div>
-          
-          <div className="max-w-6xl mx-auto">
-            <div className="bg-zion-blue-light rounded-lg p-8 border border-zion-blue-lighter">
-              <h2 className="text-2xl font-bold text-white mb-6">Coming Soon</h2>
-              <p className="text-zion-slate-light mb-6">
-                Our quote request system is currently under development.
-              </p>
-=======
     <div className="min-h-screen bg-zion-blue-dark">
       <SEO 
         title="Request Quote - Zion Tech Group" 
@@ -1041,19 +969,13 @@ export default function RequestQuote() {
                   Browse Talent
                 </a>
               </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-6664
             </div>
           </div>
         </div>
       </main>
-<<<<<<< HEAD
-      <Footer />
-    </>
-=======
 
       <Footer />
     </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-6664
 =======
     <>
       <SEO 
@@ -1078,7 +1000,5 @@ export default function RequestQuote() {
         </div>
       </div>
     </>
->>>>>>> origin/cursor/website-audit-and-enhancement-8717
   );
 }
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974

@@ -38,18 +38,20 @@ const contactInfo = {
 
 const navigationItems: NavigationItem[] = [
   {
-    name: '🚀 All Services',
-    href: '/comprehensive-services-showcase-2025',
+    name: 'All Services',
+    href: '/comprehensive-new-services-showcase-2025',
     icon: <Globe className="w-5 h-5" />,
     description: 'Complete portfolio of all technology services',
-    badge: 'Showcase',
-    color: 'from-cyan-500 to-blue-600',
-    isNew: true,
+    badge: 'New 2025',
     children: [
-      { name: 'View All Services', href: '/comprehensive-services-showcase-2025', description: 'Complete services portfolio' },
-      { name: 'Service Categories', href: '/comprehensive-services-showcase-2025#categories', description: 'Browse by category' },
-      { name: 'Pricing Comparison', href: '/comprehensive-services-showcase-2025#pricing', description: 'Compare service costs' },
-      { name: 'Service Search', href: '/comprehensive-services-showcase-2025#search', description: 'Find specific services' }
+      { name: 'New Services Showcase 2025', href: '/comprehensive-new-services-showcase-2025', description: 'Latest innovative services portfolio' },
+      { name: 'Micro SAAS Services', href: '/comprehensive-new-services-showcase-2025#services', description: 'New business solutions' },
+      { name: 'AI Services', href: '/comprehensive-new-services-showcase-2025#services', description: 'Cutting-edge AI solutions' },
+      { name: 'IT Services', href: '/comprehensive-new-services-showcase-2025#services', description: 'Next-gen infrastructure' },
+      { name: 'Business Solutions', href: '/comprehensive-new-services-showcase-2025#services', description: 'AI-powered business tools' },
+      { name: 'Service Categories', href: '/comprehensive-new-services-showcase-2025#services', description: 'Browse by category' },
+      { name: 'Pricing & Plans', href: '/comprehensive-new-services-showcase-2025#services', description: 'Service pricing' },
+      { name: 'Contact & Support', href: '/comprehensive-new-services-showcase-2025#contact', description: 'Get in touch' }
     ]
   },
   {
@@ -126,6 +128,24 @@ const navigationItems: NavigationItem[] = [
       { name: 'Market Pricing', href: '/market-pricing', description: 'Competitor price references' },
       { name: 'Enterprise Quotes', href: '/contact', description: 'Custom enterprise pricing' },
       { name: 'ROI Calculator', href: '/contact', description: 'Calculate your ROI' }
+    ]
+  },
+  {
+    name: 'Innovative 2025',
+    href: '/innovative-2025-services-showcase',
+    icon: <Sparkles className="w-5 h-5" />,
+    description: 'Latest innovative services showcase',
+    badge: 'New',
+    children: [
+      { name: 'AI Content Intelligence Suite', href: '/ai-content-intelligence-suite', description: 'AI-powered content creation' },
+      { name: 'Quantum Cyber Defense Platform', href: '/quantum-cyber-defense-platform', description: 'Quantum-enhanced cybersecurity' },
+      { name: 'Autonomous Business Intelligence', href: '/autonomous-business-intelligence', description: 'Self-driving analytics' },
+      { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestrator', description: 'Intelligent edge management' },
+      { name: 'Blockchain Identity Management', href: '/blockchain-identity-management', description: 'Decentralized identity' },
+      { name: 'AI-Powered DevOps Automation', href: '/ai-devops-automation', description: 'Intelligent DevOps' },
+      { name: 'Quantum Machine Learning', href: '/quantum-machine-learning', description: 'Quantum-enhanced ML' },
+      { name: 'Autonomous Customer Service AI', href: '/autonomous-customer-service-ai', description: 'Self-learning support' },
+      { name: 'Space Technology Analytics', href: '/space-technology-analytics', description: 'Space mission analytics' }
     ]
   }
 ];
