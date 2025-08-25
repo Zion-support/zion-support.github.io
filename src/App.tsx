@@ -19,7 +19,7 @@ import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
 import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
-import { EnhancedSEO } from './components/EnhancedSEO';
+import { EnhancedSEO, defaultSEOConfig } from './components/EnhancedSEO';
 import { EnhancedAccessibility } from './components/EnhancedAccessibility';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
 
@@ -108,11 +108,42 @@ const App = () => {
               <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
                 {/* Enhanced SEO */}
                 <EnhancedSEO 
-                  title="Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services"
-                  description="Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology."
-                  keywords="AI solutions, quantum computing, cybersecurity, digital transformation, enterprise technology, machine learning, cloud services, IT infrastructure"
-                  type="website"
-                  url="https://ziontechgroup.com"
+                  config={{
+                    ...defaultSEOConfig,
+                    title: "Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services",
+                    description: "Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology.",
+                    keywords: [
+                      "AI solutions",
+                      "quantum computing", 
+                      "cybersecurity",
+                      "digital transformation",
+                      "enterprise technology",
+                      "machine learning",
+                      "cloud services",
+                      "IT infrastructure",
+                      "Zion Tech Group",
+                      "technology consulting",
+                      "software development",
+                      "data analytics",
+                      "business intelligence",
+                      "automation",
+                      "blockchain",
+                      "IoT",
+                      "5G",
+                      "edge computing"
+                    ],
+                    type: "website",
+                    url: "https://ziontechgroup.com",
+                    image: "https://ziontechgroup.com/images/zion-tech-group-og.jpg",
+                    author: "Zion Tech Group",
+                    language: "en",
+                    twitterHandle: "@ziontechgroup",
+                    facebookAppId: "123456789012345"
+                  }}
+                  enableStructuredData={true}
+                  enableSocialMedia={true}
+                  enablePerformanceOptimization={true}
+                  enableAnalytics={true}
                 />
                 
                 <Header />
@@ -187,7 +218,12 @@ const App = () => {
                 <SonnerToaster />
                 
                 {/* Enhanced Accessibility Controls */}
-                <EnhancedAccessibility position="bottom-right" />
+                <EnhancedAccessibility 
+                  position="bottom-right" 
+                  showLabels={true}
+                  enableVoiceControl={true}
+                  enableKeyboardShortcuts={true}
+                />
                 
                 {/* AI Chatbot - Always Available */}
                 <AIChatbot />
