@@ -1,411 +1,468 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { 
-  Search, 
-  Filter, 
-  Grid, 
-  List, 
-  Star, 
-  ShoppingCart,
-  Eye,
-  Heart,
-  Zap,
-  Shield,
-  Cloud,
-  Brain,
-  Code,
-  Database,
-  Globe,
-  Users
-} from 'lucide-react';
+  MagnifyingGlassIcon, 
+  FunnelIcon,
+  StarIcon,
+  ShoppingCartIcon,
+  HeartIcon,
+  EyeIcon,
+  TagIcon,
+  UserIcon,
+  CalendarIcon,
+  ArrowRightIcon
+} from '@heroicons/react/24/outline';
 
-const Marketplace = () => {
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+const Marketplace: React.FC = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('featured');
 
   const categories = [
-    { id: 'all', name: 'All Products', icon: <Grid className="w-4 h-4" /> },
-    { id: 'ai', name: 'AI Solutions', icon: <Brain className="w-4 h-4" /> },
-    { id: 'saas', name: 'Micro SAAS', icon: <Code className="w-4 h-4" /> },
-    { id: 'cloud', name: 'Cloud Services', icon: <Cloud className="w-4 h-4" /> },
-    { id: 'security', name: 'Security', icon: <Shield className="w-4 h-4" /> },
-    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-4 h-4" /> }
+    { id: 'all', name: 'All Products' },
+    { id: 'ai-tools', name: 'AI Tools' },
+    { id: 'quantum', name: 'Quantum Solutions' },
+    { id: 'cybersecurity', name: 'Security Tools' },
+    { id: 'cloud', name: 'Cloud Services' },
+    { id: 'templates', name: 'Templates' },
+    { id: 'courses', name: 'Training Courses' }
   ];
 
-  const products = [
+  const sortOptions = [
+    { id: 'featured', name: 'Featured' },
+    { id: 'newest', name: 'Newest' },
+    { id: 'popular', name: 'Most Popular' },
+    { id: 'price-low', name: 'Price: Low to High' },
+    { id: 'price-high', name: 'Price: High to Low' },
+    { id: 'rating', name: 'Highest Rated' }
+  ];
+
+  const marketplaceProducts = [
     {
       id: 1,
-      name: "AI Business Intelligence Suite",
-      category: "ai",
-      description: "Transform your business data into actionable insights with our advanced AI analytics platform",
-      price: 299,
-      currency: "$",
-      pricingModel: "per month",
+      title: 'AI Autonomous Business Manager Pro',
+      description: 'Complete AI-powered business management solution with advanced analytics and automation.',
+      category: 'ai-tools',
+      price: 2999,
+      originalPrice: 3999,
       rating: 4.8,
-      reviews: 127,
-      image: "🤖",
-      features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "API Integration"],
-      tags: ["AI", "Analytics", "Business Intelligence", "Machine Learning"]
+      reviews: 156,
+      downloads: 1200,
+      author: 'Zion Tech Group',
+      image: '/images/marketplace/ai-business-manager.jpg',
+      tags: ['AI', 'Business', 'Automation', 'Analytics'],
+      featured: true,
+      isNew: false,
+      discount: 25
     },
     {
       id: 2,
-      name: "Micro SAAS Starter Kit",
-      category: "saas",
-      description: "Complete foundation for building and launching your micro SAAS business",
-      price: 199,
-      currency: "$",
-      pricingModel: "per month",
+      title: 'Quantum Neural Network Framework',
+      description: 'Advanced framework for building and training quantum neural networks.',
+      category: 'quantum',
+      price: 1999,
+      originalPrice: 2499,
       rating: 4.9,
       reviews: 89,
-      image: "🚀",
-      features: ["User Management", "Subscription Billing", "Analytics Dashboard", "Multi-tenant Support"],
-      tags: ["SAAS", "Startup", "B2B", "Scalable"]
+      downloads: 450,
+      author: 'Quantum Labs',
+      image: '/images/marketplace/quantum-framework.jpg',
+      tags: ['Quantum', 'Neural Networks', 'Framework', 'Research'],
+      featured: true,
+      isNew: true,
+      discount: 20
     },
     {
       id: 3,
-      name: "Cloud Infrastructure Manager",
-      category: "cloud",
-      description: "Optimize and manage your cloud infrastructure for performance and cost",
-      price: 149,
-      currency: "$",
-      pricingModel: "per month",
+      title: 'SOC2 Compliance Automation Suite',
+      description: 'Comprehensive SOC2 compliance automation and monitoring platform.',
+      category: 'cybersecurity',
+      price: 1499,
+      originalPrice: 1999,
       rating: 4.7,
-      reviews: 156,
-      image: "☁️",
-      features: ["Cost Optimization", "Performance Monitoring", "Auto-scaling", "Security Hardening"],
-      tags: ["Cloud", "DevOps", "Infrastructure", "AWS/Azure"]
+      reviews: 203,
+      downloads: 890,
+      author: 'Security Solutions Inc',
+      image: '/images/marketplace/soc2-suite.jpg',
+      tags: ['SOC2', 'Compliance', 'Security', 'Automation'],
+      featured: false,
+      isNew: false,
+      discount: 25
     },
     {
       id: 4,
-      name: "Cybersecurity Compliance Suite",
-      category: "security",
-      description: "Achieve and maintain compliance with industry standards and regulations",
-      price: 399,
-      currency: "$",
-      pricingModel: "per month",
-      rating: 4.9,
-      reviews: 203,
-      image: "🔒",
-      features: ["SOC 2 Compliance", "GDPR Compliance", "HIPAA Compliance", "Regular Audits"],
-      tags: ["Security", "Compliance", "Enterprise", "Audit"]
+      title: '5G Enterprise Deployment Kit',
+      description: 'Complete toolkit for deploying 5G enterprise solutions.',
+      category: 'cloud',
+      price: 899,
+      originalPrice: 1199,
+      rating: 4.6,
+      reviews: 67,
+      downloads: 320,
+      author: '5G Solutions',
+      image: '/images/marketplace/5g-kit.jpg',
+      tags: ['5G', 'Enterprise', 'Deployment', 'Network'],
+      featured: false,
+      isNew: true,
+      discount: 25
     },
     {
       id: 5,
-      name: "Data Analytics Platform",
-      category: "data",
-      description: "Comprehensive data analytics and visualization platform for enterprises",
-      price: 249,
-      currency: "$",
-      pricingModel: "per month",
-      rating: 4.6,
-      reviews: 94,
-      image: "📊",
-      features: ["Data Visualization", "ETL Processing", "Real-time Streaming", "Advanced Reporting"],
-      tags: ["Data", "Analytics", "Visualization", "Big Data"]
+      title: 'AI Workflow Automation Templates',
+      description: 'Collection of pre-built AI workflow automation templates.',
+      category: 'templates',
+      price: 199,
+      originalPrice: 299,
+      rating: 4.5,
+      reviews: 134,
+      downloads: 2100,
+      author: 'Workflow Masters',
+      image: '/images/marketplace/workflow-templates.jpg',
+      tags: ['AI', 'Workflow', 'Templates', 'Automation'],
+      featured: false,
+      isNew: false,
+      discount: 33
     },
     {
       id: 6,
-      name: "AI Chatbot Platform",
-      category: "ai",
-      description: "Build intelligent chatbots and virtual assistants for customer service",
-      price: 179,
-      currency: "$",
-      pricingModel: "per month",
+      title: 'Advanced Cybersecurity Training Course',
+      description: 'Comprehensive cybersecurity training with hands-on labs.',
+      category: 'courses',
+      price: 599,
+      originalPrice: 799,
       rating: 4.8,
-      reviews: 167,
-      image: "💬",
-      features: ["Natural Language Processing", "Multi-language Support", "Integration APIs", "Analytics Dashboard"],
-      tags: ["AI", "Chatbot", "Customer Service", "NLP"]
+      reviews: 89,
+      downloads: 450,
+      author: 'Cyber Academy',
+      image: '/images/marketplace/cyber-course.jpg',
+      tags: ['Cybersecurity', 'Training', 'Labs', 'Certification'],
+      featured: false,
+      isNew: false,
+      discount: 25
+    },
+    {
+      id: 7,
+      title: 'Cloud Infrastructure Templates',
+      description: 'AWS, Azure, and GCP infrastructure templates for enterprise.',
+      category: 'templates',
+      price: 299,
+      originalPrice: 399,
+      rating: 4.7,
+      reviews: 178,
+      downloads: 1200,
+      author: 'Cloud Architects',
+      image: '/images/marketplace/cloud-templates.jpg',
+      tags: ['Cloud', 'Infrastructure', 'AWS', 'Azure', 'GCP'],
+      featured: false,
+      isNew: false,
+      discount: 25
+    },
+    {
+      id: 8,
+      title: 'AI Content Generation Pro',
+      description: 'Professional AI content generation and optimization platform.',
+      category: 'ai-tools',
+      price: 799,
+      originalPrice: 999,
+      rating: 4.6,
+      reviews: 245,
+      downloads: 1800,
+      author: 'Content AI Pro',
+      image: '/images/marketplace/content-ai.jpg',
+      tags: ['AI', 'Content', 'Generation', 'SEO'],
+      featured: false,
+      isNew: false,
+      discount: 20
     }
   ];
 
-  const filteredProducts = products.filter(product => {
-    const matchesCategory = selectedCategory === 'all' || product.category === selectedCategory;
-    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         product.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         product.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
+  const filteredProducts = marketplaceProducts.filter(product => 
+    activeCategory === 'all' || product.category === activeCategory
+  ).filter(product =>
+    product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    product.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    product.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+  );
+
+  const formatPrice = (price: number) => {
+    return new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 0
+    }).format(price);
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Zion <span className="bg-gradient-to-r from-zion-cyan to-zion-purple-light bg-clip-text text-transparent">Marketplace</span>
-          </h1>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed mb-8">
-            Discover cutting-edge technology solutions, micro SAAS platforms, and AI-powered tools 
-            designed to accelerate your business growth.
-          </p>
-          
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Header */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Zion Tech Marketplace
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover cutting-edge AI tools, quantum solutions, cybersecurity platforms, and professional services from leading technology providers.
+            </p>
+          </motion.div>
+
           {/* Search Bar */}
-          <div className="max-w-2xl mx-auto mb-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="max-w-2xl mx-auto mt-8"
+          >
             <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+              <MagnifyingGlassIcon className="absolute left-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-gray-400" />
               <input
                 type="text"
-                placeholder="Search products and services..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-white/20 border border-white/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan transition-colors"
+                placeholder="Search products, tools, and services..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 transition-all duration-200"
               />
             </div>
-          </div>
+          </motion.div>
+        </div>
+      </div>
 
-          {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-3 mb-8">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                  selectedCategory === category.id
-                    ? 'bg-zion-cyan text-white shadow-lg'
-                    : 'bg-white/10 text-zion-slate-light border border-white/20 hover:bg-white/20'
-                }`}
+      {/* Main Content */}
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        {/* Filters and Categories */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mb-8"
+        >
+          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+            {/* Categories */}
+            <div className="flex flex-wrap gap-2">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setActiveCategory(category.id)}
+                  className={`px-4 py-2 rounded-lg border transition-all duration-200 ${
+                    activeCategory === category.id
+                      ? 'bg-purple-600 border-purple-500 text-white'
+                      : 'bg-white/10 border-white/20 text-gray-300 hover:bg-white/20 hover:text-white'
+                  }`}
+                >
+                  {category.name}
+                </button>
+              ))}
+            </div>
+
+            {/* Sort Options */}
+            <div className="flex items-center space-x-3">
+              <FunnelIcon className="h-5 w-5 text-gray-400" />
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className="bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-purple-500"
               >
-                {category.icon}
-                {category.name}
-              </button>
+                {sortOptions.map((option) => (
+                  <option key={option.id} value={option.id}>
+                    {option.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Products Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {filteredProducts.map((product, index) => (
+              <motion.div
+                key={product.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
+                className="bg-white/10 border border-white/20 rounded-xl overflow-hidden hover:bg-white/20 transition-all duration-200 group"
+              >
+                {/* Product Image */}
+                <div className="relative h-48 bg-gradient-to-br from-purple-600/20 to-pink-600/20 flex items-center justify-center">
+                  <div className="text-center">
+                    <TagIcon className="h-16 w-16 text-purple-400 mx-auto mb-2" />
+                    <span className="text-purple-400 text-sm">Product</span>
+                  </div>
+                  
+                  {/* Badges */}
+                  <div className="absolute top-3 left-3 space-y-2">
+                    {product.featured && (
+                      <span className="bg-yellow-600/80 text-white px-2 py-1 rounded text-xs font-semibold">
+                        Featured
+                      </span>
+                    )}
+                    {product.isNew && (
+                      <span className="bg-green-600/80 text-white px-2 py-1 rounded text-xs font-semibold">
+                        New
+                      </span>
+                    )}
+                    {product.discount > 0 && (
+                      <span className="bg-red-600/80 text-white px-2 py-1 rounded text-xs font-semibold">
+                        -{product.discount}%
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="absolute top-3 right-3 space-y-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                    <button className="w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center text-white transition-all duration-200">
+                      <HeartIcon className="h-4 w-4" />
+                    </button>
+                    <button className="w-8 h-8 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center text-white transition-all duration-200">
+                      <EyeIcon className="h-4 w-4" />
+                    </button>
+                  </div>
+                </div>
+
+                {/* Product Info */}
+                <div className="p-4">
+                  <div className="flex items-center space-x-2 mb-2">
+                    <span className="bg-purple-600/20 text-purple-400 px-2 py-1 rounded text-xs">
+                      {categories.find(c => c.id === product.category)?.name}
+                    </span>
+                  </div>
+
+                  <h3 className="text-lg font-semibold text-white mb-2 line-clamp-2">
+                    {product.title}
+                  </h3>
+                  
+                  <p className="text-gray-300 text-sm mb-3 line-clamp-2">
+                    {product.description}
+                  </p>
+
+                  {/* Rating */}
+                  <div className="flex items-center space-x-2 mb-3">
+                    <div className="flex items-center space-x-1">
+                      {[...Array(5)].map((_, i) => (
+                        <StarIcon
+                          key={i}
+                          className={`h-4 w-4 ${
+                            i < Math.floor(product.rating)
+                              ? 'text-yellow-400 fill-current'
+                              : 'text-gray-400'
+                          }`}
+                        />
+                      ))}
+                    </div>
+                    <span className="text-gray-400 text-sm">
+                      {product.rating} ({product.reviews})
+                    </span>
+                  </div>
+
+                  {/* Price */}
+                  <div className="flex items-center space-x-3 mb-4">
+                    <span className="text-2xl font-bold text-white">
+                      {formatPrice(product.price)}
+                    </span>
+                    {product.originalPrice > product.price && (
+                      <span className="text-gray-400 line-through">
+                        {formatPrice(product.originalPrice)}
+                      </span>
+                    )}
+                  </div>
+
+                  {/* Product Meta */}
+                  <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
+                    <span className="flex items-center space-x-1">
+                      <UserIcon className="h-3 w-3" />
+                      <span>{product.author}</span>
+                    </span>
+                    <span>{product.downloads} downloads</span>
+                  </div>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-1 mb-4">
+                    {product.tags.slice(0, 3).map((tag, tagIndex) => (
+                      <span
+                        key={tagIndex}
+                        className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded border border-white/20"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="flex space-x-2">
+                    <button className="flex-1 inline-flex items-center justify-center space-x-2 px-4 py-2 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-all duration-200">
+                      <ShoppingCartIcon className="h-4 w-4" />
+                      <span>Add to Cart</span>
+                    </button>
+                    <button className="inline-flex items-center justify-center px-4 py-2 bg-white/10 border border-white/20 text-white rounded-lg hover:bg-white/20 transition-all duration-200">
+                      <ArrowRightIcon className="h-4 w-4" />
+                    </button>
+                  </div>
+                </div>
+              </motion.div>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* View Mode Toggle */}
-      <section className="px-4 pb-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex justify-between items-center">
-            <div className="text-zion-slate-light">
-              Showing {filteredProducts.length} of {products.length} products
-            </div>
-            <div className="flex items-center gap-2">
+          {/* No Results */}
+          {filteredProducts.length === 0 && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-center py-16"
+            >
+              <div className="text-gray-400 text-lg mb-4">
+                No products found matching your criteria.
+              </div>
               <button
-                onClick={() => setViewMode('grid')}
-                className={`p-2 rounded-lg transition-colors ${
-                  viewMode === 'grid' 
-                    ? 'bg-zion-cyan text-white' 
-                    : 'bg-white/10 text-zion-slate-light hover:bg-white/20'
-                }`}
+                onClick={() => {
+                  setSearchQuery('');
+                  setActiveCategory('all');
+                }}
+                className="px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-all duration-200"
               >
-                <Grid className="w-5 h-5" />
+                Clear Filters
               </button>
-              <button
-                onClick={() => setViewMode('list')}
-                className={`p-2 rounded-lg transition-colors ${
-                  viewMode === 'list' 
-                    ? 'bg-zion-cyan text-white' 
-                    : 'bg-white/10 text-zion-slate-light hover:bg-white/20'
-                }`}
-              >
-                <List className="w-5 h-5" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Products Grid/List */}
-      <section className="px-4 pb-16">
-        <div className="max-w-7xl mx-auto">
-          {viewMode === 'grid' ? (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredProducts.map((product) => (
-                <div key={product.id} className="bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 group">
-                  <div className="p-6">
-                    {/* Product Header */}
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="text-4xl">{product.image}</div>
-                      <div className="flex items-center gap-2">
-                        <button className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors">
-                          <Heart className="w-5 h-5" />
-                        </button>
-                        <button className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors">
-                          <Eye className="w-5 h-5" />
-                        </button>
-                      </div>
-                    </div>
-
-                    {/* Product Info */}
-                    <div className="mb-4">
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">
-                          {product.category.toUpperCase()}
-                        </span>
-                        <div className="flex items-center gap-1">
-                          <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                          <span className="text-sm text-zion-slate-light">{product.rating}</span>
-                          <span className="text-xs text-zion-slate-light">({product.reviews})</span>
-                        </div>
-                      </div>
-                      <h3 className="text-lg font-semibold text-white mb-2">{product.name}</h3>
-                      <p className="text-zion-slate-light text-sm leading-relaxed">{product.description}</p>
-                    </div>
-
-                    {/* Features */}
-                    <div className="mb-4">
-                      <h4 className="text-sm font-medium text-zion-cyan mb-2">Key Features:</h4>
-                      <ul className="space-y-1">
-                        {product.features.slice(0, 3).map((feature, index) => (
-                          <li key={index} className="flex items-center gap-2 text-xs text-zion-slate-light">
-                            <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Pricing */}
-                    <div className="mb-4">
-                      <div className="flex items-baseline gap-2">
-                        <span className="text-2xl font-bold text-white">{product.currency}{product.price}</span>
-                        <span className="text-zion-slate-light">{product.pricingModel}</span>
-                      </div>
-                    </div>
-
-                    {/* Tags */}
-                    <div className="mb-4">
-                      <div className="flex flex-wrap gap-2">
-                        {product.tags.slice(0, 3).map((tag, index) => (
-                          <span
-                            key={index}
-                            className="px-2 py-1 bg-white/10 text-zion-slate-light text-xs rounded border border-white/20"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Actions */}
-                    <div className="flex gap-3">
-                      <button className="flex-1 bg-zion-cyan hover:bg-zion-cyan/90 text-white py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2">
-                        <ShoppingCart className="w-4 h-4" />
-                        Get Started
-                      </button>
-                      <Link
-                        to={`/product/${product.id}`}
-                        className="px-4 py-2 border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white rounded-lg font-medium transition-colors"
-                      >
-                        Details
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div className="space-y-6">
-              {filteredProducts.map((product) => (
-                <div key={product.id} className="bg-white/10 backdrop-blur-sm rounded-lg border border-white/20 hover:border-zion-cyan/50 transition-all duration-300">
-                  <div className="p-6">
-                    <div className="flex items-start gap-6">
-                      <div className="text-6xl flex-shrink-0">{product.image}</div>
-                      
-                      <div className="flex-1">
-                        <div className="flex items-start justify-between mb-4">
-                          <div>
-                            <div className="flex items-center gap-3 mb-2">
-                              <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full">
-                                {product.category.toUpperCase()}
-                              </span>
-                              <div className="flex items-center gap-1">
-                                <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                                <span className="text-sm text-zion-slate-light">{product.rating}</span>
-                                <span className="text-xs text-zion-slate-light">({product.reviews})</span>
-                              </div>
-                            </div>
-                            <h3 className="text-xl font-semibold text-white mb-2">{product.name}</h3>
-                            <p className="text-zion-slate-light leading-relaxed">{product.description}</p>
-                          </div>
-                          
-                          <div className="text-right">
-                            <div className="text-3xl font-bold text-white mb-1">{product.currency}{product.price}</div>
-                            <div className="text-zion-slate-light text-sm">{product.pricingModel}</div>
-                          </div>
-                        </div>
-
-                        <div className="grid md:grid-cols-2 gap-6">
-                          <div>
-                            <h4 className="text-sm font-medium text-zion-cyan mb-2">Key Features:</h4>
-                            <ul className="space-y-1">
-                              {product.features.map((feature, index) => (
-                                <li key={index} className="flex items-center gap-2 text-sm text-zion-slate-light">
-                                  <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>
-                                  {feature}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                          
-                          <div>
-                            <h4 className="text-sm font-medium text-zion-cyan mb-2">Tags:</h4>
-                            <div className="flex flex-wrap gap-2">
-                              {product.tags.map((tag, index) => (
-                                <span
-                                  key={index}
-                                  className="px-2 py-1 bg-white/10 text-zion-slate-light text-xs rounded border border-white/20"
-                                >
-                                  {tag}
-                                </span>
-                              ))}
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className="flex items-center gap-3 mt-6">
-                          <button className="bg-zion-cyan hover:bg-zion-cyan/90 text-white py-2 px-6 rounded-lg font-medium transition-colors flex items-center gap-2">
-                            <ShoppingCart className="w-4 h-4" />
-                            Get Started
-                          </button>
-                          <Link
-                            to={`/product/${product.id}`}
-                            className="px-6 py-2 border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white rounded-lg font-medium transition-colors"
-                          >
-                            View Details
-                          </Link>
-                          <button className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors">
-                            <Heart className="w-5 h-5" />
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+            </motion.div>
           )}
-        </div>
-      </section>
+        </motion.div>
 
-      {/* CTA Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Can't Find What You're Looking For?
-          </h2>
-          <p className="text-zion-slate-light text-lg mb-8">
-            We offer custom development services to create tailored solutions for your specific needs.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-zion-cyan hover:bg-zion-cyan/90 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              Request Custom Solution
-            </Link>
-            <Link
-              to="/services"
-              className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-            >
-              View All Services
-            </Link>
+        {/* CTA Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="mt-16"
+        >
+          <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-xl p-8 text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Have a Product to Sell?
+            </h2>
+            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+              Join our marketplace as a vendor and reach thousands of technology professionals and businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="inline-flex items-center space-x-2 px-8 py-4 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition-all duration-200">
+                <span>Become a Vendor</span>
+                <ArrowRightIcon className="h-5 w-5" />
+              </button>
+              <button className="inline-flex items-center space-x-2 px-8 py-4 bg-white/10 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200">
+                <span>Learn More</span>
+                <ArrowRightIcon className="h-5 w-5" />
+              </button>
+            </div>
           </div>
-        </div>
-      </section>
+        </motion.div>
+      </div>
     </div>
   );
 };

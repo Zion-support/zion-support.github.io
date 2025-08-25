@@ -30,6 +30,16 @@ export function Footer() {
       title: "AI & Technology Services",
       icon: Brain,
       links: [
+<<<<<<< HEAD
+        { label: "AI & Autonomous Systems", path: "/services/ai-autonomous-systems" },
+        { label: "AI Research Assistant", path: "/ai-autonomous-research-assistant" },
+        { label: "Quantum Neural Networks", path: "/quantum-neural-network-platform" },
+        { label: "Autonomous Business Platform", path: "/autonomous-business-operations-platform" },
+        { label: "AI Asset Management", path: "/ai-powered-it-asset-management" },
+        { label: "Quantum Technology", path: "/services/quantum-technology" },
+        { label: "Machine Learning Solutions", path: "/services/ai-machine-learning" },
+        { label: "AI Business Intelligence", path: "/services/ai-business-intelligence" }
+=======
         { name: "AI Solutions", href: "/ai-solutions" },
         { name: "AI Autonomous Systems", href: "/ai-autonomous-systems-platform" },
         { name: "Quantum Technology", href: "/quantum-technology" },
@@ -37,6 +47,7 @@ export function Footer() {
         { name: "Cloud & DevOps", href: "/cloud-devops" },
         { name: "Enterprise Solutions", href: "/enterprise-solutions" },
         { name: "5G Solutions", href: "/5g-enterprise-solutions" }
+>>>>>>> origin/cursor/website-audit-and-enhancement-bca6
       ]
     },
     {
@@ -57,24 +68,46 @@ export function Footer() {
       title: "Industry Solutions",
       icon: Building,
       links: [
+<<<<<<< HEAD
+        { label: "Enterprise Solutions", path: "/solutions/enterprise" },
+        { label: "Healthcare Solutions", path: "/solutions/healthcare" },
+        { label: "Financial Solutions", path: "/solutions/financial" },
+        { label: "Manufacturing Solutions", path: "/solutions/manufacturing" },
+        { label: "Retail Solutions", path: "/solutions/retail" },
+        { label: "Government Solutions", path: "/solutions/government" },
+        { label: "Digital Transformation", path: "/digital-transformation" },
+        { label: "Micro SAAS Solutions", path: "/services/micro-saas-solutions" }
+=======
         { name: "About Us", href: "/about" },
         { name: "Our Team", href: "/team" },
         { name: "Careers", href: "/careers" },
         { name: "Blog", href: "/blog" },
         { name: "Case Studies", href: "/case-studies" },
         { name: "Partners", href: "/partners" }
+>>>>>>> origin/cursor/website-audit-and-enhancement-bca6
       ]
     },
     {
       title: "Company & Resources",
       icon: Users,
       links: [
+<<<<<<< HEAD
+        { label: "About Us", path: "/about" },
+        { label: "Our Mission", path: "/mission" },
+        { label: "Team", path: "/team" },
+        { label: "Careers", path: "/careers" },
+        { label: "Partners", path: "/partners" },
+        { label: "Blog", path: "/blog" },
+        { label: "Case Studies", path: "/case-studies" },
+        { label: "Help Center", path: "/help" }
+=======
         { name: "Documentation", href: "/docs" },
         { name: "Help Center", href: "/help" },
         { name: "Community", href: "/community" },
         { name: "Webinars", href: "/webinars" },
         { name: "White Papers", href: "/white-papers" },
         { name: "Marketplace", href: "/marketplace" }
+>>>>>>> origin/cursor/website-audit-and-enhancement-bca6
       ]
     }
   ];

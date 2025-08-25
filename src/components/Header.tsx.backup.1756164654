@@ -50,6 +50,12 @@ export function Header() {
 
   const navigationItems = [
     { 
+<<<<<<< HEAD
+      path: '/', 
+      label: 'Home', 
+      icon: '🏠',
+      description: 'Welcome to Zion Tech Group'
+=======
       name: 'Services', 
       href: '/services',
       dropdown: [
@@ -61,6 +67,7 @@ export function Header() {
         { name: 'Enterprise Solutions', href: '/enterprise-solutions', description: 'Large-scale business solutions' },
         { name: '5G Solutions', href: '/5g-enterprise-solutions', description: '5G enterprise deployment' }
       ]
+>>>>>>> origin/cursor/website-audit-and-enhancement-bca6
     },
     { 
       path: '/services', 
@@ -70,6 +77,44 @@ export function Header() {
       hasDropdown: true
     },
     { 
+<<<<<<< HEAD
+      path: '/solutions/enterprise', 
+      label: 'Solutions', 
+      icon: '💼',
+      description: 'Industry-specific solutions',
+      hasDropdown: true
+    },
+    { 
+      path: '/pricing', 
+      label: 'Pricing', 
+      icon: '💰',
+      description: 'Transparent pricing plans'
+    },
+    { 
+      path: '/about', 
+      label: 'About', 
+      icon: 'ℹ️',
+      description: 'Learn about our company'
+    },
+    { 
+      path: '/careers', 
+      label: 'Careers', 
+      icon: '🚀',
+      description: 'Join our team'
+    },
+    { 
+      path: '/blog', 
+      label: 'Blog', 
+      icon: '📝',
+      description: 'Latest insights and news'
+    },
+    { 
+      path: '/contact', 
+      label: 'Contact', 
+      icon: '📞',
+      description: 'Get in touch with us'
+    }
+=======
       name: 'Company', 
       href: '/about',
       dropdown: [
@@ -90,6 +135,7 @@ export function Header() {
       ]
     },
     { name: 'Contact', href: '/contact' }
+>>>>>>> origin/cursor/website-audit-and-enhancement-bca6
   ];
 
   const serviceCategories = [
