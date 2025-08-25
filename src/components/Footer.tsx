@@ -1,26 +1,6 @@
 import { Link } from 'react-router-dom';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Linkedin, 
-  Twitter, 
-  Github, 
-  Youtube, 
-  Facebook, 
-  Instagram,
-  Globe,
-  Shield,
-  Brain,
-  Cpu,
-  Rocket,
-  Building,
-  Users,
-  Target,
-  Zap,
-  Database,
-  Network
-} from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ArrowUp as ArrowUpIcon, Phone as PhoneIcon, Mail as EnvelopeIcon, MapPin as MapPinIcon } from 'lucide-react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();

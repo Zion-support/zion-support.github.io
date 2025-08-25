@@ -351,21 +351,6 @@ export default function InnovativeServicesShowcase() {
                     </a>
                   )}
                 </div>
-
-                {/* Contact Info */}
-                <div className="mt-4 pt-4 border-t border-gray-700">
-                  <div className="text-center">
-                    <div className="text-sm text-gray-400 mb-2">Ready to get started?</div>
-                    <div className="flex justify-center space-x-4 text-xs text-gray-500">
-                      <a href={`tel:${service.contactInfo.phone}`} className="hover:text-cyan-400">
-                        {service.contactInfo.phone}
-                      </a>
-                      <a href={`mailto:${service.contactInfo.email}`} className="hover:text-cyan-400">
-                        {service.contactInfo.email}
-                      </a>
-                    </div>
-                  </div>
-                </div>
               </div>
             );
           })}

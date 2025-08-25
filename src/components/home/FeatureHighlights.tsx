@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, Sparkles, Users, Building, ArrowRight } from "lucide-react";
@@ -53,6 +52,10 @@ export function FeatureHighlights() {
     },
     {
       title: "Micro SAAS Solutions",
+      icon: <Building className="w-6 h-6" />,
+      color: "from-orange-500 to-red-600",
+      bgColor: "bg-orange-500/10",
+      borderColor: "border-orange-500/20",
       features: [
         "AI-powered content generation and code assistance tools",
         "Cloud migration and cybersecurity audit services",
@@ -170,7 +173,7 @@ export function FeatureHighlights() {
               </Card>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Call to action */}
         <motion.div 
