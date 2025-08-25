@@ -514,10 +514,20 @@ export default function Home() {
 
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-eb69
       <SEO 
+<<<<<<< HEAD
         title="Zion - The Tech & AI Marketplace" 
         description="Discover top AI and tech talent, services, and equipment in one place."
         keywords="AI, technology, marketplace, services, talent"
         canonical="https://ziontechgroup.com/"
+=======
+        title="Leading Tech & AI Marketplace - Connect with World-Class Talent & Services" 
+        description="Zion Tech Group is the premier marketplace for AI talent, IT services, and cutting-edge technology solutions. Connect with 10,000+ verified professionals, get 24/7 global IT support, and accelerate your digital transformation."
+        keywords="AI marketplace, tech talent, IT services, software development, artificial intelligence, technology consulting, digital transformation, tech recruitment, AI solutions, enterprise technology, Zion Tech Group"
+        canonical="https://ziontechgroup.com/"
+        type="website"
+        ogImage="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=1200&h=630&fit=crop&crop=center"
+        tags={["AI", "Technology", "Marketplace", "IT Services", "Digital Transformation"]}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4514
       />
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-73d5
 
