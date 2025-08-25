@@ -75,6 +75,12 @@ export const Header: React.FC = () => {
 
   const solutions = [
     {
+<<<<<<< HEAD
+      name: "Enterprise Solutions",
+      path: "/enterprise",
+      icon: <Building className="w-4 h-4" />,
+      description: "Large-scale business transformation"
+=======
       title: 'AI & Machine Learning',
       icon: Brain,
       description: 'Intelligent solutions powered by artificial intelligence',
@@ -97,6 +103,7 @@ export const Header: React.FC = () => {
         { name: 'AI Legal Tech', path: '/services/ai-legal-tech', description: 'Automated legal processes', icon: Shield },
         { name: 'AI Healthcare Analytics', path: '/solutions/healthcare', description: 'Patient care optimization', icon: Heart }
       ]
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-1218
     },
     {
       name: "Startup Solutions",

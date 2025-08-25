@@ -102,7 +102,11 @@ export default function Sidebar() {
   ];
 
   const socialLinks = [
+<<<<<<< HEAD
+    { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
+=======
     { icon: Linkedin, href: 'https://linkedin.com/company/zion-tech-group', label: 'LinkedIn' },
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-1218
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Facebook, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' },
     { icon: Instagram, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' },

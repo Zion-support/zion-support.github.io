@@ -1,5 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+<<<<<<< HEAD
+=======
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
@@ -14,6 +16,7 @@ import { SecurityComplianceDashboard } from './components/SecurityComplianceDash
 import { MachineLearningDashboard } from './components/MachineLearningDashboard';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { LinkHealthMonitor } from './components/LinkHealthMonitor';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-1218
 import { ThemeProvider } from "./components/ThemeProvider";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { SidebarProvider } from './context/SidebarContext';
@@ -29,10 +32,14 @@ const AIMatcherPage = lazy(() => import('./pages/AIMatcher'));
 const TalentDirectory = lazy(() => import('./pages/TalentDirectory'));
 const TalentsPage = lazy(() => import('./pages/TalentsPage'));
 const EmergingTech = lazy(() => import('./pages/EmergingTech'));
+<<<<<<< HEAD
+const Pricing = lazy(() => import('./pages/Pricing'));
+=======
 
 // New pages from incoming branch
 const MicroSaasServicesPage = lazy(() => import('./pages/InnovativeMicroSaasServices'));
 const PricingPage = lazy(() => import('./pages/PricingPage'));
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-1218
 
 // Service pages
 const AIServices = lazy(() => import('./pages/AIServices'));
@@ -49,6 +56,8 @@ const AIWorkflowAutomation = lazy(() => import('./pages/services/AIWorkflowAutom
 const BlockchainEnterpriseSolutions = lazy(() => import('./pages/services/BlockchainEnterpriseSolutions'));
 const IoTDataAnalytics = lazy(() => import('./pages/services/IoTDataAnalytics'));
 
+<<<<<<< HEAD
+=======
 // Additional AI service pages
 const AIHRRecruitment = lazy(() => import('./pages/services/AIHRRecruitment'));
 const AILegalTech = lazy(() => import('./pages/services/AILegalTech'));
@@ -56,6 +65,7 @@ const AIHealthcareAnalytics = lazy(() => import('./pages/services/AIHealthcareAn
 const BlockchainSolutions = lazy(() => import('./pages/services/BlockchainSolutions'));
 const IoTPlatforms = lazy(() => import('./pages/services/IoTPlatforms'));
 
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-1218
 // Missing pages from analysis
 const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/QuantumNeuralNetworkPlatform'));
 const AutonomousBusinessOperationsPlatform = lazy(() => import('./pages/AutonomousBusinessOperationsPlatform'));
@@ -116,6 +126,50 @@ const App: React.FC = () => {
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
+<<<<<<< HEAD
+            <div className="App min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+              <Header />
+              <Sidebar isOpen={false} onClose={() => {}} />
+              
+              {/* Main Content with enhanced Suspense */}
+              <main className="ml-64 pt-20 min-h-screen">
+                <Suspense fallback={<LoadingSpinner />}>
+                  <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/services" element={<Services />} />
+                    <Route path="/ai-solutions" element={<AISolutions />} />
+                    <Route path="/services-showcase" element={<ServicesShowcase />} />
+                    <Route path="/match" element={<AIMatcherPage />} />
+                    <Route path="/talent" element={<TalentDirectory />} />
+                    <Route path="/talents" element={<TalentsPage />} />
+                    <Route path="/emerging-tech" element={<EmergingTech />} />
+                    <Route path="/pricing" element={<Pricing />} />
+                    <Route path="/comprehensive-services" element={<Services />} />
+                    <Route path="/services-comparison" element={<Services />} />
+                    <Route path="/it-onsite-services" element={<Services />} />
+                    
+                    {/* Our enhanced service routes */}
+                    <Route path="/about" element={<About />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/mission" element={<Mission />} />
+                    <Route path="/team" element={<Team />} />
+                    <Route path="/services-overview" element={<ServicesOverview />} />
+                    <Route path="/services/ai-autonomous-systems" element={<AIAutonomousSystems />} />
+                    <Route path="/services/quantum-technology" element={<QuantumTechnology />} />
+                    <Route path="/services/cybersecurity" element={<Cybersecurity />} />
+                    <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
+                    <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
+                    <Route path="/services/industry-solutions" element={<IndustrySolutions />} />
+                  </Routes>
+                </Suspense>
+              </main>
+              
+              <Footer />
+              <SonnerToaster />
+              
+              {/* Enhanced Accessibility Controls */}
+              <AccessibilityControls position="bottom-right" />
+=======
                       <div>
               <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
                 {/* Enhanced SEO */}
@@ -318,6 +372,7 @@ const App: React.FC = () => {
               <ContentQualityEnhancer />
               <BrokenLinkFixer />
               <WebsiteImprovementDashboard />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-1218
               
               {/* AI Chatbot - Always Available */}
               <AIChatbot />
@@ -372,7 +427,11 @@ const App: React.FC = () => {
                     <MachineLearningDashboard />
                   </div>
                 </>
+<<<<<<< HEAD
+              )}
+=======
                              )}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-1218
             </div>
           </Router>
         </WhitelabelProvider>
