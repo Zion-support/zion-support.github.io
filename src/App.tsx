@@ -4,7 +4,7 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import Sidebar from './components/Sidebar';
 import { AccessibilityControls } from './components/AccessibilityControls';
-import { PerformanceDashboard } from './components/PerformanceDashboard';
+import PerformanceDashboard from './components/PerformanceDashboard';
 import { AnalyticsDashboard } from './components/AnalyticsDashboard';
 import { AIChatbot } from './components/AIChatbot';
 import { CollaborativeTextEditor } from './components/CollaborativeTextEditor';
@@ -19,7 +19,7 @@ import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
 import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
-import { EnhancedSEO } from './components/EnhancedSEO';
+import EnhancedSEO from './components/EnhancedSEO';
 import { EnhancedAccessibility } from './components/EnhancedAccessibility';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
 
@@ -48,6 +48,11 @@ const AIAutonomousResearchAssistant = lazy(() => import('./pages/AIAutonomousRes
 const FiveGEnterpriseSolutions = lazy(() => import('./pages/5GEnterpriseSolutions'));
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
+
+// Newly created pages to fix broken links
+const AccessibilityAuditor = lazy(() => import('./pages/accessibility-auditor'));
+const AdvancedCybersecuritySuite = lazy(() => import('./pages/advanced-cybersecurity-suite'));
+const AffiliateAttributionHub = lazy(() => import('./pages/affiliate-attribution-hub'));
 
 // Company information pages
 const About = lazy(() => import('./pages/About'));
@@ -164,13 +169,15 @@ const App = () => {
 
   return (
     <EnhancedErrorBoundary>
-      <EnhancedSEO />
-      <EnhancedAccessibility />
-      <PerformanceMonitor />
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
-            <div className="App min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+            <div className="min-h-screen bg-background text-foreground">
+              <EnhancedSEO 
+                title="Zion Tech Group - AI & Technology Solutions"
+                description="Leading provider of AI-powered business solutions, autonomous systems, and cutting-edge technology services."
+                url="https://ziontechgroup.com"
+              />
               <Header />
               <Sidebar isOpen={false} onClose={() => {}} />
               
@@ -234,6 +241,11 @@ const App = () => {
                     <Route path="/docs" element={<Docs />} />
                     <Route path="/marketplace" element={<Marketplace />} />
                     <Route path="/community" element={<Community />} />
+
+                    {/* Newly created pages to fix broken links */}
+                    <Route path="/accessibility-auditor" element={<AccessibilityAuditor />} />
+                    <Route path="/advanced-cybersecurity-suite" element={<AdvancedCybersecuritySuite />} />
+                    <Route path="/affiliate-attribution-hub" element={<AffiliateAttributionHub />} />
 
                     {/* AI Service specific routes */}
                     <Route path="/ai-autonomous-business-manager" element={<AIAutonomousBusinessManager />} />

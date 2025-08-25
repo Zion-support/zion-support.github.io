@@ -6,28 +6,94 @@ export function Footer() {
 
   const footerSections = [
     {
-      title: "AI & Micro SAAS",
+      title: "AI & Autonomous Systems",
       links: [
-        { label: "AI & Autonomous Systems", path: "/services/ai-autonomous-systems" },
-        { label: "AI Research Assistant", path: "/ai-autonomous-research-assistant" },
-        { label: "Quantum Neural Networks", path: "/quantum-neural-network-platform" },
-        { label: "Autonomous Business Platform", path: "/autonomous-business-operations-platform" },
-        { label: "AI Asset Management", path: "/ai-powered-it-asset-management" },
-        { label: "Quantum Technology", path: "/services/quantum-technology" },
-        { label: "IT Infrastructure", path: "/services/it-infrastructure" },
-        { label: "Micro SAAS Solutions", path: "/services/micro-saas-solutions" },
-        { label: "Cybersecurity", path: "/services/cybersecurity" },
-        { label: "SOC2 Compliance Automation", path: "/soc2-compliance-automation" },
-        { label: "Industry Solutions", path: "/services/industry-solutions" },
-        { label: "AI & Machine Learning", path: "/services#ai-ml" },
-        { label: "Cloud & Infrastructure", path: "/services#cloud" },
-        { label: "5G Enterprise Solutions", path: "/5g-enterprise-solutions" },
-        { label: "Blockchain Solutions", path: "/services#blockchain" },
-        { label: "IoT & Edge Computing", path: "/services#iot" }
+        { label: "AI Autonomous Business Manager", path: "/ai-autonomous-business-manager" },
+        { label: "AI Autonomous Research Assistant", path: "/ai-autonomous-research-assistant" },
+        { label: "AI Autonomous Decision Engine", path: "/ai-autonomous-decision-engine" },
+        { label: "AI Autonomous Code Review", path: "/ai-autonomous-code-review" },
+        { label: "AI Autonomous Creative Director", path: "/ai-autonomous-creative-director" },
+        { label: "AI Autonomous Data", path: "/ai-autonomous-data" },
+        { label: "AI Autonomous Research", path: "/ai-autonomous-research" },
+        { label: "AI Autonomous Systems Platform", path: "/ai-autonomous-systems-platform" },
+        { label: "AI Autonomous DevOps", path: "/ai-autonomous-devops" },
+        { label: "AI Autonomous Education Professor", path: "/ai-autonomous-education-professor" },
+        { label: "AI Autonomous Healthcare Physician", path: "/ai-autonomous-healthcare-physician" },
+        { label: "AI Autonomous Learning System", path: "/ai-autonomous-learning-system" },
+        { label: "AI Autonomous Legal Counsel", path: "/ai-autonomous-legal-counsel" },
+        { label: "AI Autonomous Logistics", path: "/ai-autonomous-logistics" },
+        { label: "AI Autonomous Manufacturing", path: "/ai-autonomous-manufacturing" },
+        { label: "AI Autonomous Robotics", path: "/ai-autonomous-robotics" },
+        { label: "AI Autonomous Scientific Researcher", path: "/ai-autonomous-scientific-researcher" },
+        { label: "AI Autonomous Security", path: "/ai-autonomous-security" },
+        { label: "AI Autonomous Testing", path: "/ai-autonomous-testing" },
+        { label: "AI Autonomous Vehicle Platform", path: "/ai-autonomous-vehicle-platform" },
+        { label: "AI Autonomous Vehicles", path: "/ai-autonomous-vehicles" },
+        { label: "AI Autonomous Venture Capitalist", path: "/ai-autonomous-venture-capitalist" }
       ]
     },
     {
-      title: "Solutions",
+      title: "AI Specialized Solutions",
+      links: [
+        { label: "AI Biomedical Research", path: "/ai-biomedical-research" },
+        { label: "AI Biotech Drug Discovery", path: "/ai-biotech-drug-discovery" },
+        { label: "AI Blockchain Analytics", path: "/ai-blockchain-analytics" },
+        { label: "AI Blockchain Governance", path: "/ai-blockchain-governance" },
+        { label: "AI Brain Computer Interface", path: "/ai-brain-computer-interface" },
+        { label: "AI Brain Interface", path: "/ai-brain-interface" },
+        { label: "AI Brand Personality Generator", path: "/ai-brand-personality-generator" },
+        { label: "AI Business Intelligence Elite", path: "/ai-business-intelligence-elite" },
+        { label: "AI Business Intelligence Pro", path: "/ai-business-intelligence-pro" },
+        { label: "AI Business Intelligence Suite", path: "/ai-business-intelligence-suite" },
+        { label: "AI Business Intelligence", path: "/ai-business-intelligence" },
+        { label: "AI Climate Prediction Engine", path: "/ai-climate-prediction-engine" },
+        { label: "AI Climate Prediction Platform", path: "/ai-climate-prediction-platform" },
+        { label: "AI Climate Prediction", path: "/ai-climate-prediction" },
+        { label: "AI Code Generation Enterprise", path: "/ai-code-generation-enterprise" },
+        { label: "AI Code Review Copilot", path: "/ai-code-review-copilot" },
+        { label: "AI Code Review", path: "/ai-code-review" },
+        { label: "AI Compliance Automation", path: "/ai-compliance-automation" },
+        { label: "AI Computer Vision Platform", path: "/ai-computer-vision-platform" },
+        { label: "AI Consciousness Evolution", path: "/ai-consciousness-evolution" },
+        { label: "AI Consciousness Evolution Platform", path: "/ai-consciousness-evolution-platform" },
+        { label: "AI Consciousness Simulation Platform", path: "/ai-consciousness-simulation-platform" },
+        { label: "AI Consciousness Simulation", path: "/ai-consciousness-simulation" },
+        { label: "AI Consciousness Simulator", path: "/ai-consciousness-simulator" },
+        { label: "AI Content Creation Revolution", path: "/ai-content-creation-revolution" },
+        { label: "AI Content Creation", path: "/ai-content-creation" },
+        { label: "AI Content Factory", path: "/ai-content-factory" },
+        { label: "AI Content Generation Automation", path: "/ai-content-generation-automation" },
+        { label: "AI Content Generation Pro", path: "/ai-content-generation-pro" },
+        { label: "AI Content Generator", path: "/ai-content-generator" },
+        { label: "AI Content Marketing Automation", path: "/ai-content-marketing-automation" },
+        { label: "AI Content Personalization Engine", path: "/ai-content-personalization-engine" },
+        { label: "AI Creativity Studio", path: "/ai-creativity-studio" },
+        { label: "AI Market Research", path: "/ai-market-research" },
+        { label: "AI Powered Enterprise Security", path: "/ai-powered-enterprise-security" },
+        { label: "AI Workflow Automation", path: "/ai-workflow-automation" }
+      ]
+    },
+    {
+      title: "Core Services",
+      links: [
+        { label: "AI & Autonomous Systems", path: "/services/ai-autonomous-systems" },
+        { label: "Cybersecurity", path: "/services/cybersecurity" },
+        { label: "Advanced Cybersecurity Suite", path: "/advanced-cybersecurity-suite" },
+        { label: "IT Infrastructure", path: "/services/it-infrastructure" },
+        { label: "Quantum Technology", path: "/services/quantum-technology" },
+        { label: "Quantum Neural Network Platform", path: "/quantum-neural-network-platform" },
+        { label: "Micro SAAS Solutions", path: "/services/micro-saas-solutions" },
+        { label: "Industry Solutions", path: "/services/industry-solutions" },
+        { label: "Accessibility Auditor", path: "/accessibility-auditor" },
+        { label: "Affiliate Attribution Hub", path: "/affiliate-attribution-hub" },
+        { label: "SOC2 Compliance Automation", path: "/soc2-compliance-automation" },
+        { label: "5G Enterprise Solutions", path: "/5g-enterprise-solutions" },
+        { label: "Autonomous Business Operations Platform", path: "/autonomous-business-operations-platform" },
+        { label: "AI Powered IT Asset Management", path: "/ai-powered-it-asset-management" }
+      ]
+    },
+    {
+      title: "Solutions & Industries",
       links: [
         { label: "Enterprise Solutions", path: "/solutions/enterprise" },
         { label: "Healthcare Solutions", path: "/solutions/healthcare" },
@@ -35,45 +101,37 @@ export function Footer() {
         { label: "Manufacturing Solutions", path: "/solutions/manufacturing" },
         { label: "Retail Solutions", path: "/solutions/retail" },
         { label: "Government Solutions", path: "/solutions/government" },
-        { label: "Business Intelligence", path: "/services/business-intelligence" },
-        { label: "Marketing Automation", path: "/services/ai-marketing" },
-        { label: "HR & Recruitment", path: "/services/ai-hr" },
-        { label: "Legal Tech", path: "/services/ai-legal" }
+        { label: "Space Technology", path: "/space-tech" },
+        { label: "Research & Development", path: "/research-development" },
+        { label: "Quantum Cloud Infrastructure", path: "/quantum-cloud-infrastructure" },
+        { label: "Quantum Financial Trading", path: "/quantum-financial-trading" },
+        { label: "Quantum Services", path: "/quantum-services" }
       ]
     },
     {
-      title: "Emerging Tech",
-      links: [
-        { label: "Quantum Computing", path: "/emerging-tech" },
-        { label: "Blockchain & DeFi", path: "/emerging-tech" },
-        { label: "IoT & Edge Computing", path: "/emerging-tech" },
-        { label: "Extended Reality (XR)", path: "/emerging-tech" },
-        { label: "5G & Networks", path: "/emerging-tech" },
-        { label: "Green Technology", path: "/emerging-tech" },
-        { label: "Digital Twins", path: "/emerging-tech" }
-      ]
-    },
-    {
-      title: "Company",
+      title: "Company & Resources",
       links: [
         { label: "About Us", path: "/about" },
         { label: "Our Mission", path: "/mission" },
         { label: "Team", path: "/team" },
-        { label: "Pricing", path: "/pricing" },
-        { label: "Careers", path: "/careers" },
+        { label: "Leadership", path: "/leadership" },
         { label: "Partners", path: "/partners" },
-        { label: "Contact", path: "/contact" },
-        { label: "Blog", path: "/blog" }
-      ]
-    },
-    {
-      title: "Resources",
-      links: [
-        { label: "Blog & Articles", path: "/blog" },
+        { label: "Careers", path: "/careers" },
         { label: "Case Studies", path: "/case-studies" },
-        { label: "Help Center", path: "/help" },
+        { label: "Testimonials", path: "/testimonials" },
+        { label: "News", path: "/news" },
+        { label: "Blog", path: "/blog" },
+        { label: "Events", path: "/events" },
+        { label: "Webinars", path: "/webinars" },
+        { label: "White Papers", path: "/white-papers" },
         { label: "Documentation", path: "/docs" },
-        { label: "Support Center", path: "/support" }
+        { label: "Help Center", path: "/help" },
+        { label: "Support", path: "/support" },
+        { label: "FAQ", path: "/faq" },
+        { label: "Marketplace", path: "/marketplace" },
+        { label: "Community", path: "/community" },
+        { label: "Pricing", path: "/pricing" },
+        { label: "Contact", path: "/contact" }
       ]
     }
   ];
@@ -143,11 +201,12 @@ export function Footer() {
       window.location.href = `mailto:${contactInfo.email}`;
     }
   };
+
   return (
     <footer className="bg-zion-slate text-white py-12">
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="mb-4">
@@ -231,6 +290,9 @@ export function Footer() {
               </Link>
               <Link to="/terms" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">
                 Terms of Service
+              </Link>
+              <Link to="/cookies" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">
+                Cookie Policy
               </Link>
             </div>
           </div>
