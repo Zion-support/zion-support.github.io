@@ -36,16 +36,17 @@ import { EMERGING_TECH_SERVICES } from '../data/emergingTechServices';
 
 interface Service {
   id: string;
-  title: string;
+  title?: string;
+  name?: string;
   description: string;
   category: string;
   subcategory: string;
   price: number;
-  currency: string;
+  currency?: string;
   pricingModel: string;
   features: string[];
   benefits: string[];
-  useCases: string[];
+  useCases?: string[];
   targetAudience: string[];
   tags: string[];
   estimatedDelivery: string;
@@ -80,7 +81,8 @@ const InnovativeMicroSaasServices: React.FC = () => {
   
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const serviceTitle = service.title || service.name || '';
+    const matchesSearch = serviceTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
     return matchesCategory && matchesSearch;

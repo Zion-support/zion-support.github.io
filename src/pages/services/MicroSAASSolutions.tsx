@@ -20,7 +20,8 @@ import {
   Clock,
   CheckCircle,
   Star,
-  ArrowRight
+  ArrowRight,
+  Brain
 } from 'lucide-react';
 
 export default function MicroSAASSolutions() {
@@ -216,6 +217,33 @@ export default function MicroSAASSolutions() {
     }
   ];
 
+  const pricingTiers = [
+    {
+      name: "Starter",
+      price: "$99",
+      period: "/month",
+      description: "Perfect for small businesses and startups",
+      features: ["Up to 5 users", "Basic features", "Email support", "Standard templates", "Basic analytics"],
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: "$299",
+      period: "/month",
+      description: "Ideal for growing businesses",
+      features: ["Up to 25 users", "Advanced features", "Priority support", "Custom templates", "Advanced analytics", "API access"],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "$799",
+      period: "/month",
+      description: "For large organizations",
+      features: ["Unlimited users", "All features", "24/7 support", "Custom development", "White-label options", "Dedicated account manager"],
+      popular: false
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       <SEO 
@@ -329,7 +357,7 @@ export default function MicroSAASSolutions() {
                 className="glass-card p-6 text-center hover:scale-105 transition-all duration-300 group"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <benefit.icon className={`w-16 h-16 mx-auto mb-6 ${benefit.color} group-hover:scale-110 transition-transform duration-300`} />
+                <benefit.icon className="w-16 h-16 mx-auto mb-6 text-cyan-400 group-hover:scale-110 transition-transform duration-300" />
                 <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
                   {benefit.title}
                 </h3>
