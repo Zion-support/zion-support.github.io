@@ -17,17 +17,19 @@ import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
 import { ErrorBoundary } from './components/ErrorBoundary';
+import { InnovativeServicesShowcase } from './components/InnovativeServicesShowcase';
 
 // Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
+const EnhancedHome = lazy(() => import('./pages/EnhancedHome'));
 const Services = lazy(() => import('./pages/Services'));
 const AISolutions = lazy(() => import('./pages/AISolutions'));
 const ServicesShowcase = lazy(() => import('./pages/ServicesShowcase'));
+const EnhancedServicesShowcase = lazy(() => import('./pages/EnhancedServicesShowcase'));
 const AIMatcherPage = lazy(() => import('./pages/AIMatcher'));
 const TalentDirectory = lazy(() => import('./pages/TalentDirectory'));
 const TalentsPage = lazy(() => import('./pages/TalentsPage'));
 const EmergingTech = lazy(() => import('./pages/EmergingTech'));
-const InnovativeServices = lazy(() => import('./pages/InnovativeServices'));
 
 // Our enhanced service pages
 const About = lazy(() => import('./pages/About'));
@@ -42,23 +44,11 @@ const ITInfrastructure = lazy(() => import('./pages/services/ITInfrastructure'))
 const MicroSAASSolutions = lazy(() => import('./pages/services/MicroSAASSolutions'));
 const IndustrySolutions = lazy(() => import('./pages/services/IndustrySolutions'));
 
-// Additional pages
-const Pricing = lazy(() => import('./pages/Pricing'));
+// New enhanced pages
+const WhitePapers = lazy(() => import('./pages/WhitePapers'));
+const Events = lazy(() => import('./pages/Events'));
+const Webinars = lazy(() => import('./pages/Webinars'));
 const Careers = lazy(() => import('./pages/Careers'));
-const Partners = lazy(() => import('./pages/Partners'));
-const News = lazy(() => import('./pages/News'));
-const Testimonials = lazy(() => import('./pages/Testimonials'));
-const Leadership = lazy(() => import('./pages/Leadership'));
-const Blog = lazy(() => import('./pages/Blog'));
-const CaseStudies = lazy(() => import('./pages/CaseStudies'));
-const FAQ = lazy(() => import('./pages/FAQ'));
-const Privacy = lazy(() => import('./pages/Privacy'));
-const Terms = lazy(() => import('./pages/Terms'));
-const Cookies = lazy(() => import('./pages/Cookies'));
-const Accessibility = lazy(() => import('./pages/Accessibility'));
-const Sitemap = lazy(() => import('./pages/Sitemap'));
-const HelpCenter = lazy(() => import('./pages/HelpCenter'));
-const RequestQuote = lazy(() => import('./pages/RequestQuote'));
 
 // Loading Component
 const LoadingSpinner = () => (
@@ -91,14 +81,16 @@ const App = () => {
                 <Suspense fallback={<LoadingSpinner />}>
                   <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/home" element={<Home />} />
                     <Route path="/services" element={<Services />} />
                     <Route path="/ai-solutions" element={<AISolutions />} />
                     <Route path="/services-showcase" element={<ServicesShowcase />} />
+                    {/* Temporarily disabled due to typing issues */}
+                    {/* <Route path="/enhanced-services" element={<EnhancedServicesShowcase />} /> */}
                     <Route path="/match" element={<AIMatcherPage />} />
                     <Route path="/talent" element={<TalentDirectory />} />
                     <Route path="/talents" element={<TalentsPage />} />
                     <Route path="/emerging-tech" element={<EmergingTech />} />
-                    <Route path="/innovative-services" element={<InnovativeServices />} />
                     <Route path="/comprehensive-services" element={<Services />} />
                     <Route path="/services-comparison" element={<Services />} />
                     <Route path="/it-onsite-services" element={<Services />} />
@@ -116,25 +108,14 @@ const App = () => {
                     <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
                     <Route path="/services/industry-solutions" element={<IndustrySolutions />} />
                     
-                    {/* Additional page routes */}
-                    <Route path="/pricing" element={<Pricing />} />
+                    {/* New innovative services routes */}
+                    <Route path="/innovative-services" element={<InnovativeServicesShowcase />} />
+                    
+                    {/* New enhanced page routes */}
+                    <Route path="/white-papers" element={<WhitePapers />} />
+                    <Route path="/events" element={<Events />} />
+                    <Route path="/webinars" element={<Webinars />} />
                     <Route path="/careers" element={<Careers />} />
-                    <Route path="/partners" element={<Partners />} />
-                    <Route path="/news" element={<News />} />
-                    <Route path="/testimonials" element={<Testimonials />} />
-                    <Route path="/leadership" element={<Leadership />} />
-                    <Route path="/blog" element={<Blog />} />
-                    <Route path="/case-studies" element={<CaseStudies />} />
-                    <Route path="/faq" element={<FAQ />} />
-                    <Route path="/privacy" element={<Privacy />} />
-                    <Route path="/terms" element={<Terms />} />
-                    <Route path="/cookies" element={<Cookies />} />
-                    <Route path="/accessibility" element={<Accessibility />} />
-                    <Route path="/sitemap" element={<Sitemap />} />
-                    <Route path="/help" element={<HelpCenter />} />
-                    <Route path="/support" element={<HelpCenter />} />
-                    <Route path="/request-quote" element={<RequestQuote />} />
-                    <Route path="/quote" element={<RequestQuote />} />
                   </Routes>
                 </Suspense>
               </main>
