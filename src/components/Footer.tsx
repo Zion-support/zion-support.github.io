@@ -7,19 +7,14 @@ export function Footer() {
     {
       title: "AI & Micro SAAS",
       links: [
-        { label: "AI & Autonomous Systems", path: "/services/ai-autonomous-systems" },
-        { label: "Quantum Technology", path: "/services/quantum-technology" },
-        { label: "IT Infrastructure", path: "/services/it-infrastructure" },
+        { label: "AI Business Intelligence", path: "/services/ai-business-intelligence" },
         { label: "Micro SAAS Solutions", path: "/services/micro-saas-solutions" },
-        { label: "Cybersecurity", path: "/services/cybersecurity" },
-        { label: "Industry Solutions", path: "/services/industry-solutions" },
-        { label: "Marketplace", path: "/marketplace" },
-        { label: "AI & Machine Learning", path: "/services#ai-ml" },
-        { label: "Cloud & Infrastructure", path: "/services#cloud" },
-        { label: "Blockchain Solutions", path: "/services#blockchain" },
-        { label: "IoT & Edge Computing", path: "/services#iot" },
-        { label: "IT Consulting", path: "/services#consulting" },
-        { label: "Managed Services", path: "/services#managed" }
+        { label: "AI Marketing Automation", path: "/services/ai-marketing-automation" },
+        { label: "AI Customer Success", path: "/services/ai-customer-success" },
+        { label: "Workflow Automation", path: "/services/workflow-automation" },
+        { label: "Document Processing", path: "/services/document-processing" },
+        { label: "Predictive Maintenance", path: "/services/predictive-maintenance" },
+        { label: "Supply Chain Intelligence", path: "/services/supply-chain-intelligence" }
       ]
     },
     {
@@ -88,7 +83,8 @@ export function Footer() {
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008, Middletown DE 19709'
+    address: '364 E Main St STE 1008, Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
   };
 
   return (

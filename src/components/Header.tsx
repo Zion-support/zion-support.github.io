@@ -26,9 +26,27 @@ export function Header() {
     },
     { 
       path: '/services', 
-      label: 'AI Services', 
-      icon: '🤖',
-      description: 'Explore our AI service offerings'
+      label: 'Services', 
+      icon: '🚀',
+      description: 'Explore our comprehensive service offerings'
+    },
+    { 
+      path: '/services/micro-saas-solutions', 
+      label: 'Micro SAAS', 
+      icon: '💻',
+      description: 'AI-powered micro SAAS solutions'
+    },
+    { 
+      path: '/services/ai-business-intelligence', 
+      label: 'AI BI', 
+      icon: '🧠',
+      description: 'AI Business Intelligence Platform'
+    },
+    { 
+      path: '/services/quantum-cybersecurity', 
+      label: 'Security', 
+      icon: '🔒',
+      description: 'Quantum-Safe Cybersecurity Suite'
     },
     { 
       path: '/solutions/enterprise', 
@@ -49,18 +67,6 @@ export function Header() {
       description: 'Learn about our company'
     },
     { 
-      path: '/careers', 
-      label: 'Careers', 
-      icon: '🚀',
-      description: 'Join our team'
-    },
-    { 
-      path: '/blog', 
-      label: 'Blog', 
-      icon: '📝',
-      description: 'Latest insights and news'
-    },
-    { 
       path: '/contact', 
       label: 'Contact', 
       icon: '📞',
@@ -72,32 +78,45 @@ export function Header() {
     {
       title: 'AI & Machine Learning',
       services: [
-        { name: 'AI Business Intelligence', path: '/services#ai-bi' },
-        { name: 'AI Marketing Automation', path: '/services#ai-marketing' },
-        { name: 'AI HR & Recruitment', path: '/services#ai-hr' },
-        { name: 'AI Legal Tech', path: '/services#ai-legal' }
+        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence' },
+        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation' },
+        { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment' },
+        { name: 'AI Legal Tech', path: '/services/ai-legal-tech' },
+        { name: 'AI Customer Success', path: '/services/ai-customer-success' }
+      ]
+    },
+    {
+      title: 'Micro SAAS Solutions',
+      services: [
+        { name: 'AI-Powered CRM', path: '/services/ai-powered-crm' },
+        { name: 'Workflow Automation', path: '/services/workflow-automation' },
+        { name: 'Document Processing', path: '/services/document-processing' },
+        { name: 'Predictive Maintenance', path: '/services/predictive-maintenance' },
+        { name: 'Supply Chain Intelligence', path: '/services/supply-chain-intelligence' }
       ]
     },
     {
       title: 'Cybersecurity',
       services: [
-        { name: 'Quantum-Safe Security', path: '/services#quantum-security' },
-        { name: 'Security Assessment', path: '/services#security-assessment' },
-        { name: 'Compliance & Audit', path: '/services#compliance' }
+        { name: 'Quantum-Safe Security', path: '/services/quantum-cybersecurity' },
+        { name: 'AI Threat Detection', path: '/services/ai-threat-detection' },
+        { name: 'Zero-Trust Architecture', path: '/services/zero-trust-architecture' },
+        { name: 'Compliance & Audit', path: '/services/compliance-audit' }
       ]
     },
     {
       title: 'Cloud & Infrastructure',
       services: [
-        { name: 'Cloud Migration', path: '/services#cloud-migration' },
-        { name: 'Network Infrastructure', path: '/services#network' },
-        { name: 'Managed IT Services', path: '/services#managed-it' }
+        { name: 'Cloud Migration', path: '/services/cloud-migration' },
+        { name: 'Network Infrastructure', path: '/services/network-infrastructure' },
+        { name: 'Managed IT Services', path: '/services/managed-it-services' },
+        { name: 'DevOps Automation', path: '/services/devops-automation' }
       ]
     },
     {
       title: 'Emerging Tech',
       services: [
-        { name: 'Blockchain Solutions', path: '/services#blockchain' },
+        { name: 'Blockchain Solutions', path: '/services/blockchain-solutions' },
         { name: 'Quantum Computing', path: '/services#quantum' },
         { name: 'IoT & Edge Computing', path: '/services#iot-edge' }
       ]

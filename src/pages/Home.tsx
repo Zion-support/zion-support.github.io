@@ -33,27 +33,27 @@ const Home: React.FC = () => {
     {
       title: "AI-Powered Innovation",
       subtitle: "Transform your business with cutting-edge artificial intelligence solutions",
-      description: "From predictive analytics to intelligent automation, we deliver AI solutions that drive real business results.",
+      description: "From predictive analytics to intelligent automation, we deliver AI solutions that drive real business results and competitive advantage.",
       cta: "Explore AI Solutions",
-      path: "/comprehensive-services",
+      path: "/services/ai-business-intelligence",
       icon: Brain,
       color: "from-cyan-500 to-blue-600"
     },
     {
-      title: "Enterprise IT Excellence",
-      subtitle: "Comprehensive IT services for modern businesses",
-      description: "24/7 support, cybersecurity, cloud solutions, and strategic technology consulting to keep your business ahead.",
-      cta: "View IT Services",
-      path: "/it-onsite-services",
+      title: "Quantum-Safe Security",
+      subtitle: "Future-proof cybersecurity for the quantum era",
+      description: "Next-generation security platform with quantum-resistant encryption and AI-powered threat detection to protect your business.",
+      cta: "Secure Your Business",
+      path: "/services/quantum-cybersecurity",
       icon: Shield,
       color: "from-purple-500 to-pink-600"
     },
     {
-      title: "Micro SAAS Solutions",
-      subtitle: "Scalable software solutions for every business need",
-      description: "Custom micro SAAS applications that streamline operations, reduce costs, and accelerate growth.",
-      cta: "Browse Services",
-      path: "/services",
+      title: "Micro SAAS Excellence",
+      subtitle: "AI-powered software solutions for rapid business transformation",
+      description: "Custom micro SAAS platforms that streamline operations, reduce costs, and accelerate growth with intelligent automation.",
+      cta: "Discover Solutions",
+      path: "/services/micro-saas-solutions",
       icon: Cpu,
       color: "from-green-500 to-emerald-600"
     }
@@ -61,47 +61,47 @@ const Home: React.FC = () => {
 
   const featuredServices = [
     {
-      id: "ai-powered-crm",
-      title: "AI-Powered CRM",
-      description: "Intelligent customer relationship management with predictive analytics and automated insights",
-      price: "$1,500/month",
-      features: ["Predictive Analytics", "Automated Follow-ups", "Smart Lead Scoring", "Real-time Insights"],
+      id: "ai-business-intelligence",
+      title: "AI Business Intelligence",
+      description: "Transform data into actionable insights with AI-powered analytics and predictive modeling",
+      price: "$2,500/month",
+      features: ["Predictive Analytics", "Real-time Dashboards", "Natural Language Query", "Automated Insights"],
       icon: Brain,
-      category: "AI & Machine Learning",
+      category: "AI & Analytics",
       rating: 4.9,
-      reviewCount: 342,
-      path: "/services/ai-powered-crm"
+      reviewCount: 456,
+      path: "/services/ai-business-intelligence"
     },
     {
-      id: "cybersecurity-platform",
-      title: "Cybersecurity Platform",
-      description: "Comprehensive threat detection and response system with AI-powered security intelligence",
-      price: "$1,800/month",
-      features: ["Threat Detection", "Incident Response", "Compliance Monitoring", "24/7 Protection"],
+      id: "quantum-cybersecurity",
+      title: "Quantum-Safe Cybersecurity",
+      description: "Next-generation security platform with quantum-resistant encryption and AI threat detection",
+      price: "$3,200/month",
+      features: ["Quantum Encryption", "AI Threat Detection", "Zero-Trust Architecture", "24/7 Monitoring"],
       icon: Shield,
       category: "Cybersecurity",
       rating: 4.8,
-      reviewCount: 189,
-      path: "/services/cybersecurity-platform"
+      reviewCount: 289,
+      path: "/services/quantum-cybersecurity"
     },
     {
-      id: "cloud-optimization",
-      title: "Cloud Cost Optimization",
-      description: "AI-driven cloud cost management that reduces spending by 30-50% automatically",
-      price: "$350/month",
-      features: ["Cost Analysis", "Automated Optimization", "Resource Scheduling", "Budget Management"],
+      id: "micro-saas-solutions",
+      title: "Micro SAAS Solutions",
+      description: "AI-powered micro SAAS platforms for rapid business transformation and growth",
+      price: "$1,800/month",
+      features: ["Custom Development", "AI Integration", "Scalable Architecture", "Multi-tenant Support"],
       icon: Cpu,
-      category: "Cloud Computing",
+      category: "Micro SAAS",
       rating: 4.7,
-      reviewCount: 234,
-      path: "/services/cloud-optimization"
+      reviewCount: 334,
+      path: "/services/micro-saas-solutions"
     }
   ];
 
   const stats = [
-    { label: "AI Services", value: "25+", icon: Brain, color: "text-cyan-400" },
-    { label: "Happy Clients", value: "100+", icon: Users, color: "text-purple-400" },
-    { label: "Uptime", value: "99.9%", icon: Shield, color: "text-green-400" },
+    { label: "AI Services", value: "50+", icon: Brain, color: "text-cyan-400" },
+    { label: "Happy Clients", value: "500+", icon: Users, color: "text-purple-400" },
+    { label: "Uptime", value: "99.99%", icon: Shield, color: "text-green-400" },
     { label: "Support", value: "24/7", icon: Clock, color: "text-yellow-400" }
   ];
 
