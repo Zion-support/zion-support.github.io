@@ -1,34 +1,42 @@
-export interface EnhancedMicroSaasService {
+export interface MicroSaasService {
   id: string;
-  title: string;
-  description: string;
+  name: string;
   category: string;
   subcategory: string;
+  description: string;
   price: number;
-  currency: string;
-  pricingModel: string;
+  pricingModel: 'freemium' | 'monthly' | 'yearly' | 'per-user' | 'usage-based';
+  userLimit: string;
   features: string[];
   benefits: string[];
-  useCases: string[];
   targetAudience: string[];
   tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
+  website: string;
+  demoUrl?: string;
+  freeTrial: boolean;
+  freeTrialDays: number;
   contactInfo: {
     phone: string;
     email: string;
-    website: string;
+    address: string;
   };
+<<<<<<< HEAD
   technology: string[];
   integrations: string[];
   compliance: string[];
   roi: string;
+=======
+  marketPosition: string;
+  competitors: string[];
+  roi: string;
+  implementationTime: string;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f031
 }
 
-export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
-  // AI-Powered Business Intelligence
+export const ENHANCED_MICRO_SAAS_SERVICES: MicroSaasService[] = [
+  // Productivity & Collaboration
   {
+<<<<<<< HEAD
     id: "ai-business-intelligence-platform",
     title: "AI Business Intelligence Platform",
     description: "Real-time business intelligence platform powered by AI that transforms raw data into actionable insights, predictive analytics, and automated reporting.",
@@ -36,8 +44,18 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     subcategory: "Business Intelligence",
     price: 2500,
     currency: "$",
+=======
+    id: "taskflow-pro",
+    name: "TaskFlow Pro",
+    category: "Productivity",
+    subcategory: "Project Management",
+    description: "AI-powered task management and project collaboration platform with intelligent automation and predictive analytics",
+    price: 29,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f031
     pricingModel: "monthly",
+    userLimit: "Up to 25 users",
     features: [
+<<<<<<< HEAD
       "Real-time data visualization",
       "AI-powered predictive analytics",
       "Automated report generation",
@@ -73,29 +91,50 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     estimatedDelivery: "2-3 weeks",
     supportLevel: "premium",
     marketPrice: "$299 - $1,200/month",
+=======
+      "AI task prioritization",
+      "Smart time estimation",
+      "Real-time collaboration",
+      "Advanced reporting",
+      "Mobile app",
+      "API integration",
+      "Custom workflows",
+      "Resource allocation"
+    ],
+    benefits: [
+      "Increase team productivity by 40%",
+      "Reduce project delays by 60%",
+      "Improve resource utilization",
+      "Enhanced team communication"
+    ],
+    targetAudience: ["Small teams", "Startups", "Agencies", "Consulting firms"],
+    tags: ["Task Management", "AI", "Productivity", "Collaboration", "Project Management"],
+    website: "https://ziontechgroup.com/taskflow-pro",
+    demoUrl: "https://demo.ziontechgroup.com/taskflow",
+    freeTrial: true,
+    freeTrialDays: 14,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f031
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    technology: ["React", "Python", "TensorFlow", "PostgreSQL", "Redis"],
-    integrations: ["Salesforce", "HubSpot", "QuickBooks", "Google Analytics", "Slack"],
-    compliance: ["GDPR", "SOC 2", "HIPAA"],
+    marketPosition: "Mid-market project management solution",
+    competitors: ["Asana", "Monday.com", "ClickUp"],
     roi: "300% within 6 months",
-    competitors: ["Tableau", "Power BI", "Looker", "Qlik"]
+    implementationTime: "1-2 weeks"
   },
-
-  // AI-Powered Customer Service
   {
-    id: "ai-customer-service-automation",
-    title: "AI Customer Service Automation",
-    description: "Intelligent customer service platform that automates responses, handles inquiries, and provides 24/7 support using advanced NLP.",
-    category: "AI & Customer Service",
-    subcategory: "Automation",
-    price: 199,
-    currency: "$",
+    id: "invoicegenius",
+    name: "InvoiceGenius",
+    category: "Finance",
+    subcategory: "Invoicing & Billing",
+    description: "AI-powered invoice generation, expense tracking, and financial management platform for small businesses",
+    price: 39,
     pricingModel: "monthly",
+    userLimit: "Unlimited users",
     features: [
+<<<<<<< HEAD
       "Natural language processing",
       "Multi-language support",
       "24/7 availability",
@@ -155,19 +194,48 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-375a
     supportLevel: "premium",
     marketPrice: "$2,500 - $8,000/month",
+=======
+      "AI invoice generation",
+      "Expense categorization",
+      "Financial reporting",
+      "Tax preparation",
+      "Multi-currency support",
+      "Payment processing",
+      "Bank reconciliation",
+      "Mobile receipt scanning"
+    ],
+    benefits: [
+      "Save 15+ hours per month on invoicing",
+      "Reduce payment delays by 45%",
+      "Improve cash flow management",
+      "Automated tax compliance"
+    ],
+    targetAudience: ["Small businesses", "Freelancers", "Consultants", "Service providers"],
+    tags: ["Invoicing", "Finance", "AI", "Expense Tracking", "Tax Preparation"],
+    website: "https://ziontechgroup.com/invoicegenius",
+    demoUrl: "https://demo.ziontechgroup.com/invoice",
+    freeTrial: true,
+    freeTrialDays: 30,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f031
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     technology: ["React", "Python", "OpenAI GPT", "FastAPI", "PostgreSQL"],
     integrations: ["Zendesk", "Intercom", "Slack", "Microsoft Teams", "Zapier"],
     compliance: ["GDPR", "SOC 2", "CCPA"],
+=======
+    marketPosition: "AI-first financial management platform",
+    competitors: ["FreshBooks", "QuickBooks", "Wave"],
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f031
     roi: "250% within 4 months",
-    competitors: ["Intercom", "Zendesk", "Freshdesk", "Help Scout"]
+    implementationTime: "1 week"
   },
+<<<<<<< HEAD
 
   // Blockchain Supply Chain
   {
@@ -178,8 +246,19 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     subcategory: "Tracking & Compliance",
     price: 450,
     currency: "$",
+=======
+  {
+    id: "socialsync-pro",
+    name: "SocialSync Pro",
+    category: "Marketing",
+    subcategory: "Social Media Management",
+    description: "Comprehensive social media management platform with AI content optimization and multi-platform analytics",
+    price: 49,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f031
     pricingModel: "monthly",
+    userLimit: "Up to 10 users",
     features: [
+<<<<<<< HEAD
       "Real-time tracking",
       "Smart contracts",
       "Compliance reporting",
@@ -231,8 +310,174 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     subcategory: "Quantum Security",
     price: 599,
     currency: "$",
-    pricingModel: "monthly",
+=======
+      "Multi-platform posting",
+      "AI content optimization",
+      "Content calendar",
+      "Analytics dashboard",
+      "Engagement tracking",
+      "Hashtag optimization",
+      "Competitor analysis",
+      "Automated responses"
+    ],
+    benefits: [
+      "Increase social engagement by 65%",
+      "Save 20+ hours per week",
+      "Improve content performance",
+      "Better brand consistency"
+    ],
+    targetAudience: ["Marketing teams", "Small businesses", "Agencies", "Content creators"],
+    tags: ["Social Media", "Marketing", "AI", "Analytics", "Content Management"],
+    website: "https://ziontechgroup.com/socialsync-pro",
+    demoUrl: "https://demo.ziontechgroup.com/social",
+    freeTrial: true,
+    freeTrialDays: 14,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPosition: "AI-powered social media automation",
+    competitors: ["Hootsuite", "Buffer", "Sprout Social"],
+    roi: "400% within 3 months",
+    implementationTime: "1 week"
+  },
+  {
+    id: "customerflow-crm",
+    name: "CustomerFlow CRM",
+    category: "CRM",
+    subcategory: "Customer Relationship Management",
+    description: "Lightweight yet powerful CRM system with AI insights and automated sales processes",
+    price: 35,
+    pricingModel: "per-user",
+    userLimit: "Up to 50 users",
     features: [
+      "Contact management",
+      "Sales pipeline",
+      "Email integration",
+      "AI lead scoring",
+      "Automated follow-ups",
+      "Reporting tools",
+      "Mobile app",
+      "API access"
+    ],
+    benefits: [
+      "Increase sales by 35%",
+      "Improve lead conversion by 50%",
+      "Reduce manual data entry by 80%",
+      "Better customer insights"
+    ],
+    targetAudience: ["Sales teams", "Small businesses", "Startups", "Consultants"],
+    tags: ["CRM", "Sales", "AI", "Automation", "Lead Management"],
+    website: "https://ziontechgroup.com/customerflow-crm",
+    demoUrl: "https://demo.ziontechgroup.com/crm",
+    freeTrial: true,
+    freeTrialDays: 21,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPosition: "AI-driven sales automation platform",
+    competitors: ["HubSpot", "Salesforce", "Pipedrive"],
+    roi: "350% within 5 months",
+    implementationTime: "2-3 weeks"
+  },
+  {
+    id: "dataviz-studio",
+    name: "DataViz Studio",
+    category: "Analytics",
+    subcategory: "Data Visualization",
+    description: "Advanced data visualization and business intelligence platform with AI-powered insights",
+    price: 59,
+    pricingModel: "monthly",
+    userLimit: "Up to 15 users",
+    features: [
+      "Interactive dashboards",
+      "AI-powered insights",
+      "Data connectors",
+      "Custom charts",
+      "Real-time updates",
+      "Collaborative editing",
+      "Export capabilities",
+      "Mobile responsive"
+    ],
+    benefits: [
+      "Make data-driven decisions 3x faster",
+      "Improve reporting efficiency by 70%",
+      "Better stakeholder communication",
+      "Real-time business insights"
+    ],
+    targetAudience: ["Business analysts", "Marketing teams", "Executives", "Data teams"],
+    tags: ["Analytics", "Data Visualization", "AI", "Business Intelligence", "Reporting"],
+    website: "https://ziontechgroup.com/dataviz-studio",
+    demoUrl: "https://demo.ziontechgroup.com/dataviz",
+    freeTrial: true,
+    freeTrialDays: 14,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPosition: "AI-powered business intelligence platform",
+    competitors: ["Tableau", "Power BI", "Looker"],
+    roi: "500% within 6 months",
+    implementationTime: "2-4 weeks"
+  },
+  // New Innovative Services
+  {
+    id: "ai-content-writer",
+    name: "AI Content Writer Pro",
+    category: "Content Creation",
+    subcategory: "AI Writing",
+    description: "Advanced AI content creation platform for blogs, marketing copy, and business communications",
+    price: 79,
+    pricingModel: "monthly",
+    userLimit: "Up to 20 users",
+    features: [
+      "AI blog writing",
+      "Marketing copy generation",
+      "SEO optimization",
+      "Content templates",
+      "Plagiarism checking",
+      "Multi-language support",
+      "Brand voice training",
+      "Content calendar"
+    ],
+    benefits: [
+      "Create 10x more content",
+      "Improve SEO rankings by 40%",
+      "Reduce content costs by 60%",
+      "Consistent brand messaging"
+    ],
+    targetAudience: ["Marketing teams", "Content creators", "Agencies", "Small businesses"],
+    tags: ["AI Writing", "Content Creation", "SEO", "Marketing", "Automation"],
+    website: "https://ziontechgroup.com/ai-content-writer",
+    demoUrl: "https://demo.ziontechgroup.com/aiwriter",
+    freeTrial: true,
+    freeTrialDays: 7,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPosition: "Enterprise-grade AI content creation",
+    competitors: ["Jasper", "Copy.ai", "Writesonic"],
+    roi: "600% within 3 months",
+    implementationTime: "1 week"
+  },
+  {
+    id: "smart-inventory",
+    name: "Smart Inventory Manager",
+    category: "Operations",
+    subcategory: "Inventory Management",
+    description: "AI-powered inventory management system with predictive analytics and automated reordering",
+    price: 45,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f031
+    pricingModel: "monthly",
+    userLimit: "Up to 30 users",
+    features: [
+<<<<<<< HEAD
       "Post-quantum cryptography",
       "AI threat detection",
       "Zero-trust architecture",
@@ -1417,11 +1662,76 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     supportLevel: "enterprise",
     marketPrice: "$449 - $2,000/month",
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-375a
+=======
+      "Real-time inventory tracking",
+      "AI demand forecasting",
+      "Automated reordering",
+      "Barcode scanning",
+      "Multi-location support",
+      "Supplier management",
+      "Cost optimization",
+      "Mobile app"
+    ],
+    benefits: [
+      "Reduce stockouts by 80%",
+      "Lower inventory costs by 25%",
+      "Improve cash flow by 35%",
+      "Automated operations"
+    ],
+    targetAudience: ["Retail businesses", "Manufacturing", "E-commerce", "Warehouses"],
+    tags: ["Inventory", "AI", "Operations", "Supply Chain", "Automation"],
+    website: "https://ziontechgroup.com/smart-inventory",
+    demoUrl: "https://demo.ziontechgroup.com/inventory",
+    freeTrial: true,
+    freeTrialDays: 21,
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
+    marketPosition: "AI-first inventory optimization",
+    competitors: ["TradeGecko", "Zoho Inventory", "Fishbowl"],
+    roi: "400% within 4 months",
+    implementationTime: "2-3 weeks"
+  },
+  {
+    id: "cyber-shield",
+    name: "CyberShield Pro",
+    category: "Cybersecurity",
+    subcategory: "Threat Protection",
+    description: "Comprehensive cybersecurity platform with AI threat detection and automated incident response",
+    price: 89,
+    pricingModel: "monthly",
+    userLimit: "Up to 100 users",
+    features: [
+      "AI threat detection",
+      "Automated incident response",
+      "Vulnerability scanning",
+      "Security monitoring",
+      "Compliance reporting",
+      "Employee training",
+      "24/7 support",
+      "Mobile security"
+    ],
+    benefits: [
+      "Prevent 99.9% of cyber attacks",
+      "Reduce security incidents by 90%",
+      "Meet compliance requirements",
+      "24/7 protection"
+    ],
+    targetAudience: ["Small businesses", "Startups", "Healthcare", "Financial services"],
+    tags: ["Cybersecurity", "AI", "Threat Detection", "Compliance", "Automation"],
+    website: "https://ziontechgroup.com/cybershield-pro",
+    demoUrl: "https://demo.ziontechgroup.com/cyber",
+    freeTrial: true,
+    freeTrialDays: 14,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f031
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+<<<<<<< HEAD
 <<<<<<< HEAD
     technology: ["React", "Python", "TensorFlow", "PostgreSQL", "Redis"],
     integrations: ["SAP", "Oracle", "NetSuite", "QuickBooks", "Shopify"],
@@ -1454,8 +1764,24 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     subcategory: "Machine Learning",
     price: 799,
     currency: "$",
+=======
+    marketPosition: "AI-powered cybersecurity for SMBs",
+    competitors: ["CrowdStrike", "SentinelOne", "Cylance"],
+    roi: "1000% within 6 months",
+    implementationTime: "1-2 weeks"
+  },
+  {
+    id: "cloud-optimizer",
+    name: "Cloud Optimizer Pro",
+    category: "Cloud & DevOps",
+    subcategory: "Cloud Management",
+    description: "AI-powered cloud cost optimization and performance monitoring platform",
+    price: 69,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f031
     pricingModel: "monthly",
+    userLimit: "Up to 50 users",
     features: [
+<<<<<<< HEAD
       "Quantum ML algorithms",
       "Hybrid quantum-classical training",
       "Optimization solvers",
@@ -1490,11 +1816,35 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     estimatedDelivery: "8-12 weeks",
     supportLevel: "enterprise",
     marketPrice: "$799 - $5,000/month",
+=======
+      "Cost optimization",
+      "Performance monitoring",
+      "Resource scaling",
+      "Security compliance",
+      "Multi-cloud support",
+      "Automated backups",
+      "Disaster recovery",
+      "API management"
+    ],
+    benefits: [
+      "Reduce cloud costs by 40%",
+      "Improve performance by 60%",
+      "Automated scaling",
+      "Better security posture"
+    ],
+    targetAudience: ["DevOps teams", "Cloud engineers", "Startups", "Enterprises"],
+    tags: ["Cloud", "DevOps", "AI", "Cost Optimization", "Performance"],
+    website: "https://ziontechgroup.com/cloud-optimizer",
+    demoUrl: "https://demo.ziontechgroup.com/cloud",
+    freeTrial: true,
+    freeTrialDays: 14,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f031
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
+<<<<<<< HEAD
     technology: ["Qiskit", "PennyLane", "TensorFlow Quantum", "Python", "Quantum hardware"],
     integrations: ["AWS Braket", "IBM Quantum", "Google Quantum AI", "Azure Quantum", "ML platforms"],
     compliance: ["ISO 27001", "SOC 2", "Research standards"],
@@ -1583,11 +1933,50 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-375a
     supportLevel: "premium",
     marketPrice: "$349 - $1,500/month",
+=======
+    marketPosition: "Intelligent cloud cost management",
+    competitors: ["CloudHealth", "CloudCheckr", "ParkMyCloud"],
+    roi: "450% within 5 months",
+    implementationTime: "2-3 weeks"
+  },
+  {
+    id: "hr-automation",
+    name: "HR Automation Suite",
+    category: "Human Resources",
+    subcategory: "HR Management",
+    description: "Comprehensive HR automation platform with AI recruitment and employee management",
+    price: 55,
+    pricingModel: "per-user",
+    userLimit: "Up to 200 users",
+    features: [
+      "AI recruitment",
+      "Employee onboarding",
+      "Performance management",
+      "Time tracking",
+      "Payroll integration",
+      "Benefits administration",
+      "Compliance tracking",
+      "Mobile app"
+    ],
+    benefits: [
+      "Reduce hiring time by 50%",
+      "Improve employee retention by 30%",
+      "Automate HR processes",
+      "Better compliance"
+    ],
+    targetAudience: ["HR teams", "Small businesses", "Startups", "Growing companies"],
+    tags: ["HR", "Recruitment", "AI", "Automation", "Employee Management"],
+    website: "https://ziontechgroup.com/hr-automation",
+    demoUrl: "https://demo.ziontechgroup.com/hr",
+    freeTrial: true,
+    freeTrialDays: 21,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f031
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      address: "364 E Main St STE 1008 Middletown DE 19709"
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
     technology: ["React", "Python", "TensorFlow", "PostgreSQL", "Redis"],
     integrations: ["Zillow", "Redfin", "Realtor.com", "MLS", "PropStream"],
@@ -3476,3 +3865,62 @@ export const getServicesByCategory = (category: string) => {
 export const getServicesByTag = (tag: string) => {
   return ENHANCED_MICRO_SAAS_SERVICES.filter(service => service.tags.includes(tag));
 };
+=======
+    marketPosition: "AI-powered HR automation",
+    competitors: ["BambooHR", "Workday", "Zenefits"],
+    roi: "350% within 4 months",
+    implementationTime: "3-4 weeks"
+  }
+];
+
+export const SERVICE_CATEGORIES = [
+  {
+    id: "productivity",
+    name: "Productivity & Collaboration",
+    icon: "⚡",
+    count: 1
+  },
+  {
+    id: "finance",
+    name: "Finance & Accounting",
+    icon: "💰",
+    count: 1
+  },
+  {
+    id: "marketing",
+    name: "Marketing & Sales",
+    icon: "📈",
+    count: 2
+  },
+  {
+    id: "operations",
+    name: "Operations & Supply Chain",
+    icon: "🏭",
+    count: 1
+  },
+  {
+    id: "cybersecurity",
+    name: "Cybersecurity",
+    icon: "🔒",
+    count: 1
+  },
+  {
+    id: "cloud-devops",
+    name: "Cloud & DevOps",
+    icon: "☁️",
+    count: 1
+  },
+  {
+    id: "hr",
+    name: "Human Resources",
+    icon: "👥",
+    count: 1
+  },
+  {
+    id: "content-creation",
+    name: "Content Creation",
+    icon: "✍️",
+    count: 1
+  }
+];
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f031
