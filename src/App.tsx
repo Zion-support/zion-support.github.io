@@ -1,202 +1,140 @@
-import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Header } from './components/Header';
-import { Footer } from './components/Footer';
-import Sidebar from './components/Sidebar';
-import { AccessibilityControls } from './components/AccessibilityControls';
-import { PerformanceDashboard } from './components/PerformanceDashboard';
-import { AnalyticsDashboard } from './components/AnalyticsDashboard';
-import { AIChatbot } from './components/AIChatbot';
-import { CollaborativeTextEditor } from './components/CollaborativeTextEditor';
-import { AICodeGenerator } from './components/AICodeGenerator';
-import { EnterpriseDashboard } from './components/EnterpriseDashboard';
-import { SecurityComplianceDashboard } from './components/SecurityComplianceDashboard';
-import { MachineLearningDashboard } from './components/MachineLearningDashboard';
+import React from 'react';
+import { Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
+
 import { ThemeProvider } from "./components/ThemeProvider";
-import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
+import { Toaster } from "./components/ui/toaster";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import { ErrorBoundary } from './components/ErrorBoundary';
+import {
+  AuthRoutes,
+  DashboardRoutes,
+  MarketplaceRoutes,
+  TalentRoutes,
+  AdminRoutes,
+  MobileAppRoutes,
+  ContentRoutes,
+  ErrorRoutes,
+  EnterpriseRoutes,
+  CommunityRoutes,
+  DeveloperRoutes
+} from './routes';
 
-// Enhanced lazy loading with preloading hints and better code splitting
-const Home = lazy(() => import('./pages/Home').then(module => ({ default: module.default })));
-const Services = lazy(() => import('./pages/Services').then(module => ({ default: module.default })));
-const AISolutions = lazy(() => import('./pages/AISolutions').then(module => ({ default: module.default })));
-const ServicesShowcase = lazy(() => import('./pages/ServicesShowcase').then(module => ({ default: module.default })));
-const AIMatcherPage = lazy(() => import('./pages/AIMatcher').then(module => ({ default: module.default })));
-const TalentDirectory = lazy(() => import('./pages/TalentDirectory').then(module => ({ default: module.default })));
-const TalentsPage = lazy(() => import('./pages/TalentsPage').then(module => ({ default: module.default })));
-const EmergingTech = lazy(() => import('./pages/EmergingTech').then(module => ({ default: module.default })));
+const Home = React.lazy(() => import('./pages/Home'));
+const About = React.lazy(() => import('./pages/About'));
+const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
+const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
+const TalentsPage = React.lazy(() => import('./pages/TalentsPage'));
+const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage'));
+const EquipmentDetail = React.lazy(() => import('./pages/EquipmentDetail'));
+const Analytics = React.lazy(() => import('./pages/Analytics'));
+const MobileLaunchPage = React.lazy(() => import('./pages/MobileLaunchPage'));
+const CommunityPage = React.lazy(() => import('./pages/CommunityPage'));
+const Categories = React.lazy(() => import('./pages/Categories'));
+const Blog = React.lazy(() => import('./pages/Blog'));
+const BlogPost = React.lazy(() => import('./pages/BlogPost'));
+const PartnersPage = React.lazy(() => import('./pages/Partners'));
+const Login = React.lazy(() => import('./pages/Login'));
+const Signup = React.lazy(() => import('./pages/Signup'));
+const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage'));
+const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
+const ContactPage = React.lazy(() => import('./pages/ContactPage'));
+const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
+const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
+const MicroSaasServices = React.lazy(() => import('./pages/MicroSaasServices'));
+const PricingPage = React.lazy(() => import('./pages/PricingPage'));
 
-// Our enhanced service pages with better chunking
-const About = lazy(() => import('./pages/About').then(module => ({ default: module.default })));
-const Contact = lazy(() => import('./pages/Contact').then(module => ({ default: module.default })));
-const Mission = lazy(() => import('./pages/Mission').then(module => ({ default: module.default })));
-const Team = lazy(() => import('./pages/Team').then(module => ({ default: module.default })));
-const ServicesOverview = lazy(() => import('./pages/services/ServicesOverview').then(module => ({ default: module.default })));
-const AIAutonomousSystems = lazy(() => import('./pages/services/AIAutonomousSystems').then(module => ({ default: module.default })));
-const QuantumTechnology = lazy(() => import('./pages/services/QuantumTechnology').then(module => ({ default: module.default })));
-const Cybersecurity = lazy(() => import('./pages/services/Cybersecurity').then(module => ({ default: module.default })));
-const ITInfrastructure = lazy(() => import('./pages/services/ITInfrastructure').then(module => ({ default: module.default })));
-const MicroSAASSolutions = lazy(() => import('./pages/services/MicroSAASSolutions').then(module => ({ default: module.default })));
-const IndustrySolutions = lazy(() => import('./pages/services/IndustrySolutions').then(module => ({ default: module.default })));
+// Service Pages
+const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
+const CloudDevOpsSolutions = React.lazy(() => import('./pages/CloudDevOpsSolutions'));
+const EnterpriseSolutionsPage = React.lazy(() => import('./pages/EnterpriseSolutionsPage'));
+const DigitalTransformation = React.lazy(() => import('./pages/DigitalTransformation'));
+const EmergingTechServices = React.lazy(() => import('./pages/EmergingTechServices'));
 
-// New enhanced pages
-const WhitePapers = lazy(() => import('./pages/WhitePapers').then(module => ({ default: module.default })));
-const Events = lazy(() => import('./pages/Events').then(module => ({ default: module.default })));
-const Webinars = lazy(() => import('./pages/Webinars').then(module => ({ default: module.default })));
+// Legal Pages
+const Privacy = React.lazy(() => import('./pages/Privacy'));
+const Terms = React.lazy(() => import('./pages/Terms'));
 
-// Enhanced Loading Component with better UX
-const LoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-    <div className="text-center">
-      <div className="relative">
-        <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-        <div className="absolute inset-0 w-16 h-16 border-4 border-purple-500 border-t-transparent rounded-full animate-spin mx-auto" style={{ animationDelay: '-0.5s' }}></div>
-      </div>
-      <p className="text-cyan-400 text-lg font-medium">Loading Zion Tech Group...</p>
-      <p className="text-gray-400 text-sm mt-2">Preparing your experience</p>
-      {/* Progress indicator */}
-      <div className="w-48 h-1 bg-gray-700 rounded-full mt-4 overflow-hidden">
-        <div className="h-full bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full animate-pulse"></div>
-      </div>
-    </div>
-  </div>
-);
-
-// Preload critical routes for better performance
-const preloadCriticalRoutes = () => {
-  // Preload Home page immediately
-  const homePromise = import('./pages/Home');
+const baseRoutes = [
+  { path: '/', element: <Home /> },
+  { path: '/about', element: <About /> },
+  { path: '/match', element: <AIMatcherPage /> },
+  { path: '/login', element: <Login /> },
+  { path: '/signup', element: <Signup /> },
+  { path: '/talent', element: <TalentDirectory /> },
+  { path: '/talents', element: <TalentsPage /> },
+  { path: '/micro-saas-services', element: <MicroSaasServices /> },
+  { path: '/pricing', element: <PricingPage /> },
+  { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
+  { path: '/categories', element: <Categories /> },
+  { path: '/equipment', element: <EquipmentPage /> },
+  { path: '/equipment/:id', element: <EquipmentDetail /> },
+  { path: '/analytics', element: <Analytics /> },
+  { path: '/mobile-launch', element: <MobileLaunchPage /> },
+  { path: '/open-app', element: <OpenAppRedirect /> },
+  { path: '/community', element: <CommunityPage /> },
+  { path: '/contact', element: <ContactPage /> },
+  { path: '/partners', element: <PartnersPage /> },
+  { path: '/zion-hire-ai', element: <ZionHireAI /> },
+  { path: '/hire-ai', element: <ZionHireAI /> },
+  { path: '/request-quote', element: <RequestQuotePage /> },
+  { path: '/blog', element: <Blog /> },
+  { path: '/blog/:slug', element: <BlogPost /> },
   
-  // Preload other critical routes after a delay
-  setTimeout(() => {
-    import('./pages/Services');
-    import('./pages/AISolutions');
-  }, 1000);
+  // Service Routes
+  { path: '/ai-services', element: <AIServicesPage /> },
+  { path: '/cloud-devops', element: <CloudDevOpsSolutions /> },
+  { path: '/enterprise-solutions', element: <EnterpriseSolutionsPage /> },
+  { path: '/digital-transformation', element: <DigitalTransformation /> },
+  { path: '/emerging-tech', element: <EmergingTechServices /> },
   
-  return homePromise;
-};
+  // Individual AI Service Routes
+  { path: '/ai-business-intelligence', element: <AIServicesPage /> },
+  { path: '/ai-business-intelligence-pro', element: <AIServicesPage /> },
+  { path: '/ai-content-generation', element: <AIServicesPage /> },
+  { path: '/ai-content-marketing-automation', element: <AIServicesPage /> },
+  { path: '/ai-code-generation-enterprise', element: <AIServicesPage /> },
+  { path: '/ai-code-review-copilot', element: <AIServicesPage /> },
+  { path: '/ai-autonomous-research-assistant', element: <AIServicesPage /> },
+  { path: '/ai-consciousness-evolution-platform', element: <AIServicesPage /> },
+  
+  // Legal Pages
+  { path: '/privacy', element: <Privacy /> },
+  { path: '/terms', element: <Terms /> },
+];
 
 const App = () => {
-  useScrollToTop();
-
-  // Preload critical routes on mount
-  React.useEffect(() => {
-    preloadCriticalRoutes();
-  }, []);
-
   return (
-    <ErrorBoundary>
-      <ThemeProvider>
-        <WhitelabelProvider>
-          <Router>
-            <div className="App min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-              <Header />
-              <Sidebar isOpen={false} onClose={() => {}} />
-              
-              {/* Main Content with enhanced Suspense and error handling */}
-              <main className="ml-64 pt-20 min-h-screen">
-                <Suspense fallback={<LoadingSpinner />}>
-                  <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/services" element={<Services />} />
-                    <Route path="/ai-solutions" element={<AISolutions />} />
-                    <Route path="/services-showcase" element={<ServicesShowcase />} />
-                    <Route path="/match" element={<AIMatcherPage />} />
-                    <Route path="/talent" element={<TalentDirectory />} />
-                    <Route path="/talents" element={<TalentsPage />} />
-                    <Route path="/emerging-tech" element={<EmergingTech />} />
-                    <Route path="/comprehensive-services" element={<Services />} />
-                    <Route path="/services-comparison" element={<Services />} />
-                    <Route path="/it-onsite-services" element={<Services />} />
-                    
-                    {/* Our enhanced service routes */}
-                    <Route path="/about" element={<About />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/mission" element={<Mission />} />
-                    <Route path="/team" element={<Team />} />
-                    <Route path="/services-overview" element={<ServicesOverview />} />
-                    <Route path="/services/ai-autonomous-systems" element={<AIAutonomousSystems />} />
-                    <Route path="/services/quantum-technology" element={<QuantumTechnology />} />
-                    <Route path="/services/cybersecurity" element={<Cybersecurity />} />
-                    <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
-                    <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
-                    <Route path="/services/industry-solutions" element={<IndustrySolutions />} />
-                    
-                    {/* New enhanced page routes */}
-                    <Route path="/white-papers" element={<WhitePapers />} />
-                    <Route path="/events" element={<Events />} />
-                    <Route path="/webinars" element={<Webinars />} />
-                  </Routes>
-                </Suspense>
-              </main>
-              
-              <Footer />
-              <SonnerToaster />
-              
-              {/* Enhanced Accessibility Controls */}
-              <AccessibilityControls position="bottom-right" />
-              
-              {/* AI Chatbot - Always Available */}
-              <AIChatbot />
-              
-              {/* Collaborative Text Editor - Development Mode */}
-              {import.meta.env.DEV && (
-                <div className="fixed bottom-24 left-6 z-40 w-96">
-                  <CollaborativeTextEditor
-                    roomId="dev-editor"
-                    userId="dev-user"
-                    userName="Developer"
-                    initialContent="Welcome to the collaborative text editor! Start typing to see AI suggestions and real-time collaboration features."
-                    enableAI={true}
-                    enableCollaboration={true}
-                    enableVersioning={true}
-                  />
-                </div>
-              )}
-              
-              {/* AI Code Generator - Development Mode */}
-              {import.meta.env.DEV && (
-                <div className="fixed bottom-24 right-6 z-40 w-96">
-                  <AICodeGenerator />
-                </div>
-              )}
-              
-              {/* Development Dashboards */}
-              {import.meta.env.DEV && (
-                <>
-                  {/* Performance Dashboard */}
-                  <div className="fixed top-4 left-4 z-40">
-                    <PerformanceDashboard />
-                  </div>
-                  
-                  {/* Analytics Dashboard */}
-                  <div className="fixed top-4 right-4 z-40">
-                    <AnalyticsDashboard />
-                  </div>
-                  
-                  {/* Enterprise Dashboard */}
-                  <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-40">
-                    <EnterpriseDashboard />
-                  </div>
-                  
-                  {/* Security & Compliance Dashboard */}
-                  <div className="fixed top-4 right-1/2 transform translate-x-1/2 z-40">
-                    <SecurityComplianceDashboard />
-                  </div>
-                  
-                  {/* Machine Learning Dashboard */}
-                  <div className="fixed top-4 right-4 z-40">
-                    <MachineLearningDashboard />
-                  </div>
-                </>
-              )}
-            </div>
-          </Router>
-        </WhitelabelProvider>
+    <WhitelabelProvider>
+      <ThemeProvider defaultTheme="dark">
+        <Header />
+        <main className="min-h-screen">
+          <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
+            <Routes>
+              {baseRoutes.map(({ path, element }) => (
+                <Route key={path} path={path} element={element} />
+              ))}
+              <Route path="/auth/*" element={<AuthRoutes />} />
+              <Route path="/dashboard/*" element={<DashboardRoutes />} />
+              <Route path="/marketplace/*" element={<MarketplaceRoutes />} />
+              <Route path="/talent/*" element={<TalentRoutes />} />
+              <Route path="/admin/*" element={<AdminRoutes />} />
+              <Route path="/mobile/*" element={<MobileAppRoutes />} />
+              <Route path="/content/*" element={<ContentRoutes />} />
+              <Route path="/enterprise/*" element={<EnterpriseRoutes />} />
+              <Route path="/community/*" element={<CommunityRoutes />} />
+              <Route path="/developers/*" element={<DeveloperRoutes />} />
+              <Route path="*" element={<ErrorRoutes />} />
+            </Routes>
+          </Suspense>
+        </main>
+        <Footer />
+        <Toaster />
+        <SonnerToaster position="top-right" />
       </ThemeProvider>
-    </ErrorBoundary>
+    </WhitelabelProvider>
   );
 };
 

@@ -1,305 +1,288 @@
-import { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import Sidebar from './Sidebar';
+import { Button } from '@/components/ui/button';
+import { Menu, X, ChevronDown, Globe, Zap, Shield, Cpu, Cloud, Brain, Rocket, FileText, DollarSign, MessageSquare } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
-export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+export const Header: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 20);
     };
-
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
     window.addEventListener('scroll', handleScroll);
-    window.addEventListener('resize', handleResize);
-    
-    // Set initial mobile state
-    handleResize();
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', handleResize);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navigationItems = [
-    { 
-      path: '/', 
-      label: 'Home', 
-      icon: '🏠',
-      description: 'Welcome to Zion Tech Group'
-    },
-    { 
-      path: '/services', 
-      label: 'AI Services', 
-      icon: '🤖',
-      description: 'Explore our AI service offerings'
-    },
-    { 
-      path: '/emerging-tech', 
-      label: 'Emerging Tech', 
-      icon: '🚀',
-      description: 'Cutting-edge technology solutions'
-    },
-    { 
-      path: '/comprehensive-services', 
-      label: 'All Services', 
-      icon: '⚡',
-      description: 'Complete service catalog'
-    },
-    { 
-      path: '/services-comparison', 
-      label: 'Compare', 
-      icon: '📊',
-      description: 'Compare service options'
-    },
-    { 
-      path: '/it-onsite-services', 
-      label: 'Onsite IT', 
-      icon: '🔧',
-      description: 'Onsite IT support services'
-    },
-    { 
-      path: '/pricing', 
-      label: 'Pricing', 
-      icon: '💰',
-      description: 'Transparent pricing plans'
-    },
-    { 
-      path: '/about', 
-      label: 'About', 
-      icon: 'ℹ️',
-      description: 'Learn about our company'
-    },
-    { 
-      path: '/contact', 
-      label: 'Contact', 
-      icon: '📞',
-      description: 'Get in touch with us'
-    },
-    { 
-      path: '/white-papers', 
-      label: 'White Papers', 
-      icon: '📄',
-      description: 'Research and technical documentation'
-    },
-    { 
-      path: '/events', 
-      label: 'Events', 
-      icon: '🎪',
-      description: 'Conferences, workshops, and events'
-    },
-    { 
-      path: '/webinars', 
-      label: 'Webinars', 
-      icon: '🎥',
-      description: 'Live and on-demand learning sessions'
-    }
-  ];
-
-  const serviceCategories = [
+  const services = [
     {
       title: 'AI & Machine Learning',
-      services: [
-        { name: 'AI Business Intelligence', path: '/services#ai-bi' },
-        { name: 'AI Marketing Automation', path: '/services#ai-marketing' },
-        { name: 'Machine Learning Models', path: '/services#ml-models' },
-        { name: 'Natural Language Processing', path: '/services#nlp' }
-      ]
+      description: 'Cutting-edge AI solutions for business transformation',
+      icon: Brain,
+      link: '/ai-services',
+      color: 'from-purple-500 to-pink-500'
     },
     {
-      title: 'Micro SAAS Solutions',
-      services: [
-        { name: 'Custom Web Applications', path: '/services#web-apps' },
-        { name: 'API Development', path: '/services#api-dev' },
-        { name: 'Cloud Infrastructure', path: '/services#cloud-infra' },
-        { name: 'Database Design', path: '/services#database' }
-      ]
+      title: 'Cloud & DevOps',
+      description: 'Scalable cloud infrastructure and automation',
+      icon: Cloud,
+      link: '/cloud-devops',
+      color: 'from-blue-500 to-cyan-500'
     },
     {
-      title: 'IT Infrastructure',
-      services: [
-        { name: 'Network Security', path: '/services#network-security' },
-        { name: 'Cloud Migration', path: '/services#cloud-migration' },
-        { name: '24/7 IT Support', path: '/services#it-support' },
-        { name: 'Disaster Recovery', path: '/services#disaster-recovery' }
-      ]
+      title: 'Enterprise Solutions',
+      description: 'Comprehensive business technology solutions',
+      icon: Shield,
+      link: '/enterprise-solutions',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      title: 'Micro SAAS Services',
+      description: 'Custom software solutions for modern businesses',
+      icon: Cpu,
+      link: '/micro-saas-services',
+      color: 'from-orange-500 to-red-500'
+    },
+    {
+      title: 'Digital Transformation',
+      description: 'End-to-end business modernization',
+      icon: Rocket,
+      link: '/digital-transformation',
+      color: 'from-indigo-500 to-purple-500'
+    },
+    {
+      title: 'Emerging Tech',
+      description: 'Next-generation technology solutions',
+      icon: Zap,
+      link: '/emerging-tech',
+      color: 'from-yellow-500 to-orange-500'
     }
   ];
 
-  const toggleMenu = useCallback(() => {
-    setIsMenuOpen(prev => !prev);
-  }, []);
+  const companyLinks = [
+    { title: 'About Us', link: '/about', icon: FileText },
+    { title: 'Contact', link: '/contact', icon: MessageSquare },
+    { title: 'Blog', link: '/blog', icon: Globe },
+    { title: 'Pricing', link: '/pricing', icon: DollarSign }
+  ];
 
-  const closeMenu = useCallback(() => {
-    setIsMenuOpen(false);
-  }, []);
-
-  const toggleSidebar = useCallback(() => {
-    setIsSidebarOpen(prev => !prev);
-  }, []);
+  const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-black/90 backdrop-blur-md border-b border-gray-800/50' 
-        : 'bg-transparent'
-    }`}>
+    <header 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-zion-blue-dark/95 backdrop-blur-md border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' 
+          : 'bg-transparent'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center space-x-2 group">
-              <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <span className="text-white font-bold text-lg md:text-xl">Z</span>
-              </div>
-              <div className="hidden sm:block">
-                <span className="text-white font-bold text-lg md:text-xl">Zion Tech Group</span>
+          <motion.div 
+            className="flex items-center"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Link to="/" className="flex-shrink-0 group">
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h1 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                    Zion Tech Group
+                  </h1>
+                  <p className="text-xs text-zion-slate-light -mt-1">Innovation • Technology • Future</p>
+                </div>
               </div>
             </Link>
-          </div>
-
+          </motion.div>
+          
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            {navigationItems.slice(0, 6).map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`relative group px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
-                  location.pathname === item.path
-                    ? 'text-cyan-400'
-                    : 'text-gray-300 hover:text-white'
-                }`}
-              >
-                <span className="flex items-center space-x-2">
-                  <span className="text-lg">{item.icon}</span>
-                  <span>{item.label}</span>
-                </span>
-                
-                {/* Hover tooltip */}
-                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50">
-                  {item.description}
-                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
-                </div>
-              </Link>
-            ))}
-
+            <Link 
+              to="/" 
+              className={`px-3 py-2 text-sm font-medium transition-all duration-300 hover:text-zion-cyan ${
+                isActive('/') ? 'text-zion-cyan' : 'text-white'
+              }`}
+            >
+              Home
+            </Link>
+            
             {/* Services Dropdown */}
             <div className="relative group">
-              <button className="flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200">
-                <span>Services</span>
-                <svg className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
+              <button 
+                className="px-3 py-2 text-sm font-medium text-white hover:text-zion-cyan transition-colors duration-300 flex items-center gap-2"
+                onMouseEnter={() => setActiveDropdown('services')}
+                onMouseLeave={() => setActiveDropdown(null)}
+              >
+                Services
+                <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
               </button>
               
-              {/* Dropdown Menu */}
-              <div className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md rounded-lg border border-gray-700/50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform scale-95 group-hover:scale-100">
-                <div className="p-4">
-                  {serviceCategories.map((category, index) => (
-                    <div key={index} className="mb-4 last:mb-0">
-                      <h3 className="text-cyan-400 font-semibold text-sm mb-2">{category.title}</h3>
-                      <div className="space-y-1">
-                        {category.services.map((service, serviceIndex) => (
+              <AnimatePresence>
+                {activeDropdown === 'services' && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full left-0 mt-2 w-[600px] bg-zion-blue-dark/95 backdrop-blur-md border border-zion-cyan/20 rounded-2xl shadow-2xl shadow-zion-cyan/20 p-6"
+                    onMouseEnter={() => setActiveDropdown('services')}
+                    onMouseLeave={() => setActiveDropdown(null)}
+                  >
+                    <div className="grid grid-cols-2 gap-4">
+                      {services.map((service) => {
+                        const IconComponent = service.icon;
+                        return (
                           <Link
-                            key={serviceIndex}
-                            to={service.path}
-                            className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-colors duration-200"
+                            key={service.title}
+                            to={service.link}
+                            className="group p-4 rounded-xl hover:bg-zion-blue-light/10 transition-all duration-300 border border-transparent hover:border-zion-cyan/30"
                           >
-                            {service.name}
+                            <div className="flex items-start gap-3">
+                              <div className={`w-10 h-10 bg-gradient-to-br ${service.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                                <IconComponent className="w-5 h-5 text-white" />
+                              </div>
+                              <div>
+                                <h3 className="font-semibold text-white group-hover:text-zion-cyan transition-colors">
+                                  {service.title}
+                                </h3>
+                                <p className="text-sm text-zion-slate-light mt-1">
+                                  {service.description}
+                                </p>
+                              </div>
+                            </div>
                           </Link>
-                        ))}
-                      </div>
+                        );
+                      })}
                     </div>
-                  ))}
-                </div>
-              </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
 
-            {/* CTA Button */}
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+            {/* Company Links */}
+            {companyLinks.map((link) => (
+              <Link 
+                key={link.title}
+                to={link.link} 
+                className={`px-3 py-2 text-sm font-medium transition-all duration-300 hover:text-zion-cyan ${
+                  isActive(link.link) ? 'text-zion-cyan' : 'text-white'
+                }`}
+              >
+                {link.title}
+              </Link>
+            ))}
+          </nav>
+          
+          {/* CTA Buttons */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <Link to="/request-quote">
+              <Button 
+                variant="outline" 
+                size="sm"
+                className="border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-300"
+              >
+                Request Quote
+              </Button>
+            </Link>
+            <Button 
+              size="sm"
+              className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
             >
               Get Started
-            </Link>
-          </nav>
-
-          {/* Mobile menu button */}
-          <div className="lg:hidden">
-            <button
-              onClick={toggleSidebar}
-              className="text-gray-300 hover:text-white p-2 rounded-md transition-colors duration-200"
-              aria-label="Toggle menu"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
+            </Button>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors duration-300"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
       </div>
 
-      {/* Mobile Navigation Overlay */}
-      {isSidebarOpen && (
-        <div className="lg:hidden">
-          <div className="fixed inset-0 z-40">
-            <div className="fixed inset-y-0 right-0 w-80 bg-gray-900/95 backdrop-blur-md border-l border-gray-700/50">
-              <div className="flex items-center justify-between p-4 border-b border-gray-700/50">
-                <h2 className="text-lg font-semibold text-white">Menu</h2>
-                <button
-                  onClick={toggleSidebar}
-                  className="text-gray-300 hover:text-white p-2 rounded-md transition-colors duration-200"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
+      {/* Mobile Navigation */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="lg:hidden bg-zion-blue-dark/95 backdrop-blur-md border-t border-zion-cyan/20"
+          >
+            <div className="px-4 py-6 space-y-4">
+              <Link 
+                to="/" 
+                className={`block px-3 py-2 text-base font-medium transition-colors duration-300 ${
+                  isActive('/') ? 'text-zion-cyan' : 'text-white hover:text-zion-cyan'
+                }`}
+                onClick={() => setIsOpen(false)}
+              >
+                Home
+              </Link>
               
-              <nav className="p-4 space-y-2">
-                {navigationItems.map((item) => (
+              <div className="space-y-2">
+                <div className="px-3 py-2 text-base font-medium text-zion-slate-light">
+                  Services
+                </div>
+                {services.map((service) => (
                   <Link
-                    key={item.path}
-                    to={item.path}
-                    onClick={toggleSidebar}
-                    className={`flex items-center space-x-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors duration-200 ${
-                      location.pathname === item.path
-                        ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
-                        : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
-                    }`}
+                    key={service.title}
+                    to={service.link}
+                    className="block px-6 py-2 text-sm text-zion-slate-light hover:text-zion-cyan transition-colors duration-300"
+                    onClick={() => setIsOpen(false)}
                   >
-                    <span className="text-lg">{item.icon}</span>
-                    <span>{item.label}</span>
+                    {service.title}
                   </Link>
                 ))}
-                
-                {/* Mobile CTA */}
-                <div className="pt-4 border-t border-gray-700/50">
-                  <Link
-                    to="/contact"
-                    onClick={toggleSidebar}
-                    className="block w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-4 py-3 rounded-lg font-medium text-center transition-all duration-200 transform hover:scale-105"
+              </div>
+              
+              {/* Company Links in Mobile */}
+              {companyLinks.map((link) => (
+                <Link 
+                  key={link.title}
+                  to={link.link} 
+                  className={`block px-3 py-2 text-base font-medium transition-colors duration-300 ${
+                    isActive(link.link) ? 'text-zion-cyan' : 'text-white hover:text-zion-cyan'
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.title}
+                </Link>
+              ))}
+              
+              <div className="pt-4 space-y-3">
+                <Link to="/request-quote" className="block">
+                  <Button 
+                    variant="outline" 
+                    size="sm"
+                    className="w-full border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan hover:text-white transition-all duration-300"
                   >
-                    Get Started
-                  </Link>
-                </div>
-              </nav>
+                    Request Quote
+                  </Button>
+                </Link>
+                <Button 
+                  size="sm"
+                  className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
+                >
+                  Get Started
+                </Button>
+              </div>
             </div>
-          </div>
-        </div>
-      )}
-
-      {/* Sidebar Component */}
-      <Sidebar isOpen={isSidebarOpen} onClose={toggleSidebar} />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
-}
+};
