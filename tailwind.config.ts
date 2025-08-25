@@ -3,12 +3,21 @@ import defaultTheme from 'tailwindcss/defaultTheme';
 import plugin from 'tailwindcss/plugin';
 
 const config: Config = {
+<<<<<<< HEAD
   darkMode: 'class',
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
+=======
+  darkMode: "class",
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
   ],
   safelist: ['border-border'],
   theme: {
@@ -47,6 +56,7 @@ const config: Config = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
+<<<<<<< HEAD
         // Enhanced Zion colors for futuristic design
 <<<<<<< HEAD
 =======
@@ -82,6 +92,29 @@ const config: Config = {
         'quantum-blue': '#1e40af',
         'quantum-purple': '#7c3aed',
         'quantum-cyan': '#0891b2',
+=======
+        // Custom Zion colors
+        "zion-blue": {
+          DEFAULT: "#0a0f1f",
+          light: "#1e263b",
+          dark: "#090c1a",
+        },
+        "zion-purple": {
+          DEFAULT: "#a855f7",
+          light: "#d8b4fe",
+          dark: "#9333ea",
+        },
+        "zion-cyan": {
+          DEFAULT: "#00e5ff",
+          light: "#7df9ff",
+          dark: "#00c4cc",
+        },
+        "zion-slate": {
+          DEFAULT: "#94A3B8",
+          light: "#CBD5E1",
+          dark: "#64748B",
+        },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -107,6 +140,7 @@ const config: Config = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
         },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -195,6 +229,8 @@ const config: Config = {
           '0%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(360deg)' },
         },
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
         'gradient-x': {
           '0%, 100%': {
             'background-size': '200% 200%',
@@ -213,6 +249,7 @@ const config: Config = {
           '0%, 100%': { boxShadow: '0 0 20px rgba(0, 229, 255, 0.5)' },
           '50%': { boxShadow: '0 0 40px rgba(0, 229, 255, 0.8)' },
         },
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d2d6
 =======
@@ -223,10 +260,21 @@ const config: Config = {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-434d
 =======
 >>>>>>> origin/cursor/build-and-fix-errors-e276
+=======
+        'neon-pulse': {
+          '0%, 100%': { 
+            textShadow: '0 0 5px #00e5ff, 0 0 10px #00e5ff, 0 0 15px #00e5ff, 0 0 20px #00e5ff' 
+          },
+          '50%': { 
+            textShadow: '0 0 2px #00e5ff, 0 0 5px #00e5ff, 0 0 7px #00e5ff, 0 0 10px #00e5ff' 
+          },
+        }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+<<<<<<< HEAD
         'neon-pulse': 'neon-pulse 2s ease-in-out infinite',
         'quantum-float': 'quantum-float 6s ease-in-out infinite',
         'holographic-shift': 'holographic-shift 3s ease infinite',
@@ -238,10 +286,13 @@ const config: Config = {
         'glow': 'glow 2s ease-in-out infinite alternate',
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
         'gradient-x': 'gradient-x 15s ease infinite',
         'float': 'float 6s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
         'neon-pulse': 'neon-pulse 2s ease-in-out infinite alternate',
+<<<<<<< HEAD
         'holographic-shift': 'holographic-shift 3s ease infinite',
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d2d6
 =======
@@ -263,6 +314,9 @@ const config: Config = {
         'quantum': '0 0 20px rgba(0, 229, 255, 0.5), 0 0 40px rgba(0, 229, 255, 0.3)',
         'holographic': '0 0 30px rgba(168, 85, 247, 0.6), 0 0 60px rgba(168, 85, 247, 0.4)',
       },
+=======
+      }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
     }
   },
   plugins: [
