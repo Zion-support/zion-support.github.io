@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { 
   Eye, 
   EyeOff, 
@@ -36,7 +36,6 @@ interface AccessibilitySettings {
   reducedMotion: boolean;
   screenReader: boolean;
   keyboardNavigation: boolean;
-  focusIndicator: boolean;
   colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
   dyslexia: boolean;
   highContrastText: boolean;
@@ -46,21 +45,28 @@ interface AccessibilitySettings {
   showFocusRings: boolean;
   showKeyboardShortcuts: boolean;
   showScreenReaderHints: boolean;
-  showAccessibilityInfo: boolean;
 }
 
-const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' }> = ({ 
-  position = 'bottom-right' 
+interface EnhancedAccessibilityProps {
+  position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
+  showOnLoad?: boolean;
+  enableKeyboardShortcuts?: boolean;
+  enableVoiceCommands?: boolean;
+}
+
+export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
+  position = 'bottom-right',
+  showOnLoad = false,
+  enableKeyboardShortcuts = true,
+  enableVoiceCommands = false
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isOpen, setIsOpen] = useState(showOnLoad);
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     fontSize: 16,
     reducedMotion: false,
     screenReader: false,
     keyboardNavigation: false,
-    focusIndicator: true,
     colorBlindness: 'none',
     dyslexia: false,
     highContrastText: false,
@@ -69,10 +75,13 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
     autoPlay: false,
     showFocusRings: true,
     showKeyboardShortcuts: false,
-    showScreenReaderHints: false,
-    showAccessibilityInfo: false,
+    showScreenReaderHints: false
   });
-
+  const [activeTab, setActiveTab] = useState<'general' | 'visual' | 'audio' | 'navigation'>('general');
+  const [showKeyboardShortcuts, setShowKeyboardShortcuts] = useState(false);
+  const [voiceCommandActive, setVoiceCommandActive] = useState(false);
+  const [accessibilityScore, setAccessibilityScore] = useState(85);
+  const [notifications, setNotifications] = useState<string[]>([]);
   const [currentFocus, setCurrentFocus] = useState<string>('');
   const [focusHistory, setFocusHistory] = useState<string[]>([]);
   const [keyboardShortcuts, setKeyboardShortcuts] = useState<Map<string, string>>(new Map());
@@ -81,7 +90,10 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
   const [dragOffset, setDragOffset] = useState({ x: 0, y: 0 });
   const [positionState, setPositionState] = useState(position);
   const [isMinimized, setIsMinimized] = useState(false);
-
+  const [isExpanded, setIsExpanded] = useState(false);
+  
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
   const accessibilityRef = useRef<HTMLDivElement>(null);
   const announcementRef = useRef<HTMLDivElement>(null);
 
@@ -142,7 +154,6 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
 
     // Set up accessibility info
     setupAccessibilityInfo();
-
   }, []);
 
   // Apply accessibility settings when they change
@@ -151,7 +162,99 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
     localStorage.setItem('accessibility-settings', JSON.stringify(settings));
   }, [settings]);
 
-  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
+  // Keyboard event handlers
+  useEffect(() => {
+    if (!enableKeyboardShortcuts) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      // Alt + A: Toggle accessibility panel
+      if (event.altKey && event.key === 'a') {
+        event.preventDefault();
+        setIsOpen(prev => !prev);
+      }
+      
+      // Alt + H: Toggle high contrast
+      if (event.altKey && event.key === 'h') {
+        event.preventDefault();
+        toggleHighContrast();
+      }
+      
+      // Alt + F: Increase font size
+      if (event.altKey && event.key === 'f') {
+        event.preventDefault();
+        changeFontSize(2);
+      }
+      
+      // Alt + Shift + F: Decrease font size
+      if (event.altKey && event.shiftKey && event.key === 'F') {
+        event.preventDefault();
+        changeFontSize(-2);
+      }
+      
+      // Alt + R: Reset all settings
+      if (event.altKey && event.key === 'r') {
+        event.preventDefault();
+        resetAllSettings();
+      }
+      
+      // Alt + S: Toggle screen reader mode
+      if (event.altKey && event.key === 's') {
+        event.preventDefault();
+        toggleScreenReader();
+      }
+      
+      // Alt + K: Show keyboard shortcuts
+      if (event.altKey && event.key === 'k') {
+        event.preventDefault();
+        setShowKeyboardShortcuts(true);
+      }
+      
+      // Escape: Close panel
+      if (event.key === 'Escape' && isOpen) {
+        setIsOpen(false);
+        if (buttonRef.current) {
+          buttonRef.current.focus();
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, enableKeyboardShortcuts]);
+
+  // Voice command recognition
+  useEffect(() => {
+    if (!enableVoiceCommands || !('webkitSpeechRecognition' in window)) return;
+
+    const recognition = new (window as any).webkitSpeechRecognition();
+    recognition.continuous = false;
+    recognition.interimResults = false;
+    recognition.lang = 'en-US';
+
+    recognition.onresult = (event: any) => {
+      const command = event.results[0][0].transcript.toLowerCase();
+      executeVoiceCommand(command);
+    };
+
+    recognition.onstart = () => {
+      setVoiceCommandActive(true);
+      addNotification('Voice recognition active. Speak a command.');
+    };
+
+    recognition.onend = () => {
+      setVoiceCommandActive(false);
+    };
+
+    if (voiceCommandActive) {
+      recognition.start();
+    }
+
+    return () => {
+      recognition.stop();
+    };
+  }, [enableVoiceCommands, voiceCommandActive]);
+
+  const applyAccessibilitySettings = useCallback((newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
     
     // High contrast mode
@@ -217,13 +320,33 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
     }
 
     // Focus indicator
-    if (newSettings.focusIndicator) {
+    if (newSettings.showFocusRings) {
       root.classList.add('show-focus');
     } else {
       root.classList.remove('show-focus');
     }
+    
+    // Keyboard navigation
+    if (newSettings.keyboardNavigation) {
+      root.setAttribute('data-keyboard-nav', 'true');
+      announceToScreenReader('Keyboard navigation mode enabled');
+    } else {
+      root.removeAttribute('data-keyboard-nav');
+    }
+  }, []);
+
+  const announceToScreenReader = (message: string) => {
+    if (settings.screenReader) {
+      setAnnouncements(prev => [...prev, message]);
+      
+      // Remove announcement after 5 seconds
+      setTimeout(() => {
+        setAnnouncements(prev => prev.filter(a => a !== message));
+      }, 5000);
+    }
   };
 
+  // Setup functions
   const setupKeyboardShortcuts = () => {
     const shortcuts = new Map([
       ['Alt + A', 'Toggle accessibility panel'],
@@ -274,17 +397,6 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
     liveRegion.setAttribute('aria-atomic', 'true');
     liveRegion.className = 'sr-only';
     document.body.appendChild(liveRegion);
-  };
-
-  const announceToScreenReader = (message: string) => {
-    if (settings.screenReader) {
-      setAnnouncements(prev => [...prev, message]);
-      
-      // Remove announcement after 5 seconds
-      setTimeout(() => {
-        setAnnouncements(prev => prev.filter(a => a !== message));
-      }, 5000);
-    }
   };
 
   const setupHighContrastDetection = () => {
@@ -475,14 +587,47 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
     }, 3000);
   };
 
-  const resetSettings = () => {
-    const defaultSettings: AccessibilitySettings = {
+  // Calculate accessibility score
+  const calculateAccessibilityScore = useCallback(() => {
+    let score = 100;
+    
+    if (!settings.showFocusRings) score -= 15;
+    if (!settings.screenReader) score -= 10;
+    if (!settings.keyboardNavigation) score -= 10;
+    if (settings.fontSize < 16) score -= 5;
+    if (settings.reducedMotion) score -= 5;
+    if (settings.colorBlindness !== 'none') score += 5; // Bonus for color blindness support
+    
+    setAccessibilityScore(Math.max(0, Math.min(100, score)));
+  }, [settings]);
+
+  useEffect(() => {
+    calculateAccessibilityScore();
+  }, [settings, calculateAccessibilityScore]);
+
+  // Toggle functions
+  const toggleHighContrast = () => {
+    setSettings(prev => ({ ...prev, highContrast: !prev.highContrast }));
+    addNotification(`High contrast ${!settings.highContrast ? 'enabled' : 'disabled'}`);
+  };
+
+  const toggleScreenReader = () => {
+    setSettings(prev => ({ ...prev, screenReader: !prev.screenReader }));
+  };
+
+  const changeFontSize = (delta: number) => {
+    const newSize = Math.max(12, Math.min(24, settings.fontSize + delta));
+    setSettings(prev => ({ ...prev, fontSize: newSize }));
+    addNotification(`Font size: ${newSize}px`);
+  };
+
+  const resetAllSettings = () => {
+    setSettings({
       highContrast: false,
       fontSize: 16,
       reducedMotion: false,
       screenReader: false,
       keyboardNavigation: false,
-      focusIndicator: true,
       colorBlindness: 'none',
       dyslexia: false,
       highContrastText: false,
@@ -491,12 +636,37 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
       autoPlay: false,
       showFocusRings: true,
       showKeyboardShortcuts: false,
-      showScreenReaderHints: false,
-      showAccessibilityInfo: false,
-    };
-    setSettings(defaultSettings);
+      showScreenReaderHints: false
+    });
+    addNotification('All settings reset to default');
   };
 
+  const executeVoiceCommand = (command: string) => {
+    const voiceCommands: Record<string, () => void> = {
+      'high contrast': toggleHighContrast,
+      'increase font': () => changeFontSize(2),
+      'decrease font': () => changeFontSize(-2),
+      'reset': resetAllSettings,
+    };
+
+    for (const [key, action] of Object.entries(voiceCommands)) {
+      if (command.includes(key)) {
+        action();
+        addNotification(`Voice command executed: ${key}`);
+        return;
+      }
+    }
+    addNotification('Voice command not recognized');
+  };
+
+  const addNotification = (message: string) => {
+    setNotifications(prev => [...prev, message]);
+    setTimeout(() => {
+      setNotifications(prev => prev.filter(n => n !== message));
+    }, 3000);
+  };
+
+  // Position classes
   const getPositionClasses = () => {
     switch (positionState) {
       case 'top-left':
@@ -774,16 +944,6 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
                   <label className="flex items-center space-x-2">
                     <input
                       type="checkbox"
-                      checked={settings.focusIndicator}
-                      onChange={(e) => setSettings(prev => ({ ...prev, focusIndicator: e.target.checked }))}
-                      className="rounded"
-                    />
-                    <span className="text-sm text-gray-600 dark:text-gray-400">Show Focus Indicator</span>
-                  </label>
-                  
-                  <label className="flex items-center space-x-2">
-                    <input
-                      type="checkbox"
                       checked={settings.showFocusRings}
                       onChange={(e) => setSettings(prev => ({ ...prev, showFocusRings: e.target.checked }))}
                       className="rounded"
@@ -826,50 +986,11 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
                 </div>
               </div>
 
-              {/* Information Display */}
-              <div>
-                <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2 flex items-center">
-                  <Info className="w-4 h-4 mr-2" />
-                  Information Display
-                </h3>
-                <div className="space-y-2">
-                  <label className="flex items-center space-x-2">
-                    <input
-                      type="checkbox"
-                      checked={settings.showKeyboardShortcuts}
-                      onChange={(e) => setSettings(prev => ({ ...prev, showKeyboardShortcuts: e.target.checked }))}
-                      className="rounded"
-                    />
-                    <span className="text-sm text-gray-600 dark:text-gray-400">Show Keyboard Shortcuts</span>
-                  </label>
-                  
-                  <label className="flex items-center space-x-2">
-                    <input
-                      type="checkbox"
-                      checked={settings.showScreenReaderHints}
-                      onChange={(e) => setSettings(prev => ({ ...prev, showScreenReaderHints: e.target.checked }))}
-                      className="rounded"
-                    />
-                    <span className="text-sm text-gray-600 dark:text-gray-400">Show Screen Reader Hints</span>
-                  </label>
-                  
-                  <label className="flex items-center space-x-2">
-                    <input
-                      type="checkbox"
-                      checked={settings.showAccessibilityInfo}
-                      onChange={(e) => setSettings(prev => ({ ...prev, showAccessibilityInfo: e.target.checked }))}
-                      className="rounded"
-                    />
-                    <span className="text-sm text-gray-600 dark:text-gray-400">Show Accessibility Info</span>
-                  </label>
-                </div>
-              </div>
-
               {/* Actions */}
               <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
                 <div className="flex space-x-2">
                   <button
-                    onClick={resetSettings}
+                    onClick={resetAllSettings}
                     className="flex-1 px-3 py-2 text-sm bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
                   >
                     <RotateCcw className="w-4 h-4 inline mr-1" />
@@ -904,7 +1025,7 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
       )}
 
       {/* Keyboard Shortcuts Help */}
-      {settings.showKeyboardShortcuts && (
+      {showKeyboardShortcuts && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-40 flex items-center justify-center">
           <div className="bg-white dark:bg-gray-900 rounded-lg p-6 max-w-2xl max-h-96 overflow-y-auto">
             <h2 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">Keyboard Shortcuts</h2>
@@ -919,7 +1040,7 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
               ))}
             </div>
             <button
-              onClick={() => setSettings(prev => ({ ...prev, showKeyboardShortcuts: false }))}
+              onClick={() => setShowKeyboardShortcuts(false)}
               className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
             >
               Close
@@ -941,6 +1062,21 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
           </div>
         </div>
       )}
+
+      {/* Notifications */}
+      <div className="fixed top-6 right-6 z-50 space-y-2">
+        {notifications.map((notification, index) => (
+          <div
+            key={index}
+            className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg p-4 max-w-sm"
+          >
+            <div className="flex items-start gap-3">
+              <Check className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
+              <p className="text-sm text-gray-900 dark:text-white">{notification}</p>
+            </div>
+          </div>
+        ))}
+      </div>
     </>
   );
 };

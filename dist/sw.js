@@ -1,5 +1,5 @@
 // Basic Service Worker for Zion Tech Group
-const CACHE_NAME = 'zion-tech-group-v1';
+const CACHE_NAME = 'zion-tech-v1';
 const STATIC_CACHE = 'zion-static-v1';
 const DYNAMIC_CACHE = 'zion-dynamic-v1';
 
@@ -7,10 +7,10 @@ const DYNAMIC_CACHE = 'zion-dynamic-v1';
 const STATIC_FILES = [
   '/',
   '/index.html',
-  '/static/js/bundle.js',
-  '/static/css/main.css',
   '/manifest.json',
   '/favicon.ico',
+  '/css/main.css',
+  '/js/main.js',
   '/images/zion-tech-group-logo.png',
   '/images/zion-tech-group-og.jpg'
 ];
@@ -20,11 +20,15 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
-        console.log('Opened cache');
+        console.log('Caching static files');
         return cache.addAll(STATIC_FILES);
       })
       .then(() => {
+        console.log('Static files cached successfully');
         return self.skipWaiting();
+      })
+      .catch((error) => {
+        console.error('Error caching static files:', error);
       })
   );
 });
@@ -32,18 +36,21 @@ self.addEventListener('install', (event) => {
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-            console.log('Deleting old cache:', cacheName);
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    }).then(() => {
-      return self.clients.claim();
-    })
+    caches.keys()
+      .then((cacheNames) => {
+        return Promise.all(
+          cacheNames.map((cacheName) => {
+            if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
+              console.log('Deleting old cache:', cacheName);
+              return caches.delete(cacheName);
+            }
+          })
+        );
+      })
+      .then(() => {
+        console.log('Service Worker activated');
+        return self.clients.claim();
+      })
   );
 });
 
@@ -64,23 +71,36 @@ self.addEventListener('fetch', (event) => {
 
   // Handle different types of requests
   if (url.pathname === '/' || url.pathname === '/index.html') {
-    // Homepage - serve from cache first, then network
+    // Home page - serve from cache first, then network
     event.respondWith(
       caches.match(request)
         .then((response) => {
           if (response) {
             // Return cached version and update in background
-            fetch(request).then((freshResponse) => {
-              caches.open(DYNAMIC_CACHE).then((cache) => {
-                cache.put(request, freshResponse);
+            fetch(request)
+              .then((networkResponse) => {
+                caches.open(DYNAMIC_CACHE)
+                  .then((cache) => cache.put(request, networkResponse));
+              })
+              .catch(() => {
+                // Network failed, keep using cached version
               });
-            });
             return response;
           }
-          return fetch(request);
+          
+          // Not in cache, fetch from network
+          return fetch(request)
+            .then((response) => {
+              if (response.status === 200) {
+                const responseClone = response.clone();
+                caches.open(DYNAMIC_CACHE)
+                  .then((cache) => cache.put(request, responseClone));
+              }
+              return response;
+            });
         })
     );
-  } else if (url.pathname.startsWith('/static/') || url.pathname.startsWith('/images/')) {
+  } else if (url.pathname.startsWith('/images/') || url.pathname.startsWith('/css/') || url.pathname.startsWith('/js/')) {
     // Static assets - cache first strategy
     event.respondWith(
       caches.match(request)
@@ -88,15 +108,16 @@ self.addEventListener('fetch', (event) => {
           if (response) {
             return response;
           }
-          return fetch(request).then((response) => {
-            if (response.status === 200) {
-              const responseClone = response.clone();
-              caches.open(STATIC_CACHE).then((cache) => {
-                cache.put(request, responseClone);
-              });
-            }
-            return response;
-          });
+          
+          return fetch(request)
+            .then((response) => {
+              if (response.status === 200) {
+                const responseClone = response.clone();
+                caches.open(STATIC_CACHE)
+                  .then((cache) => cache.put(request, responseClone));
+              }
+              return response;
+            });
         })
     );
   } else if (url.pathname.startsWith('/api/')) {
@@ -106,32 +127,46 @@ self.addEventListener('fetch', (event) => {
         .then((response) => {
           if (response.status === 200) {
             const responseClone = response.clone();
-            caches.open(DYNAMIC_CACHE).then((cache) => {
-              cache.put(request, responseClone);
-            });
+            caches.open(DYNAMIC_CACHE)
+              .then((cache) => cache.put(request, responseClone));
           }
           return response;
         })
         .catch(() => {
-          // Fallback to cache if network fails
-          return caches.match(request);
+          // Network failed, try cache
+          return caches.match(request)
+            .then((response) => {
+              if (response) {
+                return response;
+              }
+              
+              // Return offline page if nothing in cache
+              return caches.match('/offline.html');
+            });
         })
     );
   } else {
-    // Other requests - network first with cache fallback
+    // Other pages - network first with cache fallback
     event.respondWith(
       fetch(request)
         .then((response) => {
           if (response.status === 200) {
             const responseClone = response.clone();
-            caches.open(DYNAMIC_CACHE).then((cache) => {
-              cache.put(request, responseClone);
-            });
+            caches.open(DYNAMIC_CACHE)
+              .then((cache) => cache.put(request, responseClone));
           }
           return response;
         })
         .catch(() => {
-          return caches.match(request);
+          return caches.match(request)
+            .then((response) => {
+              if (response) {
+                return response;
+              }
+              
+              // Return offline page if nothing in cache
+              return caches.match('/offline.html');
+            });
         })
     );
   }
@@ -149,32 +184,35 @@ self.addEventListener('sync', (event) => {
 
 // Push notification handling
 self.addEventListener('push', (event) => {
-  const options = {
-    body: event.data ? event.data.text() : 'New update available!',
-    icon: '/images/zion-tech-group-logo.png',
-    badge: '/images/zion-tech-group-logo.png',
-    vibrate: [100, 50, 100],
-    data: {
-      dateOfArrival: Date.now(),
-      primaryKey: 1
-    },
-    actions: [
-      {
-        action: 'explore',
-        title: 'Explore',
-        icon: '/images/zion-tech-group-logo.png'
+  if (event.data) {
+    const data = event.data.json();
+    const options = {
+      body: data.body,
+      icon: '/images/zion-tech-group-logo.png',
+      badge: '/images/zion-tech-group-logo.png',
+      vibrate: [100, 50, 100],
+      data: {
+        dateOfArrival: Date.now(),
+        primaryKey: 1
       },
-      {
-        action: 'close',
-        title: 'Close',
-        icon: '/images/zion-tech-group-logo.png'
-      }
-    ]
-  };
+      actions: [
+        {
+          action: 'explore',
+          title: 'Explore',
+          icon: '/images/zion-tech-group-logo.png'
+        },
+        {
+          action: 'close',
+          title: 'Close',
+          icon: '/images/zion-tech-group-logo.png'
+        }
+      ]
+    };
 
-  event.waitUntil(
-    self.registration.showNotification('Zion Tech Group', options)
-  );
+    event.waitUntil(
+      self.registration.showNotification(data.title, options)
+    );
+  }
 });
 
 // Notification click handling
@@ -194,34 +232,8 @@ self.addEventListener('message', (event) => {
     self.skipWaiting();
   }
   
-  if (event.data && event.data.type === 'GET_CACHE_SIZE') {
-    event.waitUntil(
-      caches.keys().then((cacheNames) => {
-        return Promise.all(
-          cacheNames.map((cacheName) => {
-            return caches.open(cacheName).then((cache) => {
-              return cache.keys().then((requests) => {
-                return Promise.all(
-                  requests.map((request) => {
-                    return cache.match(request).then((response) => {
-                      return response ? response.blob().then((blob) => blob.size) : 0;
-                    });
-                  })
-                ).then((sizes) => {
-                  return sizes.reduce((total, size) => total + size, 0);
-                });
-              });
-            });
-          })
-        ).then((sizes) => {
-          const totalSize = sizes.reduce((total, size) => total + size, 0);
-          event.ports[0].postMessage({
-            type: 'CACHE_SIZE',
-            size: totalSize
-          });
-        });
-      })
-    );
+  if (event.data && event.data.type === 'GET_VERSION') {
+    event.ports[0].postMessage({ version: CACHE_NAME });
   }
 });
 

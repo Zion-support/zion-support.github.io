@@ -439,6 +439,107 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+      {/* Enhanced Services Showcase Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-900 to-black">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Cutting-Edge AI Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover our comprehensive portfolio of innovative services designed to accelerate your digital transformation
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 group">
+              <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Brain className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-cyan-400 transition-colors">
+                Enhanced AI Services
+              </h3>
+              <p className="text-gray-300 mb-6">
+                Advanced AI-powered solutions for financial services, healthcare, legal technology, and more
+              </p>
+              <ul className="text-gray-400 mb-6 space-y-2">
+                <li>• AI Financial Advisor Platform</li>
+                <li>• Healthcare Diagnostic AI</li>
+                <li>• Legal Research AI</li>
+                <li>• Marketing Automation Suite</li>
+              </ul>
+              <Link 
+                to="/enhanced-services-showcase" 
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:translate-x-1 transition-all duration-300"
+              >
+                Explore Enhanced Services
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </div>
+
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 group">
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Zap className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-purple-400 transition-colors">
+                Emerging Technologies
+              </h3>
+              <p className="text-gray-300 mb-6">
+                Revolutionary solutions in quantum computing, edge AI, neuromorphic computing, and 6G networks
+              </p>
+              <ul className="text-gray-400 mb-6 space-y-2">
+                <li>• Quantum Machine Learning</li>
+                <li>• Edge AI Computing</li>
+                <li>• Neuromorphic Computing</li>
+                <li>• 6G Network Infrastructure</li>
+              </ul>
+              <Link 
+                to="/enhanced-services-showcase" 
+                className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:translate-x-1 transition-all duration-300"
+              >
+                Explore Emerging Tech
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </div>
+
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 group">
+              <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Target className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-emerald-400 transition-colors">
+                Industry Solutions
+              </h3>
+              <p className="text-gray-300 mb-6">
+                Specialized AI solutions tailored for healthcare, finance, manufacturing, retail, and more
+              </p>
+              <ul className="text-gray-400 mb-6 space-y-2">
+                <li>• Healthcare AI Diagnostics</li>
+                <li>• Financial Risk Management</li>
+                <li>• Manufacturing Optimization</li>
+                <li>• Retail Customer Intelligence</li>
+              </ul>
+              <Link 
+                to="/enhanced-services-showcase" 
+                className="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-semibold group-hover:translate-x-1 transition-all duration-300"
+              >
+                Explore Industry Solutions
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Link 
+              to="/enhanced-services-showcase" 
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+            >
+              View All Enhanced Services
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-900 to-blue-900">
         <div className="container mx-auto px-4 text-center">

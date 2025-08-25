@@ -29,35 +29,17 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       ]
     },
     {
-      title: 'AI & Micro SAAS Services',
+      title: 'Services',
       items: [
-        { name: 'AI Content Hub Pro', path: '/services/ai-content-hub-pro', icon: Briefcase },
-        { name: 'AI Customer Service Automation', path: '/services/ai-customer-service-automation', icon: Briefcase },
-        { name: 'AI Sales Intelligence Platform', path: '/services/ai-sales-intelligence-platform', icon: Briefcase },
-        { name: 'AI Fintech Platform', path: '/services/ai-fintech-platform', icon: Briefcase },
-        { name: 'AI Healthcare Technology', path: '/services/ai-healthcare-tech-platform', icon: Briefcase },
         { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
-        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Briefcase }
-      ]
-    },
-    {
-      title: 'Enterprise Solutions',
-      items: [
-        { name: 'Quantum Enterprise Platform', path: '/services/quantum-enterprise-platform', icon: Briefcase },
-        { name: 'AI Autonomous Business Operations', path: '/services/ai-autonomous-business-operations', icon: Briefcase },
-        { name: 'Advanced Cybersecurity Platform', path: '/services/advanced-cybersecurity-platform', icon: Shield },
-        { name: '5G Enterprise Networks', path: '/services/5g-enterprise-network-solutions', icon: Briefcase },
-        { name: 'Blockchain Enterprise Solutions', path: '/services/blockchain-enterprise-solutions', icon: Briefcase }
-      ]
-    },
-    {
-      title: 'Specialized IT Services',
-      items: [
-        { name: 'Cloud Cost Optimization', path: '/services/cloud-cost-optimization-finops', icon: Briefcase },
-        { name: 'DevOps Automation Platform', path: '/services/devops-automation-cicd-platform', icon: Briefcase },
-        { name: 'Data Analytics Platform', path: '/services/data-analytics-business-intelligence', icon: Briefcase },
-        { name: 'IoT & Edge Computing', path: '/services/iot-edge-computing-platform', icon: Briefcase },
-        { name: 'API Management Platform', path: '/services/api-management-integration-platform', icon: Briefcase },
+        { name: 'AI Autonomous Systems Platform', path: '/ai-autonomous-systems-platform', icon: Briefcase },
+        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Briefcase },
+        { name: 'AI Autonomous Research', path: '/ai-autonomous-research', icon: Briefcase },
+        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Briefcase },
+        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Briefcase },
+        { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
+        { name: 'AI Autonomous Business Platform', path: '/ai-autonomous-business-platform', icon: Briefcase },
+        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Briefcase },
         { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
         { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Shield },
         { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
@@ -72,9 +54,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       items: [
         { name: 'About Us', path: '/about', icon: Users },
         { name: 'Our Team', path: '/team', icon: Users },
-        { name: 'Careers', path: '/careers', icon: Briefcase },
         { name: 'Partners', path: '/partners', icon: Handshake },
-        { name: 'Blog', path: '/blog', icon: Globe },
         { name: 'Case Studies', path: '/case-studies', icon: Globe },
         { name: 'Help Center', path: '/help', icon: Globe }
       ]
@@ -97,7 +77,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
+    { icon: Linkedin, href: 'https://linkedin.com/company/zion-tech-group', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Facebook, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' },
     { icon: Instagram, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' }
