@@ -135,6 +135,7 @@
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "include": [
     "src/main.tsx",
     "src/App.tsx",
@@ -198,6 +199,9 @@
 =======
   "include": ["src"],
 >>>>>>> origin/cursor/website-audit-and-enhancement-bdc0
+=======
+  "include": ["src"],
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-ad2d
   "references": [{ "path": "./tsconfig.node.json" }]
 =======
     "zion.app/recovered-content/**",

@@ -45,6 +45,7 @@ import { Link } from "react-router-dom";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Globe } from "lucide-react";
 import { useState } from "react";
 import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES } from "@/data/comprehensiveServices";
@@ -79,6 +80,11 @@ import { Globe, Zap, Shield, BarChart3, Database, Code, Network } from "lucide-r
 import { useEffect, useState } from "react";
 import { IT_SERVICES, getITServicesByCategory } from "@/data/itServices";
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-de94
+=======
+import { Globe, Zap, Brain } from "lucide-react";
+import { useEffect, useState } from "react";
+import { MICRO_SAAS_SERVICES } from "@/data/microSaasServices";
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-ad2d
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1102,7 +1108,11 @@ import { useNavigate } from 'react-router-dom';
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 
 export default function ServicesPage() {
+<<<<<<< HEAD
   const [activeCategory, setActiveCategory] = useState('all');
+=======
+  const [listings, setListings] = useState<ProductListing[]>([...SERVICE_LISTINGS, ...MICRO_SAAS_SERVICES]);
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-ad2d
 
 <<<<<<< HEAD
   const serviceCategories = [
@@ -1421,6 +1431,7 @@ export default function ServicesPage() {
                 Micro SAAS Services
               </Button>
             </Link>
+<<<<<<< HEAD
             <Link to="/it-onsite-services">
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-de94
@@ -2521,6 +2532,14 @@ export default function ServicesPage() {
               </Button>
             </Link>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-a231
+=======
+            <Link to="/micro-saas-services">
+              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+                <Brain className="h-4 w-4 mr-2" />
+                Micro SAAS Solutions
+              </Button>
+            </Link>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-ad2d
             <Link to="/request-quote">
 <<<<<<< HEAD
               <Button className="bg-white text-zion-blue-dark hover:bg-gray-100 px-8 py-3">

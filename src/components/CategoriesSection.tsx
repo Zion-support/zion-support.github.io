@@ -403,6 +403,7 @@ const specialServices = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     title: "Comprehensive Services",
     link: "/comprehensive-services"
 <<<<<<< HEAD
@@ -916,6 +917,10 @@ const advancedCategories = [
     title: "Data Analytics Services",
     link: "/data-analytics-services"
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-a231
+=======
+    title: "Micro SAAS Services",
+    link: "/micro-saas-services"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-ad2d
   }
 ];
 
