@@ -228,7 +228,7 @@ export default function Home() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Discover our most popular AI-powered solutions and IT services
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {featuredServices.map((service, index) => {
@@ -279,7 +279,7 @@ export default function Home() {
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
               </motion.div>
-            ))}
+            );}
           </div>
 
           <div className="text-center mt-12">
