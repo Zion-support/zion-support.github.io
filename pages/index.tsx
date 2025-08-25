@@ -189,11 +189,38 @@ const serviceCategories = [
   {
     title: 'Micro SAAS',
     description: 'Innovative business solutions for modern enterprises',
-    services: innovativeRealMicroSaasServices2025.slice(0, 3),
-    icon: RocketIcon,
+    services: innovativeRealMicroSaasServices2025.slice(0, 4),
+    icon: Rocket,
     color: 'from-teal-500 to-emerald-600',
     href: '/micro-saas',
-    features: ['Content Automation', 'CRM Intelligence', 'Decision Engine']
+    features: ['Content Automation', 'CRM Intelligence', 'Decision Engine', 'HR Analytics']
+  },
+  {
+    title: 'Advanced AI Automation',
+    description: 'Revolutionary AI automation for development, testing, DevOps, and security',
+    services: advancedAIAutomationServices2025.slice(0, 3),
+    icon: Brain,
+    color: 'from-emerald-500 to-teal-600',
+    href: '/advanced-ai-automation-services',
+    features: ['Code Review AI', 'Testing Automation', 'DevOps Intelligence']
+  },
+  {
+    title: 'Advanced IT Infrastructure',
+    description: 'Next-generation infrastructure with quantum computing and edge computing',
+    services: advancedITInfrastructureServices2025.slice(0, 3),
+    icon: Cloud,
+    color: 'from-indigo-500 to-purple-600',
+    href: '/advanced-it-infrastructure-services',
+    features: ['Quantum Cloud', 'Edge Computing', 'Zero Trust Security']
+  },
+  {
+    title: 'Innovative Business Solutions',
+    description: 'AI-powered business intelligence, marketing, sales, and HR solutions',
+    services: innovativeBusinessSolutions2025.slice(0, 3),
+    icon: Target,
+    color: 'from-green-500 to-emerald-600',
+    href: '/innovative-business-solutions',
+    features: ['Business Intelligence', 'Marketing Automation', 'Sales Intelligence']
   }
 ];
 
@@ -325,144 +352,219 @@ export default function Home() {
       </Head>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]" />
+      <section className="relative py-20 lg:py-32 overflow-hidden">
+        {/* Enhanced Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,211,238,0.1),transparent_50%)]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.1),transparent_50%)]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.1),transparent_50%)]"></div>
         </div>
         
         {/* Floating Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          {[...Array(20)].map((_, i) => (
+          {[...Array(30)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-2 h-2 bg-cyan-400/30 rounded-full"
-              animate={{
-                x: [0, 100, 0],
-                y: [0, -100, 0],
-                opacity: [0.3, 0.8, 0.3],
-              }}
-              transition={{
-                duration: 10 + i * 2,
-                repeat: Infinity,
-                delay: i * 0.5,
-              }}
+              className="absolute w-1 h-1 bg-cyan-400/40 rounded-full"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
+              }}
+              animate={{
+                y: [0, -30, 0],
+                opacity: [0.2, 0.8, 0.2],
+                scale: [1, 1.5, 1],
+              }}
+              transition={{
+                duration: 4 + Math.random() * 3,
+                repeat: Infinity,
+                delay: Math.random() * 2,
               }}
             />
           ))}
         </div>
 
-        <div className="relative z-10 text-center px-4 max-w-7xl mx-auto">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-cyan-400 to-purple-400 bg-clip-text text-transparent mb-6">
+            <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
               Future Technology
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
-                Today
-              </span>
             </h1>
-            
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your business with revolutionary AI consciousness, quantum computing, 
-              and emerging technology solutions. Access 500+ cutting-edge services with 
-              99.9% uptime and 300% average ROI.
+            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-8">
+              Solutions Today
+            </h2>
+            <p className="text-xl lg:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+              Transform your business with revolutionary AI, quantum computing, and emerging technology solutions. 
+              We're not just building the future – we're living it.
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                Explore Services
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-full text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300"
-              >
-                Schedule Demo
-              </motion.button>
-            </div>
-
-            {/* Hero Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            
+            {/* Enhanced Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
               {heroStats.map((stat, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="text-center"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="text-center group"
                 >
-                  <div className="text-3xl md:text-4xl font-bold text-white mb-2 flex items-center justify-center">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 border border-cyan-500/30">
                     {stat.icon}
-                    <span className="ml-2">{stat.value}</span>
                   </div>
-                  <p className="text-gray-400 text-sm">{stat.label}</p>
+                  <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                  <div className="text-gray-400">{stat.label}</div>
                 </motion.div>
               ))}
+            </div>
+
+            {/* Enhanced CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/comprehensive-services-showcase-2025">
+                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold text-lg rounded-xl hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300 shadow-2xl shadow-cyan-500/25">
+                  Explore All Services
+                </button>
+              </Link>
+              <Link href="/contact">
+                <button className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-300 font-semibold text-lg rounded-xl hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm">
+                  Get Started Today
+                </button>
+              </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Services Overview */}
-      <section className="py-20 bg-gradient-to-b from-black to-gray-900">
-        <div className="max-w-7xl mx-auto px-4">
+      {/* Enhanced Service Categories */}
+      <section className="py-20 bg-black/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Service Categories
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Explore our comprehensive range of technology services organized by category
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            {serviceCategories.map((category, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="relative group"
+              >
+                <Link href={category.href}>
+                  <div className={`${category.color} p-1 rounded-xl`}>
+                    <div className="bg-gray-900/80 backdrop-blur-sm rounded-xl p-6 h-full hover:bg-gray-800/90 transition-all duration-300 border border-white/10">
+                      <div className="text-center">
+                        <div className={`${category.color} w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                          <category.icon className="w-8 h-8 text-white" />
+                        </div>
+                        <h3 className="text-xl font-semibold text-white mb-3">{category.title}</h3>
+                        <p className="text-gray-300 text-sm mb-4">{category.description}</p>
+                        <div className="space-y-2 mb-4">
+                          {category.features.map((feature, featureIndex) => (
+                            <div key={featureIndex} className="flex items-center text-xs text-gray-300">
+                              <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                              {feature}
+                            </div>
+                          ))}
+                        </div>
+                        <div className="mt-4 text-cyan-400 text-sm font-semibold group-hover:text-cyan-300 transition-colors duration-300">
+                          {category.services.length} Services →
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced Featured Services */}
+      <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Revolutionary Technology Services
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Featured Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Access the most advanced AI, quantum computing, and emerging technology solutions 
-              that are reshaping industries and creating new possibilities.
+              Discover our most popular and innovative technology solutions
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {serviceHighlights.map((service, index) => (
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+            {innovativeRealMicroSaasServices2025.slice(0, 6).map((service, index) => (
               <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                key={service.id}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
                 viewport={{ once: true }}
-                className="group"
+                className="relative group"
               >
-                <Link href={category.href}>
-                  <div className={`p-6 rounded-2xl bg-gradient-to-br ${category.color} hover:scale-105 transition-all duration-300 cursor-pointer h-full`}>
-                    <div className="text-4xl mb-4">{category.icon({ className: "w-12 h-12 text-white" })}</div>
-                    <h3 className="text-xl font-bold text-white mb-3">{category.title}</h3>
-                    <p className="text-gray-100 mb-4">{category.description}</p>
-                    
-                    <div className="space-y-2">
-                      {category.services.slice(0, 2).map((service, serviceIndex) => (
-                        <div key={serviceIndex} className="flex items-center text-sm text-gray-100">
-                          <CheckCircle className="w-4 h-4 mr-2 text-green-300" />
-                          {service.name}
+                <div className={`${service.color} p-1 rounded-xl`}>
+                  <div className="bg-gray-900/80 backdrop-blur-sm rounded-xl p-6 h-full border border-white/10">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-3xl">{service.icon}</span>
+                      {service.popular && (
+                        <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
+                          Popular
+                        </span>
+                      )}
+                    </div>
+                    <h4 className="text-xl font-semibold text-white mb-2">{service.name}</h4>
+                    <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-2xl font-bold text-white">{service.price}</span>
+                      <span className="text-gray-400">{service.period}</span>
+                    </div>
+                    <p className="text-gray-300 text-sm mb-4">{service.description}</p>
+                    <div className="space-y-2 mb-6">
+                      {service.features.slice(0, 3).map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          {feature}
                         </div>
                       ))}
                     </div>
-                    
-                    <div className="mt-4 text-white/80 text-sm">
-                      +{category.services.length - 2} more services
+                    <div className="flex items-center justify-between">
+                      <Link
+                        href={service.link}
+                        className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
+                      >
+                        Learn More
+                        <ArrowRight className="ml-1 w-4 h-4" />
+                      </Link>
+                      <Link
+                        href="/contact"
+                        className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                      >
+                        Get Started
+                      </Link>
                     </div>
                   </div>
-                </Card>
+                </div>
               </motion.div>
             ))}
           </div>

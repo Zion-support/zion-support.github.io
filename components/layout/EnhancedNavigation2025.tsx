@@ -115,15 +115,41 @@ const navigationItems: NavigationItem[] = [
     icon: <Rocket className="w-5 h-5" />,
     description: 'Innovative business solutions',
     children: [
-      { name: 'AI Autonomous Content Factory', href: '/ai-autonomous-content-factory', description: 'Automated content creation' },
-      { name: 'Quantum CRM Intelligence', href: '/quantum-crm-intelligence', description: 'AI-powered customer management' },
-      { name: 'AI Autonomous Decision Engine', href: '/ai-autonomous-decision-engine', description: 'Intelligent business decisions' },
-      { name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer', description: 'Legal document analysis' },
-      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading', description: 'Advanced trading algorithms' },
-      { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics', description: 'Medical AI solutions' },
-      { name: 'Quantum Cybersecurity Platform', href: '/quantum-cybersecurity-platform', description: 'Unbreakable security' },
-      { name: 'AI Sustainability Platform', href: '/ai-sustainability-platform', description: 'Environmental AI solutions' },
-      { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery', description: 'Materials research acceleration' }
+      { name: 'AI Customer Success', href: '/ai-customer-success-platform', description: 'Churn prediction and retention' },
+      { name: 'AI Sales Intelligence', href: '/ai-sales-intelligence-platform', description: 'Sales performance optimization' },
+      { name: 'AI HR Analytics', href: '/ai-hr-analytics-platform', description: 'People intelligence' },
+      { name: 'AI Financial Planning', href: '/ai-financial-planning-platform', description: 'Intelligent financial analysis' },
+      { name: 'AI Supply Chain Optimization', href: '/ai-supply-chain-optimization', description: 'AI-powered logistics' },
+      { name: 'AI Project Management', href: '/ai-project-management-suite', description: 'AI project optimization' },
+      { name: 'AI Content Automation', href: '/ai-content-automation-platform', description: 'AI content creation' },
+      { name: 'AI Decision Engine', href: '/ai-decision-engine', description: 'Intelligent decision making' },
+      { name: 'AI Smart CRM Suite', href: '/ai-smart-crm-suite', description: 'AI-enhanced CRM' },
+      { name: 'AI Business Intelligence', href: '/ai-business-intelligence-suite', description: 'Advanced analytics' },
+      { name: 'AI Marketing Automation', href: '/ai-autonomous-marketing-platform', description: 'Intelligent marketing' },
+      { name: 'AI Customer Service', href: '/ai-autonomous-customer-service', description: 'Automated support' },
+      { name: 'AI HR & Recruitment', href: '/ai-autonomous-hr-platform', description: 'AI talent management' },
+      { name: 'AI Legal Contract Analysis', href: '/ai-legal-contract-analyzer', description: 'Legal document review' },
+      { name: 'AI Autonomous Content Studio', href: '/ai-autonomous-content-studio', description: 'Autonomous content creation' },
+      { name: 'Quantum Financial Trading', href: '/quantum-enhanced-financial-trading', description: 'Quantum-powered trading' },
+      { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics-platform', description: 'Medical AI diagnostics' },
+      { name: 'Autonomous Manufacturing', href: '/autonomous-manufacturing-ai-platform', description: 'AI manufacturing' },
+      { name: 'Innovative Business Solutions', href: '/innovative-business-solutions', description: 'AI-powered business intelligence, marketing, sales, customer service, and HR solutions' }
+    ]
+  },
+  {
+    name: 'Space & Metaverse',
+    href: '/space-tech',
+    icon: <Rocket className="w-5 h-5" />,
+    description: 'Space technology and metaverse solutions',
+    children: [
+      { name: 'Space Mining Platform', href: '/autonomous-space-mining-platform', description: 'Asteroid mining operations' },
+      { name: 'Space Technology AI', href: '/space-technology-ai-platform', description: 'AI space solutions' },
+      { name: 'Metaverse Development', href: '/metaverse-ai-development-platform', description: 'Metaverse platforms' },
+      { name: 'Virtual Event Holograms', href: '/virtual-event-hologram-platform', description: 'Holographic events' },
+      { name: 'Space Logistics', href: '/space-logistics-platform', description: 'Space transportation' },
+      { name: 'Satellite Technology', href: '/satellite-technology-platform', description: 'Satellite solutions' },
+      { name: 'Space Research', href: '/space-research-platform', description: 'Space exploration tools' },
+      { name: 'Space Mining Analytics', href: '/space-mining-analytics', description: 'Mining data analysis' }
     ]
   },
   {
