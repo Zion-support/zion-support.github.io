@@ -242,6 +242,7 @@ export default function Sidebar() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         { name: 'AI Autonomous Research', path: '/ai-autonomous-research', icon: Briefcase },
         { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
@@ -274,6 +275,13 @@ export default function Sidebar() {
         { name: 'AI Research Platform', path: '/ai-autonomous-research', icon: Briefcase },
         { name: 'AI Code Review', path: '/ai-autonomous-code-review', icon: Briefcase },
         { name: 'AI Business Intelligence', path: '/ai-business-intelligence-suite', icon: Briefcase },
+=======
+        { name: 'AI Agent Orchestrator', path: '/ai-agent-orchestrator', icon: Briefcase },
+        { name: 'AI Analytics Copilot', path: '/ai-analytics-copilot', icon: Briefcase },
+        { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
+        { name: 'AI Business Platform', path: '/ai-autonomous-business-platform', icon: Briefcase },
+        { name: 'AI Code Review', path: '/ai-autonomous-code-review', icon: Briefcase },
+>>>>>>> origin/cursor/website-audit-and-enhancement-77ac
         { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Briefcase },
         { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Briefcase },
         { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Briefcase },

@@ -8,18 +8,22 @@ export function Footer() {
       title: "AI & Micro SAAS",
       links: [
         { label: "AI & Autonomous Systems", path: "/services/ai-autonomous-systems" },
-        { label: "Quantum Technology", path: "/services/quantum-technology" },
+        { label: "AI Research Assistant", path: "/ai-autonomous-research-assistant" },
+        { label: "AI Agent Orchestrator", path: "/ai-agent-orchestrator" },
+        { label: "AI Analytics Copilot", path: "/ai-analytics-copilot" },
+        { label: "AI Business Manager", path: "/ai-autonomous-business-manager" },
+        { label: "AI Business Platform", path: "/ai-autonomous-business-platform" },
+        { label: "AI Code Review", path: "/ai-autonomous-code-review" },
         { label: "Quantum Neural Networks", path: "/quantum-neural-network-platform" },
+        { label: "Autonomous Business Platform", path: "/autonomous-business-operations-platform" },
+        { label: "AI Asset Management", path: "/ai-powered-it-asset-management" },
+        { label: "Quantum Technology", path: "/services/quantum-technology" },
         { label: "IT Infrastructure", path: "/services/it-infrastructure" },
-        { label: "AI-Powered IT Asset Management", path: "/ai-powered-it-asset-management" },
         { label: "Micro SAAS Solutions", path: "/services/micro-saas-solutions" },
         { label: "Cybersecurity", path: "/services/cybersecurity" },
-        { label: "Advanced Cybersecurity Suite", path: "/advanced-cybersecurity-suite" },
+        { label: "SOC2 Compliance Automation", path: "/soc2-compliance-automation" },
         { label: "Industry Solutions", path: "/services/industry-solutions" },
-        { label: "AI & Machine Learning", path: "/ai-solutions" },
-        { label: "Cloud & Infrastructure", path: "/services/cloud-devops" },
-        { label: "Digital Transformation", path: "/digital-transformation" },
-        { label: "Enterprise Solutions", path: "/enterprise-solutions" }
+        { label: "5G Enterprise Solutions", path: "/5g-enterprise-solutions" }
       ]
     },
     {
@@ -31,19 +35,10 @@ export function Footer() {
         { label: "Manufacturing Solutions", path: "/solutions/manufacturing" },
         { label: "Retail Solutions", path: "/solutions/retail" },
         { label: "Government Solutions", path: "/solutions/government" },
-        { label: "Business Intelligence", path: "/services/business-intelligence" },
-        { label: "Marketing Automation", path: "/services/ai-marketing" },
-        { label: "HR & Recruitment", path: "/services/ai-hr" },
-        { label: "Legal Tech", path: "/services/ai-legal" }
-      ]
-    },
-    {
-      title: "Business Operations",
-      links: [
-        { label: "Autonomous Business Operations", path: "/autonomous-business-operations-platform" },
-        { label: "Affiliate Attribution Hub", path: "/affiliate-attribution-hub" },
-        { label: "Agentic RAG Helpdesk", path: "/agentic-rag-helpdesk" },
-        { label: "Advanced Research Automation", path: "/advanced-research-automation" }
+        { label: "Business Intelligence", path: "/ai-analytics-copilot" },
+        { label: "AI Business Management", path: "/ai-autonomous-business-manager" },
+        { label: "AI Code Review", path: "/ai-autonomous-code-review" },
+        { label: "AI Agent Orchestration", path: "/ai-agent-orchestrator" }
       ]
     },
     {
@@ -55,8 +50,7 @@ export function Footer() {
         { label: "Extended Reality (XR)", path: "/emerging-tech" },
         { label: "5G & Networks", path: "/emerging-tech" },
         { label: "Green Technology", path: "/emerging-tech" },
-        { label: "Digital Twins", path: "/emerging-tech" },
-        { label: "Accessibility Auditor", path: "/accessibility-auditor" }
+        { label: "Digital Twins", path: "/emerging-tech" }
       ]
     },
     {
@@ -77,6 +71,7 @@ export function Footer() {
       links: [
         { label: "Blog & Articles", path: "/blog" },
         { label: "Case Studies", path: "/case-studies" },
+        { label: "Help Center", path: "/help" },
         { label: "Documentation", path: "/docs" },
         { label: "Support Center", path: "/support" }
       ]
