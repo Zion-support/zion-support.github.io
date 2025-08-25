@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-fb38
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter } from 'react-router-dom'
 import App from './App'
+<<<<<<< HEAD
 import { SkipToContent } from './components/Accessibility'
 import './index.css'
 
@@ -86,3 +90,11 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   </React.StrictMode>
 );
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
+=======
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+)
+>>>>>>> origin/cursor/build-and-fix-errors-fb38

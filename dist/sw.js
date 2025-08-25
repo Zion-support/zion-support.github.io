@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Service Worker for Zion Tech Group Website
 // Version: 1.0.0
 // Cache Name: zion-tech-v1
@@ -12,6 +13,11 @@ const STATIC_CACHE = 'zion-static-v1';
 const DYNAMIC_CACHE = 'zion-dynamic-v1';
 const API_CACHE = 'zion-api-v1';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
+=======
+const CACHE_NAME = 'zion-tech-group-v1';
+const STATIC_CACHE = 'zion-static-v1';
+const DYNAMIC_CACHE = 'zion-dynamic-v1';
+>>>>>>> origin/cursor/build-and-fix-errors-fb38
 
 const STATIC_ASSETS = [
   '/',
@@ -19,6 +25,7 @@ const STATIC_ASSETS = [
   '/static/js/bundle.js',
   '/static/css/main.css',
   '/manifest.json',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -54,14 +61,24 @@ const API_ENDPOINTS = [
 self.addEventListener('install', (event) => {
   console.log('Service Worker installing...');
   
+=======
+  '/favicon.ico'
+];
+
+// Install event - cache static files
+self.addEventListener('install', (event) => {
+>>>>>>> origin/cursor/build-and-fix-errors-fb38
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
 <<<<<<< HEAD
         console.log('Opened static cache');
+<<<<<<< HEAD
         return cache.addAll(STATIC_ASSETS);
 =======
         console.log('Caching static files');
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-fb38
         return cache.addAll(STATIC_FILES);
 >>>>>>> origin/main
       })
@@ -84,6 +101,7 @@ self.addEventListener('activate', (event) => {
   console.log('Service Worker activating...');
   
   event.waitUntil(
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -110,6 +128,8 @@ self.addEventListener('activate', (event) => {
 
 // Fetch event - handle different caching strategies
 =======
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-fb38
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
@@ -128,8 +148,12 @@ self.addEventListener('activate', (event) => {
   );
 });
 
+<<<<<<< HEAD
 // Fetch event - implement caching strategies
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
+=======
+// Fetch event - serve from cache or network
+>>>>>>> origin/cursor/build-and-fix-errors-fb38
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
@@ -160,6 +184,7 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
+<<<<<<< HEAD
   // API requests - Network first with cache fallback
   if (API_ENDPOINTS.some(endpoint => url.pathname.startsWith(endpoint))) {
     event.respondWith(handleApiRequest(request));
@@ -297,10 +322,23 @@ async function handleDefaultRequest(request) {
   }
 }
 
+=======
+  // Handle different types of requests
+  if (isStaticAsset(request)) {
+    event.respondWith(handleStaticAsset(request));
+  } else if (isAPIRequest(request)) {
+    event.respondWith(handleAPIRequest(request));
+  } else {
+    event.respondWith(handlePageRequest(request));
+  }
+});
+
+>>>>>>> origin/cursor/build-and-fix-errors-fb38
 // Check if request is for a static asset
 function isStaticAsset(request) {
   const url = new URL(request.url);
   return (
+<<<<<<< HEAD
     request.destination === 'image' ||
     request.destination === 'font' ||
     request.destination === 'style' ||
@@ -512,6 +550,27 @@ async function networkFirst(request, cacheName) {
 
 // Background sync function
 async function doBackgroundSync() {
+=======
+    url.pathname.startsWith('/static/') ||
+    url.pathname.startsWith('/assets/') ||
+    url.pathname.includes('.js') ||
+    url.pathname.includes('.css') ||
+    url.pathname.includes('.png') ||
+    url.pathname.includes('.jpg') ||
+    url.pathname.includes('.svg') ||
+    url.pathname.includes('.ico')
+  );
+}
+
+// Check if request is for an API
+function isAPIRequest(request) {
+  const url = new URL(request.url);
+  return url.pathname.startsWith('/api/') || url.hostname.includes('api.');
+}
+
+// Handle static asset requests
+async function handleStaticAsset(request) {
+>>>>>>> origin/cursor/build-and-fix-errors-fb38
   try {
     console.log('Performing background sync...');
     
@@ -526,17 +585,69 @@ async function doBackgroundSync() {
       });
     });
     
+<<<<<<< HEAD
     console.log('Background sync completed successfully');
+=======
+    // Cache successful responses
+    if (networkResponse.ok) {
+      const cache = await caches.open(DYNAMIC_CACHE);
+      cache.put(request, networkResponse.clone());
+    }
+    
+    return networkResponse;
+  } catch (error) {
+    console.error('Page request failed, trying cache:', error);
+    
+    // Fallback to cache
+    const cachedResponse = await caches.match(request);
+    if (cachedResponse) {
+      return cachedResponse;
+    }
+    
+    // Return offline page
+    return caches.match('/offline.html');
+  }
+}
+
+// Background sync for offline actions
+self.addEventListener('sync', (event) => {
+  if (event.tag === 'background-sync') {
+    event.waitUntil(doBackgroundSync());
+  }
+});
+
+// Handle background sync
+async function doBackgroundSync() {
+  try {
+    // Get pending actions from IndexedDB
+    const pendingActions = await getPendingActions();
+    
+    for (const action of pendingActions) {
+      try {
+        await processPendingAction(action);
+        await removePendingAction(action.id);
+      } catch (error) {
+        console.error('Failed to process pending action:', error);
+      }
+    }
+>>>>>>> origin/cursor/build-and-fix-errors-fb38
   } catch (error) {
     console.error('Background sync failed:', error);
   }
 }
 
+<<<<<<< HEAD
 // Message handling from clients
 =======
 // Helper functions for offline actions (would need IndexedDB implementation)
 async function getOfflineActions() {
   // Implementation would use IndexedDB to store/retrieve offline actions
+=======
+// Get pending actions from IndexedDB
+async function getPendingActions() {
+  // This would typically interact with IndexedDB
+  // For now, return empty array
+>>>>>>> origin/cursor/build-and-fix-errors-fb38
   return [];
 }
 
@@ -550,6 +661,75 @@ async function removeOfflineAction(id) {
   console.log('Removing offline action:', id);
 }
 
+<<<<<<< HEAD
+=======
+// Make API call
+async function makeAPICall(apiData) {
+  const response = await fetch(apiData.url, {
+    method: apiData.method || 'GET',
+    headers: apiData.headers || {},
+    body: apiData.body
+  });
+  
+  if (!response.ok) {
+    throw new Error('API call failed');
+  }
+  
+  return response.json();
+}
+
+// Remove processed action
+async function removePendingAction(actionId) {
+  // Remove from IndexedDB
+  // For now, just log
+  console.log('Removed pending action:', actionId);
+}
+
+// Push notification handling
+self.addEventListener('push', (event) => {
+  if (event.data) {
+    const data = event.data.json();
+    const options = {
+      body: data.body,
+      icon: '/favicon.ico',
+      badge: '/favicon.ico',
+      vibrate: [100, 50, 100],
+      data: {
+        dateOfArrival: Date.now(),
+        primaryKey: 1
+      },
+      actions: [
+        {
+          action: 'explore',
+          title: 'View Details',
+          icon: '/favicon.ico'
+        },
+        {
+          action: 'close',
+          title: 'Close',
+          icon: '/favicon.ico'
+        }
+      ]
+    };
+    
+    event.waitUntil(
+      self.registration.showNotification(data.title, options)
+    );
+  }
+});
+
+// Notification click handling
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+  
+  if (event.action === 'explore') {
+    event.waitUntil(
+      clients.openWindow('/')
+    );
+  }
+});
+
+>>>>>>> origin/cursor/build-and-fix-errors-fb38
 // Message handling for communication with main thread
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
 self.addEventListener('message', (event) => {
@@ -565,6 +745,7 @@ self.addEventListener('message', (event) => {
       cacheName: CACHE_NAME
     });
   }
+<<<<<<< HEAD
 });
 
 // Error handling
@@ -643,3 +824,6 @@ console.log('Zion Tech Group Service Worker loaded successfully');
   console.error('Service worker unhandled rejection:', event.reason);
 });
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
+=======
+});
+>>>>>>> origin/cursor/build-and-fix-errors-fb38
