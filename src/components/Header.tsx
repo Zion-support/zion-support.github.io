@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Menu, X, ChevronDown, Zap, Brain, Server, Code, Shield, Cloud, Database, Users, Settings, Globe, Rocket, Star, Target, TrendingUp, BarChart3, MessageSquare, Eye, Heart, Truck, CreditCard, BookOpen, Calendar, FileText, Video, Music, Camera, Palette, Layers, Wifi, ShieldCheck, RefreshCw, Cpu, Network, Settings2, Cog, Tool, Hammer, Screwdriver, Drill, Saw, Paintbrush, Palette as PaletteIcon, Brush, PenTool, Vector, Grid, Layout, Monitor, Display, Projector, Printer, Scanner, Fax, Copier, Archive, Folder, File, Document, Spreadsheet, Presentation, Chart, Graph, Analytics, Report, Dashboard, Clock, Timer, Stopwatch, Hourglass, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarWeek, CalendarMonth, CalendarYear, Clock1, Clock2, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, Handshake, Briefcase } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ChevronDown, Menu, X } from 'lucide-react';
 
-export const Header: React.FC = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const Header = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,270 +16,229 @@ export const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const isActive = (path: string) => location.pathname === path;
-
-  const services = [
-    {
-      name: "Micro SAAS Services",
-      path: "/micro-saas-services",
-      icon: <Zap className="w-4 h-4" />,
-      description: "Affordable software solutions"
-    },
-    {
-      name: "AI Services",
-      path: "/ai-services",
-      icon: <Brain className="w-4 h-4" />,
-      description: "Artificial intelligence solutions"
-    },
-    {
-      name: "IT Onsite Services",
-      path: "/it-onsite-services",
-      icon: <Server className="w-4 h-4" />,
-      description: "Professional IT support"
-    },
-    {
-      name: "Cloud Solutions",
-      path: "/cloud-devops-solutions",
-      icon: <Cloud className="w-4 h-4" />,
-      description: "Cloud infrastructure & DevOps"
-    },
-    {
-      name: "Digital Transformation",
-      path: "/digital-transformation",
-      icon: <Rocket className="w-4 h-4" />,
-      description: "Business transformation services"
-    },
-    {
-      name: "Industry Solutions",
-      path: "/industry-solutions",
-      icon: <Target className="w-4 h-4" />,
-      description: "Industry-specific solutions"
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+    if (isMobileMenuOpen) {
+      setActiveDropdown(null);
     }
-  ];
+  };
 
-  const company = [
-    { name: "About Us", path: "/about", icon: <Users className="w-4 h-4" /> },
-    { name: "Blog", path: "/blog", icon: <FileText className="w-4 h-4" /> },
-    { name: "Partners", path: "/partners", icon: <Handshake className="w-4 h-4" /> },
-    { name: "Careers", path: "/careers", icon: <Briefcase className="w-4 h-4" /> },
-    { name: "Contact", path: "/contact", icon: <MessageSquare className="w-4 h-4" /> }
-  ];
+  const toggleDropdown = (dropdown: string) => {
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  };
+
+  const closeAllDropdowns = () => {
+    setActiveDropdown(null);
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-slate-900/95 backdrop-blur-md border-b border-slate-700/50 shadow-2xl' 
-        : 'bg-transparent'
+      isScrolled ? 'bg-zion-blue-dark/95 backdrop-blur-md shadow-lg' : 'bg-zion-blue-dark'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 lg:h-20">
           {/* Logo */}
-          <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0 group">
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 lg:w-10 lg:h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Zap className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
-                </div>
-                <h1 className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500 bg-clip-text text-transparent">
-                  Zion Tech Group
-                </h1>
-              </div>
-            </Link>
-          </div>
-          
+          <Link to="/" className="flex items-center space-x-2" onClick={closeAllDropdowns}>
+            <div className="w-8 h-8 lg:w-10 lg:h-10 bg-zion-cyan rounded-lg flex items-center justify-center">
+              <span className="text-zion-blue-dark font-bold text-lg lg:text-xl">Z</span>
+            </div>
+            <span className="text-white font-bold text-xl lg:text-2xl">Zion Tech Group</span>
+          </Link>
+
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex space-x-1">
-            <Link 
-              to="/" 
-              className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 ${
-                isActive('/') 
-                  ? 'text-cyan-400 bg-cyan-400/10 border border-cyan-400/20' 
-                  : 'text-gray-300 hover:text-white hover:bg-white/10'
-              }`}
-            >
-              Home
-            </Link>
-            
+          <nav className="hidden lg:flex items-center space-x-8">
             {/* Services Dropdown */}
-            <div className="relative group">
-              <button className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300 flex items-center space-x-1">
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown('services')}
+                className="flex items-center space-x-1 text-white hover:text-zion-cyan transition-colors py-2"
+              >
                 <span>Services</span>
-                <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
+                <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
               </button>
-              <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                <div className="p-4">
-                  <div className="grid grid-cols-1 gap-2">
-                    {services.map((service) => (
-                      <Link
-                        key={service.path}
-                        to={service.path}
-                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-700/50 transition-all duration-300 group"
-                      >
-                        <div className="text-cyan-400 group-hover:scale-110 transition-transform duration-300">
-                          {service.icon}
-                        </div>
-                        <div>
-                          <div className="font-medium text-white group-hover:text-cyan-400 transition-colors duration-300">
-                            {service.name}
-                          </div>
-                          <div className="text-sm text-gray-400">
-                            {service.description}
-                          </div>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
+              
+              {activeDropdown === 'services' && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-light/95 backdrop-blur-md border border-zion-cyan/30 rounded-lg shadow-xl py-2">
+                  <Link to="/services" className="block px-4 py-2 text-white hover:bg-zion-cyan/20 transition-colors">All Services</Link>
+                  <Link to="/ai-services" className="block px-4 py-2 text-white hover:bg-zion-cyan/20 transition-colors">AI & Machine Learning</Link>
+                  <Link to="/enterprise-solutions" className="block px-4 py-2 text-white hover:bg-zion-cyan/20 transition-colors">Enterprise Solutions</Link>
+                  <Link to="/cloud-devops-solutions" className="block px-4 py-2 text-white hover:bg-zion-cyan/20 transition-colors">Cloud & DevOps</Link>
+                  <Link to="/digital-transformation" className="block px-4 py-2 text-white hover:bg-zion-cyan/20 transition-colors">Digital Transformation</Link>
+                  <Link to="/emerging-tech-services" className="block px-4 py-2 text-white hover:bg-zion-cyan/20 transition-colors">Emerging Tech</Link>
+                  <Link to="/ai-business-solutions" className="block px-4 py-2 text-white hover:bg-zion-cyan/20 transition-colors">AI Business Solutions</Link>
+                  <Link to="/industry-solutions" className="block px-4 py-2 text-white hover:bg-zion-cyan/20 transition-colors">Industry Solutions</Link>
+                  <Link to="/green-it" className="block px-4 py-2 text-white hover:bg-zion-cyan/20 transition-colors">Green IT</Link>
                 </div>
-              </div>
+              )}
             </div>
 
             {/* Company Dropdown */}
-            <div className="relative group">
-              <button className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300 flex items-center space-x-1">
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown('company')}
+                className="flex items-center space-x-1 text-white hover:text-zion-cyan transition-colors py-2"
+              >
                 <span>Company</span>
-                <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
+                <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'company' ? 'rotate-180' : ''}`} />
               </button>
-              <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-md border border-slate-700 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                <div className="p-4">
-                  <div className="space-y-2">
-                    {company.map((item) => (
-                      <Link
-                        key={item.path}
-                        to={item.path}
-                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-700/50 transition-all duration-300 group"
-                      >
-                        <div className="text-blue-400 group-hover:scale-110 transition-transform duration-300">
-                          {item.icon}
-                        </div>
-                        <span className="font-medium text-white group-hover:text-blue-400 transition-colors duration-300">
-                          {item.name}
-                        </span>
-                      </Link>
-                    ))}
-                  </div>
+              
+              {activeDropdown === 'company' && (
+                <div className="absolute top-full left-0 mt-2 w-48 bg-zion-blue-light/95 backdrop-blur-md border border-zion-cyan/30 rounded-lg shadow-xl py-2">
+                  <Link to="/about" className="block px-4 py-2 text-white hover:bg-zion-cyan/20 transition-colors">About Us</Link>
+                  <Link to="/careers" className="block px-4 py-2 text-white hover:bg-zion-cyan/20 transition-colors">Careers</Link>
+                  <Link to="/contact" className="block px-4 py-2 text-white hover:bg-zion-cyan/20 transition-colors">Contact</Link>
+                  <Link to="/partners" className="block px-4 py-2 text-white hover:bg-zion-cyan/20 transition-colors">Partners</Link>
                 </div>
-              </div>
+              )}
             </div>
 
-            <Link 
-              to="/pricing" 
-              className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 ${
-                isActive('/pricing') 
-                  ? 'text-purple-400 bg-purple-400/10 border border-purple-400/20' 
-                  : 'text-gray-300 hover:text-white hover:bg-white/10'
-              }`}
-            >
-              Pricing
-            </Link>
+            {/* Resources Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown('resources')}
+                className="flex items-center space-x-1 text-white hover:text-zion-cyan transition-colors py-2"
+              >
+                <span>Resources</span>
+                <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'resources' ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {activeDropdown === 'resources' && (
+                <div className="absolute top-full left-0 mt-2 w-56 bg-zion-blue-light/95 backdrop-blur-md border border-zion-cyan/30 rounded-lg shadow-xl py-2">
+                  <Link to="/blog" className="block px-4 py-2 text-white hover:bg-zion-cyan/20 transition-colors">Blog</Link>
+                  <Link to="/white-papers" className="block px-4 py-2 text-white hover:bg-zion-cyan/20 transition-colors">White Papers</Link>
+                  <Link to="/case-studies" className="block px-4 py-2 text-white hover:bg-zion-cyan/20 transition-colors">Case Studies</Link>
+                  <Link to="/events" className="block px-4 py-2 text-white hover:bg-zion-cyan/20 transition-colors">Events</Link>
+                  <Link to="/webinars" className="block px-4 py-2 text-white hover:bg-zion-cyan/20 transition-colors">Webinars</Link>
+                  <Link to="/help-center" className="block px-4 py-2 text-white hover:bg-zion-cyan/20 transition-colors">Help Center</Link>
+                </div>
+              )}
+            </div>
+
+            <Link to="/pricing" className="text-white hover:text-zion-cyan transition-colors">Pricing</Link>
+            <Link to="/request-quote" className="text-white hover:text-zion-cyan transition-colors">Get Quote</Link>
           </nav>
-          
+
           {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center space-x-3">
-            <Button 
-              variant="outline" 
-              size="sm"
-              className="border-slate-600 text-gray-300 hover:bg-slate-700 hover:text-white transition-all duration-300"
+          <div className="hidden lg:flex items-center space-x-4">
+            <Link
+              to="/login"
+              className="text-white hover:text-zion-cyan transition-colors font-medium"
             >
-              Sign In
-            </Button>
-            <Button 
-              size="sm"
-              className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white transition-all duration-300 transform hover:scale-105"
+              Login
+            </Link>
+            <Link
+              to="/signup"
+              className="bg-zion-cyan text-zion-blue-dark px-6 py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors shadow-lg shadow-zion-cyan/30"
             >
               Get Started
-            </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300"
-            >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+          <button
+            onClick={toggleMobileMenu}
+            className="lg:hidden text-white hover:text-zion-cyan transition-colors"
+          >
+            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        <div className={`lg:hidden transition-all duration-300 ease-in-out ${
+          isMobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
+        }`}>
+          <div className="py-4 space-y-4 border-t border-zion-cyan/30">
+            {/* Mobile Services */}
+            <div>
+              <button
+                onClick={() => toggleDropdown('mobile-services')}
+                className="flex items-center justify-between w-full text-left text-white hover:text-zion-cyan transition-colors py-2"
+              >
+                <span>Services</span>
+                <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'mobile-services' ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {activeDropdown === 'mobile-services' && (
+                <div className="ml-4 mt-2 space-y-2">
+                  <Link to="/services" className="block text-zion-slate-light hover:text-zion-cyan transition-colors py-1">All Services</Link>
+                  <Link to="/ai-services" className="block text-zion-slate-light hover:text-zion-cyan transition-colors py-1">AI & Machine Learning</Link>
+                  <Link to="/enterprise-solutions" className="block text-zion-slate-light hover:text-zion-cyan transition-colors py-1">Enterprise Solutions</Link>
+                  <Link to="/cloud-devops-solutions" className="block text-zion-slate-light hover:text-zion-cyan transition-colors py-1">Cloud & DevOps</Link>
+                  <Link to="/digital-transformation" className="block text-zion-slate-light hover:text-zion-cyan transition-colors py-1">Digital Transformation</Link>
+                  <Link to="/emerging-tech-services" className="block text-zion-slate-light hover:text-zion-cyan transition-colors py-1">Emerging Tech</Link>
+                  <Link to="/ai-business-solutions" className="block text-zion-slate-light hover:text-zion-cyan transition-colors py-1">AI Business Solutions</Link>
+                  <Link to="/industry-solutions" className="block text-zion-slate-light hover:text-zion-cyan transition-colors py-1">Industry Solutions</Link>
+                  <Link to="/green-it" className="block text-zion-slate-light hover:text-zion-cyan transition-colors py-1">Green IT</Link>
+                </div>
+              )}
+            </div>
+
+            {/* Mobile Company */}
+            <div>
+              <button
+                onClick={() => toggleDropdown('mobile-company')}
+                className="flex items-center justify-between w-full text-left text-white hover:text-zion-cyan transition-colors py-2"
+              >
+                <span>Company</span>
+                <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'mobile-company' ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {activeDropdown === 'mobile-company' && (
+                <div className="ml-4 mt-2 space-y-2">
+                  <Link to="/about" className="block text-zion-slate-light hover:text-zion-cyan transition-colors py-1">About Us</Link>
+                  <Link to="/careers" className="block text-zion-slate-light hover:text-zion-cyan transition-colors py-1">Careers</Link>
+                  <Link to="/contact" className="block text-zion-slate-light hover:text-zion-cyan transition-colors py-1">Contact</Link>
+                  <Link to="/partners" className="block text-zion-slate-light hover:text-zion-cyan transition-colors py-1">Partners</Link>
+                </div>
+              )}
+            </div>
+
+            {/* Mobile Resources */}
+            <div>
+              <button
+                onClick={() => toggleDropdown('mobile-resources')}
+                className="flex items-center justify-between w-full text-left text-white hover:text-zion-cyan transition-colors py-2"
+              >
+                <span>Resources</span>
+                <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'mobile-resources' ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {activeDropdown === 'mobile-resources' && (
+                <div className="ml-4 mt-2 space-y-2">
+                  <Link to="/blog" className="block text-zion-slate-light hover:text-zion-cyan transition-colors py-1">Blog</Link>
+                  <Link to="/white-papers" className="block text-zion-slate-light hover:text-zion-cyan transition-colors py-1">White Papers</Link>
+                  <Link to="/case-studies" className="block text-zion-slate-light hover:text-zion-cyan transition-colors py-1">Case Studies</Link>
+                  <Link to="/events" className="block text-zion-slate-light hover:text-zion-cyan transition-colors py-1">Events</Link>
+                  <Link to="/webinars" className="block text-zion-slate-light hover:text-zion-cyan transition-colors py-1">Webinars</Link>
+                  <Link to="/help-center" className="block text-zion-slate-light hover:text-zion-cyan transition-colors py-1">Help Center</Link>
+                </div>
+              )}
+            </div>
+
+            <Link to="/pricing" className="block text-white hover:text-zion-cyan transition-colors py-2">Pricing</Link>
+            <Link to="/request-quote" className="block text-white hover:text-zion-cyan transition-colors py-2">Get Quote</Link>
+            
+            {/* Mobile CTA Buttons */}
+            <div className="pt-4 space-y-3 border-t border-zion-cyan/30">
+              <Link
+                to="/login"
+                className="block text-center text-white hover:text-zion-cyan transition-colors font-medium py-2"
+              >
+                Login
+              </Link>
+              <Link
+                to="/signup"
+                className="block text-center bg-zion-cyan text-zion-blue-dark px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors"
+              >
+                Get Started
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-
-      {/* Mobile Navigation */}
-      {isMenuOpen && (
-        <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-slate-700/50">
-          <div className="px-4 py-6 space-y-4">
-            <Link 
-              to="/" 
-              className={`block px-4 py-3 text-base font-medium rounded-lg transition-all duration-300 ${
-                isActive('/') 
-                  ? 'text-cyan-400 bg-cyan-400/10 border border-cyan-400/20' 
-                  : 'text-gray-300 hover:text-white hover:bg-white/10'
-              }`}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Home
-            </Link>
-            
-            <div className="space-y-2">
-              <div className="px-4 py-2 text-sm font-semibold text-gray-400 uppercase tracking-wider">
-                Services
-              </div>
-              {services.map((service) => (
-                <Link
-                  key={service.path}
-                  to={service.path}
-                  className="block px-8 py-3 text-base text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {service.name}
-                </Link>
-              ))}
-            </div>
-
-            <div className="space-y-2">
-              <div className="px-4 py-2 text-sm font-semibold text-gray-400 uppercase tracking-wider">
-                Company
-              </div>
-              {company.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  className="block px-8 py-3 text-base text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-
-            <Link 
-              to="/pricing" 
-              className={`block px-4 py-3 text-base font-medium rounded-lg transition-all duration-300 ${
-                isActive('/pricing') 
-                  ? 'text-purple-400 bg-purple-400/10 border border-purple-400/20' 
-                  : 'text-gray-300 hover:text-white hover:bg-white/10'
-              }`}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Pricing
-            </Link>
-
-            <div className="pt-4 space-y-3">
-              <Button 
-                variant="outline" 
-                size="sm"
-                className="w-full border-slate-600 text-gray-300 hover:bg-slate-700 hover:text-white transition-all duration-300"
-              >
-                Sign In
-              </Button>
-              <Button 
-                size="sm"
-                className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white transition-all duration-300"
-              >
-                Get Started
-              </Button>
-            </div>
-          </div>
-        </div>
-      )}
     </header>
   );
 };
+
+export default Header;

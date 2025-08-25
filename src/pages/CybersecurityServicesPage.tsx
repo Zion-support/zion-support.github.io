@@ -84,8 +84,8 @@ const SecurityServiceCard: React.FC<{ service: any }> = ({ service }) => {
           </div>
 
           <div className="flex flex-wrap gap-1">
-            {service.tags.map((tag, index) => (
-              <Badge key={index} variant="outline" className="text-xs border-zion-blue-light text-zion-slate-light">
+            {service.tags.map((tag: string, index: number) => (
+              <Badge variant="outline" className="text-xs border-zion-blue-light text-zion-slate-light">
                 {tag}
               </Badge>
             ))}
