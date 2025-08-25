@@ -1,255 +1,220 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { SEO } from '@/components/SEO';
 import { 
+  Bot, 
   Brain, 
-  Building, 
-  DollarSign, 
-  Heart, 
-  Truck, 
-  Shield,
-  Zap,
+  Cpu, 
+  Database, 
+  Network, 
+  Shield, 
+  Zap, 
   ArrowRight,
   CheckCircle,
-  Star,
   Users,
-  TrendingUp
+  TrendingUp,
+  Globe,
+  Clock,
+  BarChart3,
+  Target,
+  Lightbulb,
+  Rocket,
+  Code,
+  Lock,
+  Cloud,
+  Microchip,
+  Settings,
+  Monitor,
+  AlertTriangle,
+  RefreshCw,
+  Eye,
+  Heart,
+  Star
 } from 'lucide-react';
+import SEOHead from '../../components/SEOHead';
 
-const aiServices = [
-  {
-    id: 'ai-legal-research-assistant',
-    title: 'AI Legal Research Assistant',
-    description: 'Revolutionary AI-powered legal research platform that autonomously analyzes case law, statutes, and legal precedents',
-    icon: Building,
-    color: 'from-purple-500 to-pink-600',
-    features: [
-      'Automated case law analysis',
-      'Statute interpretation assistance',
-      'Legal precedent identification',
-      'Research summary generation',
-      'Citation verification'
-    ],
-    pricing: '$299/month',
-    href: '/ai-autonomous-legal-research-assistant'
-  },
-  {
-    id: 'ai-financial-risk-manager',
-    title: 'AI Financial Risk Manager',
-    description: 'Intelligent financial risk assessment and management system that operates autonomously to protect your investments',
-    icon: DollarSign,
-    color: 'from-green-500 to-emerald-600',
-    features: [
-      'Real-time risk assessment',
-      'Portfolio optimization',
-      'Market trend analysis',
-      'Automated alerts',
-      'Compliance monitoring'
-    ],
-    pricing: '$499/month',
-    href: '/ai-autonomous-financial-risk-manager'
-  },
-  {
-    id: 'ai-healthcare-diagnostics-pro',
-    title: 'AI Healthcare Diagnostics Pro',
-    description: 'Advanced AI-powered healthcare diagnostics system that provides autonomous medical analysis and recommendations',
-    icon: Heart,
-    color: 'from-red-500 to-pink-600',
-    features: [
-      'Medical image analysis',
-      'Symptom assessment',
-      'Treatment recommendations',
-      'Patient monitoring',
-      'Diagnostic accuracy tracking'
-    ],
-    pricing: '$799/month',
-    href: '/ai-autonomous-healthcare-diagnostics-pro'
-  },
-  {
-    id: 'ai-supply-chain-optimizer',
-    title: 'AI Supply Chain Optimizer',
-    description: 'Intelligent supply chain management system that autonomously optimizes logistics, inventory, and distribution',
-    icon: Truck,
-    color: 'from-blue-500 to-cyan-600',
-    features: [
-      'Demand forecasting',
-      'Inventory optimization',
-      'Route optimization',
-      'Supplier management',
-      'Cost reduction analysis'
-    ],
-    pricing: '$599/month',
-    href: '/ai-autonomous-supply-chain-optimizer'
-  },
-  {
-    id: 'ai-cybersecurity-sentinel',
-    title: 'AI Cybersecurity Sentinel',
-    description: 'Autonomous cybersecurity system that continuously monitors, detects, and responds to threats in real-time',
-    icon: Shield,
-    color: 'from-orange-500 to-red-600',
-    features: [
-      'Threat detection & response',
-      'Behavioral analysis',
-      'Incident automation',
-      'Security monitoring',
-      'Compliance reporting'
-    ],
-    pricing: '$699/month',
-    href: '/ai-autonomous-cybersecurity-sentinel'
-  }
-];
+const AIAutonomousSystems: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: "Self-Learning Capabilities",
+      description: "Advanced machine learning algorithms that continuously improve performance based on data patterns and user interactions."
+    },
+    {
+      icon: Bot,
+      title: "Autonomous Decision Making",
+      description: "AI systems that can make complex decisions independently while maintaining human oversight and control."
+    },
+    {
+      icon: RefreshCw,
+      title: "Continuous Optimization",
+      description: "Real-time performance monitoring and automatic system optimization for maximum efficiency."
+    },
+    {
+      icon: Shield,
+      title: "Built-in Security",
+      description: "Enterprise-grade security protocols integrated into every autonomous system component."
+    }
+  ];
 
-const benefits = [
-  {
-    title: '24/7 Autonomous Operation',
-    description: 'AI systems that work continuously without human intervention',
-    icon: Zap
-  },
-  {
-    title: 'Continuous Learning',
-    description: 'Systems that improve performance over time through machine learning',
-    icon: TrendingUp
-  },
-  {
-    title: 'Scalable Solutions',
-    description: 'AI systems that grow with your business needs',
-    icon: Building
-  },
-  {
-    title: 'Cost Efficiency',
-    description: 'Reduce operational costs through intelligent automation',
-    icon: DollarSign
-  }
-];
+  const useCases = [
+    {
+      title: "Business Process Automation",
+      description: "Streamline operations with AI systems that handle repetitive tasks and complex workflows.",
+      icon: Settings,
+      benefits: ["24/7 Operation", "Error Reduction", "Cost Savings", "Scalability"]
+    },
+    {
+      title: "Predictive Analytics",
+      description: "Forecast trends and identify opportunities with autonomous data analysis systems.",
+      icon: BarChart3,
+      benefits: ["Real-time Insights", "Pattern Recognition", "Risk Assessment", "Strategic Planning"]
+    },
+    {
+      title: "Customer Service",
+      description: "Intelligent chatbots and support systems that provide personalized assistance.",
+      icon: Users,
+      benefits: ["Instant Response", "Personalization", "Multi-language Support", "Learning from Interactions"]
+    },
+    {
+      title: "Supply Chain Management",
+      description: "Optimize logistics and inventory with autonomous systems that adapt to market changes.",
+      icon: Network,
+      benefits: ["Demand Forecasting", "Route Optimization", "Inventory Management", "Cost Optimization"]
+    }
+  ];
 
-const useCases = [
-  {
-    industry: 'Legal',
-    description: 'Automate legal research and case analysis for law firms',
-    icon: Building
-  },
-  {
-    industry: 'Finance',
-    description: 'Intelligent risk management and portfolio optimization',
-    icon: DollarSign
-  },
-  {
-    industry: 'Healthcare',
-    description: 'Enhanced diagnostic accuracy and patient care',
-    icon: Heart
-  },
-  {
-    industry: 'Manufacturing',
-    description: 'Optimize supply chains and production processes',
-    icon: Truck
-  },
-  {
-    industry: 'Technology',
-    description: 'Advanced cybersecurity and threat protection',
-    icon: Shield
-  }
-];
+  const benefits = [
+    {
+      icon: Zap,
+      title: "Increased Efficiency",
+      description: "Automate complex processes and reduce manual intervention by up to 80%"
+    },
+    {
+      icon: TrendingUp,
+      title: "Cost Reduction",
+      description: "Lower operational costs through automation and optimized resource allocation"
+    },
+    {
+      icon: Clock,
+      title: "24/7 Operation",
+      description: "Continuous operation without breaks, holidays, or human limitations"
+    },
+    {
+      icon: Target,
+      title: "Improved Accuracy",
+      description: "Reduce human errors and improve decision-making accuracy by leveraging data"
+    }
+  ];
 
-export default function AIAutonomousSystems() {
+  const technologies = [
+    "Machine Learning & Deep Learning",
+    "Natural Language Processing",
+    "Computer Vision",
+    "Robotic Process Automation",
+    "Edge Computing",
+    "IoT Integration",
+    "Blockchain Security",
+    "Quantum Computing Ready"
+  ];
+
   return (
-    <div className="min-h-screen bg-background">
-      <SEO 
-        title="AI & Autonomous Systems - Zion Tech Group" 
-        description="Revolutionary AI systems that operate independently and transform business operations across industries."
-        keywords="AI autonomous systems, artificial intelligence, machine learning, business automation"
-        canonical="https://ziontechgroup.com/services/ai-autonomous-systems"
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
+      <SEOHead 
+        title="AI Autonomous Systems - Zion Tech Group"
+        description="Transform your business with self-managing AI systems that operate independently. Our autonomous AI solutions drive efficiency, reduce costs, and enable 24/7 operations."
+        keywords="AI autonomous systems, self-managing AI, autonomous decision making, business automation, AI optimization"
       />
-
+      
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-purple-900 via-black to-pink-900 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(168,85,247,0.1),transparent_50%)]"></div>
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <div className="flex items-center justify-center mb-6">
-            <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mr-4">
-              <Brain className="w-10 h-10 text-white" />
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/30 rounded-full text-cyan-300 text-sm font-medium mb-6">
+              <Bot className="w-4 h-4 mr-2" />
+              AI Autonomous Systems
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-gradient">
-              AI & Autonomous Systems
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Self-Managing AI Systems
             </h1>
-          </div>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-            Revolutionary AI systems that operate independently and transform business operations across industries. 
-            Our autonomous solutions deliver unprecedented efficiency, accuracy, and innovation.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              to="/contact"
-              className="btn-primary text-lg px-8 py-4 inline-flex items-center"
-            >
-              Get Started
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-            <Link
-              to="/request-quote"
-              className="btn-secondary text-lg px-8 py-4"
-            >
-              Request Demo
-            </Link>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+              Deploy intelligent systems that operate independently, learn continuously, and optimize your business operations 24/7
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Started
+              </Link>
+              <Link 
+                to="/services" 
+                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
+              >
+                View All Services
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* AI Services Grid */}
-      <section className="py-20 bg-gray-900/50">
-        <div className="container mx-auto px-4">
+      {/* Features Section */}
+      <section className="py-20 bg-black/30">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6 text-gradient">
-              Our AI Services
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Core Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Explore our comprehensive range of AI-powered autonomous systems designed to revolutionize your business operations
+              Our autonomous AI systems are built with cutting-edge technology to deliver exceptional performance and reliability
             </p>
           </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-4">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {aiServices.map((service) => (
-              <div
-                key={service.id}
-                className="group bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105"
-              >
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                    <service.icon className="w-8 h-8 text-white" />
+      {/* Use Cases Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Real-World Applications
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover how autonomous AI systems are transforming industries and revolutionizing business operations
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <div key={index} className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl border border-gray-700 hover:border-cyan-500 transition-all duration-300">
+                <div className="flex items-start mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mr-6 flex-shrink-0">
+                    <useCase.icon className="w-8 h-8 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-400">{service.description}</p>
+                    <h3 className="text-2xl font-bold mb-3">{useCase.title}</h3>
+                    <p className="text-gray-300 mb-4">{useCase.description}</p>
                   </div>
                 </div>
-
-                <div className="space-y-3 mb-6">
-                  {service.features.map((feature, index) => (
-                    <div key={index} className="flex items-center space-x-3 text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
-                      <span>{feature}</span>
+                <div className="grid grid-cols-2 gap-3">
+                  {useCase.benefits.map((benefit, idx) => (
+                    <div key={idx} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
+                      {benefit}
                     </div>
                   ))}
-                </div>
-
-                <div className="flex items-center justify-between mb-6">
-                  <span className="text-2xl font-bold text-purple-400">{service.pricing}</span>
-                  <div className="flex items-center space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                </div>
-
-                <div className="pt-4 border-t border-gray-700/50">
-                  <Link
-                    to={service.href}
-                    className="inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors duration-300 text-sm font-medium group"
-                  >
-                    <span>Learn More</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                  </Link>
                 </div>
               </div>
             ))}
@@ -258,28 +223,24 @@ export default function AIAutonomousSystems() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-black/50">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-black/30">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6 text-gradient">
-              Why Choose AI Autonomous Systems?
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Why Choose Autonomous AI?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI systems deliver exceptional value through continuous learning, autonomous operation, and intelligent decision-making
+              Experience the transformative benefits of deploying self-managing AI systems in your organization
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className="text-center group"
-                style={{ opacity: 0, transform: 'translateY(30px)' }}
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <benefit.icon className="w-8 h-8 text-white" />
+              <div key={index} className="text-center group">
+                <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <benefit.icon className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
                 <p className="text-gray-300">{benefit.description}</p>
               </div>
             ))}
@@ -287,64 +248,58 @@ export default function AIAutonomousSystems() {
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-20 bg-gray-900/50">
-        <div className="container mx-auto px-4">
+      {/* Technologies Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6 text-gradient">
-              Industry Applications
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Advanced Technologies
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI autonomous systems are transforming industries across the globe
+              Built on cutting-edge technologies that ensure reliability, security, and performance
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index) => (
-              <div
-                key={index}
-                className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300"
-              >
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
-                    <useCase.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white">{useCase.industry}</h3>
+          
+          <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl border border-gray-700 p-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {technologies.map((tech, index) => (
+                <div key={index} className="flex items-center text-gray-300">
+                  <Microchip className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                  {tech}
                 </div>
-                <p className="text-gray-300">{useCase.description}</p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-900 to-pink-900">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6 text-white">
-            Ready to Embrace the Future of AI?
+      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-700">
+        <div className="max-w-4xl mx-auto text-center px-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+            Ready to Deploy Autonomous AI?
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Transform your business with our cutting-edge AI autonomous systems. 
-            Experience the power of intelligent automation and unprecedented efficiency.
+          <p className="text-xl text-cyan-100 mb-8">
+            Transform your business operations with self-managing AI systems that work around the clock
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              to="/contact"
-              className="btn-primary text-lg px-8 py-4 inline-flex items-center"
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact" 
+              className="px-8 py-4 bg-white text-cyan-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
             >
-              Get Started Today
-              <ArrowRight className="ml-2 w-5 h-5" />
+              Start Your Journey
             </Link>
-            <Link
-              to="/request-quote"
-              className="btn-secondary text-lg px-8 py-4"
+            <Link 
+              to="/services" 
+              className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"
             >
-              Request Quote
+              Explore All Services
             </Link>
           </div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default AIAutonomousSystems;

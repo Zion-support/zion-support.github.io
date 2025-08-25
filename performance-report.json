@@ -1,0 +1,252 @@
+{
+  "summary": {
+    "totalSize": "59.64 MB",
+    "fileCount": 2957,
+    "dependencies": 87,
+    "recommendations": 3
+  },
+  "timestamp": "2025-08-25T21:22:54.050Z",
+  "bundleAnalysis": {
+    "totalSize": 62534631,
+    "fileCount": 2957,
+    "largestFiles": [
+      {
+        "path": "/workspace/dist/search/index.json.backup.1755991116",
+        "size": 3971466,
+        "relativePath": "search/index.json.backup.1755991116",
+        "sizeFormatted": "3.79 MB"
+      },
+      {
+        "path": "/workspace/dist/search/index.json.backup.1755991177",
+        "size": 3971466,
+        "relativePath": "search/index.json.backup.1755991177",
+        "sizeFormatted": "3.79 MB"
+      },
+      {
+        "path": "/workspace/dist/sitemap.xml.backup.1755991178",
+        "size": 2335087,
+        "relativePath": "sitemap.xml.backup.1755991178",
+        "sizeFormatted": "2.23 MB"
+      },
+      {
+        "path": "/workspace/dist/sitemap.xml.backup.1755991116",
+        "size": 2285407,
+        "relativePath": "sitemap.xml.backup.1755991116",
+        "sizeFormatted": "2.18 MB"
+      },
+      {
+        "path": "/workspace/dist/reports/metadata/latest.json.backup.1755991115",
+        "size": 2217377,
+        "relativePath": "reports/metadata/latest.json.backup.1755991115",
+        "sizeFormatted": "2.11 MB"
+      },
+      {
+        "path": "/workspace/dist/reports/metadata/latest.json.backup.1755991177",
+        "size": 2217377,
+        "relativePath": "reports/metadata/latest.json.backup.1755991177",
+        "sizeFormatted": "2.11 MB"
+      },
+      {
+        "path": "/workspace/dist/reports/metadata/latest.json",
+        "size": 2213146,
+        "relativePath": "reports/metadata/latest.json",
+        "sizeFormatted": "2.11 MB"
+      },
+      {
+        "path": "/workspace/dist/sitemap.xml.backup.1755992060",
+        "size": 1871451,
+        "relativePath": "sitemap.xml.backup.1755992060",
+        "sizeFormatted": "1.78 MB"
+      },
+      {
+        "path": "/workspace/dist/reports/metadata/index.html.backup.1755991115",
+        "size": 1778023,
+        "relativePath": "reports/metadata/index.html.backup.1755991115",
+        "sizeFormatted": "1.7 MB"
+      },
+      {
+        "path": "/workspace/dist/reports/metadata/index.html.backup.1755991177",
+        "size": 1778023,
+        "relativePath": "reports/metadata/index.html.backup.1755991177",
+        "sizeFormatted": "1.7 MB"
+      }
+    ],
+    "chunks": [
+      {
+        "name": "root",
+        "size": 62518538,
+        "sizeFormatted": "59.62 MB",
+        "fileCount": 2936
+      },
+      {
+        "name": "index",
+        "size": 13659,
+        "sizeFormatted": "13.34 KB",
+        "fileCount": 1
+      },
+      {
+        "name": "legal_bundle/privacy_policy.md",
+        "size": 830,
+        "sizeFormatted": "830 Bytes",
+        "fileCount": 1
+      },
+      {
+        "name": "legal_bundle/terms_of_use.md",
+        "size": 670,
+        "sizeFormatted": "670 Bytes",
+        "fileCount": 1
+      },
+      {
+        "name": "media_kit/logos/zion_logo_color.svg",
+        "size": 241,
+        "sizeFormatted": "241 Bytes",
+        "fileCount": 1
+      },
+      {
+        "name": "media_kit/logos/zion_logo_white.png",
+        "size": 159,
+        "sizeFormatted": "159 Bytes",
+        "fileCount": 1
+      },
+      {
+        "name": "social_media_kit/banners/linkedin_banner.png",
+        "size": 159,
+        "sizeFormatted": "159 Bytes",
+        "fileCount": 1
+      },
+      {
+        "name": "social_media_kit/banners/twitter_banner.png",
+        "size": 159,
+        "sizeFormatted": "159 Bytes",
+        "fileCount": 1
+      },
+      {
+        "name": "social_media_kit/gifs/promo_banner.gif",
+        "size": 79,
+        "sizeFormatted": "79 Bytes",
+        "fileCount": 1
+      },
+      {
+        "name": "media_kit/press_release_templates/press_release_launch_template.md",
+        "size": 49,
+        "sizeFormatted": "49 Bytes",
+        "fileCount": 1
+      },
+      {
+        "name": "media_kit/press_release_templates/press_release_seed_round_template.md",
+        "size": 44,
+        "sizeFormatted": "44 Bytes",
+        "fileCount": 1
+      },
+      {
+        "name": "media_kit/press_release_templates/press_release_token_sale_template.md",
+        "size": 44,
+        "sizeFormatted": "44 Bytes",
+        "fileCount": 1
+      },
+      {
+        "name": "legal_bundle/dao_disclaimer.md",
+        "size": 0,
+        "sizeFormatted": "0 Bytes",
+        "fileCount": 1
+      },
+      {
+        "name": "legal_bundle/jurisdictional_disclosures.md",
+        "size": 0,
+        "sizeFormatted": "0 Bytes",
+        "fileCount": 1
+      },
+      {
+        "name": "legal_bundle/token_sale_notice.md",
+        "size": 0,
+        "sizeFormatted": "0 Bytes",
+        "fileCount": 1
+      },
+      {
+        "name": "media_kit/zion_brand_guidelines.md",
+        "size": 0,
+        "sizeFormatted": "0 Bytes",
+        "fileCount": 1
+      },
+      {
+        "name": "media_kit/zion_color_palette.md",
+        "size": 0,
+        "sizeFormatted": "0 Bytes",
+        "fileCount": 1
+      },
+      {
+        "name": "media_kit/zion_typography.md",
+        "size": 0,
+        "sizeFormatted": "0 Bytes",
+        "fileCount": 1
+      },
+      {
+        "name": "post_launch_playbook.md",
+        "size": 0,
+        "sizeFormatted": "0 Bytes",
+        "fileCount": 1
+      },
+      {
+        "name": "pre_launch_playbook.md",
+        "size": 0,
+        "sizeFormatted": "0 Bytes",
+        "fileCount": 1
+      },
+      {
+        "name": "sample_zion_kit.pdf",
+        "size": 0,
+        "sizeFormatted": "0 Bytes",
+        "fileCount": 1
+      },
+      {
+        "name": "social_media_kit/copy_blocks/explainer_copy_1.txt",
+        "size": 0,
+        "sizeFormatted": "0 Bytes",
+        "fileCount": 1
+      }
+    ]
+  },
+  "dependencyAnalysis": {
+    "totalDependencies": 87,
+    "productionDependencies": 58,
+    "devDependencies": 29,
+    "largePackages": []
+  },
+  "recommendations": [
+    {
+      "category": "Bundle Size",
+      "priority": "High",
+      "title": "Reduce Bundle Size",
+      "description": "Bundle size exceeds 1MB. Consider code splitting and tree shaking.",
+      "actions": [
+        "Implement dynamic imports for route-based code splitting",
+        "Review and remove unused dependencies",
+        "Optimize images and assets",
+        "Use compression (gzip/brotli)"
+      ]
+    },
+    {
+      "category": "Code Splitting",
+      "priority": "Medium",
+      "title": "Optimize Large Chunks",
+      "description": "Found 1 chunks larger than 200KB.",
+      "actions": [
+        "Review chunk splitting strategy in vite.config.ts",
+        "Implement lazy loading for heavy components",
+        "Consider vendor chunk optimization"
+      ]
+    },
+    {
+      "category": "Best Practices",
+      "priority": "Low",
+      "title": "Performance Monitoring",
+      "description": "Implement ongoing performance monitoring.",
+      "actions": [
+        "Set up Core Web Vitals monitoring",
+        "Implement performance budgets",
+        "Regular bundle analysis",
+        "User experience metrics tracking"
+      ]
+    }
+  ]
+}
