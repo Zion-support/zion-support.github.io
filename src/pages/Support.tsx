@@ -1,262 +1,407 @@
 import React, { useState } from 'react';
-import { MessageCircle, Phone, Mail, Clock, FileText, Users, Search, Send, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { 
+  MessageCircle, 
+  Phone, 
+  Mail, 
+  Clock, 
+  Users,
+  FileText,
+  Video,
+  Calendar,
+  MapPin,
+  Globe,
+  ChevronRight,
+  CheckCircle,
+  AlertCircle,
+  XCircle,
+  Star,
+  Rocket,
+  Brain,
+  Shield
+} from 'lucide-react';
 
 const Support = () => {
   const [selectedCategory, setSelectedCategory] = useState('general');
-  const [message, setMessage] = useState('');
-  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const supportCategories = [
-    { id: 'general', name: 'General Support', icon: MessageCircle, description: 'General questions and assistance' },
-    { id: 'technical', name: 'Technical Support', icon: FileText, description: 'Technical issues and troubleshooting' },
-    { id: 'billing', name: 'Billing & Payments', icon: CheckCircle, description: 'Billing questions and payment issues' },
-    { id: 'feature', name: 'Feature Requests', icon: Users, description: 'Suggest new features or improvements' }
-  ];
-
-  const faqs = [
     {
-      question: 'How do I get started with Zion Tech Group services?',
-      answer: 'Getting started is easy! Simply contact our team through the contact form or call us directly. We\'ll schedule a consultation to understand your needs and recommend the best solutions.'
+      id: 'general',
+      title: 'General Support',
+      icon: Users,
+      description: 'General questions and account support',
+      priority: 'medium',
+      responseTime: '2-4 hours'
     },
     {
-      question: 'What AI services do you offer?',
-      answer: 'We offer comprehensive AI services including autonomous systems, machine learning solutions, AI research assistance, and custom AI development for your specific business needs.'
+      id: 'technical',
+      title: 'Technical Support',
+      icon: FileText,
+      description: 'Technical issues and troubleshooting',
+      priority: 'high',
+      responseTime: '1-2 hours'
     },
     {
-      question: 'Do you provide 24/7 support?',
-      answer: 'Yes, we provide 24/7 monitoring and support for critical systems. Our support team is available during business hours, and we have emergency response procedures for urgent issues.'
+      id: 'billing',
+      title: 'Billing Support',
+      icon: CheckCircle,
+      description: 'Billing, payments, and subscription issues',
+      priority: 'high',
+      responseTime: '1-2 hours'
     },
     {
-      question: 'What industries do you serve?',
-      answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, government, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards.'
+      id: 'ai-services',
+      title: 'AI Services Support',
+      icon: Brain,
+      description: 'AI and machine learning service support',
+      priority: 'high',
+      responseTime: '1-3 hours'
+    },
+    {
+      id: 'security',
+      title: 'Security Support',
+      icon: Shield,
+      description: 'Security incidents and compliance questions',
+      priority: 'critical',
+      responseTime: '30 minutes - 1 hour'
+    },
+    {
+      id: 'enterprise',
+      title: 'Enterprise Support',
+      icon: Rocket,
+      description: 'Enterprise customer support and account management',
+      priority: 'critical',
+      responseTime: '30 minutes - 1 hour'
     }
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitted(true);
-    setMessage('');
-    // In a real application, this would send the message to a backend service
+  const contactMethods = [
+    {
+      title: 'Live Chat',
+      icon: MessageCircle,
+      description: 'Get instant help from our support team',
+      availability: '24/7',
+      responseTime: 'Immediate',
+      color: 'from-green-500 to-emerald-500',
+      path: '/chat'
+    },
+    {
+      title: 'Phone Support',
+      icon: Phone,
+      description: 'Call us directly for urgent issues',
+      availability: 'Mon-Fri 9AM-6PM EST',
+      responseTime: 'Immediate',
+      color: 'from-blue-500 to-cyan-500',
+      path: 'tel:+13024640950'
+    },
+    {
+      title: 'Email Support',
+      icon: Mail,
+      description: 'Send detailed messages for complex issues',
+      availability: '24/7',
+      responseTime: '2-4 hours',
+      color: 'from-purple-500 to-pink-500',
+      path: 'mailto:kleber@ziontechgroup.com'
+    },
+    {
+      title: 'Schedule Call',
+      icon: Calendar,
+      description: 'Book a dedicated support session',
+      availability: 'Mon-Fri 9AM-6PM EST',
+      responseTime: 'Scheduled',
+      color: 'from-orange-500 to-red-500',
+      path: '/schedule'
+    }
+  ];
+
+  const faqCategories = [
+    {
+      title: 'Getting Started',
+      questions: [
+        'How do I create my first project?',
+        'What are the system requirements?',
+        'How do I set up my account?'
+      ]
+    },
+    {
+      title: 'AI Services',
+      questions: [
+        'How do I integrate AI services?',
+        'What AI models do you support?',
+        'How do I train custom AI models?'
+      ]
+    },
+    {
+      title: 'Billing & Pricing',
+      questions: [
+        'How does your pricing work?',
+        'Can I change my plan?',
+        'What payment methods do you accept?'
+      ]
+    }
+  ];
+
+  const supportTiers = [
+    {
+      name: 'Basic Support',
+      description: 'Standard support for all customers',
+      features: [
+        'Email support (2-4 hour response)',
+        'Help center access',
+        'Community forum access',
+        'Documentation access'
+      ],
+      included: true
+    },
+    {
+      name: 'Priority Support',
+      description: 'Enhanced support for business customers',
+      features: [
+        'Phone support (1-2 hour response)',
+        'Live chat support',
+        'Priority ticket handling',
+        'Dedicated support team'
+      ],
+      included: false
+    },
+    {
+      name: 'Enterprise Support',
+      description: 'Premium support for enterprise customers',
+      features: [
+        '24/7 phone support',
+        'Dedicated account manager',
+        'Custom SLA agreements',
+        'On-site support available'
+      ],
+      included: false
+    }
+  ];
+
+  const getPriorityColor = (priority: string) => {
+    switch (priority) {
+      case 'critical':
+        return 'text-red-400 bg-red-400/10';
+      case 'high':
+        return 'text-orange-400 bg-orange-400/10';
+      case 'medium':
+        return 'text-yellow-400 bg-yellow-400/10';
+      case 'low':
+        return 'text-green-400 bg-green-400/10';
+      default:
+        return 'text-gray-400 bg-gray-400/10';
+    }
+  };
+
+  const getPriorityIcon = (priority: string) => {
+    switch (priority) {
+      case 'critical':
+        return <XCircle className="w-4 h-4" />;
+      case 'high':
+        return <AlertCircle className="w-4 h-4" />;
+      case 'medium':
+        return <Clock className="w-4 h-4" />;
+      case 'low':
+        return <CheckCircle className="w-4 h-4" />;
+      default:
+        return <Clock className="w-4 h-4" />;
+    }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Header */}
-      <div className="pt-20 pb-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-4">
-              Support Center
-            </h1>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              We're here to help you succeed with Zion Tech Group solutions
-            </p>
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
+      <div className="container mx-auto px-4 py-12">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center mb-6">
+            <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mr-4">
+              <MessageCircle className="w-8 h-8 text-white" />
+            </div>
+            <div>
+              <h1 className="text-5xl font-bold text-white mb-2">Support Center</h1>
+              <p className="text-xl text-zion-slate-light">Get the help you need, when you need it</p>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Contact Methods */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-gradient-to-br from-blue-500/10 to-blue-600/10 backdrop-blur-sm rounded-2xl border border-blue-500/20 p-6 text-center">
-            <Phone className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
-            <p className="text-gray-300 mb-4">Speak directly with our support team</p>
-            <a 
-              href="tel:+13024640950" 
-              className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
-            >
-              +1 (302) 464-0950
-            </a>
-          </div>
-
-          <div className="bg-gradient-to-br from-green-500/10 to-green-600/10 backdrop-blur-sm rounded-2xl border border-green-500/20 p-6 text-center">
-            <Mail className="w-12 h-12 text-green-400 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-white mb-2">Email Support</h3>
-            <p className="text-gray-300 mb-4">Send us a detailed message</p>
-            <a 
-              href="mailto:support@ziontechgroup.com" 
-              className="inline-flex items-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors"
-            >
-              support@ziontechgroup.com
-            </a>
-          </div>
-
-          <div className="bg-gradient-to-br from-purple-500/10 to-purple-600/10 backdrop-blur-sm rounded-2xl border border-purple-500/20 p-6 text-center">
-            <Clock className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-white mb-2">Business Hours</h3>
-            <p className="text-gray-300 mb-4">Monday - Friday</p>
-            <p className="text-cyan-400 font-medium">9:00 AM - 6:00 PM EST</p>
+        {/* Contact Methods */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Get Support</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {contactMethods.map((method, index) => (
+              <Link
+                key={index}
+                to={method.path}
+                className="group bg-white/5 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 transform hover:scale-105"
+              >
+                <div className={`w-12 h-12 bg-gradient-to-r ${method.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <method.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-zion-cyan transition-colors">
+                  {method.title}
+                </h3>
+                <p className="text-sm text-zion-slate-light mb-3">{method.description}</p>
+                <div className="space-y-1 text-xs text-zion-slate-light">
+                  <div className="flex items-center justify-between">
+                    <span>Availability:</span>
+                    <span className="text-zion-cyan">{method.availability}</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span>Response:</span>
+                    <span className="text-zion-cyan">{method.responseTime}</span>
+                  </div>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
-      </div>
 
-      {/* Support Categories */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-        <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-2xl border border-gray-600/30 p-8">
-          <h2 className="text-2xl font-semibold text-white mb-6">How can we help you?</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {supportCategories.map((category) => {
-              const Icon = category.icon;
-              return (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`p-6 rounded-xl border transition-all duration-200 text-left ${
-                    selectedCategory === category.id
-                      ? 'border-cyan-500 bg-cyan-500/10'
-                      : 'border-gray-600 hover:border-gray-500 hover:bg-gray-700/30'
-                  }`}
-                >
-                  <div className="flex items-start space-x-4">
-                    <Icon className={`w-8 h-8 mt-1 ${
-                      selectedCategory === category.id ? 'text-cyan-400' : 'text-gray-400'
-                    }`} />
+        {/* Support Categories */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Support Categories</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {supportCategories.map((category) => (
+              <div
+                key={category.id}
+                onClick={() => setSelectedCategory(category.id)}
+                className={`cursor-pointer bg-white/5 backdrop-blur-sm border rounded-xl p-6 transition-all duration-300 hover:bg-white/10 ${
+                  selectedCategory === category.id
+                    ? 'border-zion-cyan bg-zion-cyan/10'
+                    : 'border-zion-cyan/20'
+                }`}
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mr-4">
+                      <category.icon className="w-6 h-6 text-white" />
+                    </div>
                     <div>
-                      <h3 className="font-semibold text-white mb-2">{category.name}</h3>
-                      <p className="text-sm text-gray-400">{category.description}</p>
+                      <h3 className="text-xl font-semibold text-white">{category.title}</h3>
+                      <p className="text-zion-slate-light">{category.description}</p>
                     </div>
                   </div>
-                </button>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-
-      {/* Contact Form */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-        <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-2xl border border-gray-600/30 p-8">
-          <h2 className="text-2xl font-semibold text-white mb-6">Send us a message</h2>
-          
-          {isSubmitted ? (
-            <div className="text-center py-12">
-              <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-              <h3 className="text-xl font-medium text-white mb-2">Message Sent Successfully!</h3>
-              <p className="text-gray-400 mb-6">We'll get back to you within 24 hours.</p>
-              <button
-                onClick={() => setIsSubmitted(false)}
-                className="px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors"
-              >
-                Send Another Message
-              </button>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">First Name</label>
-                  <input
-                    type="text"
-                    required
-                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Enter your first name"
-                  />
+                  <div className="flex items-center space-x-2">
+                    {getPriorityIcon(category.priority)}
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${getPriorityColor(category.priority)}`}>
+                      {category.priority}
+                    </span>
+                  </div>
                 </div>
                 
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Last Name</label>
-                  <input
-                    type="text"
-                    required
-                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Enter your last name"
-                  />
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-zion-slate-light">Response Time:</span>
+                  <span className="text-zion-cyan font-semibold">{category.responseTime}</span>
                 </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Email</label>
-                  <input
-                    type="email"
-                    required
-                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Enter your email address"
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">Phone (Optional)</label>
-                  <input
-                    type="tel"
-                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Enter your phone number"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">Subject</label>
-                <input
-                  type="text"
-                  required
-                  className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  placeholder="Brief description of your inquiry"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2">Message</label>
-                <textarea
-                  required
-                  rows={6}
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
-                  placeholder="Please describe your question or issue in detail..."
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full md:w-auto px-8 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-200 flex items-center justify-center space-x-2"
-              >
-                <Send className="w-5 h-5" />
-                <span>Send Message</span>
-              </button>
-            </form>
-          )}
-        </div>
-      </div>
-
-      {/* FAQ Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-        <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-2xl border border-gray-600/30 p-8">
-          <h2 className="text-2xl font-semibold text-white mb-6">Frequently Asked Questions</h2>
-          
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <div key={index} className="border border-gray-600 rounded-lg p-6">
-                <h3 className="text-lg font-medium text-white mb-3">{faq.question}</h3>
-                <p className="text-gray-300">{faq.answer}</p>
               </div>
             ))}
           </div>
         </div>
-      </div>
 
-      {/* Additional Resources */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-        <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-2xl border border-gray-600/30 p-8">
-          <h2 className="text-2xl font-semibold text-white mb-6">Additional Resources</h2>
+        {/* FAQ Section */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Frequently Asked Questions</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {faqCategories.map((category, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6">
+                <h3 className="text-xl font-semibold text-white mb-4">{category.title}</h3>
+                <div className="space-y-3">
+                  {category.questions.map((question, qIndex) => (
+                    <Link
+                      key={qIndex}
+                      to={`/help/${category.title.toLowerCase().replace(/\s+/g, '-')}/${qIndex}`}
+                      className="block p-3 rounded-lg hover:bg-white/5 transition-colors group"
+                    >
+                      <div className="flex items-center justify-between">
+                        <span className="text-zion-slate-light group-hover:text-zion-cyan transition-colors">
+                          {question}
+                        </span>
+                        <ChevronRight className="w-4 h-4 text-zion-slate-light group-hover:text-zion-cyan group-hover:translate-x-1 transition-all duration-300" />
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Support Tiers */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Support Tiers</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {supportTiers.map((tier, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6">
+                <div className="text-center mb-6">
+                  <h3 className="text-xl font-semibold text-white mb-2">{tier.name}</h3>
+                  <p className="text-zion-slate-light">{tier.description}</p>
+                </div>
+                
+                <div className="space-y-3 mb-6">
+                  {tier.features.map((feature, fIndex) => (
+                    <div key={fIndex} className="flex items-center space-x-2">
+                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <span className="text-sm text-zion-slate-light">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="text-center">
+                  {tier.included ? (
+                    <span className="inline-block px-4 py-2 bg-green-500/20 text-green-400 rounded-lg font-medium">
+                      Included
+                    </span>
+                  ) : (
+                    <Link
+                      to="/contact"
+                      className="inline-block px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-lg font-medium hover:bg-zion-cyan/30 transition-colors"
+                    >
+                      Contact Sales
+                    </Link>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Contact Information */}
+        <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 border border-zion-cyan/20 rounded-2xl p-8">
+          <h2 className="text-3xl font-bold text-white text-center mb-8">Contact Information</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-6 bg-gradient-to-br from-cyan-500/10 to-cyan-600/10 rounded-xl border border-cyan-500/20">
-              <h3 className="text-lg font-semibold text-white mb-3">Documentation</h3>
-              <p className="text-gray-300 mb-4">Access our comprehensive documentation and user guides</p>
-              <a href="/docs" className="text-cyan-400 hover:text-cyan-300 font-medium">
-                View Documentation →
-              </a>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="text-center">
+              <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Phone className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
+              <p className="text-zion-slate-light mb-2">+1 302 464 0950</p>
+              <p className="text-xs text-zion-slate-light">Mon-Fri 9AM-6PM EST</p>
             </div>
             
-            <div className="p-6 bg-gradient-to-br from-purple-500/10 to-purple-600/10 rounded-xl border border-purple-500/20">
-              <h3 className="text-lg font-semibold text-white mb-3">Help Center</h3>
-              <p className="text-gray-300 mb-4">Browse our help articles and troubleshooting guides</p>
-              <a href="/help" className="text-purple-400 hover:text-purple-300 font-medium">
-                Visit Help Center →
-              </a>
+            <div className="text-center">
+              <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Mail className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
+              <p className="text-zion-slate-light mb-2">kleber@ziontechgroup.com</p>
+              <p className="text-xs text-zion-slate-light">24/7 Support</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4">
+                <MapPin className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
+              <p className="text-zion-slate-light mb-2">364 E Main St STE 1008</p>
+              <p className="text-xs text-zion-slate-light">Middletown DE 19709</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Globe className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Website</h3>
+              <p className="text-zion-slate-light mb-2">ziontechgroup.com</p>
+              <p className="text-xs text-zion-slate-light">24/7 Access</p>
             </div>
           </div>
         </div>
