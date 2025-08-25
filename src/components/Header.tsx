@@ -81,6 +81,19 @@ export function Header() {
       hasDropdown: true
     },
     { 
+      path: '/ai-autonomous-business-manager', 
+      label: 'AI Business', 
+      icon: '🧠',
+      description: 'AI-powered business solutions',
+      hasDropdown: true
+    },
+    { 
+      path: '/5g-enterprise-solutions', 
+      label: '5G Solutions', 
+      icon: '📡',
+      description: 'Next-generation connectivity'
+    },
+    { 
       path: '/case-studies', 
       label: 'Case Studies', 
       icon: '📊',
@@ -120,7 +133,7 @@ export function Header() {
       color: 'from-purple-500 to-pink-500',
       services: [
         { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', description: 'Advanced autonomous AI systems', icon: Brain },
-        { name: 'AI Workflow Automation', path: '/services/ai-workflow-automation', description: 'Intelligent process automation', icon: Brain },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Intelligent process automation', icon: Brain },
         { name: 'AI Customer Intelligence', path: '/services/ai-customer-intelligence', description: 'Customer behavior insights', icon: Users },
         { name: 'AI Predictive Analytics', path: '/services/ai-predictive-analytics', description: 'Future-focused analytics', icon: BarChart3 },
         { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', description: 'AI-powered research automation', icon: Brain },
@@ -145,7 +158,9 @@ export function Header() {
       services: [
         { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', description: 'Quantum-powered neural networks', icon: Brain },
         { name: 'Quantum Computing', path: '/services/quantum-technology', description: 'Quantum computing platforms', icon: Cpu },
-        { name: 'Quantum-Safe Security', path: '/services/quantum-security', description: 'Future-proof quantum security', icon: Shield }
+        { name: 'Quantum-Safe Security', path: '/services/quantum-security', description: 'Future-proof quantum security', icon: Shield },
+        { name: 'Quantum Cloud Infrastructure', path: '/quantum-cloud-infrastructure', description: 'Quantum-secure cloud solutions', icon: Cloud },
+        { name: 'Quantum Financial Trading', path: '/quantum-financial-trading', description: 'Quantum-powered trading platforms', icon: DollarSign }
       ]
     },
     {
@@ -156,7 +171,9 @@ export function Header() {
       services: [
         { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', description: 'Self-operating business systems', icon: Building },
         { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', description: 'Intelligent IT asset management', icon: Database },
-        { name: 'Business Intelligence', path: '/services/ai-business-intelligence', description: 'Advanced business analytics', icon: BarChart3 }
+        { name: 'Business Intelligence', path: '/services/ai-business-intelligence', description: 'Advanced business analytics', icon: BarChart3 },
+        { name: 'Advanced AI Automation', path: '/advanced-ai-automation-services', description: 'Enterprise AI automation', icon: Zap },
+        { name: 'Advanced IT Infrastructure', path: '/advanced-it-infrastructure-services', description: 'Next-gen IT infrastructure', icon: Cpu }
       ]
     },
     {
@@ -167,6 +184,7 @@ export function Header() {
       services: [
         { name: 'Cybersecurity Services', path: '/services/cybersecurity', description: 'Complete security solutions', icon: Shield },
         { name: 'SOC2 Compliance Automation', path: '/soc2-compliance-automation', description: 'Automated compliance management', icon: Lock },
+        { name: 'Advanced Cybersecurity Suite', path: '/advanced-cybersecurity-suite', description: 'Enterprise security solutions', icon: Shield },
         { name: 'Security Assessment', path: '/services/security-assessment', description: 'Security audit and testing', icon: Shield },
         { name: 'Compliance & Audit', path: '/services/compliance-audit', description: 'Regulatory compliance support', icon: Lock },
         { name: 'Threat Detection', path: '/services/threat-detection', description: 'Real-time security monitoring', icon: Shield }
@@ -182,6 +200,9 @@ export function Header() {
         { name: 'Cloud DevOps', path: '/cloud-devops', description: 'Cloud development and operations', icon: Cpu },
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', description: 'Complete IT infrastructure solutions', icon: Network },
         { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', description: 'High-speed 5G connectivity', icon: Network },
+        { name: '5G Enterprise Network', path: '/5g-enterprise-network', description: 'Enterprise 5G networks', icon: Network },
+        { name: '5G Network Optimization', path: '/5g-network-optimization', description: '5G performance optimization', icon: Zap },
+        { name: '5G Private Networks', path: '/5g-private-network-solutions', description: 'Private 5G solutions', icon: Shield },
         { name: 'Cloud Migration', path: '/services/cloud-migration', description: 'Seamless cloud transition', icon: Cloud },
         { name: 'Network Infrastructure', path: '/services/network-infrastructure', description: 'Robust network solutions', icon: Network },
         { name: 'Managed IT Services', path: '/services/managed-it-services', description: '24/7 IT support', icon: Clock },
@@ -195,9 +216,13 @@ export function Header() {
       color: 'from-purple-500 to-violet-500',
       services: [
         { name: 'Blockchain Solutions', path: '/services/blockchain-solutions', description: 'Decentralized applications', icon: Code },
+        { name: 'AI Blockchain Governance', path: '/ai-blockchain-governance', description: 'AI-powered blockchain management', icon: Brain },
         { name: 'IoT Platforms', path: '/services/iot-platforms', description: 'Connected device management', icon: Network },
+        { name: 'IoT Data Analytics', path: '/iot-data-analytics', description: 'IoT intelligence and insights', icon: BarChart3 },
         { name: 'Quantum Computing', path: '/services/quantum-computing', description: 'Next-generation computing', icon: Cpu },
-        { name: 'AR/VR Solutions', path: '/services/ar-vr-solutions', description: 'Immersive experiences', icon: Eye }
+        { name: 'AR/VR Solutions', path: '/services/ar-vr-solutions', description: 'Immersive experiences', icon: Eye },
+        { name: 'Space Technology', path: '/space-tech', description: 'Space tech solutions', icon: Rocket },
+        { name: 'AI Brain Interface', path: '/ai-brain-interface', description: 'Brain-computer interfaces', icon: Brain }
       ]
     },
     {

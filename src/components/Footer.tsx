@@ -9,6 +9,8 @@ export function Footer() {
       links: [
         { label: "AI & Autonomous Systems", path: "/services/ai-autonomous-systems" },
         { label: "AI Research Assistant", path: "/ai-autonomous-research-assistant" },
+        { label: "AI Business Manager", path: "/ai-autonomous-business-manager" },
+        { label: "AI Business Platform", path: "/ai-autonomous-business-platform" },
         { label: "Quantum Neural Networks", path: "/quantum-neural-network-platform" },
         { label: "Autonomous Business Platform", path: "/autonomous-business-operations-platform" },
         { label: "AI Asset Management", path: "/ai-powered-it-asset-management" },
@@ -18,11 +20,9 @@ export function Footer() {
         { label: "Cybersecurity", path: "/services/cybersecurity" },
         { label: "SOC2 Compliance Automation", path: "/soc2-compliance-automation" },
         { label: "Industry Solutions", path: "/services/industry-solutions" },
-        { label: "AI & Machine Learning", path: "/services#ai-ml" },
-        { label: "Cloud & Infrastructure", path: "/services#cloud" },
         { label: "5G Enterprise Solutions", path: "/5g-enterprise-solutions" },
-        { label: "Blockchain Solutions", path: "/services#blockchain" },
-        { label: "IoT & Edge Computing", path: "/services#iot" }
+        { label: "Blockchain Solutions", path: "/services/blockchain-solutions" },
+        { label: "IoT & Edge Computing", path: "/services/iot-platforms" }
       ]
     },
     {
@@ -34,22 +34,23 @@ export function Footer() {
         { label: "Manufacturing Solutions", path: "/solutions/manufacturing" },
         { label: "Retail Solutions", path: "/solutions/retail" },
         { label: "Government Solutions", path: "/solutions/government" },
-        { label: "Business Intelligence", path: "/services/business-intelligence" },
-        { label: "Marketing Automation", path: "/services/ai-marketing" },
-        { label: "HR & Recruitment", path: "/services/ai-hr" },
-        { label: "Legal Tech", path: "/services/ai-legal" }
+        { label: "Business Intelligence", path: "/services/ai-business-intelligence" },
+        { label: "Marketing Automation", path: "/services/ai-marketing-automation" },
+        { label: "HR & Recruitment", path: "/services/ai-hr-recruitment" },
+        { label: "Legal Tech", path: "/services/ai-legal-tech" }
       ]
     },
     {
       title: "Emerging Tech",
       links: [
-        { label: "Quantum Computing", path: "/emerging-tech" },
-        { label: "Blockchain & DeFi", path: "/emerging-tech" },
-        { label: "IoT & Edge Computing", path: "/emerging-tech" },
-        { label: "Extended Reality (XR)", path: "/emerging-tech" },
-        { label: "5G & Networks", path: "/emerging-tech" },
-        { label: "Green Technology", path: "/emerging-tech" },
-        { label: "Digital Twins", path: "/emerging-tech" }
+        { label: "Quantum Computing", path: "/services/quantum-technology" },
+        { label: "Quantum Neural Networks", path: "/quantum-neural-network-platform" },
+        { label: "Blockchain & DeFi", path: "/services/blockchain-solutions" },
+        { label: "IoT & Edge Computing", path: "/services/iot-platforms" },
+        { label: "Extended Reality (XR)", path: "/services/ar-vr-solutions" },
+        { label: "5G & Networks", path: "/5g-enterprise-solutions" },
+        { label: "Space Technology", path: "/space-tech" },
+        { label: "Digital Twins", path: "/services/digital-twins" }
       ]
     },
     {
@@ -62,7 +63,8 @@ export function Footer() {
         { label: "Careers", path: "/careers" },
         { label: "Partners", path: "/partners" },
         { label: "Contact", path: "/contact" },
-        { label: "Blog", path: "/blog" }
+        { label: "Blog", path: "/blog" },
+        { label: "News", path: "/news" }
       ]
     },
     {
@@ -72,7 +74,10 @@ export function Footer() {
         { label: "Case Studies", path: "/case-studies" },
         { label: "Help Center", path: "/help" },
         { label: "Documentation", path: "/docs" },
-        { label: "Support Center", path: "/support" }
+        { label: "Support Center", path: "/support" },
+        { label: "White Papers", path: "/white-papers" },
+        { label: "Webinars", path: "/webinars" },
+        { label: "Events", path: "/events" }
       ]
     }
   ];
