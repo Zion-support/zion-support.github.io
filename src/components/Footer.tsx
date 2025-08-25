@@ -81,7 +81,7 @@ export function Footer() {
   const socialLinks = [
     { 
       name: 'LinkedIn', 
-      url: 'https://www.linkedin.com/company/ziontechgroup', 
+      url: 'https://www.linkedin.com/company/zion-tech-group', 
       icon: '💼',
       fallback: 'https://linkedin.com'
     },
@@ -93,7 +93,7 @@ export function Footer() {
     },
     { 
       name: 'GitHub', 
-      url: 'https://github.com/ziontechgroup', 
+      url: 'https://github.com/Zion-Holdings', 
       icon: '💻',
       fallback: 'https://github.com'
     },
@@ -240,6 +240,12 @@ export function Footer() {
             </Link>
             <Link to="/accessibility" className="hover:text-cyan-400 transition-colors duration-200">
               Accessibility
+            </Link>
+            <Link to="/sitemap" className="hover:text-cyan-400 transition-colors duration-200">
+              Sitemap
+            </Link>
+            <Link to="/help" className="hover:text-cyan-400 transition-colors duration-200">
+              Help Center
             </Link>
           </div>
         </div>

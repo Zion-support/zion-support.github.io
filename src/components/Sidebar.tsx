@@ -50,9 +50,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       items: [
         { name: 'About Us', path: '/about', icon: Users },
         { name: 'Our Team', path: '/team', icon: Users },
-        { name: 'Careers', path: '/careers', icon: Briefcase },
         { name: 'Partners', path: '/partners', icon: Handshake },
-        { name: 'Blog', path: '/blog', icon: Globe },
         { name: 'Case Studies', path: '/case-studies', icon: Globe },
         { name: 'Help Center', path: '/help', icon: Globe }
       ]
@@ -75,7 +73,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
+    { icon: Linkedin, href: 'https://linkedin.com/company/zion-tech-group', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Facebook, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' },
     { icon: Instagram, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' }
