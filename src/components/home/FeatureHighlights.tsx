@@ -146,9 +146,9 @@ export function FeatureHighlights() {
               </Card>
             </motion.div>
           ))}
-        </motion.div>
-        
-        {/* Bottom CTA */}
+        </div>
+
+        {/* Call to action */}
         <motion.div 
           className="text-center mt-16"
           initial={{ opacity: 0, y: 30 }}

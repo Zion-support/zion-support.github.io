@@ -20,12 +20,21 @@ export default defineConfig(async () => ({
     },
   },
   build: {
-    target: 'es2015',
+    target: 'es2020',
     minify: 'terser',
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info'],
+        dead_code: true,
+        unused: true,
+      },
+      mangle: {
+        safari10: true,
+      },
+      output: {
+        comments: false,
       },
     },
     rollupOptions: {
@@ -55,25 +64,10 @@ export default defineConfig(async () => ({
       }
     },
     chunkSizeWarningLimit: 500,
-    reportCompressedSize: true,
-    emptyOutDir: true,
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        passes: 3,
-        unsafe: true,
-        unsafe_comps: true,
-        unsafe_Function: true,
-        unsafe_math: true,
-        unsafe_proto: true,
-        unsafe_regexp: true,
-        unsafe_undefined: true
-      },
-      mangle: {
-        safari10: true
-      }
-    }
+    sourcemap: false,
+    reportCompressedSize: false,
+    cssCodeSplit: true,
+    assetsInlineLimit: 4096,
   },
   optimizeDeps: {
     esbuildOptions: {
