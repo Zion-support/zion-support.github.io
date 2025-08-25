@@ -23,7 +23,7 @@ export function NewServices() {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
+                         (('tags' in service && service.tags) ? service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())) : false);
     return matchesCategory && matchesSearch;
   });
 

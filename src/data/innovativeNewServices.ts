@@ -15,6 +15,8 @@ export interface InnovativeNewService {
   estimatedDelivery: string;
   supportLevel: string;
   marketPrice: string;
+  roi: string;
+  innovationLevel: string;
   contactInfo: {
     phone: string;
     email: string;
@@ -77,6 +79,8 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
     estimatedDelivery: "8-12 weeks",
     supportLevel: "enterprise",
     marketPrice: "$4,999 - $15,000/month",
+    roi: "300-500%",
+    innovationLevel: "Revolutionary",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -131,6 +135,8 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,999 - $8,999/month",
+    roi: "200-350%",
+    innovationLevel: "Advanced",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -185,6 +191,8 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$1,999 - $5,999/month",
+    roi: "150-300%",
+    innovationLevel: "Innovative",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",

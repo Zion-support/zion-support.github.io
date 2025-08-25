@@ -18,10 +18,10 @@ import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import EnhancedSEO from './components/EnhancedSEO';
 import EnhancedAccessibility from './components/EnhancedAccessibility';
-import { PerformanceMonitor } from './components/PerformanceMonitor';
+import PerformanceMonitor from './components/PerformanceMonitor';
 import { ScrollToTop } from './components/ScrollToTop';
 import { ContentQualityEnhancer } from './components/ContentQualityEnhancer';
 import { BrokenLinkFixer } from './components/BrokenLinkFixer';
@@ -166,24 +166,16 @@ const App: React.FC = () => {
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
-            <PerformanceOptimizer
-              enableMonitoring={true}
-              enableOptimizations={true}
-              showMetrics={import.meta.env.DEV}
-            >
+            <PerformanceOptimizer>
               <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
                 {/* Enhanced SEO */}
                 <EnhancedSEO 
-                  seoData={{
-                    title: "Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services",
-                    description: "Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology.",
-                    keywords: ["AI solutions", "quantum computing", "cybersecurity", "digital transformation", "enterprise technology", "machine learning", "cloud services", "IT infrastructure"],
-                    canonicalUrl: "https://ziontechgroup.com",
-                    ogImage: "https://ziontechgroup.com/og-image.jpg",
-                    ogType: "website",
-                    twitterCard: "summary_large_image"
-                  }}
-                  pageType="home"
+                  title="Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services"
+                  description="Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology."
+                  keywords="AI solutions, quantum computing, cybersecurity, digital transformation, enterprise technology, machine learning, cloud services, IT infrastructure"
+                  url="https://ziontechgroup.com"
+                  image="https://ziontechgroup.com/og-image.jpg"
+                  type="website"
                 />
                 
                 <Header />
@@ -347,79 +339,72 @@ const App: React.FC = () => {
                 <Footer />
                 <SonnerToaster />
               </div>
-            </PerformanceOptimizer>
-                
-                {/* Enhanced Accessibility Controls */}
-                <EnhancedAccessibility 
-                  position="bottom-right" 
-                  showOnLoad={false}
-                  enableKeyboardShortcuts={true}
-                  enableVoiceCommands={import.meta.env.DEV}
-                />
-                
-                {/* Website Improvement Tools */}
-                <ContentQualityEnhancer />
-                <BrokenLinkFixer />
-                <WebsiteImprovementDashboard />
-                
-                {/* AI Chatbot - Always Available */}
-                <AIChatbot />
-                
-                {/* Scroll to Top Button */}
-                <ScrollToTop />
-                
-                {/* Collaborative Text Editor - Development Mode */}
-                {import.meta.env.DEV && (
-                  <div className="fixed bottom-24 left-6 z-40 w-96">
-                    <CollaborativeTextEditor
-                      roomId="dev-editor"
-                      userId="dev-user"
-                      userName="Developer"
-                      initialContent="Welcome to the collaborative text editor! Start typing to see AI suggestions and real-time collaboration features."
-                      enableAI={true}
-                      enableCollaboration={true}
-                      enableVersioning={true}
-                    />
+              
+              {/* Enhanced Accessibility Controls */}
+              <EnhancedAccessibility />
+              
+              {/* Website Improvement Tools */}
+              <ContentQualityEnhancer />
+              <BrokenLinkFixer />
+              <WebsiteImprovementDashboard />
+              
+              {/* AI Chatbot - Always Available */}
+              <AIChatbot />
+              
+              {/* Scroll to Top Button */}
+              <ScrollToTop />
+              
+              {/* Collaborative Text Editor - Development Mode */}
+              {import.meta.env.DEV && (
+                <div className="fixed bottom-24 left-6 z-40 w-96">
+                  <CollaborativeTextEditor
+                    roomId="dev-editor"
+                    userId="dev-user"
+                    userName="Developer"
+                    initialContent="Welcome to the collaborative text editor! Start typing to see AI suggestions and real-time collaboration features."
+                    enableAI={true}
+                    enableCollaboration={true}
+                    enableVersioning={true}
+                  />
+                </div>
+              )}
+              
+              {/* AI Code Generator - Development Mode */}
+              {import.meta.env.DEV && (
+                <div className="fixed bottom-24 right-6 z-40 w-96">
+                  <AICodeGenerator />
+                </div>
+              )}
+              
+              {/* Development Dashboards */}
+              {import.meta.env.DEV && (
+                <>
+                  {/* Performance Dashboard */}
+                  <div className="fixed top-4 left-4 z-40">
+                    <PerformanceDashboard />
                   </div>
-                )}
-                
-                {/* AI Code Generator - Development Mode */}
-                {import.meta.env.DEV && (
-                  <div className="fixed bottom-24 right-6 z-40 w-96">
-                    <AICodeGenerator />
+                  
+                  {/* Analytics Dashboard */}
+                  <div className="fixed top-4 right-4 z-40">
+                    <AnalyticsDashboard />
                   </div>
-                )}
-                
-                {/* Development Dashboards */}
-                {import.meta.env.DEV && (
-                  <>
-                    {/* Performance Dashboard */}
-                    <div className="fixed top-4 left-4 z-40">
-                      <PerformanceDashboard />
-                    </div>
-                    
-                    {/* Analytics Dashboard */}
-                    <div className="fixed top-4 right-4 z-40">
-                      <AnalyticsDashboard />
-                    </div>
-                    
-                    {/* Enterprise Dashboard */}
-                    <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-40">
-                      <EnterpriseDashboard />
-                    </div>
-                    
-                    {/* Security & Compliance Dashboard */}
-                    <div className="fixed top-4 right-1/2 transform translate-x-1/2 z-40">
-                      <SecurityComplianceDashboard />
-                    </div>
-                    
-                    {/* Machine Learning Dashboard */}
-                    <div className="fixed top-4 right-4 z-40">
-                      <MachineLearningDashboard />
-                    </div>
-                  </>
-                )}
-              </div>
+                  
+                  {/* Enterprise Dashboard */}
+                  <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-40">
+                    <EnterpriseDashboard />
+                  </div>
+                  
+                  {/* Security & Compliance Dashboard */}
+                  <div className="fixed top-4 right-1/2 transform translate-x-1/2 z-40">
+                    <SecurityComplianceDashboard />
+                  </div>
+                  
+                  {/* Machine Learning Dashboard */}
+                  <div className="fixed top-4 right-4 z-40">
+                    <MachineLearningDashboard />
+                  </div>
+                </>
+              )}
             </PerformanceOptimizer>
           </Router>
         </WhitelabelProvider>
