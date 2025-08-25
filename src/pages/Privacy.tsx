@@ -76,10 +76,17 @@ import { GradientHeading } from "@/components/GradientHeading";
 
   return (
     <>
+<<<<<<< HEAD
       <SEO 
         title="Privacy Policy | Zion Tech Group"
         description="Learn how Zion Tech Group protects your privacy and handles your personal information in accordance with data protection regulations."
         keywords="privacy policy, data protection, GDPR, privacy, Zion Tech Group"
+=======
+      <SEO
+        title="Privacy Policy"
+        description="Learn how Zion Tech Group handles your data and protects your privacy."
+        canonical="https://ziontechgroup.com/privacy"
+>>>>>>> origin/cursor/website-audit-and-enhancement-3805
       />
       
       <div className="min-h-screen bg-zion-blue-dark">

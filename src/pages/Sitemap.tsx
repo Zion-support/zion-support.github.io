@@ -682,10 +682,18 @@ export default function Sitemap() {
 
   return (
     <>
+<<<<<<< HEAD
       <SEO 
         title="Sitemap - Zion Tech Group"
         description="Complete site navigation guide for Zion Tech Group. Find all pages, services, and resources organized by category."
         keywords="sitemap, navigation, site structure, pages, services, Zion Tech Group"
+=======
+      <SEO
+        title="Sitemap | Zion AI Marketplace"
+        description="Human readable sitemap for all public routes"
+        keywords="sitemap, navigation"
+        canonical="https://ziontechgroup.com/sitemap"
+>>>>>>> origin/cursor/website-audit-and-enhancement-3805
       />
       
       <Header />

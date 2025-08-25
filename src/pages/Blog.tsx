@@ -1105,6 +1105,7 @@ const Blog = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -1155,6 +1156,21 @@ const Blog = () => {
               Stay ahead of the curve with expert insights on AI, quantum computing, cybersecurity, 
               and the latest technology trends shaping the future of business.
 >>>>>>> origin/cursor/website-audit-and-enhancement-2bc0
+=======
+    <>
+      <SEO 
+        title="Blog - AI & Tech Insights" 
+        description="Stay updated with the latest trends in AI technology, marketplace strategies, and IT services. Expert articles on innovation, sustainability, and digital transformation." 
+        keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT"
+        canonical="https://ziontechgroup.com/blog"
+      />
+      <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <GradientHeading>AI & Tech Insights</GradientHeading>
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
+              Expert perspectives on artificial intelligence, tech innovation, and digital transformation
+>>>>>>> origin/cursor/website-audit-and-enhancement-3805
             </p>
             
             {/* Search Bar */}

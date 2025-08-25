@@ -4,7 +4,11 @@ import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
+<<<<<<< HEAD
 import { useState, useRef, useEffect } from "react";
+=======
+import { useState } from "react";
+>>>>>>> origin/cursor/website-audit-and-enhancement-3805
 
 interface MainNavigationProps {
   isAdmin?: boolean;
@@ -18,6 +22,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const location = useLocation();
   const { t } = useTranslation();
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+<<<<<<< HEAD
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -30,11 +35,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3805
 
   const baseLinks = [
     {
       key: 'home',
       href: '/',
+      name: 'Home',
       matches: (path: string) => path === '/'
     },
     {
@@ -67,12 +75,19 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     {
       key: 'marketplace',
       href: '/marketplace',
+      name: 'Marketplace',
       matches: (path: string) => path.startsWith('/marketplace')
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       key: 'services',
       href: '/services',
+=======
+      key: 'services',
+      href: '/services',
+      name: 'Services',
+>>>>>>> origin/cursor/website-audit-and-enhancement-3805
       matches: (path: string) => path.startsWith('/services')
     },
     {
@@ -80,19 +95,23 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 >>>>>>> origin/cursor/website-audit-and-enhancement-cbd5
       key: 'talent',
       href: '/talent',
+      name: 'Talent',
       matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard')
     },
     {
       key: 'equipment',
       href: '/equipment',
+      name: 'Equipment',
       matches: (path: string) => path.startsWith('/equipment')
     },
     {
       key: 'community',
       href: '/community',
+      name: 'Community',
       matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       key: 'about',
       href: '/about',
@@ -115,7 +134,26 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         { name: 'Contact', href: '/contact' }
       ]
 >>>>>>> origin/cursor/website-audit-and-enhancement-cbd5
+=======
+      key: 'blog',
+      href: '/blog',
+      name: 'Blog',
+      matches: (path: string) => path.startsWith('/blog')
+>>>>>>> origin/cursor/website-audit-and-enhancement-3805
     }
+  ];
+
+  const companyLinks = [
+    { key: 'about', href: '/about', name: 'About' },
+    { key: 'careers', href: '/careers', name: 'Careers' },
+    { key: 'partners', href: '/partners', name: 'Partners' },
+    { key: 'contact', href: '/contact', name: 'Contact' }
+  ];
+
+  const resourceLinks = [
+    { key: 'help', href: '/help', name: 'Help Center' },
+    { key: 'sitemap', href: '/sitemap', name: 'Sitemap' },
+    { key: 'green-it', href: '/green-it', name: 'Green IT' }
   ];
 
   let links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) }));
@@ -144,6 +182,10 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     setActiveDropdown(activeDropdown === key ? null : key);
   };
   
+  const isActive = (path: string) => {
+    return location.pathname === path || location.pathname.startsWith(path + '/');
+  };
+
   return (
     <nav className={cn("navbar ml-6 hidden md:flex", className)} ref={dropdownRef}>
       <ul className="flex items-center gap-1">
@@ -196,6 +238,74 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             )}
           </li>
         ))}
+        
+        {/* Company Dropdown */}
+        <li className="relative">
+          <button
+            onClick={() => setActiveDropdown(activeDropdown === 'company' ? null : 'company')}
+            className={cn(
+              "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
+              isActive('/about') || isActive('/careers') || isActive('/partners') || isActive('/contact')
+                ? "bg-zion-purple/20 text-zion-cyan"
+                : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+            )}
+          >
+            Company
+            <ChevronDown className="ml-1 h-4 w-4" />
+          </button>
+          
+          {activeDropdown === 'company' && (
+            <div className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-purple/20 rounded-md shadow-lg py-2 z-50">
+              {companyLinks.map((link) => (
+                <Link
+                  key={link.key}
+                  to={link.href}
+                  className={cn(
+                    "block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors",
+                    isActive(link.href) && "bg-zion-purple/20 text-zion-cyan"
+                  )}
+                  onClick={() => setActiveDropdown(null)}
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          )}
+        </li>
+
+        {/* Resources Dropdown */}
+        <li className="relative">
+          <button
+            onClick={() => setActiveDropdown(activeDropdown === 'resources' ? null : 'resources')}
+            className={cn(
+              "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
+              isActive('/help') || isActive('/sitemap') || isActive('/green-it')
+                ? "bg-zion-purple/20 text-zion-cyan"
+                : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+            )}
+          >
+            Resources
+            <ChevronDown className="ml-1 h-4 w-4" />
+          </button>
+          
+          {activeDropdown === 'resources' && (
+            <div className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-purple/20 rounded-md shadow-lg py-2 z-50">
+              {resourceLinks.map((link) => (
+                <Link
+                  key={link.key}
+                  to={link.href}
+                  className={cn(
+                    "block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors",
+                    isActive(link.href) && "bg-zion-purple/20 text-zion-cyan"
+                  )}
+                  onClick={() => setActiveDropdown(null)}
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+          )}
+        </li>
         
         {/* Messages link with unread counter */}
         {isAuthenticated && (

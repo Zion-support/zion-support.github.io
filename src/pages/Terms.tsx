@@ -124,10 +124,17 @@ import TermsOfService from "@/legal/TermsOfService";
 
   return (
     <>
+<<<<<<< HEAD
       <SEO 
         title="Terms of Service | Zion Tech Group"
         description="Read Zion Tech Group's terms of service to understand the rules and conditions for using our technology services and solutions."
         keywords="terms of service, terms and conditions, legal, Zion Tech Group, service agreement"
+=======
+      <SEO
+        title="Terms of Service"
+        description="The terms and conditions for using the Zion platform."
+        canonical="https://ziontechgroup.com/terms"
+>>>>>>> origin/cursor/website-audit-and-enhancement-3805
       />
       
       <div className="min-h-screen bg-zion-blue-dark">

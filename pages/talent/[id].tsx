@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3805
 import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
 import type { TalentProfile as TalentProfileType } from '@/types/talent';
 import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
@@ -78,7 +81,11 @@ const TalentProfilePage: React.FC = () => {
   }, [id]);
 
   if (loading) return <ProfileLoadingState />;
+<<<<<<< HEAD
   if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
+=======
+  if (error || !profile) return <ProfileErrorState error={error} />;
+>>>>>>> origin/cursor/website-audit-and-enhancement-3805
 
   return (
     <main className="min-h-screen bg-zion-blue py-8 text-white">

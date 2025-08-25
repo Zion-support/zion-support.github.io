@@ -447,6 +447,7 @@ const AboutPage: React.FC = () => {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -458,6 +459,22 @@ const AboutPage: React.FC = () => {
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               We are a forward-thinking technology company dedicated to transforming businesses through 
               cutting-edge AI, quantum computing, and autonomous systems solutions.
+=======
+    <>
+      <SEO 
+        title="About Zion - The Future of AI & Tech Marketplace" 
+        description="Learn about Zion's mission to create the first free marketplace dedicated to high-tech and artificial intelligence." 
+        keywords="about Zion, AI marketplace, tech platform, mission, vision, team"
+        canonical="https://ziontechgroup.com/about"
+      />
+      <Header />
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <GradientHeading>About Zion</GradientHeading>
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
+              The world's first free marketplace dedicated to high-tech and artificial intelligence
+>>>>>>> origin/cursor/website-audit-and-enhancement-3805
             </p>
 =======
   const team = [
