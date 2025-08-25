@@ -5,6 +5,7 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -144,10 +145,17 @@ import { Link } from 'react-router-dom';
 import { Atom, Brain, Zap, Shield, Globe, Cpu, Network, Rocket } from 'lucide-react';
 
 const QuantumNeuralNetworkPlatform: React.FC = () => {
+=======
+import { Link } from 'react-router-dom';
+import { Atom, Brain, Zap, Shield, Globe, ArrowRight, CheckCircle, Star } from 'lucide-react';
+
+export default function QuantumNeuralNetworkPlatform() {
+>>>>>>> origin/cursor/website-audit-and-enhancement-d426
   const features = [
     {
       icon: Brain,
       title: "Quantum Consciousness Integration",
+<<<<<<< HEAD
       description: "Advanced neural networks with quantum consciousness capabilities for human-like AI reasoning"
     },
     {
@@ -160,10 +168,19 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
       title: "Real-time Learning",
       description: "Continuous adaptation and learning from new data streams in real-time"
 >>>>>>> origin/cursor/website-audit-and-enhancement-91fb
+=======
+      description: "Advanced AI systems with quantum-enhanced consciousness capabilities"
+    },
+    {
+      icon: Zap,
+      title: "Real-time Processing",
+      description: "Lightning-fast quantum computing for instant decision making"
+>>>>>>> origin/cursor/website-audit-and-enhancement-d426
     },
     {
       icon: Shield,
       title: "Quantum-Safe Security",
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: "Post-quantum cryptography and quantum-resistant security protocols"
     },
@@ -231,10 +248,14 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
       description: "Solve complex problems exponentially faster than classical computers"
 =======
       description: "Unbreakable encryption using quantum key distribution and post-quantum cryptography"
+=======
+      description: "Unbreakable encryption using quantum cryptography principles"
+>>>>>>> origin/cursor/website-audit-and-enhancement-d426
     },
     {
       icon: Globe,
       title: "Global Neural Network",
+<<<<<<< HEAD
       description: "Distributed quantum neural networks across multiple quantum computing nodes"
 >>>>>>> origin/cursor/website-audit-and-enhancement-91fb
     },
@@ -992,10 +1013,14 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4867
 =======
       description: "Seamless integration of classical and quantum computing for optimal performance"
+=======
+      description: "Distributed quantum neural networks across multiple locations"
+>>>>>>> origin/cursor/website-audit-and-enhancement-d426
     }
   ];
 
   const useCases = [
+<<<<<<< HEAD
     {
       title: "Scientific Research",
       description: "Accelerating drug discovery, climate modeling, and fundamental physics research",
@@ -1016,11 +1041,29 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
       description: "Advanced threat detection and quantum-safe communication protocols",
       icon: Shield
     }
+=======
+    "Advanced AI Research & Development",
+    "Quantum Machine Learning Models",
+    "Neural Network Optimization",
+    "Consciousness Simulation",
+    "Predictive Analytics",
+    "Autonomous Decision Making"
+  ];
+
+  const benefits = [
+    "Exponential processing power increase",
+    "Enhanced AI consciousness capabilities",
+    "Unprecedented security through quantum encryption",
+    "Real-time global neural network operations",
+    "Advanced pattern recognition and prediction",
+    "Scalable quantum computing infrastructure"
+>>>>>>> origin/cursor/website-audit-and-enhancement-d426
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
+<<<<<<< HEAD
       <section className="relative overflow-hidden pt-20 pb-16">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1333,10 +1376,47 @@ export default function QuantumNeuralNetworkPlatform() {
               Request Demo
             </Link>
 >>>>>>> origin/cursor/website-audit-and-enhancement-3be4
+=======
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.05),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.05),transparent_50%)]"></div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto text-center">
+          <div className="flex items-center justify-center mb-6">
+            <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4">
+              <Atom className="w-8 h-8 text-white" />
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Quantum Neural Network Platform
+            </h1>
+          </div>
+          
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+            Experience the future of AI with our revolutionary quantum-powered neural network platform. 
+            Combining cutting-edge quantum computing with advanced consciousness integration.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105"
+            >
+              Get Started
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+            <Link
+              to="/services/quantum-technology"
+              className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold rounded-lg transition-all duration-200"
+            >
+              Learn More
+            </Link>
+>>>>>>> origin/cursor/website-audit-and-enhancement-d426
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Features Section */}
 <<<<<<< HEAD
@@ -1349,10 +1429,22 @@ export default function QuantumNeuralNetworkPlatform() {
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Our platform combines cutting-edge quantum computing with advanced neural network architectures
+=======
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Revolutionary Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover the groundbreaking capabilities that set our quantum neural network platform apart
+>>>>>>> origin/cursor/website-audit-and-enhancement-d426
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<<<<<<< HEAD
             {features.map((feature, index) => (
               <div key={index} className="text-center p-6 rounded-xl bg-gradient-to-br from-purple-50 to-blue-50 border border-purple-100 hover:shadow-lg transition-all duration-300">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-600 text-white rounded-full mb-4">
@@ -2259,11 +2351,14 @@ export default function QuantumNeuralNetworkPlatform() {
             <p className="text-xl text-gray-400">Discover what makes our platform truly groundbreaking</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-d426
             {features.map((feature, index) => {
               const Icon = feature.icon;
               return (
                 <div
                   key={index}
+<<<<<<< HEAD
                   className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
@@ -2271,6 +2366,15 @@ export default function QuantumNeuralNetworkPlatform() {
                   </div>
                   <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
                   <p className="text-gray-400">{feature.description}</p>
+=======
+                  className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105"
+                >
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+                    <Icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+>>>>>>> origin/cursor/website-audit-and-enhancement-d426
                 </div>
               );
             })}
@@ -2279,6 +2383,7 @@ export default function QuantumNeuralNetworkPlatform() {
       </section>
 
       {/* Use Cases Section */}
+<<<<<<< HEAD
       <section className="py-16 bg-gray-800/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -2336,11 +2441,54 @@ export default function QuantumNeuralNetworkPlatform() {
               );
             })}
 >>>>>>> origin/cursor/website-audit-and-enhancement-91fb
+=======
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Transform Your Business with Quantum AI
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                Our quantum neural network platform opens up unprecedented possibilities for businesses 
+                looking to leverage the power of quantum computing and advanced AI consciousness.
+              </p>
+              
+              <div className="space-y-4">
+                {useCases.map((useCase, index) => (
+                  <div key={index} className="flex items-center">
+                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                    <span className="text-gray-300">{useCase}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="relative">
+              <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8">
+                <div className="text-center mb-6">
+                  <Star className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold text-white mb-2">Why Choose Our Platform?</h3>
+                  <p className="text-gray-300">Industry-leading quantum computing capabilities</p>
+                </div>
+                
+                <div className="space-y-4">
+                  {benefits.map((benefit, index) => (
+                    <div key={index} className="flex items-start">
+                      <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                      <span className="text-gray-300 text-sm">{benefit}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-d426
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2789,6 +2937,29 @@ export default function QuantumNeuralNetworkPlatform() {
             <Link
               to="/pricing"
               className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200"
+=======
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Experience the Future?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+            Join the quantum revolution and transform your business with the most advanced 
+            neural network platform ever created.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105"
+            >
+              Schedule a Demo
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+            <Link
+              to="/pricing"
+              className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold rounded-lg transition-all duration-200"
+>>>>>>> origin/cursor/website-audit-and-enhancement-d426
             >
               View Pricing
             </Link>
@@ -2797,7 +2968,11 @@ export default function QuantumNeuralNetworkPlatform() {
       </section>
     </div>
   );
+<<<<<<< HEAD
 };
 
 export default QuantumNeuralNetworkPlatform;
 >>>>>>> origin/cursor/website-audit-and-enhancement-91fb
+=======
+}
+>>>>>>> origin/cursor/website-audit-and-enhancement-d426
