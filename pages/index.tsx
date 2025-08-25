@@ -19,20 +19,29 @@ import { realMarketServices } from '../data/real-market-services';
 import { serviceExpansions2025 } from '../data/service-expansions-2025';
 import { realOperationalServices } from '../data/real-operational-services';
 import { newOperationalServices2025 } from '../data/new-operational-services-2025';
-import { realVerifiedServiceAdditions2025 } from '../data/real-verified-service-additions-2025';
-
-// Import 2026 innovative services
-import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-services';
-import { innovativeAIServices2026 } from '../data/2026-innovative-ai-services';
-import { innovativeITServices2026 } from '../data/2026-innovative-it-services';
-import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
+import { innovative2025Services } from '../data/innovative-2025-services';
+import { revolutionary2025Services } from '../data/revolutionary-2025-services';
+import { nextGenInnovations2025 } from '../data/next-gen-innovations-2025';
+import { innovative2026Services } from '../data/innovative-2026-services';
+import { emergingTech2026Services } from '../data/emerging-tech-2026-services';
+import { enterpriseIT2026Services } from '../data/enterprise-it-2026-services';
+import { innovative2026MicroSaasServices } from '../data/innovative-2026-micro-saas';
+import { emergingTech2026Services as emergingTech2026ServicesNew } from '../data/emerging-tech-2026-services';
+import { enterpriseIT2026Services as enterpriseIT2026ServicesNew } from '../data/enterprise-it-2026-services';
+import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
+import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2';
+import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2';
+import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations';
+import { nextGenAI2026Services } from '../data/next-gen-ai-2026-services';
+import { aiAutonomousServices2026 } from '../data/2026-ai-autonomous-services';
+import { quantumSpaceTechServices2026 } from '../data/2026-quantum-space-tech-services';
+import { metaverseDigitalRealityServices2026 } from '../data/2026-metaverse-digital-reality-services';
+import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3';
+import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3';
+import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3';
+import { ultimate2026Services } from '../data/ultimate-2026-services';
+import { innovative2026MicroSaasV4Services } from '../data/innovative-2026-micro-saas-v4';
+import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -56,9 +65,32 @@ const contactInfo = {
     ...realMarketServices,
     ...serviceExpansions2025,
     ...realOperationalServices,
-    ...newOperationalServices2025
-    ,
-    ...realVerifiedServiceAdditions2025
+    ...newOperationalServices2025,
+    ...verifiedRealServices2025Batch2,
+    ...innovative2025Services,
+    ...emergingTechServices2025,
+    ...revolutionary2025Services,
+    ...nextGenInnovations2025,
+    ...innovative2026Services,
+    ...emergingTech2026Services,
+    ...enterpriseIT2026Services,
+    ...innovative2026MicroSaasServices,
+    ...emergingTech2026ServicesNew,
+    ...enterpriseIT2026ServicesNew,
+    ...innovative2026MicroSaasServicesV2,
+    ...emergingTech2026ServicesV2,
+    ...enterpriseIT2026ServicesV2,
+    ...revolutionary2026Innovations,
+    ...nextGenAI2026Services,
+    ...aiAutonomousServices2026,
+    ...quantumSpaceTechServices2026,
+    ...metaverseDigitalRealityServices2026,
+    ...innovative2026MicroSaasV4Services,
+    ...emergingTech2026ServicesV4,
+    ...innovative2026AIServicesV3,
+    ...emergingTech2026ServicesV3,
+    ...enterpriseIT2026ServicesV3,
+    ...ultimate2026Services
   ];
 
 
