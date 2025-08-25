@@ -217,6 +217,8 @@ export default function Services() {
       ]
     }
   ];
+<<<<<<< HEAD
+=======
   
   const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
   
@@ -226,6 +228,7 @@ export default function Services() {
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;
   });
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4e91
 
   const filteredCategories = selectedCategory === 'all' 
     ? serviceCategories 
@@ -299,6 +302,20 @@ export default function Services() {
               key={idx}
               className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105 group"
             >
+<<<<<<< HEAD
+              {/* Service Header */}
+              <div className="flex items-start space-x-4 mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <service.icon className="w-6 h-6 text-white" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200">
+                    {service.name}
+                  </h3>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    {service.description}
+                  </p>
+=======
               {/* Service Icon */}
               <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
                 <span className="text-2xl">
@@ -326,6 +343,7 @@ export default function Services() {
                   <span className="text-2xl font-bold text-white">
                     ${service.price.toLocaleString()}
                   </span>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4e91
                 </div>
               </div>
 
