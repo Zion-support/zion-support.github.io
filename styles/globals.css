@@ -1457,15 +1457,19 @@ h3 {
 
 /* Enhanced Reduced Motion Support */
 @media (prefers-reduced-motion: reduce) {
-  .animate-float,
-  .animate-pulse-glow,
-  .animate-neon-flicker,
-  .animate-matrix-rain,
-  .animate-hologram-scan,
-  .animate-quantum-pulse,
-  .animate-space-drift,
-  .animate-cyber-wave {
-    animation: none;
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
   }
+}
+
+/* Responsive container padding adjustments */
+@media (max-width: 640px) {
+  .container { padding-left: 1rem; padding-right: 1rem; }
+}
+@media (min-width: 641px) and (max-width: 1024px) {
+  .container { padding-left: 1.25rem; padding-right: 1.25rem; }
 }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8488
