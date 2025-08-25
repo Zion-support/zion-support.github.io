@@ -1,11 +1,28 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import { Sidebar } from './components/Sidebar';
+import { AccessibilityControls } from './components/AccessibilityControls';
+import { PerformanceDashboard } from './components/PerformanceDashboard';
+import { AnalyticsDashboard } from './components/AnalyticsDashboard';
+import { AIChatbot } from './components/AIChatbot';
+import { CollaborativeTextEditor } from './components/CollaborativeTextEditor';
+import { AICodeGenerator } from './components/AICodeGenerator';
+import { EnterpriseDashboard } from './components/EnterpriseDashboard';
+import { SecurityComplianceDashboard } from './components/SecurityComplianceDashboard';
+import { MachineLearningDashboard } from './components/MachineLearningDashboard';
 import './App.css';
 
 // Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
 const Services = lazy(() => import('./pages/Services'));
-const AISolutions = lazy(() => import('./pages/AISolutions'));
+const ComprehensiveServices = lazy(() => import('./pages/ComprehensiveServices'));
+const About = lazy(() => import('./pages/About'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Blog = lazy(() => import('./pages/Blog'));
+const Careers = lazy(() => import('./pages/Careers'));
+const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 
 // Error Boundary Component
 class ErrorBoundary extends React.Component<
@@ -67,23 +84,124 @@ const App = () => {
     <ErrorBoundary>
       <Router>
         <div className="App min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+          <Header />
+          <Sidebar />
+          
           {/* Main Content with enhanced Suspense */}
-          <main className="pt-20 min-h-screen">
+          <main className="ml-64 pt-20 min-h-screen">
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/services" element={<Services />} />
-                <Route path="/ai-solutions" element={<AISolutions />} />
-                <Route path="/comprehensive-services" element={<Services />} />
+                <Route path="/comprehensive-services" element={<ComprehensiveServices />} />
                 <Route path="/services-comparison" element={<Services />} />
                 <Route path="/it-onsite-services" element={<Services />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/careers" element={<Careers />} />
+                <Route path="/help" element={<HelpCenter />} />
+                
+                {/* Additional service category routes */}
+                <Route path="/services/ai" element={<Services />} />
+                <Route path="/services/it" element={<Services />} />
+                <Route path="/services/saas" element={<Services />} />
+                <Route path="/services/security" element={<Services />} />
+                <Route path="/services/cloud" element={<Services />} />
+                <Route path="/services/analytics" element={<Services />} />
+                
+                {/* Solution routes */}
+                <Route path="/solutions/enterprise-ai" element={<Services />} />
+                <Route path="/solutions/digital-transformation" element={<Services />} />
+                <Route path="/solutions/automation" element={<Services />} />
+                <Route path="/solutions/iot" element={<Services />} />
+                <Route path="/solutions/blockchain" element={<Services />} />
+                <Route path="/solutions/quantum" element={<Services />} />
+                
+                {/* Company routes */}
+                <Route path="/team" element={<About />} />
+                <Route path="/partners" element={<About />} />
+                <Route path="/case-studies" element={<Blog />} />
+                
+                {/* Support routes */}
+                <Route path="/docs" element={<HelpCenter />} />
+                <Route path="/api" element={<HelpCenter />} />
+                <Route path="/status" element={<HelpCenter />} />
+                <Route path="/support" element={<Contact />} />
+                <Route path="/training" element={<HelpCenter />} />
+                
+                {/* Legal routes */}
+                <Route path="/privacy" element={<About />} />
+                <Route path="/terms" element={<About />} />
+                <Route path="/cookies" element={<About />} />
+                <Route path="/accessibility" element={<About />} />
               </Routes>
             </Suspense>
           </main>
+          
+          <Footer />
+          
+          {/* Enhanced Accessibility Controls */}
+          <AccessibilityControls position="bottom-right" />
+          
+          {/* AI Chatbot - Always Available */}
+          <AIChatbot />
+          
+          {/* Collaborative Text Editor - Development Mode */}
+          {process.env.NODE_ENV === 'development' && (
+            <div className="fixed bottom-24 left-6 z-40 w-96">
+              <CollaborativeTextEditor
+                roomId="dev-editor"
+                userId="dev-user"
+                userName="Developer"
+                initialContent="Welcome to the collaborative text editor! Start typing to see AI suggestions and real-time collaboration features."
+                enableAI={true}
+                enableCollaboration={true}
+                enableVersioning={true}
+              />
+            </div>
+          )}
+          
+          {/* AI Code Generator - Development Mode */}
+          {process.env.NODE_ENV === 'development' && (
+            <div className="fixed bottom-24 right-6 z-40 w-96">
+              <AICodeGenerator />
+            </div>
+          )}
+          
+          {/* Development Dashboards */}
+          {process.env.NODE_ENV === 'development' && (
+            <>
+              {/* Performance Dashboard */}
+              <div className="fixed top-4 left-4 z-40">
+                <PerformanceDashboard />
+              </div>
+              
+              {/* Analytics Dashboard */}
+              <div className="fixed top-4 right-4 z-40">
+                <AnalyticsDashboard />
+              </div>
+              
+              {/* Enterprise Dashboard */}
+              <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-40">
+                <EnterpriseDashboard />
+              </div>
+              
+              {/* Security & Compliance Dashboard */}
+              <div className="fixed top-4 right-1/2 transform translate-x-1/2 z-40">
+                <SecurityComplianceDashboard />
+              </div>
+              
+              {/* Machine Learning Dashboard */}
+              <div className="fixed top-4 right-4 z-40">
+                <MachineLearningDashboard />
+              </div>
+            </>
+          )}
         </div>
       </Router>
     </ErrorBoundary>
   );
-}
+};
 
 export default App;
