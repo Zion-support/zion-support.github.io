@@ -173,6 +173,13 @@ const HeroSection: React.FC = () => {
                 {currentSlideData.cta}
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
+              <Link
+                to="/comprehensive-services-showcase-2025"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg"
+              >
+                View All Services
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
               <button className="inline-flex items-center justify-center px-8 py-4 border border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white font-semibold rounded-lg transition-all duration-300 hover:bg-gray-800/50">
                 <Play className="mr-2 w-5 h-5" />
                 Watch Demo

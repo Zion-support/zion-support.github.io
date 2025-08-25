@@ -213,6 +213,20 @@ export function Header() {
         { name: 'Manufacturing Intelligence', path: '/services/manufacturing-intelligence', description: 'Smart manufacturing', icon: Cpu },
         { name: 'Retail Technology', path: '/services/retail-technology', description: 'Digital retail transformation', icon: ShoppingCart }
       ]
+    },
+    {
+      title: 'Comprehensive Services 2025',
+      icon: Sparkles,
+      description: 'Complete portfolio of innovative AI & IT services',
+      color: 'from-purple-500 to-cyan-500',
+      services: [
+        { name: 'All Services Showcase', path: '/comprehensive-services-showcase-2025', description: 'Complete service portfolio', icon: Sparkles },
+        { name: 'Pricing & Plans', path: '/comprehensive-pricing-2025', description: 'Transparent pricing information', icon: DollarSign },
+        { name: 'AI Financial Advisory', path: '/services/ai-financial-advisory', description: 'AI-powered financial services', icon: Brain },
+        { name: 'AI Healthcare Diagnostics', path: '/services/ai-healthcare-diagnostics', description: 'Medical AI solutions', icon: Heart },
+        { name: 'Zero Trust Security', path: '/services/zero-trust-security', description: 'Advanced cybersecurity', icon: Shield },
+        { name: 'Cloud-Native Development', path: '/services/cloud-native-development', description: 'Modern cloud solutions', icon: Cloud }
+      ]
     }
   ];
 

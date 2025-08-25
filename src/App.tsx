@@ -1,10 +1,10 @@
 import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Footer from './components/Footer';
+import { Footer } from './components/Footer';
 import Sidebar from './components/Sidebar';
 import { AccessibilityControls } from './components/AccessibilityControls';
-import { PerformanceDashboard } from './components/PerformanceDashboard';
+import PerformanceDashboard from './components/PerformanceDashboard';
 import { AnalyticsDashboard } from './components/AnalyticsDashboard';
 import { AIChatbot } from './components/AIChatbot';
 import { CollaborativeTextEditor } from './components/CollaborativeTextEditor';
@@ -38,7 +38,6 @@ const TalentsPage = lazy(() => import('./pages/TalentsPage'));
 const EmergingTech = lazy(() => import('./pages/EmergingTech'));
 
 // New pages from incoming branch
-const MicroSaasServicesPage = lazy(() => import('./pages/MicroSaasServices'));
 const PricingPage = lazy(() => import('./pages/PricingPage'));
 
 // Service pages
@@ -92,11 +91,13 @@ const MicroSAASSolutions = lazy(() => import('./pages/services/MicroSAASSolution
 const IndustrySolutions = lazy(() => import('./pages/services/IndustrySolutions'));
 const InnovativeNewServices = lazy(() => import('./pages/services/InnovativeNewServices'));
 const SpecializedITInfrastructure = lazy(() => import('./pages/services/SpecializedITInfrastructure'));
-const InnovativeMicroSaasServices = lazy(() => import('./pages/InnovativeMicroSaasServices'));
-const ComprehensiveInnovativeServices = lazy(() => import('./pages/ComprehensiveInnovativeServices'));
-const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveServicesOverview'));
-const EnhancedServicesShowcase = lazy(() => import('./pages/EnhancedServicesShowcase'));
-const InnovativeServicesShowcase = lazy(() => import('./pages/InnovativeServicesShowcase'));
+
+
+// New comprehensive services showcase 2025
+const ComprehensiveServicesShowcase2025 = lazy(() => import('./pages/ComprehensiveServicesShowcase2025'));
+
+// New comprehensive pricing 2025
+const ComprehensivePricing2025 = lazy(() => import('./pages/ComprehensivePricing2025'));
 
 // Solutions pages
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
@@ -170,24 +171,18 @@ const App: React.FC = () => {
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
-            <PerformanceOptimizer
-              enableMonitoring={true}
-              enableOptimizations={true}
-              showMetrics={import.meta.env.DEV}
-            >
-              <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+            <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
                 {/* Enhanced SEO */}
                 <EnhancedSEO 
-                  seoData={{
-                    title: "Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services",
-                    description: "Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology.",
-                    keywords: ["AI solutions", "quantum computing", "cybersecurity", "digital transformation", "enterprise technology", "machine learning", "cloud services", "IT infrastructure"],
-                    canonicalUrl: "https://ziontechgroup.com",
-                    ogImage: "https://ziontechgroup.com/og-image.jpg",
-                    ogType: "website",
-                    twitterCard: "summary_large_image"
-                  }}
-                  pageType="home"
+                  title="Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services"
+                  description="Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology."
+                  keywords="AI solutions, quantum computing, cybersecurity, digital transformation, enterprise technology, machine learning, cloud services, IT infrastructure"
+                  url="https://ziontechgroup.com"
+                  image="/images/zion-tech-group-og.jpg"
+                  type="website"
+                  canonicalUrl="https://ziontechgroup.com"
+                  ogType="website"
+                  twitterCard="summary_large_image"
                 />
                 
                 <Header />
@@ -202,14 +197,15 @@ const App: React.FC = () => {
                       <Route path="/services" element={<Services />} />
                       <Route path="/ai-solutions" element={<AISolutions />} />
                       <Route path="/services-showcase" element={<ServicesShowcase />} />
-                      <Route path="/innovative-services-showcase" element={<InnovativeServicesShowcase />} />
+
+                      <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+                      <Route path="/comprehensive-pricing-2025" element={<ComprehensivePricing2025 />} />
                       <Route path="/ai-matcher" element={<AIMatcherPage />} />
                       <Route path="/talent-directory" element={<TalentDirectory />} />
                       <Route path="/talents" element={<TalentsPage />} />
                       <Route path="/emerging-tech" element={<EmergingTech />} />
                       
                       {/* New routes from incoming branch */}
-                      <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
                       <Route path="/pricing" element={<PricingPage />} />
                       
                       {/* Service Routes */}
@@ -259,79 +255,18 @@ const App: React.FC = () => {
                       <Route path="/services/industry-solutions" element={<IndustrySolutions />} />
                       <Route path="/services/innovative-new-services" element={<InnovativeNewServices />} />
                       <Route path="/services/specialized-it-infrastructure" element={<SpecializedITInfrastructure />} />
-                      <Route path="/innovative-micro-saas-services" element={<InnovativeMicroSaasServices />} />
-                      <Route path="/comprehensive-innovative-services" element={<ComprehensiveInnovativeServices />} />
-                      <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview />} />
-                      <Route path="/enhanced-services-showcase" element={<EnhancedServicesShowcase />} />
-                      <Route path="/innovative-services-showcase" element={<InnovativeServicesShowcase />} />
                       
                       {/* New innovative service routes */}
                       <Route path="/ai-workflow-automation" element={<AIWorkflowAutomation />} />
                       <Route path="/blockchain-enterprise-solutions" element={<BlockchainEnterpriseSolutions />} />
                       <Route path="/iot-data-analytics" element={<IoTDataAnalytics />} />
                       
-                      {/* Additional innovative service routes */}
+                      {/* Additional service routes */}
                       <Route path="/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-                      <Route path="/iot-management-platform" element={<IoTManagementPlatform />} />
-                      <Route path="/blockchain-defi-solutions" element={<BlockchainDeFiSolutions />} />
+                      <Route path="/ai-marketing" element={<AIMarketingAutomation />} />
                       
-                      {/* Solutions Routes */}
-                      <Route path="/services/enterprise" element={<EnterpriseSolutions />} />
-                      <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
-                      
-                      {/* Legacy route redirects for SEO */}
-                      <Route path="/comprehensive-services" element={<Services />} />
-                      <Route path="/services-comparison" element={<Services />} />
-                      <Route path="/it-onsite-services" element={<Services />} />
-                      
-                      {/* Additional missing pages to fix broken links */}
-                      <Route path="/privacy" element={<Privacy />} />
-                      <Route path="/terms" element={<Terms />} />
-                      <Route path="/cookies" element={<Cookies />} />
-                      <Route path="/faq" element={<FAQ />} />
-                      <Route path="/events" element={<Events />} />
-                      <Route path="/webinars" element={<Webinars />} />
-                      <Route path="/white-papers" element={<WhitePapers />} />
-                      <Route path="/testimonials" element={<Testimonials />} />
-                      <Route path="/support" element={<Support />} />
-                      <Route path="/docs" element={<Docs />} />
-                      <Route path="/marketplace" element={<Marketplace />} />
-                      <Route path="/community" element={<Community />} />
-                      
-                      {/* AI Autonomous Service routes */}
-                      <Route path="/ai-autonomous-business-manager" element={<AIAutonomousBusinessManager />} />
-                      <Route path="/ai-autonomous-business-platform" element={<AIAutonomousBusinessPlatform />} />
-                      <Route path="/ai-autonomous-code-review" element={<AIAutonomousCodeReview />} />
-                      <Route path="/ai-autonomous-creative-director" element={<AIAutonomousCreativeDirector />} />
-                      <Route path="/ai-autonomous-data" element={<AIAutonomousData />} />
-                      <Route path="/ai-autonomous-decision-engine" element={<AIAutonomousDecisionEngine />} />
-                      <Route path="/ai-autonomous-decision-platform" element={<AIAutonomousDecisionPlatform />} />
-                      <Route path="/ai-autonomous-devops" element={<AIAutonomousDevOps />} />
-                      <Route path="/ai-autonomous-education-professor" element={<AIAutonomousEducationProfessor />} />
-                      <Route path="/ai-autonomous-healthcare-physician" element={<AIAutonomousHealthcarePhysician />} />
-                      <Route path="/ai-autonomous-learning-system" element={<AIAutonomousLearningSystem />} />
-                      <Route path="/ai-autonomous-legal-counsel" element={<AIAutonomousLegalCounsel />} />
-                      <Route path="/ai-autonomous-logistics" element={<AIAutonomousLogistics />} />
-                      <Route path="/ai-autonomous-manufacturing" element={<AIAutonomousManufacturing />} />
-                      <Route path="/ai-autonomous-research" element={<AIAutonomousResearch />} />
-                      <Route path="/ai-autonomous-robotics" element={<AIAutonomousRobotics />} />
-                      <Route path="/ai-autonomous-scientific-researcher" element={<AIAutonomousScientificResearcher />} />
-                      <Route path="/ai-autonomous-security" element={<AIAutonomousSecurity />} />
-                      <Route path="/ai-autonomous-systems-platform" element={<AIAutonomousSystemsPlatform />} />
-                      <Route path="/ai-autonomous-testing" element={<AIAutonomousTesting />} />
-                      <Route path="/ai-autonomous-vehicle-platform" element={<AIAutonomousVehiclePlatform />} />
-                      <Route path="/ai-autonomous-vehicle" element={<AIAutonomousVehicle />} />
-                      <Route path="/ai-autonomous-vehicles-platform" element={<AIAutonomousVehiclesPlatform />} />
-                      <Route path="/ai-autonomous-vehicles" element={<AIAutonomousVehicles />} />
-                      <Route path="/ai-autonomous-venture-capitalist" element={<AIAutonomousVentureCapitalist />} />
-                      
-                      {/* AI Content Generation routes */}
-                      <Route path="/ai-content-generation-automation" element={<AIContentGenerationAutomation />} />
-                      <Route path="/ai-content-generation-pro" element={<AIContentGenerationPro />} />
-                      <Route path="/ai-consciousness-evolution" element={<AIConsciousnessEvolution />} />
-                      
-                      {/* Enhanced AI service routes */}
-                      <Route path="/ai-autonomous-business-manager-2029" element={<AIAutonomousBusinessManager />} />
+                      {/* Additional service routes */}
+                      <Route path="/ai-autonomous-business-manager-2026" element={<AIAutonomousBusinessManager />} />
                       <Route path="/ai-autonomous-business-platform-2026" element={<AIAutonomousBusinessPlatform />} />
                       <Route path="/ai-business-intelligence-elite-2026" element={<AIBusinessIntelligenceElite />} />
                       <Route path="/ai-business-intelligence-suite-2029" element={<AIBusinessIntelligenceSuite />} />
@@ -354,8 +289,6 @@ const App: React.FC = () => {
                 
                 <Footer />
                 <SonnerToaster />
-              </div>
-            </PerformanceOptimizer>
                 
                 {/* Enhanced Accessibility Controls */}
                 <EnhancedAccessibility 
@@ -424,13 +357,15 @@ const App: React.FC = () => {
                     </div>
                   </>
                 )}
+                
+                {/* Performance Optimizer */}
+                <PerformanceOptimizer />
               </div>
-            </PerformanceOptimizer>
-          </Router>
-        </WhitelabelProvider>
-      </ThemeProvider>
-    </EnhancedErrorBoundary>
-  );
-};
+            </Router>
+          </WhitelabelProvider>
+        </ThemeProvider>
+      </EnhancedErrorBoundary>
+    );
+  };
 
 export default App;

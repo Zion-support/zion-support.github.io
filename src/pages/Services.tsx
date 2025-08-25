@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { COMPREHENSIVE_SERVICES } from '../data/comprehensiveServices';
+import { ADDITIONAL_INNOVATIVE_SERVICES_2025 } from '../data/additionalInnovativeServices2025';
+import { SPECIALIZED_IT_SERVICES_2025 } from '../data/specializedITServices2025';
 import { INNOVATIVE_MICRO_SAAS_SERVICES } from '../data/innovativeMicroSaasServices';
 import { ADVANCED_ENTERPRISE_SOLUTIONS } from '../data/advancedEnterpriseSolutions';
 import { SPECIALIZED_IT_SERVICES } from '../data/specializedITServices';
@@ -11,7 +12,8 @@ export function Services() {
   const [searchTerm, setSearchTerm] = useState<string>('');
 
   const allServices = [
-    ...COMPREHENSIVE_SERVICES,
+    ...ADDITIONAL_INNOVATIVE_SERVICES_2025,
+    ...SPECIALIZED_IT_SERVICES_2025,
     ...INNOVATIVE_MICRO_SAAS_SERVICES,
     ...ADVANCED_ENTERPRISE_SOLUTIONS,
     ...SPECIALIZED_IT_SERVICES
