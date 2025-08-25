@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  ShoppingCart, 
-  Smartphone, 
+  Scale, 
+  FileText, 
+  Search, 
   Brain, 
-  Target, 
   BarChart3, 
   Zap, 
   Shield, 
@@ -15,82 +15,82 @@ import {
   Rocket,
   Briefcase,
   Award,
-  Database,
-  Store,
-  CreditCard
+  TrendingUp,
+  Gavel,
+  BookOpen
 } from 'lucide-react';
 
-export default function RetailSolutions() {
+export default function AILegalTech() {
   const features = [
     {
+      icon: FileText,
+      title: "Intelligent Document Analysis",
+      description: "AI-powered contract review and legal document analysis"
+    },
+    {
+      icon: Search,
+      title: "Advanced Legal Research",
+      description: "Automated case law research and precedent analysis"
+    },
+    {
       icon: Brain,
-      title: "AI-Powered Customer Insights",
-      description: "Machine learning models to understand customer behavior and preferences"
+      title: "Predictive Legal Analytics",
+      description: "Machine learning models for case outcome prediction"
     },
     {
       icon: BarChart3,
-      title: "Real-time Analytics",
-      description: "Live monitoring of sales, inventory, and customer engagement metrics"
-    },
-    {
-      icon: Target,
-      title: "Personalized Marketing",
-      description: "AI-driven targeted marketing campaigns and product recommendations"
+      title: "Compliance Monitoring",
+      description: "Real-time regulatory compliance tracking and alerts"
     },
     {
       icon: Zap,
-      title: "Inventory Optimization",
-      description: "Intelligent inventory management and demand forecasting"
+      title: "Automated Contract Generation",
+      description: "AI-driven contract drafting and customization"
     },
     {
       icon: Shield,
-      title: "E-commerce Security",
-      description: "Advanced security for online retail and payment processing"
-    },
-    {
-      icon: Smartphone,
-      title: "Omnichannel Experience",
-      description: "Seamless integration across online and offline retail channels"
+      title: "Risk Assessment",
+      description: "Intelligent legal risk analysis and mitigation strategies"
     }
   ];
 
   const benefits = [
-    "Increase sales by 25-40%",
-    "Improve customer retention by 30%",
-    "Reduce inventory costs by 20-35%",
-    "Enhance customer experience",
-    "Better marketing ROI",
-    "Streamlined operations"
+    "Reduce legal document review time by 80%",
+    "Improve contract accuracy by 95%",
+    "Lower legal costs by 40-60%",
+    "Enhance compliance monitoring",
+    "Faster legal research and analysis",
+    "Better risk management and mitigation"
   ];
 
   const solutions = [
     {
-      title: "E-commerce Platform",
-      description: "Modern online retail platform with AI-powered features"
+      title: "Contract Management",
+      description: "End-to-end contract lifecycle management with AI assistance"
     },
     {
-      title: "Customer Analytics",
-      description: "Comprehensive customer behavior analysis and insights"
+      title: "Legal Research",
+      description: "Automated case law research and precedent analysis"
     },
     {
-      title: "Inventory Management",
-      description: "Smart inventory optimization and demand forecasting"
+      title: "Compliance Automation",
+      description: "Regulatory compliance monitoring and reporting"
     },
     {
-      title: "Marketing Automation",
-      description: "AI-driven marketing campaigns and personalization"
+      title: "Risk Assessment",
+      description: "AI-powered legal risk analysis and mitigation"
     }
   ];
 
-  const retailTypes = [
-    "Fashion & Apparel",
-    "Electronics",
-    "Home & Garden",
-    "Beauty & Health",
-    "Sports & Outdoor",
-    "Books & Media",
-    "Food & Beverage",
-    "Automotive"
+  const practiceAreas = [
+    "Corporate Law",
+    "Contract Law",
+    "Employment Law",
+    "Intellectual Property",
+    "Regulatory Compliance",
+    "Litigation Support",
+    "Mergers & Acquisitions",
+    "Data Privacy"
   ];
 
   return (
@@ -105,19 +105,19 @@ export default function RetailSolutions() {
           >
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center">
-                <ShoppingCart className="w-10 h-10 text-white" />
+                <Scale className="w-10 h-10 text-white" />
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Retail Solutions
+              AI Legal Tech
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your retail business with cutting-edge AI technology. Enhance customer experience, 
-              optimize operations, and drive sales growth with intelligent retail solutions.
+              Transform your legal practice with cutting-edge AI technology. Streamline document review, 
+              automate research, and enhance compliance with intelligent legal solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105">
-                Get Started
+                Start Free Trial
               </button>
               <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200">
                 Schedule Demo
@@ -138,11 +138,11 @@ export default function RetailSolutions() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              AI-Powered Retail Technology
+              AI-Powered Legal Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our comprehensive retail solutions combine advanced AI with retail expertise 
-              to revolutionize how retailers operate and serve their customers.
+              Our comprehensive AI legal platform combines advanced machine learning with legal expertise 
+              to revolutionize how legal professionals work.
             </p>
           </motion.div>
 
@@ -178,10 +178,10 @@ export default function RetailSolutions() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Why Choose Our Retail Solutions?
+              Why Choose AI Legal Tech?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience unprecedented growth and efficiency in your retail operations.
+              Experience unprecedented efficiency and accuracy in your legal practice with AI-powered solutions.
             </p>
           </motion.div>
 
@@ -223,7 +223,7 @@ export default function RetailSolutions() {
         </div>
       </section>
 
-      {/* Retail Types Section */}
+      {/* Practice Areas Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -234,26 +234,25 @@ export default function RetailSolutions() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Retail Categories
+              Practice Areas
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our retail solutions are designed to meet the unique challenges and requirements 
-              of various retail sectors and product categories.
+              Our AI legal solutions are designed to support various practice areas and legal specialties.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {retailTypes.map((type, index) => (
+            {practiceAreas.map((area, index) => (
               <motion.div
-                key={type}
+                key={area}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 border border-gray-700 rounded-lg p-6 text-center hover:border-cyan-500 transition-all duration-300"
               >
-                <Store className="w-8 h-8 text-cyan-500 mx-auto mb-3" />
-                <h3 className="font-semibold">{type}</h3>
+                <Gavel className="w-8 h-8 text-cyan-500 mx-auto mb-3" />
+                <h3 className="font-semibold">{area}</h3>
               </motion.div>
             ))}
           </div>
@@ -270,10 +269,10 @@ export default function RetailSolutions() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Retail Business?
+              Ready to Transform Your Legal Practice?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join the future of retail technology and start seeing results today.
+              Join the future of legal technology and start seeing results today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2">

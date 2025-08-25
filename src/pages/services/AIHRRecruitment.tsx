@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  ShoppingCart, 
-  Smartphone, 
-  Brain, 
+  Users, 
+  Search, 
   Target, 
+  Brain, 
   BarChart3, 
   Zap, 
   Shield, 
@@ -15,82 +15,80 @@ import {
   Rocket,
   Briefcase,
   Award,
-  Database,
-  Store,
-  CreditCard
+  TrendingUp
 } from 'lucide-react';
 
-export default function RetailSolutions() {
+export default function AIHRRecruitment() {
   const features = [
     {
-      icon: Brain,
-      title: "AI-Powered Customer Insights",
-      description: "Machine learning models to understand customer behavior and preferences"
+      icon: Search,
+      title: "Intelligent Candidate Sourcing",
+      description: "AI-powered talent discovery across multiple platforms and databases"
     },
     {
-      icon: BarChart3,
-      title: "Real-time Analytics",
-      description: "Live monitoring of sales, inventory, and customer engagement metrics"
+      icon: Brain,
+      title: "Smart Resume Parsing",
+      description: "Advanced AI algorithms to extract and analyze candidate information"
     },
     {
       icon: Target,
-      title: "Personalized Marketing",
-      description: "AI-driven targeted marketing campaigns and product recommendations"
+      title: "Predictive Candidate Matching",
+      description: "Machine learning models to find the perfect fit for your roles"
+    },
+    {
+      icon: BarChart3,
+      title: "Performance Analytics",
+      description: "Comprehensive insights into hiring metrics and process optimization"
     },
     {
       icon: Zap,
-      title: "Inventory Optimization",
-      description: "Intelligent inventory management and demand forecasting"
+      title: "Automated Screening",
+      description: "Intelligent pre-screening to save time and improve quality"
     },
     {
       icon: Shield,
-      title: "E-commerce Security",
-      description: "Advanced security for online retail and payment processing"
-    },
-    {
-      icon: Smartphone,
-      title: "Omnichannel Experience",
-      description: "Seamless integration across online and offline retail channels"
+      title: "Bias-Free Hiring",
+      description: "AI algorithms designed to eliminate unconscious bias in recruitment"
     }
   ];
 
   const benefits = [
-    "Increase sales by 25-40%",
-    "Improve customer retention by 30%",
-    "Reduce inventory costs by 20-35%",
-    "Enhance customer experience",
-    "Better marketing ROI",
-    "Streamlined operations"
+    "Reduce time-to-hire by 60-80%",
+    "Improve candidate quality by 40%",
+    "Reduce recruitment costs by 30-50%",
+    "Enhance diversity and inclusion",
+    "Streamlined interview scheduling",
+    "Better candidate experience"
   ];
 
   const solutions = [
     {
-      title: "E-commerce Platform",
-      description: "Modern online retail platform with AI-powered features"
+      title: "Talent Acquisition",
+      description: "End-to-end recruitment automation from sourcing to onboarding"
     },
     {
-      title: "Customer Analytics",
-      description: "Comprehensive customer behavior analysis and insights"
+      title: "Candidate Assessment",
+      description: "AI-powered skills testing and personality evaluation"
     },
     {
-      title: "Inventory Management",
-      description: "Smart inventory optimization and demand forecasting"
+      title: "Interview Management",
+      description: "Automated scheduling and structured interview processes"
     },
     {
-      title: "Marketing Automation",
-      description: "AI-driven marketing campaigns and personalization"
+      title: "Employee Retention",
+      description: "Predictive analytics for employee satisfaction and retention"
     }
   ];
 
-  const retailTypes = [
-    "Fashion & Apparel",
-    "Electronics",
-    "Home & Garden",
-    "Beauty & Health",
-    "Sports & Outdoor",
-    "Books & Media",
-    "Food & Beverage",
-    "Automotive"
+  const industries = [
+    "Technology",
+    "Healthcare",
+    "Finance",
+    "Manufacturing",
+    "Retail",
+    "Education",
+    "Government",
+    "Non-profit"
   ];
 
   return (
@@ -105,19 +103,19 @@ export default function RetailSolutions() {
           >
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center">
-                <ShoppingCart className="w-10 h-10 text-white" />
+                <Users className="w-10 h-10 text-white" />
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Retail Solutions
+              AI HR & Recruitment
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your retail business with cutting-edge AI technology. Enhance customer experience, 
-              optimize operations, and drive sales growth with intelligent retail solutions.
+              Revolutionize your hiring process with intelligent AI-powered recruitment solutions. 
+              Find the best talent faster, reduce bias, and optimize your HR operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105">
-                Get Started
+                Start Free Trial
               </button>
               <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200">
                 Schedule Demo
@@ -138,11 +136,11 @@ export default function RetailSolutions() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              AI-Powered Retail Technology
+              AI-Powered HR Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our comprehensive retail solutions combine advanced AI with retail expertise 
-              to revolutionize how retailers operate and serve their customers.
+              Our comprehensive AI HR platform streamlines every aspect of the recruitment process, 
+              from initial candidate discovery to final hiring decisions.
             </p>
           </motion.div>
 
@@ -178,10 +176,10 @@ export default function RetailSolutions() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Why Choose Our Retail Solutions?
+              Transform Your HR Operations
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience unprecedented growth and efficiency in your retail operations.
+              Experience unprecedented efficiency and effectiveness in your recruitment and HR processes.
             </p>
           </motion.div>
 
@@ -223,7 +221,7 @@ export default function RetailSolutions() {
         </div>
       </section>
 
-      {/* Retail Types Section */}
+      {/* Industries Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -234,26 +232,25 @@ export default function RetailSolutions() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Retail Categories
+              Industry Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our retail solutions are designed to meet the unique challenges and requirements 
-              of various retail sectors and product categories.
+              Our AI HR solutions are tailored to meet the unique challenges and requirements of various industries.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {retailTypes.map((type, index) => (
+            {industries.map((industry, index) => (
               <motion.div
-                key={type}
+                key={industry}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-gray-800/50 border border-gray-700 rounded-lg p-6 text-center hover:border-cyan-500 transition-all duration-300"
               >
-                <Store className="w-8 h-8 text-cyan-500 mx-auto mb-3" />
-                <h3 className="font-semibold">{type}</h3>
+                <Briefcase className="w-8 h-8 text-cyan-500 mx-auto mb-3" />
+                <h3 className="font-semibold">{industry}</h3>
               </motion.div>
             ))}
           </div>
@@ -270,10 +267,10 @@ export default function RetailSolutions() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Retail Business?
+              Ready to Revolutionize Your HR?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join the future of retail technology and start seeing results today.
+              Join thousands of companies already using AI to transform their recruitment processes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2">
