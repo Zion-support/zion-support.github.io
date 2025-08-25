@@ -48,6 +48,7 @@ const AIAutonomousResearchAssistant = lazy(() => import('./pages/AIAutonomousRes
 const FiveGEnterpriseSolutions = lazy(() => import('./pages/5GEnterpriseSolutions'));
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
+const NewServices = lazy(() => import('./pages/NewServices'));
 
 // Company information pages
 const About = lazy(() => import('./pages/About'));
@@ -146,6 +147,7 @@ const App = () => {
                       <Route path="/5g-enterprise-solutions" element={<FiveGEnterpriseSolutions />} />
                       <Route path="/case-studies" element={<CaseStudies />} />
                       <Route path="/help" element={<HelpCenter />} />
+                      <Route path="/new-services" element={<NewServices />} />
                       
                       {/* Company Routes */}
                       <Route path="/about" element={<About />} />

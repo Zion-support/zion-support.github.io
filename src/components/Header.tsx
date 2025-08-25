@@ -44,9 +44,15 @@ export function Header() {
     },
     { 
       path: '/services', 
-      label: 'AI Services', 
+      label: 'Services', 
       icon: '🤖',
-      description: 'Explore our AI service offerings'
+      description: 'Explore our service offerings'
+    },
+    { 
+      path: '/new-services', 
+      label: 'New Services', 
+      icon: '✨',
+      description: 'Latest technology services'
     },
     { 
       path: '/solutions/enterprise', 
@@ -73,12 +79,6 @@ export function Header() {
       description: 'Join our team'
     },
     { 
-      path: '/blog', 
-      label: 'Blog', 
-      icon: '📝',
-      description: 'Latest insights and news'
-    },
-    { 
       path: '/contact', 
       label: 'Contact', 
       icon: '📞',
@@ -90,34 +90,37 @@ export function Header() {
     {
       title: 'AI & Machine Learning',
       services: [
+        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems' },
+        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant' },
         { name: 'AI Business Intelligence', path: '/services#ai-bi' },
-        { name: 'AI Marketing Automation', path: '/services#ai-marketing' },
-        { name: 'AI HR & Recruitment', path: '/services#ai-hr' },
-        { name: 'AI Legal Tech', path: '/services#ai-legal' }
+        { name: 'AI Marketing Automation', path: '/services#ai-marketing' }
       ]
     },
     {
       title: 'Cybersecurity',
       services: [
+        { name: 'Advanced Cybersecurity', path: '/services/cybersecurity' },
+        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation' },
         { name: 'Quantum-Safe Security', path: '/services#quantum-security' },
-        { name: 'Security Assessment', path: '/services#security-assessment' },
-        { name: 'Compliance & Audit', path: '/services#compliance' }
+        { name: 'Security Assessment', path: '/services#security-assessment' }
       ]
     },
     {
       title: 'Cloud & Infrastructure',
       services: [
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure' },
+        { name: 'Cloud DevOps', path: '/cloud-devops' },
         { name: 'Cloud Migration', path: '/services#cloud-migration' },
-        { name: 'Network Infrastructure', path: '/services#network' },
-        { name: 'Managed IT Services', path: '/services#managed-it' }
+        { name: 'Network Infrastructure', path: '/services#network' }
       ]
     },
     {
       title: 'Emerging Tech',
       services: [
+        { name: 'Quantum Technology', path: '/services/quantum-technology' },
+        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions' },
         { name: 'Blockchain Solutions', path: '/services#blockchain' },
-        { name: 'IoT Integration', path: '/services#iot' },
-        { name: 'Quantum Computing', path: '/services#quantum' }
+        { name: 'IoT Integration', path: '/services#iot' }
       ]
     }
   ], []);
