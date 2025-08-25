@@ -39,6 +39,9 @@ const InnovativeServicesShowcase = lazy(() => import('./pages/InnovativeServices
 // Enhanced innovative services page
 const EnhancedInnovativeServices = lazy(() => import('./pages/EnhancedInnovativeServices'));
 
+// Advanced innovative services showcase 2025
+const AdvancedInnovativeServicesShowcase = lazy(() => import('./pages/AdvancedInnovativeServicesShowcase'));
+
 // Missing pages from analysis
 const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/QuantumNeuralNetworkPlatform'));
 const AutonomousBusinessOperationsPlatform = lazy(() => import('./pages/AutonomousBusinessOperationsPlatform'));
@@ -58,6 +61,7 @@ const Mission = lazy(() => import('./pages/Mission'));
 const Team = lazy(() => import('./pages/Team'));
 const Pricing = lazy(() => import('./pages/Pricing'));
 const ComprehensivePricing = lazy(() => import('./pages/ComprehensivePricing'));
+const ComprehensivePricing2025 = lazy(() => import('./pages/ComprehensivePricing2025'));
 const Careers = lazy(() => import('./pages/Careers'));
 const Partners = lazy(() => import('./pages/Partners'));
 const Blog = lazy(() => import('./pages/Blog'));
@@ -134,6 +138,9 @@ const AIConsciousnessEvolution = lazy(() => import('./pages/services/AIConscious
 const AIBusinessIntelligenceElite = lazy(() => import('./pages/services/AIBusinessIntelligenceElite'));
 const AIBusinessIntelligenceSuite = lazy(() => import('./pages/services/AIBusinessIntelligenceSuite'));
 
+// Comprehensive services overview 2025
+const ComprehensiveServicesOverview2025 = lazy(() => import('./pages/ComprehensiveServicesOverview2025'));
+
 const App: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   useScrollToTop();
@@ -199,6 +206,7 @@ const App: React.FC = () => {
                     <Route path="/mission" element={<Mission />} />
                     <Route path="/team" element={<Team />} />
                     <Route path="/pricing" element={<Pricing />} />
+                    <Route path="/comprehensive-pricing-2025" element={<ComprehensivePricing2025 />} />
                     <Route path="/careers" element={<Careers />} />
                     <Route path="/partners" element={<Partners />} />
                     <Route path="/blog" element={<Blog />} />
@@ -226,6 +234,12 @@ const App: React.FC = () => {
                     <Route path="/ai-workflow-automation" element={<AIWorkflowAutomation />} />
                     <Route path="/blockchain-enterprise-solutions" element={<BlockchainEnterpriseSolutions />} />
                     <Route path="/iot-data-analytics" element={<IoTDataAnalytics />} />
+                    
+                    {/* Advanced innovative services showcase 2025 */}
+                    <Route path="/advanced-innovative-services-2025" element={<AdvancedInnovativeServicesShowcase />} />
+                    
+                    {/* Comprehensive services overview 2025 */}
+                    <Route path="/comprehensive-services-overview-2025" element={<ComprehensiveServicesOverview2025 />} />
                     
                     {/* Additional innovative service routes */}
                     <Route path="/ai-business-intelligence" element={<AIBusinessIntelligence />} />
