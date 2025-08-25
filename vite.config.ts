@@ -24,24 +24,60 @@ export default defineConfig({
     sourcemap: false,
     rollupOptions: {
       output: {
-        manualChunks: {
-          // Core React chunks
-          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          'ui-vendor': ['@radix-ui/react-accordion', '@radix-ui/react-alert-dialog', '@radix-ui/react-aspect-ratio', '@radix-ui/react-avatar', '@radix-ui/react-checkbox', '@radix-ui/react-context-menu', '@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-label', '@radix-ui/react-popover', '@radix-ui/react-progress', '@radix-ui/react-radio-group', '@radix-ui/react-scroll-area', '@radix-ui/react-select', '@radix-ui/react-separator', '@radix-ui/react-slider', '@radix-ui/react-slot', '@radix-ui/react-switch', '@radix-ui/react-tabs', '@radix-ui/react-toast', '@radix-ui/react-tooltip'],
-          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
-          'animation-vendor': ['framer-motion', 'embla-carousel-react'],
-          'utility-vendor': ['clsx', 'class-variance-authority', 'tailwind-merge', 'date-fns'],
-          'chart-vendor': ['recharts'],
-          'icon-vendor': ['lucide-react', 'react-icons'],
-          'state-vendor': ['@reduxjs/toolkit', 'react-redux'],
-          'query-vendor': ['@tanstack/react-query'],
-          'supabase-vendor': ['@supabase/supabase-js'],
-          'stripe-vendor': ['@stripe/stripe-js'],
-          'dnd-vendor': ['@hello-pangea/dnd'],
-          'pdf-vendor': ['jspdf', 'jspdf-autotable'],
-          'i18n-vendor': ['i18next', 'i18next-browser-languagedetector', 'react-i18next'],
-          'input-vendor': ['input-otp'],
-          'ui-components': ['vaul', 'cmdk', 'sonner'],
+        manualChunks: (id) => {
+          // Consolidate small vendor chunks for better caching
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router-dom')) {
+              return 'react-vendor';
+            }
+            if (id.includes('@radix-ui')) {
+              return 'ui-vendor';
+            }
+            if (id.includes('framer-motion') || id.includes('embla-carousel')) {
+              return 'animation-vendor';
+            }
+            if (id.includes('lucide-react') || id.includes('react-icons')) {
+              return 'icon-vendor';
+            }
+            if (id.includes('@reduxjs') || id.includes('react-redux')) {
+              return 'state-vendor';
+            }
+            if (id.includes('@tanstack/react-query')) {
+              return 'query-vendor';
+            }
+            if (id.includes('@supabase')) {
+              return 'supabase-vendor';
+            }
+            if (id.includes('@stripe')) {
+              return 'stripe-vendor';
+            }
+            if (id.includes('@hello-pangea/dnd')) {
+              return 'dnd-vendor';
+            }
+            if (id.includes('jspdf')) {
+              return 'pdf-vendor';
+            }
+            if (id.includes('i18next')) {
+              return 'i18n-vendor';
+            }
+            if (id.includes('input-otp')) {
+              return 'input-vendor';
+            }
+            if (id.includes('vaul') || id.includes('cmdk') || id.includes('sonner')) {
+              return 'ui-components';
+            }
+            if (id.includes('recharts')) {
+              return 'chart-vendor';
+            }
+            if (id.includes('clsx') || id.includes('class-variance-authority') || id.includes('tailwind-merge') || id.includes('date-fns')) {
+              return 'utility-vendor';
+            }
+            if (id.includes('react-hook-form') || id.includes('@hookform/resolvers') || id.includes('zod')) {
+              return 'form-vendor';
+            }
+            // Group remaining small packages into a common vendor chunk
+            return 'common-vendor';
+          }
         },
         chunkFileNames: (chunkInfo) => {
           const facadeModuleId = chunkInfo.facadeModuleId ? chunkInfo.facadeModuleId.split('/').pop() : 'chunk';
@@ -64,16 +100,24 @@ export default defineConfig({
         },
       },
     },
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 500, // Reduced from 1000 for better optimization
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug'],
-        passes: 2,
+        passes: 3, // Increased from 2 for better compression
+        unsafe: true, // Enable unsafe optimizations
+        unsafe_comps: true,
+        unsafe_Function: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+        unsafe_regexp: true,
+        unsafe_undefined: true,
       },
       mangle: {
         toplevel: true,
+        safari10: true, // Better Safari compatibility
       },
     },
     // Enable CSS code splitting
@@ -82,6 +126,9 @@ export default defineConfig({
     commonjsOptions: {
       include: [/node_modules/],
     },
+    // Add build optimizations
+    reportCompressedSize: true,
+    emptyOutDir: true,
   },
   optimizeDeps: {
     include: [
@@ -123,6 +170,11 @@ export default defineConfig({
     ],
     // Force pre-bundling for better performance
     force: true,
+    // Add esbuild optimizations
+    esbuildOptions: {
+      target: 'esnext',
+      treeShaking: true,
+    },
   },
   server: {
     port: 3000,
@@ -139,6 +191,21 @@ export default defineConfig({
   },
   css: {
     devSourcemap: true,
+    // Add CSS optimization
+    postcss: {
+      plugins: [
+        require('autoprefixer'),
+        require('cssnano')({
+          preset: ['default', {
+            discardComments: { removeAll: true },
+            normalizeWhitespace: true,
+            colormin: true,
+            minifyFontValues: true,
+            minifySelectors: true,
+          }]
+        })
+      ]
+    }
   },
   esbuild: {
     logOverride: { 'this-is-undefined-in-esm': 'silent' },
@@ -146,6 +213,10 @@ export default defineConfig({
     treeShaking: true,
     // Optimize JSX
     jsx: 'automatic',
+    // Add more optimizations
+    minifyIdentifiers: true,
+    minifySyntax: true,
+    minifyWhitespace: true,
   },
   // Enable experimental features for better performance
   experimental: {
@@ -156,5 +227,10 @@ export default defineConfig({
         return { relative: true }
       }
     },
+  },
+  // Add performance optimizations
+  define: {
+    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
+    __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
   },
 })

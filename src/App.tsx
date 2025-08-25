@@ -22,6 +22,7 @@ import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
 import { EnhancedSEO } from './components/EnhancedSEO';
 import { EnhancedAccessibility } from './components/EnhancedAccessibility';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { BundleAnalyzer } from './components/BundleAnalyzer';
 
 // Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
@@ -188,6 +189,9 @@ const App = () => {
                 
                 {/* Enhanced Accessibility Controls */}
                 <EnhancedAccessibility position="bottom-right" />
+                
+                {/* Bundle Analyzer - Development Mode */}
+                {import.meta.env.DEV && <BundleAnalyzer />}
                 
                 {/* AI Chatbot - Always Available */}
                 <AIChatbot />
