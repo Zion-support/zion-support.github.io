@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 import React from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -227,6 +230,7 @@ export function LoadingSpinner({
 >>>>>>> origin/cursor/build-and-fix-errors-e276
       {text && (
         <motion.p
+<<<<<<< HEAD
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
@@ -315,6 +319,11 @@ export function LoadingSpinner({
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.5 }}
 >>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+=======
+          className={cn("text-zion-slate-light font-medium", textSizes[size])}
+          animate={{ opacity: [0.5, 1, 0.5] }}
+          transition={{ duration: 2, repeat: Infinity }}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
         >
           {text}
         </motion.p>
@@ -323,6 +332,7 @@ export function LoadingSpinner({
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 // Page loading component
@@ -334,6 +344,8 @@ export function PageLoader() {
         <h1 className="text-2xl font-bold">Loading Zion Tech Group...</h1>
         <p className="mt-2 text-blue-200">Please wait while we prepare your experience.</p>
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 // Full page loading component
 export function FullPageLoader({ text = "Loading..." }: { text?: string }) {
   return (
@@ -362,7 +374,11 @@ export function PageLoader() {
 
 <<<<<<< HEAD
 // Inline loading component
+<<<<<<< HEAD
 export function InlineLoader({ size = 'sm', variant = 'default' }: LoadingSpinnerProps) {
+=======
+export function InlineLoader({ text, size = "sm" }: { text?: string; size?: "sm" | "md" | "lg" }) {
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
   return (
 <<<<<<< HEAD
     <div className="inline-flex items-center">
@@ -372,6 +388,7 @@ export function InlineLoader({ size = 'sm', variant = 'default' }: LoadingSpinne
     <div className="inline-flex items-center gap-2">
       <LoadingSpinner size={size} variant="dots" />
       {text && <span className="text-zion-slate-light text-sm">{text}</span>}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/build-and-fix-errors-e276
 =======
 export function SectionLoader() {
@@ -387,6 +404,8 @@ export function CardLoader() {
     <div className="p-8 flex items-center justify-center">
       <LoadingSpinner size="md" text="Loading..." />
 >>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
     </div>
   );
 }

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -123,10 +124,14 @@ export function isDesktop(): boolean {
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
 =======
 import { type ClassValue, clsx } from "clsx"
+=======
+import clsx, { type ClassValue } from "clsx"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 import { twMerge } from "tailwind-merge"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
+<<<<<<< HEAD
 >>>>>>> origin/cursor/build-and-fix-errors-e276
 =======
 =======
@@ -140,4 +145,6 @@ export function cn(...inputs: ClassValue[]) {
 >>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
 =======
 >>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 }

@@ -11,6 +11,7 @@ export interface ProductListing {
   price: number | null;
   currency: string;
   tags: string[];
+<<<<<<< HEAD
   author: {
     name: string;
     id: string;
@@ -54,4 +55,15 @@ export interface ServiceCategory {
 >>>>>>> origin/cursor/build-and-fix-errors-e276
 =======
 >>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
+=======
+  author: string;
+  images: string[];
+  created_at: string;
+  rating: number;
+  review_count: number;
+  featured: boolean;
+  location: string;
+  availability: string;
+  ai_score: number;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 }

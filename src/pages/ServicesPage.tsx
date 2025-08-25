@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -754,6 +755,10 @@ const SERVICE_FILTERS = [
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-7440
 ];
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-8fa6
+=======
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 
 export default function ServicesPage() {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -1015,6 +1020,7 @@ export default function ServicesPage() {
     : allServices.filter(service => service.category === activeCategory);
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
       {/* Hero Section */}
@@ -2553,3 +2559,13 @@ export default function ServicesPage() {
 
 export default ServicesPage;
 >>>>>>> origin/cursor/website-audit-and-enhancement-cbd5
+=======
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-2xl font-bold mb-4">Redirecting...</h1>
+        <p className="text-gray-600">Taking you to our comprehensive services page.</p>
+      </div>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857

@@ -1,12 +1,16 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/build-and-fix-errors-e276
 
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
+=======
+
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, Star, TrendingUp, Users, Award, Zap } from "lucide-react";
@@ -119,12 +123,18 @@ export function FeatureHighlights() {
       opacity: 1,
       transition: {
 <<<<<<< HEAD
+<<<<<<< HEAD
         staggerChildren: 0.2
+=======
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
       }
     }
   };
 
   const itemVariants = {
+<<<<<<< HEAD
 <<<<<<< HEAD
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -171,6 +181,8 @@ export function FeatureHighlights() {
 <<<<<<< HEAD
           animate="visible"
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
     hidden: { y: 30, opacity: 0 },
     visible: {
       y: 0,
@@ -338,6 +350,7 @@ export function FeatureHighlights() {
     }
   };
 
+<<<<<<< HEAD
   return (
     <section className="py-20 bg-gradient-to-b from-zion-blue to-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -420,10 +433,21 @@ export function FeatureHighlights() {
                     ))}
                   </motion.ul>
 >>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+=======
+                  <div className="flex items-center justify-between">
+                    <div className="w-8 h-8 bg-zion-purple/20 rounded-full flex items-center justify-center group-hover:bg-zion-purple/40 transition-colors">
+                      <ArrowRight className="w-4 h-4 text-zion-purple" />
+                    </div>
+                    <span className="text-xs text-zion-cyan font-medium bg-zion-cyan/10 px-3 py-1 rounded-full">
+                      Learn More
+                    </span>
+                  </div>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
                 </CardContent>
               </Card>
             </motion.div>
           ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -622,6 +646,14 @@ export const FeatureHighlights: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center mt-16"
+=======
+        </motion.div>
+
+        {/* Call to action */}
+        <motion.div 
+          className="mt-12 text-center"
+          variants={itemVariants}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
         >
           <div className="bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20 border border-zion-cyan/30 rounded-2xl p-12 backdrop-blur-md">
             <h3 className="text-3xl md:text-4xl font-bold mb-4 text-white">
@@ -660,6 +692,7 @@ export const FeatureHighlights: React.FC = () => {
           </div>
         </motion.div>
       </motion.div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/build-and-fix-errors-e276
     </section>
   );
@@ -704,3 +737,8 @@ export const FeatureHighlights: React.FC = () => {
   );
 }
 >>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+=======
+    </section>
+  );
+}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857

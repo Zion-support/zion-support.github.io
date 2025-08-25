@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 import { GradientHeading } from "@/components/GradientHeading";
 import { motion } from "framer-motion";
 import { Star, Shield, Award, Users, Globe, Zap } from "lucide-react";
@@ -44,6 +45,8 @@ const testimonials = [
 ];
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 export function TrustedBySection() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -357,6 +360,7 @@ export const TrustedBySection: React.FC = () => {
       </div>
     </section>
   );
+<<<<<<< HEAD
 };
 =======
         <motion.div
@@ -387,3 +391,6 @@ export const TrustedBySection: React.FC = () => {
   );
 }
 >>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+=======
+}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857

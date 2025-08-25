@@ -381,3 +381,394 @@ src/pages/Home.tsx
 [2025-08-25 23:35:08] Processing unmerged file: src/pages/Home.tsx
 [2025-08-25 23:35:08] File exists in HEAD, keeping it
 [2025-08-25 23:35:08] Still have unmerged paths, attempting additional resolution...
+[main 9548fddc316] Merge PR #6663: cursor/enhance-app-with-new-services-and-futuristic-design-73d5 (advanced conflict resolution)
+[2025-08-25 23:35:09] ✓ Advanced conflict resolution successful for PR #6663
+[2025-08-25 23:35:09] ✓ PR #6663 processed successfully
+==========================================
+
+
+==========================================
+[2025-08-25 23:35:09] Processing PR #6661 from branch: cursor/expand-services-and-deploy-updates-4082
+==========================================
+[2025-08-25 23:35:09] Processing PR #6661 from branch: cursor/expand-services-and-deploy-updates-4082
+[2025-08-25 23:35:10] Attempting regular merge...
+Already up to date.
+[2025-08-25 23:35:10] ✓ Successfully merged PR #6661
+[2025-08-25 23:35:10] ✓ PR #6661 processed successfully
+==========================================
+
+
+==========================================
+[2025-08-25 23:35:10] Processing PR #6658 from branch: cursor/enhance-app-with-new-services-and-futuristic-design-331d
+==========================================
+[2025-08-25 23:35:10] Processing PR #6658 from branch: cursor/enhance-app-with-new-services-and-futuristic-design-331d
+[2025-08-25 23:35:11] Attempting regular merge...
+Already up to date.
+[2025-08-25 23:35:11] ✓ Successfully merged PR #6658
+[2025-08-25 23:35:11] ✓ PR #6658 processed successfully
+==========================================
+
+
+==========================================
+[2025-08-25 23:35:11] Processing PR #6656 from branch: cursor/expand-services-and-deploy-updates-2857
+==========================================
+[2025-08-25 23:35:11] Processing PR #6656 from branch: cursor/expand-services-and-deploy-updates-2857
+[2025-08-25 23:35:11] Attempting regular merge...
+Auto-merging automation-health-report.txt
+CONFLICT (content): Merge conflict in automation-health-report.txt
+Auto-merging dist/index.html
+CONFLICT (content): Merge conflict in dist/index.html
+CONFLICT (rename/delete): dist/js/chunk-CBrhuu6z.js renamed to dist/js/chunk-CDRJui1_.js in HEAD, but deleted in origin/cursor/expand-services-and-deploy-updates-2857.
+CONFLICT (modify/delete): dist/js/chunk-CDRJui1_.js deleted in origin/cursor/expand-services-and-deploy-updates-2857 and modified in HEAD.  Version HEAD of dist/js/chunk-CDRJui1_.js left in tree.
+Auto-merging package-lock.json
+CONFLICT (content): Merge conflict in package-lock.json
+Auto-merging package.json
+CONFLICT (content): Merge conflict in package.json
+CONFLICT (modify/delete): pages/talent/[id].tsx deleted in origin/cursor/expand-services-and-deploy-updates-2857 and modified in HEAD.  Version HEAD of pages/talent/[id].tsx left in tree.
+Auto-merging src/App.css
+CONFLICT (content): Merge conflict in src/App.css
+Auto-merging src/App.tsx
+CONFLICT (content): Merge conflict in src/App.tsx
+Auto-merging src/components/BenefitsSection.tsx
+CONFLICT (content): Merge conflict in src/components/BenefitsSection.tsx
+Auto-merging src/components/CategoriesSection.tsx
+CONFLICT (content): Merge conflict in src/components/CategoriesSection.tsx
+Auto-merging src/components/EnhancedFooter.tsx
+CONFLICT (add/add): Merge conflict in src/components/EnhancedFooter.tsx
+Auto-merging src/components/EnhancedServiceCard.tsx
+CONFLICT (add/add): Merge conflict in src/components/EnhancedServiceCard.tsx
+CONFLICT (modify/delete): src/components/ErrorBoundary.tsx deleted in origin/cursor/expand-services-and-deploy-updates-2857 and modified in HEAD.  Version HEAD of src/components/ErrorBoundary.tsx left in tree.
+Auto-merging src/components/FeatureCard.tsx
+CONFLICT (add/add): Merge conflict in src/components/FeatureCard.tsx
+Auto-merging src/components/FeaturedListingsSection.tsx
+CONFLICT (content): Merge conflict in src/components/FeaturedListingsSection.tsx
+CONFLICT (modify/delete): src/components/Footer.tsx deleted in origin/cursor/expand-services-and-deploy-updates-2857 and modified in HEAD.  Version HEAD of src/components/Footer.tsx left in tree.
+Auto-merging src/components/Header.tsx
+CONFLICT (content): Merge conflict in src/components/Header.tsx
+Auto-merging src/components/HeroSection.tsx
+CONFLICT (content): Merge conflict in src/components/HeroSection.tsx
+Auto-merging src/components/NewsletterSection.tsx
+CONFLICT (content): Merge conflict in src/components/NewsletterSection.tsx
+Auto-merging src/components/SEO.tsx
+CONFLICT (content): Merge conflict in src/components/SEO.tsx
+Auto-merging src/components/SocialShareSection.tsx
+CONFLICT (content): Merge conflict in src/components/SocialShareSection.tsx
+Auto-merging src/components/TrustedBySection.tsx
+CONFLICT (content): Merge conflict in src/components/TrustedBySection.tsx
+Auto-merging src/components/header/Logo.tsx
+CONFLICT (content): Merge conflict in src/components/header/Logo.tsx
+Auto-merging src/components/header/MobileBottomNav.tsx
+CONFLICT (add/add): Merge conflict in src/components/header/MobileBottomNav.tsx
+Auto-merging src/components/header/MobileMenu.tsx
+CONFLICT (add/add): Merge conflict in src/components/header/MobileMenu.tsx
+Auto-merging src/components/header/UserMenu.tsx
+CONFLICT (content): Merge conflict in src/components/header/UserMenu.tsx
+Auto-merging src/components/home/EnhancedServicesOverview.tsx
+CONFLICT (add/add): Merge conflict in src/components/home/EnhancedServicesOverview.tsx
+Auto-merging src/components/home/FeatureCTAs.tsx
+CONFLICT (content): Merge conflict in src/components/home/FeatureCTAs.tsx
+Auto-merging src/components/home/FeatureHighlights.tsx
+CONFLICT (content): Merge conflict in src/components/home/FeatureHighlights.tsx
+Auto-merging src/components/home/ITServiceRequestHero.tsx
+CONFLICT (content): Merge conflict in src/components/home/ITServiceRequestHero.tsx
+Auto-merging src/components/home/QuickAccess.tsx
+CONFLICT (content): Merge conflict in src/components/home/QuickAccess.tsx
+CONFLICT (modify/delete): src/components/home/ServicesOverview.tsx deleted in origin/cursor/expand-services-and-deploy-updates-2857 and modified in HEAD.  Version HEAD of src/components/home/ServicesOverview.tsx left in tree.
+Auto-merging src/components/profile/ProfileLoadingState.tsx
+Auto-merging src/components/search/EnhancedSearchInput.tsx
+CONFLICT (content): Merge conflict in src/components/search/EnhancedSearchInput.tsx
+CONFLICT (modify/delete): src/components/ui/LoadingSpinner.tsx deleted in origin/cursor/expand-services-and-deploy-updates-2857 and modified in HEAD.  Version HEAD of src/components/ui/LoadingSpinner.tsx left in tree.
+Auto-merging src/components/ui/accordion.tsx
+CONFLICT (content): Merge conflict in src/components/ui/accordion.tsx
+Auto-merging src/components/ui/alert-dialog.tsx
+CONFLICT (content): Merge conflict in src/components/ui/alert-dialog.tsx
+Auto-merging src/components/ui/badge.tsx
+CONFLICT (content): Merge conflict in src/components/ui/badge.tsx
+Auto-merging src/components/ui/button.tsx
+CONFLICT (content): Merge conflict in src/components/ui/button.tsx
+Auto-merging src/components/ui/card.tsx
+CONFLICT (content): Merge conflict in src/components/ui/card.tsx
+Auto-merging src/components/ui/collapsible.tsx
+CONFLICT (add/add): Merge conflict in src/components/ui/collapsible.tsx
+Auto-merging src/components/ui/input.tsx
+CONFLICT (content): Merge conflict in src/components/ui/input.tsx
+Auto-merging src/components/ui/label.tsx
+CONFLICT (content): Merge conflict in src/components/ui/label.tsx
+Auto-merging src/components/ui/loading-spinner.tsx
+CONFLICT (content): Merge conflict in src/components/ui/loading-spinner.tsx
+Auto-merging src/components/ui/select.tsx
+CONFLICT (content): Merge conflict in src/components/ui/select.tsx
+CONFLICT (modify/delete): src/components/ui/sonner.tsx deleted in origin/cursor/expand-services-and-deploy-updates-2857 and modified in HEAD.  Version HEAD of src/components/ui/sonner.tsx left in tree.
+Auto-merging src/components/ui/steps.tsx
+CONFLICT (content): Merge conflict in src/components/ui/steps.tsx
+Auto-merging src/components/ui/tabs.tsx
+CONFLICT (content): Merge conflict in src/components/ui/tabs.tsx
+Auto-merging src/components/ui/textarea.tsx
+CONFLICT (content): Merge conflict in src/components/ui/textarea.tsx
+CONFLICT (modify/delete): src/components/ui/toaster.tsx deleted in origin/cursor/expand-services-and-deploy-updates-2857 and modified in HEAD.  Version HEAD of src/components/ui/toaster.tsx left in tree.
+Auto-merging src/config/sitemap.ts
+CONFLICT (add/add): Merge conflict in src/config/sitemap.ts
+Auto-merging src/data/comprehensiveServices.ts
+CONFLICT (content): Merge conflict in src/data/comprehensiveServices.ts
+Auto-merging src/data/enhancedServices.ts
+CONFLICT (content): Merge conflict in src/data/enhancedServices.ts
+Auto-merging src/data/expandedServices.ts
+CONFLICT (content): Merge conflict in src/data/expandedServices.ts
+Auto-merging src/data/microSaasServices.ts
+CONFLICT (content): Merge conflict in src/data/microSaasServices.ts
+Auto-merging src/hooks/useAuth.ts
+CONFLICT (content): Merge conflict in src/hooks/useAuth.ts
+Auto-merging src/hooks/usePostsByCategory.ts
+CONFLICT (content): Merge conflict in src/hooks/usePostsByCategory.ts
+Auto-merging src/index.css
+CONFLICT (content): Merge conflict in src/index.css
+CONFLICT (modify/delete): src/layout/MainNavigation.tsx deleted in origin/cursor/expand-services-and-deploy-updates-2857 and modified in HEAD.  Version HEAD of src/layout/MainNavigation.tsx left in tree.
+Auto-merging src/lib/utils.ts
+CONFLICT (content): Merge conflict in src/lib/utils.ts
+Auto-merging src/main.tsx
+CONFLICT (content): Merge conflict in src/main.tsx
+CONFLICT (modify/delete): src/pages/AIServicesPage.tsx deleted in origin/cursor/expand-services-and-deploy-updates-2857 and modified in HEAD.  Version HEAD of src/pages/AIServicesPage.tsx left in tree.
+CONFLICT (modify/delete): src/pages/About.tsx deleted in origin/cursor/expand-services-and-deploy-updates-2857 and modified in HEAD.  Version HEAD of src/pages/About.tsx left in tree.
+CONFLICT (modify/delete): src/pages/Contact.tsx deleted in origin/cursor/expand-services-and-deploy-updates-2857 and modified in HEAD.  Version HEAD of src/pages/Contact.tsx left in tree.
+Auto-merging src/pages/EnhancedServicesPage.tsx
+CONFLICT (content): Merge conflict in src/pages/EnhancedServicesPage.tsx
+Auto-merging src/pages/EnhancedServicesShowcase.tsx
+CONFLICT (add/add): Merge conflict in src/pages/EnhancedServicesShowcase.tsx
+Auto-merging src/pages/ExpandedServicesPage.tsx
+CONFLICT (content): Merge conflict in src/pages/ExpandedServicesPage.tsx
+CONFLICT (modify/delete): src/pages/GreenIT.tsx deleted in origin/cursor/expand-services-and-deploy-updates-2857 and modified in HEAD.  Version HEAD of src/pages/GreenIT.tsx left in tree.
+Auto-merging src/pages/Home.tsx
+CONFLICT (content): Merge conflict in src/pages/Home.tsx
+Auto-merging src/pages/ITOnsiteServicesPage.tsx
+CONFLICT (content): Merge conflict in src/pages/ITOnsiteServicesPage.tsx
+Auto-merging src/pages/MicroSaasServices.tsx
+CONFLICT (content): Merge conflict in src/pages/MicroSaasServices.tsx
+CONFLICT (modify/delete): src/pages/PricingPage.tsx deleted in origin/cursor/expand-services-and-deploy-updates-2857 and modified in HEAD.  Version HEAD of src/pages/PricingPage.tsx left in tree.
+Auto-merging src/pages/ServicesPage.tsx
+CONFLICT (content): Merge conflict in src/pages/ServicesPage.tsx
+Auto-merging src/pages/ServicesPricingPage.tsx
+CONFLICT (content): Merge conflict in src/pages/ServicesPricingPage.tsx
+CONFLICT (modify/delete): src/store/hooks.ts deleted in origin/cursor/expand-services-and-deploy-updates-2857 and modified in HEAD.  Version HEAD of src/store/hooks.ts left in tree.
+Auto-merging src/types/listings.ts
+CONFLICT (content): Merge conflict in src/types/listings.ts
+CONFLICT (modify/delete): src_disabled/ServicesPage.tsx deleted in origin/cursor/expand-services-and-deploy-updates-2857 and modified in HEAD.  Version HEAD of src_disabled/ServicesPage.tsx left in tree.
+Auto-merging tsconfig.json
+CONFLICT (content): Merge conflict in tsconfig.json
+Auto-merging tsconfig.tsbuildinfo
+CONFLICT (content): Merge conflict in tsconfig.tsbuildinfo
+Auto-merging yarn.lock
+CONFLICT (content): Merge conflict in yarn.lock
+Automatic merge failed; fix conflicts and then commit the result.
+[2025-08-25 23:35:14] ✗ Merge failed for PR #6656, attempting advanced conflict resolution...
+[2025-08-25 23:35:14] Resolving complex conflicts for PR #6656 (cursor/expand-services-and-deploy-updates-2857)...
+[2025-08-25 23:35:14] Found unmerged files: automation-health-report.txt
+dist/index.html
+dist/js/chunk-CDRJui1_.js
+package-lock.json
+package.json
+pages/talent/[id].tsx
+src/App.css
+src/App.tsx
+src/components/BenefitsSection.tsx
+src/components/CategoriesSection.tsx
+src/components/ErrorBoundary.tsx
+src/components/FeaturedListingsSection.tsx
+src/components/Footer.tsx
+src/components/Header.tsx
+src/components/HeroSection.tsx
+src/components/NewsletterSection.tsx
+src/components/SEO.tsx
+src/components/SocialShareSection.tsx
+src/components/TrustedBySection.tsx
+src/components/header/Logo.tsx
+src/components/header/UserMenu.tsx
+src/components/home/FeatureCTAs.tsx
+src/components/home/FeatureHighlights.tsx
+src/components/home/ITServiceRequestHero.tsx
+src/components/home/QuickAccess.tsx
+src/components/home/ServicesOverview.tsx
+src/components/search/EnhancedSearchInput.tsx
+src/components/ui/LoadingSpinner.tsx
+src/components/ui/accordion.tsx
+src/components/ui/alert-dialog.tsx
+src/components/ui/badge.tsx
+src/components/ui/button.tsx
+src/components/ui/card.tsx
+src/components/ui/input.tsx
+src/components/ui/label.tsx
+src/components/ui/loading-spinner.tsx
+src/components/ui/select.tsx
+src/components/ui/sonner.tsx
+src/components/ui/steps.tsx
+src/components/ui/tabs.tsx
+src/components/ui/textarea.tsx
+src/components/ui/toaster.tsx
+src/data/comprehensiveServices.ts
+src/data/enhancedServices.ts
+src/data/expandedServices.ts
+src/data/microSaasServices.ts
+src/hooks/useAuth.ts
+src/hooks/usePostsByCategory.ts
+src/index.css
+src/layout/MainNavigation.tsx
+src/lib/utils.ts
+src/main.tsx
+src/pages/AIServicesPage.tsx
+src/pages/About.tsx
+src/pages/Contact.tsx
+src/pages/EnhancedServicesPage.tsx
+src/pages/ExpandedServicesPage.tsx
+src/pages/GreenIT.tsx
+src/pages/Home.tsx
+src/pages/ITOnsiteServicesPage.tsx
+src/pages/MicroSaasServices.tsx
+src/pages/PricingPage.tsx
+src/pages/ServicesPage.tsx
+src/pages/ServicesPricingPage.tsx
+src/store/hooks.ts
+src/types/listings.ts
+src_disabled/ServicesPage.tsx
+tsconfig.json
+tsconfig.tsbuildinfo
+yarn.lock
+[2025-08-25 23:35:14] Processing unmerged file: automation-health-report.txt
+[2025-08-25 23:35:14] File exists in HEAD, keeping it
+[2025-08-25 23:35:14] Processing unmerged file: dist/index.html
+[2025-08-25 23:35:14] File exists in HEAD, keeping it
+[2025-08-25 23:35:14] Processing unmerged file: dist/js/chunk-CDRJui1_.js
+[2025-08-25 23:35:14] File exists in HEAD, keeping it
+[2025-08-25 23:35:14] Processing unmerged file: package-lock.json
+[2025-08-25 23:35:14] File exists in HEAD, keeping it
+[2025-08-25 23:35:14] Processing unmerged file: package.json
+[2025-08-25 23:35:14] File exists in HEAD, keeping it
+[2025-08-25 23:35:14] Processing unmerged file: pages/talent/[id].tsx
+[2025-08-25 23:35:14] File exists in HEAD, keeping it
+[2025-08-25 23:35:14] Processing unmerged file: src/App.css
+[2025-08-25 23:35:14] File exists in HEAD, keeping it
+[2025-08-25 23:35:14] Processing unmerged file: src/App.tsx
+[2025-08-25 23:35:14] File exists in HEAD, keeping it
+[2025-08-25 23:35:14] Processing unmerged file: src/components/BenefitsSection.tsx
+[2025-08-25 23:35:14] File exists in HEAD, keeping it
+[2025-08-25 23:35:14] Processing unmerged file: src/components/CategoriesSection.tsx
+[2025-08-25 23:35:14] File exists in HEAD, keeping it
+[2025-08-25 23:35:14] Processing unmerged file: src/components/ErrorBoundary.tsx
+[2025-08-25 23:35:14] File exists in HEAD, keeping it
+[2025-08-25 23:35:14] Processing unmerged file: src/components/FeaturedListingsSection.tsx
+[2025-08-25 23:35:14] File exists in HEAD, keeping it
+[2025-08-25 23:35:14] Processing unmerged file: src/components/Footer.tsx
+[2025-08-25 23:35:14] File exists in HEAD, keeping it
+[2025-08-25 23:35:14] Processing unmerged file: src/components/Header.tsx
+[2025-08-25 23:35:14] File exists in HEAD, keeping it
+[2025-08-25 23:35:14] Processing unmerged file: src/components/HeroSection.tsx
+[2025-08-25 23:35:14] File exists in HEAD, keeping it
+[2025-08-25 23:35:14] Processing unmerged file: src/components/NewsletterSection.tsx
+[2025-08-25 23:35:14] File exists in HEAD, keeping it
+[2025-08-25 23:35:14] Processing unmerged file: src/components/SEO.tsx
+[2025-08-25 23:35:14] File exists in HEAD, keeping it
+[2025-08-25 23:35:14] Processing unmerged file: src/components/SocialShareSection.tsx
+[2025-08-25 23:35:14] File exists in HEAD, keeping it
+[2025-08-25 23:35:14] Processing unmerged file: src/components/TrustedBySection.tsx
+[2025-08-25 23:35:14] File exists in HEAD, keeping it
+[2025-08-25 23:35:14] Processing unmerged file: src/components/header/Logo.tsx
+[2025-08-25 23:35:14] File exists in HEAD, keeping it
+[2025-08-25 23:35:14] Processing unmerged file: src/components/header/UserMenu.tsx
+[2025-08-25 23:35:14] File exists in HEAD, keeping it
+[2025-08-25 23:35:14] Processing unmerged file: src/components/home/FeatureCTAs.tsx
+[2025-08-25 23:35:14] File exists in HEAD, keeping it
+[2025-08-25 23:35:14] Processing unmerged file: src/components/home/FeatureHighlights.tsx
+[2025-08-25 23:35:14] File exists in HEAD, keeping it
+[2025-08-25 23:35:14] Processing unmerged file: src/components/home/ITServiceRequestHero.tsx
+[2025-08-25 23:35:14] File exists in HEAD, keeping it
+[2025-08-25 23:35:14] Processing unmerged file: src/components/home/QuickAccess.tsx
+[2025-08-25 23:35:14] File exists in HEAD, keeping it
+[2025-08-25 23:35:14] Processing unmerged file: src/components/home/ServicesOverview.tsx
+[2025-08-25 23:35:14] File exists in HEAD, keeping it
+[2025-08-25 23:35:14] Processing unmerged file: src/components/search/EnhancedSearchInput.tsx
+[2025-08-25 23:35:14] File exists in HEAD, keeping it
+[2025-08-25 23:35:14] Processing unmerged file: src/components/ui/LoadingSpinner.tsx
+[2025-08-25 23:35:14] File exists in HEAD, keeping it
+[2025-08-25 23:35:14] Processing unmerged file: src/components/ui/accordion.tsx
+[2025-08-25 23:35:14] File exists in HEAD, keeping it
+[2025-08-25 23:35:14] Processing unmerged file: src/components/ui/alert-dialog.tsx
+[2025-08-25 23:35:14] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/components/ui/badge.tsx
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/components/ui/button.tsx
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/components/ui/card.tsx
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/components/ui/input.tsx
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/components/ui/label.tsx
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/components/ui/loading-spinner.tsx
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/components/ui/select.tsx
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/components/ui/sonner.tsx
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/components/ui/steps.tsx
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/components/ui/tabs.tsx
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/components/ui/textarea.tsx
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/components/ui/toaster.tsx
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/data/comprehensiveServices.ts
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/data/enhancedServices.ts
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/data/expandedServices.ts
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/data/microSaasServices.ts
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/hooks/useAuth.ts
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/hooks/usePostsByCategory.ts
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/index.css
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/layout/MainNavigation.tsx
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/lib/utils.ts
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/main.tsx
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/pages/AIServicesPage.tsx
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/pages/About.tsx
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/pages/Contact.tsx
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/pages/EnhancedServicesPage.tsx
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/pages/ExpandedServicesPage.tsx
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/pages/GreenIT.tsx
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/pages/Home.tsx
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/pages/ITOnsiteServicesPage.tsx
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/pages/MicroSaasServices.tsx
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/pages/PricingPage.tsx
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/pages/ServicesPage.tsx
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:15] Processing unmerged file: src/pages/ServicesPricingPage.tsx
+[2025-08-25 23:35:15] File exists in HEAD, keeping it
+[2025-08-25 23:35:16] Processing unmerged file: src/store/hooks.ts
+[2025-08-25 23:35:16] File exists in HEAD, keeping it
+[2025-08-25 23:35:16] Processing unmerged file: src/types/listings.ts
+[2025-08-25 23:35:16] File exists in HEAD, keeping it
+[2025-08-25 23:35:16] Processing unmerged file: src_disabled/ServicesPage.tsx
+[2025-08-25 23:35:16] File exists in HEAD, keeping it
+[2025-08-25 23:35:16] Processing unmerged file: tsconfig.json
+[2025-08-25 23:35:16] File exists in HEAD, keeping it
+[2025-08-25 23:35:16] Processing unmerged file: tsconfig.tsbuildinfo
+[2025-08-25 23:35:16] File exists in HEAD, keeping it
+[2025-08-25 23:35:16] Processing unmerged file: yarn.lock
+[2025-08-25 23:35:16] File exists in HEAD, keeping it
+[2025-08-25 23:35:16] Still have unmerged paths, attempting additional resolution...

@@ -2,13 +2,23 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 import React from 'react';
 =======
 >>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 import { cn } from '../../lib/utils';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface ButtonProps {
+=======
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: 'default' | 'outline' | 'ghost';
+  size?: 'sm' | 'md' | 'lg';
+  asChild?: boolean;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
   children: React.ReactNode;
   className?: string;
   onClick?: () => void;
@@ -23,6 +33,7 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const Button: React.FC<ButtonProps> = ({ 
   children, 
   className = '', 
@@ -34,6 +45,17 @@ const Button: React.FC<ButtonProps> = ({
   asChild = false
 }) => {
   const baseClasses = 'inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50';
+=======
+export const Button: React.FC<ButtonProps> = ({ 
+  variant = 'default', 
+  size = 'md', 
+  asChild = false,
+  children, 
+  className = '', 
+  ...props 
+}) => {
+  const baseClasses = 'inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
   
   const variantClasses = {
     default: 'bg-primary text-primary-foreground hover:bg-primary/90',
@@ -57,6 +79,13 @@ const Button: React.FC<ButtonProps> = ({
     return <span className={finalClassName}>{children}</span>;
   }
   
+  if (asChild) {
+    return React.cloneElement(children as React.ReactElement, {
+      className: classes,
+      ...props
+    });
+  }
+  
   return (
     <button
       type={type}
@@ -68,6 +97,7 @@ const Button: React.FC<ButtonProps> = ({
     </button>
   );
 };
+<<<<<<< HEAD
 
 export { Button };
 =======
@@ -227,3 +257,5 @@ Button.displayName = 'Button';
 
 export { Button };
 >>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857

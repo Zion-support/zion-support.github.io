@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { motion } from 'framer-motion';
@@ -39,6 +40,8 @@ export function QuickAccess() {
       color: 'from-zion-cyan to-zion-purple',
       gradient: 'from-zion-cyan/20 to-zion-purple/20'
 =======
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -471,6 +474,7 @@ export function QuickAccess() {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 export const QuickAccess: React.FC = () => {
@@ -514,3 +518,5 @@ export const QuickAccess: React.FC = () => {
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
 =======
 >>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857

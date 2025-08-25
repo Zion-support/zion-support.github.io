@@ -61,7 +61,16 @@ export const AlertDialog: React.FC<AlertDialogProps> = ({ children, open = false
 
   return (
     <div className={cn("relative", isOpen && "z-50")}>
+<<<<<<< HEAD
       {children}
+=======
+      {React.Children.map(children, (child) => {
+        if (React.isValidElement(child)) {
+          return child;
+        }
+        return child;
+      })}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
     </div>
   );
 };

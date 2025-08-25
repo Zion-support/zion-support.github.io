@@ -277,8 +277,11 @@ export function NewsletterSection() {
             </p>
 =======
 import React, { useState } from 'react';
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 import { motion } from 'framer-motion';
 import { Mail, CheckCircle, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -456,6 +459,7 @@ export function NewsletterSection() {
     </section>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 import React from 'react';
@@ -572,3 +576,6 @@ export const NewsletterSection: React.FC = () => {
 =======
 }
 >>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+=======
+}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { cn } from '@/lib/utils';
 =======
@@ -15,6 +16,18 @@ interface TabsContextType {
 const TabsContext = createContext<TabsContextType | null>(null);
 
 interface TabsProps {
+=======
+import React from 'react';
+
+interface TabsProps {
+  defaultValue?: string;
+  value?: string;
+  onValueChange?: (value: string) => void;
+  children: React.ReactNode;
+}
+
+interface TabsListProps {
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
   children: React.ReactNode;
   className?: string;
 =======
@@ -25,6 +38,7 @@ export interface TabsProps extends React.HTMLAttributes<HTMLDivElement> {
   onValueChange?: (value: string) => void;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const Tabs: React.FC<TabsProps> = ({ children, className = '', value, onValueChange, defaultValue }) => {
   const [internalValue, setInternalValue] = useState(defaultValue || '');
@@ -107,6 +121,8 @@ export function TabsList({ children, className = '' }: TabsListProps) {
   );
 }
 
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 interface TabsTriggerProps {
 >>>>>>> origin/cursor/build-and-fix-errors-e276
   children: React.ReactNode;
@@ -133,8 +149,11 @@ export const TabsList: React.FC<TabsListProps> = ({ children, className, ...prop
 <<<<<<< HEAD
 interface TabsTriggerProps {
   children: React.ReactNode;
+<<<<<<< HEAD
   className?: string;
   value: string;
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 }
 
 const TabsTrigger: React.FC<TabsTriggerProps> = ({ children, className = '', value }) => {
@@ -158,6 +177,7 @@ export const TabsTrigger: React.FC<TabsTriggerProps> = ({ value, children, class
     throw new Error('TabsTrigger must be used within a Tabs component');
   }
 
+<<<<<<< HEAD
   const isActive = context.value === value;
 
   return (
@@ -279,3 +299,28 @@ TabsContent.displayName = TabsPrimitive.Content.displayName
 
 export { Tabs, TabsList, TabsTrigger, TabsContent }
 >>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
+=======
+export function TabsList({ children, className }: TabsListProps) {
+  return (
+    <div className={`flex border-b border-zion-slate ${className}`}>
+      {children}
+    </div>
+  );
+}
+
+export function TabsTrigger({ value, children, className }: TabsTriggerProps) {
+  return (
+    <button className={`px-4 py-2 text-sm font-medium border-b-2 border-transparent hover:border-zion-cyan focus:outline-none ${className}`}>
+      {children}
+    </button>
+  );
+}
+
+export function TabsContent({ value, children }: TabsContentProps) {
+  return (
+    <div className="mt-4">
+      {children}
+    </div>
+  );
+}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857

@@ -1,10 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as React from "react"
 =======
 >>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 
 <<<<<<< HEAD
+=======
+import * as React from "react"
+
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 import { cn } from "@/lib/utils"
 
 export interface TextareaProps
@@ -37,11 +42,15 @@ export const Textarea: React.FC<TextareaProps> = ({ label, error, className = ''
         {...props}
       />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
     )
   }
 )
 Textarea.displayName = "Textarea"
 
+<<<<<<< HEAD
 export { Textarea }
 =======
       {error && (
@@ -67,3 +76,6 @@ export const Textarea: React.FC<TextareaProps> = ({ className = '', ...props }) 
   );
 };
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
+=======
+export { Textarea }
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857

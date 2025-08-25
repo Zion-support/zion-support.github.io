@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/build-and-fix-errors-fb38
 import React from 'react'
@@ -89,6 +90,13 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './index.css';
+=======
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { HelmetProvider } from 'react-helmet-async'
+import App from './App.tsx'
+import './index.css'
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 
 // Create a client
 const queryClient = new QueryClient({
@@ -146,6 +154,7 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
+<<<<<<< HEAD
     <App />
   </React.StrictMode>,
 )
@@ -173,3 +182,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 >>>>>>> origin/cursor/build-and-fix-errors-e276
 =======
 >>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
+=======
+    <HelmetProvider>
+      <App />
+    </HelmetProvider>
+  </React.StrictMode>,
+)
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857

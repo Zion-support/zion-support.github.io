@@ -6,20 +6,25 @@
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-73d5
 export interface MicroSaasService {
-  id: string;
+  id: number;
   title: string;
   description: string;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   category: 'AI' | 'IT' | 'Development' | 'Analytics' | 'Security' | 'Automation' | 'Cloud' | 'Marketing' | 'Productivity' | 'Finance';
   subcategory: string;
+=======
+  category: string;
+  subcategory?: string;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
   price: {
-    monthly: number;
-    yearly: number;
+    monthly?: number;
     oneTime?: number;
     currency: string;
   };
+<<<<<<< HEAD
 =======
   category: 'AI' | 'IT' | 'Business' | 'Development' | 'Marketing' | 'Analytics' | 'Security' | 'Automation';
 >>>>>>> origin/cursor/build-and-fix-errors-e276
@@ -57,10 +62,23 @@ export interface MicroSaasService {
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-73d5
   website: string;
   contactInfo: {
+=======
+  rating: number;
+  users: number;
+  pricingTier: string;
+  features?: string[];
+  benefits?: string[];
+  targetAudience?: string[];
+  launchDate: string;
+  reviewCount: number;
+  image?: string;
+  url?: string;
+  contactInfo?: {
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
     email: string;
     phone: string;
-    address: string;
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
   rating: number;
   reviewCount: number;
@@ -75,10 +93,13 @@ export interface MicroSaasService {
   status: 'available' | 'coming-soon' | 'beta';
   tags: string[];
 >>>>>>> origin/cursor/build-and-fix-errors-e276
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 }
 
 export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
   {
+<<<<<<< HEAD
     id: 'ai-content-generator',
 <<<<<<< HEAD
     title: 'Zion AI Content Generator',
@@ -2752,106 +2773,88 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     integration: ['Shopify', 'WooCommerce', 'Salesforce', 'HubSpot', 'Mailchimp'],
     pricingTier: 'Professional',
     website: 'https://ziontechgroup.com/ai-marketing-automation',
-    contactInfo: {
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+=======
+    id: 1,
+    title: "Task Manager Pro",
+    description: "Simple task management for small teams",
+    category: "Productivity",
+    subcategory: "Project Management",
+    price: {
+      monthly: 9,
+      currency: "$"
     },
-    rating: 4.8,
-    reviewCount: 234,
-    launchDate: '2023-12-01',
-    status: 'Active'
+    rating: 4.6,
+    users: 1200,
+    pricingTier: "Starter",
+    features: ["Task Creation", "Team Collaboration", "Progress Tracking"],
+    benefits: ["Increased Productivity", "Better Team Coordination", "Time Savings"],
+    targetAudience: ["Small Teams", "Startups", "Freelancers"],
+    launchDate: "2024-01-15",
+    reviewCount: 156,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
+    contactInfo: {
+      email: "support@taskmanagerpro.com",
+      phone: "+1-555-0123"
+    }
   },
-
-  // Productivity Services
   {
-    id: 'team-collaboration-platform',
-    title: 'Zion Team Collaboration Platform',
-    description: 'Comprehensive collaboration suite that brings teams together with project management, communication, and productivity tools.',
-    category: 'Productivity',
-    subcategory: 'Collaboration',
+    id: 2,
+    title: "Invoice Creator",
+    description: "Easy invoicing for freelancers",
+    category: "Finance",
+    subcategory: "Billing",
     price: {
       monthly: 15,
-      yearly: 150,
-      currency: '$'
+      currency: "$"
     },
-    features: [
-      'Project management tools',
-      'Real-time messaging',
-      'File sharing and storage',
-      'Video conferencing',
-      'Task tracking and automation',
-      'Mobile apps for all devices'
-    ],
-    benefits: [
-      'Improve team productivity by 35%',
-      'Reduce meeting time',
-      'Better project visibility',
-      'Enhanced team communication'
-    ],
-    targetAudience: ['Remote teams', 'Project managers', 'Creative agencies', 'Development teams'],
-    useCases: [
-      'Project collaboration',
-      'Remote team management',
-      'Client communication',
-      'Document collaboration'
-    ],
-    integration: ['Google Workspace', 'Microsoft 365', 'Slack', 'Zoom', 'Trello'],
-    pricingTier: 'Starter',
-    website: 'https://ziontechgroup.com/team-collaboration',
+    rating: 4.8,
+    users: 800,
+    pricingTier: "Professional",
+    features: ["Invoice Templates", "Payment Tracking", "Tax Calculations"],
+    benefits: ["Faster Invoicing", "Professional Appearance", "Better Cash Flow"],
+    targetAudience: ["Freelancers", "Small Businesses", "Consultants"],
+    launchDate: "2024-02-01",
+    reviewCount: 89,
     contactInfo: {
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    },
-    rating: 4.7,
-    reviewCount: 189,
-    launchDate: '2024-02-15',
-    status: 'Active'
+      email: "hello@invoicecreator.com",
+      phone: "+1-555-0124"
+    }
   },
-
-  // Finance Services
   {
-    id: 'ai-financial-advisor',
-    title: 'Zion AI Financial Advisor',
-    description: 'Intelligent financial planning and investment advisory platform that provides personalized financial guidance and portfolio management.',
-    category: 'Finance',
-    subcategory: 'Financial Planning',
+    id: 3,
+    title: "Social Media Scheduler",
+    description: "Schedule posts across platforms",
+    category: "Marketing",
+    subcategory: "Social Media",
     price: {
-      monthly: 39,
-      yearly: 390,
-      currency: '$'
+      monthly: 12,
+      currency: "$"
     },
-    features: [
-      'AI-powered financial planning',
-      'Portfolio optimization',
-      'Risk assessment',
-      'Tax optimization strategies',
-      'Retirement planning tools',
-      'Real-time market analysis'
-    ],
-    benefits: [
-      'Optimize investment returns',
-      'Reduce financial risks',
-      'Plan for long-term goals',
-      'Save on taxes and fees'
-    ],
-    targetAudience: ['Individual investors', 'Small business owners', 'Retirees', 'Young professionals'],
-    useCases: [
-      'Investment portfolio management',
-      'Retirement planning',
-      'Tax optimization',
-      'Financial goal setting'
-    ],
-    integration: ['Banking accounts', 'Investment platforms', 'Tax software', 'Budgeting apps'],
-    pricingTier: 'Professional',
-    website: 'https://ziontechgroup.com/ai-financial-advisor',
+    rating: 4.5,
+    users: 950,
+    pricingTier: "Starter",
+    features: ["Multi-Platform", "Content Calendar", "Analytics"],
+    benefits: ["Time Savings", "Consistent Posting", "Better Engagement"],
+    targetAudience: ["Social Media Managers", "Businesses", "Influencers"],
+    launchDate: "2024-01-20",
+    reviewCount: 234,
     contactInfo: {
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
+      email: "info@socialscheduler.com",
+      phone: "+1-555-0125"
+    }
+  },
+  {
+    id: 4,
+    title: "Code Review Assistant",
+    description: "AI-powered code review tool",
+    category: "Development",
+    subcategory: "Code Quality",
+    price: {
+      monthly: 25,
+      currency: "$"
     },
     rating: 4.9,
+<<<<<<< HEAD
     reviewCount: 167,
     launchDate: '2024-01-01',
     status: 'Active'
@@ -3440,17 +3443,113 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     compliance: ["SOC 2", "ISO 27001"],
     aiScore: 89
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-73d5
+=======
+    users: 150,
+    pricingTier: "Enterprise",
+    features: ["AI Analysis", "Security Checks", "Performance Metrics"],
+    benefits: ["Better Code Quality", "Faster Reviews", "Security Improvements"],
+    targetAudience: ["Development Teams", "Tech Companies", "Open Source Projects"],
+    launchDate: "2024-03-01",
+    reviewCount: 67,
+    contactInfo: {
+      email: "dev@codereview.com",
+      phone: "+1-555-0126"
+    }
+  },
+  {
+    id: 5,
+    title: "Design System Manager",
+    description: "Manage design tokens and components",
+    category: "Design",
+    subcategory: "Design Systems",
+    price: {
+      monthly: 18,
+      currency: "$"
+    },
+    rating: 4.7,
+    users: 300,
+    pricingTier: "Professional",
+    features: ["Component Library", "Design Tokens", "Version Control"],
+    benefits: ["Consistent Design", "Faster Development", "Better Collaboration"],
+    targetAudience: ["Design Teams", "Product Companies", "Agencies"],
+    launchDate: "2024-02-15",
+    reviewCount: 123,
+    contactInfo: {
+      email: "design@designsystem.com",
+      phone: "+1-555-0127"
+    }
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
   }
 ];
 
+export const getPopularServices = () => [
+  {
+    id: 1,
+    title: "Task Manager Pro",
+    description: "Simple task management for small teams",
+    category: "Productivity",
+    price: "$9/month",
+    rating: 4.6,
+    users: 1200
+  },
+  {
+    id: 2,
+    title: "Invoice Creator",
+    description: "Easy invoicing for freelancers",
+    category: "Finance",
+    price: "$15/month",
+    rating: 4.8,
+    users: 800
+  },
+  {
+    id: 3,
+    title: "Social Media Scheduler",
+    description: "Schedule posts across platforms",
+    category: "Marketing",
+    price: "$12/month",
+    rating: 4.5,
+    users: 950
+  }
+];
+
+export const getNewServices = () => [
+  {
+    id: 4,
+    title: "Code Review Assistant",
+    description: "AI-powered code review tool",
+    category: "Development",
+    price: "$25/month",
+    rating: 4.9,
+    users: 150
+  },
+  {
+    id: 5,
+    title: "Design System Manager",
+    description: "Manage design tokens and components",
+    category: "Design",
+    price: "$18/month",
+    rating: 4.7,
+    users: 300
+  }
+];
+
+export const getFeaturedServices = () => MICRO_SAAS_SERVICES.filter(service => service.rating >= 4.5);
+
 export const getServiceByCategory = (category: string) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
   return MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase() === category.toLowerCase());
+=======
+  if (category === 'all') return MICRO_SAAS_SERVICES;
+  return MICRO_SAAS_SERVICES.filter(service => service.category === category);
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 };
 
 <<<<<<< HEAD
 export const getServiceBySubcategory = (subcategory: string) => {
+  if (subcategory === 'all') return MICRO_SAAS_SERVICES;
   return MICRO_SAAS_SERVICES.filter(service => service.subcategory === subcategory);
+<<<<<<< HEAD
 };
 
 export const getServiceByPricingTier = (tier: string) => {
@@ -3523,3 +3622,6 @@ export const getServicesByPriceRange = (min: number, max: number) => {
   return MICRO_SAAS_SERVICES.filter(service => service.price >= min && service.price <= max);
 };
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-73d5
+=======
+};
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857

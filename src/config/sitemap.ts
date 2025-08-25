@@ -1,4 +1,5 @@
 export interface SitemapRoute {
+<<<<<<< HEAD
   path: string;
   label: string;
   description?: string;
@@ -42,4 +43,47 @@ export const completeSitemap: SitemapRoute[] = [
   // Authentication
   { path: '/login', label: 'Login', description: 'Sign in to your account' },
   { path: '/signup', label: 'Sign Up', description: 'Create a new account' },
+=======
+  url: string;
+  path: string;
+  label: string;
+  lastModified: Date;
+  changeFrequency: string;
+  priority: number;
+}
+
+export const completeSitemap: SitemapRoute[] = [
+  {
+    url: "/",
+    path: "/",
+    label: "Home",
+    lastModified: new Date(),
+    changeFrequency: "daily",
+    priority: 1,
+  },
+  {
+    url: "/contact",
+    path: "/contact",
+    label: "Contact",
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.8,
+  },
+  {
+    url: "/services",
+    path: "/services",
+    label: "Services",
+    lastModified: new Date(),
+    changeFrequency: "weekly",
+    priority: 0.9,
+  },
+  {
+    url: "/about",
+    path: "/about",
+    label: "About",
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.7,
+  },
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 ];

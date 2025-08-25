@@ -1,4 +1,24 @@
+<<<<<<< HEAD
 /* App.css - Clean version without merge conflicts */
+=======
+/* App.css - Comprehensive application styles */
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8fafc;
+}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 
 .App {
   text-align: center;
@@ -12,8 +32,14 @@
   color: white;
 }
 
+<<<<<<< HEAD
 .App-link {
   color: #61dafb;
+=======
+/* Background colors */
+.bg-background {
+  background-color: #f8fafc;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 }
 
 /* Navigation styles */
@@ -1278,12 +1304,18 @@
   background-color: rgb(37 99 235);
 }
 
+<<<<<<< HEAD
 .bg-blue-700 {
   background-color: rgb(29 78 216);
 }
 
 .bg-blue-900 {
   background-color: rgb(30 58 138);
+=======
+/* Grid */
+.grid {
+  display: grid;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 }
 
 .bg-green-500 {
@@ -2136,6 +2168,7 @@
 .quantum-field {
   position: relative;
   overflow: hidden;
+<<<<<<< HEAD
 }
 
 .quantum-field::before {
@@ -2360,4 +2393,19 @@
     inset 0 0 20px rgba(245, 158, 11, 0.2);
 =======
 >>>>>>> origin/cursor/build-and-fix-errors-e276
+=======
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+/* Loading fallback styles */
+.loading-fallback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  font-size: 1.1rem;
+  color: #64748b;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 }

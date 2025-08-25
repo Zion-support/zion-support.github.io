@@ -8,25 +8,21 @@ interface User {
   id: string;
 <<<<<<< HEAD
   email: string;
+<<<<<<< HEAD
   name: string;
   role: 'user' | 'admin';
   userType: 'creator' | 'jobSeeker' | 'employer' | 'buyer' | 'admin';
+=======
+  name?: string;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 }
 
-interface AuthState {
-  user: User | null;
-  isAuthenticated: boolean;
-  isLoading: boolean;
-}
-
-export const useAuth = () => {
-  const [authState, setAuthState] = useState<AuthState>({
-    user: null,
-    isAuthenticated: false,
-    isLoading: true,
-  });
+export function useAuth() {
+  const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+<<<<<<< HEAD
     // Check if user is logged in (e.g., check localStorage, cookies, etc.)
     const checkAuth = () => {
       const token = localStorage.getItem('authToken');
@@ -51,10 +47,19 @@ export const useAuth = () => {
         });
       }
     };
+=======
+    // Simulate auth check
+    const timer = setTimeout(() => {
+      setLoading(false);
+      // For now, no user is logged in
+      setUser(null);
+    }, 1000);
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 
-    checkAuth();
+    return () => clearTimeout(timer);
   }, []);
 
+<<<<<<< HEAD
   const login = async (email: string, _password: string) => {
     // In a real app, you would make an API call to your backend
     setAuthState({
@@ -274,3 +279,22 @@ export function useAuth(): AuthContextType {
   };
 }
 >>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+=======
+  const signIn = async (email: string, password: string) => {
+    // Simulate sign in
+    return { success: true };
+  };
+
+  const signOut = async () => {
+    setUser(null);
+  };
+
+  return {
+    user,
+    loading,
+    signIn,
+    signOut,
+    isAuthenticated: !!user,
+  };
+}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857

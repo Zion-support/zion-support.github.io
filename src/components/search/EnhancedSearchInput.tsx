@@ -136,6 +136,7 @@ export function EnhancedSearchInput({
       <div className="relative">
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
         <Input
+<<<<<<< HEAD
 >>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
           type="text"
           value={value}
@@ -144,6 +145,15 @@ export function EnhancedSearchInput({
 <<<<<<< HEAD
           className="w-full pl-10 pr-10 py-2 bg-zion-blue-light/20 border border-zion-blue-light/30 rounded-lg text-white placeholder:text-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
           onFocus={() => value.trim() && setShowSuggestions(true)}
+=======
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          onFocus={() => setIsFocused(true)}
+          onBlur={() => setTimeout(() => setIsFocused(false), 200)}
+          placeholder="Search for services, talent, or equipment..."
+          className="flex-1 border-0 focus:ring-0 text-lg"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
         />
         {value && (
           <button

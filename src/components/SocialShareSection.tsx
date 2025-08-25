@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { Share2, Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 import { Button } from '@/components/ui/button';
 
 export const SocialShareSection: React.FC = () => {

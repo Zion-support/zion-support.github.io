@@ -29,20 +29,29 @@ import {
   ExternalLink
 } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { COMPREHENSIVE_SERVICES as comprehensiveServices } from '@/data/comprehensiveServices';
 =======
 import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
 >>>>>>> origin/cursor/website-audit-and-enhancement-53a4
+=======
+import { comprehensiveServices, serviceCategories } from '@/data/comprehensiveServices';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 
 export default function EnhancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const filteredServices = selectedCategory === 'all' 
+<<<<<<< HEAD
     ? COMPREHENSIVE_SERVICES 
     : COMPREHENSIVE_SERVICES.filter(service => service.category.toLowerCase().includes(selectedCategory.toLowerCase()));
 
   // Get unique categories
   const categories: string[] = [...new Set(COMPREHENSIVE_SERVICES.map(service => service.category))];
+=======
+    ? comprehensiveServices 
+    : comprehensiveServices.filter(service => service.category.toLowerCase().includes(selectedCategory.toLowerCase()));
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
@@ -114,6 +123,7 @@ export default function EnhancedServicesShowcase() {
           >
             All Services
           </Button>
+<<<<<<< HEAD
           {categories.map((category) => (
             <Button
               key={category}
@@ -122,6 +132,16 @@ export default function EnhancedServicesShowcase() {
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
             >
               {category}
+=======
+          {serviceCategories.map((category) => (
+            <Button
+              key={category.id}
+              variant={selectedCategory === category.id ? 'default' : 'outline'}
+              onClick={() => setSelectedCategory(category.id)}
+              className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
+            >
+              {category.icon} {category.name}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
             </Button>
           ))}
         </div>

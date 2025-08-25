@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "use client"
 
 =======
@@ -30,6 +31,30 @@ const AccordionItem = React.forwardRef<
   />
 ))
 AccordionItem.displayName = "AccordionItem"
+=======
+import React from 'react';
+
+interface AccordionProps {
+  type?: 'single' | 'multiple';
+  collapsible?: boolean;
+  children: React.ReactNode;
+}
+
+interface AccordionItemProps {
+  value: string;
+  children: React.ReactNode;
+}
+
+interface AccordionTriggerProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+interface AccordionContentProps {
+  children: React.ReactNode;
+  className?: string;
+}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 
 const AccordionTrigger = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Trigger>,
@@ -183,6 +208,7 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({ value, disabled, c
       })}
     </div>
   );
+<<<<<<< HEAD
 };
 
 export const AccordionTrigger: React.FC<AccordionTriggerProps> = ({ children, className, value, ...props }) => {
@@ -303,3 +329,23 @@ AccordionContent.displayName = 'AccordionContent';
 
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
 >>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+=======
+}
+
+export function AccordionTrigger({ children, className }: AccordionTriggerProps) {
+  return (
+    <button className={`w-full px-4 py-3 text-left flex items-center justify-between hover:bg-zion-blue-light transition-colors ${className || ''}`}>
+      {children}
+      <span className="text-zion-cyan">+</span>
+    </button>
+  );
+}
+
+export function AccordionContent({ children, className }: AccordionContentProps) {
+  return (
+    <div className={`px-4 pb-3 ${className || ''}`}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857

@@ -18,6 +18,7 @@ export const usePostsByCategory = (category: string) => {
       const mockPosts: ForumPost[] = [
         {
           id: '1',
+<<<<<<< HEAD
           title: 'Getting Started with Zion Tech',
           content: 'Welcome to the Zion Tech community! This is your first step into a world of innovation and collaboration.',
           authorName: 'Zion Team',
@@ -29,11 +30,25 @@ export const usePostsByCategory = (category: string) => {
           likes: 15,
           tags: ['welcome', 'getting-started'],
           isPinned: true,
+=======
+          title: 'Getting Started with AI Development',
+          content: 'I\'m new to AI development and looking for guidance on where to start. Any recommendations for beginners?',
+          authorId: 'user1',
+          authorName: 'Alex Chen',
+          authorAvatar: '/avatars/alex.jpg',
+          category: 'AI Development',
+          tags: ['AI', 'Beginner', 'Development'],
+          createdAt: '2024-01-15T10:00:00Z',
+          updatedAt: '2024-01-15T10:00:00Z',
+          likes: 12,
+          isPinned: false,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
           isLocked: false,
           replies: []
         },
         {
           id: '2',
+<<<<<<< HEAD
           title: 'Best Practices for AI Development',
           content: 'Share your experiences and learn from others about developing AI applications with best practices.',
           authorName: 'AI Expert',
@@ -44,6 +59,18 @@ export const usePostsByCategory = (category: string) => {
           updatedAt: '2024-01-14T14:30:00Z',
           likes: 23,
           tags: ['ai', 'development', 'best-practices'],
+=======
+          title: 'Best Practices for Cybersecurity',
+          content: 'What are the current best practices for implementing cybersecurity in small businesses?',
+          authorId: 'user2',
+          authorName: 'Sarah Johnson',
+          authorAvatar: '/avatars/sarah.jpg',
+          category: 'Cybersecurity',
+          tags: ['Security', 'Business', 'Best Practices'],
+          createdAt: '2024-01-14T14:30:00Z',
+          updatedAt: '2024-01-14T14:30:00Z',
+          likes: 8,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
           isPinned: false,
           isLocked: false,
           replies: []

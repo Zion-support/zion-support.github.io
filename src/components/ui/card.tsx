@@ -2,6 +2,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 import React from 'react';
 <<<<<<< HEAD
 =======
@@ -35,45 +38,100 @@ const Card = React.forwardRef<
 Card.displayName = "Card";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const Card: React.FC<CardProps> = ({ children, className = '' }) => {
   return (
     <div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}>
+=======
+export const Card: React.FC<CardProps> = ({ children, className = '' }) => {
+  return (
+    <div className={`bg-white rounded-lg border border-gray-200 shadow-sm ${className}`}>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
       {children}
     </div>
   );
 };
+<<<<<<< HEAD
 
 const CardHeader: React.FC<CardProps> = ({ children, className = '' }) => {
   return (
     <div className={`flex flex-col space-y-1.5 p-6 ${className}`}>
+=======
+
+interface CardHeaderProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export const CardHeader: React.FC<CardHeaderProps> = ({ children, className = '' }) => {
+  return (
+    <div className={`px-6 py-4 border-b border-gray-200 ${className}`}>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
       {children}
     </div>
   );
 };
+<<<<<<< HEAD
 
 const CardTitle: React.FC<CardProps> = ({ children, className = '' }) => {
   return (
     <h3 className={`text-2xl font-semibold leading-none tracking-tight ${className}`}>
+=======
+
+interface CardTitleProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export const CardTitle: React.FC<CardTitleProps> = ({ children, className = '' }) => {
+  return (
+    <h3 className={`text-lg font-semibold text-gray-900 ${className}`}>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
       {children}
     </h3>
   );
 };
+<<<<<<< HEAD
 
 const CardDescription: React.FC<CardProps> = ({ children, className = '' }) => {
   return (
     <p className={`text-sm text-muted-foreground ${className}`}>
+=======
+
+interface CardDescriptionProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export const CardDescription: React.FC<CardDescriptionProps> = ({ children, className = '' }) => {
+  return (
+    <p className={`text-sm text-gray-600 ${className}`}>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
       {children}
     </p>
   );
 };
+<<<<<<< HEAD
 
 const CardContent: React.FC<CardProps> = ({ children, className = '' }) => {
   return (
     <div className={`p-6 pt-0 ${className}`}>
+=======
+
+interface CardContentProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export const CardContent: React.FC<CardContentProps> = ({ children, className = '' }) => {
+  return (
+    <div className={`px-6 py-4 ${className}`}>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
       {children}
     </div>
   );
 };
+<<<<<<< HEAD
 
 const CardFooter: React.FC<CardProps> = ({ children, className = '' }) => {
   return (
@@ -296,3 +354,5 @@ CardFooter.displayName = 'CardFooter';
 
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
 >>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857

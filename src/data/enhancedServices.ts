@@ -1,9 +1,43 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface ServiceContact {
   phone: string;
   email: string;
   website: string;
   address: string;
+=======
+export interface EnhancedService {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  subcategory: string;
+  price: number;
+  currency: string;
+  pricingModel: 'one-time' | 'monthly' | 'hourly' | 'project-based';
+  features: string[];
+  benefits: string[];
+  useCases: string[];
+  marketPrice: string;
+  contactInfo: {
+    phone: string;
+    email: string;
+    website: string;
+  };
+  tags: string[];
+  author: {
+    name: string;
+    id: string;
+    avatarUrl?: string;
+  };
+  images: string[];
+  createdAt: string;
+  aiScore: number;
+  rating: number;
+  reviewCount: number;
+  availability: 'immediate' | '1-2 weeks' | '1 month' | 'custom';
+  supportLevel: 'basic' | 'standard' | 'premium' | 'enterprise';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 }
 
 export interface MicroSaasService {
@@ -68,6 +102,7 @@ export interface AIService {
 // Enhanced Micro SAAS Services
 export const enhancedMicroSaasServices: MicroSaasService[] = [
   {
+<<<<<<< HEAD
     id: 1,
     name: "TaskFlow Pro",
     category: "Productivity",
@@ -388,10 +423,101 @@ export const itServices: ITService[] = [
       website: "https://ziontechgroup.com"
     },
     tags: ["AI", "Automation", "Process Optimization", "Machine Learning", "Workflow"],
+=======
+    id: "ai-ml-1",
+    title: "AI-Powered Customer Service Automation",
+    description: "Implement intelligent chatbots and automated customer service solutions using advanced NLP and machine learning to handle 80% of customer inquiries automatically.",
+    category: "AI & Machine Learning",
+    subcategory: "Customer Service",
+    price: 2500,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Multi-language support",
+      "24/7 availability",
+      "Seamless human handoff",
+      "Analytics dashboard",
+      "Custom training on your data",
+      "Integration with CRM systems"
+    ],
+    benefits: [
+      "Reduce customer service costs by 60%",
+      "Improve response time from hours to seconds",
+      "Handle unlimited customer inquiries simultaneously",
+      "Provide consistent service quality",
+      "Gather valuable customer insights"
+    ],
+    useCases: [
+      "E-commerce customer support",
+      "SaaS product help desks",
+      "Financial services inquiries",
+      "Healthcare appointment scheduling",
+      "Real estate lead qualification"
+    ],
+    marketPrice: "$2,000 - $5,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-customer-service"
+    },
+    tags: ["AI", "Chatbot", "NLP", "Customer Service", "Automation"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
+    },
+    images: ["https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-15T10:00:00.000Z",
+    aiScore: 95,
+    rating: 4.9,
+    reviewCount: 156,
+    availability: "1-2 weeks",
+    supportLevel: "premium"
+  },
+  {
+    id: "ai-ml-2",
+    title: "Predictive Analytics & Business Intelligence",
+    description: "Transform your business data into actionable insights with advanced predictive analytics, forecasting models, and real-time business intelligence dashboards.",
+    category: "AI & Machine Learning",
+    subcategory: "Analytics",
+    price: 3500,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Real-time data processing",
+      "Custom ML model development",
+      "Interactive dashboards",
+      "Automated reporting",
+      "Anomaly detection",
+      "Forecasting algorithms"
+    ],
+    benefits: [
+      "Increase revenue by 15-25% through better decision making",
+      "Reduce operational costs by identifying inefficiencies",
+      "Predict market trends and customer behavior",
+      "Optimize inventory and resource allocation",
+      "Improve customer retention strategies"
+    ],
+    useCases: [
+      "Sales forecasting and pipeline analysis",
+      "Inventory optimization",
+      "Customer churn prediction",
+      "Market trend analysis",
+      "Operational efficiency optimization"
+    ],
+    marketPrice: "$3,000 - $8,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/predictive-analytics"
+    },
+    tags: ["AI", "Analytics", "Business Intelligence", "Machine Learning", "Forecasting"],
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
     author: {
       name: "Zion Tech Group",
       id: "zion-tech-group"
     },
+<<<<<<< HEAD
     images: ["/images/services/ai-automation.jpg"],
     createdAt: "2024-01-15",
     aiScore: 95,
@@ -652,11 +778,60 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     price: 4999,
     currency: "$",
     tags: ["Predictive Analytics", "Machine Learning", "Business Intelligence", "Forecasting"],
+=======
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-20T14:30:00.000Z",
+    aiScore: 92,
+    rating: 4.8,
+    reviewCount: 89,
+    availability: "1-2 weeks",
+    supportLevel: "premium"
+  },
+  {
+    id: "ai-ml-3",
+    title: "Computer Vision & Image Recognition Solutions",
+    description: "Implement advanced computer vision solutions for quality control, security monitoring, and automated image analysis across various industries.",
+    category: "AI & Machine Learning",
+    subcategory: "Computer Vision",
+    price: 4500,
+    currency: "$",
+    pricingModel: "project-based",
+    features: [
+      "Custom model training",
+      "Real-time processing",
+      "Multi-object detection",
+      "Quality control automation",
+      "Security monitoring",
+      "API integration"
+    ],
+    benefits: [
+      "Reduce quality control costs by 70%",
+      "Improve product consistency",
+      "24/7 automated monitoring",
+      "Reduce human error in visual tasks",
+      "Scalable image processing capabilities"
+    ],
+    useCases: [
+      "Manufacturing quality control",
+      "Retail inventory management",
+      "Security surveillance systems",
+      "Medical image analysis",
+      "Agricultural crop monitoring"
+    ],
+    marketPrice: "$4,000 - $15,000/project",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/computer-vision"
+    },
+    tags: ["AI", "Computer Vision", "Image Recognition", "Quality Control", "Automation"],
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
     author: {
       name: "Zion Tech Group",
-      id: "zion-tech",
-      email: "kleber@ziontechgroup.com",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100"
     },
+<<<<<<< HEAD
     images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-20T09:15:00.000Z",
     rating: 4.9,
@@ -665,10 +840,20 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "3-4 Weeks",
     aiScore: 97
+=======
+    images: ["https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-25T09:15:00.000Z",
+    aiScore: 94,
+    rating: 4.9,
+    reviewCount: 67,
+    availability: "1 month",
+    supportLevel: "enterprise"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
   },
 
   // Cybersecurity & Compliance Services
   {
+<<<<<<< HEAD
     id: "zero-trust-security",
     title: "Zero Trust Security Framework",
     description: "Comprehensive zero trust security implementation including identity verification, device trust scoring, network segmentation, and continuous monitoring. Reduces security breaches by 95% and ensures compliance with SOC2, ISO27001, and GDPR.",
@@ -698,11 +883,102 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     price: 3999,
     currency: "$",
     tags: ["Threat Detection", "AI Security", "Incident Response", "Behavioral Analysis"],
+=======
+    id: "cyber-1",
+    title: "Zero-Trust Security Architecture Implementation",
+    description: "Design and implement comprehensive zero-trust security frameworks that protect your organization from modern cyber threats with continuous verification and least-privilege access.",
+    category: "Cybersecurity",
+    subcategory: "Architecture",
+    price: 8000,
+    currency: "$",
+    pricingModel: "project-based",
+    features: [
+      "Identity and access management",
+      "Network segmentation",
+      "Continuous monitoring",
+      "Threat detection",
+      "Compliance reporting",
+      "Security training"
+    ],
+    benefits: [
+      "Reduce security breach risk by 90%",
+      "Meet industry compliance requirements",
+      "Improve audit readiness",
+      "Protect against insider threats",
+      "Enable secure remote work"
+    ],
+    useCases: [
+      "Financial services security",
+      "Healthcare data protection",
+      "Government contractor compliance",
+      "Enterprise network security",
+      "Cloud security implementation"
+    ],
+    marketPrice: "$7,000 - $25,000/project",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/zero-trust-security"
+    },
+    tags: ["Cybersecurity", "Zero-Trust", "Compliance", "Network Security", "Access Control"],
     author: {
       name: "Zion Tech Group",
-      id: "zion-tech",
-      email: "kleber@ziontechgroup.com",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=100&h=100"
     },
+    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-18T16:45:00.000Z",
+    aiScore: 96,
+    rating: 4.9,
+    reviewCount: 134,
+    availability: "1 month",
+    supportLevel: "enterprise"
+  },
+  {
+    id: "cyber-2",
+    title: "Penetration Testing & Vulnerability Assessment",
+    description: "Comprehensive security testing services including penetration testing, vulnerability assessments, and security audits to identify and remediate security weaknesses.",
+    category: "Cybersecurity",
+    subcategory: "Testing",
+    price: 3500,
+    currency: "$",
+    pricingModel: "one-time",
+    features: [
+      "External and internal testing",
+      "Web application security",
+      "Network infrastructure testing",
+      "Social engineering assessment",
+      "Detailed remediation report",
+      "Follow-up verification"
+    ],
+    benefits: [
+      "Identify security vulnerabilities before attackers",
+      "Meet compliance requirements",
+      "Improve security posture",
+      "Protect customer data",
+      "Reduce cyber insurance costs"
+    ],
+    useCases: [
+      "Annual security audits",
+      "Compliance requirements",
+      "Pre-deployment testing",
+      "Merger and acquisition due diligence",
+      "Incident response preparation"
+    ],
+    marketPrice: "$3,000 - $10,000/assessment",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/penetration-testing"
+    },
+    tags: ["Cybersecurity", "Penetration Testing", "Vulnerability Assessment", "Security Audit", "Compliance"],
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
+    },
+<<<<<<< HEAD
     images: ["https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-02-05T16:20:00.000Z",
     rating: 4.8,
@@ -731,10 +1007,20 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     location: "Global",
     availability: "1-2 Weeks",
     aiScore: 91
+=======
+    images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-22T11:20:00.000Z",
+    aiScore: 93,
+    rating: 4.8,
+    reviewCount: 78,
+    availability: "1-2 weeks",
+    supportLevel: "standard"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
   },
 
   // Cloud & DevOps Services
   {
+<<<<<<< HEAD
     id: "multi-cloud-orchestration",
     title: "Multi-Cloud Orchestration Platform",
     description: "Unified management platform for AWS, Azure, and Google Cloud with automated resource optimization, cost management, and disaster recovery. Reduces cloud costs by 30% and improves operational efficiency.",
@@ -742,11 +1028,51 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     price: 5999,
     currency: "$",
     tags: ["Multi-Cloud", "AWS", "Azure", "GCP", "Cost Optimization"],
+=======
+    id: "cloud-1",
+    title: "Multi-Cloud Infrastructure Management",
+    description: "Comprehensive multi-cloud strategy and management services to optimize costs, improve performance, and ensure business continuity across AWS, Azure, and Google Cloud.",
+    category: "Cloud & DevOps",
+    subcategory: "Infrastructure",
+    price: 5000,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Multi-cloud architecture design",
+      "Cost optimization strategies",
+      "Performance monitoring",
+      "Disaster recovery planning",
+      "Security compliance",
+      "24/7 support"
+    ],
+    benefits: [
+      "Reduce cloud costs by 20-40%",
+      "Improve application performance",
+      "Enhance disaster recovery capabilities",
+      "Avoid vendor lock-in",
+      "Optimize resource utilization"
+    ],
+    useCases: [
+      "Enterprise cloud migration",
+      "Multi-cloud strategy development",
+      "Cost optimization initiatives",
+      "Disaster recovery implementation",
+      "Performance optimization"
+    ],
+    marketPrice: "$4,000 - $12,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/multi-cloud-management"
+    },
+    tags: ["Cloud", "DevOps", "AWS", "Azure", "Google Cloud", "Infrastructure"],
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
     author: {
       name: "Zion Tech Group",
       id: "zion-tech",
       email: "kleber@ziontechgroup.com",
     },
+<<<<<<< HEAD
     images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-30T10:30:00.000Z",
     rating: 4.8,
@@ -808,11 +1134,219 @@ export const ENHANCED_SERVICES: ProductListing[] = [
     price: 6999,
     currency: "$",
     tags: ["Real-Time", "Data Pipeline", "Apache Kafka", "Stream Processing"],
+=======
+    images: ["https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-16T13:15:00.000Z",
+    aiScore: 91,
+    rating: 4.7,
+    reviewCount: 112,
+    availability: "1-2 weeks",
+    supportLevel: "premium"
+  },
+  {
+    id: "cloud-2",
+    title: "DevOps Automation & CI/CD Pipeline",
+    description: "Implement automated DevOps practices and CI/CD pipelines to accelerate software delivery, improve code quality, and reduce deployment risks.",
+    category: "Cloud & DevOps",
+    subcategory: "Automation",
+    price: 4000,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "CI/CD pipeline setup",
+      "Automated testing",
+      "Infrastructure as code",
+      "Monitoring and alerting",
+      "Security scanning",
+      "Performance optimization"
+    ],
+    benefits: [
+      "Reduce deployment time by 80%",
+      "Improve code quality and reliability",
+      "Enable faster feature delivery",
+      "Reduce human error in deployments",
+      "Improve team productivity"
+    ],
+    useCases: [
+      "Software development teams",
+      "Digital transformation projects",
+      "Microservices architecture",
+      "Container orchestration",
+      "Legacy system modernization"
+    ],
+    marketPrice: "$3,500 - $8,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/devops-automation"
+    },
+    tags: ["DevOps", "CI/CD", "Automation", "Infrastructure as Code", "Monitoring"],
     author: {
       name: "Zion Tech Group",
-      id: "zion-tech",
-      email: "kleber@ziontechgroup.com",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
     },
+    images: ["https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-19T15:30:00.000Z",
+    aiScore: 89,
+    rating: 4.6,
+    reviewCount: 95,
+    availability: "1-2 weeks",
+    supportLevel: "standard"
+  },
+
+  // Business Intelligence & Analytics
+  {
+    id: "bi-1",
+    title: "Real-Time Business Intelligence Dashboard",
+    description: "Custom business intelligence dashboards that provide real-time insights into key performance indicators, enabling data-driven decision making across your organization.",
+    category: "Business Intelligence",
+    subcategory: "Dashboards",
+    price: 3000,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Real-time data visualization",
+      "Custom KPI tracking",
+      "Interactive charts and graphs",
+      "Mobile-responsive design",
+      "Automated reporting",
+      "Data integration services"
+    ],
+    benefits: [
+      "Improve decision-making speed by 60%",
+      "Identify business opportunities faster",
+      "Monitor performance in real-time",
+      "Reduce manual reporting time",
+      "Enable data-driven culture"
+    ],
+    useCases: [
+      "Sales performance monitoring",
+      "Financial reporting and analysis",
+      "Operational efficiency tracking",
+      "Customer behavior analysis",
+      "Supply chain optimization"
+    ],
+    marketPrice: "$2,500 - $6,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/bi-dashboards"
+    },
+    tags: ["Business Intelligence", "Analytics", "Dashboards", "KPI", "Real-time"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100"
+    },
+    images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-17T12:00:00.000Z",
+    aiScore: 88,
+    rating: 4.7,
+    reviewCount: 73,
+    availability: "1-2 weeks",
+    supportLevel: "standard"
+  },
+
+  // Digital Transformation Services
+  {
+    id: "digital-1",
+    title: "Legacy System Modernization",
+    description: "Transform your outdated legacy systems into modern, cloud-native applications that improve efficiency, reduce costs, and enable digital innovation.",
+    category: "Digital Transformation",
+    subcategory: "Modernization",
+    price: 15000,
+    currency: "$",
+    pricingModel: "project-based",
+    features: [
+      "System assessment and planning",
+      "Cloud migration strategy",
+      "API development and integration",
+      "Data migration services",
+      "User training and change management",
+      "Ongoing support and maintenance"
+    ],
+    benefits: [
+      "Reduce operational costs by 30-50%",
+      "Improve system performance and reliability",
+      "Enable new digital capabilities",
+      "Enhance user experience",
+      "Reduce security risks"
+    ],
+    useCases: [
+      "ERP system modernization",
+      "Legacy database migration",
+      "Mainframe to cloud migration",
+      "Custom application modernization",
+      "Integration platform development"
+    ],
+    marketPrice: "$15,000 - $100,000/project",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/legacy-modernization"
+    },
+    tags: ["Digital Transformation", "Legacy Systems", "Cloud Migration", "API Development", "Modernization"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100"
+    },
+    images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-21T10:45:00.000Z",
+    aiScore: 87,
+    rating: 4.6,
+    reviewCount: 45,
+    availability: "1 month",
+    supportLevel: "enterprise"
+  },
+
+  // Specialized Industry Solutions
+  {
+    id: "industry-1",
+    title: "Healthcare IT Compliance & Security",
+    description: "Specialized IT services for healthcare organizations, ensuring HIPAA compliance, data security, and seamless integration of medical systems while maintaining patient privacy.",
+    category: "Healthcare IT",
+    subcategory: "Compliance",
+    price: 6000,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "HIPAA compliance auditing",
+      "Medical device security",
+      "Electronic health record integration",
+      "Patient data protection",
+      "Staff training programs",
+      "Incident response planning"
+    ],
+    benefits: [
+      "Ensure HIPAA compliance and avoid penalties",
+      "Protect sensitive patient information",
+      "Improve healthcare delivery efficiency",
+      "Reduce security breach risks",
+      "Enable telemedicine capabilities"
+    ],
+    useCases: [
+      "Hospitals and medical centers",
+      "Private medical practices",
+      "Healthcare technology companies",
+      "Medical device manufacturers",
+      "Healthcare consulting firms"
+    ],
+    marketPrice: "$5,000 - $15,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/healthcare-it"
+    },
+    tags: ["Healthcare", "HIPAA", "Compliance", "Security", "Medical IT"],
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100"
+    },
+<<<<<<< HEAD
     images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-02-08T14:15:00.000Z",
     rating: 4.9,
@@ -1116,3 +1650,127 @@ export const SERVICE_PRICING_TIERS = {
   }
 };
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-302a
+=======
+    images: ["https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-23T14:20:00.000Z",
+    aiScore: 95,
+    rating: 4.9,
+    reviewCount: 89,
+    availability: "1-2 weeks",
+    supportLevel: "premium"
+  },
+  {
+    id: "industry-2",
+    title: "Financial Services Technology Solutions",
+    description: "Comprehensive IT solutions for financial institutions, including regulatory compliance, fraud detection, payment processing, and digital banking platforms.",
+    category: "Financial Services",
+    subcategory: "Technology",
+    price: 8000,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Regulatory compliance (SOX, PCI-DSS)",
+      "Fraud detection and prevention",
+      "Payment gateway integration",
+      "Digital banking platforms",
+      "Risk management systems",
+      "Audit trail and reporting"
+    ],
+    benefits: [
+      "Ensure regulatory compliance",
+      "Reduce fraud losses",
+      "Improve customer experience",
+      "Enable digital transformation",
+      "Reduce operational risks"
+    ],
+    useCases: [
+      "Banks and credit unions",
+      "Payment processors",
+      "Investment firms",
+      "Insurance companies",
+      "Fintech startups"
+    ],
+    marketPrice: "$7,000 - $20,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/financial-services"
+    },
+    tags: ["Financial Services", "Compliance", "Fraud Detection", "Digital Banking", "Regulatory"],
+    author: {
+      name: "Zion Tech Group",
+      id: "zion-tech-group",
+      avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100"
+    },
+    images: ["https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500"],
+    createdAt: "2024-01-24T11:30:00.000Z",
+    aiScore: 93,
+    rating: 4.8,
+    reviewCount: 67,
+    availability: "1 month",
+    supportLevel: "enterprise"
+  }
+];
+
+export const SERVICE_CATEGORIES = [
+  {
+    id: "ai-ml",
+    name: "AI & Machine Learning",
+    description: "Advanced artificial intelligence and machine learning solutions",
+    icon: "🤖",
+    services: ENHANCED_SERVICES.filter(s => s.category === "AI & Machine Learning")
+  },
+  {
+    id: "cybersecurity",
+    name: "Cybersecurity",
+    description: "Comprehensive security solutions and protection services",
+    icon: "🔒",
+    services: ENHANCED_SERVICES.filter(s => s.category === "Cybersecurity")
+  },
+  {
+    id: "cloud-devops",
+    name: "Cloud & DevOps",
+    description: "Cloud infrastructure and DevOps automation services",
+    icon: "☁️",
+    services: ENHANCED_SERVICES.filter(s => s.category === "Cloud & DevOps")
+  },
+  {
+    id: "business-intelligence",
+    name: "Business Intelligence",
+    description: "Data analytics and business intelligence solutions",
+    icon: "📊",
+    services: ENHANCED_SERVICES.filter(s => s.category === "Business Intelligence")
+  },
+  {
+    id: "digital-transformation",
+    name: "Digital Transformation",
+    description: "Legacy system modernization and digital innovation",
+    icon: "🚀",
+    services: ENHANCED_SERVICES.filter(s => s.category === "Digital Transformation")
+  },
+  {
+    id: "healthcare-it",
+    name: "Healthcare IT",
+    description: "Specialized IT solutions for healthcare organizations",
+    icon: "🏥",
+    services: ENHANCED_SERVICES.filter(s => s.category === "Healthcare IT")
+  },
+  {
+    id: "financial-services",
+    name: "Financial Services",
+    description: "Technology solutions for financial institutions",
+    icon: "💰",
+    services: ENHANCED_SERVICES.filter(s => s.category === "Financial Services")
+  }
+];
+
+export const getServiceByCategory = (categoryId: string) => {
+  return ENHANCED_SERVICES.filter(service => 
+    SERVICE_CATEGORIES.find(cat => cat.id === categoryId)?.services.includes(service)
+  );
+};
+
+export const getServiceById = (id: string) => {
+  return ENHANCED_SERVICES.find(service => service.id === id);
+};
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857

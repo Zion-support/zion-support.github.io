@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+<<<<<<< HEAD
 
 /* Custom line-clamp utility */
 @layer utilities {
@@ -139,55 +140,38 @@ html {
     --zion-slate-light: #94a3b8;
 =======
 /* Zion-specific custom properties */
+=======
+
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 :root {
-  --zion-blue: #2e73ea;
-  --zion-blue-light: #8ab1f3;
-  --zion-blue-dark: #172d67;
-  --zion-purple: #8c15e9;
-  --zion-purple-light: #b971f2;
-  --zion-purple-dark: #530c8b;
-  --zion-cyan: #22ddd2;
-  --zion-cyan-light: #7aeae4;
-  --zion-cyan-dark: #14847e;
-  --zion-slate: #17072b;
-  --zion-slate-light: #451582;
-  --zion-slate-dark: #000000;
+  --zion-blue: #1e40af;
+  --zion-blue-dark: #1e3a8a;
+  --zion-blue-light: #3b82f6;
+  --zion-cyan: #06b6d4;
+  --zion-cyan-dark: #0891b2;
+  --zion-cyan-light: #22d3ee;
+  --zion-purple: #8b5cf6;
+  --zion-purple-dark: #7c3aed;
+  --zion-purple-light: #a78bfa;
+  --zion-slate: #475569;
+  --zion-slate-dark: #334155;
+  --zion-slate-light: #64748b;
+  --zion-green: #10b981;
+  --zion-orange: #f59e0b;
+  --zion-red: #ef4444;
 }
 
-/* Accessibility Enhancements */
-.high-contrast {
-  --background: 0 0% 0%;
-  --foreground: 0 0% 100%;
-  --card: 0 0% 0%;
-  --card-foreground: 0 0% 100%;
-  --border: 0 0% 100%;
-  --input: 0 0% 100%;
-  --primary: 0 0% 100%;
-  --primary-foreground: 0 0% 0%;
+/* Custom CSS Variables */
+.bg-background {
+  background-color: #ffffff;
 }
 
-.high-contrast * {
-  border-color: white !important;
-}
-
-.high-contrast .bg-muted {
-  background-color: #333 !important;
-}
-
-.large-text {
-  font-size: 1.2em;
-}
-
-.large-text h1 { font-size: 2.5em; }
-.large-text h2 { font-size: 2em; }
-.large-text h3 { font-size: 1.75em; }
-.large-text p, .large-text span { font-size: 1.2em; }
-
-/* Print styles */
-@media print {
-  .no-print {
-    display: none !important;
+/* Custom Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
   }
+<<<<<<< HEAD
   
   body {
     background: white !important;
@@ -391,10 +375,257 @@ html {
 
   .section-padding-sm {
     @apply py-12 md:py-16;
+=======
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animation Classes */
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.6s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.6s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.6s ease-out forwards;
+}
+
+.animate-bounce-in {
+  animation: bounce-in 0.8s ease-out forwards;
+}
+
+/* Staggered Animation Delays */
+.animate-delay-100 {
+  animation-delay: 0.1s;
+}
+
+.animate-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animate-delay-300 {
+  animation-delay: 0.3s;
+}
+
+.animate-delay-400 {
+  animation-delay: 0.4s;
+}
+
+.animate-delay-500 {
+  animation-delay: 0.5s;
+}
+
+.animate-delay-600 {
+  animation-delay: 0.6s;
+}
+
+/* Enhanced Hover Effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--zion-blue), var(--zion-cyan), var(--zion-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glassmorphism Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, var(--zion-blue), var(--zion-cyan));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, var(--zion-blue-dark), var(--zion-cyan-dark));
+}
+
+/* Futuristic Elements */
+.futuristic-border {
+  position: relative;
+}
+
+.futuristic-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent, var(--zion-cyan), transparent);
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.futuristic-border:hover::before {
+  opacity: 1;
+}
+
+/* Glow Effects */
+.glow-blue {
+  box-shadow: 0 0 20px rgba(30, 64, 175, 0.3);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+}
+
+.glow-purple {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+/* Responsive Typography */
+.text-responsive-xl {
+  font-size: clamp(1.25rem, 2.5vw, 2.25rem);
+}
+
+.text-responsive-2xl {
+  font-size: clamp(1.5rem, 3vw, 3rem);
+}
+
+.text-responsive-3xl {
+  font-size: clamp(1.875rem, 4vw, 4.5rem);
+}
+
+.text-responsive-4xl {
+  font-size: clamp(2.25rem, 5vw, 6rem);
+}
+
+.text-responsive-5xl {
+  font-size: clamp(3rem, 6vw, 7.5rem);
+}
+
+/* Loading States */
+.loading-shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
   }
 }
 
 /* Focus States */
+<<<<<<< HEAD
 @layer utilities {
   .focus-ring {
     @apply focus:outline-none focus:ring-2 focus:ring-zion-purple focus:ring-offset-2 focus:ring-offset-zion-blue-dark;
@@ -489,6 +720,50 @@ html {
   .will-change-scroll {
     will-change: scroll-position;
   }
+=======
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2;
+}
+
+/* Button Variants */
+.btn-primary {
+  @apply bg-zion-blue hover:bg-zion-blue-dark text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus-ring;
+}
+
+.btn-secondary {
+  @apply bg-zion-slate hover:bg-zion-slate-dark text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus-ring;
+}
+
+.btn-outline {
+  @apply border border-zion-blue text-zion-blue hover:bg-zion-blue hover:text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 focus-ring;
+}
+
+/* Card Variants */
+.card-elevated {
+  @apply bg-white rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-200 border border-gray-200;
+}
+
+.card-interactive {
+  @apply bg-white rounded-lg shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-200 border border-gray-200 cursor-pointer;
+}
+
+/* Form Elements */
+.input-styled {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-colors duration-200;
+}
+
+/* Utility Classes */
+.text-balance {
+  text-wrap: balance;
+}
+
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-square {
+  aspect-ratio: 1 / 1;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 }
 
 /* Print Styles */
@@ -499,6 +774,7 @@ html {
   
   .print-break {
     page-break-before: always;
+<<<<<<< HEAD
 =======
   /* Futuristic animations and effects */
   @keyframes neon-glow {
@@ -861,5 +1137,27 @@ html {
     --lk-bg1: #0B1120;
     --lk-bg2: #0F172A;
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
+=======
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  :root {
+    --zion-blue: #000080;
+    --zion-cyan: #008080;
+    --zion-purple: #800080;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
   }
 }

@@ -1,6 +1,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 import { motion } from 'framer-motion';
 import { Star, Eye, Heart, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
@@ -579,5 +583,9 @@ export function FeaturedListingsSection() {
       </div>
     </section>
   );
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+=======
+}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
