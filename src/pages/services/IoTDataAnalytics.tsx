@@ -13,8 +13,8 @@ import {
   Cloud,
   Smartphone,
   Wifi,
-  Sensor,
-  Analytics,
+  Gauge,
+  BarChart,
   Monitor,
   AlertTriangle
 } from 'lucide-react';
@@ -438,7 +438,7 @@ export default function IoTDataAnalytics() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
-                <Sensor className="w-10 h-10 text-white" />
+                <Gauge className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
                 Multi-Protocol Support
@@ -450,7 +450,7 @@ export default function IoTDataAnalytics() {
 
             <div className="text-center">
               <div className="w-20 h-20 bg-gradient-to-br from-zion-purple to-zion-pink rounded-full flex items-center justify-center mx-auto mb-6">
-                <Analytics className="w-10 h-10 text-white" />
+                <BarChart className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
                 Machine Learning
