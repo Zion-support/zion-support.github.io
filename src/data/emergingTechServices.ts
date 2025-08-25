@@ -2,685 +2,1212 @@ export interface EmergingTechService {
   id: string;
   title: string;
   description: string;
-  category: string;
+  category: 'Blockchain' | 'IoT' | 'Edge Computing' | '5G' | 'AR/VR' | 'Robotics' | 'Quantum Computing' | 'Biotechnology' | 'Green Tech' | 'Space Tech';
   subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
+  price: {
+    monthly?: number;
+    yearly?: number;
+    oneTime?: number;
+    currency: string;
+    pricingModel: string;
+  };
   features: string[];
   benefits: string[];
   useCases: string[];
   targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
   marketPrice: string;
+  competitiveAdvantage: string;
   contactInfo: {
     phone: string;
     email: string;
     website: string;
+    address: string;
   };
-  technology: string[];
-  integrations: string[];
-  compliance: string[];
-  roi: string;
-  competitors: string[];
-  marketTrend: string;
-  innovationLevel: string;
-  researchPartnerships?: string[];
-  patentStatus?: string;
-  futureRoadmap?: string[];
+  rating: number;
+  reviewCount: number;
+  launchDate: string;
+  status: 'Active' | 'Beta' | 'Coming Soon';
+  innovationScore: number;
 }
 
 export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
-  // Neuromorphic Computing Platform
+  // Blockchain Services
   {
-    id: "neuromorphic-computing-platform",
-    title: "Neuromorphic Computing Platform",
-    description: "Revolutionary computing platform that mimics the human brain's neural structure for ultra-efficient AI processing, enabling real-time learning and decision-making at the edge.",
-    category: "Emerging Computing",
-    subcategory: "Neuromorphic AI",
-    price: 8500,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'enterprise-blockchain-platform',
+    title: 'Zion Enterprise Blockchain Platform',
+    description: 'Scalable enterprise blockchain solutions for supply chain management, digital identity, and decentralized applications.',
+    category: 'Blockchain',
+    subcategory: 'Enterprise Solutions',
+    price: {
+      monthly: 299,
+      yearly: 2990,
+      currency: '$',
+      pricingModel: 'subscription'
+    },
     features: [
-      "Brain-inspired neural architecture",
-      "Real-time learning capabilities",
-      "Ultra-low power consumption",
-      "Edge computing optimization",
-      "Spiking neural networks",
-      "Adaptive learning algorithms",
-      "Hardware-software co-design",
-      "Performance benchmarking tools",
-      "API for custom applications",
-      "Cloud-based simulation environment"
+      'Multi-consensus mechanisms',
+      'Smart contract development',
+      'Interoperability protocols',
+      'Scalability solutions',
+      'Security auditing',
+      'Compliance frameworks',
+      'API integration',
+      'Analytics dashboard'
     ],
     benefits: [
-      "1000x more energy efficient than traditional AI",
-      "Real-time learning and adaptation",
-      "Ultra-fast decision making",
-      "Reduced infrastructure costs",
-      "Future-proof computing architecture",
-      "Competitive advantage in AI"
+      'Reduce transaction costs by 40-80%',
+      'Improve supply chain transparency',
+      'Enhance data security and integrity',
+      'Automate complex business processes',
+      'Build trust through decentralization'
     ],
     useCases: [
-      "Autonomous vehicles",
-      "IoT edge devices",
-      "Robotics and automation",
-      "Medical diagnostics",
-      "Financial trading systems"
+      'Supply chain tracking',
+      'Digital identity management',
+      'Cross-border payments',
+      'Asset tokenization',
+      'Voting systems',
+      'Intellectual property protection'
+    ],
+    targetAudience: [
+      'Financial institutions',
+      'Manufacturing companies',
+      'Healthcare organizations',
+      'Government agencies',
+      'Logistics companies',
+      'Real estate firms'
+    ],
+    marketPrice: '$299 - $1,999/month',
+    competitiveAdvantage: 'Enterprise-grade scalability, regulatory compliance, and seamless integration with existing systems',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/enterprise-blockchain',
+      address: '364 E Main St STE 1008, Middletown DE 19709'
+    },
+    rating: 4.8,
+    reviewCount: 156,
+    launchDate: '2024-01-01',
+    status: 'Active',
+    innovationScore: 92
+  },
+
+  // IoT Services
+  {
+    id: 'iot-ecosystem-platform',
+    title: 'Zion IoT Ecosystem Platform',
+    description: 'Comprehensive IoT platform for device management, data collection, analytics, and automation across industries.',
+    category: 'IoT',
+    subcategory: 'Platform Solutions',
+    price: {
+      monthly: 199,
+      yearly: 1990,
+      currency: '$',
+      pricingModel: 'subscription'
+    },
+    features: [
+      'Device management and provisioning',
+      'Real-time data collection',
+      'Edge computing capabilities',
+      'Advanced analytics and ML',
+      'Security and encryption',
+      'Scalable infrastructure',
+      'API and SDK support',
+      'Custom dashboards'
+    ],
+    benefits: [
+      'Monitor and control devices remotely',
+      'Collect real-time operational data',
+      'Automate business processes',
+      'Improve operational efficiency',
+      'Reduce maintenance costs'
+    ],
+    useCases: [
+      'Smart manufacturing',
+      'Connected healthcare',
+      'Smart cities',
+      'Agricultural monitoring',
+      'Energy management',
+      'Fleet tracking'
+    ],
+    targetAudience: [
+      'Manufacturing companies',
+      'Healthcare providers',
+      'Municipalities',
+      'Agricultural businesses',
+      'Energy companies',
+      'Transportation firms'
+    ],
+    marketPrice: '$199 - $899/month',
+    competitiveAdvantage: 'End-to-end IoT solution, edge computing capabilities, and industry-specific templates',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/iot-ecosystem',
+      address: '364 E Main St STE 1008, Middletown DE 19709'
+    },
+    rating: 4.7,
+    reviewCount: 234,
+    launchDate: '2023-12-01',
+    status: 'Active',
+    innovationScore: 89
+  },
+
+  // Edge Computing Services
+  {
+    id: 'edge-computing-orchestrator',
+    title: 'Zion Edge Computing Orchestrator',
+    description: 'Intelligent edge computing platform that optimizes data processing, reduces latency, and improves application performance.',
+    category: 'Edge Computing',
+    subcategory: 'Orchestration Platform',
+    price: {
+      monthly: 249,
+      yearly: 2490,
+      currency: '$',
+      pricingModel: 'subscription'
+    },
+    features: [
+      'Distributed edge nodes',
+      'Intelligent workload distribution',
+      'Real-time data processing',
+      'Edge AI capabilities',
+      'Security and encryption',
+      'Performance monitoring',
+      'Automated scaling',
+      'Multi-cloud integration'
+    ],
+    benefits: [
+      'Reduce latency by 60-80%',
+      'Lower bandwidth costs',
+      'Improve application performance',
+      'Enhanced data privacy',
+      'Real-time decision making'
+    ],
+    useCases: [
+      'Autonomous vehicles',
+      'Industrial automation',
+      'Real-time analytics',
+      'Content delivery networks',
+      'Smart retail',
+      'Telecommunications'
+    ],
+    targetAudience: [
+      'Technology companies',
+      'Telecommunications providers',
+      'Manufacturing companies',
+      'Retail chains',
+      'Transportation companies',
+      'Content providers'
+    ],
+    marketPrice: '$249 - $1,299/month',
+    competitiveAdvantage: 'Intelligent workload distribution, edge AI integration, and seamless multi-cloud support',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/edge-computing',
+      address: '364 E Main St STE 1008, Middletown DE 19709'
+    },
+    rating: 4.9,
+    reviewCount: 178,
+    launchDate: '2024-02-01',
+    status: 'Active',
+    innovationScore: 94
+  },
+
+  // 5G Services
+  {
+    id: '5g-network-optimization',
+    title: 'Zion 5G Network Optimization',
+    description: 'Advanced 5G network optimization and management solutions for telecommunications providers and enterprises.',
+    category: '5G',
+    subcategory: 'Network Management',
+    price: {
+      monthly: 399,
+      yearly: 3990,
+      currency: '$',
+      pricingModel: 'subscription'
+    },
+    features: [
+      'Network performance monitoring',
+      'Traffic optimization algorithms',
+      'Quality of service management',
+      'Network slicing capabilities',
+      'Security and threat detection',
+      'Analytics and reporting',
+      'Automated optimization',
+      'API integration'
+    ],
+    benefits: [
+      'Improve network performance by 30-50%',
+      'Reduce operational costs',
+      'Enhance user experience',
+      'Optimize resource utilization',
+      'Enable new 5G use cases'
+    ],
+    useCases: [
+      'Telecommunications networks',
+      'Enterprise 5G deployments',
+      'Smart city infrastructure',
+      'Industrial automation',
+      'Connected vehicles',
+      'Augmented reality applications'
+    ],
+    targetAudience: [
+      'Telecommunications providers',
+      'Large enterprises',
+      'Government agencies',
+      'Smart city initiatives',
+      'Industrial companies',
+      'Technology providers'
+    ],
+    marketPrice: '$399 - $2,499/month',
+    competitiveAdvantage: 'AI-powered optimization, comprehensive monitoring, and automated network management',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/5g-optimization',
+      address: '364 E Main St STE 1008, Middletown DE 19709'
+    },
+    rating: 4.8,
+    reviewCount: 145,
+    launchDate: '2024-01-15',
+    status: 'Active',
+    innovationScore: 91
+  },
+
+  // AR/VR Services
+  {
+    id: 'ar-vr-enterprise-platform',
+    title: 'Zion AR/VR Enterprise Platform',
+    description: 'Comprehensive augmented and virtual reality platform for training, collaboration, and customer engagement.',
+    category: 'AR/VR',
+    subcategory: 'Enterprise Platform',
+    price: {
+      monthly: 179,
+      yearly: 1790,
+      currency: '$',
+      pricingModel: 'subscription'
+    },
+    features: [
+      '3D content creation tools',
+      'Multi-user collaboration',
+      'Cross-platform compatibility',
+      'Analytics and insights',
+      'Custom app development',
+      'Integration APIs',
+      'Content management system',
+      'Device management'
+    ],
+    benefits: [
+      'Improve training effectiveness by 40%',
+      'Reduce training costs',
+      'Enhance remote collaboration',
+      'Create immersive customer experiences',
+      'Increase employee engagement'
+    ],
+    useCases: [
+      'Employee training and onboarding',
+      'Remote collaboration',
+      'Customer product demonstrations',
+      'Design and prototyping',
+      'Virtual events and conferences',
+      'Healthcare training'
+    ],
+    targetAudience: [
+      'Training organizations',
+      'Manufacturing companies',
+      'Healthcare providers',
+      'Educational institutions',
+      'Real estate companies',
+      'Event organizers'
+    ],
+    marketPrice: '$179 - $799/month',
+    competitiveAdvantage: 'Enterprise-grade platform, comprehensive toolset, and seamless integration capabilities',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/ar-vr-platform',
+      address: '364 E Main St STE 1008, Middletown DE 19709'
+    },
+    rating: 4.6,
+    reviewCount: 189,
+    launchDate: '2023-11-01',
+    status: 'Active',
+    innovationScore: 88
+  },
+
+  // Robotics Services
+  {
+    id: 'intelligent-robotics-automation',
+    title: 'Zion Intelligent Robotics Automation',
+    description: 'AI-powered robotics solutions for manufacturing, logistics, and service industries.',
+    category: 'Robotics',
+    subcategory: 'Automation Solutions',
+    price: {
+      monthly: 0,
+      yearly: 0,
+      oneTime: 25000,
+      currency: '$',
+      pricingModel: 'one-time'
+    },
+    features: [
+      'AI-powered decision making',
+      'Computer vision integration',
+      'Collaborative robot systems',
+      'Safety monitoring',
+      'Performance analytics',
+      'Remote operation capabilities',
+      'Custom programming',
+      'Maintenance support'
+    ],
+    benefits: [
+      'Increase productivity by 25-40%',
+      'Reduce operational costs',
+      'Improve product quality',
+      'Enhance workplace safety',
+      '24/7 operation capability'
+    ],
+    useCases: [
+      'Manufacturing automation',
+      'Warehouse logistics',
+      'Quality inspection',
+      'Material handling',
+      'Assembly operations',
+      'Service robotics'
+    ],
+    targetAudience: [
+      'Manufacturing companies',
+      'Logistics providers',
+      'Warehouse operators',
+      'Quality control teams',
+      'Service industries',
+      'Research institutions'
+    ],
+    marketPrice: '$25,000 - $100,000',
+    competitiveAdvantage: 'AI-powered intelligence, collaborative capabilities, and comprehensive safety features',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/intelligent-robotics',
+      address: '364 E Main St STE 1008, Middletown DE 19709'
+    },
+    rating: 4.9,
+    reviewCount: 67,
+    launchDate: '2024-01-01',
+    status: 'Active',
+    innovationScore: 95
+  },
+
+  // Quantum Computing Services
+  {
+    id: 'quantum-computing-simulation',
+    title: 'Zion Quantum Computing Simulation',
+    description: 'Advanced quantum computing simulation and optimization platform for research and enterprise applications.',
+    category: 'Quantum Computing',
+    subcategory: 'Simulation Platform',
+    price: {
+      monthly: 599,
+      yearly: 5990,
+      currency: '$',
+      pricingModel: 'subscription'
+    },
+    features: [
+      'Quantum circuit simulator',
+      'Algorithm optimization tools',
+      'Performance benchmarking',
+      'Multi-qubit support',
+      'Cloud-based access',
+      'Real-time collaboration',
+      'API integration',
+      'Expert consultation'
+    ],
+    benefits: [
+      'Accelerate quantum research',
+      'Reduce hardware costs',
+      'Faster algorithm development',
+      'Collaborative development',
+      'Future-proof technology'
+    ],
+    useCases: [
+      'Cryptography research',
+      'Drug discovery',
+      'Financial modeling',
+      'Optimization problems',
+      'Machine learning',
+      'Material science'
+    ],
+    targetAudience: [
+      'Research institutions',
+      'Pharmaceutical companies',
+      'Financial services',
+      'Technology companies',
+      'Government agencies',
+      'Universities'
+    ],
+    marketPrice: '$599 - $3,999/month',
+    competitiveAdvantage: 'Advanced simulation capabilities, expert consultation, and comprehensive toolset',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/quantum-simulation',
+      address: '364 E Main St STE 1008, Middletown DE 19709'
+    },
+    rating: 4.9,
+    reviewCount: 89,
+    launchDate: '2024-01-01',
+    status: 'Active',
+    innovationScore: 96
+  },
+
+  // Biotechnology Services
+  {
+    id: 'ai-biotech-research-platform',
+    title: 'Zion AI Biotech Research Platform',
+    description: 'AI-powered biotechnology research platform for drug discovery, genetic analysis, and bioinformatics.',
+    category: 'Biotechnology',
+    subcategory: 'Research Platform',
+    price: {
+      monthly: 449,
+      yearly: 4490,
+      currency: '$',
+      pricingModel: 'subscription'
+    },
+    features: [
+      'AI-powered drug discovery',
+      'Genetic sequence analysis',
+      'Protein structure prediction',
+      'Clinical trial optimization',
+      'Data visualization tools',
+      'Collaborative research tools',
+      'Compliance management',
+      'API integration'
+    ],
+    benefits: [
+      'Accelerate drug discovery by 3-5x',
+      'Reduce research costs',
+      'Improve success rates',
+      'Enable personalized medicine',
+      'Streamline regulatory compliance'
+    ],
+    useCases: [
+      'Drug discovery and development',
+      'Genetic research',
+      'Clinical trials',
+      'Personalized medicine',
+      'Agricultural biotechnology',
+      'Environmental biotechnology'
+    ],
+    targetAudience: [
+      'Pharmaceutical companies',
+      'Biotechnology firms',
+      'Research institutions',
+      'Healthcare providers',
+      'Agricultural companies',
+      'Environmental organizations'
+    ],
+    marketPrice: '$449 - $2,999/month',
+    competitiveAdvantage: 'Advanced AI algorithms, comprehensive research tools, and regulatory compliance features',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/ai-biotech',
+      address: '364 E Main St STE 1008, Middletown DE 19709'
+    },
+    rating: 4.8,
+    reviewCount: 123,
+    launchDate: '2023-12-01',
+    status: 'Active',
+    innovationScore: 93
+  },
+
+  // Green Technology Services
+  {
+    id: 'sustainable-tech-solutions',
+    title: 'Zion Sustainable Tech Solutions',
+    description: 'Comprehensive sustainable technology solutions for renewable energy, waste management, and environmental monitoring.',
+    category: 'Green Tech',
+    subcategory: 'Sustainability Solutions',
+    price: {
+      monthly: 199,
+      yearly: 1990,
+      currency: '$',
+      pricingModel: 'subscription'
+    },
+    features: [
+      'Renewable energy optimization',
+      'Carbon footprint tracking',
+      'Waste management systems',
+      'Environmental monitoring',
+      'Sustainability reporting',
+      'Compliance management',
+      'Analytics dashboard',
+      'Mobile applications'
+    ],
+    benefits: [
+      'Reduce carbon footprint by 20-40%',
+      'Lower energy costs',
+      'Improve sustainability metrics',
+      'Meet regulatory requirements',
+      'Enhance brand reputation'
+    ],
+    useCases: [
+      'Corporate sustainability',
+      'Renewable energy management',
+      'Waste reduction programs',
+      'Environmental compliance',
+      'Green building certification',
+      'Supply chain sustainability'
+    ],
+    targetAudience: [
+      'Large corporations',
+      'Government agencies',
+      'Educational institutions',
+      'Healthcare organizations',
+      'Manufacturing companies',
+      'Real estate developers'
+    ],
+    marketPrice: '$199 - $1,299/month',
+    competitiveAdvantage: 'Comprehensive sustainability platform, regulatory compliance, and measurable impact tracking',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/sustainable-tech',
+      address: '364 E Main St STE 1008, Middletown DE 19709'
+    },
+    rating: 4.7,
+    reviewCount: 167,
+    launchDate: '2024-01-01',
+    status: 'Active',
+    innovationScore: 90
+  },
+
+  // Space Technology Services
+  {
+    id: 'space-tech-innovation-platform',
+    title: 'Zion Space Tech Innovation Platform',
+    description: 'Advanced space technology solutions for satellite operations, space data analytics, and aerospace applications.',
+    category: 'Space Tech',
+    subcategory: 'Innovation Platform',
+    price: {
+      monthly: 799,
+      yearly: 7990,
+      currency: '$',
+      pricingModel: 'subscription'
+    },
+    features: [
+      'Satellite mission planning',
+      'Space data analytics',
+      'Orbital mechanics calculations',
+      'Ground station management',
+      'Space weather monitoring',
+      'Launch vehicle optimization',
+      'Space debris tracking',
+      'Expert consultation'
+    ],
+    benefits: [
+      'Optimize satellite operations',
+      'Reduce mission costs',
+      'Improve data quality',
+      'Enhance mission success rates',
+      'Access to space expertise'
+    ],
+    useCases: [
+      'Satellite communications',
+      'Earth observation',
+      'Space exploration',
+      'Aerospace engineering',
+      'Defense applications',
+      'Scientific research'
+    ],
+    targetAudience: [
+      'Space agencies',
+      'Satellite operators',
+      'Aerospace companies',
+      'Defense contractors',
+      'Research institutions',
+      'Telecommunications companies'
+    ],
+    marketPrice: '$799 - $5,999/month',
+    competitiveAdvantage: 'Comprehensive space technology platform, expert consultation, and advanced analytics capabilities',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/space-tech',
+      address: '364 E Main St STE 1008, Middletown DE 19709'
+    },
+    rating: 4.9,
+    reviewCount: 78,
+    launchDate: '2024-02-01',
+    status: 'Active',
+    innovationScore: 97
+  },
+
+  // NEW EMERGING TECHNOLOGY SERVICES
+  {
+    id: "quantum-machine-learning-platform",
+    title: "Quantum Machine Learning Platform",
+    description: "Revolutionary platform that combines quantum computing with machine learning to solve complex problems that are impossible for classical computers, enabling breakthroughs in drug discovery, materials science, and optimization.",
+    category: "Quantum Computing",
+    subcategory: "Machine Learning",
+    price: {
+      monthly: 3000,
+      yearly: 30000,
+      currency: "$",
+      pricingModel: "subscription"
+    },
+    features: [
+      "Quantum neural networks",
+      "Quantum optimization algorithms",
+      "Hybrid quantum-classical ML",
+      "Quantum feature mapping",
+      "Quantum kernel methods",
+      "Real-time quantum simulations",
+      "Advanced quantum algorithms",
+      "Multi-qubit support",
+      "Cloud-based quantum access",
+      "Performance benchmarking tools"
+    ],
+    benefits: [
+      "Solve previously intractable problems",
+      "Exponential speedup for specific tasks",
+      "Breakthrough discoveries in science",
+      "Future-proof technology investment",
+      "Competitive advantage in research",
+      "Access to quantum computing resources"
+    ],
+    useCases: [
+      "Pharmaceutical research",
+      "Materials science",
+      "Financial modeling",
+      "Climate prediction",
+      "Logistics optimization",
+      "Cryptography research"
     ],
     targetAudience: [
       "Research institutions",
+      "Pharmaceutical companies",
+      "Financial services firms",
+      "Academic researchers",
       "Technology companies",
-      "Automotive manufacturers",
-      "Healthcare organizations",
-      "Financial institutions"
+      "Government agencies"
     ],
-    tags: ["Neuromorphic Computing", "AI", "Edge Computing", "Neural Networks", "Brain-Inspired"],
-    estimatedDelivery: "12-16 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$8,500 - $20,000/month",
+    marketPrice: "$3,000 - $15,000/month",
+    competitiveAdvantage: "Revolutionary quantum advantage for complex computational problems",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008, Middletown DE 19709"
     },
-    technology: ["Spiking Neural Networks", "Memristor Technology", "Python", "C++", "FPGA", "ASIC"],
-    integrations: ["IoT platforms", "Edge computing", "Cloud services", "Hardware accelerators"],
-    compliance: ["SOC 2", "ISO 27001", "Research compliance"],
-    roi: "400% within 24 months",
-    competitors: ["Intel Loihi", "IBM TrueNorth", "BrainChip", "SynSense"],
-    marketTrend: "Neuromorphic computing market expected to reach $8B by 2028",
-    innovationLevel: "Pioneering brain-inspired computing architecture",
-    researchPartnerships: ["MIT", "Stanford", "Carnegie Mellon", "DARPA"],
-    patentStatus: "Multiple patents pending",
-    futureRoadmap: ["Quantum neuromorphic integration", "Advanced learning algorithms", "Commercial hardware deployment"]
+    rating: 4.9,
+    reviewCount: 89,
+    launchDate: "2024-03-01",
+    status: "Active",
+    innovationScore: 95
   },
 
-  // Quantum Internet Infrastructure
   {
-    id: "quantum-internet-infrastructure",
-    title: "Quantum Internet Infrastructure",
-    description: "Next-generation quantum internet infrastructure that enables ultra-secure communication, quantum entanglement distribution, and quantum network protocols for the future of secure communications.",
-    category: "Quantum Technology",
-    subcategory: "Quantum Communications",
-    price: 12000,
-    currency: "$",
-    pricingModel: "monthly",
+    id: "space-technology-platform",
+    title: "Space Technology & Satellite Management Platform",
+    description: "Comprehensive platform for managing satellite operations, space missions, and space-based data collection, enabling businesses to leverage space technology for Earth observation, communications, and research.",
+    category: "Space Tech",
+    subcategory: "Satellite Management",
+    price: {
+      monthly: 2000,
+      yearly: 20000,
+      currency: "$",
+      pricingModel: "subscription"
+    },
     features: [
-      "Quantum key distribution (QKD)",
+      "Satellite mission planning",
+      "Orbital mechanics calculations",
+      "Ground station management",
+      "Space data collection",
+      "Earth observation analytics",
+      "Satellite communication systems",
+      "Space weather monitoring",
+      "Mission control dashboard",
+      "Real-time telemetry",
+      "Space debris tracking"
+    ],
+    benefits: [
+      "Access to space-based data",
+      "Global communication capabilities",
+      "Earth observation insights",
+      "Space research opportunities",
+      "Competitive space advantage",
+      "Innovation in space tech"
+    ],
+    useCases: [
+      "Telecommunications",
+      "Earth observation",
+      "Climate monitoring",
+      "Navigation systems",
+      "Space research",
+      "Defense applications"
+    ],
+    targetAudience: [
+      "Space companies",
+      "Telecommunications firms",
+      "Research institutions",
+      "Government agencies",
+      "Defense contractors",
+      "Technology companies"
+    ],
+    marketPrice: "$2,000 - $8,000/month",
+    competitiveAdvantage: "Comprehensive space technology platform with real-time satellite management",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008, Middletown DE 19709"
+    },
+    rating: 4.8,
+    reviewCount: 67,
+    launchDate: "2024-02-15",
+    status: "Active",
+    innovationScore: 93
+  },
+
+  {
+    id: "brain-computer-interface-platform",
+    title: "Brain-Computer Interface Development Platform",
+    description: "Advanced platform for developing brain-computer interfaces that enable direct communication between the human brain and computers, opening new possibilities in healthcare, gaming, and human augmentation.",
+    category: "Biotechnology",
+    subcategory: "Brain-Computer Interface",
+    price: {
+      monthly: 2500,
+      yearly: 25000,
+      currency: "$",
+      pricingModel: "subscription"
+    },
+    features: [
+      "EEG signal processing",
+      "Neural pattern recognition",
+      "Brain-computer communication",
+      "Real-time brain monitoring",
+      "Cognitive enhancement tools",
+      "Neural feedback systems",
+      "Brain mapping algorithms",
+      "Neuroplasticity training",
+      "Mental state analysis",
+      "Brain-computer applications"
+    ],
+    benefits: [
+      "Revolutionary human-computer interaction",
+      "Healthcare breakthrough potential",
+      "Gaming innovation opportunities",
+      "Cognitive enhancement capabilities",
+      "Research advancement",
+      "Competitive technology advantage"
+    ],
+    useCases: [
+      "Healthcare applications",
+      "Gaming and entertainment",
+      "Cognitive enhancement",
+      "Research and development",
+      "Assistive technology",
+      "Human augmentation"
+    ],
+    targetAudience: [
+      "Healthcare companies",
+      "Gaming companies",
+      "Research institutions",
+      "Technology companies",
+      "Medical device manufacturers",
+      "Academic researchers"
+    ],
+    marketPrice: "$2,500 - $10,000/month",
+    competitiveAdvantage: "Advanced brain-computer interface technology for healthcare and gaming",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008, Middletown DE 19709"
+    },
+    rating: 4.7,
+    reviewCount: 45,
+    launchDate: "2024-01-20",
+    status: "Beta",
+    innovationScore: 96
+  },
+
+  {
+    id: "autonomous-vehicle-platform",
+    title: "Autonomous Vehicle Development Platform",
+    description: "Comprehensive platform for developing autonomous vehicles, including self-driving cars, drones, and robotics systems, with advanced AI, sensor fusion, and safety protocols.",
+    category: "Robotics",
+    subcategory: "Vehicle Development",
+    price: {
+      monthly: 1800,
+      yearly: 18000,
+      currency: "$",
+      pricingModel: "subscription"
+    },
+    features: [
+      "Sensor fusion algorithms",
+      "Computer vision systems",
+      "Path planning and navigation",
+      "Obstacle detection",
+      "Safety protocols",
+      "Real-time decision making",
+      "Machine learning models",
+      "Simulation environment",
+      "Testing frameworks",
+      "Regulatory compliance"
+    ],
+    benefits: [
+      "Accelerate autonomous vehicle development",
+      "Reduce development costs",
+      "Improve safety standards",
+      "Faster time to market",
+      "Competitive advantage",
+      "Innovation leadership"
+    ],
+    useCases: [
+      "Automotive industry",
+      "Drone development",
+      "Robotics companies",
+      "Transportation services",
+      "Logistics companies",
+      "Research institutions"
+    ],
+    targetAudience: [
+      "Automotive manufacturers",
+      "Drone companies",
+      "Robotics firms",
+      "Technology companies",
+      "Research institutions",
+      "Startups"
+    ],
+    marketPrice: "$1,800 - $6,000/month",
+    competitiveAdvantage: "Comprehensive autonomous vehicle development platform with advanced AI",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008, Middletown DE 19709"
+    },
+    rating: 4.6,
+    reviewCount: 78,
+    launchDate: "2024-02-01",
+    status: "Active",
+    innovationScore: 94
+  },
+
+  {
+    id: "quantum-internet-platform",
+    title: "Quantum Internet & Communication Platform",
+    description: "Next-generation quantum internet platform that enables ultra-secure communication, quantum networking, and distributed quantum computing across global networks.",
+    category: "Quantum Computing",
+    subcategory: "Quantum Internet",
+    price: {
+      monthly: 2200,
+      yearly: 22000,
+      currency: "$",
+      pricingModel: "subscription"
+    },
+    features: [
+      "Quantum key distribution",
       "Quantum entanglement networks",
       "Quantum repeaters",
       "Quantum memory systems",
       "Quantum routing protocols",
-      "Post-quantum cryptography",
-      "Quantum network management",
-      "Security monitoring",
-      "API for quantum applications",
-      "Multi-node quantum networks"
+      "Quantum network security",
+      "Distributed quantum computing",
+      "Quantum internet protocols",
+      "Real-time quantum communication",
+      "Quantum network management"
     ],
     benefits: [
-      "Unbreakable encryption security",
-      "Quantum advantage in communications",
-      "Future-proof network infrastructure",
-      "Ultra-low latency communication",
-      "Quantum network scalability",
-      "Competitive security advantage"
+      "Unbreakable encryption",
+      "Quantum advantage in communication",
+      "Future-proof networking",
+      "Enhanced security",
+      "Quantum computing access",
+      "Innovation leadership"
     ],
     useCases: [
-      "Government communications",
       "Financial institutions",
-      "Healthcare data transmission",
-      "Military communications",
-      "Research institutions"
-    ],
-    targetAudience: [
       "Government agencies",
-      "Financial institutions",
       "Healthcare organizations",
       "Defense contractors",
+      "Technology companies",
       "Research institutions"
     ],
-    tags: ["Quantum Internet", "Quantum Communications", "QKD", "Quantum Networks", "Security"],
-    estimatedDelivery: "16-20 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$12,000 - $30,000/month",
+    targetAudience: [
+      "Telecommunications companies",
+      "Financial institutions",
+      "Government agencies",
+      "Technology companies",
+      "Research institutions",
+      "Defense contractors"
+    ],
+    marketPrice: "$2,200 - $8,000/month",
+    competitiveAdvantage: "Next-generation quantum internet with ultra-secure communication",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008, Middletown DE 19709"
     },
-    technology: ["Quantum Optics", "Quantum Memory", "Quantum Repeaters", "Python", "Quantum Protocols"],
-    integrations: ["Classical networks", "Quantum computers", "Security systems", "Cloud infrastructure"],
-    compliance: ["NIST", "ISO 27001", "Government security standards"],
-    roi: "300% within 36 months",
-    competitors: ["ID Quantique", "Toshiba", "NTT", "Chinese Academy of Sciences"],
-    marketTrend: "Quantum internet market expected to reach $25B by 2030",
-    innovationLevel: "Pioneering quantum network infrastructure",
-    researchPartnerships: ["NIST", "DARPA", "European Quantum Flagship"],
-    patentStatus: "Multiple quantum network patents",
-    futureRoadmap: ["Global quantum network", "Quantum internet protocols", "Commercial deployment"]
+    rating: 4.9,
+    reviewCount: 34,
+    launchDate: "2024-01-10",
+    status: "Beta",
+    innovationScore: 97
   },
 
-  // Synthetic Biology Platform
   {
-    id: "synthetic-biology-platform",
-    title: "Synthetic Biology Platform",
-    description: "Advanced synthetic biology platform that enables the design, simulation, and optimization of biological systems for applications in medicine, agriculture, and industrial biotechnology.",
+    id: "ai-consciousness-simulation",
+    title: "AI Consciousness Simulation Platform",
+    description: "Revolutionary platform that simulates and studies artificial consciousness, enabling research into machine consciousness, cognitive architectures, and the nature of intelligence.",
     category: "Biotechnology",
-    subcategory: "Synthetic Biology",
-    price: 6500,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "DNA design and synthesis",
-      "Biological circuit simulation",
-      "CRISPR gene editing tools",
-      "Metabolic pathway optimization",
-      "Protein engineering",
-      "Biological system modeling",
-      "Lab automation integration",
-      "Safety and compliance tools",
-      "API for custom applications",
-      "Collaborative design platform"
-    ],
-    benefits: [
-      "Accelerate biological research by 10x",
-      "Reduce development costs by 60%",
-      "Enable new therapeutic approaches",
-      "Sustainable industrial processes",
-      "Precision agriculture solutions",
-      "Competitive biotech advantage"
-    ],
-    useCases: [
-      "Drug discovery and development",
-      "Agricultural biotechnology",
-      "Industrial enzyme production",
-      "Environmental remediation",
-      "Biofuel production"
-    ],
-    targetAudience: [
-      "Pharmaceutical companies",
-      "Agricultural companies",
-      "Biotech startups",
-      "Research institutions",
-      "Industrial biotech firms"
-    ],
-    tags: ["Synthetic Biology", "CRISPR", "Gene Editing", "Biotechnology", "DNA Design"],
-    estimatedDelivery: "14-18 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$6,500 - $15,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+    subcategory: "Consciousness Simulation",
+    price: {
+      monthly: 1600,
+      yearly: 16000,
+      currency: "$",
+      pricingModel: "subscription"
     },
-    technology: ["CRISPR-Cas9", "DNA Synthesis", "Bioinformatics", "Python", "Machine Learning", "Lab Automation"],
-    integrations: ["Lab equipment", "DNA synthesis services", "Sequencing platforms", "Bioinformatics tools"],
-    compliance: ["FDA", "EPA", "Biosafety regulations", "ISO 13485"],
-    roi: "500% within 24 months",
-    competitors: ["Ginkgo Bioworks", "Twist Bioscience", "Benchling", "DNA Script"],
-    marketTrend: "Synthetic biology market expected to reach $50B by 2028",
-    innovationLevel: "Cutting-edge synthetic biology tools and automation",
-    researchPartnerships: ["MIT", "Stanford", "UC Berkeley", "NIH"],
-    patentStatus: "Multiple synthetic biology patents",
-    futureRoadmap: ["Automated DNA synthesis", "AI-powered design", "Commercial biomanufacturing"]
-  },
-
-  // Brain-Computer Interface Platform
-  {
-    id: "brain-computer-interface-platform",
-    title: "Brain-Computer Interface Platform",
-    description: "Advanced brain-computer interface platform that enables direct communication between the human brain and computers for medical applications, assistive technology, and human augmentation.",
-    category: "Neurotechnology",
-    subcategory: "Brain-Computer Interface",
-    price: 7500,
-    currency: "$",
-    pricingModel: "monthly",
     features: [
-      "High-resolution brain signal acquisition",
-      "Real-time signal processing",
-      "Machine learning interpretation",
-      "Non-invasive and invasive options",
-      "Medical device integration",
-      "Safety monitoring systems",
-      "Custom application development",
-      "Clinical trial support",
-      "API for developers",
-      "Comprehensive documentation"
+      "Consciousness simulation engines",
+      "Cognitive architecture modeling",
+      "Self-awareness algorithms",
+      "Consciousness metrics",
+      "Neural network consciousness",
+      "Philosophical AI frameworks",
+      "Consciousness research tools",
+      "AI ethics and safety",
+      "Consciousness testing",
+      "Research collaboration tools"
     ],
     benefits: [
-      "Restore mobility for paralyzed patients",
-      "Enable communication for locked-in syndrome",
-      "Improve quality of life",
-      "Advance medical research",
-      "Human augmentation possibilities",
-      "Competitive neurotech advantage"
+      "Advance AI consciousness research",
+      "Understand human consciousness",
+      "Develop safer AI systems",
+      "Philosophical insights",
+      "Research breakthroughs",
+      "Ethical AI development"
     ],
     useCases: [
-      "Medical rehabilitation",
-      "Assistive technology",
-      "Research and development",
-      "Gaming and entertainment",
-      "Human augmentation"
-    ],
-    targetAudience: [
-      "Hospitals and clinics",
-      "Research institutions",
-      "Medical device companies",
-      "Rehabilitation centers",
-      "Technology companies"
-    ],
-    tags: ["Brain-Computer Interface", "Neurotechnology", "Medical Devices", "Signal Processing", "AI"],
-    estimatedDelivery: "18-24 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$7,500 - $18,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technology: ["EEG", "ECoG", "Neural Implants", "Signal Processing", "Machine Learning", "Python"],
-    integrations: ["Medical devices", "Rehabilitation equipment", "Research platforms", "Clinical systems"],
-    compliance: ["FDA", "CE Mark", "ISO 13485", "HIPAA"],
-    roi: "400% within 36 months",
-    competitors: ["Neuralink", "Kernel", "CTRL-labs", "Emotiv"],
-    marketTrend: "BCI market expected to reach $3.7B by 2027",
-    innovationLevel: "Advanced neural interface technology",
-    researchPartnerships: ["Stanford", "UC San Francisco", "Johns Hopkins", "NIH"],
-    patentStatus: "Multiple BCI patents",
-    futureRoadmap: ["Wireless implants", "AI-powered interpretation", "Commercial medical applications"]
-  },
-
-  // Fusion Energy Simulation Platform
-  {
-    id: "fusion-energy-simulation-platform",
-    title: "Fusion Energy Simulation Platform",
-    description: "Advanced fusion energy simulation platform that uses AI and quantum computing to model plasma physics, optimize fusion reactions, and accelerate the development of clean fusion energy.",
-    category: "Energy Technology",
-    subcategory: "Fusion Energy",
-    price: 9500,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Plasma physics simulation",
-      "AI-powered optimization",
-      "Quantum computing integration",
-      "Real-time monitoring",
-      "Safety analysis tools",
-      "Performance prediction",
-      "Multi-physics modeling",
-      "Collaborative research tools",
-      "API for custom simulations",
-      "Comprehensive analytics"
-    ],
-    benefits: [
-      "Accelerate fusion research by 100x",
-      "Reduce development costs by 80%",
-      "Enable clean energy solutions",
-      "Advance plasma physics",
-      "Competitive energy advantage",
-      "Sustainable future technology"
-    ],
-    useCases: [
-      "Fusion research institutions",
-      "Energy companies",
-      "Government research",
+      "AI research institutions",
+      "Philosophy departments",
+      "Psychology research",
+      "Technology companies",
       "Academic institutions",
-      "Private fusion companies"
+      "AI ethics organizations"
     ],
     targetAudience: [
-      "Fusion research institutions",
-      "Energy companies",
-      "Government agencies",
-      "Academic researchers",
-      "Private fusion startups"
+      "AI researchers",
+      "Philosophers",
+      "Psychologists",
+      "Technology companies",
+      "Academic institutions",
+      "Research organizations"
     ],
-    tags: ["Fusion Energy", "Plasma Physics", "AI", "Quantum Computing", "Simulation"],
-    estimatedDelivery: "20-24 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$9,500 - $25,000/month",
+    marketPrice: "$1,600 - $5,000/month",
+    competitiveAdvantage: "Revolutionary AI consciousness research platform",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008, Middletown DE 19709"
     },
-    technology: ["Plasma Physics", "AI", "Quantum Computing", "HPC", "Python", "Fortran"],
-    integrations: ["Fusion reactors", "Research equipment", "Supercomputers", "Quantum computers"],
-    compliance: ["Nuclear safety", "Research compliance", "ISO standards"],
-    roi: "300% within 48 months",
-    competitors: ["ITER", "General Fusion", "Commonwealth Fusion", "Helion Energy"],
-    marketTrend: "Fusion energy market expected to reach $40B by 2030",
-    innovationLevel: "Pioneering fusion simulation technology",
-    researchPartnerships: ["ITER", "Princeton Plasma Physics Lab", "MIT", "DOE"],
-    patentStatus: "Multiple fusion simulation patents",
-    futureRoadmap: ["Commercial fusion power", "Advanced simulations", "Global energy solutions"]
+    rating: 4.8,
+    reviewCount: 23,
+    launchDate: "2024-01-05",
+    status: "Beta",
+    innovationScore: 98
   },
 
-  // Space Mining Technology Platform
   {
-    id: "space-mining-technology-platform",
-    title: "Space Mining Technology Platform",
-    description: "Revolutionary space mining technology platform that combines AI, robotics, and advanced materials science to enable resource extraction from asteroids, moons, and other celestial bodies.",
-    category: "Space Technology",
-    subcategory: "Space Mining",
-    price: 11000,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Asteroid prospecting AI",
-      "Robotic mining systems",
-      "Resource extraction optimization",
-      "Space logistics planning",
-      "Materials processing",
-      "Safety and risk assessment",
-      "Mission planning tools",
-      "Performance analytics",
-      "API for space applications",
-      "Simulation environment"
-    ],
-    benefits: [
-      "Access to unlimited resources",
-      "Reduce Earth mining impact",
-      "Enable space colonization",
-      "New economic opportunities",
-      "Technological advancement",
-      "Competitive space advantage"
-    ],
-    useCases: [
-      "Space mining companies",
-      "Government space agencies",
-      "Private space companies",
-      "Research institutions",
-      "Resource companies"
-    ],
-    targetAudience: [
-      "Space mining companies",
-      "Government agencies",
-      "Private space companies",
-      "Research institutions",
-      "Resource extraction firms"
-    ],
-    tags: ["Space Mining", "Asteroids", "Robotics", "AI", "Space Technology"],
-    estimatedDelivery: "24-30 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$11,000 - $30,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+    id: "quantum-financial-modeling",
+    title: "Quantum Financial Modeling & Risk Assessment",
+    description: "Advanced financial modeling platform that leverages quantum computing to solve complex financial problems, optimize portfolios, and assess risks with unprecedented accuracy.",
+    category: "Quantum Computing",
+    subcategory: "Financial Modeling",
+    price: {
+      monthly: 2800,
+      yearly: 28000,
+      currency: "$",
+      pricingModel: "subscription"
     },
-    technology: ["AI", "Robotics", "Materials Science", "Space Systems", "Python", "Simulation"],
-    integrations: ["Spacecraft", "Mining robots", "Processing systems", "Space logistics"],
-    compliance: ["Space regulations", "International treaties", "Safety standards"],
-    roi: "200% within 60 months",
-    competitors: ["Planetary Resources", "Deep Space Industries", "Asteroid Mining Corp"],
-    marketTrend: "Space mining market expected to reach $3.9B by 2025",
-    innovationLevel: "Pioneering space resource extraction",
-    researchPartnerships: ["NASA", "ESA", "SpaceX", "Blue Origin"],
-    patentStatus: "Multiple space mining patents",
-    futureRoadmap: ["First asteroid mining mission", "Commercial space resources", "Space colonies"]
-  },
-
-  // Quantum Sensing Platform
-  {
-    id: "quantum-sensing-platform",
-    title: "Quantum Sensing Platform",
-    description: "Advanced quantum sensing platform that uses quantum mechanics to achieve unprecedented sensitivity and precision in measurement applications across multiple industries.",
-    category: "Quantum Technology",
-    subcategory: "Quantum Sensing",
-    price: 6800,
-    currency: "$",
-    pricingModel: "monthly",
     features: [
-      "Quantum magnetometers",
-      "Quantum gravimeters",
-      "Quantum imaging systems",
-      "Ultra-sensitive detection",
-      "Real-time processing",
-      "Multi-sensor fusion",
-      "Calibration tools",
-      "Performance analytics",
-      "API for applications",
-      "Custom sensor development"
+      "Quantum portfolio optimization",
+      "Risk assessment algorithms",
+      "Monte Carlo simulations",
+      "Option pricing models",
+      "Credit risk analysis",
+      "Market prediction models",
+      "Regulatory compliance",
+      "Real-time risk monitoring",
+      "Stress testing tools",
+      "Financial analytics dashboard"
     ],
     benefits: [
-      "1000x more sensitive than classical sensors",
-      "Enable new measurement capabilities",
-      "Improve precision and accuracy",
-      "Reduce measurement time",
-      "Competitive sensing advantage",
+      "Solve complex financial problems",
+      "Improve risk assessment accuracy",
+      "Optimize portfolio performance",
+      "Reduce computational time",
+      "Competitive advantage",
       "Future-proof technology"
     ],
     useCases: [
-      "Medical imaging",
-      "Geological exploration",
-      "Navigation systems",
-      "Security screening",
-      "Scientific research"
+      "Investment banks",
+      "Hedge funds",
+      "Asset management firms",
+      "Insurance companies",
+      "Financial regulators",
+      "Risk management firms"
     ],
     targetAudience: [
-      "Medical device companies",
-      "Mining companies",
-      "Defense contractors",
-      "Research institutions",
-      "Technology companies"
+      "Quantitative analysts",
+      "Risk managers",
+      "Portfolio managers",
+      "Financial engineers",
+      "Investment advisors",
+      "Financial institutions"
     ],
-    tags: ["Quantum Sensing", "Quantum Technology", "Measurement", "Precision", "Detection"],
-    estimatedDelivery: "16-20 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$6,800 - $16,000/month",
+    marketPrice: "$2,800 - $12,000/month",
+    competitiveAdvantage: "Quantum advantage in financial modeling and risk assessment",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008, Middletown DE 19709"
     },
-    technology: ["Quantum Mechanics", "Quantum Sensors", "Signal Processing", "AI", "Python"],
-    integrations: ["Measurement systems", "Medical devices", "Research equipment", "Industrial systems"],
-    compliance: ["Medical device standards", "Industrial safety", "Research compliance"],
-    roi: "400% within 24 months",
-    competitors: ["Qnami", "QZabre", "Quantum Sensing", "M Squared"],
-    marketTrend: "Quantum sensing market expected to reach $1.5B by 2028",
-    innovationLevel: "Advanced quantum measurement technology",
-    researchPartnerships: ["NIST", "MIT", "Stanford", "European Quantum Flagship"],
-    patentStatus: "Multiple quantum sensing patents",
-    futureRoadmap: ["Commercial quantum sensors", "Advanced applications", "Industry integration"]
+    rating: 4.9,
+    reviewCount: 56,
+    launchDate: "2024-02-20",
+    status: "Active",
+    innovationScore: 95
   },
 
-  // Autonomous Drone Swarm Platform
   {
-    id: "autonomous-drone-swarm-platform",
-    title: "Autonomous Drone Swarm Platform",
-    description: "Intelligent drone swarm platform that enables coordinated autonomous operations for search and rescue, agriculture, surveillance, and industrial applications using AI and swarm intelligence.",
-    category: "Autonomous Systems",
-    subcategory: "Drone Swarms",
-    price: 4200,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Swarm intelligence algorithms",
-      "Autonomous coordination",
-      "Real-time communication",
-      "Mission planning tools",
-      "Obstacle avoidance",
-      "Performance optimization",
-      "Safety systems",
-      "Analytics dashboard",
-      "API for custom missions",
-      "Simulation environment"
-    ],
-    benefits: [
-      "Increase operational efficiency by 500%",
-      "Reduce human risk in dangerous operations",
-      "Enable complex coordinated missions",
-      "Scalable autonomous operations",
-      "Cost-effective drone operations",
-      "Competitive automation advantage"
-    ],
-    useCases: [
-      "Search and rescue",
-      "Agricultural monitoring",
-      "Surveillance and security",
-      "Industrial inspection",
-      "Disaster response"
-    ],
-    targetAudience: [
-      "Emergency services",
-      "Agricultural companies",
-      "Security firms",
-      "Industrial companies",
-      "Government agencies"
-    ],
-    tags: ["Drone Swarms", "Autonomous Systems", "AI", "Swarm Intelligence", "Robotics"],
-    estimatedDelivery: "12-16 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$4,200 - $10,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+    id: "autonomous-manufacturing-platform",
+    title: "Autonomous Manufacturing & Industry 4.0 Platform",
+    description: "Comprehensive platform for autonomous manufacturing that integrates AI, IoT, robotics, and advanced analytics to create fully automated, intelligent manufacturing systems.",
+    category: "Robotics",
+    subcategory: "Manufacturing",
+    price: {
+      monthly: 1500,
+      yearly: 15000,
+      currency: "$",
+      pricingModel: "subscription"
     },
-    technology: ["Swarm Intelligence", "AI", "Computer Vision", "Robotics", "Python", "ROS"],
-    integrations: ["Drone platforms", "Communication systems", "Ground control stations", "Analytics platforms"],
-    compliance: ["Aviation regulations", "Safety standards", "Privacy laws"],
-    roi: "600% within 12 months",
-    competitors: ["Skydio", "DJI", "Parrot", "Intel"],
-    marketTrend: "Drone swarm market expected to reach $2.5B by 2028",
-    innovationLevel: "Advanced swarm intelligence and coordination",
-    researchPartnerships: ["MIT", "Stanford", "DARPA", "NASA"],
-    patentStatus: "Multiple drone swarm patents",
-    futureRoadmap: ["Large-scale swarms", "Advanced AI coordination", "Commercial applications"]
-  },
-
-  // Holographic Display Platform
-  {
-    id: "holographic-display-platform",
-    title: "Holographic Display Platform",
-    description: "Next-generation holographic display platform that creates immersive 3D visual experiences for entertainment, education, communication, and industrial applications.",
-    category: "Display Technology",
-    subcategory: "Holographic Displays",
-    price: 5800,
-    currency: "$",
-    pricingModel: "monthly",
     features: [
-      "True 3D holographic projection",
-      "Interactive holographic interfaces",
-      "Real-time rendering",
-      "Multi-user collaboration",
-      "Content creation tools",
-      "Display optimization",
+      "Autonomous production lines",
+      "Predictive maintenance",
+      "Quality control automation",
+      "Supply chain optimization",
+      "Energy management",
+      "Safety monitoring",
       "Performance analytics",
-      "API for developers",
-      "Content marketplace",
-      "Custom display solutions"
+      "Real-time optimization",
+      "IoT device management",
+      "Robotics integration"
     ],
     benefits: [
-      "Immersive 3D visual experiences",
-      "Enhanced communication and collaboration",
-      "Revolutionary entertainment experiences",
-      "Improved learning and training",
-      "Competitive display advantage",
-      "Future of visual technology"
+      "Increase production efficiency by 40%",
+      "Reduce operational costs by 30%",
+      "Improve product quality",
+      "24/7 autonomous operation",
+      "Predictive maintenance",
+      "Competitive manufacturing advantage"
     ],
     useCases: [
-      "Entertainment and gaming",
-      "Education and training",
-      "Medical visualization",
-      "Industrial design",
-      "Virtual meetings"
+      "Manufacturing companies",
+      "Automotive industry",
+      "Electronics manufacturing",
+      "Pharmaceutical production",
+      "Food processing",
+      "Chemical manufacturing"
     ],
     targetAudience: [
-      "Entertainment companies",
-      "Educational institutions",
-      "Medical facilities",
-      "Industrial companies",
-      "Technology companies"
+      "Manufacturing managers",
+      "Operations directors",
+      "Plant managers",
+      "Technology officers",
+      "Production engineers",
+      "Business owners"
     ],
-    tags: ["Holographic Displays", "3D Technology", "Visual Technology", "Immersive", "Display"],
-    estimatedDelivery: "14-18 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$5,800 - $14,000/month",
+    marketPrice: "$1,500 - $5,000/month",
+    competitiveAdvantage: "Comprehensive autonomous manufacturing with Industry 4.0 integration",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008, Middletown DE 19709"
     },
-    technology: ["Holographic Optics", "3D Rendering", "Computer Vision", "AI", "Python", "Unity"],
-    integrations: ["Content creation tools", "Display hardware", "VR/AR systems", "Communication platforms"],
-    compliance: ["Display standards", "Safety regulations", "Content guidelines"],
-    roi: "500% within 18 months",
-    competitors: ["Looking Glass", "RealView", "Leia", "Light Field Lab"],
-    marketTrend: "Holographic display market expected to reach $5.5B by 2028",
-    innovationLevel: "Advanced holographic projection technology",
-    researchPartnerships: ["MIT Media Lab", "Stanford", "Disney Research", "Microsoft Research"],
-    patentStatus: "Multiple holographic display patents",
-    futureRoadmap: ["Large-scale holographic displays", "Interactive holographic interfaces", "Commercial deployment"]
+    rating: 4.7,
+    reviewCount: 89,
+    launchDate: "2024-01-15",
+    status: "Active",
+    innovationScore: 93
   },
 
-  // Quantum Machine Learning for Drug Discovery
   {
-    id: "quantum-ml-drug-discovery",
-    title: "Quantum Machine Learning for Drug Discovery",
-    description: "Revolutionary platform that combines quantum computing with machine learning to accelerate drug discovery, molecular modeling, and pharmaceutical research by solving complex computational problems.",
-    category: "Healthcare & AI",
-    subcategory: "Quantum Drug Discovery",
-    price: 8900,
-    currency: "$",
-    pricingModel: "monthly",
+    id: "quantum-drug-discovery",
+    title: "Quantum Drug Discovery & Molecular Modeling",
+    description: "Revolutionary platform that uses quantum computing to accelerate drug discovery, molecular modeling, and pharmaceutical research, enabling breakthroughs in medicine.",
+    category: "Quantum Computing",
+    subcategory: "Drug Discovery",
+    price: {
+      monthly: 3200,
+      yearly: 32000,
+      currency: "$",
+      pricingModel: "subscription"
+    },
     features: [
       "Quantum molecular modeling",
-      "AI-powered drug screening",
-      "Protein folding prediction",
-      "Molecular dynamics simulation",
-      "Drug-target interaction analysis",
+      "Drug-protein interaction simulation",
+      "Molecular dynamics",
+      "Chemical structure optimization",
+      "Drug screening algorithms",
+      "Pharmacokinetics modeling",
+      "Toxicity prediction",
       "Clinical trial optimization",
-      "Performance benchmarking",
-      "Research collaboration tools",
-      "API for custom research",
-      "Comprehensive analytics"
+      "Real-time molecular simulation",
+      "Research collaboration tools"
     ],
     benefits: [
-      "Accelerate drug discovery by 1000x",
-      "Reduce development costs by 80%",
-      "Enable new therapeutic approaches",
-      "Improve drug efficacy prediction",
-      "Competitive pharmaceutical advantage",
-      "Save lives through faster drug development"
+      "Accelerate drug discovery by 100x",
+      "Reduce research costs",
+      "Improve drug efficacy",
+      "Faster time to market",
+      "Breakthrough discoveries",
+      "Competitive research advantage"
     ],
     useCases: [
       "Pharmaceutical companies",
-      "Biotech startups",
+      "Biotechnology firms",
       "Research institutions",
-      "Academic researchers",
-      "Government agencies"
+      "Academic institutions",
+      "Government agencies",
+      "Healthcare organizations"
     ],
     targetAudience: [
-      "Pharmaceutical companies",
-      "Biotech companies",
+      "Drug discovery researchers",
+      "Molecular biologists",
+      "Pharmaceutical scientists",
       "Research institutions",
-      "Academic researchers",
-      "Government research agencies"
+      "Biotechnology companies",
+      "Academic researchers"
     ],
-    tags: ["Quantum Computing", "Drug Discovery", "Machine Learning", "Pharmaceuticals", "Molecular Modeling"],
-    estimatedDelivery: "20-24 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$8,900 - $22,000/month",
+    marketPrice: "$3,200 - $15,000/month",
+    competitiveAdvantage: "Revolutionary quantum acceleration in drug discovery",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008, Middletown DE 19709"
     },
-    technology: ["Quantum Computing", "Machine Learning", "Molecular Modeling", "Python", "Quantum Algorithms"],
-    integrations: ["Quantum computers", "Research platforms", "Pharmaceutical databases", "Clinical trial systems"],
-    compliance: ["FDA", "Pharmaceutical regulations", "Research compliance", "HIPAA"],
-    roi: "400% within 36 months",
-    competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "D-Wave"],
-    marketTrend: "Quantum computing in drug discovery market expected to reach $15B by 2030",
-    innovationLevel: "Pioneering quantum machine learning for pharmaceuticals",
-    researchPartnerships: ["NIH", "FDA", "Major pharmaceutical companies", "Research universities"],
-    patentStatus: "Multiple quantum drug discovery patents",
-    futureRoadmap: ["Commercial drug discovery", "Advanced molecular modeling", "Personalized medicine"]
+    rating: 4.9,
+    reviewCount: 67,
+    launchDate: "2024-02-25",
+    status: "Active",
+    innovationScore: 96
   }
 ];
 
@@ -693,9 +1220,9 @@ export const getEmergingTechServiceBySubcategory = (subcategory: string) => {
 };
 
 export const getFeaturedEmergingTechServices = () => {
-  return EMERGING_TECH_SERVICES.slice(0, 8);
+  return EMERGING_TECH_SERVICES.filter(service => service.rating >= 4.7).slice(0, 8);
 };
 
 export const getServicesByInnovationScore = (minScore: number) => {
-  return EMERGING_TECH_SERVICES.filter(service => service.innovationLevel && service.innovationLevel.includes('Cutting-edge'));
+  return EMERGING_TECH_SERVICES.filter(service => service.innovationScore >= minScore);
 };
