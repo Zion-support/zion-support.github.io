@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useParams } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -47,6 +48,9 @@ import { useRouter } from 'next/router';
 =======
 import { useParams } from 'react-router-dom';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-dfab
+=======
+import { useParams } from 'react-router-dom';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d816
 import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
 import type { TalentProfile as TalentProfileType } from '@/types/talent';
 import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
@@ -121,6 +125,7 @@ const TalentProfilePage: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const { id } = useParams();
 =======
   const { id } = useParams() as { id?: string };
@@ -143,6 +148,9 @@ const TalentProfilePage: React.FC = () => {
 =======
   const { id } = useParams();
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-dfab
+=======
+  const { id } = useParams();
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d816
   const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -180,6 +188,7 @@ const TalentProfilePage: React.FC = () => {
   }, [id]);
 
   if (loading) return <ProfileLoadingState />;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -233,6 +242,9 @@ const TalentProfilePage: React.FC = () => {
 =======
   if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-dfab
+=======
+  if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d816
 
   return (
     <main className="min-h-screen bg-zion-blue py-8 text-white">

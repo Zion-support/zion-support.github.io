@@ -213,6 +213,7 @@ import { NewsletterSection } from "@/components/NewsletterSection";
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { HomePageSEO } from "@/components/SEO";
 import { HeroSection } from "@/components/HeroSection";
 =======
@@ -223,6 +224,10 @@ import { EnhancedHeroSection } from "@/components/home/EnhancedHeroSection";
 import { SEO } from "@/components/SEO";
 import { EnhancedHeroSection } from "@/components/home/EnhancedHeroSection";
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-445a
+=======
+import { SEO } from "@/components/SEO";
+import { EnhancedHeroSection } from "@/components/home/EnhancedHeroSection";
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d816
 import { QuickAccess } from "@/components/home/QuickAccess";
 import { FeatureCTAs } from "@/components/home/FeatureCTAs";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
@@ -717,6 +722,7 @@ export default function Home() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <motion.div
@@ -959,6 +965,9 @@ export default function Home() {
 =======
       <EnhancedHeroSection />
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-445a
+=======
+      <EnhancedHeroSection />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d816
       
       <QuickAccess />
       
