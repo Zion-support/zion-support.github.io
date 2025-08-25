@@ -58,6 +58,13 @@ const AIWorkflowAutomation = lazy(() => import('./pages/services/AIWorkflowAutom
 const BlockchainEnterpriseSolutions = lazy(() => import('./pages/services/BlockchainEnterpriseSolutions'));
 const IoTDataAnalytics = lazy(() => import('./pages/services/IoTDataAnalytics'));
 
+// Additional AI service pages
+const AIHRRecruitment = lazy(() => import('./pages/services/AIHRRecruitment'));
+const AILegalTech = lazy(() => import('./pages/services/AILegalTech'));
+const AIHealthcareAnalytics = lazy(() => import('./pages/services/AIHealthcareAnalytics'));
+const BlockchainSolutions = lazy(() => import('./pages/services/BlockchainSolutions'));
+const IoTPlatforms = lazy(() => import('./pages/services/IoTPlatforms'));
+
 // Missing pages from analysis
 const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/QuantumNeuralNetworkPlatform'));
 const AutonomousBusinessOperationsPlatform = lazy(() => import('./pages/AutonomousBusinessOperationsPlatform'));
@@ -274,6 +281,14 @@ const App: React.FC = () => {
                       <Route path="/ai-business-intelligence" element={<AIBusinessIntelligence />} />
                       <Route path="/iot-management-platform" element={<IoTManagementPlatform />} />
                       <Route path="/blockchain-defi-solutions" element={<BlockchainDeFiSolutions />} />
+                      
+                      {/* Additional AI service routes */}
+                      <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
+                      <Route path="/services/ai-hr-recruitment" element={<AIHRRecruitment />} />
+                      <Route path="/services/ai-legal-tech" element={<AILegalTech />} />
+                      <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
+                      <Route path="/services/blockchain-solutions" element={<BlockchainSolutions />} />
+                      <Route path="/services/iot-platforms" element={<IoTPlatforms />} />
                       
                       {/* Solutions Routes */}
                       <Route path="/services/enterprise" element={<EnterpriseSolutions />} />

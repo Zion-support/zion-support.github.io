@@ -29,12 +29,18 @@ const Footer: React.FC = () => {
     {
       title: "Solutions",
       links: [
-        { name: "Healthcare", href: "/solutions/healthcare" },
-        { name: "Finance", href: "/solutions/finance" },
-        { name: "Manufacturing", href: "/solutions/manufacturing" },
-        { name: "Retail", href: "/solutions/retail" },
-        { name: "Education", href: "/solutions/education" },
-        { name: "Government", href: "/solutions/government" }
+        { name: "Enterprise Solutions", href: "/solutions/enterprise" },
+        { name: "Healthcare Solutions", href: "/solutions/healthcare" },
+        { name: "Financial Solutions", href: "/services/financial-services" },
+        { name: "Manufacturing Solutions", href: "/services/manufacturing-intelligence" },
+        { name: "Retail Solutions", href: "/services/retail-technology" },
+        { name: "Government Solutions", href: "/services/government-solutions" },
+        { name: "Business Intelligence", href: "/services/ai-business-intelligence" },
+        { name: "Marketing Automation", href: "/services/ai-marketing-automation" },
+        { name: "AI HR & Recruitment", href: "/services/ai-hr-recruitment" },
+        { name: "AI Legal Tech", href: "/services/ai-legal-tech" },
+        { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics" },
+        { name: "Blockchain Solutions", href: "/services/blockchain-solutions" }
       ]
     },
     {
@@ -61,12 +67,90 @@ const Footer: React.FC = () => {
     }
   ];
 
-  const socialLinks = [
-    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: "💼" },
-    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: "🐦" },
-    { name: "GitHub", href: "https://github.com/ziontechgroup", icon: "💻" },
-    { name: "YouTube", href: "https://youtube.com/@ziontechgroup", icon: "📺" }
+  const quickLinks = [
+    { label: "Services Overview", path: "/services" },
+    { label: "Solutions", path: "/solutions/enterprise" },
+    { label: "AI Matcher", path: "/ai-matcher" },
+    { label: "Talent Directory", path: "/talent-directory" },
+    { label: "Emerging Tech", path: "/emerging-tech" },
+    { label: "Request Quote", path: "/request-quote" },
+    { label: "Support", path: "/help" }
   ];
+
+  const legalLinks = [
+    { label: "Privacy Policy", path: "/privacy" },
+    { label: "Terms of Service", path: "/terms" },
+    { label: "Cookie Policy", path: "/cookies" },
+    { label: "Dispute Management", path: "/dispute-management" }
+  ];
+
+    const socialLinks = [
+    { 
+      name: 'LinkedIn', 
+      url: 'https://www.linkedin.com/company/zion-tech-group', 
+      icon: '💼',
+      fallback: 'https://linkedin.com'
+    },
+    { 
+      name: 'Twitter', 
+      url: 'https://twitter.com/ziontechgroup', 
+      icon: '🐦',
+      fallback: 'https://twitter.com'
+    },
+    { 
+      name: 'GitHub', 
+      url: 'https://github.com/Zion-Holdings', 
+      icon: '💻',
+      fallback: 'https://github.com'
+    },
+    { 
+      name: 'YouTube', 
+      url: 'https://www.youtube.com/@ziontechgroup', 
+      icon: '📺',
+      fallback: 'https://youtube.com'
+    }
+  ];
+
+  const contactInfo = [
+    { 
+      icon: PhoneIcon, 
+      text: '+1 302 464 0950', 
+      href: 'tel:+13024640950',
+      label: 'Call us'
+    },
+    { 
+      icon: EnvelopeIcon, 
+      text: 'kleber@ziontechgroup.com', 
+      href: 'mailto:kleber@ziontechgroup.com',
+      label: 'Email us'
+    },
+    { 
+      icon: MapPinIcon, 
+      text: '364 E Main St STE 1008 Middletown DE 19709', 
+      href: '#',
+      label: 'Visit us'
+    }
+  ];
+
+  const handleContactClick = (type: 'phone' | 'email') => {
+    if (type === 'phone') {
+      window.location.href = `tel:+13024640950`;
+    } else {
+      window.location.href = `mailto:kleber@ziontechgroup.com`;
+    }
+  };
+
+  const handleSocialLinkClick = (link: typeof socialLinks[0], e: React.MouseEvent) => {
+    e.preventDefault();
+    
+    // Try to open the primary URL first
+    const newWindow = window.open(link.url, '_blank', 'noopener,noreferrer');
+    
+    // If the window fails to open, try the fallback
+    if (!newWindow) {
+      window.open(link.fallback, '_blank', 'noopener,noreferrer');
+    }
+  };
 
   return (
     <footer className="bg-slate-900 text-white relative overflow-hidden">
@@ -132,60 +216,73 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Newsletter Section */}
-        <div className="py-8 border-t border-white/10">
-          <div className="text-center">
-            <h3 className="text-xl font-semibold text-white mb-2">
-              Stay Updated with Zion Tech
-            </h3>
-            <p className="text-gray-300 mb-6">
-              Get the latest insights on AI, quantum computing, and technology trends
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors duration-200"
-              />
-              <button className="px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
-                Subscribe
-              </button>
+        {/* Quick Links & Contact */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-8 border-t border-gray-800">
+          {/* Quick Links */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-white">Quick Links</h4>
+            <div className="space-y-2">
+              {quickLinks.map((link, idx) => (
+                <Link
+                  key={idx}
+                  to={link.path}
+                  className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Additional Links */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-white">Legal & Support</h4>
+            <div className="flex flex-wrap gap-4 text-sm text-gray-400">
+              <Link to="/privacy" className="hover:text-cyan-400 transition-colors duration-200">
+                Privacy Policy
+              </Link>
+              <Link to="/terms" className="hover:text-cyan-400 transition-colors duration-200">
+                Terms of Service
+              </Link>
+              <Link to="/cookies" className="hover:text-cyan-400 transition-colors duration-200">
+                Cookie Policy
+              </Link>
+              <Link to="/accessibility" className="hover:text-cyan-400 transition-colors duration-200">
+                Accessibility
+              </Link>
+              <Link to="/sitemap" className="hover:text-cyan-400 transition-colors duration-200">
+                Sitemap
+              </Link>
+              <Link to="/help" className="hover:text-cyan-400 transition-colors duration-200">
+                Help Center
+              </Link>
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Bottom Footer */}
-        <div className="py-8 border-t border-white/10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center space-x-6">
-              <span className="text-gray-400 text-sm">
-                © 2025 Zion Tech Group. All rights reserved.
-              </span>
-              <div className="flex space-x-4">
-                <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
-                  Privacy Policy
-                </Link>
-                <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
-                  Terms of Service
-                </Link>
-                <Link to="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
-                  Cookie Policy
-                </Link>
-              </div>
+      {/* Bottom Section */}
+      <div className="border-t border-gray-800 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+            {/* Copyright */}
+            <div className="text-gray-400 text-sm">
+              © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
             </div>
 
             {/* Social Links */}
             <div className="flex items-center space-x-4">
-              {socialLinks.map((social) => (
+              {socialLinks.map((link) => (
                 <a
-                  key={social.name}
-                  href={social.href}
+                  key={link.name}
+                  href={link.url}
+                  onClick={(e) => handleSocialLinkClick(link, e)}
+                  className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-400/10 rounded-md transition-all duration-200"
+                  title={link.name}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center text-lg transition-all duration-200 hover:scale-110"
-                  aria-label={social.name}
                 >
-                  {social.icon}
+                  <span className="text-lg">{link.icon}</span>
                 </a>
               ))}
             </div>
