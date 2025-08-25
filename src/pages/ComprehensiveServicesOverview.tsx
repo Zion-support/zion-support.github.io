@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -24,10 +25,29 @@ import {
   Sparkles,
   Globe,
   Lock,
+=======
+import React, { useState } from 'react';
+import { SEO } from '../components/SEO';
+import { Link } from 'react-router-dom';
+import { 
+  Search, 
+  Filter, 
+  Star, 
+  CheckCircle, 
+  ArrowRight,
+  Phone,
+  Mail,
+  Globe,
+  Zap,
+  Brain,
+  Shield,
+  Cpu,
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2e04
   Database,
   Network,
   Code,
   BarChart3,
+<<<<<<< HEAD
   Microchip,
   Atom,
   Satellite,
@@ -174,9 +194,83 @@ const ComprehensiveServicesOverview: React.FC = () => {
         return Cpu;
       default:
         return Lightbulb;
+=======
+  Target,
+  Lightbulb,
+  Rocket,
+  Clock,
+  DollarSign,
+  TrendingUp,
+  Users,
+  Building,
+  Globe2,
+  Lock,
+  Cloud,
+  Server,
+  Eye,
+  Heart,
+  Sparkles,
+  ChevronRight,
+  ExternalLink
+} from 'lucide-react';
+import { ADDITIONAL_INNOVATIVE_SERVICES } from '../data/additionalInnovativeServices';
+import { SPECIALIZED_IT_SERVICES } from '../data/specializedITServices';
+
+export default function ComprehensiveServicesOverview() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  // Combine all services
+  const allServices = [...ADDITIONAL_INNOVATIVE_SERVICES, ...SPECIALIZED_IT_SERVICES];
+
+  // Get unique categories
+  const categories = ["all", ...Array.from(new Set(allServices.map(service => service.category)))];
+
+  // Filter services based on search and filters
+  const filteredServices = allServices.filter(service => {
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    
+    return matchesSearch && matchesCategory;
+  });
+
+  // Group services by category
+  const servicesByCategory = filteredServices.reduce((acc, service) => {
+    if (!acc[service.category]) {
+      acc[service.category] = [];
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2e04
     }
+    acc[service.category].push(service);
+    return acc;
+  }, {} as { [key: string]: typeof allServices });
+
+  const getCategoryIcon = (category: string) => {
+    const iconMap: { [key: string]: any } = {
+      'AI & Marketing': TrendingUp,
+      'AI & Customer Service': Users,
+      'AI & Financial Services': DollarSign,
+      'AI & Supply Chain': Network,
+      'AI & Healthcare': Heart,
+      'AI & Legal Tech': Shield,
+      'AI & Education': Lightbulb,
+      'AI & Energy': Zap,
+      'AI & Manufacturing': Building,
+      'Cloud & DevOps': Cloud,
+      'Cybersecurity': Lock,
+      'Data & Analytics': Database,
+      'Edge Computing & IoT': Cpu,
+      'Integration & APIs': Code,
+      'Digital Twin & Simulation': Eye,
+      'Blockchain & Web3': Globe2,
+      'Quantum Computing': Sparkles
+    };
+    return iconMap[category] || Target;
   };
 
+<<<<<<< HEAD
   const getServiceColor = (category: string) => {
     switch (category) {
       case 'AI & Machine Learning':
@@ -370,6 +464,146 @@ const ComprehensiveServicesOverview: React.FC = () => {
               <p className="text-gray-400">
                 Discover innovative solutions tailored to your business needs
               </p>
+=======
+  const getCategoryColor = (category: string) => {
+    const colorMap: { [key: string]: string } = {
+      'AI & Marketing': 'from-pink-500 to-rose-600',
+      'AI & Customer Service': 'from-blue-500 to-indigo-600',
+      'AI & Financial Services': 'from-green-500 to-emerald-600',
+      'AI & Supply Chain': 'from-purple-500 to-violet-600',
+      'AI & Healthcare': 'from-red-500 to-pink-600',
+      'AI & Legal Tech': 'from-yellow-500 to-orange-600',
+      'AI & Education': 'from-cyan-500 to-blue-600',
+      'AI & Energy': 'from-orange-500 to-red-600',
+      'AI & Manufacturing': 'from-indigo-500 to-purple-600',
+      'Cloud & DevOps': 'from-blue-500 to-cyan-600',
+      'Cybersecurity': 'from-red-500 to-orange-600',
+      'Data & Analytics': 'from-green-500 to-teal-600',
+      'Edge Computing & IoT': 'from-purple-500 to-pink-600',
+      'Integration & APIs': 'from-yellow-500 to-green-600',
+      'Digital Twin & Simulation': 'from-indigo-500 to-blue-600',
+      'Blockchain & Web3': 'from-emerald-500 to-green-600',
+      'Quantum Computing': 'from-violet-500 to-purple-600'
+    };
+    return colorMap[category] || 'from-gray-500 to-gray-600';
+  };
+
+  const getCategoryDescription = (category: string) => {
+    const descriptions: { [key: string]: string } = {
+      'AI & Marketing': 'AI-powered marketing solutions that optimize campaigns, personalize content, and drive conversions',
+      'AI & Customer Service': 'Intelligent customer experience platforms that deliver personalized, omnichannel support',
+      'AI & Financial Services': 'Advanced financial analytics and risk management solutions powered by AI',
+      'AI & Supply Chain': 'Intelligent supply chain optimization platforms that reduce costs and improve efficiency',
+      'AI & Healthcare': 'AI-powered healthcare analytics and clinical decision support systems',
+      'AI & Legal Tech': 'Intelligent legal research and compliance automation platforms',
+      'AI & Education': 'Personalized learning platforms that adapt to individual student needs',
+      'AI & Energy': 'Smart energy management solutions that optimize consumption and reduce costs',
+      'AI & Manufacturing': 'Intelligent manufacturing platforms that optimize production and quality control',
+      'Cloud & DevOps': 'Enterprise-grade cloud-native development and DevOps automation platforms',
+      'Cybersecurity': 'Advanced security frameworks including zero-trust architecture and threat detection',
+      'Data & Analytics': 'Comprehensive data lake and analytics platforms for enterprise insights',
+      'Edge Computing & IoT': 'Edge computing and IoT management platforms for real-time processing',
+      'Integration & APIs': 'Enterprise API management and system integration platforms',
+      'Digital Twin & Simulation': 'Digital twin platforms for industrial applications and simulation',
+      'Blockchain & Web3': 'Enterprise blockchain platforms for secure, transparent business processes',
+      'Quantum Computing': 'Quantum computing services for research and enterprise applications'
+    };
+    return descriptions[category] || 'Innovative technology solutions for modern businesses';
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
+      <SEO 
+        title="Comprehensive Services Overview - Zion Tech Group" 
+        description="Explore our complete portfolio of AI-powered services, specialized IT solutions, and innovative technology platforms designed to transform your business."
+        keywords="comprehensive services, AI solutions, IT services, technology platforms, digital transformation, Zion Tech Group"
+        canonical="https://ziontechgroup.com/comprehensive-services-overview"
+      />
+
+      {/* Hero Section */}
+      <section className="relative overflow-hidden pt-32 pb-20">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/90 to-zion-purple/90"></div>
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-20"></div>
+        </div>
+        
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <div className="inline-flex items-center px-4 py-2 bg-zion-cyan/20 border border-zion-cyan/30 rounded-full text-zion-cyan text-sm font-medium mb-6">
+            <Sparkles className="w-4 h-4 mr-2" />
+            Complete Portfolio
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Comprehensive
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple-light">
+              Services Overview
+            </span>
+            <span className="block text-3xl md:text-4xl text-zion-slate-light mt-4">
+              Your Complete Technology Solution Partner
+            </span>
+          </h1>
+          
+          <p className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8 leading-relaxed">
+            Discover our extensive portfolio of {allServices.length}+ innovative services and solutions 
+            designed to accelerate your digital transformation and drive business innovation across all industries.
+          </p>
+
+          {/* Contact Information */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-zion-slate-light">
+            <div className="flex items-center">
+              <Phone className="w-5 h-5 mr-2 text-zion-cyan" />
+              <span>+1 302 464 0950</span>
+            </div>
+            <div className="flex items-center">
+              <Mail className="w-5 h-5 mr-2 text-zion-cyan" />
+              <span>kleber@ziontechgroup.com</span>
+            </div>
+            <div className="flex items-center">
+              <Globe className="w-5 h-5 mr-2 text-zion-cyan" />
+              <span>https://ziontechgroup.com</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Search and Filters */}
+      <section className="py-8 bg-white/5 backdrop-blur-sm">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+            {/* Search */}
+            <div className="relative flex-1 max-w-md">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search services..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+              />
+            </div>
+
+            {/* Category Filter */}
+            <div className="flex items-center gap-4">
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+              >
+                {categories.map(category => (
+                  <option key={category} value={category} className="bg-gray-800 text-white">
+                    {category === 'all' ? 'All Categories' : category}
+                  </option>
+                ))}
+              </select>
+
+              <Link
+                to="/innovative-services"
+                className="inline-flex items-center px-6 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan/90 transition-colors duration-300"
+              >
+                <ExternalLink className="w-4 h-4 mr-2" />
+                View All Services
+              </Link>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2e04
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -799,6 +1033,7 @@ const ComprehensiveServicesOverview: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Search and Filters */}
       <section className="py-8 bg-zion-blue-dark/30">
         <div className="container mx-auto px-4">
@@ -1061,10 +1296,121 @@ const ComprehensiveServicesOverview: React.FC = () => {
               </div>
             ))}
           </div>
+=======
+      {/* Services by Category */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Services by Category
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Explore our services organized by category to find the perfect solution for your business needs
+            </p>
+          </div>
+
+          {Object.entries(servicesByCategory).map(([category, services]) => {
+            if (services.length === 0) return null;
+            
+            const IconComponent = getCategoryIcon(category);
+            const categoryColor = getCategoryColor(category);
+            const categoryDescription = getCategoryDescription(category);
+            
+            return (
+              <div key={category} className="mb-16">
+                {/* Category Header */}
+                <div className="flex items-center mb-8">
+                  <div className={`p-4 rounded-xl bg-gradient-to-r ${categoryColor} mr-6`}>
+                    <IconComponent className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-3xl font-bold text-white mb-2">{category}</h3>
+                    <p className="text-lg text-gray-400 max-w-2xl">{categoryDescription}</p>
+                  </div>
+                </div>
+
+                {/* Services Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {services.map((service, index) => (
+                    <div
+                      key={service.id}
+                      className="group bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105"
+                    >
+                      {/* Service Header */}
+                      <div className="mb-4">
+                        <h4 className="text-lg font-semibold text-white group-hover:text-zion-cyan transition-colors mb-2">
+                          {service.title}
+                        </h4>
+                        <p className="text-gray-400 text-sm line-clamp-3">
+                          {service.description}
+                        </p>
+                      </div>
+
+                      {/* Key Features */}
+                      <div className="mb-4">
+                        <div className="flex flex-wrap gap-1">
+                          {service.features.slice(0, 3).map((feature, idx) => (
+                            <span
+                              key={idx}
+                              className="inline-flex items-center px-2 py-1 rounded-full text-xs bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30"
+                            >
+                              <CheckCircle className="w-3 h-3 mr-1" />
+                              {feature}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Pricing and Contact */}
+                      <div className="border-t border-gray-700/50 pt-4">
+                        <div className="flex items-center justify-between mb-3">
+                          <div className="text-xl font-bold text-white">
+                            ${service.price.toLocaleString()}
+                            <span className="text-sm text-gray-400 font-normal">/month</span>
+                          </div>
+                          <div className="text-sm text-gray-400">
+                            {service.estimatedDelivery}
+                          </div>
+                        </div>
+                        
+                        {/* Action Buttons */}
+                        <div className="flex gap-2">
+                          <a
+                            href={service.websiteUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 text-center"
+                          >
+                            Learn More
+                          </a>
+                          <a
+                            href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title}`}
+                            className="bg-white/10 hover:bg-white/20 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-300"
+                          >
+                            Contact
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+
+          {Object.keys(servicesByCategory).length === 0 && (
+            <div className="text-center py-20">
+              <div className="text-6xl mb-4">🔍</div>
+              <h3 className="text-2xl font-semibold text-white mb-2">No services found</h3>
+              <p className="text-gray-400">Try adjusting your search criteria or filters</p>
+            </div>
+          )}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2e04
         </div>
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -1123,12 +1469,56 @@ const ComprehensiveServicesOverview: React.FC = () => {
                 </Link>
               </div>
             </div>
+=======
+      <section className="py-20 bg-gradient-to-r from-zion-blue-dark/50 to-zion-purple/50">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Our team of experts is ready to help you implement the perfect solution for your business needs. 
+            Get in touch today to start your digital transformation journey.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a
+              href="tel:+13024640950"
+              className="inline-flex items-center px-8 py-4 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan/90 transition-colors duration-300"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Call Now: +1 302 464 0950
+            </a>
+            
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="inline-flex items-center px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-colors duration-300"
+            >
+              <Mail className="w-5 h-5 mr-2" />
+              Email Us
+            </a>
+          </div>
+
+          <div className="mt-8 text-center">
+            <p className="text-gray-400 mb-2">Visit our website for more information:</p>
+            <a
+              href="https://ziontechgroup.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-zion-cyan hover:text-zion-cyan/80 transition-colors duration-300"
+            >
+              https://ziontechgroup.com
+            </a>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2e04
           </div>
         </div>
       </section>
     </div>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-5c5f
   );
+<<<<<<< HEAD
 };
 
 export default ComprehensiveServicesOverview;
+=======
+}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2e04

@@ -25,6 +25,7 @@ import {
   Award
 } from 'lucide-react';
 
+<<<<<<< HEAD
 interface Service {
   id: string;
   title: string;
@@ -132,6 +133,90 @@ const ServicesSection: React.FC = () => {
   const filteredServices = selectedCategory === 'all' 
     ? services 
     : services.filter(service => service.category === selectedCategory);
+=======
+const services = [
+  {
+    icon: Brain,
+    title: "AI & Machine Learning",
+    description: "Cutting-edge artificial intelligence solutions that transform business operations",
+    features: ["Predictive Analytics", "Natural Language Processing", "Computer Vision", "Machine Learning Models"],
+    path: "/ai-solutions",
+    color: "from-cyan-500 to-blue-600"
+  },
+  {
+    icon: Shield,
+    title: "Cybersecurity",
+    description: "Enterprise-grade security solutions to protect your digital assets",
+    features: ["Threat Detection", "Incident Response", "Compliance Management", "Security Audits"],
+    path: "/services/cybersecurity",
+    color: "from-purple-500 to-pink-600"
+  },
+  {
+    icon: Cpu,
+    title: "Cloud & Infrastructure",
+    description: "Scalable cloud solutions and robust IT infrastructure management",
+    features: ["Cloud Migration", "DevOps Automation", "Infrastructure as Code", "Performance Optimization"],
+    path: "/services/cloud-devops",
+    color: "from-green-500 to-emerald-600"
+  },
+  {
+    icon: Rocket,
+    title: "Digital Transformation",
+    description: "End-to-end digital transformation strategies for modern businesses",
+    features: ["Process Automation", "Legacy Modernization", "Change Management", "ROI Optimization"],
+    path: "/digital-transformation",
+    color: "from-orange-500 to-red-600"
+  },
+  {
+    icon: Users,
+    title: "Enterprise Solutions",
+    description: "Comprehensive enterprise software and integration services",
+    features: ["ERP Systems", "CRM Integration", "Data Analytics", "Business Intelligence"],
+    path: "/enterprise-solutions",
+    color: "from-indigo-500 to-purple-600"
+  },
+  {
+    icon: TrendingUp,
+    title: "Business Intelligence",
+    description: "Data-driven insights and analytics to drive strategic decisions",
+    features: ["Data Warehousing", "Real-time Dashboards", "Predictive Modeling", "KPI Tracking"],
+    path: "/services/business-intelligence",
+    color: "from-yellow-500 to-orange-600"
+  },
+  {
+    icon: Zap,
+    title: "Emerging Technologies",
+    description: "Cutting-edge solutions in quantum computing, edge AI, and neuromorphic computing",
+    features: ["Quantum Computing", "Edge AI", "Neuromorphic Computing", "6G Networks"],
+    path: "/emerging-tech",
+    color: "from-violet-500 to-purple-600"
+  },
+  {
+    icon: Target,
+    title: "Industry Solutions",
+    description: "Specialized AI solutions for healthcare, finance, manufacturing, and retail industries",
+    features: ["Healthcare AI", "Financial Technology", "Smart Manufacturing", "Retail Intelligence"],
+    path: "/comprehensive-services-overview",
+    color: "from-emerald-500 to-teal-600"
+  },
+  {
+    icon: Sparkles,
+    title: "Micro-SaaS Services",
+    description: "Scalable software-as-a-service solutions for growing businesses",
+    features: ["Custom Development", "API Integration", "User Management", "Analytics Dashboard"],
+    path: "/services/micro-saas-solutions",
+    color: "from-amber-500 to-orange-600"
+  },
+  {
+    icon: Rocket,
+    title: "Innovative Services Hub",
+    description: "Comprehensive portfolio of cutting-edge AI and technology solutions",
+    features: ["AI-Powered Services", "Specialized IT Solutions", "Emerging Technologies", "Enterprise Platforms"],
+    path: "/innovative-services",
+    color: "from-violet-500 to-purple-600"
+  }
+];
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2e04
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-black to-gray-900">

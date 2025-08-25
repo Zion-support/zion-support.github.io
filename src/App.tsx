@@ -61,6 +61,7 @@ const FiveGEnterpriseSolutions = lazy(() => import('./pages/5GEnterpriseSolution
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 const NewServices = lazy(() => import('./pages/NewServices'));
+const NewInnovativeServices = lazy(() => import('./pages/NewInnovativeServices'));
 
 // Additional missing pages
 
@@ -206,6 +207,7 @@ const App: React.FC = () => {
                       <Route path="/case-studies" element={<CaseStudies />} />
                       <Route path="/help" element={<HelpCenter />} />
                       <Route path="/new-services" element={<NewServices />} />
+                      <Route path="/innovative-services" element={<NewInnovativeServices />} />
                       
                       {/* Additional missing pages */}
                       <Route path="/ai-autonomous-business-manager" element={<AIAutonomousBusinessManager />} />
