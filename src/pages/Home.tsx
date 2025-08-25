@@ -28,73 +28,13 @@ import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 import { ServicesOverview } from "@/components/ServicesOverview";
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10"></div>
-        
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentSlide}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
-            className="text-center z-10 px-4 sm:px-6 lg:px-8"
-          >
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-6"
-            >
-              <span className={`bg-gradient-to-r ${heroSlides[currentSlide].color} bg-clip-text text-transparent`}>
-                {heroSlides[currentSlide].title}
-              </span>
-            </motion.h1>
-            
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              className="text-xl sm:text-2xl lg:text-3xl text-gray-300 mb-4"
-            >
-              {heroSlides[currentSlide].subtitle}
-            </motion.h2>
-            
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6, duration: 0.6 }}
-              className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto mb-8"
-            >
-              {heroSlides[currentSlide].description}
-            </motion.p>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
-            >
-              <Link
-                to="/services"
-                className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25"
-              >
-                Explore Services
-                <ArrowRightIcon className="ml-2 w-5 h-5" />
-              </Link>
-              
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300"
-              >
-                Get Started
-              </Link>
-            </motion.div>
-          </motion.div>
-        </AnimatePresence>
-      </section>
+    <div className="min-h-screen bg-background">
+      <SEO 
+        title="Zion - The Tech & AI Marketplace" 
+        description="Discover top AI and tech talent, services, and equipment in one place."
+        keywords="AI, technology, marketplace, services, talent"
+        canonical="https://ziontechgroup.com/"
+      />
 
       {/* Stats Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
