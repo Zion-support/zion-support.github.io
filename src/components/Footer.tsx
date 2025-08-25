@@ -84,21 +84,12 @@ export function Footer() {
     { name: "Government", link: "/government", description: "Public sector tech" }
   ];
 
-  const companyLinks = [
-    { name: "About Us", link: "/about", description: "Our story & mission" },
-    { name: "Careers", link: "/careers", description: "Join our team" },
-    { name: "Partners", link: "/partners", description: "Strategic alliances" },
-    { name: "Press", link: "/press", description: "Media resources" },
-    { name: "Investors", link: "/investors", description: "Financial information" }
-  ];
-
-  const resources = [
-    { name: "Blog", link: "/blog", description: "Latest insights" },
-    { name: "Documentation", link: "/docs", description: "Technical guides" },
-    { name: "API Reference", link: "/api", description: "Developer resources" },
-    { name: "Support Center", link: "/support", description: "Help & resources" },
-    { name: "Community", link: "/community", description: "User forums" }
-  ];
+  const contactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    website: 'https://ziontechgroup.com',
+    address: '364 E Main St STE 1008, Middletown DE 19709'
+  };
 
   return (
     <footer className="bg-zion-blue-dark border-t border-zion-blue-light">

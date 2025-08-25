@@ -53,29 +53,11 @@ export const Header: React.FC = () => {
       icon: <Network className="w-4 h-4" />,
       description: "Connected devices and real-time processing"
     },
-    {
-      name: "AR/VR & Immersive Tech",
-      path: "/immersive-tech",
-      icon: <Eye className="w-4 h-4" />,
-      description: "Virtual and augmented reality experiences"
-    },
-    {
-      name: "Green Tech & Sustainability",
-      path: "/green-tech",
-      icon: <Leaf className="w-4 h-4" />,
-      description: "Environmental impact and ESG solutions"
-    },
-    {
-      name: "Healthcare Tech",
-      path: "/healthcare-tech",
-      icon: <Heart className="w-4 h-4" />,
-      description: "Digital health and medical technology"
-    },
-    {
-      name: "Financial Technology",
-      path: "/fintech",
-      icon: <CreditCard className="w-4 h-4" />,
-      description: "Quantum finance and digital banking"
+    { 
+      path: '/pricing', 
+      label: 'Pricing', 
+      icon: '💰',
+      description: 'Transparent pricing plans'
     },
     {
       name: "Event Management",
