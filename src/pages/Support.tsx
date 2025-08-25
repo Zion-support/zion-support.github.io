@@ -1,276 +1,268 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { MessageCircle, Phone, Mail, Clock, FileText, Users, Search, Send, CheckCircle } from 'lucide-react';
 
-export default function Support() {
-  const supportChannels = [
+const Support = () => {
+  const [selectedCategory, setSelectedCategory] = useState('general');
+  const [message, setMessage] = useState('');
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const supportCategories = [
+    { id: 'general', name: 'General Support', icon: MessageCircle, description: 'General questions and assistance' },
+    { id: 'technical', name: 'Technical Support', icon: FileText, description: 'Technical issues and troubleshooting' },
+    { id: 'billing', name: 'Billing & Payments', icon: CheckCircle, description: 'Billing questions and payment issues' },
+    { id: 'feature', name: 'Feature Requests', icon: Users, description: 'Suggest new features or improvements' }
+  ];
+
+  const faqs = [
     {
-      title: 'Live Chat',
-      icon: '💬',
-      description: 'Get instant help from our support team',
-      availability: '24/7',
-      responseTime: 'Immediate',
-      action: 'Start Chat',
-      actionType: 'button'
+      question: 'How do I get started with Zion Tech Group services?',
+      answer: 'Getting started is easy! Simply contact our team through the contact form or call us directly. We\'ll schedule a consultation to understand your needs and recommend the best solutions.'
     },
     {
-      title: 'Email Support',
-      icon: '✉️',
-      description: 'Send us a detailed message for complex issues',
-      availability: '24/7',
-      responseTime: 'Within 4 hours',
-      action: 'Send Email',
-      actionType: 'link',
-      path: '/contact'
+      question: 'What AI services do you offer?',
+      answer: 'We offer comprehensive AI services including autonomous systems, machine learning solutions, AI research assistance, and custom AI development for your specific business needs.'
     },
     {
-      title: 'Phone Support',
-      icon: '📞',
-      description: 'Call us directly for urgent technical issues',
-      availability: 'Business Hours',
-      responseTime: 'Immediate',
-      action: 'Call Now',
-      actionType: 'phone',
-      phone: '+13024640950'
+      question: 'Do you provide 24/7 support?',
+      answer: 'Yes, we provide 24/7 monitoring and support for critical systems. Our support team is available during business hours, and we have emergency response procedures for urgent issues.'
     },
     {
-      title: 'Help Center',
-      icon: '📚',
-      description: 'Browse our comprehensive knowledge base',
-      availability: '24/7',
-      responseTime: 'Self-service',
-      action: 'Browse Articles',
-      actionType: 'link',
-      path: '/help'
+      question: 'What industries do you serve?',
+      answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, government, and more. Our solutions are tailored to meet industry-specific requirements and compliance standards.'
     }
   ];
 
-  const supportTiers = [
-    {
-      name: 'Basic Support',
-      description: 'For all users',
-      features: [
-        'Email support within 24 hours',
-        'Help center access',
-        'Community forum access',
-        'Documentation access'
-      ],
-      price: 'Free'
-    },
-    {
-      name: 'Priority Support',
-      description: 'For paid plans',
-      features: [
-        'Email support within 4 hours',
-        'Live chat support',
-        'Phone support during business hours',
-        'Priority ticket handling',
-        'Dedicated support team'
-      ],
-      price: 'Included'
-    },
-    {
-      name: 'Enterprise Support',
-      description: 'For enterprise clients',
-      features: [
-        '24/7 phone support',
-        'Dedicated support manager',
-        'Custom SLA agreements',
-        'On-site support available',
-        'Training and consultation',
-        'Priority feature requests'
-      ],
-      price: 'Custom'
-    }
-  ];
-
-  const commonIssues = [
-    {
-      category: 'Account & Access',
-      issues: [
-        'Password reset and recovery',
-        'Two-factor authentication setup',
-        'Account verification issues',
-        'Permission and role management'
-      ]
-    },
-    {
-      category: 'Technical Problems',
-      issues: [
-        'API integration issues',
-        'Performance optimization',
-        'Error troubleshooting',
-        'Browser compatibility'
-      ]
-    },
-    {
-      category: 'Billing & Subscriptions',
-      issues: [
-        'Payment processing',
-        'Invoice generation',
-        'Plan upgrades/downgrades',
-        'Refund requests'
-      ]
-    },
-    {
-      category: 'Service Usage',
-      issues: [
-        'Feature implementation',
-        'Best practices guidance',
-        'Training and onboarding',
-        'Custom solutions'
-      ]
-    }
-  ];
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitted(true);
+    setMessage('');
+    // In a real application, this would send the message to a backend service
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Header Section */}
-      <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">
-            Support Center
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            We're here to help you succeed. Choose the support channel that works best for you.
-          </p>
-        </div>
-      </div>
-
-      {/* Support Channels */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">How can we help you?</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {supportChannels.map((channel) => (
-              <div key={channel.title} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300">
-                <div className="text-4xl mb-4">{channel.icon}</div>
-                <h3 className="text-xl font-semibold mb-3 text-cyan-400">{channel.title}</h3>
-                <p className="text-gray-300 text-sm mb-4">{channel.description}</p>
-                
-                <div className="space-y-2 mb-6">
-                  <div className="flex justify-between text-sm">
-                    <span className="text-gray-400">Availability:</span>
-                    <span className="text-cyan-400">{channel.availability}</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-gray-400">Response:</span>
-                    <span className="text-cyan-400">{channel.responseTime}</span>
-                  </div>
-                </div>
-                
-                {channel.actionType === 'button' && (
-                  <button className="w-full bg-cyan-600 hover:bg-cyan-700 text-white py-2 px-4 rounded-lg transition-colors duration-200">
-                    {channel.action}
-                  </button>
-                )}
-                
-                {channel.actionType === 'link' && (
-                  <Link
-                    to={channel.path}
-                    className="block w-full bg-cyan-600 hover:bg-cyan-700 text-white py-2 px-4 rounded-lg transition-colors duration-200 text-center"
-                  >
-                    {channel.action}
-                  </Link>
-                )}
-                
-                {channel.actionType === 'phone' && (
-                  <a
-                    href={`tel:${channel.phone}`}
-                    className="block w-full bg-cyan-600 hover:bg-cyan-700 text-white py-2 px-4 rounded-lg transition-colors duration-200 text-center"
-                  >
-                    {channel.action}
-                  </a>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Support Tiers */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Support Plans</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {supportTiers.map((tier) => (
-              <div key={tier.name} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300">
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-cyan-400 mb-2">{tier.name}</h3>
-                  <p className="text-gray-400 text-sm mb-4">{tier.description}</p>
-                  <div className="text-3xl font-bold text-white">{tier.price}</div>
-                </div>
-                
-                <ul className="space-y-3 mb-6">
-                  {tier.features.map((feature, index) => (
-                    <li key={index} className="flex items-center text-sm text-gray-300">
-                      <span className="text-cyan-400 mr-2">✓</span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                
-                <Link
-                  to="/contact"
-                  className="block w-full bg-cyan-600 hover:bg-cyan-700 text-white py-3 px-4 rounded-lg transition-colors duration-200 text-center font-medium"
-                >
-                  Get Started
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Common Issues */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Common Issues & Solutions</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {commonIssues.map((category) => (
-              <div key={category.category} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
-                <h3 className="text-lg font-semibold mb-4 text-cyan-400">{category.category}</h3>
-                <ul className="space-y-2">
-                  {category.issues.map((issue, index) => (
-                    <li key={index} className="text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-200 cursor-pointer">
-                      • {issue}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Contact Section */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 border border-cyan-500/30">
-            <h2 className="text-3xl font-bold mb-6">Still need help?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Our expert support team is ready to assist you with any questions or issues.
+      {/* Header */}
+      <div className="pt-20 pb-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-4">
+              Support Center
+            </h1>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              We're here to help you succeed with Zion Tech Group solutions
             </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Contact Methods */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-gradient-to-br from-blue-500/10 to-blue-600/10 backdrop-blur-sm rounded-2xl border border-blue-500/20 p-6 text-center">
+            <Phone className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
+            <p className="text-gray-300 mb-4">Speak directly with our support team</p>
+            <a 
+              href="tel:+13024640950" 
+              className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+            >
+              +1 (302) 464-0950
+            </a>
+          </div>
+
+          <div className="bg-gradient-to-br from-green-500/10 to-green-600/10 backdrop-blur-sm rounded-2xl border border-green-500/20 p-6 text-center">
+            <Mail className="w-12 h-12 text-green-400 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-2">Email Support</h3>
+            <p className="text-gray-300 mb-4">Send us a detailed message</p>
+            <a 
+              href="mailto:support@ziontechgroup.com" 
+              className="inline-flex items-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors"
+            >
+              support@ziontechgroup.com
+            </a>
+          </div>
+
+          <div className="bg-gradient-to-br from-purple-500/10 to-purple-600/10 backdrop-blur-sm rounded-2xl border border-purple-500/20 p-6 text-center">
+            <Clock className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-2">Business Hours</h3>
+            <p className="text-gray-300 mb-4">Monday - Friday</p>
+            <p className="text-cyan-400 font-medium">9:00 AM - 6:00 PM EST</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Support Categories */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+        <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-2xl border border-gray-600/30 p-8">
+          <h2 className="text-2xl font-semibold text-white mb-6">How can we help you?</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {supportCategories.map((category) => {
+              const Icon = category.icon;
+              return (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`p-6 rounded-xl border transition-all duration-200 text-left ${
+                    selectedCategory === category.id
+                      ? 'border-cyan-500 bg-cyan-500/10'
+                      : 'border-gray-600 hover:border-gray-500 hover:bg-gray-700/30'
+                  }`}
+                >
+                  <div className="flex items-start space-x-4">
+                    <Icon className={`w-8 h-8 mt-1 ${
+                      selectedCategory === category.id ? 'text-cyan-400' : 'text-gray-400'
+                    }`} />
+                    <div>
+                      <h3 className="font-semibold text-white mb-2">{category.name}</h3>
+                      <p className="text-sm text-gray-400">{category.description}</p>
+                    </div>
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {/* Contact Form */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+        <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-2xl border border-gray-600/30 p-8">
+          <h2 className="text-2xl font-semibold text-white mb-6">Send us a message</h2>
+          
+          {isSubmitted ? (
+            <div className="text-center py-12">
+              <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+              <h3 className="text-xl font-medium text-white mb-2">Message Sent Successfully!</h3>
+              <p className="text-gray-400 mb-6">We'll get back to you within 24 hours.</p>
+              <button
+                onClick={() => setIsSubmitted(false)}
+                className="px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-lg transition-colors"
+              >
+                Send Another Message
+              </button>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">First Name</label>
+                  <input
+                    type="text"
+                    required
+                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    placeholder="Enter your first name"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Last Name</label>
+                  <input
+                    type="text"
+                    required
+                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    placeholder="Enter your last name"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                  <input
+                    type="email"
+                    required
+                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    placeholder="Enter your email address"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2">Phone (Optional)</label>
+                  <input
+                    type="tel"
+                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    placeholder="Enter your phone number"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-2">Subject</label>
+                <input
+                  type="text"
+                  required
+                  className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  placeholder="Brief description of your inquiry"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-300 mb-2">Message</label>
+                <textarea
+                  required
+                  rows={6}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
+                  placeholder="Please describe your question or issue in detail..."
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full md:w-auto px-8 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-200 flex items-center justify-center space-x-2"
+              >
+                <Send className="w-5 h-5" />
+                <span>Send Message</span>
+              </button>
+            </form>
+          )}
+        </div>
+      </div>
+
+      {/* FAQ Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+        <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-2xl border border-gray-600/30 p-8">
+          <h2 className="text-2xl font-semibold text-white mb-6">Frequently Asked Questions</h2>
+          
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <div key={index} className="border border-gray-600 rounded-lg p-6">
+                <h3 className="text-lg font-medium text-white mb-3">{faq.question}</h3>
+                <p className="text-gray-300">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Additional Resources */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+        <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-2xl border border-gray-600/30 p-8">
+          <h2 className="text-2xl font-semibold text-white mb-6">Additional Resources</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="p-6 bg-gradient-to-br from-cyan-500/10 to-cyan-600/10 rounded-xl border border-cyan-500/20">
+              <h3 className="text-lg font-semibold text-white mb-3">Documentation</h3>
+              <p className="text-gray-300 mb-4">Access our comprehensive documentation and user guides</p>
+              <a href="/docs" className="text-cyan-400 hover:text-cyan-300 font-medium">
+                View Documentation →
+              </a>
+            </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="px-8 py-4 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold rounded-lg transition-colors duration-200"
-              >
-                Contact Support
-              </Link>
-              <Link
-                to="/help"
-                className="px-8 py-4 bg-transparent border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold rounded-lg transition-colors duration-200"
-              >
-                Browse Help Center
-              </Link>
+            <div className="p-6 bg-gradient-to-br from-purple-500/10 to-purple-600/10 rounded-xl border border-purple-500/20">
+              <h3 className="text-lg font-semibold text-white mb-3">Help Center</h3>
+              <p className="text-gray-300 mb-4">Browse our help articles and troubleshooting guides</p>
+              <a href="/help" className="text-purple-400 hover:text-purple-300 font-medium">
+                Visit Help Center →
+              </a>
             </div>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default Support;
