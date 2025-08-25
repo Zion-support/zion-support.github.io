@@ -30,7 +30,38 @@ export const PerformanceDashboard: React.FC = () => {
     bandwidth: 0,
     connectionType: 'unknown'
   });
+  const [isLoading, setIsLoading] = useState(false);
+  const [metrics, setMetrics] = useState<any>({});
+  const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
+  const [autoRefresh, setAutoRefresh] = useState(true);
   const performance = usePerformance();
+
+  // Collect performance metrics
+  const collectMetrics = useCallback(async () => {
+    // This would typically collect real performance metrics
+    // For now, return mock data
+    return {
+      fcp: performance.fcp,
+      lcp: performance.lcp,
+      fid: performance.fid,
+      cls: performance.cls,
+      ttfb: performance.ttfb,
+      tti: performance.tti
+    };
+  }, [performance]);
+
+  // Get score icon
+  const getScoreIcon = (score: number) => {
+    if (score >= 90) return <TrendingUp className="w-5 h-5 text-green-400" />;
+    if (score >= 70) return <Target className="w-5 h-5 text-yellow-400" />;
+    return <TrendingDown className="w-5 h-5 text-red-400" />;
+  };
+
+  // Format metric values
+  const formatMetric = (value: number | null, unit: string = 'ms') => {
+    if (value === null) return 'N/A';
+    return `${value.toFixed(0)} ${unit}`;
+  };
 
   // Calculate bundle metrics
   const calculateBundleMetrics = useCallback(async () => {
@@ -241,14 +272,6 @@ export const PerformanceDashboard: React.FC = () => {
                 Real-time performance monitoring
               </p>
             </div>
-          </div>
-        </div>
-        {lastUpdated && (
-          <p className="text-sm text-gray-500 mt-2">
-            Last updated: {lastUpdated.toLocaleTimeString()}
-          </p>
-        )}
-      </div>
 
             {/* Content */}
             <div className="p-4 space-y-4 max-h-96 overflow-y-auto">

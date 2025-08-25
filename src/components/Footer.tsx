@@ -187,6 +187,7 @@ export function Footer() {
                 </a>
               ))}
             </div>
+          </div>
 
           {/* Marketplace */}
           <div>

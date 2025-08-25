@@ -4,14 +4,61 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Clock, MapPin, Globe, Shield, Zap, CheckCircle } from "lucide-react";
+import { Clock, MapPin, Globe, Shield, Zap, CheckCircle, Users, Star } from "lucide-react";
 
 export const ITServiceRequestHero = () => {
+  const [location, setLocation] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const navigate = useNavigate();
+
   const stats = [
     { icon: Users, value: '500+', label: 'Happy Clients' },
     { icon: Zap, value: '99.9%', label: 'Uptime' },
     { icon: Star, value: '4.9/5', label: 'Rating' },
     { icon: Shield, value: '24/7', label: 'Support' },
+  ];
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (location.trim()) {
+      setIsSubmitting(true);
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      setIsSubmitting(false);
+      setShowSuccess(true);
+      setTimeout(() => {
+        navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`);
+      }, 1500);
+    }
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 }
+    }
+  };
+
+  const features = [
+    { icon: Clock, text: "24/7 Global Support", color: "text-zion-cyan" },
+    { icon: Globe, text: "Worldwide Coverage", color: "text-zion-purple-light" },
+    { icon: Shield, text: "Certified Technicians", color: "text-zion-blue-light" },
+    { icon: Zap, text: "Same Day Response", color: "text-zion-cyan-light" }
   ];
 
   return (
@@ -65,144 +112,82 @@ export const ITServiceRequestHero = () => {
         />
       </div>
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (location.trim()) {
-      setIsSubmitting(true);
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setIsSubmitting(false);
-      setShowSuccess(true);
-      setTimeout(() => {
-        navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`);
-      }, 1500);
-    }
-  };
-
-  const containerVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 }
-    }
-  };
-
-  const features = [
-    { icon: Clock, text: "24/7 Global Support", color: "text-zion-cyan" },
-    { icon: Globe, text: "Worldwide Coverage", color: "text-zion-purple-light" },
-    { icon: Shield, text: "Certified Technicians", color: "text-zion-blue-light" },
-    { icon: Zap, text: "Same Day Response", color: "text-zion-cyan-light" }
-  ];
-
-  return (
-    <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark py-20 md:py-28 border-b border-zion-purple/20 relative overflow-hidden">
-      {/* Background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0)`,
-          backgroundSize: '60px 60px'
-        }}></div>
-      </div>
-
-      <motion.div 
-        className="container mx-auto px-4"
+      {/* Main Content */}
+      <motion.div
         variants={containerVariants}
         initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
+        animate="visible"
+        className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <motion.div variants={itemVariants}>
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-12 h-12 bg-zion-cyan/20 rounded-full flex items-center justify-center">
-                <Zap className="w-6 h-6 text-zion-cyan" />
-              </div>
-              <span className="text-zion-cyan font-semibold text-lg">Premium Service</span>
-            </div>
-            
-            <GradientHeading className="mb-6 text-4xl md:text-5xl lg:text-6xl leading-tight">
-              24x7 Global IT Onsite Services
-            </GradientHeading>
-            
-            <p className="text-lg md:text-xl text-zion-slate-light mb-8 max-w-lg leading-relaxed">
-              Request professional technicians anywhere in the world, anytime you need them. 
-              Our certified experts provide rapid response and reliable solutions for all your IT needs.
-            </p>
+        {/* Hero Content */}
+        <motion.div variants={itemVariants} className="mb-12">
+          <GradientHeading className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+            IT Services at Your Doorstep
+          </GradientHeading>
+          <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+            Professional IT technicians available 24/7 for on-site support, remote assistance, and emergency repairs. 
+            Get same-day response and expert solutions for all your technology needs.
+          </p>
+        </motion.div>
 
-            {/* Feature highlights */}
-            <div className="grid grid-cols-2 gap-4 mb-8">
-              {features.map((feature, index) => (
-                <motion.div 
-                  key={index}
-                  className="flex items-center gap-3"
-                  variants={itemVariants}
-                >
-                  <feature.icon className={`w-5 h-5 ${feature.color}`} />
-                  <span className="text-zion-slate-light text-sm font-medium">{feature.text}</span>
-                </motion.div>
-              ))}
+        {/* Service Request Form */}
+        <motion.div variants={itemVariants} className="mb-12">
+          <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Input
+                type="text"
+                placeholder="Enter your location or address"
+                value={location}
+                onChange={(e) => setLocation(e.target.value)}
+                className="flex-1"
+                required
+              />
+              <Button
+                type="submit"
+                disabled={isSubmitting}
+                className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8"
+              >
+                {isSubmitting ? "Requesting..." : "Request Service"}
+              </Button>
             </div>
+          </form>
+        </motion.div>
 
-            {/* Trust indicators */}
-            <div className="flex items-center gap-6 text-zion-slate-light text-sm">
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-zion-cyan" />
-                <span>ISO 27001 Certified</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-zion-cyan" />
-                <span>99.9% Uptime</span>
-              </div>
+        {/* Success Message */}
+        {showSuccess && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="mb-8 p-4 bg-green-500/20 border border-green-500/30 rounded-lg"
+          >
+            <div className="flex items-center justify-center gap-2 text-green-400">
+              <CheckCircle className="w-5 h-5" />
+              <span>Service request submitted successfully!</span>
             </div>
           </motion.div>
+        )}
 
-          <motion.div variants={itemVariants}>
-            <div className="bg-gradient-to-br from-zion-blue-light/10 to-zion-purple/10 backdrop-blur-sm p-8 rounded-2xl shadow-2xl border border-zion-purple/20">
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-white mb-2">Request Service</h3>
-                <p className="text-zion-slate-light">Get instant quotes from certified technicians</p>
+        {/* Features Grid */}
+        <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+          {features.map((feature, index) => (
+            <div key={index} className="text-center">
+              <div className={`w-12 h-12 mx-auto mb-3 rounded-lg bg-zion-blue-dark/30 flex items-center justify-center ${feature.color}`}>
+                <feature.icon className="w-6 h-6" />
               </div>
-              
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="relative">
-                  <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
-                  <Input
-                    value={location}
-                    onChange={(e) => setLocation(e.target.value)}
-                    placeholder="Enter service location (city, country)"
-                    className="pl-12 bg-zion-blue-dark/50 border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white placeholder-zion-slate-light h-14 text-lg rounded-xl"
-                  />
-                </div>
-                
-                <Button 
-                  type="submit" 
-                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 rounded-xl shadow-2xl shadow-zion-purple/25 transition-all duration-300 hover:scale-105 h-14"
-                >
-                  Get Instant Quote
-                </Button>
-                
-                <div className="text-center">
-                  <p className="text-xs text-zion-slate-light">
-                    Available worldwide, 24 hours a day • Response within 2 hours
-                  </p>
-                </div>
-              </form>
+              <p className="text-sm text-zion-slate-light">{feature.text}</p>
             </div>
-          </motion.div>
-        </div>
+          ))}
+        </motion.div>
+
+        {/* Stats */}
+        <motion.div variants={itemVariants} className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="text-2xl font-bold text-zion-cyan mb-1">{stat.value}</div>
+              <div className="text-sm text-zion-slate-light">{stat.label}</div>
+            </div>
+          ))}
+        </motion.div>
       </motion.div>
     </section>
   );

@@ -98,7 +98,7 @@ export function FeatureHighlights() {
           initial="hidden"
           animate="visible"
         >
-          {highlightsData.map((category, index) => (
+          {highlights.map((category, index) => (
             <motion.div key={index} variants={itemVariants}>
               <Card className="h-full bg-gradient-to-br from-zion-blue-dark/90 to-zion-blue-dark border-zion-blue-light/30 hover:border-zion-purple/50 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-purple/20 group overflow-hidden">
                 <CardContent className="p-8 h-full flex flex-col">
@@ -146,7 +146,7 @@ export function FeatureHighlights() {
               </Card>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Call to action */}
         <motion.div 
