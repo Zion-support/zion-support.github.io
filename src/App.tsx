@@ -101,7 +101,14 @@ import {
 } from './routes';
 const Home = React.lazy(() => import('./pages/Home'));
 <<<<<<< HEAD
+<<<<<<< HEAD
 const About = React.lazy(() => import('./pages/About'));
+=======
+const About = React.lazy(() => import('./pages/About'));
+const Careers = React.lazy(() => import('./pages/Careers'));
+const GreenIT = React.lazy(() => import('./pages/GreenIT'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+>>>>>>> origin/cursor/website-audit-and-enhancement-bdc0
 const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-76ca
@@ -313,6 +320,12 @@ const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
 const baseRoutes = [
   { path: '/', element: <Home /> },
   { path: '/about', element: <About /> },
+<<<<<<< HEAD
+=======
+  { path: '/careers', element: <Careers /> },
+  { path: '/green-it', element: <GreenIT /> },
+  { path: '/sitemap', element: <Sitemap /> },
+>>>>>>> origin/cursor/website-audit-and-enhancement-bdc0
   { path: '/match', element: <AIMatcherPage /> },
   { path: '/login', element: <Login /> },
   { path: '/signup', element: <Signup /> },

@@ -134,6 +134,7 @@
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
   "include": [
     "src/main.tsx",
     "src/App.tsx",
@@ -194,6 +195,9 @@
 =======
   "include": ["src"],
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-ae1c
+=======
+  "include": ["src"],
+>>>>>>> origin/cursor/website-audit-and-enhancement-bdc0
   "references": [{ "path": "./tsconfig.node.json" }]
 =======
     "zion.app/recovered-content/**",

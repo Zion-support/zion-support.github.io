@@ -239,6 +239,7 @@ export function Footer() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <footer className="bg-zion-blue-dark border-t border-zion-blue-light pt-12 pb-8 relative overflow-hidden">
       {/* Futuristic Background Effects */}
@@ -279,6 +280,8 @@ export function Footer() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-6664
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-ab27
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-bdc0
           <div>
 <<<<<<< HEAD
 =======
@@ -582,12 +585,22 @@ export function Footer() {
             <ul className="space-y-2">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               <li><Link to="/ai-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Services</Link></li>
               <li><Link to="/it-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">IT Services</Link></li>
               <li><Link to="/digital-marketing" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Digital Marketing</Link></li>
               <li><Link to="/business-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Business Solutions</Link></li>
               <li><Link to="/it-onsite-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Onsite Services</Link></li>
               <li><Link to="/request-quote" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Request Quote</Link></li>
+=======
+              <li><Link to="/marketplace" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Products</Link></li>
+              <li><Link to="/services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Services</Link></li>
+              <li><Link to="/talent" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Talent</Link></li>
+              <li><Link to="/equipment" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Equipment</Link></li>
+              <li><Link to="/categories" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Categories</Link></li>
+              <li><Link to="/green-it" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Green IT</Link></li>
+              <li><Link to="/it-onsite-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">IT Onsite Services</Link></li>
+>>>>>>> origin/cursor/website-audit-and-enhancement-bdc0
             </ul>
           </div>
 
@@ -821,6 +834,7 @@ export function Footer() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h3 className="text-white font-semibold mb-6 text-lg">Support</h3>
             <ul className="space-y-3">
               <li><Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Contact</Link></li>
@@ -857,11 +871,22 @@ export function Footer() {
               <li><Link to="/service-description-generator" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Service Generator</Link></li>
               <li><Link to="/content-generator" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Content Generator</Link></li>
               <li><Link to="/portfolio-builder" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Portfolio Builder</Link></li>
+=======
+            <h3 className="text-white font-semibold mb-4 text-lg">Resources</h3>
+            <ul className="space-y-2">
+              <li><Link to="/blog" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Blog</Link></li>
+              <li><Link to="/sitemap" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Sitemap</Link></li>
+              <li><Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Help Center</Link></li>
+              <li><Link to="/developers" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Developer Portal</Link></li>
+>>>>>>> origin/cursor/website-audit-and-enhancement-bdc0
             </ul>
           </div>
           
           <div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-76ca
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-bdc0
             <h3 className="text-white font-semibold mb-4 text-lg">Subscribe to our newsletter</h3>
             <p className="text-zion-slate-light mb-4">
               Stay updated with the latest news on tech, AI, and marketplace opportunities.
