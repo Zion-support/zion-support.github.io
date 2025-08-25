@@ -28,7 +28,8 @@ import {
 import SEOHead from '../components/SEOHead';
 
 // Import service data
-import { COMPREHENSIVE_SERVICES } from '../data/comprehensiveServices';
+import { ADDITIONAL_INNOVATIVE_SERVICES_2025 } from '../data/additionalInnovativeServices2025';
+import { SPECIALIZED_IT_SERVICES_2025 } from '../data/specializedITServices2025';
 import { INNOVATIVE_NEW_SERVICES } from '../data/innovativeNewServices';
 import { ADVANCED_MICRO_SAAS_SERVICES } from '../data/advancedMicroSaasServices';
 import { EMERGING_TECH_SERVICES } from '../data/emergingTechServices';
@@ -42,7 +43,8 @@ const ComprehensiveServicesOverview: React.FC = () => {
 
   // Combine all services
   const allServices = [
-    ...COMPREHENSIVE_SERVICES,
+    ...ADDITIONAL_INNOVATIVE_SERVICES_2025,
+    ...SPECIALIZED_IT_SERVICES_2025,
     ...INNOVATIVE_NEW_SERVICES,
     ...ADVANCED_MICRO_SAAS_SERVICES,
     ...EMERGING_TECH_SERVICES,

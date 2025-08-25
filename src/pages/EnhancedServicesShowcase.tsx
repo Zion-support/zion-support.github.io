@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -6,52 +7,92 @@ import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Globe, 
+  Search, 
+  Filter, 
+  Grid3X3, 
+  List, 
+  ArrowUpDown, 
   Star, 
-  Clock, 
-  TrendingUp, 
+  Zap, 
   Shield, 
-  Zap,
-  Brain,
+  Cpu, 
   Database,
-  Cloud,
+  Globe,
   Lock,
-  BarChart3,
-  Network,
-  Smartphone,
-  CreditCard,
+  TrendingUp,
   Users,
+  BarChart3,
+  Lightbulb,
+  Rocket,
+  Target,
+  Award,
   CheckCircle,
+  Clock,
+  DollarSign,
   ArrowRight,
-  ExternalLink
+  Phone,
+  Mail,
+  MapPin
 } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { COMPREHENSIVE_SERVICES as comprehensiveServices } from '@/data/comprehensiveServices';
-=======
-import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
->>>>>>> origin/cursor/website-audit-and-enhancement-53a4
-=======
-import { comprehensiveServices, serviceCategories } from '@/data/comprehensiveServices';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
+import SEOHead from '../components/SEOHead';
 
-export default function EnhancedServicesShowcase() {
+// Import service data
+import { ADDITIONAL_INNOVATIVE_SERVICES_2025 } from '../data/additionalInnovativeServices2025';
+import { SPECIALIZED_IT_SERVICES_2025 } from '../data/specializedITServices2025';
+import { INNOVATIVE_NEW_SERVICES } from '../data/innovativeNewServices';
+import { ADVANCED_MICRO_SAAS_SERVICES } from '../data/advancedMicroSaasServices';
+import { EMERGING_TECH_SERVICES } from '../data/emergingTechServices';
+import { SPECIALIZED_IT_INFRASTRUCTURE_SERVICES } from '../data/specializedITInfrastructureServices';
+
+const EnhancedServicesShowcase: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [sortBy, setSortBy] = useState('name');
 
-  const filteredServices = selectedCategory === 'all' 
-<<<<<<< HEAD
-    ? COMPREHENSIVE_SERVICES 
-    : COMPREHENSIVE_SERVICES.filter(service => service.category.toLowerCase().includes(selectedCategory.toLowerCase()));
+  // Combine all services
+  const allServices = [
+    ...ADDITIONAL_INNOVATIVE_SERVICES_2025,
+    ...SPECIALIZED_IT_SERVICES_2025,
+    ...INNOVATIVE_NEW_SERVICES,
+    ...ADVANCED_MICRO_SAAS_SERVICES,
+    ...EMERGING_TECH_SERVICES,
+    ...SPECIALIZED_IT_INFRASTRUCTURE_SERVICES
+  ];
 
   // Get unique categories
-  const categories: string[] = [...new Set(COMPREHENSIVE_SERVICES.map(service => service.category))];
-=======
-    ? comprehensiveServices 
-    : comprehensiveServices.filter(service => service.category.toLowerCase().includes(selectedCategory.toLowerCase()));
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
+  const categories: string[] = ['all', ...new Set(allServices.map(service => service.category))];
+
+  const filteredServices = selectedCategory === 'all' 
+    ? allServices 
+    : allServices.filter(service => service.category.toLowerCase().includes(selectedCategory.toLowerCase()));
+
+  // Filter and sort services
+  const finalFilteredServices = filteredServices
+    .filter(service => {
+      const matchesSearch = searchTerm === '' || 
+        service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
+      
+      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+      
+      return matchesSearch && matchesCategory;
+    })
+    .sort((a, b) => {
+      switch (sortBy) {
+        case 'price-low':
+          return (a.price || 0) - (b.price || 0);
+        case 'price-high':
+          return (b.price || 0) - (a.price || 0);
+        case 'name':
+          return a.title.localeCompare(b.title);
+        case 'popularity':
+          return (b.tags?.length || 0) - (a.tags?.length || 0);
+        default:
+          return 0;
+      }
+    });
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
@@ -123,7 +164,6 @@ export default function EnhancedServicesShowcase() {
           >
             All Services
           </Button>
-<<<<<<< HEAD
           {categories.map((category) => (
             <Button
               key={category}
@@ -132,23 +172,13 @@ export default function EnhancedServicesShowcase() {
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
             >
               {category}
-=======
-          {serviceCategories.map((category) => (
-            <Button
-              key={category.id}
-              variant={selectedCategory === category.id ? 'default' : 'outline'}
-              onClick={() => setSelectedCategory(category.id)}
-              className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
-            >
-              {category.icon} {category.name}
->>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
             </Button>
           ))}
         </div>
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredServices.map((service) => (
+          {finalFilteredServices.map((service) => (
             <ServiceCard key={service.id} service={service} />
           ))}
         </div>
@@ -168,7 +198,7 @@ export default function EnhancedServicesShowcase() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <Card className="bg-white/10 backdrop-blur-sm border-zion-cyan/30 text-center">
             <CardContent className="p-8">
-              <Brain className="h-16 w-16 mx-auto mb-4 text-zion-cyan" />
+              <Cpu className="h-16 w-16 mx-auto mb-4 text-zion-cyan" />
               <h3 className="text-2xl font-bold text-white mb-4">AI-First Approach</h3>
               <p className="text-zion-cyan-light">
                 We leverage the latest AI technologies to create intelligent, scalable solutions that adapt to your business needs.
@@ -269,6 +299,8 @@ export default function EnhancedServicesShowcase() {
     </div>
   );
 }
+
+export default EnhancedServicesShowcase;
 
 // Service Card Component
 function ServiceCard({ service }: { service: any }) {

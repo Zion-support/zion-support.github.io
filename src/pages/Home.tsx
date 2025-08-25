@@ -27,8 +27,10 @@ import {
   Clock,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  Sparkles
 } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 
 // Lazy load components for better performance
 const LazyServicesSection = React.lazy(() => import('../components/home/ServicesSection'));
@@ -53,59 +55,25 @@ const Home: React.FC = () => {
       title: "AI-Powered Solutions",
       subtitle: "Transform your business with cutting-edge artificial intelligence",
       description: "Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization.",
-      image: "/images/hero-ai-solutions.jpg",
+      color: "from-blue-400 to-purple-400",
       cta: "Explore AI Solutions",
-      path: "/ai-solutions",
-      color: "from-blue-400 to-purple-400"
+      path: "/ai-solutions"
     },
     {
       title: "Comprehensive IT Services",
       subtitle: "End-to-end technology solutions for modern businesses",
       description: "From infrastructure management to digital transformation, we provide the expertise you need to succeed.",
-      image: "/images/hero-it-services.jpg",
+      color: "from-cyan-400 to-blue-400",
       cta: "View Our Services",
-      path: "/services",
-      color: "from-green-400 to-blue-400"
+      path: "/services"
     },
     {
       title: "Micro-SaaS Solutions",
       subtitle: "Scalable software solutions for growing businesses",
       description: "Custom SaaS applications designed to streamline operations and boost productivity.",
-      image: "/images/hero-saas.jpg",
+      color: "from-purple-400 to-pink-400",
       cta: "Learn More",
-      path: "/services/micro-saas-solutions",
-      color: "from-purple-400 to-pink-400"
-    }
-  ];
-
-  const services = [
-    {
-      title: "AI Solutions",
-      description: "Cutting-edge artificial intelligence for business automation",
-      icon: Brain,
-      link: "/ai-solutions",
-      color: "from-blue-500 to-purple-500"
-    },
-    {
-      title: "Cloud Services",
-      description: "Scalable cloud infrastructure and management",
-      icon: Cloud,
-      link: "/cloud-devops",
-      color: "from-green-500 to-blue-500"
-    },
-    {
-      title: "Cybersecurity",
-      description: "Comprehensive security and compliance solutions",
-      icon: Shield,
-      link: "/services/cybersecurity",
-      color: "from-red-500 to-orange-500"
-    },
-    {
-      title: "Digital Transformation",
-      description: "End-to-end business transformation services",
-      icon: Rocket,
-      link: "/digital-transformation",
-      color: "from-purple-500 to-pink-500"
+      path: "/services/micro-saas-solutions"
     }
   ];
 
@@ -116,24 +84,42 @@ const Home: React.FC = () => {
     { icon: Globe, value: "25+", label: "Countries Served" }
   ];
 
-  const testimonials = [
+  const featuredServices = [
     {
-      name: "Sarah Johnson",
-      role: "CTO, TechCorp",
-      content: "Zion Tech Group transformed our infrastructure with AI-powered solutions that increased our efficiency by 300%.",
-      rating: 5
+      title: "AI Content Hub Pro",
+      description: "Enterprise-grade AI content creation platform for multi-platform content generation and optimization.",
+      icon: Brain,
+      path: "/services/ai-content-hub-pro",
+      category: "AI & Content Creation",
+      price: "$2,999/mo",
+      rating: 4.9,
+      reviewCount: 156,
+      highlights: ["Multi-language Generation", "SEO Optimization", "Cross-platform Distribution"],
+      features: ["GPT-4 Integration", "Real-time Analytics", "Brand Voice Consistency", "24/7 Support"]
     },
     {
-      name: "Michael Chen",
-      role: "CEO, InnovateLab",
-      content: "The autonomous business platform revolutionized our operations. We've never been more efficient or scalable.",
-      rating: 5
+      title: "AI Customer Service Automation",
+      description: "Intelligent customer service automation that handles 80% of inquiries automatically.",
+      icon: Brain,
+      path: "/services/ai-customer-service-automation",
+      category: "AI & Customer Service",
+      price: "$1,899/mo",
+      rating: 4.8,
+      reviewCount: 89,
+      highlights: ["24/7 Availability", "Multi-channel Support", "Human-like Interactions"],
+      features: ["NLP Processing", "Sentiment Analysis", "CRM Integration", "Performance Analytics"]
     },
     {
-      name: "Emily Rodriguez",
-      role: "VP Engineering, DataFlow",
-      content: "Outstanding service and cutting-edge technology. Zion Tech Group is our trusted partner for innovation.",
-      rating: 5
+      title: "Quantum Enterprise Platform",
+      description: "Enterprise-grade quantum computing platform for complex business problems.",
+      icon: Zap,
+      path: "/services/quantum-enterprise-platform",
+      category: "Quantum Computing",
+      price: "$15,000/mo",
+      rating: 4.9,
+      reviewCount: 45,
+      highlights: ["Quantum Processors", "Algorithm Library", "Hybrid Computing"],
+      features: ["IBM Quantum", "Google Quantum", "Real-time Visualization", "Enterprise Security"]
     }
   ];
 
@@ -176,14 +162,33 @@ const Home: React.FC = () => {
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    setIsAutoPlaying(false);
+    setTimeout(() => setIsAutoPlaying(true), 10000);
   };
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+    setIsAutoPlaying(false);
+    setTimeout(() => setIsAutoPlaying(true), 10000);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+    setIsAutoPlaying(false);
+    setTimeout(() => setIsAutoPlaying(true), 10000);
+  };
+
+  const seoMetadata = {
+    title: "Zion Tech Group - AI-Powered Technology Solutions",
+    description: "Transform your business with cutting-edge AI solutions, comprehensive IT services, and innovative micro-SaaS platforms.",
+    keywords: "AI solutions, IT services, micro-SaaS, technology consulting, digital transformation",
+    canonical: "https://ziontechgroup.com"
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
+      <SEOHead {...seoMetadata} />
+      
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Background Pattern */}
@@ -235,125 +240,70 @@ const Home: React.FC = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <Link
-                to="/services"
+                to={heroSlides[currentSlide].path}
                 className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25"
               >
-                Explore Services
+                {heroSlides[currentSlide].cta}
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               
               <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-white/10 backdrop-blur-sm border border-white/20 rounded-full hover:bg-white/20 transition-all duration-300"
+                to="/comprehensive-services-showcase-2025"
+                className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-purple-600 to-cyan-600 rounded-full hover:from-purple-700 hover:to-cyan-700 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-cyan-500/25"
               >
-                Get Started
+                View All Services
+                <Sparkles className="ml-2 w-5 h-5" />
               </Link>
             </motion.div>
           </motion.div>
         </AnimatePresence>
-        
+
         {/* Navigation Arrows */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 p-3 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300"
         >
           <ChevronLeft className="w-6 h-6 text-white" />
         </button>
         
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all duration-300"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 p-3 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300"
         >
           <ChevronRight className="w-6 h-6 text-white" />
         </button>
-        
+
         {/* Slide Indicators */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
           {heroSlides.map((_, index) => (
             <button
               key={index}
-              onClick={() => setCurrentSlide(index)}
+              onClick={() => goToSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide ? 'bg-white scale-125' : 'bg-white/30'
+                index === currentSlide
+                  ? 'bg-gradient-to-r from-blue-400 to-purple-400 scale-125'
+                  : 'bg-white/30 hover:bg-white/50'
               }`}
             />
           ))}
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Stats Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Our <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Services</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed to accelerate your business growth and innovation.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative"
-              >
-                <Link to={service.link}>
-                  <div className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-2xl p-6 text-center hover:bg-white/10 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 group-hover:scale-105">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                      <service.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                    <p className="text-gray-300 leading-relaxed">{service.description}</p>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Trusted by <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Thousands</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our solutions are powering businesses around the world with proven results.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-10 h-10 text-white" />
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mb-4">
+                  <stat.icon className="w-8 h-8 text-white" />
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-400">{stat.label}</div>
@@ -363,54 +313,77 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Featured Services Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-              What Our <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Clients Say</span>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Featured <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Services</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Don't just take our word for it - hear from the businesses we've helped transform.
+              Discover our most popular AI-powered solutions and innovative technology services
             </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {featuredServices.map((service, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300"
+                className="group bg-gray-800/50 backdrop-blur-sm border border-gray-600 rounded-2xl p-6 hover:border-gray-500 hover:bg-gray-700/50 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold text-lg">
-                    {testimonial.name.charAt(0)}
+                  <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg">
+                    <service.icon className="w-6 h-6 text-white" />
                   </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-white">{testimonial.name}</h4>
-                    <p className="text-gray-400 text-sm">{testimonial.role}</p>
+                  <span className="text-sm text-blue-400 font-medium">{service.category}</span>
+                </div>
+                
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                  {service.title}
+                </h3>
+                
+                <p className="text-gray-400 mb-4 line-clamp-3">
+                  {service.description}
+                </p>
+                
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-blue-400">{service.price}</span>
+                  <div className="flex items-center gap-1">
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <span className="text-white text-sm">{service.rating}</span>
                   </div>
                 </div>
                 
-                <div className="flex items-center gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                  ))}
-                </div>
-                
-                <p className="text-gray-300 leading-relaxed">"{testimonial.content}"</p>
+                <Link
+                  to={service.path}
+                  className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
+                >
+                  <span>Learn More</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
               </motion.div>
             ))}
           </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <Link
+              to="/comprehensive-services-showcase-2025"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+            >
+              <span>View All Services</span>
+              <Sparkles className="w-5 h-5" />
+            </Link>
+          </motion.div>
         </div>
       </section>
 
@@ -428,7 +401,14 @@ const Home: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {whyChooseUs.map((feature, index) => (
-              <div key={index} className="text-center group">
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center group"
+              >
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-10 h-10 text-white" />
                 </div>
@@ -438,53 +418,28 @@ const Home: React.FC = () => {
                 <p className="text-gray-400 leading-relaxed">
                   {feature.description}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="max-w-4xl mx-auto text-center px-4">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how our innovative solutions can accelerate your digital transformation journey.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-4 text-lg font-semibold text-blue-600 bg-white rounded-full hover:bg-gray-100 transform hover:scale-105 transition-all duration-300"
-            >
-              Get Started Today
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-            
-            <Link
-              to="/services"
-              className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white border-2 border-white rounded-full hover:bg-white hover:text-blue-600 transition-all duration-300"
-            >
-              Explore Services
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Lazy Loaded Sections */}
+      {/* Services Section */}
       <Suspense fallback={<LoadingFallback message="Loading services..." />}>
         <LazyServicesSection />
       </Suspense>
 
+      {/* Features Section */}
       <Suspense fallback={<LoadingFallback message="Loading features..." />}>
         <LazyFeaturesSection />
       </Suspense>
 
+      {/* Testimonials Section */}
       <Suspense fallback={<LoadingFallback message="Loading testimonials..." />}>
         <LazyTestimonialsSection />
       </Suspense>
 
+      {/* CTA Section */}
       <Suspense fallback={<LoadingFallback message="Loading CTA..." />}>
         <LazyCTASection />
       </Suspense>
