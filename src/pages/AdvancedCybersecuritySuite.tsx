@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { 
   Shield, 
   Lock, 
@@ -40,11 +41,15 @@ export default function AdvancedCybersecuritySuite() {
       description: "Implement strict access controls and continuous verification for all users and devices."
 =======
 import { Shield, Zap, BarChart3, Globe, Users, Database, Settings, ArrowRight, Lock, Eye, Network, Server, AlertTriangle, CheckCircle } from 'lucide-react';
+=======
+import { Shield, Lock, Eye, AlertTriangle, BarChart3, Globe, Cpu, Zap } from 'lucide-react';
+>>>>>>> origin/cursor/website-audit-and-enhancement-91fb
 
 const AdvancedCybersecuritySuite: React.FC = () => {
   const features = [
     {
       icon: Shield,
+<<<<<<< HEAD
       title: "Advanced Threat Protection",
       description: "Multi-layered security with AI-powered threat detection and prevention."
 >>>>>>> origin/cursor/website-audit-and-enhancement-3121
@@ -72,10 +77,30 @@ const AdvancedCybersecuritySuite: React.FC = () => {
       title: "Zero Trust Security",
       description: "Implement zero trust architecture with continuous verification and access control."
 >>>>>>> origin/cursor/website-audit-and-enhancement-3121
+=======
+      title: "Threat Detection",
+      description: "Advanced AI-powered threat detection and prevention systems"
+    },
+    {
+      icon: Lock,
+      title: "Access Control",
+      description: "Multi-factor authentication and identity management solutions"
+    },
+    {
+      icon: Eye,
+      title: "Security Monitoring",
+      description: "24/7 security monitoring and incident response"
+    },
+    {
+      icon: AlertTriangle,
+      title: "Vulnerability Assessment",
+      description: "Continuous vulnerability scanning and risk assessment"
+>>>>>>> origin/cursor/website-audit-and-enhancement-91fb
     },
     {
       icon: BarChart3,
       title: "Security Analytics",
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: "Advanced analytics and machine learning for predictive threat detection and risk assessment."
 =======
@@ -205,11 +230,20 @@ export default function AdvancedCybersecuritySuite() {
       icon: AlertTriangle,
       title: 'Incident Response',
       description: 'Rapid response and recovery from security incidents'
+=======
+      description: "Comprehensive security metrics and reporting"
+    },
+    {
+      icon: Globe,
+      title: "Network Security",
+      description: "Advanced firewall and network protection"
+>>>>>>> origin/cursor/website-audit-and-enhancement-91fb
     }
   ];
 
   const securityModules = [
     {
+<<<<<<< HEAD
       title: 'Network Security',
       description: 'Advanced network protection and monitoring',
       features: ['Firewall management', 'Intrusion detection', 'DDoS protection', 'Network segmentation']
@@ -253,10 +287,62 @@ export default function AdvancedCybersecuritySuite() {
       title: "Incident Response",
       description: "Rapid incident response with forensics and recovery capabilities."
 >>>>>>> origin/cursor/website-audit-and-enhancement-3121
+=======
+      title: "Endpoint Protection",
+      description: "Comprehensive protection for all devices and endpoints",
+      icon: Cpu,
+      features: ["Antivirus", "Firewall", "Device control", "Data loss prevention"]
+    },
+    {
+      title: "Network Security",
+      description: "Advanced network protection and monitoring",
+      icon: Globe,
+      features: ["Intrusion detection", "Traffic analysis", "VPN management", "Network segmentation"]
+    },
+    {
+      title: "Cloud Security",
+      description: "Secure cloud infrastructure and applications",
+      icon: Shield,
+      features: ["Cloud access security", "Data encryption", "Compliance monitoring", "Threat prevention"]
+    },
+    {
+      title: "Identity & Access",
+      description: "Secure identity management and access control",
+      icon: Lock,
+      features: ["Single sign-on", "Multi-factor auth", "Privileged access", "User provisioning"]
+    }
+  ];
+
+  const complianceStandards = [
+    {
+      title: "SOC 2",
+      description: "Service Organization Control 2 compliance",
+      icon: Shield,
+      features: ["Security", "Availability", "Processing integrity", "Confidentiality", "Privacy"]
+    },
+    {
+      title: "ISO 27001",
+      description: "Information security management system",
+      icon: Lock,
+      features: ["Risk assessment", "Security controls", "Incident management", "Business continuity"]
+    },
+    {
+      title: "GDPR",
+      description: "General Data Protection Regulation compliance",
+      icon: Eye,
+      features: ["Data protection", "Privacy rights", "Consent management", "Breach notification"]
+    },
+    {
+      title: "HIPAA",
+      description: "Health Insurance Portability and Accountability Act",
+      icon: AlertTriangle,
+      features: ["Patient privacy", "Data security", "Access controls", "Audit trails"]
+>>>>>>> origin/cursor/website-audit-and-enhancement-91fb
     }
   ];
 
   const benefits = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     "99.9% threat detection accuracy with AI-powered systems",
@@ -343,12 +429,34 @@ export default function AdvancedCybersecuritySuite() {
       label: "Compliance",
       description: "Full regulatory compliance coverage"
 >>>>>>> origin/cursor/website-audit-and-enhancement-3121
+=======
+    {
+      title: "Threat Prevention",
+      description: "Block 99.9% of cyber threats before they reach your systems",
+      metric: "99.9%"
+    },
+    {
+      title: "Incident Response",
+      description: "Reduce incident response time from hours to minutes",
+      metric: "90%"
+    },
+    {
+      title: "Compliance",
+      description: "Achieve and maintain regulatory compliance",
+      metric: "100%"
+    },
+    {
+      title: "Cost Savings",
+      description: "Reduce security costs through automation and efficiency",
+      metric: "40%"
+>>>>>>> origin/cursor/website-audit-and-enhancement-91fb
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -383,17 +491,39 @@ export default function AdvancedCybersecuritySuite() {
               Comprehensive cybersecurity protection with AI-powered threat detection, 
               zero trust architecture, and 24/7 security monitoring for enterprise-grade protection.
 >>>>>>> origin/cursor/website-audit-and-enhancement-3121
+=======
+      <section className="relative overflow-hidden pt-20 pb-16">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="flex justify-center mb-6">
+              <div className="w-20 h-20 bg-gradient-to-r from-red-500 to-blue-600 rounded-2xl flex items-center justify-center animate-pulse">
+                <Shield className="w-12 h-12 text-white" />
+              </div>
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-red-400 to-blue-400 bg-clip-text text-transparent">
+              Advanced Cybersecurity Suite
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Protect your organization with enterprise-grade cybersecurity solutions. Our comprehensive 
+              suite provides advanced threat detection, prevention, and response capabilities.
+>>>>>>> origin/cursor/website-audit-and-enhancement-91fb
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 className="bg-white text-zion-blue px-8 py-4 rounded-lg font-semibold hover:bg-zion-slate-light transition-all duration-300 transform hover:scale-105"
+=======
+                className="px-8 py-4 bg-gradient-to-r from-red-600 to-blue-600 text-white rounded-lg font-semibold hover:from-red-700 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
+>>>>>>> origin/cursor/website-audit-and-enhancement-91fb
               >
                 Get Security Assessment
               </Link>
               <Link
+<<<<<<< HEAD
                 to="/contact"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-zion-blue transition-all duration-300"
               >
@@ -422,10 +552,17 @@ export default function AdvancedCybersecuritySuite() {
               >
                 Learn More
 >>>>>>> origin/cursor/website-audit-and-enhancement-3121
+=======
+                to="/services/cybersecurity"
+                className="px-8 py-4 border border-red-500 text-red-400 rounded-lg font-semibold hover:bg-red-500 hover:text-white transition-all duration-200"
+              >
+                Learn More
+>>>>>>> origin/cursor/website-audit-and-enhancement-91fb
               </Link>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         
@@ -449,10 +586,24 @@ export default function AdvancedCybersecuritySuite() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {securityFeatures.map((feature, index) => {
+=======
+      </section>
+
+      {/* Features Section */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Security Features</h2>
+            <p className="text-xl text-gray-400">Comprehensive cybersecurity capabilities for modern threats</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => {
+>>>>>>> origin/cursor/website-audit-and-enhancement-91fb
               const Icon = feature.icon;
               return (
                 <div
                   key={index}
+<<<<<<< HEAD
                   className="group p-8 bg-gradient-to-br from-white to-slate-50 dark:from-slate-700 dark:to-slate-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-slate-200 dark:border-slate-600"
                 >
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-blue to-zion-cyan rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -525,10 +676,23 @@ export default function AdvancedCybersecuritySuite() {
               </div>
             ))}
 >>>>>>> origin/cursor/website-audit-and-enhancement-3121
+=======
+                  className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-red-500/50 transition-all duration-300 hover:transform hover:scale-105"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+                    <Icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                  <p className="text-gray-400">{feature.description}</p>
+                </div>
+              );
+            })}
+>>>>>>> origin/cursor/website-audit-and-enhancement-91fb
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       {/* Security Services Section */}
@@ -583,6 +747,38 @@ export default function AdvancedCybersecuritySuite() {
                       </li>
                     ))}
                   </ul>
+=======
+      {/* Security Modules Section */}
+      <section className="py-16 bg-gray-800/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Security Modules</h2>
+            <p className="text-xl text-gray-400">Modular security solutions for comprehensive protection</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {securityModules.map((module, index) => {
+              const Icon = module.icon;
+              return (
+                <div
+                  key={index}
+                  className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50"
+                >
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-semibold">{module.title}</h3>
+                  </div>
+                  <p className="text-gray-400 text-lg mb-6">{module.description}</p>
+                  <div className="grid grid-cols-2 gap-3">
+                    {module.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <div className="w-2 h-2 bg-red-500 rounded-full mr-2"></div>
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-91fb
                 </div>
               );
             })}
@@ -590,6 +786,7 @@ export default function AdvancedCybersecuritySuite() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Compliance Standards Section */}
       <section className="py-20 bg-white dark:bg-slate-800">
         <div className="container mx-auto px-4">
@@ -604,11 +801,22 @@ export default function AdvancedCybersecuritySuite() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+=======
+      {/* Compliance Section */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Compliance Standards</h2>
+            <p className="text-xl text-gray-400">Meet and exceed industry compliance requirements</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+>>>>>>> origin/cursor/website-audit-and-enhancement-91fb
             {complianceStandards.map((standard, index) => {
               const Icon = standard.icon;
               return (
                 <div
                   key={index}
+<<<<<<< HEAD
                   className="p-6 bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-700 dark:to-slate-800 rounded-xl border border-slate-200 dark:border-slate-600"
                 >
                   <div className="flex items-center mb-4">
@@ -666,11 +874,34 @@ export default function AdvancedCybersecuritySuite() {
               </div>
             ))}
 >>>>>>> origin/cursor/website-audit-and-enhancement-3121
+=======
+                  className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50"
+                >
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-semibold">{standard.title}</h3>
+                  </div>
+                  <p className="text-gray-400 text-lg mb-6">{standard.description}</p>
+                  <div className="grid grid-cols-2 gap-3">
+                    {standard.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <div className="w-2 h-2 bg-red-500 rounded-full mr-2"></div>
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+>>>>>>> origin/cursor/website-audit-and-enhancement-91fb
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800">
@@ -742,10 +973,30 @@ export default function AdvancedCybersecuritySuite() {
             ))}
 <<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-1b0a
+=======
+      <section className="py-16 bg-gray-800/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Security Benefits</h2>
+            <p className="text-xl text-gray-400">Measurable improvements in your security posture</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <div
+                key={index}
+                className="text-center p-6 bg-gray-800/30 rounded-lg border border-gray-700/30"
+              >
+                <div className="text-4xl font-bold text-red-400 mb-2">{benefit.metric}</div>
+                <h3 className="text-lg font-semibold mb-2">{benefit.title}</h3>
+                <p className="text-sm text-gray-400">{benefit.description}</p>
+              </div>
+            ))}
+>>>>>>> origin/cursor/website-audit-and-enhancement-91fb
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Threat Landscape Section */}
       <section className="py-20 bg-white dark:bg-slate-800">
@@ -820,11 +1071,33 @@ export default function AdvancedCybersecuritySuite() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-1b0a
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-3121
+=======
+      {/* Integration Section */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Security Tool Integration</h2>
+            <p className="text-xl text-gray-400">Works with your existing security infrastructure</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            {[
+              "Active Directory", "Okta", "Duo", "CrowdStrike", "SentinelOne", "Carbon Black",
+              "Palo Alto", "Cisco", "Fortinet", "Check Point", "Splunk", "QRadar"
+            ].map((tool, index) => (
+              <div
+                key={index}
+                className="bg-gray-800/50 rounded-lg p-4 text-center border border-gray-700/50 hover:border-red-500/50 transition-colors duration-200"
+              >
+                <div className="text-gray-300 font-medium">{tool}</div>
+              </div>
+            ))}
+>>>>>>> origin/cursor/website-audit-and-enhancement-91fb
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-zion-blue via-zion-purple to-zion-cyan text-white">
@@ -941,10 +1214,19 @@ export default function AdvancedCybersecuritySuite() {
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Our cybersecurity experts can help you implement comprehensive protection for your organization.
 >>>>>>> origin/cursor/website-audit-and-enhancement-3121
+=======
+      <section className="py-16 bg-gradient-to-r from-red-900/20 to-blue-900/20">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold mb-6">Ready to Secure Your Organization?</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join leading organizations that trust our cybersecurity suite to protect their 
+            critical assets and maintain compliance. Start your security transformation today.
+>>>>>>> origin/cursor/website-audit-and-enhancement-91fb
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
+<<<<<<< HEAD
 <<<<<<< HEAD
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg text-white font-semibold hover:from-red-600 hover:to-pink-700 transition-all duration-200 transform hover:scale-105"
             >
@@ -969,6 +1251,17 @@ export default function AdvancedCybersecuritySuite() {
             >
               View All Services
 >>>>>>> origin/cursor/website-audit-and-enhancement-3121
+=======
+              className="px-8 py-4 bg-gradient-to-r from-red-600 to-blue-600 text-white rounded-lg font-semibold hover:from-red-700 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
+            >
+              Get Security Assessment
+            </Link>
+            <Link
+              to="/pricing"
+              className="px-8 py-4 border border-red-500 text-red-400 rounded-lg font-semibold hover:bg-red-500 hover:text-white transition-all duration-200"
+            >
+              View Pricing
+>>>>>>> origin/cursor/website-audit-and-enhancement-91fb
             </Link>
           </div>
         </div>
@@ -976,9 +1269,15 @@ export default function AdvancedCybersecuritySuite() {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 };
 
 export default AdvancedCybersecuritySuite;
 >>>>>>> origin/cursor/website-audit-and-enhancement-3121
+=======
+};
+
+export default AdvancedCybersecuritySuite;
+>>>>>>> origin/cursor/website-audit-and-enhancement-91fb

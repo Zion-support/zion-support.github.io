@@ -288,20 +288,40 @@ export default function Sidebar() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-4b12
 =======
         { name: 'AI & Machine Learning', path: '/services?category=AI%20%26%20Machine%20Learning', icon: Briefcase },
+<<<<<<< HEAD
         { name: 'AI Agent Orchestrator', path: '/ai-agent-orchestrator', icon: Network },
         { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain },
         { name: 'AI Analytics Copilot', path: '/ai-analytics-copilot', icon: BarChart3 },
         { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Command },
         { name: 'Autonomous Business Operations', path: '/autonomous-business-operations-platform', icon: Zap },
         { name: 'AI-Powered IT Asset Management', path: '/ai-powered-it-asset-management', icon: Database },
+=======
+        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Briefcase },
+        { name: 'Advanced Research Automation', path: '/advanced-research-automation', icon: Briefcase },
+>>>>>>> origin/cursor/website-audit-and-enhancement-91fb
         { name: 'Cybersecurity', path: '/services?category=Cybersecurity', icon: Shield },
+        { name: 'Advanced Cybersecurity Suite', path: '/advanced-cybersecurity-suite', icon: Shield },
         { name: 'Micro SAAS Solutions', path: '/services?category=Micro%20SAAS%20Solutions', icon: Globe },
+        { name: 'AI-Powered IT Asset Management', path: '/ai-powered-it-asset-management', icon: Briefcase },
         { name: 'Space Technology', path: '/services?category=Space%20Technology', icon: Globe },
         { name: 'Healthcare AI', path: '/services?category=Healthcare%20AI', icon: Users },
         { name: 'Manufacturing AI', path: '/services?category=Manufacturing%20AI', icon: Briefcase },
         { name: 'Emerging Technology', path: '/services?category=Emerging%20Technology', icon: Globe },
+<<<<<<< HEAD
         { name: 'Autonomous Systems', path: '/services?category=AI%20%26%20Autonomous%20Systems', icon: Users }
 >>>>>>> origin/cursor/website-audit-and-enhancement-fc31
+=======
+        { name: 'Autonomous Systems', path: '/services?category=AI%20%26%20Autonomous%20Systems', icon: Users },
+        { name: 'Accessibility Auditor', path: '/accessibility-auditor', icon: Users }
+      ]
+    },
+    {
+      title: 'Business Operations',
+      items: [
+        { name: 'Autonomous Business Operations', path: '/autonomous-business-operations-platform', icon: Briefcase },
+        { name: 'Affiliate Attribution Hub', path: '/affiliate-attribution-hub', icon: Globe },
+        { name: 'Agentic RAG Helpdesk', path: '/agentic-rag-helpdesk', icon: Users }
+>>>>>>> origin/cursor/website-audit-and-enhancement-91fb
       ]
     },
     {
