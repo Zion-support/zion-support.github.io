@@ -34,36 +34,46 @@ import {
 import { ADVANCED_MICRO_SAAS_SERVICES } from '../data/advancedMicroSaasServices';
 import { EMERGING_TECH_SERVICES } from '../data/emergingTechServices';
 
-interface Service {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
-  contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-  };
-  technology?: string[];
-  integrations?: string[];
-  compliance?: string[];
-  roi?: string;
-  competitors?: string[];
-  marketTrend?: string;
-  innovationLevel?: string;
-}
+// Use the actual service types from the data files
+type Service = typeof ADVANCED_MICRO_SAAS_SERVICES[0] | typeof EMERGING_TECH_SERVICES[0];
+
+// Helper functions to safely access service properties
+const getServiceProperty = (service: Service, property: string, defaultValue: string): string => {
+  if (property in service) {
+    const value = (service as any)[property];
+    if (value !== undefined && value !== null) {
+      return String(value);
+    }
+  }
+  return defaultValue;
+};
+
+const getServiceTags = (service: Service): string[] => {
+  if ('tags' in service && service.tags) {
+    return service.tags;
+  }
+  return [];
+};
+
+const getServicePrice = (service: Service): { price: number; currency: string; pricingModel: string } => {
+  if ('price' in service && typeof service.price === 'object') {
+    // EmergingTechService has a price object
+    const priceObj = service.price as any;
+    return {
+      price: priceObj.monthly || priceObj.yearly || priceObj.oneTime || 0,
+      currency: priceObj.currency || '$',
+      pricingModel: priceObj.pricingModel || 'custom'
+    };
+  } else if ('price' in service && typeof service.price === 'number') {
+    // AdvancedMicroSaasService has a direct price number
+    return {
+      price: service.price,
+      currency: (service as any).currency || '$',
+      pricingModel: (service as any).pricingModel || 'monthly'
+    };
+  }
+  return { price: 0, currency: '$', pricingModel: 'custom' };
+};
 
 const InnovativeMicroSaasServices: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -71,7 +81,7 @@ const InnovativeMicroSaasServices: React.FC = () => {
   const [expandedService, setExpandedService] = useState<string | null>(null);
 
   // Combine all services
-  const allServices: Service[] = [
+  const allServices = [
     ...ADVANCED_MICRO_SAAS_SERVICES,
     ...EMERGING_TECH_SERVICES
   ];
@@ -80,9 +90,16 @@ const InnovativeMicroSaasServices: React.FC = () => {
   
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+<<<<<<< HEAD
+    const serviceTitle = 'title' in service ? service.title : service.name;
+    const matchesSearch = serviceTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
+                         ('tags' in service && service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
+=======
+    const matchesSearch = getServiceProperty(service, 'title', '').toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         getServiceTags(service).some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+>>>>>>> origin/cursor/website-audit-and-enhancement-3843
     return matchesCategory && matchesSearch;
   });
 
@@ -239,7 +256,11 @@ const InnovativeMicroSaasServices: React.FC = () => {
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
+<<<<<<< HEAD
+                      <h3 className="text-xl font-bold text-white mb-2">{'title' in service ? service.title : service.name}</h3>
+=======
+                      <h3 className="text-xl font-bold text-white mb-2">{getServiceProperty(service, 'title', 'Service')}</h3>
+>>>>>>> origin/cursor/website-audit-and-enhancement-3843
                       <p className="text-gray-400 text-sm mb-3">{service.description}</p>
                     </div>
                     <button
@@ -257,15 +278,53 @@ const InnovativeMicroSaasServices: React.FC = () => {
                     </span>
                     <div className="text-right">
                       <div className="text-2xl font-bold text-cyan-400">
-                        {formatPrice(service.price, service.currency)}
+<<<<<<< HEAD
+                        {typeof service.price === 'number' ? formatPrice(service.price, 'currency' in service ? (service.currency as string) : '$') : 
+                         'price' in service && typeof service.price === 'object' ? 
+                         `$${service.price.monthly || service.price.yearly || service.price.oneTime}` : '$99'}
                       </div>
-                      <div className="text-gray-400 text-sm">per {service.pricingModel}</div>
+                      <div className="text-gray-400 text-sm">per {'pricingModel' in service ? service.pricingModel : 'month'}
+                      </div>
+=======
+                        {formatPrice(getServicePrice(service).price, getServicePrice(service).currency)}
+                      </div>
+                      <div className="text-gray-400 text-sm">per {getServicePrice(service).pricingModel}</div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-3843
                     </div>
                   </div>
 
                   {/* Tags */}
+<<<<<<< HEAD
+                  {'tags' in service && service.tags && (
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {service.tags.slice(0, 3).map((tag, index) => (
+                        <span
+                          key={index}
+                          className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                      {service.tags.length > 3 && (
+                        <span className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">
+                          +{service.tags.length - 3} more
+                        </span>
+                      )}
+                    </div>
+                  )}
+
+                  {/* Support Level */}
+                  {'supportLevel' in service && (
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-sm text-gray-400">Support Level:</span>
+                      <span className={`px-2 py-1 text-xs text-white rounded ${getSupportLevelColor(service.supportLevel)}`}>
+                        {service.supportLevel}
+                      </span>
+                    </div>
+                  )}
+=======
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {service.tags.slice(0, 3).map((tag, index) => (
+                    {getServiceTags(service).slice(0, 3).map((tag, index) => (
                       <span
                         key={index}
                         className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded"
@@ -273,9 +332,9 @@ const InnovativeMicroSaasServices: React.FC = () => {
                         {tag}
                       </span>
                     ))}
-                    {service.tags.length > 3 && (
+                    {getServiceTags(service).length > 3 && (
                       <span className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">
-                        +{service.tags.length - 3} more
+                        +{getServiceTags(service).length - 3} more
                       </span>
                     )}
                   </div>
@@ -283,16 +342,21 @@ const InnovativeMicroSaasServices: React.FC = () => {
                   {/* Support Level */}
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-sm text-gray-400">Support Level:</span>
-                    <span className={`px-2 py-1 text-xs text-white rounded ${getSupportLevelColor(service.supportLevel)}`}>
-                      {service.supportLevel}
+                    <span className={`px-2 py-1 text-xs text-white rounded ${getSupportLevelColor(getServiceProperty(service, 'supportLevel', 'standard'))}`}>
+                      {getServiceProperty(service, 'supportLevel', 'standard')}
                     </span>
                   </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-3843
 
                   {/* Quick Info */}
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div className="flex items-center text-gray-400">
                       <Clock size={16} className="mr-2" />
-                      {service.estimatedDelivery}
+<<<<<<< HEAD
+                      {'estimatedDelivery' in service ? service.estimatedDelivery : '2-4 weeks'}
+=======
+                      {getServiceProperty(service, 'estimatedDelivery', 'Custom')}
+>>>>>>> origin/cursor/website-audit-and-enhancement-3843
                     </div>
                     <div className="flex items-center text-gray-400">
                       <Users size={16} className="mr-2" />
@@ -360,13 +424,21 @@ const InnovativeMicroSaasServices: React.FC = () => {
                       </div>
 
                       {/* Innovation Level */}
-                      {service.innovationLevel && (
+<<<<<<< HEAD
+                      {'innovationLevel' in service && service.innovationLevel && (
+=======
+                      {getServiceProperty(service, 'innovationLevel', '') && (
+>>>>>>> origin/cursor/website-audit-and-enhancement-3843
                         <div>
                           <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
                             <Lightbulb size={20} className="mr-2 text-yellow-400" />
                             Innovation Level
                           </h4>
-                          <p className="text-gray-300 text-sm">{service.innovationLevel}</p>
+<<<<<<< HEAD
+                                                      <p className="text-gray-300 text-sm">{service.innovationLevel as string}</p>
+=======
+                          <p className="text-gray-300 text-sm">{getServiceProperty(service, 'innovationLevel', '')}</p>
+>>>>>>> origin/cursor/website-audit-and-enhancement-3843
                         </div>
                       )}
 
@@ -374,7 +446,11 @@ const InnovativeMicroSaasServices: React.FC = () => {
                       <div className="pt-4 border-t border-gray-700">
                         <div className="flex flex-col sm:flex-row gap-3">
                           <a
-                            href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title}`}
+<<<<<<< HEAD
+                            href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${'title' in service ? service.title : service.name}`}
+=======
+                            href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${getServiceProperty(service, 'title', 'Service')}`}
+>>>>>>> origin/cursor/website-audit-and-enhancement-3843
                             className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg text-center font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center"
                           >
                             <Mail size={20} className="mr-2" />

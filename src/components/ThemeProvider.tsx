@@ -1,4 +1,11 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+=======
+import React, { createContext, useContext, useState, useEffect } from 'react';
+>>>>>>> origin/cursor/check-and-fix-github-actions-e92c
+=======
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 
 type Theme = 'light' | 'dark' | 'system';
 
@@ -9,6 +16,7 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
+<<<<<<< HEAD
 interface ThemeProviderProps {
   children: ReactNode;
   defaultTheme?: Theme;
@@ -18,13 +26,27 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   children, 
   defaultTheme = 'system' 
 }) => {
+=======
+export function ThemeProvider({ 
+  children, 
+  defaultTheme = 'dark' 
+}: { 
+  children: React.ReactNode;
+  defaultTheme?: Theme;
+}) {
+>>>>>>> origin/cursor/check-and-fix-github-actions-e92c
   const [theme, setTheme] = useState<Theme>(defaultTheme);
 
   useEffect(() => {
     const root = window.document.documentElement;
+<<<<<<< HEAD
     
     root.classList.remove('light', 'dark');
     
+=======
+    root.classList.remove('light', 'dark');
+
+>>>>>>> origin/cursor/check-and-fix-github-actions-e92c
     if (theme === 'system') {
       const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       root.classList.add(systemTheme);

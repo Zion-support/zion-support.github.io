@@ -3,12 +3,33 @@ import defaultTheme from 'tailwindcss/defaultTheme';
 import plugin from 'tailwindcss/plugin';
 
 const config: Config = {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
   darkMode: 'class',
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
+=======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
+  darkMode: "class",
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
   ],
   safelist: ['border-border'],
   theme: {
@@ -47,36 +68,37 @@ const config: Config = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
         // Enhanced Zion colors for futuristic design
+<<<<<<< HEAD
+=======
+        // Zion color palette (consolidated)
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d2d6
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-e276
         'zion-blue': {
           DEFAULT: '#0a0f1f',
           light: '#1e263b',
           dark: '#090c1a',
-          neon: '#00e5ff',
-          glow: '#0ea5e9',
         },
         'zion-purple': {
           DEFAULT: '#a855f7',
           light: '#d8b4fe',
           dark: '#9333ea',
-          neon: '#c084fc',
-          glow: '#8b5cf6',
         },
         'zion-cyan': {
           DEFAULT: '#00e5ff',
           light: '#7df9ff',
           dark: '#00c4cc',
-          neon: '#06b6d4',
-          glow: '#0891b2',
         },
         'zion-slate': {
           DEFAULT: '#94A3B8',
           light: '#CBD5E1',
           dark: '#64748B',
-          neon: '#475569',
-          glow: '#334155',
         },
-        // New futuristic colors
+        // Futuristic accents
         'neon-pink': '#ff0080',
         'neon-green': '#00ff41',
         'neon-orange': '#ff6b35',
@@ -84,6 +106,39 @@ const config: Config = {
         'quantum-blue': '#1e40af',
         'quantum-purple': '#7c3aed',
         'quantum-cyan': '#0891b2',
+=======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
+        // Custom Zion colors
+        "zion-blue": {
+          DEFAULT: "#0a0f1f",
+          light: "#1e263b",
+          dark: "#090c1a",
+        },
+        "zion-purple": {
+          DEFAULT: "#a855f7",
+          light: "#d8b4fe",
+          dark: "#9333ea",
+        },
+        "zion-cyan": {
+          DEFAULT: "#00e5ff",
+          light: "#7df9ff",
+          dark: "#00c4cc",
+        },
+        "zion-slate": {
+          DEFAULT: "#94A3B8",
+          light: "#CBD5E1",
+          dark: "#64748B",
+        },
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -109,6 +164,16 @@ const config: Config = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
         },
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-e276
         'neon-pulse': {
           '0%, 100%': { 
             textShadow: '0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor',
@@ -140,6 +205,12 @@ const config: Config = {
           '0%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(360deg)' },
         },
+<<<<<<< HEAD
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-434d
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
         'gradient-x': {
           '0%, 100%': {
             'background-size': '200% 200%',
@@ -158,10 +229,90 @@ const config: Config = {
           '0%, 100%': { boxShadow: '0 0 20px rgba(0, 229, 255, 0.5)' },
           '50%': { boxShadow: '0 0 40px rgba(0, 229, 255, 0.8)' },
         },
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d2d6
+        'neon-pulse': {
+          '0%, 100%': { 
+            textShadow: '0 0 5px #00e5ff, 0 0 10px #00e5ff, 0 0 15px #00e5ff, 0 0 20px #00e5ff',
+            opacity: '1'
+          },
+          '50%': { 
+            textShadow: '0 0 2px #00e5ff, 0 0 5px #00e5ff, 0 0 7px #00e5ff, 0 0 10px #00e5ff',
+            opacity: '0.8'
+          },
+        },
+        'holographic-shift': {
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
+        },
+<<<<<<< HEAD
+        'matrix-rain': {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(100vh)' },
+        },
+        'neon-flicker': {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0.8' },
+        },
+        'quantum-spin': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+        'gradient-x': {
+          '0%, 100%': {
+            'background-size': '200% 200%',
+            'background-position': 'left center'
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'right center'
+          },
+        },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+        'glow': {
+          '0%, 100%': { boxShadow: '0 0 20px rgba(0, 229, 255, 0.5)' },
+          '50%': { boxShadow: '0 0 40px rgba(0, 229, 255, 0.8)' },
+        },
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d2d6
+=======
+        'shimmer': {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-434d
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-e276
+=======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
+        'neon-pulse': {
+          '0%, 100%': { 
+            textShadow: '0 0 5px #00e5ff, 0 0 10px #00e5ff, 0 0 15px #00e5ff, 0 0 20px #00e5ff' 
+          },
+          '50%': { 
+            textShadow: '0 0 2px #00e5ff, 0 0 5px #00e5ff, 0 0 7px #00e5ff, 0 0 10px #00e5ff' 
+          },
+        }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
         'neon-pulse': 'neon-pulse 2s ease-in-out infinite',
         'quantum-float': 'quantum-float 6s ease-in-out infinite',
         'holographic-shift': 'holographic-shift 3s ease infinite',
@@ -171,6 +322,26 @@ const config: Config = {
         'gradient-x': 'gradient-x 15s ease infinite',
         'float': 'float 6s ease-in-out infinite',
         'glow': 'glow 2s ease-in-out infinite alternate',
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
+        'gradient-x': 'gradient-x 15s ease infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'glow': 'glow 2s ease-in-out infinite alternate',
+        'neon-pulse': 'neon-pulse 2s ease-in-out infinite alternate',
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        'holographic-shift': 'holographic-shift 3s ease infinite',
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d2d6
+=======
+        'shimmer': 'shimmer 2s ease infinite',
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-434d
       },
       backgroundImage: {
         'quantum-gradient': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
@@ -187,6 +358,13 @@ const config: Config = {
         'quantum': '0 0 20px rgba(0, 229, 255, 0.5), 0 0 40px rgba(0, 229, 255, 0.3)',
         'holographic': '0 0 30px rgba(168, 85, 247, 0.6), 0 0 60px rgba(168, 85, 247, 0.4)',
       },
+=======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
+      }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
     }
   },
   plugins: [

@@ -1,6 +1,12 @@
+<<<<<<< HEAD:components_backup/layout/Layout.tsx
 import React, { useState, useEffect } from 'react';
 import { Header } from '../components/header/Header';
 import { Footer } from '../components/Footer';
+=======
+import React, { useState } from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-48a5:src/layout/Layout.tsx
 import { Helmet } from 'react-helmet-async';
 
 interface LayoutProps {

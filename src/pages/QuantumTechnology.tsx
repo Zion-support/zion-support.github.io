@@ -26,20 +26,16 @@ import {
   Satellite,
   Radar,
   Camera,
-  Sensor,
   Fingerprint,
   Unlock,
   AlertTriangle,
   Info,
   Play,
   Pause,
-  Stop,
   RotateCcw,
   Settings,
-  Tool,
   Wrench,
   Hammer,
-  Screwdriver,
   Globe,
   Users,
   BarChart3,
@@ -54,28 +50,7 @@ import {
   Car,
   Plane,
   Ship,
-  Robot,
-  Wifi,
-  Bluetooth,
-  Satellite,
-  Radar,
-  Camera,
-  Sensor,
-  Fingerprint,
-  Key,
-  Lock,
-  Unlock,
-  AlertTriangle,
-  Info,
-  Play,
-  Pause,
-  Stop,
-  RotateCcw,
-  Settings,
-  Tool,
-  Wrench,
-  Hammer,
-  Screwdriver
+  Bot
 } from 'lucide-react';
 
 export default function QuantumTechnology() {
@@ -318,7 +293,7 @@ export default function QuantumTechnology() {
     {
       title: 'Interference',
       description: 'Quantum waves can interfere constructively or destructively to enhance computation.',
-      icon: Wave,
+      icon: Zap,
       examples: ['Amplitude amplification', 'Quantum walks', 'Algorithm speedup']
     }
   ];
