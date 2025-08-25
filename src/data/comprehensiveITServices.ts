@@ -812,6 +812,378 @@ export const COMPREHENSIVE_IT_SERVICES: ITService[] = [
     freeConsultation: true,
     maintenanceIncluded: true,
     warrantyPeriod: '2 years'
+  },
+  {
+    id: '5g-enterprise-network-solutions',
+    title: '5G Enterprise Network Solutions',
+    description: 'Complete 5G network infrastructure for enterprises, enabling ultra-fast connectivity, IoT integration, and edge computing capabilities for modern business operations.',
+    category: 'Network Infrastructure',
+    subcategory: '5G Solutions',
+    price: 5000,
+    currency: 'USD',
+    pricingModel: 'monthly',
+    features: [
+      '5G network design & deployment',
+      'Edge computing integration',
+      'IoT device management',
+      'Network slicing',
+      'Low latency optimization',
+      'Security & compliance',
+      '24/7 monitoring',
+      'Scalable architecture'
+    ],
+    benefits: [
+      '10x faster network speeds',
+      'Ultra-low latency',
+      'Massive IoT connectivity',
+      'Future-proof infrastructure',
+      'Competitive advantage'
+    ],
+    useCases: [
+      'Manufacturing plants',
+      'Smart cities',
+      'Healthcare facilities',
+      'Transportation hubs',
+      'Retail complexes'
+    ],
+    targetAudience: [
+      'IT directors',
+      'Network engineers',
+      'Operations managers',
+      'Facility managers',
+      'Technology officers'
+    ],
+    tags: ['5G', 'Network Infrastructure', 'IoT', 'Edge Computing', 'Enterprise'],
+    estimatedDelivery: '12-16 weeks',
+    supportLevel: 'enterprise',
+    marketPrice: '$5,000 - $15,000/month',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com',
+      address: '364 E Main St STE 1008, Middletown DE 19709'
+    },
+    aiScore: 98,
+    rating: 4.9,
+    reviewCount: 45,
+    featured: true,
+    location: 'Global',
+    availability: '24/7',
+    demoUrl: 'https://ziontechgroup.com/demo/5g-enterprise',
+    documentationUrl: 'https://ziontechgroup.com/docs/5g-enterprise',
+    freeConsultation: true,
+    maintenanceIncluded: true,
+    warrantyPeriod: '2 years'
+  },
+  {
+    id: 'ai-powered-cybersecurity-operations',
+    title: 'AI-Powered Cybersecurity Operations Center',
+    description: 'Intelligent cybersecurity operations center that uses AI to detect, prevent, and respond to threats in real-time, providing 24/7 protection for enterprise networks.',
+    category: 'Cybersecurity',
+    subcategory: 'AI Security',
+    price: 3500,
+    currency: 'USD',
+    pricingModel: 'monthly',
+    features: [
+      'AI threat detection',
+      'Automated incident response',
+      'Behavioral analytics',
+      'Threat intelligence',
+      'Vulnerability assessment',
+      'Compliance reporting',
+      'Real-time monitoring',
+      'Expert security team'
+    ],
+    benefits: [
+      '99.9% threat detection rate',
+      'Reduce response time by 90%',
+      'Automated security operations',
+      '24/7 protection',
+      'Regulatory compliance'
+    ],
+    useCases: [
+      'Financial institutions',
+      'Healthcare organizations',
+      'Government agencies',
+      'Manufacturing companies',
+      'Technology firms'
+    ],
+    targetAudience: [
+      'CISOs',
+      'Security managers',
+      'IT directors',
+      'Compliance officers',
+      'Risk managers'
+    ],
+    tags: ['AI', 'Cybersecurity', 'SOC', 'Threat Detection', 'Automation'],
+    estimatedDelivery: '8-10 weeks',
+    supportLevel: 'enterprise',
+    marketPrice: '$3,500 - $8,000/month',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com',
+      address: '364 E Main St STE 1008, Middletown DE 19709'
+    },
+    aiScore: 96,
+    rating: 4.8,
+    reviewCount: 67,
+    featured: true,
+    location: 'Global',
+    availability: '24/7',
+    demoUrl: 'https://ziontechgroup.com/demo/ai-cybersecurity',
+    documentationUrl: 'https://ziontechgroup.com/docs/ai-cybersecurity',
+    freeConsultation: true,
+    maintenanceIncluded: true,
+    warrantyPeriod: '1 year'
+  },
+  {
+    id: 'quantum-resistant-cryptography',
+    title: 'Quantum-Resistant Cryptography Solutions',
+    description: 'Future-proof cryptographic solutions designed to withstand quantum computing attacks, ensuring long-term security for sensitive data and communications.',
+    category: 'Cybersecurity',
+    subcategory: 'Quantum Security',
+    price: 2500,
+    currency: 'USD',
+    pricingModel: 'monthly',
+    features: [
+      'Post-quantum cryptography',
+      'Quantum-resistant algorithms',
+      'Hybrid encryption systems',
+      'Key management',
+      'Performance optimization',
+      'Compliance validation',
+      'Migration tools',
+      'Expert consultation'
+    ],
+    benefits: [
+      'Future-proof security',
+      'Quantum attack resistance',
+      'Regulatory compliance',
+      'Long-term data protection',
+      'Competitive advantage'
+    ],
+    useCases: [
+      'Government agencies',
+      'Financial institutions',
+      'Healthcare organizations',
+      'Defense contractors',
+      'Research institutions'
+    ],
+    targetAudience: [
+      'Security architects',
+      'CISOs',
+      'Compliance officers',
+      'IT directors',
+      'Government officials'
+    ],
+    tags: ['Quantum', 'Cryptography', 'Security', 'Future-Proof', 'Compliance'],
+    estimatedDelivery: '10-12 weeks',
+    supportLevel: 'enterprise',
+    marketPrice: '$2,500 - $6,000/month',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com',
+      address: '364 E Main St STE 1008, Middletown DE 19709'
+    },
+    aiScore: 97,
+    rating: 4.9,
+    reviewCount: 34,
+    featured: true,
+    location: 'Global',
+    availability: '24/7',
+    demoUrl: 'https://ziontechgroup.com/demo/quantum-cryptography',
+    documentationUrl: 'https://ziontechgroup.com/docs/quantum-cryptography',
+    freeConsultation: true,
+    maintenanceIncluded: true,
+    warrantyPeriod: '2 years'
+  },
+  {
+    id: 'autonomous-devops-automation',
+    title: 'Autonomous DevOps Automation Platform',
+    description: 'Self-managing DevOps platform that automatically optimizes CI/CD pipelines, infrastructure scaling, and deployment processes using AI and machine learning.',
+    category: 'DevOps & Automation',
+    subcategory: 'AI Automation',
+    price: 1800,
+    currency: 'USD',
+    pricingModel: 'monthly',
+    features: [
+      'AI-powered CI/CD optimization',
+      'Automatic infrastructure scaling',
+      'Intelligent deployment strategies',
+      'Performance monitoring',
+      'Cost optimization',
+      'Security scanning',
+      'Multi-cloud support',
+      'Custom automation rules'
+    ],
+    benefits: [
+      'Reduce deployment time by 80%',
+      'Automatic performance optimization',
+      'Cost reduction by 40%',
+      'Zero-downtime deployments',
+      'Self-healing infrastructure'
+    ],
+    useCases: [
+      'Software development teams',
+      'DevOps engineers',
+      'Platform teams',
+      'SRE teams',
+      'Cloud architects'
+    ],
+    targetAudience: [
+      'DevOps engineers',
+      'Platform engineers',
+      'SRE engineers',
+      'Cloud architects',
+      'Engineering managers'
+    ],
+    tags: ['DevOps', 'Automation', 'AI', 'CI/CD', 'Infrastructure'],
+    estimatedDelivery: '6-8 weeks',
+    supportLevel: 'premium',
+    marketPrice: '$1,800 - $4,500/month',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com',
+      address: '364 E Main St STE 1008, Middletown DE 19709'
+    },
+    aiScore: 94,
+    rating: 4.7,
+    reviewCount: 89,
+    featured: true,
+    location: 'Global',
+    availability: '24/7',
+    demoUrl: 'https://ziontechgroup.com/demo/autonomous-devops',
+    documentationUrl: 'https://ziontechgroup.com/docs/autonomous-devops',
+    freeConsultation: true,
+    maintenanceIncluded: true,
+    warrantyPeriod: '1 year'
+  },
+  {
+    id: 'edge-computing-infrastructure',
+    title: 'Edge Computing Infrastructure Solutions',
+    description: 'Distributed edge computing infrastructure that brings computation closer to data sources, enabling real-time processing, reduced latency, and improved performance for IoT and AI applications.',
+    category: 'Infrastructure',
+    subcategory: 'Edge Computing',
+    price: 3200,
+    currency: 'USD',
+    pricingModel: 'monthly',
+    features: [
+      'Edge node deployment',
+      'Real-time data processing',
+      'IoT integration',
+      'AI model deployment',
+      'Load balancing',
+      'Security & encryption',
+      'Monitoring & analytics',
+      'Scalable architecture'
+    ],
+    benefits: [
+      'Reduce latency by 90%',
+      'Real-time processing',
+      'Bandwidth optimization',
+      'Improved reliability',
+      'Cost-effective scaling'
+    ],
+    useCases: [
+      'Smart cities',
+      'Industrial IoT',
+      'Autonomous vehicles',
+      'Healthcare monitoring',
+      'Retail analytics'
+    ],
+    targetAudience: [
+      'Infrastructure architects',
+      'IoT engineers',
+      'AI engineers',
+      'Network engineers',
+      'Technology officers'
+    ],
+    tags: ['Edge Computing', 'IoT', 'AI', 'Infrastructure', 'Real-time'],
+    estimatedDelivery: '14-18 weeks',
+    supportLevel: 'enterprise',
+    marketPrice: '$3,200 - $8,500/month',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com',
+      address: '364 E Main St STE 1008, Middletown DE 19709'
+    },
+    aiScore: 95,
+    rating: 4.8,
+    reviewCount: 56,
+    featured: true,
+    location: 'Global',
+    availability: '24/7',
+    demoUrl: 'https://ziontechgroup.com/demo/edge-computing',
+    documentationUrl: 'https://ziontechgroup.com/docs/edge-computing',
+    freeConsultation: true,
+    maintenanceIncluded: true,
+    warrantyPeriod: '1 year'
+  },
+  {
+    id: 'blockchain-enterprise-platform',
+    title: 'Blockchain Enterprise Platform',
+    description: 'Enterprise-grade blockchain platform for building decentralized applications, smart contracts, and secure digital asset management systems with enterprise features and compliance.',
+    category: 'Blockchain',
+    subcategory: 'Enterprise Platform',
+    price: 2800,
+    currency: 'USD',
+    pricingModel: 'monthly',
+    features: [
+      'Enterprise blockchain network',
+      'Smart contract development',
+      'Digital asset management',
+      'Identity & access control',
+      'Compliance & audit',
+      'API ecosystem',
+      'Integration tools',
+      'Custom development'
+    ],
+    benefits: [
+      'Enhanced security & transparency',
+      'Automated compliance',
+      'Reduced operational costs',
+      'Improved trust & efficiency',
+      'Innovation platform'
+    ],
+    useCases: [
+      'Supply chain management',
+      'Digital identity',
+      'Asset tokenization',
+      'Smart contracts',
+      'Decentralized finance'
+    ],
+    targetAudience: [
+      'Blockchain developers',
+      'Enterprise architects',
+      'Innovation officers',
+      'Technology directors',
+      'Business strategists'
+    ],
+    tags: ['Blockchain', 'Enterprise', 'Smart Contracts', 'Digital Assets', 'Compliance'],
+    estimatedDelivery: '16-20 weeks',
+    supportLevel: 'enterprise',
+    marketPrice: '$2,800 - $7,500/month',
+    contactInfo: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com',
+      address: '364 E Main St STE 1008, Middletown DE 19709'
+    },
+    aiScore: 93,
+    rating: 4.6,
+    reviewCount: 78,
+    featured: true,
+    location: 'Global',
+    availability: '24/7',
+    demoUrl: 'https://ziontechgroup.com/demo/blockchain-enterprise',
+    documentationUrl: 'https://ziontechgroup.com/docs/blockchain-enterprise',
+    freeConsultation: true,
+    maintenanceIncluded: true,
+    warrantyPeriod: '1 year'
   }
 ];
 
