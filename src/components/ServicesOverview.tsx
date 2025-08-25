@@ -373,6 +373,12 @@ export function ServicesOverview() {
                   <ArrowRight className="h-5 w-5 ml-2" />
                 </Button>
               </Link>
+              <Link to="/innovative-services-2025">
+                <Button size="lg" className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light">
+                  Innovative Services 2025
+                  <ArrowRight className="h-5 w-5 ml-2" />
+                </Button>
+              </Link>
               <Button 
                 size="lg" 
                 variant="outline" 
