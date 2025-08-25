@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -196,6 +197,9 @@ const About = () => {
 import { motion } from 'framer-motion';
 import { Users, Target, Award, Zap, Globe, Shield, Sparkles, Lightbulb } from 'lucide-react';
 import { Header } from "@/components/Header";
+=======
+import { Header } from "@/components/header/Header";
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 

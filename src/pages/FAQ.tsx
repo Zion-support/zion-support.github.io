@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, Search, HelpCircle, MessageCircle, Phone, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -16,6 +17,10 @@ interface FAQItem {
 =======
 import React from 'react';
 import { FaqSection } from "@/components/FaqSection";
+=======
+import { Header } from "@/components/header/Header";
+import { Footer } from "@/components/Footer";
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 import { SEO } from "@/components/SEO";
 import { AppHeader } from "@/layout/AppHeader";
 import Footer from "@/components/Footer";

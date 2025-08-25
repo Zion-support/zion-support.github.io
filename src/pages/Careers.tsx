@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -143,6 +144,13 @@ const values = [
     description: "Continuous learning and personal development are core to our culture."
   }
 ];
+=======
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/Button";
+import { Card, CardContent } from "@/components/ui/Card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/Tabs";
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 
 export default function Careers() {
   const [activeDepartment, setActiveDepartment] = useState('all');

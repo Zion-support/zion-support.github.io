@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -128,10 +129,15 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 >>>>>>> origin/cursor/build-and-fix-errors-e276
 =======
+=======
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
+<<<<<<< HEAD
 >>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
+=======
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 }

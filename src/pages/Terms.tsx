@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -51,6 +52,12 @@ const Terms = () => {
     "Respect intellectual property rights",
     "Report security concerns promptly"
   ];
+=======
+import { SEO } from "@/components/SEO";
+import { Header } from "@/components/header/Header";
+import { Footer } from "@/components/Footer";
+import TermsOfService from "@/legal/TermsOfService";
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 
   return (
     <>

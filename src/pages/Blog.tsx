@@ -4,7 +4,22 @@
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
+=======
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { GradientHeading } from "@/components/GradientHeading";
+import { SEO } from "@/components/SEO";
+import { Card, CardContent, CardFooter } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
+import { Input } from "@/components/ui/Input";
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
+import { BlogPost } from "@/types/blog";
+import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost";
+import { BLOG_POSTS } from "@/data/blog-posts";
+import { Search } from "lucide-react";
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 
 <<<<<<< HEAD
 =======

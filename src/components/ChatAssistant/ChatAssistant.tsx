@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Send, Bot, User, X, Minimize2, Maximize2, MessageCircle } from 'lucide-react';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { ChatMessage, Message } from './ChatMessage';
+=======
+import React, { useState, useEffect, useRef, ReactNode } from 'react';
+import { ChatMessage } from './ChatMessage';
+import { ChatInput } from './ChatInput';
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/Avatar";
+import { Button } from "@/components/ui/Button";
+import { X } from "lucide-react";
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 
 const ChatAssistant: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

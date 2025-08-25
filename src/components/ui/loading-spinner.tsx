@@ -10,17 +10,29 @@ import { cn } from "@/lib/utils";
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
+<<<<<<< HEAD
   variant?: 'default' | 'primary' | 'secondary' | 'white';
   className?: string;
   text?: string;
 <<<<<<< HEAD
+=======
+  className?: string;
+  text?: string;
+  variant?: 'default' | 'pulse' | 'dots';
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 }
 
 export function LoadingSpinner({ 
   size = 'md', 
+<<<<<<< HEAD
   variant = 'default',
   className = '',
   text
+=======
+  className, 
+  text,
+  variant = 'default' 
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 }: LoadingSpinnerProps) {
   const sizeClasses = {
     sm: 'w-4 h-4',
@@ -29,6 +41,7 @@ export function LoadingSpinner({
     xl: 'w-12 h-12'
   };
 
+<<<<<<< HEAD
   const variantClasses = {
     default: 'text-zion-cyan',
     primary: 'text-zion-blue',
@@ -218,6 +231,90 @@ export function LoadingSpinner({
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
           className="text-zion-slate-light font-medium text-sm"
+=======
+  const textSizeClasses = {
+    sm: 'text-xs',
+    md: 'text-sm',
+    lg: 'text-base',
+    xl: 'text-lg'
+  };
+
+  if (variant === 'pulse') {
+    return (
+      <div className={cn("flex flex-col items-center justify-center", className)}>
+        <div className={cn(
+          "rounded-full bg-zion-purple animate-pulse",
+          sizeClasses[size]
+        )} />
+        {text && (
+          <p className={cn(
+            "mt-2 text-zion-slate-light text-center",
+            textSizeClasses[size]
+          )}>
+            {text}
+          </p>
+        )}
+      </div>
+    );
+  }
+
+  if (variant === 'dots') {
+    return (
+      <div className={cn("flex flex-col items-center justify-center", className)}>
+        <div className="flex space-x-1">
+          {[0, 1, 2].map((i) => (
+            <motion.div
+              key={i}
+              className="w-2 h-2 bg-zion-cyan rounded-full"
+              animate={{
+                y: [0, -10, 0],
+                opacity: [0.5, 1, 0.5]
+              }}
+              transition={{
+                duration: 1.4,
+                repeat: Infinity,
+                delay: i * 0.2,
+                ease: "easeInOut"
+              }}
+            />
+          ))}
+        </div>
+        {text && (
+          <p className={cn(
+            "mt-3 text-zion-slate-light text-center",
+            textSizeClasses[size]
+          )}>
+            {text}
+          </p>
+        )}
+      </div>
+    );
+  }
+
+  return (
+    <div className={cn("flex flex-col items-center justify-center", className)}>
+      <motion.div
+        className={cn(
+          "border-2 border-zion-blue-light border-t-zion-purple rounded-full",
+          sizeClasses[size]
+        )}
+        animate={{ rotate: 360 }}
+        transition={{
+          duration: 1,
+          repeat: Infinity,
+          ease: "linear"
+        }}
+      />
+      {text && (
+        <motion.p 
+          className={cn(
+            "mt-3 text-zion-slate-light text-center",
+            textSizeClasses[size]
+          )}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
         >
           {text}
         </motion.p>
@@ -226,6 +323,7 @@ export function LoadingSpinner({
   );
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Page loading component
 export function PageLoader() {
@@ -250,11 +348,19 @@ export function FullPageLoader({ text = "Loading..." }: { text?: string }) {
           Please wait while we prepare your experience...
         </motion.div>
 >>>>>>> origin/cursor/build-and-fix-errors-e276
+=======
+export function PageLoader() {
+  return (
+    <div className="min-h-screen bg-background flex items-center justify-center">
+      <div className="text-center">
+        <LoadingSpinner size="xl" text="Loading amazing content..." />
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
       </div>
     </div>
   );
 }
 
+<<<<<<< HEAD
 // Inline loading component
 export function InlineLoader({ size = 'sm', variant = 'default' }: LoadingSpinnerProps) {
   return (
@@ -267,6 +373,20 @@ export function InlineLoader({ size = 'sm', variant = 'default' }: LoadingSpinne
       <LoadingSpinner size={size} variant="dots" />
       {text && <span className="text-zion-slate-light text-sm">{text}</span>}
 >>>>>>> origin/cursor/build-and-fix-errors-e276
+=======
+export function SectionLoader() {
+  return (
+    <div className="py-20 flex items-center justify-center">
+      <LoadingSpinner size="lg" text="Loading section..." />
+    </div>
+  );
+}
+
+export function CardLoader() {
+  return (
+    <div className="p-8 flex items-center justify-center">
+      <LoadingSpinner size="md" text="Loading..." />
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
     </div>
   );
 }

@@ -1,6 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { SEO } from '@/components/SEO';
+=======
+
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/Button";
+import { Leaf, Server, Cloud } from "lucide-react";
+import { Link } from "react-router-dom";
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 
 export default function GreenIT() {
   return (

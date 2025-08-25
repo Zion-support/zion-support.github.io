@@ -2,6 +2,7 @@ User-agent: *
 Allow: /
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Sitemaps
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-638c
@@ -10,6 +11,13 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 <<<<<<< HEAD
 =======
 # Crawl-delay for respectful crawling
+=======
+# Sitemap location
+Sitemap: https://ziontechgroup.com/sitemap.xml
+Sitemap: https://ziontechgroup.com/sitemap
+
+# Crawl-delay
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 Crawl-delay: 1
 
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-60a2
@@ -28,6 +36,7 @@ Disallow: /backup/
 # Allow important pages
 <<<<<<< HEAD
 Allow: /
+<<<<<<< HEAD
 Allow: /services/
 Allow: /ai-solutions/
 Allow: /about/
@@ -126,3 +135,9 @@ Disallow: /
 User-agent: *
 Crawl-delay: 2
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-60a2
+=======
+Allow: /about
+Allow: /contact
+Allow: /services
+Allow: /technologies
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974

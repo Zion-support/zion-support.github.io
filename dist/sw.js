@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Service Worker for Zion Tech Group Website
 // Version: 1.0.0
 // Cache Name: zion-tech-v1
@@ -63,10 +64,25 @@ self.addEventListener('install', (event) => {
   
 =======
   '/favicon.ico'
+=======
+const CACHE_NAME = 'zion-tech-v1';
+const STATIC_CACHE_NAME = 'zion-static-v1';
+const DYNAMIC_CACHE_NAME = 'zion-dynamic-v1';
+
+// Files to cache immediately
+const STATIC_FILES = [
+  '/',
+  '/index.html',
+  '/manifest.json',
+  '/favicon.ico',
+  '/images/zion-logo.png',
+  '/images/placeholder.jpg'
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 ];
 
 // Install event - cache static files
 self.addEventListener('install', (event) => {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/build-and-fix-errors-fb38
   event.waitUntil(
     caches.open(STATIC_CACHE)
@@ -92,12 +108,27 @@ self.addEventListener('install', (event) => {
 =======
         console.error('Error caching static assets:', error);
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
+=======
+  event.waitUntil(
+    caches.open(STATIC_CACHE_NAME)
+      .then((cache) => {
+        console.log('Caching static files');
+        return cache.addAll(STATIC_FILES);
+      })
+      .then(() => {
+        console.log('Static files cached successfully');
+        return self.skipWaiting();
+      })
+      .catch((error) => {
+        console.error('Error caching static files:', error);
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
       })
   );
 });
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
+<<<<<<< HEAD
   console.log('Service Worker activating...');
   
   event.waitUntil(
@@ -106,13 +137,22 @@ self.addEventListener('activate', (event) => {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
+=======
+  event.waitUntil(
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
     caches.keys()
       .then((cacheNames) => {
         return Promise.all(
           cacheNames.map((cacheName) => {
+<<<<<<< HEAD
             if (cacheName !== STATIC_CACHE && 
                 cacheName !== DYNAMIC_CACHE && 
                 cacheName !== API_CACHE) {
+=======
+            if (cacheName !== STATIC_CACHE_NAME && 
+                cacheName !== DYNAMIC_CACHE_NAME && 
+                cacheName !== CACHE_NAME) {
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
               console.log('Deleting old cache:', cacheName);
               return caches.delete(cacheName);
             }
@@ -120,12 +160,17 @@ self.addEventListener('activate', (event) => {
         );
       })
       .then(() => {
+<<<<<<< HEAD
         console.log('Service Worker activated successfully');
+=======
+        console.log('Service worker activated');
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
         return self.clients.claim();
       })
   );
 });
 
+<<<<<<< HEAD
 // Fetch event - handle different caching strategies
 =======
 =======
@@ -158,10 +203,18 @@ self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
   
+=======
+// Fetch event - implement caching strategies
+self.addEventListener('fetch', (event) => {
+  const { request } = event;
+  const url = new URL(request.url);
+
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
   // Skip non-GET requests
   if (request.method !== 'GET') {
     return;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   
   // Handle different types of requests
@@ -180,10 +233,15 @@ self.addEventListener('fetch', (event) => {
 =======
 
   // Skip chrome-extension and other non-http(s) requests
+=======
+
+  // Skip chrome-extension and other non-http requests
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
   if (!url.protocol.startsWith('http')) {
     return;
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   // API requests - Network first with cache fallback
   if (API_ENDPOINTS.some(endpoint => url.pathname.startsWith(endpoint))) {
@@ -503,6 +561,21 @@ function isPageRequest(request) {
 }
 
 // Cache-first strategy for static assets
+=======
+  // Handle different types of requests with appropriate caching strategies
+  if (isStaticAsset(request)) {
+    event.respondWith(cacheFirst(request, STATIC_CACHE_NAME));
+  } else if (isAPIRequest(request)) {
+    event.respondWith(networkFirst(request, DYNAMIC_CACHE_NAME));
+  } else if (isHTMLRequest(request)) {
+    event.respondWith(networkFirst(request, DYNAMIC_CACHE_NAME));
+  } else {
+    event.respondWith(networkFirst(request, DYNAMIC_CACHE_NAME));
+  }
+});
+
+// Cache first strategy for static assets
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 async function cacheFirst(request, cacheName) {
   try {
     const cachedResponse = await caches.match(request);
@@ -517,12 +590,20 @@ async function cacheFirst(request, cacheName) {
     }
     return networkResponse;
   } catch (error) {
+<<<<<<< HEAD
     console.error('Cache-first strategy failed:', error);
+=======
+    console.error('Cache first strategy failed:', error);
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
     return new Response('Network error', { status: 503 });
   }
 }
 
+<<<<<<< HEAD
 // Network-first strategy with cache fallback
+=======
+// Network first strategy for dynamic content
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 async function networkFirst(request, cacheName) {
   try {
     const networkResponse = await fetch(request);
@@ -533,14 +614,22 @@ async function networkFirst(request, cacheName) {
     return networkResponse;
   } catch (error) {
     console.log('Network failed, trying cache:', error);
+<<<<<<< HEAD
     
+=======
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
     const cachedResponse = await caches.match(request);
     if (cachedResponse) {
       return cachedResponse;
     }
     
+<<<<<<< HEAD
     // Return offline page for page requests
     if (isPageRequest(request)) {
+=======
+    // Return offline page for HTML requests
+    if (isHTMLRequest(request)) {
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
       return caches.match('/offline.html');
     }
     
@@ -548,6 +637,7 @@ async function networkFirst(request, cacheName) {
   }
 }
 
+<<<<<<< HEAD
 // Background sync function
 async function doBackgroundSync() {
 =======
@@ -607,6 +697,24 @@ async function handleStaticAsset(request) {
     // Return offline page
     return caches.match('/offline.html');
   }
+=======
+// Helper functions to determine request types
+function isStaticAsset(request) {
+  const url = new URL(request.url);
+  return url.pathname.match(/\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot)$/);
+}
+
+function isAPIRequest(request) {
+  const url = new URL(request.url);
+  return url.pathname.startsWith('/api/') || url.pathname.startsWith('/graphql');
+}
+
+function isHTMLRequest(request) {
+  const url = new URL(request.url);
+  return url.pathname.endsWith('.html') || 
+         url.pathname === '/' || 
+         !url.pathname.includes('.');
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 }
 
 // Background sync for offline actions
@@ -616,6 +724,7 @@ self.addEventListener('sync', (event) => {
   }
 });
 
+<<<<<<< HEAD
 // Handle background sync
 async function doBackgroundSync() {
   try {
@@ -631,11 +740,19 @@ async function doBackgroundSync() {
       }
     }
 >>>>>>> origin/cursor/build-and-fix-errors-fb38
+=======
+async function doBackgroundSync() {
+  try {
+    // Implement background sync logic here
+    // For example, sync offline form submissions
+    console.log('Background sync completed');
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
   } catch (error) {
     console.error('Background sync failed:', error);
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Message handling from clients
 =======
@@ -685,14 +802,21 @@ async function removePendingAction(actionId) {
   console.log('Removed pending action:', actionId);
 }
 
+=======
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 // Push notification handling
 self.addEventListener('push', (event) => {
   if (event.data) {
     const data = event.data.json();
     const options = {
       body: data.body,
+<<<<<<< HEAD
       icon: '/favicon.ico',
       badge: '/favicon.ico',
+=======
+      icon: '/images/zion-logo.png',
+      badge: '/images/zion-logo.png',
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
       vibrate: [100, 50, 100],
       data: {
         dateOfArrival: Date.now(),
@@ -701,17 +825,30 @@ self.addEventListener('push', (event) => {
       actions: [
         {
           action: 'explore',
+<<<<<<< HEAD
           title: 'View Details',
           icon: '/favicon.ico'
+=======
+          title: 'View',
+          icon: '/images/zion-logo.png'
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
         },
         {
           action: 'close',
           title: 'Close',
+<<<<<<< HEAD
           icon: '/favicon.ico'
         }
       ]
     };
     
+=======
+          icon: '/images/zion-logo.png'
+        }
+      ]
+    };
+
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
     event.waitUntil(
       self.registration.showNotification(data.title, options)
     );
@@ -721,7 +858,11 @@ self.addEventListener('push', (event) => {
 // Notification click handling
 self.addEventListener('notificationclick', (event) => {
   event.notification.close();
+<<<<<<< HEAD
   
+=======
+
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
   if (event.action === 'explore') {
     event.waitUntil(
       clients.openWindow('/')
@@ -729,23 +870,33 @@ self.addEventListener('notificationclick', (event) => {
   }
 });
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/build-and-fix-errors-fb38
 // Message handling for communication with main thread
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
 self.addEventListener('message', (event) => {
   console.log('Message received from client:', event.data);
   
+=======
+// Message handling for communication with main thread
+self.addEventListener('message', (event) => {
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
   }
   
   if (event.data && event.data.type === 'GET_VERSION') {
+<<<<<<< HEAD
     event.ports[0].postMessage({
       version: '1.0.0',
       cacheName: CACHE_NAME
     });
   }
 <<<<<<< HEAD
+=======
+    event.ports[0].postMessage({ version: CACHE_NAME });
+  }
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 });
 
 // Error handling
@@ -754,6 +905,7 @@ self.addEventListener('error', (event) => {
 });
 
 self.addEventListener('unhandledrejection', (event) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
   console.error('Service Worker unhandled rejection:', event.reason);
 });
@@ -827,3 +979,7 @@ console.log('Zion Tech Group Service Worker loaded successfully');
 =======
 });
 >>>>>>> origin/cursor/build-and-fix-errors-fb38
+=======
+  console.error('Service worker unhandled rejection:', event.reason);
+});
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974

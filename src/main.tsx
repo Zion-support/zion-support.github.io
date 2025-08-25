@@ -47,6 +47,7 @@ if ('serviceWorker' in navigator) {
 }
 =======
 import React from 'react';
+<<<<<<< HEAD
 import ReactDOM from 'react-dom/client';
 import { HelmetProvider } from 'react-helmet-async';
 =======
@@ -80,6 +81,24 @@ window.addEventListener('error', (event) => {
 });
 =======
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
+=======
+import { createRoot } from 'react-dom/client';
+import { HelmetProvider } from 'react-helmet-async';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
+import './index.css';
+
+// Create a client
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: 1,
+      refetchOnWindowFocus: false,
+    },
+  },
+});
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 
 const rootElement = document.getElementById('root');
 
@@ -91,6 +110,7 @@ const root = ReactDOM.createRoot(rootElement);
 
 root.render(
   <React.StrictMode>
+<<<<<<< HEAD
 <<<<<<< HEAD
     <HelmetProvider>
 <<<<<<< HEAD
@@ -128,6 +148,15 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
       <App />
     </BrowserRouter>
+=======
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </QueryClientProvider>
+    </HelmetProvider>
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
   </React.StrictMode>
 );
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef

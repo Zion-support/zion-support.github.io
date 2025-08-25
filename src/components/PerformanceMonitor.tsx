@@ -1250,6 +1250,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     networkInfo: null
   });
 
+<<<<<<< HEAD
   const [isVisible, setIsVisible] = useState(false);
   const [alerts, setAlerts] = useState<string[]>([]);
 
@@ -1262,6 +1263,17 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         const downlink = connection.downlink || 'unknown';
         const rtt = connection.rtt || 'unknown';
         return `${effectiveType} (${downlink}Mbps, ${rtt}ms RTT)`;
+=======
+  // Measure First Contentful Paint (FCP)
+  const measureFCP = () => {
+    const paintEntries = performance.getEntriesByType('paint');
+    const fcpEntry = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+
+    if (fcpEntry) {
+      metricsRef.current.fcp = fcpEntry.startTime;
+      if (logToConsole) {
+        console.log('FCP:', fcpEntry.startTime, 'ms');
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
       }
     }
     return 'unknown';
@@ -1290,6 +1302,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             setMetrics(prev => ({ ...prev, fcp: Math.round(fcpEntry.startTime) }));
           }
         });
+<<<<<<< HEAD
         fcpObserver.observe({ entryTypes: ['paint'] });
       } catch (error) {
         console.warn('FCP measurement failed:', error);
@@ -1305,6 +1318,10 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           }
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+=======
+        observerRef.current.observe({ entryTypes: ['largest-contentful-paint'] });
+
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
       } catch (error) {
         console.warn('LCP measurement failed:', error);
       }
@@ -1315,6 +1332,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           const entries = list.getEntries();
           entries.forEach(entry => {
             if (entry.entryType === 'first-input') {
+<<<<<<< HEAD
               const fidEntry = entry as FirstInputEntry;
               setMetrics(prev => ({ ...prev, fid: Math.round(fidEntry.processingStart - fidEntry.startTime) }));
             }
@@ -1336,6 +1354,14 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               if (!clsEntry.hadRecentInput) {
                 clsValue += clsEntry.value;
                 setMetrics(prev => ({ ...prev, cls: Math.round(clsValue * 1000) / 1000 }));
+=======
+              // Use a safer way to measure FID
+              const fid = entry.processingStart ? entry.processingStart - entry.startTime : 0;
+
+              metricsRef.current.fid = fid;
+              if (logToConsole) {
+                console.log('FID:', fid, 'ms');
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
               }
             }
           });
@@ -1347,6 +1373,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }
   }, []);
 
+<<<<<<< HEAD
   // Measure additional performance metrics
   const measureAdditionalMetrics = useCallback(() => {
     // Time to First Byte (TTFB) and other navigation metrics
@@ -1368,6 +1395,17 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         navigationObserver.observe({ entryTypes: ['navigation'] });
       } catch (error) {
         console.warn('Navigation timing measurement failed:', error);
+=======
+  // Measure Time to First Byte (TTFB)
+  const measureTTFB = () => {
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+
+    if (navigationEntry) {
+      metricsRef.current.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
+
+      if (logToConsole) {
+        console.log('TTFB:', metricsRef.current.ttfb, 'ms');
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
       }
     }
 

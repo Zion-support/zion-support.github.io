@@ -179,9 +179,10 @@ const Contact: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 =======
 import { useState } from "react";
-import { Header } from "@/components/Header";
+import { Header } from "@/components/header/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -189,6 +190,17 @@ import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { z } from "zod";
 import { Mail, MessageSquare, MapPin, Phone, Brain, Shield, Cloud, Code } from "lucide-react";
+=======
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/Button";
+import { Input } from "@/components/ui/Input";
+import { Textarea } from "@/components/ui/Textarea";
+import { Card } from "@/components/ui/Card";
+import { toast } from "@/components/ui/use-toast";
+import z from "zod";
+import { ChatAssistant } from "@/components/ChatAssistant/ChatAssistant";
+import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 
 export default function Contact() {
   const [isChatOpen, setIsChatOpen] = useState(false);

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -65,6 +66,12 @@ const Privacy = () => {
     "Withdraw consent",
     "Lodge a complaint"
   ];
+=======
+import { Header } from "@/components/header/Header";
+import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
 
   return (
     <>

@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
 >>>>>>> origin/cursor/build-and-fix-errors-e276
@@ -42,11 +43,21 @@ export function HeroSection() {
   const { t } = useTranslation();
   
 >>>>>>> origin/cursor/build-and-fix-errors-e276
+=======
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Search, Zap, Shield, Users, ArrowRight } from 'lucide-react';
+import { Button } from './ui/Button';
+import { Link } from 'react-router-dom';
+
+export function HeroSection() {
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
+<<<<<<< HEAD
 <<<<<<< HEAD
         staggerChildren: 0.2
 =======
@@ -57,6 +68,10 @@ export function HeroSection() {
 =======
         delayChildren: 0.1
 >>>>>>> origin/cursor/build-and-fix-errors-e276
+=======
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
       }
 =======
 
@@ -104,6 +119,7 @@ const HeroSection = () => {
   const itemVariants = {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     hidden: { y: 30, opacity: 0 },
 =======
     hidden: { y: 50, opacity: 0 },
@@ -111,9 +127,12 @@ const HeroSection = () => {
 =======
     hidden: { y: 20, opacity: 0 },
 >>>>>>> origin/cursor/build-and-fix-errors-e276
+=======
+    hidden: { opacity: 0, y: 30 },
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
     visible: {
-      y: 0,
       opacity: 1,
+      y: 0,
       transition: {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -163,12 +182,20 @@ const HeroSection = () => {
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const pulseVariants = {
     pulse: {
       scale: [1, 1.05, 1],
       opacity: [0.8, 1, 0.8],
       transition: {
         duration: 3,
+=======
+  const floatingVariants = {
+    animate: {
+      y: [-10, 10, -10],
+      transition: {
+        duration: 4,
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
         repeat: Infinity,
         ease: "easeInOut"
       }
@@ -229,6 +256,7 @@ const HeroSection = () => {
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -332,20 +360,46 @@ const HeroSection = () => {
           className="absolute bottom-1/3 left-1/4 w-1.5 h-1.5 bg-zion-cyan rounded-full"
           variants={floatingVariants}
           animate="float"
+=======
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <motion.div
+          className="absolute top-20 left-20 w-32 h-32 bg-zion-purple/20 rounded-full blur-xl"
+          variants={floatingVariants}
+          animate="animate"
+        />
+        <motion.div
+          className="absolute top-40 right-32 w-24 h-24 bg-zion-cyan/20 rounded-full blur-xl"
+          variants={floatingVariants}
+          animate="animate"
+          style={{ animationDelay: '1s' }}
+        />
+        <motion.div
+          className="absolute bottom-32 left-1/3 w-20 h-20 bg-zion-purple/30 rounded-full blur-xl"
+          variants={floatingVariants}
+          animate="animate"
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
           style={{ animationDelay: '2s' }}
         />
       </div>
 
+<<<<<<< HEAD
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
+=======
+      <div className="relative z-10 container mx-auto px-4 text-center">
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
         <motion.div
+          className="max-w-6xl mx-auto"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
 <<<<<<< HEAD
           className="max-w-5xl mx-auto"
         >
+<<<<<<< HEAD
           {/* Badge */}
           <motion.div
             variants={itemVariants}
@@ -682,6 +736,99 @@ const HeroSection = () => {
           </div>
         </motion.div>
 >>>>>>> origin/cursor/build-and-fix-errors-e276
+=======
+          {/* Main Heading */}
+          <motion.h1
+            className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
+            variants={itemVariants}
+          >
+            The Future of
+            <span className="block bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
+              Tech Talent
+            </span>
+          </motion.h1>
+
+          {/* Subtitle */}
+          <motion.p
+            className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-3xl mx-auto leading-relaxed"
+            variants={itemVariants}
+          >
+            Connect with world-class tech professionals, AI-powered services, and cutting-edge solutions. 
+            Zion Tech Group is your gateway to the future of technology.
+          </motion.p>
+
+          {/* CTA Buttons */}
+          <motion.div
+            className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+            variants={itemVariants}
+          >
+            <Button
+              asChild
+              size="lg"
+              className="bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple/90 hover:to-zion-cyan/90 text-white px-8 py-4 text-lg font-semibold shadow-2xl hover:shadow-zion-purple/25 transition-all duration-300"
+            >
+              <Link to="/match">
+                <Zap className="w-5 h-5 mr-2" />
+                Find Your Perfect Match
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </Button>
+            
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="border-2 border-zion-cyan/50 text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 text-lg font-semibold transition-all duration-300"
+            >
+              <Link to="/services">
+                <Search className="w-5 h-5 mr-2" />
+                Explore Services
+              </Link>
+            </Button>
+          </motion.div>
+
+          {/* Trust Indicators */}
+          <motion.div
+            className="flex flex-wrap justify-center items-center gap-8 text-zion-slate-light"
+            variants={itemVariants}
+          >
+            <div className="flex items-center gap-2">
+              <Shield className="w-5 h-5 text-zion-cyan" />
+              <span>Trusted by 10,000+ companies</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Users className="w-5 h-5 text-zion-cyan" />
+              <span>50,000+ verified professionals</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Zap className="w-5 h-5 text-zion-cyan" />
+              <span>AI-powered matching</span>
+            </div>
+          </motion.div>
+        </motion.div>
+      </div>
+
+      {/* Scroll Indicator */}
+      <motion.div
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1, duration: 0.8 }}
+      >
+        <div className="w-6 h-10 border-2 border-zion-cyan/50 rounded-full flex justify-center">
+          <motion.div
+            className="w-1 h-3 bg-zion-cyan rounded-full mt-2"
+            animate={{
+              y: [0, 12, 0],
+            }}
+            transition={{
+              duration: 1.5,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+        </div>
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
       </motion.div>
     </section>
   );
