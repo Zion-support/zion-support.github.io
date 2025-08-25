@@ -1,16 +1,52 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { COMPREHENSIVE_SERVICES } from '../data/comprehensiveServices';
-import { ADVANCED_INNOVATIVE_SERVICES } from '../data/advancedInnovativeServices';
-import { EMERGING_TECH_SERVICES } from '../data/emergingTechServices';
+import { COMPREHENSIVE_SERVICES, Service } from '../data/comprehensiveServices';
+import { ADVANCED_INNOVATIVE_SERVICES, AdvancedInnovativeService } from '../data/advancedInnovativeServices';
+import { EMERGING_TECH_SERVICES, EmergingTechService } from '../data/emergingTechServices';
+
+type CombinedService = Service | AdvancedInnovativeService | EmergingTechService;
 
 export function NewServices() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [selectedService, setSelectedService] = useState<any>(null);
 
+  // Helper functions to access common properties
+  const getServiceTitle = (service: CombinedService): string => {
+    return service.title;
+  };
+
+  const getServiceTags = (service: CombinedService): string[] => {
+    if ('tags' in service) {
+      return service.tags;
+    }
+    // For EmergingTechService, create tags from category and features
+    return [service.category, ...service.features.slice(0, 3)];
+  };
+
+  const getServiceEstimatedDelivery = (service: CombinedService): string => {
+    if ('estimatedDelivery' in service) {
+      return service.estimatedDelivery;
+    }
+    return '4-6 weeks';
+  };
+
+  const getServiceSupportLevel = (service: CombinedService): string => {
+    if ('supportLevel' in service) {
+      return service.supportLevel;
+    }
+    return 'standard';
+  };
+
+  const getServiceMarketPrice = (service: CombinedService): string => {
+    if ('marketPrice' in service) {
+      return service.marketPrice;
+    }
+    return 'Contact for pricing';
+  };
+
   // Combine all services
-  const allServices = [
+  const allServices: CombinedService[] = [
     ...COMPREHENSIVE_SERVICES,
     ...ADVANCED_INNOVATIVE_SERVICES,
     ...EMERGING_TECH_SERVICES
@@ -21,9 +57,9 @@ export function NewServices() {
   
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const matchesSearch = getServiceTitle(service).toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
+                         getServiceTags(service).some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
 

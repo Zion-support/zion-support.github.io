@@ -1,7 +1,13 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { ArrowUp } from 'lucide-react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const footerSections = [
     {
@@ -265,7 +271,7 @@ export function Footer() {
         whileTap={{ scale: 0.9 }}
         aria-label="Scroll to top"
       >
-        <ArrowUpIcon className="h-6 w-6 mx-auto" />
+        <ArrowUp className="h-6 w-6 mx-auto" />
       </motion.button>
     </footer>
   );

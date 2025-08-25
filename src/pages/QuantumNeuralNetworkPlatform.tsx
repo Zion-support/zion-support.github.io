@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { 
   Brain, 
   Zap, 
@@ -27,7 +28,7 @@ import SEOHead from '../components/SEOHead';
 const QuantumNeuralNetworkPlatform: React.FC = () => {
   const features = [
     {
-      icon: CpuChipIcon,
+      icon: Cpu,
       title: "Quantum Neural Processing",
       description: "Advanced quantum algorithms for neural network optimization and training acceleration"
     },
@@ -133,7 +134,7 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
                 View Case Studies
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

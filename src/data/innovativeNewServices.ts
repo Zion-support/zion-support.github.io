@@ -15,6 +15,8 @@ export interface InnovativeNewService {
   estimatedDelivery: string;
   supportLevel: string;
   marketPrice: string;
+  roi: string;
+  innovationLevel: string;
   contactInfo: {
     phone: string;
     email: string;
@@ -77,6 +79,8 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
     estimatedDelivery: "8-12 weeks",
     supportLevel: "enterprise",
     marketPrice: "$4,999 - $15,000/month",
+    roi: "500-1000%",
+    innovationLevel: "Very High Innovation",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -99,38 +103,40 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
       "AI-powered route optimization",
       "Real-time safety monitoring",
       "Predictive maintenance",
-      "Traffic pattern analysis",
-      "Energy optimization",
-      "Regulatory compliance",
-      "Multi-vehicle coordination",
-      "Emergency response systems",
-      "Advanced analytics dashboard"
+      "Compliance management",
+      "Fleet analytics dashboard",
+      "Integration with existing systems",
+      "Scalable architecture",
+      "Advanced security protocols",
+      "24/7 monitoring support"
     ],
     benefits: [
-      "Reduce operational costs by 40%",
-      "Improve safety by 90%",
-      "Optimize fleet utilization by 60%",
-      "24/7 autonomous operation",
-      "Regulatory compliance automation"
+      "Reduce operational costs by 40-60%",
+      "Improve safety and compliance",
+      "Optimize fleet utilization",
+      "Real-time decision making",
+      "Scalable for any fleet size"
     ],
     useCases: [
-      "Autonomous delivery fleets",
-      "Self-driving taxi services",
-      "Autonomous logistics",
-      "Smart city transportation",
-      "Industrial automation"
+      "Logistics and transportation",
+      "Ride-sharing services",
+      "Delivery companies",
+      "Public transportation",
+      "Corporate fleets"
     ],
     targetAudience: [
       "Transportation companies",
       "Logistics providers",
-      "City governments",
-      "Manufacturing companies",
-      "Technology companies"
+      "Ride-sharing platforms",
+      "Delivery services",
+      "Corporate fleet managers"
     ],
-    tags: ["AI", "Autonomous Systems", "Fleet Management", "Safety", "Automation"],
-    estimatedDelivery: "6-8 weeks",
+    tags: ["AI", "Autonomous Systems", "Fleet Management", "Transportation", "Safety"],
+    estimatedDelivery: "6-10 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$2,999 - $8,999/month",
+    marketPrice: "$2,999 - $8,000/month",
+    roi: "300-500%",
+    innovationLevel: "High Innovation",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -185,6 +191,8 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$1,999 - $5,999/month",
+    roi: "400-600%",
+    innovationLevel: "High Innovation",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -239,6 +247,8 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,499 - $7,999/month",
+    roi: "350-500%",
+    innovationLevel: "High Innovation",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -293,6 +303,8 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
     estimatedDelivery: "8-12 weeks",
     supportLevel: "enterprise",
     marketPrice: "$3,999 - $12,999/month",
+    roi: "450-700%",
+    innovationLevel: "Very High Innovation",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -347,6 +359,8 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
     estimatedDelivery: "8-12 weeks",
     supportLevel: "enterprise",
     marketPrice: "$4,999 - $15,000/month",
+    roi: "400-600%",
+    innovationLevel: "High Innovation",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -401,6 +415,8 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
     estimatedDelivery: "8-10 weeks",
     supportLevel: "enterprise",
     marketPrice: "$3,499 - $9,999/month",
+    roi: "300-450%",
+    innovationLevel: "Medium Innovation",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -455,6 +471,8 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
     estimatedDelivery: "6-8 weeks",
     supportLevel: "premium",
     marketPrice: "$1,999 - $5,999/month",
+    roi: "250-400%",
+    innovationLevel: "Medium Innovation",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -509,6 +527,8 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
     estimatedDelivery: "10-12 weeks",
     supportLevel: "enterprise",
     marketPrice: "$4,999 - $15,000/month",
+    roi: "350-500%",
+    innovationLevel: "High Innovation",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -563,6 +583,8 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
     estimatedDelivery: "6-8 weeks",
     supportLevel: "premium",
     marketPrice: "$1,499 - $4,999/month",
+    roi: "200-350%",
+    innovationLevel: "Medium Innovation",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -617,6 +639,8 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
     estimatedDelivery: "6-8 weeks",
     supportLevel: "premium",
     marketPrice: "$2,499 - $7,999/month",
+    roi: "300-450%",
+    innovationLevel: "Medium Innovation",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -671,6 +695,8 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
     estimatedDelivery: "8-10 weeks",
     supportLevel: "enterprise",
     marketPrice: "$3,999 - $12,999/month",
+    roi: "400-600%",
+    innovationLevel: "High Innovation",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -725,6 +751,8 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
     estimatedDelivery: "6-8 weeks",
     supportLevel: "premium",
     marketPrice: "$1,999 - $5,999/month",
+    roi: "250-400%",
+    innovationLevel: "Medium Innovation",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -779,6 +807,8 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
     estimatedDelivery: "8-10 weeks",
     supportLevel: "premium",
     marketPrice: "$2,999 - $8,999/month",
+    roi: "300-450%",
+    innovationLevel: "Medium Innovation",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -833,6 +863,8 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
     estimatedDelivery: "6-8 weeks",
     supportLevel: "premium",
     marketPrice: "$1,999 - $5,999/month",
+    roi: "250-400%",
+    innovationLevel: "Medium Innovation",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
