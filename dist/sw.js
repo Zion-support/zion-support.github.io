@@ -1,16 +1,21 @@
 // Basic Service Worker for Zion Tech Group
+<<<<<<< HEAD
 const CACHE_NAME = 'zion-tech-group-v1.0.0';
 const STATIC_CACHE_NAME = 'zion-static-v1.0.0';
 const DYNAMIC_CACHE_NAME = 'zion-dynamic-v1.0.0';
+=======
+const CACHE_NAME = 'zion-tech-v1';
+const STATIC_CACHE = 'zion-static-v1';
+const DYNAMIC_CACHE = 'zion-dynamic-v1';
+>>>>>>> 8166e4d86173885c3ad451d279716a4c1c8c4172
 
 // Files to cache immediately
 const STATIC_FILES = [
   '/',
   '/index.html',
-  '/static/js/bundle.js',
-  '/static/css/main.css',
   '/manifest.json',
   '/favicon.ico',
+<<<<<<< HEAD
   '/offline.html'
 ];
 
@@ -19,6 +24,12 @@ const API_ROUTES = [
   '/api/services',
   '/api/contact',
   '/api/analytics'
+=======
+  '/css/main.css',
+  '/js/main.js',
+  '/images/zion-tech-group-logo.png',
+  '/images/zion-tech-group-og.jpg'
+>>>>>>> 8166e4d86173885c3ad451d279716a4c1c8c4172
 ];
 
 // Install event - cache static files
@@ -35,7 +46,11 @@ self.addEventListener('install', (event) => {
         return self.skipWaiting();
       })
       .catch((error) => {
+<<<<<<< HEAD
         console.error('Failed to cache static files:', error);
+=======
+        console.error('Error caching static files:', error);
+>>>>>>> 8166e4d86173885c3ad451d279716a4c1c8c4172
       })
   );
 });
@@ -48,8 +63,12 @@ self.addEventListener('activate', (event) => {
       .then((cacheNames) => {
         return Promise.all(
           cacheNames.map((cacheName) => {
+<<<<<<< HEAD
             if (cacheName !== STATIC_CACHE_NAME && 
                 cacheName !== DYNAMIC_CACHE_NAME) {
+=======
+            if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
+>>>>>>> 8166e4d86173885c3ad451d279716a4c1c8c4172
               console.log('Deleting old cache:', cacheName);
               return caches.delete(cacheName);
             }
@@ -74,12 +93,114 @@ self.addEventListener('fetch', (event) => {
   }
 
   // Handle different types of requests
+<<<<<<< HEAD
   if (isStaticFile(request)) {
     event.respondWith(handleStaticFile(request));
   } else if (isApiRequest(request)) {
     event.respondWith(handleApiRequest(request));
   } else {
     event.respondWith(handleDynamicRequest(request));
+=======
+  if (url.pathname === '/' || url.pathname === '/index.html') {
+    // Home page - serve from cache first, then network
+    event.respondWith(
+      caches.match(request)
+        .then((response) => {
+          if (response) {
+            // Return cached version and update in background
+            fetch(request)
+              .then((networkResponse) => {
+                caches.open(DYNAMIC_CACHE)
+                  .then((cache) => cache.put(request, networkResponse));
+              })
+              .catch(() => {
+                // Network failed, keep using cached version
+              });
+            return response;
+          }
+          
+          // Not in cache, fetch from network
+          return fetch(request)
+            .then((response) => {
+              if (response.status === 200) {
+                const responseClone = response.clone();
+                caches.open(DYNAMIC_CACHE)
+                  .then((cache) => cache.put(request, responseClone));
+              }
+              return response;
+            });
+        })
+    );
+  } else if (url.pathname.startsWith('/images/') || url.pathname.startsWith('/css/') || url.pathname.startsWith('/js/')) {
+    // Static assets - cache first strategy
+    event.respondWith(
+      caches.match(request)
+        .then((response) => {
+          if (response) {
+            return response;
+          }
+          
+          return fetch(request)
+            .then((response) => {
+              if (response.status === 200) {
+                const responseClone = response.clone();
+                caches.open(STATIC_CACHE)
+                  .then((cache) => cache.put(request, responseClone));
+              }
+              return response;
+            });
+        })
+    );
+  } else if (url.pathname.startsWith('/api/')) {
+    // API requests - network first strategy
+    event.respondWith(
+      fetch(request)
+        .then((response) => {
+          if (response.status === 200) {
+            const responseClone = response.clone();
+            caches.open(DYNAMIC_CACHE)
+              .then((cache) => cache.put(request, responseClone));
+          }
+          return response;
+        })
+        .catch(() => {
+          // Network failed, try cache
+          return caches.match(request)
+            .then((response) => {
+              if (response) {
+                return response;
+              }
+              
+              // Return offline page if nothing in cache
+              return caches.match('/offline.html');
+            });
+        })
+    );
+  } else {
+    // Other pages - network first with cache fallback
+    event.respondWith(
+      fetch(request)
+        .then((response) => {
+          if (response.status === 200) {
+            const responseClone = response.clone();
+            caches.open(DYNAMIC_CACHE)
+              .then((cache) => cache.put(request, responseClone));
+          }
+          return response;
+        })
+        .catch(() => {
+          return caches.match(request)
+            .then((response) => {
+              if (response) {
+                return response;
+              }
+              
+              // Return offline page if nothing in cache
+              return caches.match('/offline.html');
+            });
+        })
+    );
+>>>>>>> 8166e4d86173885c3ad451d279716a4c1c8c4172
   }
 });
 
@@ -230,6 +351,7 @@ async function doBackgroundSync() {
 
 // Push notification handling
 self.addEventListener('push', (event) => {
+<<<<<<< HEAD
   console.log('Push notification received:', event);
   
   const options = {
@@ -258,6 +380,37 @@ self.addEventListener('push', (event) => {
   event.waitUntil(
     self.registration.showNotification('Zion Tech Group', options)
   );
+=======
+  if (event.data) {
+    const data = event.data.json();
+    const options = {
+      body: data.body,
+      icon: '/images/zion-tech-group-logo.png',
+      badge: '/images/zion-tech-group-logo.png',
+      vibrate: [100, 50, 100],
+      data: {
+        dateOfArrival: Date.now(),
+        primaryKey: 1
+      },
+      actions: [
+        {
+          action: 'explore',
+          title: 'Explore',
+          icon: '/images/zion-tech-group-logo.png'
+        },
+        {
+          action: 'close',
+          title: 'Close',
+          icon: '/images/zion-tech-group-logo.png'
+        }
+      ]
+    };
+
+    event.waitUntil(
+      self.registration.showNotification(data.title, options)
+    );
+  }
+>>>>>>> 8166e4d86173885c3ad451d279716a4c1c8c4172
 });
 
 // Notification click handling
@@ -282,10 +435,14 @@ self.addEventListener('message', (event) => {
   }
   
   if (event.data && event.data.type === 'GET_VERSION') {
+<<<<<<< HEAD
     event.ports[0].postMessage({
       version: CACHE_NAME,
       timestamp: Date.now()
     });
+=======
+    event.ports[0].postMessage({ version: CACHE_NAME });
+>>>>>>> 8166e4d86173885c3ad451d279716a4c1c8c4172
   }
 });
 
