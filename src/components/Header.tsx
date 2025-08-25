@@ -1,32 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Globe, 
-  Users, 
-  Briefcase, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Brain, 
-  BarChart3, 
-  Code, 
-  Palette, 
-  Target,
-  Shield,
-  Heart,
-  Cpu,
-  Building,
-  Network,
-  Cloud,
-  Clock,
-  Rocket,
-  Eye,
-  DollarSign,
-  ShoppingCart
-} from 'lucide-react';
+import { Menu, X, ChevronDown, Globe, Users, Briefcase, Phone, Mail, MapPin, Brain, BarChart3, Code, Palette, Target, Shield, Heart, Cpu, Network, Cloud, Clock, Rocket, Eye, Building, DollarSign, ShoppingCart } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
 
 export function Header() {
@@ -49,8 +23,7 @@ export function Header() {
         { name: 'Cloud & DevOps', href: '/cloud-devops' },
         { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
         { name: 'Digital Transformation', href: '/digital-transformation' },
-        { name: 'Advanced Services 2025', href: '/advanced-innovative-services-2025', highlight: true },
-        { name: 'View All Services', href: '/services' }
+        { name: 'View All Services', href: '/services', highlight: true }
       ]
     },
     { 
@@ -191,8 +164,7 @@ export function Header() {
         { name: 'Blockchain Solutions', path: '/services/blockchain-solutions', description: 'Decentralized applications', icon: Code },
         { name: 'IoT Platforms', path: '/services/iot-platforms', description: 'Connected device management', icon: Network },
         { name: 'Quantum Computing', path: '/services/quantum-computing', description: 'Next-generation computing', icon: Cpu },
-        { name: 'AR/VR Solutions', path: '/services/ar-vr-solutions', description: 'Immersive experiences', icon: Eye },
-        { name: 'Advanced Services 2025', path: '/advanced-innovative-services-2025', description: 'Cutting-edge 2025 solutions', icon: Rocket }
+        { name: 'AR/VR Solutions', path: '/services/ar-vr-solutions', description: 'Immersive experiences', icon: Eye }
       ]
     },
     {
