@@ -1,5 +1,4 @@
 
-
 interface TableProps {
   children: React.ReactNode;
   className?: string;
@@ -25,7 +24,6 @@ interface TableHeadProps {
 
 interface TableCellProps {
   children: React.ReactNode;
-  className?: string;
 }
 
 export function Table({ children, className }: TableProps) {
@@ -70,9 +68,9 @@ export function TableHead({ children, className }: TableHeadProps) {
   );
 }
 
-export function TableCell({ children, className }: TableCellProps) {
+export function TableCell({ children }: TableCellProps) {
   return (
-    <td className={`px-4 py-3 text-zion-slate ${className || ''}`}>
+    <td className="px-4 py-3 text-zion-slate">
       {children}
     </td>
   );

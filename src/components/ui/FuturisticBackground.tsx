@@ -1,4 +1,3 @@
-import React, { useEffect, useRef } from 'react';
 
 interface FuturisticBackgroundProps {
   variant?: 'particles' | 'grid' | 'waves' | 'matrix';

@@ -1,60 +1,58 @@
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/Button';
-import { Input } from '@/components/ui/Input';
-import { Mail } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 
-export function FooterNewsletter() {
+export const FooterNewsletter: React.FC = () => {
   const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [message, setMessage] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email.trim()) return;
+    setIsSubmitting(true);
+    setMessage('');
 
-    setIsLoading(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubscribed(true);
-      setIsLoading(false);
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      setMessage('Thank you for subscribing! We\'ll keep you updated with the latest tech insights.');
       setEmail('');
-    }, 1000);
+    } catch (error) {
+      setMessage('Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
-  if (isSubscribed) {
-    return (
-      <div className="text-center p-4 bg-zion-purple/10 rounded-lg border border-zion-purple/20">
-        <p className="text-zion-cyan text-sm font-medium">
-          Thank you for subscribing! 🎉
-        </p>
-        <p className="text-zion-slate-light text-xs mt-1">
-          You'll receive our latest updates soon.
-        </p>
-      </div>
-    );
-  }
-
   return (
-    <form onSubmit={handleSubmit} className="space-y-3">
-      <div className="relative">
-        <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
+    <div className="space-y-4">
+      <h3 className="text-lg font-semibold text-white">Stay Updated</h3>
+      <p className="text-sm text-gray-300">
+        Get the latest insights on AI, cybersecurity, and tech innovation.
+      </p>
+      
+      <form onSubmit={handleSubmit} className="flex gap-2">
         <Input
           type="email"
           placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"
           required
+          className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 focus:bg-white/20"
         />
-      </div>
-      <Button
-        type="submit"
-        disabled={isLoading || !email.trim()}
-        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple disabled:opacity-50 disabled:cursor-not-allowed"
-      >
-        {isLoading ? 'Subscribing...' : 'Subscribe'}
-      </Button>
-    </form>
+        <Button 
+          type="submit" 
+          disabled={isSubmitting}
+          className="bg-blue-600 hover:bg-blue-700 text-white"
+        >
+          {isSubmitting ? 'Subscribing...' : 'Subscribe'}
+        </Button>
+      </form>
+      
+      {message && (
+        <p className={`text-sm ${message.includes('Thank you') ? 'text-green-400' : 'text-red-400'}`}>
+          {message}
+        </p>
+      )}
+    </div>
   );
-}
+};
