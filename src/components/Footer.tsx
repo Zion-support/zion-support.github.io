@@ -19,11 +19,12 @@ const Footer: React.FC = () => {
       title: "Services",
       links: [
         { name: "AI Solutions", href: "/ai-solutions" },
+        { name: "AI Autonomous Systems", href: "/ai-autonomous-systems-platform" },
+        { name: "Quantum Technology", href: "/quantum-technology" },
         { name: "Cybersecurity", href: "/cybersecurity" },
         { name: "Cloud & DevOps", href: "/cloud-devops" },
-        { name: "Data Analytics", href: "/data-analytics" },
-        { name: "Quantum Technology", href: "/quantum-technology" },
-        { name: "Enterprise Solutions", href: "/enterprise-solutions" }
+        { name: "Enterprise Solutions", href: "/enterprise-solutions" },
+        { name: "5G Solutions", href: "/5g-enterprise-solutions" }
       ]
     },
     {
@@ -43,7 +44,7 @@ const Footer: React.FC = () => {
         { name: "About Us", href: "/about" },
         { name: "Our Team", href: "/team" },
         { name: "Careers", href: "/careers" },
-        { name: "News & Blog", href: "/news" },
+        { name: "Blog", href: "/blog" },
         { name: "Case Studies", href: "/case-studies" },
         { name: "Partners", href: "/partners" }
       ]
@@ -52,11 +53,11 @@ const Footer: React.FC = () => {
       title: "Resources",
       links: [
         { name: "Documentation", href: "/docs" },
-        { name: "API Reference", href: "/api" },
         { name: "Help Center", href: "/help" },
+        { name: "Community", href: "/community" },
         { name: "Webinars", href: "/webinars" },
         { name: "White Papers", href: "/white-papers" },
-        { name: "Support", href: "/support" }
+        { name: "Marketplace", href: "/marketplace" }
       ]
     }
   ];
