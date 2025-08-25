@@ -886,12 +886,6 @@ const Home: React.FC = () => {
       </Suspense>
     </div>
   );
-<<<<<<< HEAD
 };
 
 export default Home;
-=======
-}
-
-export default Home;
->>>>>>> origin/main
