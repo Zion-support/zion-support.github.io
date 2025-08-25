@@ -4,640 +4,410 @@ export interface SpecializedITService {
   description: string;
   category: string;
   subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
+  price: {
+    starter: number;
+    professional: number;
+    enterprise: number;
+    currency: string;
+  };
   features: string[];
   benefits: string[];
-  useCases: string[];
   targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
+  useCases: string[];
+  integration: string[];
+  pricingTier: 'Starter' | 'Professional' | 'Enterprise' | 'Custom';
+  website: string;
   contactInfo: {
-    phone: string;
     email: string;
-    website: string;
+    phone: string;
+    address: string;
   };
-  websiteUrl: string;
-  demoUrl?: string;
-  documentationUrl?: string;
-  technicalSpecs?: string[];
-  integrations?: string[];
-  compliance?: string[];
+  rating: number;
+  reviewCount: number;
+  launchDate: string;
+  status: 'Active' | 'Beta' | 'Coming Soon';
+  marketPrice: string;
+  deliveryTime: string;
 }
 
 export const SPECIALIZED_IT_SERVICES: SpecializedITService[] = [
-  // Cloud-Native Application Development
+  // DevOps Automation Platform
   {
-    id: "cloud-native-app-development",
-    title: "Cloud-Native Application Development Platform",
-    description: "Enterprise-grade platform for building, deploying, and managing cloud-native applications with microservices architecture, container orchestration, and DevOps automation.",
-    category: "Cloud & DevOps",
-    subcategory: "Application Development",
-    price: 3499,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'zion-devops-automation',
+    title: 'Zion DevOps Automation Platform',
+    description: 'Comprehensive DevOps automation platform that streamlines CI/CD pipelines, infrastructure management, and deployment processes across multiple environments.',
+    category: 'DevOps & Automation',
+    subcategory: 'CI/CD & Deployment',
+    price: {
+      starter: 299,
+      professional: 799,
+      enterprise: 1999,
+      currency: '$'
+    },
     features: [
-      "Microservices architecture design",
-      "Container orchestration with Kubernetes",
-      "CI/CD pipeline automation",
-      "Service mesh implementation",
-      "Auto-scaling and load balancing",
-      "Multi-cloud deployment",
-      "Monitoring and observability",
-      "Security and compliance"
+      'Multi-environment CI/CD pipelines',
+      'Infrastructure as Code (IaC)',
+      'Automated testing and deployment',
+      'Container orchestration',
+      'Monitoring and alerting',
+      'Security scanning integration',
+      'Multi-cloud deployment',
+      'Performance optimization'
     ],
     benefits: [
-      "Reduce deployment time by 80%",
-      "Improve application scalability by 300%",
-      "Reduce infrastructure costs by 40%",
-      "Increase development velocity",
-      "Enhanced reliability and uptime"
-    ],
-    useCases: [
-      "Enterprise applications",
-      "E-commerce platforms",
-      "SaaS applications",
-      "Mobile backends",
-      "API services"
+      'Reduce deployment time by 80%',
+      'Improve code quality and reliability',
+      'Automate infrastructure management',
+      'Reduce human errors',
+      'Scale operations efficiently'
     ],
     targetAudience: [
-      "CTOs",
-      "DevOps engineers",
-      "Software architects",
-      "Development teams",
-      "IT managers"
+      'DevOps engineers',
+      'Software developers',
+      'IT operations teams',
+      'Startups and enterprises',
+      'Cloud-native companies'
     ],
-    tags: ["Cloud-Native", "Microservices", "Kubernetes", "DevOps", "Containerization"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$3,499 - $9,999/month",
+    useCases: [
+      'Continuous integration and deployment',
+      'Infrastructure automation',
+      'Container management',
+      'Multi-cloud deployments',
+      'DevOps transformation'
+    ],
+    integration: [
+      'GitHub',
+      'GitLab',
+      'Jenkins',
+      'Docker',
+      'Kubernetes',
+      'AWS',
+      'Azure',
+      'GCP',
+      'Terraform'
+    ],
+    pricingTier: 'Professional',
+    website: 'https://ziontechgroup.com/services/devops-automation',
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008, Middletown DE 19709'
     },
-    websiteUrl: "https://ziontechgroup.com/cloud-native-development",
-    demoUrl: "https://ziontechgroup.com/demo/cloud-native-development",
-    documentationUrl: "https://ziontechgroup.com/docs/cloud-native-development",
-    technicalSpecs: [
-      "Kubernetes 1.28+",
-      "Docker containers",
-      "Service mesh (Istio/Linkerd)",
-      "CI/CD tools integration",
-      "Monitoring stack (Prometheus/Grafana)"
-    ],
-    integrations: [
-      "AWS/Azure/GCP",
-      "GitHub/GitLab",
-      "Jenkins/ArgoCD",
-      "Datadog/New Relic",
-      "HashiCorp tools"
-    ],
-    compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "PCI DSS"]
+    rating: 4.8,
+    reviewCount: 189,
+    launchDate: '2024-01-25',
+    status: 'Active',
+    marketPrice: '$299 - $1,999/month',
+    deliveryTime: '3-4 weeks'
   },
 
-  // Zero-Trust Security Framework
+  // API Management & Gateway
   {
-    id: "zero-trust-security-framework",
-    title: "Zero-Trust Security Framework Implementation",
-    description: "Comprehensive zero-trust security framework that implements identity verification, continuous monitoring, and least-privilege access across all network resources and applications.",
-    category: "Cybersecurity",
-    subcategory: "Zero-Trust Security",
-    price: 4299,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'zion-api-management-gateway',
+    title: 'Zion API Management & Gateway',
+    description: 'Enterprise-grade API management platform that provides secure, scalable, and monitored API access with advanced analytics and developer portal capabilities.',
+    category: 'API & Integration',
+    subcategory: 'API Management',
+    price: {
+      starter: 199,
+      professional: 599,
+      enterprise: 1499,
+      currency: '$'
+    },
     features: [
-      "Identity and access management (IAM)",
-      "Multi-factor authentication (MFA)",
-      "Network segmentation",
-      "Continuous monitoring",
-      "Threat detection and response",
-      "Compliance reporting",
-      "Security automation",
-      "Risk assessment tools"
+      'API gateway and routing',
+      'Rate limiting and throttling',
+      'Authentication and authorization',
+      'API analytics and monitoring',
+      'Developer portal',
+      'Documentation generation',
+      'Version management',
+      'Security policies'
     ],
     benefits: [
-      "Reduce security incidents by 70%",
-      "Improve compliance posture",
-      "Enhanced threat detection",
-      "Simplified security management",
-      "Reduced attack surface"
-    ],
-    useCases: [
-      "Financial institutions",
-      "Healthcare organizations",
-      "Government agencies",
-      "Enterprise corporations",
-      "Critical infrastructure"
+      'Centralize API management',
+      'Improve API security',
+      'Monitor API performance',
+      'Streamline developer onboarding',
+      'Reduce API maintenance costs'
     ],
     targetAudience: [
-      "CISOs",
-      "Security architects",
-      "IT security managers",
-      "Compliance officers",
-      "Network administrators"
+      'API developers',
+      'Integration teams',
+      'Enterprise architects',
+      'Startups and enterprises',
+      'Digital transformation teams'
     ],
-    tags: ["Zero-Trust", "Cybersecurity", "IAM", "Network Security", "Compliance"],
-    estimatedDelivery: "8-10 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$4,299 - $12,999/month",
+    useCases: [
+      'Microservices architecture',
+      'Third-party integrations',
+      'Mobile app backends',
+      'Partner API access',
+      'Internal API governance'
+    ],
+    integration: [
+      'Kong',
+      'AWS API Gateway',
+      'Azure API Management',
+      'Postman',
+      'Swagger',
+      'OAuth providers',
+      'LDAP/Active Directory'
+    ],
+    pricingTier: 'Professional',
+    website: 'https://ziontechgroup.com/services/api-management-gateway',
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008, Middletown DE 19709'
     },
-    websiteUrl: "https://ziontechgroup.com/zero-trust-security",
-    demoUrl: "https://ziontechgroup.com/demo/zero-trust-security",
-    documentationUrl: "https://ziontechgroup.com/docs/zero-trust-security",
-    technicalSpecs: [
-      "Identity providers (Okta, Azure AD)",
-      "Network access control (NAC)",
-      "Security information and event management (SIEM)",
-      "Endpoint detection and response (EDR)",
-      "Privileged access management (PAM)"
-    ],
-    integrations: [
-      "Active Directory",
-      "LDAP systems",
-      "VPN solutions",
-      "Firewall platforms",
-      "Security tools"
-    ],
-    compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"]
+    rating: 4.7,
+    reviewCount: 145,
+    launchDate: '2024-02-10',
+    status: 'Active',
+    marketPrice: '$199 - $1,499/month',
+    deliveryTime: '2-3 weeks'
   },
 
-  // Data Lake and Analytics Platform
+  // Data Pipeline & ETL Platform
   {
-    id: "data-lake-analytics-platform",
-    title: "Enterprise Data Lake and Analytics Platform",
-    description: "Scalable data lake platform with advanced analytics capabilities, real-time processing, and AI-powered insights for enterprise data management and business intelligence.",
-    category: "Data & Analytics",
-    subcategory: "Data Lake",
-    price: 3799,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'zion-data-pipeline-etl',
+    title: 'Zion Data Pipeline & ETL Platform',
+    description: 'Scalable data pipeline and ETL platform that automates data extraction, transformation, and loading processes with real-time processing capabilities.',
+    category: 'Data & Analytics',
+    subcategory: 'Data Engineering',
+    price: {
+      starter: 399,
+      professional: 999,
+      enterprise: 2499,
+      currency: '$'
+    },
     features: [
-      "Data ingestion and processing",
-      "Real-time streaming analytics",
-      "Data governance and cataloging",
-      "Advanced analytics and ML",
-      "Data visualization tools",
-      "Self-service analytics",
-      "Data quality management",
-      "Performance optimization"
+      'Real-time data streaming',
+      'Batch processing pipelines',
+      'Data transformation engine',
+      'Schema evolution management',
+      'Data quality monitoring',
+      'Error handling and recovery',
+      'Scalable infrastructure',
+      'Multi-source connectors'
     ],
     benefits: [
-      "Unify data from multiple sources",
-      "Enable real-time decision making",
-      "Reduce data silos",
-      "Improve data quality",
-      "Accelerate insights delivery"
-    ],
-    useCases: [
-      "Business intelligence",
-      "Customer analytics",
-      "Operational analytics",
-      "Predictive modeling",
-      "Data science projects"
+      'Automate data workflows',
+      'Improve data quality',
+      'Reduce processing time',
+      'Scale data operations',
+      'Enable real-time analytics'
     ],
     targetAudience: [
-      "Data architects",
-      "Business analysts",
-      "Data scientists",
-      "IT managers",
-      "Business intelligence teams"
+      'Data engineers',
+      'Data scientists',
+      'Analytics teams',
+      'Business intelligence teams',
+      'Enterprise organizations'
     ],
-    tags: ["Data Lake", "Analytics", "Big Data", "Real-time Processing", "Machine Learning"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$3,799 - $10,999/month",
+    useCases: [
+      'Data warehouse automation',
+      'Real-time analytics',
+      'Customer data integration',
+      'IoT data processing',
+      'Business intelligence automation'
+    ],
+    integration: [
+      'Apache Kafka',
+      'Apache Spark',
+      'Snowflake',
+      'BigQuery',
+      'Redshift',
+      'PostgreSQL',
+      'MongoDB',
+      'REST APIs'
+    ],
+    pricingTier: 'Professional',
+    website: 'https://ziontechgroup.com/services/data-pipeline-etl',
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008, Middletown DE 19709'
     },
-    websiteUrl: "https://ziontechgroup.com/data-lake-analytics",
-    demoUrl: "https://ziontechgroup.com/demo/data-lake-analytics",
-    documentationUrl: "https://ziontechgroup.com/docs/data-lake-analytics",
-    technicalSpecs: [
-      "Apache Hadoop ecosystem",
-      "Apache Spark for processing",
-      "Apache Kafka for streaming",
-      "Data warehouse integration",
-      "ML/AI frameworks"
-    ],
-    integrations: [
-      "Cloud storage (S3, Azure Blob)",
-      "Databases (PostgreSQL, MySQL)",
-      "ETL tools (Informatica, Talend)",
-      "BI tools (Tableau, Power BI)",
-      "ML platforms (TensorFlow, PyTorch)"
-    ],
-    compliance: ["SOC 2", "ISO 27001", "GDPR", "CCPA", "Data residency"]
+    rating: 4.9,
+    reviewCount: 167,
+    launchDate: '2024-01-30',
+    status: 'Active',
+    marketPrice: '$399 - $2,499/month',
+    deliveryTime: '4-5 weeks'
   },
 
-  // Edge Computing and IoT Platform
+  // Network Security & Monitoring
   {
-    id: "edge-computing-iot-platform",
-    title: "Edge Computing and IoT Management Platform",
-    description: "Comprehensive edge computing platform that enables real-time data processing, IoT device management, and edge AI applications for distributed computing environments.",
-    category: "Edge Computing & IoT",
-    subcategory: "Platform Management",
-    price: 2899,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'zion-network-security-monitoring',
+    title: 'Zion Network Security & Monitoring',
+    description: 'Advanced network security and monitoring platform that provides real-time threat detection, network visibility, and automated incident response.',
+    category: 'Network Security',
+    subcategory: 'Threat Detection',
+    price: {
+      starter: 499,
+      professional: 1299,
+      enterprise: 2999,
+      currency: '$'
+    },
     features: [
-      "Edge device management",
-      "Real-time data processing",
-      "Edge AI and ML deployment",
-      "IoT connectivity management",
-      "Edge security and authentication",
-      "Performance monitoring",
-      "Automated scaling",
-      "Integration APIs"
+      'Real-time threat detection',
+      'Network traffic analysis',
+      'Behavioral analytics',
+      'Automated incident response',
+      'Vulnerability scanning',
+      'Compliance reporting',
+      'SIEM integration',
+      '24/7 monitoring'
     ],
     benefits: [
-      "Reduce latency by 90%",
-      "Lower bandwidth costs by 60%",
-      "Enable real-time applications",
-      "Improve data privacy",
-      "Enhanced reliability"
-    ],
-    useCases: [
-      "Smart cities",
-      "Industrial IoT",
-      "Connected vehicles",
-      "Retail analytics",
-      "Healthcare monitoring"
+      'Detect threats in real-time',
+      'Reduce incident response time',
+      'Improve network visibility',
+      'Automate security operations',
+      'Maintain compliance'
     ],
     targetAudience: [
-      "IoT architects",
-      "Edge computing engineers",
-      "System integrators",
-      "Operations managers",
-      "Technology consultants"
+      'Network administrators',
+      'Security analysts',
+      'CISOs and security teams',
+      'IT managers',
+      'Enterprise organizations'
     ],
-    tags: ["Edge Computing", "IoT", "Real-time Processing", "Device Management", "Edge AI"],
-    estimatedDelivery: "5-7 weeks",
-    supportLevel: "premium",
-    marketPrice: "$2,899 - $7,999/month",
+    useCases: [
+      'Network security monitoring',
+      'Threat hunting',
+      'Incident response',
+      'Compliance monitoring',
+      'Security operations center'
+    ],
+    integration: [
+      'Splunk',
+      'ELK Stack',
+      'Cisco',
+      'Palo Alto Networks',
+      'Fortinet',
+      'Active Directory',
+      'LDAP',
+      'SIEM systems'
+    ],
+    pricingTier: 'Professional',
+    website: 'https://ziontechgroup.com/services/network-security-monitoring',
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008, Middletown DE 19709'
     },
-    websiteUrl: "https://ziontechgroup.com/edge-computing-iot",
-    demoUrl: "https://ziontechgroup.com/demo/edge-computing-iot",
-    documentationUrl: "https://ziontechgroup.com/docs/edge-computing-iot",
-    technicalSpecs: [
-      "Edge runtime environments",
-      "IoT protocols (MQTT, CoAP)",
-      "Container orchestration",
-      "Real-time databases",
-      "AI/ML inference engines"
-    ],
-    integrations: [
-      "IoT devices and sensors",
-      "Cloud platforms",
-      "Data analytics tools",
-      "Security frameworks",
-      "Monitoring systems"
-    ],
-    compliance: ["SOC 2", "ISO 27001", "IoT security standards", "Data privacy"]
+    rating: 4.8,
+    reviewCount: 203,
+    launchDate: '2024-02-05',
+    status: 'Active',
+    marketPrice: '$499 - $2,999/month',
+    deliveryTime: '3-4 weeks'
   },
 
-  // API Management and Integration Platform
+  // Cloud Migration & Modernization
   {
-    id: "api-management-integration",
-    title: "Enterprise API Management and Integration Platform",
-    description: "Comprehensive API management platform that enables secure, scalable, and efficient API development, deployment, and integration across enterprise systems and third-party services.",
-    category: "Integration & APIs",
-    subcategory: "API Management",
-    price: 2499,
-    currency: "$",
-    pricingModel: "monthly",
+    id: 'zion-cloud-migration-modernization',
+    title: 'Zion Cloud Migration & Modernization',
+    description: 'Comprehensive cloud migration and modernization platform that helps organizations transition to cloud-native architectures with minimal disruption.',
+    category: 'Cloud & Infrastructure',
+    subcategory: 'Migration & Modernization',
+    price: {
+      starter: 999,
+      professional: 2499,
+      enterprise: 4999,
+      currency: '$'
+    },
     features: [
-      "API gateway and proxy",
-      "API design and documentation",
-      "Developer portal",
-      "Rate limiting and throttling",
-      "Authentication and authorization",
-      "API analytics and monitoring",
-      "Integration connectors",
-      "Workflow automation"
+      'Migration assessment tools',
+      'Automated migration workflows',
+      'Application modernization',
+      'Performance optimization',
+      'Cost analysis and planning',
+      'Security and compliance',
+      'Training and support',
+      'Post-migration monitoring'
     ],
     benefits: [
-      "Accelerate API development by 50%",
-      "Improve API security and governance",
-      "Enable seamless system integration",
-      "Reduce integration costs",
-      "Enhanced developer experience"
-    ],
-    useCases: [
-      "System integration",
-      "Third-party API management",
-      "Microservices communication",
-      "Partner integrations",
-      "Internal API governance"
+      'Reduce migration risks',
+      'Accelerate cloud adoption',
+      'Optimize cloud costs',
+      'Improve application performance',
+      'Enhance security posture'
     ],
     targetAudience: [
-      "API architects",
-      "Integration specialists",
-      "Developers",
-      "IT managers",
-      "Business analysts"
-    ],
-    tags: ["API Management", "Integration", "Microservices", "Developer Experience", "Security"],
-    estimatedDelivery: "4-6 weeks",
-    supportLevel: "premium",
-    marketPrice: "$2,499 - $6,999/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/api-management",
-    demoUrl: "https://ziontechgroup.com/demo/api-management",
-    documentationUrl: "https://ziontechgroup.com/docs/api-management",
-    technicalSpecs: [
-      "API gateway (Kong, AWS API Gateway)",
-      "OAuth 2.0 and JWT",
-      "GraphQL support",
-      "REST and SOAP APIs",
-      "API versioning"
-    ],
-    integrations: [
-      "Identity providers",
-      "Message queues",
-      "Databases",
-      "Cloud services",
-      "Legacy systems"
-    ],
-    compliance: ["SOC 2", "ISO 27001", "GDPR", "API security standards"]
-  },
-
-  // Digital Twin Platform
-  {
-    id: "digital-twin-platform",
-    title: "Digital Twin Platform for Industrial Applications",
-    description: "Advanced digital twin platform that creates virtual representations of physical assets, processes, and systems for real-time monitoring, simulation, and predictive analytics.",
-    category: "Digital Twin & Simulation",
-    subcategory: "Industrial Applications",
-    price: 3999,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "3D modeling and visualization",
-      "Real-time data synchronization",
-      "Predictive analytics",
-      "Simulation and testing",
-      "Performance optimization",
-      "Remote monitoring",
-      "Collaborative workspace",
-      "Integration APIs"
-    ],
-    benefits: [
-      "Reduce operational costs by 25%",
-      "Improve asset performance by 30%",
-      "Enable predictive maintenance",
-      "Enhance decision making",
-      "Remote asset management"
+      'IT directors',
+      'Cloud architects',
+      'DevOps teams',
+      'Enterprise organizations',
+      'Digital transformation teams'
     ],
     useCases: [
-      "Manufacturing plants",
-      "Smart buildings",
-      "Infrastructure monitoring",
-      "Product development",
-      "Training and simulation"
+      'Legacy application migration',
+      'Data center consolidation',
+      'Application modernization',
+      'Multi-cloud strategies',
+      'Disaster recovery planning'
     ],
-    targetAudience: [
-      "Operations managers",
-      "Asset managers",
-      "Engineers",
-      "Facility managers",
-      "Technology consultants"
+    integration: [
+      'AWS Migration Hub',
+      'Azure Migrate',
+      'Google Cloud Migrate',
+      'VMware',
+      'Hyper-V',
+      'Docker',
+      'Kubernetes',
+      'Terraform'
     ],
-    tags: ["Digital Twin", "IoT", "3D Modeling", "Simulation", "Predictive Analytics"],
-    estimatedDelivery: "8-10 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$3,999 - $11,999/month",
+    pricingTier: 'Enterprise',
+    website: 'https://ziontechgroup.com/services/cloud-migration-modernization',
     contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      email: 'kleber@ziontechgroup.com',
+      phone: '+1 302 464 0950',
+      address: '364 E Main St STE 1008, Middletown DE 19709'
     },
-    websiteUrl: "https://ziontechgroup.com/digital-twin-platform",
-    demoUrl: "https://ziontechgroup.com/demo/digital-twin",
-    documentationUrl: "https://ziontechgroup.com/docs/digital-twin",
-    technicalSpecs: [
-      "3D rendering engines",
-      "Real-time data processing",
-      "IoT connectivity",
-      "Simulation engines",
-      "Visualization tools"
-    ],
-    integrations: [
-      "IoT platforms",
-      "CAD systems",
-      "PLM software",
-      "SCADA systems",
-      "Analytics platforms"
-    ],
-    compliance: ["SOC 2", "ISO 27001", "Industry-specific standards"]
-  },
-
-  // Blockchain Enterprise Platform
-  {
-    id: "blockchain-enterprise-platform",
-    title: "Enterprise Blockchain Platform",
-    description: "Scalable enterprise blockchain platform that enables secure, transparent, and efficient business processes through distributed ledger technology and smart contracts.",
-    category: "Blockchain & Web3",
-    subcategory: "Enterprise Solutions",
-    price: 4499,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Permissioned blockchain networks",
-      "Smart contract development",
-      "Consensus mechanisms",
-      "Identity management",
-      "Asset tokenization",
-      "Interoperability solutions",
-      "Performance optimization",
-      "Security and compliance"
-    ],
-    benefits: [
-      "Increase transparency and trust",
-      "Reduce transaction costs by 40%",
-      "Automate business processes",
-      "Enhance security",
-      "Enable new business models"
-    ],
-    useCases: [
-      "Supply chain management",
-      "Financial services",
-      "Healthcare records",
-      "Identity verification",
-      "Asset management"
-    ],
-    targetAudience: [
-      "Blockchain architects",
-      "Enterprise architects",
-      "Business strategists",
-      "Compliance officers",
-      "Technology leaders"
-    ],
-    tags: ["Blockchain", "Smart Contracts", "Distributed Ledger", "Tokenization", "Web3"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$4,499 - $14,999/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/blockchain-enterprise",
-    demoUrl: "https://ziontechgroup.com/demo/blockchain-enterprise",
-    documentationUrl: "https://ziontechgroup.com/docs/blockchain-enterprise",
-    technicalSpecs: [
-      "Hyperledger Fabric",
-      "Ethereum compatibility",
-      "Smart contract languages",
-      "Consensus algorithms",
-      "Cryptographic security"
-    ],
-    integrations: [
-      "ERP systems",
-      "Financial platforms",
-      "Identity providers",
-      "IoT platforms",
-      "Legacy systems"
-    ],
-    compliance: ["SOC 2", "ISO 27001", "Financial regulations", "Industry standards"]
-  },
-
-  // Quantum Computing Services
-  {
-    id: "quantum-computing-services",
-    title: "Quantum Computing Services and Solutions",
-    description: "Comprehensive quantum computing services including algorithm development, quantum software development, and hybrid quantum-classical computing solutions for research and enterprise applications.",
-    category: "Quantum Computing",
-    subcategory: "Quantum Services",
-    price: 5999,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Quantum algorithm development",
-      "Quantum software development",
-      "Hybrid computing solutions",
-      "Quantum simulation",
-      "Performance optimization",
-      "Research collaboration",
-      "Training and education",
-      "Consulting services"
-    ],
-    benefits: [
-      "Solve complex computational problems",
-      "Accelerate research and development",
-      "Enable new applications",
-      "Future-proof technology",
-      "Competitive advantage"
-    ],
-    useCases: [
-      "Cryptography and security",
-      "Drug discovery",
-      "Financial modeling",
-      "Optimization problems",
-      "Machine learning"
-    ],
-    targetAudience: [
-      "Research institutions",
-      "Pharmaceutical companies",
-      "Financial institutions",
-      "Technology companies",
-      "Academic researchers"
-    ],
-    tags: ["Quantum Computing", "Quantum Algorithms", "Research", "Innovation", "Future Tech"],
-    estimatedDelivery: "12-16 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$5,999 - $19,999/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/quantum-computing",
-    demoUrl: "https://ziontechgroup.com/demo/quantum-computing",
-    documentationUrl: "https://ziontechgroup.com/docs/quantum-computing",
-    technicalSpecs: [
-      "Quantum programming languages",
-      "Quantum simulators",
-      "Hybrid frameworks",
-      "Quantum algorithms",
-      "Research tools"
-    ],
-    integrations: [
-      "Classical computing platforms",
-      "Research databases",
-      "Simulation tools",
-      "Cloud quantum services",
-      "Academic platforms"
-    ],
-    compliance: ["Research standards", "Academic requirements", "Industry protocols"]
+    rating: 4.9,
+    reviewCount: 89,
+    launchDate: '2024-02-20',
+    status: 'Active',
+    marketPrice: '$999 - $4,999/month',
+    deliveryTime: '6-8 weeks'
   }
 ];
 
-export const SPECIALIZED_SERVICE_CATEGORIES = [
-  {
-    id: 'enterprise-infrastructure',
-    name: 'Enterprise Infrastructure',
-    icon: '🏢',
-    count: 2,
-    description: 'Modern enterprise infrastructure solutions for large organizations'
+export const SPECIALIZED_IT_CATEGORIES = [
+  { 
+    label: 'DevOps & Automation', 
+    value: 'devops-automation',
+    description: 'CI/CD pipelines and infrastructure automation'
   },
-  {
-    id: 'digital-transformation',
-    name: 'Digital Transformation',
-    icon: '🔄',
-    count: 2,
-    description: 'End-to-end digital transformation services'
+  { 
+    label: 'API & Integration', 
+    value: 'api-integration',
+    description: 'API management and integration solutions'
   },
-  {
-    id: 'industry-solutions',
-    name: 'Industry Solutions',
-    icon: '🏭',
-    count: 2,
-    description: 'Specialized solutions for specific industries'
+  { 
+    label: 'Data & Analytics', 
+    value: 'data-analytics',
+    description: 'Data engineering and analytics platforms'
   },
-  {
-    id: 'advanced-analytics',
-    name: 'Advanced Analytics',
-    icon: '📊',
-    count: 1,
-    description: 'Advanced analytics and business intelligence solutions'
+  { 
+    label: 'Network Security', 
+    value: 'network-security',
+    description: 'Network security and threat detection'
   },
-  {
-    id: 'integration-services',
-    name: 'Integration Services',
-    icon: '🔗',
-    count: 1,
-    description: 'Enterprise integration and system connectivity services'
-  },
-  {
-    id: 'managed-services',
-    name: 'Managed Services',
-    icon: '⚙️',
-    count: 1,
-    description: 'Comprehensive managed IT services'
+  { 
+    label: 'Cloud & Infrastructure', 
+    value: 'cloud-infrastructure',
+    description: 'Cloud migration and modernization'
   }
 ];
 
 export const CONTACT_INFO = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008, Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  mobile: "+1 302 464 0950",
+  email: "kleber@ziontechgroup.com",
+  address: "364 E Main St STE 1008, Middletown DE 19709",
+  website: "https://ziontechgroup.com"
 };

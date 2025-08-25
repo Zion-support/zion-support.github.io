@@ -1,37 +1,38 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ADVANCED_MICRO_SAAS_SERVICES } from '../data/advancedMicroSaasServices';
+import { INNOVATIVE_MICRO_SAAS_SERVICES } from '../data/innovativeMicroSaasServices';
 import { SPECIALIZED_IT_SERVICES } from '../data/specializedITServices';
 
 interface Service {
   id: string;
-  name?: string;
-  title?: string;
+  title: string;
   description: string;
   category: string;
   subcategory: string;
-  price: number | {
-    monthly: number;
-    yearly: number;
+  price: {
+    starter: number;
+    professional: number;
     enterprise: number;
-    oneTime: number;
     currency: string;
   };
-  pricingModel?: string;
   features: string[];
   benefits: string[];
-  tags?: string[];
-  aiScore?: number;
-  rating?: number;
-  reviewCount?: number;
-  featured?: boolean;
-  marketPrice: string;
+  targetAudience: string[];
+  useCases: string[];
+  integration: string[];
+  pricingTier: 'Starter' | 'Professional' | 'Enterprise' | 'Custom';
+  website: string;
   contactInfo: {
-    phone?: string;
     email: string;
-    website?: string;
-    address?: string;
+    phone: string;
+    address: string;
   };
+  rating: number;
+  reviewCount: number;
+  launchDate: string;
+  status: 'Active' | 'Beta' | 'Coming Soon';
+  marketPrice: string;
+  deliveryTime: string;
 }
 
 export const AdvancedServicesShowcase: React.FC = () => {
@@ -42,7 +43,7 @@ export const AdvancedServicesShowcase: React.FC = () => {
 
   // Combine all services
   const allServices: Service[] = [
-    ...ADVANCED_MICRO_SAAS_SERVICES,
+    ...INNOVATIVE_MICRO_SAAS_SERVICES,
     ...SPECIALIZED_IT_SERVICES
   ];
 
@@ -55,18 +56,14 @@ export const AdvancedServicesShowcase: React.FC = () => {
       selectedCategory === 'All' || service.category === selectedCategory
     )
     .filter(service =>
-      service.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.tags?.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+      service.features.some(feature => feature.toLowerCase().includes(searchTerm.toLowerCase()))
     )
     .sort((a, b) => {
-      if (sortBy === 'price') {
-        const priceA = typeof a.price === 'number' ? a.price : (a.price as any).monthly;
-        const priceB = typeof b.price === 'number' ? b.price : (b.price as any).monthly;
-        return priceA - priceB;
-      }
-      if (sortBy === 'rating') return (b.rating || 0) - (a.rating || 0);
-      return (b.aiScore || 0) - (a.aiScore || 0);
+      if (sortBy === 'price') return a.price.starter - b.price.starter;
+      if (sortBy === 'rating') return b.rating - a.rating;
+      return 0; // Default sort
     });
 
   const containerVariants = {
@@ -219,9 +216,9 @@ export const AdvancedServicesShowcase: React.FC = () => {
                 <div className="mb-6">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
-                                              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-                          {service.name || service.title}
-                        </h3>
+                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+                        {service.title}
+                      </h3>
                       <div className="flex items-center gap-2 mb-3">
                         <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full border border-cyan-500/30">
                           {service.category}
@@ -231,9 +228,9 @@ export const AdvancedServicesShowcase: React.FC = () => {
                         </span>
                       </div>
                     </div>
-                    {service.featured && (
-                      <div className="px-2 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs rounded-full font-medium">
-                        ⭐ Featured
+                    {service.status === 'Active' && (
+                      <div className="px-2 py-1 bg-gradient-to-r from-green-500 to-green-600 text-white text-xs rounded-full font-medium">
+                        ✓ Active
                       </div>
                     )}
                   </div>
@@ -242,28 +239,23 @@ export const AdvancedServicesShowcase: React.FC = () => {
                     {service.description}
                   </p>
 
-                  {/* AI Score & Rating */}
+                  {/* Rating & Status */}
                   <div className="flex items-center gap-4 mb-4">
-                    {service.aiScore && (
-                      <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-white text-xs font-bold">
-                          {service.aiScore}
-                        </div>
-                        <span className="text-xs text-gray-400">AI Score</span>
-                      </div>
-                    )}
                     {service.rating && (
                       <div className="flex items-center gap-2">
                         <div className="flex items-center gap-1">
                           {[...Array(5)].map((_, i) => (
                             <span key={i} className="text-yellow-400">
-                              {i < Math.floor(service.rating!) ? '★' : '☆'}
+                              {i < Math.floor(service.rating) ? '★' : '☆'}
                             </span>
                           ))}
                         </div>
                         <span className="text-xs text-gray-400">({service.reviewCount} reviews)</span>
                       </div>
                     )}
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs text-gray-400">Status: {service.status}</span>
+                    </div>
                   </div>
                 </div>
 
@@ -290,9 +282,9 @@ export const AdvancedServicesShowcase: React.FC = () => {
                   <div className="flex items-center justify-between mb-4">
                     <div>
                       <div className="text-2xl font-bold text-white">
-                        {typeof service.price === 'number' ? service.price : (service.price as any).monthly}
+                        ${service.price.starter}
                         <span className="text-sm text-gray-400 font-normal ml-1">
-                          /{service.pricingModel === 'per-user' ? 'user' : service.pricingModel === 'per-project' ? 'project' : service.pricingModel}
+                          /month
                         </span>
                       </div>
                       <div className="text-xs text-gray-500">{service.marketPrice}</div>
@@ -306,28 +298,26 @@ export const AdvancedServicesShowcase: React.FC = () => {
                   <div className="text-xs text-gray-400 space-y-1">
                     <div>📱 {service.contactInfo.phone}</div>
                     <div>✉️ {service.contactInfo.email}</div>
-                    <div>🌐 <a href={service.contactInfo.website} className="text-cyan-400 hover:underline">Visit Website</a></div>
+                    <div>🌐 <a href={service.website} className="text-cyan-400 hover:underline">Visit Website</a></div>
                   </div>
                 </div>
 
-                                  {/* Tags */}
-                  {service.tags && service.tags.length > 0 && (
-                    <div className="mt-4 flex flex-wrap gap-2">
-                      {service.tags.slice(0, 4).map((tag, index) => (
-                        <span
-                          key={index}
-                          className="px-2 py-1 bg-gray-800/50 text-gray-300 text-xs rounded-full border border-gray-600/50"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                      {service.tags.length > 4 && (
-                        <span className="px-2 py-1 bg-gray-800/50 text-gray-500 text-xs rounded-full">
-                          +{service.tags.length - 4}
-                        </span>
-                      )}
-                    </div>
+                {/* Target Audience */}
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {service.targetAudience.slice(0, 4).map((audience, index) => (
+                    <span
+                      key={index}
+                      className="px-2 py-1 bg-gray-800/50 text-gray-300 text-xs rounded-full border border-gray-600/50"
+                    >
+                      {audience}
+                    </span>
+                  ))}
+                  {service.targetAudience.length > 4 && (
+                    <span className="px-2 py-1 bg-gray-800/50 text-gray-500 text-xs rounded-full">
+                      +{service.targetAudience.length - 4}
+                    </span>
                   )}
+                </div>
               </motion.div>
             ))}
           </AnimatePresence>
