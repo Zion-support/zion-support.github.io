@@ -7,11 +7,10 @@ import {
   ShieldCheck, Globe, Target, Users, Award, Rocket
 } from 'lucide-react';
 import Button from '../components/ui/Button';
-import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029';
+import UltraFuturisticBackground2028 from '../components/ui/UltraFuturisticBackground2028';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
-import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisticNavigation2029V2';
-import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2';
+import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
 import EnhancedServiceShowcase from '../components/sections/EnhancedServiceShowcase';
 import Enhanced2026ServicesShowcase from '../components/sections/Enhanced2026ServicesShowcase';
 import Revolutionary2026ServiceShowcase from '../components/sections/Revolutionary2026ServiceShowcase';
@@ -72,15 +71,6 @@ import { revolutionary2027ITServices } from '../data/revolutionary-2027-it-servi
 import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-micro-saas';
 import { futuristic2028Services } from '../data/2028-futuristic-innovations';
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
-import { futuristicAIServices2029 } from '../data/2029-futuristic-ai-services';
-import { emergingTechServices2029 } from '../data/2029-emerging-tech-services';
-import { enterpriseITServices2029 } from '../data/2029-enterprise-it-services';
-import { innovativeMicroSaasServices2029 } from '../data/2029-innovative-micro-saas';
-import { innovativeMicroSaasServices2029V2 } from '../data/2029-innovative-micro-saas-v2';
-import { emergingTechServices2029V2 } from '../data/2029-emerging-tech-services-v2';
-import { enterpriseITServices2029V2 } from '../data/2029-enterprise-it-services-v2';
-import { spaceMetaverseServices2029 } from '../data/2029-space-metaverse-services';
-import { researchDevelopmentServices2029 } from '../data/2029-research-development-services';
 
 export default function HomePage() {
   const heroStats = [
@@ -334,9 +324,9 @@ export default function HomePage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-              <UltraFuturisticBackground2029>
+      <UltraFuturisticBackground2028>
         {/* Ultra Advanced Navigation */}
-        <UltraFuturisticNavigation2029V2 />
+        <UltraFuturisticNavigation2028 />
 
       {/* Enhanced Service Highlights Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -587,10 +577,7 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-                              </UltraFuturisticBackground2029>
-      
-      {/* Footer */}
-              <UltraFuturisticFooter2029V2 />
+              </UltraFuturisticBackground2028>
     </>
   );
 }
