@@ -2181,3 +2181,41 @@ tailwind.config.ts
 [2025-08-25 23:36:27] Processing unmerged file: tailwind.config.ts
 [2025-08-25 23:36:27] File exists in HEAD, keeping it
 [2025-08-25 23:36:27] Still have unmerged paths, attempting additional resolution...
+[main 6385eadae16] Merge PR #6580: cursor/enhance-app-with-new-services-and-futuristic-design-a2e5 (advanced conflict resolution)
+[2025-08-25 23:36:28] ✓ Advanced conflict resolution successful for PR #6580
+[2025-08-25 23:36:28] ✓ PR #6580 processed successfully
+==========================================
+
+
+==========================================
+[2025-08-25 23:36:28] Processing PR #6577 from branch: cursor/expand-services-and-deploy-updates-2e79
+==========================================
+[2025-08-25 23:36:28] Processing PR #6577 from branch: cursor/expand-services-and-deploy-updates-2e79
+[2025-08-25 23:36:29] Attempting regular merge...
+Auto-merging package-lock.json
+CONFLICT (content): Merge conflict in package-lock.json
+Auto-merging src/App.tsx
+CONFLICT (content): Merge conflict in src/App.tsx
+Auto-merging src/components/CategoriesSection.tsx
+CONFLICT (content): Merge conflict in src/components/CategoriesSection.tsx
+Auto-merging src/data/expandedServices.ts
+CONFLICT (add/add): Merge conflict in src/data/expandedServices.ts
+Auto-merging src/pages/AIServicesPage.tsx
+CONFLICT (add/add): Merge conflict in src/pages/AIServicesPage.tsx
+Auto-merging src/pages/CybersecurityServicesPage.tsx
+CONFLICT (add/add): Merge conflict in src/pages/CybersecurityServicesPage.tsx
+Auto-merging src/pages/ExpandedServicesPage.tsx
+CONFLICT (add/add): Merge conflict in src/pages/ExpandedServicesPage.tsx
+Automatic merge failed; fix conflicts and then commit the result.
+[2025-08-25 23:36:29] ✗ Merge failed for PR #6577, attempting advanced conflict resolution...
+[2025-08-25 23:36:29] Resolving complex conflicts for PR #6577 (cursor/expand-services-and-deploy-updates-2e79)...
+[2025-08-25 23:36:29] Found unmerged files: package-lock.json
+src/App.tsx
+src/components/CategoriesSection.tsx
+[2025-08-25 23:36:29] Processing unmerged file: package-lock.json
+[2025-08-25 23:36:29] File exists in HEAD, keeping it
+[2025-08-25 23:36:29] Processing unmerged file: src/App.tsx
+[2025-08-25 23:36:29] File exists in HEAD, keeping it
+[2025-08-25 23:36:30] Processing unmerged file: src/components/CategoriesSection.tsx
+[2025-08-25 23:36:30] File exists in HEAD, keeping it
+[2025-08-25 23:36:30] Still have unmerged paths, attempting additional resolution...

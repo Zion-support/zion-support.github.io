@@ -260,6 +260,7 @@ const specialServices = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     title: "Comprehensive Services",
     link: "/comprehensive-services"
 <<<<<<< HEAD
@@ -271,10 +272,17 @@ const specialServices = [
   {
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-7440
+=======
+    title: "Enterprise Solutions",
+    link: "/expanded-services"
+  },
+  {
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2e79
     title: "AI Services",
     link: "/ai-services"
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     title: "Cybersecurity Services",
@@ -722,6 +730,10 @@ const advancedCategories = [
     title: "Services Comparison",
     link: "/services-comparison"
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e6db
+=======
+    title: "Cybersecurity",
+    link: "/cybersecurity"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-2e79
   }
 ];
 
