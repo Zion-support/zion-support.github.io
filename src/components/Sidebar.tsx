@@ -166,6 +166,14 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         { name: 'Cookie Policy', path: '/cookies', icon: Cookie },
         { name: 'Dispute Management', path: '/dispute-management', icon: Gavel }
       ]
+    },
+    {
+      title: 'Accessibility',
+      items: [
+        { name: 'Accessibility Auditor', path: '/accessibility-auditor', icon: Shield },
+        { name: 'WCAG Compliance', path: '/accessibility-auditor', icon: Shield },
+        { name: 'Mobile Accessibility', path: '/accessibility-auditor', icon: Shield }
+      ]
     }
   ];
 

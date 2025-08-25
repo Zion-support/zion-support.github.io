@@ -57,6 +57,8 @@ const AIPoweredITAssetManagement = lazy(() => import('./pages/AIPoweredITAssetMa
 const SOC2ComplianceAutomation = lazy(() => import('./pages/SOC2ComplianceAutomation'));
 const AIAutonomousResearchAssistant = lazy(() => import('./pages/AIAutonomousResearchAssistant'));
 const FiveGEnterpriseSolutions = lazy(() => import('./pages/5GEnterpriseSolutions'));
+const AccessibilityAuditor = lazy(() => import('./pages/AccessibilityAuditor'));
+const AdvancedCybersecuritySuite = lazy(() => import('./pages/AdvancedCybersecuritySuite'));
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 
@@ -163,6 +165,8 @@ const App = () => {
                       <Route path="/soc2-compliance-automation" element={<SOC2ComplianceAutomation />} />
                       <Route path="/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
                       <Route path="/5g-enterprise-solutions" element={<FiveGEnterpriseSolutions />} />
+                      <Route path="/accessibility-auditor" element={<AccessibilityAuditor />} />
+                      <Route path="/advanced-cybersecurity-suite" element={<AdvancedCybersecuritySuite />} />
                       <Route path="/case-studies" element={<CaseStudies />} />
                       <Route path="/help" element={<HelpCenter />} />
                       
