@@ -113,6 +113,7 @@ const ContactPage = React.lazy(() => import('./pages/Contact'));
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 <<<<<<< HEAD
+<<<<<<< HEAD
 const AboutPage = React.lazy(() => import('./pages/About'));
 const CareersPage = React.lazy(() => import('./pages/Careers'));
 const SitemapPage = React.lazy(() => import('./pages/Sitemap'));
@@ -129,6 +130,13 @@ const AccessibilityPage = React.lazy(() => import('./pages/Accessibility'));
 =======
 const MicroSaasServicesPage = React.lazy(() => import('./pages/MicroSaasServicesPage'));
 >>>>>>> main
+=======
+const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
+const BlockchainServicesPage = React.lazy(() => import('./pages/BlockchainServicesPage'));
+const IoTServicesPage = React.lazy(() => import('./pages/IoTServicesPage'));
+const CybersecurityServicesPage = React.lazy(() => import('./pages/CybersecurityServicesPage'));
+const ServicesOverviewPage = React.lazy(() => import('./pages/ServicesOverviewPage'));
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7440
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -138,8 +146,16 @@ const baseRoutes = [
   { path: '/talent', element: <TalentDirectory /> },
   { path: '/talents', element: <TalentsPage /> },
   { path: '/services', element: <ServicesPage /> },
+<<<<<<< HEAD
   { path: '/micro-saas-services', element: <MicroSaasServicesPage /> },
+=======
+  { path: '/services-overview', element: <ServicesOverviewPage /> },
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7440
   { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
+  { path: '/ai-services', element: <AIServicesPage /> },
+  { path: '/blockchain-services', element: <BlockchainServicesPage /> },
+  { path: '/iot-services', element: <IoTServicesPage /> },
+  { path: '/cybersecurity-services', element: <CybersecurityServicesPage /> },
   { path: '/categories', element: <Categories /> },
   { path: '/equipment', element: <EquipmentPage /> },
   { path: '/equipment/:id', element: <EquipmentDetail /> },

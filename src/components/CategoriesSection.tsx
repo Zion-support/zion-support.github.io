@@ -134,6 +134,7 @@ const specialServices = [
   {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     title: "Comprehensive Services",
     link: "/comprehensive-services"
 =======
@@ -142,10 +143,13 @@ const specialServices = [
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-ae1c
   },
   {
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7440
     title: "AI Services",
     link: "/ai-services"
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
     title: "Cybersecurity Services",
     link: "/cybersecurity-services"
@@ -173,6 +177,18 @@ const specialServices = [
     title: "Comprehensive Services",
     link: "/comprehensive-services"
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-ae1c
+=======
+    title: "Blockchain Solutions",
+    link: "/blockchain-services"
+  },
+  {
+    title: "IoT Platform",
+    link: "/iot-services"
+  },
+  {
+    title: "Cybersecurity",
+    link: "/cybersecurity-services"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7440
   }
 ];
 
