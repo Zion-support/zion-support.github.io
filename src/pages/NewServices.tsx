@@ -23,7 +23,7 @@ export function NewServices() {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
+                         ((service as any).tags && (service as any).tags.some((tag: string) => tag.toLowerCase().includes(searchTerm.toLowerCase())));
     return matchesCategory && matchesSearch;
   });
 
@@ -246,7 +246,7 @@ export function NewServices() {
                 <div className="border-t border-zion-cyan/20 pt-4">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-zion-slate-light">
-                      Delivery: {service.estimatedDelivery}
+                      Delivery: {(service as any).estimatedDelivery || "TBD"}
                     </span>
                     <span className="text-zion-cyan font-medium">
                       {service.supportLevel} support
@@ -350,7 +350,7 @@ export function NewServices() {
                 <div className="border-t border-zion-cyan/20 pt-4">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-zion-slate-light">
-                      Delivery: {service.estimatedDelivery}
+                      Delivery: {(service as any).estimatedDelivery || "TBD"}
                     </span>
                     <span className="text-zion-cyan font-medium">
                       {service.supportLevel} support
