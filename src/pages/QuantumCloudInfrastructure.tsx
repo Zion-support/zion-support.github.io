@@ -2,11 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
-  BarChart3, 
-  TrendingUp, 
+  Zap, 
   Target, 
+  TrendingUp, 
   Shield, 
   Users, 
+  BarChart3, 
   Clock,
   CheckCircle,
   ArrowRight,
@@ -27,93 +28,93 @@ import {
   Settings,
   Cloud,
   Server,
-  PieChart,
-  LineChart,
-  Activity,
-  Zap
+  Gauge,
+  CpuIcon,
+  Atom,
+  TestTube
 } from 'lucide-react';
 
-const AIBusinessIntelligence = () => {
-  const biFeatures = [
+const QuantumCloudInfrastructure = () => {
+  const quantumFeatures = [
     {
-      icon: Brain,
-      title: "AI-Powered Analytics",
-      description: "Advanced machine learning algorithms that automatically identify patterns, trends, and insights in your data"
+      icon: Atom,
+      title: "Quantum Computing Power",
+      description: "Access to quantum processors and quantum simulators for complex computational tasks"
     },
     {
-      icon: BarChart3,
-      title: "Real-Time Dashboards",
-      description: "Live, interactive dashboards that provide instant visibility into business performance and KPIs"
-    },
-    {
-      icon: TrendingUp,
-      title: "Predictive Analytics",
-      description: "Forecast future trends, customer behavior, and business outcomes with high accuracy"
-    },
-    {
-      icon: Target,
-      title: "Goal Tracking & Optimization",
-      description: "Intelligent goal setting and automated optimization recommendations based on data analysis"
-    },
-    {
-      icon: Users,
-      title: "Customer Intelligence",
-      description: "Deep insights into customer behavior, preferences, and lifetime value for targeted strategies"
+      icon: Cloud,
+      title: "Hybrid Quantum-Classical",
+      description: "Seamless integration between quantum and classical computing resources"
     },
     {
       icon: Zap,
-      title: "Automated Reporting",
-      description: "AI-generated reports and insights delivered automatically to stakeholders across your organization"
+      title: "Quantum Speedup",
+      description: "Exponential speedup for specific algorithms and computational problems"
+    },
+    {
+      icon: Shield,
+      title: "Quantum-Safe Security",
+      description: "Post-quantum cryptography and quantum-resistant security protocols"
+    },
+    {
+      icon: Network,
+      title: "Quantum Networking",
+      description: "Quantum entanglement-based networking for ultra-secure communications"
+    },
+    {
+      icon: Database,
+      title: "Quantum Storage",
+      description: "Quantum memory and storage systems for quantum information processing"
     }
   ];
 
-  const biModules = [
+  const useCases = [
     {
-      title: "Financial Analytics",
-      description: "Comprehensive financial reporting, budgeting, and forecasting with AI-driven insights",
+      title: "Financial Modeling",
+      description: "Quantum algorithms for portfolio optimization, risk assessment, and trading strategies",
       icon: TrendingUp,
-      features: ["Revenue analysis", "Cost optimization", "Profit forecasting", "Financial modeling"]
+      applications: ["Portfolio optimization", "Risk modeling", "Option pricing", "Market simulation"]
     },
     {
-      title: "Sales Intelligence",
-      description: "Advanced sales analytics and pipeline management with predictive lead scoring",
-      icon: Target,
-      features: ["Lead scoring", "Sales forecasting", "Pipeline analysis", "Performance tracking"]
+      title: "Drug Discovery",
+      description: "Quantum chemistry simulations for molecular modeling and drug development",
+      icon: TestTube,
+      applications: ["Molecular simulation", "Protein folding", "Drug interaction", "Chemical modeling"]
     },
     {
-      title: "Marketing Analytics",
-      description: "Campaign performance tracking and ROI optimization across all marketing channels",
-      icon: BarChart3,
-      features: ["Campaign tracking", "ROI analysis", "Customer segmentation", "Channel optimization"]
+      title: "Machine Learning",
+      description: "Quantum machine learning algorithms for pattern recognition and optimization",
+      icon: Brain,
+      applications: ["Quantum neural networks", "Feature selection", "Optimization", "Classification"]
     },
     {
-      title: "Operational Intelligence",
-      description: "Real-time monitoring and optimization of business operations and processes",
-      icon: Activity,
-      features: ["Process monitoring", "Efficiency tracking", "Resource optimization", "Quality control"]
+      title: "Cryptography",
+      description: "Quantum-resistant encryption and quantum key distribution systems",
+      icon: Lock,
+      applications: ["Post-quantum crypto", "Quantum key distribution", "Secure communication", "Encryption"]
     }
   ];
 
   const benefits = [
-    "Increase revenue by up to 25%",
-    "Reduce operational costs by 30%",
-    "Improve decision-making speed by 5x",
-    "Real-time business visibility",
-    "Predictive business insights",
-    "Automated reporting workflows",
-    "Enhanced customer understanding",
-    "Competitive advantage through data"
+    "Solve previously intractable problems",
+    "Exponential computational speedup",
+    "Enhanced security with quantum cryptography",
+    "Scalable quantum infrastructure",
+    "Hybrid quantum-classical workflows",
+    "Future-proof technology investment",
+    "Access to cutting-edge quantum research",
+    "Competitive advantage in innovation"
   ];
 
-  const dataSources = [
-    "CRM Systems",
-    "ERP Platforms",
-    "Marketing Tools",
-    "Sales Platforms",
-    "Customer Support",
-    "Financial Systems",
-    "Web Analytics",
-    "Social Media"
+  const infrastructure = [
+    "Quantum Processors",
+    "Quantum Simulators",
+    "Quantum Memory Systems",
+    "Quantum Networking",
+    "Classical Computing",
+    "Hybrid Orchestration",
+    "Security Infrastructure",
+    "Monitoring & Analytics"
   ];
 
   return (
@@ -122,15 +123,15 @@ const AIBusinessIntelligence = () => {
       <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <div className="flex items-center justify-center mb-6">
-              <BarChart3 className="w-12 h-12 text-cyan-400 mr-3" />
-              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                AI Business Intelligence
-              </h1>
-            </div>
+                          <div className="flex items-center justify-center mb-6">
+                <Atom className="w-12 h-12 text-cyan-400 mr-3" />
+                <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                  Quantum Cloud Infrastructure
+                </h1>
+              </div>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Transform your business data into actionable intelligence with AI-powered analytics, 
-              predictive insights, and automated reporting that drives growth
+              Access the power of quantum computing through our cloud infrastructure, enabling 
+              breakthrough solutions for complex computational challenges
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -149,21 +150,21 @@ const AIBusinessIntelligence = () => {
         </div>
       </section>
 
-      {/* BI Features */}
+      {/* Quantum Features */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Intelligent Business Analytics
+              Quantum Computing Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI Business Intelligence platform combines advanced analytics with artificial intelligence 
-              to deliver insights that transform your business decisions
+              Our quantum cloud infrastructure provides access to cutting-edge quantum computing 
+              resources and hybrid quantum-classical workflows
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {biFeatures.map((feature, index) => (
+            {quantumFeatures.map((feature, index) => (
               <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
@@ -176,35 +177,35 @@ const AIBusinessIntelligence = () => {
         </div>
       </section>
 
-      {/* BI Modules */}
+      {/* Use Cases */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive BI Modules
+              Quantum Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Every aspect of your business intelligence needs covered with specialized modules and analytics
+              Discover how quantum computing can revolutionize your industry with these breakthrough applications
             </p>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {biModules.map((module, index) => (
+            {useCases.map((useCase, index) => (
               <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mr-4">
-                    <module.icon className="w-6 h-6 text-white" />
+                    <useCase.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white">{module.title}</h3>
-                    <p className="text-gray-300 text-sm">{module.description}</p>
+                    <h3 className="text-xl font-semibold text-white">{useCase.title}</h3>
+                    <p className="text-gray-300 text-sm">{useCase.description}</p>
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-2">
-                  {module.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                  {useCase.applications.map((application, appIndex) => (
+                    <div key={appIndex} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                      {feature}
+                      {application}
                     </div>
                   ))}
                 </div>
@@ -219,10 +220,10 @@ const AIBusinessIntelligence = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Business Transformation
+              Quantum Advantage
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience unprecedented business growth and efficiency with AI-powered business intelligence
+              Experience the transformative power of quantum computing with our cloud infrastructure
             </p>
           </div>
           
@@ -239,25 +240,25 @@ const AIBusinessIntelligence = () => {
         </div>
       </section>
 
-      {/* Data Sources */}
+      {/* Infrastructure Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Data Integration
+              Infrastructure Components
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Connect all your business data sources for comprehensive insights and unified reporting
+              Complete quantum computing infrastructure with hybrid classical-quantum capabilities
             </p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {dataSources.map((source, index) => (
+            {infrastructure.map((component, index) => (
               <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-cyan-500 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Database className="w-8 h-8 text-white" />
+                  <Server className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white">{source}</h3>
+                <h3 className="text-lg font-semibold text-white">{component}</h3>
               </div>
             ))}
           </div>
@@ -268,11 +269,11 @@ const AIBusinessIntelligence = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/50 to-blue-900/50">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business Intelligence?
+            Ready to Experience Quantum Computing?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join the future of business analytics with our AI-powered Business Intelligence platform. 
-            Start making data-driven decisions today.
+            Access the future of computing with our quantum cloud infrastructure. Start solving 
+            previously impossible problems today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -295,4 +296,4 @@ const AIBusinessIntelligence = () => {
   );
 };
 
-export default AIBusinessIntelligence;
+export default QuantumCloudInfrastructure;
