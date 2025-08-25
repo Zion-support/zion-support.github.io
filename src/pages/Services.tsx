@@ -347,6 +347,51 @@ export default function Services() {
           </div>
         )}
 
+        {/* Enhanced Services Links */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold text-white mb-8">Explore Our Complete Service Portfolio</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <Link
+              to="/enhanced-services-2025"
+              className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-xl p-6 hover:border-purple-400/50 transition-all duration-300 group"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <Rocket className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">2025 Enhanced Services</h3>
+              <p className="text-gray-300 text-sm">
+                Discover our cutting-edge micro SAAS solutions powered by advanced AI and emerging technologies.
+              </p>
+            </Link>
+            
+            <Link
+              to="/comprehensive-services-marketing-2025"
+              className="bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <Globe className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Complete Portfolio</h3>
+              <p className="text-gray-300 text-sm">
+                View our comprehensive service portfolio with detailed information and company overview.
+              </p>
+            </Link>
+            
+            <Link
+              to="/comprehensive-pricing-comparison-2025"
+              className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-xl p-6 hover:border-green-400/50 transition-all duration-300 group"
+            >
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <DollarSign className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Pricing & Comparison</h3>
+              <p className="text-gray-300 text-sm">
+                Compare our competitive pricing with market averages and discover exceptional value.
+              </p>
+            </Link>
+          </div>
+        </div>
+
                   {/* CTA Section */}
           <div className="text-center mt-16">
             <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-8">
