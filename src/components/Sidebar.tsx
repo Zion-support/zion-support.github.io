@@ -47,6 +47,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     {
       title: 'AI & Autonomous Systems',
       items: [
+<<<<<<< HEAD
         { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Brain },
         { name: 'AI Autonomous Business Platform', path: '/ai-autonomous-business-platform', icon: Brain },
         { name: 'AI Autonomous Systems Platform', path: '/ai-autonomous-systems-platform', icon: Brain },
@@ -70,6 +71,21 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         { name: 'AI Autonomous Vehicle Platform', path: '/ai-autonomous-vehicle-platform', icon: Car },
         { name: 'AI Autonomous Vehicles', path: '/ai-autonomous-vehicles', icon: Car },
         { name: 'AI Autonomous Venture Capitalist', path: '/ai-autonomous-venture-capitalist', icon: DollarSign }
+=======
+        { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
+        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Briefcase },
+        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Briefcase },
+        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Briefcase },
+        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Briefcase },
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
+        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Shield },
+        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Briefcase },
+        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Briefcase },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', icon: Briefcase },
+        { name: 'Blockchain Solutions', path: '/blockchain-enterprise-solutions', icon: Globe },
+        { name: 'IoT Analytics', path: '/iot-data-analytics', icon: Globe }
+>>>>>>> origin/cursor/website-audit-and-enhancement-98d1
       ]
     },
     {
@@ -156,6 +172,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         { name: 'Team', path: '/team', icon: Users },
         { name: 'Leadership', path: '/leadership', icon: Users },
         { name: 'Partners', path: '/partners', icon: Handshake },
+<<<<<<< HEAD
         { name: 'Careers', path: '/careers', icon: Briefcase },
         { name: 'Case Studies', path: '/case-studies', icon: FileText },
         { name: 'Testimonials', path: '/testimonials', icon: Quote },
@@ -170,6 +187,21 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         { name: 'FAQ', path: '/faq', icon: HelpCircle },
         { name: 'Marketplace', path: '/marketplace', icon: Store },
         { name: 'Community', path: '/community', icon: Users }
+=======
+        { name: 'News', path: '/news', icon: Globe },
+        { name: 'Case Studies', path: '/case-studies', icon: Globe }
+      ]
+    },
+    {
+      title: 'Support & Resources',
+      items: [
+        { name: 'Help Center', path: '/help', icon: Users },
+        { name: 'Case Studies', path: '/case-studies', icon: Globe },
+        { name: 'New Services', path: '/new-services', icon: Globe },
+        { name: 'White Papers', path: '/white-papers', icon: Globe },
+        { name: 'Webinars', path: '/webinars', icon: Globe },
+        { name: 'Emerging Tech', path: '/emerging-tech', icon: Globe }
+>>>>>>> origin/cursor/website-audit-and-enhancement-98d1
       ]
     }
   ];
