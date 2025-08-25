@@ -27,9 +27,8 @@ import {
   CheckCircle,
   Clock,
   TrendingUp,
-  FileText,
-  MessageCircle,
-  Truck
+  Sparkles,
+  FileText
 } from 'lucide-react';
 
 export default function Services() {
@@ -75,46 +74,6 @@ export default function Services() {
           icon: Target,
           features: ['Customer segmentation', 'Campaign optimization', 'ROI tracking'],
           pricing: 'Starting from $2,500/month'
-        },
-        {
-          name: 'AI Legal Document Automation',
-          path: '/services/ai-legal-document-automation',
-          description: 'AI-powered legal document generation and compliance',
-          icon: FileText,
-          features: ['Smart document generation', 'Compliance monitoring', 'Legal research automation'],
-          pricing: 'Starting from $299/month'
-        },
-        {
-          name: 'AI Healthcare Analytics',
-          path: '/services/ai-healthcare-analytics',
-          description: 'AI-powered healthcare diagnostics and patient monitoring',
-          icon: Heart,
-          features: ['Predictive diagnostics', 'Real-time monitoring', 'Population health analytics'],
-          pricing: 'Starting from $799/month'
-        },
-        {
-          name: 'AI Financial Trading',
-          path: '/services/ai-financial-trading',
-          description: 'AI-powered trading algorithms and portfolio optimization',
-          icon: TrendingUp,
-          features: ['AI trading algorithms', 'Risk management', 'High-frequency trading'],
-          pricing: 'Starting from $99/month'
-        },
-        {
-          name: 'AI Supply Chain Optimization',
-          path: '/services/ai-supply-chain-optimization',
-          description: 'AI-powered supply chain management and optimization',
-          icon: Truck,
-          features: ['Demand forecasting', 'Route optimization', 'Inventory management'],
-          pricing: 'Starting from $499/month'
-        },
-        {
-          name: 'AI Customer Service Automation',
-          path: '/services/ai-customer-service-automation',
-          description: 'AI-powered customer support and service automation',
-          icon: MessageCircle,
-          features: ['AI chatbots', 'Multi-channel support', 'Smart routing'],
-          pricing: 'Starting from $199/month'
         }
       ]
     },
@@ -389,6 +348,84 @@ export default function Services() {
             <p className="text-gray-500">Try adjusting your search or filter criteria.</p>
           </div>
         )}
+
+        {/* Enhanced Services Section */}
+        <div className="mt-16 mb-16">
+          <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-500/20 rounded-2xl p-8">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-4">
+                <Sparkles className="h-5 w-5 text-purple-400" />
+                <span className="text-purple-400 font-medium">New & Enhanced</span>
+              </div>
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Discover Our Enhanced Innovative Services
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Explore our cutting-edge suite of AI-powered services, quantum solutions, and innovative micro SAAS platforms designed to transform your business operations.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
+                  <FileText className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">AI Legal Contract Analyzer</h3>
+                <p className="text-gray-400 text-sm mb-4">Advanced AI platform for legal contract analysis and risk assessment.</p>
+                <div className="text-2xl font-bold text-purple-400 mb-4">$1,299/month</div>
+                <Link
+                  to="/enhanced-innovative-services"
+                  className="w-full flex items-center justify-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-600 hover:to-cyan-700 transition-all duration-200"
+                >
+                  <span>Learn More</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+              
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4">
+                  <DollarSign className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Autonomous Financial Advisor</h3>
+                <p className="text-gray-400 text-sm mb-4">AI-driven financial advisory and portfolio optimization platform.</p>
+                <div className="text-2xl font-bold text-purple-400 mb-4">$2,499/month</div>
+                <Link
+                  to="/enhanced-innovative-services"
+                  className="w-full flex items-center justify-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-600 hover:to-cyan-700 transition-all duration-200"
+                >
+                  <span>Learn More</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+              
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
+                  <Heart className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">AI Healthcare Diagnostics</h3>
+                <p className="text-gray-400 text-sm mb-4">AI-powered medical image analysis and diagnostic assistance.</p>
+                <div className="text-2xl font-bold text-purple-400 mb-4">$3,999/month</div>
+                <Link
+                  to="/enhanced-innovative-services"
+                  className="w-full flex items-center justify-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-500 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-600 hover:to-cyan-700 transition-all duration-200"
+                >
+                  <span>Learn More</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <Link
+                to="/enhanced-innovative-services"
+                className="inline-flex items-center space-x-2 px-8 py-3 bg-gradient-to-r from-purple-500 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-600 hover:to-cyan-700 transition-all duration-200 transform hover:scale-105"
+              >
+                <span>View All Enhanced Services</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+        </div>
 
         {/* CTA Section */}
         <div className="text-center mt-16">
