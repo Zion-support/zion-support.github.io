@@ -124,3 +124,15 @@ src/pages/News.tsx[0m
 2025-08-25 23:30:57 - [1;33m⚠️  Found conflicts in src/pages/News.tsx, resolving...[0m
 2025-08-25 23:30:57 - [0;34m💻 Code file detected, attempting intelligent merge...[0m
 2025-08-25 23:30:57 - [0;32m✅ Resolved conflicts in src/pages/News.tsx[0m
+2025-08-25 23:30:58 - [0;32m✅ Successfully resolved conflicts and merged cursor/website-audit-and-enhancement-2305[0m
+2025-08-25 23:30:58 - [0;32m✅ PR #8322 (cursor/website-audit-and-enhancement-2305) processed successfully[0m
+2025-08-25 23:30:58 - [0;34m🔒 Closing PR #8322 via GitHub API...[0m
+2025-08-25 23:30:58 - [0;34m📊 Progress: 3/100, ✅ 3, ❌ 0[0m
+2025-08-25 23:31:00 - [0;34m📋 Processing PR #8317: Expand services and deploy updates (branch: cursor/expand-services-and-deploy-updates-748d)[0m
+2025-08-25 23:31:00 - [0;34m🔄 Attempting to merge cursor/expand-services-and-deploy-updates-748d...[0m
+2025-08-25 23:31:01 - [0;32m✅ Successfully merged cursor/expand-services-and-deploy-updates-748d[0m
+2025-08-25 23:31:01 - [0;32m✅ PR #8317 (cursor/expand-services-and-deploy-updates-748d) processed successfully[0m
+2025-08-25 23:31:01 - [0;34m🔒 Closing PR #8317 via GitHub API...[0m
+2025-08-25 23:31:01 - [0;34m📊 Progress: 4/100, ✅ 4, ❌ 0[0m
+2025-08-25 23:31:03 - [0;34m📋 Processing PR #8312: Analyze, improve, and deploy ziontechgroup app (branch: cursor/analyze-improve-and-deploy-ziontechgroup-app-1218)[0m
+2025-08-25 23:31:04 - [0;34m🔄 Attempting to merge cursor/analyze-improve-and-deploy-ziontechgroup-app-1218...[0m
