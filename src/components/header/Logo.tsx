@@ -10,12 +10,18 @@ export function Logo({ customLogo, customColor }: LogoProps) {
   const logoColor = customColor || '#3b82f6'; // Default blue color
   
   return (
+<<<<<<< HEAD
     <Link to="/" className="flex items-center space-x-2">
       <div 
         className="w-8 h-8 rounded-lg flex items-center justify-center font-bold text-white text-lg"
         style={{ backgroundColor: logoColor }}
       >
         Z
+=======
+    <Link to="/" className="flex items-center">
+      <div className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent" style={colorToUse ? { color: colorToUse } : {}}>
+        {isWhitelabel ? brandName : 'ZION'} <span className="text-zion-cyan">TECH</span>
+>>>>>>> origin/cursor/website-audit-and-enhancement-f8cc
       </div>
       <span className="text-xl font-bold text-white">Zion Tech Group</span>
 =======
