@@ -44,6 +44,9 @@ const QuantumSecureCloud = lazy(() => import('./pages/services/QuantumSecureClou
 const AIPredictiveAnalytics = lazy(() => import('./pages/services/AIPredictiveAnalytics'));
 const InnovativeServicesOverview = lazy(() => import('./pages/services/InnovativeServicesOverview'));
 
+// Next Generation Services Showcase
+const NextGenServicesShowcase = lazy(() => import('./pages/NextGenServicesShowcase'));
+
 // Additional innovative service pages from main
 const BlockchainEnterpriseSolutions = lazy(() => import('./pages/services/BlockchainEnterpriseSolutions'));
 const IoTDataAnalytics = lazy(() => import('./pages/services/IoTDataAnalytics'));
@@ -200,6 +203,9 @@ const App = () => {
                       <Route path="/ai-workflow-automation" element={<AIWorkflowAutomation />} />
                       <Route path="/blockchain-enterprise-solutions" element={<BlockchainEnterpriseSolutions />} />
                       <Route path="/iot-data-analytics" element={<IoTDataAnalytics />} />
+                      
+                      {/* Next Generation Services Showcase */}
+                      <Route path="/next-gen-services" element={<NextGenServicesShowcase />} />
                       
                       {/* Solutions Routes */}
                       <Route path="/services/enterprise" element={<EnterpriseSolutions />} />

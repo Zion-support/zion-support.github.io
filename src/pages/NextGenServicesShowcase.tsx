@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { COMPREHENSIVE_SERVICES } from '../data/comprehensiveServices';
 import { NEXT_GEN_INNOVATIVE_SERVICES } from '../data/nextGenInnovativeServices';
 import { ADVANCED_IT_INFRASTRUCTURE_SERVICES } from '../data/advancedITInfrastructureServices';
 import { SPECIALIZED_AI_SERVICES } from '../data/specializedAIServices';
 
-const ComprehensiveServicesOverview: React.FC = () => {
+const NextGenServicesShowcase: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
 
   const allServices = [
-    ...COMPREHENSIVE_SERVICES,
     ...NEXT_GEN_INNOVATIVE_SERVICES,
     ...ADVANCED_IT_INFRASTRUCTURE_SERVICES,
     ...SPECIALIZED_AI_SERVICES
@@ -26,16 +24,6 @@ const ComprehensiveServicesOverview: React.FC = () => {
     return matchesCategory && matchesSearch;
   });
 
-  const getCategoryStats = () => {
-    const stats: { [key: string]: number } = {};
-    allServices.forEach(service => {
-      stats[service.category] = (stats[service.category] || 0) + 1;
-    });
-    return stats;
-  };
-
-  const categoryStats = getCategoryStats();
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -44,43 +32,21 @@ const ComprehensiveServicesOverview: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Comprehensive
+              Next-Generation
               <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Technology Services
+                Innovative Services
               </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Zion Tech Group offers the most comprehensive portfolio of micro SAAS, IT infrastructure, 
-              and AI services in the industry. From quantum computing to edge AI, we deliver cutting-edge 
-              solutions that drive innovation and business transformation.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Discover cutting-edge micro SAAS solutions, advanced IT infrastructure, and specialized AI services 
+              that transform businesses and drive innovation across industries.
             </p>
-            
-            {/* Service Statistics */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400">{allServices.length}+</div>
-                <div className="text-sm text-gray-400">Total Services</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400">{categories.length - 1}</div>
-                <div className="text-sm text-gray-400">Service Categories</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-green-400">24/7</div>
-                <div className="text-sm text-gray-400">Support Available</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400">99.9%</div>
-                <div className="text-sm text-gray-400">Uptime SLA</div>
-              </div>
-            </div>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/next-gen-services"
+                to="/contact"
                 className="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
               >
-                Explore Next-Gen Services
+                Get Started Today
               </Link>
               <a
                 href="tel:+13024640950"
@@ -90,51 +56,6 @@ const ComprehensiveServicesOverview: React.FC = () => {
               </a>
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* Category Overview */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h2 className="text-3xl font-bold text-white text-center mb-12">Service Categories</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {categories.filter(cat => cat !== 'all').map(category => (
-            <div
-              key={category}
-              className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-gray-600/30 hover:bg-white/20 transition-all duration-300 cursor-pointer"
-              onClick={() => setSelectedCategory(category)}
-            >
-              <div className="flex justify-between items-center mb-4">
-                <h3 className="text-xl font-semibold text-white">{category}</h3>
-                <span className="text-2xl font-bold text-blue-400">{categoryStats[category]}</span>
-              </div>
-              <p className="text-gray-300 text-sm">
-                {category === 'AI & Machine Learning' && 'Advanced AI solutions including LLMs, computer vision, and predictive analytics'}
-                {category === 'Cybersecurity' && 'Comprehensive security solutions including zero trust architecture and threat detection'}
-                {category === 'Cloud Management' && 'Multi-cloud management, orchestration, and optimization platforms'}
-                {category === 'Network Infrastructure' && 'SDN, NFV, and advanced networking solutions'}
-                {category === 'Data Center' && 'HCI, automation, and edge computing infrastructure'}
-                {category === 'Containerization' && 'Enterprise container orchestration and management'}
-                {category === 'Edge Computing' && 'Distributed edge computing and IoT infrastructure'}
-                {category === 'Quantum AI & Healthcare' && 'Quantum computing applications in healthcare and drug discovery'}
-                {category === 'Autonomous AI' && 'Fully autonomous AI systems for research and operations'}
-                {category === 'Neurotechnology' && 'Brain-computer interface and neural technology solutions'}
-                {category === 'Climate AI' && 'AI-powered climate prediction and environmental intelligence'}
-                {category === 'Space Technology' && 'Satellite operations and space mission automation'}
-                {category === 'Digital Twin' && 'Virtual replicas for real-time monitoring and optimization'}
-                {category === 'Metaverse' && 'Enterprise metaverse development and virtual experiences'}
-                {category === 'Synthetic Biology' && 'AI-powered biological design and optimization'}
-                {category === 'Quantum Internet' && 'Next-generation quantum internet infrastructure'}
-                {category === 'AI & Business Intelligence' && 'AI-powered BI and customer intelligence platforms'}
-                {category === 'AI & Customer Service' && 'Intelligent customer service automation and analytics'}
-                {category === 'AI & Analytics' && 'Predictive analytics and data science solutions'}
-                {category === 'AI & Automation' && 'Intelligent process automation and workflow optimization'}
-                {category === 'AI & Supply Chain' && 'Supply chain optimization and logistics intelligence'}
-                {category === 'AI & Quality Assurance' && 'AI-powered testing and quality assurance platforms'}
-                {category === 'Blockchain & Web3' && 'Enterprise blockchain and Web3 solutions'}
-                {category === 'Internet of Things' && 'IoT platforms and data analytics solutions'}
-              </p>
-            </div>
-          ))}
         </div>
       </div>
 
@@ -260,9 +181,8 @@ const ComprehensiveServicesOverview: React.FC = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Our comprehensive portfolio of services covers every aspect of modern technology needs. 
-              From AI and quantum computing to infrastructure and cybersecurity, we have the expertise 
-              to drive your digital transformation.
+              Our team of experts is ready to help you implement these cutting-edge solutions. 
+              Get in touch today to discuss your specific needs and discover how we can drive innovation in your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
@@ -307,10 +227,10 @@ const ComprehensiveServicesOverview: React.FC = () => {
               </div>
               <div>
                 <h4 className="font-semibold text-white mb-2">Why Choose Us</h4>
-                <p>• Industry-leading expertise</p>
-                <p>• Proven track record</p>
-                <p>• Comprehensive solutions</p>
-                <p>• 24/7 enterprise support</p>
+                <p>• Cutting-edge technology</p>
+                <p>• Expert implementation</p>
+                <p>• Proven ROI</p>
+                <p>• 24/7 support</p>
               </div>
             </div>
           </div>
@@ -320,4 +240,4 @@ const ComprehensiveServicesOverview: React.FC = () => {
   );
 };
 
-export default ComprehensiveServicesOverview;
+export default NextGenServicesShowcase;
