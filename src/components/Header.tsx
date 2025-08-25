@@ -82,18 +82,6 @@ export function Header() {
       description: 'Learn about our company'
     },
     { 
-      path: '/careers', 
-      label: 'Careers', 
-      icon: '🚀',
-      description: 'Join our team'
-    },
-    { 
-      path: '/blog', 
-      label: 'Blog', 
-      icon: '📝',
-      description: 'Latest insights and news'
-    },
-    { 
       path: '/contact', 
       label: 'Contact', 
       icon: '📞',

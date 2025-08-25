@@ -217,14 +217,14 @@ export default function MicroSAASSolutions() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       <SEO 
         title="Micro SAAS Solutions - Zion Tech Group" 
         description="Custom software-as-a-service solutions designed for rapid deployment, scalability, and business growth across industries. Starting at $129/month."
         keywords="micro SAAS, custom software, subscription management, multi-tenant, API development, business software, AI solutions, cloud software"
         canonical="https://ziontechgroup.com/services/micro-saas-solutions"
       />
-
+      
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/80 to-zion-purple/80"></div>
@@ -251,18 +251,17 @@ export default function MicroSAASSolutions() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+      <section id="services" className="py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
               Ready-to-Deploy Micro SAAS Solutions
             </h2>
-            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              From concept to deployment, we provide end-to-end micro SAAS development services that 
-              accelerate your business growth and digital transformation.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover our cutting-edge micro SAAS platforms designed to revolutionize your business operations
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg p-6 border border-zion-blue-light hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
@@ -282,7 +281,8 @@ export default function MicroSAASSolutions() {
                 <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
                   {service.title}
                 </h3>
-                <p className="text-zion-slate mb-4">
+                
+                <p className="text-gray-300 mb-4 leading-relaxed">
                   {service.description}
                 </p>
                 <div className="mb-4">
@@ -311,25 +311,26 @@ export default function MicroSAASSolutions() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-zion-blue-light">
-        <div className="container mx-auto px-4">
+      <section className="py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
-              Why Choose Our Micro SAAS Solutions?
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Why Choose Our SAAS Solutions?
             </h2>
-            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Experience the advantages of rapid development, scalability, and cost-effective solutions 
-              designed for modern business needs.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We combine cutting-edge technology with proven expertise to deliver exceptional results
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
-                  <benefit.icon className="w-10 h-10 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
+              <div
+                key={benefit.title}
+                className="glass-card p-6 text-center hover:scale-105 transition-all duration-300 group"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <benefit.icon className={`w-16 h-16 mx-auto mb-6 ${benefit.color} group-hover:scale-110 transition-transform duration-300`} />
+                <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
                   {benefit.title}
                 </h3>
                 <p className="text-zion-slate mb-3">
@@ -345,14 +346,14 @@ export default function MicroSAASSolutions() {
       </section>
 
       {/* Industry Solutions */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Industry-Specific Solutions
             </h2>
-            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Tailored micro SAAS solutions designed for the unique requirements and compliance needs of different industries.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Tailored SAAS platforms designed for your industry's unique challenges and requirements
             </p>
           </div>
           
@@ -362,7 +363,7 @@ export default function MicroSAASSolutions() {
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4">
                   <industry.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-zion-blue-dark mb-2">
+                <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
                   {industry.name}
                 </h3>
                 <p className="text-sm text-zion-slate mb-4">
@@ -417,6 +418,65 @@ export default function MicroSAASSolutions() {
                 <p className="text-zion-slate text-sm italic">
                   "{testimonial.content}"
                 </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Transparent Pricing
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the plan that fits your business needs with our flexible pricing options
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingTiers.map((tier, index) => (
+              <div
+                key={tier.name}
+                className={`glass-card p-8 text-center relative ${
+                  tier.popular ? 'ring-2 ring-cyan-500 scale-105' : ''
+                }`}
+                style={{ animationDelay: `${index * 200}ms` }}
+              >
+                {tier.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                
+                <h3 className="text-2xl font-bold text-white mb-4">{tier.name}</h3>
+                <div className="mb-6">
+                  <span className="text-4xl font-bold text-cyan-400">{tier.price}</span>
+                  <span className="text-gray-400">{tier.period}</span>
+                </div>
+                <p className="text-gray-300 mb-8">{tier.description}</p>
+                
+                <ul className="space-y-3 mb-8 text-left">
+                  {tier.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center space-x-3 text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <a
+                  href="/contact"
+                  className={`w-full futuristic-btn text-center ${
+                    tier.popular ? 'bg-gradient-to-r from-cyan-500 to-blue-600' : ''
+                  }`}
+                >
+                  Get Started
+                </a>
               </div>
             ))}
           </div>
