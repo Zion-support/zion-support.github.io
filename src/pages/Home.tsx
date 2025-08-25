@@ -1,193 +1,104 @@
 
-
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  ChevronLeft, 
-  ChevronRight, 
-  CheckCircle, 
-  Star, 
-  ArrowRight,
-  Users,
-  TrendingUp,
-  Award,
-  Globe,
-  Shield,
-  Zap,
-  Brain,
-  Cloud,
-  Lock,
-  Cpu,
-  Database,
-  Network,
-  Code,
-  BarChart3,
-  Target,
-  Lightbulb,
-  Rocket,
-  Clock,
-  ChevronRight,
-  ChevronLeft,
-  Award,
-  Globe,
-  Zap,
-  Target,
-  BarChart3,
-  Lightbulb,
-  Code,
-  Database,
-  Cloud,
-  Lock
-} from 'lucide-react';
-import SEOHead from '../components/SEOHead';
-import { SEOConfigs } from '../components/SEOHead';
+import { ArrowRight, CheckCircle, Star } from 'lucide-react';
+import { CategoriesSection } from "@/components/CategoriesSection";
+import { BenefitsSection } from "@/components/BenefitsSection";
+import { HowItWorksSection } from "@/components/HowItWorksSection";
+import { NewsletterSection } from "@/components/NewsletterSection";
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
+import { SEO } from "@/components/SEO";
+import { HeroSection } from "@/components/HeroSection";
+import { QuickAccess } from "@/components/home/QuickAccess";
+import { FeatureCTAs } from "@/components/home/FeatureCTAs";
+import { FeatureHighlights } from "@/components/home/FeatureHighlights";
+import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
+import { AnimatedBackground, FloatingOrbs } from "@/components/ui/AnimatedBackground";
 
-const Home: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+// Featured services data
+const featuredServices = [
+  {
+    title: "AI & Machine Learning",
+    description: "Cutting-edge AI solutions to automate and optimize your business processes.",
+    icon: () => <div className="w-8 h-8 bg-white rounded-full" />,
+    color: "from-neon-pink to-neon-orange",
+    link: "/ai-services"
+  },
+  {
+    title: "Cloud & DevOps",
+    description: "Scalable cloud infrastructure and automated deployment solutions.",
+    icon: () => <div className="w-8 h-8 bg-white rounded-full" />,
+    color: "from-quantum-blue to-quantum-cyan",
+    link: "/cloud-devops"
+  },
+  {
+    title: "Digital Transformation",
+    description: "End-to-end digital transformation strategies for modern businesses.",
+    icon: () => <div className="w-8 h-8 bg-white rounded-full" />,
+    color: "from-neon-green to-quantum-purple",
+    link: "/digital-transformation"
+  },
+  {
+    title: "Micro SAAS Solutions",
+    description: "Custom micro SAAS applications tailored to your specific needs.",
+    icon: () => <div className="w-8 h-8 bg-white rounded-full" />,
+    color: "from-zion-cyan to-zion-purple",
+    link: "/micro-saas-services"
+  }
+];
 
-  useEffect(() => {
-    // Auto-rotate hero slides
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % 3);
-    }, 5000);
+// Features data
+const features = [
+  {
+    title: "Innovation First",
+    description: "We stay ahead of the curve with cutting-edge technologies and innovative approaches.",
+    icon: () => <div className="w-8 h-8 bg-zion-cyan rounded-full" />,
+    color: "text-zion-cyan"
+  },
+  {
+    title: "Expert Team",
+    description: "Our team of certified professionals brings years of industry experience.",
+    icon: () => <div className="w-8 h-8 bg-zion-purple rounded-full" />,
+    color: "text-zion-purple"
+  },
+  {
+    title: "Proven Results",
+    description: "Track record of successful implementations and measurable business outcomes.",
+    icon: () => <div className="w-8 h-8 bg-neon-green rounded-full" />,
+    color: "text-neon-green"
+  },
+  {
+    title: "24/7 Support",
+    description: "Round-the-clock support to ensure your systems run smoothly.",
+    icon: () => <div className="w-8 h-8 bg-neon-orange rounded-full" />,
+    color: "text-neon-orange"
+  }
+];
 
-    return () => clearInterval(interval);
-  }, []);
+// Testimonials data
+const testimonials = [
+  {
+    name: "Sarah Johnson",
+    role: "CTO, TechCorp",
+    content: "Zion Tech Group transformed our entire IT infrastructure. The results exceeded our expectations.",
+    rating: 5
+  },
+  {
+    name: "Michael Chen",
+    role: "CEO, StartupXYZ",
+    content: "Their AI solutions helped us automate 80% of our manual processes. Game-changing technology.",
+    rating: 5
+  },
+  {
+    name: "Emily Rodriguez",
+    role: "Operations Director, GlobalTech",
+    content: "Professional, reliable, and innovative. Zion Tech Group is our go-to technology partner.",
+    rating: 5
+  }
+];
 
-  const heroSlides = [
-    {
-      title: "AI-Powered Solutions",
-      subtitle: "Transform your business with cutting-edge artificial intelligence",
-      description: "Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization.",
-      image: "/images/hero-ai-solutions.jpg",
-      cta: "Explore AI Solutions",
-      path: "/ai-solutions",
-      icon: Brain,
-      color: "from-cyan-500 to-blue-600"
-    },
-    {
-      title: "Enterprise IT Excellence",
-      subtitle: "Comprehensive IT services for modern businesses",
-      description: "24/7 support, cybersecurity, cloud solutions, and strategic technology consulting to keep your business ahead.",
-      cta: "View IT Services",
-      path: "/services",
-      icon: Shield,
-      color: "from-purple-500 to-pink-600"
-    },
-    {
-      title: "Micro SAAS Solutions",
-      subtitle: "Scalable software solutions for every business need",
-      description: "Custom micro SAAS applications that streamline operations, reduce costs, and accelerate growth.",
-      cta: "Browse Services",
-      path: "/services",
-      icon: Cpu,
-      color: "from-green-500 to-emerald-600"
-    }
-  ];
-
-  const featuredServices = [
-    {
-      title: "AI Content Hub Pro",
-      description: "Enterprise-grade AI content creation platform for multi-platform content generation and optimization.",
-      icon: Brain,
-      path: "/services/ai-content-hub-pro",
-      category: "AI & Content Creation",
-      price: "$2,999/mo",
-      rating: 4.9,
-      reviewCount: 342,
-      path: "/services/ai-powered-crm"
-    },
-    {
-      title: "Quantum Neural Networks",
-      description: "Next-generation computing power for complex AI applications and research.",
-      icon: Cpu,
-      path: "/quantum-neural-network-platform",
-      category: "Quantum Tech",
-      price: "$5,000/mo",
-      rating: 4.8,
-      reviewCount: 189,
-      path: "/services/cybersecurity-platform"
-    },
-    {
-      id: "cloud-optimization",
-      title: "Cloud Cost Optimization",
-      description: "AI-driven cloud cost management that reduces spending by 30-50% automatically",
-      price: "$350/month",
-      features: ["Cost Analysis", "Automated Optimization", "Resource Scheduling", "Budget Management"],
-      icon: Cpu,
-      category: "Cloud Computing",
-      rating: 4.7,
-      reviewCount: 234,
-      path: "/services/cloud-optimization"
-    }
-  ];
-
-  const stats = [
-    { label: "AI Services", value: "25+", icon: Brain, color: "text-cyan-400" },
-    { label: "Happy Clients", value: "100+", icon: Users, color: "text-purple-400" },
-    { label: "Uptime", value: "99.9%", icon: Shield, color: "text-green-400" },
-    { label: "Support", value: "24/7", icon: Clock, color: "text-yellow-400" }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "CTO, TechFlow Inc.",
-      company: "TechFlow Inc.",
-      content: "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions increased our efficiency by 40% and reduced costs significantly.",
-      rating: 5,
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
-    },
-    {
-      name: "Michael Chen",
-      role: "CEO, DataSphere",
-      company: "DataSphere",
-      content: "The cybersecurity platform they implemented has given us peace of mind. Their team is incredibly responsive and knowledgeable.",
-      rating: 5,
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "Operations Director, GreenTech",
-      company: "GreenTech",
-      content: "Their micro SAAS solution streamlined our entire workflow. The ROI was immediate and the support is outstanding.",
-      rating: 5,
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
-    }
-  ];
-
-  const caseStudies = [
-    {
-      title: "Global Retail Chain Transformation",
-      description: "Implemented AI-powered inventory management for a 500+ store retail chain, reducing waste by 35% and increasing profits by 28%.",
-      metrics: ["35% waste reduction", "28% profit increase", "500+ stores", "6 months implementation"],
-      icon: BarChart3,
-      color: "from-green-500 to-emerald-600"
-    },
-    {
-      title: "Healthcare Data Security",
-      description: "Deployed comprehensive cybersecurity solution for a major hospital network, achieving 100% compliance and zero security breaches.",
-      metrics: ["100% compliance", "0 security breaches", "24/7 monitoring", "HIPAA certified"],
-      icon: Shield,
-      color: "from-blue-500 to-cyan-600"
-    },
-    {
-      title: "Manufacturing Automation",
-      description: "AI-driven process optimization for manufacturing company, increasing production efficiency by 45% while reducing operational costs.",
-      metrics: ["45% efficiency increase", "30% cost reduction", "Real-time monitoring", "Predictive maintenance"],
-      icon: Cpu,
-      color: "from-purple-500 to-pink-600"
-    }
-  ];
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
-  };
-
+export default function Home() {
   return (
     <div className="min-h-screen futuristic-bg">
       {/* Hero Section */}
@@ -317,21 +228,21 @@ const Home: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Discover our most popular AI-powered solutions and IT services
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredServices.map((service, index) => (
-              <div
-                key={service.id}
-                className="glass-card p-6 hover:scale-105 transition-all duration-300 group"
-                style={{ animationDelay: `${index * 200}ms` }}
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <service.icon className="w-12 h-12 text-cyan-400" />
-                  <div className="flex items-center space-x-1">
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <span className="text-sm text-gray-300">{service.rating}</span>
-                    <span className="text-xs text-gray-500">({service.reviewCount})</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {featuredServices.map((service, index) => {
+              const IconComponent = service.icon;
+              return (
+                <motion.div
+                  key={service.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                  className="group bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-6 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20"
+                >
+                  <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>
+                    <IconComponent />
                   </div>
                 </div>
 
@@ -394,32 +305,26 @@ const Home: React.FC = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Real results from real businesses. See how we've transformed operations across industries.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => (
-              <div
-                key={index}
-                className="glass-card p-6 hover:scale-105 transition-all duration-300 group"
-                style={{ animationDelay: `${index * 200}ms` }}
-              >
-                <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${study.color} p-4 mb-6 mx-auto`}>
-                  <study.icon className="w-8 h-8 text-white" />
-                </div>
-                
-                <h3 className="text-xl font-semibold text-white mb-4 text-center group-hover:text-cyan-400 transition-colors duration-300">
-                  {study.title}
-                </h3>
-                
-                <p className="text-gray-300 mb-6 leading-relaxed text-center">
-                  {study.description}
-                </p>
-
-                <div className="space-y-2">
-                  {study.metrics.map((metric, metricIndex) => (
-                    <div key={metricIndex} className="flex items-center space-x-2 text-sm">
-                      <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>
-                      <span className="text-gray-300">{metric}</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {features.map((feature, index) => {
+              const IconComponent = feature.icon;
+              return (
+                <motion.div
+                  key={feature.title}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+                  className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className={`p-3 bg-zion-purple/20 rounded-lg ${feature.color}`}>
+                      <IconComponent />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                      <p className="text-zion-slate-light leading-relaxed">{feature.description}</p>
                     </div>
                   ))}
                 </div>
