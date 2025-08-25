@@ -21,16 +21,12 @@ import {
   Info,
   HelpCircle,
   Accessibility,
-  Braille,
   Headphones,
   Hand,
   ArrowUp,
   ArrowDown,
   ArrowLeft,
   ArrowRight,
-  Enter,
-  Escape,
-  Tab,
   Space
 } from 'lucide-react';
 
@@ -751,7 +747,7 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
               {/* Accessibility Features */}
               <div>
                 <h3 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2 flex items-center">
-                  <Braille className="w-4 h-4 mr-2" />
+                  <Accessibility className="w-4 h-4 mr-2" />
                   Accessibility Features
                 </h3>
                 <div className="space-y-2">
