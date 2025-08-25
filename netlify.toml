@@ -12,23 +12,30 @@
   to = "/index.html"
   status = 200
 
-# Headers for static assets
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
 
-[[headers]]
-  for = "/*.js"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+[[redirects]]
+  from = "/quantum-internet-security-platform"
+  to = "/quantum-internet-security"
+  status = 301
 
-[[headers]]
-  for = "/*.css"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+[[redirects]]
+  from = "/ai-legal-contract-analyzer"
+  to = "/ai-legal-analysis"
+  status = 301
 
-[[headers]]
-  for = "/*.html"
-  [headers.values]
-    Cache-Control = "public, max-age=0, must-revalidate"
+[[redirects]]
+  from = "/ai-cybersecurity-suite"
+  to = "/ai-cybersecurity"
+  status = 301
+
+[[redirects]]
+  from = "/iot-edge-computing-orchestration"
+  to = "/edge-computing-orchestration"
+  status = 301
+
+[[redirects]]
+  from = "/ai-agents"
+  to = "/ai-services"
+  status = 301

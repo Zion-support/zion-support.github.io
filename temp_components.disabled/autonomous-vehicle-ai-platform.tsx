@@ -10,7 +10,7 @@ export default function AutonomousVehicleAIPage() {
   if (!service) return null;
 
   return (
-    <UltraAdvancedFuturisticBackground>
+    <Layout>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
         <meta name="description" content={service.description} />
@@ -28,28 +28,28 @@ export default function AutonomousVehicleAIPage() {
               <p className="text-slate-300 mb-6">{service.description}</p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.features.slice(0, 12).map((feat, i) => (
-                  <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-orange-400 mt-0.5" /><span>{feat}</span></li>
+                  <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-orange-400 mt-0.5"><Check /><span>{feat}</span></li>
                 ))}
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-orange-500/30 p-6 h-fit">
               <div className="flex items-end justify-between mb-3">
                 <div>
-                  <div className="text-3xl font-bold text-white">{service.price}<span className="text-slate-400 text-base">{service.period}</span></div>
+                  <div className="text-3xl font-bold text-white text-slate-400 text-base">{service.price}<span >{service.period}</span></div>
                   <div className="text-slate-400">{service.trialDays}-day free trial • Setup: {service.setupTime}</div>
                 </div>
-                <div className="flex items-center text-yellow-400"><Star className="w-4 h-4 mr-1" />{service.rating.toFixed(1)}</div>
+                <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
               </div>
               <Button href="/contact" variant="quantum" size="lg" className="w-full">Schedule a Pilot<ArrowRight className="w-5 h-5 ml-2" /></Button>
               <div className="mt-6 space-y-3 text-sm text-slate-300">
-                <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
-                <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
-                <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
+                <div className="flex items-center space-x-2 w-4 h-4 text-cyan-400"><Phone /><span>{service.contactInfo.mobile}</span></div>
+                <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{service.contactInfo.email}</span></div>
+                <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs"><MapPin /><span >{service.contactInfo.address}</span></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </UltraAdvancedFuturisticBackground>
+    </Layout>
   );
 }

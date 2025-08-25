@@ -2,64 +2,130 @@
 @tailwind components;
 @tailwind utilities;
 
-/* CSS Custom Properties for Accessibility and Performance */
-:root {
-  /* Font sizes with accessibility support */
-  --font-size-multiplier: 1;
-  --font-size-base: 16px;
-  --font-size-small: 14px;
-  --font-size-large: 18px;
-  --font-size-xl: 20px;
-  --font-size-2xl: 24px;
-  --font-size-3xl: 30px;
-  
-  /* Animation durations for reduced motion support */
-  --animation-duration: 0.3s;
-  --animation-duration-fast: 0.15s;
-  --animation-duration-slow: 0.5s;
-  
-  /* Color blindness filters */
-  --color-blindness-filter: none;
-  
-  /* Focus indicator styles */
-  --focus-ring-color: #3b82f6;
-  --focus-ring-width: 3px;
-  --focus-ring-offset: 2px;
-  
-  /* High contrast mode variables */
-  --high-contrast-text: #000000;
-  --high-contrast-bg: #ffffff;
-  --high-contrast-border: #000000;
-  
-  /* Performance optimization variables */
-  --content-visibility: auto;
-  --contain-layout: layout style paint;
-  --will-change: auto;
-  
-  /* Futuristic Design Variables */
-  --neon-cyan: #00ffff;
-  --neon-purple: #8b00ff;
-  --neon-pink: #ff0080;
-  --neon-green: #00ff41;
-  --neon-blue: #0080ff;
-  --neon-orange: #ff8000;
-  --neon-yellow: #ffff00;
-  --neon-red: #ff0000;
-  
-  /* Gradient Variables */
-  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  --gradient-tertiary: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-  --gradient-quaternary: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-  --gradient-quinary: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-  
-  /* Animation Variables */
-  --float-animation: float 6s ease-in-out infinite;
-  --glow-animation: glow 2s ease-in-out infinite alternate;
-  --pulse-animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-  --shimmer-animation: shimmer 2.5s linear infinite;
-  --matrix-animation: matrix 20s linear infinite;
-}
+/* Futuristic utility classes */
+@layer utilities {
+  .neon-glow {
+    box-shadow: 
+      0 0 5px hsl(var(--neon-cyan)),
+      0 0 10px hsl(var(--neon-cyan)),
+      0 0 15px hsl(var(--neon-cyan)),
+      0 0 20px hsl(var(--neon-cyan));
+  }
+
+  .neon-text {
+    text-shadow: 
+      0 0 5px hsl(var(--neon-cyan)),
+      0 0 10px hsl(var(--neon-cyan)),
+      0 0 15px hsl(var(--neon-cyan));
+  }
+
+  .hologram-effect {
+    background: linear-gradient(
+      45deg,
+      hsl(var(--neon-cyan) / var(--hologram-opacity)),
+      hsl(var(--neon-blue) / var(--hologram-opacity)),
+      hsl(var(--neon-purple) / var(--hologram-opacity))
+    );
+    background-size: 200% 200%;
+    animation: hologram 4s ease-in-out infinite;
+  }
+
+  .cyber-border {
+    border: 2px solid transparent;
+    background: linear-gradient(45deg, hsl(var(--neon-cyan)), hsl(var(--neon-blue))) border-box;
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) padding-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+  }
+
+  .energy-field {
+    background: radial-gradient(
+      circle at center,
+      hsl(var(--neon-cyan) / 0.3) 0%,
+      transparent 70%
+    );
+    animation: energyPulse 3s ease-in-out infinite;
+  }
+
+  .matrix-bg {
+    background-image: 
+      linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: matrixRain 20s linear infinite;
+  }
+
+  .quantum-shift {
+    animation: quantumShift 2s ease-in-out infinite;
+  }
+
+  .neon-flicker {
+    animation: neonFlicker 0.5s ease-in-out infinite alternate;
+  }
+
+  .animate-quantum-float {
+    animation: quantumFloat 6s ease-in-out infinite;
+  }
+
+  .animation-delay-1000 {
+    animation-delay: 1s;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .cyber-wave {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cyber-wave::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      hsl(var(--neon-cyan) / 0.3),
+      transparent
+    );
+    animation: cyberWave 8s ease-in-out infinite;
+  }
+
+  .particle-field {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .particle-field::before,
+  .particle-field::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: hsl(var(--neon-cyan));
+    border-radius: 50%;
+    animation: particleFloat 5s ease-in-out infinite;
+  }
+
+  .particle-field::before {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+  }
 
 /* High Contrast Mode */
 .high-contrast {
@@ -329,6 +395,22 @@
   .futuristic-btn {
     font-size: 12px;
     padding: 10px 16px;
+  }
+
+  .nav-link {
+    @apply px-4 py-2 text-zion-slate-light hover:text-zion-cyan transition-all duration-300 relative group font-medium;
+  }
+  
+  .nav-link::after {
+    @apply content-[''] absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-zion-cyan to-zion-purple transition-all duration-300 transform -translate-x-1/2;
+  }
+  
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+  
+  .mobile-nav-link {
+    @apply block py-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-200;
   }
   
   .neon-text {
@@ -742,8 +824,16 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.glass-dark {
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  ::-moz-selection {
+    background: rgba(34, 221, 210, 0.3);
+    color: white;
+  }
+
+  /* Quantum Float Animation */
+  @keyframes quantumFloat {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    25% { transform: translateY(-20px) rotate(1deg); }
+    50% { transform: translateY(-10px) rotate(-1deg); }
+    75% { transform: translateY(-30px) rotate(0.5deg); }
+  }
 }
