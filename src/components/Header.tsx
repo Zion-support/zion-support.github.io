@@ -26,15 +26,39 @@ export function Header() {
     },
     { 
       path: '/services', 
-      label: 'Services', 
+      label: 'AI Services', 
       icon: '🤖',
       description: 'Explore our AI service offerings'
     },
     { 
-      path: '/about', 
-      label: 'About', 
-      icon: 'ℹ️',
-      description: 'Learn about our company'
+      path: '/emerging-tech', 
+      label: 'Emerging Tech', 
+      icon: '🚀',
+      description: 'Cutting-edge technology solutions'
+    },
+    { 
+      path: '/innovative-services', 
+      label: 'Innovative Services', 
+      icon: '⚡',
+      description: 'Revolutionary micro SAAS solutions'
+    },
+    { 
+      path: '/comprehensive-services', 
+      label: 'All Services', 
+      icon: '⚡',
+      description: 'Complete service catalog'
+    },
+    { 
+      path: '/services-comparison', 
+      label: 'Compare', 
+      icon: '📊',
+      description: 'Compare service options'
+    },
+    { 
+      path: '/it-onsite-services', 
+      label: 'Onsite IT', 
+      icon: '🔧',
+      description: 'Onsite IT support services'
     },
     { 
       path: '/pricing', 
@@ -43,28 +67,34 @@ export function Header() {
       description: 'Transparent pricing plans'
     },
     { 
-      path: '/case-studies', 
-      label: 'Case Studies', 
-      icon: '📊',
-      description: 'View our success stories'
-    },
-    { 
-      path: '/news', 
-      label: 'News', 
-      icon: '📰',
-      description: 'Latest updates and insights'
-    },
-    { 
-      path: '/careers', 
-      label: 'Careers', 
-      icon: '💼',
-      description: 'Join our team'
+      path: '/about', 
+      label: 'About', 
+      icon: 'ℹ️',
+      description: 'Learn about our company'
     },
     { 
       path: '/contact', 
       label: 'Contact', 
       icon: '📞',
       description: 'Get in touch with us'
+    },
+    { 
+      path: '/white-papers', 
+      label: 'White Papers', 
+      icon: '📄',
+      description: 'Research and technical documentation'
+    },
+    { 
+      path: '/events', 
+      label: 'Events', 
+      icon: '🎪',
+      description: 'Conferences, workshops, and events'
+    },
+    { 
+      path: '/webinars', 
+      label: 'Webinars', 
+      icon: '🎥',
+      description: 'Live and on-demand learning sessions'
     }
   ];
 
@@ -110,11 +140,11 @@ export function Header() {
     <>
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled 
-          ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/20' 
-          : 'bg-gradient-to-r from-black/80 via-blue-900/80 to-purple-900/80 backdrop-blur-md'
+          ? 'bg-black/95 backdrop-blur-2xl border-b border-cyan-500/50 shadow-2xl shadow-cyan-500/30' 
+          : 'bg-gradient-to-r from-black/90 via-blue-900/90 to-purple-900/90 backdrop-blur-xl'
       }`}>
         {/* Enhanced Animated Background */}
-        <div className="absolute inset-0 futuristic-bg opacity-60"></div>
+        <div className="absolute inset-0 futuristic-bg opacity-80"></div>
         
         {/* Enhanced Matrix Rain Effect */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
