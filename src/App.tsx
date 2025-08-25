@@ -160,6 +160,7 @@ const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const AboutPage = React.lazy(() => import('./pages/About'));
 const CareersPage = React.lazy(() => import('./pages/Careers'));
 const SitemapPage = React.lazy(() => import('./pages/Sitemap'));
@@ -274,6 +275,10 @@ const GreenITPage = React.lazy(() => import('./pages/GreenIT'));
 const ExpandedServicesPage = React.lazy(() => import('./pages/ExpandedServicesPage'));
 const ServicesPricingPage = React.lazy(() => import('./pages/ServicesPricingPage'));
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-1baf
+=======
+const AdvancedServicesPage = React.lazy(() => import('./pages/AdvancedServicesPage'));
+const ServicesComparisonPage = React.lazy(() => import('./pages/ServicesComparisonPage'));
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1ab5
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -285,6 +290,7 @@ const baseRoutes = [
   { path: '/talents', element: <TalentsPage /> },
 <<<<<<< HEAD
   { path: '/services', element: <ServicesPage /> },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -357,6 +363,10 @@ const baseRoutes = [
   { path: '/expanded-services', element: <ExpandedServicesPage /> },
   { path: '/services-pricing', element: <ServicesPricingPage /> },
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-1baf
+=======
+  { path: '/advanced-services', element: <AdvancedServicesPage /> },
+  { path: '/services-comparison', element: <ServicesComparisonPage /> },
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1ab5
   { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
   { path: '/ai-services', element: <AIServicesPage /> },
   { path: '/blockchain-services', element: <BlockchainServicesPage /> },

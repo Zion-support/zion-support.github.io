@@ -381,6 +381,7 @@ const specialServices = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     title: "Comprehensive Services",
     link: "/comprehensive-services"
 <<<<<<< HEAD
@@ -845,10 +846,15 @@ const advancedCategories = [
 =======
     title: "Enhanced Services",
     link: "/enhanced-services"
+=======
+    title: "Advanced AI Services",
+    link: "/advanced-services"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1ab5
   },
   {
     title: "Services Comparison",
     link: "/services-comparison"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e6db
 =======
     title: "Cybersecurity",
@@ -873,6 +879,8 @@ const advancedCategories = [
     link: "/category/cloud-services",
     description: "Seamless cloud infrastructure transition"
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1ab5
   }
 ];
 

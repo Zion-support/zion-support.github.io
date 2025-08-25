@@ -224,6 +224,7 @@ import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { EnhancedServicesShowcase } from "@/components/home/EnhancedServicesShowcase";
 import { BottomNavigation } from "@/components/MobileNavigation";
 import { MicroSaasServicesSection } from "@/components/home/MicroSaasServicesSection";
@@ -500,6 +501,9 @@ const STATS_DATA = [
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { ServiceRecommendations } from "@/components/ServiceRecommendations";
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-1baf
+=======
+import { AdvancedServicesShowcase } from "@/components/home/AdvancedServicesShowcase";
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1ab5
 
 export default function Home() {
   const features = [
@@ -910,6 +914,7 @@ export default function Home() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <MicroSaasShowcase />
 =======
       <ServicesOverview />
@@ -931,6 +936,9 @@ export default function Home() {
       
       <ServiceRecommendations maxRecommendations={6} />
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-1baf
+=======
+      <AdvancedServicesShowcase />
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1ab5
       
       <CategoriesSection />
       <ServicesShowcase />
