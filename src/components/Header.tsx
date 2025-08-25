@@ -37,6 +37,24 @@ export function Header() {
       description: 'AI and machine learning services'
     },
     { 
+      path: '/ai-autonomous-business-manager', 
+      label: 'AI Business Manager', 
+      icon: '🧠',
+      description: 'AI Autonomous Business Management'
+    },
+    { 
+      path: '/quantum-neural-network-platform', 
+      label: 'Quantum AI', 
+      icon: '⚛️',
+      description: 'Quantum Neural Network Platform'
+    },
+    { 
+      path: '/autonomous-business-operations-platform', 
+      label: 'Operations Platform', 
+      icon: '⚙️',
+      description: 'Autonomous Business Operations'
+    },
+    { 
       path: '/solutions/enterprise', 
       label: 'Solutions', 
       icon: '💼',
