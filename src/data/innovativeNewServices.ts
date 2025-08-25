@@ -1194,6 +1194,7 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     innovationLevel: "Revolutionary quantum technology at the forefront of scientific advancement"
   },
 
+<<<<<<< HEAD
   // AI Workflow Automation Platform
   {
     id: "ai-workflow-automation",
@@ -1390,10 +1391,20 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     description: "Next-generation cybersecurity platform that uses artificial intelligence to detect, prevent, and respond to cyber threats in real-time.",
     category: "AI & Cybersecurity",
     subcategory: "AI Security",
+=======
+  // AI-Powered Cybersecurity Threat Intelligence
+  {
+    id: "ai-cybersecurity-threat-intelligence",
+    title: "AI-Powered Cybersecurity Threat Intelligence Platform",
+    description: "Advanced threat intelligence platform that uses AI and machine learning to detect, analyze, and respond to cybersecurity threats in real-time with predictive capabilities.",
+    category: "Cybersecurity",
+    subcategory: "Threat Intelligence",
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-3cf3
     price: 1800,
     currency: "$",
     pricingModel: "monthly",
     features: [
+<<<<<<< HEAD
       "AI threat detection",
       "Behavioral analysis",
       "Automated response",
@@ -1432,11 +1443,52 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     estimatedDelivery: "8-10 weeks",
     supportLevel: "enterprise",
     marketPrice: "$1,800 - $8,000/month",
+=======
+      "Real-time threat detection",
+      "AI-powered threat analysis",
+      "Predictive threat modeling",
+      "Automated incident response",
+      "Threat hunting automation",
+      "Vulnerability assessment",
+      "Security orchestration",
+      "Threat intelligence sharing",
+      "Compliance reporting",
+      "Mobile security monitoring"
+    ],
+    benefits: [
+      "Reduce threat response time by 80%",
+      "Prevent 95% of cyber attacks",
+      "Lower security costs by 40%",
+      "24/7 automated monitoring",
+      "Proactive threat prevention",
+      "Enhanced compliance"
+    ],
+    useCases: [
+      "Financial institutions",
+      "Healthcare organizations",
+      "Government agencies",
+      "Technology companies",
+      "Manufacturing firms",
+      "Retail businesses"
+    ],
+    targetAudience: [
+      "CISOs",
+      "Security analysts",
+      "IT managers",
+      "Compliance officers",
+      "Risk managers"
+    ],
+    tags: ["AI", "Cybersecurity", "Threat Intelligence", "Machine Learning", "Incident Response", "Compliance"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$1,800 - $6,000/month",
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-3cf3
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
+<<<<<<< HEAD
     technology: ["Machine Learning", "Deep Learning", "Natural Language Processing", "Behavioral Analytics", "Threat Intelligence"],
     integrations: ["SIEM Systems", "Firewalls", "Endpoint Protection", "Cloud Platforms", "Security Tools"],
     compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "Industry Standards"],
@@ -1939,10 +1991,71 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     supportLevel: "enterprise",
     marketPrice: "$3,500 - $12,000/month",
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-41b5
+=======
+    technology: ["Machine Learning", "Natural Language Processing", "Behavioral Analytics", "Cloud Computing", "API Integration"],
+    integrations: ["SIEM Systems", "Firewalls", "EDR Solutions", "Vulnerability Scanners", "Security Tools"],
+    compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
+    roi: "400% within 12 months",
+    competitors: ["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],
+    marketTrend: "High-growth market with 350% annual expansion",
+    innovationLevel: "Advanced AI technology revolutionizing cybersecurity threat detection and response"
+  },
+
+  // Blockchain-Based Supply Chain Transparency
+  {
+    id: "blockchain-supply-chain-transparency",
+    title: "Blockchain-Based Supply Chain Transparency Platform",
+    description: "Transparent and immutable supply chain tracking system using blockchain technology to ensure product authenticity, compliance, and ethical sourcing.",
+    category: "Blockchain & Supply Chain",
+    subcategory: "Transparency & Traceability",
+    price: 1200,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "End-to-end traceability",
+      "Smart contract automation",
+      "Product authentication",
+      "Compliance verification",
+      "Ethical sourcing tracking",
+      "Real-time monitoring",
+      "Supplier verification",
+      "Quality assurance",
+      "Sustainability metrics",
+      "Mobile app access"
+    ],
+    benefits: [
+      "Improve supply chain transparency by 100%",
+      "Reduce fraud by 90%",
+      "Lower compliance costs by 35%",
+      "Enhanced brand trust",
+      "Better supplier relationships",
+      "Sustainable operations"
+    ],
+    useCases: [
+      "Food and beverage companies",
+      "Pharmaceutical manufacturers",
+      "Luxury goods brands",
+      "Automotive industry",
+      "Fashion retailers",
+      "Electronics manufacturers"
+    ],
+    targetAudience: [
+      "Supply chain managers",
+      "Compliance officers",
+      "Quality managers",
+      "Brand managers",
+      "Sustainability officers"
+    ],
+    tags: ["Blockchain", "Supply Chain", "Transparency", "Traceability", "Smart Contracts", "Compliance"],
+    estimatedDelivery: "6-8 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,200 - $4,500/month",
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-3cf3
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
+<<<<<<< HEAD
 <<<<<<< HEAD
     }
 =======
@@ -1990,10 +2103,52 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
       "Automated campaign management",
       "Personalized customer experiences",
       "Real-time optimization"
+=======
+    },
+    technology: ["Blockchain", "Smart Contracts", "IoT Sensors", "Cloud Computing", "Mobile Applications"],
+    integrations: ["ERP Systems", "WMS", "TMS", "Supplier Portals", "E-commerce Platforms"],
+    compliance: ["ISO 28000", "FSMA", "GDPR", "SOC 2", "Industry Standards"],
+    roi: "300% within 18 months",
+    competitors: ["IBM Food Trust", "VeChain", "Walmart Blockchain", "De Beers Tracr"],
+    marketTrend: "Emerging market with 400% projected growth in next 5 years",
+    innovationLevel: "Revolutionary blockchain technology ensuring complete supply chain transparency and trust"
+  },
+
+  // AI-Powered Customer Experience Optimization
+  {
+    id: "ai-customer-experience-optimization",
+    title: "AI-Powered Customer Experience Optimization Platform",
+    description: "Intelligent platform that optimizes customer journeys, personalizes interactions, and predicts customer needs using advanced AI and behavioral analytics.",
+    category: "AI & Customer Experience",
+    subcategory: "Experience Optimization",
+    price: 950,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Customer journey mapping",
+      "Behavioral analytics",
+      "Predictive personalization",
+      "A/B testing automation",
+      "Sentiment analysis",
+      "Real-time optimization",
+      "Multi-channel integration",
+      "Customer feedback analysis",
+      "Performance analytics",
+      "Mobile optimization"
+    ],
+    benefits: [
+      "Increase customer satisfaction by 45%",
+      "Improve conversion rates by 35%",
+      "Reduce customer churn by 30%",
+      "Personalized experiences",
+      "Data-driven decisions",
+      "Enhanced brand loyalty"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-3cf3
     ],
     useCases: [
       "E-commerce businesses",
       "SaaS companies",
+<<<<<<< HEAD
       "Marketing agencies",
       "B2B companies",
       "Retail brands"
@@ -2183,11 +2338,30 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
     estimatedDelivery: "8-10 weeks",
     supportLevel: "enterprise",
     marketPrice: "$1,499 - $5,000/month",
+=======
+      "Retail chains",
+      "Financial services",
+      "Healthcare providers",
+      "Travel companies"
+    ],
+    targetAudience: [
+      "Customer experience managers",
+      "Marketing teams",
+      "Product managers",
+      "UX designers",
+      "Business owners"
+    ],
+    tags: ["AI", "Customer Experience", "Personalization", "Behavioral Analytics", "Optimization", "UX"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "premium",
+    marketPrice: "$950 - $3,500/month",
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-3cf3
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
+<<<<<<< HEAD
     technology: ["ROS", "Computer Vision", "Machine Learning", "Python", "C++", "React", "IoT sensors"],
     integrations: ["Manufacturing systems", "Logistics platforms", "Quality control systems", "Safety systems"],
     compliance: ["ISO 13482", "ANSI/RIA R15.06", "Safety standards", "Industry regulations"],
@@ -2372,6 +2546,15 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeService[] = [
       website: "https://ziontechgroup.com"
 <<<<<<< HEAD
     }
+=======
+    technology: ["Machine Learning", "Natural Language Processing", "Behavioral Analytics", "Cloud Computing", "API Integration"],
+    integrations: ["CRM Systems", "Analytics Platforms", "E-commerce Platforms", "Marketing Tools", "Social Media"],
+    compliance: ["GDPR", "CCPA", "SOC 2", "PCI DSS"],
+    roi: "350% within 12 months",
+    competitors: ["Optimizely", "VWO", "Hotjar", "FullStory"],
+    marketTrend: "High-growth market with 300% annual expansion",
+    innovationLevel: "Advanced AI technology revolutionizing customer experience optimization and personalization"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-3cf3
   }
 ];
 
