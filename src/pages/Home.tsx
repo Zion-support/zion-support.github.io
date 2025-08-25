@@ -213,6 +213,7 @@ import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { MicroSaasShowcase } from "@/components/home/MicroSaasShowcase";
 import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { EnhancedServicesShowcase } from "@/components/home/EnhancedServicesShowcase";
 import { BottomNavigation } from "@/components/MobileNavigation";
 import { MicroSaasServicesSection } from "@/components/home/MicroSaasServicesSection";
@@ -220,6 +221,9 @@ import { MicroSaasServicesSection } from "@/components/home/MicroSaasServicesSec
 =======
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-302a
+=======
+import { FloatingCTA } from "@/components/FloatingCTA";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
 
   return (
 <<<<<<< HEAD
@@ -548,9 +552,13 @@ import { ServicesOverview } from "@/components/home/ServicesOverview";
       <FeaturedListingsSection />
       <NewsletterSection />
       
+<<<<<<< HEAD
       {/* Mobile Bottom Navigation */}
       <BottomNavigation />
 >>>>>>> origin/cursor/website-audit-and-enhancement-ba38
+=======
+      <FloatingCTA />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
     </div>
   );
 };

@@ -16,7 +16,11 @@ import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+<<<<<<< HEAD
 import { ArrowRight, Star, TrendingUp, Zap, Users, Globe } from "lucide-react";
+=======
+import { ArrowRight, Star, TrendingUp, Eye } from "lucide-react";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
 
 interface FeaturedListingsSectionProps {
   showTitle?: boolean;
@@ -41,8 +45,13 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
         id: "tech-ai-labs",
         avatarUrl: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=64&h=64&fit=crop&auto=format"
       },
+<<<<<<< HEAD
       badge: "Trending",
       badgeColor: "from-zion-purple to-zion-purple-dark"
+=======
+      badge: "Top Rated",
+      badgeColor: "from-yellow-500 to-orange-500"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
     },
     {
       id: "image-generation-service",
@@ -61,7 +70,11 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
         id: "visual-ai"
       },
       badge: "Popular",
+<<<<<<< HEAD
       badgeColor: "from-zion-cyan to-zion-blue"
+=======
+      badgeColor: "from-purple-500 to-pink-500"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
     },
     {
 <<<<<<< HEAD
@@ -80,8 +93,13 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
         name: "DataMinds Consulting",
         id: "dataminds-consulting"
       },
+<<<<<<< HEAD
       badge: "Premium",
       badgeColor: "from-zion-cyan-light to-zion-cyan"
+=======
+      badge: "Expert",
+      badgeColor: "from-blue-500 to-cyan-500"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
     },
     {
       id: "sentiment-analysis-api",
@@ -100,6 +118,7 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
         id: "social-ai"
       },
       badge: "New",
+<<<<<<< HEAD
       badgeColor: "from-zion-blue to-zion-blue-dark"
     },
   ];
@@ -111,6 +130,12 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
     { number: "150+", label: "Countries Served", icon: Globe }
   ];
 
+=======
+      badgeColor: "from-green-500 to-emerald-500"
+    },
+  ];
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -130,6 +155,7 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
       transition: { duration: 0.5 }
     }
   };
+<<<<<<< HEAD
 =======
       id: 'cybersecurity-audit',
       title: 'Cybersecurity Audit',
@@ -149,11 +175,30 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
           backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.2) 1px, transparent 0)`,
           backgroundSize: '100px 100px'
         }}></div>
+=======
+
+  const headerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 }
+    }
+  };
+
+  return (
+    <section id="featured" className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-slate-dark to-zion-slate relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 right-20 w-64 h-64 bg-zion-purple rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 left-20 w-48 h-48 bg-zion-cyan rounded-full blur-2xl"></div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         {showTitle && (
           <motion.div 
+<<<<<<< HEAD
             className="text-center mb-20"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -192,10 +237,77 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
               </div>
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
               <div className="text-zion-slate-light text-sm md:text-base">{stat.label}</div>
+=======
+            className="text-center mb-16"
+            variants={headerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <GradientHeading className="text-4xl md:text-5xl font-bold mb-4">
+              Featured Listings
+            </GradientHeading>
+            <p className="text-zion-slate-light max-w-3xl mx-auto text-lg leading-relaxed">
+              Discover our handpicked selection of top AI products and services. 
+              Curated by experts for quality and innovation.
+            </p>
+            
+            {/* Stats */}
+            <div className="flex flex-wrap justify-center gap-8 mt-8">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-zion-cyan">500+</div>
+                <div className="text-sm text-zion-slate-light">Active Listings</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-zion-purple">98%</div>
+                <div className="text-sm text-zion-slate-light">Satisfaction Rate</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-zion-blue">24/7</div>
+                <div className="text-sm text-zion-slate-light">Support Available</div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          {featuredListings.map((listing, index) => (
+            <motion.div key={listing.id} variants={itemVariants}>
+              <div className="relative group">
+                {/* Badge */}
+                {listing.badge && (
+                  <div className={`absolute top-3 left-3 z-10 px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r ${listing.badgeColor} shadow-lg`}>
+                    {listing.badge}
+                  </div>
+                )}
+                
+                {/* View count indicator */}
+                <div className="absolute top-3 right-3 z-10 px-2 py-1 rounded-full text-xs font-medium text-white bg-zion-slate-dark/80 backdrop-blur-sm flex items-center gap-1">
+                  <Eye className="w-3 h-3" />
+                  {Math.floor(Math.random() * 1000) + 100}
+                </div>
+                
+                <ProductListingCard
+                  key={listing.id}
+                  listing={listing}
+                  onRequestQuote={(listingId: string) => {
+                    // Handle quote request - could navigate to quote form or open modal
+                    console.log('Requesting quote for:', listingId);
+                  }}
+                />
+              </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
             </motion.div>
           ))}
         </motion.div>
 
+<<<<<<< HEAD
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
           variants={containerVariants}
@@ -431,6 +543,39 @@ export function FeaturedListingsSection() {
             </CardContent>
           </Card>
         </div>
+=======
+        {/* Enhanced CTA Section */}
+        <motion.div 
+          className="text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+          <div className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-2xl p-8 max-w-3xl mx-auto">
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <TrendingUp className="w-6 h-6 text-zion-cyan" />
+              <h3 className="text-xl font-bold text-white">Trending Now</h3>
+            </div>
+            <p className="text-zion-slate-light mb-6">
+              Join thousands of tech professionals discovering amazing opportunities every day
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/marketplace">
+                <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25 transform hover:scale-105 flex items-center gap-2">
+                  Explore Marketplace
+                  <ArrowRight className="w-5 h-5" />
+                </Button>
+              </Link>
+              <Link to="/categories">
+                <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark px-8 py-3 rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25">
+                  Browse Categories
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </motion.div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
       </div>
     </section>
   );
