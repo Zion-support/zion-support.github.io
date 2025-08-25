@@ -93,6 +93,17 @@ export function Header() {
 
   const serviceCategories = [
     {
+      title: 'Innovative Micro SAAS',
+      icon: Rocket,
+      description: 'Cutting-edge technology solutions for modern businesses',
+      services: [
+        { name: 'Innovative Services Showcase', path: '/services/innovative-services-showcase', description: 'Revolutionary micro SAAS solutions' },
+        { name: 'AI Content & SEO Platform', path: '/services#ai-content', description: 'AI-powered content generation' },
+        { name: 'Blockchain Supply Chain', path: '/services#blockchain', description: 'Transparent supply chain management' },
+        { name: 'Quantum Cybersecurity', path: '/services#quantum-security', description: 'Future-proof security solutions' }
+      ]
+    },
+    {
       title: 'AI & Machine Learning',
       icon: Brain,
       description: 'Intelligent solutions powered by artificial intelligence',
