@@ -1,6 +1,32 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, Globe, Users, Briefcase, Phone, Mail, MapPin, Brain, BarChart3, Code, Palette, Target } from 'lucide-react';
+import { 
+  Menu, 
+  X, 
+  ChevronDown, 
+  Globe, 
+  Users, 
+  Briefcase, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Brain, 
+  BarChart3, 
+  Code, 
+  Palette, 
+  Target,
+  Shield,
+  Heart,
+  Cpu,
+  Building,
+  Network,
+  Cloud,
+  Clock,
+  Rocket,
+  Eye,
+  DollarSign,
+  ShoppingCart
+} from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
 
 export function Header() {
@@ -179,7 +205,6 @@ export function Header() {
         { name: 'Retail Technology', path: '/services/retail-technology', description: 'Digital retail transformation', icon: ShoppingCart }
       ]
     }
->>>>>>> origin/main
   ];
 
   const socialLinks = [
