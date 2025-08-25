@@ -97,11 +97,12 @@ export function Header() {
       icon: Brain,
       description: 'Intelligent solutions powered by artificial intelligence',
       services: [
-        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', description: 'Advanced analytics and insights' },
-        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', description: 'Smart marketing optimization' },
-        { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', description: 'Intelligent talent management' },
-        { name: 'AI Legal Tech', path: '/services/ai-legal-tech', description: 'Automated legal processes' },
-        { name: 'AI Healthcare Analytics', path: '/services/ai-healthcare-analytics', description: 'Patient care optimization' }
+        { name: 'AI Workflow Automation', path: '/services/ai-workflow-automation', description: 'Automate business processes with AI' },
+        { name: 'AI Business Intelligence', path: '/services#ai-bi', description: 'Advanced analytics and insights' },
+        { name: 'AI Marketing Automation', path: '/services#ai-marketing', description: 'Smart marketing optimization' },
+        { name: 'AI HR & Recruitment', path: '/services#ai-hr', description: 'Intelligent talent management' },
+        { name: 'AI Legal Tech', path: '/services#ai-legal', description: 'Automated legal processes' },
+        { name: 'AI Healthcare Analytics', path: '/services#ai-healthcare', description: 'Patient care optimization' }
       ]
     },
     {
@@ -109,6 +110,7 @@ export function Header() {
       icon: Shield,
       description: 'Protect your digital assets with cutting-edge security',
       services: [
+        { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', description: 'AI-powered threat detection' },
         { name: 'Quantum-Safe Security', path: '/services#quantum-security', description: 'Future-proof protection' },
         { name: 'Security Assessment', path: '/services#security-assessment', description: 'Comprehensive security audit' },
         { name: 'Compliance & Audit', path: '/services#compliance', description: 'Regulatory compliance solutions' },
@@ -131,9 +133,10 @@ export function Header() {
       icon: Rocket,
       description: 'Cutting-edge solutions for tomorrow\'s challenges',
       services: [
+        { name: 'Quantum Computing as a Service', path: '/services/quantum-computing-as-a-service', description: 'Access quantum computing power' },
+        { name: 'Edge Computing Platform', path: '/services/edge-computing-platform', description: 'Ultra-low latency edge computing' },
         { name: 'Blockchain Solutions', path: '/services#blockchain', description: 'Decentralized applications' },
         { name: 'IoT Platforms', path: '/services#iot', description: 'Connected device management' },
-        { name: 'Quantum Computing', path: '/services#quantum', description: 'Next-generation computing' },
         { name: 'AR/VR Solutions', path: '/services#ar-vr', description: 'Immersive experiences' }
       ]
     },

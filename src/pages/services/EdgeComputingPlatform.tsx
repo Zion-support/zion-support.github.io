@@ -1,113 +1,120 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
 import { 
-  Brain, 
+  Cpu, 
   Zap, 
-  Workflow, 
-  Bot, 
+  Globe, 
+  Brain, 
   TrendingUp, 
   Shield, 
   Clock, 
   BarChart3,
   Users,
-  Cpu,
   Database,
-  Globe,
+  Network,
   Lock,
   ArrowRight,
   CheckCircle,
-  Star
+  Star,
+  Server,
+  Target,
+  Rocket,
+  Wifi,
+  Activity,
+  Layers,
+  HardDrive
 } from 'lucide-react';
 
-export default function AIWorkflowAutomation() {
+export default function EdgeComputingPlatform() {
   const features = [
     {
-      title: "Intelligent Process Mapping",
-      description: "AI-powered analysis of existing workflows to identify optimization opportunities and automation potential",
-      icon: Workflow,
-      benefits: ["Process discovery", "Efficiency analysis", "Bottleneck identification", "ROI calculation"]
+      title: "Global Edge Network",
+      description: "Distributed edge nodes in 50+ countries providing ultra-low latency computing worldwide",
+      icon: Globe,
+      benefits: ["Global coverage", "Low latency", "High availability", "Geographic redundancy"]
     },
     {
-      title: "Smart Document Processing",
-      description: "Advanced OCR and NLP for automated document classification, extraction, and routing",
-      icon: Bot,
-      benefits: ["Multi-format support", "Accuracy >95%", "Custom extraction rules", "Real-time processing"]
+      title: "Real-time Data Processing",
+      description: "Process data at the edge with sub-10ms latency for IoT and real-time applications",
+      icon: Zap,
+      benefits: ["Sub-10ms latency", "Real-time analytics", "Stream processing", "Instant insights"]
     },
     {
-      title: "Predictive Analytics",
-      description: "Machine learning models that predict workflow outcomes and suggest proactive interventions",
-      icon: TrendingUp,
-      benefits: ["Risk assessment", "Performance forecasting", "Anomaly detection", "Trend analysis"]
+      title: "AI Edge Inference",
+      description: "Run AI models directly on edge devices for instant decision making",
+      icon: Brain,
+      benefits: ["Local AI processing", "Reduced bandwidth", "Privacy preservation", "Offline capability"]
     },
     {
-      title: "Intelligent Routing",
-      description: "AI-driven decision making for optimal task assignment and workflow routing",
-      icon: Cpu,
-      benefits: ["Skill-based routing", "Load balancing", "Priority optimization", "Dynamic adjustment"]
+      title: "Edge Security",
+      description: "Built-in security with encryption, authentication, and threat detection at every edge node",
+      icon: Shield,
+      benefits: ["End-to-end encryption", "Identity management", "Threat detection", "Compliance ready"]
     },
     {
-      title: "Real-time Monitoring",
-      description: "Live dashboards with AI-powered insights and automated alerting systems",
+      title: "Edge Analytics",
+      description: "Advanced analytics and machine learning capabilities at the edge",
       icon: BarChart3,
-      benefits: ["Live metrics", "Smart alerts", "Performance tracking", "Custom KPIs"]
+      benefits: ["Local analytics", "Predictive models", "Data visualization", "Custom dashboards"]
     },
     {
-      title: "Integration Hub",
-      description: "Seamless connectivity with 200+ enterprise systems and custom API development",
-      icon: Database,
-      benefits: ["Pre-built connectors", "Custom APIs", "Webhook support", "Real-time sync"]
+      title: "Edge Management Console",
+      description: "Centralized management and monitoring of all edge nodes and applications",
+      icon: Activity,
+      benefits: ["Centralized control", "Real-time monitoring", "Automated scaling", "Performance optimization"]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$2,500",
+      name: "Edge Starter",
+      price: "$2,000",
       period: "/month",
-      description: "Perfect for small teams getting started with workflow automation",
+      description: "Perfect for small IoT deployments and edge computing experiments",
       features: [
-        "Up to 10 workflows",
-        "Basic AI processing",
-        "5 user licenses",
+        "5 edge nodes",
+        "100GB data processing/month",
+        "Basic edge analytics",
+        "5 user accounts",
         "Email support",
-        "Standard integrations",
-        "Basic analytics"
+        "Standard security",
+        "99.5% uptime SLA"
       ],
       cta: "Start Free Trial",
       popular: false
     },
     {
-      name: "Professional",
-      price: "$7,500",
+      name: "Edge Professional",
+      price: "$8,000",
       period: "/month",
-      description: "Ideal for growing businesses with complex automation needs",
+      description: "Ideal for production edge computing deployments",
       features: [
-        "Up to 50 workflows",
-        "Advanced AI models",
-        "25 user licenses",
+        "25 edge nodes",
+        "1TB data processing/month",
+        "Advanced edge analytics",
+        "25 user accounts",
         "Priority support",
-        "Custom integrations",
-        "Advanced analytics",
-        "Workflow templates",
-        "API access"
+        "AI edge inference",
+        "Custom edge applications",
+        "99.9% uptime SLA"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$15,000",
+      name: "Edge Enterprise",
+      price: "$25,000",
       period: "/month",
-      description: "Full-scale automation platform for large organizations",
+      description: "Full-scale edge computing platform for large organizations",
       features: [
-        "Unlimited workflows",
+        "Unlimited edge nodes",
+        "Unlimited data processing",
         "Custom AI models",
         "Unlimited users",
         "24/7 dedicated support",
-        "White-label options",
-        "Advanced security",
-        "Custom development",
-        "SLA guarantees"
+        "White-label solutions",
+        "On-premise edge",
+        "99.99% uptime SLA"
       ],
       cta: "Contact Sales",
       popular: false
@@ -116,69 +123,103 @@ export default function AIWorkflowAutomation() {
 
   const useCases = [
     {
+      industry: "Manufacturing",
+      title: "Smart Factory",
+      description: "Real-time monitoring and predictive maintenance for industrial equipment",
+      roi: "30% reduction in downtime",
+      icon: Cpu
+    },
+    {
       industry: "Healthcare",
-      title: "Patient Care Coordination",
-      description: "Automated patient intake, appointment scheduling, and follow-up care workflows",
-      roi: "40% reduction in administrative overhead",
+      title: "Remote Patient Monitoring",
+      description: "Edge computing for real-time health data processing and alerts",
+      roi: "40% faster response times",
       icon: Users
     },
     {
-      industry: "Finance",
-      title: "Loan Processing",
-      description: "Intelligent document review, risk assessment, and approval workflows",
-      roi: "60% faster loan processing",
-      icon: Shield
-    },
-    {
-      industry: "Manufacturing",
-      title: "Quality Control",
-      description: "Automated inspection workflows with AI-powered defect detection",
-      roi: "35% improvement in quality metrics",
-      icon: CheckCircle
-    },
-    {
       industry: "Retail",
-      title: "Inventory Management",
-      description: "Smart demand forecasting and automated reorder workflows",
-      roi: "25% reduction in stockouts",
+      title: "Smart Retail",
+      description: "Edge analytics for customer behavior and inventory optimization",
+      roi: "25% increase in sales",
       icon: TrendingUp
+    },
+    {
+      industry: "Transportation",
+      title: "Connected Vehicles",
+      description: "Edge processing for autonomous driving and traffic optimization",
+      roi: "50% improvement in safety",
+      icon: Rocket
     }
   ];
 
   const benefits = [
     {
-      title: "80% Time Savings",
-      description: "Automate repetitive tasks and focus on strategic work",
-      icon: Clock,
-      metric: "80%"
-    },
-    {
-      title: "95% Accuracy",
-      description: "AI-powered processing reduces human errors significantly",
-      icon: CheckCircle,
-      metric: "95%"
-    },
-    {
-      title: "3x Faster",
-      description: "Streamlined workflows accelerate business processes",
+      title: "10x Faster",
+      description: "Ultra-low latency processing at the edge",
       icon: Zap,
-      metric: "3x"
+      metric: "10x"
     },
     {
-      title: "24/7 Operation",
-      description: "Automated systems work around the clock without breaks",
+      title: "99.9% Uptime",
+      description: "High availability with distributed edge nodes",
+      icon: CheckCircle,
+      metric: "99.9%"
+    },
+    {
+      title: "Global Coverage",
+      description: "Edge nodes in 50+ countries worldwide",
       icon: Globe,
-      metric: "24/7"
+      metric: "50+"
+    },
+    {
+      title: "Real-time Processing",
+      description: "Sub-10ms latency for instant insights",
+      icon: Clock,
+      metric: "<10ms"
     }
+  ];
+
+  const edgeAdvantages = [
+    {
+      title: "Reduced Latency",
+      description: "Process data closer to the source for faster response times",
+      icon: Zap
+    },
+    {
+      title: "Bandwidth Optimization",
+      description: "Reduce data transfer by processing at the edge",
+      icon: Network
+    },
+    {
+      title: "Privacy & Security",
+      description: "Keep sensitive data local and secure at the edge",
+      icon: Shield
+    },
+    {
+      title: "Offline Operation",
+      description: "Continue processing even when connectivity is limited",
+      icon: Wifi
+    }
+  ];
+
+  const edgeTechnologies = [
+    "Kubernetes Edge",
+    "Docker Edge",
+    "WebAssembly",
+    "Edge AI Frameworks",
+    "5G Integration",
+    "IoT Protocols",
+    "Edge Databases",
+    "Edge Security"
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
       <SEO 
-        title="AI Workflow Automation - Zion Tech Group" 
-        description="Transform your business with intelligent workflow automation powered by AI. Reduce manual work by 80% and increase efficiency by 3x."
-        keywords="AI workflow automation, business process automation, intelligent automation, workflow optimization, AI-powered workflows"
-        canonical="https://ziontechgroup.com/services/ai-workflow-automation"
+        title="Edge Computing Platform - Zion Tech Group" 
+        description="Deploy applications at the edge with our global edge computing platform. Ultra-low latency, real-time processing, and AI inference at the edge."
+        keywords="edge computing, edge platform, IoT, real-time processing, edge analytics, edge AI, low latency computing"
+        canonical="https://ziontechgroup.com/services/edge-computing-platform"
       />
 
       {/* Hero Section */}
@@ -186,29 +227,29 @@ export default function AIWorkflowAutomation() {
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/90 to-zion-purple/90"></div>
         <div className="relative z-10 container mx-auto px-4 py-24 text-center">
           <div className="flex items-center justify-center mb-6">
-            <Brain className="w-12 h-12 text-zion-cyan mr-3 animate-pulse" />
+            <Cpu className="w-12 h-12 text-zion-cyan mr-3 animate-pulse" />
             <h1 className="text-5xl md:text-6xl font-bold text-white">
-              AI Workflow Automation
+              Edge Computing Platform
             </h1>
           </div>
           <p className="text-2xl text-zion-cyan mb-4 font-semibold">
-            Transform Manual Processes into Intelligent Workflows
+            Compute at the Edge, Process in Real-Time
           </p>
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8">
-            Leverage the power of artificial intelligence to automate complex business processes, 
-            reduce manual work by 80%, and increase operational efficiency by 3x. Our AI-powered 
-            workflow automation platform adapts and learns from your business operations.
+            Deploy applications at the edge with our global edge computing platform. Experience 
+            ultra-low latency processing, real-time analytics, and AI inference capabilities 
+            distributed across 50+ countries worldwide.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <button className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 hover:shadow-lg">
               Start Free Trial
             </button>
             <button className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold transition-all">
-              Schedule Demo
+              Edge Assessment
             </button>
           </div>
           <div className="mt-8 text-zion-slate-light">
-            <p className="text-sm">✓ 14-day free trial • ✓ No credit card required • ✓ Instant setup</p>
+            <p className="text-sm">✓ 30-day free trial • ✓ No setup fees • ✓ Global edge deployment • ✓ Real-time processing</p>
           </div>
         </div>
       </section>
@@ -218,11 +259,11 @@ export default function AIWorkflowAutomation() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
-              Proven Results Across Industries
+              Edge Computing Advantages
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Our AI workflow automation platform delivers measurable results that transform 
-              business operations and drive significant ROI.
+              Experience the power of distributed computing with measurable performance 
+              improvements and global reach.
             </p>
           </div>
           
@@ -249,22 +290,57 @@ export default function AIWorkflowAutomation() {
         </div>
       </section>
 
-      {/* Features Grid */}
+      {/* Edge Advantages */}
       <section className="py-20 bg-zion-blue-light">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
-              Advanced AI-Powered Features
+              Why Edge Computing?
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Comprehensive automation capabilities that adapt to your business needs and 
-              continuously improve through machine learning.
+              Understand the fundamental advantages of edge computing and how it transforms 
+              the way we process data and deploy applications.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {edgeAdvantages.map((advantage, index) => (
+              <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+                <div className="flex items-start mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mr-4">
+                    <advantage.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-zion-blue-dark mb-2">
+                      {advantage.title}
+                    </h3>
+                  </div>
+                </div>
+                <p className="text-zion-slate">
+                  {advantage.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features Grid */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
+              Advanced Edge Computing Features
+            </h2>
+            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
+              Comprehensive edge computing capabilities designed for modern applications 
+              that require real-time processing and global distribution.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 border border-zion-blue-light hover:shadow-xl transition-all duration-300 group hover:-translate-y-2">
+              <div key={index} className="bg-zion-blue-light rounded-xl shadow-lg p-6 border border-zion-blue-light hover:shadow-xl transition-all duration-300 group hover:-translate-y-2">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
@@ -288,22 +364,48 @@ export default function AIWorkflowAutomation() {
         </div>
       </section>
 
+      {/* Edge Technologies */}
+      <section className="py-20 bg-zion-blue-light">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
+              Edge Computing Technologies
+            </h2>
+            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
+              Built on industry-standard technologies and frameworks for maximum 
+              compatibility and performance at the edge.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+            {edgeTechnologies.map((technology, index) => (
+              <div key={index} className="bg-white rounded-lg p-6 text-center shadow-md hover:shadow-lg transition-shadow">
+                <Server className="w-8 h-8 text-zion-cyan mx-auto mb-3" />
+                <p className="text-sm font-semibold text-zion-blue-dark">
+                  {technology}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
-              Transparent Pricing Plans
+              Edge Computing Pricing Plans
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Choose the plan that fits your automation needs. All plans include our 
-              core AI capabilities and 14-day free trial.
+              Choose the edge computing plan that fits your deployment needs. All plans include 
+              our core edge capabilities and 30-day free trial.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`relative bg-white rounded-xl shadow-lg p-8 border-2 transition-all duration-300 hover:shadow-xl ${
+              <div key={index} className={`relative bg-zion-blue-light rounded-xl shadow-lg p-8 border-2 transition-all duration-300 hover:shadow-xl ${
                 plan.popular 
                   ? 'border-zion-cyan scale-105' 
                   : 'border-zion-blue-light hover:border-zion-cyan'
@@ -339,7 +441,7 @@ export default function AIWorkflowAutomation() {
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all ${
                   plan.popular
                     ? 'bg-zion-cyan hover:bg-zion-cyan-light text-white'
-                    : 'bg-zion-blue-light hover:bg-zion-blue text-white'
+                    : 'bg-zion-blue hover:bg-zion-blue-dark text-white'
                 }`}>
                   {plan.cta}
                 </button>
@@ -349,10 +451,10 @@ export default function AIWorkflowAutomation() {
           
           <div className="text-center mt-12">
             <p className="text-zion-slate mb-4">
-              Need a custom solution? Contact our enterprise team for tailored pricing.
+              Need custom edge solutions? Contact our edge computing experts for tailored pricing.
             </p>
             <button className="text-zion-cyan hover:text-zion-cyan-light font-semibold flex items-center justify-center mx-auto">
-              Contact Enterprise Sales
+              Contact Edge Experts
               <ArrowRight className="w-4 h-4 ml-2" />
             </button>
           </div>
@@ -364,11 +466,11 @@ export default function AIWorkflowAutomation() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
-              Industry-Specific Solutions
+              Industry Applications
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              See how AI workflow automation transforms operations across different industries 
-              with proven ROI and measurable results.
+              Discover how edge computing is transforming industries with real-time processing, 
+              reduced latency, and improved efficiency.
             </p>
           </div>
           
@@ -406,22 +508,22 @@ export default function AIWorkflowAutomation() {
       <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Automate Your Workflows?
+            Ready to Deploy at the Edge?
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Join thousands of businesses that have transformed their operations with AI-powered 
-            workflow automation. Start your free trial today and see results in 14 days.
+            Experience the future of computing with our global edge computing platform. 
+            Start your free trial today and deploy applications worldwide.
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <button className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105">
               Start Free Trial
             </button>
             <button className="border-2 border-white text-white hover:bg-white hover:text-zion-blue-dark px-8 py-4 rounded-lg font-semibold transition-all">
-              Schedule Demo
+              Edge Assessment
             </button>
           </div>
           <div className="text-zion-slate-light text-sm">
-            <p>✓ No setup fees • ✓ 14-day free trial • ✓ Instant access • ✓ 24/7 support</p>
+            <p>✓ No setup fees • ✓ 30-day free trial • ✓ Global edge deployment • ✓ Real-time processing</p>
           </div>
         </div>
       </section>
