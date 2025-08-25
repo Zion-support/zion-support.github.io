@@ -1,245 +1,216 @@
-import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
-  title: string;
-  description: string;
-  keywords: string;
-  canonical?: string;
+  title?: string;
+  description?: string;
+  keywords?: string;
   ogImage?: string;
+  ogUrl?: string;
+  canonical?: string;
   ogType?: string;
   twitterCard?: string;
-  article?: boolean;
+  structuredData?: object;
+  noindex?: boolean;
+  nofollow?: boolean;
+  type?: 'website' | 'article' | 'profile';
+  author?: string;
   publishedTime?: string;
   modifiedTime?: string;
-  author?: string;
   section?: string;
   tags?: string[];
 }
 
-export function SEO({
+export const SEO: React.FC<SEOProps> = ({
   title,
   description,
   keywords,
-  canonical,
   ogImage = '/og-image.jpg',
+  ogUrl,
+  canonical,
   ogType = 'website',
   twitterCard = 'summary_large_image',
-  article = false,
+  structuredData,
+  noindex = false,
+  nofollow = false,
+  type = 'website',
+  author = 'Zion Tech Group',
   publishedTime,
   modifiedTime,
-  author = 'Zion Tech Group',
   section,
   tags = []
-}: SEOProps) {
+}: SEOProps) => {
   const siteName = 'Zion Tech Group';
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | ${siteName}`;
-  const fullCanonical = canonical || `https://ziontechgroup.com${window.location.pathname}`;
-  const defaultOgImage = 'https://ziontechgroup.com/og-image.jpg';
-
-  // Enhanced structured data
+  const siteUrl = 'https://ziontechgroup.com';
+  const fullTitle = title?.includes(siteName) ? title : `${title} | ${siteName}`;
+  const fullUrl = canonical || ogUrl || `${siteUrl}${window.location.pathname}`;
+  const fullOgImage = ogImage?.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+  
+  // Organization schema
   const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://ziontechgroup.com/logo.png",
-      "width": 512,
-      "height": 512
-    },
-    "description": "Leading technology solutions provider specializing in AI, cloud computing, micro SAAS services, and digital transformation for modern enterprises.",
-    "foundingDate": "2020",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
-    },
-    "contactPoint": [
-      {
-        "@type": "ContactPoint",
-        "telephone": "+1-302-464-0950",
-        "contactType": "customer service",
-        "email": "kleber@ziontechgroup.com",
-        "availableLanguage": "English"
-      }
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Zion Tech Group',
+    url: siteUrl,
+    logo: `${siteUrl}/logo.png`,
+    description: 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.',
+    sameAs: [
+      'https://linkedin.com/company/ziontechgroup',
+      'https://twitter.com/ziontechgroup',
+      'https://github.com/ziontechgroup'
     ],
-    "sameAs": [
-      "https://facebook.com/ziontechgroup",
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup",
-      "https://instagram.com/ziontechgroup",
-      "https://github.com/ziontechgroup",
-      "https://youtube.com/@ziontechgroup"
-    ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Technology Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "AI & Machine Learning Solutions",
-            "description": "Cutting-edge AI solutions for business transformation"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Micro SAAS Services",
-            "description": "Scalable software solutions for growing businesses"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Cloud & DevOps Solutions",
-            "description": "Infrastructure optimization and automated deployment"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Digital Transformation",
-            "description": "Complete business modernization services"
-          }
-        }
-      ]
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+1-302-464-0950',
+      contactType: 'customer service',
+      email: 'kleber@ziontechgroup.com',
+      areaServed: 'Worldwide'
     },
-    "areaServed": {
-      "@type": "Country",
-      "name": "United States"
-    },
-    "serviceArea": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": 39.4496,
-        "longitude": -75.7163
-      },
-      "geoRadius": "50000"
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'US',
+      addressLocality: 'Middletown',
+      addressRegion: 'DE',
+      postalCode: '19709',
+      streetAddress: '364 E Main St STE 1008'
     }
   };
 
+  // Website schema
   const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "description": "Your comprehensive marketplace for all things technology and AI",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": {
-        "@type": "EntryPoint",
-        "urlTemplate": "https://ziontechgroup.com/search?q={search_term_string}"
-      },
-      "query-input": "required name=search_term_string"
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Zion Tech Group',
+    url: siteUrl,
+    description: 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: `${siteUrl}/search?q={search_term_string}`,
+      'query-input': 'required name=search_term_string'
     }
   };
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://ziontechgroup.com"
+  // Article schema (if applicable)
+  const articleSchema = (type === 'article' || ogType === 'article') ? {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description: description,
+    image: fullOgImage,
+    author: {
+      '@type': 'Organization',
+      name: author
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: siteName,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteUrl}/logo.png`
       }
-    ]
-  };
+    },
+    datePublished: publishedTime,
+    dateModified: modifiedTime,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': fullUrl
+    },
+    ...(section && { articleSection: section }),
+    ...(tags.length > 0 && { keywords: tags.join(', ') })
+  } : null;
 
   return (
     <Helmet>
-      {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <link rel="canonical" href={fullCanonical} />
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
       
-      {/* Language and Locale */}
-      <meta httpEquiv="content-language" content="en" />
-      <meta name="language" content="English" />
-      <meta name="geo.region" content="US-DE" />
-      <meta name="geo.placename" content="Middletown, Delaware" />
-      <meta name="geo.position" content="39.4496;-75.7163" />
-      <meta name="ICBM" content="39.4496, -75.7163" />
-
-      {/* Open Graph Meta Tags */}
+      {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
+      <meta property="og:image" content={fullOgImage} />
+      <meta property="og:url" content={fullUrl} />
       <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={fullCanonical} />
-      <meta property="og:image" content={ogImage || defaultOgImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content={siteName} />
-      <meta property="og:locale" content="en_US" />
-      {article && (
-        <>
-          {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-          {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-          {author && <meta property="article:author" content={author} />}
-          {section && <meta property="article:section" content={section} />}
-          {tags.map((tag, index) => (
-            <meta key={index} property="article:tag" content={tag} />
-          ))}
-        </>
-      )}
-
-      {/* Twitter Card Meta Tags */}
+      
+      {/* Twitter */}
       <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:site" content="@ziontechgroup" />
-      <meta name="twitter:creator" content="@ziontechgroup" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage || defaultOgImage} />
-
-      {/* Additional Meta Tags */}
-      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-      <meta name="author" content={author} />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-      <meta name="theme-color" content="#172d67" />
-      <meta name="msapplication-TileColor" content="#172d67" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="twitter:image" content={fullOgImage} />
       
-      {/* Performance and Security */}
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="referrer" content="strict-origin-when-cross-origin" />
-      
-      {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      
-      {/* Favicon and App Icons */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="manifest" href="/site.webmanifest" />
+      {/* Canonical */}
+      <link rel="canonical" href={fullUrl} />
       
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(organizationSchema)}
       </script>
+      
       <script type="application/ld+json">
         {JSON.stringify(websiteSchema)}
       </script>
-      <script type="application/ld+json">
-        {JSON.stringify(breadcrumbSchema)}
-      </script>
+      
+      {articleSchema && (
+        <script type="application/ld+json">
+          {JSON.stringify(articleSchema)}
+        </script>
+      )}
     </Helmet>
+  );
+};
+
+// Specialized SEO components for different page types
+export function HomePageSEO() {
+  return (
+    <SEO
+      title="Zion Tech Group - Revolutionary Micro SaaS & AI Solutions"
+      description="Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with our innovative solutions."
+      keywords="micro SaaS, AI solutions, cloud infrastructure, cybersecurity, machine learning, React, Node.js, AWS, Azure, business automation"
+      canonical="/"
+      ogImage="/images/zion-homepage-og.jpg"
+      ogType="website"
+    />
   );
 }
 
+export function ServicePageSEO({ 
+  serviceName, 
+  description, 
+  category 
+}: { 
+  serviceName: string;
+  description: string;
+  category: string;
+}) {
+  return (
+    <SEO
+      title={`${serviceName} - Zion Tech Group`}
+      description={description}
+      keywords={`${serviceName}, ${category}, tech services, IT solutions, Zion Tech Group`}
+      canonical={`/services/${serviceName.toLowerCase().replace(/\s+/g, '-')}`}
+      ogType="product"
+    />
+  );
+}
+
+export function TalentPageSEO({ 
+  talentName, 
+  skills, 
+  description 
+}: { 
+  talentName: string;
+  skills: string[];
+  description: string;
+}) {
+  return (
+    <SEO
+      title={`${talentName} - Tech Talent | Zion Tech Group`}
+      description={description}
+      keywords={`${talentName}, ${skills.join(', ')}, tech talent, AI expert, developer, Zion Tech Group`}
+      canonical={`/talent/${talentName.toLowerCase().replace(/\s+/g, '-')}`}
+      ogType="profile"
+    />
+  );
+}
