@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -40,8 +38,7 @@ import {
   ShieldCheck,
   Zap as ZapIcon
 } from 'lucide-react';
-import SEOHead from '../components/SEOHead';
-import { SEOConfigs } from '../components/SEOHead';
+import { SEOHead } from '../components/SEOHead';
 
 // Lazy load components for better performance
 const LazyHeroSection = React.lazy(() => import('../components/home/HeroSection'));
