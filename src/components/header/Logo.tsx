@@ -20,9 +20,14 @@ export function Logo({ customLogo, customColor }: LogoProps) {
         Z
 =======
     <Link to="/" className="flex items-center">
+<<<<<<< HEAD
       <div className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent" style={colorToUse ? { color: colorToUse } : {}}>
         {isWhitelabel ? brandName : 'ZION'} <span className="text-zion-cyan">TECH</span>
 >>>>>>> origin/cursor/website-audit-and-enhancement-f8cc
+=======
+      <div className="text-2xl font-bold hover-glow transition-all duration-300" style={colorToUse ? { color: colorToUse } : {}}>
+        {isWhitelabel ? brandName : 'Zion'}<span className="text-zion-cyan neon-pulse">AI</span>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2048
       </div>
       <span className="text-xl font-bold text-white">Zion Tech Group</span>
 =======

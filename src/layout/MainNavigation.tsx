@@ -90,6 +90,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       key: 'services',
 <<<<<<< HEAD
       href: '/services',
@@ -145,6 +146,28 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     },
     {
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-da9e
+=======
+      key: 'services',
+      href: '/services',
+      matches: (path: string) => path.startsWith('/services')
+    },
+    {
+      key: 'ai-services',
+      href: '/ai-services',
+      matches: (path: string) => path.startsWith('/ai-services')
+    },
+    {
+      key: 'it-services',
+      href: '/it-services',
+      matches: (path: string) => path.startsWith('/it-services')
+    },
+    {
+      key: 'micro-saas',
+      href: '/micro-saas-services',
+      matches: (path: string) => path.startsWith('/micro-saas-services')
+    },
+    {
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2048
       key: 'marketplace',
       href: '/marketplace',
       name: 'Marketplace',
@@ -683,10 +706,10 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             <Link
               to={link.href}
               className={cn(
-                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-all duration-300 hover:scale-105",
                 link.matches(location.pathname)
-                  ? "bg-zion-purple/20 text-zion-cyan"
-                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                  ? "bg-zion-purple/20 text-zion-cyan neon-glow"
+                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan hover-glow"
               )}
             >
               {link.name}

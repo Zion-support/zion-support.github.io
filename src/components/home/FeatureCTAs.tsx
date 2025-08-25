@@ -37,6 +37,7 @@ import {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   PenTool,
   Link as LinkIcon,
   Shield,
@@ -60,6 +61,9 @@ import {
 =======
   Sparkles
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-eb69
+=======
+  Server
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2048
 } from "lucide-react";
 =======
   Users, 
@@ -353,6 +357,7 @@ export function FeatureCTAs() {
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       title: "Services Marketplace",
       description: "Discover professional tech and AI services for your business needs, from development to consulting.",
       icon: <Zap className="h-12 w-12 p-3 rounded-2xl bg-gradient-to-br from-cyan-500 to-cyan-600 text-white shadow-lg" />,
@@ -360,6 +365,30 @@ export function FeatureCTAs() {
       badge: "New",
       details: "From on-demand IT support to specialized AI development, our marketplace offers verified services with transparent pricing and reviews.",
       gradient: "from-cyan-500/20 to-cyan-600/20"
+=======
+      title: "AI Services",
+      description: "Transform your business with cutting-edge AI solutions including chatbots, content generation, and predictive analytics.",
+      icon: <Zap className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />,
+      link: "/ai-services",
+      badge: "New",
+      details: "From AI chatbots to predictive analytics, our AI services help you automate processes and gain competitive advantages."
+    },
+    {
+      title: "IT Services",
+      description: "Comprehensive IT solutions including cloud migration, cybersecurity, and infrastructure management.",
+      icon: <Server className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />,
+      link: "/it-services",
+      badge: "Essential",
+      details: "Modernize your IT infrastructure with our expert services including cloud migration, security, and managed IT solutions."
+    },
+    {
+      title: "Micro SAAS Services",
+      description: "Affordable software solutions for modern businesses including CRM, project management, and analytics.",
+      icon: <Building className="h-10 w-10 p-2 rounded-md bg-green-100 text-green-700" />,
+      link: "/micro-saas-services",
+      badge: "Affordable",
+      details: "Powerful, affordable software solutions designed for modern businesses. Start with free trials and scale as you grow."
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2048
     },
     {
 =======
@@ -754,6 +783,7 @@ export function FeatureCTAs() {
         >
           {features.map((feature, index) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
             <motion.div key={index} variants={itemVariants}>
               <Card className={`group bg-gradient-to-br ${feature.gradient} border-zion-blue-light/20 hover:border-zion-purple/50 rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-zion-purple/20 transform hover:scale-105 backdrop-blur-sm`}>
                 <CardHeader className="pb-4">
@@ -796,6 +826,9 @@ export function FeatureCTAs() {
             </motion.div>
 =======
             <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50 bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/20 hover:scale-105 group">
+=======
+            <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50 hover:scale-105 group">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2048
               <CardHeader className="pb-2">
                 <div className="flex justify-between items-start">
                   {feature.icon}
@@ -861,6 +894,7 @@ export function FeatureCTAs() {
                   {service.description}
                 </CardDescription>
               </CardHeader>
+<<<<<<< HEAD
               
               <CardContent className="space-y-4">
                 {/* Rating and Price */}
@@ -882,6 +916,16 @@ export function FeatureCTAs() {
                   <Link to={service.link}>
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+=======
+              <CardContent>
+                <p className="text-sm text-muted-foreground">{feature.details}</p>
+              </CardContent>
+              <CardFooter>
+                <Button asChild className="w-full gap-1 hover-neon transition-all duration-300">
+                  <Link to={feature.link}>
+                    <span>Explore {feature.title}</span>
+                    <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2048
                   </Link>
                 </Button>
               </CardContent>

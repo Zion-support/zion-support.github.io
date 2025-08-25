@@ -454,11 +454,15 @@ export function Header() {
     <header 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/95 backdrop-blur-md shadow-lg shadow-zion-purple/10"
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-da9e
 =======
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/95 backdrop-blur-xl shadow-2xl shadow-zion-purple/10"
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a2e5
+=======
+      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md glass-effect-dark"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2048
       style={headerStyle}
     >
       {/* Animated background elements */}

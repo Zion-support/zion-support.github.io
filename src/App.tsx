@@ -107,6 +107,7 @@ const TalentsPage = React.lazy(() => import('./pages/TalentsPage'));
 const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
 const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
 const DigitalMarketingServicesPage = React.lazy(() => import('./pages/DigitalMarketingServicesPage'));
@@ -124,6 +125,11 @@ const ServiceDetailPage = React.lazy(() => import('./pages/ServiceDetailPage'));
 const ServicePricingPage = React.lazy(() => import('./pages/ServicePricingPage'));
 const EnterpriseSolutionsPage = React.lazy(() => import('./pages/EnterpriseSolutionsPage'));
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-32cc
+=======
+const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
+const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
+const MicroSAASServicesPage = React.lazy(() => import('./pages/MicroSAASServicesPage'));
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2048
 const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage'));
 const EquipmentDetail = React.lazy(() => import('./pages/EquipmentDetail'));
 const Analytics = React.lazy(() => import('./pages/Analytics'));
@@ -303,6 +309,7 @@ const baseRoutes = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   { path: '/micro-saas-services', element: <MicroSaasServicesPage /> },
 =======
   { path: '/services-overview', element: <ServicesOverviewPage /> },
@@ -367,6 +374,11 @@ const baseRoutes = [
   { path: '/advanced-services', element: <AdvancedServicesPage /> },
   { path: '/services-comparison', element: <ServicesComparisonPage /> },
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-1ab5
+=======
+  { path: '/ai-services', element: <AIServicesPage /> },
+  { path: '/it-services', element: <ITServicesPage /> },
+  { path: '/micro-saas-services', element: <MicroSAASServicesPage /> },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2048
   { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
   { path: '/ai-services', element: <AIServicesPage /> },
   { path: '/blockchain-services', element: <BlockchainServicesPage /> },
