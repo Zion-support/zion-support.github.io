@@ -1,217 +1,241 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, Briefcase, Users, Phone, Globe, Shield, Zap } from 'lucide-react';
-import { ThemeToggle } from './ThemeToggle';
+import { Button } from '@/components/ui/button';
+import { Menu, X, ChevronDown, Globe, Sun, Moon } from 'lucide-react';
+import { useTheme } from '@/components/ThemeProvider';
 
-export function Header() {
+export const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const { theme, setTheme } = useTheme();
   const location = useLocation();
 
-  const navigation = [
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    setActiveDropdown(null);
+  };
+
+  const toggleDropdown = (dropdown: string) => {
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  };
+
+  const navigationItems = [
+    { name: 'Home', href: '/' },
     { 
       name: 'Services', 
-      href: '/services',
-      current: location.pathname.startsWith('/services'),
+      href: '#',
       dropdown: [
-        { name: 'AI & Autonomous Systems', href: '/services/ai-autonomous-systems' },
-        { name: 'Quantum Technology', href: '/services/quantum-technology' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity' },
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
-        { name: 'Micro SAAS Solutions', href: '/services/micro-saas-solutions' },
-        { name: 'Emerging Technology', href: '/emerging-tech' },
-        { name: 'View All Services', href: '/services' }
+        { name: 'Micro SAAS Services', href: '/micro-saas-services' },
+        { name: 'AI & Machine Learning', href: '/ai-services' },
+        { name: 'Cloud & DevOps', href: '/cloud-devops' },
+        { name: 'Digital Transformation', href: '/digital-transformation' },
+        { name: 'Enterprise Solutions', href: '/enterprise-solutions' },
+        { name: 'IT Onsite Services', href: '/it-onsite-services' },
       ]
     },
-    { 
-      name: 'Solutions', 
-      href: '/solutions/enterprise',
-      current: location.pathname.startsWith('/solutions'),
-      dropdown: [
-        { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
-        { name: 'Healthcare Solutions', href: '/solutions/healthcare' },
-        { name: 'Financial Solutions', href: '/financial-solutions' },
-        { name: 'Manufacturing Solutions', href: '/manufacturing-solutions' },
-        { name: 'Green IT Solutions', href: '/green-it' }
-      ]
-    },
-    { 
-      name: 'Company', 
-      href: '/about',
-      current: location.pathname.startsWith('/about') || location.pathname.startsWith('/team') || location.pathname.startsWith('/partners'),
-      dropdown: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Team', href: '/team' },
-        { name: 'Partners', href: '/partners' },
-        { name: 'Case Studies', href: '/case-studies' },
-        { name: 'News & Events', href: '/news' }
-      ]
-    },
-    { 
-      name: 'Resources', 
-      href: '/resources',
-      current: location.pathname.startsWith('/blog') || location.pathname.startsWith('/webinars') || location.pathname.startsWith('/white-papers'),
-      dropdown: [
-        { name: 'Blog', href: '/blog' },
-        { name: 'Webinars', href: '/webinars' },
-        { name: 'White Papers', href: '/white-papers' },
-        { name: 'Documentation', href: '/docs' },
-        { name: 'Help Center', href: '/help' }
-      ]
-    },
-    { name: 'Contact', href: '/contact', current: location.pathname === '/contact' },
+    { name: 'Marketplace', href: '/marketplace' },
+    { name: 'Talent', href: '/talent' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
   ];
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
+  const isActive = (href: string) => {
+    if (href === '/') {
+      return location.pathname === '/';
+    }
+    return location.pathname.startsWith(href);
   };
 
   return (
-    <header className="bg-background/80 backdrop-blur-md border-b border-border sticky top-0 z-50">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-zion-blue-dark/95 backdrop-blur-md border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' 
+        : 'bg-transparent'
+    }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-zion-blue to-zion-purple rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">Z</span>
-            </div>
-            <span className="text-xl font-bold text-gradient">Zion Tech Group</span>
-          </Link>
-
+          <div className="flex items-center">
+            <Link to="/" className="flex-shrink-0" onClick={closeMenu}>
+              <div className="flex items-center space-x-2">
+                <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">Z</span>
+                </div>
+                <span className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
+                  Zion Tech Group
+                </span>
+              </div>
+            </Link>
+          </div>
+          
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1">
-            {navigation.map((item) => (
-              <div key={item.name} className="relative group">
+          <nav className="hidden lg:flex space-x-8">
+            {navigationItems.map((item) => (
+              <div key={item.name} className="relative">
                 {item.dropdown ? (
-                  <button
-                    onClick={() => toggleDropdown(item.name)}
-                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center space-x-1 ${
-                      item.current
-                        ? 'text-zion-cyan bg-zion-cyan/10'
-                        : 'text-muted-foreground hover:text-foreground hover:bg-muted'
-                    }`}
-                  >
-                    <span>{item.name}</span>
-                    <ChevronDown className="w-4 h-4" />
-                  </button>
+                  <div className="relative">
+                    <button
+                      onClick={() => toggleDropdown(item.name)}
+                      className={`flex items-center space-x-1 px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+                        isActive(item.href)
+                          ? 'text-zion-cyan bg-zion-cyan/10'
+                          : 'text-zion-slate-light hover:text-white hover:bg-zion-blue-light/20'
+                      }`}
+                    >
+                      <span>{item.name}</span>
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                        activeDropdown === item.name ? 'rotate-180' : ''
+                      }`} />
+                    </button>
+                    
+                    {activeDropdown === item.name && (
+                      <div className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/20 overflow-hidden">
+                        {item.dropdown.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.name}
+                            to={dropdownItem.href}
+                            className="block px-4 py-3 text-sm text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 transition-all duration-200 border-b border-zion-blue-light/20 last:border-b-0"
+                            onClick={() => setActiveDropdown(null)}
+                          >
+                            {dropdownItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 ) : (
                   <Link
                     to={item.href}
-                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                      item.current
+                    className={`px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+                      isActive(item.href)
                         ? 'text-zion-cyan bg-zion-cyan/10'
-                        : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                        : 'text-zion-slate-light hover:text-white hover:bg-zion-blue-light/20'
                     }`}
                   >
                     {item.name}
                   </Link>
                 )}
-                
-                {/* Dropdown Menu */}
-                {item.dropdown && (
-                  <div className="absolute top-full left-0 mt-1 w-64 bg-background/95 backdrop-blur-md border border-border rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                    <div className="py-2">
-                      {item.dropdown.map((dropdownItem) => (
-                        <Link
-                          key={dropdownItem.name}
-                          to={dropdownItem.href}
-                          className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
-                        >
-                          {dropdownItem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
               </div>
             ))}
           </nav>
-
-          {/* Right side - Theme Toggle and CTA */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <ThemeToggle />
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white px-4 py-2 rounded-md font-medium transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/30"
+          
+          {/* Right side buttons */}
+          <div className="flex items-center space-x-4">
+            {/* Theme toggle */}
+            <button
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              className="p-2 text-zion-slate-light hover:text-white hover:bg-zion-blue-light/20 rounded-lg transition-all duration-200"
             >
-              Get Started
-            </Link>
+              {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+            </button>
+            
+            {/* Language selector */}
+            <button className="p-2 text-zion-slate-light hover:text-white hover:bg-zion-blue-light/20 rounded-lg transition-all duration-200">
+              <Globe className="w-5 h-5" />
+            </button>
+            
+            {/* Auth buttons */}
+            <div className="hidden md:flex items-center space-x-3">
+              <Button variant="outline" size="sm" className="border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan hover:text-white">
+                Sign In
+              </Button>
+              <Button size="sm" className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:shadow-lg hover:shadow-zion-cyan/25">
+                Get Started
+              </Button>
+            </div>
+            
+            {/* Mobile menu button */}
+            <button
+              onClick={toggleMenu}
+              className="lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-zion-blue-light/20 rounded-lg transition-all duration-200"
+            >
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile Menu Button */}
           <button
-            onClick={toggleMenu}
-            className="lg:hidden p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted"
-            aria-label="Toggle menu"
+            onClick={() => setIsSidebarOpen(true)}
+            className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors"
           >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            <Menu className="w-6 h-6" />
           </button>
         </div>
+      </div>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-background/95 backdrop-blur-md border-t border-border">
-              {navigation.map((item) => (
-                <div key={item.name}>
-                  {item.dropdown ? (
-                    <div>
-                      <button
-                        onClick={() => toggleDropdown(item.name)}
-                        className={`w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors flex items-center justify-between ${
-                          item.current
-                            ? 'text-zion-cyan bg-zion-cyan/10'
-                            : 'text-muted-foreground hover:text-foreground hover:bg-muted'
-                        }`}
-                      >
-                        <span>{item.name}</span>
-                        <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === item.name ? 'rotate-180' : ''}`} />
-                      </button>
-                      {activeDropdown === item.name && (
-                        <div className="ml-4 mt-2 space-y-1">
-                          {item.dropdown.map((dropdownItem) => (
-                            <Link
-                              key={dropdownItem.name}
-                              to={dropdownItem.href}
-                              className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
-                              onClick={() => setIsMenuOpen(false)}
-                            >
-                              {dropdownItem.name}
-                            </Link>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ) : (
-                    <Link
-                      to={item.href}
-                      className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
-                        item.current
-                          ? 'text-zion-cyan bg-zion-cyan/10'
-                          : 'text-muted-foreground hover:text-foreground hover:bg-muted'
-                      }`}
-                      onClick={() => setIsMenuOpen(false)}
+      {/* Mobile Navigation */}
+      {isMenuOpen && (
+        <div className="lg:hidden bg-zion-blue-dark/98 backdrop-blur-md border-t border-zion-cyan/20">
+          <div className="px-4 py-6 space-y-4">
+            {navigationItems.map((item) => (
+              <div key={item.name}>
+                {item.dropdown ? (
+                  <div>
+                    <button
+                      onClick={() => toggleDropdown(item.name)}
+                      className="flex items-center justify-between w-full px-3 py-2 text-left text-zion-slate-light hover:text-white hover:bg-zion-blue-light/20 rounded-lg transition-all duration-200"
                     >
-                      {item.name}
-                    </Link>
-                  )}
-                </div>
-              ))}
-              <div className="pt-4 flex items-center justify-between">
-                <ThemeToggle />
-                <Link
-                  to="/contact"
-                  className="bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white px-4 py-2 rounded-md font-medium transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/30"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Get Started
-                </Link>
+                      <span>{item.name}</span>
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                        activeDropdown === item.name ? 'rotate-180' : ''
+                      }`} />
+                    </button>
+                    
+                    {activeDropdown === item.name && (
+                      <div className="ml-4 mt-2 space-y-2">
+                        {item.dropdown.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.name}
+                            to={dropdownItem.href}
+                            className="block px-3 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-zion-blue-light/20 rounded-lg transition-all duration-200"
+                            onClick={closeMenu}
+                          >
+                            {dropdownItem.name}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <Link
+                    to={item.href}
+                    className={`block px-3 py-2 text-zion-slate-light hover:text-white hover:bg-zion-blue-light/20 rounded-lg transition-all duration-200 ${
+                      isActive(item.href) ? 'text-zion-cyan bg-zion-cyan/10' : ''
+                    }`}
+                    onClick={closeMenu}
+                  >
+                    {item.name}
+                  </Link>
+                )}
               </div>
+            ))}
+            
+            {/* Mobile auth buttons */}
+            <div className="pt-4 space-y-3">
+              <Button variant="outline" className="w-full border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan hover:text-white">
+                Sign In
+              </Button>
+              <Button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:shadow-lg hover:shadow-zion-cyan/25">
+                Get Started
+              </Button>
             </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </header>
   );
 }

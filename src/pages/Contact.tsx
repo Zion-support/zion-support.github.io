@@ -89,9 +89,13 @@ export default function Contact() {
       icon: Phone,
       title: 'Phone',
 <<<<<<< HEAD
+<<<<<<< HEAD
       details: ['+1 (302) 464-0950', '+1 (800) 123-4567'],
       description: 'Speak directly with our team',
       action: 'Call Now',
+=======
+      value: '+1 (302) 464-0950',
+>>>>>>> origin/main
       href: 'tel:+13024640950',
       color: 'from-blue-500 to-cyan-500'
 =======

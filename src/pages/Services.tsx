@@ -769,6 +769,7 @@ export function Services() {
           </motion.div>
         )}
 
+<<<<<<< HEAD
         {/* Services Summary */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -785,6 +786,15 @@ export function Services() {
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Sparkles className="w-8 h-8 text-white" />
 >>>>>>> origin/cursor/website-audit-and-enhancement-98d1
+=======
+              {/* Contact Info */}
+              <div>
+                <h4 className="text-lg font-semibold text-white mb-4">Contact</h4>
+                <div className="space-y-2 text-zion-slate-light">
+                  <p>📱 +1 (302) 464-0950</p>
+                  <p>✉️ kleber@ziontechgroup.com</p>
+                  <p>📍 364 E Main St STE 1008<br />Middletown DE 19709</p>
+>>>>>>> origin/main
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">Innovation First</h3>
                 <p className="text-gray-300">Cutting-edge AI and quantum technologies that keep you ahead of the competition</p>
