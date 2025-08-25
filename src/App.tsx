@@ -21,7 +21,7 @@ import { Toaster as SonnerToaster } from "./components/ui/sonner";
 import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
 import EnhancedSEO from './components/EnhancedSEO';
 import EnhancedAccessibility from './components/EnhancedAccessibility';
-import { PerformanceMonitor } from './components/PerformanceMonitor';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 // Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
@@ -41,14 +41,13 @@ const DigitalTransformation = lazy(() => import('./pages/DigitalTransformation')
 const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAutomation'));
 
-// Additional innovative services
-const IoTManagementPlatform = lazy(() => import('./pages/services/IoTManagementPlatform'));
-const BlockchainDeFiSolutions = lazy(() => import('./pages/services/BlockchainDeFiSolutions'));
-
 // New innovative service pages
 const AIWorkflowAutomation = lazy(() => import('./pages/services/AIWorkflowAutomation'));
 const BlockchainEnterpriseSolutions = lazy(() => import('./pages/services/BlockchainEnterpriseSolutions'));
 const IoTDataAnalytics = lazy(() => import('./pages/services/IoTDataAnalytics'));
+
+// Next Generation Innovative Services
+const NextGenInnovativeServices = lazy(() => import('./pages/NextGenInnovativeServices'));
 
 // Missing pages from analysis
 const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/QuantumNeuralNetworkPlatform'));
@@ -60,14 +59,6 @@ const FiveGEnterpriseSolutions = lazy(() => import('./pages/5GEnterpriseSolution
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 const NewServices = lazy(() => import('./pages/NewServices'));
-
-// Additional missing pages
-const AIAutonomousBusinessManagerPage = lazy(() => import('./pages/ai-autonomous-business-manager'));
-const AIAutonomousBusinessPlatformPage = lazy(() => import('./pages/ai-autonomous-business-platform'));
-const AIAutonomousResearchPage = lazy(() => import('./pages/ai-autonomous-research'));
-const AIAutonomousSystemsPlatformPage = lazy(() => import('./pages/ai-autonomous-systems-platform'));
-const AIAutonomousCodeReviewPage = lazy(() => import('./pages/ai-autonomous-code-review'));
-const AIAutonomousCreativeDirectorPage = lazy(() => import('./pages/ai-autonomous-creative-director'));
 
 // Company information pages
 const About = lazy(() => import('./pages/About'));
@@ -93,8 +84,6 @@ const SpecializedITInfrastructure = lazy(() => import('./pages/services/Speciali
 const InnovativeMicroSaasServices = lazy(() => import('./pages/InnovativeMicroSaasServices'));
 const ComprehensiveInnovativeServices = lazy(() => import('./pages/ComprehensiveInnovativeServices'));
 const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveServicesOverview'));
-const EnhancedServicesShowcase = lazy(() => import('./pages/EnhancedServicesShowcase'));
-const InnovativeServicesShowcase = lazy(() => import('./pages/InnovativeServicesShowcase'));
 
 // Solutions pages
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
@@ -168,11 +157,7 @@ const App: React.FC = () => {
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
-            <PerformanceOptimizer
-              enableMonitoring={true}
-              enableOptimizations={true}
-              showMetrics={import.meta.env.DEV}
-            >
+            <PerformanceOptimizer>
               <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
                 {/* Enhanced SEO */}
                 <EnhancedSEO 
@@ -216,14 +201,6 @@ const App: React.FC = () => {
                       <Route path="/help" element={<HelpCenter />} />
                       <Route path="/new-services" element={<NewServices />} />
                       
-                      {/* Additional missing pages */}
-                      <Route path="/ai-autonomous-business-manager" element={<AIAutonomousBusinessManagerPage />} />
-                      <Route path="/ai-autonomous-business-platform" element={<AIAutonomousBusinessPlatformPage />} />
-                      <Route path="/ai-autonomous-research" element={<AIAutonomousResearchPage />} />
-                      <Route path="/ai-autonomous-systems-platform" element={<AIAutonomousSystemsPlatformPage />} />
-                      <Route path="/ai-autonomous-code-review" element={<AIAutonomousCodeReviewPage />} />
-                      <Route path="/ai-autonomous-creative-director" element={<AIAutonomousCreativeDirectorPage />} />
-                      
                       {/* Company Routes */}
                       <Route path="/about" element={<About />} />
                       <Route path="/contact" element={<Contact />} />
@@ -250,20 +227,14 @@ const App: React.FC = () => {
                       <Route path="/innovative-micro-saas-services" element={<InnovativeMicroSaasServices />} />
                       <Route path="/comprehensive-innovative-services" element={<ComprehensiveInnovativeServices />} />
                       <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview />} />
-                      <Route path="/enhanced-services-showcase" element={<EnhancedServicesShowcase />} />
-                      
-                      {/* Innovative Services Showcase */}
-                      <Route path="/innovative-services-showcase" element={<InnovativeServicesShowcase />} />
                       
                       {/* New innovative service routes */}
                       <Route path="/ai-workflow-automation" element={<AIWorkflowAutomation />} />
                       <Route path="/blockchain-enterprise-solutions" element={<BlockchainEnterpriseSolutions />} />
                       <Route path="/iot-data-analytics" element={<IoTDataAnalytics />} />
                       
-                      {/* Additional innovative service routes */}
-                      <Route path="/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-                      <Route path="/iot-management-platform" element={<IoTManagementPlatform />} />
-                      <Route path="/blockchain-defi-solutions" element={<BlockchainDeFiSolutions />} />
+                      {/* Next Generation Innovative Services */}
+                      <Route path="/next-gen-innovative-services" element={<NextGenInnovativeServices />} />
                       
                       {/* Solutions Routes */}
                       <Route path="/services/enterprise" element={<EnterpriseSolutions />} />
@@ -346,12 +317,7 @@ const App: React.FC = () => {
                 <SonnerToaster />
                 
                 {/* Enhanced Accessibility Controls */}
-                <EnhancedAccessibility 
-                  position="bottom-right" 
-                  showOnLoad={false}
-                  enableKeyboardShortcuts={true}
-                  enableVoiceCommands={import.meta.env.DEV}
-                />
+                <EnhancedAccessibility position="bottom-right" />
                 
                 {/* AI Chatbot - Always Available */}
                 <AIChatbot />
