@@ -8,6 +8,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-89a0
 import React, { useState } from 'react';
@@ -1038,6 +1039,11 @@ import React, { useState, useMemo } from 'react';
 >>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 import { motion } from 'framer-motion';
 import { Search, CheckCircle, ArrowRight, Phone } from 'lucide-react';
+=======
+import React, { useState, useMemo } from 'react';
+import { motion } from 'framer-motion';
+import { Search, Filter, Star, ExternalLink, Zap, Shield, Cloud, Brain, Globe, Lock, Cpu, Database, Network, Code, BarChart3, Users, Smartphone, Server, Key, Eye, Rocket, Target, TrendingUp, Award, Clock, CheckCircle, ArrowRight } from 'lucide-react';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9077
 
 interface Service {
   id: string;
@@ -1559,11 +1565,15 @@ export default function ServicesPage() {
       case '2000-4000': return '$2,000 - $4,000/month';
       case '4000+': return 'Over $4,000/month';
       default: return 'All Prices';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9077
     }
   };
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue">
       {/* Hero Section */}
@@ -2001,6 +2011,8 @@ const Services = () => {
           <motion.div
             className="text-center"
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9077
     <div className="min-h-screen bg-zion-blue-dark text-white">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6 bg-gradient-to-br from-zion-blue-dark via-zion-blue-light to-zion-purple overflow-hidden">
@@ -2013,11 +2025,15 @@ const Services = () => {
         
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <motion.div
+<<<<<<< HEAD
 >>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9077
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
+<<<<<<< HEAD
 <<<<<<< HEAD
             <motion.h1
               className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent animate-neon-pulse"
@@ -2144,6 +2160,8 @@ const Services = () => {
             
             return (
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9077
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Revolutionary Technology Services
             </h1>
@@ -2263,6 +2281,7 @@ const Services = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
+<<<<<<< HEAD
 >>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
               <motion.div
                 key={service.id}
@@ -2378,12 +2397,65 @@ const Services = () => {
                     {service.benefits.slice(0, 2).map((benefit, idx) => (
                       <li key={idx} className="flex items-center text-sm text-gray-300">
                         <TrendingUp className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
+=======
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-6 hover:bg-white/10 transition-all duration-300 group hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/20"
+              >
+                {/* Service Header */}
+                <div className="flex items-start justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <service.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div className="flex gap-2">
+                    {service.popular && (
+                      <span className="bg-zion-cyan text-white text-xs px-2 py-1 rounded-full font-medium">Popular</span>
+                    )}
+                    {service.new && (
+                      <span className="bg-zion-purple text-white text-xs px-2 py-1 rounded-full font-medium">New</span>
+                    )}
+                  </div>
+                </div>
+
+                {/* Service Content */}
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
+                  {service.name}
+                </h3>
+                <p className="text-zion-slate-light mb-4 leading-relaxed">
+                  {service.description}
+                </p>
+
+                {/* Price Comparison */}
+                <div className="mb-4">
+                  <div className="text-2xl font-bold text-zion-cyan">
+                    {service.price}
+                  </div>
+                  <div className="text-sm text-zion-slate-light">
+                    Market: {service.marketPrice}
+                  </div>
+                </div>
+
+                {/* Key Benefits */}
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-white mb-2 flex items-center gap-2">
+                    <TrendingUp className="w-4 h-4 text-zion-cyan" />
+                    Key Benefits:
+                  </h4>
+                  <ul className="space-y-1">
+                    {service.benefits.slice(0, 2).map((benefit, idx) => (
+                      <li key={idx} className="text-sm text-zion-slate-light flex items-center gap-2">
+                        <CheckCircle className="w-3 h-3 text-zion-cyan" />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9077
                         {benefit}
                       </li>
                     ))}
                   </ul>
                 </div>
 
+<<<<<<< HEAD
                 {/* Market Price Comparison */}
                 <div className="mb-4 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50">
                   <div className="flex items-center justify-between text-sm">
@@ -3522,11 +3594,57 @@ export default function Services() {
                   setSelectedCategory('all');
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
+=======
+                {/* Technology Stack */}
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-white mb-2 flex items-center gap-2">
+                    <Code className="w-4 h-4 text-zion-cyan" />
+                    Technology:
+                  </h4>
+                  <div className="flex flex-wrap gap-2">
+                    {service.technology.slice(0, 3).map((tech, idx) => (
+                      <span key={idx} className="bg-white/10 text-zion-slate-light text-xs px-2 py-1 rounded-full">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* CTA Button */}
+                <a
+                  href={service.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold py-3 px-4 rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 flex items-center justify-center gap-2 group-hover:scale-105 transform"
+                >
+                  <span>Learn More</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </motion.div>
+            ))}
+          </div>
+
+          {filteredServices.length === 0 && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-center py-16"
+            >
+              <div className="text-zion-slate-light text-lg mb-4">No services found matching your criteria</div>
+              <button
+                onClick={() => {
+                  setSelectedCategory('All');
+                  setSearchTerm('');
+                  setPriceRange('all');
+                }}
+                className="bg-zion-cyan text-white px-6 py-3 rounded-lg hover:bg-zion-cyan-dark transition-colors"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9077
               >
                 Clear Filters
               </button>
             </motion.div>
           )}
+<<<<<<< HEAD
         </section>
 
         {/* Call to Action */}
@@ -4268,12 +4386,53 @@ export default Services;
               >
                 Get Free Quote
               </Link>
+=======
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-6 bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-zion-purple/20 via-zion-blue-light/20 to-zion-cyan/20"></div>
+          <div className="absolute -top-20 -right-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-white/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+        
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Let's discuss how our technology services can help you achieve your goals and stay ahead of the competition. 
+              Our team of experts is ready to guide you through the digital transformation journey.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="bg-white text-zion-purple font-semibold py-4 px-8 rounded-lg hover:bg-zion-slate-light transition-all duration-300 flex items-center justify-center space-x-2 group"
+              >
+                <span>Get Started</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+              <a
+                href="tel:+13024640950"
+                className="bg-transparent text-white font-semibold py-4 px-8 rounded-lg border-2 border-white hover:bg-white hover:text-zion-purple transition-all duration-300 flex items-center justify-center space-x-2 group"
+              >
+                <span>Call Now</span>
+                <Phone className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              </a>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9077
             </div>
           </motion.div>
         </div>
       </section>
     </div>
   );
+<<<<<<< HEAD
 };
 
 export default Services;
@@ -4490,3 +4649,6 @@ export default Services;
 =======
 }
 >>>>>>> origin/cursor/build-and-fix-errors-e276
+=======
+}
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9077
