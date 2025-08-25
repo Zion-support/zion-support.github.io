@@ -1,26 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Sidebar from './Sidebar';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Search, 
-  Phone, 
-  Mail, 
-  MapPin,
-  Brain,
-  Users,
-  Target,
-  Shield,
-  Zap,
-  Building,
-  Cpu,
-  Globe,
-  Rocket,
-  Star,
-  ArrowRight
-} from 'lucide-react';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -46,21 +26,15 @@ export function Header() {
     },
     { 
       path: '/services', 
-      label: 'Services', 
+      label: 'AI Services', 
       icon: '🤖',
-      description: 'Explore our comprehensive service offerings'
+      description: 'Explore our AI service offerings'
     },
     { 
       path: '/solutions/enterprise', 
       label: 'Solutions', 
       icon: '💼',
       description: 'Industry-specific solutions'
-    },
-    { 
-      path: '/emerging-tech', 
-      label: 'Emerging Tech', 
-      icon: '🚀',
-      description: 'Cutting-edge technology solutions'
     },
     { 
       path: '/pricing', 
@@ -87,18 +61,6 @@ export function Header() {
       description: 'Latest insights and news'
     },
     { 
-      path: '/case-studies', 
-      label: 'Case Studies', 
-      icon: '📊',
-      description: 'Success stories and results'
-    },
-    { 
-      path: '/help', 
-      label: 'Help', 
-      icon: '❓',
-      description: 'Get help and support'
-    },
-    { 
       path: '/contact', 
       label: 'Contact', 
       icon: '📞',
@@ -109,296 +71,211 @@ export function Header() {
   const serviceCategories = [
     {
       title: 'AI & Machine Learning',
-      icon: Brain,
-      description: 'Intelligent solutions powered by artificial intelligence',
       services: [
-        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', description: 'Advanced autonomous AI systems' },
-        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', description: 'AI-powered research automation' },
-        { name: 'AI Business Intelligence', path: '/services/business-intelligence', description: 'Advanced analytics and insights' },
-        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', description: 'Smart marketing optimization' },
-        { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', description: 'Intelligent talent management' },
-        { name: 'AI Legal Tech', path: '/services/ai-legal-tech', description: 'Automated legal processes' }
+        { name: 'AI Workflow Automation', path: '/services/ai-workflow-automation' },
+        { name: 'AI Customer Intelligence', path: '/services/ai-customer-intelligence' },
+        { name: 'AI Data Analytics', path: '/services/ai-data-analytics' },
+        { name: 'AI Business Intelligence', path: '/services#ai-bi' }
       ]
     },
     {
-      title: 'Quantum Technology',
-      icon: Brain,
-      description: 'Next-generation quantum computing solutions',
+      title: 'Cybersecurity & Compliance',
       services: [
-        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', description: 'Quantum-powered neural networks' },
-        { name: 'Quantum Computing', path: '/services/quantum-technology', description: 'Quantum computing platforms' },
-        { name: 'Quantum-Safe Security', path: '/services#quantum-security', description: 'Future-proof quantum security' }
-      ]
-    },
-    {
-      title: 'Business Operations',
-      icon: Building,
-      description: 'Streamlined business process automation',
-      services: [
-        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', description: 'Self-operating business systems' },
-        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', description: 'Intelligent IT asset management' },
-        { name: 'Business Intelligence', path: '/services#ai-bi', description: 'Advanced business analytics' }
-      ]
-    },
-    {
-      title: 'Cybersecurity',
-      icon: Shield,
-      description: 'Comprehensive security and compliance solutions',
-      services: [
-        { name: 'Cybersecurity Services', path: '/services/cybersecurity', description: 'Complete security solutions' },
-        { name: 'SOC2 Compliance Automation', path: '/soc2-compliance-automation', description: 'Automated compliance management' },
-        { name: 'Security Assessment', path: '/services#security-assessment', description: 'Security audit and testing' },
-        { name: 'Compliance & Audit', path: '/services#compliance', description: 'Regulatory compliance support' }
+        { name: 'AI Security & Compliance', path: '/services/ai-security-compliance' },
+        { name: 'Quantum-Safe Security', path: '/services#quantum-security' },
+        { name: 'Security Assessment', path: '/services#security-assessment' },
+        { name: 'Compliance & Audit', path: '/services#compliance' }
       ]
     },
     {
       title: 'Cloud & Infrastructure',
-      icon: Cpu,
-      description: 'Scalable cloud solutions and infrastructure management',
       services: [
-        { name: 'Cloud DevOps', path: '/cloud-devops', description: 'Cloud development and operations' },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', description: 'Complete IT infrastructure solutions' },
-        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', description: 'High-speed 5G connectivity' },
-        { name: 'Cloud Migration', path: '/services#cloud-migration', description: 'Seamless cloud transition' },
-        { name: 'Network Infrastructure', path: '/services#network', description: 'Robust network solutions' },
-        { name: 'Managed IT Services', path: '/services#managed-it', description: '24/7 IT support' }
+        { name: 'Cloud Migration', path: '/services#cloud-migration' },
+        { name: 'Network Infrastructure', path: '/services#network' },
+        { name: 'Managed IT Services', path: '/services#managed-it' }
       ]
     },
     {
-      title: 'Emerging Technologies',
-      icon: Rocket,
-      description: 'Cutting-edge solutions for tomorrow\'s challenges',
+      title: 'Emerging Tech',
       services: [
-        { name: 'Emerging Technology', path: '/emerging-tech', description: 'Cutting-edge technology solutions' },
-        { name: 'Blockchain Solutions', path: '/services#blockchain', description: 'Decentralized applications' },
-        { name: 'IoT & Edge Computing', path: '/services#iot-edge', description: 'Connected device management' }
+        { name: 'Blockchain Solutions', path: '/services#blockchain' },
+        { name: 'Quantum Computing', path: '/services#quantum' },
+        { name: 'IoT & Edge Computing', path: '/services#iot-edge' }
       ]
     }
   ];
 
-  // Fixed social media links with proper error handling
-  const socialLinks = [
-    {
-      name: 'LinkedIn',
-      url: 'https://www.linkedin.com/company/ziontechgroup',
-      icon: '💼',
-      fallback: 'https://linkedin.com'
-    },
-    {
-      name: 'Twitter',
-      url: 'https://twitter.com/ziontechgroup',
-      icon: '🐦',
-      fallback: 'https://twitter.com'
-    },
-    {
-      name: 'GitHub',
-      url: 'https://github.com/ziontechgroup',
-      icon: '💻',
-      fallback: 'https://github.com'
-    },
-    {
-      name: 'YouTube',
-      url: 'https://www.youtube.com/@ziontechgroup',
-      icon: '📺',
-      fallback: 'https://youtube.com'
-    }
-  ];
-
-  const handleSocialLinkClick = (link: typeof socialLinks[0], e: React.MouseEvent) => {
-    e.preventDefault();
-    
-    // Try to open the primary URL first
-    const newWindow = window.open(link.url, '_blank', 'noopener,noreferrer');
-    
-    // If the window fails to open, try the fallback
-    if (!newWindow) {
-      window.open(link.fallback, '_blank', 'noopener,noreferrer');
-    }
-  };
-
-  const handleContactClick = (type: 'phone' | 'email') => {
-    if (type === 'phone') {
-      // Use a proper phone number format that works across devices
-      window.location.href = 'tel:+13024640950';
-    } else {
-      window.location.href = 'mailto:kleber@ziontechgroup.com';
-    }
-  };
+  const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-black/90 backdrop-blur-md shadow-lg' 
-        : 'bg-transparent'
-    }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Z</span>
-              </div>
-              <span className="text-white font-bold text-xl hidden sm:block">
-                Zion Tech Group
-              </span>
-            </Link>
-          </div>
+    <>
+      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled 
+          ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/20' 
+          : 'bg-gradient-to-r from-black/80 via-blue-900/80 to-purple-900/80 backdrop-blur-md'
+      }`}>
+        {/* Enhanced Animated Background */}
+        <div className="absolute inset-0 futuristic-bg opacity-60"></div>
+        
+        {/* Enhanced Matrix Rain Effect */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {[...Array(25)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute text-cyan-400/20 text-xs animate-matrix-rain"
+              style={{
+                left: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 20}s`,
+                animationDuration: `${10 + Math.random() * 20}s`
+              }}
+            >
+              {String.fromCharCode(0x30A0 + Math.random() * 96)}
+            </div>
+          ))}
+        </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex space-x-8">
-            {navigationItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`relative group px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
-                  location.pathname === item.path
-                    ? 'text-cyan-400 bg-cyan-400/10'
-                    : 'text-gray-300 hover:text-white hover:bg-white/10'
-                }`}
-              >
-                <span className="flex items-center space-x-2">
-                  <span>{item.icon}</span>
-                  <span>{item.label}</span>
-                </span>
-                
-                {/* Tooltip */}
-                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-black text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50">
-                  {item.description}
-                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 lg:h-20">
+            {/* Logo */}
+            <div className="flex items-center space-x-3">
+              <Link to="/" className="flex items-center space-x-3 group">
+                <div className="relative">
+                  <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center text-white font-bold text-lg lg:text-xl shadow-lg shadow-cyan-500/50 group-hover:shadow-cyan-400/70 transition-all duration-300 group-hover:scale-110">
+                    Z
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl blur-lg opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
+                </div>
+                <div className="hidden sm:block">
+                  <h1 className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:to-blue-300 transition-all duration-300">
+                    Zion Tech Group
+                  </h1>
+                  <p className="text-xs text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                    The Tech & AI Marketplace
+                  </p>
                 </div>
               </Link>
-            ))}
-          </nav>
+            </div>
 
-          {/* Contact & Social Links */}
-          <div className="hidden lg:flex items-center space-x-4">
-            {/* Contact Buttons */}
-            <button
-              onClick={() => handleContactClick('phone')}
-              className="flex items-center space-x-2 px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-md transition-colors duration-200"
-            >
-              <span>📞</span>
-              <span className="hidden sm:block">Call Us</span>
-            </button>
-            
-            <button
-              onClick={() => handleContactClick('email')}
-              className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors duration-200"
-            >
-              <span>✉️</span>
-              <span className="hidden sm:block">Email</span>
-            </button>
-
-            {/* Social Links */}
-            <div className="flex items-center space-x-2">
-              {socialLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.url}
-                  onClick={(e) => handleSocialLinkClick(link, e)}
-                  className="p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200"
-                  title={link.name}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className="text-lg">{link.icon}</span>
-                </a>
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center space-x-1">
+              {navigationItems.map((item) => (
+                <div key={item.path} className="relative group">
+                  <Link
+                    to={item.path}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 flex items-center space-x-2 group-hover:bg-cyan-500/20 group-hover:border-cyan-400/50 ${
+                      isActive(item.path)
+                        ? 'text-cyan-400 border border-cyan-400/50 bg-cyan-500/10'
+                        : 'text-gray-300 hover:text-white border border-transparent'
+                    }`}
+                  >
+                    <span className="text-lg">{item.icon}</span>
+                    <span>{item.label}</span>
+                  </Link>
+                  
+                  {/* Enhanced Tooltip */}
+                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-black/90 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap z-50">
+                    {item.description}
+                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black/90"></div>
+                  </div>
+                </div>
               ))}
+            </nav>
+
+            {/* CTA Buttons */}
+            <div className="hidden lg:flex items-center space-x-4">
+              <button className="px-4 py-2 text-cyan-400 border border-cyan-400/50 rounded-lg hover:bg-cyan-400/20 hover:border-cyan-400 transition-all duration-300 text-sm font-medium">
+                Get Quote
+              </button>
+              <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 text-sm font-medium transform hover:scale-105 shadow-lg shadow-cyan-500/30">
+                Start Project
+              </button>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <div className="lg:hidden">
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800/50 transition-all duration-300"
+                aria-label="Toggle mobile menu"
+              >
+                <svg
+                  className="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  {isMenuOpen ? (
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  ) : (
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  )}
+                </svg>
+              </button>
             </div>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="lg:hidden">
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-300 hover:text-white p-2"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                {isMenuOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                )}
-              </svg>
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="lg:hidden bg-black/95 backdrop-blur-md rounded-lg mt-2 p-4">
-            <nav className="space-y-2">
-              {navigationItems.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
-                    location.pathname === item.path
-                      ? 'text-cyan-400 bg-cyan-400/10'
-                      : 'text-gray-300 hover:text-white hover:bg-white/10'
-                  }`}
-                >
-                  <span className="flex items-center space-x-2">
-                    <span>{item.icon}</span>
-                    <span>{item.label}</span>
-                  </span>
-                </Link>
-              ))}
-              
-              {/* Mobile Contact & Social */}
-              <div className="pt-4 border-t border-gray-700">
-                <div className="flex flex-col space-y-2">
-                  <button
-                    onClick={() => {
-                      handleContactClick('phone');
-                      setIsMenuOpen(false);
-                    }}
-                    className="flex items-center space-x-2 px-3 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-md transition-colors duration-200"
+          {/* Enhanced Mobile Menu */}
+          {isMenuOpen && (
+            <div className="lg:hidden">
+              <div className="px-2 pt-2 pb-3 space-y-1 bg-black/50 backdrop-blur-xl rounded-xl border border-cyan-500/30 mt-4">
+                {navigationItems.map((item) => (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`block px-3 py-2 rounded-lg text-base font-medium transition-all duration-300 ${
+                      isActive(item.path)
+                        ? 'text-cyan-400 bg-cyan-500/20 border border-cyan-400/50'
+                        : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
+                    }`}
                   >
-                    <span>📞</span>
-                    <span>Call Us</span>
-                  </button>
-                  
-                  <button
-                    onClick={() => {
-                      handleContactClick('email');
-                      setIsMenuOpen(false);
-                    }}
-                    className="flex items-center space-x-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors duration-200"
-                  >
-                    <span>✉️</span>
-                    <span>Email Us</span>
-                  </button>
-                </div>
+                    <div className="flex items-center space-x-3">
+                      <span className="text-xl">{item.icon}</span>
+                      <div>
+                        <div className="font-medium">{item.label}</div>
+                        <div className="text-xs text-gray-400">{item.description}</div>
+                      </div>
+                    </div>
+                  </Link>
+                ))}
                 
-                <div className="flex items-center justify-center space-x-4 pt-4">
-                  {socialLinks.map((link) => (
-                    <a
-                      key={link.name}
-                      href={link.url}
-                      onClick={(e) => {
-                        handleSocialLinkClick(link, e);
-                        setIsMenuOpen(false);
-                      }}
-                      className="p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200"
-                      title={link.name}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <span className="text-xl">{link.icon}</span>
-                    </a>
-                  ))}
+                {/* Mobile CTA Buttons */}
+                <div className="pt-4 space-y-2">
+                  <button className="w-full px-4 py-2 text-cyan-400 border border-cyan-400/50 rounded-lg hover:bg-cyan-400/20 transition-all duration-300 text-sm font-medium">
+                    Get Quote
+                  </button>
+                  <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 text-sm font-medium">
+                    Start Project
+                  </button>
                 </div>
               </div>
-            </nav>
-          </div>
-        )}
-      </div>
+            </div>
+          )}
+        </div>
+
+        {/* Enhanced Floating Elements */}
+        <div className="absolute top-20 right-20 w-2 h-2 bg-cyan-400 rounded-full animate-ping animate-energy-pulse"></div>
+        <div className="absolute bottom-32 left-32 w-3 h-3 bg-blue-400 rounded-full animate-pulse animate-energy-pulse"></div>
+        <div className="absolute top-1/2 left-20 w-1 h-1 bg-purple-400 rounded-full animate-bounce animate-energy-pulse"></div>
+        
+        {/* Additional Quantum Particles */}
+        <div className="absolute top-40 right-40 w-1 h-1 bg-cyan-400 rounded-full animate-ping animate-energy-pulse animation-delay-1000"></div>
+        <div className="absolute bottom-40 right-40 w-1 h-1 bg-blue-400 rounded-full animate-ping animate-energy-pulse animation-delay-2000"></div>
+        <div className="absolute top-1/3 left-40 w-1 h-1 bg-purple-400 rounded-full animate-ping animate-energy-pulse animation-delay-3000"></div>
+      </header>
 
       {/* Sidebar */}
       <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
-    </header>
+    </>
   );
 }

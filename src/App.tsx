@@ -47,6 +47,13 @@ const FiveGEnterpriseSolutions = lazy(() => import('./pages/5GEnterpriseSolution
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 
+// New micro SAAS services
+const AIWorkflowAutomation = lazy(() => import('./pages/services/AIWorkflowAutomation'));
+const AICustomerIntelligence = lazy(() => import('./pages/services/AICustomerIntelligence'));
+const AISecurityCompliance = lazy(() => import('./pages/services/AISecurityCompliance'));
+const AIDataAnalytics = lazy(() => import('./pages/services/AIDataAnalytics'));
+const ComprehensiveServicesOverview = lazy(() => import('./pages/services/ComprehensiveServicesOverview'));
+
 // Our enhanced service pages
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
@@ -137,6 +144,15 @@ const App = () => {
                     <Route path="/5g-enterprise-solutions" element={<FiveGEnterpriseSolutions />} />
                     <Route path="/case-studies" element={<CaseStudies />} />
                     <Route path="/help" element={<HelpCenter />} />
+                    
+                    {/* New micro SAAS service routes */}
+                    <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
+                    <Route path="/services/ai-customer-intelligence" element={<AICustomerIntelligence />} />
+                    <Route path="/services/ai-security-compliance" element={<AISecurityCompliance />} />
+                    <Route path="/services/ai-data-analytics" element={<AIDataAnalytics />} />
+                    
+                    {/* Comprehensive Services Overview */}
+                    <Route path="/services/comprehensive-services-overview" element={<ComprehensiveServicesOverview />} />
                     
                     {/* Our enhanced service routes */}
                     <Route path="/about" element={<About />} />
