@@ -294,6 +294,32 @@ export default function EnhancedNavigation2025() {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="bg-transparent text-sm text-white placeholder-gray-400 outline-none w-48"
               />
+              
+              {/* Search Results Dropdown */}
+              {searchQuery && filteredServices.length > 0 && (
+                <div className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden">
+                  <div className="p-4">
+                    <div className="space-y-2">
+                      {filteredServices.slice(0, 8).map((service, index) => (
+                        <Link
+                          key={index}
+                          href={service.href}
+                          onClick={() => setSearchQuery('')}
+                          className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
+                        >
+                          <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+                            <Star className="w-4 h-4 text-white" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <h4 className="text-sm font-medium text-white">{service.name}</h4>
+                            <p className="text-xs text-gray-400 mt-1 line-clamp-1">{service.description}</p>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
 
             {/* Contact Button */}
@@ -391,7 +417,9 @@ export default function EnhancedNavigation2025() {
             </div>
           </motion.div>
         )}
-      </AnimatePresence>
+      </div>
     </nav>
   );
-}
+};
+
+export default EnhancedNavigation2025;

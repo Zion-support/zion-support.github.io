@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
@@ -15,9 +15,6 @@ import { innovativeITInfrastructureServices2025 } from '../data/2025-innovative-
 import { innovativeEmergingTechServices2025 } from '../data/2025-innovative-emerging-tech-services';
 import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-saas-solutions';
 import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
-import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-services-enhanced';
-import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced';
-import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -81,7 +78,8 @@ const categories = [
   }
 ];
 
-export default function ComprehensiveServicesShowcase2025() {
+const ComprehensiveServicesShowcase2025: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -214,8 +212,6 @@ export default function ComprehensiveServicesShowcase2025() {
               </button>
             </div>
           </div>
-        </div>
-      </section>
 
       {/* Categories */}
       <section className="py-12 bg-black">
@@ -385,4 +381,6 @@ export default function ComprehensiveServicesShowcase2025() {
       </section>
     </Layout>
   );
-}
+};
+
+export default ComprehensiveServicesShowcase2025;
