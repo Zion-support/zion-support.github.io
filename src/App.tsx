@@ -197,6 +197,7 @@ const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const AboutPage = React.lazy(() => import('./pages/About'));
 const CareersPage = React.lazy(() => import('./pages/Careers'));
 const SitemapPage = React.lazy(() => import('./pages/Sitemap'));
@@ -351,6 +352,9 @@ const PricingPage = React.lazy(() => import('./pages/PricingPage'));
 const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServicesPage'));
 const ServicesPricingPage = React.lazy(() => import('./pages/ServicesPricingPage'));
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-defc
+=======
+const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServicesPage'));
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f15c
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -368,6 +372,7 @@ const baseRoutes = [
   { path: '/talents', element: <TalentsPage /> },
 <<<<<<< HEAD
   { path: '/services', element: <ServicesPage /> },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -467,6 +472,9 @@ const baseRoutes = [
 =======
   { path: '/micro-saas-services', element: <MicroSaasServicesPage /> },
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-445a
+=======
+  { path: '/comprehensive-services', element: <ComprehensiveServicesPage /> },
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f15c
   { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
   { path: '/ai-services', element: <AIServicesPage /> },
   { path: '/blockchain-services', element: <BlockchainServicesPage /> },

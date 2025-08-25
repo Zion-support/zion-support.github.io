@@ -47,6 +47,7 @@ import { Link } from "react-router-dom";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Globe } from "lucide-react";
 import { useState } from "react";
 import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES } from "@/data/comprehensiveServices";
@@ -73,6 +74,9 @@ import {
 import Link2 from "lucide-react/dist/esm/icons/link-2";
 import Wifi from "lucide-react/dist/esm/icons/wifi";
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
+=======
+import { Globe, Zap } from "lucide-react";
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f15c
 import { useEffect, useState } from "react";
 import { EXPANDED_SERVICES, FEATURED_SERVICES, NEW_SERVICES } from "@/data/expandedServices";
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-32cc
@@ -1427,6 +1431,7 @@ export default function ServicesPage() {
           <div className="flex flex-wrap gap-2">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Link to="/expanded-services">
 =======
             <Link to="/services-overview">
@@ -1434,6 +1439,15 @@ export default function ServicesPage() {
               <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
 =======
             <Link to="/micro-saas-services">
+=======
+            <Link to="/comprehensive-services">
+              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+                <Zap className="h-4 w-4 mr-2" />
+                Comprehensive Services
+              </Button>
+            </Link>
+            <Link to="/it-onsite-services">
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f15c
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                 <Zap className="h-4 w-4 mr-2" />
                 Micro SAAS Services

@@ -411,6 +411,7 @@ const specialServices = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     title: "Comprehensive Services",
     link: "/comprehensive-services"
 <<<<<<< HEAD
@@ -935,6 +936,10 @@ const advancedCategories = [
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-ad2d
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-defc
+=======
+    title: "Comprehensive Services",
+    link: "/comprehensive-services"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f15c
   }
 ];
 
