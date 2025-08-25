@@ -28,10 +28,14 @@ import {
   Clock,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  Workflow,
+  Eye,
+  Key
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import { SEOConfigs } from '../components/SEOHead';
+import FuturisticAnimatedBackground from '../components/FuturisticAnimatedBackground';
 
 // Lazy load components for better performance
 const LazyServicesSection = React.lazy(() => import('../components/home/ServicesSection'));
@@ -53,28 +57,28 @@ const Home: React.FC = () => {
 
   const heroSlides = [
     {
-      title: "AI-Powered Business Solutions",
-      subtitle: "Transform your business with cutting-edge artificial intelligence",
-      description: "Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization.",
+      title: "AI Workflow Automation",
+      subtitle: "Transform your business operations with intelligent automation",
+      description: "Leverage AI-powered workflows that learn, adapt, and optimize your business processes in real-time.",
       image: "/images/hero-ai-solutions.jpg",
-      cta: "Explore AI Solutions",
-      path: "/ai-solutions"
+      cta: "Start Free Trial",
+      path: "/services/ai-workflow-automation"
     },
     {
-      title: "Comprehensive IT Services",
-      subtitle: "End-to-end technology solutions for modern businesses",
-      description: "From infrastructure management to digital transformation, we provide the expertise you need to succeed.",
+      title: "Quantum-Secure Cloud",
+      subtitle: "Future-proof your business with military-grade security",
+      description: "Quantum-resistant encryption, AI threat detection, and zero-trust architecture for ultimate protection.",
       image: "/images/hero-it-services.jpg",
-      cta: "View Our Services",
-      path: "/services"
+      cta: "Security Assessment",
+      path: "/services/quantum-secure-cloud"
     },
     {
-      title: "Micro-SaaS Solutions",
-      subtitle: "Scalable software solutions for growing businesses",
-      description: "Custom SaaS applications designed to streamline operations and boost productivity.",
+      title: "AI Customer Intelligence",
+      subtitle: "Unlock the power of customer data",
+      description: "Transform customer relationships with AI-driven insights and predictive analytics for unprecedented growth.",
       image: "/images/hero-saas.jpg",
       cta: "Learn More",
-      path: "/services/micro-saas-solutions"
+      path: "/services/ai-customer-intelligence"
     }
   ];
 
@@ -87,40 +91,52 @@ const Home: React.FC = () => {
 
   const featuredServices = [
     {
-      title: "AI Business Intelligence",
-      description: "Transform data into actionable insights with our AI-powered analytics platform.",
-      icon: Brain,
-      path: "/services/ai-business-intelligence",
+      title: "AI Workflow Automation",
+      description: "Transform your business operations with intelligent automation that learns and optimizes workflows in real-time.",
+      icon: Workflow,
+      path: "/services/ai-workflow-automation",
       category: "AI Solutions",
-      price: "$2,500/mo",
-      rating: 4.9,
-      reviewCount: 127,
-      highlights: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards"],
-      features: ["Machine Learning", "Data Visualization", "API Integration", "24/7 Support"]
-    },
-    {
-      title: "Cloud Infrastructure",
-      description: "Scalable cloud solutions designed for enterprise performance and security.",
-      icon: Cloud,
-      path: "/services/cloud-infrastructure",
-      category: "Infrastructure",
-      price: "$1,800/mo",
-      rating: 4.8,
-      reviewCount: 89,
-      highlights: ["99.9% Uptime", "Auto-scaling", "Security First"],
-      features: ["AWS/Azure/GCP", "Load Balancing", "Backup & Recovery", "Monitoring"]
-    },
-    {
-      title: "Cybersecurity Solutions",
-      description: "Comprehensive security services to protect your digital assets and data.",
-      icon: Shield,
-      path: "/services/cybersecurity",
-      category: "Security",
-      price: "$3,200/mo",
+      price: "$299/mo",
       rating: 4.9,
       reviewCount: 156,
-      highlights: ["Threat Detection", "Compliance Ready", "24/7 Monitoring"],
-      features: ["Penetration Testing", "Security Audits", "Incident Response", "Training"]
+      highlights: ["Intelligent Process Discovery", "Dynamic Workflow Engine", "Multi-Platform Integration"],
+      features: ["AI-Powered Automation", "Real-time Optimization", "Advanced Analytics", "24/7 Support"]
+    },
+    {
+      title: "AI Customer Intelligence",
+      description: "Unlock the power of customer data with AI-driven insights that transform how you understand and engage customers.",
+      icon: Eye,
+      path: "/services/ai-customer-intelligence",
+      category: "AI Solutions",
+      price: "$199/mo",
+      rating: 4.8,
+      reviewCount: 134,
+      highlights: ["Real-Time Behavior Analysis", "Predictive Segmentation", "Sentiment Analysis"],
+      features: ["Customer Behavior Insights", "Predictive Analytics", "Personalization Engine", "API Integration"]
+    },
+    {
+      title: "Quantum-Secure Cloud",
+      description: "Future-proof your business with quantum-secure cloud infrastructure featuring military-grade security.",
+      icon: Key,
+      path: "/services/quantum-secure-cloud",
+      category: "Security & Cloud",
+      price: "$399/mo",
+      rating: 4.9,
+      reviewCount: 89,
+      highlights: ["Quantum-Resistant Encryption", "AI Threat Detection", "Zero-Trust Architecture"],
+      features: ["Post-Quantum Cryptography", "Real-time Monitoring", "Compliance Ready", "99.99% Uptime"]
+    },
+    {
+      title: "AI Predictive Analytics",
+      description: "Transform your business with AI-powered predictive analytics for unprecedented growth and insights.",
+      icon: Brain,
+      path: "/services/ai-predictive-analytics",
+      category: "AI Solutions",
+      price: "$299/mo",
+      rating: 4.9,
+      reviewCount: 127,
+      highlights: ["Advanced ML Models", "Real-Time Processing", "Predictive Modeling Studio"],
+      features: ["Machine Learning", "Forecasting", "Business Intelligence", "Custom Dashboards"]
     }
   ];
 
@@ -177,8 +193,11 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen bg-gray-900 text-white relative">
       <SEOHead {...SEOConfigs.home} />
+      
+      {/* Futuristic Animated Background */}
+      <FuturisticAnimatedBackground intensity="medium" colorScheme="multi" />
       
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
