@@ -1,6 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-89a0
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
@@ -2077,6 +2080,7 @@ const Services = () => {
                 <p className="text-gray-300">24/7 expert support and dedicated success managers for your business</p>
               </div>
             </div>
+<<<<<<< HEAD
           </div>
 <<<<<<< HEAD
         </div>
@@ -2103,6 +2107,16 @@ const Services = () => {
               Explore Comprehensive Services
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
+=======
+            
+            <div className="border-t border-zion-blue-light mt-8 pt-8 text-center">
+              <p className="text-zion-slate-light text-sm">
+                © 2024 Zion Tech Group. All rights reserved. | 
+                <a href="/contact" className="ml-2 hover:text-zion-cyan transition-colors">Privacy Policy</a> | 
+                <a href="/contact" className="ml-2 hover:text-zion-cyan transition-colors">Terms of Service</a>
+              </p>
+            </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-89a0
           </div>
         </div>
 =======
@@ -2278,6 +2292,7 @@ const Services = () => {
 >>>>>>> origin/cursor/website-audit-and-enhancement-54e3
 
 export default Services;
+<<<<<<< HEAD
 =======
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-center mt-20"
@@ -2669,3 +2684,5 @@ export default Services;
 
 export default Services;
 >>>>>>> origin/cursor/website-audit-and-enhancement-8e2b
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-89a0
