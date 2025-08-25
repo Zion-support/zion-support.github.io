@@ -538,10 +538,10 @@ const Home: React.FC = () => {
                 <li>• Marketing Automation Suite</li>
               </ul>
               <Link 
-                to="/enhanced-services-showcase" 
+                to="/innovative-services-showcase" 
                 className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:translate-x-1 transition-all duration-300"
               >
-                Explore Enhanced Services
+                Explore Innovative Services
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </div>
@@ -563,7 +563,7 @@ const Home: React.FC = () => {
                 <li>• 6G Network Infrastructure</li>
               </ul>
               <Link 
-                to="/enhanced-services-showcase" 
+                to="/innovative-services-showcase" 
                 className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold group-hover:translate-x-1 transition-all duration-300"
               >
                 Explore Emerging Tech
@@ -588,7 +588,7 @@ const Home: React.FC = () => {
                 <li>• Retail Customer Intelligence</li>
               </ul>
               <Link 
-                to="/enhanced-services-showcase" 
+                to="/innovative-services-showcase" 
                 className="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-semibold group-hover:translate-x-1 transition-all duration-300"
               >
                 Explore Industry Solutions
@@ -599,10 +599,10 @@ const Home: React.FC = () => {
 
           <div className="text-center">
             <Link 
-              to="/enhanced-services-showcase" 
+              to="/innovative-services-showcase" 
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
             >
-              View All Enhanced Services
+              View All Innovative Services
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </div>
