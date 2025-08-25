@@ -210,9 +210,7 @@ export default function EnhancedServicesShowcase() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-6">
                 Featured Service Categories
               </h2>
@@ -228,9 +226,7 @@ export default function EnhancedServicesShowcase() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
-                  viewport={{ once: true }}
-                  className="relative"
-                >
+                  viewport={{ once: true }} className="relative">
                   <div className={`bg-gradient-to-br ${category.color} p-8 rounded-2xl text-white relative overflow-hidden`}>
                     <div className="absolute inset-0 bg-black/20"></div>
                     <div className="relative z-10">
@@ -278,8 +274,7 @@ export default function EnhancedServicesShowcase() {
                       type="text"
                       placeholder="Search services..."
                       value={searchTerm}
-                      onChange={(e) => setSearchTerm(e.target.value)}
-                      className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     />
                   </div>
                 </div>
@@ -288,9 +283,7 @@ export default function EnhancedServicesShowcase() {
                 <div className="flex-shrink-0">
                   <select
                     value={selectedCategory}
-                    onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  >
+                    onChange={(e) => setSelectedCategory(e.target.value)} className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
                     {categories.map((category) => (
                       <option key={category.id} value={category.id}>
                         {category.name} ({category.count})
@@ -303,9 +296,7 @@ export default function EnhancedServicesShowcase() {
                 <div className="flex-shrink-0">
                   <select
                     value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value)}
-                    className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  >
+                    onChange={(e) => setSortBy(e.target.value)} className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
                     {sortOptions.map((option) => (
                       <option key={option.id} value={option.id}>
                         {option.name}
@@ -402,11 +393,8 @@ export default function EnhancedServicesShowcase() {
                       </div>
 
                       <div className="flex gap-3">
-                        <Button 
-                          href={service.link} 
-                          variant="primary"
-                          className="flex-1"
-                        >
+                        <a 
+                          href={service.link} className="flex-1">
                           Learn More
                           <ExternalLink className="ml-2 w-4 h-4" />
                         </Button>
@@ -416,7 +404,7 @@ export default function EnhancedServicesShowcase() {
                           className="flex-1"
                         >
                           Get Started
-                        </Button>
+                        </a>
                       </div>
                     </div>
                   ) : (
@@ -463,10 +451,10 @@ export default function EnhancedServicesShowcase() {
                         </div>
 
                         <div className="flex gap-3">
-                          <Button 
+                          <a 
                             href={service.link} 
-                            variant="primary"
-                            size="sm"
+                            
+                            
                           >
                             Learn More
                             <ExternalLink className="ml-2 w-4 h-4" />
@@ -477,7 +465,7 @@ export default function EnhancedServicesShowcase() {
                             size="sm"
                           >
                             Get Started
-                          </Button>
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -491,16 +479,16 @@ export default function EnhancedServicesShowcase() {
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-gray-400 mb-6">Try adjusting your search criteria or browse all categories</p>
-                <Button 
+                <a 
                   href="#"
                   onClick={() => {
                     setSearchTerm('');
                     setSelectedCategory('all');
                   }}
-                  variant="primary"
+                  
                 >
                   View All Services
-                </Button>
+                </a>
               </div>
             )}
           </div>
@@ -555,7 +543,7 @@ export default function EnhancedServicesShowcase() {
                 >
                   View Pricing
                   <DollarSign className="ml-2 w-6 h-6" />
-                </Button>
+                </a>
               </div>
             </motion.div>
           </div>

@@ -88,14 +88,7 @@ export default function ServicesAdvertisingPage() {
   ];
 
   return (
-    <UltraAdvancedFuturisticBackground 
-      intensity="high" 
-      colorScheme="quantum-fusion"
-      particleCount={300}
-      animationSpeed={1.5}
-      enableHolographic={true}
-      enableQuantumEffects={true}
-    >
+    <Layout>
       <Head>
         <title>AI, IT and Micro SaaS Services Advertising | Zion Tech Group</title>
         <meta name="description" content="Explore our AI, IT, and micro SaaS services with features, capabilities, benefits, pricing references, and easy contact options." />
@@ -110,12 +103,12 @@ export default function ServicesAdvertisingPage() {
             </h1>
             <p className="text-gray-300 text-lg">AI platforms, enterprise IT solutions, and real micro SaaS accelerators.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">
+              <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">
                 Talk to Sales <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
-              <Button href="/market-pricing" variant="outline" className="px-8 py-4 border border-gray-600 text-gray-200">
+              </a>
+              <a href="/market-pricing" className="px-8 py-4 border border-gray-600 text-gray-200">
                 View Market Pricing <ExternalLink className="w-5 h-5 ml-2" />
-              </Button>
+              </a>
             </div>
           </header>
 
@@ -220,7 +213,7 @@ export default function ServicesAdvertisingPage() {
               ))}
             </div>
             <div className="text-center mt-6">
-              <Button href="/market-pricing" variant="secondary" className="px-8 py-4">Full Market Pricing</Button>
+              <a href="/market-pricing" className="px-8 py-4">Full Market Pricing</a>
             </div>
           </section>
 
@@ -350,6 +343,6 @@ export default function ServicesAdvertisingPage() {
           </section>
         </div>
       </div>
-    </UltraAdvancedFuturisticBackground>
+    </Layout>
   );
 }
