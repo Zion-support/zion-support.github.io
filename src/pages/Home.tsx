@@ -393,7 +393,7 @@ const Home: React.FC = () => {
                 </Link>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -451,7 +451,7 @@ const Home: React.FC = () => {
                     Get Started
                   </Link>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 
 export default function Contact() {
+  const [isChatOpen, setIsChatOpen] = useState(false);
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -29,7 +30,7 @@ export default function Contact() {
     timeline: '',
     preferredContact: 'email'
   });
-
+  const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 

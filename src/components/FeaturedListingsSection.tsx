@@ -119,78 +119,66 @@ export function FeaturedListingsSection() {
                     </button>
                   </div>
                 </div>
-                
-                {/* Content */}
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="px-3 py-1 rounded-full bg-zion-cyan/20 text-zion-cyan text-xs font-medium">
-                      {listing.category}
-                    </span>
+              </div>
+              
+              <div className="mb-4">
+                <span className="inline-block bg-zion-cyan/20 text-zion-cyan text-xs px-2 py-1 rounded-full mb-2">
+                  {listing.category}
+                </span>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
+                  {listing.title}
+                </h3>
+                <p className="text-zion-slate-light text-sm leading-relaxed">
+                  {listing.description}
+                </p>
+              </div>
+              
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center space-x-1">
+                  <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                  <span className="text-white text-sm font-medium">{listing.rating}</span>
+                  <span className="text-zion-slate-light text-sm">({listing.reviews})</span>
+                </div>
+                <div className="flex items-center space-x-4 text-zion-slate-light text-sm">
+                  <div className="flex items-center space-x-1">
+                    <Eye className="w-4 h-4" />
+                    <span>{listing.views}</span>
                   </div>
-                  
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
-                    {listing.title}
-                  </h3>
-                  
-                  <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
-                    {listing.description}
-                  </p>
-                  
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {listing.tags.map((tag, index) => (
-                      <span key={index} className="px-2 py-1 rounded-md bg-zion-slate/30 text-zion-slate-light text-xs">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  
-                  {/* Stats */}
-                  <div className="flex items-center justify-between mb-4 text-sm text-zion-slate-light">
-                    <div className="flex items-center gap-1">
-                      <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                      <span>{listing.rating}</span>
-                      <span>({listing.reviews})</span>
-                    </div>
-                    <div className="flex items-center gap-4">
-                      <div className="flex items-center gap-1">
-                        <Eye className="w-4 h-4" />
-                        <span>{listing.views}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Heart className="w-4 h-4" />
-                        <span>{listing.likes}</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Price and CTA */}
-                  <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-zion-cyan">
-                      {listing.price}
-                    </span>
-                    <button className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover:scale-105">
-                      View Details
-                      <ArrowRight className="w-4 h-4" />
-                    </button>
+                  <div className="flex items-center space-x-1">
+                    <Heart className="w-4 h-4" />
+                    <span>{listing.likes}</span>
                   </div>
                 </div>
               </div>
+              
+              <div className="flex flex-wrap gap-2 mb-4">
+                {listing.tags.map((tag, index) => (
+                  <span
+                    key={index}
+                    className="bg-zion-blue/20 text-zion-cyan text-xs px-2 py-1 rounded-full"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              
+              <button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-4 rounded-xl font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center space-x-2 group-hover:scale-105">
+                <span>View Details</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </button>
             </motion.div>
           ))}
         </motion.div>
         
-        {/* Bottom CTA */}
         <motion.div 
           className="text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-dark hover:to-zion-blue-dark text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+          <button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105">
             View All Projects
-            <ArrowRight className="w-5 h-5" />
           </button>
         </motion.div>
       </div>

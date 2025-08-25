@@ -166,6 +166,349 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     launchDate: '2023-11-20',
     status: 'Active'
   },
+  {
+    id: "ai-business-intelligence",
+    title: "AI Business Intelligence Suite",
+    description: "Comprehensive business analytics platform powered by AI that transforms raw data into actionable insights and predictive analytics.",
+    category: "AI Services",
+    price: {
+      monthly: 89,
+      yearly: 890,
+      currency: "$"
+    },
+    features: [
+      "Real-time data visualization",
+      "Predictive analytics modeling",
+      "Custom dashboard builder",
+      "Automated report generation",
+      "KPI tracking and alerts",
+      "Data integration from 100+ sources",
+      "Natural language querying",
+      "Mobile-responsive analytics"
+    ],
+    benefits: [
+      "Make data-driven decisions faster",
+      "Identify hidden business opportunities",
+      "Reduce manual reporting by 80%",
+      "Predict market trends and customer behavior",
+      "Improve operational efficiency"
+    ],
+    useCases: [
+      "Business executives",
+      "Data analysts",
+      "Marketing teams",
+      "Sales departments",
+      "Operations managers"
+    ],
+    targetAudience: ["Business leaders", "Data analysts", "Marketing professionals", "Operations teams"],
+    integration: ["Salesforce", "HubSpot", "Google Analytics", "QuickBooks", "Zapier"],
+    support: ["Dedicated account manager", "Priority support", "Custom training", "API documentation"],
+    link: "https://ziontechgroup.com/ai-business-intelligence",
+    badge: "New",
+    rating: 4.8,
+    reviewCount: 456,
+    aiScore: 94,
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500",
+    author: {
+      name: "Zion Analytics",
+      id: "zion-analytics",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
+    }
+  },
+  {
+    id: "cyber-threat-detection",
+    title: "Cyber Threat Detection & Response",
+    description: "AI-powered cybersecurity platform that provides real-time threat detection, automated incident response, and comprehensive security monitoring.",
+    category: "Security",
+    price: {
+      monthly: 129,
+      yearly: 1290,
+      currency: "$"
+    },
+    features: [
+      "Real-time threat monitoring",
+      "AI-powered anomaly detection",
+      "Automated incident response",
+      "Vulnerability assessment",
+      "Compliance reporting (SOC2, GDPR, HIPAA)",
+      "24/7 security operations center",
+      "Threat intelligence feeds",
+      "Security awareness training"
+    ],
+    benefits: [
+      "Detect threats 10x faster than traditional methods",
+      "Reduce false positives by 90%",
+      "Automated response reduces incident resolution time",
+      "Meet compliance requirements effortlessly",
+      "Protect against zero-day attacks"
+    ],
+    useCases: [
+      "Financial institutions",
+      "Healthcare organizations",
+      "E-commerce businesses",
+      "Government agencies",
+      "Educational institutions"
+    ],
+    targetAudience: ["CISOs", "IT security teams", "Compliance officers", "Risk managers"],
+    integration: ["SIEM systems", "Firewalls", "Endpoint protection", "Cloud security", "Identity management"],
+    support: ["24/7 security monitoring", "Emergency response team", "Compliance consulting", "Security training"],
+    link: "https://ziontechgroup.com/cyber-threat-detection",
+    badge: "Premium",
+    rating: 4.9,
+    reviewCount: 789,
+    aiScore: 97,
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&h=500",
+    author: {
+      name: "Zion Security",
+      id: "zion-security",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
+    }
+  },
+  {
+    id: "ai-customer-support",
+    title: "AI Customer Support Automation",
+    description: "Intelligent customer service platform that uses AI to provide instant responses, route inquiries, and automate support workflows.",
+    category: "AI Services",
+    price: {
+      monthly: 59,
+      yearly: 590,
+      currency: "$"
+    },
+    features: [
+      "AI-powered chatbot with human-like responses",
+      "Multi-language support",
+      "Ticket routing and prioritization",
+      "Knowledge base management",
+      "Customer sentiment analysis",
+      "Integration with CRM systems",
+      "Performance analytics",
+      "Custom workflow automation"
+    ],
+    benefits: [
+      "Reduce support response time by 95%",
+      "Handle 80% of inquiries automatically",
+      "Improve customer satisfaction scores",
+      "Reduce support staff workload",
+      "24/7 customer support availability"
+    ],
+    useCases: [
+      "E-commerce platforms",
+      "SaaS companies",
+      "Financial services",
+      "Healthcare providers",
+      "Educational institutions"
+    ],
+    targetAudience: ["Customer support managers", "Business owners", "Operations teams", "Marketing teams"],
+    integration: ["Zendesk", "Intercom", "Salesforce", "Shopify", "WordPress"],
+    support: ["Setup assistance", "Training sessions", "Custom integration help", "Priority support"],
+    link: "https://ziontechgroup.com/ai-customer-support",
+    badge: "Featured",
+    rating: 4.7,
+    reviewCount: 623,
+    aiScore: 93,
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&h=500",
+    author: {
+      name: "Zion Support AI",
+      id: "zion-support-ai",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
+    }
+  },
+  {
+    id: "blockchain-identity-verification",
+    title: "Blockchain Identity Verification",
+    description: "Decentralized identity verification platform using blockchain technology for secure, tamper-proof identity management and verification.",
+    category: "Security",
+    price: {
+      monthly: 79,
+      yearly: 790,
+      currency: "$"
+    },
+    features: [
+      "Decentralized identity management",
+      "Zero-knowledge proof verification",
+      "Multi-factor authentication",
+      "Compliance with KYC/AML regulations",
+      "Cross-border identity verification",
+      "Privacy-preserving verification",
+      "API integration",
+      "Audit trail and compliance reporting"
+    ],
+    benefits: [
+      "Eliminate identity fraud and impersonation",
+      "Reduce verification costs by 60%",
+      "Comply with global regulations",
+      "Enhance user privacy and security",
+      "Streamline onboarding processes"
+    ],
+    useCases: [
+      "Financial institutions",
+      "Cryptocurrency exchanges",
+      "Healthcare providers",
+      "Government services",
+      "E-commerce platforms"
+    ],
+    targetAudience: ["Compliance officers", "Security teams", "Product managers", "Legal teams"],
+    integration: ["Web3 wallets", "Banking systems", "Healthcare platforms", "Government databases"],
+    support: ["Regulatory compliance consulting", "Technical integration support", "24/7 monitoring", "Custom development"],
+    link: "https://ziontechgroup.com/blockchain-identity",
+    badge: "New",
+    rating: 4.6,
+    reviewCount: 234,
+    aiScore: 91,
+    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500",
+    author: {
+      name: "Zion Blockchain",
+      id: "zion-blockchain",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
+    }
+  },
+  {
+    id: "iot-platform-management",
+    title: "IoT Platform Management Suite",
+    description: "Comprehensive IoT device management platform with real-time monitoring, predictive maintenance, and automated control systems.",
+    category: "IT Services",
+    price: {
+      monthly: 99,
+      yearly: 990,
+      currency: "$"
+    },
+    features: [
+      "Device lifecycle management",
+      "Real-time monitoring and alerts",
+      "Predictive maintenance analytics",
+      "Automated control systems",
+      "Data visualization dashboards",
+      "Edge computing capabilities",
+      "Security and encryption",
+      "Scalable cloud infrastructure"
+    ],
+    benefits: [
+      "Reduce operational costs by 40%",
+      "Prevent equipment failures proactively",
+      "Optimize energy consumption",
+      "Improve operational efficiency",
+      "Scale IoT deployments seamlessly"
+    ],
+    useCases: [
+      "Manufacturing facilities",
+      "Smart cities",
+      "Energy management",
+      "Agriculture",
+      "Healthcare monitoring"
+    ],
+    targetAudience: ["Operations managers", "IT administrators", "Facility managers", "System integrators"],
+    integration: ["PLC systems", "SCADA systems", "Cloud platforms", "Mobile apps", "Analytics tools"],
+    support: ["Hardware integration support", "Custom development", "Training programs", "24/7 technical support"],
+    link: "https://ziontechgroup.com/iot-platform",
+    badge: "Enterprise",
+    rating: 4.8,
+    reviewCount: 445,
+    aiScore: 95,
+    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500",
+    author: {
+      name: "Zion IoT Solutions",
+      id: "zion-iot",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
+    }
+  },
+  {
+    id: "ai-recruitment-platform",
+    title: "AI-Powered Recruitment Platform",
+    description: "Intelligent hiring platform that uses AI to source, screen, and match candidates with job requirements, reducing hiring time and improving quality.",
+    category: "AI Services",
+    price: {
+      monthly: 69,
+      yearly: 690,
+      currency: "$"
+    },
+    features: [
+      "AI-powered candidate sourcing",
+      "Resume parsing and analysis",
+      "Skills assessment automation",
+      "Cultural fit analysis",
+      "Interview scheduling automation",
+      "Candidate ranking algorithms",
+      "Diversity and inclusion tools",
+      "Analytics and reporting"
+    ],
+    benefits: [
+      "Reduce time-to-hire by 70%",
+      "Improve candidate quality by 40%",
+      "Reduce hiring bias and improve diversity",
+      "Automate repetitive recruitment tasks",
+      "Better candidate experience"
+    ],
+    useCases: [
+      "HR departments",
+      "Recruitment agencies",
+      "Startups",
+      "Enterprise companies",
+      "Remote-first organizations"
+    ],
+    targetAudience: ["HR professionals", "Recruiters", "Hiring managers", "Talent acquisition teams"],
+    integration: ["ATS systems", "LinkedIn", "Job boards", "Calendar systems", "HRIS platforms"],
+    support: ["Setup and training", "Custom integration", "Best practices consulting", "Priority support"],
+    link: "https://ziontechgroup.com/ai-recruitment",
+    badge: "Popular",
+    rating: 4.9,
+    reviewCount: 892,
+    aiScore: 96,
+    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&h=500",
+    author: {
+      name: "Zion HR Tech",
+      id: "zion-hr-tech",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
+    }
+  },
+  {
+    id: "quantum-computing-simulation",
+    title: "Quantum Computing Simulation Platform",
+    description: "Advanced quantum computing simulation and development platform for researchers, developers, and businesses exploring quantum algorithms.",
+    category: "AI Services",
+    price: {
+      monthly: 199,
+      yearly: 1990,
+      currency: "$"
+    },
+    features: [
+      "Quantum circuit simulator",
+      "Multiple quantum computing backends",
+      "Quantum algorithm library",
+      "Performance optimization tools",
+      "Real-time quantum state visualization",
+      "API for custom integrations",
+      "Educational resources and tutorials",
+      "Collaborative development tools"
+    ],
+    benefits: [
+      "Access quantum computing without hardware investment",
+      "Develop and test quantum algorithms",
+      "Train teams on quantum computing concepts",
+      "Optimize classical algorithms using quantum principles",
+      "Stay ahead of quantum computing adoption"
+    ],
+    useCases: [
+      "Research institutions",
+      "Pharmaceutical companies",
+      "Financial services",
+      "Cybersecurity firms",
+      "Technology companies"
+    ],
+    targetAudience: ["Quantum researchers", "Software developers", "Data scientists", "Technology leaders"],
+    integration: ["Python", "Jupyter notebooks", "Cloud platforms", "Scientific computing tools"],
+    support: ["Quantum computing experts", "Custom algorithm development", "Training programs", "Research collaboration"],
+    link: "https://ziontechgroup.com/quantum-computing",
+    badge: "Premium",
+    rating: 4.7,
+    reviewCount: 156,
+    aiScore: 98,
+    image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&h=500",
+    author: {
+      name: "Zion Quantum Labs",
+      id: "zion-quantum",
+      avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"
+    }
+  },
 
   // IT Services
   {

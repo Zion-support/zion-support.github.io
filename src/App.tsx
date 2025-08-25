@@ -5,7 +5,6 @@ import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
 import { AccessibilityControls } from './components/AccessibilityControls';
 import { ThemeProvider } from "./components/ThemeProvider";
-import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
 import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';

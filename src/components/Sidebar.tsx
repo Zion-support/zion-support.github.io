@@ -34,7 +34,43 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
 
   const navigationItems = [
     {
-      title: 'Main',
+      title: 'AI Services',
+      icon: Brain,
+      items: [
+        { name: 'AI Content Generation', href: '/ai-services-showcase', icon: Bot, badge: 'Popular' },
+        { name: 'AI Business Intelligence', href: '/ai-services-showcase', icon: BarChart3, badge: 'New' },
+        { name: 'AI Customer Support', href: '/ai-services-showcase', icon: MessageSquare, badge: 'Featured' },
+        { name: 'AI Recruitment Platform', href: '/ai-services-showcase', icon: Users, badge: 'Popular' },
+        { name: 'Quantum AI Platform', href: '/ai-services-showcase', icon: CpuIcon, badge: 'Premium' },
+        { name: 'AI Ethics & Governance', href: '/ai-services-showcase', icon: ShieldCheck, badge: 'Enterprise' }
+      ]
+    },
+    {
+      title: 'IT Solutions',
+      icon: Server,
+      items: [
+        { name: 'Edge Computing Platform', href: '/services', icon: Globe2, badge: 'New' },
+        { name: 'DevOps Automation', href: '/services', icon: ZapIcon, badge: 'Popular' },
+        { name: 'API Gateway Management', href: '/services', icon: Network, badge: 'Enterprise' },
+        { name: 'Cloud-Native Development', href: '/services', icon: Cloud, badge: 'Premium' },
+        { name: 'Low-Code Platform', href: '/services', icon: Layers, badge: 'Featured' },
+        { name: 'PWA Builder', href: '/services', icon: Smartphone, badge: 'New' }
+      ]
+    },
+    {
+      title: 'Development',
+      icon: Code,
+      items: [
+        { name: 'Web Development', href: '/services', icon: Globe, badge: 'Popular' },
+        { name: 'Mobile Development', href: '/services', icon: Smartphone, badge: 'Featured' },
+        { name: 'Metaverse Development', href: '/services', icon: Eye, badge: 'New' },
+        { name: 'Blockchain Development', href: '/services', icon: Lock, badge: 'Premium' },
+        { name: 'IoT Development', href: '/services', icon: Wifi, badge: 'Enterprise' }
+      ]
+    },
+    {
+      title: 'Security',
+      icon: Shield,
       items: [
         { name: 'Home', path: '/', icon: Home },
         { name: 'Services', path: '/services', icon: Briefcase },
@@ -408,3 +444,18 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     </>
   );
 }
+
+// Add missing icons
+const Database = ({ className }: { className?: string }) => (
+  <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+    <path d="M12 2C6.48 2 2 4.02 2 6.5v11C2 19.98 6.48 22 12 22s10-2.02 10-4.5v-11C22 4.02 17.52 2 12 2zM12 20c-4.42 0-8-1.79-8-4v-1.5c2.21 1.86 5.74 2.5 8 2.5s5.79-.64 8-2.5V16c0 2.21-3.58 4-8 4z"/>
+    <path d="M12 16c-4.42 0-8-1.79-8-4v-1.5c2.21 1.86 5.74 2.5 8 2.5s5.79-.64 8-2.5V12c0 2.21-3.58 4-8 4z"/>
+    <path d="M12 12c-4.42 0-8-1.79-8-4V6.5c2.21 1.86 5.74 2.5 8 2.5s5.79-.64 8-2.5V8c0 2.21-3.58 4-8 4z"/>
+  </svg>
+);
+
+const CheckCircle = ({ className }: { className?: string }) => (
+  <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+  </svg>
+);

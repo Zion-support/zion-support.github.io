@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { COMPREHENSIVE_SERVICES } from '../data/comprehensiveServices';
 import { INNOVATIVE_MICRO_SAAS_SERVICES } from '../data/innovativeMicroSaasServices';
 import { ADVANCED_ENTERPRISE_SOLUTIONS } from '../data/advancedEnterpriseSolutions';
 import { SPECIALIZED_IT_SERVICES } from '../data/specializedITServices';
 import { Link } from 'react-router-dom';
+import { Star, CheckCircle } from 'lucide-react';
 
 export function Services() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -26,6 +27,8 @@ export function Services() {
                          (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
     return matchesCategory && matchesSearch;
   });
+
+  const categories = ['all', ...Array.from(new Set(COMPREHENSIVE_SERVICES.map(service => service.category)))];
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -49,60 +52,83 @@ export function Services() {
   };
 
   return (
-    <div className="min-h-screen bg-zion-blue-dark text-white relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-quantum-gradient opacity-20 animate-pulse"></div>
-      <div className="absolute inset-0 bg-quantum-mesh"></div>
-      
-      {/* Matrix Rain Effect */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute text-zion-cyan text-xs animate-matrix-rain"
-            style={{
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 20}s`,
-              animationDuration: `${20 + Math.random() * 10}s`
-            }}
-          >
-            {Math.random() > 0.5 ? '1' : '0'}
-          </div>
-        ))}
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light text-white">
+      {/* Animated Background Elements */}
+      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/10 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute top-40 right-20 w-96 h-96 bg-zion-purple/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-zion-cyan/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-zion-purple/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '6s' }}></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        {/* Header Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-holographic-gradient bg-clip-text text-transparent animate-holographic-shift">
-            Our Services
-          </h1>
-          <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Discover our comprehensive range of cutting-edge technology solutions designed to transform your business
-          </p>
-          
-          {/* Search Bar */}
-          <div className="max-w-2xl mx-auto mb-8">
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Search services..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full px-6 py-4 bg-zion-blue-light/20 border border-zion-cyan/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 backdrop-blur-sm"
-              />
-              <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-cyan">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
+      <div className="relative z-10">
+        {/* Hero Section */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <motion.h1
+              className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent animate-neon-pulse"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.2 }}
+            >
+              Our Services
+            </motion.h1>
+            <motion.p
+              className="text-xl md:text-2xl lg:text-3xl text-zion-slate-light mb-8 max-w-4xl mx-auto leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              Discover our comprehensive range of AI, IT, and Micro SaaS solutions designed to transform your business
+            </motion.p>
+          </motion.div>
+        </section>
+
+        {/* Search and Filter Section */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Search */}
+              <div>
+                <label htmlFor="search" className="block text-sm font-medium text-zion-slate-light mb-2">
+                  Search Services
+                </label>
+                <input
+                  type="text"
+                  id="search"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  placeholder="Search by name, description, or tags..."
+                  className="w-full px-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"
+                />
+              </div>
+
+              {/* Category Filter */}
+              <div>
+                <label htmlFor="category" className="block text-sm font-medium text-zion-slate-light mb-2">
+                  Filter by Category
+                </label>
+                <select
+                  id="category"
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="w-full px-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"
+                >
+                  {categories.map((category) => (
+                    <option key={category} value={category} className="bg-zion-blue-dark text-white">
+                      {category === 'all' ? 'All Categories' : category}
+                    </option>
+                  ))}
+                </select>
               </div>
             </div>
           </div>
+        </section>
 
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-3 mb-12">
@@ -245,47 +271,75 @@ export function Services() {
                     ziontechgroup.com
                   </a>
                 </div>
-              </div>
 
-              {/* Contact Info */}
-              <div>
-                <h4 className="text-lg font-semibold text-white mb-4">Contact</h4>
-                <div className="space-y-2 text-zion-slate-light">
-                  <p>📱 +1 302 464 0950</p>
-                  <p>✉️ kleber@ziontechgroup.com</p>
-                  <p>📍 364 E Main St STE 1008<br />Middletown DE 19709</p>
+                {/* Action Buttons */}
+                <div className="flex space-x-3">
+                  <Link
+                    to={service.link}
+                    className="flex-1 px-4 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium text-center hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
+                  >
+                    Learn More
+                  </Link>
+                  <Link
+                    to="/contact"
+                    className="px-6 py-3 border border-zion-cyan text-zion-cyan rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-all duration-300"
+                  >
+                    Get Quote
+                  </Link>
                 </div>
-              </div>
+              </motion.div>
+            ))}
+          </motion.div>
 
-              {/* Quick Links */}
-              <div>
-                <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
-                <div className="space-y-2">
-                  <a href="/comprehensive-services" className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
-                    Comprehensive Services
-                  </a>
-                  <a href="/ai-services" className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
-                    AI Services
-                  </a>
-                  <a href="/enterprise-solutions" className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
-                    Enterprise Solutions
-                  </a>
-                  <a href="/micro-saas-services" className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
-                    Micro SAAS Services
-                  </a>
-                </div>
-              </div>
-            </div>
-            
-            <div className="border-t border-zion-blue-light mt-8 pt-8 text-center">
-              <p className="text-zion-slate-light text-sm">
-                © 2024 Zion Tech Group. All rights reserved. | 
-                <a href="/privacy" className="ml-2 hover:text-zion-cyan transition-colors">Privacy Policy</a> | 
-                <a href="/terms" className="ml-2 hover:text-zion-cyan transition-colors">Terms of Service</a>
+          {/* No Results Message */}
+          {filteredServices.length === 0 && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-center py-20"
+            >
+              <div className="text-6xl mb-4">🔍</div>
+              <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
+              <p className="text-zion-slate-light mb-6">
+                Try adjusting your search terms or category filter
               </p>
-            </div>
-          </div>
-        </div>
+              <button
+                onClick={() => {
+                  setSearchTerm('');
+                  setSelectedCategory('all');
+                }}
+                className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
+              >
+                Clear Filters
+              </button>
+            </motion.div>
+          )}
+        </section>
+
+        {/* Call to Action */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <motion.div
+            className="text-center bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-3xl p-12 border border-zion-cyan/30"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+              Need a Custom Solution?
+            </h2>
+            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+              Can't find exactly what you're looking for? Our team can create a custom solution tailored to your specific needs.
+            </p>
+            <Link
+              to="/contact"
+              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
+            >
+              <span>Contact Us</span>
+              <CheckCircle className="w-5 h-5" />
+            </Link>
+          </motion.div>
+        </section>
       </div>
     </div>
   );

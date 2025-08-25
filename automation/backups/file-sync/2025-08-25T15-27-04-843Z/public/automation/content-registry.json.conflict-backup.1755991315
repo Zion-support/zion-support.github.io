@@ -2,22 +2,6 @@
   "generatedAt": "2025-08-11T23:25:17.461Z",
   "pages": [
     {
-<<<<<<< HEAD
-      "route": "/_app",
-      "title": "/_app"
-    },
-    {
-      "route": "/automation",
-      "title": "Automation Hub"
-    },
-    {
-      "route": "/front",
-      "title": "/front"
-    },
-    {
-      "route": "/index",
-      "title": "Zion — Autonomous Cloud Automations"
-=======
       "title": "Reference Architecture — Autonomous Content Mesh",
       "href": "/reports/blueprints/blueprint-2025-08-14-120147",
       "desc": "New autonomous content",
@@ -44,7 +28,6 @@
       "desc": "New autonomous content",
       "createdAt": "2025-08-14T12:01:47.400Z",
       "source": "cloud-deep-research-factory"
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
     },
     {
       "route": "/main/front",
@@ -55,10 +38,6 @@
       "title": "Newsroom — Curated Tech Headlines"
     },
     {
-<<<<<<< HEAD
-      "route": "/reports/ai-trends",
-      "title": "/reports/ai-trends"
-=======
       "file": "pages/reports/index.tsx",
       "route": "/reports"
     },
@@ -201,17 +180,12 @@
     {
       "file": "pages/tutorials/rapid-1755542895072-rppr3c.tsx",
       "route": "/tutorials/rapid-1755542895072-rppr3c"
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
     },
     {
       "route": "/reports/seo",
       "title": "/reports/seo"
     },
     {
-<<<<<<< HEAD
-      "route": "/site-health",
-      "title": "Site Health — Broken Images"
-=======
       "file": "pages/reports/seo.tsx",
       "route": "/reports/seo"
     },
@@ -31250,7 +31224,6 @@
     {
       "file": "pages/main/front/index.tsx",
       "route": "/main/front"
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
     }
   ],
   "reports": [
@@ -31271,10 +31244,6 @@
       "title": "index.html"
     },
     {
-<<<<<<< HEAD
-      "path": "/reports/seo/latest.json",
-      "title": "latest.json"
-=======
       "file": "docs/MEDIA_RELEASE.md",
       "route": "/docs/MEDIA_RELEASE.md"
     },
@@ -31480,7 +31449,6 @@
       "id": "cursor-chat-2025-08-19T03:44:43.881Z",
       "type": "cursor-chat",
       "timestamp": "2025-08-19T03:44:43.881Z"
->>>>>>> fc96978c78b07828f17a558ba097f8cec16c314d
     }
   ]
 }

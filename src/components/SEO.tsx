@@ -133,6 +133,7 @@ export const SEO: React.FC<SEOProps> = ({
       <script type="application/ld+json">
         {JSON.stringify(organizationSchema)}
       </script>
+      
       <script type="application/ld+json">
         {JSON.stringify(websiteSchema)}
       </script>

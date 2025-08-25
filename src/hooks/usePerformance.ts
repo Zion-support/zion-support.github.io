@@ -17,13 +17,23 @@ interface PerformanceEntry {
   value?: number;
 }
 
-interface FirstInputEntry extends PerformanceEntry {
+// Type definitions for Web Performance API
+interface LayoutShift extends PerformanceEntry {
+  hadRecentInput: boolean;
+  value: number;
+}
+
+interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number;
 }
 
-interface LayoutShiftEntry extends PerformanceEntry {
-  hadRecentInput: boolean;
-  value: number;
+// Type guards
+function isLayoutShift(entry: PerformanceEntry): entry is LayoutShift {
+  return entry.entryType === 'layout-shift';
+}
+
+function isPerformanceEventTiming(entry: PerformanceEntry): entry is PerformanceEventTiming {
+  return entry.entryType === 'first-input';
 }
 
 export const usePerformance = () => {

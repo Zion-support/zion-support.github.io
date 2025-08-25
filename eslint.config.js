@@ -16,6 +16,7 @@ export default [
       globals: {
         ...globals.browser,
         ...globals.node,
+        React: 'readonly',
         process: 'readonly',
         console: 'readonly',
         module: 'readonly',

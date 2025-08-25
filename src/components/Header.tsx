@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import { 
@@ -385,6 +386,7 @@ export function Header() {
                         ? 'text-cyan-400 bg-cyan-400/10 border border-cyan-400/20'
                         : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
                     }`}
+                    onClick={() => setIsMenuOpen(false)}
                   >
                     <span>{item.icon}</span>
                     <span className="font-medium">{item.label}</span>
