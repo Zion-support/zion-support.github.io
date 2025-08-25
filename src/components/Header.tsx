@@ -105,6 +105,12 @@ export function Header() {
       description: 'Support and documentation'
     },
     { 
+      path: '/accessibility-auditor', 
+      label: 'Accessibility', 
+      icon: '♿',
+      description: 'Accessibility auditing services'
+    },
+    { 
       path: '/contact', 
       label: 'Contact', 
       icon: '📞',

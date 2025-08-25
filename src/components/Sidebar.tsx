@@ -1027,6 +1027,14 @@ export default function Sidebar() {
         { name: 'Dispute Management', path: '/dispute-management', icon: Gavel }
 >>>>>>> origin/cursor/website-audit-and-enhancement-a3a9
       ]
+    },
+    {
+      title: 'Accessibility',
+      items: [
+        { name: 'Accessibility Auditor', path: '/accessibility-auditor', icon: Shield },
+        { name: 'WCAG Compliance', path: '/accessibility-auditor', icon: Shield },
+        { name: 'Mobile Accessibility', path: '/accessibility-auditor', icon: Shield }
+      ]
     }
   ];
 
