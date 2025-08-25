@@ -62,12 +62,6 @@ const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 const NewServices = lazy(() => import('./pages/NewServices'));
 
 // Additional missing pages
-const AIAutonomousBusinessManager = lazy(() => import('./pages/ai-autonomous-business-manager'));
-const AIAutonomousBusinessPlatform = lazy(() => import('./pages/ai-autonomous-business-platform'));
-const AIAutonomousResearch = lazy(() => import('./pages/ai-autonomous-research'));
-const AIAutonomousSystemsPlatform = lazy(() => import('./pages/ai-autonomous-systems-platform'));
-const AIAutonomousCodeReview = lazy(() => import('./pages/ai-autonomous-code-review'));
-const AIAutonomousCreativeDirector = lazy(() => import('./pages/ai-autonomous-creative-director'));
 
 // Company information pages
 const About = lazy(() => import('./pages/About'));
@@ -94,6 +88,7 @@ const InnovativeMicroSaasServices = lazy(() => import('./pages/InnovativeMicroSa
 const ComprehensiveInnovativeServices = lazy(() => import('./pages/ComprehensiveInnovativeServices'));
 const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveServicesOverview'));
 const EnhancedServicesShowcase = lazy(() => import('./pages/EnhancedServicesShowcase'));
+const InnovativeServicesShowcase = lazy(() => import('./pages/InnovativeServicesShowcase'));
 
 // Solutions pages
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
@@ -193,6 +188,7 @@ const App: React.FC = () => {
                       <Route path="/services" element={<Services />} />
                       <Route path="/ai-solutions" element={<AISolutions />} />
                       <Route path="/services-showcase" element={<ServicesShowcase />} />
+                      <Route path="/innovative-services-showcase" element={<InnovativeServicesShowcase />} />
                       <Route path="/ai-matcher" element={<AIMatcherPage />} />
                       <Route path="/talent-directory" element={<TalentDirectory />} />
                       <Route path="/talents" element={<TalentsPage />} />
@@ -250,6 +246,7 @@ const App: React.FC = () => {
                       <Route path="/comprehensive-innovative-services" element={<ComprehensiveInnovativeServices />} />
                       <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview />} />
                       <Route path="/enhanced-services-showcase" element={<EnhancedServicesShowcase />} />
+                      <Route path="/innovative-services-showcase" element={<InnovativeServicesShowcase />} />
                       
                       {/* New innovative service routes */}
                       <Route path="/ai-workflow-automation" element={<AIWorkflowAutomation />} />
