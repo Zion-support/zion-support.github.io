@@ -1,6 +1,17 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Activity, TrendingUp, TrendingDown, Zap, Clock, Target, BarChart3, HardDrive, Wifi, Cpu, Memory } from 'lucide-react';
+import { 
+  Activity, 
+  TrendingUp, 
+  TrendingDown, 
+  Zap, 
+  Clock, 
+  Target, 
+  BarChart3, 
+  HardDrive, 
+  Wifi, 
+  Cpu
+} from 'lucide-react';
 import { usePerformance } from '../hooks/usePerformance';
 
 interface BundleMetrics {
@@ -55,10 +66,10 @@ export const PerformanceDashboard: React.FC = () => {
     }
 
     // Measure latency to a reliable endpoint
-    const start = performance.now();
+    const start = window.performance.now();
     fetch('/api/health', { method: 'HEAD' })
       .then(() => {
-        const latency = performance.now() - start;
+        const latency = window.performance.now() - start;
         setNetworkMetrics(prev => ({ ...prev, latency }));
       })
       .catch(() => {
