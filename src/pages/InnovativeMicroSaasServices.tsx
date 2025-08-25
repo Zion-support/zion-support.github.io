@@ -36,26 +36,25 @@ import { EMERGING_TECH_SERVICES } from '../data/emergingTechServices';
 
 interface Service {
   id: string;
-  title?: string;
-  name?: string;
+  title: string;
   description: string;
   category: string;
-  subcategory?: string;
+  subcategory: string;
   price: number;
-  currency?: string;
+  currency: string;
   pricingModel: string;
   features: string[];
-  benefits?: string[];
-  useCases?: string[];
-  targetAudience?: string[];
-  tags?: string[];
-  estimatedDelivery?: string;
-  supportLevel?: string;
-  marketPrice?: string;
+  benefits: string[];
+  useCases: string[];
+  targetAudience: string[];
+  tags: string[];
+  estimatedDelivery: string;
+  supportLevel: string;
+  marketPrice: string;
   contactInfo: {
-    phone?: string;
-    email?: string;
-    website?: string;
+    phone: string;
+    email: string;
+    website: string;
   };
   technology?: string[];
   integrations?: string[];
@@ -64,6 +63,16 @@ interface Service {
   competitors?: string[];
   marketTrend?: string;
   innovationLevel?: string;
+  // Optional properties for compatibility with different service types
+  name?: string;
+  userLimit?: string;
+  demoUrl?: string;
+  documentationUrl?: string;
+  freeTrial?: boolean;
+  freeTrialDays?: number;
+  rating?: number;
+  reviewCount?: number;
+  address?: string;
 }
 
 const InnovativeMicroSaasServices: React.FC = () => {
@@ -71,45 +80,74 @@ const InnovativeMicroSaasServices: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [expandedService, setExpandedService] = useState<string | null>(null);
 
-  // Map and combine all services to match Service interface
-  const mapToService = (service: any): Service => ({
-    id: service.id,
-    title: service.name || service.title,
-    description: service.description,
-    category: service.category,
-    subcategory: service.subcategory,
-    price: service.price,
-    currency: service.currency || 'USD',
-    pricingModel: service.pricingModel,
-    features: service.features,
-    benefits: service.benefits,
-    useCases: service.useCases || [],
-    targetAudience: service.targetAudience,
-    tags: service.tags,
-    estimatedDelivery: service.estimatedDelivery,
-    supportLevel: service.supportLevel,
-    marketPrice: service.marketPrice,
-    contactInfo: service.contactInfo,
-    technology: service.technology,
-    integrations: service.integrations,
-    compliance: service.compliance,
-    roi: service.roi,
-    competitors: service.competitors,
-    marketTrend: service.marketTrend,
-    innovationLevel: service.innovationLevel
-  });
-
+  // Combine all services with proper type mapping
   const allServices: Service[] = [
-    ...ADVANCED_MICRO_SAAS_SERVICES.map(mapToService),
-    ...EMERGING_TECH_SERVICES.map(mapToService)
+    ...ADVANCED_MICRO_SAAS_SERVICES.map(service => ({
+      id: service.id,
+      title: service.name,
+      description: service.description,
+      category: service.category,
+      subcategory: service.subcategory,
+      price: service.price,
+      currency: '$',
+      pricingModel: service.pricingModel,
+      features: service.features,
+      benefits: service.benefits,
+      useCases: service.features,
+      targetAudience: service.targetAudience,
+      tags: service.tags,
+      estimatedDelivery: service.estimatedDelivery,
+      supportLevel: service.supportLevel,
+      marketPrice: service.marketPrice,
+      contactInfo: service.contactInfo,
+      technology: service.technology,
+      integrations: service.integrations,
+      compliance: service.compliance,
+      roi: service.roi,
+      competitors: service.competitors,
+      innovationLevel: 'Advanced',
+      marketTrend: 'Growing',
+      name: service.name,
+      userLimit: service.userLimit,
+      demoUrl: service.demoUrl,
+      documentationUrl: service.documentationUrl,
+      freeTrial: service.freeTrial,
+      freeTrialDays: service.freeTrialDays,
+      address: service.contactInfo.address
+    })),
+    ...EMERGING_TECH_SERVICES.map(service => ({
+      id: service.id,
+      title: service.title,
+      description: service.description,
+      category: service.category,
+      subcategory: service.subcategory,
+      price: service.price,
+      currency: service.currency,
+      pricingModel: service.pricingModel,
+      features: service.features,
+      benefits: service.benefits,
+      useCases: service.useCases,
+      targetAudience: service.targetAudience,
+      tags: service.tags,
+      estimatedDelivery: service.estimatedDelivery,
+      supportLevel: service.supportLevel,
+      marketPrice: service.marketPrice,
+      contactInfo: service.contactInfo,
+      technology: [],
+      integrations: [],
+      compliance: [],
+      roi: '',
+      competitors: [],
+      innovationLevel: 'Emerging',
+      marketTrend: 'Growing'
+    }))
   ];
 
   const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
   
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const serviceTitle = service.title || service.name || '';
-    const matchesSearch = serviceTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
     return matchesCategory && matchesSearch;
@@ -268,7 +306,7 @@ const InnovativeMicroSaasServices: React.FC = () => {
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white mb-2">{service.title || service.name}</h3>
+                      <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
                       <p className="text-gray-400 text-sm mb-3">{service.description}</p>
                     </div>
                     <button
@@ -403,7 +441,7 @@ const InnovativeMicroSaasServices: React.FC = () => {
                       <div className="pt-4 border-t border-gray-700">
                         <div className="flex flex-col sm:flex-row gap-3">
                           <a
-                            href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title || service.name}`}
+                            href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title}`}
                             className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg text-center font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center"
                           >
                             <Mail size={20} className="mr-2" />

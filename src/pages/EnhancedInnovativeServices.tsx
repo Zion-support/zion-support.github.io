@@ -12,6 +12,7 @@ export default function EnhancedInnovativeServicesPage() {
           type="website"
           image="/images/enhanced-innovative-services-og.jpg"
           url="https://ziontechgroup.com/enhanced-innovative-services"
+          type="website"
         />
       
       <EnhancedInnovativeServicesShowcase />
