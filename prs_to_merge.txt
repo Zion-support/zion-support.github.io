@@ -1,7 +1,6 @@
-8377|cursor/expand-services-and-deploy-updates-fb92|Expand services and deploy updates
+8382|cursor/analyze-improve-and-deploy-ziontechgroup-app-dbff|Analyze, improve, and deploy ziontechgroup app
+8380|cursor/website-audit-and-enhancement-7c45|Website audit and enhancement
 8376|cursor/analyze-improve-and-deploy-ziontechgroup-app-4b0c|Analyze, improve, and deploy ziontechgroup app
-8375|cursor/expand-services-and-deploy-updates-e9d3|Expand services and deploy updates
-8373|cursor/analyze-improve-and-deploy-ziontechgroup-app-8acb|Analyze, improve, and deploy ziontechgroup app
 6762|cursor/expand-services-and-deploy-updates-a1ec|Expand services and deploy updates
 6762|1nq1ky-codex/render-talent-profiles-with-error-states|Expand services and deploy updates
 6757|cursor/expand-services-and-deploy-updates-4e39|Expand services and deploy updates
@@ -194,3 +193,5 @@
 6503|1nq1ky-codex/render-talent-profiles-with-error-states|Website audit and enhancement
 6502|cursor/expand-services-and-deploy-updates-fbb3|Expand services and deploy updates
 6502|1nq1ky-codex/render-talent-profiles-with-error-states|Expand services and deploy updates
+6495|cursor/enhance-app-with-new-services-and-futuristic-design-b8ff|Enhance app with new services and futuristic design
+6495|1nq1ky-codex/render-talent-profiles-with-error-states|Enhance app with new services and futuristic design
