@@ -54,6 +54,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     },
     {
       key: 'services',
+<<<<<<< HEAD
       href: '/services',
       matches: (path: string) => path.startsWith('/services') || path.includes('quantum') || path.includes('ai-autonomous'),
       hasDropdown: true,
@@ -78,6 +79,10 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         { name: 'Manufacturing Solutions', href: '/solutions/manufacturing' },
         { name: 'Government Solutions', href: '/government-technology-solutions' }
       ]
+=======
+      href: '/services-hub',
+      matches: (path: string) => path.startsWith('/services') || path.startsWith('/ai-services') || path.startsWith('/it-services') || path.startsWith('/digital-transformation')
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4df9
     },
     {
       key: 'marketplace',

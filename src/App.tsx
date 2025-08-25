@@ -92,15 +92,23 @@ import {
   DeveloperRoutes
 } from './routes';
 const Home = React.lazy(() => import('./pages/Home'));
+const About = React.lazy(() => import('./pages/About'));
 const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
 const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
 const TalentsPage = React.lazy(() => import('./pages/TalentsPage'));
 const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
+<<<<<<< HEAD
 const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
 const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
 const DigitalMarketingServicesPage = React.lazy(() => import('./pages/DigitalMarketingServicesPage'));
 const BusinessSolutionsPage = React.lazy(() => import('./pages/BusinessSolutionsPage'));
 const ServicesOverviewPage = React.lazy(() => import('./pages/ServicesOverviewPage'));
+=======
+const ServicesHubPage = React.lazy(() => import('./pages/ServicesHubPage'));
+const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
+const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
+const DigitalTransformationPage = React.lazy(() => import('./pages/DigitalTransformationPage'));
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4df9
 const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage'));
 const EquipmentDetail = React.lazy(() => import('./pages/EquipmentDetail'));
 const Analytics = React.lazy(() => import('./pages/Analytics'));
@@ -145,6 +153,7 @@ const ServicesOverviewPage = React.lazy(() => import('./pages/ServicesOverviewPa
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
+  { path: '/about', element: <About /> },
   { path: '/match', element: <AIMatcherPage /> },
   { path: '/login', element: <Login /> },
   { path: '/signup', element: <Signup /> },
@@ -152,6 +161,7 @@ const baseRoutes = [
   { path: '/talents', element: <TalentsPage /> },
 <<<<<<< HEAD
   { path: '/services', element: <ServicesPage /> },
+<<<<<<< HEAD
 <<<<<<< HEAD
   { path: '/micro-saas-services', element: <MicroSaasServicesPage /> },
 =======
@@ -165,6 +175,12 @@ const baseRoutes = [
   { path: '/digital-marketing', element: <DigitalMarketingServicesPage /> },
   { path: '/business-solutions', element: <BusinessSolutionsPage /> },
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
+=======
+  { path: '/services-hub', element: <ServicesHubPage /> },
+  { path: '/ai-services', element: <AIServicesPage /> },
+  { path: '/it-services', element: <ITServicesPage /> },
+  { path: '/digital-transformation', element: <DigitalTransformationPage /> },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4df9
   { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
   { path: '/ai-services', element: <AIServicesPage /> },
   { path: '/blockchain-services', element: <BlockchainServicesPage /> },

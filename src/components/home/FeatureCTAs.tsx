@@ -20,6 +20,7 @@ import {
   Building,
   Clock,
 <<<<<<< HEAD
+<<<<<<< HEAD
   PenTool,
   Link as LinkIcon,
   Shield,
@@ -30,6 +31,11 @@ import {
   TrendingUp,
   CheckCircle
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
+=======
+  Brain,
+  Server,
+  TrendingUp
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4df9
 } from "lucide-react";
 
 =======
@@ -241,6 +247,7 @@ export function FeatureCTAs() {
       badge: "Premium",
       details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution."
     },
+<<<<<<< HEAD
     // New innovative micro SAAS services
     {
       title: "AI Content Generation",
@@ -290,6 +297,31 @@ export function FeatureCTAs() {
       badge: "Edge",
       details: "Process data closer to the source with our edge computing platform for faster response times and reduced latency."
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-7440
+=======
+    {
+      title: "AI Services & Solutions",
+      description: "Comprehensive AI development, machine learning, and automation services for modern businesses.",
+      icon: <Brain className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />,
+      link: "/ai-services",
+      badge: "New",
+      details: "From custom AI models to computer vision solutions, we deliver cutting-edge artificial intelligence services."
+    },
+    {
+      title: "IT Infrastructure Services",
+      description: "Enterprise-grade IT solutions including cloud migration, cybersecurity, and managed services.",
+      icon: <Server className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />,
+      link: "/it-services",
+      badge: "Featured",
+      details: "Transform your IT infrastructure with our comprehensive cloud, security, and DevOps solutions."
+    },
+    {
+      title: "Digital Transformation",
+      description: "Strategic consulting and implementation for business modernization and digital growth.",
+      icon: <TrendingUp className="h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700" />,
+      link: "/digital-transformation",
+      badge: "Premium",
+      details: "Navigate the digital age with our comprehensive transformation strategies and implementation services."
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4df9
     }
   ];
 
