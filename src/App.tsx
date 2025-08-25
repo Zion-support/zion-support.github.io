@@ -120,7 +120,7 @@ const App = () => {
                 <Header />
                 <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
                 
-                <main className="pt-20">
+                <main id="main-content" className="pt-20">
                   <Suspense fallback={<LoadingSpinner />}>
                     <Routes>
                       {/* Main Routes */}

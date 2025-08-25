@@ -38,10 +38,13 @@ import SEOHead from '../components/SEOHead';
 import { SEOConfigs } from '../components/SEOHead';
 
 // Lazy load components for better performance
+// Temporarily commented out for debugging
+/*
 const LazyServicesSection = React.lazy(() => import('../components/home/ServicesSection'));
 const LazyFeaturesSection = React.lazy(() => import('../components/home/FeaturesSection'));
 const LazyTestimonialsSection = React.lazy(() => import('../components/home/TestimonialsSection'));
 const LazyCTASection = React.lazy(() => import('../components/home/CTASection'));
+*/
 
 // Loading fallback component
 const LoadingFallback = ({ message }: { message: string }) => (
@@ -504,6 +507,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Services Section */}
+      {/* Temporarily commented out for debugging
       <Suspense fallback={<LoadingFallback message="Loading services..." />}>
         <LazyServicesSection />
       </Suspense>
@@ -522,6 +526,7 @@ const Home: React.FC = () => {
       <Suspense fallback={<LoadingFallback message="Loading CTA..." />}>
         <LazyCTASection />
       </Suspense>
+      */}
     </div>
   );
 };
