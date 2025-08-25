@@ -98,7 +98,7 @@ const Home: React.FC = () => {
       title: "AI Business Intelligence",
       description: "Transform data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive modeling, and automated reporting.",
       icon: Brain,
-      path: "/services/ai-business-intelligence",
+      path: "/ai-services",
       category: "AI Solutions",
       price: "$2,500/mo",
       rating: 4.9,
@@ -107,10 +107,10 @@ const Home: React.FC = () => {
       features: ["Machine Learning", "Data Visualization", "API Integration", "24/7 Support", "Custom Alerts", "Performance Monitoring"]
     },
     {
-      title: "Cloud Infrastructure",
+      title: "Cloud Infrastructure & DevOps",
       description: "Scalable cloud solutions designed for enterprise performance and security. Optimize costs while maintaining high availability and performance.",
       icon: Cloud,
-      path: "/services/cloud-infrastructure",
+      path: "/cloud-devops",
       category: "Infrastructure",
       price: "$1,800/mo",
       rating: 4.8,
@@ -129,6 +129,42 @@ const Home: React.FC = () => {
       reviewCount: 156,
       highlights: ["Threat Detection", "Compliance Ready", "24/7 Monitoring", "Incident Response"],
       features: ["Penetration Testing", "Security Audits", "Incident Response", "Training", "Vulnerability Assessment", "Security Architecture"]
+    },
+    {
+      title: "Quantum Technology Solutions",
+      description: "Next-generation quantum computing and quantum-safe security solutions. Stay ahead of the curve with cutting-edge quantum technology.",
+      icon: Cpu,
+      path: "/services/quantum-technology",
+      category: "Emerging Tech",
+      price: "$5,000/mo",
+      rating: 4.9,
+      reviewCount: 45,
+      highlights: ["Quantum Computing", "Quantum Security", "Future-Proof", "Research & Development"],
+      features: ["Quantum Algorithms", "Post-Quantum Cryptography", "Quantum Simulation", "Expert Consultation", "Custom Development", "Training Programs"]
+    },
+    {
+      title: "Micro-SaaS Solutions",
+      description: "Custom software solutions designed for growing businesses. Streamline operations and boost productivity with tailored applications.",
+      icon: Code,
+      path: "/services/micro-saas-solutions",
+      category: "Software",
+      price: "$1,200/mo",
+      rating: 4.7,
+      reviewCount: 78,
+      highlights: ["Custom Development", "Scalable Architecture", "API Integration", "User Management"],
+      features: ["Web Applications", "Mobile Apps", "API Development", "Database Design", "Cloud Deployment", "Maintenance & Support"]
+    },
+    {
+      title: "Digital Transformation",
+      description: "Complete business transformation services to modernize your operations and drive innovation across your organization.",
+      icon: Rocket,
+      path: "/digital-transformation",
+      category: "Consulting",
+      price: "$4,500/mo",
+      rating: 4.9,
+      reviewCount: 92,
+      highlights: ["Strategic Planning", "Process Optimization", "Technology Integration", "Change Management"],
+      features: ["Business Analysis", "Workflow Automation", "Legacy Migration", "Training Programs", "Performance Monitoring", "Continuous Improvement"]
     }
   ];
 
@@ -136,22 +172,32 @@ const Home: React.FC = () => {
     {
       icon: Zap,
       title: "Lightning Fast",
-      description: "Optimized performance and rapid deployment with cutting-edge technologies"
+      description: "Optimized performance and rapid deployment with cutting-edge technologies. We deliver results in weeks, not months."
     },
     {
       icon: Lock,
       title: "Secure by Design",
-      description: "Enterprise-grade security built into every solution from the ground up"
+      description: "Enterprise-grade security built into every solution from the ground up. SOC2 compliant with military-grade encryption."
     },
     {
       icon: Cpu,
       title: "Scalable Architecture",
-      description: "Grow without limits with our flexible and scalable infrastructure solutions"
+      description: "Grow without limits with our flexible and scalable infrastructure solutions. From startup to enterprise, we scale with you."
     },
     {
       icon: Database,
       title: "Data-Driven",
-      description: "Insights that drive better business decisions and strategic planning"
+      description: "Insights that drive better business decisions and strategic planning. AI-powered analytics for competitive advantage."
+    },
+    {
+      icon: Network,
+      title: "Global Reach",
+      description: "24/7 support across multiple time zones with local expertise and global infrastructure capabilities."
+    },
+    {
+      icon: Target,
+      title: "Results Focused",
+      description: "We measure success by your business outcomes. ROI-driven solutions with guaranteed performance improvements."
     }
   ];
 
@@ -457,7 +503,7 @@ const Home: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyChooseUs.map((feature, index) => (
               <div key={index} className="text-center group">
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-500/25">
