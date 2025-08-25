@@ -27,7 +27,7 @@ import SEOHead from '../components/SEOHead';
 const QuantumNeuralNetworkPlatform: React.FC = () => {
   const features = [
     {
-      icon: Brain,
+      icon: CpuChipIcon,
       title: "Quantum Neural Processing",
       description: "Advanced quantum algorithms for neural network optimization and training acceleration"
     },
@@ -133,7 +133,7 @@ const QuantumNeuralNetworkPlatform: React.FC = () => {
                 View Case Studies
               </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
