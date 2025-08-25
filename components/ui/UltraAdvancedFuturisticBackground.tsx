@@ -11,6 +11,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
   variant = 'quantum-holographic-advanced' 
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const particlesRef = useRef<any[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
   const holographicRef = useRef<HTMLDivElement>(null);
 
@@ -21,7 +22,11 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
     const ctx = canvas.getContext('2d');
     if (!canvas || !ctx) return;
 
-    let particles: Array<{
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // Enhanced particle system
+    class Particle {
       x: number;
       y: number;
       vx: number;
@@ -169,6 +174,17 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           const y = Math.random() * canvas.height;
           ctx.fillText('01', x, y);
         }
+
+        // Neural network visualization
+        if (variant.includes('neural')) {
+          ctx.strokeStyle = 'rgba(16, 185, 129, 0.03)';
+          ctx.lineWidth = 0.3;
+          particlesRef.current.forEach(particle => {
+            if (Math.random() < 0.01) {
+              particle.createConnection();
+            }
+          });
+        }
       }
 
       // Add neural network effect for neural variants
@@ -196,7 +212,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
       }
       window.removeEventListener('resize', resizeCanvas);
     };
-  }, [variant]);
+  }, [intensity, variant]);
 
   const drawQuantumField = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, colors: any, intensity: number) => {
     const time = Date.now() * 0.001;
@@ -361,9 +377,41 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         </div>
       </div>
 
-      {/* Content */}
+      {/* Content Layer */}
       <div className="relative z-20">
         {children}
+      </div>
+
+      {/* Enhanced Overlay Effects */}
+      <div className="absolute inset-0 pointer-events-none z-30">
+        {/* Quantum Field Lines */}
+        {variant.includes('quantum') && (
+          <svg className="absolute inset-0 w-full h-full">
+            <defs>
+              <linearGradient id="quantumGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="rgba(0, 255, 255, 0.1)" />
+                <stop offset="100%" stopColor="rgba(0, 255, 255, 0)" />
+              </linearGradient>
+            </defs>
+            <path
+              d="M 0 50 Q 200 0 400 50 T 800 50"
+              stroke="url(#quantumGradient)"
+              strokeWidth="1"
+              fill="none"
+              opacity="0.3"
+            />
+          </svg>
+        )}
+
+        {/* Holographic Grid */}
+        {variant.includes('holographic') && (
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/5 to-transparent" />
+        )}
+
+        {/* Cyberpunk Scan Lines */}
+        {variant.includes('cyberpunk') && (
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-pink-500/3 to-transparent" />
+        )}
       </div>
     </div>
   );
