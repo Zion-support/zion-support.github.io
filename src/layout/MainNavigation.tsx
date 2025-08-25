@@ -2,7 +2,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
-import { MessageSquare } from "lucide-react";
+import { MessageSquare, Briefcase, Users, Settings, BarChart3 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 interface MainNavigationProps {
@@ -21,48 +21,77 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     {
       key: 'home',
       href: '/',
+      name: 'Home',
+      icon: null,
       matches: (path: string) => path === '/'
     },
     {
       key: 'marketplace',
       href: '/marketplace',
+      name: 'Marketplace',
+      icon: Briefcase,
       matches: (path: string) => path.startsWith('/marketplace')
     },
     {
       key: 'services',
-      href: '/enhanced-services',
-      matches: (path: string) => path.startsWith('/services') || path.startsWith('/enhanced-services')
-    },
-    {
-      key: 'categories',
-      href: '/categories',
-      matches: (path: string) => path.startsWith('/categories')
+      href: '/services',
+      name: 'Services',
+      icon: null,
+      matches: (path: string) => path.startsWith('/services')
     },
     {
       key: 'talent',
       href: '/talent',
+      name: 'Talent',
+      icon: Users,
       matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard')
     },
     {
       key: 'equipment',
       href: '/equipment',
+      name: 'Equipment',
+      icon: null,
       matches: (path: string) => path.startsWith('/equipment')
     },
     {
       key: 'community',
       href: '/community',
+      name: 'Community',
+      icon: null,
       matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
+    },
+    {
+      key: 'blog',
+      href: '/blog',
+      name: 'Blog',
+      icon: null,
+      matches: (path: string) => path.startsWith('/blog')
+    },
+    {
+      key: 'about',
+      href: '/about',
+      name: 'About',
+      icon: null,
+      matches: (path: string) => path.startsWith('/about')
+    },
+    {
+      key: 'contact',
+      href: '/contact',
+      name: 'Contact',
+      icon: null,
+      matches: (path: string) => path === '/contact'
     }
   ];
 
-  let links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) }));
+  let links = baseLinks;
   
   // Add authenticated-only links
   if (isAuthenticated) {
     links.push({
       key: 'dashboard',
-      name: t('nav.dashboard'),
+      name: 'Dashboard',
       href: '/dashboard',
+      icon: BarChart3,
       matches: (path: string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard'
     });
   }
@@ -71,34 +100,35 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   if (isAdmin) {
     links.push({
       key: 'analytics',
-      name: t('nav.analytics'),
+      name: 'Analytics',
       href: '/analytics',
+      icon: BarChart3,
       matches: (path: string) => path.startsWith('/analytics')
     });
   }
   
   return (
-    <nav className={cn("navbar hidden lg:flex", className)}>
-      <ul className="flex items-center gap-2">
-        {links.map((link) => (
-          <li key={link.name}>
-            <Link
-              to={link.href}
-              className={cn(
-                "inline-flex h-12 items-center justify-center rounded-xl px-6 text-sm font-medium transition-all duration-300 relative group",
-                link.matches(location.pathname)
-                  ? "bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 text-zion-cyan border border-zion-purple/30 shadow-lg shadow-zion-purple/20"
-                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan hover:scale-105"
-              )}
-            >
-              {link.name}
-              {link.matches(location.pathname) && (
-                <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-8 h-1 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full"></div>
-              )}
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-zion-purple/5 to-zion-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </Link>
-          </li>
-        ))}
+    <nav className={cn("navbar ml-6 hidden md:flex", className)}>
+      <ul className="flex items-center gap-1">
+        {links.map((link) => {
+          const IconComponent = link.icon;
+          return (
+            <li key={link.name}>
+              <Link
+                to={link.href}
+                className={cn(
+                  "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
+                  link.matches(location.pathname)
+                    ? "bg-zion-purple/20 text-zion-cyan"
+                    : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                )}
+              >
+                {IconComponent && <IconComponent className="w-4 h-4 mr-2" />}
+                {link.name}
+              </Link>
+            </li>
+          );
+        })}
         
         {/* Messages link with unread counter */}
         {isAuthenticated && (
@@ -106,20 +136,19 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             <Link
               to="/messages"
               className={cn(
-                "inline-flex h-12 items-center justify-center rounded-xl px-6 text-sm font-medium transition-all duration-300 relative group",
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative",
                 location.pathname === "/messages" || location.pathname === "/inbox"
-                  ? "bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 text-zion-cyan border border-zion-purple/30 shadow-lg shadow-zion-purple/20"
-                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan hover:scale-105"
+                  ? "bg-zion-purple/20 text-zion-cyan"
+                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
               )}
             >
-              <MessageSquare className="w-4 h-4 mr-2" />
-              {t('nav.messages')}
+              <MessageSquare className="w-4 h-4 mr-1" />
+              Messages
               {unreadCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs rounded-full h-6 w-6 flex items-center justify-center animate-pulse">
+                <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                   {unreadCount}
                 </span>
               )}
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-zion-purple/5 to-zion-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Link>
           </li>
         )}
