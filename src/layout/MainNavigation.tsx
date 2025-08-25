@@ -5,6 +5,7 @@ import { useAuth } from "@/hooks/useAuth";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 <<<<<<< HEAD
@@ -31,6 +32,11 @@ import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState, useEffect, useRef } from "react";
 >>>>>>> origin/cursor/website-audit-and-enhancement-76ca
+=======
+import { MessageSquare, ChevronDown } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useState } from "react";
+>>>>>>> origin/cursor/website-audit-and-enhancement-3b60
 
 interface MainNavigationProps {
   isAdmin?: boolean;
@@ -51,6 +57,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const isAuthenticated = !!user;
   const location = useLocation();
   const { t } = useTranslation();
+<<<<<<< HEAD
 <<<<<<< HEAD
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 <<<<<<< HEAD
@@ -100,6 +107,9 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     };
   }, []);
 >>>>>>> origin/cursor/website-audit-and-enhancement-76ca
+=======
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+>>>>>>> origin/cursor/website-audit-and-enhancement-3b60
 
   const baseLinks = [
     {
@@ -383,6 +393,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'marketplace',
       href: '/marketplace',
 <<<<<<< HEAD
+<<<<<<< HEAD
       matches: (path: string) => path.startsWith('/marketplace')
     },
     {
@@ -392,11 +403,23 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 =======
       matches: (path: string) => path.startsWith('/marketplace') || path.startsWith('/categories') || path.startsWith('/equipment') || path.startsWith('/services')
 >>>>>>> origin/cursor/website-audit-and-enhancement-7286
+=======
+      matches: (path: string) => path.startsWith('/marketplace'),
+      hasDropdown: true,
+      dropdownItems: [
+        { href: '/marketplace', label: 'All Products' },
+        { href: '/categories', label: 'Categories' },
+        { href: '/services', label: 'Services' },
+        { href: '/equipment', label: 'Equipment' },
+        { href: '/featured', label: 'Featured' }
+      ]
+>>>>>>> origin/cursor/website-audit-and-enhancement-3b60
     },
     {
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
       key: 'talent',
       href: '/talent',
+<<<<<<< HEAD
       matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard')
     },
     {
@@ -412,6 +435,15 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'equipment',
       href: '/equipment',
       matches: (path: string) => path.startsWith('/equipment')
+=======
+      matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard'),
+      hasDropdown: true,
+      dropdownItems: [
+        { href: '/talent', label: 'Browse Talent' },
+        { href: '/post-job', label: 'Post a Job' },
+        { href: '/ai-matcher', label: 'AI Matcher' }
+      ]
+>>>>>>> origin/cursor/website-audit-and-enhancement-3b60
     },
     {
 <<<<<<< HEAD
@@ -523,6 +555,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
 =======
 =======
@@ -530,10 +563,13 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: '/community',
       matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
 >>>>>>> origin/cursor/website-audit-and-enhancement-7286
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3b60
     },
     {
       key: 'about',
       href: '/about',
+<<<<<<< HEAD
       matches: (path: string) => path.startsWith('/about')
 =======
       key: 'community',
@@ -565,6 +601,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 =======
       matches: (path: string) => path === '/contact'
 >>>>>>> origin/cursor/website-audit-and-enhancement-bdc0
+=======
+      matches: (path: string) => path === '/about'
+    },
+    {
+      key: 'blog',
+      href: '/blog',
+      matches: (path: string) => path.startsWith('/blog')
+>>>>>>> origin/cursor/website-audit-and-enhancement-3b60
     }
   ];
 
@@ -644,8 +688,13 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   };
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
   
+<<<<<<< HEAD
   const isActive = (path: string) => {
     return location.pathname === path || location.pathname.startsWith(path + '/');
+=======
+  const handleDropdownToggle = (key: string) => {
+    setActiveDropdown(activeDropdown === key ? null : key);
+>>>>>>> origin/cursor/website-audit-and-enhancement-3b60
   };
 
   return (
@@ -658,16 +707,23 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       <ul className="flex items-center gap-1">
         {links.map((link) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <nav className={cn("navbar ml-6 hidden lg:flex", className)} ref={dropdownRef}>
       <ul className="flex items-center gap-1">
         {links.map((link) => (
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3b60
           <li key={link.name} className="relative">
             {link.hasDropdown ? (
               <div className="relative">
                 <button
+<<<<<<< HEAD
                   onClick={() => toggleDropdown(link.key)}
+=======
+                  onClick={() => handleDropdownToggle(link.key)}
+>>>>>>> origin/cursor/website-audit-and-enhancement-3b60
                   className={cn(
                     "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
                     link.matches(location.pathname)
@@ -675,6 +731,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                       : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
                   )}
                 >
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                   {link.name}
@@ -767,6 +824,24 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                       </div>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
                     </div>
+=======
+                  {link.name}
+                  <ChevronDown className="ml-1 h-3 w-3" />
+                </button>
+                
+                {activeDropdown === link.key && (
+                  <div className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-purple/20 rounded-md shadow-lg py-2 z-50">
+                    {link.dropdownItems?.map((item) => (
+                      <Link
+                        key={item.href}
+                        to={item.href}
+                        className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
+                        onClick={() => setActiveDropdown(null)}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+>>>>>>> origin/cursor/website-audit-and-enhancement-3b60
                   </div>
                 )}
               </div>
@@ -784,6 +859,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               </Link>
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
           <li key={link.name}>
             <Link
@@ -800,6 +876,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3b60
           </li>
         ))}
         

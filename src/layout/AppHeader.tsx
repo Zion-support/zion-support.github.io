@@ -26,7 +26,11 @@ import { MainSidebar } from '@/components/layout/MainSidebar';
 import { Sidebar } from '@/components/Sidebar';
 >>>>>>> origin/cursor/website-audit-and-enhancement-050f
 
-export function AppHeader() {
+interface AppHeaderProps {
+  onSidebarToggle?: () => void;
+}
+
+export function AppHeader({ onSidebarToggle }: AppHeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const isMobile = useIsMobile();
@@ -90,6 +94,7 @@ export function AppHeader() {
       >
 >>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
         <div className="container flex h-16 items-center px-4 sm:px-6">
+<<<<<<< HEAD
           {/* Sidebar Toggle */}
           <button
             onClick={() => setSidebarOpen(!sidebarOpen)}
@@ -102,6 +107,17 @@ export function AppHeader() {
           >
             <PanelLeft className="h-5 w-5" />
           </button>
+=======
+          {/* Sidebar Toggle for Mobile */}
+          <div className="lg:hidden mr-3">
+            <button
+              onClick={onSidebarToggle}
+              className="p-2 rounded-md text-zion-slate-light hover:text-white hover:bg-zion-purple/10"
+            >
+              <Menu className="h-5 w-5" />
+            </button>
+          </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-3b60
           
           <Logo />
           <div className="ml-6 flex-1 hidden md:block">
