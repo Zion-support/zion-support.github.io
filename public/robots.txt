@@ -7,11 +7,16 @@ Allow: /
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-638c
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
-# Disallow admin and private areas
+# Disallow admin and development areas
 Disallow: /admin/
-Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
+<<<<<<< HEAD
+=======
+Disallow: /static/
+Disallow: /temp/
+Disallow: /backup/
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fbd9
 
 # Allow important pages
 Allow: /
@@ -19,6 +24,7 @@ Allow: /services/
 Allow: /ai-solutions/
 Allow: /about/
 Allow: /contact/
+<<<<<<< HEAD
 Allow: /blog/
 <<<<<<< HEAD
 Allow: /news/
@@ -34,3 +40,9 @@ Allow: /case-studies/
 Crawl-delay: 1
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-638c
+=======
+Allow: /case-studies/
+
+# Crawl delay (optional)
+Crawl-delay: 1
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fbd9

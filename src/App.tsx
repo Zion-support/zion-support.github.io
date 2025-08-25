@@ -62,6 +62,9 @@ const Partners = lazy(() => import('./pages/Partners'));
 const Blog = lazy(() => import('./pages/Blog'));
 const News = lazy(() => import('./pages/News'));
 
+// 404 Page
+const NotFound = lazy(() => import('./pages/NotFound'));
+
 // Service detail pages
 const ServicesOverview = lazy(() => import('./pages/services/ServicesOverview'));
 const AIAutonomousSystems = lazy(() => import('./pages/services/AIAutonomousSystems'));
@@ -74,6 +77,11 @@ const InnovativeNewServices = lazy(() => import('./pages/services/InnovativeNewS
 const SpecializedITInfrastructure = lazy(() => import('./pages/services/SpecializedITInfrastructure'));
 const InnovativeMicroSaasServices = lazy(() => import('./pages/InnovativeMicroSaasServices'));
 const ComprehensiveInnovativeServices = lazy(() => import('./pages/ComprehensiveInnovativeServices'));
+
+// New Innovative Services
+const AIWorkflowAutomation = lazy(() => import('./pages/services/AIWorkflowAutomation'));
+const AICustomerExperiencePlatform = lazy(() => import('./pages/services/AICustomerExperiencePlatform'));
+const BlockchainSupplyChainTransparency = lazy(() => import('./pages/services/BlockchainSupplyChainTransparency'));
 
 // Solutions pages
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
@@ -173,6 +181,11 @@ const App = () => {
                       <Route path="/innovative-micro-saas-services" element={<InnovativeMicroSaasServices />} />
                       <Route path="/comprehensive-innovative-services" element={<ComprehensiveInnovativeServices />} />
                       
+                      {/* New Innovative Service Routes */}
+                      <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
+                      <Route path="/services/ai-customer-experience-platform" element={<AICustomerExperiencePlatform />} />
+                      <Route path="/services/blockchain-supply-chain-transparency" element={<BlockchainSupplyChainTransparency />} />
+                      
                       {/* Solutions Routes */}
                       <Route path="/services/enterprise" element={<EnterpriseSolutions />} />
                       <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
@@ -181,6 +194,9 @@ const App = () => {
                       <Route path="/comprehensive-services" element={<Services />} />
                       <Route path="/services-comparison" element={<Services />} />
                       <Route path="/it-onsite-services" element={<Services />} />
+
+                      {/* 404 Route */}
+                      <Route path="*" element={<NotFound />} />
                     </Routes>
                   </Suspense>
                 </main>
