@@ -142,8 +142,6 @@ export function Header() {
         { name: 'Comprehensive IT Services', path: '/services/comprehensive-it-services', description: 'Complete IT solutions' }
       ]
     },
-      ]
-    },
     {
       title: 'Cloud & Infrastructure',
       icon: Cpu,

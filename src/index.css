@@ -135,9 +135,7 @@
   50% {
     transform: translateY(-20px);
   }
-}
-    transform: translate(2px, -2px);
-  }
+
 }
 
 @keyframes hologram-flicker {
