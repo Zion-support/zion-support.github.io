@@ -29,8 +29,10 @@ import {
   Phone,
   Mail,
   MapPin,
-  Sparkles,
+  Workflow,
   Eye,
+  Key,
+  Sparkles,
   Heart,
   Target as TargetIcon,
   ArrowUpRight,
@@ -39,6 +41,7 @@ import {
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import { SEOConfigs } from '../components/SEOHead';
+import FuturisticAnimatedBackground from '../components/FuturisticAnimatedBackground';
 
 // Lazy load components for better performance
 const LazyServicesSection = React.lazy(() => import('../components/home/ServicesSection'));
@@ -61,6 +64,33 @@ const Home: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const heroSlides = [
+    {
+      title: "AI Workflow Automation",
+      subtitle: "Transform your business operations with intelligent automation",
+      description: "Leverage AI-powered workflows that learn, adapt, and optimize your business processes in real-time.",
+      image: "/images/hero-ai-solutions.jpg",
+      cta: "Start Free Trial",
+      path: "/services/ai-workflow-automation",
+      features: ["Machine Learning", "Predictive Analytics", "Process Automation", "Real-time Insights"]
+    },
+    {
+      title: "Quantum-Secure Cloud",
+      subtitle: "Future-proof your business with military-grade security",
+      description: "Quantum-resistant encryption, AI threat detection, and zero-trust architecture for ultimate protection.",
+      image: "/images/hero-it-services.jpg",
+      cta: "Security Assessment",
+      path: "/services/quantum-secure-cloud",
+      features: ["Cloud Infrastructure", "Cybersecurity", "DevOps Automation", "24/7 Support"]
+    },
+    {
+      title: "AI Customer Intelligence",
+      subtitle: "Unlock the power of customer data",
+      description: "Transform customer relationships with AI-driven insights and predictive analytics for unprecedented growth.",
+      image: "/images/hero-saas.jpg",
+      cta: "Learn More",
+      path: "/services/ai-customer-intelligence",
+      features: ["Custom Development", "Scalable Architecture", "API Integration", "User Management"]
+    },
     {
       title: "AI-Powered Business Solutions",
       subtitle: "Transform your business with cutting-edge artificial intelligence",
@@ -101,6 +131,54 @@ const Home: React.FC = () => {
   ];
 
   const featuredServices = [
+    {
+      title: "AI Workflow Automation",
+      description: "Transform your business operations with intelligent automation that learns and optimizes workflows in real-time.",
+      icon: Workflow,
+      path: "/services/ai-workflow-automation",
+      category: "AI Solutions",
+      price: "$299/mo",
+      rating: 4.9,
+      reviewCount: 156,
+      highlights: ["Intelligent Process Discovery", "Dynamic Workflow Engine", "Multi-Platform Integration"],
+      features: ["AI-Powered Automation", "Real-time Optimization", "Advanced Analytics", "24/7 Support"]
+    },
+    {
+      title: "AI Customer Intelligence",
+      description: "Unlock the power of customer data with AI-driven insights that transform how you understand and engage customers.",
+      icon: Eye,
+      path: "/services/ai-customer-intelligence",
+      category: "AI Solutions",
+      price: "$199/mo",
+      rating: 4.8,
+      reviewCount: 134,
+      highlights: ["Real-Time Behavior Analysis", "Predictive Segmentation", "Sentiment Analysis"],
+      features: ["Customer Behavior Insights", "Predictive Analytics", "Personalization Engine", "API Integration"]
+    },
+    {
+      title: "Quantum-Secure Cloud",
+      description: "Future-proof your business with quantum-secure cloud infrastructure featuring military-grade security.",
+      icon: Key,
+      path: "/services/quantum-secure-cloud",
+      category: "Security & Cloud",
+      price: "$399/mo",
+      rating: 4.9,
+      reviewCount: 89,
+      highlights: ["Quantum-Resistant Encryption", "AI Threat Detection", "Zero-Trust Architecture"],
+      features: ["Post-Quantum Cryptography", "Real-time Monitoring", "Compliance Ready", "99.99% Uptime"]
+    },
+    {
+      title: "AI Predictive Analytics",
+      description: "Transform your business with AI-powered predictive analytics for unprecedented growth and insights.",
+      icon: Brain,
+      path: "/services/ai-predictive-analytics",
+      category: "AI Solutions",
+      price: "$299/mo",
+      rating: 4.9,
+      reviewCount: 127,
+      highlights: ["Advanced ML Models", "Real-Time Processing", "Predictive Modeling Studio"],
+      features: ["Machine Learning", "Forecasting", "Business Intelligence", "Custom Dashboards"]
+    },
     {
       title: "AI Business Intelligence",
       description: "Transform data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive modeling, and automated reporting.",
@@ -251,7 +329,7 @@ const Home: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white relative">
       <SEOHead 
         title="Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services"
         description="Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology."
@@ -259,6 +337,9 @@ const Home: React.FC = () => {
         type="website"
         url="https://ziontechgroup.com"
       />
+      
+      {/* Futuristic Animated Background */}
+      <FuturisticAnimatedBackground intensity="medium" colorScheme="multi" />
       
       {/* Hero Section with Enhanced Performance */}
       <section className="relative overflow-hidden">

@@ -37,8 +37,14 @@ const CloudDevOps = lazy(() => import('./pages/CloudDevOps'));
 const EnterpriseSolutionsPage = lazy(() => import('./pages/EnterpriseSolutions'));
 const DigitalTransformation = lazy(() => import('./pages/DigitalTransformation'));
 
-// New innovative service pages
+// New innovative micro SAAS services
 const AIWorkflowAutomation = lazy(() => import('./pages/services/AIWorkflowAutomation'));
+const AICustomerIntelligence = lazy(() => import('./pages/services/AICustomerIntelligence'));
+const QuantumSecureCloud = lazy(() => import('./pages/services/QuantumSecureCloud'));
+const AIPredictiveAnalytics = lazy(() => import('./pages/services/AIPredictiveAnalytics'));
+const InnovativeServicesOverview = lazy(() => import('./pages/services/InnovativeServicesOverview'));
+
+// Additional innovative service pages from main
 const BlockchainEnterpriseSolutions = lazy(() => import('./pages/services/BlockchainEnterpriseSolutions'));
 const IoTDataAnalytics = lazy(() => import('./pages/services/IoTDataAnalytics'));
 
@@ -145,6 +151,13 @@ const App = () => {
                       <Route path="/cloud-devops" element={<CloudDevOps />} />
                       <Route path="/enterprise-solutions" element={<EnterpriseSolutionsPage />} />
                       <Route path="/digital-transformation" element={<DigitalTransformation />} />
+                      
+                      {/* New Innovative Micro SAAS Services */}
+                      <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
+                      <Route path="/services/ai-customer-intelligence" element={<AICustomerIntelligence />} />
+                      <Route path="/services/quantum-secure-cloud" element={<QuantumSecureCloud />} />
+                      <Route path="/services/ai-predictive-analytics" element={<AIPredictiveAnalytics />} />
+                      <Route path="/services/innovative-overview" element={<InnovativeServicesOverview />} />
                       
                       {/* Missing pages from analysis */}
                       <Route path="/quantum-neural-network-platform" element={<QuantumNeuralNetworkPlatform />} />
