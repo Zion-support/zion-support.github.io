@@ -1,536 +1,653 @@
-export interface InnovativeService {
+export interface EnhancedInnovativeService {
   id: string;
   title: string;
   description: string;
-  category: 'AI & ML' | 'IT Infrastructure' | 'Cybersecurity' | 'Cloud Services' | 'Digital Transformation' | 'Emerging Tech' | 'Business Intelligence' | 'Automation' | 'DevOps' | 'Data Services';
+  category: string;
   subcategory: string;
-  price: {
-    monthly?: number;
-    yearly?: number;
-    oneTime?: number;
-    currency: string;
-    pricingModel: string;
-  };
+  price: number;
+  currency: string;
+  pricingModel: string;
   features: string[];
   benefits: string[];
   useCases: string[];
   targetAudience: string[];
+  tags: string[];
+  estimatedDelivery: string;
+  supportLevel: string;
   marketPrice: string;
-  competitiveAdvantage: string;
   contactInfo: {
     phone: string;
     email: string;
     website: string;
-    address: string;
   };
-  rating: number;
-  reviewCount: number;
-  launchDate: string;
-  status: 'Active' | 'Beta' | 'Coming Soon';
-  aiScore?: number;
+  technology: string[];
+  integrations: string[];
+  compliance: string[];
+  roi: string;
+  competitors: string[];
+  marketTrend: string;
+  innovationLevel: string;
+  pricingTiers: {
+    starter: { price: number; features: string[] };
+    professional: { price: number; features: string[] };
+    enterprise: { price: number; features: string[] };
+  };
 }
 
-export const INNOVATIVE_SERVICES: InnovativeService[] = [
-  // AI & Machine Learning Services
+export const ENHANCED_INNOVATIVE_SERVICES: EnhancedInnovativeService[] = [
+  // AI-Powered Customer Experience Platform
   {
-    id: 'ai-voice-cloning-platform',
-    title: 'Zion AI Voice Cloning Platform',
-    description: 'Advanced AI-powered voice cloning and synthesis platform for content creators, marketers, and businesses requiring custom voice solutions.',
-    category: 'AI & ML',
-    subcategory: 'Voice Technology',
-    price: {
-      monthly: 79,
-      yearly: 790,
-      currency: '$',
-      pricingModel: 'subscription'
-    },
+    id: "ai-customer-experience-platform",
+    title: "AI Customer Experience & Sentiment Analysis Platform",
+    description: "Advanced AI-powered platform that analyzes customer interactions across all channels, predicts customer behavior, and provides personalized experiences in real-time.",
+    category: "AI & Customer Experience",
+    subcategory: "Customer Analytics",
+    price: 899,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      'High-quality voice cloning in 10+ languages',
-      'Emotion and tone control',
-      'Real-time voice synthesis',
-      'Custom voice training',
-      'API integration for developers',
-      'Voice watermarking and security',
-      'Batch processing capabilities',
-      'Mobile app support'
+      "Real-time sentiment analysis",
+      "Customer behavior prediction",
+      "Multi-channel interaction tracking",
+      "Personalized recommendations",
+      "Automated customer service",
+      "Customer journey mapping",
+      "Churn prediction",
+      "Voice and text analysis",
+      "Emotion detection",
+      "Customer satisfaction scoring"
     ],
     benefits: [
-      'Reduce content production costs by 60%',
-      'Create consistent brand voice across all content',
-      'Scale voice content production instantly',
-      'Access to professional-quality voices 24/7',
-      'Multilingual content creation'
+      "Increase customer satisfaction by 45%",
+      "Reduce churn by 30%",
+      "Improve response times by 70%",
+      "Boost customer lifetime value by 40%",
+      "Automated customer insights",
+      "Proactive customer service"
     ],
     useCases: [
-      'Podcast and video content creation',
-      'Marketing and advertising campaigns',
-      'E-learning and training materials',
-      'Customer service automation',
-      'Audiobook production',
-      'Voice assistant development'
+      "E-commerce platforms",
+      "Customer service centers",
+      "Retail businesses",
+      "SaaS companies",
+      "Financial services",
+      "Healthcare providers"
     ],
     targetAudience: [
-      'Content creators and influencers',
-      'Marketing agencies',
-      'E-learning platforms',
-      'Podcast producers',
-      'Video content creators',
-      'Customer service teams'
+      "Customer success managers",
+      "Marketing teams",
+      "Product managers",
+      "Customer service directors",
+      "Business owners"
     ],
-    marketPrice: '$79 - $299/month',
-    competitiveAdvantage: 'Superior voice quality, multilingual support, and enterprise-grade security features',
+    tags: ["AI", "Customer Experience", "Sentiment Analysis", "Personalization", "Automation", "Analytics"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "premium",
+    marketPrice: "$899 - $3,500/month",
     contactInfo: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/ai-voice-cloning',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    rating: 4.9,
-    reviewCount: 234,
-    launchDate: '2024-03-01',
-    status: 'Active',
-    aiScore: 95
+    technology: ["Natural Language Processing", "Machine Learning", "Real-time Analytics", "Cloud Computing", "API Integration"],
+    integrations: ["CRM Systems", "Help Desk Software", "E-commerce Platforms", "Social Media APIs", "Email Marketing Tools"],
+    compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001"],
+    roi: "350% within 6 months",
+    competitors: ["Intercom", "Zendesk", "Freshdesk", "HubSpot"],
+    marketTrend: "High-growth market with 400% annual expansion",
+    innovationLevel: "Cutting-edge AI technology revolutionizing customer experience",
+    pricingTiers: {
+      starter: { 
+        price: 899, 
+        features: ["Basic sentiment analysis", "Customer interaction tracking", "Email support"] 
+      },
+      professional: { 
+        price: 1899, 
+        features: ["Advanced analytics", "Multi-channel support", "Priority support", "Custom integrations"] 
+      },
+      enterprise: { 
+        price: 3999, 
+        features: ["Full platform access", "Dedicated support", "Custom AI models", "White-label options"] 
+      }
+    }
   },
 
+  // Blockchain-Based Supply Chain Transparency Platform
   {
-    id: 'ai-video-generation-suite',
-    title: 'Zion AI Video Generation Suite',
-    description: 'Comprehensive AI video creation platform that generates professional-quality videos from text, images, and audio inputs.',
-    category: 'AI & ML',
-    subcategory: 'Video Generation',
-    price: {
-      monthly: 149,
-      yearly: 1490,
-      currency: '$',
-      pricingModel: 'subscription'
-    },
+    id: "blockchain-supply-chain-transparency",
+    title: "Blockchain Supply Chain Transparency & Traceability Platform",
+    description: "Revolutionary blockchain-powered platform that provides end-to-end visibility into supply chains, ensuring transparency, authenticity, and compliance across global networks.",
+    category: "Blockchain & Supply Chain",
+    subcategory: "Transparency & Traceability",
+    price: 1500,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      'Text-to-video generation',
-      'Image-to-video conversion',
-      'AI-powered video editing',
-      'Custom animation templates',
-      'Multi-format export options',
-      'Collaborative editing tools',
-      'Stock footage integration',
-      'Advanced motion graphics'
+      "End-to-end supply chain tracking",
+      "Smart contract automation",
+      "Product authenticity verification",
+      "Real-time compliance monitoring",
+      "Supplier performance analytics",
+      "Carbon footprint tracking",
+      "Quality assurance protocols",
+      "Multi-stakeholder access",
+      "Mobile app integration",
+      "API for third-party systems"
     ],
     benefits: [
-      'Create videos 10x faster than traditional methods',
-      'Reduce video production costs by 80%',
-      'Maintain consistent brand style',
-      'Scale video content production',
-      'Professional-quality output'
+      "Improve supply chain transparency by 100%",
+      "Reduce fraud and counterfeiting by 80%",
+      "Enhance compliance by 90%",
+      "Lower operational costs by 25%",
+      "Build consumer trust",
+      "Sustainable business practices"
     ],
     useCases: [
-      'Marketing and advertising videos',
-      'Social media content',
-      'Product demonstrations',
-      'Training and educational videos',
-      'Event promotions',
-      'Brand storytelling'
+      "Food and beverage industry",
+      "Pharmaceutical companies",
+      "Luxury goods manufacturers",
+      "Automotive supply chains",
+      "Textile and apparel",
+      "Electronics manufacturers"
     ],
     targetAudience: [
-      'Marketing teams',
-      'Content creators',
-      'Small businesses',
-      'E-commerce companies',
-      'Educational institutions',
-      'Event organizers'
+      "Supply chain managers",
+      "Compliance officers",
+      "Quality assurance teams",
+      "Sustainability officers",
+      "Operations directors"
     ],
-    marketPrice: '$149 - $499/month',
-    competitiveAdvantage: 'Advanced AI algorithms, extensive template library, and professional-grade output quality',
+    tags: ["Blockchain", "Supply Chain", "Transparency", "Traceability", "Compliance", "Sustainability"],
+    estimatedDelivery: "8-12 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$1,500 - $8,000/month",
     contactInfo: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/ai-video-generation',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    rating: 4.8,
-    reviewCount: 189,
-    launchDate: '2024-02-15',
-    status: 'Active',
-    aiScore: 92
+    technology: ["Blockchain", "Smart Contracts", "IoT Sensors", "Cloud Computing", "Mobile Apps"],
+    integrations: ["ERP Systems", "WMS", "TMS", "Quality Management Systems", "Compliance Platforms"],
+    compliance: ["ISO 28000", "FSMA", "GDPR", "SOC 2", "Industry-specific standards"],
+    roi: "400% within 18 months",
+    competitors: ["IBM Food Trust", "VeChain", "OriginTrail", "Provenance"],
+    marketTrend: "Emerging market with 600% projected growth in next 5 years",
+    innovationLevel: "Revolutionary blockchain technology transforming supply chain transparency",
+    pricingTiers: {
+      starter: { 
+        price: 1500, 
+        features: ["Basic tracking", "Standard compliance", "Email support"] 
+      },
+      professional: { 
+        price: 3500, 
+        features: ["Advanced analytics", "Custom compliance", "Priority support", "API access"] 
+      },
+      enterprise: { 
+        price: 8000, 
+        features: ["Full platform", "Dedicated support", "Custom development", "White-label options"] 
+      }
+    }
   },
 
-  // Cybersecurity Services
+  // AI-Powered Predictive Maintenance Platform
   {
-    id: 'ai-threat-intelligence-platform',
-    title: 'Zion AI Threat Intelligence Platform',
-    description: 'Advanced AI-powered cybersecurity platform that provides real-time threat detection, analysis, and automated response capabilities.',
-    category: 'Cybersecurity',
-    subcategory: 'Threat Intelligence',
-    price: {
-      monthly: 299,
-      yearly: 2990,
-      currency: '$',
-      pricingModel: 'subscription'
-    },
+    id: "ai-predictive-maintenance",
+    title: "AI Predictive Maintenance & Asset Management Platform",
+    description: "Intelligent platform that uses AI and IoT sensors to predict equipment failures, optimize maintenance schedules, and maximize asset performance across industrial operations.",
+    category: "AI & Industrial IoT",
+    subcategory: "Predictive Maintenance",
+    price: 1200,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      'Real-time threat detection and analysis',
-      'AI-powered behavioral analytics',
-      'Automated incident response',
-      'Threat hunting capabilities',
-      'Vulnerability assessment',
-      'Compliance reporting (SOC2, ISO27001)',
-      'Dark web monitoring',
-      'Security awareness training'
+      "AI-powered failure prediction",
+      "Real-time equipment monitoring",
+      "Predictive maintenance scheduling",
+      "Asset performance optimization",
+      "Energy consumption analysis",
+      "Maintenance cost tracking",
+      "Mobile maintenance apps",
+      "Integration with CMMS",
+      "Custom alert systems",
+      "Performance dashboards"
     ],
     benefits: [
-      'Reduce security incidents by 90%',
-      '24/7 automated threat monitoring',
-      'Compliance with industry standards',
-      'Proactive threat prevention',
-      'Reduced security team workload'
+      "Reduce unplanned downtime by 60%",
+      "Lower maintenance costs by 40%",
+      "Extend equipment lifespan by 30%",
+      "Improve safety by 50%",
+      "Optimize resource allocation",
+      "Data-driven decision making"
     ],
     useCases: [
-      'Enterprise security operations',
-      'Financial services security',
-      'Healthcare data protection',
-      'Government cybersecurity',
-      'E-commerce security',
-      'Critical infrastructure protection'
+      "Manufacturing facilities",
+      "Power plants",
+      "Oil and gas operations",
+      "Mining operations",
+      "Transportation fleets",
+      "Data centers"
     ],
     targetAudience: [
-      'Large enterprises',
-      'Financial institutions',
-      'Healthcare organizations',
-      'Government agencies',
-      'Technology companies',
-      'E-commerce platforms'
+      "Maintenance managers",
+      "Operations directors",
+      "Plant managers",
+      "Facility managers",
+      "Asset managers"
     ],
-    marketPrice: '$299 - $999/month',
-    competitiveAdvantage: 'Advanced AI algorithms, real-time response capabilities, and comprehensive compliance features',
+    tags: ["AI", "IoT", "Predictive Maintenance", "Asset Management", "Industrial Automation", "Machine Learning"],
+    estimatedDelivery: "6-10 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,200 - $5,000/month",
     contactInfo: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/ai-threat-intelligence',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    rating: 4.9,
-    reviewCount: 156,
-    launchDate: '2024-01-01',
-    status: 'Active',
-    aiScore: 96
+    technology: ["Machine Learning", "IoT Sensors", "Edge Computing", "Cloud Computing", "Mobile Applications"],
+    integrations: ["CMMS Systems", "ERP Platforms", "SCADA Systems", "PLC Controllers", "Enterprise Systems"],
+    compliance: ["ISO 55001", "OSHA", "Industry 4.0", "SOC 2", "Data Protection"],
+    roi: "300% within 12 months",
+    competitors: ["GE Digital", "Siemens", "PTC", "IBM Watson IoT"],
+    marketTrend: "High-growth market with 350% annual expansion",
+    innovationLevel: "Advanced AI and IoT technology revolutionizing industrial maintenance",
+    pricingTiers: {
+      starter: { 
+        price: 1200, 
+        features: ["Basic monitoring", "Standard alerts", "Email support"] 
+      },
+      professional: { 
+        price: 2800, 
+        features: ["Advanced analytics", "Custom alerts", "Priority support", "Mobile apps"] 
+      },
+      enterprise: { 
+        price: 5000, 
+        features: ["Full platform", "Dedicated support", "Custom development", "White-label options"] 
+      }
+    }
   },
 
-  // Cloud Services
+  // Quantum-Safe Communication Platform
   {
-    id: 'multi-cloud-orchestration-platform',
-    title: 'Zion Multi-Cloud Orchestration Platform',
-    description: 'Intelligent multi-cloud management platform that optimizes costs, performance, and security across AWS, Azure, Google Cloud, and private clouds.',
-    category: 'Cloud Services',
-    subcategory: 'Cloud Management',
-    price: {
-      monthly: 199,
-      yearly: 1990,
-      currency: '$',
-      pricingModel: 'subscription'
-    },
+    id: "quantum-safe-communication",
+    title: "Quantum-Safe Communication & Encryption Platform",
+    description: "Next-generation communication platform that implements post-quantum cryptography to secure communications against future quantum computing threats while maintaining current security standards.",
+    category: "Quantum Technology & Security",
+    subcategory: "Quantum-Safe Communications",
+    price: 3500,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      'Unified cloud dashboard',
-      'Cost optimization algorithms',
-      'Performance monitoring and alerting',
-      'Security policy management',
-      'Automated resource scaling',
-      'Multi-cloud backup solutions',
-      'Compliance monitoring',
-      'API integration hub'
+      "Post-quantum encryption algorithms",
+      "Quantum-resistant key exchange",
+      "Secure messaging platform",
+      "File encryption and sharing",
+      "Video conferencing security",
+      "Multi-device synchronization",
+      "Zero-knowledge architecture",
+      "Compliance reporting",
+      "API for integrations",
+      "Mobile and desktop apps"
     ],
     benefits: [
-      'Reduce cloud costs by 25-40%',
-      'Improve application performance',
-      'Centralized security management',
-      'Simplified compliance reporting',
-      'Automated resource optimization'
+      "Future-proof security against quantum threats",
+      "Enhanced data protection",
+      "Compliance with emerging standards",
+      "Competitive security advantage",
+      "Long-term investment protection",
+      "Trusted communication platform"
     ],
     useCases: [
-      'Multi-cloud infrastructure management',
-      'Cost optimization and governance',
-      'Performance monitoring and optimization',
-      'Security and compliance management',
-      'Disaster recovery planning',
-      'Resource automation'
+      "Government agencies",
+      "Financial institutions",
+      "Healthcare organizations",
+      "Legal firms",
+      "Research institutions",
+      "Defense contractors"
     ],
     targetAudience: [
-      'Enterprise IT teams',
-      'Cloud architects',
-      'DevOps engineers',
-      'Financial services',
-      'Healthcare organizations',
-      'Technology companies'
+      "Security officers",
+      "IT directors",
+      "Compliance managers",
+      "Government officials",
+      "Security architects"
     ],
-    marketPrice: '$199 - $799/month',
-    competitiveAdvantage: 'Intelligent cost optimization, unified management interface, and advanced automation capabilities',
+    tags: ["Quantum Technology", "Cybersecurity", "Encryption", "Communication", "Post-Quantum Cryptography", "Zero-Knowledge"],
+    estimatedDelivery: "10-14 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,500 - $15,000/month",
     contactInfo: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/multi-cloud-orchestration',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    rating: 4.8,
-    reviewCount: 203,
-    launchDate: '2023-12-01',
-    status: 'Active',
-    aiScore: 91
+    technology: ["Post-Quantum Algorithms", "Zero-Knowledge Proofs", "End-to-End Encryption", "Cloud Computing", "Mobile Development"],
+    integrations: ["Active Directory", "LDAP", "SSO Systems", "Enterprise Messaging", "Video Platforms"],
+    compliance: ["NIST", "FIPS", "SOC 2", "ISO 27001", "Government Standards"],
+    roi: "250% within 24 months",
+    competitors: ["Signal", "Wickr", "ProtonMail", "Microsoft 365"],
+    marketTrend: "Emerging market with 800% projected growth in next 10 years",
+    innovationLevel: "Revolutionary quantum-safe technology ahead of market adoption",
+    pricingTiers: {
+      starter: { 
+        price: 3500, 
+        features: ["Basic encryption", "Standard messaging", "Email support"] 
+      },
+      professional: { 
+        price: 7500, 
+        features: ["Advanced features", "Priority support", "Custom integrations", "Compliance tools"] 
+      },
+      enterprise: { 
+        price: 15000, 
+        features: ["Full platform", "Dedicated support", "Custom development", "White-label options"] 
+      }
+    }
   },
 
-  // Emerging Technology Services
+  // AI-Powered Market Research & Competitive Intelligence
   {
-    id: 'quantum-ready-encryption-suite',
-    title: 'Zion Quantum-Ready Encryption Suite',
-    description: 'Future-proof encryption solutions designed to protect data against both classical and quantum computing threats.',
-    category: 'Emerging Tech',
-    subcategory: 'Quantum Security',
-    price: {
-      monthly: 399,
-      yearly: 3990,
-      currency: '$',
-      pricingModel: 'subscription'
-    },
+    id: "ai-market-research-intelligence",
+    title: "AI Market Research & Competitive Intelligence Platform",
+    description: "Intelligent platform that uses AI to analyze market trends, monitor competitors, and provide actionable insights for strategic decision-making across industries.",
+    category: "AI & Business Intelligence",
+    subcategory: "Market Research",
+    price: 699,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      'Post-quantum cryptography algorithms',
-      'Hybrid encryption systems',
-      'Quantum key distribution',
-      'Advanced threat modeling',
-      'Compliance with NIST standards',
-      'Performance optimization',
-      'API and SDK support',
-      'Expert consultation services'
+      "AI-powered market analysis",
+      "Competitor monitoring",
+      "Trend prediction algorithms",
+      "Sentiment analysis",
+      "Market opportunity identification",
+      "Custom research reports",
+      "Real-time alerts",
+      "Data visualization",
+      "Export capabilities",
+      "API access"
     ],
     benefits: [
-      'Future-proof security against quantum threats',
-      'Compliance with emerging standards',
-      'Enhanced data protection',
-      'Competitive security advantage',
-      'Long-term investment protection'
+      "Reduce research time by 80%",
+      "Improve decision accuracy by 60%",
+      "Identify opportunities faster",
+      "Stay ahead of competitors",
+      "Data-driven strategies",
+      "Cost-effective research"
     ],
     useCases: [
-      'Government and defense',
-      'Financial services',
-      'Healthcare data protection',
-      'Critical infrastructure',
-      'Long-term data storage',
-      'High-security applications'
+      "Marketing teams",
+      "Business development",
+      "Product managers",
+      "Strategy consultants",
+      "Investment firms",
+      "Startups"
     ],
     targetAudience: [
-      'Government agencies',
-      'Financial institutions',
-      'Healthcare organizations',
-      'Defense contractors',
-      'Technology companies',
-      'Research institutions'
+      "Business analysts",
+      "Marketing managers",
+      "Product strategists",
+      "Business developers",
+      "Consultants"
     ],
-    marketPrice: '$399 - $1,299/month',
-    competitiveAdvantage: 'Early adoption of quantum-resistant algorithms, NIST compliance, and expert quantum security consultation',
+    tags: ["AI", "Market Research", "Competitive Intelligence", "Business Intelligence", "Analytics", "Strategy"],
+    estimatedDelivery: "3-5 weeks",
+    supportLevel: "premium",
+    marketPrice: "$699 - $2,500/month",
     contactInfo: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/quantum-encryption',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    rating: 4.9,
-    reviewCount: 89,
-    launchDate: '2024-01-15',
-    status: 'Active',
-    aiScore: 94
+    technology: ["Machine Learning", "Natural Language Processing", "Data Analytics", "Cloud Computing", "Real-time Processing"],
+    integrations: ["CRM Systems", "Marketing Platforms", "Business Intelligence Tools", "Social Media APIs", "News APIs"],
+    compliance: ["GDPR", "CCPA", "SOC 2", "Data Protection"],
+    roi: "400% within 6 months",
+    competitors: ["Crayon", "Kompyte", "Brandwatch", "Mention"],
+    marketTrend: "High-growth market with 300% annual expansion",
+    innovationLevel: "Advanced AI technology revolutionizing market research",
+    pricingTiers: {
+      starter: { 
+        price: 699, 
+        features: ["Basic analysis", "Standard reports", "Email support"] 
+      },
+      professional: { 
+        price: 1499, 
+        features: ["Advanced analytics", "Custom reports", "Priority support", "API access"] 
+      },
+      enterprise: { 
+        price: 2500, 
+        features: ["Full platform", "Dedicated support", "Custom development", "White-label options"] 
+      }
+    }
   },
 
-  // Business Intelligence Services
+  // Sustainable Business Operations Platform
   {
-    id: 'ai-business-intelligence-platform',
-    title: 'Zion AI Business Intelligence Platform',
-    description: 'Intelligent business intelligence platform that automatically discovers insights, generates reports, and provides predictive analytics.',
-    category: 'Business Intelligence',
-    subcategory: 'Analytics',
-    price: {
-      monthly: 129,
-      yearly: 1290,
-      currency: '$',
-      pricingModel: 'subscription'
-    },
+    id: "sustainable-business-operations",
+    title: "Sustainable Business Operations & ESG Management Platform",
+    description: "Comprehensive platform that helps businesses measure, manage, and optimize their environmental, social, and governance (ESG) performance for sustainable growth.",
+    category: "Sustainability & ESG",
+    subcategory: "Business Operations",
+    price: 999,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      'Automated insight discovery',
-      'Natural language querying',
-      'Predictive analytics models',
-      'Custom dashboard builder',
-      'Real-time data processing',
-      'Advanced visualization options',
-      'Data storytelling tools',
-      'Mobile BI applications'
+      "ESG performance tracking",
+      "Carbon footprint calculation",
+      "Sustainability reporting",
+      "Compliance monitoring",
+      "Stakeholder engagement",
+      "Goal setting and tracking",
+      "Benchmarking tools",
+      "Data visualization",
+      "Mobile applications",
+      "Integration capabilities"
     ],
     benefits: [
-      'Make data-driven decisions faster',
-      'Identify hidden business opportunities',
-      'Reduce manual reporting time',
-      'Improve forecasting accuracy',
-      'Democratize data access'
+      "Improve ESG ratings by 40%",
+      "Reduce compliance risks by 60%",
+      "Enhance stakeholder trust",
+      "Access to sustainable finance",
+      "Operational efficiency gains",
+      "Competitive advantage"
     ],
     useCases: [
-      'Sales performance analysis',
-      'Customer behavior insights',
-      'Financial forecasting',
-      'Operational efficiency metrics',
-      'Market trend analysis',
-      'Competitive intelligence'
+      "Public companies",
+      "Private enterprises",
+      "Investment firms",
+      "Government agencies",
+      "Non-profit organizations",
+      "Educational institutions"
     ],
     targetAudience: [
-      'Business analysts',
-      'Executives and managers',
-      'Data scientists',
-      'Marketing teams',
-      'Sales teams',
-      'Operations managers'
+      "Sustainability officers",
+      "ESG managers",
+      "Compliance officers",
+      "Investor relations",
+      "Operations directors"
     ],
-    marketPrice: '$129 - $499/month',
-    competitiveAdvantage: 'Advanced AI algorithms, natural language processing, and automated insight generation',
+    tags: ["Sustainability", "ESG", "Compliance", "Reporting", "Environmental Management", "Social Responsibility"],
+    estimatedDelivery: "5-8 weeks",
+    supportLevel: "premium",
+    marketPrice: "$999 - $4,000/month",
     contactInfo: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/ai-business-intelligence',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    rating: 4.8,
-    reviewCount: 267,
-    launchDate: '2023-11-01',
-    status: 'Active',
-    aiScore: 93
+    technology: ["Cloud Computing", "Data Analytics", "Mobile Development", "API Integration", "Reporting Tools"],
+    integrations: ["ERP Systems", "Accounting Software", "HR Systems", "Environmental Monitoring", "Financial Platforms"],
+    compliance: ["GRI", "SASB", "TCFD", "ISO 14001", "SOC 2"],
+    roi: "300% within 18 months",
+    competitors: ["Sphera", "Benchmark ESG", "Sustainalytics", "MSCI"],
+    marketTrend: "High-growth market with 500% annual expansion",
+    innovationLevel: "Advanced sustainability technology for modern business operations",
+    pricingTiers: {
+      starter: { 
+        price: 999, 
+        features: ["Basic tracking", "Standard reporting", "Email support"] 
+      },
+      professional: { 
+        price: 2199, 
+        features: ["Advanced analytics", "Custom reporting", "Priority support", "API access"] 
+      },
+      enterprise: { 
+        price: 4000, 
+        features: ["Full platform", "Dedicated support", "Custom development", "White-label options"] 
+      }
+    }
   },
 
-  // DevOps Services
+  // AI-Powered Talent Acquisition & HR Analytics
   {
-    id: 'ai-powered-devops-automation',
-    title: 'Zion AI-Powered DevOps Automation',
-    description: 'Intelligent DevOps automation platform that optimizes software development, testing, and deployment processes.',
-    category: 'DevOps',
-    subcategory: 'Automation',
-    price: {
-      monthly: 179,
-      yearly: 1790,
-      currency: '$',
-      pricingModel: 'subscription'
-    },
+    id: "ai-talent-acquisition-hr-analytics",
+    title: "AI Talent Acquisition & HR Analytics Platform",
+    description: "Intelligent HR platform that uses AI to streamline recruitment, improve candidate matching, and provide data-driven insights for better hiring decisions and employee management.",
+    category: "AI & Human Resources",
+    subcategory: "Talent Acquisition",
+    price: 799,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      'Intelligent CI/CD pipeline optimization',
-      'Automated testing and quality assurance',
-      'Performance monitoring and alerting',
-      'Security scanning integration',
-      'Infrastructure as code automation',
-      'Deployment strategy optimization',
-      'Team collaboration tools',
-      'Analytics and reporting'
+      "AI-powered candidate matching",
+      "Automated resume screening",
+      "Interview scheduling automation",
+      "Skills assessment tools",
+      "Employee performance analytics",
+      "Retention prediction",
+      "Diversity and inclusion metrics",
+      "Mobile recruitment apps",
+      "Integration with ATS",
+      "Advanced reporting"
     ],
     benefits: [
-      'Reduce deployment time by 70%',
-      'Improve code quality and reliability',
-      'Automate repetitive tasks',
-      'Enhance team productivity',
-      'Reduce production incidents'
+      "Reduce time-to-hire by 50%",
+      "Improve candidate quality by 40%",
+      "Lower recruitment costs by 35%",
+      "Enhance diversity hiring",
+      "Better employee retention",
+      "Data-driven HR decisions"
     ],
     useCases: [
-      'Software development teams',
-      'DevOps engineering',
-      'Quality assurance',
-      'System administration',
-      'Cloud infrastructure management',
-      'Microservices deployment'
+      "HR departments",
+      "Recruitment agencies",
+      "Talent acquisition teams",
+      "Hiring managers",
+      "Startups and scale-ups",
+      "Enterprise companies"
     ],
     targetAudience: [
-      'Development teams',
-      'DevOps engineers',
-      'System administrators',
-      'Quality assurance teams',
-      'IT operations',
-      'Technology companies'
+      "HR directors",
+      "Recruitment managers",
+      "Talent acquisition specialists",
+      "Hiring managers",
+      "HR analysts"
     ],
-    marketPrice: '$179 - $599/month',
-    competitiveAdvantage: 'AI-powered optimization, comprehensive automation, and intelligent pipeline management',
+    tags: ["AI", "HR", "Recruitment", "Talent Acquisition", "Analytics", "Automation"],
+    estimatedDelivery: "4-7 weeks",
+    supportLevel: "premium",
+    marketPrice: "$799 - $3,000/month",
     contactInfo: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/ai-devops-automation',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    rating: 4.7,
-    reviewCount: 145,
-    launchDate: '2024-02-01',
-    status: 'Active',
-    aiScore: 90
+    technology: ["Machine Learning", "Natural Language Processing", "Data Analytics", "Cloud Computing", "Mobile Development"],
+    integrations: ["ATS Systems", "HRIS Platforms", "Job Boards", "Social Media", "Background Check Services"],
+    compliance: ["EEOC", "GDPR", "CCPA", "SOC 2", "HR Industry Standards"],
+    roi: "350% within 12 months",
+    competitors: ["Hired", "Pymetrics", "HireVue", "Textio"],
+    marketTrend: "High-growth market with 400% annual expansion",
+    innovationLevel: "Advanced AI technology revolutionizing talent acquisition",
+    pricingTiers: {
+      starter: { 
+        price: 799, 
+        features: ["Basic matching", "Standard screening", "Email support"] 
+      },
+      professional: { 
+        price: 1699, 
+        features: ["Advanced analytics", "Custom assessments", "Priority support", "API access"] 
+      },
+      enterprise: { 
+        price: 3000, 
+        features: ["Full platform", "Dedicated support", "Custom development", "White-label options"] 
+      }
+    }
   },
 
-  // Data Services
+  // Autonomous Data Center Management Platform
   {
-    id: 'ai-data-governance-platform',
-    title: 'Zion AI Data Governance Platform',
-    description: 'Comprehensive data governance platform that ensures data quality, compliance, and security across your organization.',
-    category: 'Data Services',
-    subcategory: 'Data Governance',
-    price: {
-      monthly: 249,
-      yearly: 2490,
-      currency: '$',
-      pricingModel: 'subscription'
-    },
+    id: "autonomous-data-center-management",
+    title: "Autonomous Data Center Management & Optimization Platform",
+    description: "AI-powered platform that autonomously manages data center operations, optimizes energy consumption, and ensures maximum uptime through predictive analytics and automated responses.",
+    category: "AI & Data Center Management",
+    subcategory: "Infrastructure Management",
+    price: 2500,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      'Automated data quality monitoring',
-      'Compliance tracking (GDPR, CCPA, HIPAA)',
-      'Data lineage and cataloging',
-      'Privacy impact assessments',
-      'Data access controls',
-      'Audit trail and reporting',
-      'Data classification automation',
-      'Integration with existing systems'
+      "Autonomous infrastructure management",
+      "Predictive failure detection",
+      "Energy optimization algorithms",
+      "Real-time monitoring",
+      "Automated incident response",
+      "Capacity planning",
+      "Cost optimization",
+      "Performance analytics",
+      "Mobile management apps",
+      "API integration"
     ],
     benefits: [
-      'Ensure regulatory compliance',
-      'Improve data quality and reliability',
-      'Reduce data-related risks',
-      'Build customer trust',
-      'Streamline audit processes'
+      "Reduce downtime by 90%",
+      "Lower energy costs by 40%",
+      "Improve efficiency by 50%",
+      "Reduce operational costs by 30%",
+      "24/7 autonomous operation",
+      "Predictive maintenance"
     ],
     useCases: [
-      'Regulatory compliance',
-      'Data quality management',
-      'Privacy protection',
-      'Risk management',
-      'Audit preparation',
-      'Data strategy planning'
+      "Data centers",
+      "Cloud providers",
+      "Enterprise IT",
+      "Colocation facilities",
+      "Edge computing sites",
+      "Server farms"
     ],
     targetAudience: [
-      'Compliance officers',
-      'Data governance teams',
-      'Legal departments',
-      'Risk management teams',
-      'IT security teams',
-      'Business executives'
+      "Data center managers",
+      "IT directors",
+      "Infrastructure engineers",
+      "Operations managers",
+      "Facility managers"
     ],
-    marketPrice: '$249 - $899/month',
-    competitiveAdvantage: 'Comprehensive compliance coverage, AI-powered automation, and enterprise-grade security',
+    tags: ["AI", "Data Center", "Infrastructure", "Automation", "Energy Management", "Predictive Analytics"],
+    estimatedDelivery: "10-14 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$2,500 - $12,000/month",
     contactInfo: {
-      phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com/ai-data-governance',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    rating: 4.8,
-    reviewCount: 178,
-    launchDate: '2023-10-01',
-    status: 'Active',
-    aiScore: 92
+    technology: ["Machine Learning", "IoT Sensors", "Edge Computing", "Cloud Computing", "Automation Systems"],
+    integrations: ["DCIM Systems", "BMS", "Monitoring Tools", "Ticketing Systems", "Enterprise Platforms"],
+    compliance: ["Uptime Institute", "ISO 27001", "SOC 2", "Energy Star", "Industry Standards"],
+    roi: "400% within 18 months",
+    competitors: ["Schneider Electric", "Vertiv", "Eaton", "IBM"],
+    marketTrend: "High-growth market with 450% annual expansion",
+    innovationLevel: "Revolutionary autonomous AI technology for data center management",
+    pricingTiers: {
+      starter: { 
+        price: 2500, 
+        features: ["Basic monitoring", "Standard alerts", "Email support"] 
+      },
+      professional: { 
+        price: 5500, 
+        features: ["Advanced analytics", "Custom alerts", "Priority support", "API access"] 
+      },
+      enterprise: { 
+        price: 12000, 
+        features: ["Full platform", "Dedicated support", "Custom development", "White-label options"] 
+      }
+    }
   }
 ];
-
-export const getInnovativeServiceByCategory = (category: string) => {
-  return INNOVATIVE_SERVICES.filter(service => service.category === category);
-};
-
-export const getInnovativeServiceBySubcategory = (subcategory: string) => {
-  return INNOVATIVE_SERVICES.filter(service => service.subcategory === subcategory);
-};
-
-export const getFeaturedInnovativeServices = () => {
-  return INNOVATIVE_SERVICES.filter(service => service.rating >= 4.7).slice(0, 8);
-};
-
-export const getServicesByAIScore = (minScore: number) => {
-  return INNOVATIVE_SERVICES.filter(service => service.aiScore && service.aiScore >= minScore);
-};
