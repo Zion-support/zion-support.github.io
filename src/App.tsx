@@ -6,7 +6,8 @@ import { ErrorBoundary } from './components/ErrorBoundary';
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 
-// Lazy load only the pages we know work
+// Lazy load pages for better performance
+const Home = React.lazy(() => import('./pages/Home'));
 const MicroSaasServicesPage = React.lazy(() => import('./pages/MicroSaasServices'));
 const PricingPage = React.lazy(() => import('./pages/PricingPage'));
 
@@ -21,7 +22,8 @@ const PageLoader = () => (
 );
 
 const baseRoutes = [
-  { path: '/', element: <MicroSaasServicesPage /> },
+  { path: '/', element: <Home /> },
+  { path: '/home', element: <Home /> },
   { path: '/micro-saas-services', element: <MicroSaasServicesPage /> },
   { path: '/pricing', element: <PricingPage /> },
 ];
