@@ -825,3 +825,42 @@ src/components/CategoriesSection.tsx
 [2025-08-25 23:35:19] Processing unmerged file: src/components/CategoriesSection.tsx
 [2025-08-25 23:35:19] File exists in HEAD, keeping it
 [2025-08-25 23:35:20] Still have unmerged paths, attempting additional resolution...
+[main a192adf9ed7] Merge PR #6653: cursor/expand-services-and-deploy-updates-63f3 (advanced conflict resolution)
+[2025-08-25 23:35:21] ✓ Advanced conflict resolution successful for PR #6653
+[2025-08-25 23:35:21] ✓ PR #6653 processed successfully
+==========================================
+
+
+==========================================
+[2025-08-25 23:35:21] Processing PR #6651 from branch: cursor/website-audit-and-enhancement-1f4f
+==========================================
+[2025-08-25 23:35:21] Processing PR #6651 from branch: cursor/website-audit-and-enhancement-1f4f
+[2025-08-25 23:35:21] Attempting regular merge...
+Auto-merging src/App.tsx
+CONFLICT (content): Merge conflict in src/App.tsx
+Auto-merging src/pages/About.tsx
+Auto-merging src/pages/Blog.tsx
+Auto-merging src/pages/Careers.tsx
+Auto-merging src/pages/Contact.tsx
+Auto-merging src/pages/Enterprise.tsx
+CONFLICT (add/add): Merge conflict in src/pages/Enterprise.tsx
+Auto-merging src/pages/FAQ.tsx
+CONFLICT (add/add): Merge conflict in src/pages/FAQ.tsx
+Auto-merging src/pages/Home.tsx
+Auto-merging src/pages/Privacy.tsx
+CONFLICT (content): Merge conflict in src/pages/Privacy.tsx
+Auto-merging src/pages/Terms.tsx
+CONFLICT (content): Merge conflict in src/pages/Terms.tsx
+Automatic merge failed; fix conflicts and then commit the result.
+[2025-08-25 23:35:22] ✗ Merge failed for PR #6651, attempting advanced conflict resolution...
+[2025-08-25 23:35:22] Resolving complex conflicts for PR #6651 (cursor/website-audit-and-enhancement-1f4f)...
+[2025-08-25 23:35:22] Found unmerged files: src/App.tsx
+src/pages/Privacy.tsx
+src/pages/Terms.tsx
+[2025-08-25 23:35:22] Processing unmerged file: src/App.tsx
+[2025-08-25 23:35:22] File exists in HEAD, keeping it
+[2025-08-25 23:35:22] Processing unmerged file: src/pages/Privacy.tsx
+[2025-08-25 23:35:22] File exists in HEAD, keeping it
+[2025-08-25 23:35:22] Processing unmerged file: src/pages/Terms.tsx
+[2025-08-25 23:35:22] File exists in HEAD, keeping it
+[2025-08-25 23:35:23] Still have unmerged paths, attempting additional resolution...
