@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -560,6 +558,4 @@ const Home: React.FC = () => {
       </Suspense>
     </div>
   );
-};
-
-export default Home;
+}
