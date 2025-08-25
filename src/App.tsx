@@ -1,6 +1,7 @@
 import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
+import { EnhancedHeader } from './components/EnhancedHeader';
 import { Footer } from './components/Footer';
 import Sidebar from './components/Sidebar';
 import { AccessibilityControls } from './components/AccessibilityControls';
@@ -28,6 +29,7 @@ const Home = lazy(() => import('./pages/Home'));
 const Services = lazy(() => import('./pages/Services'));
 const AISolutions = lazy(() => import('./pages/AISolutions'));
 const ServicesShowcase = lazy(() => import('./pages/ServicesShowcase'));
+const EnhancedServicesShowcase = lazy(() => import('./pages/EnhancedServicesShowcase'));
 const AIMatcherPage = lazy(() => import('./pages/AIMatcher'));
 const TalentDirectory = lazy(() => import('./pages/TalentDirectory'));
 const TalentsPage = lazy(() => import('./pages/TalentsPage'));
@@ -122,7 +124,7 @@ const App = () => {
                   url="https://ziontechgroup.com"
                 />
                 
-                <Header />
+                <EnhancedHeader />
                 <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
                 
                 <main className="pt-20">
@@ -133,6 +135,7 @@ const App = () => {
                       <Route path="/services" element={<Services />} />
                       <Route path="/ai-solutions" element={<AISolutions />} />
                       <Route path="/services-showcase" element={<ServicesShowcase />} />
+                      <Route path="/enhanced-services-showcase" element={<EnhancedServicesShowcase />} />
                       <Route path="/ai-matcher" element={<AIMatcherPage />} />
                       <Route path="/talent-directory" element={<TalentDirectory />} />
                       <Route path="/talents" element={<TalentsPage />} />
