@@ -194,6 +194,7 @@ export default defineConfig({
 =======
         manualChunks: {
 <<<<<<< HEAD
+<<<<<<< HEAD
           // Core React chunks
           'react-core': ['react', 'react-dom'],
           'react-router': ['react-router-dom'],
@@ -328,10 +329,25 @@ export default defineConfig({
       include: [/node_modules/],
 =======
     chunkSizeWarningLimit: 500, // Reduced from 1000 for better optimization
+=======
+          'react-vendor': ['react', 'react-dom'],
+          'utils-vendor': ['clsx', 'tailwind-merge'],
+          'animation-vendor': ['framer-motion'],
+          'ui-vendor': ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-tabs'],
+          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
+          'chart-vendor': ['recharts'],
+          'icon-vendor': ['lucide-react', 'react-icons']
+        }
+      }
+    },
+    chunkSizeWarningLimit: 1000,
+    minify: 'terser',
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6b26
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
+<<<<<<< HEAD
         pure_funcs: ['console.log', 'console.info', 'console.debug'],
         passes: 2
       },
@@ -367,10 +383,19 @@ export default defineConfig({
   },
 
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
+=======
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn']
+      }
+    },
+    sourcemap: false,
+    target: 'es2015'
+  },
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6b26
   optimizeDeps: {
     include: [
       'react',
       'react-dom',
+<<<<<<< HEAD
       'react-router-dom',
 <<<<<<< HEAD
       '@radix-ui/react-accordion',
@@ -497,6 +522,21 @@ export default defineConfig({
         return { relative: true }
       }
     }
+=======
+      'framer-motion',
+      'clsx',
+      'tailwind-merge'
+    ]
+  },
+  server: {
+    port: 5173,
+    host: true,
+    open: false
+  },
+  preview: {
+    port: 4173,
+    host: true
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6b26
   }
 })
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6685
