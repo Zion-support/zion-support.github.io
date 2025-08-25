@@ -19,7 +19,17 @@ import {
   Globe,
   Rocket,
   Star,
-  ArrowRight
+  ArrowRight,
+  Briefcase,
+  Code,
+  Database,
+  Network,
+  Cloud,
+  Lock,
+  BarChart3,
+  Palette,
+  Smartphone,
+  Server
 } from 'lucide-react';
 
 export function Header() {
@@ -169,9 +179,9 @@ export function Header() {
       description: 'Tailored solutions for specific industries',
       services: [
         { name: 'Healthcare Technology', path: '/solutions/healthcare', description: 'Medical innovation' },
-        { name: 'Financial Services', path: '/services/financial-services', description: 'Fintech solutions' },
-        { name: 'Manufacturing Intelligence', path: '/services/manufacturing-intelligence', description: 'Smart manufacturing' },
-        { name: 'Retail Technology', path: '/services/retail-technology', description: 'Digital retail transformation' }
+        { name: 'Financial Services', path: '/solutions/financial', description: 'Fintech solutions' },
+        { name: 'Manufacturing Intelligence', path: '/solutions/manufacturing', description: 'Smart manufacturing' },
+        { name: 'Retail Technology', path: '/solutions/retail', description: 'Digital retail transformation' }
       ]
     }
   ];
@@ -198,214 +208,182 @@ export function Header() {
       ]
     },
     {
-      title: 'Startup Solutions',
-      icon: Rocket,
-      description: 'Accelerate your startup growth',
+      title: 'Specialized Solutions',
+      icon: Target,
+      description: 'Industry-specific expertise',
       solutions: [
-        { name: 'MVP Development', path: '/services/mvp-development', description: 'Rapid prototype development' },
-        { name: 'AI Integration', path: '/ai-solutions', description: 'AI-powered features' },
-        { name: 'Scalable Architecture', path: '/services/scalable-architecture', description: 'Growth-ready infrastructure' }
+        { name: 'Healthcare Solutions', path: '/solutions/healthcare', description: 'Medical technology innovation' },
+        { name: 'Financial Solutions', path: '/solutions/financial', description: 'Fintech and banking solutions' },
+        { name: 'Manufacturing Solutions', path: '/solutions/manufacturing', description: 'Industry 4.0 transformation' },
+        { name: 'Retail Solutions', path: '/solutions/retail', description: 'Digital commerce solutions' },
+        { name: 'Government Solutions', path: '/solutions/government', description: 'Public sector technology' }
       ]
     }
   ];
 
-  const handleDropdownToggle = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  const toggleDropdown = (category: string) => {
+    setActiveDropdown(activeDropdown === category ? null : category);
   };
 
   const closeDropdowns = () => {
     setActiveDropdown(null);
   };
 
-  const isActive = (path: string) => location.pathname === path;
-
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-zion-blue-dark/95 backdrop-blur-md border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' 
-        : 'bg-transparent'
+        ? 'bg-black/95 backdrop-blur-md border-b border-gray-800' 
+        : 'bg-black/80 backdrop-blur-sm'
     }`}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <span className="text-white font-bold text-lg">Z</span>
-            </div>
-            <div className="hidden sm:block">
-              <h1 className="text-xl font-bold text-white">Zion Tech Group</h1>
-              <p className="text-xs text-zion-cyan">AI-Powered Innovation</p>
-            </div>
-          </Link>
+          <div className="flex-shrink-0">
+            <Link to="/" className="flex items-center space-x-2">
+              <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-xl">Z</span>
+              </div>
+              <span className="text-white font-bold text-xl hidden sm:block">Zion Tech Group</span>
+            </Link>
+          </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex space-x-8">
             {navigationItems.map((item) => (
-              <div key={item.path} className="relative group">
+              <div key={item.path} className="relative">
                 {item.hasDropdown ? (
-                  <button
-                    onClick={() => handleDropdownToggle(item.label.toLowerCase())}
-                    className={`flex items-center space-x-1 px-3 py-2 rounded-lg transition-all duration-300 ${
-                      isActive(item.path) 
-                        ? 'text-zion-cyan bg-zion-cyan/10' 
-                        : 'text-gray-300 hover:text-white hover:bg-white/10'
-                    }`}
-                  >
-                    <span>{item.icon}</span>
-                    <span>{item.label}</span>
-                    <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
-                  </button>
+                  <div className="relative">
+                    <button
+                      onClick={() => toggleDropdown(item.label.toLowerCase())}
+                      onMouseEnter={() => setActiveDropdown(item.label.toLowerCase())}
+                      className="flex items-center space-x-1 text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                    >
+                      <span>{item.icon}</span>
+                      <span>{item.label}</span>
+                      <ChevronDown className="w-4 h-4" />
+                    </button>
+                    
+                    {/* Services Dropdown */}
+                    {activeDropdown === 'services' && item.label === 'Services' && (
+                      <div 
+                        className="absolute top-full left-0 mt-2 w-screen max-w-6xl bg-black/95 backdrop-blur-md border border-gray-800 rounded-lg shadow-2xl p-6"
+                        onMouseLeave={closeDropdowns}
+                      >
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                          {serviceCategories.map((category) => (
+                            <div key={category.title} className="space-y-3">
+                              <div className="flex items-center space-x-2">
+                                <category.icon className="w-5 h-5 text-cyan-500" />
+                                <h3 className="text-white font-semibold text-sm">{category.title}</h3>
+                              </div>
+                              <p className="text-gray-400 text-xs">{category.description}</p>
+                              <div className="space-y-2">
+                                {category.services.map((service) => (
+                                  <Link
+                                    key={service.name}
+                                    to={service.path}
+                                    className="block text-gray-300 hover:text-cyan-400 text-xs transition-colors duration-200"
+                                  >
+                                    {service.name}
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Solutions Dropdown */}
+                    {activeDropdown === 'solutions' && item.label === 'Solutions' && (
+                      <div 
+                        className="absolute top-full left-0 mt-2 w-screen max-w-4xl bg-black/95 backdrop-blur-md border border-gray-800 rounded-lg shadow-2xl p-6"
+                        onMouseLeave={closeDropdowns}
+                      >
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                          {solutionCategories.map((category) => (
+                            <div key={category.title} className="space-y-3">
+                              <div className="flex items-center space-x-2">
+                                <category.icon className="w-5 h-5 text-cyan-500" />
+                                <h3 className="text-white font-semibold text-sm">{category.title}</h3>
+                              </div>
+                              <p className="text-gray-400 text-xs">{category.description}</p>
+                              <div className="space-y-2">
+                                {category.solutions.map((solution) => (
+                                  <Link
+                                    key={solution.name}
+                                    to={solution.path}
+                                    className="block text-gray-300 hover:text-cyan-400 text-xs transition-colors duration-200"
+                                  >
+                                    {solution.name}
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 ) : (
                   <Link
                     to={item.path}
-                    className={`flex items-center space-x-1 px-3 py-2 rounded-lg transition-all duration-300 ${
-                      isActive(item.path) 
-                        ? 'text-zion-cyan bg-zion-cyan/10' 
-                        : 'text-gray-300 hover:text-white hover:bg-white/10'
-                    }`}
+                    className="flex items-center space-x-1 text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
                   >
                     <span>{item.icon}</span>
                     <span>{item.label}</span>
                   </Link>
                 )}
-
-                {/* Dropdown Menus */}
-                {item.hasDropdown && activeDropdown === item.label.toLowerCase() && (
-                  <div className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-cyan/30 rounded-xl shadow-2xl shadow-zion-cyan/10 overflow-hidden">
-                    <div className="p-4">
-                      <h3 className="text-lg font-semibold text-white mb-4">{item.label}</h3>
-                      <div className="grid grid-cols-1 gap-3">
-                        {item.label.toLowerCase() === 'services' && serviceCategories.map((category) => (
-                          <div key={category.title} className="group">
-                            <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-zion-cyan/10 transition-colors duration-200">
-                              <category.icon className="w-5 h-5 text-zion-cyan" />
-                              <div className="flex-1">
-                                <h4 className="font-medium text-white group-hover:text-zion-cyan transition-colors duration-200">
-                                  {category.title}
-                                </h4>
-                                <p className="text-sm text-gray-400">{category.description}</p>
-                              </div>
-                            </div>
-                            <div className="ml-8 space-y-2">
-                              {category.services.map((service) => (
-                                <Link
-                                  key={service.name}
-                                  to={service.path}
-                                  className="block p-2 rounded-lg hover:bg-zion-cyan/10 transition-colors duration-200"
-                                >
-                                  <div className="text-sm font-medium text-gray-300 hover:text-zion-cyan transition-colors duration-200">
-                                    {service.name}
-                                  </div>
-                                  <div className="text-xs text-gray-500">{service.description}</div>
-                                </Link>
-                              ))}
-                            </div>
-                          </div>
-                        ))}
-                        {item.label.toLowerCase() === 'solutions' && solutionCategories.map((category) => (
-                          <div key={category.title} className="group">
-                            <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-zion-cyan/10 transition-colors duration-200">
-                              <category.icon className="w-5 h-5 text-zion-cyan" />
-                              <div className="flex-1">
-                                <h4 className="font-medium text-white group-hover:text-zion-cyan transition-colors duration-200">
-                                  {category.title}
-                                </h4>
-                                <p className="text-sm text-gray-400">{category.description}</p>
-                              </div>
-                            </div>
-                            <div className="ml-8 space-y-2">
-                              {category.solutions.map((solution) => (
-                                <Link
-                                  key={solution.name}
-                                  to={solution.path}
-                                  className="block p-2 rounded-lg hover:bg-zion-cyan/10 transition-colors duration-200"
-                                >
-                                  <div className="text-sm font-medium text-gray-300 hover:text-zion-cyan transition-colors duration-200">
-                                    {solution.name}
-                                  </div>
-                                  <div className="text-xs text-gray-500">{solution.description}</div>
-                                </Link>
-                              ))}
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                )}
               </div>
             ))}
           </nav>
 
-          {/* CTA Buttons */}
-          <div className="hidden lg:flex items-center space-x-4">
+          {/* Right side actions */}
+          <div className="flex items-center space-x-4">
+            {/* Search */}
+            <button className="text-gray-300 hover:text-white p-2 rounded-md transition-colors duration-200">
+              <Search className="w-5 h-5" />
+            </button>
+
+            {/* Contact Info */}
+            <div className="hidden md:flex items-center space-x-4 text-sm">
+              <a 
+                href="tel:+13024640950" 
+                className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-1"
+              >
+                <Phone className="w-4 h-4" />
+                <span>+1 (302) 464-0950</span>
+              </a>
+              <a 
+                href="mailto:kleber@ziontechgroup.com" 
+                className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center space-x-1"
+              >
+                <Mail className="w-4 h-4" />
+                <span>kleber@ziontechgroup.com</span>
+              </a>
+            </div>
+
+            {/* CTA Button */}
             <Link
               to="/contact"
-              className="px-4 py-2 text-zion-cyan border border-zion-cyan/50 rounded-lg hover:bg-zion-cyan/20 hover:border-zion-cyan transition-all duration-300"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
             >
               Get Started
             </Link>
-            <Link
-              to="/pricing"
-              className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-all duration-300"
+
+            {/* Mobile menu button */}
+            <button
+              onClick={() => setIsSidebarOpen(true)}
+              className="lg:hidden text-gray-300 hover:text-white p-2 rounded-md transition-colors duration-200"
             >
-              View Pricing
-            </Link>
+              <Menu className="w-6 h-6" />
+            </button>
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300"
-            aria-label="Toggle mobile menu"
-          >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
         </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-zion-cyan/20">
-            <div className="space-y-2">
-              {navigationItems.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`block px-4 py-3 rounded-lg transition-all duration-300 ${
-                    isActive(item.path) 
-                      ? 'text-zion-cyan bg-zion-cyan/10' 
-                      : 'text-gray-300 hover:text-white hover:bg-white/10'
-                  }`}
-                >
-                  <div className="flex items-center space-x-3">
-                    <span>{item.icon}</span>
-                    <span>{item.label}</span>
-                  </div>
-                </Link>
-              ))}
-            </div>
-            
-            {/* Mobile CTA Buttons */}
-            <div className="mt-6 space-y-3">
-              <Link
-                to="/contact"
-                onClick={() => setIsMenuOpen(false)}
-                className="block w-full text-center px-4 py-3 text-zion-cyan border border-zion-cyan/50 rounded-lg hover:bg-zion-cyan/20 hover:border-zion-cyan transition-all duration-300"
-              >
-                Get Started
-              </Link>
-              <Link
-                to="/pricing"
-                onClick={() => setIsMenuOpen(false)}
-                className="block w-full text-center px-4 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-all duration-300"
-              >
-                View Pricing
-              </Link>
-            </div>
-          </div>
-        )}
       </div>
+
+      {/* Mobile Sidebar */}
+      <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
     </header>
   );
 }

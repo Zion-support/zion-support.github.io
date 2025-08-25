@@ -72,6 +72,8 @@ const InnovativeNewServices = lazy(() => import('./pages/services/InnovativeNewS
 const SpecializedITInfrastructure = lazy(() => import('./pages/services/SpecializedITInfrastructure'));
 const InnovativeMicroSaasServices = lazy(() => import('./pages/InnovativeMicroSaasServices'));
 const ComprehensiveInnovativeServices = lazy(() => import('./pages/ComprehensiveInnovativeServices'));
+const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
+const AIMachineLearning = lazy(() => import('./pages/services/AIMachineLearning'));
 
 // Solutions pages
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
@@ -170,6 +172,8 @@ const App = () => {
                       <Route path="/services/specialized-it-infrastructure" element={<SpecializedITInfrastructure />} />
                       <Route path="/innovative-micro-saas-services" element={<InnovativeMicroSaasServices />} />
                       <Route path="/comprehensive-innovative-services" element={<ComprehensiveInnovativeServices />} />
+                      <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                      <Route path="/services/ai-machine-learning" element={<AIMachineLearning />} />
                       
                       {/* Solutions Routes */}
                       <Route path="/services/enterprise" element={<EnterpriseSolutions />} />
