@@ -271,7 +271,7 @@ export function Services() {
         }
       ]
     }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-50ba
+
   ];
   
   const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
