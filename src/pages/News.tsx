@@ -1,44 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { 
-  Search, 
-<<<<<<< HEAD
-=======
 import { motion } from 'framer-motion';
 import { 
->>>>>>> origin/cursor/website-audit-and-enhancement-bd86
   Calendar, 
   Clock, 
   User, 
   Tag, 
   ArrowRight,
-<<<<<<< HEAD
-  Newspaper,
-  TrendingUp,
-  Lightbulb,
-  Code,
-  Shield,
-  Cloud,
-  Brain,
-  Cpu,
-  Zap,
-  Building,
-  Users,
-  Globe,
-  Star,
-  Eye,
-  Heart,
-  Share2,
-  ExternalLink,
-  Filter,
-  Bookmark,
-  BookmarkPlus
-=======
   Filter, 
   Calendar, 
   User, 
@@ -55,7 +21,6 @@ import {
   Database,
   TrendingUp,
   Globe
->>>>>>> origin/cursor/website-audit-and-enhancement-82f7
 =======
   Search,
   Filter,
@@ -67,26 +32,38 @@ import {
   Zap,
   Eye,
   Share2
->>>>>>> origin/cursor/website-audit-and-enhancement-bd86
 } from 'lucide-react';
 
 export default function News() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-<<<<<<< HEAD
-  const [selectedSource, setSelectedSource] = useState('all');
-  const [selectedTimeframe, setSelectedTimeframe] = useState('all');
+  Calendar, 
+  User, 
+  Tag, 
+  ArrowRight, 
+  Search, 
+  Filter,
+  Clock,
+  Eye,
+  ExternalLink,
+  TrendingUp,
+  Award,
+  Globe
+} from 'lucide-react';
+
+export default function News() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
   const categories = [
-<<<<<<< HEAD
-    { id: 'all', name: 'All News', icon: Newspaper, count: 45 },
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain, count: 12 },
-    { id: 'quantum', name: 'Quantum Technology', icon: Cpu, count: 6 },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: 8 },
-    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: 7 },
-    { id: 'business', name: 'Business & Industry', icon: Building, count: 9 },
-    { id: 'innovation', name: 'Innovation & Trends', icon: Lightbulb, count: 8 },
-    { id: 'development', name: 'Development', icon: Code, count: 5 }
+    'All',
+    'Company News',
+    'Product Updates',
+    'Industry Insights',
+    'Awards & Recognition',
+    'Partnerships',
+    'Research & Development',
+    'Market Trends'
   ];
 
   const sources = [
@@ -123,155 +100,11 @@ export default function News() {
     { id: '2025', name: '2025', count: 23 },
     { id: '2024', name: '2024', count: 28 },
     { id: '2023', name: '2023', count: 16 }
->>>>>>> origin/cursor/website-audit-and-enhancement-bd86
   ];
 
   const newsArticles = [
     {
       id: 1,
-<<<<<<< HEAD
-      title: 'Zion Tech Group Launches Revolutionary AI Autonomous Business Platform',
-      excerpt: 'New platform enables businesses to automate complex decision-making processes using advanced AI algorithms.',
-      content: 'Zion Tech Group today announced the launch of its groundbreaking AI Autonomous Business Platform, designed to revolutionize how organizations approach business automation...',
-      author: 'Zion Tech Group',
-      source: 'Company Press Releases',
-      publishDate: '2024-01-15',
-      readTime: '5 min read',
-      category: 'ai-ml',
-      tags: ['AI', 'Business Platform', 'Automation', 'Launch'],
-      featured: true,
-      views: 25420,
-      likes: 1245,
-      image: '/images/news/ai-platform-launch.jpg',
-      externalLink: 'https://ziontechgroup.com/press-releases/ai-platform-launch',
-      isBookmarked: false
-    },
-    {
-      id: 2,
-      title: 'Quantum Computing Breakthrough: Zion Tech Achieves 1000+ Qubit Milestone',
-      excerpt: 'Company reaches significant milestone in quantum computing development, opening new possibilities for complex problem-solving.',
-      content: 'Zion Tech Group has achieved a major breakthrough in quantum computing technology, successfully scaling its quantum systems to over 1000 qubits...',
-      author: 'Dr. Michael Chen',
-      source: 'Research Papers',
-      publishDate: '2024-01-14',
-      readTime: '8 min read',
-      category: 'quantum',
-      tags: ['Quantum Computing', 'Breakthrough', 'Research', '1000+ Qubits'],
-      featured: true,
-      views: 19850,
-      likes: 987,
-      image: '/images/news/quantum-breakthrough.jpg',
-      externalLink: 'https://ziontechgroup.com/research/quantum-breakthrough',
-      isBookmarked: false
-    },
-    {
-      id: 3,
-      title: 'Cybersecurity Threat Report: AI-Powered Attacks on the Rise',
-      excerpt: 'New research reveals increasing sophistication of cyber threats using artificial intelligence.',
-      content: 'A comprehensive cybersecurity threat report released by Zion Tech Group reveals a concerning trend in AI-powered cyber attacks...',
-      author: 'Security Research Team',
-      source: 'Industry Reports',
-      publishDate: '2024-01-13',
-      readTime: '6 min read',
-      category: 'cybersecurity',
-      tags: ['Cybersecurity', 'AI Threats', 'Research', 'Security'],
-      featured: false,
-      views: 15670,
-      likes: 756,
-      image: '/images/news/cybersecurity-threats.jpg',
-      externalLink: 'https://ziontechgroup.com/security/ai-threat-report',
-      isBookmarked: false
-    },
-    {
-      id: 4,
-      title: 'Cloud Migration Success: Fortune 500 Company Achieves 40% Cost Reduction',
-      excerpt: 'Case study demonstrates significant cost savings and performance improvements through strategic cloud migration.',
-      content: 'A Fortune 500 manufacturing company has achieved remarkable results through its cloud migration partnership with Zion Tech Group...',
-      author: 'Cloud Solutions Team',
-      source: 'Customer Success Stories',
-      publishDate: '2024-01-12',
-      readTime: '7 min read',
-      category: 'cloud',
-      tags: ['Cloud Migration', 'Cost Reduction', 'Case Study', 'Success'],
-      featured: false,
-      views: 12890,
-      likes: 634,
-      image: '/images/news/cloud-migration-success.jpg',
-      externalLink: 'https://ziontechgroup.com/case-studies/cloud-migration',
-      isBookmarked: false
-    },
-    {
-      id: 5,
-      title: 'Digital Transformation in Healthcare: AI-Powered Patient Care',
-      excerpt: 'Healthcare organizations are leveraging AI to improve patient outcomes and operational efficiency.',
-      content: 'The healthcare industry is undergoing a digital transformation revolution, with AI-powered solutions leading the charge...',
-      author: 'Healthcare Innovation Team',
-      source: 'Industry Reports',
-      publishDate: '2024-01-11',
-      readTime: '9 min read',
-      category: 'business',
-      tags: ['Healthcare', 'Digital Transformation', 'AI', 'Patient Care'],
-      featured: false,
-      views: 11230,
-      likes: 567,
-      image: '/images/news/healthcare-ai.jpg',
-      externalLink: 'https://ziontechgroup.com/insights/healthcare-transformation',
-      isBookmarked: false
-    },
-    {
-      id: 6,
-      title: 'Edge Computing Revolution: Real-Time Processing for IoT Applications',
-      excerpt: 'New edge computing solutions enable faster processing and reduced latency in IoT deployments.',
-      content: 'Edge computing is revolutionizing the Internet of Things (IoT) landscape, enabling real-time processing and decision-making...',
-      author: 'IoT Solutions Team',
-      source: 'Technology News',
-      publishDate: '2024-01-10',
-      readTime: '6 min read',
-      category: 'innovation',
-      tags: ['Edge Computing', 'IoT', 'Real-time', 'Innovation'],
-      featured: false,
-      views: 9870,
-      likes: 445,
-      image: '/images/news/edge-computing-iot.jpg',
-      externalLink: 'https://ziontechgroup.com/technology/edge-computing',
-      isBookmarked: false
-    },
-    {
-      id: 7,
-      title: 'Machine Learning in Financial Services: Risk Assessment and Fraud Detection',
-      excerpt: 'Financial institutions are adopting ML solutions for improved risk management and security.',
-      content: 'Machine learning is transforming the financial services industry, particularly in areas of risk assessment and fraud detection...',
-      author: 'Financial Services Team',
-      source: 'Industry Reports',
-      publishDate: '2024-01-09',
-      readTime: '8 min read',
-      category: 'ai-ml',
-      tags: ['Machine Learning', 'Financial Services', 'Risk Assessment', 'Fraud Detection'],
-      featured: false,
-      views: 8760,
-      likes: 398,
-      image: '/images/news/ml-financial-services.jpg',
-      externalLink: 'https://ziontechgroup.com/insights/financial-ml',
-      isBookmarked: false
-    },
-    {
-      id: 8,
-      title: 'Microservices Architecture: Building Scalable Applications',
-      excerpt: 'Best practices for implementing microservices that can scale with business growth.',
-      content: 'Microservices architecture has become the preferred approach for building scalable, maintainable applications...',
-      author: 'Software Architecture Team',
-      source: 'Technology News',
-      publishDate: '2024-01-08',
-      readTime: '10 min read',
-      category: 'development',
-      tags: ['Microservices', 'Architecture', 'Scalability', 'Development'],
-      featured: false,
-      views: 7650,
-      likes: 312,
-      image: '/images/news/microservices-architecture.jpg',
-      externalLink: 'https://ziontechgroup.com/technology/microservices',
-      isBookmarked: false
-=======
       title: "Zion Tech Group Launches Revolutionary Quantum Neural Network Platform",
       excerpt: "The company introduces a breakthrough quantum computing solution that combines neural networks with quantum processing for unprecedented computational power.",
       content: "Zion Tech Group today announced the launch of its revolutionary Quantum Neural Network Platform, marking a significant milestone in the convergence of quantum computing and artificial intelligence. This breakthrough technology represents a paradigm shift in computational capabilities, enabling organizations to solve complex problems that were previously impossible with classical computing methods...",
@@ -389,56 +222,10 @@ export default function News() {
       image: "/news/5g-solutions.jpg",
       views: 7890,
       shares: 445
->>>>>>> origin/cursor/website-audit-and-enhancement-bd86
     }
   ];
 
   const filteredNews = newsArticles.filter(article => {
-<<<<<<< HEAD
-    const searchMatch = article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                       article.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                       article.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                       article.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
-    const categoryMatch = selectedCategory === 'all' || article.category === selectedCategory;
-    const sourceMatch = selectedSource === 'all' || article.source === selectedSource;
-    
-    let timeframeMatch = true;
-    if (selectedTimeframe !== 'all') {
-      const articleDate = new Date(article.publishDate);
-      const now = new Date();
-      const diffTime = Math.abs(now.getTime() - articleDate.getTime());
-      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-      
-      switch (selectedTimeframe) {
-        case 'Last 24 Hours':
-          timeframeMatch = diffDays <= 1;
-          break;
-        case 'Last Week':
-          timeframeMatch = diffDays <= 7;
-          break;
-        case 'Last Month':
-          timeframeMatch = diffDays <= 30;
-          break;
-        case 'Last 3 Months':
-          timeframeMatch = diffDays <= 90;
-          break;
-        case 'Last Year':
-          timeframeMatch = diffDays <= 365;
-          break;
-      }
-    }
-    
-    return searchMatch && categoryMatch && sourceMatch && timeframeMatch;
-  });
-
-  const featuredNews = newsArticles.filter(article => article.featured);
-  const recentNews = newsArticles.slice(0, 3);
-
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', {
-=======
     { id: 'all', name: 'All News', icon: Newspaper, count: 18 },
     { id: 'ai', name: 'AI & ML', icon: Brain, count: 6 },
     { id: 'innovation', name: 'Innovation', icon: Rocket, count: 4 },
@@ -511,132 +298,50 @@ const News = () => {
       date: "2024-01-10",
       author: "Dr. Sarah Chen",
       readTime: "8 min read",
->>>>>>> origin/cursor/website-audit-and-enhancement-9620
       image: "/api/placeholder/400/250"
     },
     {
       id: 3,
-<<<<<<< HEAD
-      title: "Zion Tech Group Expands Global Operations with New European Office",
-      excerpt: "The company opens its first European headquarters in Berlin, Germany, to better serve clients across the European Union...",
-      author: "Corporate Communications",
-      date: "2024-01-16",
-      readTime: "4 min read",
-      views: "2.9k",
-      category: "business",
-      tags: ["Global Expansion", "European Market", "Business Growth", "International"],
-=======
       title: "Cybersecurity in the AI Era: New Threats and Solutions",
       excerpt: "As AI becomes more prevalent, we explore the evolving cybersecurity landscape and our innovative defense strategies.",
       category: "Cybersecurity",
       date: "2024-01-08",
       author: "Michael Rodriguez",
       readTime: "6 min read",
->>>>>>> origin/cursor/website-audit-and-enhancement-9620
       image: "/api/placeholder/400/250"
     },
     {
       id: 4,
-<<<<<<< HEAD
-      title: "New Cybersecurity Framework Released for Enterprise Clients",
-      excerpt: "Zion Tech Group introduces comprehensive security framework designed to protect against emerging cyber threats...",
-      author: "Security Team",
-      date: "2024-01-14",
-      readTime: "6 min read",
-      views: "4.1k",
-      category: "security",
-      tags: ["Cybersecurity", "Enterprise", "Security Framework", "Threat Protection"],
-=======
       title: "The Future of Work: How AI is Reshaping Industries",
       excerpt: "Discover how artificial intelligence is transforming traditional industries and creating new opportunities for growth.",
       category: "Industry Insights",
       date: "2024-01-05",
       author: "Jennifer Kim",
       readTime: "7 min read",
->>>>>>> origin/cursor/website-audit-and-enhancement-9620
       image: "/api/placeholder/400/250"
     },
     {
       id: 5,
-<<<<<<< HEAD
-      title: "Partnership Announced with Leading Cloud Infrastructure Provider",
-      excerpt: "Strategic collaboration to deliver enhanced cloud solutions and accelerate digital transformation for enterprise clients...",
-      author: "Partnership Team",
-      date: "2024-01-12",
-      readTime: "5 min read",
-      views: "3.3k",
-      category: "cloud",
-      tags: ["Partnership", "Cloud Infrastructure", "Digital Transformation", "Enterprise"],
-=======
       title: "Zion Tech Group Named Top AI Company by Tech Innovators Association",
       excerpt: "We're honored to be recognized for our contributions to AI innovation and technological advancement.",
       category: "Company News",
       date: "2024-01-03",
       author: "Zion Tech Team",
       readTime: "3 min read",
->>>>>>> origin/cursor/website-audit-and-enhancement-9620
       image: "/api/placeholder/400/250"
     },
     {
       id: 6,
-<<<<<<< HEAD
-      title: "Zion Tech Group Recognized as Top AI Solutions Provider",
-      excerpt: "Industry recognition for excellence in artificial intelligence solutions and innovative technology implementations...",
-      author: "Awards Team",
-      date: "2024-01-10",
-      readTime: "4 min read",
-      views: "2.7k",
-      category: "ai",
-      tags: ["Awards", "Recognition", "AI Solutions", "Industry Leadership"],
-=======
       title: "Micro SAAS Revolution: Democratizing Technology for Small Businesses",
       excerpt: "Learn how our micro SAAS solutions are making enterprise-grade technology accessible to businesses of all sizes.",
       category: "Product Updates",
       date: "2024-01-01",
       author: "David Thompson",
       readTime: "5 min read",
->>>>>>> origin/cursor/website-audit-and-enhancement-9620
       image: "/api/placeholder/400/250"
     }
   ];
 
-<<<<<<< HEAD
-  const filteredArticles = newsArticles.filter(article => {
-    const matchesSearch = article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         article.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         article.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory;
-    return matchesSearch && matchesCategory;
-  });
-
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
->>>>>>> origin/cursor/website-audit-and-enhancement-82f7
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
-  };
-
-<<<<<<< HEAD
-  const getCategoryIcon = (categoryId: string) => {
-    const category = categories.find(cat => cat.id === categoryId);
-    return category ? category.icon : Newspaper;
-  };
-
-  const getCategoryName = (categoryId: string) => {
-    const category = categories.find(cat => cat.id === categoryId);
-    return category ? category.name : 'General';
-  };
-
-  const toggleBookmark = (articleId: number) => {
-    // This would typically update a state or make an API call
-    console.log('Toggle bookmark for article:', articleId);
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
-=======
   const categories = [
     "All News",
     "Product Launch",
@@ -651,23 +356,10 @@ const News = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
->>>>>>> origin/cursor/website-audit-and-enhancement-9620
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-<<<<<<< HEAD
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
-              Latest News & Updates
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-              Stay informed with the latest developments in AI, quantum technology, cybersecurity, 
-              and industry insights from Zion Tech Group and the technology world.
-            </p>
-            
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto mb-8">
-=======
     const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory;
     const matchesYear = selectedYear === 'all' || article.publishDate.startsWith(selectedYear);
     const matchesSearch = searchQuery === '' || 
@@ -782,42 +474,16 @@ export default function News() {
       date: '2025-01-15',
       category: 'Product Launch',
       image: '/images/news/quantum-edge-launch.jpg',
->>>>>>> origin/cursor/website-audit-and-enhancement-b7ac
       featured: true
     },
     {
       id: 2,
-<<<<<<< HEAD
-      title: 'Partnership with Microsoft Azure for Enhanced AI Services',
-      excerpt: 'Strategic collaboration brings enterprise-grade AI solutions to our clients with enhanced security and scalability.',
-      category: 'Partnership',
-      date: '2024-08-20',
-      readTime: '3 min read',
-      image: '🤝',
->>>>>>> origin/cursor/website-audit-and-enhancement-bc98
-      featured: true
-    },
-    {
-      id: 3,
-<<<<<<< HEAD
-      title: "Breakthrough in Quantum Neural Network Technology",
-      excerpt: "Our research team achieves significant milestone in quantum computing, reducing processing time for complex AI models by 95% while maintaining accuracy.",
-      author: "Dr. Sarah Chen",
-      publishDate: "2025-01-10",
-      readTime: "5 min read",
-      category: "technology",
-      tags: ["Quantum Computing", "AI", "Research", "Breakthrough"],
-      image: "/api/placeholder/600/400",
-      views: "18.5k",
-      type: "research",
-=======
       title: 'New Cybersecurity Framework for Quantum Threats',
       excerpt: 'Introducing quantum-safe security protocols to protect against future quantum computing threats.',
       category: 'Security',
       date: '2024-08-15',
       readTime: '7 min read',
       image: '🔒',
->>>>>>> origin/cursor/website-audit-and-enhancement-bc98
       featured: true
     }
   ];
@@ -825,108 +491,176 @@ export default function News() {
   const recentNews = [
     {
       id: 4,
-<<<<<<< HEAD
-      title: "Zion Tech Group Expands European Operations",
-      excerpt: "New office opening in Berlin, Germany to serve growing demand for AI solutions across European markets.",
+      title: "Zion Tech Group Named Top AI Solutions Provider 2025",
+      excerpt: "Leading technology research firm recognizes Zion Tech Group for excellence in AI-powered business solutions and innovation.",
+      content: "Zion Tech Group has been recognized as a Top AI Solutions Provider for 2025 by TechResearch Insights, a leading technology research and advisory firm. This recognition highlights our commitment to delivering cutting-edge AI solutions that drive real business value...",
       author: "Zion Tech Group",
-      publishDate: "2025-01-08",
-      readTime: "2 min read",
-      category: "company",
-      tags: ["Expansion", "Europe", "AI Solutions"],
-      image: "/api/placeholder/400/250",
-      views: "8.9k",
-      type: "announcement"
+      publishDate: "2025-01-20",
+      readTime: "3 min read",
+      views: "5.2k",
+      category: "Awards & Recognition",
+      tags: ["Award", "AI Solutions", "Recognition", "2025"],
+      featured: true,
+      image: "/images/news/award-2025.jpg",
+      externalLink: null,
+      isPressRelease: true
+    },
+    {
+      id: 2,
+      title: "New Quantum Neural Network Platform Launch",
+      excerpt: "Revolutionary quantum computing platform now available for enterprise customers, offering unprecedented computational power.",
+      content: "Zion Tech Group is excited to announce the launch of our revolutionary Quantum Neural Network Platform, a breakthrough in quantum computing technology that combines the power of quantum mechanics with advanced neural network architectures...",
+      author: "Dr. Sarah Chen",
+      publishDate: "2025-01-18",
+      readTime: "5 min read",
+      views: "3.8k",
+      category: "Product Updates",
+      tags: ["Quantum Computing", "Neural Networks", "Product Launch", "Innovation"],
+      featured: true,
+      image: "/images/news/quantum-platform-launch.jpg",
+      externalLink: null,
+      isPressRelease: true
+    },
+    {
+      id: 3,
+      title: "Partnership with Global Tech Leaders Announced",
+      excerpt: "Strategic collaboration to accelerate AI adoption across enterprise markets and drive innovation in emerging technologies.",
+      content: "Zion Tech Group is pleased to announce a strategic partnership with leading global technology companies to accelerate the adoption of AI solutions across enterprise markets. This collaboration will focus on developing next-generation AI technologies...",
+      author: "James Wilson",
+      publishDate: "2025-01-15",
+      readTime: "4 min read",
+      views: "2.9k",
+      category: "Partnerships",
+      tags: ["Partnership", "AI Adoption", "Enterprise", "Collaboration"],
+      featured: false,
+      image: "/images/news/partnership-announcement.jpg",
+      externalLink: null,
+      isPressRelease: true
+    },
+    {
+      id: 4,
+      title: "AI Research Breakthrough in Autonomous Systems",
+      excerpt: "New research demonstrates significant improvements in AI autonomous decision-making capabilities and operational efficiency.",
+      content: "Our research team has achieved a major breakthrough in AI autonomous systems, demonstrating significant improvements in decision-making capabilities and operational efficiency. The research, published in leading AI journals, shows...",
+      author: "Dr. Michael Rodriguez",
+      publishDate: "2025-01-12",
+      readTime: "6 min read",
+      views: "4.1k",
+      category: "Research & Development",
+      tags: ["Research", "AI", "Autonomous Systems", "Breakthrough"],
+      featured: false,
+      image: "/images/news/ai-research-breakthrough.jpg",
+      externalLink: null,
+      isPressRelease: false
     },
     {
       id: 5,
-      title: "SOC2 Type II Certification Achieved",
-      excerpt: "Successfully completed SOC2 Type II audit, demonstrating our commitment to security and compliance excellence.",
-      author: "Zion Tech Group",
-      publishDate: "2025-01-06",
-      readTime: "2 min read",
-      category: "company",
-      tags: ["SOC2", "Certification", "Security", "Compliance"],
-      image: "/api/placeholder/400/250",
-      views: "7.2k",
-      type: "announcement"
+      title: "Industry Report: AI Adoption in Manufacturing 2025",
+      excerpt: "Comprehensive analysis of AI adoption trends in manufacturing sector reveals significant growth opportunities and challenges.",
+      content: "Zion Tech Group has released a comprehensive industry report analyzing AI adoption trends in the manufacturing sector for 2025. The report, based on data from over 500 manufacturing companies worldwide, reveals significant growth opportunities...",
+      author: "Lisa Thompson",
+      publishDate: "2025-01-10",
+      readTime: "7 min read",
+      views: "3.3k",
+      category: "Industry Insights",
+      tags: ["Industry Report", "Manufacturing", "AI Adoption", "Trends"],
+      featured: false,
+      image: "/images/news/manufacturing-ai-report.jpg",
+      externalLink: null,
+      isPressRelease: false
     },
     {
       id: 6,
-      title: "New AI Research Lab Opens in Silicon Valley",
-      excerpt: "State-of-the-art facility dedicated to advancing autonomous systems and quantum computing research.",
-      author: "Zion Tech Group",
-      publishDate: "2025-01-04",
-      readTime: "3 min read",
-      category: "company",
-      tags: ["Research Lab", "Silicon Valley", "AI", "Quantum"],
-      image: "/api/placeholder/400/250",
-      views: "6.8k",
-      type: "announcement"
+      title: "SOC2 Compliance Automation Tool Update",
+      excerpt: "Enhanced compliance automation platform now supports additional regulatory frameworks and improved reporting capabilities.",
+      content: "We're excited to announce a major update to our SOC2 Compliance Automation Tool, which now supports additional regulatory frameworks and provides enhanced reporting capabilities. The update includes...",
+      author: "Alex Kim",
+      publishDate: "2025-01-08",
+      readTime: "4 min read",
+      views: "2.7k",
+      category: "Product Updates",
+      tags: ["SOC2", "Compliance", "Automation", "Update"],
+      featured: false,
+      image: "/images/news/soc2-update.jpg",
+      externalLink: null,
+      isPressRelease: true
     },
     {
       id: 7,
-      title: "Industry Report: AI Adoption in Manufacturing",
-      excerpt: "Comprehensive study reveals 40% increase in AI adoption across manufacturing sector, with Zion Tech Group leading implementations.",
-      author: "Industry Research Team",
-      publishDate: "2025-01-02",
-      readTime: "4 min read",
-      category: "industry",
-      tags: ["Manufacturing", "AI Adoption", "Research", "Report"],
-      image: "/api/placeholder/400/250",
-      views: "5.4k",
-      type: "report"
+      title: "Market Analysis: Quantum Computing Investment Trends",
+      excerpt: "Analysis of global quantum computing investment patterns shows accelerating growth and emerging market opportunities.",
+      content: "Our market analysis team has released a comprehensive report on global quantum computing investment trends, revealing accelerating growth and emerging market opportunities. The analysis covers...",
+      author: "David Park",
+      publishDate: "2025-01-05",
+      readTime: "8 min read",
+      views: "2.4k",
+      category: "Market Trends",
+      tags: ["Market Analysis", "Quantum Computing", "Investment", "Trends"],
+      featured: false,
+      image: "/images/news/quantum-investment-trends.jpg",
+      externalLink: null,
+      isPressRelease: false
     },
     {
       id: 8,
-      title: "5G Enterprise Solutions Launch",
-      excerpt: "Introducing next-generation 5G enterprise solutions designed for high-performance, low-latency business applications.",
-      author: "Zion Tech Group",
-      publishDate: "2024-12-30",
-      readTime: "3 min read",
-      category: "technology",
-      tags: ["5G", "Enterprise", "Technology", "Launch"],
-      image: "/api/placeholder/400/250",
-      views: "4.9k",
-      type: "product-launch"
+      title: "Customer Success Story: Fortune 500 Digital Transformation",
+      excerpt: "How a Fortune 500 company achieved 40% operational efficiency improvement using our AI solutions.",
+      content: "We're proud to share the success story of how one of our Fortune 500 clients achieved a 40% improvement in operational efficiency using our AI-powered digital transformation solutions. The project involved...",
+      author: "Emily Johnson",
+      publishDate: "2025-01-03",
+      readTime: "5 min read",
+      views: "3.6k",
+      category: "Company News",
+      tags: ["Customer Success", "Digital Transformation", "AI Solutions", "Case Study"],
+      featured: false,
+      image: "/images/news/fortune500-success.jpg",
+      externalLink: null,
+      isPressRelease: false
     },
     {
       id: 9,
-      title: "Cybersecurity Excellence Award",
-      excerpt: "Recognized for outstanding contributions to cybersecurity innovation and threat prevention.",
+      title: "New Office Opening in Silicon Valley",
+      excerpt: "Expansion into Silicon Valley strengthens our presence in the heart of technology innovation and talent acquisition.",
+      content: "Zion Tech Group is excited to announce the opening of our new office in Silicon Valley, strengthening our presence in the heart of technology innovation and talent acquisition. The new facility will serve as...",
       author: "Zion Tech Group",
+      publishDate: "2024-12-30",
+      readTime: "3 min read",
+      views: "2.1k",
+      category: "Company News",
+      tags: ["Expansion", "Silicon Valley", "Office Opening", "Growth"],
+      featured: false,
+      image: "/images/news/silicon-valley-office.jpg",
+      externalLink: null,
+      isPressRelease: true
+    },
+    {
+      id: 10,
+      title: "AI Ethics and Responsible AI Development",
+      excerpt: "Commitment to ethical AI development and responsible technology deployment in all our solutions.",
+      content: "Zion Tech Group reaffirms our commitment to ethical AI development and responsible technology deployment. We believe that AI technology should be developed and deployed in ways that benefit humanity while minimizing potential risks...",
+      author: "Dr. Sarah Chen",
       publishDate: "2024-12-28",
-      readTime: "2 min read",
-      category: "awards",
-      tags: ["Cybersecurity", "Award", "Innovation", "Security"],
-      image: "/api/placeholder/400/250",
-      views: "4.2k",
-      type: "award"
+      readTime: "6 min read",
+      views: "2.8k",
+      category: "Company News",
+      tags: ["AI Ethics", "Responsible AI", "Technology", "Commitment"],
+      featured: false,
+      image: "/images/news/ai-ethics-commitment.jpg",
+      externalLink: null,
+      isPressRelease: false
     }
   ];
 
-  const allNews = [...featuredNews, ...recentNews];
-
-  const filteredNews = allNews.filter(news => {
-    const matchesCategory = selectedCategory === 'all' || news.category === selectedCategory;
-    const matchesSearch = 
-      news.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      news.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      news.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    return matchesCategory && matchesSearch;
+  const filteredNews = newsItems.filter(item => {
+    const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         item.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    const matchesCategory = selectedCategory === 'All' || item.category === selectedCategory;
+    return matchesSearch && matchesCategory;
   });
 
-  const sortedNews = filteredNews.sort((a, b) => {
-    switch (sortBy) {
-      case 'latest':
-        return new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime();
-      case 'popular':
-        return b.views.localeCompare(a.views, undefined, { numeric: true });
-      case 'featured':
-        return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
-      default:
-        return 0;
-    }
-  });
+  const featuredNews = newsItems.filter(item => item.featured);
+  const regularNews = filteredNews.filter(item => !item.featured);
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -937,76 +671,6 @@ export default function News() {
     });
   };
 
-  const getCategoryColor = (categoryId: string) => {
-    const category = categories.find(cat => cat.id === categoryId);
-    return category ? category.color : 'from-gray-500 to-slate-500';
-  };
-
-  const getNewsTypeIcon = (type: string) => {
-    switch (type) {
-      case 'press-release':
-        return FileText;
-      case 'announcement':
-        return Newspaper;
-      case 'research':
-        return TrendingUp;
-      case 'report':
-        return FileText;
-      case 'product-launch':
-        return Star;
-      case 'award':
-        return Award;
-      default:
-        return Newspaper;
-    }
-  };
-
-  const getNewsTypeColor = (type: string) => {
-    switch (type) {
-      case 'press-release':
-        return 'from-blue-500 to-cyan-500';
-      case 'announcement':
-        return 'from-green-500 to-emerald-500';
-      case 'research':
-        return 'from-purple-500 to-pink-500';
-      case 'report':
-        return 'from-orange-500 to-red-500';
-      case 'product-launch':
-        return 'from-yellow-500 to-orange-500';
-      case 'award':
-        return 'from-pink-500 to-rose-500';
-      default:
-        return 'from-gray-500 to-slate-500';
-    }
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
->>>>>>> origin/cursor/website-audit-and-enhancement-2bc0
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-            transition={{ duration: 0.6 }}
-          >
-            <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-cyan-400 text-sm font-medium mb-6">
-              <Newspaper className="w-4 h-4 mr-2" />
-              Latest Updates
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
-              Company News & Updates
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-              Stay informed about Zion Tech Group's latest innovations, partnerships, awards, and industry developments.
-            </p>
-            
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto">
->>>>>>> origin/cursor/website-audit-and-enhancement-bd86
-=======
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -1020,45 +684,18 @@ export default function News() {
             
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-8">
->>>>>>> origin/cursor/website-audit-and-enhancement-2bc0
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  placeholder="Search news, topics, or keywords..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent text-lg"
-=======
                   placeholder="Search news, announcements, or topics..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
->>>>>>> origin/cursor/website-audit-and-enhancement-2bc0
                 />
               </div>
             </div>
 
-<<<<<<< HEAD
-            {/* Filter Controls */}
-            <div className="flex flex-wrap gap-4 justify-center mb-8">
-              {/* Category Filter */}
-              <div className="flex items-center space-x-2">
-                <Filter className="w-4 h-4 text-gray-400" />
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-3 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                >
-                  {categories.map((category) => (
-                    <option key={category.id} value={category.id}>
-                      {category.name} ({category.count})
-                    </option>
-                  ))}
-                </select>
-=======
             {/* Quick Stats */}
             <div className="flex flex-wrap justify-center gap-6">
               <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white">
@@ -1069,7 +706,6 @@ export default function News() {
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white">
                 <span className="font-semibold">12</span> Awards
->>>>>>> origin/cursor/website-audit-and-enhancement-2bc0
               </div>
 
               {/* Source Filter */}
@@ -1146,7 +782,6 @@ export default function News() {
 
             {/* Category Filter */}
             <div className="flex flex-wrap gap-3">
->>>>>>> origin/cursor/website-audit-and-enhancement-82f7
 =======
                   placeholder="Search news articles and updates..."
                   value={searchQuery}
@@ -1165,32 +800,19 @@ export default function News() {
           <div className="flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between">
             {/* Categories */}
             <div className="flex flex-wrap gap-3">
->>>>>>> origin/cursor/website-audit-and-enhancement-bd86
               {categories.map((category) => (
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg border transition-all duration-300 ${
-                    selectedCategory === category.id
-                      ? 'bg-cyan-500 border-cyan-500 text-white'
-                      : 'bg-gray-800/50 border-gray-700 text-gray-300 hover:border-cyan-500/50 hover:text-cyan-400'
-=======
                   className={`flex items-center space-x-2 px-4 py-2 rounded-lg border transition-all duration-200 ${
                     selectedCategory === category.id
                       ? 'border-orange-500 bg-orange-500/20 text-orange-400'
                       : 'border-gray-700 text-gray-300 hover:border-orange-500/50 hover:text-orange-400'
->>>>>>> origin/cursor/website-audit-and-enhancement-82f7
                   }`}
                 >
                   <category.icon className="w-4 h-4" />
                   <span>{category.name}</span>
-<<<<<<< HEAD
-                  <span className="text-xs bg-white/20 px-2 py-1 rounded-full">
-=======
                   <span className="text-xs bg-gray-700 px-2 py-1 rounded-full">
->>>>>>> origin/cursor/website-audit-and-enhancement-82f7
 =======
                   className={`flex items-center px-4 py-2 rounded-lg border transition-all duration-300 ${
                     selectedCategory === category.id
@@ -1201,13 +823,10 @@ export default function News() {
                   <category.icon className="w-4 h-4 mr-2" />
                   {category.name}
                   <span className="ml-2 px-2 py-1 bg-gray-700/50 rounded-full text-xs">
->>>>>>> origin/cursor/website-audit-and-enhancement-bd86
                     {category.count}
                   </span>
                 </button>
               ))}
-<<<<<<< HEAD
-=======
             </div>
 
             {/* Years */}
@@ -1226,114 +845,11 @@ export default function News() {
                   <span className="ml-1 text-xs opacity-75">({year.count})</span>
                 </button>
               ))}
->>>>>>> origin/cursor/website-audit-and-enhancement-bd86
             </div>
           </motion.div>
         </div>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {/* Featured News */}
-      {featuredNews.length > 0 && (
-<<<<<<< HEAD
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center">
-              Featured News
-            </h2>
-            <div className="grid lg:grid-cols-2 gap-8">
-              {featuredNews.map((article) => {
-                const CategoryIcon = getCategoryIcon(article.category);
-                return (
-                  <article key={article.id} className="bg-gray-800/50 rounded-xl border border-gray-700 overflow-hidden hover:border-cyan-500/50 transition-all duration-300">
-                    <div className="p-8">
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center space-x-2">
-                          <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium border border-cyan-500/30">
-                            Featured
-                          </span>
-                          <span className="bg-gray-700 text-gray-300 px-3 py-1 rounded-full text-sm border border-gray-600">
-                            {getCategoryName(article.category)}
-                          </span>
-                        </div>
-                        <button
-                          onClick={() => toggleBookmark(article.id)}
-                          className="text-gray-400 hover:text-cyan-400 transition-colors duration-300"
-                        >
-                          {article.isBookmarked ? (
-                            <Bookmark className="w-5 h-5 fill-current" />
-                          ) : (
-                            <BookmarkPlus className="w-5 h-5" />
-                          )}
-                        </button>
-                      </div>
-                      
-                      <h3 className="text-2xl font-bold text-white mb-4 hover:text-cyan-400 transition-colors">
-                        {article.title}
-                      </h3>
-                      
-                      <p className="text-gray-300 mb-6 leading-relaxed">
-                        {article.excerpt}
-                      </p>
-                      
-                      <div className="flex items-center space-x-6 text-sm text-gray-400 mb-6">
-                        <div className="flex items-center space-x-2">
-                          <User className="w-4 h-4" />
-                          <span>{article.author}</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <Calendar className="w-4 h-4" />
-                          <span>{formatDate(article.publishDate)}</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <Clock className="w-4 h-4" />
-                          <span>{article.readTime}</span>
-                        </div>
-                      </div>
-                      
-                      <div className="flex items-center justify-between">
-                        <div className="flex space-x-2">
-                          {article.tags.slice(0, 3).map((tag, index) => (
-                            <span key={index} className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs border border-gray-600">
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                        
-                        <div className="flex items-center space-x-4 text-sm text-gray-400">
-                          <div className="flex items-center space-x-1">
-                            <Eye className="w-4 h-4" />
-                            <span>{article.views.toLocaleString()}</span>
-                          </div>
-                          <div className="flex items-center space-x-1">
-                            <Heart className="w-4 h-4" />
-                            <span>{article.likes.toLocaleString()}</span>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <div className="flex items-center justify-between mt-6">
-                        <a
-                          href={article.externalLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
-                        >
-                          Read Full Article
-                          <ExternalLink className="w-4 h-4 ml-2" />
-                        </a>
-                        
-                        <button className="text-gray-400 hover:text-cyan-400 transition-colors duration-300">
-                          <Share2 className="w-5 h-5" />
-                        </button>
-                      </div>
-                    </div>
-                  </article>
-                );
-              })}
-            </div>
-=======
       {/* Breaking News Banner */}
       <section className="py-4 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-600 to-orange-600">
         <div className="max-w-7xl mx-auto">
@@ -1370,75 +886,10 @@ export default function News() {
           <div className="absolute top-20 left-10 w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
           <div className="absolute top-40 right-20 w-3 h-3 bg-teal-400 rounded-full animate-pulse"></div>
           <div className="absolute bottom-20 left-1/4 w-1 h-1 bg-green-400 rounded-full animate-bounce"></div>
->>>>>>> origin/cursor/website-audit-and-enhancement-9620
         </div>
       </section>
 
       {/* Featured Article */}
-<<<<<<< HEAD
-      {filteredArticles.filter(article => article.featured).length > 0 && (
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-2xl font-bold mb-8 text-center">Featured News</h2>
-            {filteredArticles.filter(article => article.featured).map((article) => (
-              <div key={article.id} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl overflow-hidden hover:border-orange-500/50 transition-all duration-300">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  <div className="p-8">
-                    <div className="flex items-center space-x-4 mb-4">
-                      {article.breaking && (
-                        <span className="px-3 py-1 bg-red-500/20 text-red-400 text-sm rounded-full border border-red-500/30">
-                          BREAKING
-                        </span>
-                      )}
-                      <span className="px-3 py-1 bg-orange-500/20 text-orange-400 text-sm rounded-full border border-orange-500/30">
-                        Featured
-                      </span>
-                      <span className="text-gray-400 text-sm">{article.category.toUpperCase()}</span>
-                    </div>
-                    <h3 className="text-2xl font-bold mb-4 hover:text-orange-400 transition-colors">
-                      {article.title}
-                    </h3>
-                    <p className="text-gray-300 mb-6 leading-relaxed">{article.excerpt}</p>
-                    <div className="flex items-center space-x-6 text-sm text-gray-400 mb-6">
-                      <div className="flex items-center space-x-2">
-                        <User className="w-4 h-4" />
-                        <span>{article.author}</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <Calendar className="w-4 h-4" />
-                        <span>{formatDate(article.date)}</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <Clock className="w-4 h-4" />
-                        <span>{article.readTime}</span>
-                      </div>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <div className="flex flex-wrap gap-2">
-                        {article.tags.map((tag, idx) => (
-                          <span key={idx} className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                      <Link
-                        to={`/news/${article.id}`}
-                        className="flex items-center space-x-2 text-orange-400 hover:text-orange-300 transition-colors"
-                      >
-                        <span>Read Full Article</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="bg-gray-700/50 flex items-center justify-center">
-                    <div className="text-gray-500 text-center p-8">
-                      <div className="w-32 h-32 bg-gray-600 rounded-lg mx-auto mb-4"></div>
-                      <p>News Image</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-=======
       {/* Categories Filter */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1459,133 +910,8 @@ export default function News() {
                   {category.count}
                 </span>
               </button>
->>>>>>> origin/cursor/website-audit-and-enhancement-2bc0
             ))}
->>>>>>> origin/cursor/website-audit-and-enhancement-82f7
           </div>
-<<<<<<< HEAD
-        </section>
-      )}
-
-<<<<<<< HEAD
-      {/* All News */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold text-white">
-              Latest News
-            </h2>
-            <div className="text-gray-400">
-              {filteredNews.length} of {newsArticles.length} articles
-            </div>
-          </div>
-
-          {filteredNews.length === 0 ? (
-            <div className="text-center py-20">
-              <Newspaper className="w-16 h-16 text-gray-500 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-400 mb-2">
-                No news articles found
-              </h3>
-              <p className="text-gray-500">
-                Try adjusting your search criteria or browse all categories.
-              </p>
-            </div>
-          ) : (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredNews.map((article) => {
-                const CategoryIcon = getCategoryIcon(article.category);
-                return (
-                  <article key={article.id} className="bg-gray-800/50 rounded-xl border border-gray-700 overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
-                    <div className="p-6">
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center space-x-2">
-                          <span className="bg-gray-700 text-gray-300 px-3 py-1 rounded-full text-sm border border-gray-600">
-                            {getCategoryName(article.category)}
-                          </span>
-                          {article.featured && (
-                            <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium border border-cyan-500/30">
-                              Featured
-                            </span>
-                          )}
-                        </div>
-                        <button
-                          onClick={() => toggleBookmark(article.id)}
-                          className="text-gray-400 hover:text-cyan-400 transition-colors duration-300"
-                        >
-                          {article.isBookmarked ? (
-                            <Bookmark className="w-4 h-4 fill-current" />
-                          ) : (
-                            <BookmarkPlus className="w-4 h-4" />
-                          )}
-                        </button>
-                      </div>
-                      
-                      <h3 className="text-xl font-bold text-white mb-3 hover:text-cyan-400 transition-colors line-clamp-2">
-                        {article.title}
-                      </h3>
-                      
-                      <p className="text-gray-300 mb-4 leading-relaxed line-clamp-3">
-                        {article.excerpt}
-                      </p>
-                      
-                      <div className="flex items-center space-x-4 text-sm text-gray-400 mb-4">
-                        <div className="flex items-center space-x-2">
-                          <User className="w-4 h-4" />
-                          <span>{article.author}</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <Calendar className="w-4 h-4" />
-                          <span>{formatDate(article.publishDate)}</span>
-                        </div>
-                      </div>
-                      
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="flex space-x-2">
-                          {article.tags.slice(0, 2).map((tag, index) => (
-                            <span key={index} className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs border border-gray-600">
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                        
-                        <div className="flex items-center space-x-1 text-sm text-gray-400">
-                          <Clock className="w-4 h-4" />
-                          <span>{article.readTime}</span>
-                        </div>
-                      </div>
-                      
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-3 text-sm text-gray-400">
-                          <div className="flex items-center space-x-1">
-                            <Eye className="w-4 h-4" />
-                            <span>{article.views.toLocaleString()}</span>
-                          </div>
-                          <div className="flex items-center space-x-1">
-                            <Heart className="w-4 h-4" />
-                            <span>{article.likes.toLocaleString()}</span>
-                          </div>
-                        </div>
-                        
-                        <div className="flex items-center space-x-2">
-                          <button className="text-gray-400 hover:text-cyan-400 transition-colors duration-300">
-                            <Share2 className="w-4 h-4" />
-                          </button>
-                          <a
-                            href={article.externalLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
-                          >
-                            Read More
-                            <ExternalLink className="w-4 h-4 ml-2" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </article>
-                );
-              })}
-=======
       {/* News Articles Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1730,7 +1056,6 @@ export default function News() {
                       Read Full Article
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </button>
->>>>>>> origin/cursor/website-audit-and-enhancement-bd86
                   </div>
                 </motion.article>
               ))}
@@ -1820,7 +1145,6 @@ export default function News() {
                   </div>
                 </motion.article>
               ))}
->>>>>>> origin/cursor/website-audit-and-enhancement-82f7
             </div>
           )}
           
@@ -1834,27 +1158,6 @@ export default function News() {
         </div>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {/* Newsletter Signup */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Stay Informed
-          </h2>
-          <p className="text-xl text-gray-400 mb-8">
-            Get the latest news and insights delivered to your inbox. Never miss an important update.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-            />
-            <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
-              Subscribe
-            </button>
-=======
       {/* Press Kit Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
         <div className="max-w-4xl mx-auto text-center">
@@ -1876,7 +1179,6 @@ export default function News() {
             >
               Media Contact
             </Link>
->>>>>>> origin/cursor/website-audit-and-enhancement-82f7
 =======
         </div>
       </section>
@@ -2036,38 +1338,10 @@ export default function News() {
                 </button>
               ))}
             </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-2bc0
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6 text-white">
-            Ready to Stay Ahead?
-          </h2>
-          <p className="text-xl text-gray-400 mb-8">
-            Discover how our technology solutions can keep your business at the forefront of innovation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-            >
-              <Newspaper className="w-5 h-5 mr-2" />
-              Get Started
-            </Link>
-            <Link
-              to="/services"
-              className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
-            >
-              <TrendingUp className="w-5 h-5 mr-2" />
-              Explore Services
-            </Link>
-=======
       {/* Newsletter Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -2084,7 +1358,6 @@ export default function News() {
             <button className="px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-200">
               Subscribe
             </button>
->>>>>>> origin/cursor/website-audit-and-enhancement-82f7
           </div>
         </div>
       </section>
@@ -2248,16 +1521,11 @@ export default function News() {
               </button>
               <button className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300">
                 Contact Media Relations
->>>>>>> origin/cursor/website-audit-and-enhancement-2bc0
               </button>
             </div>
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-bd86
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-2bc0
 =======
       title: 'AI-Powered Business Intelligence Suite Update',
       excerpt: 'Enhanced analytics capabilities with real-time insights and predictive modeling.',
@@ -2343,22 +1611,56 @@ export default function News() {
             <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-medium hover:bg-cyan-400/20 transition-all duration-300">
               RSS Feed
             </button>
+=======
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Latest News & Updates
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Stay informed about our latest developments, product updates, industry insights, 
+              and company milestones as we continue to innovate and grow.
+            </p>
+            
+            {/* Search and Filter */}
+            <div className="max-w-2xl mx-auto mb-8">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search news, updates, or topics..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                />
+              </div>
+            </div>
+
+            {/* Category Filter */}
+            <div className="flex flex-wrap justify-center gap-3">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+                    selectedCategory === category
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
+                      : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
+                  }`}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Category Filter */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-wrap justify-center gap-2">
-            {categories.map((category, index) => (
-              <button
-                key={index}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                  index === 0
-                    ? 'bg-cyan-500 text-white'
-                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
-=======
       {featuredArticle && (
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -2420,7 +1722,6 @@ export default function News() {
                   index === 0
                     ? 'bg-gradient-to-r from-green-500 to-teal-500 text-white'
                     : 'bg-gray-800/50 text-gray-300 hover:bg-green-500/20 hover:text-green-400 border border-gray-700/50 hover:border-green-400/50'
->>>>>>> origin/cursor/website-audit-and-enhancement-9620
                 }`}
               >
                 {category}
@@ -2428,166 +1729,82 @@ export default function News() {
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
-
       {/* Featured News */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Featured Stories
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our most important announcements and breakthroughs
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {featuredNews.map((news) => (
-              <div key={news.id} className="group">
-                <div className="p-6 rounded-2xl border border-gray-700 bg-gray-800/30 hover:border-cyan-400/50 transition-all duration-300 h-full">
-                  <div className="text-6xl mb-4">{news.image}</div>
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-xs font-medium">
-                      {news.category}
+      {featuredNews.length > 0 && (
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured News</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {featuredNews.map((item) => (
+              <article
+                key={item.id}
+                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
+              >
+                <div className="p-6">
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="px-3 py-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs font-medium rounded-full">
+                      Featured
                     </span>
-                    <span className="text-gray-400 text-sm">{news.readTime}</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
-                    {news.title}
-                  </h3>
-                  <p className="text-gray-300 mb-4 line-clamp-3">{news.excerpt}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-400 text-sm">{news.date}</span>
-                    <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
-                      Read More →
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Recent News */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Latest News
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Recent updates and industry insights
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {recentNews.map((news) => (
-              <div key={news.id} className="group">
-                <div className="p-6 rounded-xl border border-gray-700 bg-gray-800/30 hover:border-cyan-400/50 transition-all duration-300 h-full">
-                  <div className="text-4xl mb-4">{news.image}</div>
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="px-2 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">
-                      {news.category}
+                    <span className="px-3 py-1 bg-gray-700 text-gray-300 text-xs rounded-full">
+                      {item.category}
                     </span>
-                    <span className="text-gray-400 text-sm">{news.readTime}</span>
+                    {item.isPressRelease && (
+                      <span className="px-3 py-1 bg-red-600 text-white text-xs rounded-full">
+                        Press Release
+                      </span>
+                    )}
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2">
-                    {news.title}
+                  
+                  <h3 className="text-2xl font-bold text-white mb-4 leading-tight">
+                    {item.title}
                   </h3>
-                  <p className="text-gray-300 mb-4 line-clamp-3 text-sm">{news.excerpt}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-400 text-xs">{news.date}</span>
-                    <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm">
-                      Read More →
-                    </button>
+                  
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    {item.excerpt}
+                  </p>
+                  
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="flex items-center space-x-4 text-sm text-gray-400">
+                      <div className="flex items-center">
+                        <User className="w-4 h-4 mr-2" />
+                        {item.author}
+                      </div>
+                      <div className="flex items-center">
+                        <Calendar className="w-4 h-4 mr-2" />
+                        {formatDate(item.publishDate)}
+                      </div>
+                      <div className="flex items-center">
+                        <Clock className="w-4 h-4 mr-2" />
+                        {item.readTime}
+                      </div>
+                    </div>
+                    <div className="flex items-center text-sm text-gray-400">
+                      <Eye className="w-4 h-4 mr-2" />
+                      {item.views}
+                    </div>
                   </div>
+                  
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {item.tags.slice(0, 3).map((tag, index) => (
+                      <span
+                        key={index}
+                        className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center group">
+                    Read Full Article
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                  </button>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
       </div>
 
-      {/* Newsletter Signup */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Stay Updated
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Get the latest news, insights, and updates delivered directly to your inbox
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-              />
-              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300">
-                Subscribe
-              </button>
-            </div>
-            <p className="text-sm text-gray-400 mt-4">
-              No spam, unsubscribe at any time. We respect your privacy.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Press Kit */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Press & Media
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Resources for journalists and media professionals
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                title: 'Press Releases',
-                description: 'Official announcements and company news',
-                icon: '📰',
-                action: 'View Releases'
-              },
-              {
-                title: 'Media Kit',
-                description: 'Company logos, images, and brand guidelines',
-                icon: '🎨',
-                action: 'Download Kit'
-              },
-              {
-                title: 'Contact Media',
-                description: 'Get in touch with our PR team',
-                icon: '📞',
-                action: 'Contact Us'
-              }
-            ].map((item, index) => (
-              <div key={index} className="p-6 rounded-xl border border-gray-700 bg-gray-800/30 hover:border-cyan-400/50 transition-all duration-300 text-center">
-                <div className="text-4xl mb-4">{item.icon}</div>
-                <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
-                <p className="text-gray-300 mb-4 text-sm">{item.description}</p>
-                <button className="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-colors duration-300 text-sm">
-                  {item.action}
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-bc98
-    </div>
-  );
-}
-=======
       </section>
 
       {/* News Grid */}
@@ -2716,7 +1933,6 @@ export default function News() {
 };
 
 export default News;
->>>>>>> origin/cursor/website-audit-and-enhancement-9620
 =======
       title: 'Zion Tech Group Named Top AI Company by Tech Innovation Awards',
       excerpt: 'Recognition for our groundbreaking work in autonomous AI systems and machine learning solutions that are transforming industries worldwide.',
@@ -2911,6 +2127,97 @@ export default News;
               />
               <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-r-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 font-medium">
                 Subscribe
+=======
+      {/* Regular News */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <h2 className="text-3xl font-bold text-white mb-8 text-center">
+          Latest Updates
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {regularNews.map((item) => (
+            <article
+              key={item.id}
+              className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
+            >
+              <div className="p-6">
+                <div className="flex items-center gap-2 mb-4">
+                  <span className="px-3 py-1 bg-gray-700 text-gray-300 text-xs rounded-full">
+                    {item.category}
+                  </span>
+                  {item.isPressRelease && (
+                    <span className="px-3 py-1 bg-red-600 text-white text-xs rounded-full">
+                      Press Release
+                    </span>
+                  )}
+                </div>
+                
+                <h3 className="text-xl font-bold text-white mb-4 leading-tight">
+                  {item.title}
+                </h3>
+                
+                <p className="text-gray-300 mb-6 text-sm leading-relaxed">
+                  {item.excerpt}
+                </p>
+                
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center space-x-4 text-sm text-gray-400">
+                    <div className="flex items-center">
+                      <User className="w-4 h-4 mr-2" />
+                      {item.author}
+                    </div>
+                    <div className="flex items-center">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      {formatDate(item.publishDate)}
+                    </div>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-400">
+                    <Clock className="w-4 h-4 mr-2" />
+                    {item.readTime}
+                  </div>
+                </div>
+                
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {item.tags.slice(0, 2).map((tag, index) => (
+                    <span
+                      key={index}
+                      className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                
+                <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center group">
+                  Read Article
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                </button>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+
+      {/* Press Room CTA */}
+      <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Press & Media Inquiries
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Journalists and media representatives can access our press kit, 
+              high-resolution images, and contact our media relations team.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"
+              >
+                Contact Media Relations
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <button className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-medium rounded-lg transition-all duration-200">
+                Download Press Kit
               </button>
             </div>
           </div>
@@ -2919,4 +2226,3 @@ export default News;
     </div>
   );
 }
->>>>>>> origin/cursor/website-audit-and-enhancement-b7ac
