@@ -19,6 +19,7 @@ Disallow: /backup/
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fbd9
 
 # Allow important pages
+<<<<<<< HEAD
 Allow: /
 Allow: /services/
 Allow: /ai-solutions/
@@ -46,3 +47,14 @@ Allow: /case-studies/
 # Crawl delay (optional)
 Crawl-delay: 1
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fbd9
+=======
+Allow: /services/
+Allow: /solutions/
+Allow: /about/
+Allow: /contact/
+Allow: /blog/
+Allow: /news/
+
+# Crawl delay (optional)
+Crawl-delay: 1
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-678c

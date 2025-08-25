@@ -11,6 +11,7 @@
     <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+<<<<<<< HEAD
   </url>
   <url>
     <loc>https://ziontechgroup.com/ai-solutions</loc>
@@ -416,35 +417,69 @@
   </url>
   <url>
     <loc>https://ziontechgroup.com/faq</loc>
-    <lastmod>2025-08-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+=======
   </url>
   <url>
+    <loc>https://ziontechgroup.com/ai-solutions</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/enterprise-solutions</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/about</loc>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-678c
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+<<<<<<< HEAD
     <loc>https://ziontechgroup.com/events</loc>
+=======
+    <loc>https://ziontechgroup.com/contact</loc>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-678c
     <lastmod>2025-08-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
+<<<<<<< HEAD
     <loc>https://ziontechgroup.com/webinars</loc>
+=======
+    <loc>https://ziontechgroup.com/mission</loc>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-678c
     <lastmod>2025-08-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
+<<<<<<< HEAD
     <loc>https://ziontechgroup.com/white-papers</loc>
+=======
+    <loc>https://ziontechgroup.com/team</loc>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-678c
     <lastmod>2025-08-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
+<<<<<<< HEAD
     <loc>https://ziontechgroup.com/testimonials</loc>
+=======
+    <loc>https://ziontechgroup.com/pricing</loc>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-678c
     <lastmod>2025-08-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
+<<<<<<< HEAD
     <loc>https://ziontechgroup.com/support</loc>
     <lastmod>2025-08-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -452,17 +487,31 @@
   </url>
   <url>
     <loc>https://ziontechgroup.com/docs</loc>
+=======
+    <loc>https://ziontechgroup.com/careers</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/partners</loc>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-678c
     <lastmod>2025-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
+<<<<<<< HEAD
     <loc>https://ziontechgroup.com/marketplace</loc>
+=======
+    <loc>https://ziontechgroup.com/blog</loc>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-678c
     <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+<<<<<<< HEAD
     <loc>https://ziontechgroup.com/community</loc>
     <lastmod>2025-08-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -470,11 +519,21 @@
   </url>
   <url>
     <loc>https://ziontechgroup.com/emerging-tech</loc>
+=======
+    <loc>https://ziontechgroup.com/news</loc>
     <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ziontechgroup.com/services-overview</loc>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-678c
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+<<<<<<< HEAD
     <loc>https://ziontechgroup.com/talent-directory</loc>
     <lastmod>2025-08-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -488,6 +547,87 @@
   </url>
   <url>
     <loc>https://ziontechgroup.com/ai-matcher</loc>
+=======
+    <loc>https://ziontechgroup.com/services/ai-autonomous-systems</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/services/quantum-technology</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/services/cybersecurity</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/services/it-infrastructure</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/services/micro-saas-solutions</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/services/industry-solutions</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/services/innovative-new-services</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/services/specialized-it-infrastructure</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/solutions/enterprise</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/solutions/healthcare</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/ai-services</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/cloud-devops</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/digital-transformation</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/emerging-tech</loc>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-678c
     <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -497,5 +637,26 @@
     <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+<<<<<<< HEAD
+=======
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/match</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/talent</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/talents</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-678c
   </url>
 </urlset>
