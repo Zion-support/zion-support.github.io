@@ -24,9 +24,14 @@ export const SEO: React.FC<SEOProps> = ({
   description,
   keywords = [],
   canonical,
-  ogImage = '/images/zion-og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
+  image = '/images/zion-og-image.jpg',
+  url,
+  type = 'website',
+  publishedTime,
+  modifiedTime,
+  author,
+  section,
+  tags,
   structuredData,
   noindex = false,
   nofollow = false,
@@ -79,18 +84,18 @@ export const SEO: React.FC<SEOProps> = ({
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} />
+      <meta property="og:type" content={type} />
       <meta property="og:url" content={canonical || window.location.href} />
-      <meta property="og:image" content={ogImage} />
+      <meta property="og:image" content={image} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content={siteName} />
       
       {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:image" content={image} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
       
@@ -158,7 +163,7 @@ export function HomePageSEO() {
       description="Discover top AI and tech talent, services, and equipment in one place. Connect with experts, find innovative solutions, and accelerate your tech projects."
       keywords="AI marketplace, tech talent, IT services, tech equipment, AI experts, developers, tech consulting, innovation"
       canonical="/"
-      ogImage="/images/zion-homepage-og.jpg"
+      image="/images/zion-homepage-og.jpg"
       structuredData={{
         "@type": "WebSite",
         "name": "Zion Tech Group",
@@ -188,7 +193,7 @@ export function ServicePageSEO({
       description={description}
       keywords={`${serviceName}, ${category}, tech services, IT solutions, Zion Tech Group`}
       canonical={`/services/${serviceName.toLowerCase().replace(/\s+/g, '-')}`}
-      ogImage="/images/zion-services-og.jpg"
+      image="/images/zion-services-og.jpg"
       structuredData={{
         "@type": "Service",
         "name": serviceName,
@@ -219,7 +224,7 @@ export function TalentPageSEO({
       description={description}
       keywords={`${talentName}, ${skills.join(', ')}, tech talent, AI expert, developer, Zion Tech Group`}
       canonical={`/talent/${talentName.toLowerCase().replace(/\s+/g, '-')}`}
-      ogImage="/images/zion-profile-og.jpg"
+      image="/images/zion-profile-og.jpg"
       structuredData={{
         "@type": "Person",
         "name": talentName,

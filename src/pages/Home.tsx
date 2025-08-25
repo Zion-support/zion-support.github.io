@@ -28,7 +28,11 @@ import {
   Clock,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  ArrowUpRight,
+  Sparkles,
+  Globe2,
+  ShieldCheck
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 
@@ -57,7 +61,7 @@ const Home: React.FC = () => {
       description: "Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization.",
       image: "/images/hero-ai-solutions.jpg",
       cta: "Explore AI Solutions",
-      path: "/ai-solutions"
+      path: "/ai-services"
     },
     {
       title: "Comprehensive IT Services",
@@ -73,7 +77,7 @@ const Home: React.FC = () => {
       description: "Custom SaaS applications designed to streamline operations and boost productivity.",
       image: "/images/hero-saas.jpg",
       cta: "Learn More",
-      path: "/services/micro-saas-solutions"
+      path: "/services"
     }
   ];
 
@@ -89,7 +93,7 @@ const Home: React.FC = () => {
       title: "AI Business Intelligence",
       description: "Transform data into actionable insights with our AI-powered analytics platform.",
       icon: Brain,
-      path: "/services/ai-business-intelligence",
+      path: "/ai-business-intelligence",
       category: "AI Solutions",
       price: "$2,500/mo",
       rating: 4.9,
@@ -101,7 +105,7 @@ const Home: React.FC = () => {
       title: "Cloud Infrastructure",
       description: "Scalable cloud solutions designed for enterprise performance and security.",
       icon: Cloud,
-      path: "/services/cloud-infrastructure",
+      path: "/cloud-devops",
       category: "Infrastructure",
       price: "$1,800/mo",
       rating: 4.8,
@@ -113,7 +117,7 @@ const Home: React.FC = () => {
       title: "Cybersecurity Solutions",
       description: "Comprehensive security services to protect your digital assets and data.",
       icon: Shield,
-      path: "/services/cybersecurity",
+      path: "/enterprise-solutions",
       category: "Security",
       price: "$3,200/mo",
       rating: 4.9,
@@ -143,6 +147,33 @@ const Home: React.FC = () => {
       icon: Database,
       title: "Data-Driven",
       description: "Insights that drive better business decisions"
+    }
+  ];
+
+  const latestTechnologies = [
+    {
+      title: "Quantum Computing",
+      description: "Next-generation computing power for complex problem solving",
+      icon: Sparkles,
+      path: "/services"
+    },
+    {
+      title: "Blockchain Solutions",
+      description: "Secure, transparent, and decentralized applications",
+      icon: ShieldCheck,
+      path: "/services"
+    },
+    {
+      title: "IoT Management",
+      description: "Connect and manage your devices intelligently",
+      icon: Globe2,
+      path: "/services"
+    },
+    {
+      title: "Edge Computing",
+      description: "Process data closer to the source for faster results",
+      icon: Zap,
+      path: "/services"
     }
   ];
 
@@ -179,9 +210,9 @@ const Home: React.FC = () => {
     <div className="min-h-screen bg-gray-900 text-white">
       <SEOHead 
         config={{
-          title: "AI-Powered Innovation & Enterprise Solutions",
-          description: "Transform your business with cutting-edge artificial intelligence solutions, comprehensive IT services, and digital transformation expertise.",
-          keywords: "AI solutions, artificial intelligence, enterprise IT, cybersecurity, cloud computing, digital transformation",
+          title: "Zion Tech Group - AI-Powered Innovation & Enterprise Solutions",
+          description: "Transform your business with cutting-edge artificial intelligence solutions, comprehensive IT services, and digital transformation expertise from Zion Tech Group.",
+          keywords: "AI solutions, artificial intelligence, enterprise IT, cybersecurity, cloud computing, digital transformation, Zion Tech Group",
           type: "website"
         }}
       />
@@ -198,37 +229,26 @@ const Home: React.FC = () => {
         />
         
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-gray-900/60" />
         
         {/* Content */}
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            {heroSlides[currentSlide].title}
-          </h1>
-          
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-gray-200">
-            {heroSlides[currentSlide].subtitle}
-          </h2>
-          
-          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            {heroSlides[currentSlide].description}
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="relative z-10 text-center max-w-6xl mx-auto px-6">
+          <div className="mb-8">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              {heroSlides[currentSlide].title}
+            </h1>
+            <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-gray-200">
+              {heroSlides[currentSlide].subtitle}
+            </h2>
+            <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              {heroSlides[currentSlide].description}
+            </p>
             <Link
               to={heroSlides[currentSlide].path}
-              className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
-              aria-label={`Learn more about ${heroSlides[currentSlide].title}`}
+              className="inline-flex items-center bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
             >
               {heroSlides[currentSlide].cta}
-            </Link>
-            
-            <Link
-              to="/services"
-              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
-              aria-label="Explore all our services"
-            >
-              Explore Services
+              <ArrowUpRight className="ml-2 h-5 w-5" />
             </Link>
           </div>
         </div>
@@ -236,22 +256,20 @@ const Home: React.FC = () => {
         {/* Navigation Controls */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 rounded-full bg-black/50 hover:bg-black/70 text-white transition-all duration-300"
-          aria-label="Previous slide"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800/50 hover:bg-gray-800/80 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
         >
-          <ChevronLeft className="w-6 h-6" />
+          <ChevronLeft className="h-6 w-6" />
         </button>
         
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 rounded-full bg-black/50 hover:bg-black/70 text-white transition-all duration-300"
-          aria-label="Next slide"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800/50 hover:bg-gray-800/80 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
         >
-          <ChevronRight className="w-6 h-6" />
+          <ChevronRight className="h-6 w-6" />
         </button>
 
         {/* Slide Indicators */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3">
           {heroSlides.map((_, index) => (
             <button
               key={index}
@@ -259,27 +277,34 @@ const Home: React.FC = () => {
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentSlide 
                   ? 'bg-cyan-500 scale-125' 
-                  : 'bg-white/50 hover:bg-white/75'
+                  : 'bg-gray-600 hover:bg-gray-400'
               }`}
-              aria-label={`Go to slide ${index + 1}`}
             />
           ))}
         </div>
+
+        {/* Auto-play Toggle */}
+        <button
+          onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+          className="absolute top-8 right-8 bg-gray-800/50 hover:bg-gray-800/80 text-white px-4 py-2 rounded-lg transition-all duration-300"
+        >
+          {isAutoPlaying ? 'Pause' : 'Play'}
+        </button>
       </section>
 
       {/* Stats Section */}
       <section className="py-20 bg-gray-800">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mb-4">
-                  <stat.icon className="w-8 h-8 text-white" />
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-4">
+                  <stat.icon className="h-8 w-8 text-white" />
                 </div>
                 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
                   {stat.value}
                 </div>
-                <div className="text-gray-400">{stat.label}</div>
+                <div className="text-gray-300">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -288,91 +313,60 @@ const Home: React.FC = () => {
 
       {/* Featured Services Section */}
       <section className="py-20 bg-gray-900">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Featured Services
+              Our Featured Services
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Discover our most popular solutions that are transforming businesses worldwide
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover our comprehensive range of technology solutions designed to drive your business forward
             </p>
           </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredServices.map((service, index) => (
-              <article key={index} className="group bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/10">
-                {/* Header */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg">
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="text-right">
-                    <div className="text-2xl font-bold text-white">{service.price}</div>
-                    <div className="text-sm text-gray-400">{service.category}</div>
-                  </div>
+              <div key={index} className="bg-gray-800 rounded-xl p-8 hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-6">
+                  <service.icon className="h-8 w-8 text-white" />
                 </div>
-
-                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-                  {service.title}
-                </h3>
                 
-                <p className="text-gray-400 mb-4 line-clamp-3">
-                  {service.description}
-                </p>
-
-                {/* Highlights */}
-                <div className="mb-4">
-                  {service.highlights.map((highlight, index) => (
-                    <div key={index} className="flex items-center text-sm text-cyan-400 mb-1">
-                      <CheckCircle className="w-4 h-4 mr-2" />
-                      {highlight}
-                    </div>
-                  ))}
-                </div>
-
-                {/* Rating */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center">
-                    <div className="flex items-center mr-2">
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className={`w-4 h-4 ${
-                            i < Math.floor(service.rating)
-                              ? 'text-yellow-400 fill-current'
-                              : 'text-gray-600'
-                          }`}
-                        />
-                      ))}
-                    </div>
-                    <span className="text-sm text-gray-400">
-                      {service.rating} ({service.reviewCount})
-                    </span>
-                  </div>
-                </div>
-
-                {/* Features */}
-                <div className="mb-6">
-                  <div className="text-sm text-gray-400 mb-2">Key Features:</div>
-                  <div className="grid grid-cols-2 gap-2">
-                    {service.features.map((feature, index) => (
-                      <div key={index} className="flex items-center text-xs text-gray-300">
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-1" />
-                        {feature}
-                      </div>
+                <h3 className="text-2xl font-bold mb-3 text-white">{service.title}</h3>
+                <p className="text-gray-300 mb-6">{service.description}</p>
+                
+                <div className="flex items-center mb-4">
+                  <div className="flex items-center text-yellow-400">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className={`h-5 w-5 ${i < Math.floor(service.rating) ? 'fill-current' : ''}`} />
                     ))}
                   </div>
+                  <span className="ml-2 text-gray-400">({service.reviewCount} reviews)</span>
                 </div>
-
+                
+                <div className="mb-6">
+                  <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
+                  <span className="text-gray-400 text-sm ml-2">/month</span>
+                </div>
+                
+                <div className="mb-6">
+                  <h4 className="font-semibold text-white mb-2">Key Features:</h4>
+                  <ul className="space-y-1">
+                    {service.highlights.map((feature, i) => (
+                      <li key={i} className="flex items-center text-gray-300">
+                        <CheckCircle className="h-4 w-4 text-cyan-500 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
                 <Link
                   to={service.path}
-                  className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white rounded-lg transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
-                  aria-label={`Learn more about ${service.title}`}
+                  className="w-full inline-flex items-center justify-center bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-lg"
                 >
                   Learn More
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
-              </article>
+              </div>
             ))}
           </div>
         </div>
@@ -380,83 +374,81 @@ const Home: React.FC = () => {
 
       {/* Why Choose Us Section */}
       <section className="py-20 bg-gray-800">
-        <div className="container mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Why Choose Zion Tech Group?
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We combine cutting-edge technology with proven expertise to deliver exceptional results
             </p>
           </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {whyChooseUs.map((feature, index) => (
               <div key={index} className="text-center group">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="w-10 h-10 text-white" />
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="h-10 w-10 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-400 leading-relaxed">
-                  {feature.description}
-                </p>
+                <h3 className="text-xl font-bold mb-3 text-white">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-900 to-blue-900">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
-            Join hundreds of companies that have already revolutionized their operations with our solutions
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="px-8 py-4 bg-white text-cyan-900 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-              aria-label="Get started today with our solutions"
-            >
-              Get Started Today
-            </Link>
-            <Link
-              to="/pricing"
-              className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-900 transition-all duration-300 transform hover:scale-105"
-              aria-label="View our pricing plans"
-            >
-              View Pricing
-            </Link>
+      {/* Latest Technologies Section */}
+      <section className="py-20 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Cutting-Edge Technologies
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Stay ahead of the curve with our innovative technology solutions
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {latestTechnologies.map((tech, index) => (
+              <div key={index} className="bg-gray-800 rounded-xl p-6 hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-4">
+                  <tech.icon className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-white">{tech.title}</h3>
+                <p className="text-gray-300 mb-4">{tech.description}</p>
+                <Link
+                  to={tech.path}
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors duration-300"
+                >
+                  Learn More
+                  <ArrowUpRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Lazy Loaded Components */}
       <Suspense fallback={<LoadingFallback message="Loading services..." />}>
         <LazyServicesSection />
       </Suspense>
 
-      {/* Features Section */}
       <Suspense fallback={<LoadingFallback message="Loading features..." />}>
         <LazyFeaturesSection />
       </Suspense>
 
-      {/* Testimonials Section */}
       <Suspense fallback={<LoadingFallback message="Loading testimonials..." />}>
         <LazyTestimonialsSection />
       </Suspense>
 
-      {/* CTA Section */}
       <Suspense fallback={<LoadingFallback message="Loading CTA..." />}>
         <LazyCTASection />
       </Suspense>
     </div>
   );
-}
+};
 
 export default Home;

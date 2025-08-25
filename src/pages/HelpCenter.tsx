@@ -321,4 +321,6 @@ const HelpCenter: React.FC = () => {
       </section>
     </div>
   );
-}
+};
+
+export default HelpCenter;
