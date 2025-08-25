@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { 
   X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, 
   Shield, Handshake, ChevronDown, ChevronRight, Brain, Cpu, Database, Network, Code, Palette, 
@@ -28,6 +29,9 @@ import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitte
 =======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, ShoppingCart, Code, DollarSign } from 'lucide-react';
 >>>>>>> origin/cursor/website-audit-and-enhancement-0fd3
+=======
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Database, Cpu, Lock, Rocket, BookOpen, FileText, Calendar, HelpCircle, Settings, BarChart3, Target, Building2, Heart, Car, Factory, ShoppingCart, GraduationCap, Microscope, Truck, Plane, Satellite, Atom, Cloud, Signal, Github, Link as LinkIcon } from 'lucide-react';
+>>>>>>> origin/cursor/website-audit-and-enhancement-232f
 import { Link, useLocation } from 'react-router-dom';
 import { useSidebar } from '../context/SidebarContext';
 
@@ -69,6 +73,7 @@ export default function Sidebar() {
       title: 'Main Navigation',
       items: [
         { name: 'Home', path: '/', icon: Home },
+<<<<<<< HEAD
         { name: 'Services', path: '/services', icon: Briefcase },
 <<<<<<< HEAD
         { name: 'Solutions', path: '/solutions/enterprise', icon: Building },
@@ -80,11 +85,17 @@ export default function Sidebar() {
         { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
         { name: 'Pricing', path: '/pricing', icon: Briefcase },
 >>>>>>> origin/cursor/website-audit-and-enhancement-0fd3
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-232f
         { name: 'About', path: '/about', icon: Users },
+        { name: 'Services', path: '/services', icon: Briefcase },
+        { name: 'Solutions', path: '/solutions/enterprise', icon: Target },
+        { name: 'Pricing', path: '/pricing', icon: BarChart3 },
         { name: 'Contact', path: '/contact', icon: Phone }
       ]
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -483,6 +494,85 @@ export default function Sidebar() {
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Briefcase },
         { name: 'Emerging Technology', path: '/emerging-tech', icon: Globe }
 >>>>>>> origin/cursor/website-audit-and-enhancement-0fd3
+=======
+      title: 'AI & Autonomous Systems',
+      items: [
+        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
+        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
+        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Target },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', icon: Zap },
+        { name: 'AI Autonomous Research', path: '/ai-autonomous-research-assistant', icon: Microscope },
+        { name: 'AI Content Generation', path: '/ai-content-generator', icon: FileText },
+        { name: 'AI Code Review', path: '/ai-code-review', icon: Cpu },
+        { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Building2 },
+        { name: 'AI Autonomous Business Platform', path: '/ai-autonomous-business-platform', icon: Rocket },
+        { name: 'AI Autonomous Code Review', path: '/ai-autonomous-code-review', icon: Cpu },
+        { name: 'AI Autonomous Creative Director', path: '/ai-autonomous-creative-director', icon: Brain },
+        { name: 'AI Autonomous Data', path: '/ai-autonomous-data', icon: Database },
+        { name: 'AI Autonomous Decision Engine', path: '/ai-autonomous-decision-engine', icon: Target },
+        { name: 'AI Autonomous Decision Platform', path: '/ai-autonomous-decision-platform', icon: Target },
+        { name: 'AI Autonomous DevOps', path: '/ai-autonomous-devops', icon: Settings },
+        { name: 'AI Autonomous Education Professor', path: '/ai-autonomous-education-professor', icon: GraduationCap },
+        { name: 'AI Autonomous Healthcare Physician', path: '/ai-autonomous-healthcare-physician', icon: Heart },
+        { name: 'AI Autonomous Learning System', path: '/ai-autonomous-learning-system', icon: BookOpen },
+        { name: 'AI Autonomous Legal Counsel', path: '/ai-autonomous-legal-counsel', icon: Shield },
+        { name: 'AI Autonomous Logistics', path: '/ai-autonomous-logistics', icon: Truck },
+        { name: 'AI Autonomous Manufacturing', path: '/ai-autonomous-manufacturing', icon: Factory },
+        { name: 'AI Autonomous Research', path: '/ai-autonomous-research', icon: Microscope },
+        { name: 'AI Autonomous Robotics', path: '/ai-autonomous-robotics', icon: Cpu },
+        { name: 'AI Autonomous Scientific Researcher', path: '/ai-autonomous-scientific-researcher', icon: Microscope },
+        { name: 'AI Autonomous Security', path: '/ai-autonomous-security', icon: Lock },
+        { name: 'AI Autonomous Systems Platform', path: '/ai-autonomous-systems-platform', icon: Rocket },
+        { name: 'AI Autonomous Testing', path: '/ai-autonomous-testing', icon: Cpu },
+        { name: 'AI Autonomous Vehicle Platform', path: '/ai-autonomous-vehicle-platform', icon: Car },
+        { name: 'AI Autonomous Vehicle', path: '/ai-autonomous-vehicle', icon: Car },
+        { name: 'AI Autonomous Vehicles Platform', path: '/ai-autonomous-vehicles-platform', icon: Car },
+        { name: 'AI Autonomous Vehicles', path: '/ai-autonomous-vehicles', icon: Car },
+        { name: 'AI Autonomous Venture Capitalist', path: '/ai-autonomous-venture-capitalist', icon: Target },
+      ]
+    },
+    {
+      title: 'Quantum Technology',
+      items: [
+        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Brain },
+        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain },
+        { name: 'Quantum Cloud Infrastructure', path: '/quantum-cloud-infrastructure', icon: Cloud },
+        { name: 'Quantum Financial Trading', path: '/quantum-financial-trading', icon: BarChart3 },
+        { name: 'Quantum Services', path: '/quantum-services', icon: Globe },
+      ]
+    },
+    {
+      title: 'Cybersecurity & Compliance',
+      items: [
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
+        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Lock },
+        { name: 'AI-Powered Security', path: '/ai-powered-enterprise-security', icon: Shield },
+        { name: 'Autonomous Security', path: '/ai-autonomous-security', icon: Lock },
+      ]
+    },
+    {
+      title: 'Infrastructure & Solutions',
+      items: [
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Cpu },
+        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Signal },
+        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
+        { name: 'Blockchain Solutions', path: '/blockchain-enterprise-solutions', icon: LinkIcon },
+        { name: 'IoT Data Analytics', path: '/iot-data-analytics', icon: Database },
+        { name: 'Space Technology', path: '/space-tech', icon: Satellite },
+        { name: 'AI-Powered IT Asset Management', path: '/ai-powered-it-asset-management', icon: Database },
+        { name: 'Autonomous Business Operations Platform', path: '/autonomous-business-operations-platform', icon: Rocket },
+      ]
+    },
+    {
+      title: 'Industry Solutions',
+      items: [
+        { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building2 },
+        { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart },
+        { name: 'Financial Solutions', path: '/solutions/financial', icon: BarChart3 },
+        { name: 'Government Solutions', path: '/solutions/government', icon: Shield },
+        { name: 'Manufacturing Solutions', path: '/solutions/manufacturing', icon: Factory },
+        { name: 'Retail Solutions', path: '/solutions/retail', icon: ShoppingCart },
+>>>>>>> origin/cursor/website-audit-and-enhancement-232f
       ]
     },
     {
@@ -644,6 +734,7 @@ export default function Sidebar() {
 =======
         { name: 'About Us', path: '/about', icon: Users },
         { name: 'Our Team', path: '/team', icon: Users },
+<<<<<<< HEAD
         { name: 'Our Mission', path: '/mission', icon: Users },
         { name: 'Leadership', path: '/leadership', icon: Users },
         { name: 'Partners', path: '/partners', icon: Handshake },
@@ -651,14 +742,27 @@ export default function Sidebar() {
         { name: 'Careers', path: '/careers', icon: Users },
         { name: 'News', path: '/news', icon: Globe },
         { name: 'Blog', path: '/blog', icon: Globe }
+=======
+        { name: 'Our Mission', path: '/mission', icon: Target },
+        { name: 'Partners', path: '/partners', icon: Handshake },
+        { name: 'Careers', path: '/careers', icon: Users },
+        { name: 'Case Studies', path: '/case-studies', icon: FileText },
+        { name: 'News', path: '/news', icon: FileText },
+        { name: 'Blog', path: '/blog', icon: BookOpen },
+        { name: 'Testimonials', path: '/testimonials', icon: Users },
+        { name: 'Events', path: '/events', icon: Calendar },
+        { name: 'Webinars', path: '/webinars', icon: Calendar },
+        { name: 'White Papers', path: '/white-papers', icon: FileText },
+>>>>>>> origin/cursor/website-audit-and-enhancement-232f
       ]
     },
     {
       title: 'Support & Resources',
       items: [
-        { name: 'Help Center', path: '/help', icon: Users },
-        { name: 'Documentation', path: '/docs', icon: Globe },
+        { name: 'Help Center', path: '/help', icon: HelpCircle },
+        { name: 'Documentation', path: '/docs', icon: BookOpen },
         { name: 'Contact Support', path: '/support', icon: Phone },
+<<<<<<< HEAD
         { name: 'FAQ', path: '/faq', icon: Users },
         { name: 'Webinars', path: '/webinars', icon: Globe },
         { name: 'White Papers', path: '/white-papers', icon: Globe },
@@ -675,6 +779,14 @@ export default function Sidebar() {
         { name: 'Developer Portal', path: '/developer-portal', icon: Code },
         { name: 'Request Quote', path: '/request-quote', icon: DollarSign },
         { name: 'Pricing', path: '/pricing', icon: DollarSign }
+=======
+        { name: 'FAQ', path: '/faq', icon: HelpCircle },
+        { name: 'Status Page', path: '/status', icon: Globe },
+        { name: 'Privacy Policy', path: '/privacy', icon: Shield },
+        { name: 'Terms of Service', path: '/terms', icon: FileText },
+        { name: 'Cookie Policy', path: '/cookies', icon: Shield },
+        { name: 'Sitemap', path: '/sitemap', icon: Globe },
+>>>>>>> origin/cursor/website-audit-and-enhancement-232f
       ]
     }
   ];
@@ -722,6 +834,7 @@ export default function Sidebar() {
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
@@ -734,10 +847,14 @@ export default function Sidebar() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-4b00
   return (
 <<<<<<< HEAD
+=======
+  return (
+>>>>>>> origin/cursor/website-audit-and-enhancement-232f
     <AnimatePresence>
       {isOpen && (
         <>
           {/* Backdrop */}
+<<<<<<< HEAD
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -792,10 +909,23 @@ export default function Sidebar() {
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
             className="fixed left-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-r border-gray-800/50 z-50 overflow-y-auto"
 =======
+=======
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+            onClick={onClose}
+          />
+
+          {/* Sidebar */}
+          <motion.aside
+>>>>>>> origin/cursor/website-audit-and-enhancement-232f
             variants={sidebarVariants}
             initial="closed"
             animate="open"
             exit="closed"
+<<<<<<< HEAD
             className="fixed left-0 top-0 h-full w-96 max-w-[90vw] z-50 overflow-hidden"
 >>>>>>> origin/cursor/website-audit-and-enhancement-118f
           >
@@ -1220,40 +1350,80 @@ export default function Sidebar() {
                   <div className="space-y-2">
                     {contactInfo.map((contact, index) => {
                       const Icon = contact.icon;
+=======
+            className="fixed left-0 top-0 h-full w-80 bg-background/95 backdrop-blur-md border-r border-border z-50 overflow-y-auto"
+          >
+            {/* Header */}
+            <div className="flex items-center justify-between p-6 border-b border-border">
+              <div className="flex items-center space-x-2">
+                <div className="w-8 h-8 bg-gradient-to-br from-zion-blue to-zion-purple rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">Z</span>
+                </div>
+                <span className="text-lg font-bold text-gradient">Zion Tech Group</span>
+              </div>
+              <button
+                onClick={onClose}
+                className="p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+
+            {/* Navigation */}
+            <nav className="p-6 space-y-8">
+              {navigationItems.map((section) => (
+                <div key={section.title}>
+                  <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">
+                    {section.title}
+                  </h3>
+                  <div className="space-y-2">
+                    {section.items.map((item) => {
+                      const IconComponent = item.icon;
+                      const isActive = location.pathname === item.path;
+>>>>>>> origin/cursor/website-audit-and-enhancement-232f
                       return (
-                        <a
-                          key={index}
-                          href={contact.href}
-                          className="flex items-center gap-3 text-sm text-zion-slate-light hover:neon-text transition-colors group"
+                        <Link
+                          key={item.name}
+                          to={item.path}
+                          className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                            isActive
+                              ? 'text-zion-cyan bg-zion-cyan/10 border border-zion-cyan/20'
+                              : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                          }`}
                         >
+<<<<<<< HEAD
                           <Icon className="w-4 h-4 text-zion-cyan group-hover:neon-text" />
                           <span className="flex-1 text-xs">{contact.text}</span>
                         </a>
+=======
+                          <IconComponent className="w-4 h-4 flex-shrink-0" />
+                          <span className="truncate">{item.name}</span>
+                        </Link>
+>>>>>>> origin/cursor/website-audit-and-enhancement-232f
                       );
                     })}
                   </div>
                 </div>
+              ))}
+            </nav>
 
-                {/* Social Links */}
-                <div className="space-y-3">
-                  <h4 className="text-sm font-semibold text-zion-cyan neon-text">Follow Us</h4>
-                  <div className="flex gap-3">
-                    {socialLinks.map((social, index) => {
-                      const Icon = social.icon;
-                      return (
-                        <a
-                          key={index}
-                          href={social.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-2 futuristic-card hover:bg-white/20 rounded-lg transition-colors group"
-                          aria-label={social.label}
-                        >
-                          <Icon className="w-4 h-4 text-zion-slate-light group-hover:neon-text transition-colors" />
-                        </a>
-                      );
-                    })}
+            {/* Contact Information */}
+            <div className="p-6 border-t border-border">
+              <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">
+                Contact Information
+              </h3>
+              <div className="space-y-3">
+                {contactInfo.map((contact, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <contact.icon className="w-4 h-4 text-zion-cyan flex-shrink-0" />
+                    <a 
+                      href={contact.href} 
+                      className="text-sm text-muted-foreground hover:text-foreground transition-colors truncate"
+                    >
+                      {contact.text}
+                    </a>
                   </div>
+<<<<<<< HEAD
                 </div>
 
                 {/* Company Info */}
@@ -1270,6 +1440,33 @@ export default function Sidebar() {
               </div>
             </div>
           </motion.div>
+=======
+                ))}
+              </div>
+            </div>
+
+            {/* Social Links */}
+            <div className="p-6 border-t border-border">
+              <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">
+                Follow Us
+              </h3>
+              <div className="flex space-x-3">
+                {socialLinks.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 bg-muted hover:bg-zion-cyan/20 rounded-lg flex items-center justify-center text-muted-foreground hover:text-zion-cyan transition-all duration-300"
+                    aria-label={social.label}
+                  >
+                    <social.icon className="w-5 h-5" />
+                  </a>
+                ))}
+              </div>
+            </div>
+          </motion.aside>
+>>>>>>> origin/cursor/website-audit-and-enhancement-232f
         </>
       )}
     </AnimatePresence>
