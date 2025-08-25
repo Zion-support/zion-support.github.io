@@ -22,16 +22,10 @@ const navigationItems: NavigationItem[] = [
     icon: <Brain className="w-5 h-5" />,
     description: 'Advanced AI solutions for every industry',
     children: [
-      { name: 'AI Content Generation', href: '/ai-content-generator' },
-      { name: 'AI Code Review', href: '/ai-code-review' },
-      { name: 'AI Customer Service', href: '/ai-customer-service' },
-      { name: 'AI Data Analytics', href: '/ai-data-analytics' },
-      { name: 'AI HR & Recruitment', href: '/ai-hr-recruitment' },
-      { name: 'AI Legal Analysis', href: '/ai-legal-contract-analyzer' },
+      { name: 'AI Agent Orchestrator', href: '/ai-agent-orchestrator' },
+      { name: 'AI Phone Agent', href: '/ai-phone-agent' },
       { name: 'AI Market Research', href: '/ai-market-research' },
-      { name: 'AI Sales Automation', href: '/ai-sales-automation' },
-      { name: 'AI SEO Optimization', href: '/ai-seo-optimization' },
-      { name: 'AI Video Editing', href: '/ai-video-editing' }
+      { name: 'Sales Copilot', href: '/sales-copilot' }
     ]
   },
   {
@@ -59,14 +53,10 @@ const navigationItems: NavigationItem[] = [
     icon: <Shield className="w-5 h-5" />,
     description: 'Next-generation security solutions',
     children: [
-      { name: 'AI Cybersecurity Threat Hunting', href: '/ai-cybersecurity-threat-hunting' },
-      { name: 'AI Zero-Day Threat Hunter', href: '/ai-zero-day-threat-hunter' },
-      { name: 'AI Quantum Encryption Platform', href: '/ai-quantum-encryption-platform' },
-      { name: 'AI Behavioral Biometrics', href: '/ai-behavioral-biometrics' },
-      { name: 'SOC2 Evidence Automation', href: '/soc2-evidence-automation' },
-      { name: 'Vendor Risk Automation', href: '/vendor-risk-automation' },
-      { name: 'TLS Certificate Monitor', href: '/tls-certificate-monitor' },
-      { name: 'API Security Scanner', href: '/api-security-scanner' }
+      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' },
+      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' },
+      { name: '5G Private Networks', href: '/5g-private-network-solutions' },
+      { name: 'Metaverse AI Platform', href: '/metaverse-ai-development-platform' }
     ]
   },
   {
@@ -75,11 +65,9 @@ const navigationItems: NavigationItem[] = [
     icon: <Network className="w-5 h-5" />,
     description: 'Decentralized and blockchain solutions',
     children: [
-      { name: 'AI Quantum Blockchain Platform', href: '/ai-quantum-blockchain-platform' },
-      { name: 'AI DeFi Optimization Engine', href: '/ai-defi-optimization-engine' },
-      { name: 'AI NFT Intelligence Platform', href: '/ai-nft-intelligence-platform' },
-      { name: 'AI Metaverse Development Platform', href: '/ai-metaverse-development-platform' },
-      { name: 'AI Blockchain Analytics', href: '/ai-blockchain-analytics' }
+      { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture' },
+      { name: 'AI Cybersecurity Platform', href: '/ai-cybersecurity' },
+      { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform' }
     ]
   },
   {
@@ -101,23 +89,9 @@ const navigationItems: NavigationItem[] = [
     icon: <Cloud className="w-5 h-5" />,
     description: 'Cloud computing and data analytics',
     children: [
-      { name: 'AI Quantum Cloud Platform', href: '/ai-quantum-cloud-platform' },
-      { name: 'AI Big Data Analytics Engine', href: '/ai-big-data-analytics-engine' },
-      { name: 'AI Data Pipeline Automation', href: '/ai-data-pipeline-automation' },
-      { name: 'AI Real-Time Streaming Platform', href: '/ai-real-time-streaming-platform' },
-      { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },
-      { name: 'Cloud Landing Zone', href: '/cloud-landing-zone' },
-      { name: 'Cloud Backup Compliance', href: '/cloud-backup-compliance' }
-    ]
-  },
-  {
-    name: 'Space Technology',
-    href: '/space-technology',
-    icon: <Rocket className="w-5 h-5" />,
-    description: 'Space exploration and satellite solutions',
-    children: [
-      { name: 'Space Technology Platform', href: '/space-technology' },
-      { name: 'AI Space Mission Controller', href: '/ai-space-mission-controller' }
+      { name: 'Managed Postgres HA', href: '/managed-postgres-ha' },
+      { name: 'Status Pages & SLO', href: '/status-pages-slo' },
+      { name: 'API Observability', href: '/api-observability' }
     ]
   }
 ];
