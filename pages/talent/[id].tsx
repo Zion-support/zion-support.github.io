@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
-import type { TalentProfile as TalentProfileType } from '@/types/talent';
 import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
+import type { TalentProfile as TalentProfileType } from '@/types/talent';
 
 interface TalentProfileWithSocial extends TalentProfileType {
   social?: Record<string, string>;
