@@ -5,6 +5,16 @@ import { Footer } from './components/Footer';
 import Sidebar from './components/Sidebar';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
+<<<<<<< HEAD
+
+// Lazy load pages for better performance
+const Home = lazy(() => import('./pages/Home'));
+const Services = lazy(() => import('./pages/Services'));
+const AISolutions = lazy(() => import('./pages/AISolutions'));
+const About = lazy(() => import('./pages/About'));
+const Contact = lazy(() => import('./pages/Contact'));
+const MicroSaasServicesPage = lazy(() => import('./pages/MicroSaasServices'));
+=======
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster } from "./components/ui/toaster";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
@@ -71,6 +81,7 @@ const baseRoutes = [
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
 ];
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-4e39
 
 // Loading spinner component
 const LoadingSpinner = () => (
