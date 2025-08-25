@@ -163,7 +163,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         if (particle.life > particle.maxLife) {
           particles[index] = createParticle();
         }
-      });
 
       // Add matrix effect for cyberpunk variants
       if (variant.includes('cyberpunk') || variant.includes('matrix')) {
