@@ -44,9 +44,10 @@ export function Header() {
         { name: 'Quantum Technology', href: '/services/quantum-technology' },
         { name: 'Micro SAAS Solutions', href: '/services/micro-saas-solutions' },
         { name: 'Industry Solutions', href: '/services/industry-solutions' },
-        { name: 'Advanced Cybersecurity Suite', href: '/advanced-cybersecurity-suite' },
-        { name: 'Accessibility Auditor', href: '/accessibility-auditor' },
-        { name: 'Affiliate Attribution Hub', href: '/affiliate-attribution-hub' }
+        { name: 'AI Business Intelligence', href: '/ai-business-intelligence' },
+        { name: 'AI Marketing Automation', href: '/ai-marketing-automation' },
+        { name: 'IoT Management Platform', href: '/iot-management-platform' },
+        { name: 'Blockchain DeFi Solutions', href: '/blockchain-defi-solutions' }
       ]
     },
     { 
@@ -97,22 +98,7 @@ export function Header() {
         { name: 'AI Compliance Automation', href: '/ai-compliance-automation' },
         { name: 'AI Computer Vision Platform', href: '/ai-computer-vision-platform' },
         { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution' },
-        { name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-platform' },
-        { name: 'AI Consciousness Simulation Platform', href: '/ai-consciousness-simulation-platform' },
-        { name: 'AI Consciousness Simulation', href: '/ai-consciousness-simulation' },
-        { name: 'AI Consciousness Simulator', href: '/ai-consciousness-simulator' },
-        { name: 'AI Content Creation Revolution', href: '/ai-content-creation-revolution' },
-        { name: 'AI Content Creation', href: '/ai-content-creation' },
-        { name: 'AI Content Factory', href: '/ai-content-factory' },
-        { name: 'AI Content Generation Automation', href: '/ai-content-generation-automation' },
-        { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro' },
-        { name: 'AI Content Generator', href: '/ai-content-generator' },
-        { name: 'AI Content Marketing Automation', href: '/ai-content-marketing-automation' },
-        { name: 'AI Content Personalization Engine', href: '/ai-content-personalization-engine' },
-        { name: 'AI Creativity Studio', href: '/ai-creativity-studio' },
-        { name: 'AI Market Research', href: '/ai-market-research' },
-        { name: 'AI Powered Enterprise Security', href: '/ai-powered-enterprise-security' },
-        { name: 'AI Workflow Automation', href: '/ai-workflow-automation' }
+        { name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-platform' }
       ]
     },
     { 
