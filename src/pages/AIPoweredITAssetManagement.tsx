@@ -17,6 +17,7 @@ import {
 =======
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { 
   Server, 
   Zap, 
@@ -43,10 +44,15 @@ import {
 import { motion } from 'framer-motion';
 import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive } from 'lucide-react';
 >>>>>>> origin/cursor/website-audit-and-enhancement-efd3
+=======
+import { Cpu, Database, Shield, TrendingUp, Users, Globe, ArrowRight, Network, Code, BarChart3 } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4867
 
 const AIPoweredITAssetManagement = () => {
   const features = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       icon: ServerIcon,
       title: "Intelligent Asset Discovery",
@@ -158,10 +164,31 @@ const AIPoweredITAssetManagement = () => {
       title: 'Resource Optimization',
       description: 'Intelligent resource allocation and workload balancing across your IT infrastructure.'
 >>>>>>> origin/cursor/website-audit-and-enhancement-efd3
+=======
+      icon: Cpu,
+      title: "Intelligent Asset Discovery",
+      description: "Automatically discover and catalog all IT assets across your infrastructure."
+    },
+    {
+      icon: Database,
+      title: "Smart Inventory Management",
+      description: "AI-powered inventory tracking with predictive maintenance scheduling."
+    },
+    {
+      icon: Shield,
+      title: "Security Compliance",
+      description: "Automated security audits and compliance monitoring for all assets."
+    },
+    {
+      icon: TrendingUp,
+      title: "Performance Analytics",
+      description: "Real-time performance monitoring and optimization recommendations."
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4867
     }
   ];
 
   const benefits = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     "Reduce IT asset costs by up to 35%",
@@ -170,11 +197,30 @@ const AIPoweredITAssetManagement = () => {
     "Real-time security threat detection",
     "Predictive failure prevention",
     "Compliance automation"
+=======
+    {
+      title: "Cost Optimization",
+      description: "Reduce IT costs by identifying underutilized assets and optimizing resource allocation."
+    },
+    {
+      title: "Risk Mitigation",
+      description: "Proactively identify security vulnerabilities and compliance issues."
+    },
+    {
+      title: "Operational Efficiency",
+      description: "Streamline IT operations with automated asset management workflows."
+    },
+    {
+      title: "Strategic Planning",
+      description: "Data-driven insights for informed IT investment and planning decisions."
+    }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4867
   ];
 
   const assetTypes = [
     "Hardware Assets",
     "Software Licenses",
+<<<<<<< HEAD
     "Cloud Resources",
     "Network Equipment",
     "Security Devices",
@@ -664,10 +710,81 @@ const AIPoweredITAssetManagement: React.FC = () => {
                 Learn More
               </Link>
             </div>
+=======
+    "Network Infrastructure",
+    "Cloud Resources",
+    "Security Devices",
+    "Mobile Devices"
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+      <SEOHead 
+        title="AI-Powered IT Asset Management - Zion Tech Group"
+        description="Revolutionary AI-powered platform for comprehensive IT asset management, optimization, and security compliance."
+        keywords="IT asset management, AI asset tracking, IT inventory, asset optimization, IT compliance, AI management"
+      />
+      
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="flex justify-center mb-8">
+            <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full">
+              <Cpu className="h-12 w-12 text-white" />
+            </div>
+          </div>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            AI-Powered IT Asset Management
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Transform your IT operations with our revolutionary AI-powered platform that provides 
+            comprehensive asset management, optimization, and security compliance.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+            >
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+            <Link
+              to="/services/it-infrastructure"
+              className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-500 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
+            >
+              Learn More
+            </Link>
           </div>
         </div>
       </section>
 
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Revolutionary Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our platform combines cutting-edge AI with comprehensive asset management capabilities.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300">
+                <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg w-fit mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4867
+          </div>
+        </div>
+      </section>
+
+<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -740,17 +857,43 @@ const AIPoweredITAssetManagement: React.FC = () => {
                 Live dashboards and reports providing comprehensive insights into asset utilization and performance.
               </p>
             </div>
+=======
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Key Benefits
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Discover how AI-powered asset management transforms your IT operations.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700">
+                <h3 className="text-2xl font-semibold text-white mb-4">{benefit.title}</h3>
+                <p className="text-gray-300 text-lg">{benefit.description}</p>
+              </div>
+            ))}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4867
           </div>
         </div>
       </section>
 
       {/* Asset Types Section */}
+<<<<<<< HEAD
       <section className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4867
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Comprehensive Asset Coverage
             </h2>
+<<<<<<< HEAD
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
               Manage all types of IT assets with intelligent automation and monitoring
             </p>
@@ -768,6 +911,45 @@ const AIPoweredITAssetManagement: React.FC = () => {
                     Servers, workstations, networking equipment, storage devices, and mobile devices.
                   </p>
                 </div>
+=======
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our platform manages all types of IT assets across your organization.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {assetTypes.map((assetType, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-cyan-500 transition-all duration-300">
+                <h3 className="text-lg font-semibold text-white">{assetType}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technology Stack Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Technology Stack
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Built with cutting-edge technologies for maximum performance and reliability.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+              { icon: Cpu, name: "AI Processing" },
+              { icon: Database, name: "Big Data" },
+              { icon: Network, name: "Cloud Native" },
+              { icon: Code, name: "Machine Learning" }
+            ].map((tech, index) => (
+              <div key={index} className="text-center">
+                <div className="p-4 bg-gray-800/50 rounded-xl mb-4 mx-auto w-fit">
+                  <tech.icon className="h-8 w-8 text-cyan-500 mx-auto" />
+                </div>
+                <p className="text-white font-medium">{tech.name}</p>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4867
               </div>
 
               <div className="flex items-start space-x-4">
@@ -1343,6 +1525,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
 =======
@@ -1384,10 +1567,20 @@ const AIPoweredITAssetManagement: React.FC = () => {
           <p className="text-xl text-gray-300 mb-8">
             Join organizations that have revolutionized their IT asset management with AI-powered 
             automation. Our expert team is ready to help you implement intelligent asset solutions.
+=======
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Optimize Your IT Assets?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join the AI-powered asset management revolution and transform your IT operations.
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4867
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
+<<<<<<< HEAD
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             >
               Schedule Demo
@@ -1398,6 +1591,18 @@ const AIPoweredITAssetManagement: React.FC = () => {
               className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
             >
               Explore All Services
+=======
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+            >
+              Schedule a Demo
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+            <Link
+              to="/services/it-infrastructure"
+              className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-500 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
+            >
+              Explore IT Services
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4867
             </Link>
 =======
       <section className="py-20">
