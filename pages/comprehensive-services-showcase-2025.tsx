@@ -80,24 +80,44 @@ const sortOptions = [
   { label: 'Price: High to Low', value: 'price-high' }
 ];
 
+// Helper function to extract numeric price from price string
+const extractPrice = (priceString: string): number => {
+  const match = priceString.match(/\$([\d,]+)/);
+  if (match) {
+    return parseInt(match[1].replace(/,/g, ''), 10);
+  }
+  return 0;
+};
+
 export default function ComprehensiveServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All Services');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-  const [sortBy, setSortBy] = useState('popular');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [filteredServices, setFilteredServices] = useState<Service[]>(allServices);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPricing, setSelectedPricing] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [sortBy, setSortBy] = useState('name');
 
-  useEffect(() => {
-    let filtered = allServices;
+  const filteredServices = allServices.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const servicePrice = extractPrice(service.price);
+    const matchesPricing = selectedPricing === 'all' || 
+      (servicePrice >= pricingRanges.find(p => p.id === selectedPricing)?.min! &&
+       servicePrice <= pricingRanges.find(p => p.id === selectedPricing)?.max!);
+    const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         service.tagline.toLowerCase().includes(searchQuery.toLowerCase());
+    
+    return matchesCategory && matchesPricing && matchesSearch;
+  });
 
-    // Filter by search term
-    if (searchTerm) {
-      filtered = filtered.filter(service =>
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
-      );
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'name':
+        return a.name.localeCompare(b.name);
+      case 'price':
+        return extractPrice(a.price) - extractPrice(b.price);
+      case 'category':
+        return a.category.localeCompare(b.category);
+      default:
+        return 0;
     }
 
     // Filter by category
@@ -257,284 +277,153 @@ export default function ComprehensiveServicesShowcase2025() {
             </div>
           </motion.div>
         </div>
-      </div>
+      </section>
 
-      {/* Filters and Controls */}
-      <div className="bg-black/50 backdrop-blur-lg border-b border-cyan-500/20 sticky top-20 z-40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-4 lg:space-y-0">
-            {/* Category Filters */}
-            <div className="flex flex-wrap items-center space-x-2">
-              {categories.map((category) => (
-                <button
-                  key={category.name}
-                  onClick={() => setSelectedCategory(category.name)}
-                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                    selectedCategory === category.name
-                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/25'
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
-                  }`}
-                >
-                  {category.icon}
-                  <span>{category.name}</span>
-                  <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
-                    {category.count}
-                  </span>
-                </button>
-              ))}
-            </div>
-
-            {/* Price and Sort Controls */}
-            <div className="flex flex-wrap items-center space-x-4">
-              {/* Price Range Filter */}
+      {/* Filters Section */}
+      <section className="py-12 bg-gray-900 border-b border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            {/* Category Filter */}
+            <div className="relative">
               <select
-                value={selectedPriceRange}
-                onChange={(e) => setSelectedPriceRange(e.target.value)}
-                className="px-4 py-2 bg-white/10 border border-cyan-500/30 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               >
-                {priceRanges.map((range) => (
-                  <option key={range.value} value={range.value} className="bg-gray-900 text-white">
-                    {range.label}
+                {categories.map((category) => (
+                  <option key={category.id} value={category.id}>
+                    {category.name}
                   </option>
                 ))}
               </select>
+            </div>
 
-              {/* Sort Options */}
+            {/* Pricing Filter */}
+            <div className="relative">
+              <select
+                value={selectedPricing}
+                onChange={(e) => setSelectedPricing(e.target.value)}
+                className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              >
+                {pricingRanges.map((range) => (
+                  <option key={range.id} value={range.id}>
+                    {range.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Search */}
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search services..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              />
+            </div>
+
+            {/* Sort */}
+            <div className="relative">
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="px-4 py-2 bg-white/10 border border-cyan-500/30 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+                className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               >
-                {sortOptions.map((option) => (
-                  <option key={option.value} value={option.value} className="bg-gray-900 text-white">
-                    {option.label}
-                  </option>
-                ))}
+                <option value="name">Sort by Name</option>
+                <option value="price">Sort by Price</option>
+                <option value="category">Sort by Category</option>
               </select>
-
-              {/* View Mode Toggle */}
-              <div className="flex items-center space-x-1 bg-white/10 rounded-lg p-1">
-                <button
-                  onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded-md transition-all duration-200 ${
-                    viewMode === 'grid'
-                      ? 'bg-cyan-500 text-white'
-                      : 'text-gray-400 hover:text-white'
-                  }`}
-                >
-                  <Grid3X3 className="w-4 h-4" />
-                </button>
-                <button
-                  onClick={() => setViewMode('list')}
-                  className={`p-2 rounded-md transition-all duration-200 ${
-                    viewMode === 'list'
-                      ? 'bg-cyan-500 text-white'
-                      : 'text-white'
-                  }`}
-                >
-                  <List className="w-4 h-4" />
-                </button>
-              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Services Grid/List */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Results Count */}
-        <div className="mb-8">
-          <p className="text-gray-400">
-            Showing {filteredServices.length} of {allServices.length} services
-          </p>
-        </div>
-
-        {viewMode === 'grid' ? (
+      {/* Services Grid */}
+      <section className="py-16 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300"
+                className="group"
               >
-                {/* Category Badge */}
-                <div className="absolute top-4 right-4">
-                  <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
-                    {getCategoryIcon(service.category)}
-                    <span className="ml-2">{service.category}</span>
-                  </span>
-                </div>
-
-                {/* Service Icon */}
-                <div className="mb-4">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300">
-                    {service.icon}
-                  </div>
-                </div>
-
-                {/* Service Info */}
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200">
-                  {service.name}
-                </h3>
-                <p className="text-gray-400 mb-3 line-clamp-2">
-                  {service.tagline}
-                </p>
-                <p className="text-sm text-gray-500 mb-4 line-clamp-3">
-                  {service.description}
-                </p>
-
-                {/* Price */}
-                <div className="mb-4">
-                  <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-                  <span className="text-gray-500 text-sm ml-2">/month</span>
-                </div>
-
-                {/* Stats */}
-                <div className="flex items-center justify-between mb-4 text-sm">
-                  <div className="flex items-center space-x-1 text-yellow-400">
-                    <Star className="w-4 h-4 fill-current" />
-                    <span className="text-white">{service.rating}</span>
-                    <span className="text-gray-500">({service.reviews})</span>
-                  </div>
-                  <div className="flex items-center space-x-1 text-gray-400">
-                    <Users className="w-4 h-4" />
-                    <span>{service.customers.toLocaleString()}</span>
-                  </div>
-                </div>
-
-                {/* Features Preview */}
-                <div className="mb-4">
-                  <div className="text-xs text-gray-500 mb-2">Key Features:</div>
-                  <div className="space-y-1">
-                    {service.features.slice(0, 3).map((feature, idx) => (
-                      <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
-                        <CheckCircle className="w-3 h-3 text-cyan-400" />
-                        <span className="line-clamp-1">{feature}</span>
-                      </div>
-                    ))}
-                    {service.features.length > 3 && (
-                      <div className="text-xs text-cyan-400">
-                        +{service.features.length - 3} more features
-                      </div>
-                    )}
-                  </div>
-                </div>
-
-                {/* Market Info */}
-                <div className="mb-4 text-xs text-gray-500">
-                  <div className="flex items-center justify-between">
-                    <span>Market Size: {service.marketSize}</span>
-                    <span>Growth: {service.growthRate}</span>
-                  </div>
-                </div>
-
-                {/* CTA Button */}
-                <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-4 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105">
-                  Learn More
-                </button>
-              </motion.div>
-            ))}
-          </div>
-        ) : (
-          <div className="space-y-6">
-            {filteredServices.map((service, index) => (
-              <motion.div
-                key={service.id}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group bg-gradient-to-r from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-400/40 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300"
-              >
-                <div className="flex items-start space-x-6">
-                  {/* Service Icon */}
-                  <div className="flex-shrink-0">
-                    <div className="w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform duration-300">
-                      {service.icon}
-                    </div>
-
-                  {/* Service Details */}
-                  <div className="flex-1 min-w-0">
-                    <div className="flex items-start justify-between mb-3">
-                      <div>
-                        <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200">
-                          {service.name}
-                        </h3>
-                        <p className="text-lg text-cyan-300 mb-2">
-                          {service.tagline}
-                        </p>
-                        <p className="text-gray-400 mb-4">
-                          {service.description}
-                        </p>
-                      </div>
-                      <div className="text-right">
-                        <div className="text-3xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                        <div className="text-gray-500 text-sm">/month</div>
-                        <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white mt-2`}>
-                          {service.category}
+                <Link href={service.link}>
+                  <div className="relative p-6 bg-gradient-to-br from-gray-900 to-black rounded-2xl border border-gray-800 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 group-hover:shadow-2xl group-hover:shadow-cyan-500/20 h-full">
+                    {/* Popular Badge */}
+                    {service.popular && (
+                      <div className="absolute -top-3 -right-3">
+                        <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                          Popular
                         </span>
                       </div>
+                    )}
+
+                    {/* Service Icon */}
+                    <div className="text-4xl mb-4">{service.icon}</div>
+
+                    {/* Service Info */}
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                      {service.name}
+                    </h3>
+                    <p className="text-gray-400 text-sm mb-3">{service.tagline}</p>
+                    
+                    {/* Price */}
+                    <div className="flex items-center mb-4">
+                      <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
+                      <span className="text-gray-400 ml-1">{service.period}</span>
                     </div>
 
-                    {/* Stats Row */}
-                    <div className="flex items-center space-x-8 mb-4 text-sm">
-                      <div className="flex items-center space-x-1 text-yellow-400">
-                        <Star className="w-4 h-4 fill-current" />
-                        <span className="text-white font-medium">{service.rating}</span>
-                        <span className="text-gray-500">({service.reviews} reviews)</span>
-                      </div>
-                      <div className="flex items-center space-x-1 text-gray-400">
-                        <Users className="w-4 h-4" />
-                        <span className="text-white font-medium">{service.customers.toLocaleString()}</span>
-                        <span className="text-gray-500">customers</span>
-                      </div>
-                      <div className="flex items-center space-x-1 text-gray-400">
-                        <TrendingUp className="w-4 h-4" />
-                        <span className="text-white font-medium">{service.growthRate}</span>
-                        <span className="text-gray-500">growth</span>
-                      </div>
-                      <div className="flex items-center space-x-1 text-gray-400">
-                        <Globe className="w-4 h-4" />
-                        <span className="text-white font-medium">{service.marketSize}</span>
-                        <span className="text-gray-500">market</span>
-                      </div>
-                    </div>
+                    {/* Description */}
+                    <p className="text-gray-300 text-sm mb-4 line-clamp-3">
+                      {service.description}
+                    </p>
 
                     {/* Features */}
-                    <div className="mb-4">
-                      <div className="text-sm text-gray-500 mb-2">Key Features:</div>
-                      <div className="grid grid-cols-2 gap-2">
-                        {service.features.slice(0, 6).map((feature, idx) => (
-                          <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
-                            <CheckCircle className="w-3 h-3 text-cyan-400 flex-shrink-0" />
-                            <span>{feature}</span>
-                          </div>
-                        ))}
-                      </div>
+                    <div className="space-y-2 mb-4">
+                      {service.features.slice(0, 3).map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center text-sm">
+                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                          <span className="text-gray-300 truncate">{feature}</span>
+                        </div>
+                      ))}
                     </div>
 
-                    {/* CTA */}
+                    {/* Category Badge */}
                     <div className="flex items-center justify-between">
-                      <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105">
-                        Learn More
-                      </button>
-                      <div className="text-xs text-gray-500">
-                        Launched: {new Date(service.launchDate).toLocaleDateString()}
-                      </div>
+                      <span className={`px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
+                        {service.category}
+                      </span>
+                      <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
-                </div>
+                </Link>
               </motion.div>
             ))}
           </div>
         )}
 
-        {/* No Results */}
-        {filteredServices.length === 0 && (
-          <div className="text-center py-20">
-            <div className="w-24 h-24 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Search className="w-12 h-12 text-cyan-400" />
+          {/* No Results */}
+          {sortedServices.length === 0 && (
+            <div className="text-center py-16">
+              <div className="text-6xl mb-4">🔍</div>
+              <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>
+              <p className="text-gray-400 mb-6">Try adjusting your filters or search terms.</p>
+              <button
+                onClick={() => {
+                  setSelectedCategory('all');
+                  setSelectedPricing('all');
+                  setSearchQuery('');
+                }}
+                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:scale-105 transition-all duration-300"
+              >
+                Clear All Filters
+              </button>
             </div>
             <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
             <p className="text-gray-400 mb-6">
@@ -555,8 +444,8 @@ export default function ComprehensiveServicesShowcase2025() {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-t border-cyan-500/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+      <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -566,23 +455,22 @@ export default function ComprehensiveServicesShowcase2025() {
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-cyan-300 mb-8 max-w-3xl mx-auto">
-              Our team of experts is ready to help you implement the perfect solution for your needs. 
-              Get in touch today and discover how our innovative services can drive your success.
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our revolutionary technology solutions today and experience 
+              unprecedented growth and efficiency.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-              >
-                Get Started Today
-              </a>
-              <a
-                href="/pricing"
-                className="border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200"
-              >
-                View Pricing Plans
-              </a>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact">
+                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:scale-105 transition-all duration-300">
+                  Contact Us Today
+                </button>
+              </Link>
+              <Link href="/pricing">
+                <button className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300">
+                  View Pricing
+                </button>
+              </Link>
             </div>
           </motion.div>
         </div>
