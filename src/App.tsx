@@ -39,6 +39,11 @@ const CloudDevOps = lazy(() => import('./pages/CloudDevOps'));
 const EnterpriseSolutionsPage = lazy(() => import('./pages/EnterpriseSolutions'));
 const DigitalTransformation = lazy(() => import('./pages/DigitalTransformation'));
 
+// New innovative service pages
+const AIWorkflowAutomation = lazy(() => import('./pages/services/AIWorkflowAutomation'));
+const BlockchainEnterpriseSolutions = lazy(() => import('./pages/services/BlockchainEnterpriseSolutions'));
+const IoTDataAnalytics = lazy(() => import('./pages/services/IoTDataAnalytics'));
+
 // Missing pages from analysis
 const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/QuantumNeuralNetworkPlatform'));
 const AutonomousBusinessOperationsPlatform = lazy(() => import('./pages/AutonomousBusinessOperationsPlatform'));
@@ -172,6 +177,11 @@ const App = () => {
                       <Route path="/innovative-micro-saas-services" element={<InnovativeMicroSaasServices />} />
                       <Route path="/comprehensive-innovative-services" element={<ComprehensiveInnovativeServices />} />
                       <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview />} />
+                      
+                      {/* New innovative service routes */}
+                      <Route path="/ai-workflow-automation" element={<AIWorkflowAutomation />} />
+                      <Route path="/blockchain-enterprise-solutions" element={<BlockchainEnterpriseSolutions />} />
+                      <Route path="/iot-data-analytics" element={<IoTDataAnalytics />} />
                       
                       {/* Solutions Routes */}
                       <Route path="/services/enterprise" element={<EnterpriseSolutions />} />
