@@ -212,6 +212,7 @@ export default function Sidebar() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Brain },
         { name: 'AI Autonomous Business Platform', path: '/ai-autonomous-business-platform', icon: Brain },
         { name: 'AI Autonomous Systems Platform', path: '/ai-autonomous-systems-platform', icon: Brain },
@@ -266,6 +267,17 @@ export default function Sidebar() {
         { name: 'AI Autonomous Venture Capitalist', path: '/ai-autonomous-venture-capitalist', icon: Briefcase }
 =======
         { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
+=======
+        { name: 'AI Autonomous Systems Platform', path: '/ai-autonomous-systems-platform', icon: Briefcase },
+        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Briefcase },
+        { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
+        { name: 'AI Research Platform', path: '/ai-autonomous-research', icon: Briefcase },
+        { name: 'AI Code Review', path: '/ai-autonomous-code-review', icon: Briefcase },
+        { name: 'AI Business Intelligence', path: '/ai-business-intelligence-suite', icon: Briefcase },
+        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Briefcase },
+        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Briefcase },
+        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Briefcase },
+>>>>>>> origin/cursor/website-audit-and-enhancement-98d0
         { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
         { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Globe },
@@ -1198,6 +1210,7 @@ export default function Sidebar() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-ea9e
       items: [
         { name: 'Help Center', path: '/help', icon: Users },
+<<<<<<< HEAD
         { name: 'Documentation', path: '/docs', icon: Globe },
         { name: 'Contact Support', path: '/contact', icon: Phone },
         { name: 'Status Page', path: '/status', icon: Globe },
@@ -1588,6 +1601,11 @@ export default function Sidebar() {
         { name: 'Events', path: '/events', icon: Calendar },
         { name: 'Partners', path: '/partners', icon: Handshake }
 >>>>>>> origin/cursor/website-audit-and-enhancement-ac08
+=======
+        { name: 'Contact Us', path: '/contact', icon: Phone },
+        { name: 'FAQ', path: '/faq', icon: Users },
+        { name: 'News', path: '/news', icon: Globe }
+>>>>>>> origin/cursor/website-audit-and-enhancement-98d0
       ]
     }
   ];
