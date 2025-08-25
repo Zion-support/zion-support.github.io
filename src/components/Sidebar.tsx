@@ -17,6 +17,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 import { 
@@ -78,6 +79,9 @@ import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitte
 =======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Network, Brain, BarChart3, Zap, Database, Command } from 'lucide-react';
 >>>>>>> origin/cursor/website-audit-and-enhancement-fc31
+=======
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, FileText } from 'lucide-react';
+>>>>>>> origin/cursor/website-audit-and-enhancement-9251
 import { Link, useLocation } from 'react-router-dom';
 import { useSidebar } from '../context/SidebarContext';
 
@@ -1597,6 +1601,7 @@ export default function Sidebar() {
       items: [
         { name: 'Help Center', path: '/help', icon: Users },
         { name: 'Documentation', path: '/docs', icon: Globe },
+<<<<<<< HEAD
         { name: 'Support Center', path: '/support', icon: Phone },
         { name: 'System Status', path: '/status', icon: Globe },
         { name: 'Case Studies', path: '/case-studies', icon: Briefcase }
@@ -1634,6 +1639,11 @@ export default function Sidebar() {
         { name: 'FAQ', path: '/faq', icon: Users },
         { name: 'News', path: '/news', icon: Globe }
 >>>>>>> origin/cursor/website-audit-and-enhancement-98d0
+=======
+        { name: 'Contact Support', path: '/support', icon: Phone },
+        { name: 'Status Page', path: '/status', icon: Globe },
+        { name: 'FAQ', path: '/help#faq', icon: FileText }
+>>>>>>> origin/cursor/website-audit-and-enhancement-9251
       ]
     }
   ];
@@ -1703,6 +1713,7 @@ export default function Sidebar() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-ea9e
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Facebook, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' },
+<<<<<<< HEAD
     { icon: Instagram, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' }
 >>>>>>> origin/main
 =======
@@ -1719,6 +1730,10 @@ export default function Sidebar() {
     { icon: Globe, href: 'https://www.youtube.com/@ziontechgroup', label: 'YouTube' },
     { icon: Briefcase, href: 'https://github.com/ziontechgroup', label: 'GitHub' }
 >>>>>>> origin/cursor/website-audit-and-enhancement-ac08
+=======
+    { icon: Instagram, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' },
+    { icon: Users, href: 'https://discord.gg/ziontechgroup', label: 'Discord' }
+>>>>>>> origin/cursor/website-audit-and-enhancement-9251
   ];
 
   const sidebarVariants = {
