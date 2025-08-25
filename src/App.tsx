@@ -33,6 +33,14 @@ const CloudDevOps = lazy(() => import('./pages/CloudDevOps'));
 const EnterpriseSolutionsPage = lazy(() => import('./pages/EnterpriseSolutions'));
 const DigitalTransformation = lazy(() => import('./pages/DigitalTransformation'));
 
+// Fix broken links - New service pages
+const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/services/QuantumNeuralNetworkPlatform'));
+const AutonomousBusinessOperationsPlatform = lazy(() => import('./pages/services/AutonomousBusinessOperationsPlatform'));
+const AIPoweredITAssetManagement = lazy(() => import('./pages/services/AIPoweredITAssetManagement'));
+const AIAgentOrchestrator = lazy(() => import('./pages/services/AIAgentOrchestrator'));
+const AIAnalyticsCopilot = lazy(() => import('./pages/services/AIAnalyticsCopilot'));
+const AIAutonomousBusinessManager = lazy(() => import('./pages/services/AIAutonomousBusinessManager'));
+
 // Our enhanced service pages
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
@@ -202,6 +210,14 @@ const App = () => {
                     <Route path="/cloud-devops" element={<CloudDevOps />} />
                     <Route path="/enterprise-solutions" element={<EnterpriseSolutionsPage />} />
                     <Route path="/digital-transformation" element={<DigitalTransformation />} />
+                    
+                    {/* Fix broken links - New service pages */}
+                    <Route path="/quantum-neural-network-platform" element={<QuantumNeuralNetworkPlatform />} />
+                    <Route path="/autonomous-business-operations-platform" element={<AutonomousBusinessOperationsPlatform />} />
+                    <Route path="/ai-powered-it-asset-management" element={<AIPoweredITAssetManagement />} />
+                    <Route path="/ai-agent-orchestrator" element={<AIAgentOrchestrator />} />
+                    <Route path="/ai-analytics-copilot" element={<AIAnalyticsCopilot />} />
+                    <Route path="/ai-autonomous-business-manager" element={<AIAutonomousBusinessManager />} />
                     
                     {/* Our enhanced service routes */}
                     <Route path="/about" element={<About />} />
