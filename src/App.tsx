@@ -97,6 +97,7 @@ const ComprehensiveInnovativeServices = lazy(() => import('./pages/Comprehensive
 const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveServicesOverview'));
 const EnhancedServicesShowcase = lazy(() => import('./pages/EnhancedServicesShowcase'));
 const InnovativeServicesShowcase = lazy(() => import('./pages/InnovativeServicesShowcase'));
+const NextGenInnovativeServices = lazy(() => import('./pages/NextGenInnovativeServices'));
 
 // Solutions pages
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
@@ -260,6 +261,7 @@ const App: React.FC = () => {
                       <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview />} />
                       <Route path="/enhanced-services-showcase" element={<EnhancedServicesShowcase />} />
                       <Route path="/innovative-services-showcase" element={<InnovativeServicesShowcase />} />
+                      <Route path="/next-gen-innovative-services" element={<NextGenInnovativeServices />} />
                       
                       {/* New innovative service routes */}
                       <Route path="/ai-workflow-automation" element={<AIWorkflowAutomation />} />
