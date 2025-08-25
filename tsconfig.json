@@ -120,6 +120,7 @@
     }
 >>>>>>> origin/cursor/build-and-fix-errors-e276
   },
+<<<<<<< HEAD
   "include": [
     "src/main.tsx",
     "src/App.tsx",
@@ -177,6 +178,9 @@
     "dist"
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
   ],
+=======
+  "include": ["src"],
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-ae1c
   "references": [{ "path": "./tsconfig.node.json" }]
 =======
     "zion.app/recovered-content/**",

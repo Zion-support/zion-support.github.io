@@ -695,6 +695,7 @@ export function Contact() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: Phone,
 <<<<<<< HEAD
       title: 'Phone',
@@ -760,6 +761,12 @@ export function Contact() {
       action: 'Start Chat',
       href: '#',
       color: 'from-green-500 to-emerald-500'
+=======
+      name: "Headquarters",
+      address: "364 E Main St STE 1008, Middletown DE 19709",
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-ae1c
     }
   ];
 
@@ -4455,6 +4462,7 @@ const Contact = () => {
                   />
                 </div>
               </div>
+<<<<<<< HEAD
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
@@ -4485,6 +4493,20 @@ const Contact = () => {
                     placeholder="Enter your phone number"
                   />
                 </div>
+=======
+              
+              <div className="mt-8 bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.678901234567!2d-75.7166667!3d39.4500000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c7c8c8c8c8c8c8%3A0x8c8c8c8c8c8c8c8c!2s364%20E%20Main%20St%2C%20Middletown%2C%20DE%2019709!5e0!3m2!1sen!2sus!4v1651234567890!5m2!1sen!2sus" 
+                  width="100%" 
+                  height="300" 
+                  style={{ border: 0 }} 
+                  allowFullScreen={true} 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Zion Office Location - Middletown, DE"
+                ></iframe>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-ae1c
               </div>
 
               <div className="mb-6">
@@ -5046,9 +5068,15 @@ export default Contact;
                 className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
                 asChild
               >
+<<<<<<< HEAD
                 <a href="tel:+13024640950">
                   <Phone className="mr-2 h-5 w-5" />
                   Call Now
+=======
+                <a href="mailto:kleber@ziontechgroup.com">
+                  <Mail className="mr-2 h-5 w-5" />
+                  Email Support
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-ae1c
                 </a>
               </Button>
             </div>

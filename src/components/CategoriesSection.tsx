@@ -41,14 +41,20 @@ const specialServices = [
     link: "/it-onsite-services"
   },
   {
+<<<<<<< HEAD
     title: "Comprehensive Services",
     link: "/comprehensive-services"
+=======
+    title: "Services Overview",
+    link: "/services-overview"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-ae1c
   },
   {
     title: "AI Services",
     link: "/ai-services"
   },
   {
+<<<<<<< HEAD
     title: "Cybersecurity Services",
     link: "/cybersecurity-services"
   },
@@ -71,6 +77,10 @@ const specialServices = [
   {
     title: "Innovative Services",
     link: "/innovative-services"
+=======
+    title: "Comprehensive Services",
+    link: "/comprehensive-services"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-ae1c
   }
 ];
 
