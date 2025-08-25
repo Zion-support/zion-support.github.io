@@ -1,17 +1,9 @@
+/** @type {import('next').NextConfig} */
 const path = require('path');
 
-let withSentryConfig = (cfg) => cfg;
-try {
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
-  const sentry = require('@sentry/nextjs');
-  withSentryConfig = (cfg) => sentry.withSentryConfig(cfg, { silent: true });
-} catch {}
-
-const baseConfig = {
-  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
-  poweredByHeader: false,
-  trailingSlash: false,
+module.exports = {
   reactStrictMode: true,
+<<<<<<< HEAD
   
   // Environment configuration
   env: {
@@ -118,8 +110,27 @@ const baseConfig = {
       ],
     });
 
+=======
+  images: {
+    domains: ["localhost"],
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  async redirects() {
+    return [
+      { source: '/zion/gitbook', destination: '/docs/gitbook', permanent: true },
+    ];
+  },
+  webpack: (config) => {
+    // Support TS path alias '@/...' by mapping it to the project root
+    config.resolve = config.resolve || {};
+    config.resolve.alias = config.resolve.alias || {};
+    config.resolve.alias['@'] = path.resolve(__dirname);
+>>>>>>> autobot/2025-08-24T03-49-38-332Z
     return config;
   },
 };
-
-module.exports = withSentryConfig(baseConfig);

@@ -62,12 +62,12 @@ const serviceCategories = [
     ]
   },
   {
-    title: '🎯 Innovative Micro SAAS',
+    title: '🎯 2030 Innovative Micro SAAS',
     services: [
-      { name: 'AI Emotion Marketing', href: '/ai-emotion-based-marketing' },
-      { name: 'Quantum Creativity Studio', href: '/quantum-creativity-studio' },
-      { name: 'LLM Gateway', href: '/llm-gateway' },
-      { name: 'API Observability', href: '/api-observability-starter' }
+      { name: 'AI Business Intelligence Suite 2030', href: '/ai-business-intelligence-suite-2030' },
+      { name: 'AI Customer Experience Platform 2030', href: '/ai-customer-experience-platform-2030' },
+      { name: 'AI Marketing Automation Suite 2030', href: '/ai-marketing-automation-2030' },
+      { name: 'AI HR Management Suite 2030', href: '/ai-hr-management-suite-2030' }
     ]
   }
 ];
@@ -250,7 +250,7 @@ export default function UltraFuturisticFooter2030() {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-10 h-10 bg-gray-800/50 hover:bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:scale-110"
+                      className="w-10 h-10 bg-gray-800/50 hover:bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-400/40"
                     >
                       <social.icon className="w-5 h-5" />
                     </a>

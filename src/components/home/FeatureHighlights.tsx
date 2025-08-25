@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
+<<<<<<< HEAD
 import { Check, Sparkles, Users, Building, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -12,6 +13,20 @@ export function FeatureHighlights() {
       color: "from-cyan-500 to-blue-600",
       bgColor: "bg-cyan-500/10",
       borderColor: "border-cyan-500/20",
+=======
+import { Check } from 'lucide-react'
+import { cn } from "@/lib/utils";
+
+interface FeatureHighlightsProps {
+  className?: string;
+  style?: React.CSSProperties;
+}
+
+export function FeatureHighlights({ className, style }: FeatureHighlightsProps) {
+  const highlightsData = [
+    {
+      title: "For Talent Seekers",
+>>>>>>> autobot/2025-08-24T03-49-38-332Z
       features: [
         "AI-powered talent matching based on your specific project requirements",
         "Verified profiles with skills validation and credential checking",
@@ -23,10 +38,13 @@ export function FeatureHighlights() {
     },
     {
       title: "For Talent & Service Providers",
+<<<<<<< HEAD
       icon: <Sparkles className="w-6 h-6" />,
       color: "from-purple-500 to-indigo-600",
       bgColor: "bg-purple-500/10",
       borderColor: "border-purple-500/20",
+=======
+>>>>>>> autobot/2025-08-24T03-49-38-332Z
       features: [
         "Create a professional profile showcasing your skills and experience",
         "Get matched with relevant projects that fit your expertise",
@@ -38,10 +56,13 @@ export function FeatureHighlights() {
     },
     {
       title: "For Enterprise Clients",
+<<<<<<< HEAD
       icon: <Building className="w-6 h-6" />,
       color: "from-emerald-500 to-green-600",
       bgColor: "bg-emerald-500/10",
       borderColor: "border-emerald-500/20",
+=======
+>>>>>>> autobot/2025-08-24T03-49-38-332Z
       features: [
         "White-labeled talent portal with your company branding",
         "Dedicated account management and priority support",
@@ -50,6 +71,7 @@ export function FeatureHighlights() {
         "API access for seamless integration with your HR systems",
         "Customizable workflow and approval processes"
       ]
+<<<<<<< HEAD
     },
     {
       title: "Micro SAAS Solutions",
@@ -185,6 +207,39 @@ export function FeatureHighlights() {
           </div>
         </motion.div>
       </motion.div>
+=======
+    }
+  ];
+
+  return (
+    <section className={cn("py-16 bg-zion-blue", className)} style={style}>
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-white mb-3">Tailored Solutions for Everyone</h2>
+          <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
+            Whatever your role in the tech ecosystem, Zion offers specialized features to help you succeed
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {highlightsData.map((category, index) => (
+            <Card key={index} className="bg-zion-blue-dark border-zion-blue-light">
+              <CardContent className="p-6">
+                <h3 className="text-xl font-bold text-white mb-4">{category.title}</h3>
+                <ul className="space-y-3">
+                  {category.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start">
+                      <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
+                      <span className="text-zion-slate-light">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+>>>>>>> autobot/2025-08-24T03-49-38-332Z
     </section>
   );
 }

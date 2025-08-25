@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -12,16 +13,27 @@ import {
   Zap,
   Shield
 } from 'lucide-react';
+=======
+import React, { Component, ReactNode } from 'react';
+import { Button } from './ui/button';
+import { AlertTriangle } from 'lucide-react'
+import {logErrorToProduction} from '@/utils/productionLogger';
+
+>>>>>>> autobot/2025-08-24T03-49-38-332Z
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
+<<<<<<< HEAD
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
   showDetails?: boolean;
+=======
+>>>>>>> autobot/2025-08-24T03-49-38-332Z
 }
 
 interface State {
   hasError: boolean;
+<<<<<<< HEAD
   error: Error | null;
   errorInfo: ErrorInfo | null;
   showDetails: boolean;
@@ -179,11 +191,33 @@ Best regards,
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
+=======
+  error?: Error;
+}
+
+export class ErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: any) {
+    logErrorToProduction('ErrorBoundary caught an error:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+>>>>>>> autobot/2025-08-24T03-49-38-332Z
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
       return (
+<<<<<<< HEAD
         <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 flex items-center justify-center p-4">
           <div className="max-w-2xl w-full bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
             {/* Header */}
@@ -336,6 +370,14 @@ Best regards,
               </div>
             </div>
           </div>
+=======
+        <div style={{ border: '5px solid red', padding: '20px', textAlign: 'center', backgroundColor: 'lightyellow' }}>
+          <h1>CUSTOM ERROR BOUNDARY (ErrorBoundary.tsx) TRIGGERED!</h1>
+          <p>If you see this, the page component crashed.</p>
+          {this.state.error && <pre>{this.state.error.message}</pre>}
+          <button onClick={() => window.location.reload()}>Refresh Page</button>
+          <button onClick={() => window.location.href = '/'}>Go Home</button>
+>>>>>>> autobot/2025-08-24T03-49-38-332Z
         </div>
       );
     }
@@ -343,5 +385,8 @@ Best regards,
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 
 export { ErrorBoundary };
+=======
+>>>>>>> autobot/2025-08-24T03-49-38-332Z

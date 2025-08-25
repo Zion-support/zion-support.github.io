@@ -1,23 +1,36 @@
 {
   "name": "Zion Tech Group",
   "short_name": "Zion Tech",
+<<<<<<< HEAD
   "description": "AI-Powered Technology Solutions & Enterprise Services",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#1e40af",
+=======
+  "description": "Leading-edge technology solutions and autonomous innovation platform",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+>>>>>>> autobot/2025-08-24T03-49-38-332Z
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en",
   "categories": ["business", "productivity", "technology"],
   "icons": [
     {
+<<<<<<< HEAD
       "src": "/images/zion-tech-group-logo-192.png",
+=======
+      "src": "/icon-192x192.png",
+>>>>>>> autobot/2025-08-24T03-49-38-332Z
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
+<<<<<<< HEAD
       "src": "/images/zion-tech-group-logo-512.png",
       "sizes": "512x512",
       "type": "image/png",
@@ -28,10 +41,22 @@
       "sizes": "1024x1024",
       "type": "image/png",
       "purpose": "any maskable"
+=======
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+>>>>>>> autobot/2025-08-24T03-49-38-332Z
     }
   ],
   "shortcuts": [
     {
+<<<<<<< HEAD
       "name": "AI Solutions",
       "short_name": "AI",
       "description": "Explore our AI-powered solutions",
@@ -40,18 +65,37 @@
         {
           "src": "/images/ai-solutions-icon.png",
           "sizes": "96x96"
+=======
+      "name": "Launch Economy",
+      "short_name": "Launch",
+      "description": "Quick access to launch your digital economy",
+      "url": "/multiverse/launch",
+      "icons": [
+        {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
+>>>>>>> autobot/2025-08-24T03-49-38-332Z
         }
       ]
     },
     {
       "name": "Services",
       "short_name": "Services",
+<<<<<<< HEAD
       "description": "View all our services",
       "url": "/services",
       "icons": [
         {
           "src": "/images/services-icon.png",
           "sizes": "96x96"
+=======
+      "description": "View our technology services",
+      "url": "/services",
+      "icons": [
+        {
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
+>>>>>>> autobot/2025-08-24T03-49-38-332Z
         }
       ]
     },
@@ -62,14 +106,20 @@
       "url": "/contact",
       "icons": [
         {
+<<<<<<< HEAD
           "src": "/images/contact-icon.png",
           "sizes": "96x96"
+=======
+          "src": "/icon-192x192.png",
+          "sizes": "192x192"
+>>>>>>> autobot/2025-08-24T03-49-38-332Z
         }
       ]
     }
   ],
   "screenshots": [
     {
+<<<<<<< HEAD
       "src": "/images/screenshot-home.png",
       "sizes": "1280x720",
       "type": "image/png",
@@ -120,6 +170,18 @@
     {
       "protocol": "web+zion",
       "url": "/protocol-handler?url=%s"
+=======
+      "src": "/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshot-narrow.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow"
+>>>>>>> autobot/2025-08-24T03-49-38-332Z
     }
   ],
   "share_target": {

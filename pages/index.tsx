@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 import { 
   Clock, DollarSign, TrendingUp, Brain, 
@@ -513,4 +514,10 @@ export default function HomePage() {
       </footer>
     </UltraAdvancedFuturisticBackground>
   );
+=======
+import Homepage2025 from '../components/Homepage2025';
+
+export default function HomePage() {
+  return <Homepage2025 />;
+>>>>>>> autobot/2025-08-24T03-49-38-332Z
 }

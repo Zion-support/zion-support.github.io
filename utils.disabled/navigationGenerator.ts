@@ -17,6 +17,7 @@ export class NavigationGenerator {
 
   // Auto-discover services from data and generate navigation
   async discoverServices(): Promise<NavigationItem[]> {
+<<<<<<< HEAD:utils.disabled/navigationGenerator.ts
     // This would typically scan a services directory or API
     // For now, using the services from the website analysis
     this.services = [
@@ -24,6 +25,15 @@ export class NavigationGenerator {
         id: 'ai-analytics',
         label: 'AI-Powered Data Analytics Platform',
         href: '/demo/analytics/',
+=======
+    // Comprehensive services list based on website analysis
+    this.services = [
+      // AI & Machine Learning Services
+      {
+        id: 'ai-analytics',
+        label: 'AI-Powered Data Analytics Platform',
+        href: '/services/ai-analytics',
+>>>>>>> autobot/2025-08-24T03-49-38-332Z:utils/navigationGenerator.ts
         category: 'AI & Machine Learning',
         status: 'active',
         description: 'Advanced analytics platform with machine learning capabilities',
@@ -38,6 +48,7 @@ export class NavigationGenerator {
         priority: 1
       },
       {
+<<<<<<< HEAD:utils.disabled/navigationGenerator.ts
         id: 'support-bot',
         label: 'Intelligent Customer Support Bot',
         href: '/demo/support-bot/',
@@ -172,13 +183,437 @@ export class NavigationGenerator {
         },
         lastUpdated: '2025-01-10',
         priority: 9
+=======
+        id: 'ai-autonomous-business-manager',
+        label: 'AI Autonomous Business Manager',
+        href: '/services/ai-autonomous-business-manager',
+        category: 'AI & Machine Learning',
+        status: 'active',
+        description: 'Fully autonomous business management system',
+        technologyStack: ['Python', 'AI/ML', 'React', 'Node.js'],
+        pricing: '$299/month',
+        performance: {
+          uptime: '99.9%',
+          response: '<100ms',
+          users: '5,000+'
+        },
+        lastUpdated: '2025-01-15',
+        priority: 2
+      },
+      {
+        id: 'ai-consciousness-evolution',
+        label: 'AI Consciousness Evolution Platform',
+        href: '/services/ai-consciousness-evolution',
+        category: 'AI & Machine Learning',
+        status: 'active',
+        description: 'Advanced AI consciousness research and development platform',
+        technologyStack: ['Python', 'Neural Networks', 'Quantum Computing', 'React'],
+        pricing: '$499/month',
+        performance: {
+          uptime: '99.8%',
+          response: '<500ms',
+          users: '2,000+'
+        },
+        lastUpdated: '2025-01-15',
+        priority: 3
+      },
+      {
+        id: 'ai-autonomous-research-assistant',
+        label: 'AI Autonomous Research Assistant',
+        href: '/services/ai-autonomous-research-assistant',
+        category: 'AI & Machine Learning',
+        status: 'active',
+        description: 'Intelligent research automation and analysis',
+        technologyStack: ['Python', 'NLP', 'React', 'FastAPI'],
+        pricing: '$199/month',
+        performance: {
+          uptime: '99.9%',
+          response: '<300ms',
+          users: '8,000+'
+        },
+        lastUpdated: '2025-01-15',
+        priority: 4
+      },
+      {
+        id: 'ai-business-intelligence',
+        label: 'AI Business Intelligence Suite',
+        href: '/services/ai-business-intelligence',
+        category: 'AI & Machine Learning',
+        status: 'active',
+        description: 'Comprehensive business intelligence with AI insights',
+        technologyStack: ['Python', 'Machine Learning', 'React', 'PostgreSQL'],
+        pricing: '$149/month',
+        performance: {
+          uptime: '99.9%',
+          response: '<200ms',
+          users: '12,000+'
+        },
+        lastUpdated: '2025-01-15',
+        priority: 5
+      },
+      {
+        id: 'ai-content-generator',
+        label: 'AI Content Generation Platform',
+        href: '/services/ai-content-generator',
+        category: 'AI & Machine Learning',
+        status: 'active',
+        description: 'Automated content creation and management',
+        technologyStack: ['Python', 'GPT Models', 'React', 'Node.js'],
+        pricing: '$79/month',
+        performance: {
+          uptime: '99.8%',
+          response: '<150ms',
+          users: '25,000+'
+        },
+        lastUpdated: '2025-01-15',
+        priority: 6
+      },
+      {
+        id: 'ai-code-review',
+        label: 'AI Code Review & Analysis',
+        href: '/services/ai-code-review',
+        category: 'AI & Machine Learning',
+        status: 'active',
+        description: 'Automated code review and quality analysis',
+        technologyStack: ['Python', 'Static Analysis', 'React', 'GitHub API'],
+        pricing: '$59/month',
+        performance: {
+          uptime: '99.9%',
+          response: '<100ms',
+          users: '15,000+'
+        },
+        lastUpdated: '2025-01-15',
+        priority: 7
+      },
+      {
+        id: 'ai-autonomous-decision-engine',
+        label: 'AI Autonomous Decision Engine',
+        href: '/services/ai-autonomous-decision-engine',
+        category: 'AI & Machine Learning',
+        status: 'active',
+        description: 'Intelligent decision-making automation system',
+        technologyStack: ['Python', 'Decision Trees', 'React', 'Redis'],
+        pricing: '$399/month',
+        performance: {
+          uptime: '99.9%',
+          response: '<50ms',
+          users: '3,000+'
+        },
+        lastUpdated: '2025-01-15',
+        priority: 8
+      },
+      {
+        id: 'ai-autonomous-ecosystem',
+        label: 'AI Autonomous Ecosystem Manager',
+        href: '/services/ai-autonomous-ecosystem',
+        category: 'AI & Machine Learning',
+        status: 'active',
+        description: 'Complete ecosystem management and optimization',
+        technologyStack: ['Python', 'AI Orchestration', 'React', 'Kubernetes'],
+        pricing: '$599/month',
+        performance: {
+          uptime: '99.9%',
+          response: '<100ms',
+          users: '1,500+'
+        },
+        lastUpdated: '2025-01-15',
+        priority: 9
+      },
+      {
+        id: 'ai-autonomous-business-operations',
+        label: 'AI Autonomous Business Operations',
+        href: '/services/ai-autonomous-business-operations',
+        category: 'AI & Machine Learning',
+        status: 'active',
+        description: 'End-to-end business process automation',
+        technologyStack: ['Python', 'RPA', 'React', 'Workflow Engine'],
+        pricing: '$449/month',
+        performance: {
+          uptime: '99.9%',
+          response: '<200ms',
+          users: '4,000+'
+        },
+        lastUpdated: '2025-01-15',
+        priority: 10
+      },
+
+      // Cybersecurity Services
+      {
+        id: 'advanced-cybersecurity-suite',
+        label: 'Advanced Cybersecurity Suite',
+        href: '/services/advanced-cybersecurity-suite',
+        category: 'Cybersecurity',
+        status: 'active',
+        description: 'Comprehensive cybersecurity protection and monitoring',
+        technologyStack: ['Python', 'Security Tools', 'React', 'SIEM'],
+        pricing: '$299/month',
+        performance: {
+          uptime: '99.99%',
+          response: '<100ms',
+          users: '8,000+'
+        },
+        lastUpdated: '2025-01-15',
+        priority: 11
+      },
+      {
+        id: 'ai-powered-enterprise-security',
+        label: 'AI-Powered Enterprise Security',
+        href: '/services/ai-powered-enterprise-security',
+        category: 'Cybersecurity',
+        status: 'active',
+        description: 'Intelligent threat detection and response',
+        technologyStack: ['Python', 'AI Security', 'React', 'Threat Intel'],
+        pricing: '$399/month',
+        performance: {
+          uptime: '99.99%',
+          response: '<50ms',
+          users: '5,000+'
+        },
+        lastUpdated: '2025-01-15',
+        priority: 12
+      },
+      {
+        id: 'soc2-compliance-automation',
+        label: 'SOC2 Compliance Automation',
+        href: '/services/soc2-compliance-automation',
+        category: 'Cybersecurity',
+        status: 'active',
+        description: 'Automated SOC2 compliance and reporting',
+        technologyStack: ['Python', 'Compliance Tools', 'React', 'Audit API'],
+        pricing: '$199/month',
+        performance: {
+          uptime: '99.9%',
+          response: '<200ms',
+          users: '3,000+'
+        },
+        lastUpdated: '2025-01-15',
+        priority: 13
+      },
+
+      // Infrastructure Services
+      {
+        id: 'advanced-it-infrastructure-services',
+        label: 'Advanced IT Infrastructure Services',
+        href: '/services/advanced-it-infrastructure-services',
+        category: 'Infrastructure',
+        status: 'active',
+        description: 'Enterprise-grade infrastructure management',
+        technologyStack: ['Kubernetes', 'Docker', 'Terraform', 'Monitoring'],
+        pricing: '$199/month',
+        performance: {
+          uptime: '99.9%',
+          response: '<100ms',
+          users: '10,000+'
+        },
+        lastUpdated: '2025-01-15',
+        priority: 14
+      },
+      {
+        id: 'autonomous-devops-platform',
+        label: 'Autonomous DevOps Platform',
+        href: '/services/autonomous-devops-platform',
+        category: 'Infrastructure',
+        status: 'active',
+        description: 'Self-managing DevOps and CI/CD platform',
+        technologyStack: ['Jenkins', 'GitLab', 'Kubernetes', 'Monitoring'],
+        pricing: '$149/month',
+        performance: {
+          uptime: '99.9%',
+          response: '<150ms',
+          users: '6,000+'
+        },
+        lastUpdated: '2025-01-15',
+        priority: 15
+      },
+      {
+        id: 'quantum-cloud-infrastructure',
+        label: 'Quantum Cloud Infrastructure',
+        href: '/services/quantum-cloud-infrastructure',
+        category: 'Infrastructure',
+        status: 'beta',
+        description: 'Next-generation quantum computing infrastructure',
+        technologyStack: ['Quantum Computing', 'Cloud Native', 'React', 'Quantum SDK'],
+        pricing: '$999/month',
+        performance: {
+          uptime: '99.8%',
+          response: '<1000ms',
+          users: '500+'
+        },
+        lastUpdated: '2025-01-15',
+        priority: 16
+      },
+
+      // Blockchain Services
+      {
+        id: 'ai-blockchain-analytics',
+        label: 'AI Blockchain Analytics',
+        href: '/services/ai-blockchain-analytics',
+        category: 'Blockchain',
+        status: 'active',
+        description: 'Intelligent blockchain data analysis',
+        technologyStack: ['Python', 'Blockchain APIs', 'React', 'Analytics'],
+        pricing: '$129/month',
+        performance: {
+          uptime: '99.9%',
+          response: '<300ms',
+          users: '4,000+'
+        },
+        lastUpdated: '2025-01-15',
+        priority: 17
+      },
+
+      // Content & Marketing Services
+      {
+        id: 'ai-content-creation',
+        label: 'AI Content Creation Platform',
+        href: '/services/ai-content-creation',
+        category: 'Content & Marketing',
+        status: 'active',
+        description: 'Automated content creation and optimization',
+        technologyStack: ['Python', 'NLP', 'React', 'CMS'],
+        pricing: '$89/month',
+        performance: {
+          uptime: '99.8%',
+          response: '<200ms',
+          users: '20,000+'
+        },
+        lastUpdated: '2025-01-15',
+        priority: 18
+      },
+      {
+        id: 'ai-content-marketing-automation',
+        label: 'AI Content Marketing Automation',
+        href: '/services/ai-content-marketing-automation',
+        category: 'Content & Marketing',
+        status: 'active',
+        description: 'Intelligent marketing content automation',
+        technologyStack: ['Python', 'Marketing APIs', 'React', 'Analytics'],
+        pricing: '$159/month',
+        performance: {
+          uptime: '99.9%',
+          response: '<150ms',
+          users: '12,000+'
+        },
+        lastUpdated: '2025-01-15',
+        priority: 19
+      },
+      {
+        id: 'ai-content-personalization-engine',
+        label: 'AI Content Personalization Engine',
+        href: '/services/ai-content-personalization-engine',
+        category: 'Content & Marketing',
+        status: 'active',
+        description: 'Dynamic content personalization system',
+        technologyStack: ['Python', 'ML Models', 'React', 'Personalization'],
+        pricing: '$119/month',
+        performance: {
+          uptime: '99.9%',
+          response: '<100ms',
+          users: '15,000+'
+        },
+        lastUpdated: '2025-01-15',
+        priority: 20
+      },
+
+      // Research & Development Services
+      {
+        id: 'advanced-research-automation',
+        label: 'Advanced Research Automation',
+        href: '/services/advanced-research-automation',
+        category: 'Research & Development',
+        status: 'active',
+        description: 'Automated research and data analysis',
+        technologyStack: ['Python', 'Research Tools', 'React', 'Data APIs'],
+        pricing: '$179/month',
+        performance: {
+          uptime: '99.9%',
+          response: '<300ms',
+          users: '6,000+'
+        },
+        lastUpdated: '2025-01-15',
+        priority: 21
+      },
+      {
+        id: 'ai-autonomous-research',
+        label: 'AI Autonomous Research Platform',
+        href: '/services/ai-autonomous-research',
+        category: 'Research & Development',
+        status: 'active',
+        description: 'Self-directed research and discovery',
+        technologyStack: ['Python', 'AI Research', 'React', 'Knowledge Graph'],
+        pricing: '$299/month',
+        performance: {
+          uptime: '99.8%',
+          response: '<500ms',
+          users: '3,000+'
+        },
+        lastUpdated: '2025-01-15',
+        priority: 22
+      },
+
+      // Specialized AI Services
+      {
+        id: 'ai-autonomous-creative-director',
+        label: 'AI Autonomous Creative Director',
+        href: '/services/ai-autonomous-creative-director',
+        category: 'Creative AI',
+        status: 'beta',
+        description: 'AI-powered creative direction and management',
+        technologyStack: ['Python', 'Creative AI', 'React', 'Design Tools'],
+        pricing: '$399/month',
+        performance: {
+          uptime: '99.8%',
+          response: '<200ms',
+          users: '2,000+'
+        },
+        lastUpdated: '2025-01-15',
+        priority: 23
+      },
+      {
+        id: 'ai-autonomous-legal-counsel',
+        label: 'AI Autonomous Legal Counsel',
+        href: '/services/ai-autonomous-legal-counsel',
+        category: 'Legal AI',
+        status: 'beta',
+        description: 'Intelligent legal analysis and counsel',
+        technologyStack: ['Python', 'Legal AI', 'React', 'Legal APIs'],
+        pricing: '$499/month',
+        performance: {
+          uptime: '99.9%',
+          response: '<300ms',
+          users: '1,500+'
+        },
+        lastUpdated: '2025-01-15',
+        priority: 24
+      },
+      {
+        id: 'ai-autonomous-healthcare-physician',
+        label: 'AI Autonomous Healthcare Physician',
+        href: '/services/ai-autonomous-healthcare-physician',
+        category: 'Healthcare AI',
+        status: 'beta',
+        description: 'AI-powered healthcare diagnostics and analysis',
+        technologyStack: ['Python', 'Medical AI', 'React', 'Health APIs'],
+        pricing: '$799/month',
+        performance: {
+          uptime: '99.99%',
+          response: '<100ms',
+          users: '1,000+'
+        },
+        lastUpdated: '2025-01-15',
+        priority: 25
+>>>>>>> autobot/2025-08-24T03-49-38-332Z:utils/navigationGenerator.ts
       }
     ];
 
     return this.services;
   }
 
+<<<<<<< HEAD:utils.disabled/navigationGenerator.ts
   // Auto-discover pages from the pages directory
+=======
+  // Discover and generate pages
+>>>>>>> autobot/2025-08-24T03-49-38-332Z:utils/navigationGenerator.ts
   async discoverPages(): Promise<NavigationItem[]> {
     this.pages = [
       {
@@ -188,9 +623,15 @@ export class NavigationGenerator {
         priority: 1
       },
       {
+<<<<<<< HEAD:utils.disabled/navigationGenerator.ts
         id: 'explore',
         label: 'Explore',
         href: '/explore',
+=======
+        id: 'about',
+        label: 'About Us',
+        href: '/about',
+>>>>>>> autobot/2025-08-24T03-49-38-332Z:utils/navigationGenerator.ts
         priority: 2
       },
       {
@@ -200,6 +641,7 @@ export class NavigationGenerator {
         priority: 3
       },
       {
+<<<<<<< HEAD:utils.disabled/navigationGenerator.ts
         id: 'automation',
         label: 'Automations',
         href: '/automation',
@@ -240,13 +682,131 @@ export class NavigationGenerator {
         label: 'Contact',
         href: '/contact',
         priority: 10
+=======
+        id: 'solutions',
+        label: 'Solutions',
+        href: '/solutions',
+        priority: 4
+      },
+      {
+        id: 'pricing',
+        label: 'Pricing',
+        href: '/pricing',
+        priority: 5
+      },
+      {
+        id: 'contact',
+        label: 'Contact',
+        href: '/contact',
+        priority: 6
+      },
+      {
+        id: 'team',
+        label: 'Team',
+        href: '/team',
+        priority: 7
+      },
+      {
+        id: 'case-studies',
+        label: 'Case Studies',
+        href: '/case-studies',
+        priority: 8
+      },
+      {
+        id: 'news',
+        label: 'News',
+        href: '/news',
+        priority: 9
+      },
+      {
+        id: 'events',
+        label: 'Events',
+        href: '/events',
+        priority: 10
+      },
+      {
+        id: 'webinars',
+        label: 'Webinars',
+        href: '/webinars',
+        priority: 11
+      },
+      {
+        id: 'white-papers',
+        label: 'White Papers',
+        href: '/white-papers',
+        priority: 12
+      },
+      {
+        id: 'research-development',
+        label: 'Research & Development',
+        href: '/research-development',
+        priority: 13
+      },
+      {
+        id: 'enterprise-it',
+        label: 'Enterprise IT',
+        href: '/enterprise-it',
+        priority: 14
+      },
+      {
+        id: 'space-tech',
+        label: 'Space Technology',
+        href: '/space-tech',
+        priority: 15
+      },
+      {
+        id: 'quantum-services',
+        label: 'Quantum Services',
+        href: '/quantum-services',
+        priority: 16
+      },
+      {
+        id: 'micro-saas',
+        label: 'Micro SaaS Solutions',
+        href: '/micro-saas',
+        priority: 17
+      },
+      {
+        id: 'startup-tools',
+        label: 'Startup Tools',
+        href: '/startup-tools',
+        priority: 18
+      },
+      {
+        id: 'docs',
+        label: 'Documentation',
+        href: '/docs',
+        priority: 19
+      },
+      {
+        id: 'privacy',
+        label: 'Privacy Policy',
+        href: '/privacy',
+        priority: 20
+      },
+      {
+        id: 'cookies',
+        label: 'Cookie Policy',
+        href: '/cookies',
+        priority: 21
+      },
+      {
+        id: 'accessibility',
+        label: 'Accessibility',
+        href: '/accessibility',
+        priority: 22
+>>>>>>> autobot/2025-08-24T03-49-38-332Z:utils/navigationGenerator.ts
       }
     ];
 
     return this.pages;
   }
 
+<<<<<<< HEAD:utils.disabled/navigationGenerator.ts
   // Auto-generate category-based navigation
+=======
+  // Generate categories from services
+>>>>>>> autobot/2025-08-24T03-49-38-332Z:utils/navigationGenerator.ts
   async generateCategories(): Promise<NavigationCategory[]> {
     const categoryMap = new Map<string, NavigationItem[]>();
     
@@ -260,11 +820,16 @@ export class NavigationGenerator {
       }
     });
 
+<<<<<<< HEAD:utils.disabled/navigationGenerator.ts
     // Generate category objects
+=======
+    // Create category objects
+>>>>>>> autobot/2025-08-24T03-49-38-332Z:utils/navigationGenerator.ts
     this.categories = Array.from(categoryMap.entries()).map(([name, services]) => ({
       id: name.toLowerCase().replace(/\s+/g, '-'),
       name,
       slug: name.toLowerCase().replace(/\s+/g, '-'),
+<<<<<<< HEAD:utils.disabled/navigationGenerator.ts
       description: `${name} solutions and services`,
       serviceCount: services.length,
       icon: this.getCategoryIcon(name),
@@ -294,6 +859,77 @@ export class NavigationGenerator {
       'Microservices': 'from-indigo-500 to-blue-600'
     };
     return colorMap[category] || 'from-gray-500 to-gray-600';
+=======
+      icon: this.getCategoryIcon(name),
+      serviceCount: services.length,
+      services: services.map(s => s.id),
+      priority: this.getCategoryPriority(name)
+    }));
+
+    // Add additional categories for pages
+    this.categories.push(
+      {
+        id: 'company',
+        name: 'Company',
+        slug: 'company',
+        icon: '🏢',
+        serviceCount: 0,
+        services: [],
+        priority: 1
+      },
+      {
+        id: 'resources',
+        name: 'Resources',
+        slug: 'resources',
+        icon: '📚',
+        serviceCount: 0,
+        services: [],
+        priority: 2
+      },
+      {
+        id: 'legal',
+        name: 'Legal',
+        slug: 'legal',
+        serviceCount: 0,
+        services: [],
+        priority: 3
+      }
+    );
+
+    return this.categories;
+  }
+
+  // Get category icon
+  private getCategoryIcon(categoryName: string): string {
+    const iconMap: { [key: string]: string } = {
+      'AI & Machine Learning': '🤖',
+      'Cybersecurity': '🔒',
+      'Infrastructure': '🏗️',
+      'Blockchain': '⛓️',
+      'Content & Marketing': '📝',
+      'Research & Development': '🔬',
+      'Creative AI': '🎨',
+      'Legal AI': '⚖️',
+      'Healthcare AI': '🏥'
+    };
+    return iconMap[categoryName] || '🚀';
+  }
+
+  // Get category priority
+  private getCategoryPriority(categoryName: string): number {
+    const priorityMap: { [key: string]: number } = {
+      'AI & Machine Learning': 1,
+      'Cybersecurity': 2,
+      'Infrastructure': 3,
+      'Blockchain': 4,
+      'Content & Marketing': 5,
+      'Research & Development': 6,
+      'Creative AI': 7,
+      'Legal AI': 8,
+      'Healthcare AI': 9
+    };
+    return priorityMap[categoryName] || 10;
+>>>>>>> autobot/2025-08-24T03-49-38-332Z:utils/navigationGenerator.ts
   }
 
   // Generate header navigation
@@ -422,13 +1058,21 @@ export class NavigationGenerator {
       {
         id: 'service-demo',
         label: 'Demo',
+<<<<<<< HEAD:utils.disabled/navigationGenerator.ts
         href: service.href.replace('/demo/', '/demo/'),
+=======
+        href: service.href.replace('/services/', '/demo/'),
+>>>>>>> autobot/2025-08-24T03-49-38-332Z:utils/navigationGenerator.ts
         priority: 2
       },
       {
         id: 'service-docs',
         label: 'Documentation',
+<<<<<<< HEAD:utils.disabled/navigationGenerator.ts
         href: service.href.replace('/demo/', '/docs/'),
+=======
+        href: service.href.replace('/services/', '/docs/'),
+>>>>>>> autobot/2025-08-24T03-49-38-332Z:utils/navigationGenerator.ts
         priority: 3
       },
       {

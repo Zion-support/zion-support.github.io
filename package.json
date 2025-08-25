@@ -1,9 +1,21 @@
 {
-  "name": "project",
+  "name": "zion-tech-group-website",
+  "version": "0.1.0",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zion-Holdings/zion.app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Zion-Holdings/zion.app/issues"
+  },
+  "homepage": "https://ziontechgroup.com",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
   "scripts": {
+<<<<<<< HEAD
     "dev": "vite",
     "build": "tsc && vite build",
     "start": "vite preview",
@@ -324,5 +336,29 @@
   "overrides": {
     "glob": "^10.4.5",
     "rimraf": "^5.0.5"
+=======
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "lucide-react": "^0.300.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^14.0.0",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.0.0"
+>>>>>>> autobot/2025-08-24T03-49-38-332Z
   }
 }

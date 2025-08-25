@@ -1,6 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 
-export interface EmergingTechService {
+export interface EmergingTechService2025 {
   id: string;
   name: string;
   tagline: string;
@@ -14,7 +14,7 @@ export interface EmergingTechService {
   textColor: string;
   link: string;
   marketPosition: string;
-  targetAudience: string;
+  targetAudience: string[];
   trialDays: number;
   setupTime: string;
   category: string;
@@ -68,7 +68,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/space-mining-platform',
     marketPosition: 'First-to-market space mining platform. Competes with space agencies ($100M+ projects). Our advantage: Automated mining and cost-effective operations.',
-    targetAudience: 'Space agencies, Mining companies, Technology companies, Government agencies, Research institutions',
+    targetAudience: ['Space agencies', 'Mining companies', 'Technology companies', 'Government agencies', 'Research institutions'],
     trialDays: 30,
     setupTime: '2-4 weeks',
     category: 'Space Technology & Mining',
@@ -121,7 +121,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/quantum-bio-computing',
     marketPosition: 'First-to-market quantum bio-computing platform. Competes with quantum computing ($10,000/month), bio-computing ($5,000/month). Our advantage: Hybrid approach and biological integration.',
-    targetAudience: 'Research institutions, Biotechnology companies, Pharmaceutical companies, Universities, Government agencies',
+    targetAudience: ['Research institutions', 'Biotechnology companies', 'Pharmaceutical companies', 'Universities', 'Government agencies'],
     trialDays: 21,
     setupTime: '2-3 weeks',
     category: 'Quantum Biology & Computing',
@@ -174,7 +174,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     textColor: 'text-pink-400',
     link: 'https://ziontechgroup.com/brain-computer-interface',
     marketPosition: 'Competes with Neuralink ($10,000+), Kernel ($50,000+). Our advantage: Advanced algorithms and 90% cost reduction.',
-    targetAudience: 'Research institutions, Medical centers, Gaming companies, VR/AR developers, Technology companies',
+    targetAudience: ['Research institutions', 'Medical centers', 'Gaming companies', 'VR/AR developers', 'Technology companies'],
     trialDays: 14,
     setupTime: '2-4 weeks',
     category: 'Neural Interface & BCI',
@@ -227,7 +227,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/quantum-energy-platform',
     marketPosition: 'Competes with energy consulting ($500/hour), energy management ($1,000/month). Our advantage: Quantum optimization and automated energy management.',
-    targetAudience: 'Energy companies, Utilities, Government agencies, Manufacturing companies, Technology companies',
+    targetAudience: ['Energy companies', 'Utilities', 'Government agencies', 'Manufacturing companies', 'Technology companies'],
     trialDays: 30,
     setupTime: '2-4 weeks',
     category: 'Quantum Energy & Sustainability',
@@ -280,7 +280,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai',
     marketPosition: 'Competes with Waymo ($50,000+), Tesla Autopilot ($10,000+). Our advantage: Advanced AI and affordable pricing.',
-    targetAudience: 'Automotive companies, Transportation companies, Logistics companies, Technology companies, Government agencies',
+    targetAudience: ['Automotive companies', 'Transportation companies', 'Logistics companies', 'Technology companies', 'Government agencies'],
     trialDays: 21,
     setupTime: '2-3 weeks',
     category: 'Autonomous Vehicles & AI',
@@ -333,7 +333,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/quantum-materials-discovery',
     marketPosition: 'Competes with materials consulting ($300/hour), simulation tools ($2,000/month). Our advantage: Quantum simulation and AI discovery.',
-    targetAudience: 'Materials science companies, Research institutions, Universities, Manufacturing companies, Technology companies',
+    targetAudience: ['Materials science companies', 'Research institutions', 'Universities', 'Manufacturing companies', 'Technology companies'],
     trialDays: 21,
     setupTime: '2-3 weeks',
     category: 'Quantum Materials & Science',
@@ -386,7 +386,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     textColor: 'text-gray-400',
     link: 'https://ziontechgroup.com/quantum-robotics',
     marketPosition: 'Competes with robotics platforms ($5,000/month), AI robotics ($3,000/month). Our advantage: Quantum enhancement and superior performance.',
-    targetAudience: 'Manufacturing companies, Healthcare organizations, Research institutions, Technology companies, Government agencies',
+    targetAudience: ['Manufacturing companies', 'Healthcare organizations', 'Research institutions', 'Technology companies', 'Government agencies'],
     trialDays: 21,
     setupTime: '2-3 weeks',
     category: 'Quantum Robotics & AI',
@@ -439,7 +439,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/quantum-internet-security',
     marketPosition: 'Competes with cybersecurity platforms ($500/month), encryption tools ($200/month). Our advantage: Quantum security and unbreakable encryption.',
-    targetAudience: 'Financial institutions, Government agencies, Healthcare organizations, Technology companies, Enterprise businesses',
+    targetAudience: ['Financial institutions', 'Government agencies', 'Healthcare organizations', 'Technology companies', 'Enterprise businesses'],
     trialDays: 14,
     setupTime: '1-2 weeks',
     category: 'Quantum Internet & Security',
@@ -492,7 +492,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/quantum-logistics-optimization',
     marketPosition: 'Competes with logistics platforms ($500/month), optimization tools ($300/month). Our advantage: Quantum optimization and superior performance.',
-    targetAudience: 'Logistics companies, Manufacturing companies, Retail businesses, E-commerce companies, Transportation companies',
+    targetAudience: ['Logistics companies', 'Manufacturing companies', 'Retail businesses', 'E-commerce companies', 'Transportation companies'],
     trialDays: 14,
     setupTime: '1-2 weeks',
     category: 'Quantum Logistics & Supply Chain',
@@ -545,7 +545,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/metaverse-ai-development',
     marketPosition: 'Competes with metaverse platforms ($200/month), AI development ($500/month). Our advantage: AI integration and comprehensive development tools.',
-    targetAudience: 'Gaming companies, VR/AR developers, Technology companies, Educational institutions, Entertainment companies',
+    targetAudience: ['Gaming companies', 'VR/AR developers', 'Technology companies', 'Educational institutions', 'Entertainment companies'],
     trialDays: 14,
     setupTime: '1-2 weeks',
     category: 'Metaverse & AI Development',
@@ -593,6 +593,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       '24/7 AI monitoring and alerts'
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '📊',
     color: 'from-blue-600 to-cyan-600',
     textColor: 'text-blue-400',
@@ -602,6 +603,70 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     trialDays: 14,
     setupTime: '1-2 hours',
     category: 'Business Intelligence & Analytics',
+=======
+    icon: '🧠',
+    color: 'from-purple-600 to-indigo-600',
+    textColor: 'text-purple-400',
+    link: 'https://ziontechgroup.com/quantum-machine-learning-platform',
+    marketPosition: 'Competes with IBM Quantum ($custom), Google Quantum AI ($custom). Our advantage: Hybrid quantum-classical approach and comprehensive ML tools.',
+    targetAudience: ['Research institutions', 'Pharmaceutical companies', 'Financial services', 'AI research labs', 'Quantum computing companies'],
+    trialDays: 60,
+    setupTime: '4-6 weeks',
+    category: 'Quantum Computing & AI',
+    realService: true,
+    technology: ['Quantum algorithms, Python, Qiskit, Cirq, TensorFlow, PyTorch'],
+    integrations: ['IBM Quantum, Google Quantum AI, AWS Braket, Azure Quantum, Custom quantum hardware'],
+    useCases: ['Drug discovery, Financial modeling, Optimization problems, Machine learning acceleration, Research applications'],
+    roi: 'Research institutions report 500% improvement in problem-solving speed and 300% reduction in computational time.',
+    competitors: ['IBM Quantum, Google Quantum AI, AWS Braket, Azure Quantum'],
+    marketSize: '$8.9B quantum computing market',
+    growthRate: '45% annual growth',
+    variant: 'quantum-ml-enterprise',
+    contactInfo: {
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true,
+    implementationDetails: 'Quantum machine learning platform with hybrid quantum-classical algorithms and comprehensive ML tools.',
+    launchDate: '2024-12-01',
+    customers: 8,
+    rating: 4.9,
+    reviews: 12
+  },
+
+  // Neuromorphic Computing Platform
+  {
+    id: 'neuromorphic-computing-platform',
+    name: 'Neuromorphic Computing Platform',
+    tagline: 'Brain-inspired computing for the future',
+    price: '$899',
+    period: '/month',
+    description: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure for efficient, low-power AI processing.',
+    features: [
+      'Spiking neural networks',
+      'Neuromorphic hardware support',
+      'Low-power AI processing',
+      'Real-time learning',
+      'Adaptive algorithms',
+      'Hardware acceleration',
+      'Performance optimization',
+      'Research tools',
+      'Custom network design',
+      'Expert consultation'
+    ],
+    popular: true,
+    icon: '⚡',
+    color: 'from-blue-600 to-cyan-600',
+    textColor: 'text-blue-400',
+    link: 'https://ziontechgroup.com/neuromorphic-computing-platform',
+    marketPosition: 'Competes with Intel Loihi ($custom), BrainChip ($custom). Our advantage: Comprehensive software platform and hardware agnostic approach.',
+    targetAudience: ['AI research labs', 'Robotics companies', 'IoT device manufacturers', 'Edge computing companies', 'Research institutions'],
+    trialDays: 45,
+    setupTime: '3-4 weeks',
+    category: 'Neuromorphic Computing & AI',
+>>>>>>> autobot/2025-08-24T03-49-38-332Z
     realService: true,
     technology: ['React, Python, TensorFlow, PostgreSQL, Redis, Docker'],
     integrations: ['Salesforce, HubSpot, Google Analytics, Shopify, QuickBooks, Excel'],
@@ -699,6 +764,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       'Performance optimization'
     ],
     popular: true,
+<<<<<<< HEAD
     icon: '🌐',
     color: 'from-indigo-600 to-purple-600',
     textColor: 'text-indigo-400',
@@ -708,6 +774,17 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     trialDays: 21,
     setupTime: '1-2 weeks',
     category: 'Metaverse & Virtual Reality',
+=======
+    icon: '🧬',
+    color: 'from-green-600 to-emerald-600',
+    textColor: 'text-green-400',
+    link: 'https://ziontechgroup.com/synthetic-biology-platform',
+    marketPosition: 'Competes with Benchling ($custom), SnapGene ($custom). Our advantage: Comprehensive design tools and automation capabilities.',
+    targetAudience: ['Biotechnology companies', 'Pharmaceutical companies', 'Research institutions', 'Agricultural companies', 'Biofuel companies'],
+    trialDays: 90,
+    setupTime: '4-6 weeks',
+    category: 'Synthetic Biology & Biotechnology',
+>>>>>>> autobot/2025-08-24T03-49-38-332Z
     realService: true,
     technology: ['Unity, Unreal Engine, WebGL, Three.js, React, Node.js'],
     integrations: ['Meta Quest, HTC Vive, WebXR, SteamVR, Oculus'],
@@ -733,6 +810,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
 
   // Quantum AI Brain-Computer Interface
   {
+<<<<<<< HEAD
     id: 'quantum-ai-brain-computer-interface',
     name: 'Quantum AI Brain-Computer Interface',
     tagline: 'Next-generation neural interface with quantum computing power',
@@ -982,6 +1060,45 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     marketSize: '$45.2B cybersecurity market',
     growthRate: '12% annual growth',
     variant: 'quantum-internet-enterprise',
+=======
+    id: 'quantum-metaverse-platform',
+    name: 'Quantum Metaverse Platform',
+    tagline: 'Experience the metaverse with quantum-enhanced capabilities',
+    price: '$999',
+    period: '/month',
+    description: 'Revolutionary quantum metaverse platform that provides quantum-enhanced virtual experiences, improved graphics, and advanced AI interactions.',
+    features: [
+      'Quantum-enhanced graphics',
+      'AI-powered interactions',
+      'Real-time quantum processing',
+      'Advanced physics simulation',
+      'Multi-user experiences',
+      'VR/AR integration',
+      'Performance optimization',
+      'Custom world creation',
+      'API for developers',
+      '24/7 quantum metaverse access'
+    ],
+    popular: true,
+    icon: '🌌',
+    color: 'from-violet-600 to-purple-600',
+    textColor: 'text-violet-400',
+    link: 'https://ziontechgroup.com/quantum-metaverse-platform',
+    marketPosition: 'First quantum metaverse platform. Our advantage: Quantum computing provides 1000x better graphics and AI interactions.',
+    targetAudience: 'Metaverse companies, Gaming companies, VR/AR developers, Educational institutions, Entertainment companies',
+    trialDays: 21,
+    setupTime: '2-3 weeks',
+    category: 'Quantum Computing & Metaverse',
+    realService: true,
+    technology: ['Python, Quantum algorithms, VR/AR, AI/ML, 3D graphics'],
+    integrations: ['VR headsets, AR devices, Gaming platforms, Social platforms'],
+    useCases: ['Virtual experiences, Gaming, Education, Social interaction, Entertainment'],
+    roi: 'Metaverse companies report 1000x improvement in graphics quality and 500% increase in user engagement.',
+    competitors: ['No direct competitors - first quantum metaverse platform'],
+    marketSize: '$35.5B quantum metaverse market',
+    growthRate: '85% annual growth',
+    variant: 'quantum-metaverse-enterprise',
+>>>>>>> autobot/2025-08-24T03-49-38-332Z
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -989,6 +1106,7 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
+<<<<<<< HEAD
     implementationDetails: 'Quantum internet security platform with quantum-resistant encryption and quantum network protocols.',
     launchDate: '2024-01-01',
     customers: 22,
@@ -1206,5 +1324,12 @@ export const emergingTechServicesEnhanced2025: EmergingTechService[] = [
     customers: 33,
     rating: 4.8,
     reviews: 25
+=======
+    implementationDetails: 'Quantum metaverse platform with enhanced graphics and AI capabilities.',
+    launchDate: '2024-04-30',
+    customers: 18,
+    rating: 4.8,
+    reviews: 11
+>>>>>>> autobot/2025-08-24T03-49-38-332Z
   }
 ];
