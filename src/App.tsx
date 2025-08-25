@@ -19,9 +19,7 @@ import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
 import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
-import { EnhancedSEO } from './components/EnhancedSEO';
-import { EnhancedAccessibility } from './components/EnhancedAccessibility';
-import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { SidebarProvider } from './context/SidebarContext';
 
 // Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
@@ -46,20 +44,8 @@ const AIPoweredITAssetManagement = lazy(() => import('./pages/AIPoweredITAssetMa
 const SOC2ComplianceAutomation = lazy(() => import('./pages/SOC2ComplianceAutomation'));
 const AIAutonomousResearchAssistant = lazy(() => import('./pages/AIAutonomousResearchAssistant'));
 const FiveGEnterpriseSolutions = lazy(() => import('./pages/5GEnterpriseSolutions'));
-const FiveGEnterpriseNetwork = lazy(() => import('./pages/5GEnterpriseNetwork'));
-const FiveGNetworkOptimization = lazy(() => import('./pages/5GNetworkOptimization'));
-const FiveGPrivateNetworkSolutions = lazy(() => import('./pages/5GPrivateNetworkSolutions'));
-const AccessibilityAuditor = lazy(() => import('./pages/AccessibilityAuditor'));
-const AdvancedCybersecuritySuite = lazy(() => import('./pages/AdvancedCybersecuritySuite'));
-const AdvancedResearchAutomation = lazy(() => import('./pages/AdvancedResearchAutomation'));
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
-
-// New Innovative Services Showcase
-const InnovativeServicesShowcase = lazy(() => import('./pages/InnovativeServicesShowcase'));
-
-// Comprehensive Services Overview
-const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveServicesOverview'));
 
 // Company information pages
 const About = lazy(() => import('./pages/About'));
@@ -109,26 +95,16 @@ const LoadingSpinner = () => (
 
 const App = () => {
   useScrollToTop();
-  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <EnhancedErrorBoundary>
       <ThemeProvider>
         <WhitelabelProvider>
-          <Router>
-            <PerformanceOptimizer>
+          <SidebarProvider>
+            <Router>
               <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-                {/* Enhanced SEO */}
-                <EnhancedSEO 
-                  title="Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services"
-                  description="Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology."
-                  keywords="AI solutions, quantum computing, cybersecurity, digital transformation, enterprise technology, machine learning, cloud services, IT infrastructure"
-                  type="website"
-                  url="https://ziontechgroup.com"
-                />
-                
                 <Header />
-                <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+                <Sidebar />
                 
                 <main className="pt-20">
                   <Suspense fallback={<LoadingSpinner />}>
@@ -156,20 +132,8 @@ const App = () => {
                       <Route path="/soc2-compliance-automation" element={<SOC2ComplianceAutomation />} />
                       <Route path="/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
                       <Route path="/5g-enterprise-solutions" element={<FiveGEnterpriseSolutions />} />
-                      <Route path="/5g-enterprise-network" element={<FiveGEnterpriseNetwork />} />
-                      <Route path="/5g-network-optimization" element={<FiveGNetworkOptimization />} />
-                      <Route path="/5g-private-network-solutions" element={<FiveGPrivateNetworkSolutions />} />
-                      <Route path="/accessibility-auditor" element={<AccessibilityAuditor />} />
-                      <Route path="/advanced-cybersecurity-suite" element={<AdvancedCybersecuritySuite />} />
-                      <Route path="/advanced-research-automation" element={<AdvancedResearchAutomation />} />
                       <Route path="/case-studies" element={<CaseStudies />} />
                       <Route path="/help" element={<HelpCenter />} />
-                      
-                      {/* New Innovative Services Showcase */}
-                      <Route path="/innovative-services-showcase" element={<InnovativeServicesShowcase />} />
-                      
-                      {/* Comprehensive Services Overview */}
-                      <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview />} />
                       
                       {/* Company Routes */}
                       <Route path="/about" element={<About />} />
@@ -211,7 +175,7 @@ const App = () => {
                 <SonnerToaster />
                 
                 {/* Enhanced Accessibility Controls */}
-                <EnhancedAccessibility />
+                <AccessibilityControls position="bottom-right" />
                 
                 {/* AI Chatbot - Always Available */}
                 <AIChatbot />
@@ -268,23 +232,6 @@ const App = () => {
                   </>
                 )}
                 
-                {/* Enhanced Performance Monitor - Always Available */}
-                <PerformanceMonitor 
-                  showMetrics={true}
-                  autoRefresh={true}
-                  refreshInterval={30000}
-                  onMetricsUpdate={(metrics) => {
-                    if (import.meta.env.DEV) {
-                      console.log('Performance metrics updated:', metrics);
-                    }
-                  }}
-                  onScoreUpdate={(score) => {
-                    if (import.meta.env.DEV) {
-                      console.log('Performance score updated:', score);
-                    }
-                  }}
-                />
-                
                 {/* Link Health Monitor - Development Mode */}
                 {import.meta.env.DEV && (
                   <LinkHealthMonitor
@@ -300,9 +247,16 @@ const App = () => {
                     timeout={5000} // 5 seconds
                   />
                 )}
+                
+                {/* Performance Optimizer - Always Available */}
+                <PerformanceOptimizer 
+                  showMetrics={true}
+                  onOptimize={(metrics) => console.log('Performance metrics:', metrics)}
+                  autoOptimize={true}
+                />
               </div>
-            </PerformanceOptimizer>
           </Router>
+        </SidebarProvider>
         </WhitelabelProvider>
       </ThemeProvider>
     </EnhancedErrorBoundary>
