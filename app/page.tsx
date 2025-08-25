@@ -1,8 +1,10 @@
-import React from 'react';
-import UltraFuturisticBackground2029 from '@/components/ui/UltraFuturisticBackground2029';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+'use client';
+
+import React, { useState } from 'react';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+import { Sidebar } from './components/Sidebar';
+import { Button } from './components/ui/button';
 import { 
   Rocket, 
   Zap, 
@@ -13,25 +15,67 @@ import {
   ArrowRight,
   Star,
   CheckCircle,
-  Lightbulb
+  Lightbulb,
+  Brain,
+  Cpu,
+  Cloud,
+  Database,
+  Network,
+  Eye,
+  Leaf,
+  Heart,
+  Calendar,
+  ShoppingCart,
+  Building,
+  Factory,
+  Store,
+  Car,
+  Plane,
+  Ship,
+  Home,
+  Hospital,
+  GraduationCap,
+  FileText,
+  BarChart3,
+  CreditCard,
+  MessageSquare,
+  Camera,
+  Video,
+  Music,
+  BookOpen,
+  Target,
+  PieChart,
+  Activity,
+  Bot,
+  Settings,
+  Truck
 } from 'lucide-react';
 
 export default function Home() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      {/* Ultra-futuristic background */}
-      <UltraFuturisticBackground2029 />
+      {/* Header */}
+      <Header />
+      
+      {/* Sidebar */}
+      <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
       
       {/* Main content */}
-      <div className="relative z-10">
+      <div className="relative z-10 pt-20 lg:pt-24">
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center justify-center px-4">
           <div className="text-center max-w-6xl mx-auto">
             <div className="mb-8">
-              <Badge variant="secondary" className="mb-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white border-0">
+              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full text-white text-sm font-medium mb-4">
                 <Rocket className="w-4 h-4 mr-2" />
                 Welcome to 2029
-              </Badge>
+              </div>
             </div>
             
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -69,148 +113,224 @@ export default function Home() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <Card className="bg-black/20 backdrop-blur-sm border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 hover:scale-105">
-                <CardHeader>
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
-                    <Rocket className="w-6 h-6 text-white" />
-                  </div>
-                  <CardTitle className="text-cyan-400">Quantum Computing</CardTitle>
-                  <CardDescription className="text-gray-300">
-                    Next-generation quantum processors solving complex problems in seconds.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-400 mb-4">
-                    Our quantum computing platform delivers unprecedented computational power for scientific research, cryptography, and AI training.
-                  </p>
-                  <Button variant="ghost" className="text-cyan-400 hover:text-cyan-300 p-0">
-                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </CardContent>
-              </Card>
+              {/* Quantum Computing */}
+              <div className="bg-black/20 backdrop-blur-sm border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 hover:scale-105 rounded-xl p-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
+                  <Cpu className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-cyan-400 text-xl font-semibold mb-2">Quantum Computing</h3>
+                <p className="text-gray-300 mb-4">
+                  Next-generation quantum processors solving complex problems in seconds.
+                </p>
+                <p className="text-gray-400 mb-4">
+                  Our quantum computing platform delivers unprecedented computational power for scientific research, cryptography, and AI training.
+                </p>
+                <Button variant="ghost" className="text-cyan-400 hover:text-cyan-300 p-0">
+                  Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </div>
 
-              <Card className="bg-black/20 backdrop-blur-sm border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
-                <CardHeader>
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
-                    <Zap className="w-6 h-6 text-white" />
-                  </div>
-                  <CardTitle className="text-purple-400">AI & Machine Learning</CardTitle>
-                  <CardDescription className="text-gray-300">
-                    Advanced neural networks and deep learning algorithms.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-400 mb-4">
-                    State-of-the-art AI models that understand, learn, and adapt to provide intelligent solutions across all industries.
-                  </p>
-                  <Button variant="ghost" className="text-purple-400 hover:text-purple-300 p-0">
-                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </CardContent>
-              </Card>
+              {/* AI & Machine Learning */}
+              <div className="bg-black/20 backdrop-blur-sm border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:scale-105 rounded-xl p-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+                  <Brain className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-purple-400 text-xl font-semibold mb-2">AI & Machine Learning</h3>
+                <p className="text-gray-300 mb-4">
+                  Advanced neural networks and deep learning algorithms.
+                </p>
+                <p className="text-gray-400 mb-4">
+                  Transform your business with intelligent automation, predictive analytics, and autonomous decision-making systems.
+                </p>
+                <Button variant="ghost" className="text-purple-400 hover:text-purple-300 p-0">
+                  Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </div>
 
-              <Card className="bg-black/20 backdrop-blur-sm border-pink-500/20 hover:border-pink-500/40 transition-all duration-300 hover:scale-105">
-                <CardHeader>
-                  <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
-                    <Shield className="w-6 h-6 text-white" />
-                  </div>
-                  <CardTitle className="text-pink-400">Cybersecurity</CardTitle>
-                  <CardDescription className="text-gray-300">
-                    Quantum-resistant encryption and advanced threat detection.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-400 mb-4">
-                    Next-level security solutions protecting data and systems from emerging cyber threats and quantum attacks.
-                  </p>
-                  <Button variant="ghost" className="text-pink-400 hover:text-pink-300 p-0">
-                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </CardContent>
-              </Card>
+              {/* Cloud & DevOps */}
+              <div className="bg-black/20 backdrop-blur-sm border-green-500/20 hover:border-green-500/40 transition-all duration-300 hover:scale-105 rounded-xl p-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
+                  <Cloud className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-green-400 text-xl font-semibold mb-2">Cloud & DevOps</h3>
+                <p className="text-gray-300 mb-4">
+                  Scalable cloud infrastructure and automated deployment.
+                </p>
+                <p className="text-gray-400 mb-4">
+                  Streamline your development workflow with modern DevOps practices and cloud-native solutions.
+                </p>
+                <Button variant="ghost" className="text-green-400 hover:text-green-300 p-0">
+                  Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </div>
 
-              <Card className="bg-black/20 backdrop-blur-sm border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 hover:scale-105">
-                <CardHeader>
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
-                    <Globe className="w-6 h-6 text-white" />
-                  </div>
-                  <CardTitle className="text-cyan-400">Global Infrastructure</CardTitle>
-                  <CardDescription className="text-gray-300">
-                    Worldwide network of data centers and edge computing nodes.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-400 mb-4">
-                    Distributed computing infrastructure ensuring low-latency, high-availability services across the globe.
-                  </p>
-                  <Button variant="ghost" className="text-cyan-400 hover:text-cyan-300 p-0">
-                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </CardContent>
-              </Card>
+              {/* Cybersecurity */}
+              <div className="bg-black/20 backdrop-blur-sm border-red-500/20 hover:border-red-500/40 transition-all duration-300 hover:scale-105 rounded-xl p-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center mb-4">
+                  <Shield className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-red-400 text-xl font-semibold mb-2">Cybersecurity</h3>
+                <p className="text-gray-300 mb-4">
+                  Advanced security and compliance solutions.
+                </p>
+                <p className="text-gray-400 mb-4">
+                  Protect your digital assets with cutting-edge security technologies and comprehensive compliance frameworks.
+                </p>
+                <Button variant="ghost" className="text-red-400 hover:text-red-300 p-0">
+                  Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </div>
 
-              <Card className="bg-black/20 backdrop-blur-sm border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
-                <CardHeader>
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg flex items-center justify-center mb-4">
-                    <Users className="w-6 h-6 text-white" />
-                  </div>
-                  <CardTitle className="text-purple-400">Digital Transformation</CardTitle>
-                  <CardDescription className="text-gray-300">
-                    Complete business modernization and digital strategy.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-400 mb-4">
-                    End-to-end digital transformation services helping organizations thrive in the digital age.
-                  </p>
-                  <Button variant="ghost" className="text-purple-400 hover:text-purple-300 p-0">
-                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </CardContent>
-              </Card>
+              {/* Blockchain Solutions */}
+              <div className="bg-black/20 backdrop-blur-sm border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:scale-105 rounded-xl p-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center mb-4">
+                  <Database className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-blue-400 text-xl font-semibold mb-2">Blockchain Solutions</h3>
+                <p className="text-gray-300 mb-4">
+                  Distributed ledger and smart contract platforms.
+                </p>
+                <p className="text-gray-400 mb-4">
+                  Build trust and transparency with blockchain technology for secure transactions and decentralized applications.
+                </p>
+                <Button variant="ghost" className="text-blue-400 hover:text-blue-300 p-0">
+                  Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </div>
 
-              <Card className="bg-black/20 backdrop-blur-sm border-pink-500/20 hover:border-pink-500/40 transition-all duration-300 hover:scale-105">
-                <CardHeader>
-                  <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center mb-4">
-                    <TrendingUp className="w-6 h-6 text-white" />
-                  </div>
-                  <CardTitle className="text-pink-400">Innovation Lab</CardTitle>
-                  <CardDescription className="text-gray-300">
-                    Research and development for future technologies.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-400 mb-4">
-                    Our innovation lab explores emerging technologies and creates breakthrough solutions for tomorrow's challenges.
-                  </p>
-                  <Button variant="ghost" className="text-pink-400 hover:text-pink-300 p-0">
-                    Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </CardContent>
-              </Card>
+              {/* IoT & Edge Computing */}
+              <div className="bg-black/20 backdrop-blur-sm border-yellow-500/20 hover:border-yellow-500/40 transition-all duration-300 hover:scale-105 rounded-xl p-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-4">
+                  <Network className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-yellow-400 text-xl font-semibold mb-2">IoT & Edge Computing</h3>
+                <p className="text-gray-300 mb-4">
+                  Connected devices and real-time processing.
+                </p>
+                <p className="text-gray-400 mb-4">
+                  Enable smart cities, connected vehicles, and industrial automation with IoT and edge computing solutions.
+                </p>
+                <Button variant="ghost" className="text-yellow-400 hover:text-yellow-300 p-0">
+                  Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Stats Section */}
-        <section className="py-20 px-4 relative">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              <div className="space-y-2">
-                <div className="text-4xl md:text-5xl font-bold text-cyan-400">500+</div>
-                <div className="text-gray-400">Global Clients</div>
+        {/* Industry Solutions */}
+        <section className="py-20 px-4 relative bg-gradient-to-b from-black to-gray-900">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
+                Industry Solutions
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Tailored technology solutions for every industry, driving innovation and digital transformation.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Healthcare */}
+              <div className="bg-white/5 backdrop-blur-sm border-green-500/20 hover:border-green-500/40 transition-all duration-300 hover:scale-105 rounded-xl p-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
+                  <Hospital className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-green-400 text-xl font-semibold mb-2">Healthcare</h3>
+                <p className="text-gray-300 mb-4">
+                  Digital health solutions and medical AI.
+                </p>
+                <p className="text-gray-400 mb-4">
+                  Revolutionize patient care with AI-powered diagnostics, telemedicine platforms, and health analytics.
+                </p>
+                <Button variant="ghost" className="text-green-400 hover:text-green-300 p-0">
+                  Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
               </div>
-              <div className="space-y-2">
-                <div className="text-4xl md:text-5xl font-bold text-purple-400">99.9%</div>
-                <div className="text-gray-400">Uptime</div>
+
+              {/* Fintech */}
+              <div className="bg-white/5 backdrop-blur-sm border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:scale-105 rounded-xl p-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center mb-4">
+                  <CreditCard className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-blue-400 text-xl font-semibold mb-2">Fintech</h3>
+                <p className="text-gray-300 mb-4">
+                  Financial technology and digital banking.
+                </p>
+                <p className="text-gray-400 mb-4">
+                  Transform financial services with blockchain, AI-powered trading, and secure payment solutions.
+                </p>
+                <Button variant="ghost" className="text-blue-400 hover:text-blue-300 p-0">
+                  Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
               </div>
-              <div className="space-y-2">
-                <div className="text-4xl md:text-5xl font-bold text-pink-400">24/7</div>
-                <div className="text-gray-400">Support</div>
+
+              {/* Education */}
+              <div className="bg-white/5 backdrop-blur-sm border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:scale-105 rounded-xl p-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
+                  <GraduationCap className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-purple-400 text-xl font-semibold mb-2">Education</h3>
+                <p className="text-gray-300 mb-4">
+                  EdTech platforms and learning systems.
+                </p>
+                <p className="text-gray-400 mb-4">
+                  Empower learners with AI-driven personalized education, virtual classrooms, and adaptive learning platforms.
+                </p>
+                <Button variant="ghost" className="text-purple-400 hover:text-purple-300 p-0">
+                  Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
               </div>
-              <div className="space-y-2">
-                <div className="text-4xl md:text-5xl font-bold text-cyan-400">10+</div>
-                <div className="text-gray-400">Years Experience</div>
+
+              {/* Manufacturing */}
+              <div className="bg-white/5 backdrop-blur-sm border-orange-500/20 hover:border-orange-500/40 transition-all duration-300 hover:scale-105 rounded-xl p-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
+                  <Factory className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-orange-400 text-xl font-semibold mb-2">Manufacturing</h3>
+                <p className="text-gray-300 mb-4">
+                  Industry 4.0 and smart manufacturing.
+                </p>
+                <p className="text-gray-400 mb-4">
+                  Optimize production with IoT sensors, predictive maintenance, and AI-powered quality control.
+                </p>
+                <Button variant="ghost" className="text-orange-400 hover:text-orange-300 p-0">
+                  Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </div>
+
+              {/* Retail */}
+              <div className="bg-white/5 backdrop-blur-sm border-pink-500/20 hover:border-pink-500/40 transition-all duration-300 hover:scale-105 rounded-xl p-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center mb-4">
+                  <Store className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-pink-400 text-xl font-semibold mb-2">Retail</h3>
+                <p className="text-gray-300 mb-4">
+                  E-commerce and omnichannel solutions.
+                </p>
+                <p className="text-gray-400 mb-4">
+                  Create seamless shopping experiences with AI-powered recommendations and inventory management.
+                </p>
+                <Button variant="ghost" className="text-pink-400 hover:text-pink-300 p-0">
+                  Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </div>
+
+              {/* Government */}
+              <div className="bg-white/5 backdrop-blur-sm border-indigo-500/20 hover:border-indigo-500/40 transition-all duration-300 hover:scale-105 rounded-xl p-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
+                  <Building className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-indigo-400 text-xl font-semibold mb-2">Government</h3>
+                <p className="text-gray-300 mb-4">
+                  Public sector technology solutions.
+                </p>
+                <p className="text-gray-400 mb-4">
+                  Modernize government services with secure, scalable, and citizen-centric digital platforms.
+                </p>
+                <Button variant="ghost" className="text-indigo-400 hover:text-indigo-300 p-0">
+                  Learn More <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
               </div>
             </div>
           </div>
@@ -220,48 +340,27 @@ export default function Home() {
         <section className="py-20 px-4 relative">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Ready to Transform Your Future?
+              Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join the revolution and discover how Zion Tech Group can accelerate your digital transformation journey.
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join the future of technology with Zion Tech Group. Let's build something extraordinary together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white border-0 px-8 py-3 text-lg">
-                <Lightbulb className="w-5 h-5 mr-2" />
-                Start Your Journey
+                <MessageSquare className="w-5 h-5 mr-2" />
+                Get Started Today
               </Button>
-              <Button size="lg" variant="outline" className="border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-3 text-lg">
-                <Users className="w-5 h-5 mr-2" />
-                Contact Our Team
+              <Button size="lg" variant="outline" className="border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white px-8 py-3 text-lg">
+                <Rocket className="w-5 h-5 mr-2" />
+                Request Demo
               </Button>
             </div>
           </div>
         </section>
-
-        {/* Footer */}
-        <footer className="py-12 px-4 border-t border-gray-800 relative">
-          <div className="max-w-6xl mx-auto text-center">
-            <div className="flex justify-center items-center mb-6">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mr-3">
-                <Star className="w-4 h-4 text-white" />
-              </div>
-              <span className="text-xl font-bold text-cyan-400">Zion Tech Group</span>
-            </div>
-            <p className="text-gray-400 mb-6">
-              Pioneering the future of technology since 2019
-            </p>
-            <div className="flex justify-center space-x-6 text-gray-400">
-              <span>Privacy Policy</span>
-              <span>Terms of Service</span>
-              <span>Contact</span>
-              <span>Careers</span>
-            </div>
-            <div className="mt-6 text-gray-500 text-sm">
-              © 2029 Zion Tech Group. All rights reserved.
-            </div>
-          </div>
-        </footer>
       </div>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
