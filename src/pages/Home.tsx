@@ -48,6 +48,7 @@ const LazyServicesSection = React.lazy(() => import('../components/home/Services
 const LazyFeaturesSection = React.lazy(() => import('../components/home/FeaturesSection'));
 const LazyTestimonialsSection = React.lazy(() => import('../components/home/TestimonialsSection'));
 const LazyCTASection = React.lazy(() => import('../components/home/CTASection'));
+const LazyEmergingTechnologiesSection = React.lazy(() => import('../components/home/EmergingTechnologiesSection'));
 
 // Loading fallback component
 const LoadingFallback = ({ message }: { message: string }) => (
@@ -89,6 +90,15 @@ const Home: React.FC = () => {
       cta: "Learn More",
       path: "/services/micro-saas-solutions",
       features: ["Custom Development", "Scalable Architecture", "API Integration", "User Management"]
+    },
+    {
+      title: "Quantum Technology Solutions",
+      subtitle: "Next-generation computing for enterprise",
+      description: "Harness the power of quantum computing for complex problem-solving, cryptography, and optimization challenges that traditional computers cannot handle.",
+      image: "/images/hero-quantum.jpg",
+      cta: "Discover Quantum",
+      path: "/services/quantum-technology",
+      features: ["Quantum Computing", "Quantum Security", "Quantum Algorithms", "Research & Development"]
     }
   ];
 
@@ -96,7 +106,9 @@ const Home: React.FC = () => {
     { icon: Users, value: "500+", label: "Happy Clients", description: "Trusted by businesses worldwide" },
     { icon: TrendingUp, value: "95%", label: "Success Rate", description: "Proven track record of delivery" },
     { icon: Award, value: "10+", label: "Years Experience", description: "Deep industry expertise" },
-    { icon: Globe, value: "25+", label: "Countries Served", description: "Global reach and support" }
+    { icon: Globe, value: "25+", label: "Countries Served", description: "Global reach and support" },
+    { icon: Shield, value: "99.9%", label: "Uptime Guarantee", description: "Reliable infrastructure and services" },
+    { icon: Zap, value: "24/7", label: "Support Available", description: "Round-the-clock technical assistance" }
   ];
 
   const featuredServices = [
@@ -168,6 +180,33 @@ const Home: React.FC = () => {
     { icon: Sparkles, label: "Innovation Leader", description: "Cutting-edge technology solutions" }
   ];
 
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      position: "CTO, TechCorp Inc.",
+      company: "TechCorp Inc.",
+      content: "Zion Tech Group transformed our data infrastructure with their AI solutions. We've seen a 40% improvement in operational efficiency.",
+      rating: 5,
+      avatar: "/images/testimonials/sarah-johnson.jpg"
+    },
+    {
+      name: "Michael Chen",
+      position: "VP of Engineering",
+      company: "InnovateTech Solutions",
+      content: "Their cybersecurity services are top-notch. We feel confident knowing our systems are protected by industry-leading security measures.",
+      rating: 5,
+      avatar: "/images/testimonials/michael-chen.jpg"
+    },
+    {
+      name: "Dr. Emily Rodriguez",
+      position: "Research Director",
+      company: "Quantum Research Institute",
+      content: "Working with Zion Tech Group on quantum computing projects has been groundbreaking. Their expertise is unmatched in the industry.",
+      rating: 5,
+      avatar: "/images/testimonials/emily-rodriguez.jpg"
+    }
+  ];
+
   const aiServices = [
     {
       title: "AI Autonomous Systems",
@@ -213,6 +252,37 @@ const Home: React.FC = () => {
       icon: Cpu,
       path: "/solutions/enterprise",
       features: ["Predictive Maintenance", "Quality Control", "Supply Chain Optimization"]
+    }
+  ];
+
+  const emergingTechnologies = [
+    {
+      title: "Quantum Computing",
+      description: "Next-generation computational power for complex problem-solving",
+      icon: Microchip,
+      path: "/services/quantum-technology",
+      features: ["Quantum Algorithms", "Cryptography", "Optimization", "Research & Development"]
+    },
+    {
+      title: "Blockchain Solutions",
+      description: "Decentralized and secure digital infrastructure",
+      icon: Network,
+      path: "/services/blockchain-solutions",
+      features: ["Smart Contracts", "DeFi Platforms", "Supply Chain", "Digital Identity"]
+    },
+    {
+      title: "IoT & Edge Computing",
+      description: "Connected devices and real-time data processing",
+      icon: Globe2,
+      path: "/services/iot-solutions",
+      features: ["Sensor Networks", "Edge Analytics", "Real-time Processing", "Device Management"]
+    },
+    {
+      title: "Extended Reality (XR)",
+      description: "Immersive technologies for training and visualization",
+      icon: Eye,
+      path: "/services/ar-vr-solutions",
+      features: ["Virtual Reality", "Augmented Reality", "Mixed Reality", "Training Simulations"]
     }
   ];
 
@@ -543,13 +613,17 @@ const Home: React.FC = () => {
         <LazyFeaturesSection />
       </Suspense>
       
-      <Suspense fallback={<LoadingFallback message="Loading testimonials..." />}>
-        <LazyTestimonialsSection />
-      </Suspense>
-      
-      <Suspense fallback={<LoadingFallback message="Loading CTA..." />}>
-        <LazyCTASection />
-      </Suspense>
+              <Suspense fallback={<LoadingFallback message="Loading emerging technologies..." />}>
+          <LazyEmergingTechnologiesSection technologies={emergingTechnologies} />
+        </Suspense>
+
+        <Suspense fallback={<LoadingFallback message="Loading testimonials..." />}>
+          <LazyTestimonialsSection testimonials={testimonials} />
+        </Suspense>
+        
+        <Suspense fallback={<LoadingFallback message="Loading CTA..." />}>
+          <LazyCTASection />
+        </Suspense>
     </div>
   );
 };

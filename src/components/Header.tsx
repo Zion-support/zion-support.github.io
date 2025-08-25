@@ -250,6 +250,43 @@ export function Header() {
     }
   ];
 
+  const socialLinks = [
+    { 
+      href: "https://www.linkedin.com/company/ziontechgroup", 
+      icon: "linkedin", 
+      label: "LinkedIn",
+      target: "_blank",
+      rel: "noopener noreferrer"
+    },
+    { 
+      href: "https://twitter.com/ziontechgroup", 
+      icon: "twitter", 
+      label: "Twitter",
+      target: "_blank",
+      rel: "noopener noreferrer"
+    },
+    { 
+      href: "https://github.com/ziontechgroup", 
+      icon: "github", 
+      label: "GitHub",
+      target: "_blank",
+      rel: "noopener noreferrer"
+    },
+    { 
+      href: "https://www.youtube.com/@ziontechgroup", 
+      icon: "youtube", 
+      label: "YouTube",
+      target: "_blank",
+      rel: "noopener noreferrer"
+    }
+  ];
+
+  const contactInfo = {
+    phone: "+1 (302) 464-0950",
+    email: "kleber@ziontechgroup.com",
+    address: "Wilmington, DE, USA"
+  };
+
   const handleDropdownToggle = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
@@ -407,6 +444,18 @@ export function Header() {
 
           {/* Search and Contact */}
           <div className="hidden lg:flex items-center space-x-4">
+            {/* Contact Information */}
+            <div className="flex items-center space-x-4 text-sm">
+              <a href={`tel:${contactInfo.phone.replace(/\s/g, '')}`} className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors">
+                <Phone className="w-4 h-4 mr-2" />
+                {contactInfo.phone}
+              </a>
+              <a href={`mailto:${contactInfo.email}`} className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors">
+                <Mail className="w-4 h-4 mr-2" />
+                {contactInfo.email}
+              </a>
+            </div>
+
             {/* Search */}
             <form onSubmit={handleSearch} className="relative">
               <input
@@ -423,6 +472,22 @@ export function Header() {
                 <Search className="w-5 h-5" />
               </button>
             </form>
+
+            {/* Social Media Links */}
+            <div className="flex items-center space-x-3">
+              {socialLinks.map((link, idx) => (
+                <a
+                  key={idx}
+                  href={link.href}
+                  target={link.target}
+                  rel={link.rel}
+                  className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
+                  aria-label={link.label}
+                >
+                  <span className="text-lg">{link.icon === 'linkedin' ? '💼' : link.icon === 'twitter' ? '🐦' : link.icon === 'github' ? '💻' : '📺'}</span>
+                </a>
+              ))}
+            </div>
 
             {/* Contact Button */}
             <Link

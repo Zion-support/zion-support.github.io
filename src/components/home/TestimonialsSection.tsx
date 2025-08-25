@@ -1,118 +1,86 @@
-import React, { useState, useEffect } from 'react';
-import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 
-const testimonials = [
-  {
-    name: "Sarah Johnson",
-    position: "CTO",
-    company: "TechFlow Solutions",
-    content: "Zion Tech Group transformed our entire IT infrastructure. Their AI-powered solutions reduced our operational costs by 40% and improved efficiency dramatically. The team is incredibly professional and responsive.",
-    rating: 5,
-    avatar: "👩‍💼"
-  },
-  {
-    name: "Michael Chen",
-    position: "CEO",
-    company: "InnovateCorp",
-    content: "Working with Zion Tech Group has been a game-changer for our business. Their cybersecurity platform detected threats we didn't even know existed, and their 24/7 support gives us peace of mind.",
-    rating: 5,
-    avatar: "👨‍💼"
-  },
-  {
-    name: "Emily Rodriguez",
-    position: "Operations Director",
-    company: "Global Dynamics",
-    content: "The AI-powered CRM system they built for us has revolutionized our sales process. We've seen a 30% increase in lead conversion rates and our team is more productive than ever.",
-    rating: 5,
-    avatar: "👩‍💻"
-  },
-  {
-    name: "David Thompson",
-    position: "IT Manager",
-    company: "SecureNet Inc",
-    content: "Zion Tech Group's cloud migration expertise saved us months of planning and implementation time. Their team handled everything seamlessly, and we experienced zero downtime during the transition.",
-    rating: 5,
-    avatar: "👨‍💻"
-  },
-  {
-    name: "Lisa Wang",
-    position: "VP of Technology",
-    company: "FutureTech",
-    content: "Their digital transformation services helped us modernize our legacy systems and processes. The ROI was immediate, and our team adapted to the new technologies faster than expected.",
-    rating: 5,
-    avatar: "👩‍🔬"
-  }
-];
+interface Testimonial {
+  name: string;
+  position: string;
+  company: string;
+  content: string;
+  rating: number;
+  avatar: string;
+}
 
-export default function TestimonialsSection() {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+interface TestimonialsSectionProps {
+  testimonials: Testimonial[];
+}
 
-  // Auto-rotate testimonials
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 6000);
-
-    return () => clearInterval(interval);
-  }, []);
+export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ testimonials }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
   };
 
   const prevTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
   const goToTestimonial = (index: number) => {
-    setCurrentTestimonial(index);
+    setCurrentIndex(index);
   };
 
+  const currentTestimonial = testimonials[currentIndex];
+
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-900/50 to-black/50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-gradient-to-br from-gray-900 via-black to-blue-900 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.02),transparent_50%)]"></div>
+      
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            What Our Clients Say
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              What Our Clients Say
+            </span>
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what our clients have to say about working with Zion Tech Group
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Don't just take our word for it. Here's what industry leaders have to say about working with Zion Tech Group
           </p>
         </div>
 
+        {/* Testimonials Carousel */}
         <div className="relative max-w-4xl mx-auto">
+          {/* Quote Icon */}
+          <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center">
+            <Quote className="w-8 h-8 text-white" />
+          </div>
+
           {/* Testimonial Card */}
-          <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 relative">
-            {/* Quote Icon */}
-            <div className="absolute top-6 left-8 text-cyan-400/20">
-              <Quote className="w-12 h-12" />
+          <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-3xl p-8 md:p-12 text-center relative">
+            {/* Rating */}
+            <div className="flex justify-center mb-6">
+              {[...Array(currentTestimonial.rating)].map((_, i) => (
+                <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
+              ))}
             </div>
 
-            {/* Testimonial Content */}
-            <div className="text-center relative z-10">
-              <div className="mb-6">
-                <div className="text-6xl mb-4">{testimonials[currentTestimonial].avatar}</div>
-                <div className="flex justify-center mb-4">
-                  {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
+            {/* Content */}
+            <blockquote className="text-xl md:text-2xl text-white mb-8 leading-relaxed italic">
+              "{currentTestimonial.content}"
+            </blockquote>
+
+            {/* Author */}
+            <div className="flex flex-col items-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mb-4">
+                <span className="text-white font-bold text-xl">
+                  {currentTestimonial.name.charAt(0)}
+                </span>
               </div>
-
-              <blockquote className="text-lg text-gray-300 mb-6 leading-relaxed italic">
-                "{testimonials[currentTestimonial].content}"
-              </blockquote>
-
               <div className="text-center">
-                <div className="font-semibold text-white text-lg">
-                  {testimonials[currentTestimonial].name}
-                </div>
-                <div className="text-cyan-400">
-                  {testimonials[currentTestimonial].position}
-                </div>
-                <div className="text-gray-400 text-sm">
-                  {testimonials[currentTestimonial].company}
-                </div>
+                <h4 className="text-lg font-semibold text-white">{currentTestimonial.name}</h4>
+                <p className="text-cyan-400 font-medium">{currentTestimonial.position}</p>
+                <p className="text-gray-400 text-sm">{currentTestimonial.company}</p>
               </div>
             </div>
           </div>
@@ -120,32 +88,28 @@ export default function TestimonialsSection() {
           {/* Navigation Arrows */}
           <button
             onClick={prevTestimonial}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 p-3 bg-black/50 backdrop-blur-sm border border-cyan-500/30 rounded-full hover:bg-cyan-500/20 hover:border-cyan-500/60 transition-all duration-300"
-            aria-label="Previous testimonial"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-gray-800/80 hover:bg-gray-700/80 rounded-full flex items-center justify-center text-white hover:text-cyan-400 transition-all duration-300 backdrop-blur-sm"
           >
-            <ChevronLeft className="w-6 h-6 text-cyan-400" />
+            <ChevronLeft className="w-6 h-6" />
           </button>
-          
           <button
             onClick={nextTestimonial}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 p-3 bg-black/50 backdrop-blur-sm border border-cyan-500/30 rounded-full hover:bg-cyan-500/20 hover:border-cyan-500/60 transition-all duration-300"
-            aria-label="Next testimonial"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-gray-800/80 hover:bg-gray-700/80 rounded-full flex items-center justify-center text-white hover:text-cyan-400 transition-all duration-300 backdrop-blur-sm"
           >
-            <ChevronRight className="w-6 h-6 text-cyan-400" />
+            <ChevronRight className="w-6 h-6" />
           </button>
 
-          {/* Testimonial Indicators */}
-          <div className="flex justify-center mt-8 space-x-3">
+          {/* Dots Indicator */}
+          <div className="flex justify-center mt-8 space-x-2">
             {testimonials.map((_, index) => (
               <button
                 key={index}
                 onClick={() => goToTestimonial(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentTestimonial 
-                    ? 'bg-cyan-400 w-8' 
-                    : 'bg-gray-500 hover:bg-gray-400'
+                  index === currentIndex
+                    ? 'bg-cyan-400 scale-125'
+                    : 'bg-gray-600 hover:bg-gray-500'
                 }`}
-                aria-label={`Go to testimonial ${index + 1}`}
               />
             ))}
           </div>
@@ -153,15 +117,28 @@ export default function TestimonialsSection() {
 
         {/* Trust Indicators */}
         <div className="mt-16 text-center">
-          <div className="text-gray-400 mb-6">Trusted by leading companies worldwide</div>
+          <p className="text-gray-400 text-sm mb-4">Trusted by industry leaders worldwide</p>
           <div className="flex justify-center items-center space-x-8 opacity-60">
-            <div className="text-2xl font-bold text-gray-600">Fortune 500</div>
-            <div className="text-2xl font-bold text-gray-600">Startups</div>
-            <div className="text-2xl font-bold text-gray-600">Enterprises</div>
-            <div className="text-2xl font-bold text-gray-600">Government</div>
+            <div className="text-gray-500 text-xs">🏥 Healthcare</div>
+            <div className="text-gray-500 text-xs">🏦 Finance</div>
+            <div className="text-gray-500 text-xs">🏭 Manufacturing</div>
+            <div className="text-gray-500 text-xs">🛒 Retail</div>
+            <div className="text-gray-500 text-xs">🏛️ Government</div>
           </div>
         </div>
       </div>
+
+      {/* Floating Elements */}
+      <div className="absolute top-20 left-10 animate-float">
+        <div className="w-3 h-3 bg-cyan-400 rounded-full opacity-60"></div>
+      </div>
+      <div className="absolute bottom-20 right-10 animate-float-delayed">
+        <div className="w-4 h-4 bg-blue-500 rounded-full opacity-40"></div>
+      </div>
+
+      {/* CSS animations will be handled by Tailwind classes */}
     </section>
   );
-}
+};
+
+export default TestimonialsSection;
