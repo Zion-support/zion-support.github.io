@@ -28,7 +28,15 @@ import {
   ArrowRight,
   ExternalLink
 } from 'lucide-react';
+<<<<<<< HEAD
 import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
+=======
+<<<<<<< HEAD
+import { COMPREHENSIVE_SERVICES as comprehensiveServices } from '@/data/comprehensiveServices';
+=======
+import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
+>>>>>>> origin/cursor/website-audit-and-enhancement-53a4
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 
 export default function EnhancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');

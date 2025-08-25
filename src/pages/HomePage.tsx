@@ -181,7 +181,15 @@ export default function HomePage() {
                 className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-400/30 transition-all duration-300 group"
               >
                 <div className="flex items-center justify-between mb-4">
+<<<<<<< HEAD
                   <div className="text-2xl">{service.image}</div>
+=======
+<<<<<<< HEAD
+                  <div className="text-2xl">{service.images?.[0] || '🚀'}</div>
+=======
+                  <div className="text-2xl">{service.image}</div>
+>>>>>>> origin/cursor/build-and-fix-errors-e276
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
                   <div className="flex items-center gap-2">
                     <Star className="w-4 h-4 text-yellow-400 fill-current" />
                     <span className="text-white/80 text-sm">{service.rating}</span>

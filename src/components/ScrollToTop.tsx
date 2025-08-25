@@ -1,5 +1,14 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+=======
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 import { ChevronUp } from 'lucide-react';
 
 export const ScrollToTop: React.FC = () => {
@@ -25,6 +34,24 @@ export const ScrollToTop: React.FC = () => {
     });
   };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  if (!isVisible) {
+    return null;
+  }
+
+  return (
+    <button
+      onClick={scrollToTop}
+      className="fixed bottom-8 right-8 z-50 p-3 bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 animate-fade-in"
+      aria-label="Scroll to top"
+      title="Scroll to top"
+    >
+      <ChevronUp className="w-6 h-6" />
+    </button>
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   const handleKeyDown = (event: React.KeyboardEvent) => {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
@@ -62,5 +89,9 @@ export const ScrollToTop: React.FC = () => {
         </motion.button>
       )}
     </AnimatePresence>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   );
 };

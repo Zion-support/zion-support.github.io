@@ -1,3 +1,63 @@
+<<<<<<< HEAD
+import React from 'react';
+import { cn } from '@/lib/utils';
+=======
+<<<<<<< HEAD
+import React from "react"
+import { cn } from "@/lib/utils"
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+
+export interface AvatarProps extends React.HTMLAttributes<HTMLDivElement> {
+  children?: React.ReactNode;
+}
+
+export interface AvatarImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
+  src: string;
+  alt: string;
+}
+
+export interface AvatarFallbackProps extends React.HTMLAttributes<HTMLDivElement> {
+  children: React.ReactNode;
+}
+
+export const Avatar: React.FC<AvatarProps> = ({
+  className,
+  children,
+  ...props
+}) => {
+  return (
+    <div
+      className={cn(
+        'relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full',
+        className
+      )}
+      {...props}
+    >
+      {children}
+    </div>
+  );
+};
+
+export const AvatarImage: React.FC<AvatarImageProps> = ({
+  className,
+  src,
+  alt,
+  ...props
+}) => {
+  return (
+    <img
+      className={cn('aspect-square h-full w-full', className)}
+      src={src}
+      alt={alt}
+      {...props}
+    />
+  );
+};
+
+<<<<<<< HEAD
+=======
+export { Avatar }
+=======
 import React from 'react';
 import { cn } from '@/lib/utils';
 
@@ -48,6 +108,7 @@ export const AvatarImage: React.FC<AvatarImageProps> = ({
   );
 };
 
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 export const AvatarFallback: React.FC<AvatarFallbackProps> = ({
   className,
   children,
@@ -64,4 +125,9 @@ export const AvatarFallback: React.FC<AvatarFallbackProps> = ({
       {children}
     </div>
   );
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

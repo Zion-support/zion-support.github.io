@@ -1,5 +1,27 @@
+<<<<<<< HEAD
 
 import { Mail, Phone, MapPin, Globe, Sparkles, Send, Clock, Users } from 'lucide-react';
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Mail, 
+  Phone, 
+  MapPin, 
+  Clock, 
+  Send, 
+  CheckCircle,
+  MessageSquare,
+  Globe,
+  Shield,
+  Users
+} from 'lucide-react';
+=======
+
+import { Mail, Phone, MapPin, Globe, Sparkles, Send, Clock, Users } from 'lucide-react';
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 
 export default function ContactPage() {
   const contactInfo = {
@@ -93,6 +115,29 @@ export default function ContactPage() {
         </div>
       </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        {/* Contact Information */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20"
+            >
+              {contactInfo.map((info, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="group text-center p-6 rounded-2xl bg-gradient-to-br from-zion-dark/60 to-zion-dark/40 backdrop-blur-sm border border-zion-primary/20 hover:border-zion-primary/40 transition-all duration-300 hover:-translate-y-2"
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       {/* Contact Form */}
       <div className="py-20 bg-slate-50 dark:bg-slate-900">
         <div className="container mx-auto px-4">
@@ -179,6 +224,10 @@ export default function ContactPage() {
                 <select
                   id="service"
                   className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 hover:border-zion-cyan/50"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
                 >
                   <option value="">Select a service</option>
                   <option value="ai-services">AI Services</option>
@@ -267,4 +316,14 @@ export default function ContactPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+};
+
+export default ContactPage;
+=======
+}
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

@@ -1,4 +1,26 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+<<<<<<< HEAD
+import React from 'react';
+<<<<<<< HEAD
+=======
+import {
+  Toast,
+  ToastClose,
+  ToastDescription,
+  ToastProvider,
+  ToastTitle,
+  ToastViewport,
+} from "@/components/ui/toast"
+import { useToast } from "@/hooks/use-toast"
+>>>>>>> origin/cursor/check-and-fix-github-actions-e92c
+
+export function Toaster() {
+  return <div id="toaster" />;
+}
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 import { cn } from '@/lib/utils';
 
 export interface Toast {
@@ -99,3 +121,7 @@ export const Toaster: React.FC<ToasterProps> = ({ toasts, onDismiss }) => {
     </div>
   );
 };
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

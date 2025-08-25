@@ -28,6 +28,38 @@ export interface InnovativeITInfrastructureService {
 export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureService[] = [
   // Edge Computing & IoT Infrastructure
   {
+<<<<<<< HEAD
+    id: "edge-computing-iot-platform",
+    title: "Edge Computing & IoT Infrastructure Platform",
+    description: "Advanced edge computing platform that processes data closer to IoT devices, reducing latency and improving real-time decision making for smart cities and industrial applications.",
+    category: "IT Infrastructure",
+    subcategory: "Edge Computing",
+    price: 799,
+=======
+<<<<<<< HEAD
+    id: "edge-computing-orchestration-platform",
+    title: "Edge Computing Orchestration Platform - Distributed Computing Infrastructure",
+    description: "Advanced edge computing platform that orchestrates distributed computing resources, optimizes data processing at the edge, and provides real-time analytics for IoT and edge applications.",
+    category: "Edge Computing & IoT",
+    subcategory: "Infrastructure Orchestration",
+    price: 1899,
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Distributed edge nodes",
+      "Real-time data processing",
+<<<<<<< HEAD
+=======
+      "Edge-to-cloud synchronization",
+      "Load balancing and failover",
+      "Security and encryption",
+      "Performance monitoring",
+      "Auto-scaling capabilities",
+      "Multi-cloud integration",
+      "Edge AI deployment",
+      "Compliance and governance"
+=======
     id: "edge-computing-iot-platform",
     title: "Edge Computing & IoT Infrastructure Platform",
     description: "Advanced edge computing platform that processes data closer to IoT devices, reducing latency and improving real-time decision making for smart cities and industrial applications.",
@@ -39,19 +71,27 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureSe
     features: [
       "Distributed edge nodes",
       "Real-time data processing",
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       "IoT device management",
       "Edge AI capabilities",
       "Low-latency networking",
       "Scalable infrastructure",
       "Security at the edge",
       "Integration with cloud services"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-43ee
     ],
     benefits: [
       "Reduce latency by 80%",
       "Lower bandwidth costs by 60%",
+<<<<<<< HEAD
+      "Improve reliability and uptime",
+      "Real-time data processing",
+      "Scalable edge infrastructure"
+=======
       "Improve real-time processing",
       "Enhanced security",
       "Scalable IoT deployments"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-43ee
     ],
     useCases: [
       "Smart cities",
@@ -62,6 +102,17 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureSe
     ],
     targetAudience: [
       "IT infrastructure managers",
+<<<<<<< HEAD
+      "DevOps engineers",
+      "IoT architects",
+      "System administrators",
+      "Technology directors"
+    ],
+    tags: ["Edge Computing", "IoT", "Distributed Computing", "Real-time Analytics", "Infrastructure"],
+    estimatedDelivery: "6-8 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$1,899 - $5,999/month",
+=======
       "IoT architects",
       "System administrators",
       "Network engineers",
@@ -71,11 +122,58 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureSe
     estimatedDelivery: "3-4 weeks",
     supportLevel: "premium",
     marketPrice: "$799 - $2,499/month",
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-43ee
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    websiteUrl: "https://ziontechgroup.com/edge-computing-orchestration-platform"
+  },
+
+  // Quantum-Safe Cybersecurity Infrastructure
+  {
+    id: "quantum-safe-cybersecurity-infrastructure",
+    title: "Quantum-Safe Cybersecurity Infrastructure - Post-Quantum Security Platform",
+    description: "Future-proof cybersecurity infrastructure that implements quantum-resistant encryption algorithms and prepares organizations for the quantum computing era.",
+    category: "Cybersecurity",
+    subcategory: "Quantum-Safe Security",
+    price: 3499,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Quantum-resistant encryption algorithms",
+      "Post-quantum cryptography",
+      "Hybrid encryption systems",
+      "Quantum key distribution",
+      "Advanced threat detection",
+      "Compliance frameworks",
+      "Security audit tools",
+      "Zero-trust architecture",
+      "Multi-factor authentication",
+      "Real-time security monitoring"
+    ],
+    benefits: [
+      "Future-proof security infrastructure",
+      "Protect against quantum attacks",
+      "Meet compliance requirements",
+      "Enhanced data protection",
+      "Long-term security investment"
+    ],
+    useCases: [
+      "Financial institutions",
+      "Government agencies",
+      "Healthcare organizations",
+      "Defense contractors",
+      "Critical infrastructure"
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     websiteUrl: "https://ziontechgroup.com/edge-computing-iot"
   },
 
@@ -112,10 +210,15 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureSe
       "Government agencies",
       "Educational institutions",
       "Manufacturing companies"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-43ee
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     ],
     targetAudience: [
       "CISOs",
       "Security architects",
+<<<<<<< HEAD
       "IT security managers",
       "Compliance officers",
       "Network security engineers"
@@ -124,11 +227,192 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureSe
     estimatedDelivery: "4-6 weeks",
     supportLevel: "enterprise",
     marketPrice: "$1,499 - $4,999/month",
+=======
+<<<<<<< HEAD
+      "Compliance officers",
+      "Risk managers",
+      "IT security directors"
+    ],
+    tags: ["Cybersecurity", "Quantum-Safe", "Post-Quantum Cryptography", "Zero-Trust", "Compliance"],
+    estimatedDelivery: "8-12 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,499 - $9,999/month",
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
+    websiteUrl: "https://ziontechgroup.com/zero-trust-security"
+  },
+
+  // Hybrid Cloud Management Platform
+  {
+<<<<<<< HEAD
+    id: "hybrid-cloud-management-platform",
+    title: "Hybrid Cloud Management Platform",
+    description: "Unified platform for managing multi-cloud and hybrid cloud environments with automated resource optimization, cost management, and seamless workload migration.",
+    category: "IT Infrastructure",
+    subcategory: "Cloud Management",
+    price: 999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Multi-cloud orchestration",
+      "Automated resource scaling",
+      "Cost optimization",
+      "Workload migration tools",
+      "Unified monitoring",
+      "Security compliance",
+=======
+    id: "green-it-infrastructure-platform",
+    title: "Green IT Infrastructure Platform - Sustainable Computing Solutions",
+    description: "Eco-friendly IT infrastructure platform that optimizes energy consumption, reduces carbon footprint, and provides sustainable computing solutions for environmentally conscious organizations.",
+    category: "Green IT",
+    subcategory: "Sustainable Infrastructure",
+    price: 1299,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Energy consumption optimization",
+      "Carbon footprint tracking",
+      "Renewable energy integration",
+      "Smart cooling systems",
+      "Power management automation",
+      "Sustainability reporting",
+      "Green procurement tools",
+      "Waste reduction analytics",
+      "Environmental compliance",
+      "Green certification support"
+    ],
+    benefits: [
+      "Reduce energy costs by 40%",
+      "Lower carbon footprint by 60%",
+      "Meet sustainability goals",
+      "Improve brand reputation",
+      "Compliance with green regulations"
+    ],
+    useCases: [
+      "Data centers",
+      "Cloud providers",
+      "Enterprise IT",
+      "Educational institutions",
+      "Government agencies"
+    ],
+    targetAudience: [
+      "IT sustainability managers",
+      "Facility managers",
+      "Environmental officers",
+      "CSR managers",
+      "IT directors"
+    ],
+    tags: ["Green IT", "Sustainability", "Energy Efficiency", "Carbon Reduction", "Environmental Compliance"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,299 - $3,999/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/green-it-infrastructure-platform"
+  },
+
+  // Autonomous IT Operations Platform
+  {
+    id: "autonomous-it-operations-platform",
+    title: "Autonomous IT Operations Platform - Self-Healing Infrastructure",
+    description: "Intelligent IT operations platform that uses AI and machine learning to automatically detect, diagnose, and resolve infrastructure issues without human intervention.",
+    category: "IT Operations",
+    subcategory: "Autonomous Operations",
+    price: 2799,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered issue detection",
+      "Automated problem resolution",
+      "Predictive maintenance",
+      "Self-healing infrastructure",
+      "Intelligent alerting",
+      "Root cause analysis",
+      "Performance optimization",
+      "Capacity planning",
+      "Change management automation",
+      "Comprehensive monitoring"
+    ],
+    benefits: [
+      "Reduce downtime by 90%",
+      "Lower operational costs by 50%",
+      "Improve system reliability",
+      "Automated problem resolution",
+      "Proactive maintenance"
+    ],
+    useCases: [
+      "Enterprise IT operations",
+      "Cloud service providers",
+      "Managed service providers",
+      "Data centers",
+      "Critical infrastructure"
+    ],
+    targetAudience: [
+      "IT operations managers",
+      "DevOps engineers",
+      "System administrators",
+      "Site reliability engineers",
+      "IT directors"
+    ],
+    tags: ["IT Operations", "Autonomous", "AI", "Self-Healing", "Predictive Maintenance"],
+    estimatedDelivery: "6-8 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$2,799 - $7,999/month",
+=======
+      "IT security managers",
+      "Compliance officers",
+      "Network security engineers"
+    ],
+    tags: ["Zero-Trust", "Security", "Network Security", "Identity Management", "Compliance"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$1,499 - $4,999/month",
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-43ee
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+<<<<<<< HEAD
+    websiteUrl: "https://ziontechgroup.com/autonomous-it-operations-platform"
+  },
+
+  // Hybrid Multi-Cloud Management Platform
+  {
+    id: "hybrid-multi-cloud-management-platform",
+    title: "Hybrid Multi-Cloud Management Platform - Unified Cloud Orchestration",
+    description: "Comprehensive cloud management platform that provides unified control, monitoring, and optimization across multiple cloud providers and hybrid environments.",
+    category: "Cloud Management",
+    subcategory: "Multi-Cloud Orchestration",
+    price: 1999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Multi-cloud resource management",
+      "Unified monitoring dashboard",
+      "Cost optimization tools",
+      "Security and compliance",
+      "Workload migration",
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+      "Performance analytics",
+      "API management"
+    ],
+    benefits: [
+      "Reduce cloud costs by 30%",
+<<<<<<< HEAD
+=======
+      "Simplify multi-cloud management",
+      "Improve operational efficiency",
+      "Enhanced security and compliance",
+      "Flexible cloud strategy"
+=======
     websiteUrl: "https://ziontechgroup.com/zero-trust-security"
   },
 
@@ -154,34 +438,73 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureSe
     ],
     benefits: [
       "Reduce cloud costs by 30%",
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       "Improve resource utilization by 40%",
       "Simplified multi-cloud management",
       "Enhanced security and compliance",
       "Faster deployment times"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-43ee
     ],
     useCases: [
       "Enterprise organizations",
       "Multi-cloud environments",
       "Hybrid cloud deployments",
+<<<<<<< HEAD
       "DevOps teams",
       "IT operations"
+=======
+<<<<<<< HEAD
+      "Cloud migration projects",
+      "DevOps teams"
+=======
+      "DevOps teams",
+      "IT operations"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-43ee
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     ],
     targetAudience: [
       "Cloud architects",
       "DevOps engineers",
+<<<<<<< HEAD
       "IT operations managers",
       "System administrators",
       "Technology directors"
     ],
+=======
+<<<<<<< HEAD
+      "IT infrastructure managers",
+      "Cloud operations teams",
+      "Technology directors"
+    ],
+    tags: ["Cloud Management", "Multi-Cloud", "Hybrid Cloud", "Cost Optimization", "DevOps"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,999 - $5,999/month",
+=======
+      "IT operations managers",
+      "System administrators",
+      "Technology directors"
+    ],
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     tags: ["Hybrid Cloud", "Multi-Cloud", "Cloud Management", "DevOps", "Resource Optimization"],
     estimatedDelivery: "2-3 weeks",
     supportLevel: "premium",
     marketPrice: "$999 - $3,499/month",
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-43ee
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    websiteUrl: "https://ziontechgroup.com/hybrid-multi-cloud-management-platform"
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     websiteUrl: "https://ziontechgroup.com/hybrid-cloud-management"
   },
 
@@ -289,5 +612,9 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureSe
       website: "https://ziontechgroup.com"
     },
     websiteUrl: "https://ziontechgroup.com/container-orchestration"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-43ee
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   }
 ];

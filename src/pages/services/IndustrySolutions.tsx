@@ -99,6 +99,12 @@ export default function IndustrySolutions() {
   ];
 
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-indigo-900 text-white">
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
       <SEO 
         title="Industry Solutions - Zion Tech Group" 
@@ -107,6 +113,10 @@ export default function IndustrySolutions() {
         url="https://ziontechgroup.com/services/industry-solutions"
       />
 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/80 to-zion-purple/80"></div>

@@ -287,6 +287,16 @@ export default function ComprehensiveInnovativeServices() {
                         <span className="text-white font-semibold">{service.marketPrice}</span>
                       </div>
                       <div className="flex items-center justify-between text-sm mt-1">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                        <span className="text-zion-cyan/70">ROI:</span>
+                        <span className="text-green-400 font-semibold">High</span>
+                      </div>
+                      <div className="flex items-center justify-between text-sm mt-1">
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3843
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
                         <span className="text-zion-cyan/70">Delivery:</span>
                         <span className="text-white font-semibold">{service.estimatedDelivery}</span>
                       </div>
@@ -299,7 +309,15 @@ export default function ComprehensiveInnovativeServices() {
                         <div className="flex items-center">
                           <Award className="w-4 h-4 text-yellow-400 mr-1" />
                           <span className="text-xs text-yellow-400 font-semibold">
+<<<<<<< HEAD
                             {service.supportLevel}
+=======
+<<<<<<< HEAD
+                            Advanced
+=======
+                            {service.supportLevel}
+>>>>>>> origin/cursor/website-audit-and-enhancement-3843
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
                           </span>
                         </div>
                       </div>

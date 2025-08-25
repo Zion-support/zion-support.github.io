@@ -1,4 +1,15 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+=======
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 import { motion } from 'framer-motion';
+=======
+
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
 import { Link } from 'react-router-dom';
 import { Mail, Phone } from 'lucide-react';
 

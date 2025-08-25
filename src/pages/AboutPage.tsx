@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Target, 
+  Eye, 
+  TrendingUp, 
+  Users, 
+  Award, 
+  Globe, 
+  Shield, 
+  Zap,
+  CheckCircle,
+  Star,
+  Rocket,
+  Lightbulb
+} from 'lucide-react';
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 
 import { Users, Target, Award, Zap, Globe, Shield, Sparkles, Lightbulb, TrendingUp } from 'lucide-react';
 
@@ -8,6 +29,10 @@ export default function AboutPage() {
     { label: 'Happy Clients', value: '50+', icon: Users },
     { label: 'Team Members', value: '15+', icon: Users }
   ];
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 
   const values = [
     {

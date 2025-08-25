@@ -1,6 +1,177 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react';
+import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Hospital, Building2, GraduationCap, Calendar, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, BookOpen, Target, TrendingUp, PieChart, Activity, Zap as ZapIcon2, Package, Server, Lock, Code, Monitor, Smartphone, Wifi, Database as DatabaseIcon2, Globe as GlobeIcon, Shield as ShieldIcon2, Cpu as CpuIcon } from 'lucide-react';
+
+const ITServices: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [selectedPricing, setSelectedPricing] = useState<string>('all');
+
+  // IT Services data
+  const itServices = [
+    {
+      id: 1,
+      name: "Cloud Migration & Optimization",
+      category: "Cloud Services",
+      description: "Complete cloud migration strategy and optimization for improved performance and cost savings",
+      features: ["Cloud assessment", "Migration planning", "Performance optimization", "Cost optimization", "Security implementation"],
+      benefits: ["Reduced infrastructure costs", "Improved scalability", "Enhanced security", "Better performance"],
+      targetAudience: ["Medium businesses", "Enterprises", "Tech companies", "Healthcare organizations"],
+      pricing: "Project-based",
+      marketPrice: "$15,000 - $100,000",
+      implementationTime: "4-12 weeks",
+      supportLevel: "Dedicated project manager + 24/7 support",
+      contactInfo: {
+        phone: "+1 302 464 0950",
+        email: "kleber@ziontechgroup.com",
+        website: "https://ziontechgroup.com/cloud-migration",
+        address: "364 E Main St STE 1008, Middletown DE 19709"
+      }
+    },
+    {
+      id: 2,
+      name: "Cybersecurity Assessment & Implementation",
+      category: "Security",
+      description: "Comprehensive cybersecurity assessment and implementation of enterprise-grade security solutions",
+      features: ["Security audit", "Vulnerability assessment", "Penetration testing", "Security implementation", "Employee training"],
+      benefits: ["Enhanced security posture", "Compliance achievement", "Risk reduction", "Customer trust"],
+      targetAudience: ["Financial services", "Healthcare", "E-commerce", "Government contractors"],
+      pricing: "Project-based",
+      marketPrice: "$25,000 - $150,000",
+      implementationTime: "6-16 weeks",
+      supportLevel: "Security team + 24/7 monitoring",
+      contactInfo: {
+        phone: "+1 302 464 0950",
+        email: "kleber@ziontechgroup.com",
+        website: "https://ziontechgroup.com/cybersecurity",
+        address: "364 E Main St STE 1008, Middletown DE 19709"
+      }
+    },
+    {
+      id: 3,
+      name: "DevOps Implementation",
+      category: "DevOps",
+      description: "End-to-end DevOps implementation with CI/CD pipelines and automation",
+      features: ["CI/CD setup", "Infrastructure as Code", "Monitoring & alerting", "Security integration", "Team training"],
+      benefits: ["Faster deployments", "Better reliability", "Improved collaboration", "Cost reduction"],
+      targetAudience: ["Development teams", "Tech companies", "Startups", "Enterprises"],
+      pricing: "Project-based",
+      marketPrice: "$25,000 - $75,000",
+      implementationTime: "6-12 weeks",
+      supportLevel: "DevOps engineers + ongoing support",
+      contactInfo: {
+        phone: "+1 302 464 0950",
+        email: "kleber@ziontechgroup.com",
+        website: "https://ziontechgroup.com/devops-implementation",
+        address: "364 E Main St STE 1008, Middletown DE 19709"
+      }
+    },
+    {
+      id: 4,
+      name: "Legacy System Modernization",
+      category: "Digital Transformation",
+      description: "Modernize legacy systems with cloud-native technologies and microservices architecture",
+      features: ["System analysis", "Architecture redesign", "Cloud migration", "API development", "Data migration"],
+      benefits: ["Improved performance", "Better scalability", "Reduced maintenance", "Enhanced security"],
+      targetAudience: ["Enterprises", "Financial services", "Healthcare", "Manufacturing"],
+      pricing: "Project-based",
+      marketPrice: "$50,000 - $500,000",
+      implementationTime: "12-36 weeks",
+      supportLevel: "Full project team + ongoing maintenance",
+      contactInfo: {
+        phone: "+1 302 464 0950",
+        email: "kleber@ziontechgroup.com",
+        website: "https://ziontechgroup.com/legacy-modernization",
+        address: "364 E Main St STE 1008, Middletown DE 19709"
+      }
+    },
+    {
+      id: 5,
+      name: "Data Strategy & Implementation",
+      category: "Data Services",
+      description: "Comprehensive data strategy, architecture, and implementation for business intelligence",
+      features: ["Data assessment", "Architecture design", "ETL implementation", "Analytics setup", "Governance framework"],
+      benefits: ["Better decision making", "Data insights", "Compliance", "Operational efficiency"],
+      targetAudience: ["Enterprises", "Financial services", "Healthcare", "Retail"],
+      pricing: "Project-based",
+      marketPrice: "$40,000 - $300,000",
+      implementationTime: "8-24 weeks",
+      supportLevel: "Data architects + ongoing optimization",
+      contactInfo: {
+        phone: "+1 302 464 0950",
+        email: "kleber@ziontechgroup.com",
+        website: "https://ziontechgroup.com/data-strategy",
+        address: "364 E Main St STE 1008, Middletown DE 19709"
+      }
+    },
+    {
+      id: 6,
+      name: "Network Infrastructure & Security",
+      category: "Infrastructure",
+      description: "Enterprise-grade network infrastructure design, implementation, and security",
+      features: ["Network design", "Security implementation", "Monitoring setup", "Disaster recovery", "Compliance"],
+      benefits: ["Enhanced security", "Better performance", "Reliability", "Scalability"],
+      targetAudience: ["Enterprises", "Healthcare", "Financial services", "Government"],
+      pricing: "Project-based",
+      marketPrice: "$30,000 - $200,000",
+      implementationTime: "8-20 weeks",
+      supportLevel: "Network engineers + 24/7 monitoring",
+      contactInfo: {
+        phone: "+1 302 464 0950",
+        email: "kleber@ziontechgroup.com",
+        website: "https://ziontechgroup.com/network-infrastructure",
+        address: "364 E Main St STE 1008, Middletown DE 19709"
+      }
+    }
+  ];
+
+  const categories = ['all', 'Cloud Services', 'Security', 'DevOps', 'Digital Transformation', 'Data Services', 'Infrastructure'];
+  const pricingModels = ['all', 'Project-based', 'Subscription', 'Consulting'];
+
+  const filteredServices = itServices.filter(service => {
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
+    
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesPricing = selectedCategory === 'all' || service.pricing === selectedCategory;
+    
+    return matchesSearch && matchesCategory && matchesPricing;
+  });
+
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case 'Cloud Services': return <Cloud className="w-6 h-6" />;
+      case 'Security': return <Shield className="w-6 h-6" />;
+      case 'DevOps': return <CpuIcon className="w-6 h-6" />;
+      case 'Digital Transformation': return <Zap className="w-6 h-6" />;
+      case 'Data Services': return <DatabaseIcon className="w-6 h-6" />;
+      case 'Infrastructure': return <Server className="w-6 h-6" />;
+      default: return <Settings className="w-6 h-6" />;
+    }
+  };
+
+  const getCategoryColor = (category: string) => {
+    switch (category) {
+      case 'Cloud Services': return 'text-blue-400';
+      case 'Security': return 'text-red-400';
+      case 'DevOps': return 'text-green-400';
+      case 'Digital Transformation': return 'text-purple-400';
+      case 'Data Services': return 'text-cyan-400';
+      case 'Infrastructure': return 'text-orange-400';
+      default: return 'text-gray-400';
+    }
+  };
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 
 export default function ITServices() {
   return (

@@ -1,3 +1,44 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+import { SEO } from '@/components/SEO';
+=======
+
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
+
+const TalentDirectory: React.FC = () => {
+  return (
+    <>
+      <SEO 
+        title="Talent Directory - Zion Tech Group"
+        description="Browse our directory of talented professionals and experts"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Talent Directory
+            </h1>
+            <p className="text-xl text-zion-slate-light mb-8">
+              Browse our directory of talented professionals and experts
+            </p>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 max-w-2xl mx-auto">
+              <p className="text-white">
+                Our talent directory is coming soon. You'll be able to browse and connect with skilled professionals across various industries.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default TalentDirectory;
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 import React from 'react';
 import { Header } from '@/components/header/Header';
 import { Footer } from '@/components/Footer';
@@ -73,4 +114,9 @@ export default function TalentDirectory() {
       <Footer />
     </>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

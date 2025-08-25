@@ -129,6 +129,18 @@ const benefits = [
 
 export default function ServicesOverview() {
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    <>
+      <Helmet>
+        <title>Services Overview - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive overview of all our technology services including AI, cybersecurity, cloud infrastructure, and specialized industry solutions. Discover how we can transform your business." />
+        <meta name="keywords" content="technology services, AI solutions, cybersecurity, cloud computing, Zion Tech Group services overview" />
+        <link rel="canonical" href="https://ziontechgroup.com/services-overview" />
+      </Helmet>
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     <div className="min-h-screen bg-background">
       <SEO 
         title="Services - Zion Tech Group" 
@@ -136,6 +148,10 @@ export default function ServicesOverview() {
         tags={["AI services", "quantum computing", "cybersecurity", "IT infrastructure", "industry solutions"]}
         url="https://ziontechgroup.com/services"
       />
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-zion-blue-dark via-black to-zion-purple-dark overflow-hidden">

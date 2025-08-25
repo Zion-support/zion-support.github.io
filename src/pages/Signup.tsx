@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+
+export default function EquipmentDetail() {
+  return (
+    <div className="min-h-screen bg-zion-blue-dark py-8 text-white">
+      <div className="container mx-auto px-4">
+        <h1 className="text-3xl font-bold mb-6">EquipmentDetail</h1>
+        <p>EquipmentDetail page content will go here.</p>
+      </div>
+    </div>
+  );
+}
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
@@ -227,4 +244,9 @@ export default function Signup() {
       </div>
     </>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

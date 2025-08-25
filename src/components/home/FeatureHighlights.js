@@ -1,4 +1,12 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React from 'react';
+export function FeatureHighlights() {
+    return (_jsx("section", { className: "py-16 bg-gradient-to-br from-zion-blue-dark to-zion-blue", children: _jsxs("div", { className: "container mx-auto px-4", children: [_jsx("h2", { className: "text-3xl font-bold text-white text-center mb-12", children: "Why Choose Zion Tech Group?" }), _jsxs("div", { className: "grid grid-cols-1 md:grid-cols-3 gap-8", children: [_jsxs("div", { className: "text-center", children: [_jsx("div", { className: "w-16 h-16 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4", children: _jsx("svg", { className: "w-8 h-8 text-white", fill: "none", stroke: "currentColor", viewBox: "0 0 24 24", children: _jsx("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M13 10V3L4 14h7v7l9-11h-7z" }) }) }), _jsx("h3", { className: "text-xl font-semibold text-white mb-2", children: "Lightning Fast" }), _jsx("p", { className: "text-zion-cyan", children: "Cutting-edge technology for maximum performance" })] }), _jsxs("div", { className: "text-center", children: [_jsx("div", { className: "w-16 h-16 bg-zion-purple rounded-full flex items-center justify-center mx-auto mb-4", children: _jsx("svg", { className: "w-8 h-8 text-white", fill: "none", stroke: "currentColor", viewBox: "0 0 24 24", children: _jsx("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" }) }) }), _jsx("h3", { className: "text-xl font-semibold text-white mb-2", children: "Reliable" }), _jsx("p", { className: "text-zion-cyan", children: "Trusted by businesses worldwide" })] }), _jsxs("div", { className: "text-center", children: [_jsx("div", { className: "w-16 h-16 bg-zion-purple-light rounded-full flex items-center justify-center mx-auto mb-4", children: _jsx("svg", { className: "w-8 h-8 text-white", fill: "none", stroke: "currentColor", viewBox: "0 0 24 24", children: _jsx("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" }) }) }), _jsx("h3", { className: "text-xl font-semibold text-white mb-2", children: "Secure" }), _jsx("p", { className: "text-zion-cyan", children: "Enterprise-grade security for your peace of mind" })] })] })] }) }));
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, Star, Shield, Zap } from "lucide-react";
 import { motion } from "framer-motion";
@@ -98,4 +106,8 @@ export function FeatureHighlights() {
                 hover:shadow-2xl hover:shadow-zion-purple/20
                 group-hover:bg-gradient-to-br group-hover:from-zion-purple/10 group-hover:to-zion-blue/20
               `, children: _jsxs(CardContent, { className: "p-8", children: [_jsxs("div", { className: "flex items-center gap-3 mb-6", children: [_jsx("div", { className: "p-3 rounded-full bg-zion-blue-dark/50 group-hover:scale-110 transition-transform duration-300", children: category.icon }), _jsx("h3", { className: "text-2xl font-bold text-white group-hover:text-zion-cyan transition-colors", children: category.title })] }), _jsx(motion.ul, { className: "space-y-4", variants: containerVariants, initial: "hidden", whileInView: "visible", viewport: { once: true }, children: category.features.map((feature, idx) => (_jsxs(motion.li, { className: "flex items-start", variants: featureVariants, children: [_jsx("div", { className: "flex-shrink-0 mr-3 mt-1", children: _jsx(Check, { className: "h-5 w-5 text-zion-cyan group-hover:text-zion-purple transition-colors" }) }), _jsx("span", { className: "text-zion-slate-light leading-relaxed group-hover:text-white transition-colors", children: feature })] }, idx))) })] }) }) }, index))) })] }) }));
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 }

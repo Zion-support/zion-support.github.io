@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { Routes, Route } from 'react-router-dom';
 
@@ -13,3 +14,24 @@ export const ErrorRoutes = () => <div>Error Routes</div>;
 export const EnterpriseRoutes = () => <div>Enterprise Routes</div>;
 export const CommunityRoutes = () => <div>Community Routes</div>;
 export const DeveloperRoutes = () => <div>Developer Routes</div>;
+=======
+<<<<<<< HEAD
+import React from 'react';
+=======
+
+import { Routes, Route } from 'react-router-dom';
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
+
+// Placeholder route components
+export const AuthRoutes = () => <></>;
+export const DashboardRoutes = () => <></>;
+export const MarketplaceRoutes = () => <></>;
+export const TalentRoutes = () => <></>;
+export const AdminRoutes = () => <></>;
+export const MobileAppRoutes = () => <></>;
+export const ContentRoutes = () => <></>;
+export const ErrorRoutes = () => <></>;
+export const EnterpriseRoutes = () => <></>;
+export const CommunityRoutes = () => <></>;
+export const DeveloperRoutes = () => <></>;
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7

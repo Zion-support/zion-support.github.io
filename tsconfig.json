@@ -2,7 +2,28 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
+<<<<<<< HEAD
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-e276
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+>>>>>>> origin/cursor/build-and-fix-errors-fb38
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     "module": "ESNext",
     "skipLibCheck": true,
 
@@ -13,6 +34,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+<<<<<<< HEAD
 
     /* Linting */
     "strict": false,
@@ -20,6 +42,88 @@
     "noUnusedParameters": false,
     "noImplicitAny": false,
     "noImplicitReturns": false,
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "strict": false,
+=======
+    "strict": true,
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    "paths": {
+<<<<<<< HEAD
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      "@/*": ["./src/*"]
+    },
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+    "noImplicitThis": false,
+    "strictNullChecks": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false
+=======
+      "@/*": [
+        "./src/*"
+      ],
+      "@/pages/*": [
+        "./src/pages/*"
+      ],
+      "@/components/*": [
+        "./src/components/*"
+      ],
+      "@/types/*": [
+        "./src/types/*"
+      ],
+      "@/utils/*": [
+        "./src/utils/*"
+      ],
+      "@/services/*": [
+        "./src/services/*"
+      ],
+      "@/styles/*": [
+        "./src/styles/*"
+      ],
+      "@/lib/*": [
+        "./src/lib/*"
+      ],
+      "@/data/*": [
+        "./src/data/*"
+      ]
+    },
+    "allowJs": true,
+    "incremental": true,
+    "esModuleInterop": true
+>>>>>>> origin/cursor/build-and-fix-errors-fb38
+=======
+    "strict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+=======
+
+    /* Linting */
+    "strict": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
     "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": false,
     "exactOptionalPropertyTypes": false,
@@ -32,8 +136,105 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
+<<<<<<< HEAD
     }
+>>>>>>> origin/cursor/build-and-fix-errors-e276
   },
+<<<<<<< HEAD
+  "include": [
+    "src/main.tsx",
+    "src/App.tsx",
+    "src/pages/Home.tsx",
+    "src/pages/ServicesPage.tsx",
+    "src/pages/Contact.tsx",
+    "src/pages/About.tsx"
+  ],
+  "exclude": [
+    "src/components/ui",
+    "src/context",
+    "src/hooks",
+    "src/layout",
+    "src/store",
+    "src/pages/Blog.tsx",
+    "src/pages/BlogPost.tsx",
+    "src/pages/CommunityPage.tsx",
+    "src/pages/ForumCategoryPage.tsx",
+    "src/pages/ForumPostPage.tsx",
+    "src/pages/Index.tsx",
+    "src/pages/NotFound.tsx",
+    "src/pages/Onboarding.tsx",
+    "src/pages/ProfileDetail.tsx",
+    "src/pages/ProfilePage.tsx",
+    "src/pages/Sitemap.tsx",
+    "src/pages/ComprehensiveServicesLanding.tsx"
+=======
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "noUncheckedIndexedAccess": false,
+    "noImplicitReturns": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "exactOptionalPropertyTypes": false,
+    "types": ["react", "react-dom"]
+=======
+    },
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
+  },
+<<<<<<< HEAD
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "dist"
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
+  ],
+=======
+  "include": ["src"],
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-ae1c
+  "references": [{ "path": "./tsconfig.node.json" }]
+=======
+    "zion.app/recovered-content/**",
+    "contracts/**",
+    "dao/**",
+    "zion-os/**",
+    "zion_academy/**",
+    "packages/**",
+    "monitoring/**",
+    "scripts/**",
+    "server/**",
+    "cypress/**",
+    "**/*.disabled/**",
+    "__tests__.disabled/**",
+    "plugins.disabled/**",
+    "test.disabled/**",
+    "services.disabled.temp/**",
+    "data.temp/**",
+    "src_backup/**",
+    "components/**",
+    "pages/**"
+=======
+    "dist"
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+>>>>>>> origin/cursor/build-and-fix-errors-e276
+=======
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
 }

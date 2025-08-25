@@ -26,6 +26,56 @@ export interface BlockchainWeb3Service {
 }
 
 export const BLOCKCHAIN_WEB3_SERVICES: BlockchainWeb3Service[] = [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  // DeFi Platform Development
+  {
+    id: "defi-platform-development",
+    title: "DeFi Platform Development Suite",
+    description: "Complete DeFi platform development solution including smart contracts, yield farming protocols, liquidity pools, and decentralized exchange functionality with advanced security features.",
+    category: "Blockchain & Web3",
+    subcategory: "DeFi Development",
+    price: 8500,
+    currency: "$",
+    pricingModel: "project-based",
+    features: [
+      "Smart contract development",
+      "Yield farming protocols",
+      "Liquidity pool management",
+      "DEX functionality",
+      "Staking mechanisms",
+      "Governance tokens",
+      "Security auditing",
+      "Multi-chain support"
+    ],
+    benefits: [
+      "Launch DeFi protocols quickly",
+      "Enhanced security with audits",
+      "Scalable architecture",
+      "Multi-chain compatibility",
+      "Regulatory compliance ready"
+    ],
+    useCases: [
+      "DeFi startups",
+      "Cryptocurrency exchanges",
+      "Investment platforms",
+      "Financial institutions",
+      "Blockchain companies"
+    ],
+    targetAudience: [
+      "DeFi entrepreneurs",
+      "Blockchain developers",
+      "Financial institutions",
+      "Investment firms",
+      "Crypto startups"
+    ],
+    tags: ["DeFi", "Blockchain", "Smart Contracts", "Cryptocurrency", "Web3"],
+    estimatedDelivery: "12-16 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$8,500 - $25,000",
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   // DeFi Lending Platform
   {
     id: "defi-lending-platform",
@@ -71,17 +121,48 @@ export const BLOCKCHAIN_WEB3_SERVICES: BlockchainWeb3Service[] = [
     estimatedDelivery: "8-12 weeks",
     supportLevel: "enterprise",
     marketPrice: "$4,200 - $12,000/month",
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-9864
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
+<<<<<<< HEAD
     websiteUrl: "https://ziontechgroup.com/defi-lending-platform"
+=======
+<<<<<<< HEAD
+    websiteUrl: "https://ziontechgroup.com/defi-development"
+=======
+    websiteUrl: "https://ziontechgroup.com/defi-lending-platform"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-9864
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   },
 
   // NFT Marketplace Platform
   {
     id: "nft-marketplace-platform",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    title: "NFT Marketplace Platform",
+    description: "Complete NFT marketplace solution with minting, trading, auction, and royalty distribution features, supporting multiple blockchain networks and digital asset types.",
+    category: "Blockchain & Web3",
+    subcategory: "NFT Solutions",
+    price: 6500,
+    currency: "$",
+    pricingModel: "project-based",
+    features: [
+      "NFT minting tools",
+      "Marketplace functionality",
+      "Auction system",
+      "Royalty distribution",
+      "Multi-wallet support",
+      "Metadata management",
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     title: "NFT Marketplace & Creation Platform",
     description: "Comprehensive NFT platform for creating, buying, selling, and trading non-fungible tokens with advanced features like fractional ownership, royalty distribution, and cross-chain compatibility.",
     category: "Blockchain & NFTs",
@@ -96,10 +177,43 @@ export const BLOCKCHAIN_WEB3_SERVICES: BlockchainWeb3Service[] = [
       "Royalty distribution",
       "Auction system",
       "Social features",
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-9864
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       "Analytics dashboard",
       "Mobile app support"
     ],
     benefits: [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      "Launch NFT marketplace quickly",
+      "Multiple blockchain support",
+      "Automated royalty payments",
+      "Enhanced user experience",
+      "Scalable architecture"
+    ],
+    useCases: [
+      "Art galleries",
+      "Gaming companies",
+      "Music labels",
+      "Sports organizations",
+      "Digital creators"
+    ],
+    targetAudience: [
+      "Digital artists",
+      "Content creators",
+      "Gaming companies",
+      "Entertainment businesses",
+      "Brands and marketers"
+    ],
+    tags: ["NFT", "Blockchain", "Digital Assets", "Marketplace", "Web3"],
+    estimatedDelivery: "8-12 weeks",
+    supportLevel: "premium",
+    marketPrice: "$6,500 - $18,000",
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       "Monetize digital assets",
       "Global marketplace access",
       "Automated royalty collection",
@@ -124,6 +238,10 @@ export const BLOCKCHAIN_WEB3_SERVICES: BlockchainWeb3Service[] = [
     estimatedDelivery: "6-8 weeks",
     supportLevel: "premium",
     marketPrice: "$2,800 - $7,500/month",
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-9864
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -132,6 +250,18 @@ export const BLOCKCHAIN_WEB3_SERVICES: BlockchainWeb3Service[] = [
     websiteUrl: "https://ziontechgroup.com/nft-marketplace"
   },
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  // Smart Contract Development
+  {
+    id: "smart-contract-development",
+    title: "Enterprise Smart Contract Development",
+    description: "Professional smart contract development services for businesses looking to leverage blockchain technology for supply chain, identity verification, and automated business processes.",
+    category: "Blockchain & Web3",
+    subcategory: "Smart Contracts",
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   // DAO Governance Platform
   {
     id: "dao-governance-platform",
@@ -139,10 +269,51 @@ export const BLOCKCHAIN_WEB3_SERVICES: BlockchainWeb3Service[] = [
     description: "Decentralized autonomous organization platform that enables community governance, voting mechanisms, proposal management, and treasury management with transparent and auditable operations.",
     category: "Blockchain & DAOs",
     subcategory: "Governance",
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-9864
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     price: 3200,
     currency: "$",
     pricingModel: "monthly",
     features: [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      "Custom smart contract development",
+      "Security auditing",
+      "Gas optimization",
+      "Multi-chain deployment",
+      "Testing and validation",
+      "Documentation",
+      "Maintenance support",
+      "Upgrade mechanisms"
+    ],
+    benefits: [
+      "Automated business processes",
+      "Enhanced transparency",
+      "Reduced operational costs",
+      "Improved security",
+      "Regulatory compliance"
+    ],
+    useCases: [
+      "Supply chain management",
+      "Identity verification",
+      "Voting systems",
+      "Asset tokenization",
+      "Automated compliance"
+    ],
+    targetAudience: [
+      "Enterprise businesses",
+      "Government agencies",
+      "Financial institutions",
+      "Healthcare organizations",
+      "Manufacturing companies"
+    ],
+    tags: ["Smart Contracts", "Blockchain", "Automation", "Security", "Enterprise"],
+    estimatedDelivery: "4-8 weeks",
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       "Proposal creation and voting",
       "Token-based governance",
       "Treasury management",
@@ -175,6 +346,10 @@ export const BLOCKCHAIN_WEB3_SERVICES: BlockchainWeb3Service[] = [
     ],
     tags: ["Blockchain", "DAO", "Governance", "Voting", "Treasury Management"],
     estimatedDelivery: "6-10 weeks",
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-9864
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     supportLevel: "premium",
     marketPrice: "$3,200 - $8,500/month",
     contactInfo: {
@@ -182,6 +357,59 @@ export const BLOCKCHAIN_WEB3_SERVICES: BlockchainWeb3Service[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    websiteUrl: "https://ziontechgroup.com/smart-contracts"
+  },
+
+  // Web3 Identity Solution
+  {
+    id: "web3-identity-solution",
+    title: "Web3 Identity and Access Management",
+    description: "Decentralized identity solution that provides self-sovereign identity management, zero-knowledge proofs, and secure authentication without centralized authorities.",
+    category: "Blockchain & Web3",
+    subcategory: "Identity Management",
+    price: 2800,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Self-sovereign identity",
+      "Zero-knowledge proofs",
+      "Decentralized identifiers",
+      "Credential verification",
+      "Privacy-preserving authentication",
+      "Multi-factor security",
+      "API integration",
+      "Compliance tools"
+    ],
+    benefits: [
+      "Enhanced privacy protection",
+      "Reduced identity fraud",
+      "User control over data",
+      "Regulatory compliance",
+      "Interoperable standards"
+    ],
+    useCases: [
+      "Financial services",
+      "Healthcare",
+      "Government services",
+      "Education",
+      "E-commerce"
+    ],
+    targetAudience: [
+      "Identity providers",
+      "Financial institutions",
+      "Healthcare organizations",
+      "Government agencies",
+      "Technology companies"
+    ],
+    tags: ["Web3", "Identity", "Privacy", "Authentication", "Blockchain"],
+    estimatedDelivery: "6-10 weeks",
+    supportLevel: "premium",
+    marketPrice: "$2,800 - $7,500/month",
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     websiteUrl: "https://ziontechgroup.com/dao-governance"
   },
 
@@ -230,11 +458,31 @@ export const BLOCKCHAIN_WEB3_SERVICES: BlockchainWeb3Service[] = [
     estimatedDelivery: "10-14 weeks",
     supportLevel: "enterprise",
     marketPrice: "$4,500 - $15,000/month",
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-9864
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    websiteUrl: "https://ziontechgroup.com/web3-identity"
+  },
+
+  // Blockchain Supply Chain Solution
+  {
+    id: "blockchain-supply-chain",
+    title: "Blockchain Supply Chain Transparency Platform",
+    description: "End-to-end supply chain visibility platform using blockchain technology to track products, verify authenticity, and ensure compliance across global supply networks.",
+    category: "Blockchain & Web3",
+    subcategory: "Supply Chain",
+    price: 3800,
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     websiteUrl: "https://ziontechgroup.com/cross-chain-bridge"
   },
 
@@ -352,10 +600,52 @@ export const BLOCKCHAIN_WEB3_SERVICES: BlockchainWeb3Service[] = [
     category: "Blockchain & Supply Chain",
     subcategory: "Tracking & Transparency",
     price: 3500,
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-9864
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     currency: "$",
     pricingModel: "monthly",
     features: [
       "Product tracking",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      "Authenticity verification",
+      "Compliance monitoring",
+      "Smart contracts",
+      "Real-time visibility",
+      "Audit trails",
+      "Integration APIs",
+      "Analytics dashboard"
+    ],
+    benefits: [
+      "End-to-end transparency",
+      "Reduced fraud",
+      "Improved compliance",
+      "Enhanced traceability",
+      "Cost optimization"
+    ],
+    useCases: [
+      "Food safety",
+      "Pharmaceuticals",
+      "Luxury goods",
+      "Electronics",
+      "Automotive"
+    ],
+    targetAudience: [
+      "Manufacturing companies",
+      "Retail chains",
+      "Logistics providers",
+      "Regulatory bodies",
+      "Consumer brands"
+    ],
+    tags: ["Blockchain", "Supply Chain", "Transparency", "Compliance", "Traceability"],
+    estimatedDelivery: "8-12 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,800 - $10,000/month",
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
       "Supply chain mapping",
       "Quality assurance",
       "Compliance monitoring",
@@ -389,12 +679,21 @@ export const BLOCKCHAIN_WEB3_SERVICES: BlockchainWeb3Service[] = [
     estimatedDelivery: "6-8 weeks",
     supportLevel: "premium",
     marketPrice: "$3,500 - $8,500/month",
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-9864
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
     websiteUrl: "https://ziontechgroup.com/blockchain-supply-chain"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   },
 
   // DeFi Yield Aggregator
@@ -448,5 +747,9 @@ export const BLOCKCHAIN_WEB3_SERVICES: BlockchainWeb3Service[] = [
       website: "https://ziontechgroup.com"
     },
     websiteUrl: "https://ziontechgroup.com/defi-yield-aggregator"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-9864
+>>>>>>> 2569ab8784f28177b60ebf1fb896001693b757b7
   }
 ];
