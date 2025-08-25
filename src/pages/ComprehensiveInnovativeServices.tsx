@@ -42,6 +42,7 @@ import {
   ExternalLink
 } from 'lucide-react';
 import { INNOVATIVE_NEW_SERVICES } from '../data/innovativeNewServices';
+import { hasRoi, hasInnovationLevel } from '../types/unifiedServiceTypes';
 
 export default function ComprehensiveInnovativeServices() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -288,7 +289,7 @@ export default function ComprehensiveInnovativeServices() {
                       </div>
                       <div className="flex items-center justify-between text-sm mt-1">
                         <span className="text-zion-cyan/70">ROI:</span>
-                        <span className="text-green-400 font-semibold">{service.roi}</span>
+                        <span className="text-green-400 font-semibold">{hasRoi(service) ? service.roi : 'Contact Us'}</span>
                       </div>
                       <div className="flex items-center justify-between text-sm mt-1">
                         <span className="text-zion-cyan/70">Delivery:</span>
@@ -303,7 +304,7 @@ export default function ComprehensiveInnovativeServices() {
                         <div className="flex items-center">
                           <Award className="w-4 h-4 text-yellow-400 mr-1" />
                           <span className="text-xs text-yellow-400 font-semibold">
-                            {service.innovationLevel.split(' ')[0]}
+                            {hasInnovationLevel(service) ? service.innovationLevel.split(' ')[0] : 'High'}
                           </span>
                         </div>
                       </div>

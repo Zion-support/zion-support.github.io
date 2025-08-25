@@ -1,7 +1,40 @@
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { ArrowUp } from 'lucide-react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleContactClick = (type: 'phone' | 'email') => {
+    if (type === 'phone') {
+      window.open('tel:+13024640950');
+    } else if (type === 'email') {
+      window.open('mailto:kleber@ziontechgroup.com');
+    }
+  };
+
+  const handleSocialLinkClick = (link: any, e: React.MouseEvent) => {
+    try {
+      // Try to open the link
+      window.open(link.url, '_blank', 'noopener,noreferrer');
+    } catch (error) {
+      console.error(`Error opening ${link.name}:`, error);
+      // Fallback to a generic URL if the specific one fails
+      if (link.fallback) {
+        window.open(link.fallback, '_blank', 'noopener,noreferrer');
+      }
+    }
+  };
+
+  const contactInfo = {
+    phone: "+1 302 464 0950",
+    email: "kleber@ziontechgroup.com",
+    address: "Zion Tech Group, Delaware, United States"
+  };
 
   const footerSections = [
     {
@@ -72,7 +105,7 @@ export function Footer() {
         { label: "Team", path: "/team" },
         { label: "Pricing", path: "/pricing" },
         { label: "Careers", path: "/careers" },
-        { label: "Partners", path: "/partners" },
+        { label: "Partner", path: "/partners" },
         { label: "Contact", path: "/contact" },
         { label: "Blog", path: "/blog" }
       ]
@@ -117,59 +150,23 @@ export function Footer() {
     }
   ];
 
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008, Middletown DE 19709'
-  };
-
-  const handleSocialLinkClick = (link: typeof socialLinks[0], e: React.MouseEvent) => {
-    e.preventDefault();
-    
-    // Try to open the primary URL first
-    const newWindow = window.open(link.url, '_blank', 'noopener,noreferrer');
-    
-    // If the window fails to open, try the fallback
-    if (!newWindow) {
-      window.open(link.fallback, '_blank', 'noopener,noreferrer');
-    }
-  };
-
-  const handleContactClick = (type: 'phone' | 'email') => {
-    if (type === 'phone') {
-      window.location.href = `tel:${contactInfo.phone.replace(/\s/g, '')}`;
-    } else {
-      window.location.href = `mailto:${contactInfo.email}`;
-    }
-  };
-
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.05),transparent_50%)]"></div>
-      
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Main Footer Content */}
-        <div className="py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
-            {/* Company Info */}
-            <div className="lg:col-span-2">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-xl">Z</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>
-                  <p className="text-sm text-gray-400">The Tech & AI Marketplace</p>
-                </div>
-              </div>
-              
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
+          {/* Company Info */}
+          <div className="lg:col-span-2">
+            <div className="mb-6">
+              <h3 className="text-2xl font-bold text-white mb-4">
+                Zion Tech Group
+              </h3>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Empowering businesses with cutting-edge AI solutions, cybersecurity, and digital transformation services. 
-                We help organizations thrive in the digital age.
+                Leading provider of AI-powered technology solutions, quantum computing, 
+                cybersecurity, and enterprise digital transformation services.
               </p>
-
-              {/* Contact Info */}
+              
+              {/* Contact Information */}
               <div className="space-y-3">
                 <button
                   onClick={() => handleContactClick('phone')}
@@ -191,26 +188,26 @@ export function Footer() {
                 </div>
               </div>
             </div>
-
-            {/* Footer Sections */}
-            {footerSections.map((section) => (
-              <div key={section.title}>
-                <h4 className="text-lg font-semibold text-white mb-4">{section.title}</h4>
-                <ul className="space-y-2">
-                  {section.links.map((link) => (
-                    <li key={link.label}>
-                      <Link
-                        to={link.path}
-                        className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
           </div>
+
+          {/* Footer Sections */}
+          {footerSections.map((section) => (
+            <div key={section.title}>
+              <h4 className="text-lg font-semibold text-white mb-4">{section.title}</h4>
+              <ul className="space-y-2">
+                {section.links.map((link) => (
+                  <li key={link.label}>
+                    <Link
+                      to={link.path}
+                      className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
         {/* Bottom Section */}
@@ -265,7 +262,7 @@ export function Footer() {
         whileTap={{ scale: 0.9 }}
         aria-label="Scroll to top"
       >
-        <ArrowUpIcon className="h-6 w-6 mx-auto" />
+        <ArrowUp className="h-6 w-6 mx-auto" />
       </motion.button>
     </footer>
   );

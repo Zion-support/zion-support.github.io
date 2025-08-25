@@ -1,10 +1,10 @@
 import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Footer from './components/Footer';
+import { Footer } from './components/Footer';
 import Sidebar from './components/Sidebar';
 import { AccessibilityControls } from './components/AccessibilityControls';
-import { PerformanceDashboard } from './components/PerformanceDashboard';
+import PerformanceDashboard from './components/PerformanceDashboard';
 import { AnalyticsDashboard } from './components/AnalyticsDashboard';
 import { AIChatbot } from './components/AIChatbot';
 import { CollaborativeTextEditor } from './components/CollaborativeTextEditor';
@@ -12,7 +12,7 @@ import { AICodeGenerator } from './components/AICodeGenerator';
 import { EnterpriseDashboard } from './components/EnterpriseDashboard';
 import { SecurityComplianceDashboard } from './components/SecurityComplianceDashboard';
 import { MachineLearningDashboard } from './components/MachineLearningDashboard';
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+
 import { LinkHealthMonitor } from './components/LinkHealthMonitor';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
@@ -38,7 +38,7 @@ const TalentsPage = lazy(() => import('./pages/TalentsPage'));
 const EmergingTech = lazy(() => import('./pages/EmergingTech'));
 
 // New pages from incoming branch
-const MicroSaasServicesPage = lazy(() => import('./pages/MicroSaasServices'));
+const MicroSaasServicesPage = lazy(() => import('./pages/services/MicroSAASSolutions'));
 const PricingPage = lazy(() => import('./pages/PricingPage'));
 
 // Service pages
@@ -170,24 +170,16 @@ const App: React.FC = () => {
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
-            <PerformanceOptimizer
-              enableMonitoring={true}
-              enableOptimizations={true}
-              showMetrics={import.meta.env.DEV}
-            >
-              <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+            <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
                 {/* Enhanced SEO */}
                 <EnhancedSEO 
-                  seoData={{
-                    title: "Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services",
-                    description: "Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology.",
-                    keywords: ["AI solutions", "quantum computing", "cybersecurity", "digital transformation", "enterprise technology", "machine learning", "cloud services", "IT infrastructure"],
-                    canonicalUrl: "https://ziontechgroup.com",
-                    ogImage: "https://ziontechgroup.com/og-image.jpg",
-                    ogType: "website",
-                    twitterCard: "summary_large_image"
-                  }}
-                  pageType="home"
+                  title="Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services"
+                  description="Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology."
+                  keywords="AI solutions, quantum computing, cybersecurity, digital transformation, enterprise technology, machine learning, cloud services, IT infrastructure"
+                  type="website"
+                  url="/"
+                  image="/images/og-image.jpg"
+                  canonicalUrl="https://ziontechgroup.com"
                 />
                 
                 <Header />
@@ -355,15 +347,9 @@ const App: React.FC = () => {
                 <Footer />
                 <SonnerToaster />
               </div>
-            </PerformanceOptimizer>
                 
                 {/* Enhanced Accessibility Controls */}
-                <EnhancedAccessibility 
-                  position="bottom-right" 
-                  showOnLoad={false}
-                  enableKeyboardShortcuts={true}
-                  enableVoiceCommands={import.meta.env.DEV}
-                />
+                <EnhancedAccessibility />
                 
                 {/* Website Improvement Tools */}
                 <ContentQualityEnhancer />
@@ -430,21 +416,8 @@ const App: React.FC = () => {
                 
                 {/* Link Health Monitor - Development Mode */}
                 {import.meta.env.DEV && (
-                  <LinkHealthMonitor
-                    links={[
-                      'https://ziontechgroup.com',
-                      'https://www.linkedin.com/company/ziontechgroup',
-                      'https://twitter.com/ziontechgroup',
-                      'https://github.com/ziontechgroup',
-                      'https://www.youtube.com/@ziontechgroup'
-                    ]}
-                    autoCheck={true}
-                    checkInterval={600000} // 10 minutes
-                    timeout={5000} // 5 seconds
-                  />
+                                  <LinkHealthMonitor />
                 )}
-              </div>
-            </PerformanceOptimizer>
           </Router>
         </WhitelabelProvider>
       </ThemeProvider>

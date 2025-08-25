@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { COMPREHENSIVE_SERVICES } from '../data/comprehensiveServices';
+import { comprehensiveServices } from '../data/comprehensiveServices';
 import { INNOVATIVE_MICRO_SAAS_SERVICES } from '../data/innovativeMicroSaasServices';
 import { ADVANCED_ENTERPRISE_SOLUTIONS } from '../data/advancedEnterpriseSolutions';
 import { SPECIALIZED_IT_SERVICES } from '../data/specializedITServices';
 import { Link } from 'react-router-dom';
+import { UnifiedService, hasTags } from '../types/unifiedServiceTypes';
 
 export function Services() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
 
   const allServices = [
-    ...COMPREHENSIVE_SERVICES,
+    ...comprehensiveServices,
     ...INNOVATIVE_MICRO_SAAS_SERVICES,
     ...ADVANCED_ENTERPRISE_SOLUTIONS,
     ...SPECIALIZED_IT_SERVICES
@@ -23,7 +24,7 @@ export function Services() {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
+                         (hasTags(service) && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
     return matchesCategory && matchesSearch;
   });
 
@@ -156,7 +157,7 @@ export function Services() {
                 </p>
                 
                 {/* Tags */}
-                {service.tags && service.tags.length > 0 && (
+                {hasTags(service) && service.tags.length > 0 && (
                   <div className="flex flex-wrap gap-2 mb-4">
                     {service.tags.slice(0, 3).map((tag, tagIndex) => (
                       <span
@@ -172,7 +173,12 @@ export function Services() {
                 {/* Price */}
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-2xl font-bold text-white">
-                    ${service.price.toLocaleString()}
+                    {typeof service.price === 'number' 
+                      ? `$${service.price.toLocaleString()}`
+                      : service.price?.monthly 
+                        ? `$${service.price.monthly.toLocaleString()}/mo`
+                        : 'Contact Us'
+                    }
                   </span>
                 </div>
               </div>
