@@ -218,6 +218,7 @@ export default defineConfig(async () => ({
     reportCompressedSize: false,
     cssCodeSplit: true,
     assetsInlineLimit: 4096,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d0e7
   },
   optimizeDeps: {
@@ -301,6 +302,8 @@ export default defineConfig(async () => ({
         safari10: true
       }
     }
+=======
+>>>>>>> origin/main
   },
   optimizeDeps: {
     esbuildOptions: {

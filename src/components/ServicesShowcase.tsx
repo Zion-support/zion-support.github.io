@@ -2,253 +2,167 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  Brain, 
-  Cloud, 
-  Code, 
-  Database, 
-  Globe, 
-  Lock, 
-  Rocket, 
-  Shield,
-  ArrowRight,
-  Zap,
-  Users,
-  TrendingUp
-} from 'lucide-react';
+  CpuChipIcon, 
+  CloudIcon, 
+  ShieldCheckIcon, 
+  LightBulbIcon,
+  RocketLaunchIcon,
+  ChartBarIcon
+} from '@heroicons/react/24/outline';
 
-export const ServicesShowcase = () => {
+export function ServicesShowcase() {
   const services = [
     {
-      icon: Brain,
-      title: 'AI & Machine Learning',
-      description: 'Intelligent automation, predictive analytics, and custom AI solutions that transform your business operations.',
-      features: ['Custom AI Models', 'Predictive Analytics', 'Natural Language Processing'],
-      color: 'from-blue-500 to-cyan-500',
-      path: '/ai-services',
-      badge: 'Popular'
+      icon: CpuChipIcon,
+      title: "AI & Machine Learning",
+      description: "Advanced AI solutions for automation, decision-making, and predictive analytics",
+      color: "from-zion-cyan to-zion-blue",
+      href: "/ai-solutions"
     },
     {
-      icon: Cloud,
-      title: 'Cloud & DevOps',
-      description: 'Scalable cloud infrastructure, automated deployments, and robust DevOps practices for modern applications.',
-      features: ['Cloud Migration', 'CI/CD Pipelines', 'Infrastructure as Code'],
-      color: 'from-purple-500 to-pink-500',
-      path: '/cloud-devops-solutions',
-      badge: 'Trending'
+      icon: CloudIcon,
+      title: "Cloud & DevOps",
+      description: "Scalable cloud infrastructure and automated deployment pipelines",
+      color: "from-zion-purple to-zion-cyan",
+      href: "/cloud-devops"
     },
     {
-      icon: Code,
-      title: 'Micro SAAS Development',
-      description: 'Custom software solutions designed to solve specific business problems with rapid development cycles.',
-      features: ['Custom Applications', 'API Development', 'Third-party Integrations'],
-      color: 'from-green-500 to-emerald-500',
-      path: '/micro-saas-services',
-      badge: 'New'
+      icon: ShieldCheckIcon,
+      title: "Cybersecurity",
+      description: "Comprehensive security solutions for threat detection and prevention",
+      color: "from-zion-purple to-zion-blue",
+      href: "/cybersecurity"
     },
     {
-      icon: Database,
-      title: 'Data Solutions',
-      description: 'Comprehensive data management, analytics, and business intelligence solutions for data-driven decisions.',
-      features: ['Data Warehousing', 'Business Intelligence', 'Data Analytics'],
-      color: 'from-orange-500 to-red-500',
-      path: '/data-solutions',
-      badge: 'Featured'
+      icon: LightBulbIcon,
+      title: "Digital Transformation",
+      description: "End-to-end digital strategy and implementation services",
+      color: "from-zion-cyan to-zion-purple",
+      href: "/digital-transformation"
     },
     {
-      icon: Globe,
-      title: 'Digital Transformation',
-      description: 'End-to-end digital transformation services to modernize your business processes and technology stack.',
-      features: ['Process Automation', 'Legacy Modernization', 'Digital Strategy'],
-      color: 'from-indigo-500 to-blue-500',
-      path: '/digital-transformation',
-      badge: 'Hot'
+      icon: RocketLaunchIcon,
+      title: "Micro SaaS Solutions",
+      description: "Custom SaaS platforms for specific business needs",
+      color: "from-zion-blue to-zion-cyan",
+      href: "/micro-saas"
     },
     {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Advanced security solutions to protect your digital assets and ensure compliance with industry standards.',
-      features: ['Security Audits', 'Compliance Management', 'Threat Detection'],
-      color: 'from-red-500 to-pink-500',
-      path: '/cybersecurity',
-      badge: 'Critical'
+      icon: ChartBarIcon,
+      title: "Business Intelligence",
+      description: "Data analytics and insights for informed decision-making",
+      color: "from-zion-purple to-zion-blue",
+      href: "/business-intelligence"
     }
   ];
 
-  const stats = [
-    { icon: Users, value: '500+', label: 'Happy Clients' },
-    { icon: Zap, value: '99.9%', label: 'Uptime' },
-    { icon: TrendingUp, value: '300%', label: 'Average ROI' },
-    { icon: Rocket, value: '24/7', label: 'Support' }
-  ];
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
 
   return (
-    <section className="py-24 bg-gradient-to-b from-zion-blue-dark to-zion-blue">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 bg-zion-slate-dark relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark opacity-50"></div>
+      <div className="absolute top-1/4 right-0 w-96 h-96 bg-zion-cyan/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 left-0 w-80 h-80 bg-zion-purple/5 rounded-full blur-3xl"></div>
+      
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
         >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/30 rounded-full text-zion-cyan text-sm font-medium mb-6"
-          >
-            <div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>
-            Our Comprehensive Services
-          </motion.div>
-          
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-            Solutions That Drive
-            <span className="block bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-cyan bg-clip-text text-transparent">
-              Business Growth
-            </span>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Our Core Services
           </h2>
-          
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
-            From concept to deployment, we provide end-to-end technology solutions that 
-            accelerate your business transformation and competitive advantage.
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+            Comprehensive technology solutions designed to accelerate your business growth 
+            and digital transformation journey.
           </p>
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          {services.map((service, index) => {
-            const IconComponent = service.icon;
-            return (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative"
-              >
-                {/* Badge */}
-                {service.badge && (
-                  <div className="absolute -top-3 -right-3 z-10">
-                    <span className="px-3 py-1 bg-gradient-to-r from-zion-cyan to-zion-purple text-white text-xs font-semibold rounded-full shadow-lg">
-                      {service.badge}
-                    </span>
-                  </div>
-                )}
-                
-                <div className="h-full bg-zion-blue-light/5 backdrop-blur-md border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 hover:bg-zion-blue-light/10 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group-hover:-translate-y-2">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          {services.map((service, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              className="group"
+            >
+              <Link to={service.href} className="block">
+                <div className="bg-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/10 hover:border-zion-cyan/30 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-zion-cyan/20">
                   {/* Icon */}
-                  <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>
-                    <IconComponent className="w-8 h-8" />
+                  <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <service.icon className="w-8 h-8 text-white" />
                   </div>
                   
                   {/* Content */}
-                  <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-zion-cyan transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-300">
                     {service.title}
                   </h3>
-                  
-                  <p className="text-zion-slate-light mb-6 leading-relaxed">
+                  <p className="text-zion-slate-light leading-relaxed">
                     {service.description}
                   </p>
                   
-                  {/* Features */}
-                  <ul className="space-y-2 mb-8">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center gap-3 text-sm text-zion-slate-light">
-                        <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  {/* CTA */}
-                  <Link
-                    to={service.path}
-                    className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors group-hover:translate-x-1 transition-transform duration-300 font-medium"
-                  >
-                    Learn More
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
+                  {/* Arrow */}
+                  <div className="mt-6 flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors duration-300">
+                    <span className="text-sm font-medium">Learn More</span>
+                    <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
                 </div>
-              </motion.div>
-            );
-          })}
-        </div>
-
-        {/* Stats Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <div className="bg-zion-blue-light/5 backdrop-blur-md border border-zion-cyan/20 rounded-2xl p-12">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-12">
-              Trusted by Industry Leaders
-            </h3>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => {
-                const IconComponent = stat.icon;
-                return (
-                  <motion.div
-                    key={stat.label}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="text-center group"
-                  >
-                    <div className="w-16 h-16 bg-zion-cyan/10 border border-zion-cyan/20 rounded-2xl mx-auto mb-4 flex items-center justify-center group-hover:bg-zion-cyan/20 group-hover:border-zion-cyan/40 transition-all duration-300">
-                      <IconComponent className="w-8 h-8 text-zion-cyan" />
-                    </div>
-                    <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.value}</div>
-                    <div className="text-zion-slate-light text-sm">{stat.label}</div>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
+              </Link>
+            </motion.div>
+          ))}
         </motion.div>
 
-        {/* CTA Section */}
+        {/* CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mt-20"
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="text-center mt-16"
         >
-          <div className="bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20 border border-zion-cyan/30 rounded-2xl p-12 backdrop-blur-md">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h3>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Let's discuss how our technology solutions can accelerate your growth and 
-              give you a competitive edge in the market.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/request-quote"
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center group hover:scale-105"
-              >
-                Get Free Consultation
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </Link>
-              <Link
-                to="/contact"
-                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-xl text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2 justify-center group hover:scale-105"
-              >
-                Contact Our Team
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </Link>
-            </div>
-          </div>
+          <Link
+            to="/services"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/30"
+          >
+            View All Services
+            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
         </motion.div>
       </div>
     </section>
   );
-};
+}

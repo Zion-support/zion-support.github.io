@@ -1,162 +1,303 @@
-import React, { useEffect, useRef, useState, ReactNode } from 'react';
-import { motion, useInView } from 'framer-motion';
+import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Zap, TrendingUp, AlertTriangle, CheckCircle, X, Settings, BarChart3, Cpu, HardDrive, Clock, Download } from 'lucide-react';
 
-interface LazyLoadProps {
-  children: ReactNode;
-  threshold?: number;
-  rootMargin?: string;
-  fallback?: ReactNode;
-  className?: string;
+interface PerformanceMetrics {
+  loadTime: number;
+  memoryUsage: number;
+  bundleSize: number;
+  lighthouseScore: number;
+  optimizationSuggestions: string[];
 }
 
-interface IntersectionObserverProps {
-  children: ReactNode;
-  threshold?: number;
-  rootMargin?: string;
-  triggerOnce?: boolean;
-  className?: string;
+interface PerformanceOptimizerProps {
+  showMetrics?: boolean;
+  onOptimize?: (metrics: PerformanceMetrics) => void;
+  autoOptimize?: boolean;
 }
 
-interface VirtualScrollProps {
-  items: any[];
-  itemHeight: number;
-  containerHeight: number;
-  renderItem: (item: any, index: number) => ReactNode;
-  overscan?: number;
-}
-
-// Lazy Loading Component
-export const LazyLoad: React.FC<LazyLoadProps> = ({
-  children,
-  threshold = 0.1,
-  rootMargin = '50px',
-  fallback = <div className="w-full h-32 bg-zion-blue-light/10 animate-pulse rounded-lg" />,
-  className = ''
+export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  showMetrics = false,
+  onOptimize,
+  autoOptimize = true
 }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold, rootMargin }
-    );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
-    return () => observer.disconnect();
-  }, [threshold, rootMargin]);
-
-  useEffect(() => {
-    if (isVisible && !isLoaded) {
-      // Simulate loading delay for better UX
-      const timer = setTimeout(() => setIsLoaded(true), 100);
-      return () => clearTimeout(timer);
-    }
-  }, [isVisible, isLoaded]);
-
-  if (!isVisible) {
-    return (
-      <div ref={ref} className={className}>
-        {fallback}
-      </div>
-    );
-  }
-
-  if (!isLoaded) {
-    return (
-      <div className={className}>
-        {fallback}
-      </div>
-    );
-  }
-
-  return <div className={className}>{children}</div>;
-};
-
-// Intersection Observer Hook Component
-export const IntersectionObserver: React.FC<IntersectionObserverProps> = ({
-  children,
-  threshold = 0.1,
-  rootMargin = '0px',
-  triggerOnce = true,
-  className = ''
-}) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInView(ref, {
-    threshold,
-    rootMargin,
-    once: triggerOnce
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    memoryUsage: 0,
+    bundleSize: 0,
+    lighthouseScore: 0,
+    optimizationSuggestions: []
   });
+  const [isVisible, setIsVisible] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [optimizationHistory, setOptimizationHistory] = useState<PerformanceMetrics[]>([]);
+
+  // Performance monitoring
+  const measurePerformance = useCallback(() => {
+    const startTime = performance.now();
+    
+    // Measure page load time
+    const loadTime = window.performance.timing.loadEventEnd - window.performance.timing.navigationStart;
+    
+    // Estimate memory usage (if available)
+    const memoryUsage = (performance as any).memory ? 
+      Math.round((performance as any).memory.usedJSHeapSize / 1024 / 1024) : 0;
+    
+    // Estimate bundle size based on loaded scripts
+    const scripts = document.querySelectorAll('script[src]');
+    const bundleSize = Array.from(scripts).reduce((total, script) => {
+      const src = script.getAttribute('src');
+      if (src && src.includes('js/')) {
+        return total + 100; // Rough estimate
+      }
+      return total;
+    }, 0);
+    
+    // Calculate Lighthouse-like score
+    let lighthouseScore = 100;
+    if (loadTime > 3000) lighthouseScore -= 30;
+    if (loadTime > 5000) lighthouseScore -= 20;
+    if (memoryUsage > 50) lighthouseScore -= 20;
+    if (bundleSize > 500) lighthouseScore -= 15;
+    
+    // Generate optimization suggestions
+    const suggestions: string[] = [];
+    if (loadTime > 2000) suggestions.push('Consider implementing lazy loading for images and components');
+    if (memoryUsage > 50) suggestions.push('Optimize memory usage by cleaning up event listeners and references');
+    if (bundleSize > 500) suggestions.push('Implement code splitting and tree shaking to reduce bundle size');
+    if (lighthouseScore < 80) suggestions.push('Run Lighthouse audit for detailed performance insights');
+    
+    const newMetrics: PerformanceMetrics = {
+      loadTime,
+      memoryUsage,
+      bundleSize,
+      lighthouseScore,
+      optimizationSuggestions: suggestions
+    };
+    
+    setMetrics(newMetrics);
+    setOptimizationHistory(prev => [...prev.slice(-4), newMetrics]);
+    
+    if (onOptimize) {
+      onOptimize(newMetrics);
+    }
+    
+    return newMetrics;
+  }, [onOptimize]);
+
+  // Auto-optimization
+  const performAutoOptimization = useCallback(() => {
+    const currentMetrics = measurePerformance();
+    
+    if (currentMetrics.lighthouseScore < 70) {
+      // Implement automatic optimizations
+      if (currentMetrics.loadTime > 3000) {
+        // Preload critical resources
+        const criticalLinks = document.querySelectorAll('link[rel="preload"]');
+        criticalLinks.forEach(link => link.setAttribute('rel', 'preload'));
+      }
+      
+      if (currentMetrics.memoryUsage > 50) {
+        // Suggest garbage collection
+        if ('gc' in window) {
+          (window as any).gc();
+        }
+      }
+    }
+  }, [measurePerformance]);
+
+  // Continuous monitoring
+  useEffect(() => {
+    if (!showMetrics) return;
+    
+    // Initial measurement
+    measurePerformance();
+    
+    // Set up continuous monitoring
+    const interval = setInterval(() => {
+      measurePerformance();
+    }, 30000); // Every 30 seconds
+    
+    // Auto-optimization interval
+    const optimizationInterval = setInterval(() => {
+      if (autoOptimize) {
+        performAutoOptimization();
+      }
+    }, 60000); // Every minute
+    
+    return () => {
+      clearInterval(interval);
+      clearInterval(optimizationInterval);
+    };
+  }, [showMetrics, measurePerformance, autoOptimize]);
+
+  // Performance tips
+  const performanceTips = [
+    'Use lazy loading for images and components',
+    'Implement code splitting to reduce initial bundle size',
+    'Optimize images and use modern formats (WebP, AVIF)',
+    'Minimize third-party scripts and load them asynchronously',
+    'Use service workers for caching and offline support',
+    'Implement critical CSS inlining',
+    'Use resource hints (preload, prefetch, preconnect)',
+    'Optimize fonts with font-display: swap'
+  ];
+
+  if (!showMetrics) {
+    return null;
+  }
 
   return (
-    <motion.div
-      ref={ref}
-      className={className}
-      initial={{ opacity: 0, y: 20 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-      transition={{ duration: 0.6, ease: 'easeOut' }}
-    >
-      {children}
-    </motion.div>
-  );
-};
-
-// Virtual Scrolling Component
-export const VirtualScroll: React.FC<VirtualScrollProps> = ({
-  items,
-  itemHeight,
-  containerHeight,
-  renderItem,
-  overscan = 5
-}) => {
-  const [scrollTop, setScrollTop] = useState(0);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  const totalHeight = items.length * itemHeight;
-  const visibleItemCount = Math.ceil(containerHeight / itemHeight);
-  const startIndex = Math.max(0, Math.floor(scrollTop / itemHeight) - overscan);
-  const endIndex = Math.min(
-    items.length - 1,
-    Math.ceil(scrollTop / itemHeight) + visibleItemCount + overscan
-  );
-
-  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
-    setScrollTop(e.currentTarget.scrollTop);
-  };
-
-  const visibleItems = items.slice(startIndex, endIndex + 1);
-
-  return (
-    <div
-      ref={containerRef}
-      style={{ height: containerHeight, overflow: 'auto' }}
-      onScroll={handleScroll}
-      className="scrollbar-thin scrollbar-thumb-zion-cyan/30 scrollbar-track-zion-blue-light/10"
-    >
-      <div style={{ height: totalHeight, position: 'relative' }}>
-        {visibleItems.map((item, index) => (
-          <div
-            key={startIndex + index}
-            style={{
-              position: 'absolute',
-              top: (startIndex + index) * itemHeight,
-              height: itemHeight,
-              width: '100%'
-            }}
+    <div className="fixed bottom-4 right-4 z-50">
+      <AnimatePresence>
+        {isVisible && (
+          <motion.div
+            initial={{ opacity: 0, y: 20, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 20, scale: 0.9 }}
+            className="bg-white/10 backdrop-blur-md border border-white/20 rounded-lg shadow-2xl max-w-sm"
           >
-            {renderItem(item, startIndex + index)}
-          </div>
-        ))}
-      </div>
+            {/* Header */}
+            <div className="flex items-center justify-between p-4 border-b border-white/20">
+              <div className="flex items-center space-x-2">
+                <Zap className="w-5 h-5 text-cyan-400" />
+                <h3 className="text-white font-semibold">Performance Monitor</h3>
+              </div>
+              <div className="flex items-center space-x-2">
+                <button
+                  onClick={() => setIsExpanded(!isExpanded)}
+                  className="p-1 hover:bg-white/20 rounded transition-colors"
+                >
+                  <BarChart3 className="w-4 h-4 text-white" />
+                </button>
+                <button
+                  onClick={() => setIsVisible(false)}
+                  className="p-1 hover:bg-white/20 rounded transition-colors"
+                >
+                  <X className="w-4 h-4 text-white" />
+                </button>
+              </div>
+            </div>
+
+            {/* Metrics */}
+            <div className="p-4 space-y-3">
+              <div className="grid grid-cols-2 gap-3">
+                <div className="text-center p-3 bg-white/5 rounded-lg">
+                  <Clock className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
+                  <div className="text-white font-semibold">{metrics.loadTime}ms</div>
+                  <div className="text-xs text-gray-400">Load Time</div>
+                </div>
+                <div className="text-center p-3 bg-white/5 rounded-lg">
+                  <HardDrive className="w-6 h-6 text-purple-400 mx-auto mb-2" />
+                  <div className="text-white font-semibold">{metrics.memoryUsage}MB</div>
+                  <div className="text-xs text-gray-400">Memory</div>
+                </div>
+              </div>
+              
+              <div className="text-center p-3 bg-white/5 rounded-lg">
+                <Cpu className="w-6 h-6 text-green-400 mx-auto mb-2" />
+                <div className="text-white font-semibold">{metrics.lighthouseScore}/100</div>
+                <div className="text-xs text-gray-400">Performance Score</div>
+              </div>
+            </div>
+
+            {/* Optimization Suggestions */}
+            {metrics.optimizationSuggestions.length > 0 && (
+              <div className="p-4 border-t border-white/20">
+                <h4 className="text-white font-semibold mb-3 flex items-center">
+                  <AlertTriangle className="w-4 h-4 text-yellow-400 mr-2" />
+                  Optimization Tips
+                </h4>
+                <ul className="space-y-2">
+                  {metrics.optimizationSuggestions.map((suggestion, index) => (
+                    <li key={index} className="text-sm text-gray-300 flex items-start">
+                      <span className="text-cyan-400 mr-2">•</span>
+                      {suggestion}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* Expanded View */}
+            {isExpanded && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
+                className="border-t border-white/20"
+              >
+                <div className="p-4 space-y-4">
+                  {/* Performance History */}
+                  <div>
+                    <h4 className="text-white font-semibold mb-3">Performance History</h4>
+                    <div className="space-y-2">
+                      {optimizationHistory.map((metric, index) => (
+                        <div key={index} className="flex items-center justify-between text-sm">
+                          <span className="text-gray-400">#{optimizationHistory.length - index}</span>
+                          <span className={`font-semibold ${
+                            metric.lighthouseScore > 80 ? 'text-green-400' : 
+                            metric.lighthouseScore > 60 ? 'text-yellow-400' : 'text-red-400'
+                          }`}>
+                            {metric.lighthouseScore}/100
+                          </span>
+                          <span className="text-gray-400">{metric.loadTime}ms</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Quick Tips */}
+                  <div>
+                    <h4 className="text-white font-semibold mb-3">Quick Tips</h4>
+                    <div className="space-y-2">
+                      {performanceTips.slice(0, 4).map((tip, index) => (
+                        <div key={index} className="text-sm text-gray-300 flex items-start">
+                          <span className="text-cyan-400 mr-2">💡</span>
+                          {tip}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+
+            {/* Actions */}
+            <div className="p-4 border-t border-white/20">
+              <div className="flex space-x-2">
+                <button
+                  onClick={measurePerformance}
+                  className="flex-1 bg-cyan-500 hover:bg-cyan-600 text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center justify-center"
+                >
+                  <TrendingUp className="w-4 h-4 mr-2" />
+                  Measure
+                </button>
+                <button
+                  onClick={performAutoOptimization}
+                  className="flex-1 bg-purple-500 hover:bg-purple-600 text-white px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center justify-center"
+                >
+                  <Zap className="w-4 h-4 mr-2" />
+                  Optimize
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Toggle Button */}
+      {!isVisible && (
+        <motion.button
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          onClick={() => setIsVisible(true)}
+          className="bg-cyan-500 hover:bg-cyan-600 text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+          title="Performance Monitor"
+        >
+          <Zap className="w-6 h-6" />
+        </motion.button>
+      )}
     </div>
   );
 };

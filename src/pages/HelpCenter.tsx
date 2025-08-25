@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -418,6 +419,8 @@ const HelpCenter = () => {
         { title: "Support Plans", path: "/help/support-plans" },
         { title: "Refund Policy", path: "/help/refund-policy" }
 =======
+=======
+>>>>>>> origin/main
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
@@ -488,6 +491,7 @@ const HelpCenter: React.FC = () => {
         }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d2cf
       ]
+<<<<<<< HEAD
     }
   ];
 
@@ -704,11 +708,14 @@ const HelpCenter: React.FC = () => {
       description: 'Best practices for optimal system performance',
       views: '1.2k',
       category: 'Performance'
+=======
+>>>>>>> origin/main
     }
   ];
 
   const supportChannels = [
     {
+<<<<<<< HEAD
       title: 'Live Chat',
       description: 'Get instant help from our support team',
       icon: MessageCircle,
@@ -1270,6 +1277,8 @@ export default function HelpCenter() {
 =======
   const supportChannels = [
     {
+=======
+>>>>>>> origin/main
       title: "Live Chat",
       description: "Get instant help from our support team",
       icon: ChatBubbleLeftRightIcon,
@@ -1531,6 +1540,7 @@ export default function HelpCenter() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
+<<<<<<< HEAD
                 <button
                   onClick={() => toggleCategory(category.id)}
                   className="w-full p-6 text-left hover:bg-gray-700/30 transition-colors duration-200"
@@ -1586,11 +1596,21 @@ export default function HelpCenter() {
                 )}
               </motion.div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-b812
+=======
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <resource.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{resource.title}</h3>
+                <p className="text-gray-300 mb-4">{resource.description}</p>
+                <div className="text-2xl font-bold text-cyan-400">{resource.count}</div>
+              </motion.div>
+>>>>>>> origin/main
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       {/* Help Categories */}
@@ -1899,6 +1919,32 @@ export default function HelpCenter() {
             ))}
 >>>>>>> origin/cursor/website-audit-and-enhancement-b812
           </div>
+=======
+      {/* Contact Support Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600/20 to-blue-600/20">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Still Need Help?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Our support team is here to help you succeed. Contact us for 
+              personalized assistance and expert guidance.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Contact Support
+              </button>
+              <button className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">
+                Schedule Call
+              </button>
+            </div>
+          </motion.div>
+>>>>>>> origin/main
         </div>
       </section>
 

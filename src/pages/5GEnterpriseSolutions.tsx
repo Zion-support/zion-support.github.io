@@ -1,6 +1,7 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -69,6 +70,8 @@ import {
 >>>>>>> origin/cursor/website-audit-and-enhancement-98d1
 } from 'lucide-react';
 =======
+=======
+>>>>>>> origin/main
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { 
@@ -81,6 +84,7 @@ import {
   CogIcon,
   LightBulbIcon
 } from '@heroicons/react/24/outline';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d2cf
 =======
   Network, 
@@ -103,6 +107,8 @@ import {
   Database
 } from 'lucide-react';
 >>>>>>> origin/cursor/website-audit-and-enhancement-9d3a
+=======
+>>>>>>> origin/main
 
 const FiveGEnterpriseSolutions = () => {
 =======
@@ -130,6 +136,7 @@ export default function FiveGEnterpriseSolutions() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-08b8
   const features = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       icon: Network,
@@ -266,6 +273,8 @@ const FiveGEnterpriseSolutions = () => {
     "Custom API integration and development",
     "Comprehensive network documentation and reporting"
 =======
+=======
+>>>>>>> origin/main
       icon: SignalIcon,
       title: "Ultra-Fast Connectivity",
       description: "Lightning-fast 5G networks with speeds up to 10 Gbps for enterprise applications and real-time operations."
@@ -425,11 +434,15 @@ const FiveGEnterpriseSolutions = () => {
     "Enable autonomous operations and remote control",
     "Improve operational efficiency by 300%",
     "Reduce infrastructure costs by 40%"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d2cf
+=======
+>>>>>>> origin/main
   ];
 
   const useCases = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       title: "Manufacturing",
       description: "Smart factory automation with real-time monitoring and control"
@@ -460,6 +473,22 @@ const FiveGEnterpriseSolutions = () => {
       icon: BarChart3,
       title: "Network Analytics",
       description: "Advanced monitoring and analytics for optimal network performance"
+=======
+      title: "Smart Manufacturing",
+      description: "5G-powered smart factories with real-time monitoring, autonomous robots, and predictive maintenance."
+    },
+    {
+      title: "Autonomous Vehicles",
+      description: "Connected autonomous vehicles with real-time communication and ultra-low latency control systems."
+    },
+    {
+      title: "Remote Healthcare",
+      description: "Telemedicine and remote surgery with real-time high-definition video and haptic feedback."
+    },
+    {
+      title: "Smart Cities",
+      description: "Intelligent city infrastructure with connected sensors, traffic management, and public safety systems."
+>>>>>>> origin/main
     }
 =======
     "10x faster data transfer speeds",
@@ -473,9 +502,15 @@ const FiveGEnterpriseSolutions = () => {
 
   const solutions = [
     {
+<<<<<<< HEAD
       title: "Manufacturing & Industry 4.0",
       description: "Enable smart factories with real-time monitoring and autonomous operations",
       benefits: ["Predictive maintenance", "Real-time quality control", "Automated production lines"]
+=======
+      metric: "Peak Data Rate",
+      value: "10 Gbps",
+      description: "Maximum download speed"
+>>>>>>> origin/main
     },
     {
       title: "Healthcare & Telemedicine",
@@ -488,6 +523,7 @@ const FiveGEnterpriseSolutions = () => {
       benefits: ["V2X communication", "Traffic optimization", "Safety systems"]
     },
     {
+<<<<<<< HEAD
       title: "Smart Cities",
       description: "Build intelligent urban infrastructure with 5G connectivity",
       benefits: ["Traffic management", "Environmental monitoring", "Public safety"]
@@ -594,6 +630,11 @@ const FiveGEnterpriseSolutions = () => {
       title: "IoT Integration",
       description: "Seamless connectivity for smart devices",
       icon: Wifi
+=======
+      metric: "Mobility",
+      value: "500 km/h",
+      description: "Maximum movement speed support"
+>>>>>>> origin/main
     }
 =======
     "10x faster than 4G networks",
@@ -606,6 +647,7 @@ const FiveGEnterpriseSolutions = () => {
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -735,6 +777,8 @@ export default function FiveGEnterpriseSolutions() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-98d1
               </Link>
 =======
+=======
+>>>>>>> origin/main
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       <Helmet>
         <title>5G Enterprise Solutions - Zion Tech Group</title>
@@ -766,6 +810,7 @@ export default function FiveGEnterpriseSolutions() {
               <button className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300">
                 View Demo
               </button>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d2cf
 =======
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
@@ -1073,6 +1118,8 @@ export default function FiveGEnterpriseSolutions() {
                 </div>
               </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-a260
+=======
+>>>>>>> origin/main
             </div>
           </motion.div>
         </div>
@@ -1114,6 +1161,7 @@ export default function FiveGEnterpriseSolutions() {
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1222,6 +1270,8 @@ export default function FiveGEnterpriseSolutions() {
               </div>
             ))}
 =======
+=======
+>>>>>>> origin/main
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
@@ -1273,6 +1323,7 @@ export default function FiveGEnterpriseSolutions() {
                 ))}
               </div>
             </motion.div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d2cf
 =======
       {/* Features Section */}
@@ -1700,12 +1751,15 @@ export default function FiveGEnterpriseSolutions() {
               </div>
             ))}
 >>>>>>> origin/cursor/website-audit-and-enhancement-98d1
+=======
+>>>>>>> origin/main
           </div>
         </div>
       </section>
 
 <<<<<<< HEAD
       {/* Use Cases Section */}
+<<<<<<< HEAD
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -1750,6 +1804,26 @@ export default function FiveGEnterpriseSolutions() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-98d1
               </div>
 =======
+=======
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Industry Applications
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              From smart manufacturing to autonomous vehicles, our 5G enterprise solutions 
+              enable revolutionary applications across all industries.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+>>>>>>> origin/main
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
@@ -1761,12 +1835,16 @@ export default function FiveGEnterpriseSolutions() {
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
               </motion.div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d2cf
+=======
+>>>>>>> origin/main
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* CTA Section */}
 <<<<<<< HEAD
@@ -1917,6 +1995,8 @@ export default function FiveGEnterpriseSolutions() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-98d1
             </Link>
 =======
+=======
+>>>>>>> origin/main
       {/* Technology Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
@@ -1968,6 +2048,7 @@ export default function FiveGEnterpriseSolutions() {
               <h3 className="text-xl font-semibold text-white mb-3">Security & Privacy</h3>
               <p className="text-gray-300">Enterprise-grade security with advanced encryption</p>
             </motion.div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d2cf
 =======
       {/* Benefits Section */}
@@ -2027,6 +2108,8 @@ export default function FiveGEnterpriseSolutions() {
               </ul>
             </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-a260
+=======
+>>>>>>> origin/main
           </div>
         </div>
       </section>

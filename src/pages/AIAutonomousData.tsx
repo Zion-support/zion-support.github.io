@@ -1,6 +1,7 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -540,6 +541,8 @@ const AIAutonomousData: React.FC = () => {
       </section>
     </div>
 =======
+=======
+>>>>>>> origin/main
 import { SEOHead } from '../components/SEOHead';
 
 const AIAutonomousData: React.FC = () => {
@@ -647,7 +650,10 @@ const AIAutonomousData: React.FC = () => {
         </div>
       </div>
     </>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d0e7
+=======
+>>>>>>> origin/main
   );
 };
 

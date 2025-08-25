@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -48,6 +49,11 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
+>>>>>>> origin/main
 import { 
   ChartBarIcon, 
   CpuChipIcon, 
@@ -58,11 +64,15 @@ import {
   UsersIcon,
   CogIcon
 } from '@heroicons/react/24/outline';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d2cf
+=======
+>>>>>>> origin/main
 
   const caseStudies = [
     {
       id: 1,
+<<<<<<< HEAD
 <<<<<<< HEAD
       title: 'AI-Powered Healthcare Analytics Platform',
       company: 'MedTech Solutions Inc.',
@@ -955,6 +965,8 @@ export default function CaseStudies() {
             className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
       title: "AI-Powered Manufacturing Transformation",
       company: "Global Manufacturing Corp",
       industry: "Manufacturing",
@@ -1148,7 +1160,10 @@ export default function CaseStudies() {
 =======
 >>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fe6d
           </motion.div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-b812
+=======
+>>>>>>> origin/main
         </div>
       </section>
 
@@ -1160,6 +1175,7 @@ export default function CaseStudies() {
 <<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredCaseStudies.map((study) => (
               <div key={study.id} className="bg-gray-800/50 rounded-xl border border-gray-700 overflow-hidden hover:border-cyan-500/50 transition-all duration-300 group">
@@ -1427,6 +1443,8 @@ export default function CaseStudies() {
 =======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
+=======
+>>>>>>> origin/main
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1480,11 +1498,15 @@ export default function CaseStudies() {
                       <li key={idx} className="flex items-start space-x-3">
                         <div className="w-2 h-2 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
                         <span className="text-gray-300">{result}</span>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d2cf
+=======
+>>>>>>> origin/main
                       </li>
                     ))}
                   </ul>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
               </div>
             ))}
@@ -1513,6 +1535,8 @@ export default function CaseStudies() {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d2cf
 =======
 >>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fe6d
+=======
+>>>>>>> origin/main
               </motion.div>
             ))}
           </div>
@@ -1536,6 +1560,7 @@ export default function CaseStudies() {
               providing tailored solutions for your specific business challenges.
             </p>
           </motion.div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-b812
         </div>
@@ -1614,6 +1639,8 @@ export default function CaseStudies() {
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-ee8a
 =======
+=======
+>>>>>>> origin/main
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {industries.map((industry, index) => (
@@ -1628,12 +1655,55 @@ export default function CaseStudies() {
               </motion.div>
             ))}
           </div>
+<<<<<<< HEAD
         </div>
       </section>
 
       {/* Technologies Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
+=======
+        </div>
+      </section>
+
+      {/* Technologies Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Technologies We Deploy
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Cutting-edge technologies that drive innovation and deliver measurable 
+              business results for our clients.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {technologies.map((tech, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 text-center"
+              >
+                <h3 className="text-lg font-semibold text-white">{tech}</h3>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600/20 to-blue-600/20">
+        <div className="max-w-4xl mx-auto text-center">
+>>>>>>> origin/main
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1790,7 +1860,10 @@ export default function CaseStudies() {
               </button>
             </div>
           </motion.div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-b812
+=======
+>>>>>>> origin/main
         </div>
       </section>
     </div>

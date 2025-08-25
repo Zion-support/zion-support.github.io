@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
 =======
 import React, { useState, useEffect, useCallback } from 'react';
@@ -457,6 +458,8 @@ const PerformanceMonitor: React.FC = () => {
     if (metrics.ttfb && metrics.ttfb > thresholds.ttfb.needsImprovement) score -= 20;
     else if (metrics.ttfb && metrics.ttfb > thresholds.ttfb.good) score -= 10;
 =======
+=======
+>>>>>>> origin/main
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -1669,11 +1672,15 @@ const MetricCard: React.FC<MetricCardProps> = ({ label, value, status }) => {
     <div className={`p-3 rounded-lg ${getStatusBg(status)}`}>
       <div className="text-xs text-gray-600 dark:text-gray-400 mb-1">{label}</div>
       <div className={`font-mono font-semibold ${getStatusColor(status)}`}>{value}</div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bec0
+=======
+>>>>>>> origin/main
     </div>
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export { PerformanceMonitor };
@@ -1684,3 +1691,7 @@ export default PerformanceMonitor;
 export { PerformanceMonitor };
 export default PerformanceMonitor;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bec0
+=======
+export { PerformanceMonitor };
+export default PerformanceMonitor;
+>>>>>>> origin/main

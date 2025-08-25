@@ -118,6 +118,13 @@ export class ErrorBoundary extends Component<Props, State> {
                 Contact Support
               </a>
             </div>
+
+            {/* Error ID for Support */}
+            {this.state.error && (
+              <div className="mt-4 text-xs text-gray-500">
+                Error ID: {this.state.error.name}-{Date.now()}
+              </div>
+            )}
           </div>
         </div>
       );

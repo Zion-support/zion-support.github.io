@@ -137,6 +137,7 @@ export default function Sitemap() {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { 
   Map, 
@@ -222,6 +223,8 @@ export default function Sitemap() {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a191
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d0e7
+=======
+>>>>>>> origin/main
   const renderPageSection = (title: string, pages: any[], IconComponent: any) => (
     <motion.div
       key={title}

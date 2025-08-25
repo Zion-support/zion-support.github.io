@@ -147,6 +147,7 @@ export function FeatureHighlights() {
             </motion.div>
           ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
         </motion.div>
         
         {/* Bottom CTA */}
@@ -155,6 +156,11 @@ export function FeatureHighlights() {
 
         {/* Call to action */}
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d0e7
+=======
+        </div>
+
+        {/* Call to action */}
+>>>>>>> origin/main
         <motion.div 
           className="text-center mt-16"
           initial={{ opacity: 0, y: 30 }}

@@ -4,11 +4,16 @@ import { Helmet } from 'react-helmet-async';
 interface SEOProps {
   title: string;
   description: string;
-  keywords?: string;
+  keywords?: string[] | string;
   canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
+  image?: string;
+  url?: string;
+  type?: 'website' | 'article' | 'product' | 'service';
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  section?: string;
+  tags?: string[];
   structuredData?: object;
   noindex?: boolean;
   nofollow?: boolean;
@@ -17,7 +22,7 @@ interface SEOProps {
 export const SEO: React.FC<SEOProps> = ({
   title,
   description,
-  keywords,
+  keywords = [],
   canonical,
   ogImage = '/images/zion-og-image.jpg',
   ogType = 'website',
@@ -80,7 +85,6 @@ export const SEO: React.FC<SEOProps> = ({
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content={siteName} />
-      <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content={twitterCard} />
@@ -144,5 +148,88 @@ export const SEO: React.FC<SEOProps> = ({
       <meta name="supported-color-schemes" content="dark light" />
     </Helmet>
   );
-};
+}
 
+// Specialized SEO components for different page types
+export function HomePageSEO() {
+  return (
+    <SEO
+      title="Zion - The Tech & AI Marketplace"
+      description="Discover top AI and tech talent, services, and equipment in one place. Connect with experts, find innovative solutions, and accelerate your tech projects."
+      keywords="AI marketplace, tech talent, IT services, tech equipment, AI experts, developers, tech consulting, innovation"
+      canonical="/"
+      ogImage="/images/zion-homepage-og.jpg"
+      structuredData={{
+        "@type": "WebSite",
+        "name": "Zion Tech Group",
+        "url": "https://ziontechgroup.com",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://ziontechgroup.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }}
+    />
+  );
+}
+
+export function ServicePageSEO({ 
+  serviceName, 
+  description, 
+  category 
+}: { 
+  serviceName: string;
+  description: string;
+  category: string;
+}) {
+  return (
+    <SEO
+      title={`${serviceName} - Zion Tech Group`}
+      description={description}
+      keywords={`${serviceName}, ${category}, tech services, IT solutions, Zion Tech Group`}
+      canonical={`/services/${serviceName.toLowerCase().replace(/\s+/g, '-')}`}
+      ogImage="/images/zion-services-og.jpg"
+      structuredData={{
+        "@type": "Service",
+        "name": serviceName,
+        "description": description,
+        "provider": {
+          "@type": "Organization",
+          "name": "Zion Tech Group"
+        },
+        "category": category,
+        "areaServed": "Worldwide"
+      }}
+    />
+  );
+}
+
+export function TalentPageSEO({ 
+  talentName, 
+  skills, 
+  description 
+}: { 
+  talentName: string;
+  skills: string[];
+  description: string;
+}) {
+  return (
+    <SEO
+      title={`${talentName} - Tech Talent | Zion Tech Group`}
+      description={description}
+      keywords={`${talentName}, ${skills.join(', ')}, tech talent, AI expert, developer, Zion Tech Group`}
+      canonical={`/talent/${talentName.toLowerCase().replace(/\s+/g, '-')}`}
+      ogImage="/images/zion-profile-og.jpg"
+      structuredData={{
+        "@type": "Person",
+        "name": talentName,
+        "description": description,
+        "knowsAbout": skills,
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Zion Tech Group"
+        }
+      }}
+    />
+  );
+}

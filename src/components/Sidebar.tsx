@@ -29,20 +29,17 @@ import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitte
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, ShoppingCart, Code, DollarSign } from 'lucide-react';
 >>>>>>> origin/cursor/website-audit-and-enhancement-0fd3
 import { Link, useLocation } from 'react-router-dom';
+import { useSidebar } from '../context/SidebarContext';
 
-interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-export default function Sidebar({ isOpen, onClose }: SidebarProps) {
+export default function Sidebar() {
+  const { isSidebarOpen, setIsSidebarOpen } = useSidebar();
   const location = useLocation();
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
 
   // Close sidebar when route changes
   useEffect(() => {
-    onClose();
-  }, [location.pathname, onClose]);
+    setIsSidebarOpen(false);
+  }, [location.pathname, setIsSidebarOpen]);
 
   const toggleSection = (sectionTitle: string) => {
     setExpandedSections(prev => 
@@ -736,6 +733,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-4b00
   return (
+<<<<<<< HEAD
     <AnimatePresence>
       {isOpen && (
         <>
@@ -754,6 +752,12 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
           />
           
           {/* Sidebar */}
+=======
+    <>
+      {/* Overlay */}
+      <AnimatePresence>
+        {isSidebarOpen && (
+>>>>>>> origin/main
           <motion.div
             initial="closed"
             animate="open"
@@ -770,10 +774,16 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                 <span className="text-xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
 =======
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
-            onClick={onClose}
+            onClick={() => setIsSidebarOpen(false)}
           />
 
+<<<<<<< HEAD
           {/* Sidebar */}
+=======
+      {/* Sidebar */}
+      <AnimatePresence>
+        {isSidebarOpen && (
+>>>>>>> origin/main
           <motion.div
 <<<<<<< HEAD
             initial={{ x: '-100%' }}
@@ -795,10 +805,19 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                 <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-lg">Z</span>
                 </div>
+<<<<<<< HEAD
                 <span className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
 >>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fe6d
                   Zion Tech Group
                 </span>
+=======
+                <button
+                  onClick={() => setIsSidebarOpen(false)}
+                  className="p-2 futuristic-card hover:bg-white/20 rounded-lg transition-colors group"
+                >
+                  <X className="w-5 h-5 text-zion-slate-light group-hover:neon-text transition-colors" />
+                </button>
+>>>>>>> origin/main
               </div>
               <button
                 onClick={onClose}

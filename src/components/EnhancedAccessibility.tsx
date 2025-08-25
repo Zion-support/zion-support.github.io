@@ -1,9 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -15,23 +18,32 @@ import {
   VolumeX, 
   Type, 
 <<<<<<< HEAD
+<<<<<<< HEAD
   Contrast, 
   MousePointer, 
   Keyboard,
 =======
+=======
+>>>>>>> origin/main
   Palette, 
   MousePointer, 
   Keyboard, 
   Monitor, 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bec0
+=======
+>>>>>>> origin/main
   Settings,
   X,
   Check,
   AlertTriangle,
   Info,
 <<<<<<< HEAD
+<<<<<<< HEAD
   Accessibility
 =======
+=======
+>>>>>>> origin/main
   Sun,
   Moon,
   Smartphone,
@@ -43,12 +55,16 @@ import {
   RotateCcw,
   HelpCircle,
   Zap
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bec0
+=======
+>>>>>>> origin/main
 } from 'lucide-react';
 
 interface AccessibilitySettings {
   // Visual
   highContrast: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
   largeText: boolean;
   reducedMotion: boolean;
@@ -482,6 +498,8 @@ Escape: Close panels
         if (nav) {
           (nav as HTMLElement).focus();
 =======
+=======
+>>>>>>> origin/main
   fontSize: number; // 50% to 200%
   colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
   reducedMotion: boolean;
@@ -638,6 +656,7 @@ const EnhancedAccessibility: React.FC = () => {
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
+<<<<<<< HEAD
 <<<<<<< HEAD
   }, [settings.keyboardNavigation]);
 
@@ -1430,6 +1449,8 @@ const EnhancedAccessibility: React.FC = () => {
 >>>>>>> origin/main
     </>
 =======
+=======
+>>>>>>> origin/main
   }, [isVisible, settings]);
 
   // Apply accessibility settings to DOM
@@ -1491,9 +1512,16 @@ const EnhancedAccessibility: React.FC = () => {
     }
   }, [settings]);
 
+<<<<<<< HEAD
   // Calculate accessibility score
   const calculateAccessibilityScore = useCallback(() => {
     let score = 100;
+=======
+  // Toggle setting with announcement
+  const toggleSetting = (key: keyof AccessibilitySettings) => {
+    const newSettings = { ...settings, [key]: !settings[key] };
+    setSettings(newSettings);
+>>>>>>> origin/main
     
     // Visual accessibility
     if (settings.highContrast) score += 5;
@@ -2084,7 +2112,7 @@ const EnhancedAccessibility: React.FC = () => {
                       }`}
                     />
                   </button>
-                </div>
+                ))}
               </div>
 
               <div className="space-y-3">
@@ -2231,6 +2259,9 @@ const EnhancedAccessibility: React.FC = () => {
         </audio>
       </motion.div>
     </AnimatePresence>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bec0
+=======
+>>>>>>> origin/main
   );
 };
