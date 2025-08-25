@@ -211,6 +211,7 @@ export function Footer() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <footer className="bg-zion-blue-dark border-t border-zion-blue-light pt-12 pb-8 relative overflow-hidden">
       {/* Futuristic Background Effects */}
@@ -243,6 +244,8 @@ export function Footer() {
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-73d5
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-5083
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-6664
           <div>
             <div className="mb-4">
               <span className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">ZION</span>
@@ -411,6 +414,7 @@ export function Footer() {
               <li><Link to="/green-it" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Green IT</Link></li>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               <li><Link to="/ai-matcher" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Matcher</Link></li>
 =======
               <li><Link to="/zion-hire-ai" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Zion Hire AI</Link></li>
@@ -421,6 +425,9 @@ export function Footer() {
 =======
               <li><Link to="/ai-matcher" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Matcher</Link></li>
 >>>>>>> origin/cursor/website-audit-and-enhancement-5083
+=======
+              <li><Link to="/match" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Matcher</Link></li>
+>>>>>>> origin/cursor/website-audit-and-enhancement-6664
             </ul>
           </div>
 
@@ -430,6 +437,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li><Link to="/about" className="text-zion-slate-light hover:text-zion-cyan transition-colors">About Us</Link></li>
               <li><Link to="/careers" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Careers</Link></li>
+<<<<<<< HEAD
               <li><Link to="/partners" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Partners</Link></li>
               <li><Link to="/blog" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Blog</Link></li>
               <li><Link to="/press" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Press</Link></li>
@@ -452,6 +460,10 @@ export function Footer() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-a0eb
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-5083
+=======
+              <li><Link to="/contact" className="text-zion-cyan transition-colors">Contact</Link></li>
+              <li><Link to="/faq" className="text-zion-slate-light hover:text-zion-cyan transition-colors">FAQ</Link></li>
+>>>>>>> origin/cursor/website-audit-and-enhancement-6664
               <li><Link to="/sitemap" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Sitemap</Link></li>
             </ul>
           </div>
@@ -475,6 +487,16 @@ export function Footer() {
             </ul>
           </div>
 
+          <div>
+            <h3 className="text-white font-semibold mb-4 text-lg">User Resources</h3>
+            <ul className="space-y-2 mb-4">
+              <li><Link to="/create-profile" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Create Profile</Link></li>
+              <li><Link to="/portfolio" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Portfolio</Link></li>
+              <li><Link to="/post-job" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Post a Job</Link></li>
+              <li><Link to="/request-quote" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Request Quote</Link></li>
+            </ul>
+          </div>
+          
           <div>
             <h3 className="text-white font-semibold mb-4 text-lg">Subscribe to our newsletter</h3>
             <p className="text-zion-slate-light mb-4">

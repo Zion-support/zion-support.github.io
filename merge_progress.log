@@ -1295,3 +1295,56 @@ tailwind.config.ts
 [2025-08-25 23:35:40] Processing unmerged file: tailwind.config.ts
 [2025-08-25 23:35:40] File exists in HEAD, keeping it
 [2025-08-25 23:35:41] Still have unmerged paths, attempting additional resolution...
+[main f2e9a2841cf] Merge PR #6639: cursor/enhance-app-with-new-services-and-futuristic-design-eb69 (advanced conflict resolution)
+[2025-08-25 23:35:42] ✓ Advanced conflict resolution successful for PR #6639
+[2025-08-25 23:35:42] ✓ PR #6639 processed successfully
+==========================================
+
+
+==========================================
+[2025-08-25 23:35:42] Processing PR #6638 from branch: cursor/website-audit-and-enhancement-6664
+==========================================
+[2025-08-25 23:35:42] Processing PR #6638 from branch: cursor/website-audit-and-enhancement-6664
+[2025-08-25 23:35:42] Attempting regular merge...
+Auto-merging package-lock.json
+CONFLICT (content): Merge conflict in package-lock.json
+Auto-merging package.json
+CONFLICT (content): Merge conflict in package.json
+CONFLICT (modify/delete): pages/talent/[id].tsx deleted in origin/cursor/website-audit-and-enhancement-6664 and modified in HEAD.  Version HEAD of pages/talent/[id].tsx left in tree.
+Auto-merging src/App.tsx
+CONFLICT (content): Merge conflict in src/App.tsx
+Auto-merging src/components/Footer.tsx
+CONFLICT (content): Merge conflict in src/components/Footer.tsx
+Auto-merging src/layout/MainNavigation.tsx
+CONFLICT (content): Merge conflict in src/layout/MainNavigation.tsx
+Auto-merging src/pages/CreateProfile.tsx
+CONFLICT (add/add): Merge conflict in src/pages/CreateProfile.tsx
+Auto-merging src/pages/FAQ.tsx
+CONFLICT (add/add): Merge conflict in src/pages/FAQ.tsx
+Auto-merging src/pages/RequestQuote.tsx
+CONFLICT (content): Merge conflict in src/pages/RequestQuote.tsx
+Automatic merge failed; fix conflicts and then commit the result.
+[2025-08-25 23:35:43] ✗ Merge failed for PR #6638, attempting advanced conflict resolution...
+[2025-08-25 23:35:43] Resolving complex conflicts for PR #6638 (cursor/website-audit-and-enhancement-6664)...
+[2025-08-25 23:35:43] Found unmerged files: package-lock.json
+package.json
+pages/talent/[id].tsx
+src/App.tsx
+src/components/Footer.tsx
+src/layout/MainNavigation.tsx
+src/pages/RequestQuote.tsx
+[2025-08-25 23:35:43] Processing unmerged file: package-lock.json
+[2025-08-25 23:35:43] File exists in HEAD, keeping it
+[2025-08-25 23:35:43] Processing unmerged file: package.json
+[2025-08-25 23:35:43] File exists in HEAD, keeping it
+[2025-08-25 23:35:43] Processing unmerged file: pages/talent/[id].tsx
+[2025-08-25 23:35:43] File exists in HEAD, keeping it
+[2025-08-25 23:35:43] Processing unmerged file: src/App.tsx
+[2025-08-25 23:35:43] File exists in HEAD, keeping it
+[2025-08-25 23:35:43] Processing unmerged file: src/components/Footer.tsx
+[2025-08-25 23:35:43] File exists in HEAD, keeping it
+[2025-08-25 23:35:43] Processing unmerged file: src/layout/MainNavigation.tsx
+[2025-08-25 23:35:43] File exists in HEAD, keeping it
+[2025-08-25 23:35:43] Processing unmerged file: src/pages/RequestQuote.tsx
+[2025-08-25 23:35:43] File exists in HEAD, keeping it
+[2025-08-25 23:35:44] Still have unmerged paths, attempting additional resolution...

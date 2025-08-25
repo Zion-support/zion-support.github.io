@@ -138,6 +138,7 @@ const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const AboutPage = React.lazy(() => import('./pages/About'));
 const CareersPage = React.lazy(() => import('./pages/Careers'));
 const SitemapPage = React.lazy(() => import('./pages/Sitemap'));
@@ -186,6 +187,11 @@ const FAQPage = React.lazy(() => import('./pages/FAQ'));
 =======
 const MicroSaasServicesPage = React.lazy(() => import('./pages/MicroSaasServicesPage'));
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-eb69
+=======
+const FAQ = React.lazy(() => import('./pages/FAQ'));
+const Portfolio = React.lazy(() => import('./pages/Portfolio'));
+const CreateProfile = React.lazy(() => import('./pages/CreateProfile'));
+>>>>>>> origin/cursor/website-audit-and-enhancement-6664
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -261,6 +267,7 @@ const baseRoutes = [
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
 <<<<<<< HEAD
+<<<<<<< HEAD
   { path: '/about', element: <AboutPage /> },
   { path: '/careers', element: <CareersPage /> },
   { path: '/sitemap', element: <SitemapPage /> },
@@ -305,6 +312,11 @@ const baseRoutes = [
   { path: '/faq', element: <FAQPage /> },
   { path: '/enterprise', element: <EnterprisePage /> },
 >>>>>>> origin/cursor/website-audit-and-enhancement-1f4f
+=======
+  { path: '/faq', element: <FAQ /> },
+  { path: '/portfolio', element: <Portfolio /> },
+  { path: '/create-profile', element: <CreateProfile /> },
+>>>>>>> origin/cursor/website-audit-and-enhancement-6664
 ];
 
 const App = () => {

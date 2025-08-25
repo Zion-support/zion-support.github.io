@@ -318,6 +318,7 @@
     "rimraf": "^5.0.5",
     "@humanwhocodes/object-schema": "@eslint/object-schema@1.0.0"
 <<<<<<< HEAD
+<<<<<<< HEAD
   },
   "overrides": {
     "glob": "^10.3.10",
@@ -325,5 +326,7 @@
     "@humanwhocodes/object-schema": "@eslint/object-schema@1.0.0"
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fb01
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-6664
   }
 }
