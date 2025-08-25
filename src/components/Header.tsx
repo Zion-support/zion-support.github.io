@@ -32,7 +32,8 @@ import {
   Cloud,
   DollarSign,
   ShoppingCart,
-  Heart
+  Heart,
+  BookOpen
 } from 'lucide-react';
 
 export function Header() {
@@ -80,6 +81,12 @@ export function Header() {
       hasDropdown: true
     },
     { 
+      path: '/case-studies', 
+      label: 'Case Studies', 
+      icon: '📊',
+      description: 'Success stories and implementations'
+    },
+    { 
       path: '/pricing', 
       label: 'Pricing', 
       icon: '💰',
@@ -102,6 +109,12 @@ export function Header() {
       label: 'Blog', 
       icon: '📝',
       description: 'Latest insights and news'
+    },
+    { 
+      path: '/help', 
+      label: 'Support', 
+      icon: '🆘',
+      description: 'Get help and support'
     },
     { 
       path: '/contact', 
@@ -199,6 +212,18 @@ export function Header() {
         { name: 'Financial Services', path: '/services/financial-services', description: 'Fintech solutions', icon: DollarSign },
         { name: 'Manufacturing Intelligence', path: '/services/manufacturing-intelligence', description: 'Smart manufacturing', icon: Cpu },
         { name: 'Retail Technology', path: '/services/retail-technology', description: 'Digital retail transformation', icon: ShoppingCart }
+      ]
+    },
+    {
+      title: 'Resources & Support',
+      icon: BookOpen,
+      description: 'Documentation, guides, and support',
+      color: 'from-indigo-500 to-purple-500',
+      services: [
+        { name: 'Help Center', path: '/help', description: 'Support and documentation', icon: BookOpen },
+        { name: 'Case Studies', path: '/case-studies', description: 'Success stories and implementations', icon: BarChart3 },
+        { name: 'Blog & Insights', path: '/blog', description: 'Latest technology insights', icon: Lightbulb },
+        { name: 'News & Updates', path: '/news', description: 'Company and industry news', icon: Sparkles }
       ]
     }
   ];
