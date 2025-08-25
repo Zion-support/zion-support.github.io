@@ -1,12 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
+  Scale, 
+  BookOpen, 
+  Users, 
   Brain, 
   Target, 
-  BarChart3, 
   Zap, 
   Shield, 
-  Users, 
   Globe, 
   Lock,
   ArrowRight,
@@ -20,98 +21,113 @@ import {
   Gauge,
   Activity,
   PieChart,
-  LineChart
+  LineChart,
+  Database,
+  Settings,
+  Monitor,
+  Award,
+  Clock,
+  Star,
+  FileText,
+  Gavel,
+  Search
 } from 'lucide-react';
 
-const AIAutonomousDecisionEngine: React.FC = () => {
+const AIAutonomousLegalCounsel: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: "Intelligent Decision Making",
-      description: "AI-powered autonomous decision engine with real-time analysis capabilities"
+      icon: Scale,
+      title: "Intelligent Legal Analysis",
+      description: "AI-powered legal research and case analysis with comprehensive insights"
     },
     {
-      icon: Target,
-      title: "Predictive Analytics",
-      description: "Advanced forecasting and trend analysis for strategic planning"
+      icon: BookOpen,
+      title: "Document Generation",
+      description: "Automated legal document creation and contract drafting"
+    },
+    {
+      icon: Brain,
+      title: "Risk Assessment",
+      description: "Advanced legal risk analysis and compliance monitoring"
     },
     {
       icon: Shield,
-      title: "Risk Assessment",
-      description: "Comprehensive risk evaluation and mitigation strategies"
-    },
-    {
-      icon: Zap,
-      title: "Real-time Processing",
-      description: "Instant decision-making with minimal latency"
+      title: "Compliance Management",
+      description: "Automated regulatory compliance and legal requirement tracking"
     },
     {
       icon: Users,
-      title: "Multi-stakeholder Support",
-      description: "Collaborative decision-making across teams and departments"
+      title: "Client Support",
+      description: "24/7 legal consultation and guidance services"
     },
     {
       icon: Globe,
-      title: "Global Scalability",
-      description: "Enterprise-grade solution that scales with your business"
+      title: "Global Legal Expertise",
+      description: "Multi-jurisdiction legal knowledge and international law support"
     }
   ];
 
   const benefits = [
-    "Automated decision-making processes",
-    "Real-time risk assessment and mitigation",
-    "Predictive analytics for strategic planning",
-    "Reduced decision-making time by 80%",
-    "Improved accuracy and consistency",
-    "Comprehensive audit trails and compliance"
+    "24/7 legal consultation and support",
+    "Automated document generation and review",
+    "Real-time compliance monitoring and alerts",
+    "Reduced legal costs by 60%",
+    "Faster legal research and analysis",
+    "Improved accuracy in legal advice",
+    "Comprehensive risk assessment and mitigation",
+    "Scalable legal services for any organization size"
+  ];
+
+  const legalServices = [
+    {
+      title: "Contract Review",
+      description: "Intelligent contract analysis and risk assessment",
+      icon: FileText
+    },
+    {
+      title: "Legal Research",
+      description: "Comprehensive case law and regulation research",
+      icon: Search
+    },
+    {
+      title: "Compliance Monitoring",
+      description: "Automated regulatory compliance tracking",
+      icon: Shield
+    },
+    {
+      title: "Dispute Resolution",
+      description: "AI-powered mediation and conflict resolution support",
+      icon: Gavel
+    }
   ];
 
   const useCases = [
     {
-      title: "Financial Trading",
-      description: "Automated trading decisions with real-time market analysis and risk management"
+      title: "Corporate Legal",
+      description: "Comprehensive legal support for businesses of all sizes",
+      icon: "🏢"
     },
     {
-      title: "Healthcare Diagnostics",
-      description: "AI-powered medical decision support with patient data analysis"
+      title: "Contract Management",
+      description: "Automated contract creation, review, and management",
+      icon: "📋"
     },
     {
-      title: "Supply Chain Management",
-      description: "Intelligent logistics decisions and route optimization"
+      title: "Regulatory Compliance",
+      description: "Real-time compliance monitoring and reporting",
+      icon: "📊"
     },
     {
-      title: "Customer Service",
-      description: "Automated customer support decisions and routing"
-    }
-  ];
-
-  const decisionTypes = [
-    {
-      title: "Strategic Decisions",
-      description: "Long-term planning and business strategy",
-      icon: Target
-    },
-    {
-      title: "Operational Decisions",
-      description: "Day-to-day business operations and processes",
-      icon: Activity
-    },
-    {
-      title: "Tactical Decisions",
-      description: "Medium-term planning and resource allocation",
-      icon: PieChart
-    },
-    {
-      title: "Emergency Decisions",
-      description: "Crisis management and rapid response",
-      icon: Zap
+      title: "Legal Research",
+      description: "Advanced legal research and case analysis",
+      icon: "🔍"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50 to-pink-100">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-slate-50 to-gray-100">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-700 text-white">
+      <section className="relative overflow-hidden bg-gradient-to-r from-slate-600 via-gray-600 to-slate-700 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
@@ -122,21 +138,21 @@ const AIAutonomousDecisionEngine: React.FC = () => {
           >
             <div className="flex justify-center mb-6">
               <div className="p-3 bg-white/20 rounded-full">
-                <Brain className="w-8 h-8" />
+                <Scale className="w-8 h-8" />
               </div>
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              AI Autonomous Decision Engine
+              AI Autonomous Legal Counsel
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-purple-100">
-              Empower your business with intelligent, autonomous decision-making that operates 24/7 with precision and speed
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-slate-100">
+              Revolutionize legal services with intelligent, autonomous counsel that's always available
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors flex items-center justify-center">
+              <button className="bg-white text-slate-600 px-8 py-3 rounded-lg font-semibold hover:bg-slate-50 transition-colors flex items-center justify-center">
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-600 transition-colors">
                 Watch Demo
               </button>
             </div>
@@ -154,10 +170,10 @@ const AIAutonomousDecisionEngine: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Advanced Decision-Making Capabilities
+              Advanced Legal Capabilities
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our AI Autonomous Decision Engine combines machine learning, predictive analytics, and real-time processing to deliver intelligent decisions
+              Our AI legal counsel combines cutting-edge technology with comprehensive legal expertise
             </p>
           </motion.div>
 
@@ -168,10 +184,10 @@ const AIAutonomousDecisionEngine: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-white to-purple-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-gradient-to-br from-white to-slate-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
               >
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-purple-600" />
+                <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-slate-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   {feature.title}
@@ -185,8 +201,8 @@ const AIAutonomousDecisionEngine: React.FC = () => {
         </div>
       </section>
 
-      {/* Decision Types Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-50 to-pink-50">
+      {/* Legal Services Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-50 to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -195,15 +211,15 @@ const AIAutonomousDecisionEngine: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Types of Decisions We Handle
+              Comprehensive Legal Services
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From strategic planning to operational decisions, our engine handles all levels of business decision-making
+              From contract review to compliance monitoring, our AI counsel handles all aspects of legal support
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {decisionTypes.map((type, index) => (
+            {legalServices.map((service, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -212,15 +228,15 @@ const AIAutonomousDecisionEngine: React.FC = () => {
                 className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
               >
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mr-4">
-                    <type.icon className="w-6 h-6 text-purple-600" />
+                  <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mr-4">
+                    <service.icon className="w-6 h-6 text-slate-600" />
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900">
-                    {type.title}
+                    {service.title}
                   </h3>
                 </div>
                 <p className="text-gray-600">
-                  {type.description}
+                  {service.description}
                 </p>
               </motion.div>
             ))}
@@ -238,10 +254,10 @@ const AIAutonomousDecisionEngine: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Why Choose AI Autonomous Decision Engine?
+              Why Choose AI Autonomous Legal Counsel?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Experience unprecedented efficiency and accuracy in your decision-making processes
+              Experience unprecedented efficiency and accuracy in legal services
             </p>
           </motion.div>
 
@@ -252,7 +268,7 @@ const AIAutonomousDecisionEngine: React.FC = () => {
               transition={{ duration: 0.8 }}
             >
               <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-                Transform Your Decision-Making Process
+                Transform Your Legal Operations
               </h3>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -278,28 +294,28 @@ const AIAutonomousDecisionEngine: React.FC = () => {
             >
               <div className="bg-white p-8 rounded-2xl shadow-xl">
                 <div className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <div className="w-20 h-20 bg-gradient-to-r from-slate-500 to-gray-600 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Gauge className="w-10 h-10 text-white" />
                   </div>
                   <h4 className="text-xl font-semibold text-gray-900 mb-4">
-                    Performance Metrics
+                    Legal Performance
                   </h4>
                   <div className="space-y-4">
                     <div className="flex justify-between items-center">
-                      <span className="text-gray-600">Decision Speed</span>
-                      <span className="font-semibold text-green-600">10x Faster</span>
+                      <span className="text-gray-600">Response Time</span>
+                      <span className="font-semibold text-green-600">24/7</span>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-gray-600">Accuracy Rate</span>
-                      <span className="font-semibold text-green-600">99.5%</span>
+                      <span className="font-semibold text-green-600">95%+</span>
                     </div>
                     <div className="flex justify-between items-center">
                       <span className="text-gray-600">Cost Reduction</span>
-                      <span className="font-semibold text-green-600">70%</span>
+                      <span className="font-semibold text-green-600">60%</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-gray-600">Uptime</span>
-                      <span className="font-semibold text-green-600">99.9%</span>
+                      <span className="text-gray-600">Efficiency</span>
+                      <span className="font-semibold text-green-600">10x</span>
                     </div>
                   </div>
                 </div>
@@ -310,7 +326,7 @@ const AIAutonomousDecisionEngine: React.FC = () => {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-50 to-pink-50">
+      <section className="py-20 bg-gradient-to-r from-slate-50 to-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -319,10 +335,10 @@ const AIAutonomousDecisionEngine: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Industry Applications
+              Legal Applications
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover how AI Autonomous Decision Engine transforms operations across various industries
+              Discover how our AI legal counsel transforms legal services across various industries
             </p>
           </motion.div>
 
@@ -335,13 +351,16 @@ const AIAutonomousDecisionEngine: React.FC = () => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
               >
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {useCase.title}
-                </h3>
+                <div className="flex items-center mb-4">
+                  <span className="text-3xl mr-3">{useCase.icon}</span>
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    {useCase.title}
+                  </h3>
+                </div>
                 <p className="text-gray-600 mb-4">
                   {useCase.description}
                 </p>
-                <button className="text-purple-600 font-semibold hover:text-purple-700 transition-colors flex items-center">
+                <button className="text-slate-600 font-semibold hover:text-slate-700 transition-colors flex items-center">
                   Learn More
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </button>
@@ -352,7 +371,7 @@ const AIAutonomousDecisionEngine: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-700 text-white">
+      <section className="py-20 bg-gradient-to-r from-slate-600 to-gray-700 text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -360,16 +379,16 @@ const AIAutonomousDecisionEngine: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold mb-6">
-              Ready to Automate Your Decision-Making?
+              Ready to Transform Legal Services?
             </h2>
-            <p className="text-xl mb-8 text-purple-100">
-              Join the future of autonomous business intelligence with Zion Tech Group
+            <p className="text-xl mb-8 text-slate-100">
+              Join the future of intelligent, autonomous legal counsel with Zion Tech Group
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
+              <button className="bg-white text-slate-600 px-8 py-3 rounded-lg font-semibold hover:bg-slate-50 transition-colors">
                 Start Free Trial
               </button>
-              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+              <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-600 transition-colors">
                 Schedule Demo
               </button>
             </div>
@@ -380,4 +399,4 @@ const AIAutonomousDecisionEngine: React.FC = () => {
   );
 };
 
-export default AIAutonomousDecisionEngine;
+export default AIAutonomousLegalCounsel;
