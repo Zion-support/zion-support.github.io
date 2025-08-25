@@ -103,7 +103,9 @@ export function Header() {
         { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', description: 'Smart marketing optimization' },
         { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', description: 'Intelligent talent management' },
         { name: 'AI Legal Tech', path: '/services/ai-legal-tech', description: 'Automated legal processes' },
-        { name: 'AI Healthcare Analytics', path: '/services/ai-healthcare-analytics', description: 'Patient care optimization' }
+        { name: 'AI Healthcare Analytics', path: '/services/ai-healthcare-analytics', description: 'Patient care optimization' },
+        { name: 'Innovative Services 2024', path: '/innovative-services-2024', description: 'Cutting-edge micro SAAS solutions' },
+        { name: 'All Services Overview', path: '/all-services-overview', description: 'Complete portfolio of all services' }
       ]
     },
     {
@@ -160,7 +162,8 @@ export function Header() {
         { name: 'Blockchain Solutions', path: '/services/blockchain-solutions', description: 'Decentralized applications' },
         { name: 'IoT Platforms', path: '/services/iot-platforms', description: 'Connected device management' },
         { name: 'Quantum Computing', path: '/services/quantum-computing', description: 'Next-generation computing' },
-        { name: 'AR/VR Solutions', path: '/services/ar-vr-solutions', description: 'Immersive experiences' }
+        { name: 'AR/VR Solutions', path: '/services/ar-vr-solutions', description: 'Immersive experiences' },
+        { name: 'Innovative Services 2024', path: '/innovative-services-2024', description: 'Latest micro SAAS innovations' }
       ]
     },
     {
