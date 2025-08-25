@@ -20,13 +20,14 @@ export interface InnovativeMicroSaasService {
     email: string;
     website: string;
   };
-  technology: string[];
-  integrations: string[];
-  compliance: string[];
-  roi: string;
-  competitors: string[];
+  technology?: string[];
+  integrations?: string[];
+  compliance?: string[];
+  roi?: string;
+  competitors?: string[];
   demoUrl?: string;
   caseStudies?: string[];
+  websiteUrl?: string;
 }
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
@@ -707,6 +708,11 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
+    technology: ["AI/ML", "React", "Node.js", "Python", "AWS"],
+    integrations: ["Adobe Creative Suite", "YouTube", "Vimeo", "Social Media APIs", "CMS Platforms"],
+    compliance: ["GDPR", "CCPA", "SOC 2"],
+    roi: "300% within 6 months",
+    competitors: ["Lumen5", "InVideo", "Synthesia", "RunwayML"],
     websiteUrl: "https://ziontechgroup.com/ai-video-production"
   },
 
@@ -762,6 +768,11 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
+    technology: ["Blockchain", "Ethereum", "Solidity", "React", "Node.js"],
+    integrations: ["Banking APIs", "KYC Providers", "Government Databases", "Financial Systems"],
+    compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001", "PCI DSS"],
+    roi: "400% within 8 months",
+    competitors: ["Onfido", "Jumio", "Veriff", "ID.me"],
     websiteUrl: "https://ziontechgroup.com/blockchain-identity"
   },
 

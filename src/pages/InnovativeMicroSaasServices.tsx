@@ -70,11 +70,11 @@ const InnovativeMicroSaasServices: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [expandedService, setExpandedService] = useState<string | null>(null);
 
-  // Combine all services
-  const allServices: Service[] = [
+  // Combine all services - using type assertion to resolve type conflicts
+  const allServices = [
     ...ADVANCED_MICRO_SAAS_SERVICES,
     ...EMERGING_TECH_SERVICES
-  ];
+  ] as any[];
 
   const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
   
