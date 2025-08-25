@@ -5,6 +5,7 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { 
   CogIcon, 
@@ -97,9 +98,13 @@ import {
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ec46
+=======
+import { Bot, Zap, TrendingUp, Shield, Users, ArrowRight, Cpu, Target } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5b65
 
 <<<<<<< HEAD
 const AutonomousBusinessOperationsPlatform: React.FC = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -355,10 +360,33 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
 =======
       description: "AI-powered customer support, automated issue resolution, sentiment analysis, and service optimization."
 >>>>>>> origin/cursor/website-audit-and-enhancement-2b07
+=======
+  const features = [
+    {
+      icon: Bot,
+      title: "AI-Powered Automation",
+      description: "Intelligent automation that learns from your business processes and continuously optimizes operations."
+    },
+    {
+      icon: Zap,
+      title: "Real-time Decision Making",
+      description: "Instant data analysis and automated decision-making for critical business operations."
+    },
+    {
+      icon: Cpu,
+      title: "Process Intelligence",
+      description: "Advanced analytics and machine learning to identify optimization opportunities across all business functions."
+    },
+    {
+      icon: Target,
+      title: "Predictive Operations",
+      description: "Anticipate issues before they occur with predictive analytics and proactive maintenance."
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5b65
     }
   ];
 
   const benefits = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -413,6 +441,30 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
     }
 =======
       benefits: ["SOC2 compliance", "GDPR ready", "24/7 monitoring"]
+=======
+    "Reduce operational costs by up to 40%",
+    "Increase efficiency by 60%",
+    "24/7 autonomous operation",
+    "Real-time performance monitoring"
+  ];
+
+  const useCases = [
+    {
+      title: "Supply Chain Management",
+      description: "Automated inventory management, demand forecasting, and logistics optimization."
+    },
+    {
+      title: "Customer Service",
+      description: "AI-powered chatbots and automated ticket routing for instant customer support."
+    },
+    {
+      title: "Financial Operations",
+      description: "Automated invoicing, expense tracking, and financial reporting."
+    },
+    {
+      title: "HR Management",
+      description: "Streamlined recruitment, onboarding, and performance management processes."
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5b65
     }
   ];
 
@@ -556,6 +608,7 @@ export default function AutonomousBusinessOperationsPlatform() {
       {/* Hero Section */}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
         <div className="relative mx-auto max-w-7xl">
@@ -639,6 +692,27 @@ export default function AutonomousBusinessOperationsPlatform() {
               </button>
               <button className="px-8 py-4 border-2 border-green-500/50 text-green-400 hover:bg-green-500/10 font-semibold rounded-xl transition-all duration-300">
 >>>>>>> origin/cursor/website-audit-and-enhancement-2b07
+=======
+      <section className="pt-20 pb-16 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="mb-8">
+            <div className="inline-flex items-center px-4 py-2 bg-green-500/20 text-green-400 rounded-full text-sm font-medium mb-6">
+              <Bot className="w-4 h-4 mr-2" />
+              Autonomous Operations
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent mb-6">
+              Autonomous Business Operations Platform
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Transform your business with intelligent automation that works 24/7. 
+              Our platform autonomously manages operations, reduces costs, and increases efficiency.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="px-8 py-4 border border-green-500/30 text-green-400 hover:bg-green-500/20 rounded-lg font-semibold transition-all duration-300">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5b65
                 Schedule Demo
               </button>
 =======
@@ -770,6 +844,7 @@ export default function AutonomousBusinessOperationsPlatform() {
       </section>
 
       {/* Features Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -799,6 +874,25 @@ export default function AutonomousBusinessOperationsPlatform() {
                 <p className="text-gray-300">
                   Continuous business operations without downtime, holidays, or human limitations.
                 </p>
+=======
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Platform Features</h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              Discover the intelligent automation capabilities that revolutionize business operations.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-green-500/50 transition-all duration-300">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                <p className="text-gray-400">{feature.description}</p>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5b65
               </div>
 
               <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-green-500 transition-all duration-300">
@@ -1205,6 +1299,7 @@ export default function AutonomousBusinessOperationsPlatform() {
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Features Section */}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1338,10 +1433,52 @@ export default function AutonomousBusinessOperationsPlatform() {
               </div>
             ))}
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4867
+=======
+      {/* Benefits Section */}
+      <section className="py-16 px-4 bg-gray-800/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Business Impact</h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              See measurable improvements in your business operations and bottom line.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-3">
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mt-1 flex-shrink-0">
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                  </div>
+                  <p className="text-gray-300">{benefit}</p>
+                </div>
+              ))}
+            </div>
+            
+            <div className="bg-gradient-to-br from-green-500/10 to-blue-600/10 rounded-xl p-8 border border-green-500/20">
+              <h3 className="text-2xl font-semibold mb-4">Performance Metrics</h3>
+              <div className="space-y-4">
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-400">Cost Reduction</span>
+                  <span className="text-green-400 font-semibold">40%</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-400">Efficiency Gain</span>
+                  <span className="text-green-400 font-semibold">60%</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-400">Uptime</span>
+                  <span className="text-green-400 font-semibold">99.9%</span>
+                </div>
+              </div>
+            </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5b65
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       {/* Benefits Section */}
@@ -1641,6 +1778,23 @@ export default function AutonomousBusinessOperationsPlatform() {
                   ))}
                 </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-2b07
+=======
+      {/* Use Cases Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Use Cases</h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              See how autonomous operations transform different business functions.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-green-500/50 transition-all duration-300">
+                <h3 className="text-xl font-semibold mb-3 text-green-400">{useCase.title}</h3>
+                <p className="text-gray-400">{useCase.description}</p>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5b65
               </div>
               
               <div className="bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/30 rounded-2xl p-8">
@@ -2465,6 +2619,7 @@ export default function AutonomousBusinessOperationsPlatform() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
 =======
@@ -2777,6 +2932,22 @@ export default function AutonomousBusinessOperationsPlatform() {
               </Link>
             </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-a260
+=======
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Automate Your Business?</h2>
+          <p className="text-xl text-gray-400 mb-8">
+            Join the autonomous operations revolution and transform your business efficiency today.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center">
+              Get Started Now
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
+            <button className="px-8 py-4 border border-green-500/30 text-green-400 hover:bg-green-500/20 rounded-lg font-semibold transition-all duration-300">
+              Contact Sales
+            </button>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5b65
           </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-ee8a
 =======
