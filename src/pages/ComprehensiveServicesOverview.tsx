@@ -191,7 +191,7 @@ const ComprehensiveServicesOverview: React.FC = () => {
         title="Comprehensive Technology Services - Zion Tech Group"
         description="Explore our comprehensive portfolio of cutting-edge technology services including AI, Quantum Computing, Cybersecurity, IT Infrastructure, and more. Transform your business with innovative solutions."
         keywords="technology services, AI services, quantum computing, cybersecurity, IT infrastructure, micro SaaS, autonomous systems, space technology, neurotechnology"
-        ogImage="/images/services-overview-og.jpg"
+        image="/images/services-overview-og.jpg"
         canonical="https://ziontechgroup.com/comprehensive-services-overview"
       />
       
