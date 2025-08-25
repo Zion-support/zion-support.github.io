@@ -35,7 +35,11 @@ const Header: React.FC = () => {
         { name: 'Cloud & DevOps', href: '/cloud-devops', description: 'Scalable cloud infrastructure' },
         { name: 'Data Analytics', href: '/data-analytics', description: 'Transform data into insights' },
         { name: 'Quantum Technology', href: '/quantum-technology', description: 'Next-generation computing' },
-        { name: 'Enterprise Solutions', href: '/enterprise-solutions', description: 'Large-scale business solutions' }
+        { name: 'Enterprise Solutions', href: '/enterprise-solutions', description: 'Large-scale business solutions' },
+        { name: 'IT Infrastructure', href: '/it-infrastructure', description: 'Robust IT foundation' },
+        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions', description: 'Scalable SaaS platforms' },
+        { name: 'Innovative Services', href: '/innovative-services-showcase', description: 'Cutting-edge technology' },
+        { name: 'Comprehensive Services', href: '/comprehensive-services-overview', description: 'Full service portfolio' }
       ]
     },
     { 
@@ -45,10 +49,47 @@ const Header: React.FC = () => {
         { name: 'Healthcare', href: '/solutions/healthcare', description: 'AI-powered healthcare solutions' },
         { name: 'Finance', href: '/solutions/finance', description: 'Financial technology innovations' },
         { name: 'Manufacturing', href: '/solutions/manufacturing', description: 'Smart manufacturing systems' },
-        { name: 'Retail', href: '/solutions/retail', description: 'Digital retail transformation' }
+        { name: 'Retail', href: '/solutions/retail', description: 'Digital retail transformation' },
+        { name: 'Education', href: '/solutions/education', description: 'Educational technology solutions' },
+        { name: 'Government', href: '/solutions/government', description: 'Public sector digitalization' }
       ]
     },
-    { name: 'About', href: '/about' },
+    { 
+      name: 'AI Autonomous', 
+      href: '/ai-autonomous-systems',
+      dropdown: [
+        { name: 'AI Business Manager', href: '/ai-autonomous-business-manager', description: 'Autonomous business management' },
+        { name: 'AI Research Assistant', href: '/ai-autonomous-research-assistant', description: 'Intelligent research automation' },
+        { name: 'AI Code Review', href: '/ai-autonomous-code-review', description: 'Automated code analysis' },
+        { name: 'AI Creative Director', href: '/ai-autonomous-creative-director', description: 'Creative content generation' },
+        { name: 'AI Decision Engine', href: '/ai-autonomous-decision-engine', description: 'Smart decision making' },
+        { name: 'AI Autonomous Systems Platform', href: '/ai-autonomous-systems-platform', description: 'Complete AI platform' }
+      ]
+    },
+    { 
+      name: 'Company', 
+      href: '/about',
+      dropdown: [
+        { name: 'About Us', href: '/about', description: 'Learn about Zion Tech Group' },
+        { name: 'Our Team', href: '/team', description: 'Meet our experts' },
+        { name: 'Mission & Vision', href: '/mission', description: 'Our company goals' },
+        { name: 'Careers', href: '/careers', description: 'Join our team' },
+        { name: 'Partners', href: '/partners', description: 'Strategic partnerships' },
+        { name: 'Case Studies', href: '/case-studies', description: 'Success stories' }
+      ]
+    },
+    { 
+      name: 'Resources', 
+      href: '/resources',
+      dropdown: [
+        { name: 'Documentation', href: '/docs', description: 'Technical documentation' },
+        { name: 'Help Center', href: '/help', description: 'Support and assistance' },
+        { name: 'Webinars', href: '/webinars', description: 'Educational content' },
+        { name: 'White Papers', href: '/white-papers', description: 'Industry insights' },
+        { name: 'Blog & News', href: '/news', description: 'Latest updates' },
+        { name: 'FAQ', href: '/faq', description: 'Frequently asked questions' }
+      ]
+    },
     { name: 'Contact', href: '/contact' }
   ];
 
@@ -141,6 +182,12 @@ const Header: React.FC = () => {
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link
+              to="/pricing"
+              className="px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200"
+            >
+              Pricing
+            </Link>
+            <Link
               to="/contact"
               className="px-6 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
             >
@@ -209,9 +256,16 @@ const Header: React.FC = () => {
               
               <div className="pt-4 border-t border-white/10">
                 <Link
+                  to="/pricing"
+                  onClick={() => setIsOpen(false)}
+                  className="block py-2 text-gray-300 hover:text-white transition-colors duration-200"
+                >
+                  Pricing
+                </Link>
+                <Link
                   to="/contact"
                   onClick={() => setIsOpen(false)}
-                  className="block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg text-center hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
+                  className="block w-full px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg text-center hover:from-purple-700 hover:to-pink-700 transition-all duration-300 mt-2"
                 >
                   Get Started
                 </Link>

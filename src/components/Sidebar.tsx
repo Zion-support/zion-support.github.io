@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake } from 'lucide-react';
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Rocket, BookOpen, HelpCircle, Settings, Star, Cloud, Code } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 interface SidebarProps {
@@ -22,42 +22,54 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       items: [
         { name: 'Home', path: '/', icon: Home },
         { name: 'Services', path: '/services', icon: Briefcase },
-        { name: 'Solutions', path: '/solutions/enterprise', icon: Briefcase },
-        { name: 'Pricing', path: '/pricing', icon: Briefcase },
+        { name: 'Solutions', path: '/solutions', icon: Globe },
+        { name: 'Pricing', path: '/pricing', icon: Star },
         { name: 'About', path: '/about', icon: Users },
         { name: 'Contact', path: '/contact', icon: Phone }
       ]
     },
     {
-      title: 'Services',
+      title: 'Core Services',
       items: [
-        { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
-        { name: 'AI Autonomous Systems Platform', path: '/ai-autonomous-systems-platform', icon: Briefcase },
-        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Briefcase },
-        { name: 'AI Autonomous Research', path: '/ai-autonomous-research', icon: Briefcase },
-        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Briefcase },
-        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Briefcase },
-        { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
-        { name: 'AI Autonomous Business Platform', path: '/ai-autonomous-business-platform', icon: Briefcase },
-        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Briefcase },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Shield },
-        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Briefcase },
-        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Briefcase },
-        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
-        { name: 'Emerging Technology', path: '/emerging-tech', icon: Globe }
+        { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
+        { name: 'Cybersecurity', path: '/cybersecurity', icon: Shield },
+        { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Cloud },
+        { name: 'Quantum Technology', path: '/quantum-technology', icon: Zap },
+        { name: 'Enterprise Solutions', path: '/enterprise-solutions', icon: Briefcase },
+        { name: 'IT Infrastructure', path: '/it-infrastructure', icon: Settings }
       ]
     },
     {
-      title: 'AI Solutions',
+      title: 'AI Autonomous Systems',
       items: [
-        { name: 'AI Autonomous Data', path: '/ai-autonomous-data', icon: Briefcase },
-        { name: 'AI Autonomous Decision Engine', path: '/ai-autonomous-decision-engine', icon: Briefcase },
-        { name: 'AI Autonomous Research', path: '/ai-autonomous-research-assistant', icon: Briefcase },
-        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Briefcase },
-        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Briefcase },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', icon: Briefcase }
+        { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', icon: Brain },
+        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: BookOpen },
+        { name: 'AI Code Review', path: '/ai-autonomous-code-review', icon: Code },
+        { name: 'AI Creative Director', path: '/ai-autonomous-creative-director', icon: Star },
+        { name: 'AI Decision Engine', path: '/ai-autonomous-decision-engine', icon: Zap },
+        { name: 'AI Autonomous Systems Platform', path: '/ai-autonomous-systems-platform', icon: Rocket }
+      ]
+    },
+    {
+      title: 'Innovative Services',
+      items: [
+        { name: 'Innovative Services Showcase', path: '/innovative-services-showcase', icon: Rocket },
+        { name: 'Comprehensive Services', path: '/comprehensive-services-overview', icon: Briefcase },
+        { name: 'Micro SaaS Solutions', path: '/micro-saas-solutions', icon: Globe },
+        { name: 'Emerging Technology', path: '/emerging-tech', icon: Zap },
+        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain },
+        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Settings }
+      ]
+    },
+    {
+      title: 'Industry Solutions',
+      items: [
+        { name: 'Healthcare', path: '/solutions/healthcare', icon: Shield },
+        { name: 'Finance', path: '/solutions/finance', icon: Briefcase },
+        { name: 'Manufacturing', path: '/solutions/manufacturing', icon: Settings },
+        { name: 'Retail', path: '/solutions/retail', icon: Globe },
+        { name: 'Education', path: '/solutions/education', icon: BookOpen },
+        { name: 'Government', path: '/solutions/government', icon: Shield }
       ]
     },
     {
@@ -65,18 +77,22 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       items: [
         { name: 'About Us', path: '/about', icon: Users },
         { name: 'Our Team', path: '/team', icon: Users },
+        { name: 'Mission & Vision', path: '/mission', icon: Star },
         { name: 'Partners', path: '/partners', icon: Handshake },
-        { name: 'Case Studies', path: '/case-studies', icon: Globe },
-        { name: 'Help Center', path: '/help', icon: Globe }
+        { name: 'Case Studies', path: '/case-studies', icon: BookOpen },
+        { name: 'Careers', path: '/careers', icon: Users }
       ]
     },
     {
-      title: 'Support',
+      title: 'Resources & Support',
       items: [
-        { name: 'Help Center', path: '/help', icon: Users },
-        { name: 'Documentation', path: '/docs', icon: Globe },
-        { name: 'Contact Support', path: '/support', icon: Phone },
-        { name: 'Status Page', path: '/status', icon: Globe }
+        { name: 'Help Center', path: '/help', icon: HelpCircle },
+        { name: 'Documentation', path: '/docs', icon: BookOpen },
+        { name: 'Webinars', path: '/webinars', icon: Globe },
+        { name: 'White Papers', path: '/white-papers', icon: BookOpen },
+        { name: 'Blog & News', path: '/news', icon: BookOpen },
+        { name: 'FAQ', path: '/faq', icon: HelpCircle },
+        { name: 'Support', path: '/support', icon: HelpCircle }
       ]
     }
   ];
@@ -88,10 +104,10 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: 'https://linkedin.com/company/zion-tech-group', label: 'LinkedIn' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
-    { icon: Facebook, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' },
-    { icon: Instagram, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' }
+    { icon: Facebook, href: 'https://www.facebook.com/ziontechgroup', label: 'Facebook' },
+    { icon: Instagram, href: 'https://www.instagram.com/ziontechgroup', label: 'Instagram' }
   ];
 
   const sidebarVariants = {
@@ -230,12 +246,18 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                     Quick Actions
                   </h3>
                   <div className="space-y-2">
-                    <button className="w-full quantum-button py-3 px-4 rounded-lg font-medium transform hover:scale-105 transition-transform">
+                    <Link 
+                      to="/contact"
+                      className="w-full quantum-button py-3 px-4 rounded-lg font-medium transform hover:scale-105 transition-transform text-center block"
+                    >
                       Get Free Quote
-                    </button>
-                    <button className="w-full futuristic-card border border-zion-cyan/30 text-zion-cyan py-3 px-4 rounded-lg font-medium hover:bg-zion-cyan/10 transition-colors">
-                      Schedule Demo
-                    </button>
+                    </Link>
+                    <Link 
+                      to="/pricing"
+                      className="w-full futuristic-card border border-zion-cyan/30 text-zion-cyan py-3 px-4 rounded-lg font-medium hover:bg-zion-cyan/10 transition-colors text-center block"
+                    >
+                      View Pricing
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -287,7 +309,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                 {/* Company Info */}
                 <div className="text-center pt-4 border-t border-zion-cyan/20">
                   <p className="text-xs text-zion-slate-light">
-                    © 2024 Zion Tech Group
+                    © 2025 Zion Tech Group
                   </p>
                   <p className="text-xs text-zion-slate-light mt-1">
                     Transforming Business with AI & Tech

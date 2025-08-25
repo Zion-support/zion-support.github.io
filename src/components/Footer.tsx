@@ -23,7 +23,22 @@ const Footer: React.FC = () => {
         { name: "Cloud & DevOps", href: "/cloud-devops" },
         { name: "Data Analytics", href: "/data-analytics" },
         { name: "Quantum Technology", href: "/quantum-technology" },
-        { name: "Enterprise Solutions", href: "/enterprise-solutions" }
+        { name: "Enterprise Solutions", href: "/enterprise-solutions" },
+        { name: "IT Infrastructure", href: "/it-infrastructure" },
+        { name: "Micro SaaS Solutions", href: "/micro-saas-solutions" },
+        { name: "Innovative Services", href: "/innovative-services-showcase" },
+        { name: "Comprehensive Services", href: "/comprehensive-services-overview" }
+      ]
+    },
+    {
+      title: "AI Autonomous",
+      links: [
+        { name: "AI Business Manager", href: "/ai-autonomous-business-manager" },
+        { name: "AI Research Assistant", href: "/ai-autonomous-research-assistant" },
+        { name: "AI Code Review", href: "/ai-autonomous-code-review" },
+        { name: "AI Creative Director", href: "/ai-autonomous-creative-director" },
+        { name: "AI Decision Engine", href: "/ai-autonomous-decision-engine" },
+        { name: "AI Autonomous Systems", href: "/ai-autonomous-systems-platform" }
       ]
     },
     {
@@ -42,30 +57,42 @@ const Footer: React.FC = () => {
       links: [
         { name: "About Us", href: "/about" },
         { name: "Our Team", href: "/team" },
+        { name: "Mission & Vision", href: "/mission" },
         { name: "Careers", href: "/careers" },
-        { name: "News & Blog", href: "/news" },
-        { name: "Case Studies", href: "/case-studies" },
-        { name: "Partners", href: "/partners" }
+        { name: "Partners", href: "/partners" },
+        { name: "Case Studies", href: "/case-studies" }
       ]
     },
     {
       title: "Resources",
       links: [
         { name: "Documentation", href: "/docs" },
-        { name: "API Reference", href: "/api" },
         { name: "Help Center", href: "/help" },
         { name: "Webinars", href: "/webinars" },
         { name: "White Papers", href: "/white-papers" },
+        { name: "Blog & News", href: "/news" },
+        { name: "FAQ", href: "/faq" },
         { name: "Support", href: "/support" }
       ]
     }
   ];
 
   const socialLinks = [
-    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: "💼" },
+    { name: "LinkedIn", href: "https://www.linkedin.com/company/ziontechgroup", icon: "💼" },
     { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: "🐦" },
     { name: "GitHub", href: "https://github.com/ziontechgroup", icon: "💻" },
-    { name: "YouTube", href: "https://youtube.com/@ziontechgroup", icon: "📺" }
+    { name: "YouTube", href: "https://www.youtube.com/@ziontechgroup", icon: "📺" },
+    { name: "Facebook", href: "https://www.facebook.com/ziontechgroup", icon: "📘" },
+    { name: "Instagram", href: "https://www.instagram.com/ziontechgroup", icon: "📷" }
+  ];
+
+  const quickLinks = [
+    { name: "Pricing", href: "/pricing" },
+    { name: "Contact", href: "/contact" },
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Terms of Service", href: "/terms" },
+    { name: "Cookie Policy", href: "/cookies" },
+    { name: "Sitemap", href: "/sitemap" }
   ];
 
   return (
@@ -76,7 +103,7 @@ const Footer: React.FC = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="py-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8">
             {/* Company Info */}
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-2 mb-6">
@@ -87,26 +114,26 @@ const Footer: React.FC = () => {
               </div>
               <p className="text-gray-300 mb-6 max-w-md">
                 Leading provider of AI-powered technology solutions, quantum computing, 
-                and enterprise digital transformation services.
+                and enterprise digital transformation services. Transform your business with cutting-edge technology.
               </p>
               
               {/* Contact Info */}
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-gray-300">
                   <MapPinIcon className="h-5 w-5 text-purple-400" />
-                  <span>Global Headquarters</span>
+                  <span>364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300">
                   <PhoneIcon className="h-5 w-5 text-purple-400" />
-                  <span>+1 (302) 464-0950</span>
+                  <a href="tel:+13024640950" className="hover:text-white transition-colors">+1 (302) 464-0950</a>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300">
                   <EnvelopeIcon className="h-5 w-5 text-purple-400" />
-                  <span>info@ziontechgroup.com</span>
+                  <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">kleber@ziontechgroup.com</a>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300">
                   <GlobeAltIcon className="h-5 w-5 text-purple-400" />
-                  <span>ziontechgroup.com</span>
+                  <a href="https://ziontechgroup.com" className="hover:text-white transition-colors">ziontechgroup.com</a>
                 </div>
               </div>
             </div>
@@ -128,6 +155,21 @@ const Footer: React.FC = () => {
                   ))}
                 </ul>
               </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Quick Links Bar */}
+        <div className="py-6 border-t border-white/10">
+          <div className="flex flex-wrap justify-center gap-6">
+            {quickLinks.map((link) => (
+              <Link
+                key={link.name}
+                to={link.href}
+                className="text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+              >
+                {link.name}
+              </Link>
             ))}
           </div>
         </div>
@@ -161,17 +203,6 @@ const Footer: React.FC = () => {
               <span className="text-gray-400 text-sm">
                 © 2025 Zion Tech Group. All rights reserved.
               </span>
-              <div className="flex space-x-4">
-                <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
-                  Privacy Policy
-                </Link>
-                <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
-                  Terms of Service
-                </Link>
-                <Link to="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors duration-200">
-                  Cookie Policy
-                </Link>
-              </div>
             </div>
 
             {/* Social Links */}
