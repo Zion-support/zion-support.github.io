@@ -35,6 +35,7 @@ import SEOHead from '../components/SEOHead';
 import { SEOConfigs } from '../components/SEOHead';
 
 // Lazy load components for better performance
+const ModernHeroSection = React.lazy(() => import('../components/home/ModernHeroSection'));
 const LazyServicesSection = React.lazy(() => import('../components/home/ServicesSection'));
 const LazyFeaturesSection = React.lazy(() => import('../components/home/FeaturesSection'));
 const LazyTestimonialsSection = React.lazy(() => import('../components/home/TestimonialsSection'));
@@ -49,35 +50,8 @@ const LoadingFallback = ({ message }: { message: string }) => (
 );
 
 const Home: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  const heroSlides = [
-    {
-      title: "AI-Powered Business Solutions",
-      subtitle: "Transform your business with cutting-edge artificial intelligence",
-      description: "Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization.",
-      image: "/images/hero-ai-solutions.jpg",
-      cta: "Explore AI Solutions",
-      path: "/ai-solutions"
-    },
-    {
-      title: "Comprehensive IT Services",
-      subtitle: "End-to-end technology solutions for modern businesses",
-      description: "From infrastructure management to digital transformation, we provide the expertise you need to succeed.",
-      image: "/images/hero-it-services.jpg",
-      cta: "View Our Services",
-      path: "/services"
-    },
-    {
-      title: "Micro-SaaS Solutions",
-      subtitle: "Scalable software solutions for growing businesses",
-      description: "Custom SaaS applications designed to streamline operations and boost productivity.",
-      image: "/images/hero-saas.jpg",
-      cta: "Learn More",
-      path: "/services/micro-saas-solutions"
-    }
-  ];
+
 
   const stats = [
     { icon: Users, value: "500+", label: "Happy Clients" },
@@ -184,119 +158,20 @@ const Home: React.FC = () => {
     }
   ];
 
-  useEffect(() => {
-    let interval: NodeJS.Timeout;
-    
-    if (isAutoPlaying) {
-      interval = setInterval(() => {
-        setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-      }, 5000);
-    }
 
-    return () => {
-      if (interval) clearInterval(interval);
-    };
-  }, [isAutoPlaying, heroSlides.length]);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    setIsAutoPlaying(false);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
-    setIsAutoPlaying(false);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-    setIsAutoPlaying(false);
-  };
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <SEOHead {...SEOConfigs.home} />
       
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000"
-          style={{
-            backgroundImage: `url(${heroSlides[currentSlide].image})`,
-            opacity: 0.3
-          }}
-        />
-        
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/50" />
-        
-        {/* Content */}
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            {heroSlides[currentSlide].title}
-          </h1>
-          
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-gray-200">
-            {heroSlides[currentSlide].subtitle}
-          </h2>
-          
-          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            {heroSlides[currentSlide].description}
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to={heroSlides[currentSlide].path}
-              className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
-              aria-label={`Learn more about ${heroSlides[currentSlide].title}`}
-            >
-              {heroSlides[currentSlide].cta}
-            </Link>
-            
-            <Link
-              to="/services"
-              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
-              aria-label="Explore all our services"
-            >
-              Explore Services
-            </Link>
-          </div>
+      {/* Modern Hero Section */}
+      <Suspense fallback={
+        <div className="flex items-center justify-center min-h-screen">
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500"></div>
         </div>
-
-        {/* Navigation Controls */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 p-2 rounded-full bg-black/50 hover:bg-black/70 text-white transition-all duration-300"
-          aria-label="Previous slide"
-        >
-          <ChevronLeft className="w-6 h-6" />
-        </button>
-        
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 rounded-full bg-black/50 hover:bg-black/70 text-white transition-all duration-300"
-          aria-label="Next slide"
-        >
-          <ChevronRight className="w-6 h-6" />
-        </button>
-
-        {/* Slide Indicators */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
-          {heroSlides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide 
-                  ? 'bg-cyan-500 scale-125' 
-                  : 'bg-white/50 hover:bg-white/75'
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
-        </div>
-      </section>
+      }>
+        <ModernHeroSection />
+      </Suspense>
 
       {/* Stats Section */}
       <section className="py-20 bg-gray-800">
