@@ -19,9 +19,9 @@ import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
 import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
-import { EnhancedSEO } from './components/EnhancedSEO';
-import { EnhancedAccessibility } from './components/EnhancedAccessibility';
-import { PerformanceMonitor } from './components/PerformanceMonitor';
+import EnhancedSEO from './components/EnhancedSEO';
+import EnhancedAccessibility from './components/EnhancedAccessibility';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 // Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
@@ -245,21 +245,7 @@ const App = () => {
                 )}
                 
                 {/* Enhanced Performance Monitor - Always Available */}
-                <PerformanceMonitor 
-                  showMetrics={true}
-                  autoRefresh={true}
-                  refreshInterval={30000}
-                  onMetricsUpdate={(metrics) => {
-                    if (import.meta.env.DEV) {
-                      console.log('Performance metrics updated:', metrics);
-                    }
-                  }}
-                  onScoreUpdate={(score) => {
-                    if (import.meta.env.DEV) {
-                      console.log('Performance score updated:', score);
-                    }
-                  }}
-                />
+                <PerformanceMonitor />
                 
                 {/* Link Health Monitor - Development Mode */}
                 {import.meta.env.DEV && (
