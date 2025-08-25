@@ -61,6 +61,7 @@ const IoTDataAnalytics = lazy(() => import('./pages/services/IoTDataAnalytics'))
 
 // Next-Generation Innovative Services 2025
 const NextGenInnovativeServices2025 = lazy(() => import('./pages/NextGenInnovativeServices2025'));
+const InnovativeServicesShowcase = lazy(() => import('./pages/InnovativeServicesShowcase'));
 
 // Additional innovative micro SAAS services
 const AILegalDocumentAutomation = lazy(() => import('./pages/services/AILegalDocumentAutomation'));
@@ -280,6 +281,7 @@ const App: React.FC = () => {
                       
                       {/* Next-Generation Innovative Services 2025 */}
                       <Route path="/next-gen-innovative-services-2025" element={<NextGenInnovativeServices2025 />} />
+                      <Route path="/innovative-services-2025" element={<InnovativeServicesShowcase />} />
                       
                       {/* Additional innovative micro SAAS service routes */}
                       <Route path="/services/ai-legal-document-automation" element={<AILegalDocumentAutomation />} />
