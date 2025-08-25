@@ -1,137 +1,143 @@
-import { Link } from 'react-router-dom';
-import { 
-  Linkedin, 
-  Twitter, 
-  Github, 
-  Youtube, 
-  Mail, 
-  Phone, 
-  MapPin,
-  ArrowRight,
-  Sparkles,
-  Shield,
-  Zap,
-  Brain,
-  Cloud,
-  Lock,
-  Cpu,
-  Database,
-  Network,
-  Code,
-  BarChart3,
-  Target,
-  Lightbulb,
-  Rocket,
-  Clock,
-  Heart,
-  Eye,
-  Target as TargetIcon
-} from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   const footerSections = [
     {
-      title: "AI & Technology Services",
-      icon: Brain,
-      color: "from-purple-500 to-pink-500",
+      title: "AI & Autonomous Systems",
+      links: [
+        { label: "AI Autonomous Business Manager", path: "/ai-autonomous-business-manager" },
+        { label: "AI Autonomous Research Assistant", path: "/ai-autonomous-research-assistant" },
+        { label: "AI Autonomous Decision Engine", path: "/ai-autonomous-decision-engine" },
+        { label: "AI Autonomous Code Review", path: "/ai-autonomous-code-review" },
+        { label: "AI Autonomous Creative Director", path: "/ai-autonomous-creative-director" },
+        { label: "AI Autonomous Data", path: "/ai-autonomous-data" },
+        { label: "AI Autonomous Research", path: "/ai-autonomous-research" },
+        { label: "AI Autonomous Systems Platform", path: "/ai-autonomous-systems-platform" },
+        { label: "AI Autonomous DevOps", path: "/ai-autonomous-devops" },
+        { label: "AI Autonomous Education Professor", path: "/ai-autonomous-education-professor" },
+        { label: "AI Autonomous Healthcare Physician", path: "/ai-autonomous-healthcare-physician" },
+        { label: "AI Autonomous Learning System", path: "/ai-autonomous-learning-system" },
+        { label: "AI Autonomous Legal Counsel", path: "/ai-autonomous-legal-counsel" },
+        { label: "AI Autonomous Logistics", path: "/ai-autonomous-logistics" },
+        { label: "AI Autonomous Manufacturing", path: "/ai-autonomous-manufacturing" },
+        { label: "AI Autonomous Robotics", path: "/ai-autonomous-robotics" },
+        { label: "AI Autonomous Scientific Researcher", path: "/ai-autonomous-scientific-researcher" },
+        { label: "AI Autonomous Security", path: "/ai-autonomous-security" },
+        { label: "AI Autonomous Testing", path: "/ai-autonomous-testing" },
+        { label: "AI Autonomous Vehicle Platform", path: "/ai-autonomous-vehicle-platform" },
+        { label: "AI Autonomous Vehicles", path: "/ai-autonomous-vehicles" },
+        { label: "AI Autonomous Venture Capitalist", path: "/ai-autonomous-venture-capitalist" }
+      ]
+    },
+    {
+      title: "AI Specialized Solutions",
+      links: [
+        { label: "AI Biomedical Research", path: "/ai-biomedical-research" },
+        { label: "AI Biotech Drug Discovery", path: "/ai-biotech-drug-discovery" },
+        { label: "AI Blockchain Analytics", path: "/ai-blockchain-analytics" },
+        { label: "AI Blockchain Governance", path: "/ai-blockchain-governance" },
+        { label: "AI Brain Computer Interface", path: "/ai-brain-computer-interface" },
+        { label: "AI Brain Interface", path: "/ai-brain-interface" },
+        { label: "AI Brand Personality Generator", path: "/ai-brand-personality-generator" },
+        { label: "AI Business Intelligence Elite", path: "/ai-business-intelligence-elite" },
+        { label: "AI Business Intelligence Pro", path: "/ai-business-intelligence-pro" },
+        { label: "AI Business Intelligence Suite", path: "/ai-business-intelligence-suite" },
+        { label: "AI Business Intelligence", path: "/ai-business-intelligence" },
+        { label: "AI Climate Prediction Engine", path: "/ai-climate-prediction-engine" },
+        { label: "AI Climate Prediction Platform", path: "/ai-climate-prediction-platform" },
+        { label: "AI Climate Prediction", path: "/ai-climate-prediction" },
+        { label: "AI Code Generation Enterprise", path: "/ai-code-generation-enterprise" },
+        { label: "AI Code Review Copilot", path: "/ai-code-review-copilot" },
+        { label: "AI Code Review", path: "/ai-code-review" },
+        { label: "AI Compliance Automation", path: "/ai-compliance-automation" },
+        { label: "AI Computer Vision Platform", path: "/ai-computer-vision-platform" },
+        { label: "AI Consciousness Evolution", path: "/ai-consciousness-evolution" },
+        { label: "AI Consciousness Evolution Platform", path: "/ai-consciousness-evolution-platform" },
+        { label: "AI Consciousness Simulation Platform", path: "/ai-consciousness-simulation-platform" },
+        { label: "AI Consciousness Simulation", path: "/ai-consciousness-simulation" },
+        { label: "AI Consciousness Simulator", path: "/ai-consciousness-simulator" },
+        { label: "AI Content Creation Revolution", path: "/ai-content-creation-revolution" },
+        { label: "AI Content Creation", path: "/ai-content-creation" },
+        { label: "AI Content Factory", path: "/ai-content-factory" },
+        { label: "AI Content Generation Automation", path: "/ai-content-generation-automation" },
+        { label: "AI Content Generation Pro", path: "/ai-content-generation-pro" },
+        { label: "AI Content Generator", path: "/ai-content-generator" },
+        { label: "AI Content Marketing Automation", path: "/ai-content-marketing-automation" },
+        { label: "AI Content Personalization Engine", path: "/ai-content-personalization-engine" },
+        { label: "AI Creativity Studio", path: "/ai-creativity-studio" },
+        { label: "AI Market Research", path: "/ai-market-research" },
+        { label: "AI Powered Enterprise Security", path: "/ai-powered-enterprise-security" },
+        { label: "AI Workflow Automation", path: "/ai-workflow-automation" }
+      ]
+    },
+    {
+      title: "Core Services",
       links: [
         { label: "AI & Autonomous Systems", path: "/services/ai-autonomous-systems" },
-        { label: "AI Research Assistant", path: "/ai-autonomous-research-assistant" },
-        { label: "Quantum Neural Networks", path: "/quantum-neural-network-platform" },
-        { label: "Autonomous Business Platform", path: "/autonomous-business-operations-platform" },
-        { label: "AI Asset Management", path: "/ai-powered-it-asset-management" },
-        { label: "Quantum Technology", path: "/services/quantum-technology" },
-        { label: "IT Infrastructure", path: "/services/it-infrastructure" },
-        { label: "Micro SAAS Solutions", path: "/services/micro-saas-solutions" },
         { label: "Cybersecurity", path: "/services/cybersecurity" },
-        { label: "SOC2 Compliance Automation", path: "/soc2-compliance-automation" },
+        { label: "Advanced Cybersecurity Suite", path: "/advanced-cybersecurity-suite" },
+        { label: "IT Infrastructure", path: "/services/it-infrastructure" },
+        { label: "Quantum Technology", path: "/services/quantum-technology" },
+        { label: "Quantum Neural Network Platform", path: "/quantum-neural-network-platform" },
+        { label: "Micro SAAS Solutions", path: "/services/micro-saas-solutions" },
         { label: "Industry Solutions", path: "/services/industry-solutions" },
-        { label: "AI & Machine Learning", path: "/services/ai-autonomous-systems" },
-        { label: "Cloud & Infrastructure", path: "/cloud-devops" },
+        { label: "Accessibility Auditor", path: "/accessibility-auditor" },
+        { label: "Affiliate Attribution Hub", path: "/affiliate-attribution-hub" },
+        { label: "SOC2 Compliance Automation", path: "/soc2-compliance-automation" },
         { label: "5G Enterprise Solutions", path: "/5g-enterprise-solutions" },
-        { label: "Blockchain Solutions", path: "/services/blockchain-solutions" },
-        { label: "IoT & Edge Computing", path: "/services/iot-platforms" }
+        { label: "Autonomous Business Operations Platform", path: "/autonomous-business-operations-platform" },
+        { label: "AI Powered IT Asset Management", path: "/ai-powered-it-asset-management" }
       ]
     },
     {
       title: "Solutions & Industries",
-      icon: Target,
-      color: "from-blue-500 to-cyan-500",
       links: [
         { label: "Enterprise Solutions", path: "/solutions/enterprise" },
         { label: "Healthcare Solutions", path: "/solutions/healthcare" },
-        { label: "Financial Solutions", path: "/services/financial-services" },
-        { label: "Manufacturing Solutions", path: "/services/manufacturing-intelligence" },
-        { label: "Retail Solutions", path: "/services/retail-technology" },
-        { label: "Government Solutions", path: "/services/government-solutions" },
-        { label: "Business Intelligence", path: "/services/ai-business-intelligence" },
-        { label: "Marketing Automation", path: "/services/ai-marketing-automation" },
-        { label: "AI HR & Recruitment", path: "/services/ai-hr-recruitment" },
-        { label: "AI Legal Tech", path: "/services/ai-legal-tech" },
-        { label: "AI Healthcare Analytics", path: "/services/ai-healthcare-analytics" },
-        { label: "Blockchain Solutions", path: "/services/blockchain-solutions" },
-        { label: "HR & Recruitment", path: "/services/ai-hr-recruitment" },
-        { label: "Legal Tech", path: "/services/ai-legal-tech" }
-      ]
-    },
-    {
-      title: "Emerging Technologies",
-      icon: Rocket,
-      color: "from-purple-500 to-violet-500",
-      links: [
-        { label: "Quantum Computing", path: "/services/quantum-technology" },
-        { label: "Blockchain & DeFi", path: "/services/blockchain-solutions" },
-        { label: "IoT & Edge Computing", path: "/services/iot-platforms" },
-        { label: "Extended Reality (XR)", path: "/services/ar-vr-solutions" },
-        { label: "5G & Networks", path: "/5g-enterprise-solutions" },
-        { label: "Green Technology", path: "/services/green-technology" },
-        { label: "Digital Twins", path: "/services/digital-twins" }
+        { label: "Financial Solutions", path: "/solutions/financial" },
+        { label: "Manufacturing Solutions", path: "/solutions/manufacturing" },
+        { label: "Retail Solutions", path: "/solutions/retail" },
+        { label: "Government Solutions", path: "/solutions/government" },
+        { label: "Space Technology", path: "/space-tech" },
+        { label: "Research & Development", path: "/research-development" },
+        { label: "Quantum Cloud Infrastructure", path: "/quantum-cloud-infrastructure" },
+        { label: "Quantum Financial Trading", path: "/quantum-financial-trading" },
+        { label: "Quantum Services", path: "/quantum-services" }
       ]
     },
     {
       title: "Company & Resources",
-      icon: Shield,
-      color: "from-green-500 to-emerald-500",
       links: [
         { label: "About Us", path: "/about" },
         { label: "Our Mission", path: "/mission" },
         { label: "Team", path: "/team" },
-        { label: "Pricing", path: "/pricing" },
-        { label: "Careers", path: "/careers" },
+        { label: "Leadership", path: "/leadership" },
         { label: "Partners", path: "/partners" },
-        { label: "Contact", path: "/contact" },
-        { label: "Blog", path: "/blog" },
-        { label: "News", path: "/news" },
+        { label: "Careers", path: "/careers" },
         { label: "Case Studies", path: "/case-studies" },
-        { label: "White Papers", path: "/white-papers" },
-        { label: "Webinars", path: "/webinars" },
+        { label: "Testimonials", path: "/testimonials" },
+        { label: "News", path: "/news" },
+        { label: "Blog", path: "/blog" },
         { label: "Events", path: "/events" },
+        { label: "Webinars", path: "/webinars" },
+        { label: "White Papers", path: "/white-papers" },
+        { label: "Documentation", path: "/docs" },
         { label: "Help Center", path: "/help" },
-        { label: "Documentation", path: "/docs" }
+        { label: "Support", path: "/support" },
+        { label: "FAQ", path: "/faq" },
+        { label: "Marketplace", path: "/marketplace" },
+        { label: "Community", path: "/community" },
+        { label: "Pricing", path: "/pricing" },
+        { label: "Contact", path: "/contact" }
       ]
     }
   ];
 
-  const quickLinks = [
-    { label: "Services Overview", path: "/services" },
-    { label: "Solutions", path: "/solutions/enterprise" },
-    { label: "AI Matcher", path: "/ai-matcher" },
-    { label: "Talent Directory", path: "/talent-directory" },
-    { label: "Emerging Tech", path: "/emerging-tech" },
-    { label: "Request Quote", path: "/request-quote" },
-    { label: "Support", path: "/help" }
-  ];
-
-  const legalLinks = [
-    { label: "Privacy Policy", path: "/privacy" },
-    { label: "Terms of Service", path: "/terms" },
-    { label: "Cookie Policy", path: "/cookies" },
-    { label: "Dispute Management", path: "/dispute-management" }
-  ];
-
-    const socialLinks = [
+  // Fixed social media links with proper error handling
+  const socialLinks = [
     { 
       name: 'LinkedIn', 
       url: 'https://www.linkedin.com/company/zion-tech-group', 
@@ -152,39 +158,28 @@ export function Footer() {
     },
     { 
       name: 'YouTube', 
-      url: 'https://www.youtube.com/@ziontechgroup', 
+      url: 'https://youtube.com/@ziontechgroup', 
       icon: '📺',
       fallback: 'https://youtube.com'
+    },
+    { 
+      name: 'Facebook', 
+      url: 'https://facebook.com/ziontechgroup', 
+      icon: '📘',
+      fallback: 'https://facebook.com'
+    },
+    { 
+      name: 'Instagram', 
+      url: 'https://instagram.com/ziontechgroup', 
+      icon: '📷',
+      fallback: 'https://instagram.com'
     }
   ];
 
-  const contactInfo = [
-    { 
-      icon: Phone, 
-      text: '+1 302 464 0950', 
-      href: 'tel:+13024640950',
-      label: 'Call us'
-    },
-    { 
-      icon: Mail, 
-      text: 'kleber@ziontechgroup.com', 
-      href: 'mailto:kleber@ziontechgroup.com',
-      label: 'Email us'
-    },
-    { 
-      icon: MapPin, 
-      text: '364 E Main St STE 1008 Middletown DE 19709', 
-      href: '#',
-      label: 'Visit us'
-    }
-  ];
-
-  const handleContactClick = (type: 'phone' | 'email') => {
-    if (type === 'phone') {
-      window.location.href = `tel:+13024640950`;
-    } else {
-      window.location.href = `mailto:kleber@ziontechgroup.com`;
-    }
+  const contactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008, Middletown DE 19709'
   };
 
   const handleSocialLinkClick = (link: typeof socialLinks[0], e: React.MouseEvent) => {
@@ -199,103 +194,106 @@ export function Footer() {
     }
   };
 
+  const handleContactClick = (type: 'phone' | 'email') => {
+    if (type === 'phone') {
+      window.location.href = `tel:${contactInfo.phone.replace(/\s/g, '')}`;
+    } else {
+      window.location.href = `mailto:${contactInfo.email}`;
+    }
+  };
+
   return (
-    <footer className="bg-black text-white">
-      {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {footerSections.map((section, idx) => (
-            <div key={idx} className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${section.color} flex items-center justify-center`}>
-                  <section.icon className="w-5 h-5 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white">{section.title}</h3>
+    <footer className="bg-zion-slate text-white py-12">
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-8">
+          {/* Company Info */}
+          <div className="lg:col-span-1">
+            <div className="mb-4">
+              <span className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">ZION</span>
+            </div>
+            <p className="text-zion-slate-light text-sm leading-relaxed mb-4">
+              Empowering businesses with cutting-edge AI solutions and innovative technology services. 
+              Transform your digital future with Zion Tech Group.
+            </p>
+            
+            {/* Contact Information */}
+            <div className="space-y-2 mb-4">
+              <div className="flex items-center space-x-2 text-sm">
+                <span className="text-zion-cyan">📞</span>
+                <button 
+                  onClick={() => handleContactClick('phone')}
+                  className="text-zion-slate-light hover:text-zion-cyan transition-colors"
+                >
+                  {contactInfo.phone}
+                </button>
               </div>
-              <div className="space-y-2">
-                {section.links.map((link, linkIdx) => (
-                  <Link
-                    key={linkIdx}
-                    to={link.path}
-                    className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200 hover:translate-x-1 transform"
-                  >
-                    {link.label}
-                  </Link>
+              <div className="flex items-center space-x-2 text-sm">
+                <span className="text-zion-cyan">✉️</span>
+                <button 
+                  onClick={() => handleContactClick('email')}
+                  className="text-zion-slate-light hover:text-zion-cyan transition-colors"
+                >
+                  {contactInfo.email}
+                </button>
+              </div>
+              <div className="flex items-start space-x-2 text-sm">
+                <span className="text-zion-cyan mt-1">📍</span>
+                <span className="text-zion-slate-light">{contactInfo.address}</span>
+              </div>
+            </div>
+
+            {/* Social Media Links */}
+            <div className="flex flex-wrap gap-2">
+              {socialLinks.map((link) => (
+                <button
+                  key={link.name}
+                  onClick={(e) => handleSocialLinkClick(link, e)}
+                  className="text-zion-slate-light hover:text-zion-cyan transition-colors text-lg"
+                  title={link.name}
+                >
+                  {link.icon}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Footer Sections */}
+          {footerSections.map((section) => (
+            <div key={section.title}>
+              <h3 className="text-white font-semibold mb-4 text-lg">{section.title}</h3>
+              <ul className="space-y-2">
+                {section.links.map((link) => (
+                  <li key={link.path}>
+                    <Link 
+                      to={link.path} 
+                      className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           ))}
         </div>
 
-        {/* Quick Links & Contact */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-8 border-t border-gray-800">
-          {/* Quick Links */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Quick Links</h4>
-            <div className="space-y-2">
-              {quickLinks.map((link, idx) => (
-                <Link
-                  key={idx}
-                  to={link.path}
-                  className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200"
-                >
-                  {link.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          {/* Additional Links */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-white">Legal & Support</h4>
-            <div className="flex flex-wrap gap-4 text-sm text-gray-400">
-              <Link to="/privacy" className="hover:text-cyan-400 transition-colors duration-200">
+        {/* Bottom Footer */}
+        <div className="pt-8 border-t border-zion-blue-light">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <p className="text-zion-slate-light text-sm">
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </p>
+            <div className="flex space-x-6 mt-4 md:mt-0">
+              <Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="hover:text-cyan-400 transition-colors duration-200">
+              <Link to="/terms" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">
                 Terms of Service
               </Link>
-              <Link to="/cookies" className="hover:text-cyan-400 transition-colors duration-200">
+              <Link to="/cookies" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">
                 Cookie Policy
               </Link>
-              <Link to="/accessibility" className="hover:text-cyan-400 transition-colors duration-200">
-                Accessibility
-              </Link>
-              <Link to="/sitemap" className="hover:text-cyan-400 transition-colors duration-200">
-                Sitemap
-              </Link>
-              <Link to="/help" className="hover:text-cyan-400 transition-colors duration-200">
-                Help Center
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom Section */}
-      <div className="border-t border-gray-800 py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-            {/* Copyright */}
-            <div className="text-gray-400 text-sm">
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </div>
-
-            {/* Social Links */}
-            <div className="flex items-center space-x-4">
-              {socialLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.url}
-                  onClick={(e) => handleSocialLinkClick(link, e)}
-                  className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-400/10 rounded-md transition-all duration-200"
-                  title={link.name}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className="text-lg">{link.icon}</span>
-                </a>
-              ))}
             </div>
           </div>
         </div>
@@ -303,3 +301,5 @@ export function Footer() {
     </footer>
   );
 }
+
+export default Footer;
