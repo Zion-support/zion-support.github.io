@@ -588,7 +588,7 @@ export default function Services() {
               Let our AI experts help you implement the right technology solutions to drive growth, innovation, and competitive advantage. 
               From quantum computing to autonomous systems, we deliver cutting-edge solutions that give you the future today.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
               <Link
                 to="/contact"
                 className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
@@ -601,6 +601,20 @@ export default function Services() {
               >
                 Request Custom Quote
               </Link>
+            </div>
+            
+            {/* Advanced Services Showcase Link */}
+            <div className="text-center">
+              <Link
+                to="/advanced-services-showcase-2025"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-medium rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 group"
+              >
+                <span>View Advanced Services Showcase 2025</span>
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <p className="text-sm text-gray-400 mt-2">
+                Discover our cutting-edge micro SAAS solutions and emerging technology platforms
+              </p>
             </div>
           </div>
         </div>
