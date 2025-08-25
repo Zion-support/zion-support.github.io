@@ -98,7 +98,9 @@ export function Header() {
       description: 'Intelligent solutions powered by artificial intelligence',
       services: [
         { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', description: 'Advanced autonomous AI systems' },
+        { name: 'AI Autonomous Systems Platform', path: '/ai-autonomous-systems-platform', description: 'Complete platform for building AI systems' },
         { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', description: 'AI-powered research automation' },
+        { name: 'AI Autonomous Research', path: '/ai-autonomous-research', description: 'AI-powered research platform' },
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', description: 'Advanced analytics and insights' },
         { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', description: 'Smart marketing optimization' },
         { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', description: 'Intelligent talent management' },
@@ -122,6 +124,8 @@ export function Header() {
       description: 'Streamlined business process automation',
       services: [
         { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', description: 'Self-operating business systems' },
+        { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', description: 'AI-powered business management' },
+        { name: 'AI Autonomous Business Platform', path: '/ai-autonomous-business-platform', description: 'Complete AI business platform' },
         { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', description: 'Intelligent IT asset management' },
         { name: 'Business Intelligence', path: '/services/ai-business-intelligence', description: 'Advanced business analytics' }
       ]

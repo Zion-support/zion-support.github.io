@@ -8,9 +8,13 @@ export function Footer() {
       title: "AI & Micro SAAS",
       links: [
         { label: "AI & Autonomous Systems", path: "/services/ai-autonomous-systems" },
+        { label: "AI Autonomous Systems Platform", path: "/ai-autonomous-systems-platform" },
         { label: "AI Research Assistant", path: "/ai-autonomous-research-assistant" },
+        { label: "AI Autonomous Research", path: "/ai-autonomous-research" },
         { label: "Quantum Neural Networks", path: "/quantum-neural-network-platform" },
         { label: "Autonomous Business Platform", path: "/autonomous-business-operations-platform" },
+        { label: "AI Autonomous Business Manager", path: "/ai-autonomous-business-manager" },
+        { label: "AI Autonomous Business Platform", path: "/ai-autonomous-business-platform" },
         { label: "AI Asset Management", path: "/ai-powered-it-asset-management" },
         { label: "Quantum Technology", path: "/services/quantum-technology" },
         { label: "IT Infrastructure", path: "/services/it-infrastructure" },
