@@ -15,6 +15,8 @@ export interface EmergingTechService {
   estimatedDelivery: string;
   supportLevel: string;
   marketPrice: string;
+  rating: number;
+  innovationScore: number;
   contactInfo: {
     phone: string;
     email: string;
@@ -71,6 +73,8 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     estimatedDelivery: "3-4 weeks",
     supportLevel: "premium",
     marketPrice: "$5,500 - $18,000/month",
+    rating: 4.8,
+    innovationScore: 95,
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -124,6 +128,8 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
     marketPrice: "$35,000 - $100,000/month",
+    rating: 4.9,
+    innovationScore: 98,
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -177,6 +183,8 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     estimatedDelivery: "16-20 weeks",
     supportLevel: "enterprise",
     marketPrice: "$45,000 - $150,000/month",
+    rating: 4.7,
+    innovationScore: 92,
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -230,6 +238,8 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     estimatedDelivery: "8-10 weeks",
     supportLevel: "enterprise",
     marketPrice: "$28,000 - $80,000/month",
+    rating: 4.6,
+    innovationScore: 90,
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -283,6 +293,8 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$18,000 - $50,000/month",
+    rating: 4.8,
+    innovationScore: 94,
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -336,6 +348,8 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     estimatedDelivery: "10-12 weeks",
     supportLevel: "enterprise",
     marketPrice: "$42,000 - $120,000/month",
+    rating: 4.9,
+    innovationScore: 97,
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -389,6 +403,8 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     estimatedDelivery: "20-24 weeks",
     supportLevel: "enterprise",
     marketPrice: "$65,000 - $200,000/month",
+    rating: 4.8,
+    innovationScore: 96,
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -442,6 +458,8 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     estimatedDelivery: "4-6 weeks",
     supportLevel: "premium",
     marketPrice: "$8,500 - $25,000/month",
+    rating: 4.7,
+    innovationScore: 91,
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -495,6 +513,8 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     estimatedDelivery: "8-10 weeks",
     supportLevel: "enterprise",
     marketPrice: "$25,000 - $80,000/month",
+    rating: 4.9,
+    innovationScore: 97,
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -548,6 +568,8 @@ export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
     estimatedDelivery: "6-8 weeks",
     supportLevel: "premium",
     marketPrice: "$12,000 - $35,000/month",
+    rating: 4.7,
+    innovationScore: 92,
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
