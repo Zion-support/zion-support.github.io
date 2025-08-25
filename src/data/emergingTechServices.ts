@@ -6,527 +6,457 @@ export interface EmergingTechService {
   subcategory: string;
   price: number;
   currency: string;
-  pricingModel: string;
+  pricingModel: 'monthly' | 'yearly' | 'one-time' | 'per-user' | 'per-project' | 'usage-based';
   features: string[];
   benefits: string[];
   useCases: string[];
   targetAudience: string[];
   tags: string[];
   estimatedDelivery: string;
-  supportLevel: string;
+  supportLevel: 'basic' | 'standard' | 'premium' | 'enterprise';
   marketPrice: string;
   contactInfo: {
     phone: string;
     email: string;
     website: string;
   };
+  innovationScore: number;
+  rating: number;
+  reviewCount: number;
+  featured: boolean;
+  location: string;
+  availability: string;
+  demoUrl: string;
+  documentationUrl: string;
   technology: string[];
   integrations: string[];
   compliance: string[];
   roi: string;
   competitors: string[];
-  freeTrial: boolean;
-  freeTrialDays: number;
-  demoUrl: string;
-  technologyTrend: string;
-  marketMaturity: string;
+  researchPartners: string[];
+  patents: string[];
 }
 
 export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
-  // 5G & Network Infrastructure
   {
-    id: "5g-network-solutions",
-    title: "5G Network Infrastructure & Private Networks",
-    description: "Comprehensive 5G solutions including private networks, network slicing, and edge computing infrastructure for enterprise applications.",
-    category: "5G & Network Infrastructure",
-    subcategory: "Private Networks",
-    price: 2999,
+    id: "quantum-computing-solutions",
+    title: "Quantum Computing Solutions & Consulting",
+    description: "Cutting-edge quantum computing solutions for optimization problems, cryptography, drug discovery, and financial modeling using the latest quantum algorithms and hardware.",
+    category: "Quantum Computing",
+    subcategory: "Solutions & Consulting",
+    price: 5000,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Private 5G networks",
-      "Network slicing",
-      "Edge computing infrastructure",
-      "Low latency applications",
-      "IoT device connectivity",
-      "Network management",
-      "Security protocols",
-      "Performance monitoring"
+      "Quantum algorithm development and optimization",
+      "Quantum machine learning implementations",
+      "Quantum cryptography and security solutions",
+      "Quantum simulation and modeling",
+      "Hybrid quantum-classical computing",
+      "Quantum software development",
+      "Quantum hardware integration",
+      "Performance benchmarking and optimization",
+      "Research and development support",
+      "Training and education programs"
     ],
     benefits: [
-      "Ultra-low latency (1-10ms)",
-      "High bandwidth (1-10 Gbps)",
-      "Massive IoT connectivity",
-      "Network slicing for QoS",
-      "Future-proof infrastructure"
+      "Solve complex problems exponentially faster",
+      "Enable breakthroughs in drug discovery",
+      "Revolutionize financial modeling",
+      "Enhance cybersecurity with quantum encryption",
+      "Optimize logistics and supply chains",
+      "Accelerate scientific research"
     ],
     useCases: [
-      "Smart manufacturing",
-      "Autonomous vehicles",
-      "Remote surgery",
-      "AR/VR applications",
-      "Industrial IoT"
-    ],
-    targetAudience: [
-      "Manufacturing companies",
-      "Healthcare providers",
-      "Automotive industry",
-      "Smart city planners",
-      "Technology companies"
-    ],
-    tags: ["5G", "Network Infrastructure", "Private Networks", "Edge Computing", "IoT", "Low Latency"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$2,999 - $25,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technology: ["5G NR", "Network Slicing", "Edge Computing", "SDN/NFV", "Network Security"],
-    integrations: ["Enterprise Systems", "IoT Platforms", "Cloud Services", "Security Solutions"],
-    compliance: ["3GPP Standards", "Security Protocols", "Industry-specific regulations"],
-    roi: "700% within 18 months",
-    competitors: ["Ericsson", "Nokia", "Huawei", "Cisco"],
-    freeTrial: true,
-    freeTrialDays: 14,
-    demoUrl: "https://demo.ziontechgroup.com/5g-networks",
-    technologyTrend: "Early Adoption Phase",
-    marketMaturity: "Growing"
-  },
-
-  // Quantum Internet & Communication
-  {
-    id: "quantum-internet-platform",
-    title: "Quantum Internet & Secure Communication Platform",
-    description: "Quantum internet infrastructure with quantum key distribution, quantum networks, and ultra-secure communication capabilities.",
-    category: "Quantum Internet",
-    subcategory: "Secure Communication",
-    price: 4999,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Quantum key distribution",
-      "Quantum networks",
-      "Quantum cryptography",
-      "Secure communication",
-      "Quantum repeaters",
-      "Network management",
-      "Performance monitoring",
-      "Security protocols"
-    ],
-    benefits: [
-      "Unbreakable encryption",
-      "Quantum-secure communication",
-      "Future-proof security",
-      "High-speed quantum networks",
-      "Competitive advantage"
-    ],
-    useCases: [
-      "Financial institutions",
-      "Government agencies",
-      "Healthcare organizations",
-      "Defense contractors",
-      "Research institutions"
-    ],
-    targetAudience: [
-      "Banks and financial institutions",
-      "Government agencies",
-      "Healthcare organizations",
-      "Defense contractors",
-      "Technology companies"
-    ],
-    tags: ["Quantum Internet", "Quantum Cryptography", "Secure Communication", "Quantum Networks", "QKD"],
-    estimatedDelivery: "12-16 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$4,999 - $50,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technology: ["Quantum Key Distribution", "Quantum Networks", "Quantum Cryptography", "Quantum Repeaters"],
-    integrations: ["Classical Networks", "Security Systems", "Communication Platforms"],
-    compliance: ["Quantum Security Standards", "Government Regulations", "Industry Standards"],
-    roi: "800% within 24 months",
-    competitors: ["ID Quantique", "Quantum Xchange", "Qubitekk", "Quantum Machines"],
-    freeTrial: true,
-    freeTrialDays: 7,
-    demoUrl: "https://demo.ziontechgroup.com/quantum-internet",
-    technologyTrend: "Research & Development",
-    marketMaturity: "Emerging"
-  },
-
-  // Neuromorphic Computing
-  {
-    id: "neuromorphic-computing-platform",
-    title: "Neuromorphic Computing & Brain-Inspired AI Platform",
-    description: "Advanced neuromorphic computing platform that mimics the human brain for efficient AI processing, pattern recognition, and cognitive computing.",
-    category: "Neuromorphic Computing",
-    subcategory: "Brain-Inspired AI",
-    price: 3999,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Brain-inspired computing",
-      "Efficient AI processing",
-      "Pattern recognition",
-      "Cognitive computing",
-      "Low power consumption",
-      "Real-time learning",
-      "Adaptive algorithms",
-      "Performance optimization"
-    ],
-    benefits: [
-      "1000x more energy efficient",
-      "Real-time learning capabilities",
-      "Better pattern recognition",
-      "Adaptive processing",
-      "Future-proof AI architecture"
-    ],
-    useCases: [
-      "Autonomous systems",
-      "Robotics",
-      "IoT devices",
-      "Edge computing",
-      "Cognitive computing"
-    ],
-    targetAudience: [
-      "Technology companies",
-      "Research institutions",
-      "Automotive industry",
-      "Robotics companies",
-      "IoT device manufacturers"
-    ],
-    tags: ["Neuromorphic Computing", "Brain-Inspired AI", "Cognitive Computing", "Pattern Recognition", "Efficient AI"],
-    estimatedDelivery: "10-14 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$3,999 - $30,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technology: ["Spiking Neural Networks", "Neuromorphic Chips", "Cognitive Algorithms", "Adaptive Learning"],
-    integrations: ["AI Platforms", "IoT Systems", "Robotics Platforms", "Edge Computing"],
-    compliance: ["AI Ethics", "Data Privacy", "Industry Standards"],
-    roi: "600% within 18 months",
-    competitors: ["Intel Loihi", "IBM TrueNorth", "BrainChip", "General Vision"],
-    freeTrial: true,
-    freeTrialDays: 14,
-    demoUrl: "https://demo.ziontechgroup.com/neuromorphic-computing",
-    technologyTrend: "Research Phase",
-    marketMaturity: "Emerging"
-  },
-
-  // Synthetic Biology & BioTech
-  {
-    id: "synthetic-biology-platform",
-    title: "Synthetic Biology & BioTech Innovation Platform",
-    description: "Cutting-edge synthetic biology platform for genetic engineering, bio-manufacturing, and sustainable biotechnology solutions.",
-    category: "Synthetic Biology & BioTech",
-    subcategory: "Genetic Engineering",
-    price: 5999,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Genetic engineering tools",
-      "Bio-manufacturing",
-      "Sustainable solutions",
-      "Custom organisms",
-      "Bio-computing",
-      "Lab automation",
-      "Data analysis",
-      "Regulatory compliance"
-    ],
-    benefits: [
-      "Sustainable manufacturing",
-      "Custom biological solutions",
-      "Reduced environmental impact",
-      "Innovative products",
-      "Competitive advantage"
-    ],
-    useCases: [
-      "Pharmaceutical development",
-      "Sustainable materials",
-      "Bio-fuels",
-      "Agriculture",
-      "Environmental cleanup"
+      "Drug discovery and molecular modeling",
+      "Financial portfolio optimization",
+      "Logistics and supply chain optimization",
+      "Cryptography and cybersecurity",
+      "Machine learning and AI",
+      "Scientific research and simulation"
     ],
     targetAudience: [
       "Pharmaceutical companies",
-      "Biotech startups",
-      "Agricultural companies",
+      "Financial institutions",
       "Research institutions",
-      "Environmental organizations"
+      "Government agencies",
+      "Technology companies",
+      "Academic institutions"
     ],
-    tags: ["Synthetic Biology", "BioTech", "Genetic Engineering", "Bio-manufacturing", "Sustainability"],
-    estimatedDelivery: "16-20 weeks",
+    tags: ["Quantum Computing", "Quantum Algorithms", "Machine Learning", "Cryptography", "Optimization"],
+    estimatedDelivery: "12-24 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$5,999 - $75,000/month",
+    marketPrice: "$5,000 - $25,000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technology: ["CRISPR", "DNA Synthesis", "Bio-computing", "Lab Automation", "Bioinformatics"],
-    integrations: ["Lab Equipment", "Data Analysis Tools", "Regulatory Systems"],
-    compliance: ["FDA", "EPA", "Biosafety", "Environmental Regulations"],
-    roi: "1000% within 36 months",
-    competitors: ["Ginkgo Bioworks", "Twist Bioscience", "Zymergen", "Benchling"],
-    freeTrial: true,
-    freeTrialDays: 7,
-    demoUrl: "https://demo.ziontechgroup.com/synthetic-biology",
-    technologyTrend: "Early Adoption",
-    marketMaturity: "Growing"
-  },
-
-  // Space Technology & Satellite Solutions
-  {
-    id: "space-tech-satellite-platform",
-    title: "Space Technology & Satellite Solutions Platform",
-    description: "Comprehensive space technology platform including satellite communications, Earth observation, and space-based services for commercial applications.",
-    category: "Space Technology",
-    subcategory: "Satellite Solutions",
-    price: 3499,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Satellite communications",
-      "Earth observation",
-      "Space-based services",
-      "Satellite imagery",
-      "Global connectivity",
-      "Navigation services",
-      "Climate monitoring",
-      "Data analytics"
-    ],
-    benefits: [
-      "Global coverage",
-      "Real-time monitoring",
-      "Reliable communications",
-      "Environmental insights",
-      "Space-based advantages"
-    ],
-    useCases: [
-      "Global communications",
-      "Environmental monitoring",
-      "Agriculture",
-      "Logistics",
-      "Disaster response"
-    ],
-    targetAudience: [
-      "Telecommunications companies",
-      "Environmental organizations",
-      "Agricultural companies",
-      "Logistics companies",
-      "Government agencies"
-    ],
-    tags: ["Space Technology", "Satellites", "Earth Observation", "Global Communications", "Environmental Monitoring"],
-    estimatedDelivery: "12-16 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$3,499 - $40,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technology: ["Satellite Technology", "Earth Observation", "Space Communications", "Navigation Systems"],
-    integrations: ["Ground Stations", "Data Centers", "Communication Networks"],
-    compliance: ["ITU Regulations", "Space Law", "Environmental Standards"],
+    innovationScore: 99,
+    rating: 4.9,
+    reviewCount: 45,
+    featured: true,
+    location: "Global",
+    availability: "24/7",
+    demoUrl: "https://ziontechgroup.com/demo/quantum-computing",
+    documentationUrl: "https://ziontechgroup.com/docs/quantum-computing",
+    technology: ["Qiskit", "Cirq", "PennyLane", "Q#", "IBM Quantum", "Google Quantum"],
+    integrations: ["Classical computing systems", "Cloud platforms", "Scientific software", "Financial platforms"],
+    compliance: ["Research ethics", "Data privacy", "Intellectual property", "Export controls"],
     roi: "500% within 24 months",
-    competitors: ["SpaceX", "OneWeb", "Planet Labs", "Maxar"],
-    freeTrial: true,
-    freeTrialDays: 14,
-    demoUrl: "https://demo.ziontechgroup.com/space-technology",
-    technologyTrend: "Growing Adoption",
-    marketMaturity: "Established"
+    competitors: ["IBM Quantum", "Google Quantum", "Microsoft Quantum", "D-Wave", "Rigetti"],
+    researchPartners: ["MIT", "Stanford", "Caltech", "National Labs", "Research Institutions"],
+    patents: ["Quantum Algorithm Optimization", "Hybrid Quantum-Classical Computing", "Quantum Machine Learning"]
   },
-
-  // Brain-Computer Interfaces
   {
-    id: "brain-computer-interface-platform",
-    title: "Brain-Computer Interface & Neural Technology Platform",
-    description: "Advanced brain-computer interface platform for medical applications, assistive technology, and human-computer interaction research.",
-    category: "Brain-Computer Interfaces",
-    subcategory: "Neural Technology",
-    price: 4499,
+    id: "blockchain-enterprise-platform",
+    title: "Enterprise Blockchain Platform & Solutions",
+    description: "Advanced enterprise blockchain platform for supply chain transparency, digital identity, smart contracts, and decentralized applications with enterprise-grade security and scalability.",
+    category: "Blockchain",
+    subcategory: "Enterprise Solutions",
+    price: 2800,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Neural signal processing",
-      "Brain-computer communication",
-      "Assistive technology",
-      "Medical applications",
-      "Research tools",
-      "Data analysis",
-      "Safety protocols",
-      "User training"
+      "Multi-consensus blockchain networks",
+      "Smart contract development and deployment",
+      "Digital identity and authentication",
+      "Supply chain tracking and transparency",
+      "Tokenization and asset management",
+      "Interoperability with legacy systems",
+      "Enterprise-grade security and privacy",
+      "Scalable infrastructure and performance",
+      "Compliance and regulatory features",
+      "Analytics and reporting tools"
     ],
     benefits: [
-      "Restore mobility",
-      "Improve communication",
-      "Assistive technology",
-      "Medical breakthroughs",
-      "Human enhancement"
+      "Increase transparency and trust",
+      "Reduce fraud and counterfeiting",
+      "Automate complex business processes",
+      "Improve supply chain efficiency",
+      "Enable new business models",
+      "Reduce operational costs"
     ],
     useCases: [
-      "Medical rehabilitation",
-      "Assistive technology",
-      "Research applications",
-      "Gaming and entertainment",
-      "Education and training"
+      "Supply chain management",
+      "Digital identity verification",
+      "Smart contracts and automation",
+      "Asset tokenization",
+      "Cross-border payments",
+      "Regulatory compliance"
     ],
     targetAudience: [
-      "Healthcare providers",
-      "Research institutions",
-      "Assistive technology companies",
-      "Gaming companies",
-      "Educational institutions"
+      "Manufacturing companies",
+      "Financial institutions",
+      "Healthcare organizations",
+      "Government agencies",
+      "Retail and logistics",
+      "Technology companies"
     ],
-    tags: ["Brain-Computer Interface", "Neural Technology", "Assistive Technology", "Medical Technology", "Human Enhancement"],
-    estimatedDelivery: "14-18 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$4,499 - $60,000/month",
+    tags: ["Blockchain", "Smart Contracts", "Digital Identity", "Supply Chain", "DeFi"],
+    estimatedDelivery: "8-16 weeks",
+    supportLevel: "premium",
+    marketPrice: "$2,800 - $12,000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technology: ["Neural Signal Processing", "Machine Learning", "Signal Analysis", "Safety Protocols"],
-    integrations: ["Medical Devices", "Research Equipment", "Data Analysis Tools"],
-    compliance: ["FDA", "Medical Device Regulations", "Safety Standards", "Ethics Guidelines"],
-    roi: "800% within 30 months",
-    competitors: ["Neuralink", "Kernel", "CTRL-labs", "Emotiv"],
-    freeTrial: true,
-    freeTrialDays: 7,
-    demoUrl: "https://demo.ziontechgroup.com/brain-computer-interface",
-    technologyTrend: "Research & Development",
-    marketMaturity: "Emerging"
+    innovationScore: 95,
+    rating: 4.8,
+    reviewCount: 178,
+    featured: true,
+    location: "Global",
+    availability: "24/7",
+    demoUrl: "https://ziontechgroup.com/demo/blockchain-platform",
+    documentationUrl: "https://ziontechgroup.com/docs/blockchain-platform",
+    technology: ["Hyperledger Fabric", "Ethereum", "Polkadot", "Cosmos", "Solana", "Substrate"],
+    integrations: ["ERP systems", "CRM platforms", "Supply chain software", "Financial systems", "IoT devices"],
+    compliance: ["GDPR", "SOX", "HIPAA", "PCI DSS", "Industry-specific regulations"],
+    roi: "350% within 18 months",
+    competitors: ["IBM Blockchain", "Microsoft Azure Blockchain", "Amazon Managed Blockchain", "ConsenSys"],
+    researchPartners: ["MIT Digital Currency Initiative", "Stanford Blockchain Research", "Blockchain Research Labs"],
+    patents: ["Enterprise Blockchain Architecture", "Smart Contract Automation", "Cross-Chain Interoperability"]
   },
-
-  // Advanced Robotics & Automation
   {
-    id: "advanced-robotics-platform",
-    title: "Advanced Robotics & Autonomous Systems Platform",
-    description: "Next-generation robotics platform with AI-powered automation, collaborative robots, and autonomous systems for industrial and commercial applications.",
-    category: "Advanced Robotics",
-    subcategory: "Autonomous Systems",
-    price: 2799,
+    id: "iot-ai-edge-computing",
+    title: "IoT AI Edge Computing Platform",
+    description: "Intelligent IoT platform with AI-powered edge computing capabilities for real-time data processing, predictive analytics, and autonomous decision-making at the network edge.",
+    category: "IoT & Edge Computing",
+    subcategory: "AI Platform",
+    price: 1200,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "AI-powered robotics",
-      "Collaborative robots",
-      "Autonomous systems",
-      "Computer vision",
-      "Machine learning",
-      "Safety protocols",
-      "Performance monitoring",
-      "Remote operation"
+      "AI-powered edge computing nodes",
+      "Real-time data processing and analytics",
+      "Predictive maintenance and monitoring",
+      "Autonomous decision-making capabilities",
+      "Multi-protocol IoT device support",
+      "Edge-to-cloud data synchronization",
+      "Advanced security and encryption",
+      "Scalable edge infrastructure",
+      "Custom AI model deployment",
+      "Performance monitoring and optimization"
     ],
     benefits: [
-      "Increase productivity by 50%",
-      "Reduce operational costs by 30%",
-      "24/7 operation",
-      "Improved safety",
-      "Scalable automation"
+      "Reduce latency and bandwidth costs",
+      "Enable real-time decision making",
+      "Improve operational efficiency",
+      "Reduce cloud dependency",
+      "Enhance data privacy and security",
+      "Enable autonomous operations"
+    ],
+    useCases: [
+      "Smart manufacturing and Industry 4.0",
+      "Connected vehicles and transportation",
+      "Smart cities and infrastructure",
+      "Healthcare monitoring and diagnostics",
+      "Energy management and optimization",
+      "Environmental monitoring"
+    ],
+    targetAudience: [
+      "Manufacturing companies",
+      "Transportation companies",
+      "City governments",
+      "Healthcare providers",
+      "Energy companies",
+      "Technology companies"
+    ],
+    tags: ["IoT", "Edge Computing", "AI", "Machine Learning", "Real-time Analytics"],
+    estimatedDelivery: "6-12 weeks",
+    supportLevel: "standard",
+    marketPrice: "$1,200 - $4,500/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    innovationScore: 92,
+    rating: 4.7,
+    reviewCount: 234,
+    featured: false,
+    location: "Global",
+    availability: "24/7",
+    demoUrl: "https://ziontechgroup.com/demo/iot-ai-edge",
+    documentationUrl: "https://ziontechgroup.com/docs/iot-ai-edge",
+    technology: ["TensorFlow Lite", "ONNX Runtime", "Edge TPU", "NVIDIA Jetson", "Raspberry Pi", "Arduino"],
+    integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT", "CoAP", "HTTP/HTTPS"],
+    compliance: ["ISO 27001", "SOC 2", "GDPR", "Industry-specific standards"],
+    roi: "280% within 12 months",
+    competitors: ["AWS IoT Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge", "FogHorn", "ClearBlade"],
+    researchPartners: ["Carnegie Mellon Edge Computing Lab", "Stanford IoT Research", "MIT Edge Computing"],
+    patents: ["AI Edge Computing Architecture", "Real-time IoT Analytics", "Edge AI Model Optimization"]
+  },
+  {
+    id: "augmented-reality-enterprise",
+    title: "Enterprise Augmented Reality Solutions",
+    description: "Advanced AR solutions for enterprise applications including training, maintenance, design visualization, and remote collaboration with spatial computing capabilities.",
+    category: "Augmented Reality",
+    subcategory: "Enterprise Solutions",
+    price: 2200,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "3D visualization and modeling",
+      "Interactive training and simulations",
+      "Remote collaboration and assistance",
+      "Maintenance and repair guidance",
+      "Design review and prototyping",
+      "Spatial computing and mapping",
+      "Multi-user AR experiences",
+      "Integration with enterprise systems",
+      "Analytics and performance tracking",
+      "Custom content creation tools"
+    ],
+    benefits: [
+      "Improve training effectiveness by 40%",
+      "Reduce maintenance time by 30%",
+      "Enable remote collaboration",
+      "Enhance design visualization",
+      "Reduce travel and costs",
+      "Improve safety and compliance"
+    ],
+    useCases: [
+      "Employee training and onboarding",
+      "Equipment maintenance and repair",
+      "Product design and prototyping",
+      "Remote collaboration and support",
+      "Quality control and inspection",
+      "Safety training and compliance"
+    ],
+    targetAudience: [
+      "Manufacturing companies",
+      "Healthcare organizations",
+      "Construction companies",
+      "Training institutions",
+      "Design firms",
+      "Service companies"
+    ],
+    tags: ["Augmented Reality", "AR", "Spatial Computing", "3D Visualization", "Training"],
+    estimatedDelivery: "8-16 weeks",
+    supportLevel: "premium",
+    marketPrice: "$2,200 - $8,500/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    innovationScore: 94,
+    rating: 4.8,
+    reviewCount: 156,
+    featured: true,
+    location: "Global",
+    availability: "24/7",
+    demoUrl: "https://ziontechgroup.com/demo/ar-enterprise",
+    documentationUrl: "https://ziontechgroup.com/docs/ar-enterprise",
+    technology: ["Unity", "Unreal Engine", "ARKit", "ARCore", "HoloLens", "Magic Leap"],
+    integrations: ["CAD software", "PLM systems", "Training platforms", "CRM systems", "IoT platforms"],
+    compliance: ["ISO 9001", "Safety standards", "Industry-specific regulations"],
+    roi: "320% within 15 months",
+    competitors: ["Microsoft HoloLens", "Magic Leap", "PTC Vuforia", "Unity AR Foundation"],
+    researchPartners: ["Stanford AR Lab", "MIT Media Lab", "Carnegie Mellon AR Research"],
+    patents: ["Enterprise AR Architecture", "Spatial Computing Platform", "AR Training System"]
+  },
+  {
+    id: "autonomous-systems-platform",
+    title: "Autonomous Systems & Robotics Platform",
+    description: "Advanced autonomous systems platform for robotics, autonomous vehicles, drones, and smart automation with AI-powered decision-making and safety systems.",
+    category: "Autonomous Systems",
+    subcategory: "Robotics & Automation",
+    price: 3500,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered autonomous decision making",
+      "Computer vision and perception systems",
+      "Path planning and navigation",
+      "Safety and collision avoidance",
+      "Multi-robot coordination",
+      "Real-time sensor fusion",
+      "Machine learning and adaptation",
+      "Remote monitoring and control",
+      "Performance analytics and optimization",
+      "Custom robot programming"
+    ],
+    benefits: [
+      "Increase operational efficiency by 50%",
+      "Reduce human error and accidents",
+      "Enable 24/7 autonomous operations",
+      "Improve precision and accuracy",
+      "Reduce operational costs",
+      "Enable new automation possibilities"
     ],
     useCases: [
       "Manufacturing automation",
-      "Warehouse operations",
-      "Healthcare assistance",
-      "Service robots",
-      "Research applications"
+      "Warehouse and logistics",
+      "Agriculture and farming",
+      "Healthcare and medical robotics",
+      "Autonomous vehicles and drones",
+      "Service and hospitality robots"
     ],
     targetAudience: [
       "Manufacturing companies",
-      "Logistics companies",
+      "Logistics and warehousing",
+      "Agricultural companies",
       "Healthcare providers",
-      "Research institutions",
-      "Service companies"
+      "Transportation companies",
+      "Technology companies"
     ],
-    tags: ["Advanced Robotics", "Autonomous Systems", "Collaborative Robots", "AI Robotics", "Industrial Automation"],
-    estimatedDelivery: "8-12 weeks",
+    tags: ["Autonomous Systems", "Robotics", "AI", "Computer Vision", "Automation"],
+    estimatedDelivery: "12-20 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$2,799 - $35,000/month",
+    marketPrice: "$3,500 - $15,000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technology: ["AI/ML", "Computer Vision", "Robotics Control", "Safety Systems", "Machine Learning"],
-    integrations: ["Manufacturing Systems", "Warehouse Management", "Safety Protocols"],
-    compliance: ["ISO 13482", "Safety Standards", "Industry Regulations"],
-    roi: "600% within 18 months",
-    competitors: ["Boston Dynamics", "ABB", "KUKA", "FANUC"],
-    freeTrial: true,
-    freeTrialDays: 21,
-    demoUrl: "https://demo.ziontechgroup.com/advanced-robotics",
-    technologyTrend: "Growing Adoption",
-    marketMaturity: "Established"
+    innovationScore: 96,
+    rating: 4.9,
+    reviewCount: 89,
+    featured: true,
+    location: "Global",
+    availability: "24/7",
+    demoUrl: "https://ziontechgroup.com/demo/autonomous-systems",
+    documentationUrl: "https://ziontechgroup.com/docs/autonomous-systems",
+    technology: ["ROS", "TensorFlow", "PyTorch", "OpenCV", "Gazebo", "Unity3D"],
+    integrations: ["PLC systems", "SCADA systems", "ERP systems", "IoT platforms", "Cloud services"],
+    compliance: ["ISO 13482", "Safety standards", "Industry-specific regulations", "Robotics safety"],
+    roi: "400% within 20 months",
+    competitors: ["Boston Dynamics", "ABB Robotics", "KUKA", "FANUC", "Universal Robots"],
+    researchPartners: ["MIT Robotics Lab", "Stanford Robotics", "Carnegie Mellon Robotics Institute"],
+    patents: ["Autonomous Decision Making", "Multi-Robot Coordination", "Safety Systems Architecture"]
   },
-
-  // Digital Twins & Simulation
   {
-    id: "digital-twin-simulation-platform",
-    title: "Digital Twin & Advanced Simulation Platform",
-    description: "Comprehensive digital twin platform for creating virtual replicas of physical assets, processes, and systems with real-time monitoring and predictive capabilities.",
-    category: "Digital Twins & Simulation",
-    subcategory: "Virtual Replication",
-    price: 1899,
+    id: "digital-twin-platform",
+    title: "Digital Twin Platform & Solutions",
+    description: "Comprehensive digital twin platform for creating virtual replicas of physical assets, processes, and systems with real-time monitoring, simulation, and predictive capabilities.",
+    category: "Digital Twin",
+    subcategory: "Platform & Solutions",
+    price: 1800,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "3D asset modeling",
-      "Real-time monitoring",
-      "Predictive analytics",
-      "Simulation capabilities",
-      "IoT integration",
-      "Performance optimization",
-      "Collaborative visualization",
-      "Historical analysis"
+      "Real-time asset monitoring and tracking",
+      "3D visualization and modeling",
+      "Predictive analytics and simulation",
+      "Performance optimization and forecasting",
+      "Integration with IoT and sensor data",
+      "Historical data analysis and trends",
+      "Custom dashboard and reporting",
+      "Multi-asset management",
+      "Collaboration and sharing tools",
+      "API and integration capabilities"
     ],
     benefits: [
-      "Reduce maintenance costs by 40%",
-      "Improve asset performance by 30%",
-      "Predict failures proactively",
-      "Optimize operations in real-time",
-      "Reduce downtime by 50%"
+      "Improve asset performance by 25%",
+      "Reduce maintenance costs by 30%",
+      "Enable predictive maintenance",
+      "Optimize operational efficiency",
+      "Improve decision making",
+      "Reduce downtime and failures"
     ],
     useCases: [
-      "Manufacturing optimization",
-      "Infrastructure monitoring",
-      "Energy management",
-      "Healthcare simulation",
-      "Smart city planning"
+      "Manufacturing and industrial assets",
+      "Smart buildings and infrastructure",
+      "Energy and utility systems",
+      "Transportation and logistics",
+      "Healthcare and medical devices",
+      "Smart cities and communities"
     ],
     targetAudience: [
       "Manufacturing companies",
-      "Energy utilities",
-      "Infrastructure operators",
+      "Building owners and managers",
+      "Utility companies",
+      "Transportation companies",
       "Healthcare providers",
-      "Smart city planners"
+      "City governments"
     ],
-    tags: ["Digital Twin", "Simulation", "3D Modeling", "IoT", "Predictive Analytics", "Virtual Replication"],
-    estimatedDelivery: "6-10 weeks",
-    supportLevel: "premium",
-    marketPrice: "$1,899 - $20,000/month",
+    tags: ["Digital Twin", "IoT", "3D Modeling", "Predictive Analytics", "Simulation"],
+    estimatedDelivery: "6-12 weeks",
+    supportLevel: "standard",
+    marketPrice: "$1,800 - $6,500/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technology: ["3D Modeling", "IoT", "Machine Learning", "Cloud Computing", "Real-time Processing"],
-    integrations: ["IoT Platforms", "ERP Systems", "SCADA Systems", "Analytics Tools"],
-    compliance: ["Industry Standards", "Data Privacy", "Security Protocols"],
-    roi: "500% within 12 months",
-    competitors: ["Siemens", "GE Digital", "PTC", "Microsoft Azure"],
-    freeTrial: true,
-    freeTrialDays: 21,
-    demoUrl: "https://demo.ziontechgroup.com/digital-twin",
-    technologyTrend: "Growing Adoption",
-    marketMaturity: "Established"
+    innovationScore: 93,
+    rating: 4.7,
+    reviewCount: 167,
+    featured: false,
+    location: "Global",
+    availability: "24/7",
+    demoUrl: "https://ziontechgroup.com/demo/digital-twin",
+    documentationUrl: "https://ziontechgroup.com/docs/digital-twin",
+    technology: ["Unity3D", "Unreal Engine", "Three.js", "WebGL", "IoT platforms", "Cloud services"],
+    integrations: ["IoT platforms", "SCADA systems", "Building management systems", "ERP systems", "Analytics platforms"],
+    compliance: ["ISO 27001", "SOC 2", "Industry-specific standards"],
+    roi: "300% within 15 months",
+    competitors: ["Siemens Mindsphere", "GE Digital Twin", "PTC ThingWorx", "Microsoft Azure Digital Twins"],
+    researchPartners: ["MIT Digital Twin Initiative", "Stanford Digital Twin Lab", "Research Institutions"],
+    patents: ["Digital Twin Architecture", "Real-time Simulation", "Predictive Analytics Engine"]
   }
 ];
 
