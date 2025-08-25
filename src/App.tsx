@@ -17,7 +17,8 @@ import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
 import { ErrorBoundary } from './components/ErrorBoundary';
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import { SEO } from './components/SEO';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
 
 // Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
@@ -28,15 +29,13 @@ const AIMatcherPage = lazy(() => import('./pages/AIMatcher'));
 const TalentDirectory = lazy(() => import('./pages/TalentDirectory'));
 const TalentsPage = lazy(() => import('./pages/TalentsPage'));
 const EmergingTech = lazy(() => import('./pages/EmergingTech'));
-
-// Service pages
+// Newly added service pages
 const AIServices = lazy(() => import('./pages/AIServices'));
 const CloudDevOps = lazy(() => import('./pages/CloudDevOps'));
 const EnterpriseSolutionsPage = lazy(() => import('./pages/EnterpriseSolutions'));
 const DigitalTransformation = lazy(() => import('./pages/DigitalTransformation'));
-const InnovativeServicesShowcase = lazy(() => import('./pages/services/InnovativeServicesShowcase'));
 
-// Core pages
+// Our enhanced service pages
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Mission = lazy(() => import('./pages/Mission'));
@@ -46,10 +45,7 @@ const Careers = lazy(() => import('./pages/Careers'));
 const Partners = lazy(() => import('./pages/Partners'));
 const Blog = lazy(() => import('./pages/Blog'));
 const News = lazy(() => import('./pages/News'));
-
-// Service detail pages
 const ServicesOverview = lazy(() => import('./pages/services/ServicesOverview'));
-const ComprehensiveServicesOverview = lazy(() => import('./pages/services/ComprehensiveServicesOverview'));
 const AIAutonomousSystems = lazy(() => import('./pages/services/AIAutonomousSystems'));
 const QuantumTechnology = lazy(() => import('./pages/services/QuantumTechnology'));
 const Cybersecurity = lazy(() => import('./pages/services/Cybersecurity'));
@@ -63,12 +59,13 @@ const SpecializedITInfrastructure = lazy(() => import('./pages/services/Speciali
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
 const HealthcareSolutions = lazy(() => import('./pages/solutions/Healthcare'));
 
-// 404 page
-const NotFound = lazy(() => import('./pages/NotFound'));
-
-// Loading Component
+// Loading Component with improved accessibility
 const LoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+  <div 
+    className="flex items-center justify-center min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900"
+    role="status"
+    aria-label="Loading Zion Tech Group application"
+  >
     <div className="text-center">
       <div className="relative">
         <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
@@ -76,6 +73,7 @@ const LoadingSpinner = () => (
       </div>
       <p className="text-cyan-400 text-lg font-medium">Loading Zion Tech Group...</p>
       <p className="text-gray-400 text-sm mt-2">Preparing your experience</p>
+      <div className="sr-only">Loading, please wait</div>
     </div>
   </div>
 );
@@ -88,13 +86,15 @@ const App = () => {
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
+            {/* Global SEO Component */}
+            <SEO />
+            
             <div className="App min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-              <PerformanceOptimizer />
               <Header />
               <Sidebar isOpen={false} onClose={() => {}} />
               
               {/* Main Content with enhanced Suspense */}
-              <main className="ml-64 pt-20 min-h-screen">
+              <main className="ml-64 pt-20 min-h-screen" role="main">
                 <Suspense fallback={<LoadingSpinner />}>
                   <Routes>
                     <Route path="/" element={<Home />} />
@@ -105,15 +105,16 @@ const App = () => {
                     <Route path="/talent" element={<TalentDirectory />} />
                     <Route path="/talents" element={<TalentsPage />} />
                     <Route path="/emerging-tech" element={<EmergingTech />} />
-                    
-                    {/* Service routes */}
+                    <Route path="/comprehensive-services" element={<Services />} />
+                    <Route path="/services-comparison" element={<Services />} />
+                    <Route path="/it-onsite-services" element={<Services />} />
+                    {/* Newly added explicit service routes */}
                     <Route path="/ai-services" element={<AIServices />} />
                     <Route path="/cloud-devops" element={<CloudDevOps />} />
                     <Route path="/enterprise-solutions" element={<EnterpriseSolutionsPage />} />
                     <Route path="/digital-transformation" element={<DigitalTransformation />} />
-                    <Route path="/innovative-services-showcase" element={<InnovativeServicesShowcase />} />
                     
-                    {/* Core page routes */}
+                    {/* Our enhanced service routes */}
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/mission" element={<Mission />} />
@@ -123,10 +124,7 @@ const App = () => {
                     <Route path="/partners" element={<Partners />} />
                     <Route path="/blog" element={<Blog />} />
                     <Route path="/news" element={<News />} />
-                    
-                    {/* Service detail routes */}
                     <Route path="/services-overview" element={<ServicesOverview />} />
-                    <Route path="/comprehensive-overview" element={<ComprehensiveServicesOverview />} />
                     <Route path="/services/ai-autonomous-systems" element={<AIAutonomousSystems />} />
                     <Route path="/services/quantum-technology" element={<QuantumTechnology />} />
                     <Route path="/services/cybersecurity" element={<Cybersecurity />} />
@@ -136,12 +134,9 @@ const App = () => {
                     <Route path="/services/innovative-new-services" element={<InnovativeNewServices />} />
                     <Route path="/services/specialized-it-infrastructure" element={<SpecializedITInfrastructure />} />
                     
-                    {/* Solutions routes */}
-                    <Route path="/solutions/enterprise" element={<EnterpriseSolutions />} />
+                    {/* Solutions Routes */}
+                    <Route path="/services/enterprise" element={<EnterpriseSolutions />} />
                     <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
-                    
-                    {/* 404 page */}
-                    <Route path="*" element={<NotFound />} />
                   </Routes>
                 </Suspense>
               </main>
@@ -154,6 +149,9 @@ const App = () => {
               
               {/* AI Chatbot - Always Available */}
               <AIChatbot />
+              
+              {/* Performance Monitor - Always Available */}
+              <PerformanceMonitor showDetails={false} />
               
               {/* Collaborative Text Editor - Development Mode */}
               {import.meta.env.DEV && (
