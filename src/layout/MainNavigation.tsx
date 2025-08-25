@@ -224,12 +224,16 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     {
       key: 'marketplace',
       href: '/marketplace',
+<<<<<<< HEAD
       matches: (path: string) => path.startsWith('/marketplace')
     },
     {
       key: 'services',
       href: '/services',
       matches: (path: string) => path.startsWith('/services')
+=======
+      matches: (path: string) => path.startsWith('/marketplace') || path.startsWith('/categories') || path.startsWith('/equipment') || path.startsWith('/services')
+>>>>>>> origin/cursor/website-audit-and-enhancement-7286
     },
     {
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
@@ -238,6 +242,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard')
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       key: 'services',
       href: '/services',
@@ -353,6 +358,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
 =======
+=======
+      key: 'community',
+      href: '/community',
+      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
+>>>>>>> origin/cursor/website-audit-and-enhancement-7286
     },
     {
       key: 'about',
@@ -363,7 +373,10 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'contact',
       href: '/contact',
       matches: (path: string) => path.startsWith('/contact')
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-050f
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-7286
     }
   ];
 

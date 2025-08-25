@@ -581,6 +581,7 @@ export function Footer() {
 
           <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h3 className="text-white font-semibold mb-4 text-lg">Resources</h3>
             <ul className="space-y-2">
               <li><Link to="/zion-hire-ai" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Hiring</Link></li>
@@ -637,6 +638,22 @@ export function Footer() {
             </p>
             <FooterNewsletter />
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
+=======
+            <h3 className="text-white font-semibold mb-4 text-lg">Resources</h3>
+            <ul className="space-y-2">
+              <li><Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Help Center</Link></li>
+              <li><Link to="/ai-matcher" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Matcher</Link></li>
+              <li><Link to="/community" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Community</Link></li>
+              <li><Link to="/zion-hire-ai" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Zion Hire AI</Link></li>
+            </ul>
+            <div className="mt-4">
+              <h4 className="text-white font-semibold mb-2 text-sm">Newsletter</h4>
+              <p className="text-zion-slate-light mb-4 text-sm">
+                Stay updated with the latest news on tech, AI, and marketplace opportunities.
+              </p>
+              <FooterNewsletter />
+            </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-7286
           </div>
         </div>
 
