@@ -1,233 +1,389 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Brain, Zap, Users, Target, Shield, Cpu, Globe, Rocket, Star, ArrowRight, CheckCircle, Play, BookOpen, Code, Database, Cloud, Lock, BarChart3, Settings, Monitor, Building } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Rocket, Brain, Cpu, Cloud, Shield, Users, Target, Globe, Award, Zap, Database, Building } from 'lucide-react';
 
-export default function DigitalTransformation() {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Transformation',
-      description: 'Leverage artificial intelligence to automate processes and gain competitive advantages'
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Migration',
-      description: 'Seamless transition to cloud infrastructure for scalability and cost optimization'
-    },
-    {
-      icon: Users,
-      title: 'Change Management',
-      description: 'Comprehensive support for organizational change and digital adoption'
-    },
-    {
-      icon: Target,
-      title: 'Strategic Planning',
-      description: 'Data-driven digital strategy aligned with business objectives'
-    },
-    {
-      icon: Shield,
-      title: 'Security & Compliance',
-      description: 'Enterprise-grade security with built-in compliance monitoring'
-    },
-    {
-      icon: Cpu,
-      title: 'Legacy Modernization',
-      description: 'Transform outdated systems into modern, efficient digital solutions'
-    }
-  ];
-
+const DigitalTransformation = () => {
   const transformationAreas = [
     {
       title: 'Process Automation',
-      description: 'Streamline workflows and eliminate manual processes with intelligent automation',
-      icon: Settings
+      description: 'Streamline operations with intelligent automation and workflow optimization.',
+      features: [
+        'RPA (Robotic Process Automation)',
+        'Workflow automation',
+        'Business process optimization',
+        'Intelligent document processing'
+      ],
+      icon: Cpu,
+      color: 'from-blue-500 to-cyan-500'
     },
     {
       title: 'Data & Analytics',
-      description: 'Transform data into actionable insights for better decision-making',
-      icon: BarChart3
+      description: 'Transform data into actionable insights for better decision-making.',
+      features: [
+        'Data governance and quality',
+        'Advanced analytics and BI',
+        'Real-time data processing',
+        'Predictive analytics'
+      ],
+      icon: Database,
+      color: 'from-purple-500 to-indigo-500'
+    },
+    {
+      title: 'Cloud Migration',
+      description: 'Modernize infrastructure with strategic cloud adoption and optimization.',
+      features: [
+        'Cloud strategy and planning',
+        'Multi-cloud architecture',
+        'Legacy system migration',
+        'Performance optimization'
+      ],
+      icon: Cloud,
+      color: 'from-green-500 to-emerald-500'
     },
     {
       title: 'Customer Experience',
-      description: 'Create seamless, personalized customer journeys across all touchpoints',
-      icon: Users
-    },
-    {
-      title: 'Employee Productivity',
-      description: 'Empower employees with digital tools and collaborative platforms',
-      icon: Rocket
+      description: 'Enhance customer engagement with digital-first experiences.',
+      features: [
+        'Omnichannel integration',
+        'Personalization engines',
+        'Customer journey mapping',
+        'Digital touchpoint optimization'
+      ],
+      icon: Users,
+      color: 'from-yellow-500 to-orange-500'
     }
   ];
 
   const benefits = [
-    'Increase operational efficiency by 40-60%',
-    'Reduce operational costs by 30-50%',
-    'Improve customer satisfaction by 35%',
-    'Accelerate time to market by 50%',
-    'Enable data-driven decision making',
-    'Create competitive advantages in digital markets'
+    {
+      title: 'Increased Efficiency',
+      description: 'Automate repetitive tasks and streamline operations for better productivity.',
+      icon: Zap,
+      color: 'from-yellow-500 to-orange-500'
+    },
+    {
+      title: 'Cost Reduction',
+      description: 'Reduce operational costs through automation and process optimization.',
+      icon: Target,
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      title: 'Better Customer Experience',
+      description: 'Deliver seamless, personalized experiences across all touchpoints.',
+      icon: Users,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      title: 'Competitive Advantage',
+      description: 'Stay ahead with cutting-edge technology and innovative solutions.',
+      icon: Rocket,
+      color: 'from-purple-500 to-pink-500'
+    }
+  ];
+
+  const industries = [
+    {
+      name: 'Manufacturing',
+      focus: ['Industry 4.0', 'Smart factories', 'Supply chain optimization'],
+      icon: Building
+    },
+    {
+      name: 'Healthcare',
+      focus: ['Telemedicine', 'Electronic health records', 'Patient engagement'],
+      icon: Shield
+    },
+    {
+      name: 'Financial Services',
+      focus: ['Digital banking', 'Fintech integration', 'Risk management'],
+      icon: Target
+    },
+    {
+      name: 'Retail',
+      focus: ['E-commerce', 'Omnichannel retail', 'Customer analytics'],
+      icon: Users
+    }
+  ];
+
+  const process = [
+    {
+      step: '01',
+      title: 'Assessment',
+      description: 'Evaluate current digital maturity and identify transformation opportunities.',
+      icon: Target
+    },
+    {
+      step: '02',
+      title: 'Strategy',
+      description: 'Develop comprehensive digital transformation roadmap aligned with business goals.',
+      icon: Globe
+    },
+    {
+      step: '03',
+      title: 'Implementation',
+      description: 'Execute transformation with proven methodologies and change management.',
+      icon: Rocket
+    },
+    {
+      step: '04',
+      title: 'Optimization',
+      description: 'Continuously improve and optimize digital capabilities.',
+      icon: Award
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+    <div className="min-h-screen bg-zion-blue-dark text-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="flex items-center justify-center space-x-2 mb-6">
-              <Rocket className="w-8 h-8 text-cyan-400" />
-              <span className="text-cyan-400 font-semibold">Digital Transformation</span>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Transform Your Business
-              <br />
-              <span className="text-white">for the Digital Age</span>
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue-light/20"></div>
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              Digital{' '}
+              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                Transformation
+              </span>
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Navigate the digital revolution with our comprehensive transformation services. 
-              From strategy to implementation, we help you thrive in the digital economy.
+            <p className="text-xl md:text-2xl text-zion-slate-light leading-relaxed mb-8">
+              Transform your business for the digital age with comprehensive technology 
+              solutions and strategic guidance.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105">
-                <Play className="w-5 h-5 inline mr-2" />
-                Watch Transformation Story
+            <div className="flex flex-wrap justify-center gap-4">
+              <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300">
+                Start Your Journey
               </button>
-              <button className="px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
-                <BookOpen className="w-5 h-5 inline mr-2" />
-                Transformation Guide
+              <button className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan hover:text-white transition-all duration-300">
+                Get a Free Assessment
               </button>
             </div>
-          </div>
-        </div>
-        
-        {/* Background Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Comprehensive Transformation Services
-            </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              End-to-end digital transformation solutions tailored to your business needs
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                  <p className="text-gray-400">{feature.description}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Transformation Areas Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Key Transformation Areas
-            </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Focus on the areas that matter most for your digital success
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {transformationAreas.map((area, index) => {
-              const Icon = area.icon;
-              return (
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold mb-3">{area.title}</h3>
-                      <p className="text-gray-400">{area.description}</p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Measurable Business Impact
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold mb-6">
+              Why{' '}
+              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                Digital Transformation
+              </span>
             </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              See real results from your digital transformation journey
+            <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
+              Unlock the full potential of your business with strategic digital transformation.
             </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => {
+              const IconComponent = benefit.icon;
+              return (
+                <motion.div
+                  key={benefit.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center p-6 rounded-2xl bg-zion-blue-dark/50 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
+                >
+                  <div className={`w-16 h-16 bg-gradient-to-br ${benefit.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
+                    <IconComponent className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
+                  <p className="text-zion-slate-light">{benefit.description}</p>
+                </motion.div>
+              );
+            })}
           </div>
+        </div>
+      </section>
+
+      {/* Transformation Areas */}
+      <section className="py-20 bg-zion-blue-light/5">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold mb-6">
+              Areas of{' '}
+              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                Transformation
+              </span>
+            </h2>
+            <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
+              Comprehensive digital transformation across all aspects of your business.
+            </p>
+          </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              {benefits.slice(0, 3).map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-4">
-                  <CheckCircle className="w-6 h-6 text-cyan-400 flex-shrink-0" />
-                  <span className="text-lg text-gray-300">{benefit}</span>
-                </div>
-              ))}
-            </div>
-            <div className="space-y-6">
-              {benefits.slice(3).map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-4">
-                  <CheckCircle className="w-6 h-6 text-cyan-400 flex-shrink-0" />
-                  <span className="text-lg text-gray-300">{benefit}</span>
-                </div>
-              ))}
-            </div>
+            {transformationAreas.map((area, index) => {
+              const IconComponent = area.icon;
+              return (
+                <motion.div
+                  key={area.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="p-8 rounded-2xl bg-zion-blue-dark/50 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
+                >
+                  <div className={`w-20 h-20 bg-gradient-to-br ${area.color} rounded-2xl flex items-center justify-center mb-6`}>
+                    <IconComponent className="w-10 h-10 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-semibold mb-4">{area.title}</h3>
+                  <p className="text-zion-slate-light mb-6">{area.description}</p>
+                  <ul className="space-y-3">
+                    {area.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center gap-3 text-zion-slate-light">
+                        <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Industries */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold mb-6">
+              Industry{' '}
+              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                Focus
+              </span>
+            </h2>
+            <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
+              Specialized digital transformation solutions for various industries.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {industries.map((industry, index) => {
+              const IconComponent = industry.icon;
+              return (
+                <motion.div
+                  key={industry.name}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="p-6 rounded-2xl bg-zion-blue-dark/50 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-4">
+                    <IconComponent className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-4 text-zion-cyan">{industry.name}</h3>
+                  <ul className="space-y-2">
+                    {industry.focus.map((focus, focusIndex) => (
+                      <li key={focusIndex} className="flex items-center gap-2 text-zion-slate-light">
+                        <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
+                        {focus}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-20 bg-zion-blue-light/5">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold mb-6">
+              Our{' '}
+              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+                Process
+              </span>
+            </h2>
+            <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
+              A proven methodology for successful digital transformation.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {process.map((step, index) => {
+              const IconComponent = step.icon;
+              return (
+                <motion.div
+                  key={step.step}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center p-6 rounded-2xl bg-zion-blue-dark/50 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
+                >
+                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                    {step.step}
+                  </div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <IconComponent className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
+                  <p className="text-zion-slate-light">{step.description}</p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-400 mb-8">
-            Join leading organizations that have successfully navigated digital transformation
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105 inline-flex items-center"
-            >
-              Start Your Transformation
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
-              to="/case-studies"
-              className="px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-            >
-              View Transformation Stories
-            </Link>
-          </div>
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <h2 className="text-4xl font-bold mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-lg text-zion-slate-light mb-8">
+              Let us help you navigate the digital transformation journey and 
+              unlock new opportunities for growth and innovation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300">
+                Start Transformation
+              </button>
+              <button className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan hover:text-white transition-all duration-300">
+                Schedule Consultation
+              </button>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default DigitalTransformation;
