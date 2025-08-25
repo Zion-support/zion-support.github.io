@@ -22,6 +22,9 @@ import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
 import EnhancedSEO from './components/EnhancedSEO';
 import EnhancedAccessibility from './components/EnhancedAccessibility';
 import PerformanceMonitor from './components/PerformanceMonitor';
+import { ContentQualityEnhancer } from './components/ContentQualityEnhancer';
+import { BrokenLinkFixer } from './components/BrokenLinkFixer';
+import { WebsiteImprovementDashboard } from './components/WebsiteImprovementDashboard';
 
 // Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
@@ -154,15 +157,19 @@ const App: React.FC = () => {
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
-            <PerformanceOptimizer>
-              <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+            <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
                 {/* Enhanced SEO */}
                 <EnhancedSEO 
-                  title="Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services"
-                  description="Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology."
-                  keywords="AI solutions, quantum computing, cybersecurity, digital transformation, enterprise technology, machine learning, cloud services, IT infrastructure"
-                  type="website"
-                  url="https://ziontechgroup.com"
+                  seoData={{
+                    title: "Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services",
+                    description: "Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology.",
+                    keywords: ["AI solutions", "quantum computing", "cybersecurity", "digital transformation", "enterprise technology", "machine learning", "cloud services", "IT infrastructure"],
+                    canonicalUrl: "https://ziontechgroup.com",
+                    ogImage: "https://ziontechgroup.com/og-image.jpg",
+                    ogType: "website",
+                    twitterCard: "summary_large_image"
+                  }}
+                  pageType="home"
                 />
                 
                 <Header />
@@ -313,6 +320,11 @@ const App: React.FC = () => {
                 {/* Enhanced Accessibility Controls */}
                 <EnhancedAccessibility position="bottom-right" />
                 
+                {/* Website Improvement Tools */}
+                <ContentQualityEnhancer />
+                <BrokenLinkFixer />
+                <WebsiteImprovementDashboard />
+                
                 {/* AI Chatbot - Always Available */}
                 <AIChatbot />
                 
@@ -368,8 +380,7 @@ const App: React.FC = () => {
                   </>
                 )}
               </div>
-            </PerformanceOptimizer>
-          </Router>
+            </Router>
         </WhitelabelProvider>
       </ThemeProvider>
     </EnhancedErrorBoundary>
