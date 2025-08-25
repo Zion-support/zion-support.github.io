@@ -5,16 +5,37 @@ export function Footer() {
 
   const footerSections = [
     {
-      title: "AI & Micro SAAS",
+      title: "AI & Autonomous Systems",
       links: [
-        { label: "AI Content Hub Pro", path: "/services/ai-content-hub-pro" },
-        { label: "AI Customer Service Automation", path: "/services/ai-customer-service-automation" },
-        { label: "AI Sales Intelligence Platform", path: "/services/ai-sales-intelligence-platform" },
-        { label: "AI Fintech Platform", path: "/services/ai-fintech-platform" },
-        { label: "AI Healthcare Technology", path: "/services/ai-healthcare-tech-platform" },
         { label: "AI & Autonomous Systems", path: "/services/ai-autonomous-systems" },
         { label: "AI Research Assistant", path: "/ai-autonomous-research-assistant" },
-        { label: "Quantum Enterprise Platform", path: "/services/quantum-enterprise-platform" },
+        { label: "AI Autonomous Business Manager", path: "/ai-autonomous-business-manager" },
+        { label: "AI Autonomous Business Platform", path: "/ai-autonomous-business-platform" },
+        { label: "AI Autonomous Code Review", path: "/ai-autonomous-code-review" },
+        { label: "AI Autonomous Creative Director", path: "/ai-autonomous-creative-director" },
+        { label: "AI Autonomous Data", path: "/ai-autonomous-data" },
+        { label: "AI Autonomous Decision Engine", path: "/ai-autonomous-decision-engine" },
+        { label: "AI Autonomous DevOps", path: "/ai-autonomous-devops" },
+        { label: "AI Autonomous Education", path: "/ai-autonomous-education-professor" },
+        { label: "AI Autonomous Healthcare", path: "/ai-autonomous-healthcare-physician" },
+        { label: "AI Autonomous Learning", path: "/ai-autonomous-learning-system" },
+        { label: "AI Autonomous Legal", path: "/ai-autonomous-legal-counsel" },
+        { label: "AI Autonomous Logistics", path: "/ai-autonomous-logistics" },
+        { label: "AI Autonomous Manufacturing", path: "/ai-autonomous-manufacturing" },
+        { label: "AI Autonomous Robotics", path: "/ai-autonomous-robotics" },
+        { label: "AI Autonomous Security", path: "/ai-autonomous-security" },
+        { label: "AI Autonomous Testing", path: "/ai-autonomous-testing" },
+        { label: "AI Autonomous Vehicle Platform", path: "/ai-autonomous-vehicle-platform" },
+        { label: "AI Autonomous Vehicle", path: "/ai-autonomous-vehicle" },
+        { label: "AI Autonomous Vehicles Platform", path: "/ai-autonomous-vehicles-platform" },
+        { label: "AI Autonomous Vehicles", path: "/ai-autonomous-vehicles" },
+        { label: "AI Autonomous Venture Capitalist", path: "/ai-autonomous-venture-capitalist" }
+      ]
+    },
+    {
+      title: "Core Services",
+      links: [
+        { label: "Quantum Neural Networks", path: "/quantum-neural-network-platform" },
         { label: "Autonomous Business Platform", path: "/autonomous-business-operations-platform" },
         { label: "AI Asset Management", path: "/ai-powered-it-asset-management" },
         { label: "Quantum Technology", path: "/services/quantum-technology" },
@@ -22,19 +43,10 @@ export function Footer() {
         { label: "Micro SAAS Solutions", path: "/services/micro-saas-solutions" },
         { label: "Cybersecurity", path: "/services/cybersecurity" },
         { label: "SOC2 Compliance Automation", path: "/soc2-compliance-automation" },
-        { label: "Industry Solutions", path: "/services/industry-solutions" }
-      ]
-    },
-    {
-      title: "Specialized IT Services",
-      links: [
-        { label: "Cloud Cost Optimization", path: "/services/cloud-cost-optimization-finops" },
-        { label: "DevOps Automation Platform", path: "/services/devops-automation-cicd-platform" },
-        { label: "Data Analytics Platform", path: "/services/data-analytics-business-intelligence" },
-        { label: "IoT & Edge Computing", path: "/services/iot-edge-computing-platform" },
-        { label: "API Management Platform", path: "/services/api-management-integration-platform" },
-        { label: "Advanced Cybersecurity", path: "/services/advanced-cybersecurity-platform" },
-        { label: "5G Enterprise Networks", path: "/services/5g-enterprise-network-solutions" }
+        { label: "5G Enterprise Solutions", path: "/5g-enterprise-solutions" },
+        { label: "Cloud DevOps", path: "/cloud-devops" },
+        { label: "Digital Transformation", path: "/digital-transformation" },
+        { label: "AI Business Intelligence", path: "/services/ai-business-intelligence" }
       ]
     },
     {
@@ -93,7 +105,7 @@ export function Footer() {
   const socialLinks = [
     { 
       name: 'LinkedIn', 
-      url: 'https://www.linkedin.com/company/ziontechgroup', 
+      url: 'https://www.linkedin.com/company/zion-tech-group', 
       icon: '💼',
       fallback: 'https://linkedin.com'
     },
@@ -105,7 +117,7 @@ export function Footer() {
     },
     { 
       name: 'GitHub', 
-      url: 'https://github.com/ziontechgroup', 
+      url: 'https://github.com/Zion-Holdings', 
       icon: '💻',
       fallback: 'https://github.com'
     },
@@ -253,20 +265,15 @@ export function Footer() {
             <Link to="/accessibility" className="hover:text-cyan-400 transition-colors duration-200">
               Accessibility
             </Link>
+            <Link to="/sitemap" className="hover:text-cyan-400 transition-colors duration-200">
+              Sitemap
+            </Link>
+            <Link to="/help" className="hover:text-cyan-400 transition-colors duration-200">
+              Help Center
+            </Link>
           </div>
         </div>
       </div>
-
-      {/* Scroll to Top Button */}
-      <motion.button
-        onClick={scrollToTop}
-        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 z-40"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        aria-label="Scroll to top"
-      >
-        <ArrowUpIcon className="h-6 w-6 mx-auto" />
-      </motion.button>
     </footer>
   );
 }
