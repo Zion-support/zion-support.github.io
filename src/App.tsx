@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import Sidebar from './components/Sidebar';
-import { AccessibilityControls } from './components/AccessibilityControls';
-import { PerformanceDashboard } from './components/PerformanceDashboard';
+import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
 import { AnalyticsDashboard } from './components/AnalyticsDashboard';
 import { AIChatbot } from './components/AIChatbot';
 import { CollaborativeTextEditor } from './components/CollaborativeTextEditor';
@@ -18,10 +18,8 @@ import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
-import { EnhancedSEO } from './components/EnhancedSEO';
-import { EnhancedAccessibility } from './components/EnhancedAccessibility';
-import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { ErrorBoundary } from './components/ErrorBoundary';
+import { SEOHead } from './components/SEOHead';
 
 // Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
@@ -96,18 +94,18 @@ const LoadingSpinner = () => (
 );
 
 const App = () => {
-  useScrollToTop();
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  useScrollToTop();
 
   return (
-    <EnhancedErrorBoundary>
+    <ErrorBoundary>
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
             <PerformanceOptimizer>
               <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
                 {/* Enhanced SEO */}
-                <EnhancedSEO 
+                <SEOHead 
                   title="Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services"
                   description="Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology."
                   keywords="AI solutions, quantum computing, cybersecurity, digital transformation, enterprise technology, machine learning, cloud services, IT infrastructure"
@@ -186,8 +184,9 @@ const App = () => {
                 <Footer />
                 <SonnerToaster />
                 
-                {/* Enhanced Accessibility Controls */}
-                <EnhancedAccessibility position="bottom-right" />
+                {/* Enhanced Accessibility and Performance Tools */}
+                <AccessibilityEnhancer />
+                <PerformanceMonitor />
                 
                 {/* AI Chatbot - Always Available */}
                 <AIChatbot />
@@ -219,7 +218,7 @@ const App = () => {
                   <>
                     {/* Performance Dashboard */}
                     <div className="fixed top-4 left-4 z-40">
-                      <PerformanceDashboard />
+                      <AnalyticsDashboard />
                     </div>
                     
                     {/* Analytics Dashboard */}
@@ -244,23 +243,6 @@ const App = () => {
                   </>
                 )}
                 
-                {/* Enhanced Performance Monitor - Always Available */}
-                <PerformanceMonitor 
-                  showMetrics={true}
-                  autoRefresh={true}
-                  refreshInterval={30000}
-                  onMetricsUpdate={(metrics) => {
-                    if (import.meta.env.DEV) {
-                      console.log('Performance metrics updated:', metrics);
-                    }
-                  }}
-                  onScoreUpdate={(score) => {
-                    if (import.meta.env.DEV) {
-                      console.log('Performance score updated:', score);
-                    }
-                  }}
-                />
-                
                 {/* Link Health Monitor - Development Mode */}
                 {import.meta.env.DEV && (
                   <LinkHealthMonitor
@@ -281,7 +263,7 @@ const App = () => {
           </Router>
         </WhitelabelProvider>
       </ThemeProvider>
-    </EnhancedErrorBoundary>
+    </ErrorBoundary>
   );
 };
 
