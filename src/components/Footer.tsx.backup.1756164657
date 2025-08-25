@@ -31,11 +31,20 @@ export function Footer() {
       icon: Brain,
       links: [
         { name: "AI Solutions", href: "/ai-solutions" },
+<<<<<<< HEAD
+        { name: "AI Autonomous Systems", href: "/ai-autonomous-systems-platform" },
+        { name: "Quantum Technology", href: "/quantum-technology" },
+        { name: "Cybersecurity", href: "/cybersecurity" },
+        { name: "Cloud & DevOps", href: "/cloud-devops" },
+        { name: "Enterprise Solutions", href: "/enterprise-solutions" },
+        { name: "5G Solutions", href: "/5g-enterprise-solutions" }
+=======
         { name: "Quantum Technology", href: "/quantum-technology" },
         { name: "Cybersecurity", href: "/services/cybersecurity" },
         { name: "Cloud & DevOps", href: "/cloud-devops" },
         { name: "Enterprise Solutions", href: "/enterprise-solutions" },
         { name: "Micro SAAS", href: "/micro-saas" }
+>>>>>>> origin/cursor/website-audit-and-enhancement-2305
       ]
     },
     {
@@ -73,8 +82,12 @@ export function Footer() {
         { name: "Community", href: "/community" },
         { name: "Webinars", href: "/webinars" },
         { name: "White Papers", href: "/white-papers" },
+<<<<<<< HEAD
+        { name: "Marketplace", href: "/marketplace" }
+=======
         { name: "FAQ", href: "/faq" },
         { name: "Support", href: "/support" }
+>>>>>>> origin/cursor/website-audit-and-enhancement-2305
       ]
     }
   ];

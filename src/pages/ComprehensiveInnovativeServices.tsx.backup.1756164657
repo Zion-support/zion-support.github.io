@@ -286,16 +286,23 @@ export default function ComprehensiveInnovativeServices() {
                         <span className="text-zion-cyan/70">Market Price:</span>
                         <span className="text-white font-semibold">{service.marketPrice}</span>
                       </div>
+<<<<<<< HEAD
+
+=======
                       <div className="flex items-center justify-between text-sm mt-1">
                         <span className="text-zion-cyan/70">ROI:</span>
                         <span className="text-green-400 font-semibold">High ROI</span>
                       </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-2305
                       <div className="flex items-center justify-between text-sm mt-1">
                         <span className="text-zion-cyan/70">Delivery:</span>
                         <span className="text-white font-semibold">{service.estimatedDelivery}</span>
                       </div>
                     </div>
 
+<<<<<<< HEAD
+
+=======
                     {/* Innovation Level */}
                     <div className="mb-4">
                       <div className="flex items-center justify-between">
@@ -308,6 +315,7 @@ export default function ComprehensiveInnovativeServices() {
                         </div>
                       </div>
                     </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-2305
 
                     {/* CTA Button */}
                     <div className="mt-6">
