@@ -206,7 +206,7 @@ export function Services() {
               Let's discuss how our technology solutions can accelerate your growth and 
               give you a competitive edge in the market.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
               <Link
                 to="/request-quote"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center group hover:scale-105"
@@ -282,6 +282,20 @@ export function Services() {
                 © 2024 Zion Tech Group. All rights reserved. | 
                 <a href="/privacy" className="ml-2 hover:text-zion-cyan transition-colors">Privacy Policy</a> | 
                 <a href="/terms" className="ml-2 hover:text-zion-cyan transition-colors">Terms of Service</a>
+              </p>
+            </div>
+            
+            {/* Advanced Services Showcase Link */}
+            <div className="text-center">
+              <Link
+                to="/advanced-services-showcase-2025"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-medium rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 group"
+              >
+                <span>View Advanced Services Showcase 2025</span>
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <p className="text-sm text-gray-400 mt-2">
+                Discover our cutting-edge micro SAAS solutions and emerging technology platforms
               </p>
             </div>
           </div>
