@@ -53,6 +53,12 @@ const Homepage2025: React.FC = () => {
   };
 
   const allServices = [
+    // New 2035 services (featured first)
+    ...innovative2035MicroSaasServices,
+    ...innovative2035AIServices,
+    ...innovative2035ITServices,
+    
+    // Existing services
     ...innovativeRealMicroSaasServices2025,
     ...innovativeAIServicesEnhanced2025,
     ...innovativeITServicesEnhanced2025,

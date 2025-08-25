@@ -1,4 +1,6 @@
-export interface InnovativeAIService {
+import { ServiceVariant } from '../types/service-variants';
+
+export interface InnovativeAIService2025 {
   id: string;
   name: string;
   tagline: string;
@@ -12,7 +14,7 @@ export interface InnovativeAIService {
   textColor: string;
   link: string;
   marketPosition: string;
-  targetAudience: string;
+  targetAudience: string[];
   trialDays: number;
   setupTime: string;
   category: string;
@@ -38,14 +40,8 @@ export interface InnovativeAIService {
   reviews: number;
 }
 
-const contact = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
-
-export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
+export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
+  // AI Consciousness & Emotional Intelligence
   {
     id: 'ai-consciousness-evolution-platform',
     name: 'AI Consciousness Evolution Platform',
@@ -95,7 +91,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService[] = [
     launchDate: '2024-12-01',
     customers: 12,
     rating: 4.9,
-    reviews: 20
+    reviews: 8
   },
 
   // AI Quantum Neural Network

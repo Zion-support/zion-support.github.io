@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   X, Menu, Home, Globe, Brain, Atom, Shield, 
@@ -177,10 +176,6 @@ const getBadgeText = (item: SidebarItem) => {
   return item.badge || '';
 };
 
-interface EnhancedSidebar2025Props {
-  isOpen: boolean;
-  onClose: () => void;
-}
 
 export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar2025Props) {
   const router = useRouter();
@@ -265,7 +260,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                   onClick={onClose}
                   className="p-2 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 text-gray-400 hover:text-white transition-colors"
                 >
-                  <X className="w-5 h-5" />
+                  <CloseIcon className="w-5 h-5" />
                 </button>
               </div>
 
@@ -280,6 +275,41 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                   className="w-full pl-10 pr-4 py-2 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 transition-colors text-sm"
                 />
               </div>
+              
+              {/* Search Results */}
+              {searchQuery && (
+                <div className="mt-4 space-y-2">
+                  <h4 className="text-sm font-medium text-gray-300">Search Results</h4>
+                  {filteredServices.length > 0 ? (
+                    <div className="space-y-1">
+                      {filteredServices.slice(0, 5).map((service) => (
+                        <Link
+                          key={service.name}
+                          href={service.href}
+                          onClick={onClose}
+                          className="block p-2 rounded-lg hover:bg-gray-800/30 transition-colors duration-200 group"
+                        >
+                          <div className="text-sm font-medium text-gray-300 group-hover:text-white transition-colors duration-200">
+                            {service.name}
+                          </div>
+                          <div className="text-xs text-gray-500">
+                            {service.description}
+                          </div>
+                        </Link>
+                      ))}
+                      {filteredServices.length > 5 && (
+                        <div className="text-xs text-cyan-400 text-center">
+                          +{filteredServices.length - 5} more results
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <div className="text-sm text-gray-500 text-center py-2">
+                      No services found
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
 
             {/* Contact Info */}
@@ -446,9 +476,37 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
                 </Link>
               </div>
             </div>
-          </motion.div>
-        </>
-      )}
-    </AnimatePresence>
+            <div className="text-center p-3 bg-gray-800/50 rounded-lg">
+              <div className="text-lg font-bold text-blue-400">1000+</div>
+              <div className="text-xs text-gray-400">Clients</div>
+            </div>
+            <div className="text-center p-3 bg-gray-800/50 rounded-lg">
+              <div className="text-lg font-bold text-purple-400">24/7</div>
+              <div className="text-xs text-gray-400">Support</div>
+            </div>
+            <div className="text-center p-3 bg-gray-800/50 rounded-lg">
+              <div className="text-lg font-bold text-green-400">99.9%</div>
+              <div className="text-xs text-gray-400">Uptime</div>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="pt-4 border-t border-gray-800 px-3">
+          <Link
+            href="/contact"
+            className="block w-full text-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+          >
+            <span>Get Started Today</span>
+            <ArrowRight className="w-4 h-4 ml-2 inline" />
+          </Link>
+        </div>
+      </div>
+
+      {/* Floating Elements */}
+      <div className="absolute top-1/4 left-4 w-1 h-1 bg-cyan-400 rounded-full animate-pulse"></div>
+      <div className="absolute top-1/2 right-4 w-1 h-1 bg-blue-400 rounded-full animate-pulse delay-1000"></div>
+      <div className="absolute bottom-1/4 left-4 w-1 h-1 bg-purple-400 rounded-full animate-pulse delay-2000"></div>
+    </motion.aside>
   );
 }

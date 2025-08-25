@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react';
+'use client';
+
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -46,10 +48,18 @@ const navigationItems: NavigationItem[] = [
     color: 'from-cyan-500 to-blue-600',
     isNew: true,
     children: [
+      { name: '2025 Innovative Services', href: '/2025-innovative-services-showcase', description: 'Latest innovative services portfolio' },
       { name: 'View All Services', href: '/comprehensive-services-showcase-2025', description: 'Complete services portfolio' },
       { name: 'Service Categories', href: '/comprehensive-services-showcase-2025#categories', description: 'Browse by category' },
       { name: 'Pricing Comparison', href: '/comprehensive-services-showcase-2025#pricing', description: 'Compare service costs' },
-      { name: 'Service Search', href: '/comprehensive-services-showcase-2025#search', description: 'Find specific services' }
+      { name: 'Service Search', href: '/comprehensive-services-showcase-2025#search', description: 'Find specific services' },
+      { name: 'Latest Innovations', href: '/revolutionary-2025-services-showcase', description: 'Cutting-edge solutions' },
+      { name: '2026 Services', href: '/revolutionary-2026-services', description: 'Next generation solutions' },
+      { name: '2027 Services', href: '/revolutionary-2027-services-showcase', description: 'Future-ready services' },
+      { name: 'Ultimate 2026', href: '/ultimate-2026-services-showcase', description: 'Premium service collection' },
+      { name: 'New 2025 Services', href: '/2025-cutting-edge-ai-services', description: 'Latest AI innovations' },
+      { name: 'IT Infrastructure', href: '/2025-innovative-it-infrastructure-services', description: 'Advanced IT solutions' },
+      { name: 'Micro SAAS Solutions', href: '/2025-innovative-micro-saas-solutions', description: 'Business solutions' }
     ]
   },
   {
@@ -214,7 +224,6 @@ export default function EnhancedNavigation2025() {
                 <div className="text-xs text-gray-400">Future Technology Solutions</div>
               </div>
             </Link>
-          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1">
@@ -230,7 +239,7 @@ export default function EnhancedNavigation2025() {
                   <span>{item.name.replace(/^[^\s]+ /, '')}</span>
                   {item.children && (
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                      activeDropdown === item.name ? 'rotate-180' : ''
+                      activeSubmenu === item.name ? 'rotate-180' : ''
                     }`} />
                   )}
                   {getBadgeText(item) && (
@@ -314,9 +323,9 @@ export default function EnhancedNavigation2025() {
             </button>
           </div>
         </div>
-      </div>
+      </nav>
 
-      {/* Mobile Navigation */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -365,7 +374,10 @@ export default function EnhancedNavigation2025() {
                           href={child.href}
                           className="block p-2 rounded text-sm text-gray-400 hover:text-white hover:bg-gray-800/30 transition-colors"
                         >
-                          {child.name}
+                          <subItem.icon className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" />
+                          <span className="text-gray-300 group-hover:text-white transition-colors duration-200">
+                            {subItem.name}
+                          </span>
                         </Link>
                       ))}
                       {item.children.length > 3 && (
@@ -392,6 +404,9 @@ export default function EnhancedNavigation2025() {
           </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+
+      {/* Spacer for fixed navigation */}
+      <div className="h-20" />
+    </>
   );
 }

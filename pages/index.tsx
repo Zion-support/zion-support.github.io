@@ -164,6 +164,28 @@ export default function HomePage() {
     .sort((a, b) => (b.rating || 0) - (a.rating || 0))
     .slice(0, 12);
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5
+    }
+  }
+};
+
+export default function Home() {
   return (
     <UltraAdvancedFuturisticBackground variant="quantum-holographic-advanced">
       <Head>
@@ -519,4 +541,19 @@ export default function HomePage() {
       </footer>
     </UltraAdvancedFuturisticBackground>
   );
+=======
+import Layout from '../components/layout/Layout';
+import Homepage2025 from '../components/Homepage2025';
+
+export default function HomePage() {
+	return (
+		<Layout>
+			<Head>
+				<title>Zion Tech Group | Micro SaaS, AI, IT & Quantum Solutions</title>
+				<meta name="description" content="Real micro SaaS, AI, and IT services with transparent pricing and fast onboarding. Contact +1 302 464 0950 or kleber@ziontechgroup.com." />
+				<link rel="canonical" href="https://ziontechgroup.com/" />
+			</Head>
+			<Homepage2025 />
+		</Layout>
+	);
 }

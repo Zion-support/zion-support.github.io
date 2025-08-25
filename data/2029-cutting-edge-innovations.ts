@@ -14,7 +14,7 @@ export interface CuttingEdgeInnovation2029 {
   textColor: string;
   link: string;
   marketPosition: string;
-  targetAudience: string;
+  targetAudience: string | string[];
   trialDays: number;
   setupTime: string;
   category: string;
@@ -195,7 +195,7 @@ export const cuttingEdgeInnovations2029: CuttingEdgeInnovation2029[] = [
     launchDate: '2029-03-01',
     customers: 8,
     rating: 4.8,
-    reviews: 5
+    reviews: 67
   },
   // Biotech & DNA Computing
   {

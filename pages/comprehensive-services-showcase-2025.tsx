@@ -106,7 +106,7 @@ export default function ComprehensiveServicesShowcase2025() {
   };
 
   return (
-    <Layout>
+    <>
       <Head>
         <title>Comprehensive Services Showcase 2025 - Zion Tech Group</title>
         <meta name="description" content="Explore our comprehensive portfolio of 500+ cutting-edge technology solutions including AI, quantum computing, emerging technologies, and micro SAAS services." />
@@ -293,6 +293,42 @@ export default function ComprehensiveServicesShowcase2025() {
                         </span>
                       ))}
                     </div>
+                  </motion.div>
+                ))}
+              </div>
+            ) : (
+              /* List View */
+              <div className="space-y-6">
+                {sortedServices.map((service, index) => (
+                  <motion.div
+                    key={service.id}
+                    initial={{ opacity: 0, x: -30 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="group"
+                  >
+                    <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-xl p-6 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300">
+                      <div className="flex flex-col lg:flex-row gap-6 items-start">
+                        {/* Service Icon and Basic Info */}
+                        <div className="flex items-start gap-4">
+                          <div className="text-4xl">{service.icon}</div>
+                          <div className="flex-1">
+                            <div className="flex items-center gap-3 mb-2">
+                              <h3 className="text-2xl font-bold text-white">{service.name}</h3>
+                              {service.popular && (
+                                <span className="px-2 py-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs font-semibold rounded-full">
+                                  Popular
+                                </span>
+                              )}
+                            </div>
+                            <p className="text-gray-300 mb-3">{service.description}</p>
+                            <div className="flex items-center gap-4 text-sm text-gray-400">
+                              <span>Category: {service.category}</span>
+                              <span>Setup: {service.setupTime}</span>
+                              <span>Trial: {service.trialDays} days</span>
+                            </div>
+                          </div>
+                        </div>
 
                     {/* Features Preview */}
                     <div className="relative mb-4">
@@ -302,9 +338,16 @@ export default function ComprehensiveServicesShowcase2025() {
                             <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                             <span className="text-gray-300 truncate">{feature}</span>
                           </div>
-                        ))}
+                          <div className="flex items-center justify-end gap-1 mb-2">
+                            <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                            <span className="text-white font-semibold">{service.rating}</span>
+                            <span className="text-gray-400">({service.reviews})</span>
+                          </div>
+                          <span className="text-sm text-gray-400">
+                            {getPriceRange(service.price)}
+                          </span>
+                        </div>
                       </div>
-                    </div>
 
                     {/* Pricing and CTA */}
                     <div className="relative flex items-center justify-between">

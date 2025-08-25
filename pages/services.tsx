@@ -29,6 +29,13 @@ export default function ServicesPage() {
 
   // Combine all services
   const allServices = [
+    ...innovativeMicroSaasServices,
+    ...extraServices,
+    ...additionalEnhancedServices,
+    ...advancedAIServices,
+    ...innovativeAIServices,
+    ...quantumSpaceServices,
+    ...enterpriseITServices,
     ...enhancedRealMicroSaasServices,
     ...innovativeMicroSaasServices,
     ...extraServices,
@@ -212,6 +219,7 @@ export default function ServicesPage() {
                     <option value="price">Price Low-High</option>
                   </select>
                 </div>
+              </div>
 
                 <div className="flex items-center gap-2">
                   <button

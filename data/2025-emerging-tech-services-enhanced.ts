@@ -1,6 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 
-export interface EmergingTechService {
+export interface EmergingTechService2025 {
   id: string;
   name: string;
   tagline: string;
@@ -14,7 +14,7 @@ export interface EmergingTechService {
   textColor: string;
   link: string;
   marketPosition: string;
-  targetAudience: string;
+  targetAudience: string[];
   trialDays: number;
   setupTime: string;
   category: string;

@@ -170,7 +170,7 @@ export default function UltraAdvancedFuturisticBackground({
           const gradient = ctx.createRadialGradient(0, 0, 0, 0, 0, particle.size * 4);
           gradient.addColorStop(0, particle.color);
           gradient.addColorStop(0.3, particle.color + '80');
-          gradient.addColorStop(0.6, particle.color + '40');
+          gradient.addColorStop(0.7, particle.color + '40');
           gradient.addColorStop(1, 'transparent');
           
           ctx.fillStyle = gradient;
@@ -258,6 +258,51 @@ export default function UltraAdvancedFuturisticBackground({
           ctx.lineTo(canvas.width, y);
           ctx.stroke();
         }
+      }
+
+      // Add floating geometric shapes
+      if (intensity === 'high') {
+        const time = Date.now() * 0.001;
+        const shapes = [
+          { x: canvas.width * 0.2, y: canvas.height * 0.3, size: 40, rotation: time * 0.5 },
+          { x: canvas.width * 0.8, y: canvas.height * 0.7, size: 60, rotation: time * 0.3 },
+          { x: canvas.width * 0.5, y: canvas.height * 0.8, size: 50, rotation: time * 0.7 }
+        ];
+
+        shapes.forEach((shape, index) => {
+          ctx.save();
+          ctx.translate(shape.x, shape.y);
+          ctx.rotate(shape.rotation);
+          ctx.globalAlpha = 0.1;
+          ctx.strokeStyle = selectedColors[index % selectedColors.length];
+          ctx.lineWidth = 2;
+          
+          if (index === 0) {
+            // Triangle
+            ctx.beginPath();
+            ctx.moveTo(0, -shape.size);
+            ctx.lineTo(shape.size * 0.866, shape.size * 0.5);
+            ctx.lineTo(-shape.size * 0.866, shape.size * 0.5);
+            ctx.closePath();
+          } else if (index === 1) {
+            // Square
+            ctx.strokeRect(-shape.size/2, -shape.size/2, shape.size, shape.size);
+          } else {
+            // Hexagon
+            ctx.beginPath();
+            for (let i = 0; i < 6; i++) {
+              const angle = (Math.PI * 2 * i) / 6;
+              const x = Math.cos(angle) * shape.size/2;
+              const y = Math.sin(angle) * shape.size/2;
+              if (i === 0) ctx.moveTo(x, y);
+              else ctx.lineTo(x, y);
+            }
+            ctx.closePath();
+          }
+          
+          ctx.stroke();
+          ctx.restore();
+        });
       }
 
       animationRef.current = requestAnimationFrame(animate);
