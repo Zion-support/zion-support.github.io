@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -332,6 +333,8 @@ const CaseStudies = () => {
   ];
 >>>>>>> origin/cursor/website-audit-and-enhancement-98d1
 =======
+=======
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fe6d
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, TrendingUp, Users, DollarSign, Clock, Target } from 'lucide-react';
@@ -460,6 +463,7 @@ const CaseStudies = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
       {/* Hero Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -789,10 +793,13 @@ export default function CaseStudies() {
             </div>
           </div>
 =======
+=======
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fe6d
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1 
             className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
+<<<<<<< HEAD
 =======
       title: "AI-Powered Manufacturing Transformation",
       company: "Global Manufacturing Corp",
@@ -926,6 +933,8 @@ export default function CaseStudies() {
         <div className="max-w-7xl mx-auto">
           <motion.div
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d2cf
+=======
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fe6d
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -964,6 +973,7 @@ export default function CaseStudies() {
               <CheckCircle className="w-4 h-4 text-green-400" />
               Cybersecurity
             </span>
+<<<<<<< HEAD
 =======
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">
               Success Stories
@@ -981,12 +991,15 @@ export default function CaseStudies() {
               </button>
             </div>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d2cf
+=======
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fe6d
           </motion.div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-b812
         </div>
       </section>
 
       {/* Case Studies Grid */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1115,6 +1128,8 @@ export default function CaseStudies() {
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                           <span className="text-gray-300 line-clamp-1">{result}</span>
 =======
+=======
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fe6d
       <section className="pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div 
@@ -1160,6 +1175,7 @@ export default function CaseStudies() {
                         </li>
                       ))}
                     </ul>
+<<<<<<< HEAD
 =======
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1182,6 +1198,8 @@ export default function CaseStudies() {
                 <div className="flex items-center mb-4">
                   <div className={`w-12 h-12 bg-gradient-to-r ${study.color} rounded-lg flex items-center justify-center mr-3`}>
                     <study.icon className="w-6 h-6 text-white" />
+=======
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fe6d
                   </div>
 <<<<<<< HEAD
                   <div>
@@ -1336,8 +1354,11 @@ export default function CaseStudies() {
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d2cf
+=======
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fe6d
               </motion.div>
             ))}
           </div>
@@ -1496,6 +1517,7 @@ export default function CaseStudies() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
@@ -1565,6 +1587,8 @@ export default function CaseStudies() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-ee8a
           </div>
 =======
+=======
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fe6d
       <section className="pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div 
@@ -1591,6 +1615,7 @@ export default function CaseStudies() {
               </button>
               <button className="px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/20 transition-all duration-300">
                 View More Cases
+<<<<<<< HEAD
 =======
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Write Your Success Story?
@@ -1606,6 +1631,8 @@ export default function CaseStudies() {
               <button className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300">
                 Schedule Consultation
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d2cf
+=======
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fe6d
               </button>
             </div>
           </motion.div>

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 import React, { useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { 
 <<<<<<< HEAD
@@ -38,6 +39,8 @@ export default function HelpCenter() {
   const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
   const [expandedFAQs, setExpandedFAQs] = useState<string[]>([]);
 =======
+=======
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fe6d
 import { motion } from 'framer-motion';
 import { Search, BookOpen, MessageCircle, FileText, Video, Users, Phone, Mail, Clock, CheckCircle, ChevronDown, ChevronRight } from 'lucide-react';
 
@@ -53,6 +56,7 @@ const HelpCenter = () => {
         : [...prev, categoryId]
     );
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const toggleFAQ = (faqId: string) => {
@@ -75,6 +79,16 @@ const HelpCenter = () => {
         { title: 'First Steps with AI Services', path: '/docs/getting-started/first-steps' },
         { title: 'Platform Overview', path: '/docs/getting-started/platform-overview' }
       ]
+=======
+
+  const helpCategories = [
+    {
+      id: 1,
+      question: "What AI solutions does Zion Tech Group offer?",
+      answer: "We offer comprehensive AI solutions including machine learning platforms, natural language processing, computer vision, predictive analytics, and autonomous systems. Our AI solutions are tailored for enterprise needs and can be customized for specific industry requirements.",
+      category: 'ai',
+      tags: ['AI', 'Machine Learning', 'Enterprise']
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fe6d
     },
     {
       id: 'ai-services',
@@ -148,6 +162,7 @@ const HelpCenter = () => {
       answer: 'Getting started is easy! Simply contact our team through our contact form or call us directly. We\'ll schedule a consultation to understand your needs and recommend the best solutions for your business. Our team will guide you through the entire setup process.'
     },
     {
+<<<<<<< HEAD
       id: 'faq-2',
       question: 'What AI services do you offer?',
       answer: 'We offer a comprehensive range of AI services including autonomous business systems, AI-powered business intelligence, marketing automation, workflow automation, research assistance, and more. Our AI solutions are designed to work autonomously while providing human oversight capabilities.'
@@ -640,12 +655,27 @@ const HelpCenter: React.FC = () => {
       article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       article.description.toLowerCase().includes(searchQuery.toLowerCase())
     )
+=======
+      id: 7,
+      question: "How do you ensure data privacy and compliance?",
+      answer: "We implement comprehensive data protection measures including data encryption, access controls, audit logging, and compliance frameworks. Our solutions are designed to meet regulatory requirements across industries and jurisdictions.",
+      category: 'security',
+      tags: ['Data Privacy', 'Compliance', 'Encryption']
+    }
+  ];
+
+  const filteredHelp = helpCategories.filter(item =>
+    item.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    item.answer.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fe6d
   );
 >>>>>>> origin/cursor/website-audit-and-enhancement-b812
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
       {/* Hero Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -1106,6 +1136,8 @@ export default function HelpCenter() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-ee8a
               </div>
 =======
+=======
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fe6d
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1 
@@ -1122,16 +1154,17 @@ export default function HelpCenter() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Find answers, tutorials, and support resources to help you get the most out of Zion Tech Group's services.
+            Find answers to common questions and get the support you need
           </motion.p>
           
           {/* Search Bar */}
           <motion.div 
-            className="max-w-2xl mx-auto relative"
+            className="max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
+<<<<<<< HEAD
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <input
               type="text"
@@ -1233,10 +1266,23 @@ export default function HelpCenter() {
               </button>
             </div>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d2cf
+=======
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search for help topics..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300"
+              />
+            </div>
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fe6d
           </motion.div>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Support Channels */}
       <section className="pb-16 px-4 sm:px-6 lg:px-8">
@@ -1763,6 +1809,72 @@ export default function HelpCenter() {
       </section>
 
       {/* Contact Support CTA */}
+=======
+      {/* Help Categories */}
+      <section className="pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <motion.div 
+            className="space-y-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            {filteredHelp.map((item) => (
+              <motion.div
+                key={item.id}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 overflow-hidden"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <button
+                  onClick={() => toggleCategory(item.id.toString())}
+                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-700/30 transition-colors duration-200"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
+                      <BookOpen className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white">{item.question}</h3>
+                      <div className="flex gap-2 mt-1">
+                        {item.tags.map((tag, index) => (
+                          <span 
+                            key={index}
+                            className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  {expandedCategories.includes(item.id.toString()) ? (
+                    <ChevronDown className="w-5 h-5 text-gray-400" />
+                  ) : (
+                    <ChevronRight className="w-5 h-5 text-gray-400" />
+                  )}
+                </button>
+                
+                {expandedCategories.includes(item.id.toString()) && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="px-6 pb-4 border-t border-gray-700/50"
+                  >
+                    <p className="text-gray-300 mt-4 leading-relaxed">{item.answer}</p>
+                  </motion.div>
+                )}
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Support Section */}
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fe6d
       <section className="pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div 
@@ -1776,7 +1888,7 @@ export default function HelpCenter() {
               Still Need Help?
             </h2>
             <p className="text-gray-300 mb-6">
-              Our expert support team is here to help you with any questions or technical issues.
+              Our support team is here to help you 24/7
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">

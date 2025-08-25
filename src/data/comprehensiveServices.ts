@@ -1172,6 +1172,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       website: "https://ziontechgroup.com"
     }
   },
+<<<<<<< HEAD
+=======
+  // NEW INNOVATIVE MICRO SAAS SERVICES
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fe6d
   {
     id: "ai-content-generator-pro",
     title: "AI Content Generator Pro",
@@ -1810,6 +1814,7 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       website: "https://ziontechgroup.com"
     }
   },
+<<<<<<< HEAD
     price: 1200,
     currency: "$",
     pricingModel: "monthly",
@@ -2678,6 +2683,13 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     id: "ai-content-generation-suite",
     title: "AI Content Generation & Optimization Suite",
     description: "Comprehensive AI-powered content creation platform that generates, optimizes, and manages content across multiple channels and formats.",
+=======
+  // NEW INNOVATIVE MICRO SAAS SERVICES
+  {
+    id: "ai-powered-project-management",
+    title: "AI-Powered Project Management Suite",
+    description: "Intelligent project management platform that uses AI to predict project risks, optimize resource allocation, and automate task management.",
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fe6d
     category: "AI & Machine Learning",
     subcategory: "Content Creation",
     price: 599,
@@ -3855,6 +3867,7 @@ export const SERVICE_CATEGORIES = [
   "Security Testing",
   "Process Automation",
   "Governance"
+<<<<<<< HEAD
 ];
 
 export const SERVICE_SUBCATEGORIES = [
@@ -3882,4 +3895,6 @@ export const SERVICE_SUBCATEGORIES = [
   "DeFi Services",
   "Security Testing",
   "Process Automation",
+=======
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fe6d
 ];
