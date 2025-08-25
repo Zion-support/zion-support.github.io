@@ -159,8 +159,14 @@ const ZionHireAI: React.FC = () => {
   return (
     <>
       <SEO 
+<<<<<<< HEAD
         title="Zion Hire AI - AI-Powered Hiring Solutions | Zion Tech Group"
         description="Revolutionary AI-powered hiring platform that transforms recruitment, screening, onboarding, and retention with cutting-edge machine learning technology."
+=======
+        title="Zion Hire AI - White-labeled AI Recruiting Assistant" 
+        description="Empower your company with AI-powered recruiting tools. Streamline hiring, improve matches, and enhance candidate experience."
+        keywords="AI hiring, AI recruiting, talent acquisition, AI assistant, Zion Hire AI"
+>>>>>>> origin/cursor/website-audit-and-enhancement-bbee
         canonical="https://ziontechgroup.com/zion-hire-ai"
       />
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">

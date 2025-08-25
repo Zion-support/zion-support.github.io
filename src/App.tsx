@@ -79,6 +79,7 @@ const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServicesPage'));
 const ServicesOverviewPage = React.lazy(() => import('./pages/ServicesOverviewPage'));
 const AIServicesShowcase = React.lazy(() => import('./pages/AIServicesShowcase'));
@@ -197,6 +198,9 @@ const CybersecurityServicesPage = React.lazy(() => import('./pages/Cybersecurity
 const HelpCenter = React.lazy(() => import('./pages/HelpCenter'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
 >>>>>>> origin/cursor/website-audit-and-enhancement-de4e
+=======
+const FAQPage = React.lazy(() => import('./pages/FAQ'));
+>>>>>>> origin/cursor/website-audit-and-enhancement-bbee
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -230,6 +234,7 @@ const baseRoutes = [
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-1010
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
+<<<<<<< HEAD
 <<<<<<< HEAD
   
   // Additional routes from HEAD branch
@@ -319,6 +324,9 @@ const baseRoutes = [
   { path: '/help', element: <HelpCenter /> },
   { path: '/cookies', element: <Cookies /> },
 >>>>>>> origin/cursor/website-audit-and-enhancement-de4e
+=======
+  { path: '/faq', element: <FAQPage /> },
+>>>>>>> origin/cursor/website-audit-and-enhancement-bbee
 ];
 >>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fad7
 

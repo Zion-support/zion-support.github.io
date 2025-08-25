@@ -83,10 +83,16 @@ const ContentRoutes = () => {
 
       {/* Legal Pages */}
       <Route path="/terms" element={<Terms />} />
+<<<<<<< HEAD
       <Route path="/cookies" element={<Cookies />} />
       
       {/* API Documentation */}
       <Route path="/api-docs" element={<ApiDocs />} />
+=======
+      
+      {/* FAQ Page */}
+      <Route path="/faq" element={<FAQ />} />
+>>>>>>> origin/cursor/website-audit-and-enhancement-bbee
 
       {/* Account Settings */}
       <Route path="/settings/account" element={<AccountSettings />} />

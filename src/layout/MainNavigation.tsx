@@ -685,6 +685,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'services',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       href: '/services',
       matches: (path: string) => path.startsWith('/services') || path.startsWith('/ai-services') || path.startsWith('/it-services') || path.startsWith('/digital-marketing') || path.startsWith('/business-solutions')
 =======
@@ -702,6 +703,10 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       icon: null,
       matches: (path: string) => path.startsWith('/services')
 >>>>>>> origin/cursor/website-audit-and-enhancement-de4e
+=======
+      href: '/services',
+      matches: (path: string) => path.startsWith('/services')
+>>>>>>> origin/cursor/website-audit-and-enhancement-bbee
     },
     {
       key: 'talent',
@@ -725,6 +730,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
     },
     {
+<<<<<<< HEAD
       key: 'blog',
       href: '/blog',
       name: 'Blog',
@@ -736,14 +742,22 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: '/about',
       name: 'About',
       icon: null,
+=======
+      key: 'about',
+      href: '/about',
+>>>>>>> origin/cursor/website-audit-and-enhancement-bbee
       matches: (path: string) => path.startsWith('/about')
     },
     {
       key: 'contact',
       href: '/contact',
+<<<<<<< HEAD
       name: 'Contact',
       icon: null,
       matches: (path: string) => path === '/contact'
+=======
+      matches: (path: string) => path.startsWith('/contact')
+>>>>>>> origin/cursor/website-audit-and-enhancement-bbee
     }
   ];
 

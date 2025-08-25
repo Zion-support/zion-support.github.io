@@ -42,7 +42,11 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       key: 'talent',
       href: '/talent',
       icon: User,
+<<<<<<< HEAD
       matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard')
+=======
+      matches: (path: string) => path.startsWith('/talent')
+>>>>>>> origin/cursor/website-audit-and-enhancement-bbee
     },
     {
       key: 'equipment',
@@ -60,19 +64,32 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
       key: 'about',
       href: '/about',
       icon: User,
+<<<<<<< HEAD
       matches: (path: string) => path === '/about'
+=======
+      matches: (path: string) => path.startsWith('/about')
+>>>>>>> origin/cursor/website-audit-and-enhancement-bbee
     },
     {
       key: 'contact',
       href: '/contact',
+<<<<<<< HEAD
       icon: MessageSquare,
       matches: (path: string) => path === '/contact'
+=======
+      icon: MessageCircle,
+      matches: (path: string) => path.startsWith('/contact')
+>>>>>>> origin/cursor/website-audit-and-enhancement-bbee
     },
     {
       key: 'faq',
       href: '/faq',
       icon: MessageCircle,
+<<<<<<< HEAD
       matches: (path: string) => path === '/faq'
+=======
+      matches: (path: string) => path.startsWith('/faq')
+>>>>>>> origin/cursor/website-audit-and-enhancement-bbee
     },
     {
       key: 'post_job',

@@ -137,6 +137,7 @@ import TermsOfService from "@/legal/TermsOfService";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-3805
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-1f4f
@@ -144,6 +145,8 @@ import TermsOfService from "@/legal/TermsOfService";
 >>>>>>> origin/cursor/website-audit-and-enhancement-a0eb
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-8717
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-bbee
       />
       
       <div className="min-h-screen bg-zion-blue-dark">

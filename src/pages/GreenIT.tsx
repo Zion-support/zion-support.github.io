@@ -589,11 +589,14 @@ export default function GreenIT() {
         canonical="https://ziontechgroup.com/marketplace/category/green-it"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-3805
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-a0eb
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-8717
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-bbee
       />
       <Header />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
