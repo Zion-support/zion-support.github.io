@@ -159,6 +159,7 @@ export function Footer() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <footer className="bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.05),transparent_50%)]"></div>
@@ -219,6 +220,24 @@ export function Footer() {
       {/* Animated Top Border */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60"></div>
       
+=======
+    <footer className="bg-zion-blue-dark border-t border-zion-blue-light pt-12 pb-8 relative overflow-hidden">
+      {/* Futuristic background elements */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zion-purple/5 to-zion-cyan/5"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/5 via-transparent to-zion-cyan/5"></div>
+      
+      {/* Animated border glow */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60"></div>
+      
+      {/* Floating elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-10 w-2 h-2 bg-zion-cyan rounded-full animate-pulse opacity-30"></div>
+        <div className="absolute top-32 right-20 w-1 h-1 bg-zion-purple rounded-full animate-pulse opacity-40 delay-1000"></div>
+        <div className="absolute bottom-20 left-1/3 w-1 h-1 bg-zion-cyan rounded-full animate-pulse opacity-50 delay-2000"></div>
+        <div className="absolute bottom-32 right-1/3 w-2 h-2 bg-zion-purple rounded-full animate-pulse opacity-30 delay-1500"></div>
+      </div>
+
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-eb69
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-73d5
@@ -381,7 +400,10 @@ export function Footer() {
 =======
               <li><Link to="/services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Services</Link></li>
               <li><Link to="/micro-saas-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Micro SAAS</Link></li>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-73d5
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-eb69
               <li><Link to="/talent" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Talent</Link></li>
               <li><Link to="/equipment" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Equipment</Link></li>
               <li><Link to="/categories" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Categories</Link></li>
@@ -464,6 +486,7 @@ export function Footer() {
         </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         {/* Bottom Footer */}
         <div className="border-t border-zion-blue-light pt-8">
 =======
@@ -499,6 +522,12 @@ export function Footer() {
           </div>
           
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4df9
+=======
+        <div className="mt-12 pt-8 border-t border-zion-blue-light relative">
+          {/* Animated border glow */}
+          <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-40"></div>
+          
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-eb69
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-center md:text-left mb-4 md:mb-0">
               <p className="text-zion-slate-light text-sm">

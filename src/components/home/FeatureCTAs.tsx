@@ -23,6 +23,7 @@ import {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   PenTool,
   Link as LinkIcon,
   Shield,
@@ -43,6 +44,9 @@ import {
   Shield,
   Cloud
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-936f
+=======
+  Sparkles
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-eb69
 } from "lucide-react";
 
 =======
@@ -257,6 +261,7 @@ export function FeatureCTAs() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     // New innovative micro SAAS services
     {
       title: "AI Content Generation",
@@ -365,6 +370,15 @@ export function FeatureCTAs() {
       badge: "Popular",
       details: "Modernize your infrastructure with cloud-native solutions, automated CI/CD pipelines, and cost optimization strategies."
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-936f
+=======
+    {
+      title: "Micro SAAS Services",
+      description: "Comprehensive suite of micro SAAS solutions for AI, IT, development, analytics, security, and automation.",
+      icon: <Sparkles className="h-10 w-10 p-2 rounded-md bg-gradient-to-r from-zion-purple to-zion-cyan text-white" />,
+      link: "/micro-saas-services",
+      badge: "New",
+      details: "Transform your business with our cutting-edge micro SAAS solutions designed to solve specific challenges and drive growth."
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-eb69
     }
   ];
 

@@ -697,6 +697,7 @@ export function Contact() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: Phone,
 <<<<<<< HEAD
       title: 'Phone',
@@ -769,11 +770,16 @@ export function Contact() {
       email: "kleber@ziontechgroup.com"
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-ae1c
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-eb69
       name: "Zion Tech Group Headquarters",
       address: "364 E Main St STE 1008, Middletown, DE 19709",
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-eb69
     }
   ];
 
@@ -4505,10 +4511,14 @@ const Contact = () => {
               <div className="mt-8 bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden">
                 <iframe 
 <<<<<<< HEAD
+<<<<<<< HEAD
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.678901234567!2d-75.7166667!3d39.4500000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c7c8c8c8c8c8c8%3A0x8c8c8c8c8c8c8c8c!2s364%20E%20Main%20St%2C%20Middletown%2C%20DE%2019709!5e0!3m2!1sen!2sus!4v1651234567890!5m2!1sen!2sus" 
 =======
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.678901234567!2d-75.7167!3d39.4496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c7a8b8b8b8b8b8%3A0x8b8b8b8b8b8b8b8b!2s364%20E%20Main%20St%2C%20Middletown%2C%20DE%2019709!5e0!3m2!1sen!2sus!4v1234567890!5m2!1sen!2sus" 
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
+=======
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.678901234567!2d-75.7167!3d39.4496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c7a8b8b8b8b8b8%3A0x8b8b8b8b8b8b8b8!2s364%20E%20Main%20St%2C%20Middletown%2C%20DE%2019709%2C%20USA!5e0!3m2!1sen!2sus!4v1651234567890!5m2!1sen!2sus" 
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-eb69
                   width="100%" 
                   height="300" 
                   style={{ border: 0 }} 
@@ -4516,10 +4526,14 @@ const Contact = () => {
                   loading="lazy" 
                   referrerPolicy="no-referrer-when-downgrade"
 <<<<<<< HEAD
+<<<<<<< HEAD
                   title="Zion Office Location - Middletown, DE"
 =======
                   title="Zion Tech Group Office Location"
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
+=======
+                  title="Zion Tech Group Office Location"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-eb69
                 ></iframe>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-ae1c
               </div>
@@ -5077,6 +5091,7 @@ export default Contact;
                   Request Free Quote
                 </Link>
               </Button>
+<<<<<<< HEAD
               <Button 
                 variant="outline" 
                 size="lg"
@@ -5097,6 +5112,18 @@ export default Contact;
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-ae1c
                 </a>
               </Button>
+=======
+                              <Button 
+                  variant="outline" 
+                  className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
+                  asChild
+                >
+                  <a href="mailto:kleber@ziontechgroup.com">
+                    <Mail className="mr-2 h-5 w-5" />
+                    Email Support
+                  </a>
+                </Button>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-eb69
             </div>
           </div>
         </section>
