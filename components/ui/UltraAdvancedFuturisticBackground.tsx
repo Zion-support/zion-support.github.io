@@ -18,7 +18,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
     if (!canvas) return;
 
     const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    if (!canvas || !ctx) return;
 
     let particles: Array<{
       x: number;
@@ -181,8 +181,6 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           ctx.stroke();
         }
       }
-
-      animationRef.current = requestAnimationFrame(animate);
     };
 
     resizeCanvas();
