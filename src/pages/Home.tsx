@@ -61,40 +61,40 @@ const Home: React.FC = () => {
 
   const featuredServices = [
     {
-      id: "ai-powered-crm",
-      title: "AI-Powered CRM",
-      description: "Intelligent customer relationship management with predictive analytics and automated insights",
-      price: "$1,500/month",
-      features: ["Predictive Analytics", "Automated Follow-ups", "Smart Lead Scoring", "Real-time Insights"],
+      id: "ai-content-seo-platform",
+      title: "AI Content & SEO Platform",
+      description: "Advanced AI-powered content creation platform that generates SEO-optimized content and analyzes competitors",
+      price: "$399/month",
+      features: ["AI Content Generation", "SEO Optimization", "Competitor Analysis", "Real-time Insights"],
       icon: Brain,
-      category: "AI & Machine Learning",
+      category: "AI & Content Marketing",
       rating: 4.9,
       reviewCount: 342,
-      path: "/services/ai-powered-crm"
+      path: "/services/innovative-services-showcase#ai-content"
     },
     {
-      id: "cybersecurity-platform",
-      title: "Cybersecurity Platform",
-      description: "Comprehensive threat detection and response system with AI-powered security intelligence",
-      price: "$1,800/month",
-      features: ["Threat Detection", "Incident Response", "Compliance Monitoring", "24/7 Protection"],
+      id: "blockchain-supply-chain",
+      title: "Blockchain Supply Chain Platform",
+      description: "Revolutionary blockchain-powered platform for end-to-end supply chain visibility and traceability",
+      price: "$599/month",
+      features: ["Real-time Tracking", "Blockchain Verification", "Smart Contracts", "Compliance Management"],
       icon: Shield,
-      category: "Cybersecurity",
+      category: "Blockchain & Supply Chain",
       rating: 4.8,
       reviewCount: 189,
-      path: "/services/cybersecurity-platform"
+      path: "/services/innovative-services-showcase#blockchain"
     },
     {
-      id: "cloud-optimization",
-      title: "Cloud Cost Optimization",
-      description: "AI-driven cloud cost management that reduces spending by 30-50% automatically",
-      price: "$350/month",
-      features: ["Cost Analysis", "Automated Optimization", "Resource Scheduling", "Budget Management"],
+      id: "quantum-cybersecurity",
+      title: "Quantum-Resistant Cybersecurity",
+      description: "Next-generation cybersecurity platform that protects against quantum computing threats",
+      price: "$799/month",
+      features: ["Post-quantum Cryptography", "AI Threat Detection", "Zero-trust Architecture", "Real-time Monitoring"],
       icon: Cpu,
-      category: "Cloud Computing",
+      category: "Cybersecurity",
       rating: 4.7,
       reviewCount: 234,
-      path: "/services/cloud-optimization"
+      path: "/services/innovative-services-showcase#quantum-security"
     }
   ];
 
@@ -381,6 +381,53 @@ const Home: React.FC = () => {
                   <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Innovative Services CTA Section */}
+      <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
+        <div className="max-w-6xl mx-auto text-center">
+          <div className="mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Discover Our Revolutionary Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              From AI-powered content generation to quantum-resistant cybersecurity, explore our cutting-edge micro SAAS solutions
+            </p>
+            <Link
+              to="/services/innovative-services-showcase"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:scale-105 transition-transform duration-300 hover:shadow-2xl hover:shadow-cyan-500/50"
+            >
+              Explore All Services
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center p-6 bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-gray-700/50">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Brain className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">AI-Powered Solutions</h3>
+              <p className="text-gray-300 text-sm">Intelligent automation and analytics that transform business operations</p>
+            </div>
+
+            <div className="text-center p-6 bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-gray-700/50">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Blockchain & Security</h3>
+              <p className="text-gray-300 text-sm">Transparent, secure, and future-proof technology solutions</p>
+            </div>
+
+            <div className="text-center p-6 bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-gray-700/50">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Rocket className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Emerging Technologies</h3>
+              <p className="text-gray-300 text-sm">Cutting-edge solutions that keep you ahead of the competition</p>
             </div>
           </div>
         </div>
