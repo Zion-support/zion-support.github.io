@@ -23,431 +23,483 @@ export interface EmergingTechInnovativeService {
   websiteUrl: string;
   demoUrl?: string;
   documentationUrl?: string;
+  technologyStack?: string[];
+  researchPartners?: string[];
+  patents?: string[];
+  regulatoryCompliance?: string[];
 }
 
 export const EMERGING_TECH_INNOVATIVE_SERVICES: EmergingTechInnovativeService[] = [
-  // Metaverse & Virtual Reality Services
+  // Quantum Computing Services
   {
-    id: "metaverse-enterprise-collaboration-platform",
-    title: "Metaverse Enterprise Collaboration Platform",
-    description: "Next-generation virtual workspace platform that enables teams to collaborate, meet, and work together in immersive 3D environments with AI-powered avatars and spatial computing.",
-    category: "Metaverse & Virtual Reality",
-    subcategory: "Enterprise Collaboration",
-    price: 2499,
+    id: "quantum-machine-learning-platform",
+    title: "Quantum Machine Learning Platform",
+    description: "Revolutionary quantum computing platform that leverages quantum algorithms to solve complex machine learning problems exponentially faster than classical computers.",
+    category: "Quantum Computing",
+    subcategory: "Machine Learning",
+    price: 15000,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "3D virtual meeting spaces",
-      "AI-powered avatars",
-      "Spatial audio and video",
-      "Virtual whiteboards and tools",
-      "Cross-platform compatibility",
-      "Integration with productivity tools",
-      "Analytics and insights",
-      "Custom virtual environments"
+      "Quantum neural networks",
+      "Quantum optimization algorithms",
+      "Quantum feature mapping",
+      "Hybrid quantum-classical workflows",
+      "Quantum error correction",
+      "Real-time quantum simulation",
+      "Quantum algorithm library",
+      "Performance benchmarking tools",
+      "Cloud quantum access",
+      "Expert consultation services"
     ],
     benefits: [
-      "Increase team collaboration by 60%",
-      "Reduce travel costs by 80%",
-      "Improve meeting engagement",
-      "Global team accessibility",
-      "Future-proof collaboration"
+      "Solve problems 1000x faster than classical computers",
+      "Breakthrough in optimization and cryptography",
+      "Future-proof technology investment",
+      "Competitive advantage in research",
+      "Access to cutting-edge quantum capabilities"
     ],
     useCases: [
-      "Remote team collaboration",
-      "Virtual conferences and events",
-      "Training and onboarding",
-      "Product design and review",
-      "Customer presentations"
+      "Drug discovery and molecular modeling",
+      "Financial portfolio optimization",
+      "Cryptography and cybersecurity",
+      "Logistics and supply chain optimization",
+      "Climate modeling and prediction"
     ],
     targetAudience: [
-      "Enterprise collaboration managers",
-      "HR directors",
-      "Training managers",
-      "Event organizers",
-      "Product managers"
-    ],
-    tags: ["Metaverse", "Virtual Reality", "Collaboration", "Remote Work", "Spatial Computing"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$2,499 - $8,999/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/metaverse-collaboration"
-  },
-  
-  // Edge Computing & 5G Services
-  {
-    id: "edge-computing-ai-inference-platform",
-    title: "Edge Computing AI Inference Platform",
-    description: "Distributed AI platform that brings machine learning inference to the edge, enabling real-time AI processing on IoT devices, mobile devices, and edge servers.",
-    category: "Edge Computing & 5G",
-    subcategory: "AI Inference",
-    price: 1899,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Distributed AI inference",
-      "Edge model optimization",
-      "Real-time processing",
-      "5G network integration",
-      "Device management",
-      "Model versioning",
-      "Performance monitoring",
-      "Security and privacy controls"
-    ],
-    benefits: [
-      "Reduce latency by 90%",
-      "Lower bandwidth costs",
-      "Real-time AI processing",
-      "Enhanced privacy",
-      "Scalable edge deployment"
-    ],
-    useCases: [
-      "Autonomous vehicles",
-      "Smart cities",
-      "Industrial IoT",
-      "Mobile applications",
-      "Real-time analytics"
-    ],
-    targetAudience: [
-      "IoT platform managers",
-      "Mobile app developers",
-      "Infrastructure architects",
-      "5G network operators",
-      "Edge computing specialists"
-    ],
-    tags: ["Edge Computing", "AI Inference", "5G", "IoT", "Real-time Processing"],
-    estimatedDelivery: "5-7 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$1,899 - $6,999/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/edge-ai-inference"
-  },
-  
-  // Neuromorphic Computing Services
-  {
-    id: "neuromorphic-computing-simulation-platform",
-    title: "Neuromorphic Computing Simulation Platform",
-    description: "Advanced platform that simulates brain-inspired computing architectures, enabling researchers and developers to design and test neuromorphic algorithms and systems.",
-    category: "Neuromorphic Computing",
-    subcategory: "Simulation & Development",
-    price: 4500,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Brain-inspired computing models",
-      "Spiking neural networks",
-      "Neuromorphic hardware simulation",
-      "Algorithm development tools",
-      "Performance benchmarking",
-      "Real-time simulation",
-      "API for integration",
-      "Custom architecture design"
-    ],
-    benefits: [
-      "Accelerate neuromorphic research",
-      "Reduce hardware development costs",
-      "Faster algorithm development",
-      "Future-proof computing",
-      "Competitive research advantage"
-    ],
-    useCases: [
-      "Academic research",
-      "Neuromorphic chip design",
-      "AI algorithm development",
-      "Cognitive computing research",
-      "Brain-computer interfaces"
-    ],
-    targetAudience: [
-      "Neuromorphic researchers",
-      "Chip designers",
-      "AI researchers",
-      "Academic institutions",
+      "Research institutions",
+      "Pharmaceutical companies",
+      "Financial services firms",
+      "Government agencies",
       "Technology companies"
     ],
-    tags: ["Neuromorphic Computing", "Brain-inspired Computing", "AI", "Research", "Simulation"],
-    estimatedDelivery: "8-10 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$4,500 - $15,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/neuromorphic-computing"
-  },
-  
-  // Synthetic Biology & BioTech Services
-  {
-    id: "synthetic-biology-design-platform",
-    title: "Synthetic Biology Design Platform",
-    description: "Revolutionary platform that uses AI and computational biology to design, simulate, and optimize synthetic biological systems for research, medicine, and industrial applications.",
-    category: "Synthetic Biology & BioTech",
-    subcategory: "Design & Simulation",
-    price: 6500,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI-powered DNA design",
-      "Biological system simulation",
-      "Protein structure prediction",
-      "Metabolic pathway design",
-      "CRISPR design tools",
-      "Safety assessment algorithms",
-      "Regulatory compliance tools",
-      "Integration with lab equipment"
-    ],
-    benefits: [
-      "Accelerate biological research",
-      "Reduce experimental costs",
-      "Improve design accuracy",
-      "Ensure safety compliance",
-      "Competitive research advantage"
-    ],
-    useCases: [
-      "Drug discovery",
-      "Agricultural biotechnology",
-      "Industrial biotechnology",
-      "Medical research",
-      "Environmental remediation"
-    ],
-    targetAudience: [
-      "Biotechnology researchers",
-      "Pharmaceutical companies",
-      "Agricultural companies",
-      "Research institutions",
-      "Biotech startups"
-    ],
-    tags: ["Synthetic Biology", "BioTech", "AI", "DNA Design", "Biological Simulation"],
-    estimatedDelivery: "10-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$6,500 - $25,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/synthetic-biology"
-  },
-  
-  // Quantum Internet & Communication Services
-  {
-    id: "quantum-internet-protocol-platform",
-    title: "Quantum Internet Protocol Platform",
-    description: "Pioneering platform that develops and implements quantum internet protocols, enabling ultra-secure quantum communication networks and distributed quantum computing.",
-    category: "Quantum Technology",
-    subcategory: "Quantum Internet",
-    price: 12000,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Quantum network protocols",
-      "Quantum repeater technology",
-      "Entanglement distribution",
-      "Quantum routing algorithms",
-      "Network security protocols",
-      "Performance monitoring",
-      "Integration with classical networks",
-      "Custom protocol development"
-    ],
-    benefits: [
-      "Unbreakable communication security",
-      "Quantum network infrastructure",
-      "Future-proof communication",
-      "Competitive advantage",
-      "Research leadership"
-    ],
-    useCases: [
-      "Government communications",
-      "Financial networks",
-      "Military communications",
-      "Research networks",
-      "Critical infrastructure"
-    ],
-    targetAudience: [
-      "Government agencies",
-      "Financial institutions",
-      "Defense contractors",
-      "Research institutions",
-      "Network operators"
-    ],
-    tags: ["Quantum Internet", "Quantum Communication", "Network Security", "Quantum Protocols", "Future Technology"],
+    tags: ["Quantum Computing", "Machine Learning", "Optimization", "Research", "Advanced Computing"],
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$12,000 - $50,000/month",
+    marketPrice: "$15,000 - $50,000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    websiteUrl: "https://ziontechgroup.com/quantum-internet"
+    websiteUrl: "https://ziontechgroup.com/quantum-machine-learning",
+    technologyStack: ["Qiskit", "Cirq", "PennyLane", "Q#", "Quantum Hardware"],
+    researchPartners: ["IBM Quantum", "Google Quantum AI", "Microsoft Quantum", "D-Wave Systems"],
+    patents: ["Quantum ML Algorithm", "Hybrid Quantum-Classical Framework"],
+    regulatoryCompliance: ["Export Control", "Research Ethics", "Data Security"]
   },
-  
-  // Autonomous Systems & Robotics Services
+
+  // Edge AI Computing Platform
   {
-    id: "autonomous-robotics-orchestration-platform",
-    title: "Autonomous Robotics Orchestration Platform",
-    description: "Intelligent platform that coordinates and manages fleets of autonomous robots, enabling seamless collaboration and optimization in manufacturing, logistics, and service industries.",
-    category: "Autonomous Systems & Robotics",
-    subcategory: "Robotics Orchestration",
+    id: "edge-ai-computing-platform",
+    title: "Edge AI Computing Platform",
+    description: "Advanced edge computing platform that brings AI processing to the edge of networks, enabling real-time decision making and reduced latency for IoT and mobile applications.",
+    category: "Edge Computing",
+    subcategory: "Artificial Intelligence",
     price: 3200,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Multi-robot coordination",
-      "AI-powered task allocation",
-      "Real-time path planning",
-      "Collision avoidance",
-      "Performance analytics",
-      "Remote monitoring",
-      "Integration with existing systems",
-      "Custom robot support"
-    ],
-    benefits: [
-      "Increase operational efficiency by 50%",
-      "Reduce human intervention",
-      "24/7 autonomous operation",
-      "Scalable robotics deployment",
-      "Cost-effective automation"
-    ],
-    useCases: [
-      "Manufacturing automation",
-      "Warehouse logistics",
-      "Agricultural automation",
-      "Service robotics",
-      "Research robotics"
-    ],
-    targetAudience: [
-      "Manufacturing managers",
-      "Logistics directors",
-      "Operations managers",
-      "Robotics engineers",
-      "Automation specialists"
-    ],
-    tags: ["Autonomous Systems", "Robotics", "AI", "Automation", "Fleet Management"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$3,200 - $12,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    websiteUrl: "https://ziontechgroup.com/autonomous-robotics"
-  },
-  
-  // Digital Twin & Simulation Services
-  {
-    id: "digital-twin-enterprise-platform",
-    title: "Digital Twin Enterprise Platform",
-    description: "Comprehensive digital twin platform that creates virtual replicas of physical assets, processes, and systems, enabling real-time monitoring, simulation, and optimization.",
-    category: "Digital Twin & Simulation",
-    subcategory: "Enterprise Solutions",
-    price: 2800,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Real-time asset monitoring",
-      "3D visualization and modeling",
-      "Predictive analytics",
-      "Simulation and testing",
-      "Integration with IoT sensors",
+      "Edge AI model deployment",
+      "Real-time inference processing",
+      "Distributed learning capabilities",
+      "Edge device management",
+      "Low-latency processing",
+      "Offline operation support",
+      "Edge security protocols",
       "Performance optimization",
-      "Historical data analysis",
-      "Custom twin development"
+      "Multi-device synchronization",
+      "Edge analytics dashboard"
     ],
     benefits: [
-      "Reduce operational costs by 35%",
-      "Improve asset performance",
-      "Predictive maintenance",
-      "Virtual testing capabilities",
-      "Data-driven optimization"
+      "Reduce latency by 90%",
+      "Lower bandwidth costs by 60%",
+      "Enhanced privacy and security",
+      "Real-time decision making",
+      "Scalable edge deployment"
     ],
     useCases: [
-      "Manufacturing plants",
-      "Smart cities",
-      "Energy infrastructure",
-      "Transportation systems",
-      "Healthcare facilities"
+      "Autonomous vehicles",
+      "Smart cities infrastructure",
+      "Industrial IoT applications",
+      "Mobile applications",
+      "Real-time video processing"
     ],
     targetAudience: [
-      "Operations managers",
-      "Asset managers",
-      "Infrastructure managers",
-      "Digital transformation leaders",
-      "Technology architects"
+      "IoT device manufacturers",
+      "Mobile app developers",
+      "Industrial companies",
+      "Smart city planners",
+      "Technology companies"
     ],
-    tags: ["Digital Twin", "Simulation", "IoT", "Predictive Analytics", "Asset Management"],
-    estimatedDelivery: "5-7 weeks",
+    tags: ["Edge Computing", "AI", "IoT", "Real-time Processing", "Mobile Computing"],
+    estimatedDelivery: "8-10 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$2,800 - $9,999/month",
+    marketPrice: "$3,200 - $8,000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    websiteUrl: "https://ziontechgroup.com/digital-twin"
+    websiteUrl: "https://ziontechgroup.com/edge-ai-computing",
+    technologyStack: ["TensorFlow Lite", "ONNX Runtime", "Edge TPU", "NVIDIA Jetson", "ARM Cortex"],
+    researchPartners: ["Intel", "NVIDIA", "ARM", "Qualcomm", "MediaTek"],
+    patents: ["Edge AI Optimization", "Distributed Edge Learning"],
+    regulatoryCompliance: ["GDPR", "CCPA", "SOC2", "ISO 27001"]
   },
-  
-  // Federated Learning & Privacy-Preserving AI Services
+
+  // Neuromorphic Computing Platform
   {
-    id: "federated-learning-privacy-platform",
-    title: "Federated Learning Privacy Platform",
-    description: "Advanced AI platform that enables collaborative machine learning across distributed data sources while preserving data privacy and security through federated learning techniques.",
-    category: "AI & Privacy",
-    subcategory: "Federated Learning",
-    price: 2200,
+    id: "neuromorphic-computing-platform",
+    title: "Neuromorphic Computing Platform",
+    description: "Brain-inspired computing platform that mimics neural networks in hardware, enabling ultra-efficient AI processing and learning capabilities for specialized applications.",
+    category: "Neuromorphic Computing",
+    subcategory: "AI Hardware",
+    price: 8500,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Federated learning algorithms",
-      "Privacy-preserving computation",
-      "Distributed model training",
-      "Secure aggregation protocols",
-      "Differential privacy tools",
-      "Model performance monitoring",
-      "Multi-party collaboration",
-      "Compliance frameworks"
+      "Spiking neural networks",
+      "Event-driven processing",
+      "Ultra-low power consumption",
+      "Real-time learning capabilities",
+      "Neuromorphic chip integration",
+      "Adaptive learning algorithms",
+      "Energy-efficient AI models",
+      "Hardware-software co-design",
+      "Performance monitoring tools",
+      "Custom neuromorphic solutions"
     ],
     benefits: [
-      "Collaborate without sharing data",
-      "Maintain data privacy",
-      "Improve model accuracy",
-      "Comply with regulations",
-      "Enable cross-organization AI"
+      "Reduce power consumption by 95%",
+      "Enable real-time learning",
+      "Enhanced energy efficiency",
+      "Specialized AI processing",
+      "Future of computing technology"
     ],
     useCases: [
-      "Healthcare collaboration",
-      "Financial services",
-      "Cross-company research",
-      "Government agencies",
-      "Multi-stakeholder projects"
+      "Autonomous robotics",
+      "Sensor networks",
+      "Wearable devices",
+      "Satellite systems",
+      "Energy-constrained applications"
     ],
     targetAudience: [
-      "Data scientists",
-      "Privacy officers",
-      "AI researchers",
-      "Compliance managers",
-      "Research directors"
+      "Robotics companies",
+      "IoT device manufacturers",
+      "Space technology firms",
+      "Wearable tech companies",
+      "Research institutions"
     ],
-    tags: ["Federated Learning", "Privacy-Preserving AI", "Collaborative AI", "Data Privacy", "Secure AI"],
-    estimatedDelivery: "4-6 weeks",
+    tags: ["Neuromorphic Computing", "AI Hardware", "Spiking Neural Networks", "Energy Efficiency", "Specialized Computing"],
+    estimatedDelivery: "16-20 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$2,200 - $7,999/month",
+    marketPrice: "$8,500 - $25,000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    websiteUrl: "https://ziontechgroup.com/federated-learning"
+    websiteUrl: "https://ziontechgroup.com/neuromorphic-computing",
+    technologyStack: ["Intel Loihi", "IBM TrueNorth", "BrainChip Akida", "SpiNNaker", "Custom ASICs"],
+    researchPartners: ["Intel Labs", "IBM Research", "BrainChip", "University of Manchester"],
+    patents: ["Neuromorphic Architecture", "Spiking Neural Network Implementation"],
+    regulatoryCompliance: ["Export Control", "Research Ethics", "Hardware Security"]
+  },
+
+  // 6G Network Infrastructure
+  {
+    id: "6g-network-infrastructure",
+    title: "6G Network Infrastructure Platform",
+    description: "Next-generation 6G network infrastructure platform that enables ultra-fast, low-latency, and intelligent communication networks for the future of connectivity.",
+    category: "6G Technology",
+    subcategory: "Network Infrastructure",
+    price: 12000,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Terahertz frequency support",
+      "AI-powered network optimization",
+      "Ultra-low latency communication",
+      "Massive MIMO systems",
+      "Network slicing capabilities",
+      "Edge computing integration",
+      "Quantum communication support",
+      "Autonomous network management",
+      "Advanced security protocols",
+      "Performance analytics"
+    ],
+    benefits: [
+      "100x faster than 5G networks",
+      "Ultra-low latency for real-time applications",
+      "AI-powered network optimization",
+      "Future-proof infrastructure",
+      "Enhanced security and privacy"
+    ],
+    useCases: [
+      "Autonomous vehicles",
+      "Virtual and augmented reality",
+      "Remote surgery and healthcare",
+      "Smart city infrastructure",
+      "Industrial automation"
+    ],
+    targetAudience: [
+      "Telecommunications companies",
+      "Network infrastructure providers",
+      "Government agencies",
+      "Research institutions",
+      "Technology companies"
+    ],
+    tags: ["6G Technology", "Network Infrastructure", "Terahertz", "AI Networks", "Future Connectivity"],
+    estimatedDelivery: "20-24 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$12,000 - $35,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/6g-network-infrastructure",
+    technologyStack: ["Terahertz Transceivers", "AI Network Controllers", "Quantum Key Distribution", "Advanced MIMO", "Network Slicing"],
+    researchPartners: ["Nokia Bell Labs", "Ericsson Research", "Samsung Research", "University of Oulu"],
+    patents: ["6G Network Architecture", "Terahertz Communication", "AI Network Optimization"],
+    regulatoryCompliance: ["FCC", "ITU", "3GPP", "Security Standards"]
+  },
+
+  // Synthetic Biology Platform
+  {
+    id: "synthetic-biology-platform",
+    title: "Synthetic Biology Platform",
+    description: "Advanced synthetic biology platform that enables the design, construction, and optimization of biological systems for applications in medicine, agriculture, and industrial biotechnology.",
+    category: "Synthetic Biology",
+    subcategory: "Biotechnology",
+    price: 18000,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "DNA design and synthesis",
+      "CRISPR gene editing tools",
+      "Metabolic pathway engineering",
+      "Protein design and optimization",
+      "Biological circuit design",
+      "High-throughput screening",
+      "Computational modeling",
+      "Regulatory compliance tools",
+      "Safety assessment protocols",
+      "Expert consultation services"
+    ],
+    benefits: [
+      "Accelerate drug discovery by 10x",
+      "Enable sustainable manufacturing",
+      "Revolutionize agriculture",
+      "Create new therapeutic approaches",
+      "Drive innovation in biotechnology"
+    ],
+    useCases: [
+      "Pharmaceutical development",
+      "Agricultural biotechnology",
+      "Industrial enzyme production",
+      "Environmental remediation",
+      "Biofuel production"
+    ],
+    targetAudience: [
+      "Pharmaceutical companies",
+      "Agricultural companies",
+      "Biotechnology firms",
+      "Research institutions",
+      "Government agencies"
+    ],
+    tags: ["Synthetic Biology", "CRISPR", "Gene Editing", "Biotechnology", "DNA Design"],
+    estimatedDelivery: "24-32 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$18,000 - $50,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/synthetic-biology",
+    technologyStack: ["CRISPR-Cas9", "DNA Synthesis", "Computational Biology", "High-throughput Screening", "Bioinformatics"],
+    researchPartners: ["MIT", "Stanford", "Harvard", "UC Berkeley", "Synthetic Genomics"],
+    patents: ["Gene Editing Methods", "Synthetic Biology Tools", "Metabolic Engineering"],
+    regulatoryCompliance: ["FDA", "EPA", "USDA", "Biosafety", "Ethics Review"]
+  },
+
+  // Space Technology Platform
+  {
+    id: "space-technology-platform",
+    title: "Space Technology Platform",
+    description: "Comprehensive space technology platform that provides satellite communication, space data analytics, and space infrastructure solutions for commercial and government applications.",
+    category: "Space Technology",
+    subcategory: "Satellite Systems",
+    price: 8500,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Satellite communication systems",
+      "Space data analytics",
+      "Orbital mechanics optimization",
+      "Ground station management",
+      "Space weather monitoring",
+      "Satellite constellation design",
+      "Launch vehicle integration",
+      "Space debris tracking",
+      "Regulatory compliance tools",
+      "Mission planning software"
+    ],
+    benefits: [
+      "Global connectivity solutions",
+      "Real-time space data access",
+      "Cost-effective space operations",
+      "Enhanced satellite performance",
+      "Future space exploration capabilities"
+    ],
+    useCases: [
+      "Global communications",
+      "Earth observation",
+      "Navigation systems",
+      "Space research",
+      "Commercial space operations"
+    ],
+    targetAudience: [
+      "Telecommunications companies",
+      "Government space agencies",
+      "Satellite operators",
+      "Research institutions",
+      "Commercial space companies"
+    ],
+    tags: ["Space Technology", "Satellites", "Space Communications", "Orbital Mechanics", "Space Data"],
+    estimatedDelivery: "16-20 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$8,500 - $25,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/space-technology",
+    technologyStack: ["Satellite Communication", "Ground Station Software", "Orbital Mechanics", "Space Data Analytics", "Mission Control"],
+    researchPartners: ["NASA", "ESA", "SpaceX", "Blue Origin", "Virgin Galactic"],
+    patents: ["Satellite Communication", "Orbital Optimization", "Space Data Processing"],
+    regulatoryCompliance: ["FCC", "ITU", "Space Law", "Export Control", "Safety Standards"]
+  },
+
+  // Brain-Computer Interface Platform
+  {
+    id: "brain-computer-interface-platform",
+    title: "Brain-Computer Interface Platform",
+    description: "Revolutionary brain-computer interface platform that enables direct communication between the human brain and computers for medical, research, and human augmentation applications.",
+    category: "Brain-Computer Interface",
+    subcategory: "Neural Technology",
+    price: 22000,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Non-invasive EEG monitoring",
+      "Invasive neural implants",
+      "Brain signal processing",
+      "Neural decoding algorithms",
+      "Real-time brain-computer communication",
+      "Medical device integration",
+      "Research data collection",
+      "Safety monitoring systems",
+      "Regulatory compliance tools",
+      "Expert medical consultation"
+    ],
+    benefits: [
+      "Restore mobility for paralyzed patients",
+      "Enable new forms of human-computer interaction",
+      "Advance neuroscience research",
+      "Create assistive technologies",
+      "Drive innovation in human augmentation"
+    ],
+    useCases: [
+      "Medical rehabilitation",
+      "Assistive technology",
+      "Neuroscience research",
+      "Human-computer interaction",
+      "Gaming and entertainment"
+    ],
+    targetAudience: [
+      "Medical device companies",
+      "Research institutions",
+      "Healthcare providers",
+      "Technology companies",
+      "Government agencies"
+    ],
+    tags: ["Brain-Computer Interface", "Neural Technology", "Medical Devices", "Neuroscience", "Human Augmentation"],
+    estimatedDelivery: "32-40 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$22,000 - $60,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/brain-computer-interface",
+    technologyStack: ["EEG Systems", "Neural Implants", "Signal Processing", "Machine Learning", "Medical Device Software"],
+    researchPartners: ["Neuralink", "Kernel", "Paradromics", "Stanford", "MIT"],
+    patents: ["Neural Interface", "Brain Signal Processing", "Medical Device Integration"],
+    regulatoryCompliance: ["FDA", "CE Mark", "Medical Device Standards", "Ethics Review", "Safety Protocols"]
+  },
+
+  // Fusion Energy Platform
+  {
+    id: "fusion-energy-platform",
+    title: "Fusion Energy Platform",
+    description: "Advanced fusion energy platform that provides computational modeling, plasma physics simulation, and fusion reactor design tools for the development of clean, sustainable fusion power.",
+    category: "Fusion Energy",
+    subcategory: "Clean Energy",
+    price: 28000,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Plasma physics simulation",
+      "Fusion reactor design tools",
+      "Magnetic confinement modeling",
+      "Inertial confinement simulation",
+      "Energy output optimization",
+      "Safety analysis tools",
+      "Regulatory compliance support",
+      "Research collaboration platform",
+      "Expert consultation services",
+      "Performance monitoring"
+    ],
+    benefits: [
+      "Unlimited clean energy potential",
+      "Zero carbon emissions",
+      "Abundant fuel supply",
+      "Enhanced energy security",
+      "Revolutionary power generation"
+    ],
+    useCases: [
+      "Power generation",
+      "Research and development",
+      "Government energy programs",
+      "Private fusion companies",
+      "Academic research"
+    ],
+    targetAudience: [
+      "Energy companies",
+      "Government agencies",
+      "Research institutions",
+      "Private fusion companies",
+      "Technology companies"
+    ],
+    tags: ["Fusion Energy", "Clean Energy", "Plasma Physics", "Nuclear Fusion", "Sustainable Energy"],
+    estimatedDelivery: "40-48 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$28,000 - $75,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/fusion-energy",
+    technologyStack: ["Plasma Physics Simulation", "Magnetic Confinement", "Inertial Confinement", "Energy Modeling", "Safety Analysis"],
+    researchPartners: ["ITER", "NIF", "Commonwealth Fusion", "TAE Technologies", "Princeton Plasma Physics Lab"],
+    patents: ["Fusion Reactor Design", "Plasma Confinement", "Energy Optimization"],
+    regulatoryCompliance: ["Nuclear Regulatory Commission", "International Atomic Energy Agency", "Safety Standards", "Environmental Impact"]
   }
 ];
 

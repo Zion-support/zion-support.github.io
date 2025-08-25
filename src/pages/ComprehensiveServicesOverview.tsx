@@ -3,20 +3,51 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { COMPREHENSIVE_SERVICES } from '../data/comprehensiveServices';
 import { INNOVATIVE_MICRO_SAAS_SERVICES } from '../data/innovativeMicroSaasServices';
+import { ENHANCED_INNOVATIVE_SERVICES } from '../data/enhancedInnovativeServices';
+import { EMERGING_TECH_INNOVATIVE_SERVICES } from '../data/emergingTechInnovativeServices';
+import { INDUSTRY_SPECIFIC_SERVICES } from '../data/industrySpecificServices';
 
 export function ComprehensiveServicesOverview() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
-  const [activeTab, setActiveTab] = useState<'comprehensive' | 'innovative'>('comprehensive');
+  const [activeTab, setActiveTab] = useState<'comprehensive' | 'innovative' | 'enhanced' | 'emerging' | 'industry'>('comprehensive');
 
   const allComprehensiveServices = [...COMPREHENSIVE_SERVICES];
   const allInnovativeServices = [...INNOVATIVE_MICRO_SAAS_SERVICES];
+  const allEnhancedServices = [...ENHANCED_INNOVATIVE_SERVICES];
+  const allEmergingTechServices = [...EMERGING_TECH_INNOVATIVE_SERVICES];
+  const allIndustrySpecificServices = [...INDUSTRY_SPECIFIC_SERVICES];
   
   const comprehensiveCategories = ['all', ...Array.from(new Set(allComprehensiveServices.map(service => service.category)))];
   const innovativeCategories = ['all', ...Array.from(new Set(allInnovativeServices.map(service => service.category)))];
+  const enhancedCategories = ['all', ...Array.from(new Set(allEnhancedServices.map(service => service.category)))];
+  const emergingTechCategories = ['all', ...Array.from(new Set(allEmergingTechServices.map(service => service.category)))];
+  const industryCategories = ['all', ...Array.from(new Set(allIndustrySpecificServices.map(service => service.category)))];
   
-  const currentCategories = activeTab === 'comprehensive' ? comprehensiveCategories : innovativeCategories;
-  const currentServices = activeTab === 'comprehensive' ? allComprehensiveServices : allInnovativeServices;
+  const getCurrentCategories = () => {
+    switch (activeTab) {
+      case 'comprehensive': return comprehensiveCategories;
+      case 'innovative': return innovativeCategories;
+      case 'enhanced': return enhancedCategories;
+      case 'emerging': return emergingTechCategories;
+      case 'industry': return industryCategories;
+      default: return comprehensiveCategories;
+    }
+  };
+  
+  const getCurrentServices = () => {
+    switch (activeTab) {
+      case 'comprehensive': return allComprehensiveServices;
+      case 'innovative': return allInnovativeServices;
+      case 'enhanced': return allEnhancedServices;
+      case 'emerging': return allEmergingTechServices;
+      case 'industry': return allIndustrySpecificServices;
+      default: return allComprehensiveServices;
+    }
+  };
+  
+  const currentCategories = getCurrentCategories();
+  const currentServices = getCurrentServices();
   
   const filteredServices = currentServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
@@ -86,7 +117,7 @@ export function ComprehensiveServicesOverview() {
           </p>
           
           {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6 mb-12">
             <div className="bg-zion-blue-light/20 backdrop-blur-sm rounded-lg p-6 border border-zion-cyan/30">
               <div className="text-3xl font-bold text-zion-cyan mb-2">{allComprehensiveServices.length}+</div>
               <div className="text-zion-slate-light">Core Services</div>
@@ -96,8 +127,16 @@ export function ComprehensiveServicesOverview() {
               <div className="text-zion-slate-light">Innovative Services</div>
             </div>
             <div className="bg-zion-blue-light/20 backdrop-blur-sm rounded-lg p-6 border border-zion-cyan/30">
-              <div className="text-3xl font-bold text-zion-cyan mb-2">{comprehensiveCategories.length - 1}</div>
-              <div className="text-zion-slate-light">Categories</div>
+              <div className="text-3xl font-bold text-zion-cyan mb-2">{allEnhancedServices.length}+</div>
+              <div className="text-zion-slate-light">Enhanced Services</div>
+            </div>
+            <div className="bg-zion-blue-light/20 backdrop-blur-sm rounded-lg p-6 border border-zion-cyan/30">
+              <div className="text-3xl font-bold text-zion-cyan mb-2">{allEmergingTechServices.length}+</div>
+              <div className="text-zion-slate-light">Emerging Tech</div>
+            </div>
+            <div className="bg-zion-blue-light/20 backdrop-blur-sm rounded-lg p-6 border border-zion-cyan/30">
+              <div className="text-3xl font-bold text-zion-cyan mb-2">{allIndustrySpecificServices.length}+</div>
+              <div className="text-zion-slate-light">Industry Specific</div>
             </div>
             <div className="bg-zion-blue-light/20 backdrop-blur-sm rounded-lg p-6 border border-zion-cyan/30">
               <div className="text-3xl font-bold text-zion-cyan mb-2">24/7</div>
@@ -107,26 +146,56 @@ export function ComprehensiveServicesOverview() {
 
           {/* Tab Navigation */}
           <div className="flex justify-center mb-8">
-            <div className="bg-zion-blue-light/20 backdrop-blur-sm rounded-lg p-1 border border-zion-cyan/30">
+            <div className="bg-zion-blue-light/20 backdrop-blur-sm rounded-lg p-1 border border-zion-cyan/30 flex flex-wrap">
               <button
                 onClick={() => setActiveTab('comprehensive')}
-                className={`px-6 py-3 rounded-md font-medium transition-all duration-200 ${
+                className={`px-4 py-3 rounded-md font-medium transition-all duration-200 text-sm ${
                   activeTab === 'comprehensive'
                     ? 'bg-zion-cyan text-zion-blue-dark shadow-lg'
                     : 'text-zion-slate-light hover:text-white'
                 }`}
               >
-                Core Services ({allComprehensiveServices.length})
+                Core ({allComprehensiveServices.length})
               </button>
               <button
                 onClick={() => setActiveTab('innovative')}
-                className={`px-6 py-3 rounded-md font-medium transition-all duration-200 ${
+                className={`px-4 py-3 rounded-md font-medium transition-all duration-200 text-sm ${
                   activeTab === 'innovative'
                     ? 'bg-zion-cyan text-zion-blue-dark shadow-lg'
                     : 'text-zion-slate-light hover:text-white'
                 }`}
               >
-                Innovative Services ({allInnovativeServices.length})
+                Innovative ({allInnovativeServices.length})
+              </button>
+              <button
+                onClick={() => setActiveTab('enhanced')}
+                className={`px-4 py-3 rounded-md font-medium transition-all duration-200 text-sm ${
+                  activeTab === 'enhanced'
+                    ? 'bg-zion-cyan text-zion-blue-dark shadow-lg'
+                    : 'text-zion-slate-light hover:text-white'
+                }`}
+              >
+                Enhanced ({allEnhancedServices.length})
+              </button>
+              <button
+                onClick={() => setActiveTab('emerging')}
+                className={`px-4 py-3 rounded-md font-medium transition-all duration-200 text-sm ${
+                  activeTab === 'emerging'
+                    ? 'bg-zion-cyan text-zion-blue-dark shadow-lg'
+                    : 'text-zion-slate-light hover:text-white'
+                }`}
+              >
+                Emerging Tech ({allEmergingTechServices.length})
+              </button>
+              <button
+                onClick={() => setActiveTab('industry')}
+                className={`px-4 py-3 rounded-md font-medium transition-all duration-200 text-sm ${
+                  activeTab === 'industry'
+                    ? 'bg-zion-cyan text-zion-blue-dark shadow-lg'
+                    : 'text-zion-slate-light hover:text-white'
+                }`}
+              >
+                Industry ({allIndustrySpecificServices.length})
               </button>
             </div>
           </div>
@@ -136,7 +205,7 @@ export function ComprehensiveServicesOverview() {
             <div className="relative">
               <input
                 type="text"
-                placeholder={`Search ${activeTab === 'comprehensive' ? 'core' : 'innovative'} services...`}
+                placeholder={`Search ${activeTab === 'comprehensive' ? 'core' : activeTab === 'innovative' ? 'innovative' : activeTab === 'enhanced' ? 'enhanced' : activeTab === 'emerging' ? 'emerging tech' : 'industry'} services...`}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full px-6 py-4 bg-zion-blue-light/20 border border-zion-cyan/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 backdrop-blur-sm"

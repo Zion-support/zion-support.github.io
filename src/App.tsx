@@ -45,6 +45,10 @@ const DigitalTransformation = lazy(() => import('./pages/DigitalTransformation')
 const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAutomation'));
 
+// Additional innovative services
+const IoTManagementPlatform = lazy(() => import('./pages/services/IoTManagementPlatform'));
+const BlockchainDeFiSolutions = lazy(() => import('./pages/services/BlockchainDeFiSolutions'));
+
 // New innovative service pages
 const AIWorkflowAutomation = lazy(() => import('./pages/services/AIWorkflowAutomation'));
 const BlockchainEnterpriseSolutions = lazy(() => import('./pages/services/BlockchainEnterpriseSolutions'));
@@ -60,6 +64,8 @@ const FiveGEnterpriseSolutions = lazy(() => import('./pages/5GEnterpriseSolution
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 const NewServices = lazy(() => import('./pages/NewServices'));
+
+// Additional missing pages
 
 // Company information pages
 const About = lazy(() => import('./pages/About'));
@@ -85,6 +91,8 @@ const SpecializedITInfrastructure = lazy(() => import('./pages/services/Speciali
 const InnovativeMicroSaasServices = lazy(() => import('./pages/InnovativeMicroSaasServices'));
 const ComprehensiveInnovativeServices = lazy(() => import('./pages/ComprehensiveInnovativeServices'));
 const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveServicesOverview'));
+const EnhancedServicesShowcase = lazy(() => import('./pages/EnhancedServicesShowcase'));
+const InnovativeServicesShowcase = lazy(() => import('./pages/InnovativeServicesShowcase'));
 
 // Solutions pages
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
@@ -158,7 +166,12 @@ const App: React.FC = () => {
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
-            <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+            <PerformanceOptimizer
+              enableMonitoring={true}
+              enableOptimizations={true}
+              showMetrics={import.meta.env.DEV}
+            >
+              <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
                 {/* Enhanced SEO */}
                 <EnhancedSEO 
                   seoData={{
@@ -184,6 +197,7 @@ const App: React.FC = () => {
                       <Route path="/services" element={<Services />} />
                       <Route path="/ai-solutions" element={<AISolutions />} />
                       <Route path="/services-showcase" element={<ServicesShowcase />} />
+                      <Route path="/innovative-services-showcase" element={<InnovativeServicesShowcase />} />
                       <Route path="/ai-matcher" element={<AIMatcherPage />} />
                       <Route path="/talent-directory" element={<TalentDirectory />} />
                       <Route path="/talents" element={<TalentsPage />} />
@@ -205,6 +219,14 @@ const App: React.FC = () => {
                       <Route path="/case-studies" element={<CaseStudies />} />
                       <Route path="/help" element={<HelpCenter />} />
                       <Route path="/new-services" element={<NewServices />} />
+                      
+                      {/* Additional missing pages */}
+                      <Route path="/ai-autonomous-business-manager" element={<AIAutonomousBusinessManager />} />
+                      <Route path="/ai-autonomous-business-platform" element={<AIAutonomousBusinessPlatform />} />
+                      <Route path="/ai-autonomous-research" element={<AIAutonomousResearch />} />
+                      <Route path="/ai-autonomous-systems-platform" element={<AIAutonomousSystemsPlatform />} />
+                      <Route path="/ai-autonomous-code-review" element={<AIAutonomousCodeReview />} />
+                      <Route path="/ai-autonomous-creative-director" element={<AIAutonomousCreativeDirector />} />
                       
                       {/* Company Routes */}
                       <Route path="/about" element={<About />} />
@@ -232,11 +254,18 @@ const App: React.FC = () => {
                       <Route path="/innovative-micro-saas-services" element={<InnovativeMicroSaasServices />} />
                       <Route path="/comprehensive-innovative-services" element={<ComprehensiveInnovativeServices />} />
                       <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview />} />
+                      <Route path="/enhanced-services-showcase" element={<EnhancedServicesShowcase />} />
+                      <Route path="/innovative-services-showcase" element={<InnovativeServicesShowcase />} />
                       
                       {/* New innovative service routes */}
                       <Route path="/ai-workflow-automation" element={<AIWorkflowAutomation />} />
                       <Route path="/blockchain-enterprise-solutions" element={<BlockchainEnterpriseSolutions />} />
                       <Route path="/iot-data-analytics" element={<IoTDataAnalytics />} />
+                      
+                      {/* Additional innovative service routes */}
+                      <Route path="/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                      <Route path="/iot-management-platform" element={<IoTManagementPlatform />} />
+                      <Route path="/blockchain-defi-solutions" element={<BlockchainDeFiSolutions />} />
                       
                       {/* Solutions Routes */}
                       <Route path="/services/enterprise" element={<EnterpriseSolutions />} />
@@ -317,9 +346,16 @@ const App: React.FC = () => {
                 
                 <Footer />
                 <SonnerToaster />
+              </div>
+            </PerformanceOptimizer>
                 
                 {/* Enhanced Accessibility Controls */}
-                <EnhancedAccessibility position="bottom-right" />
+                <EnhancedAccessibility 
+                  position="bottom-right" 
+                  showOnLoad={false}
+                  enableKeyboardShortcuts={true}
+                  enableVoiceCommands={import.meta.env.DEV}
+                />
                 
                 {/* Website Improvement Tools */}
                 <ContentQualityEnhancer />
