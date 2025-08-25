@@ -61,13 +61,7 @@ const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 const NewServices = lazy(() => import('./pages/NewServices'));
 
-// Additional missing pages
-const AIAutonomousBusinessManager = lazy(() => import('./pages/ai-autonomous-business-manager'));
-const AIAutonomousBusinessPlatform = lazy(() => import('./pages/ai-autonomous-business-platform'));
-const AIAutonomousResearch = lazy(() => import('./pages/ai-autonomous-research'));
-const AIAutonomousSystemsPlatform = lazy(() => import('./pages/ai-autonomous-systems-platform'));
-const AIAutonomousCodeReview = lazy(() => import('./pages/ai-autonomous-code-review'));
-const AIAutonomousCreativeDirector = lazy(() => import('./pages/ai-autonomous-creative-director'));
+// Additional missing pages - using service versions
 
 // Company information pages
 const About = lazy(() => import('./pages/About'));

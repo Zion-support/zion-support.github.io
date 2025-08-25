@@ -5,10 +5,36 @@ export function Footer() {
 
   const footerSections = [
     {
-      title: "AI & Micro SAAS",
+      title: "AI & Autonomous Systems",
       links: [
         { label: "AI & Autonomous Systems", path: "/services/ai-autonomous-systems" },
         { label: "AI Research Assistant", path: "/ai-autonomous-research-assistant" },
+        { label: "AI Autonomous Business Manager", path: "/ai-autonomous-business-manager" },
+        { label: "AI Autonomous Business Platform", path: "/ai-autonomous-business-platform" },
+        { label: "AI Autonomous Code Review", path: "/ai-autonomous-code-review" },
+        { label: "AI Autonomous Creative Director", path: "/ai-autonomous-creative-director" },
+        { label: "AI Autonomous Data", path: "/ai-autonomous-data" },
+        { label: "AI Autonomous Decision Engine", path: "/ai-autonomous-decision-engine" },
+        { label: "AI Autonomous DevOps", path: "/ai-autonomous-devops" },
+        { label: "AI Autonomous Education", path: "/ai-autonomous-education-professor" },
+        { label: "AI Autonomous Healthcare", path: "/ai-autonomous-healthcare-physician" },
+        { label: "AI Autonomous Learning", path: "/ai-autonomous-learning-system" },
+        { label: "AI Autonomous Legal", path: "/ai-autonomous-legal-counsel" },
+        { label: "AI Autonomous Logistics", path: "/ai-autonomous-logistics" },
+        { label: "AI Autonomous Manufacturing", path: "/ai-autonomous-manufacturing" },
+        { label: "AI Autonomous Robotics", path: "/ai-autonomous-robotics" },
+        { label: "AI Autonomous Security", path: "/ai-autonomous-security" },
+        { label: "AI Autonomous Testing", path: "/ai-autonomous-testing" },
+        { label: "AI Autonomous Vehicle Platform", path: "/ai-autonomous-vehicle-platform" },
+        { label: "AI Autonomous Vehicle", path: "/ai-autonomous-vehicle" },
+        { label: "AI Autonomous Vehicles Platform", path: "/ai-autonomous-vehicles-platform" },
+        { label: "AI Autonomous Vehicles", path: "/ai-autonomous-vehicles" },
+        { label: "AI Autonomous Venture Capitalist", path: "/ai-autonomous-venture-capitalist" }
+      ]
+    },
+    {
+      title: "Core Services",
+      links: [
         { label: "Quantum Neural Networks", path: "/quantum-neural-network-platform" },
         { label: "Autonomous Business Platform", path: "/autonomous-business-operations-platform" },
         { label: "AI Asset Management", path: "/ai-powered-it-asset-management" },
@@ -17,12 +43,10 @@ export function Footer() {
         { label: "Micro SAAS Solutions", path: "/services/micro-saas-solutions" },
         { label: "Cybersecurity", path: "/services/cybersecurity" },
         { label: "SOC2 Compliance Automation", path: "/soc2-compliance-automation" },
-        { label: "Industry Solutions", path: "/services/industry-solutions" },
-        { label: "AI & Machine Learning", path: "/services#ai-ml" },
-        { label: "Cloud & Infrastructure", path: "/services#cloud" },
         { label: "5G Enterprise Solutions", path: "/5g-enterprise-solutions" },
-        { label: "Blockchain Solutions", path: "/services#blockchain" },
-        { label: "IoT & Edge Computing", path: "/services#iot" }
+        { label: "Cloud DevOps", path: "/cloud-devops" },
+        { label: "Digital Transformation", path: "/digital-transformation" },
+        { label: "AI Business Intelligence", path: "/services/ai-business-intelligence" }
       ]
     },
     {

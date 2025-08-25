@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake } from 'lucide-react';
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, ShoppingCart, Code, DollarSign } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 interface SidebarProps {
@@ -23,22 +23,47 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         { name: 'Home', path: '/', icon: Home },
         { name: 'Services', path: '/services', icon: Briefcase },
         { name: 'Solutions', path: '/solutions/enterprise', icon: Briefcase },
+        { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
         { name: 'Pricing', path: '/pricing', icon: Briefcase },
         { name: 'About', path: '/about', icon: Users },
         { name: 'Contact', path: '/contact', icon: Phone }
       ]
     },
     {
-      title: 'Services',
+      title: 'AI & Autonomous Systems',
       items: [
         { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
         { name: 'AI Autonomous Systems Platform', path: '/ai-autonomous-systems-platform', icon: Briefcase },
         { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Briefcase },
         { name: 'AI Autonomous Research', path: '/ai-autonomous-research', icon: Briefcase },
-        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Briefcase },
-        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Briefcase },
         { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
         { name: 'AI Autonomous Business Platform', path: '/ai-autonomous-business-platform', icon: Briefcase },
+        { name: 'AI Autonomous Code Review', path: '/ai-autonomous-code-review', icon: Briefcase },
+        { name: 'AI Autonomous Creative Director', path: '/ai-autonomous-creative-director', icon: Briefcase },
+        { name: 'AI Autonomous Data', path: '/ai-autonomous-data', icon: Briefcase },
+        { name: 'AI Autonomous Decision Engine', path: '/ai-autonomous-decision-engine', icon: Briefcase },
+        { name: 'AI Autonomous DevOps', path: '/ai-autonomous-devops', icon: Briefcase },
+        { name: 'AI Autonomous Education', path: '/ai-autonomous-education-professor', icon: Briefcase },
+        { name: 'AI Autonomous Healthcare', path: '/ai-autonomous-healthcare-physician', icon: Briefcase },
+        { name: 'AI Autonomous Learning', path: '/ai-autonomous-learning-system', icon: Briefcase },
+        { name: 'AI Autonomous Legal', path: '/ai-autonomous-legal-counsel', icon: Briefcase },
+        { name: 'AI Autonomous Logistics', path: '/ai-autonomous-logistics', icon: Briefcase },
+        { name: 'AI Autonomous Manufacturing', path: '/ai-autonomous-manufacturing', icon: Briefcase },
+        { name: 'AI Autonomous Robotics', path: '/ai-autonomous-robotics', icon: Briefcase },
+        { name: 'AI Autonomous Security', path: '/ai-autonomous-security', icon: Briefcase },
+        { name: 'AI Autonomous Testing', path: '/ai-autonomous-testing', icon: Briefcase },
+        { name: 'AI Autonomous Vehicle Platform', path: '/ai-autonomous-vehicle-platform', icon: Briefcase },
+        { name: 'AI Autonomous Vehicle', path: '/ai-autonomous-vehicle', icon: Briefcase },
+        { name: 'AI Autonomous Vehicles Platform', path: '/ai-autonomous-vehicles-platform', icon: Briefcase },
+        { name: 'AI Autonomous Vehicles', path: '/ai-autonomous-vehicles', icon: Briefcase },
+        { name: 'AI Autonomous Venture Capitalist', path: '/ai-autonomous-venture-capitalist', icon: Briefcase }
+      ]
+    },
+    {
+      title: 'Core Services',
+      items: [
+        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Briefcase },
+        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Briefcase },
         { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Briefcase },
         { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
         { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Shield },
@@ -46,6 +71,9 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Briefcase },
         { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Briefcase },
         { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
+        { name: 'Cloud DevOps', path: '/cloud-devops', icon: Briefcase },
+        { name: 'Digital Transformation', path: '/digital-transformation', icon: Briefcase },
+        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Briefcase },
         { name: 'Emerging Technology', path: '/emerging-tech', icon: Globe }
       ]
     },
@@ -54,18 +82,36 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       items: [
         { name: 'About Us', path: '/about', icon: Users },
         { name: 'Our Team', path: '/team', icon: Users },
+        { name: 'Our Mission', path: '/mission', icon: Users },
+        { name: 'Leadership', path: '/leadership', icon: Users },
         { name: 'Partners', path: '/partners', icon: Handshake },
         { name: 'Case Studies', path: '/case-studies', icon: Globe },
-        { name: 'Help Center', path: '/help', icon: Globe }
+        { name: 'Careers', path: '/careers', icon: Users },
+        { name: 'News', path: '/news', icon: Globe },
+        { name: 'Blog', path: '/blog', icon: Globe }
       ]
     },
     {
-      title: 'Support',
+      title: 'Support & Resources',
       items: [
         { name: 'Help Center', path: '/help', icon: Users },
         { name: 'Documentation', path: '/docs', icon: Globe },
         { name: 'Contact Support', path: '/support', icon: Phone },
+        { name: 'FAQ', path: '/faq', icon: Users },
+        { name: 'Webinars', path: '/webinars', icon: Globe },
+        { name: 'White Papers', path: '/white-papers', icon: Globe },
+        { name: 'Testimonials', path: '/testimonials', icon: Users },
         { name: 'Status Page', path: '/status', icon: Globe }
+      ]
+    },
+    {
+      title: 'Additional Services',
+      items: [
+        { name: 'Marketplace', path: '/marketplace', icon: ShoppingCart },
+        { name: 'Community', path: '/community', icon: Users },
+        { name: 'Developer Portal', path: '/developer-portal', icon: Code },
+        { name: 'Request Quote', path: '/request-quote', icon: DollarSign },
+        { name: 'Pricing', path: '/pricing', icon: DollarSign }
       ]
     }
   ];

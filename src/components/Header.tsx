@@ -33,7 +33,12 @@ import {
   DollarSign,
   ShoppingCart,
   Heart,
-  Palette
+  Palette,
+  Leaf,
+  Truck,
+  TestTube,
+  CheckCircle,
+  Car
 } from 'lucide-react';
 
 export function Header() {
@@ -199,7 +204,65 @@ export function Header() {
         { name: 'Blockchain Solutions', path: '/services/blockchain-solutions', description: 'Decentralized applications', icon: Code },
         { name: 'IoT Platforms', path: '/services/iot-platforms', description: 'Connected device management', icon: Network },
         { name: 'Quantum Computing', path: '/services/quantum-computing', description: 'Next-generation computing', icon: Cpu },
-        { name: 'AR/VR Solutions', path: '/services/ar-vr-solutions', description: 'Immersive experiences', icon: Eye }
+        { name: 'AR/VR Solutions', path: '/services/ar-vr-solutions', description: 'Immersive experiences', icon: Eye },
+        { name: 'Space Technology', path: '/space-tech', description: 'Advanced space tech solutions', icon: Rocket },
+        { name: 'Green Technology', path: '/services/green-tech', description: 'Sustainable tech solutions', icon: Leaf }
+      ]
+    },
+    {
+      title: 'AI Autonomous Systems',
+      icon: Brain,
+      description: 'Advanced autonomous AI solutions',
+      color: 'from-indigo-500 to-purple-500',
+      services: [
+        { name: 'AI Autonomous Data', path: '/ai-autonomous-data', description: 'Intelligent data management', icon: Database },
+        { name: 'AI Autonomous Decision Engine', path: '/ai-autonomous-decision-engine', description: 'Smart decision making', icon: Brain },
+        { name: 'AI Autonomous Decision Platform', path: '/ai-autonomous-decision-platform', description: 'Decision automation platform', icon: Brain },
+        { name: 'AI Autonomous DevOps', path: '/ai-autonomous-devops', description: 'Automated development operations', icon: Code },
+        { name: 'AI Autonomous Education', path: '/ai-autonomous-education-professor', description: 'AI-powered education', icon: Users },
+        { name: 'AI Autonomous Healthcare', path: '/ai-autonomous-healthcare-physician', description: 'Medical AI solutions', icon: Heart },
+        { name: 'AI Autonomous Learning', path: '/ai-autonomous-learning-system', description: 'Intelligent learning systems', icon: Brain },
+        { name: 'AI Autonomous Legal', path: '/ai-autonomous-legal-counsel', description: 'Legal AI automation', icon: Shield },
+        { name: 'AI Autonomous Logistics', path: '/ai-autonomous-logistics', description: 'Smart logistics management', icon: Truck },
+        { name: 'AI Autonomous Manufacturing', path: '/ai-autonomous-manufacturing', description: 'Intelligent manufacturing', icon: Cpu },
+        { name: 'AI Autonomous Robotics', path: '/ai-autonomous-robotics', description: 'Advanced robotics systems', icon: Cpu },
+        { name: 'AI Autonomous Scientific Research', path: '/ai-autonomous-scientific-researcher', description: 'Research automation', icon: TestTube },
+        { name: 'AI Autonomous Security', path: '/ai-autonomous-security', description: 'Intelligent security systems', icon: Shield },
+        { name: 'AI Autonomous Testing', path: '/ai-autonomous-testing', description: 'Automated testing solutions', icon: CheckCircle },
+        { name: 'AI Autonomous Vehicle Platform', path: '/ai-autonomous-vehicle-platform', description: 'Vehicle automation platform', icon: Car },
+        { name: 'AI Autonomous Vehicle', path: '/ai-autonomous-vehicle', description: 'Autonomous vehicle systems', icon: Car },
+        { name: 'AI Autonomous Vehicles Platform', path: '/ai-autonomous-vehicles-platform', description: 'Multi-vehicle platform', icon: Car },
+        { name: 'AI Autonomous Vehicles', path: '/ai-autonomous-vehicles', description: 'Fleet automation', icon: Car },
+        { name: 'AI Autonomous Venture Capitalist', path: '/ai-autonomous-venture-capitalist', description: 'Investment AI', icon: DollarSign }
+      ]
+    },
+    {
+      title: 'AI Content & Creativity',
+      icon: Palette,
+      description: 'AI-powered content creation and creative solutions',
+      color: 'from-pink-500 to-rose-500',
+      services: [
+        { name: 'AI Content Generation Automation', path: '/ai-content-generation-automation', description: 'Automated content creation', icon: Palette },
+        { name: 'AI Content Generation Pro', path: '/ai-content-generation-pro', description: 'Professional content AI', icon: Palette },
+        { name: 'AI Consciousness Evolution', path: '/ai-consciousness-evolution', description: 'AI consciousness research', icon: Brain },
+        { name: 'AI Content Creation', path: '/ai-content-creation', description: 'Creative AI solutions', icon: Palette },
+        { name: 'AI Content Creation Revolution', path: '/ai-content-creation-revolution', description: 'Revolutionary content AI', icon: Palette },
+        { name: 'AI Content Factory', path: '/ai-content-factory', description: 'Content production AI', icon: Palette },
+        { name: 'AI Brand Personality Generator', path: '/ai-brand-personality-generator', description: 'Brand AI solutions', icon: Star }
+      ]
+    },
+    {
+      title: 'Advanced AI Intelligence',
+      icon: BarChart3,
+      description: 'Next-generation AI intelligence solutions',
+      color: 'from-cyan-500 to-blue-500',
+      services: [
+        { name: 'AI Business Intelligence Elite 2026', path: '/ai-business-intelligence-elite-2026', description: 'Elite BI solutions', icon: BarChart3 },
+        { name: 'AI Business Intelligence Pro', path: '/ai-business-intelligence-pro', description: 'Professional BI AI', icon: BarChart3 },
+        { name: 'AI Business Intelligence Suite 2029', path: '/ai-business-intelligence-suite-2029', description: 'Complete BI suite', icon: BarChart3 },
+        { name: 'AI Business Intelligence Suite', path: '/ai-business-intelligence-suite', description: 'Comprehensive BI platform', icon: BarChart3 },
+        { name: 'AI Predictive Analytics', path: '/services/ai-predictive-analytics', description: 'Future-focused analytics', icon: BarChart3 },
+        { name: 'AI Customer Intelligence', path: '/services/ai-customer-intelligence', description: 'Customer insights AI', icon: Users }
       ]
     },
     {
@@ -212,6 +275,30 @@ export function Header() {
         { name: 'Financial Services', path: '/services/financial-services', description: 'Fintech solutions', icon: DollarSign },
         { name: 'Manufacturing Intelligence', path: '/services/manufacturing-intelligence', description: 'Smart manufacturing', icon: Cpu },
         { name: 'Retail Technology', path: '/services/retail-technology', description: 'Digital retail transformation', icon: ShoppingCart }
+      ]
+    },
+    {
+      title: 'Specialized AI Services',
+      icon: Cpu,
+      description: 'Advanced AI applications for specific domains',
+      color: 'from-emerald-500 to-teal-500',
+      services: [
+        { name: 'AI Biomedical Research', path: '/ai-biomedical-research', description: 'Medical research AI', icon: TestTube },
+        { name: 'AI Biotech Drug Discovery', path: '/ai-biotech-drug-discovery', description: 'Drug discovery AI', icon: TestTube },
+        { name: 'AI Blockchain Analytics', path: '/ai-blockchain-analytics', description: 'Blockchain AI analysis', icon: Code },
+        { name: 'AI Blockchain Governance', path: '/ai-blockchain-governance', description: 'Blockchain governance AI', icon: Shield },
+        { name: 'AI Brain Computer Interface', path: '/ai-brain-computer-interface', description: 'BCI AI solutions', icon: Brain },
+        { name: 'AI Brain Interface', path: '/ai-brain-interface', description: 'Brain interface AI', icon: Brain },
+        { name: 'AI Climate Prediction', path: '/ai-climate-prediction', description: 'Climate AI modeling', icon: Cloud },
+        { name: 'AI Climate Prediction Engine', path: '/ai-climate-prediction-engine', description: 'Climate prediction AI', icon: Cloud },
+        { name: 'AI Climate Prediction Platform', path: '/ai-climate-prediction-platform', description: 'Climate platform AI', icon: Cloud },
+        { name: 'AI Code Generation Enterprise', path: '/ai-code-generation-enterprise', description: 'Enterprise code AI', icon: Code },
+        { name: 'AI Compliance Automation', path: '/ai-compliance-automation', description: 'Compliance AI automation', icon: Shield },
+        { name: 'AI Computer Vision Platform', path: '/ai-computer-vision-platform', description: 'Computer vision AI', icon: Eye },
+        { name: 'AI Consciousness Evolution Platform', path: '/ai-consciousness-evolution-platform', description: 'Consciousness platform', icon: Brain },
+        { name: 'AI Consciousness Simulation', path: '/ai-consciousness-simulation', description: 'Consciousness simulation', icon: Brain },
+        { name: 'AI Consciousness Simulation Platform', path: '/ai-consciousness-simulation-platform', description: 'Simulation platform', icon: Brain },
+        { name: 'AI Consciousness Simulator', path: '/ai-consciousness-simulator', description: 'Consciousness simulator', icon: Brain }
       ]
     }
   ];
