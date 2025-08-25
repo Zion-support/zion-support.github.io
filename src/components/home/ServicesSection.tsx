@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, Shield, Cpu, Rocket, Users, TrendingUp } from 'lucide-react';
+import { ArrowRight, Brain, Shield, Cpu, Rocket, Users, TrendingUp, Zap, Target, Sparkles } from 'lucide-react';
 
 const services = [
   {
@@ -50,6 +50,30 @@ const services = [
     features: ["Data Warehousing", "Real-time Dashboards", "Predictive Modeling", "KPI Tracking"],
     path: "/services/business-intelligence",
     color: "from-yellow-500 to-orange-600"
+  },
+  {
+    icon: Zap,
+    title: "Emerging Technologies",
+    description: "Cutting-edge solutions in quantum computing, edge AI, and neuromorphic computing",
+    features: ["Quantum Computing", "Edge AI", "Neuromorphic Computing", "6G Networks"],
+    path: "/emerging-tech",
+    color: "from-violet-500 to-purple-600"
+  },
+  {
+    icon: Target,
+    title: "Industry Solutions",
+    description: "Specialized AI solutions for healthcare, finance, manufacturing, and retail industries",
+    features: ["Healthcare AI", "Financial Technology", "Smart Manufacturing", "Retail Intelligence"],
+    path: "/comprehensive-services-overview",
+    color: "from-emerald-500 to-teal-600"
+  },
+  {
+    icon: Sparkles,
+    title: "Micro-SaaS Services",
+    description: "Scalable software-as-a-service solutions for growing businesses",
+    features: ["Custom Development", "API Integration", "User Management", "Analytics Dashboard"],
+    path: "/services/micro-saas-solutions",
+    color: "from-amber-500 to-orange-600"
   }
 ];
 
@@ -66,7 +90,7 @@ export default function ServicesSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div
               key={service.title}
