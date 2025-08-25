@@ -108,6 +108,9 @@ const Docs = lazy(() => import('./pages/HelpCenter'));
 const Marketplace = lazy(() => import('./pages/Marketplace'));
 const Community = lazy(() => import('./pages/CommunityPage'));
 
+// New comprehensive innovative services 2025
+const ComprehensiveInnovativeServices2025 = lazy(() => import('./pages/ComprehensiveInnovativeServices2025'));
+
 // AI Autonomous Service pages
 const AIAutonomousBusinessManager = lazy(() => import('./pages/services/AIAutonomousBusinessManager'));
 const AIAutonomousBusinessPlatform = lazy(() => import('./pages/services/AIAutonomousBusinessPlatform'));
@@ -280,6 +283,10 @@ const App: React.FC = () => {
                       <Route path="/docs" element={<Docs />} />
                       <Route path="/marketplace" element={<Marketplace />} />
                       <Route path="/community" element={<Community />} />
+                      
+                      {/* New comprehensive innovative services 2025 */}
+                      <Route path="/innovative-services-2025" element={<ComprehensiveInnovativeServices2025 />} />
+                      <Route path="/comprehensive-innovative-services-2025" element={<ComprehensiveInnovativeServices2025 />} />
                       
                       {/* AI Autonomous Service routes */}
                       <Route path="/ai-autonomous-business-manager" element={<AIAutonomousBusinessManager />} />

@@ -88,16 +88,16 @@ const Home: React.FC = () => {
 
   const featuredServices = [
     {
-      title: "AI Content Hub Pro",
-      description: "Enterprise-grade AI content creation platform for multi-platform content generation and optimization.",
+      title: "AI Business Intelligence Enterprise Suite 2025",
+      description: "Next-generation AI-powered business intelligence platform with real-time insights and predictive analytics.",
       icon: Brain,
-      path: "/services/ai-content-hub-pro",
-      category: "AI & Content Creation",
-      price: "$2,999/mo",
+      path: "/innovative-services-2025",
+      category: "AI & Business Intelligence",
+      price: "$4,999/mo",
       rating: 4.9,
       reviewCount: 156,
-      highlights: ["Multi-language Generation", "SEO Optimization", "Cross-platform Distribution"],
-      features: ["GPT-4 Integration", "Real-time Analytics", "Brand Voice Consistency", "24/7 Support"]
+      highlights: ["Real-time Analytics", "Predictive Modeling", "AI-powered Insights"],
+      features: ["GPT-4 Integration", "Advanced ML", "Enterprise Security", "24/7 Support"]
     },
     {
       title: "AI Customer Service Automation",
