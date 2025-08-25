@@ -79,6 +79,15 @@ const Home: React.FC = () => {
       features: ["Machine Learning", "Predictive Analytics", "Process Automation", "Real-time Insights"]
     },
     {
+      title: "Advanced Innovative Services",
+      subtitle: "Cutting-edge technology solutions for the future",
+      description: "Discover revolutionary services combining AI, quantum computing, and specialized IT solutions that will transform your business and give you a competitive advantage.",
+      image: "/images/hero-innovative-services.jpg",
+      cta: "Explore Advanced Services",
+      path: "/advanced-innovative-services",
+      features: ["Quantum Computing", "AI Innovation", "Specialized IT", "Future Technology"]
+    },
+    {
       title: "Comprehensive IT Services",
       subtitle: "End-to-end technology solutions for modern businesses",
       description: "From infrastructure management to digital transformation, we provide the expertise you need to succeed in today's competitive landscape.",
@@ -535,6 +544,93 @@ const Home: React.FC = () => {
               className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"
             >
               Explore Services
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Advanced Innovative Services Section */}
+      <section className="py-20 bg-gradient-to-b from-gray-900/50 to-black/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Advanced Innovative Services
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Discover cutting-edge technology solutions that combine AI, quantum computing, and specialized IT services 
+              to transform your business operations and drive innovation across all industries.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {/* AI Financial Advisory */}
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <div className="p-3 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg mr-4">
+                  <Brain className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white">AI Financial Advisory</h3>
+              </div>
+              <p className="text-gray-400 mb-4">
+                Intelligent financial advisory platform with AI-powered portfolio optimization and risk management.
+              </p>
+              <div className="text-2xl font-bold text-cyan-400 mb-4">$2,999/month</div>
+              <Link
+                to="/advanced-innovative-services"
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
+              >
+                Learn More <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </div>
+
+            {/* Quantum-Safe Cybersecurity */}
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <div className="p-3 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg mr-4">
+                  <Shield className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white">Quantum-Safe Security</h3>
+              </div>
+              <p className="text-gray-400 mb-4">
+                Next-generation cybersecurity with post-quantum cryptography for future-proof protection.
+              </p>
+              <div className="text-2xl font-bold text-cyan-400 mb-4">$4,500/month</div>
+              <Link
+                to="/advanced-innovative-services"
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
+              >
+                Learn More <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </div>
+
+            {/* Edge Computing Infrastructure */}
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <div className="p-3 bg-gradient-to-r from-gray-500 to-blue-600 rounded-lg mr-4">
+                  <Cpu className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white">Edge Computing</h3>
+              </div>
+              <p className="text-gray-400 mb-4">
+                Distributed edge computing platform for IoT and real-time applications with low latency.
+              </p>
+              <div className="text-2xl font-bold text-cyan-400 mb-4">$3,200/month</div>
+              <Link
+                to="/advanced-innovative-services"
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
+              >
+                Learn More <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Link
+              to="/advanced-innovative-services"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+            >
+              View All Advanced Services
+              <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
           </div>
         </div>
