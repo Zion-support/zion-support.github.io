@@ -170,7 +170,7 @@ export function FeatureHighlights() {
               </Card>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Call to action */}
         <motion.div 

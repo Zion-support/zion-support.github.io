@@ -1,41 +1,3 @@
-<<<<<<< HEAD
-import { useState } from 'react'
-
-interface Toast {
-  id: string
-  title?: string
-  description?: string
-  variant?: 'default' | 'destructive' | 'success'
-}
-
-export function useToast() {
-  const [toasts, setToasts] = useState<Toast[]>([])
-
-  const toast = ({ title, description, variant = 'default' }: Omit<Toast, 'id'>) => {
-    const id = Math.random().toString(36).substr(2, 9)
-    const newToast: Toast = { id, title, description, variant }
-    
-    setToasts(prev => [...prev, newToast])
-    
-    // Auto remove after 5 seconds
-    setTimeout(() => {
-      setToasts(prev => prev.filter(toast => toast.id !== id))
-    }, 5000)
-    
-    return id
-  }
-
-  const dismiss = (id: string) => {
-    setToasts(prev => prev.filter(toast => toast.id !== id))
-  }
-
-  return {
-    toasts,
-    toast,
-    dismiss
-  }
-}
-=======
 import * as React from "react"
 
 import type {
@@ -151,7 +113,7 @@ export const reducer = (state: State, action: Action): State => {
       }
     }
     case "REMOVE_TOAST":
-      if (action.toastId === undefined) {
+      if (toastId === undefined) {
         return {
           ...state,
           toasts: [],
@@ -159,7 +121,7 @@ export const reducer = (state: State, action: Action): State => {
       }
       return {
         ...state,
-        toasts: state.toasts.filter((t) => t.id !== action.toastId),
+        toasts: state.toasts.filter((t) => t.id !== toastId),
       }
   }
 }
@@ -227,4 +189,3 @@ function useToast() {
 }
 
 export { useToast, toast }
->>>>>>> cursor/integrate-build-improve-and-re-verify-a776

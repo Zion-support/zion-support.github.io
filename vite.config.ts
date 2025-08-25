@@ -2,11 +2,13 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
 import { visualizer } from 'rollup-plugin-visualizer'
+import { splitVendorChunkPlugin } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig(async () => ({
   plugins: [
     react(),
+    splitVendorChunkPlugin(),
     visualizer({
       filename: 'dist/stats.html',
       open: false,
@@ -27,97 +29,92 @@ export default defineConfig(async () => ({
     },
   },
   build: {
-    target: 'es2015',
+    target: 'es2020',
     minify: 'terser',
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        pure_funcs: ['console.log', 'console.info'],
+        dead_code: true,
+        unused: true,
+      },
+      mangle: {
+        safari10: true,
+      },
+      output: {
+        comments: false,
       },
     },
     rollupOptions: {
       output: {
-        manualChunks: (id) => {
+        manualChunks: {
           // Core React libraries
-          if (id.includes('react') || id.includes('react-dom') || id.includes('react-router-dom')) {
-            return 'react-vendor';
-          }
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
           
           // UI Component libraries
-          if (id.includes('@radix-ui')) {
-            return 'ui-vendor';
-          }
+          'ui-vendor': [
+            '@radix-ui/react-accordion',
+            '@radix-ui/react-alert-dialog',
+            '@radix-ui/react-aspect-ratio',
+            '@radix-ui/react-avatar',
+            '@radix-ui/react-checkbox',
+            '@radix-ui/react-context-menu',
+            '@radix-ui/react-dialog',
+            '@radix-ui/react-dropdown-menu',
+            '@radix-ui/react-label',
+            '@radix-ui/react-popover',
+            '@radix-ui/react-progress',
+            '@radix-ui/react-radio-group',
+            '@radix-ui/react-scroll-area',
+            '@radix-ui/react-select',
+            '@radix-ui/react-separator',
+            '@radix-ui/react-slider',
+            '@radix-ui/react-slot',
+            '@radix-ui/react-switch',
+            '@radix-ui/react-tabs',
+            '@radix-ui/react-toast',
+            '@radix-ui/react-tooltip',
+          ],
           
           // Animation and motion libraries
-          if (id.includes('framer-motion') || id.includes('embla-carousel-react')) {
-            return 'animation-vendor';
-          }
+          'animation-vendor': ['framer-motion', 'embla-carousel-react'],
           
           // Form and validation libraries
-          if (id.includes('react-hook-form') || id.includes('@hookform/resolvers') || id.includes('zod')) {
-            return 'form-vendor';
-          }
+          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
           
           // State management
-          if (id.includes('@reduxjs/toolkit') || id.includes('react-redux')) {
-            return 'state-vendor';
-          }
+          'state-vendor': ['@reduxjs/toolkit', 'react-redux'],
           
           // Data visualization and charts
-          if (id.includes('recharts')) {
-            return 'chart-vendor';
-          }
+          'chart-vendor': ['recharts'],
           
           // Drag and drop
-          if (id.includes('@hello-pangea/dnd')) {
-            return 'dnd-vendor';
-          }
+          'dnd-vendor': ['@hello-pangea/dnd'],
           
           // Internationalization
-          if (id.includes('i18next') || id.includes('react-i18next')) {
-            return 'i18n-vendor';
-          }
+          'i18n-vendor': ['i18next', 'i18next-browser-languagedetector', 'react-i18next'],
           
           // Input components
-          if (id.includes('input-otp') || id.includes('react-day-picker') || id.includes('date-fns')) {
-            return 'input-vendor';
-          }
+          'input-vendor': ['input-otp', 'react-day-picker', 'date-fns'],
           
           // Utility libraries
-          if (id.includes('axios') || id.includes('clsx') || id.includes('tailwind-merge') || id.includes('class-variance-authority') || id.includes('cmdk')) {
-            return 'utility-vendor';
-          }
+          'utility-vendor': ['axios', 'clsx', 'tailwind-merge', 'class-variance-authority', 'cmdk'],
           
           // Icon libraries
-          if (id.includes('lucide-react') || id.includes('react-icons')) {
-            return 'icon-vendor';
-          }
+          'icon-vendor': ['lucide-react', 'react-icons'],
           
           // PDF and document generation
-          if (id.includes('jspdf')) {
-            return 'pdf-vendor';
-          }
+          'pdf-vendor': ['jspdf', 'jspdf-autotable'],
           
           // Payment processing
-          if (id.includes('@stripe/stripe-js')) {
-            return 'stripe-vendor';
-          }
+          'stripe-vendor': ['@stripe/stripe-js'],
           
           // Database and backend
-          if (id.includes('@supabase/supabase-js')) {
-            return 'supabase-vendor';
-          }
+          'supabase-vendor': ['@supabase/supabase-js'],
           
           // Query management
-          if (id.includes('@tanstack/react-query')) {
-            return 'query-vendor';
-          }
-          
-          // Default vendor chunk for other dependencies
-          if (id.includes('node_modules')) {
-            return 'vendor';
-          }
+          'query-vendor': ['@tanstack/react-query'],
         },
         chunkFileNames: (chunkInfo) => {
           const facadeModuleId = chunkInfo.facadeModuleId ? chunkInfo.facadeModuleId.split('/').pop() : 'chunk';
@@ -136,14 +133,11 @@ export default defineConfig(async () => ({
         },
       },
     },
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 500,
     sourcemap: false,
-    // Enable CSS code splitting
+    reportCompressedSize: false,
     cssCodeSplit: true,
-    // Optimize dependencies
-    commonjsOptions: {
-      include: [/node_modules/],
-    },
+    assetsInlineLimit: 4096,
   },
   optimizeDeps: {
     include: [
@@ -199,8 +193,6 @@ export default defineConfig(async () => ({
       '@supabase/supabase-js',
       '@tanstack/react-query',
     ],
-    // Exclude problematic packages from optimization
-    exclude: ['@cypress/request'],
   },
   server: {
     port: 3000,
