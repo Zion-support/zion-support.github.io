@@ -45,9 +45,25 @@ const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
 const ContactPage = React.lazy(() => import('./pages/Contact'));
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
+<<<<<<< HEAD
+const AboutPage = React.lazy(() => import('./pages/About'));
+
+// New service pages
+const QuantumEdgeComputingPlatform = React.lazy(() => import('./pages/QuantumEdgeComputingPlatform'));
+const AIAutonomousLegalResearchAssistant = React.lazy(() => import('./pages/AIAutonomousLegalResearchAssistant'));
+const ZeroTrustNetworkArchitecture = React.lazy(() => import('./pages/ZeroTrustNetworkArchitecture'));
+
+// Additional missing pages
+const CareersPage = React.lazy(() => import('./pages/Careers'));
+const PrivacyPage = React.lazy(() => import('./pages/Privacy'));
+const TermsPage = React.lazy(() => import('./pages/Terms'));
+const SupportPage = React.lazy(() => import('./pages/Support'));
+const GetStartedPage = React.lazy(() => import('./pages/GetStarted'));
+=======
 const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServicesPage'));
 const ServicesOverviewPage = React.lazy(() => import('./pages/ServicesOverviewPage'));
 const AIServicesShowcase = React.lazy(() => import('./pages/AIServicesShowcase'));
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-ae1c
 
 const baseRoutes = [
   { path: '/', element: <Home /> },

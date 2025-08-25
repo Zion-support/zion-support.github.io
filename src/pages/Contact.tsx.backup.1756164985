@@ -48,10 +48,39 @@ const Contact = () => {
 
   const contactMethods = [
     {
+<<<<<<< HEAD
+      icon: Phone,
+      title: "Call Us",
+      details: "+1 302 464 0950",
+      description: "Speak with our technology experts",
+      color: "from-cyan-500 to-blue-500"
+    },
+    {
+      icon: Mail,
+      title: "Email Us",
+      details: "kleber@ziontechgroup.com",
+      description: "Send us a detailed message",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      icon: MapPin,
+      title: "Visit Us",
+      details: "364 E Main St STE 1008<br>Middletown DE 19709",
+      description: "Our headquarters location",
+      color: "from-green-500 to-teal-500"
+    },
+    {
+      icon: Clock,
+      title: "Business Hours",
+      details: "Mon - Fri: 9:00 AM - 6:00 PM<br>Sat: 10:00 AM - 4:00 PM",
+      description: "Eastern Time Zone",
+      color: "from-orange-500 to-red-500"
+=======
       name: "Headquarters",
       address: "364 E Main St STE 1008, Middletown DE 19709",
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-ae1c
     }
   ];
 
@@ -170,6 +199,38 @@ const Contact = () => {
                   />
                 </div>
               </div>
+<<<<<<< HEAD
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                    Company
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    placeholder="Enter your company name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    placeholder="Enter your phone number"
+                  />
+                </div>
+=======
               
               <div className="mt-8 bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden">
                 <iframe 
@@ -182,6 +243,7 @@ const Contact = () => {
                   referrerPolicy="no-referrer-when-downgrade"
                   title="Zion Office Location - Middletown, DE"
                 ></iframe>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-ae1c
               </div>
 
               <div className="mb-6">
@@ -269,6 +331,24 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
+              <div className="bg-gray-700/50 rounded-lg p-6 text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="w-8 h-8 text-white" />
+                </div>
+                <h4 className="text-lg font-semibold text-white mb-2">Get Directions</h4>
+                <p className="text-gray-400 text-sm mb-4">
+                  Our office is easily accessible from major highways and public transportation
+                </p>
+                <a 
+                  href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+                >
+                  <span>Open in Google Maps</span>
+                  <ArrowRight className="w-4 h-4" />
+=======
             </div>
           </div>
           
@@ -293,6 +373,7 @@ const Contact = () => {
                 <a href="mailto:kleber@ziontechgroup.com">
                   <Mail className="mr-2 h-5 w-5" />
                   Email Support
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-ae1c
                 </a>
               </div>
             </div>
