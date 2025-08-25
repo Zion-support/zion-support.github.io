@@ -12,16 +12,27 @@ import { Link } from "react-router-dom";
             <div className="mb-6">
               <span className="text-3xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">ZION</span>
             </div>
+<<<<<<< HEAD
+            <p className="text-zion-slate-light mb-6 max-w-md text-lg">
+              The world's first free marketplace dedicated to high-tech and artificial intelligence.
+=======
             <p className="text-zion-slate-light mb-6 max-w-md text-lg leading-relaxed">
               The world's first free marketplace dedicated to high-tech and artificial intelligence. 
               Connecting talent, services, and innovation in one seamless ecosystem.
+>>>>>>> origin/cursor/website-audit-and-enhancement-ba38
             </p>
             
             {/* Contact Info */}
             <div className="space-y-3 mb-6">
               <div className="flex items-center text-zion-slate-light">
                 <Mail className="h-4 w-4 mr-3 text-zion-cyan" />
+<<<<<<< HEAD
+                <a href="mailto:commercial@ziontechgroup.com" className="hover:text-zion-cyan transition-colors">
+                  commercial@ziontechgroup.com
+                </a>
+=======
                 <span>contact@ziontechgroup.com</span>
+>>>>>>> origin/cursor/website-audit-and-enhancement-ba38
               </div>
               <div className="flex items-center text-zion-slate-light">
                 <Phone className="h-4 w-4 mr-3 text-zion-cyan" />
@@ -39,7 +50,11 @@ import { Link } from "react-router-dom";
                 href="https://twitter.com/ziontechgroup"
                 target="_blank"
                 rel="noopener noreferrer"
+<<<<<<< HEAD
+                className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-purple/10 rounded-md"
+=======
                 className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-blue-light/20 rounded-lg"
+>>>>>>> origin/cursor/website-audit-and-enhancement-ba38
                 aria-label="Twitter"
                 title="Twitter"
               >
@@ -49,7 +64,11 @@ import { Link } from "react-router-dom";
                 href="https://www.linkedin.com/company/zion-tech-group"
                 target="_blank"
                 rel="noopener noreferrer"
+<<<<<<< HEAD
+                className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-purple/10 rounded-md"
+=======
                 className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-blue-light/20 rounded-lg"
+>>>>>>> origin/cursor/website-audit-and-enhancement-ba38
                 aria-label="LinkedIn"
                 title="LinkedIn"
               >
@@ -59,7 +78,11 @@ import { Link } from "react-router-dom";
                 href="https://www.facebook.com/ziontechgroup"
                 target="_blank"
                 rel="noopener noreferrer"
+<<<<<<< HEAD
+                className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-purple/10 rounded-md"
+=======
                 className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-blue-light/20 rounded-lg"
+>>>>>>> origin/cursor/website-audit-and-enhancement-ba38
                 aria-label="Facebook"
                 title="Facebook"
               >
@@ -69,7 +92,11 @@ import { Link } from "react-router-dom";
                 href="https://instagram.com/ziontechgroup"
                 target="_blank"
                 rel="noopener noreferrer"
+<<<<<<< HEAD
+                className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-purple/10 rounded-md"
+=======
                 className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-blue-light/20 rounded-lg"
+>>>>>>> origin/cursor/website-audit-and-enhancement-ba38
                 aria-label="Instagram"
                 title="Instagram"
               >
@@ -79,7 +106,11 @@ import { Link } from "react-router-dom";
                 href="https://github.com/ziontechgroup"
                 target="_blank"
                 rel="noopener noreferrer"
+<<<<<<< HEAD
+                className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-purple/10 rounded-md"
+=======
                 className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-blue-light/20 rounded-lg"
+>>>>>>> origin/cursor/website-audit-and-enhancement-ba38
                 aria-label="GitHub"
                 title="GitHub"
               >
@@ -97,7 +128,11 @@ import { Link } from "react-router-dom";
               <li><Link to="/equipment" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Equipment</Link></li>
               <li><Link to="/categories" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Categories</Link></li>
               <li><Link to="/green-it" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Green IT</Link></li>
+<<<<<<< HEAD
+              <li><Link to="/match" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Matcher</Link></li>
+=======
               <li><Link to="/ai-matcher" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Matcher</Link></li>
+>>>>>>> origin/cursor/website-audit-and-enhancement-ba38
             </ul>
           </div>
 
@@ -106,6 +141,13 @@ import { Link } from "react-router-dom";
             <h3 className="text-white font-semibold mb-6 text-lg">Company</h3>
             <ul className="space-y-3">
               <li><Link to="/about" className="text-zion-slate-light hover:text-zion-cyan transition-colors">About Us</Link></li>
+<<<<<<< HEAD
+              <li><Link to="/team" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Our Team</Link></li>
+              <li><Link to="/careers" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Careers</Link></li>
+              <li><Link to="/partners" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Partners</Link></li>
+              <li><Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Contact</Link></li>
+              <li><Link to="/blog" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Blog</Link></li>
+=======
               <li><Link to="/careers" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Careers</Link></li>
               <li><Link to="/partners" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Partners</Link></li>
               <li><Link to="/blog" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Blog</Link></li>
@@ -124,6 +166,21 @@ import { Link } from "react-router-dom";
               <li><Link to="/community" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Community</Link></li>
               <li><Link to="/developers" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Developer Portal</Link></li>
               <li><Link to="/sitemap" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Sitemap</Link></li>
+>>>>>>> origin/cursor/website-audit-and-enhancement-ba38
+            </ul>
+          </div>
+        </div>
+
+<<<<<<< HEAD
+          {/* Resources */}
+          <div>
+            <h3 className="text-white font-semibold mb-6 text-lg">Resources</h3>
+            <ul className="space-y-3">
+              <li><Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Help Center</Link></li>
+              <li><Link to="/community" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Community</Link></li>
+              <li><Link to="/developers" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Developer Portal</Link></li>
+              <li><Link to="/api-docs" className="text-zion-slate-light hover:text-zion-cyan transition-colors">API Documentation</Link></li>
+              <li><Link to="/enterprise" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Enterprise</Link></li>
             </ul>
           </div>
         </div>
@@ -131,9 +188,17 @@ import { Link } from "react-router-dom";
         {/* Newsletter Section */}
         <div className="border-t border-zion-blue-light pt-8 mb-8">
           <div className="text-center">
+            <h3 className="text-white font-semibold mb-4 text-xl">Subscribe to our newsletter</h3>
+            <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
+              Stay updated with the latest news on tech, AI, and marketplace opportunities.
+=======
+        {/* Newsletter Section */}
+        <div className="border-t border-zion-blue-light pt-8 mb-8">
+          <div className="text-center">
             <h3 className="text-white font-semibold mb-4 text-xl">Stay Updated</h3>
             <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
               Get the latest news on tech, AI, and marketplace opportunities delivered to your inbox.
+>>>>>>> origin/cursor/website-audit-and-enhancement-ba38
             </p>
             <FooterNewsletter />
           </div>
@@ -142,6 +207,15 @@ import { Link } from "react-router-dom";
         {/* Bottom Footer */}
         <div className="border-t border-zion-blue-light pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
+<<<<<<< HEAD
+            <p className="text-zion-slate-light text-sm">
+              &copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+            </p>
+            <div className="flex flex-wrap justify-center gap-6 mt-4 md:mt-0">
+              <Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">Privacy Policy</Link>
+              <Link to="/terms" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">Terms of Service</Link>
+              <Link to="/cookies" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">Cookie Policy</Link>
+=======
             <div className="text-center md:text-left mb-4 md:mb-0">
               <p className="text-zion-slate-light text-sm">
                 &copy; {new Date().getFullYear()} Zion Tech Group. All rights reserved.
@@ -155,6 +229,7 @@ import { Link } from "react-router-dom";
               <Link to="/terms" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">Terms of Service</Link>
               <Link to="/cookies" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">Cookie Policy</Link>
               <Link to="/accessibility" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">Accessibility</Link>
+>>>>>>> origin/cursor/website-audit-and-enhancement-ba38
             </div>
 
             {/* Social Links */}

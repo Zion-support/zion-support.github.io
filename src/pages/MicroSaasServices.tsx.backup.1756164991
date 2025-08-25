@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+import React from 'react';
+=======
 import React, { useState } from 'react';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
@@ -86,6 +89,7 @@ export default function MicroSaasServices() {
     }
     return 'Contact for pricing';
   };
+>>>>>>> origin/cursor/website-audit-and-enhancement-ba38
 
 const MicroSaasServices: React.FC = () => {
   return (
@@ -124,6 +128,11 @@ const MicroSaasServices: React.FC = () => {
             </p>
             <div className="text-cyan-400 font-semibold">Starting at $1,499/mo</div>
           </div>
+<<<<<<< HEAD
+        </div>
+      </div>
+    </div>
+=======
         </section>
 
         {/* Services Grid */}
@@ -307,6 +316,7 @@ const MicroSaasServices: React.FC = () => {
       </main>
 
     </>
+>>>>>>> origin/cursor/website-audit-and-enhancement-ba38
   );
 };
 

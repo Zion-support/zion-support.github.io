@@ -1,8 +1,7 @@
-import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import { Footer } from './components/Footer';
-import Sidebar from './components/Sidebar';
+import React from 'react';
+import { Suspense } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import './App.css';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
@@ -21,8 +20,6 @@ import {
   CommunityRoutes,
   DeveloperRoutes
 } from './routes';
-
-// Lazy load all pages
 const Home = React.lazy(() => import('./pages/Home'));
 const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
 const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
@@ -34,7 +31,6 @@ const Analytics = React.lazy(() => import('./pages/Analytics'));
 const MobileLaunchPage = React.lazy(() => import('./pages/MobileLaunchPage'));
 const CommunityPage = React.lazy(() => import('./pages/CommunityPage'));
 const Categories = React.lazy(() => import('./pages/Categories'));
-const CategoryDetail = React.lazy(() => import('./pages/CategoryDetail'));
 const Blog = React.lazy(() => import('./pages/Blog'));
 const BlogPost = React.lazy(() => import('./pages/BlogPost'));
 const PartnersPage = React.lazy(() => import('./pages/Partners'));
@@ -45,9 +41,7 @@ const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
 const ContactPage = React.lazy(() => import('./pages/Contact'));
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
-const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServicesPage'));
-const ServicesOverviewPage = React.lazy(() => import('./pages/ServicesOverviewPage'));
-const AIServicesShowcase = React.lazy(() => import('./pages/AIServicesShowcase'));
+const MicroSaasServicesPage = React.lazy(() => import('./pages/MicroSaasServicesPage'));
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -57,11 +51,9 @@ const baseRoutes = [
   { path: '/talent', element: <TalentDirectory /> },
   { path: '/talents', element: <TalentsPage /> },
   { path: '/services', element: <ServicesPage /> },
-  { path: '/expanded-services', element: <ExpandedServicesPage /> },
-  { path: '/services-pricing', element: <ServicesPricingPage /> },
+  { path: '/micro-saas-services', element: <MicroSaasServicesPage /> },
   { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
   { path: '/categories', element: <Categories /> },
-  { path: '/categories/:slug', element: <CategoryDetail /> },
   { path: '/equipment', element: <EquipmentPage /> },
   { path: '/equipment/:id', element: <EquipmentDetail /> },
   { path: '/analytics', element: <Analytics /> },
@@ -73,120 +65,52 @@ const baseRoutes = [
   { path: '/zion-hire-ai', element: <ZionHireAI /> },
   { path: '/hire-ai', element: <ZionHireAI /> },
   { path: '/request-quote', element: <RequestQuotePage /> },
-  { path: '/comprehensive-services', element: <ComprehensiveServicesPage /> },
-  { path: '/services-overview', element: <ServicesOverviewPage /> },
-  { path: '/ai-services', element: <AIServicesShowcase /> },
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
-  
-  // New pages
   { path: '/about', element: <AboutPage /> },
   { path: '/careers', element: <CareersPage /> },
+  { path: '/sitemap', element: <SitemapPage /> },
   { path: '/privacy', element: <PrivacyPage /> },
   { path: '/terms', element: <TermsPage /> },
-  { path: '/support', element: <SupportPage /> },
-  { path: '/get-started', element: <GetStartedPage /> },
-  
-  // Service detail pages
-  { path: '/quantum-edge-computing-platform', element: <QuantumEdgeComputingPlatform /> },
-  { path: '/ai-autonomous-legal-research-assistant', element: <AIAutonomousLegalResearchAssistant /> },
-  { path: '/zero-trust-network-architecture', element: <ZeroTrustNetworkArchitecture /> },
-  
-  // Additional service pages (placeholder routes)
-  { path: '/ai-autonomous-financial-risk-manager', element: <ServicesPage /> },
-  { path: '/ai-autonomous-healthcare-diagnostics-pro', element: <ServicesPage /> },
-  { path: '/ai-autonomous-supply-chain-optimizer', element: <ServicesPage /> },
-  { path: '/ai-autonomous-cybersecurity-sentinel', element: <ServicesPage /> },
-  { path: '/neuromorphic-computing-infrastructure', element: <ServicesPage /> },
-  { path: '/holographic-data-center-platform', element: <ServicesPage /> },
-  { path: '/bio-computing-infrastructure', element: <ServicesPage /> },
-  { path: '/quantum-internet-backbone', element: <ServicesPage /> },
-  { path: '/cloud-migration', element: <ServicesPage /> },
-  { path: '/devops-automation', element: <ServicesPage /> },
-  { path: '/edge-computing', element: <ServicesPage /> },
-  { path: '/data-center-optimization', element: <ServicesPage /> },
-  { path: '/5g-private-network-solutions', element: <ServicesPage /> },
-  { path: '/ai-autonomous-content-factory-pro', element: <ServicesPage /> },
-  { path: '/quantum-crm-intelligence-suite', element: <ServicesPage /> },
-  { path: '/ai-autonomous-hr-platform', element: <ServicesPage /> },
-  { path: '/quantum-financial-intelligence-platform', element: <ServicesPage /> },
-  { path: '/ai-autonomous-education-platform', element: <ServicesPage /> },
-  { path: '/threat-intelligence-platform', element: <ServicesPage /> },
-  { path: '/compliance-automation', element: <ServicesPage /> },
-  { path: '/soc2-compliance-automation', element: <ServicesPage /> },
-  { path: '/vulnerability-assessment-penetration-testing', element: <ServicesPage /> },
-  { path: '/healthcare-ai-solutions', element: <ServicesPage /> },
-  { path: '/financial-solutions', element: <ServicesPage /> },
-  { path: '/manufacturing-ai-solutions', element: <ServicesPage /> },
-  { path: '/retail-technology-solutions', element: <ServicesPage /> },
-  { path: '/energy-utilities-solutions', element: <ServicesPage /> },
-  { path: '/ai-services', element: <ServicesPage /> },
-  { path: '/quantum-services', element: <ServicesPage /> },
-  { path: '/it-services', element: <ServicesPage /> },
-  { path: '/cybersecurity', element: <ServicesPage /> },
-  { path: '/data-analytics', element: <ServicesPage /> },
-  { path: '/space-tech', element: <ServicesPage /> },
-  { path: '/solutions/enterprise', element: <ServicesPage /> },
-  { path: '/solutions/healthcare', element: <ServicesPage /> },
-  { path: '/solutions/financial', element: <ServicesPage /> },
-  { path: '/solutions/manufacturing', element: <ServicesPage /> },
-  { path: '/government-technology-solutions', element: <ServicesPage /> },
-  { path: '/mission', element: <AboutPage /> },
-  { path: '/team', element: <AboutPage /> },
-  { path: '/leadership', element: <AboutPage /> },
-  { path: '/culture', element: <AboutPage /> },
-  { path: '/values', element: <AboutPage /> },
-  { path: '/press', element: <Blog /> },
-  { path: '/news', element: <Blog /> },
-  { path: '/case-studies', element: <Blog /> },
-  { path: '/webinars', element: <Blog /> },
-  { path: '/white-papers', element: <Blog /> },
-  { path: '/docs', element: <Blog /> },
-  { path: '/training', element: <Blog /> },
-  { path: '/events-webinars', element: <Blog /> },
-  { path: '/developer-resources', element: <Blog /> },
-  { path: '/status', element: <SupportPage /> },
-  { path: '/cookies', element: <PrivacyPage /> },
-  { path: '/accessibility', element: <SupportPage /> },
+  { path: '/green-it', element: <GreenITPage /> },
+  { path: '/marketplace', element: <MarketplacePage /> },
+  { path: '/faq', element: <FAQPage /> },
+  { path: '/press', element: <PressPage /> },
+  { path: '/investors', element: <InvestorsPage /> },
+  { path: '/help', element: <HelpPage /> },
+  { path: '/cookies', element: <CookiesPage /> },
+  { path: '/accessibility', element: <AccessibilityPage /> },
+  { path: '/ai-matcher', element: <AIMatcherPage /> },
 ];
 
-// Loading spinner component
-const LoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-500"></div>
-  </div>
-);
-
-const App: React.FC = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+const App = () => {
+  // Ensure each navigation starts at the top of the page
   useScrollToTop();
-
   return (
-    <ThemeProvider>
-      <Router>
-        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-          <Header />
-          <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-          
-          <main id="main-content" className="pt-20">
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                {/* Main Routes */}
-                <Route path="/" element={<Home />} />
-                <Route path="/home" element={<Home />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/ai-solutions" element={<AISolutions />} />
-                <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-              </Routes>
-            </Suspense>
-          </main>
-          
-          <Footer />
-        </div>
-      </Router>
-    </ThemeProvider>
+    <WhitelabelProvider>
+      <ThemeProvider defaultTheme="dark">
+        <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
+          <Routes>
+            {baseRoutes.map(({ path, element }) => (
+              <Route key={path} path={path} element={element} />
+            ))}
+            <Route path="/auth/*" element={<AuthRoutes />} />
+            <Route path="/dashboard/*" element={<DashboardRoutes />} />
+            <Route path="/marketplace/*" element={<MarketplaceRoutes />} />
+            <Route path="/talent/*" element={<TalentRoutes />} />
+            <Route path="/admin/*" element={<AdminRoutes />} />
+            <Route path="/mobile/*" element={<MobileAppRoutes />} />
+            <Route path="/content/*" element={<ContentRoutes />} />
+            <Route path="/enterprise/*" element={<EnterpriseRoutes />} />
+            <Route path="/community/*" element={<CommunityRoutes />} />
+            <Route path="/developers/*" element={<DeveloperRoutes />} />
+            <Route path="*" element={<ErrorRoutes />} />
+          </Routes>
+        </Suspense>
+        <Toaster />
+        <SonnerToaster position="top-right" />
+      </ThemeProvider>
+    </WhitelabelProvider>
   );
 };
 
