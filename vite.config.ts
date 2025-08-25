@@ -5,7 +5,7 @@ import { visualizer } from 'rollup-plugin-visualizer'
 import { splitVendorChunkPlugin } from 'vite'
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(async () => ({
   plugins: [
     react(),
     splitVendorChunkPlugin(),
@@ -194,12 +194,12 @@ export default defineConfig({
   css: {
     postcss: {
       plugins: [
-        require('tailwindcss'),
-        require('autoprefixer'),
+        (await import('tailwindcss')).default,
+        (await import('autoprefixer')).default,
       ],
     },
   },
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
   },
-})
+}))

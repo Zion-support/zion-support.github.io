@@ -22,7 +22,6 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       items: [
         { name: 'Home', path: '/', icon: Home },
         { name: 'Services', path: '/services', icon: Briefcase },
-        { name: 'New Services', path: '/new-services', icon: Briefcase },
         { name: 'Solutions', path: '/solutions/enterprise', icon: Briefcase },
         { name: 'Pricing', path: '/pricing', icon: Briefcase },
         { name: 'About', path: '/about', icon: Users },
@@ -47,29 +46,26 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Briefcase },
         { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Briefcase },
         { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
-        { name: 'Cloud DevOps', path: '/cloud-devops', icon: Globe }
+        { name: 'Emerging Technology', path: '/emerging-tech', icon: Globe }
       ]
     },
     {
       title: 'Company',
       items: [
         { name: 'About Us', path: '/about', icon: Users },
-        { name: 'Our Mission', path: '/mission', icon: Users },
         { name: 'Our Team', path: '/team', icon: Users },
-        { name: 'Careers', path: '/careers', icon: Briefcase },
         { name: 'Partners', path: '/partners', icon: Handshake },
-        { name: 'News', path: '/news', icon: Globe },
-        { name: 'Case Studies', path: '/case-studies', icon: Globe }
+        { name: 'Case Studies', path: '/case-studies', icon: Globe },
+        { name: 'Help Center', path: '/help', icon: Globe }
       ]
     },
     {
-      title: 'Support & Resources',
+      title: 'Support',
       items: [
         { name: 'Help Center', path: '/help', icon: Users },
-        { name: 'Case Studies', path: '/case-studies', icon: Globe },
-        { name: 'White Papers', path: '/white-papers', icon: Globe },
-        { name: 'Webinars', path: '/webinars', icon: Globe },
-        { name: 'Emerging Tech', path: '/emerging-tech', icon: Globe }
+        { name: 'Documentation', path: '/docs', icon: Globe },
+        { name: 'Contact Support', path: '/support', icon: Phone },
+        { name: 'Status Page', path: '/status', icon: Globe }
       ]
     }
   ];
@@ -81,7 +77,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
+    { icon: Linkedin, href: 'https://linkedin.com/company/zion-tech-group', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Facebook, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' },
     { icon: Instagram, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' }

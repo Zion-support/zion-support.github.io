@@ -19,8 +19,8 @@ import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
 import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
-import { EnhancedSEO } from './components/EnhancedSEO';
-import { EnhancedAccessibility } from './components/EnhancedAccessibility';
+import EnhancedSEO from './components/EnhancedSEO';
+import EnhancedAccessibility from './components/EnhancedAccessibility';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
 
 // Enhanced lazy loading with preloading hints
@@ -38,9 +38,10 @@ const AIServices = lazy(() => import('./pages/AIServices'));
 const CloudDevOps = lazy(() => import('./pages/CloudDevOps'));
 const EnterpriseSolutionsPage = lazy(() => import('./pages/EnterpriseSolutions'));
 const DigitalTransformation = lazy(() => import('./pages/DigitalTransformation'));
+const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
+const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAutomation'));
 
 // Additional innovative services
-const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const IoTManagementPlatform = lazy(() => import('./pages/services/IoTManagementPlatform'));
 const BlockchainDeFiSolutions = lazy(() => import('./pages/services/BlockchainDeFiSolutions'));
 
@@ -92,6 +93,7 @@ const SpecializedITInfrastructure = lazy(() => import('./pages/services/Speciali
 const InnovativeMicroSaasServices = lazy(() => import('./pages/InnovativeMicroSaasServices'));
 const ComprehensiveInnovativeServices = lazy(() => import('./pages/ComprehensiveInnovativeServices'));
 const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveServicesOverview'));
+const EnhancedServicesShowcase = lazy(() => import('./pages/EnhancedServicesShowcase'));
 
 // Solutions pages
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
@@ -109,9 +111,9 @@ const Testimonials = lazy(() => import('./pages/Testimonials'));
 const Support = lazy(() => import('./pages/HelpCenter'));
 const Docs = lazy(() => import('./pages/HelpCenter'));
 const Marketplace = lazy(() => import('./pages/Marketplace'));
-const Community = lazy(() => import('./pages/HelpCenter'));
+const Community = lazy(() => import('./pages/CommunityPage'));
 
-// AI Service specific pages
+// AI Autonomous Service pages
 const AIAutonomousBusinessManager = lazy(() => import('./pages/services/AIAutonomousBusinessManager'));
 const AIAutonomousBusinessPlatform = lazy(() => import('./pages/services/AIAutonomousBusinessPlatform'));
 const AIAutonomousCodeReview = lazy(() => import('./pages/services/AIAutonomousCodeReview'));
@@ -137,52 +139,29 @@ const AIAutonomousVehicle = lazy(() => import('./pages/services/AIAutonomousVehi
 const AIAutonomousVehiclesPlatform = lazy(() => import('./pages/services/AIAutonomousVehiclesPlatform'));
 const AIAutonomousVehicles = lazy(() => import('./pages/services/AIAutonomousVehicles'));
 const AIAutonomousVentureCapitalist = lazy(() => import('./pages/services/AIAutonomousVentureCapitalist'));
-const AIBiomedicalResearch = lazy(() => import('./pages/services/AIBiomedicalResearch'));
-const AIBiotechDrugDiscovery = lazy(() => import('./pages/services/AIBiotechDrugDiscovery'));
-const AIBlockchainGovernance = lazy(() => import('./pages/services/AIBlockchainGovernance'));
-const AIBrainComputerInterface = lazy(() => import('./pages/services/AIBrainComputerInterface'));
-const AIBrainInterface = lazy(() => import('./pages/services/AIBrainInterface'));
-const AIBusinessIntelligenceElite = lazy(() => import('./pages/services/AIBusinessIntelligenceElite'));
-const AIBusinessIntelligencePro = lazy(() => import('./pages/services/AIBusinessIntelligencePro'));
-const AIBusinessIntelligenceSuite = lazy(() => import('./pages/services/AIBusinessIntelligenceSuite'));
-const AIClimatePredictionEngine = lazy(() => import('./pages/services/AIClimatePredictionEngine'));
-const AIClimatePredictionPlatform = lazy(() => import('./pages/services/AIClimatePredictionPlatform'));
-const AIClimatePrediction = lazy(() => import('./pages/services/AIClimatePrediction'));
-const AICodeGenerationEnterprise = lazy(() => import('./pages/services/AICodeGenerationEnterprise'));
-const AIComplianceAutomation = lazy(() => import('./pages/services/AIComplianceAutomation'));
-const AIComputerVisionPlatform = lazy(() => import('./pages/services/AIComputerVisionPlatform'));
-const AIConsciousnessEvolutionPlatform = lazy(() => import('./pages/services/AIConsciousnessEvolutionPlatform'));
-const AIConsciousnessSimulationPlatform = lazy(() => import('./pages/services/AIConsciousnessSimulationPlatform'));
-const AIConsciousnessSimulation = lazy(() => import('./pages/services/AIConsciousnessSimulation'));
-const AIConsciousnessSimulator = lazy(() => import('./pages/services/AIConsciousnessSimulator'));
-const AIContentCreationRevolution = lazy(() => import('./pages/services/AIContentCreationRevolution'));
-const AIContentCreation = lazy(() => import('./pages/services/AIContentCreation'));
-const AIContentFactory = lazy(() => import('./pages/services/AIContentFactory'));
+
+// AI Content Generation pages
 const AIContentGenerationAutomation = lazy(() => import('./pages/services/AIContentGenerationAutomation'));
 const AIContentGenerationPro = lazy(() => import('./pages/services/AIContentGenerationPro'));
 const AIConsciousnessEvolution = lazy(() => import('./pages/services/AIConsciousnessEvolution'));
 
-// Loading Component
+// Enhanced AI service pages
+const AIBusinessIntelligenceElite = lazy(() => import('./pages/services/AIBusinessIntelligenceElite'));
+const AIBusinessIntelligenceSuite = lazy(() => import('./pages/services/AIBusinessIntelligenceSuite'));
+
+// Loading spinner component
 const LoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-    <div className="text-center">
-      <div className="relative">
-        <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-        <div className="absolute inset-0 w-16 h-16 border-4 border-purple-500 border-t-transparent rounded-full animate-spin mx-auto" style={{ animationDelay: '-0.5s' }}></div>
-      </div>
-      <p className="text-cyan-400 text-lg font-medium">Loading Zion Tech Group...</p>
-      <p className="text-gray-400 text-sm mt-2">Preparing your experience</p>
-    </div>
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-500"></div>
   </div>
 );
 
-const App = () => {
+const App: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   useScrollToTop();
 
   return (
     <EnhancedErrorBoundary>
-      <EnhancedSEO />
       <EnhancedAccessibility />
       <PerformanceMonitor />
       <ThemeProvider>
@@ -258,6 +237,8 @@ const App = () => {
                       {/* Service Detail Routes */}
                       <Route path="/services-overview" element={<ServicesOverview />} />
                       <Route path="/services/ai-autonomous-systems" element={<AIAutonomousSystems />} />
+                      <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                      <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
                       <Route path="/services/quantum-technology" element={<QuantumTechnology />} />
                       <Route path="/services/cybersecurity" element={<Cybersecurity />} />
                       <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
@@ -268,6 +249,7 @@ const App = () => {
                       <Route path="/innovative-micro-saas-services" element={<InnovativeMicroSaasServices />} />
                       <Route path="/comprehensive-innovative-services" element={<ComprehensiveInnovativeServices />} />
                       <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview />} />
+                      <Route path="/enhanced-services-showcase" element={<EnhancedServicesShowcase />} />
                       
                       {/* New innovative service routes */}
                       <Route path="/ai-workflow-automation" element={<AIWorkflowAutomation />} />
@@ -301,8 +283,8 @@ const App = () => {
                       <Route path="/docs" element={<Docs />} />
                       <Route path="/marketplace" element={<Marketplace />} />
                       <Route path="/community" element={<Community />} />
-
-                      {/* AI Service specific routes */}
+                      
+                      {/* AI Autonomous Service routes */}
                       <Route path="/ai-autonomous-business-manager" element={<AIAutonomousBusinessManager />} />
                       <Route path="/ai-autonomous-business-platform" element={<AIAutonomousBusinessPlatform />} />
                       <Route path="/ai-autonomous-code-review" element={<AIAutonomousCodeReview />} />
@@ -328,32 +310,13 @@ const App = () => {
                       <Route path="/ai-autonomous-vehicles-platform" element={<AIAutonomousVehiclesPlatform />} />
                       <Route path="/ai-autonomous-vehicles" element={<AIAutonomousVehicles />} />
                       <Route path="/ai-autonomous-venture-capitalist" element={<AIAutonomousVentureCapitalist />} />
-                      <Route path="/ai-biomedical-research" element={<AIBiomedicalResearch />} />
-                      <Route path="/ai-biotech-drug-discovery" element={<AIBiotechDrugDiscovery />} />
-                      <Route path="/ai-blockchain-governance" element={<AIBlockchainGovernance />} />
-                      <Route path="/ai-brain-computer-interface" element={<AIBrainComputerInterface />} />
-                      <Route path="/ai-brain-interface" element={<AIBrainInterface />} />
-                      <Route path="/ai-business-intelligence-elite" element={<AIBusinessIntelligenceElite />} />
-                      <Route path="/ai-business-intelligence-pro" element={<AIBusinessIntelligencePro />} />
-                      <Route path="/ai-business-intelligence-suite" element={<AIBusinessIntelligenceSuite />} />
-                      <Route path="/ai-climate-prediction-engine" element={<AIClimatePredictionEngine />} />
-                      <Route path="/ai-climate-prediction-platform" element={<AIClimatePredictionPlatform />} />
-                      <Route path="/ai-climate-prediction" element={<AIClimatePrediction />} />
-                      <Route path="/ai-code-generation-enterprise" element={<AICodeGenerationEnterprise />} />
-                      <Route path="/ai-compliance-automation" element={<AIComplianceAutomation />} />
-                      <Route path="/ai-computer-vision-platform" element={<AIComputerVisionPlatform />} />
-                      <Route path="/ai-consciousness-evolution-platform" element={<AIConsciousnessEvolutionPlatform />} />
-                      <Route path="/ai-consciousness-simulation-platform" element={<AIConsciousnessSimulationPlatform />} />
-                      <Route path="/ai-consciousness-simulation" element={<AIConsciousnessSimulation />} />
-                      <Route path="/ai-consciousness-simulator" element={<AIConsciousnessSimulator />} />
-                      <Route path="/ai-content-creation-revolution" element={<AIContentCreationRevolution />} />
-                      <Route path="/ai-content-creation" element={<AIContentCreation />} />
-                      <Route path="/ai-content-factory" element={<AIContentFactory />} />
+                      
+                      {/* AI Content Generation routes */}
                       <Route path="/ai-content-generation-automation" element={<AIContentGenerationAutomation />} />
                       <Route path="/ai-content-generation-pro" element={<AIContentGenerationPro />} />
                       <Route path="/ai-consciousness-evolution" element={<AIConsciousnessEvolution />} />
-
-                      {/* Additional AI service routes */}
+                      
+                      {/* Enhanced AI service routes */}
                       <Route path="/ai-autonomous-business-manager-2029" element={<AIAutonomousBusinessManager />} />
                       <Route path="/ai-autonomous-business-platform-2026" element={<AIAutonomousBusinessPlatform />} />
                       <Route path="/ai-business-intelligence-elite-2026" element={<AIBusinessIntelligenceElite />} />
@@ -362,7 +325,7 @@ const App = () => {
                       <Route path="/ai-content-generation-pro-2029" element={<AIContentGenerationPro />} />
                       <Route path="/ai-consciousness-evolution-2025" element={<AIConsciousnessEvolution />} />
                       <Route path="/ai-consciousness-evolution-2029" element={<AIConsciousnessEvolution />} />
-
+                      
                       {/* Quantum and other technology routes */}
                       <Route path="/quantum-cloud-infrastructure" element={<QuantumTechnology />} />
                       <Route path="/quantum-financial-trading" element={<QuantumTechnology />} />

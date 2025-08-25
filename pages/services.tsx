@@ -1,417 +1,354 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
-import { Brain, Cloud, Code, Shield, Globe, Zap, Database, Lock, Cpu, Network, BarChart3, Smartphone } from 'lucide-react';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
+import { 
+  Search, Filter, Brain, Rocket, Dna, Globe, Shield, 
+  Wifi, Package, Bot, Car, Building2, DollarSign, 
+  Monitor, Users, Cpu, Zap, Star, TrendingUp, Grid, Lock, Truck, Gamepad2, Factory, List, ArrowRight
+} from 'lucide-react';
+import EnhancedQuantumBackground from '../components/ui/EnhancedQuantumBackground';
+import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
+import { extraServices } from '../data/extra-services';
+import { additionalEnhancedServices } from '../data/additional-real-services';
+import { emergingTechServices } from '../data/emerging-tech-services';
+import { nextGenAIServices } from '../data/next-gen-ai-services';
+import { comprehensiveITServices } from '../data/comprehensive-it-services';
+import { newInnovativeServices } from '../data/innovative-micro-saas-services';
+import { enhancedEnterpriseITServices } from '../data/enhanced-enterprise-it-services';
+import { advancedAISolutions } from '../data/advanced-ai-solutions';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
 
-const ServicesPage = () => {
-  const services = [
-    {
-      icon: Brain,
-      title: 'AI Development',
-      description: 'Custom AI solutions and machine learning models tailored to your business needs.',
-      features: [
-        'Machine Learning Models',
-        'Natural Language Processing',
-        'Computer Vision',
-        'Predictive Analytics',
-        'AI Chatbots',
-        'Recommendation Systems'
-      ],
-      benefits: [
-        'Increased operational efficiency',
-        'Data-driven decision making',
-        'Automated processes',
-        'Competitive advantage'
-      ],
-      href: '/services/ai-development'
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Architecture',
-      description: 'Scalable cloud solutions and infrastructure design for modern applications.',
-      features: [
-        'AWS/Azure/GCP Migration',
-        'Microservices Architecture',
-        'Serverless Solutions',
-        'DevOps Automation',
-        'Container Orchestration',
-        'Cloud Security'
-      ],
-      benefits: [
-        'Scalable infrastructure',
-        'Cost optimization',
-        'High availability',
-        'Reduced maintenance'
-      ],
-      href: '/services/cloud-services'
-    },
-    {
-      icon: Code,
-      title: 'Web Development',
-      description: 'Modern, responsive web applications built with cutting-edge technologies.',
-      features: [
-        'React/Next.js Applications',
-        'Full-Stack Development',
-        'Progressive Web Apps',
-        'API Development',
-        'E-commerce Solutions',
-        'Custom CMS'
-      ],
-      benefits: [
-        'Modern user experience',
-        'Mobile-first design',
-        'Fast performance',
-        'SEO optimization'
-      ],
-      href: '/services/web-development'
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets.',
-      features: [
-        'Security Audits',
-        'Penetration Testing',
-        'Compliance Management',
-        'Incident Response',
-        'Security Training',
-        'Threat Intelligence'
-      ],
-      benefits: [
-        'Protect sensitive data',
-        'Meet compliance requirements',
-        'Reduce security risks',
-        'Build customer trust'
-      ],
-      href: '/services/cybersecurity'
-    },
-    {
-      icon: Globe,
-      title: 'IoT Platforms',
-      description: 'Connected device solutions for smart environments and automation.',
-      features: [
-        'Sensor Networks',
-        'Edge Computing',
-        'Real-time Analytics',
-        'Device Management',
-        'Data Collection',
-        'Remote Monitoring'
-      ],
-      benefits: [
-        'Automated operations',
-        'Real-time insights',
-        'Cost savings',
-        'Improved efficiency'
-      ],
-      href: '/services/iot-platforms'
-    },
-    {
-      icon: Zap,
-      title: 'Digital Transformation',
-      description: 'End-to-end digital transformation services to modernize your business.',
-      features: [
-        'Process Automation',
-        'Legacy Modernization',
-        'Change Management',
-        'Training Programs',
-        'Workflow Optimization',
-        'Technology Roadmaps'
-      ],
-      benefits: [
-        'Streamlined operations',
-        'Improved productivity',
-        'Better customer experience',
-        'Future-ready business'
-      ],
-      href: '/services/digital-transformation'
-    },
-    {
-      icon: Database,
-      title: 'Data Analytics',
-      description: 'Transform raw data into actionable insights for strategic decision making.',
-      features: [
-        'Business Intelligence',
-        'Data Warehousing',
-        'Predictive Analytics',
-        'Data Visualization',
-        'ETL Processes',
-        'Performance Dashboards'
-      ],
-      benefits: [
-        'Data-driven decisions',
-        'Identify opportunities',
-        'Optimize operations',
-        'Measure performance'
-      ],
-      href: '/services/data-analytics'
-    },
-    {
-      icon: Lock,
-      title: 'Blockchain Solutions',
-      description: 'Secure, transparent, and decentralized applications for modern businesses.',
-      features: [
-        'Smart Contracts',
-        'DeFi Applications',
-        'NFT Marketplaces',
-        'Supply Chain Tracking',
-        'Identity Management',
-        'Cross-chain Solutions'
-      ],
-      benefits: [
-        'Enhanced security',
-        'Transparent operations',
-        'Reduced costs',
-        'New business models'
-      ],
-      href: '/services/blockchain'
-    },
-    {
-      icon: Cpu,
-      title: 'Machine Learning',
-      description: 'Advanced ML solutions that learn and adapt to your business needs.',
-      features: [
-        'Custom ML Models',
-        'Deep Learning',
-        'Neural Networks',
-        'Model Training',
-        'A/B Testing',
-        'Continuous Learning'
-      ],
-      benefits: [
-        'Automated insights',
-        'Pattern recognition',
-        'Predictive capabilities',
-        'Scalable intelligence'
-      ],
-      href: '/services/machine-learning'
-    },
-    {
-      icon: Network,
-      title: 'API Development',
-      description: 'Robust and scalable APIs that power modern applications.',
-      features: [
-        'RESTful APIs',
-        'GraphQL Services',
-        'API Gateway',
-        'Rate Limiting',
-        'Authentication',
-        'Documentation'
-      ],
-      benefits: [
-        'Seamless integration',
-        'Scalable architecture',
-        'Developer experience',
-        'Faster development'
-      ],
-      href: '/services/api-development'
-    },
-    {
-      icon: BarChart3,
-      title: 'Business Intelligence',
-      description: 'Comprehensive BI solutions for data-driven business decisions.',
-      features: [
-        'Interactive Dashboards',
-        'KPI Tracking',
-        'Report Automation',
-        'Data Mining',
-        'Trend Analysis',
-        'Executive Reporting'
-      ],
-      benefits: [
-        'Real-time insights',
-        'Better decisions',
-        'Performance tracking',
-        'Competitive advantage'
-      ],
-      href: '/services/business-intelligence'
-    },
-    {
-      icon: Smartphone,
-      title: 'Mobile Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android.',
-      features: [
-        'iOS Development',
-        'Android Development',
-        'React Native',
-        'Flutter Apps',
-        'Mobile UI/UX',
-        'App Store Optimization'
-      ],
-      benefits: [
-        'Mobile presence',
-        'User engagement',
-        'Brand visibility',
-        'Revenue growth'
-      ],
-      href: '/services/mobile-development'
-    }
+export default function ServicesPage() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('popular');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+
+  // Combine all services
+  const allServices = [
+    ...enhancedRealMicroSaasServices,
+    ...innovativeMicroSaasServices,
+    ...extraServices,
+    ...additionalEnhancedServices,
+    ...emergingTechServices,
+    ...nextGenAIServices,
+    ...comprehensiveITServices,
+    ...newInnovativeServices,
+    ...enhancedEnterpriseITServices,
+    ...advancedAISolutions
   ];
 
-  const process = [
-    {
-      step: '01',
-      title: 'Discovery & Analysis',
-      description: 'We analyze your business needs, current systems, and objectives to understand your requirements.'
-    },
-    {
-      step: '02',
-      title: 'Solution Design',
-      description: 'Our experts design a tailored solution that aligns with your business goals and technical requirements.'
-    },
-    {
-      step: '03',
-      title: 'Development & Testing',
-      description: 'We develop your solution using best practices and conduct thorough testing to ensure quality.'
-    },
-    {
-      step: '04',
-      title: 'Deployment & Support',
-      description: 'We deploy your solution and provide ongoing support and maintenance to ensure optimal performance.'
-    }
+  // Enhanced categories with icons and better organization
+  const categories = [
+    { id: 'all', name: 'All Services', icon: <Grid className="w-4 h-4" />, count: allServices.length },
+    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-4 h-4" />, count: allServices.filter(s => s.category.includes('AI') || s.category.includes('Machine Learning') || s.category.includes('Neural')).length },
+    { id: 'quantum', name: 'Quantum Computing', icon: <Zap className="w-4 h-4" />, count: allServices.filter(s => s.category.includes('Quantum') || s.name.includes('Quantum')).length },
+    { id: 'space', name: 'Space Technology', icon: <Rocket className="w-4 h-4" />, count: allServices.filter(s => s.category.includes('Space') || s.name.includes('Space')).length },
+    { id: 'biotech', name: 'Biotech & Healthcare', icon: <Dna className="w-4 h-4" />, count: allServices.filter(s => s.category.includes('Biotech') || s.category.includes('Healthcare')).length },
+    { id: 'finance', name: 'Financial Services', icon: <DollarSign className="w-4 h-4" />, count: allServices.filter(s => s.category.includes('Finance') || s.category.includes('Trading')).length },
+    { id: 'security', name: 'Cybersecurity', icon: <Lock className="w-4 h-4" />, count: allServices.filter(s => s.category.includes('Security') || s.category.includes('Cybersecurity')).length },
+    { id: 'internet', name: 'Internet & Network', icon: <Globe className="w-4 h-4" />, count: allServices.filter(s => s.category.includes('Internet') || s.category.includes('Network')).length },
+    { id: 'iot', name: 'IoT & Smart Devices', icon: <Wifi className="w-4 h-4" />, count: allServices.filter(s => s.category.includes('IoT') || s.name.includes('IoT')).length },
+    { id: 'logistics', name: 'Logistics & Supply Chain', icon: <Truck className="w-4 h-4" />, count: allServices.filter(s => s.category.includes('Logistics') || s.category.includes('Supply Chain')).length },
+    { id: 'metaverse', name: 'Metaverse & AR/VR', icon: <Gamepad2 className="w-4 h-4" />, count: allServices.filter(s => s.category.includes('Metaverse') || s.category.includes('AR/VR')).length },
+    { id: 'robotics', name: 'Robotics & Automation', icon: <Bot className="w-4 h-4" />, count: allServices.filter(s => s.category.includes('Robotics') || s.category.includes('Automation')).length },
+    { id: 'manufacturing', name: 'Manufacturing', icon: <Factory className="w-4 h-4" />, count: allServices.filter(s => s.category.includes('Manufacturing') || s.name.includes('Manufacturing')).length },
+    { id: 'vehicles', name: 'Autonomous Vehicles', icon: <Car className="w-4 h-4" />, count: allServices.filter(s => s.category.includes('Vehicle') || s.name.includes('Vehicle')).length },
+    { id: 'enterprise', name: 'Enterprise IT', icon: <Users className="w-4 h-4" />, count: allServices.filter(s => s.category.includes('Enterprise') || s.category.includes('IT Infrastructure')).length },
+    { id: 'cloud', name: 'Cloud Services', icon: <Globe className="w-4 h-4" />, count: allServices.filter(s => s.category.includes('Cloud') || s.name.includes('Cloud')).length },
+    { id: 'content', name: 'Content & Media', icon: <Brain className="w-4 h-4" />, count: allServices.filter(s => s.category.includes('Content') || s.category.includes('Media') || s.category.includes('Video')).length },
+    { id: 'research', name: 'Research & Development', icon: <Brain className="w-4 h-4" />, count: allServices.filter(s => s.category.includes('Research') || s.name.includes('Research')).length },
+    { id: 'energy', name: 'Energy & Sustainability', icon: <Zap className="w-4 h-4" />, count: allServices.filter(s => s.category.includes('Energy') || s.name.includes('Energy')).length }
   ];
+
+  // Filter and sort services
+  const filteredServices = React.useMemo(() => {
+    let filtered = allServices.filter(service => {
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           (service.tagline && service.tagline.toLowerCase().includes(searchTerm.toLowerCase()));
+      
+      const matchesCategory = selectedCategory === 'all' || 
+                             service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
+                             service.name.toLowerCase().includes(selectedCategory.toLowerCase());
+      
+      return matchesSearch && matchesCategory;
+    });
+
+    // Sort services
+    switch (sortBy) {
+      case 'name':
+        filtered.sort((a, b) => a.name.localeCompare(b.name));
+        break;
+      case 'price':
+        filtered.sort((a, b) => {
+          const priceA = parseFloat(a.price.replace(/[^0-9.]/g, ''));
+          const priceB = parseFloat(b.price.replace(/[^0-9.]/g, ''));
+          return priceA - priceB;
+        });
+        break;
+      case 'popularity':
+        filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0));
+        break;
+      case 'newest':
+        filtered.sort((a, b) => new Date(b.launchDate || '2024-01-01').getTime() - new Date(a.launchDate || '2024-01-01').getTime());
+        break;
+    }
+
+    return filtered;
+  }, [allServices, searchTerm, selectedCategory, sortBy]);
+
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
 
   return (
-    <>
+    <UltraAdvancedFuturisticBackground variant="quantum-holographic-advanced">
       <Head>
-        <title>Our Services - Zion Tech Group</title>
-        <meta name="description" content="Explore our comprehensive range of technology services including AI development, cloud architecture, web development, cybersecurity, and more." />
-        <meta name="keywords" content="technology services, AI development, cloud architecture, web development, cybersecurity, digital transformation" />
+        <title>Our Services - Zion Tech Group | 500+ Revolutionary AI, Quantum & IT Solutions</title>
+        <meta name="description" content="Explore our comprehensive portfolio of 500+ revolutionary AI services, quantum computing solutions, and IT services. Transform your business with cutting-edge technology." />
+        <meta name="keywords" content="AI services, quantum computing, IT solutions, micro SaaS, cybersecurity, cloud migration, autonomous vehicles, biotech AI" />
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Our Services - Zion Tech Group | 500+ Revolutionary Solutions" />
+        <meta property="og:description" content="Explore our comprehensive portfolio of revolutionary AI, quantum computing, and IT services." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/services" />
+        <link rel="canonical" href="https://ziontechgroup.com/services" />
       </Head>
-      
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-black via-gray-900 to-blue-900">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Our Services
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            We deliver cutting-edge technology solutions that drive innovation, efficiency, and growth 
-            for forward-thinking organizations across industries.
-          </p>
+
+      {/* Enhanced Header Section */}
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="mb-12"
+          >
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
+              Our Revolutionary Services
+            </h1>
+            <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Discover our comprehensive portfolio of <span className="text-cyan-400 font-semibold">500+ cutting-edge solutions</span> 
+              that are transforming industries and delivering unprecedented ROI.
+            </p>
+          </motion.div>
+
+          {/* Enhanced Search and Filter Controls */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+            className="max-w-4xl mx-auto mb-12"
+          >
+            <div className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+              {/* Search Bar */}
+              <div className="relative mb-6">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search for services, technologies, or use cases..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-12 pr-4 py-3 bg-black/30 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-300"
+                />
+              </div>
+
+              {/* Enhanced Category Filter */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 mb-6">
+                {categories.slice(0, 10).map((category) => (
+                  <button
+                    key={category.id}
+                    onClick={() => setSelectedCategory(category.id)}
+                    className={`flex flex-col items-center p-3 rounded-xl border transition-all duration-300 hover:scale-105 ${
+                      selectedCategory === category.id
+                        ? 'bg-cyan-500/20 border-cyan-400 text-cyan-400'
+                        : 'bg-black/30 border-white/10 text-gray-300 hover:bg-black/50 hover:border-white/20'
+                    }`}
+                  >
+                    <div className="mb-2">{category.icon}</div>
+                    <div className="text-sm font-medium text-center">{category.name}</div>
+                    <div className="text-xs text-gray-400 mt-1">({category.count})</div>
+                  </button>
+                ))}
+              </div>
+
+              {/* Sort and View Controls */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-between items-center">
+                <div className="flex items-center gap-4">
+                  <label className="text-gray-300 text-sm font-medium">Sort by:</label>
+                  <select
+                    value={sortBy}
+                    onChange={(e) => setSortBy(e.target.value)}
+                    className="bg-black/30 border border-white/20 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                  >
+                    <option value="popular">Most Popular</option>
+                    <option value="newest">Newest</option>
+                    <option value="name">Name A-Z</option>
+                    <option value="price">Price Low-High</option>
+                  </select>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => setViewMode('grid')}
+                    className={`p-2 rounded-lg transition-all duration-300 ${
+                      viewMode === 'grid'
+                        ? 'bg-cyan-500/20 text-cyan-400'
+                        : 'bg-black/30 text-gray-400 hover:bg-black/50'
+                    }`}
+                  >
+                    <Grid className="w-5 h-5" />
+                  </button>
+                  <button
+                    onClick={() => setViewMode('list')}
+                    className={`p-2 rounded-lg transition-all duration-300 ${
+                      viewMode === 'list'
+                        ? 'bg-cyan-500/20 text-cyan-400'
+                        : 'bg-black/30 text-gray-400 hover:bg-black/50'
+                    }`}
+                  >
+                    <List className="w-5 h-5" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-20 bg-black">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Comprehensive Technology Solutions
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              From AI and machine learning to cloud architecture and cybersecurity, we offer end-to-end 
-              solutions that transform businesses and drive measurable results.
+      {/* Enhanced Services Grid */}
+      <section className="pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          {/* Results Summary */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="mb-8 text-center"
+          >
+            <p className="text-gray-300">
+              Showing <span className="text-cyan-400 font-semibold">{filteredServices.length}</span> of{' '}
+              <span className="text-white font-semibold">{allServices.length}</span> services
             </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div 
-                key={index}
-                className="group bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 hover:border-blue-500/50 hover:bg-gray-900/80 transition-all duration-300 hover:transform hover:-translate-y-2"
+          </motion.div>
+
+          {/* Services Grid/List */}
+          <AnimatePresence mode="wait">
+            {filteredServices.length > 0 ? (
+              <motion.div
+                key={`${viewMode}-${selectedCategory}-${sortBy}`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5 }}
+                className={
+                  viewMode === 'grid'
+                    ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'
+                    : 'space-y-4'
+                }
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <service.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-400 mb-4 leading-relaxed">{service.description}</p>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-medium text-white mb-2">Key Features:</h4>
-                  <ul className="space-y-1">
-                    {service.features.slice(0, 3).map((feature, featureIndex) => (
-                      <li key={featureIndex} className="text-xs text-gray-300 flex items-center">
-                        <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-medium text-white mb-2">Benefits:</h4>
-                  <ul className="space-y-1">
-                    {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="text-xs text-gray-300 flex items-center">
-                        <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2"></span>
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <Link 
-                  href={service.href}
-                  className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium group-hover:translate-x-1 transition-transform"
+                {filteredServices.map((service, index) => (
+                  <motion.div
+                    key={service.id}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: index * 0.05 }}
+                    className="group"
+                  >
+                    <UltraFuturisticServiceCard
+                      service={service}
+                      className="h-full hover:scale-105 transition-transform duration-300"
+                    />
+                  </motion.div>
+                ))}
+              </motion.div>
+            ) : (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="text-center py-20"
+              >
+                <div className="text-6xl mb-4">🔍</div>
+                <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
+                <p className="text-gray-400 mb-6">
+                  Try adjusting your search terms or filters to find what you're looking for.
+                </p>
+                <Button
+                  onClick={() => {
+                    setSearchTerm('');
+                    setSelectedCategory('all');
+                  }}
+                  variant="primary"
+                  size="lg"
                 >
-                  <span className="inline-flex items-center">
-                    Learn More
-                    <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </span>
-                </Link>
-              </div>
-            ))}
-          </div>
+                  Clear Filters
+                </Button>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </section>
 
-      {/* Our Process */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 to-black">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+      {/* Contact CTA */}
+      <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our Development Process
+              Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              We follow a proven methodology that ensures successful project delivery and maximum value 
-              for your investment.
+            <p className="text-xl text-gray-300 mb-8">
+              Contact our team to discuss your specific needs and find the perfect solution
             </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {process.map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
-                  {step.step}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{step.title}</h3>
-                <p className="text-gray-400 leading-relaxed">{step.description}</p>
-              </div>
-            ))}
-          </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center"
+              >
+                Contact Us
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+              <a
+                href="tel:+13024640950"
+                className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center"
+              >
+                Call +1 302 464 0950
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Let&rsquo;s discuss how our technology services can transform your business and drive 
-            innovation in your industry.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/contact" 
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
-            >
-              Contact Us Today
-            </Link>
-            <Link 
-              href="/about" 
-              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors"
-            >
-              Learn More About Us
-            </Link>
-          </div>
-        </div>
-      </section>
-    </>
+    </UltraAdvancedFuturisticBackground>
   );
-};
-
-export default ServicesPage;
+}
