@@ -39,6 +39,12 @@ const CloudDevOps = lazy(() => import('./pages/CloudDevOps'));
 const EnterpriseSolutionsPage = lazy(() => import('./pages/EnterpriseSolutions'));
 const DigitalTransformation = lazy(() => import('./pages/DigitalTransformation'));
 
+// New service pages
+const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAutomation'));
+const AIHRRecruitment = lazy(() => import('./pages/services/AIHRRecruitment'));
+const AILegalTech = lazy(() => import('./pages/services/AILegalTech'));
+const AIHealthcareAnalytics = lazy(() => import('./pages/services/AIHealthcareAnalytics'));
+
 // New innovative service pages
 const AIWorkflowAutomation = lazy(() => import('./pages/services/AIWorkflowAutomation'));
 const BlockchainEnterpriseSolutions = lazy(() => import('./pages/services/BlockchainEnterpriseSolutions'));
@@ -143,6 +149,12 @@ const App = () => {
                       <Route path="/cloud-devops" element={<CloudDevOps />} />
                       <Route path="/enterprise-solutions" element={<EnterpriseSolutionsPage />} />
                       <Route path="/digital-transformation" element={<DigitalTransformation />} />
+                      
+                      {/* New Service Routes */}
+                      <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
+                      <Route path="/services/ai-hr-recruitment" element={<AIHRRecruitment />} />
+                      <Route path="/services/ai-legal-tech" element={<AILegalTech />} />
+                      <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
                       
                       {/* Missing pages from analysis */}
                       <Route path="/quantum-neural-network-platform" element={<QuantumNeuralNetworkPlatform />} />
