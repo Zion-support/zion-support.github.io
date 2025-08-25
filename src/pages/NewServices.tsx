@@ -5,13 +5,58 @@ import { COMPREHENSIVE_SERVICES } from '../data/comprehensiveServices';
 import { ADVANCED_INNOVATIVE_SERVICES } from '../data/advancedInnovativeServices';
 import { EMERGING_TECH_SERVICES } from '../data/emergingTechServices';
 
+// Create a union type for all services
+type ServiceType = typeof COMPREHENSIVE_SERVICES[0] | typeof ADVANCED_INNOVATIVE_SERVICES[0] | typeof EMERGING_TECH_SERVICES[0];
+
+// Helper functions to safely access service properties
+const getServiceProperty = (service: ServiceType, property: string, defaultValue: string): string => {
+  if (property in service) {
+    const value = (service as any)[property];
+    if (value !== undefined && value !== null) {
+      return String(value);
+    }
+  }
+  return defaultValue;
+};
+
+const getServiceTags = (service: ServiceType): string[] => {
+  if ('tags' in service && service.tags) {
+    return service.tags;
+  }
+  return [];
+};
+
+const getServicePrice = (service: ServiceType): { price: number; currency: string; pricingModel: string } => {
+  if ('price' in service && typeof service.price === 'object') {
+    // EmergingTechService has a price object
+    const priceObj = service.price as any;
+    return {
+      price: priceObj.monthly || priceObj.yearly || priceObj.oneTime || 0,
+      currency: priceObj.currency || '$',
+      pricingModel: priceObj.pricingModel || 'custom'
+    };
+  } else if ('price' in service && typeof service.price === 'number') {
+    // ComprehensiveService has a direct price number
+    return {
+      price: service.price,
+      currency: (service as any).currency || '$',
+      pricingModel: (service as any).pricingModel || 'monthly'
+    };
+  }
+  return { price: 0, currency: '$', pricingModel: 'custom' };
+};
+
 export function NewServices() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
-  const [selectedService, setSelectedService] = useState<any>(null);
+  const [selectedService, setSelectedService] = useState<ServiceType | null>(null);
 
   // Combine all services
+<<<<<<< HEAD
   const allServices: any[] = [
+=======
+  const allServices: ServiceType[] = [
+>>>>>>> origin/cursor/website-audit-and-enhancement-3843
     ...COMPREHENSIVE_SERVICES,
     ...ADVANCED_INNOVATIVE_SERVICES,
     ...EMERGING_TECH_SERVICES
@@ -375,8 +420,8 @@ const NewServices = () => {
                       {service.category}
                     </span>
                     <span className="text-zion-cyan font-bold text-lg">
-                      ${service.price.toLocaleString()}
-                      <span className="text-sm text-zion-slate-light">/month</span>
+                      ${getServicePrice(service).price.toLocaleString()}
+                      <span className="text-sm text-zion-slate-light">/{getServicePrice(service).pricingModel}</span>
                     </span>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
@@ -422,32 +467,28 @@ const NewServices = () => {
                 <div className="border-t border-zion-cyan/20 pt-4">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-zion-slate-light">
-                      Delivery: {service.estimatedDelivery}
+                      Delivery: {getServiceProperty(service, 'estimatedDelivery', 'N/A')}
                     </span>
                     <span className="text-zion-cyan font-medium">
-                      {service.supportLevel} support
+                      {getServiceProperty(service, 'supportLevel', 'N/A')} support
                     </span>
                   </div>
                   <div className="mt-3 text-center">
                     <span className="text-zion-slate-light text-sm">
-                      Market Price: {service.marketPrice}
+                      Market Price: {getServiceProperty(service, 'marketPrice', 'N/A')}
                     </span>
                   </div>
                 </div>
 
                 {/* Tags */}
-                {service.tags && (
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {service.tags.slice(0, 4).map((tag, index) => (
-                      <span
-                        key={index}
-                        className="text-xs px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light rounded-full"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                )}
+                {getServiceTags(service).slice(0, 4).map((tag, index) => (
+                  <span
+                    key={index}
+                    className="text-xs px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light rounded-full"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </motion.div>
             ))}
           </div>
@@ -479,8 +520,8 @@ const NewServices = () => {
                       {service.category}
                     </span>
                     <span className="text-zion-cyan font-bold text-lg">
-                      ${service.price.toLocaleString()}
-                      <span className="text-sm text-zion-slate-light">/month</span>
+                      ${getServicePrice(service).price.toLocaleString()}
+                      <span className="text-sm text-zion-slate-light">/{getServicePrice(service).pricingModel}</span>
                     </span>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
@@ -526,32 +567,28 @@ const NewServices = () => {
                 <div className="border-t border-zion-cyan/20 pt-4">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-zion-slate-light">
-                      Delivery: {service.estimatedDelivery}
+                      Delivery: {getServiceProperty(service, 'estimatedDelivery', 'N/A')}
                     </span>
                     <span className="text-zion-cyan font-medium">
-                      {service.supportLevel} support
+                      {getServiceProperty(service, 'supportLevel', 'N/A')} support
                     </span>
                   </div>
                   <div className="mt-3 text-center">
                     <span className="text-zion-slate-light text-sm">
-                      Market Price: {service.marketPrice}
+                      Market Price: {getServiceProperty(service, 'marketPrice', 'N/A')}
                     </span>
                   </div>
                 </div>
 
                 {/* Tags */}
-                {service.tags && (
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {service.tags.slice(0, 4).map((tag, index) => (
-                      <span
-                        key={index}
-                        className="text-xs px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light rounded-full"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                )}
+                {getServiceTags(service).slice(0, 4).map((tag, index) => (
+                  <span
+                    key={index}
+                    className="text-xs px-2 py-1 bg-zion-blue-light/20 text-zion-slate-light rounded-full"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </motion.div>
             ))}
           </div>
@@ -1016,19 +1053,19 @@ const NewServices: React.FC = () => {
                   </div>
                   <div>
                     <span className="text-zion-cyan font-medium">Subcategory:</span>
-                    <span className="text-white ml-2">{selectedService.subcategory}</span>
+                    <span className="text-white ml-2">{getServiceProperty(selectedService, 'subcategory', 'N/A')}</span>
                   </div>
                   <div>
                     <span className="text-zion-cyan font-medium">Price:</span>
-                    <span className="text-white ml-2">${selectedService.price.toLocaleString()}/{selectedService.pricingModel}</span>
+                    <span className="text-white ml-2">${getServicePrice(selectedService).price.toLocaleString()}/{getServicePrice(selectedService).pricingModel}</span>
                   </div>
                   <div>
                     <span className="text-zion-cyan font-medium">Delivery:</span>
-                    <span className="text-white ml-2">{selectedService.estimatedDelivery}</span>
+                    <span className="text-white ml-2">{getServiceProperty(selectedService, 'estimatedDelivery', 'N/A')}</span>
                   </div>
                   <div>
                     <span className="text-zion-cyan font-medium">Support:</span>
-                    <span className="text-white ml-2">{selectedService.supportLevel}</span>
+                    <span className="text-white ml-2">{getServiceProperty(selectedService, 'supportLevel', 'N/A')}</span>
                   </div>
                 </div>
               </div>
@@ -1096,8 +1133,8 @@ const NewServices: React.FC = () => {
               </div>
               <div className="text-center mt-4">
                 <p className="text-zion-slate-light text-sm">
-                  Market Price: {selectedService.marketPrice} | 
-                  Estimated Delivery: {selectedService.estimatedDelivery}
+                  Market Price: {getServiceProperty(selectedService, 'marketPrice', 'N/A')} | 
+                  Estimated Delivery: {getServiceProperty(selectedService, 'estimatedDelivery', 'N/A')}
                 </p>
               </div>
             </div>

@@ -14,6 +14,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
 import { 
@@ -66,6 +67,9 @@ import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitte
 =======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Rocket, Target } from 'lucide-react';
 >>>>>>> origin/cursor/website-audit-and-enhancement-ea9e
+=======
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Rocket, BookOpen, HelpCircle, Settings, Star, Cloud, Code } from 'lucide-react';
+>>>>>>> origin/cursor/website-audit-and-enhancement-3843
 import { Link, useLocation } from 'react-router-dom';
 import { useSidebar } from '../context/SidebarContext';
 
@@ -151,6 +155,7 @@ export default function Sidebar() {
       items: [
         { name: 'Home', path: '/', icon: Home },
         { name: 'Services', path: '/services', icon: Briefcase },
+<<<<<<< HEAD
         { name: 'Solutions', path: '/solutions/enterprise', icon: Briefcase },
 <<<<<<< HEAD
         { name: 'Pricing', path: '/pricing', icon: DollarSign },
@@ -158,12 +163,17 @@ export default function Sidebar() {
         { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
         { name: 'Pricing', path: '/pricing', icon: Briefcase },
 >>>>>>> origin/cursor/website-audit-and-enhancement-4b12
+=======
+        { name: 'Solutions', path: '/solutions', icon: Globe },
+        { name: 'Pricing', path: '/pricing', icon: Star },
+>>>>>>> origin/cursor/website-audit-and-enhancement-3843
         { name: 'About', path: '/about', icon: Users },
 >>>>>>> origin/main
         { name: 'Contact', path: '/contact', icon: Phone }
       ]
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -342,11 +352,44 @@ export default function Sidebar() {
         { name: 'Managed IT Services', path: '/services/managed-it-services', icon: Cpu },
         { name: 'DevOps Automation', path: '/services/devops-automation', icon: Cpu },
         { name: 'Cloud Migration', path: '/services/cloud-migration', icon: Cpu }
+=======
+      title: 'Core Services',
+      items: [
+        { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
+        { name: 'Cybersecurity', path: '/cybersecurity', icon: Shield },
+        { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Cloud },
+        { name: 'Quantum Technology', path: '/quantum-technology', icon: Zap },
+        { name: 'Enterprise Solutions', path: '/enterprise-solutions', icon: Briefcase },
+        { name: 'IT Infrastructure', path: '/it-infrastructure', icon: Settings }
+      ]
+    },
+    {
+      title: 'AI Autonomous Systems',
+      items: [
+        { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', icon: Brain },
+        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: BookOpen },
+        { name: 'AI Code Review', path: '/ai-autonomous-code-review', icon: Code },
+        { name: 'AI Creative Director', path: '/ai-autonomous-creative-director', icon: Star },
+        { name: 'AI Decision Engine', path: '/ai-autonomous-decision-engine', icon: Zap },
+        { name: 'AI Autonomous Systems Platform', path: '/ai-autonomous-systems-platform', icon: Rocket }
+      ]
+    },
+    {
+      title: 'Innovative Services',
+      items: [
+        { name: 'Innovative Services Showcase', path: '/innovative-services-showcase', icon: Rocket },
+        { name: 'Comprehensive Services', path: '/comprehensive-services-overview', icon: Briefcase },
+        { name: 'Micro SaaS Solutions', path: '/micro-saas-solutions', icon: Globe },
+        { name: 'Emerging Technology', path: '/emerging-tech', icon: Zap },
+        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain },
+        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Settings }
+>>>>>>> origin/cursor/website-audit-and-enhancement-3843
       ]
     },
     {
       title: 'Industry Solutions',
       items: [
+<<<<<<< HEAD
         { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Briefcase },
         { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Shield },
         { name: 'Financial Solutions', path: '/solutions/financial', icon: Target },
@@ -773,6 +816,14 @@ export default function Sidebar() {
         { name: 'AI Autonomous Vehicles Platform', path: '/ai-autonomous-vehicles-platform', icon: Car },
         { name: 'AI Autonomous Vehicles', path: '/ai-autonomous-vehicles', icon: Car },
         { name: 'AI Autonomous Venture Capitalist', path: '/ai-autonomous-venture-capitalist', icon: Target },
+=======
+        { name: 'Healthcare', path: '/solutions/healthcare', icon: Shield },
+        { name: 'Finance', path: '/solutions/finance', icon: Briefcase },
+        { name: 'Manufacturing', path: '/solutions/manufacturing', icon: Settings },
+        { name: 'Retail', path: '/solutions/retail', icon: Globe },
+        { name: 'Education', path: '/solutions/education', icon: BookOpen },
+        { name: 'Government', path: '/solutions/government', icon: Shield }
+>>>>>>> origin/cursor/website-audit-and-enhancement-3843
       ]
     },
     {
@@ -1025,6 +1076,7 @@ export default function Sidebar() {
         { name: 'Our Mission', path: '/mission', icon: Target },
 >>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
         { name: 'Our Team', path: '/team', icon: Users },
+<<<<<<< HEAD
 <<<<<<< HEAD
         { name: 'Our Mission', path: '/mission', icon: Users },
         { name: 'Leadership', path: '/leadership', icon: Users },
@@ -1421,6 +1473,24 @@ export default function Sidebar() {
         { name: 'System Status', path: '/status', icon: Globe },
         { name: 'Case Studies', path: '/case-studies', icon: Briefcase }
 >>>>>>> origin/cursor/website-audit-and-enhancement-4b12
+=======
+        { name: 'Mission & Vision', path: '/mission', icon: Star },
+        { name: 'Partners', path: '/partners', icon: Handshake },
+        { name: 'Case Studies', path: '/case-studies', icon: BookOpen },
+        { name: 'Careers', path: '/careers', icon: Users }
+      ]
+    },
+    {
+      title: 'Resources & Support',
+      items: [
+        { name: 'Help Center', path: '/help', icon: HelpCircle },
+        { name: 'Documentation', path: '/docs', icon: BookOpen },
+        { name: 'Webinars', path: '/webinars', icon: Globe },
+        { name: 'White Papers', path: '/white-papers', icon: BookOpen },
+        { name: 'Blog & News', path: '/news', icon: BookOpen },
+        { name: 'FAQ', path: '/faq', icon: HelpCircle },
+        { name: 'Support', path: '/support', icon: HelpCircle }
+>>>>>>> origin/cursor/website-audit-and-enhancement-3843
       ]
     }
   ];
@@ -1434,6 +1504,7 @@ export default function Sidebar() {
   ];
 
   const socialLinks = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1490,6 +1561,12 @@ export default function Sidebar() {
     { icon: Facebook, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' },
     { icon: Instagram, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' }
 >>>>>>> origin/main
+=======
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
+    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
+    { icon: Facebook, href: 'https://www.facebook.com/ziontechgroup', label: 'Facebook' },
+    { icon: Instagram, href: 'https://www.instagram.com/ziontechgroup', label: 'Instagram' }
+>>>>>>> origin/cursor/website-audit-and-enhancement-3843
   ];
 
   const sidebarVariants = {
@@ -1965,6 +2042,7 @@ export default function Sidebar() {
                   <div className="space-y-2">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/main
                     <Link
@@ -2015,6 +2093,21 @@ export default function Sidebar() {
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-lg">Z</span>
+=======
+                    <Link 
+                      to="/contact"
+                      className="w-full quantum-button py-3 px-4 rounded-lg font-medium transform hover:scale-105 transition-transform text-center block"
+                    >
+                      Get Free Quote
+                    </Link>
+                    <Link 
+                      to="/pricing"
+                      className="w-full futuristic-card border border-zion-cyan/30 text-zion-cyan py-3 px-4 rounded-lg font-medium hover:bg-zion-cyan/10 transition-colors text-center block"
+                    >
+                      View Pricing
+                    </Link>
+                  </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-3843
                 </div>
                 <span className="text-white font-semibold">Zion Tech Group</span>
               </div>
@@ -2764,7 +2857,7 @@ export default function Sidebar() {
                 {/* Company Info */}
                 <div className="text-center pt-4 border-t border-zion-cyan/20">
                   <p className="text-xs text-zion-slate-light">
-                    © 2024 Zion Tech Group
+                    © 2025 Zion Tech Group
                   </p>
                   <p className="text-xs text-zion-slate-light mt-1">
                     Transforming Business with AI & Tech
