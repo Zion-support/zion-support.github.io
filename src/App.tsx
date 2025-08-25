@@ -1,5 +1,5 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import Sidebar from './components/Sidebar';
@@ -12,13 +12,12 @@ import { AICodeGenerator } from './components/AICodeGenerator';
 import { EnterpriseDashboard } from './components/EnterpriseDashboard';
 import { SecurityComplianceDashboard } from './components/SecurityComplianceDashboard';
 import { MachineLearningDashboard } from './components/MachineLearningDashboard';
+import { WebsiteHealthDashboard } from './components/WebsiteHealthDashboard';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
 import { ErrorBoundary } from './components/ErrorBoundary';
-import { SEO } from './components/SEO';
-import { PerformanceMonitor } from './components/PerformanceMonitor';
 
 // Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
@@ -54,26 +53,14 @@ const MicroSAASSolutions = lazy(() => import('./pages/services/MicroSAASSolution
 const IndustrySolutions = lazy(() => import('./pages/services/IndustrySolutions'));
 const InnovativeNewServices = lazy(() => import('./pages/services/InnovativeNewServices'));
 const SpecializedITInfrastructure = lazy(() => import('./pages/services/SpecializedITInfrastructure'));
-const ComprehensiveServicesOverview = lazy(() => import('./pages/services/ComprehensiveServicesOverview'));
-
-// New AI-powered micro SAAS services
-const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
-const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAutomation'));
-const AIHRRecruitment = lazy(() => import('./pages/services/AIHRRecruitment'));
-const AILegalTech = lazy(() => import('./pages/services/AILegalTech'));
-const AIHealthcareSolutions = lazy(() => import('./pages/services/AIHealthcareSolutions'));
 
 // Solutions pages
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
 const HealthcareSolutions = lazy(() => import('./pages/solutions/Healthcare'));
 
-// Loading Component with improved accessibility
+// Loading Component
 const LoadingSpinner = () => (
-  <div 
-    className="flex items-center justify-center min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900"
-    role="status"
-    aria-label="Loading Zion Tech Group application"
-  >
+  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
     <div className="text-center">
       <div className="relative">
         <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
@@ -81,7 +68,6 @@ const LoadingSpinner = () => (
       </div>
       <p className="text-cyan-400 text-lg font-medium">Loading Zion Tech Group...</p>
       <p className="text-gray-400 text-sm mt-2">Preparing your experience</p>
-      <div className="sr-only">Loading, please wait</div>
     </div>
   </div>
 );
@@ -93,16 +79,12 @@ const App = () => {
     <ErrorBoundary>
       <ThemeProvider>
         <WhitelabelProvider>
-          <Router>
-            {/* Global SEO Component */}
-            <SEO />
-            
-            <div className="App min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+          <div className="App min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
               <Header />
               <Sidebar isOpen={false} onClose={() => {}} />
               
               {/* Main Content with enhanced Suspense */}
-              <main className="ml-64 pt-20 min-h-screen" role="main">
+              <main className="ml-64 pt-20 min-h-screen">
                 <Suspense fallback={<LoadingSpinner />}>
                   <Routes>
                     <Route path="/" element={<Home />} />
@@ -141,14 +123,6 @@ const App = () => {
                     <Route path="/services/industry-solutions" element={<IndustrySolutions />} />
                     <Route path="/services/innovative-new-services" element={<InnovativeNewServices />} />
                     <Route path="/services/specialized-it-infrastructure" element={<SpecializedITInfrastructure />} />
-                    <Route path="/services/comprehensive-overview" element={<ComprehensiveServicesOverview />} />
-                    
-                    {/* New AI-powered micro SAAS service routes */}
-                    <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-                    <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
-                    <Route path="/services/ai-hr-recruitment" element={<AIHRRecruitment />} />
-                    <Route path="/services/ai-legal-tech" element={<AILegalTech />} />
-                    <Route path="/services/ai-healthcare-solutions" element={<AIHealthcareSolutions />} />
                     
                     {/* Solutions Routes */}
                     <Route path="/services/enterprise" element={<EnterpriseSolutions />} />
@@ -165,9 +139,6 @@ const App = () => {
               
               {/* AI Chatbot - Always Available */}
               <AIChatbot />
-              
-              {/* Performance Monitor - Always Available */}
-              <PerformanceMonitor showDetails={false} />
               
               {/* Collaborative Text Editor - Development Mode */}
               {import.meta.env.DEV && (
@@ -218,10 +189,14 @@ const App = () => {
                   <div className="fixed top-4 right-4 z-40">
                     <MachineLearningDashboard />
                   </div>
+                  
+                  {/* Website Health Dashboard */}
+                  <div className="fixed top-4 left-1/4 transform -translate-x-1/2 z-40">
+                    <WebsiteHealthDashboard autoScan={true} />
+                  </div>
                 </>
               )}
-            </div>
-          </Router>
+                      </div>
         </WhitelabelProvider>
       </ThemeProvider>
     </ErrorBoundary>
