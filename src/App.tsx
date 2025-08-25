@@ -1,7 +1,7 @@
 import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
 import Sidebar from './components/Sidebar';
 import { AccessibilityControls } from './components/AccessibilityControls';
 import { PerformanceDashboard } from './components/PerformanceDashboard';
@@ -22,10 +22,6 @@ import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
 import EnhancedSEO from './components/EnhancedSEO';
 import EnhancedAccessibility from './components/EnhancedAccessibility';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
-import { ScrollToTop } from './components/ScrollToTop';
-import { ContentQualityEnhancer } from './components/ContentQualityEnhancer';
-import { BrokenLinkFixer } from './components/BrokenLinkFixer';
-import { WebsiteImprovementDashboard } from './components/WebsiteImprovementDashboard';
 
 // Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
@@ -36,10 +32,6 @@ const AIMatcherPage = lazy(() => import('./pages/AIMatcher'));
 const TalentDirectory = lazy(() => import('./pages/TalentDirectory'));
 const TalentsPage = lazy(() => import('./pages/TalentsPage'));
 const EmergingTech = lazy(() => import('./pages/EmergingTech'));
-
-// New pages from incoming branch
-const MicroSaasServicesPage = lazy(() => import('./pages/MicroSaasServices'));
-const PricingPage = lazy(() => import('./pages/PricingPage'));
 
 // Service pages
 const AIServices = lazy(() => import('./pages/AIServices'));
@@ -64,12 +56,14 @@ const AutonomousBusinessOperationsPlatform = lazy(() => import('./pages/Autonomo
 const AIPoweredITAssetManagement = lazy(() => import('./pages/AIPoweredITAssetManagement'));
 const SOC2ComplianceAutomation = lazy(() => import('./pages/SOC2ComplianceAutomation'));
 const AIAutonomousResearchAssistant = lazy(() => import('./pages/AIAutonomousResearchAssistant'));
-const FiveGEnterpriseSolutions = lazy(() => import('./pages/5GEnterpriseSolutions'));
+const FiveGEnterpriseSolutions = lazy(() => import('./pages/FiveGEnterpriseSolutions'));
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 const NewServices = lazy(() => import('./pages/NewServices'));
+const AccessibilityAuditor = lazy(() => import('./pages/AccessibilityAuditor'));
+const AIAgentOrchestrator = lazy(() => import('./pages/services/AIAgentOrchestrator'));
 
-// Additional missing pages
+// Additional missing pages - these are now imported from services directory below
 
 // Company information pages
 const About = lazy(() => import('./pages/About'));
@@ -96,7 +90,6 @@ const InnovativeMicroSaasServices = lazy(() => import('./pages/InnovativeMicroSa
 const ComprehensiveInnovativeServices = lazy(() => import('./pages/ComprehensiveInnovativeServices'));
 const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveServicesOverview'));
 const EnhancedServicesShowcase = lazy(() => import('./pages/EnhancedServicesShowcase'));
-const InnovativeServicesShowcase = lazy(() => import('./pages/InnovativeServicesShowcase'));
 
 // Solutions pages
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
@@ -178,16 +171,11 @@ const App: React.FC = () => {
               <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
                 {/* Enhanced SEO */}
                 <EnhancedSEO 
-                  seoData={{
-                    title: "Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services",
-                    description: "Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology.",
-                    keywords: ["AI solutions", "quantum computing", "cybersecurity", "digital transformation", "enterprise technology", "machine learning", "cloud services", "IT infrastructure"],
-                    canonicalUrl: "https://ziontechgroup.com",
-                    ogImage: "https://ziontechgroup.com/og-image.jpg",
-                    ogType: "website",
-                    twitterCard: "summary_large_image"
-                  }}
-                  pageType="home"
+                  title="Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services"
+                  description="Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology."
+                  keywords="AI solutions, quantum computing, cybersecurity, digital transformation, enterprise technology, machine learning, cloud services, IT infrastructure"
+                  type="website"
+                  url="https://ziontechgroup.com"
                 />
                 
                 <Header />
@@ -198,19 +186,13 @@ const App: React.FC = () => {
                     <Routes>
                       {/* Main Routes */}
                       <Route path="/" element={<Home />} />
-                      <Route path="/home" element={<Home />} />
                       <Route path="/services" element={<Services />} />
                       <Route path="/ai-solutions" element={<AISolutions />} />
                       <Route path="/services-showcase" element={<ServicesShowcase />} />
-                      <Route path="/innovative-services-showcase" element={<InnovativeServicesShowcase />} />
                       <Route path="/ai-matcher" element={<AIMatcherPage />} />
                       <Route path="/talent-directory" element={<TalentDirectory />} />
                       <Route path="/talents" element={<TalentsPage />} />
                       <Route path="/emerging-tech" element={<EmergingTech />} />
-                      
-                      {/* New routes from incoming branch */}
-                      <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
-                      <Route path="/pricing" element={<PricingPage />} />
                       
                       {/* Service Routes */}
                       <Route path="/ai-services" element={<AIServices />} />
@@ -225,6 +207,8 @@ const App: React.FC = () => {
                       <Route path="/soc2-compliance-automation" element={<SOC2ComplianceAutomation />} />
                       <Route path="/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
                       <Route path="/5g-enterprise-solutions" element={<FiveGEnterpriseSolutions />} />
+                      <Route path="/accessibility-auditor" element={<AccessibilityAuditor />} />
+                      <Route path="/ai-agent-orchestrator" element={<AIAgentOrchestrator />} />
                       <Route path="/case-studies" element={<CaseStudies />} />
                       <Route path="/help" element={<HelpCenter />} />
                       <Route path="/new-services" element={<NewServices />} />
@@ -242,6 +226,7 @@ const App: React.FC = () => {
                       <Route path="/contact" element={<Contact />} />
                       <Route path="/mission" element={<Mission />} />
                       <Route path="/team" element={<Team />} />
+                      <Route path="/pricing" element={<Pricing />} />
                       <Route path="/careers" element={<Careers />} />
                       <Route path="/partners" element={<Partners />} />
                       <Route path="/blog" element={<Blog />} />
@@ -263,7 +248,6 @@ const App: React.FC = () => {
                       <Route path="/comprehensive-innovative-services" element={<ComprehensiveInnovativeServices />} />
                       <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview />} />
                       <Route path="/enhanced-services-showcase" element={<EnhancedServicesShowcase />} />
-                      <Route path="/innovative-services-showcase" element={<InnovativeServicesShowcase />} />
                       
                       {/* New innovative service routes */}
                       <Route path="/ai-workflow-automation" element={<AIWorkflowAutomation />} />
@@ -354,8 +338,6 @@ const App: React.FC = () => {
                 
                 <Footer />
                 <SonnerToaster />
-              </div>
-            </PerformanceOptimizer>
                 
                 {/* Enhanced Accessibility Controls */}
                 <EnhancedAccessibility 
@@ -364,11 +346,6 @@ const App: React.FC = () => {
                   enableKeyboardShortcuts={true}
                   enableVoiceCommands={import.meta.env.DEV}
                 />
-                
-                {/* Website Improvement Tools */}
-                <ContentQualityEnhancer />
-                <BrokenLinkFixer />
-                <WebsiteImprovementDashboard />
                 
                 {/* AI Chatbot - Always Available */}
                 <AIChatbot />

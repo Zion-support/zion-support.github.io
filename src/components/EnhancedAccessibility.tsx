@@ -551,16 +551,14 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   };
 
   const setupAccessibilityInfo = () => {
-    if (settings.showAccessibilityInfo) {
-      // Show accessibility information for elements
-      document.addEventListener('mouseover', (e) => {
-        const target = e.target as HTMLElement;
-        const info = target.getAttribute('data-accessibility-info');
-        if (info) {
-          showAccessibilityTooltip(target, info);
-        }
-      });
-    }
+    // Show accessibility information for elements when enabled
+    document.addEventListener('mouseover', (e) => {
+      const target = e.target as HTMLElement;
+      const info = target.getAttribute('data-accessibility-info');
+      if (info) {
+        showAccessibilityTooltip(target, info);
+      }
+    });
   };
 
   const showAccessibilityTooltip = (element: HTMLElement, info: string) => {
