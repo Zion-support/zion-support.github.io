@@ -60,6 +60,9 @@ const Partners = lazy(() => import('./pages/Partners'));
 const Blog = lazy(() => import('./pages/Blog'));
 const News = lazy(() => import('./pages/News'));
 
+// Error pages
+const NotFoundPage = lazy(() => import('./pages/404'));
+
 // Service detail pages
 const ServicesOverview = lazy(() => import('./pages/services/ServicesOverview'));
 const AIAutonomousSystems = lazy(() => import('./pages/services/AIAutonomousSystems'));
@@ -179,6 +182,9 @@ const App = () => {
                       <Route path="/comprehensive-services" element={<Services />} />
                       <Route path="/services-comparison" element={<Services />} />
                       <Route path="/it-onsite-services" element={<Services />} />
+                      
+                      {/* 404 Page - Catch all unmatched routes */}
+                      <Route path="*" element={<NotFoundPage />} />
                     </Routes>
                   </Suspense>
                 </main>

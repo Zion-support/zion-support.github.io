@@ -28,7 +28,8 @@ import {
   Clock,
   Phone,
   Mail,
-  MapPin
+  MapPin,
+  Bot
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import { SEOConfigs } from '../components/SEOHead';
@@ -97,6 +98,30 @@ const Home: React.FC = () => {
       reviewCount: 127,
       highlights: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards"],
       features: ["Machine Learning", "Data Visualization", "API Integration", "24/7 Support"]
+    },
+    {
+      title: "Quantum Neural Networks",
+      description: "Revolutionary quantum computing combined with advanced neural networks for breakthrough research.",
+      icon: Cpu,
+      path: "/quantum-neural-network-platform",
+      category: "Quantum Technology",
+      price: "$5,000/mo",
+      rating: 4.8,
+      reviewCount: 89,
+      highlights: ["Quantum Processing", "Neural Networks", "Research Platform"],
+      features: ["Quantum Algorithms", "AI Integration", "Research Tools", "Expert Support"]
+    },
+    {
+      title: "AI Autonomous Systems",
+      description: "Intelligent systems that operate independently and optimize business processes.",
+      icon: Bot,
+      path: "/services/ai-autonomous-systems",
+      category: "AI Solutions",
+      price: "$3,500/mo",
+      rating: 4.9,
+      reviewCount: 156,
+      highlights: ["Autonomous Operation", "Self-Optimization", "Predictive Maintenance"],
+      features: ["Machine Learning", "Robotics Integration", "Real-time Monitoring", "24/7 Support"]
     },
     {
       title: "Cloud Infrastructure",
