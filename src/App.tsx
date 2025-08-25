@@ -151,6 +151,7 @@ const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const AboutPage = React.lazy(() => import('./pages/About'));
 const CareersPage = React.lazy(() => import('./pages/Careers'));
 const SitemapPage = React.lazy(() => import('./pages/Sitemap'));
@@ -211,6 +212,19 @@ const ServicesPricingPage = React.lazy(() => import('./pages/ServicesPricing'));
 =======
 const MicroSaasServices = React.lazy(() => import('./pages/MicroSaasServices'));
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-da9e
+=======
+const About = React.lazy(() => import('./pages/About'));
+const Mission = React.lazy(() => import('./pages/Mission'));
+const Team = React.lazy(() => import('./pages/Team'));
+const Careers = React.lazy(() => import('./pages/Careers'));
+const News = React.lazy(() => import('./pages/News'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const Privacy = React.lazy(() => import('./pages/Privacy'));
+const Terms = React.lazy(() => import('./pages/Terms'));
+const Cookies = React.lazy(() => import('./pages/Cookies'));
+const Accessibility = React.lazy(() => import('./pages/Accessibility'));
+>>>>>>> origin/cursor/website-audit-and-enhancement-b7ac
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -303,6 +317,7 @@ const baseRoutes = [
   { path: '/blog/:slug', element: <BlogPost /> },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   { path: '/about', element: <AboutPage /> },
   { path: '/careers', element: <CareersPage /> },
   { path: '/sitemap', element: <SitemapPage /> },
@@ -352,6 +367,19 @@ const baseRoutes = [
   { path: '/portfolio', element: <Portfolio /> },
   { path: '/create-profile', element: <CreateProfile /> },
 >>>>>>> origin/cursor/website-audit-and-enhancement-6664
+=======
+  { path: '/about', element: <About /> },
+  { path: '/mission', element: <Mission /> },
+  { path: '/team', element: <Team /> },
+  { path: '/careers', element: <Careers /> },
+  { path: '/news', element: <News /> },
+  { path: '/case-studies', element: <CaseStudies /> },
+  { path: '/sitemap', element: <Sitemap /> },
+  { path: '/privacy', element: <Privacy /> },
+  { path: '/terms', element: <Terms /> },
+  { path: '/cookies', element: <Cookies /> },
+  { path: '/accessibility', element: <Accessibility /> },
+>>>>>>> origin/cursor/website-audit-and-enhancement-b7ac
 ];
 
 const App = () => {

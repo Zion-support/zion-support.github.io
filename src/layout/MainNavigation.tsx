@@ -65,6 +65,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       key: 'services',
 <<<<<<< HEAD
       href: '/services',
@@ -288,6 +289,31 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: '/blog',
       matches: (path: string) => path.startsWith('/blog')
 >>>>>>> origin/cursor/website-audit-and-enhancement-6664
+=======
+      key: 'services',
+      href: '/services',
+      matches: (path: string) => path.startsWith('/services')
+    },
+    {
+      key: 'about',
+      href: '/about',
+      matches: (path: string) => path.startsWith('/about') || path === '/mission' || path === '/team'
+    },
+    {
+      key: 'case-studies',
+      href: '/case-studies',
+      matches: (path: string) => path.startsWith('/case-studies')
+    },
+    {
+      key: 'news',
+      href: '/news',
+      matches: (path: string) => path.startsWith('/news') || path.startsWith('/blog')
+    },
+    {
+      key: 'contact',
+      href: '/contact',
+      matches: (path: string) => path === '/contact'
+>>>>>>> origin/cursor/website-audit-and-enhancement-b7ac
     }
   ];
 
