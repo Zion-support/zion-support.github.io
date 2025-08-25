@@ -136,6 +136,7 @@ const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const AboutPage = React.lazy(() => import('./pages/About'));
 const CareersPage = React.lazy(() => import('./pages/Careers'));
 const SitemapPage = React.lazy(() => import('./pages/Sitemap'));
@@ -178,6 +179,9 @@ const EnterprisePage = React.lazy(() => import('./pages/Enterprise'));
 =======
 const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServicesPage'));
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-936f
+=======
+const FAQPage = React.lazy(() => import('./pages/FAQ'));
+>>>>>>> origin/cursor/website-audit-and-enhancement-5083
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -237,11 +241,15 @@ const baseRoutes = [
   { path: '/hire-ai', element: <ZionHireAI /> },
   { path: '/request-quote', element: <RequestQuotePage /> },
 <<<<<<< HEAD
+<<<<<<< HEAD
   { path: '/enhanced-services', element: <EnhancedServicesPage /> },
   { path: '/pricing', element: <PricingPage /> },
 =======
   { path: '/comprehensive-services', element: <ComprehensiveServicesPage /> },
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-936f
+=======
+  { path: '/faq', element: <FAQPage /> },
+>>>>>>> origin/cursor/website-audit-and-enhancement-5083
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
 <<<<<<< HEAD

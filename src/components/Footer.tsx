@@ -209,6 +209,7 @@ export function Footer() {
     <footer className="bg-zion-blue-dark border-t border-zion-blue-light pt-12 pb-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+<<<<<<< HEAD
 =======
     <footer className="bg-zion-blue-dark border-t border-zion-blue-light pt-12 pb-8 relative overflow-hidden">
       {/* Futuristic Background Effects */}
@@ -221,6 +222,8 @@ export function Footer() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-73d5
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5083
           <div>
             <div className="mb-4">
               <span className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">ZION</span>
@@ -385,6 +388,7 @@ export function Footer() {
 <<<<<<< HEAD
               <li><Link to="/green-it" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Green IT</Link></li>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <li><Link to="/ai-matcher" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Matcher</Link></li>
 =======
               <li><Link to="/zion-hire-ai" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Zion Hire AI</Link></li>
@@ -392,6 +396,9 @@ export function Footer() {
 =======
               <li><Link to="/content/green-it" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Green IT</Link></li>
 >>>>>>> origin/cursor/website-audit-and-enhancement-a0eb
+=======
+              <li><Link to="/ai-matcher" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Matcher</Link></li>
+>>>>>>> origin/cursor/website-audit-and-enhancement-5083
             </ul>
           </div>
 
@@ -415,22 +422,42 @@ export function Footer() {
               <li><Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Contact</Link></li>
               <li><Link to="/faq" className="text-zion-slate-light hover:text-zion-cyan transition-colors">FAQ</Link></li>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <li><Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Help Center</Link></li>
               <li><Link to="/community" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Community</Link></li>
               <li><Link to="/developers" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Developer Portal</Link></li>
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-a0eb
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5083
               <li><Link to="/sitemap" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Sitemap</Link></li>
             </ul>
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Newsletter Section */}
         <div className="border-t border-zion-blue-light pt-8 mb-8">
           <div className="text-center">
             <h3 className="text-white font-semibold mb-4 text-xl">Stay Updated</h3>
             <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
               Get the latest news on tech, AI, and marketplace opportunities delivered to your inbox.
+=======
+          <div>
+            <h3 className="text-white font-semibold mb-4 text-lg">Support & Resources</h3>
+            <ul className="space-y-2">
+              <li><Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Help Center</Link></li>
+              <li><Link to="/developers" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Developer Portal</Link></li>
+              <li><Link to="/zion-hire-ai" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Zion Hire AI</Link></li>
+              <li><Link to="/mobile-launch" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Mobile App</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-white font-semibold mb-4 text-lg">Subscribe to our newsletter</h3>
+            <p className="text-zion-slate-light mb-4">
+              Stay updated with the latest news on tech, AI, and marketplace opportunities.
+>>>>>>> origin/cursor/website-audit-and-enhancement-5083
             </p>
             <FooterNewsletter />
           </div>
