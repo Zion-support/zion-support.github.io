@@ -11,6 +11,7 @@ if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/sw.js')
       .then((registration) => {
+<<<<<<< HEAD
         console.log('SW registered: ', registration);
         
         // Check for updates
@@ -28,6 +29,9 @@ if ('serviceWorker' in navigator) {
             });
           }
         });
+=======
+        // Service Worker registered successfully
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-675b
       })
       .catch((registrationError) => {
         console.log('SW registration failed: ', registrationError);

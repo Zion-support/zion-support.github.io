@@ -55,8 +55,13 @@ export default function Contact() {
     await new Promise(resolve => setTimeout(resolve, 2000));
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     setSubmitStatus('success');
     setIsSubmitting(false);
+=======
+    // Here you would typically send the form data to your backend
+    // Form submitted successfully - console.log removed for production
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-675b
     
     // Reset form after 3 seconds
     setTimeout(() => {
