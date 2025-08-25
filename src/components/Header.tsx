@@ -19,7 +19,8 @@ import {
   Globe,
   Rocket,
   Star,
-  ArrowRight
+  ArrowRight,
+  BarChart3
 } from 'lucide-react';
 
 export function Header() {
@@ -97,13 +98,13 @@ export function Header() {
       icon: Brain,
       description: 'Intelligent solutions powered by artificial intelligence',
       services: [
+        { name: 'AI Content Hub Pro', path: '/services/ai-content-hub-pro', description: 'Multi-platform content creation suite' },
+        { name: 'AI Customer Service Automation', path: '/services/ai-customer-service-automation', description: 'Intelligent support automation' },
+        { name: 'AI Sales Intelligence', path: '/services/ai-sales-intelligence-platform', description: 'Advanced lead generation and analytics' },
+        { name: 'AI Fintech Platform', path: '/services/ai-fintech-platform', description: 'Financial technology and risk management' },
+        { name: 'AI Healthcare Technology', path: '/services/ai-healthcare-tech-platform', description: 'Patient care and medical analytics' },
         { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', description: 'Advanced autonomous AI systems' },
-        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', description: 'AI-powered research automation' },
-        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', description: 'Advanced analytics and insights' },
-        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', description: 'Smart marketing optimization' },
-        { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', description: 'Intelligent talent management' },
-        { name: 'AI Legal Tech', path: '/services/ai-legal-tech', description: 'Automated legal processes' },
-        { name: 'AI Healthcare Analytics', path: '/services/ai-healthcare-analytics', description: 'Patient care optimization' }
+        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', description: 'AI-powered research automation' }
       ]
     },
     {
@@ -143,13 +144,13 @@ export function Header() {
       icon: Cpu,
       description: 'Scalable cloud solutions and infrastructure management',
       services: [
+        { name: 'Cloud Cost Optimization', path: '/services/cloud-cost-optimization-finops', description: 'FinOps and cost management' },
+        { name: 'DevOps Automation Platform', path: '/services/devops-automation-cicd-platform', description: 'CI/CD and automation' },
         { name: 'Cloud DevOps', path: '/cloud-devops', description: 'Cloud development and operations' },
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', description: 'Complete IT infrastructure solutions' },
         { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', description: 'High-speed 5G connectivity' },
         { name: 'Cloud Migration', path: '/services/cloud-migration', description: 'Seamless cloud transition' },
-        { name: 'Network Infrastructure', path: '/services/network-infrastructure', description: 'Robust network solutions' },
-        { name: 'Managed IT Services', path: '/services/managed-it-services', description: '24/7 IT support' },
-        { name: 'DevOps Automation', path: '/services/devops-automation', description: 'Streamlined development' }
+        { name: 'Network Infrastructure', path: '/services/network-infrastructure', description: 'Robust network solutions' }
       ]
     },
     {
@@ -157,10 +158,24 @@ export function Header() {
       icon: Rocket,
       description: 'Cutting-edge solutions for tomorrow\'s challenges',
       services: [
+        { name: 'Quantum Enterprise Platform', path: '/services/quantum-enterprise-platform', description: 'Enterprise quantum computing' },
+        { name: 'Blockchain Enterprise Solutions', path: '/services/blockchain-enterprise-solutions', description: 'Enterprise blockchain and DeFi' },
+        { name: 'IoT & Edge Computing', path: '/services/iot-edge-computing-platform', description: 'IoT platform and edge computing' },
         { name: 'Blockchain Solutions', path: '/services/blockchain-solutions', description: 'Decentralized applications' },
         { name: 'IoT Platforms', path: '/services/iot-platforms', description: 'Connected device management' },
         { name: 'Quantum Computing', path: '/services/quantum-computing', description: 'Next-generation computing' },
         { name: 'AR/VR Solutions', path: '/services/ar-vr-solutions', description: 'Immersive experiences' }
+      ]
+    },
+    {
+      title: 'Data & Analytics',
+      icon: BarChart3,
+      description: 'Advanced analytics and business intelligence',
+      services: [
+        { name: 'Data Analytics Platform', path: '/services/data-analytics-business-intelligence', description: 'Business intelligence and analytics' },
+        { name: 'API Management Platform', path: '/services/api-management-integration-platform', description: 'API management and integration' },
+        { name: 'Business Intelligence', path: '/services/business-intelligence', description: 'Advanced analytics solutions' },
+        { name: 'Predictive Analytics', path: '/services/predictive-analytics', description: 'AI-powered forecasting' }
       ]
     },
     {

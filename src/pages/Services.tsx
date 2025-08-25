@@ -1,13 +1,21 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { COMPREHENSIVE_SERVICES } from '../data/comprehensiveServices';
+import { INNOVATIVE_MICRO_SAAS_SERVICES } from '../data/innovativeMicroSaasServices';
+import { ADVANCED_ENTERPRISE_SOLUTIONS } from '../data/advancedEnterpriseSolutions';
+import { SPECIALIZED_IT_SERVICES } from '../data/specializedITServices';
 import { Link } from 'react-router-dom';
 
 export function Services() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
 
-  const allServices = [...COMPREHENSIVE_SERVICES];
+  const allServices = [
+    ...COMPREHENSIVE_SERVICES,
+    ...INNOVATIVE_MICRO_SAAS_SERVICES,
+    ...ADVANCED_ENTERPRISE_SOLUTIONS,
+    ...SPECIALIZED_IT_SERVICES
+  ];
   
   const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
   
