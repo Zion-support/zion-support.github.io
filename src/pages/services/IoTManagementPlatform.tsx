@@ -442,7 +442,7 @@ export default function IoTManagementPlatform() {
             {[
               { name: "Edge Computing", icon: Cpu, color: "from-blue-500 to-cyan-500" },
               { name: "5G Networks", icon: Wifi, color: "from-green-500 to-blue-500" },
-              { name: "Machine Learning", icon: Brain, color: "from-purple-500 to-pink-500" },
+              { name: "Machine Learning", icon: Cpu, color: "from-purple-500 to-pink-500" },
               { name: "Blockchain", icon: Lock, color: "from-indigo-500 to-purple-500" },
               { name: "Cloud Native", icon: Cloud, color: "from-orange-500 to-red-500" },
               { name: "Real-time DB", icon: Database, color: "from-teal-500 to-green-500" }

@@ -244,12 +244,6 @@ const App = () => {
                       <PerformanceDashboard />
                     </div>
                     
-<<<<<<< HEAD
-                    {/* Additional innovative service routes */}
-                    <Route path="/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-                    <Route path="/iot-management-platform" element={<IoTManagementPlatform />} />
-                    <Route path="/blockchain-defi-solutions" element={<BlockchainDeFiSolutions />} />
-                    
                     {/* Analytics Dashboard */}
                     <div className="fixed top-4 right-4 z-40">
                       <AnalyticsDashboard />
