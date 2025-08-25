@@ -7,6 +7,7 @@ import { useParams } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-3805
 =======
@@ -17,6 +18,9 @@ import { useParams } from 'react-router-dom';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fb01
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-8a54
+=======
+import { ErrorPage } from '@/components/ErrorPage';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-217b
 import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
 import type { TalentProfile as TalentProfileType } from '@/types/talent';
 import { ProfileErrorState } from '@/components/profile/ProfileErrorState';

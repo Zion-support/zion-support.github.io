@@ -309,7 +309,11 @@
 =======
   "overrides": {
     "@humanwhocodes/object-schema": "@eslint/object-schema@1.0.0",
+<<<<<<< HEAD
     "glob": "^10.3.10",
+=======
+    "glob": "^10.4.5",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-217b
     "rimraf": "^5.0.5"
   },
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fb01
@@ -317,6 +321,7 @@
     "glob": "^10.4.5",
     "rimraf": "^5.0.5",
     "@humanwhocodes/object-schema": "@eslint/object-schema@1.0.0"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   },
@@ -328,5 +333,7 @@
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fb01
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-6664
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-217b
   }
 }
