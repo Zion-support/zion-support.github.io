@@ -62,6 +62,13 @@ const IoTDataAnalytics = lazy(() => import('./pages/services/IoTDataAnalytics'))
 // Next-Generation Innovative Services 2025
 const NextGenInnovativeServices2025 = lazy(() => import('./pages/NextGenInnovativeServices2025'));
 
+// Additional innovative micro SAAS services
+const AILegalDocumentAutomation = lazy(() => import('./pages/services/AILegalDocumentAutomation'));
+const AIHealthcareAnalytics = lazy(() => import('./pages/services/AIHealthcareAnalytics'));
+const AIFinancialTrading = lazy(() => import('./pages/services/AIFinancialTrading'));
+const AISupplyChainOptimization = lazy(() => import('./pages/services/AISupplyChainOptimization'));
+const AICustomerServiceAutomation = lazy(() => import('./pages/services/AICustomerServiceAutomation'));
+
 // Missing pages from analysis
 const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/QuantumNeuralNetworkPlatform'));
 const AutonomousBusinessOperationsPlatform = lazy(() => import('./pages/AutonomousBusinessOperationsPlatform'));
@@ -273,6 +280,13 @@ const App: React.FC = () => {
                       
                       {/* Next-Generation Innovative Services 2025 */}
                       <Route path="/next-gen-innovative-services-2025" element={<NextGenInnovativeServices2025 />} />
+                      
+                      {/* Additional innovative micro SAAS service routes */}
+                      <Route path="/services/ai-legal-document-automation" element={<AILegalDocumentAutomation />} />
+                      <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
+                      <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
+                      <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
+                      <Route path="/services/ai-customer-service-automation" element={<AICustomerServiceAutomation />} />
                       
                       {/* Additional innovative service routes */}
                       <Route path="/ai-business-intelligence" element={<AIBusinessIntelligence />} />
