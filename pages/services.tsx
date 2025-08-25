@@ -11,15 +11,30 @@ import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceC
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
 import { extraServices } from '../data/extra-services';
-import { additionalEnhancedServices } from '../data/additional-real-services';
-import { emergingTechServices } from '../data/emerging-tech-services';
-import { nextGenAIServices } from '../data/next-gen-ai-services';
-import { comprehensiveITServices } from '../data/comprehensive-it-services';
-import { newInnovativeServices } from '../data/innovative-micro-saas-services';
-import { enhancedEnterpriseITServices } from '../data/enhanced-enterprise-it-services';
-import { advancedAISolutions } from '../data/advanced-ai-solutions';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
+import { newlyAddedServices } from '../data/newly-added-services';
+import { moreRealServices2025 } from '../data/more-real-services-2025';
+import { verified2025Additions } from '../data/verified-2025-additions';
+import { realServicesQ12025 } from '../data/real-services-q1-2025';
+import { realEnterpriseServices2025 } from '../data/real-enterprise-services-2025';
+import { realMarketAugmentations2025 } from '../data/real-market-augmentations-2025';
+import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
+import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2';
+import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2';
+import { aiAutonomousServices2026 } from '../data/2026-ai-autonomous-services';
+import { quantumSpaceTechServices2026 } from '../data/2026-quantum-space-tech-services';
+import { metaverseDigitalRealityServices2026 } from '../data/2026-metaverse-digital-reality-services';
+import { ultimate2026Services } from '../data/ultimate-2026-services';
+import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations';
+import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
+import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
+import { revolutionary2027AIServices } from '../data/revolutionary-2027-ai-services';
+import { revolutionary2027ITServices } from '../data/revolutionary-2027-it-services';
+import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-micro-saas';
+import { innovativeMicroSaasServices2029V2 } from '../data/2029-innovative-micro-saas-v2';
+import { emergingTechServices2029V2 } from '../data/2029-emerging-tech-services-v2';
+import { enterpriseITServices2029V2 } from '../data/2029-enterprise-it-services-v2';
+import { spaceMetaverseServices2029 } from '../data/2029-space-metaverse-services';
+import { researchDevelopmentServices2029 } from '../data/2029-research-development-services';
 
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -32,13 +47,48 @@ export default function ServicesPage() {
     ...enhancedRealMicroSaasServices,
     ...innovativeMicroSaasServices,
     ...extraServices,
-    ...additionalEnhancedServices,
-    ...emergingTechServices,
-    ...nextGenAIServices,
-    ...comprehensiveITServices,
-    ...newInnovativeServices,
-    ...enhancedEnterpriseITServices,
-    ...advancedAISolutions
+    ...newlyAddedServices,
+    ...newRealServices,
+    ...moreRealServices2025,
+    ...industryRealServices,
+    ...professionalServices,
+    ...nextGenerationAIServices,
+    ...cuttingEdgeITServices,
+    ...innovativeMicroSaasV2Services,
+    ...marketValidatedServices,
+    ...emergingTechnologyServices,
+    ...comprehensiveITSolutions,
+    ...curatedMarketServices,
+    ...realMarketServices,
+    ...new2025Services,
+    ...verified2025Additions,
+    ...newRealInnovations,
+    ...serviceExpansions2025,
+    ...newOperationalServices2025,
+    ...realServicesQ12025,
+    ...realEnterpriseServices2025,
+    ...verifiedRealServices2025Batch2,
+    ...innovative2025Services,
+    ...emergingTech2025Services,
+    ...realMarketAugmentations2025,
+    ...innovative2026MicroSaasServicesV2,
+    ...emergingTech2026ServicesV2,
+    ...enterpriseIT2026ServicesV2,
+    ...aiAutonomousServices2026,
+    ...quantumSpaceTechServices2026,
+    ...metaverseDigitalRealityServices2026,
+    ...ultimate2026Services,
+    ...revolutionary2026Innovations,
+    ...cuttingEdge2027Innovations,
+    ...practicalMicroSaas2027,
+    ...revolutionary2027AIServices,
+    ...revolutionary2027ITServices,
+    ...revolutionary2027MicroSaasServices,
+    ...innovativeMicroSaasServices2029V2,
+    ...emergingTechServices2029V2,
+    ...enterpriseITServices2029V2,
+    ...spaceMetaverseServices2029,
+    ...researchDevelopmentServices2029
   ];
 
   // Enhanced categories with icons and better organization
@@ -69,8 +119,7 @@ export default function ServicesPage() {
     let filtered = allServices.filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           (service.tagline && service.tagline.toLowerCase().includes(searchTerm.toLowerCase()));
+                           (Array.isArray(service.category) ? service.category.some(cat => cat.toLowerCase().includes(searchTerm.toLowerCase())) : service.category.toLowerCase().includes(searchTerm.toLowerCase()));
       
       const matchesCategory = selectedCategory === 'all' || 
                              service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||
@@ -84,7 +133,16 @@ export default function ServicesPage() {
       case 'name':
         filtered.sort((a, b) => a.name.localeCompare(b.name));
         break;
-      case 'price':
+      case 'price-low':
+        filtered.sort((a, b) => parsePriceToNumber((a as any).price) - parsePriceToNumber((b as any).price));
+        break;
+      case 'price-high':
+        filtered.sort((a, b) => parsePriceToNumber((b as any).price) - parsePriceToNumber((a as any).price));
+        break;
+      case 'rating':
+        // Rating sorting not available for all service types
+        break;
+      case 'customers':
         filtered.sort((a, b) => {
           const priceA = parseFloat(a.price.replace(/[^0-9.]/g, ''));
           const priceB = parseFloat(b.price.replace(/[^0-9.]/g, ''));
@@ -306,13 +364,84 @@ export default function ServicesPage() {
                   variant="primary"
                   size="lg"
                 >
-                  Clear Filters
-                </Button>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-      </section>
+                  <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-3xl p-8 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/30 h-full relative overflow-hidden">
+                    {/* Background Glow Effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    <div className="relative z-10">
+                      {/* Service Icon */}
+                      <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        {'🚀'}
+                      </div>
+
+                      {/* Service Name */}
+                      <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2">
+                        {service.name}
+                      </h3>
+
+                      {/* Description */}
+                      <p className="text-gray-300 mb-6 text-sm line-clamp-3 leading-relaxed">
+                        {service.description}
+                      </p>
+
+                      {/* Price */}
+                      <div className="mb-6 p-4 bg-gradient-to-r from-gray-800/60 to-gray-700/60 rounded-2xl border border-gray-600/30">
+                        <div className="text-2xl font-bold text-cyan-400 mb-1">
+                          {typeof (service as any).price === 'number' ? `$${(service as any).price.toLocaleString()}/month` : `${(service as any).price}${(service as any).period ? '' : ''}`}
+                        </div>
+                        <div className="text-sm text-gray-400">
+                          Starting price
+                        </div>
+                      </div>
+
+                      {/* Features */}
+                      <div className="mb-8">
+                        <h4 className="text-sm font-semibold text-gray-300 mb-3 flex items-center">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          Key Features:
+                        </h4>
+                        <div className="space-y-2">
+                          {service.features.slice(0, 3).map((feature, idx) => (
+                            <div key={idx} className="flex items-center text-xs text-gray-400">
+                              <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2 flex-shrink-0"></div>
+                              <span className="line-clamp-1">{feature}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+
+                      {/* Stats */}
+                      <div className="grid grid-cols-2 gap-4 mb-8 text-sm">
+                        <div className="text-center p-3 bg-gradient-to-r from-gray-800/60 to-gray-700/60 rounded-xl border border-gray-600/30">
+                          <div className="text-cyan-400 font-bold text-lg">
+                            {'N/A'}
+                          </div>
+                          <div className="text-gray-400 text-xs">Rating</div>
+                        </div>
+                        <div className="text-center p-3 bg-gradient-to-r from-gray-800/60 to-gray-700/60 rounded-xl border border-gray-600/30">
+                          <div className="text-purple-400 font-bold text-lg">
+                            {((service as any).customerCount ?? (service as any).customers ?? 'N/A')}
+                          </div>
+                          <div className="text-gray-400 text-xs">Customers</div>
+                        </div>
+                      </div>
+
+                      {/* CTA Button */}
+                      <a 
+                        href={(service as any).link || '/services'} 
+                        className="w-full inline-flex items-center justify-center bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-4 px-6 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/30 group-hover:shadow-2xl group-hover:shadow-cyan-500/40"
+                      >
+                        <span className="flex items-center">
+                          Learn More
+                          <ArrowRight className="inline-block ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </AnimatePresence>
+          </div>
 
       {/* Contact CTA */}
       <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">

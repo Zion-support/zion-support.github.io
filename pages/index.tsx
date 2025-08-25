@@ -7,10 +7,11 @@ import {
   ShieldCheck, Globe, Target, Users, Award, Rocket
 } from 'lucide-react';
 import Button from '../components/ui/Button';
-import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
+import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
-import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
+import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisticNavigation2029V2';
+import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2';
 import EnhancedServiceShowcase from '../components/sections/EnhancedServiceShowcase';
 import Enhanced2026ServicesShowcase from '../components/sections/Enhanced2026ServicesShowcase';
 import Revolutionary2026ServiceShowcase from '../components/sections/Revolutionary2026ServiceShowcase';
@@ -71,6 +72,15 @@ import { revolutionary2027ITServices } from '../data/revolutionary-2027-it-servi
 import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-micro-saas';
 import { futuristic2028Services } from '../data/2028-futuristic-innovations';
 import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
+import { futuristicAIServices2029 } from '../data/2029-futuristic-ai-services';
+import { emergingTechServices2029 } from '../data/2029-emerging-tech-services';
+import { enterpriseITServices2029 } from '../data/2029-enterprise-it-services';
+import { innovativeMicroSaasServices2029 } from '../data/2029-innovative-micro-saas';
+import { innovativeMicroSaasServices2029V2 } from '../data/2029-innovative-micro-saas-v2';
+import { emergingTechServices2029V2 } from '../data/2029-emerging-tech-services-v2';
+import { enterpriseITServices2029V2 } from '../data/2029-enterprise-it-services-v2';
+import { spaceMetaverseServices2029 } from '../data/2029-space-metaverse-services';
+import { researchDevelopmentServices2029 } from '../data/2029-research-development-services';
 
 export default function HomePage() {
   const heroStats = [
@@ -250,6 +260,11 @@ export default function HomePage() {
     ...nextGenerationAIServices,
     ...emergingTechnologyServices,
     ...emergingTechServices2025,
+    ...innovativeMicroSaasServices2029V2,
+    ...emergingTechServices2029V2,
+    ...enterpriseITServices2029V2,
+    ...spaceMetaverseServices2029,
+    ...researchDevelopmentServices2029,
     ...comprehensiveITSolutions,
     ...realMarketServices,
     ...serviceExpansions2025,
@@ -319,63 +334,9 @@ export default function HomePage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <UltraQuantumHolographicBackground>
+              <UltraFuturisticBackground2029>
         {/* Ultra Advanced Navigation */}
-        <UltraFuturisticNavigation2028 />
-
-            {/* Enhanced CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button
-                href="/services"
-                variant="primary"
-                size="lg"
-                className="group relative overflow-hidden"
-              >
-                <span className="relative z-10">Explore Our Services</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </Button>
-              
-              <Button
-                href="/contact"
-                variant="secondary"
-                size="lg"
-                className="group relative overflow-hidden"
-              >
-                <span className="relative z-10">Get Started Today</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </Button>
-            </div>
-          </motion.div>
-
-          {/* Enhanced Hero Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto"
-          >
-            {heroStats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 + index * 0.1, ease: "easeOut" }}
-                className="bg-black/20 backdrop-blur-sm border border-white/10 rounded-xl p-4 hover:bg-black/30 transition-all duration-300 hover:scale-105 group"
-              >
-                <div className={`${stat.color} mb-2 flex justify-center`}>
-                  {stat.icon}
-                </div>
-                <div className={`${stat.color} text-2xl lg:text-3xl font-bold mb-1 group-hover:scale-110 transition-transform duration-300`}>
-                  {stat.value}
-                </div>
-                <div className="text-gray-400 text-sm lg:text-base leading-tight">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+        <UltraFuturisticNavigation2029V2 />
 
       {/* Enhanced Service Highlights Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -625,12 +586,11 @@ export default function HomePage() {
               </div>
             </div>
           </div>
-          
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
-    </UltraAdvancedFuturisticBackground>
+        </section>
+                              </UltraFuturisticBackground2029>
+      
+      {/* Footer */}
+              <UltraFuturisticFooter2029V2 />
+    </>
   );
 }
