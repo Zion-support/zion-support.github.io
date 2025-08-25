@@ -1,7 +1,7 @@
 import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
 import Sidebar from './components/Sidebar';
 import { AccessibilityControls } from './components/AccessibilityControls';
 import { PerformanceDashboard } from './components/PerformanceDashboard';
@@ -21,11 +21,7 @@ import { Toaster as SonnerToaster } from "./components/ui/sonner";
 import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
 import EnhancedSEO from './components/EnhancedSEO';
 import EnhancedAccessibility from './components/EnhancedAccessibility';
-import { PerformanceMonitor } from './components/PerformanceMonitor';
-import { ScrollToTop } from './components/ScrollToTop';
-import { ContentQualityEnhancer } from './components/ContentQualityEnhancer';
-import { BrokenLinkFixer } from './components/BrokenLinkFixer';
-import { WebsiteImprovementDashboard } from './components/WebsiteImprovementDashboard';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 // Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
@@ -37,10 +33,6 @@ const TalentDirectory = lazy(() => import('./pages/TalentDirectory'));
 const TalentsPage = lazy(() => import('./pages/TalentsPage'));
 const EmergingTech = lazy(() => import('./pages/EmergingTech'));
 
-// New pages from incoming branch
-const MicroSaasServicesPage = lazy(() => import('./pages/MicroSaasServices'));
-const PricingPage = lazy(() => import('./pages/PricingPage'));
-
 // Service pages
 const AIServices = lazy(() => import('./pages/AIServices'));
 const CloudDevOps = lazy(() => import('./pages/CloudDevOps'));
@@ -48,10 +40,6 @@ const EnterpriseSolutionsPage = lazy(() => import('./pages/EnterpriseSolutions')
 const DigitalTransformation = lazy(() => import('./pages/DigitalTransformation'));
 const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
 const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAutomation'));
-
-// Additional innovative services
-const IoTManagementPlatform = lazy(() => import('./pages/services/IoTManagementPlatform'));
-const BlockchainDeFiSolutions = lazy(() => import('./pages/services/BlockchainDeFiSolutions'));
 
 // New innovative service pages
 const AIWorkflowAutomation = lazy(() => import('./pages/services/AIWorkflowAutomation'));
@@ -68,8 +56,6 @@ const FiveGEnterpriseSolutions = lazy(() => import('./pages/5GEnterpriseSolution
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 const NewServices = lazy(() => import('./pages/NewServices'));
-
-// Additional missing pages
 
 // Company information pages
 const About = lazy(() => import('./pages/About'));
@@ -95,8 +81,6 @@ const SpecializedITInfrastructure = lazy(() => import('./pages/services/Speciali
 const InnovativeMicroSaasServices = lazy(() => import('./pages/InnovativeMicroSaasServices'));
 const ComprehensiveInnovativeServices = lazy(() => import('./pages/ComprehensiveInnovativeServices'));
 const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveServicesOverview'));
-const EnhancedServicesShowcase = lazy(() => import('./pages/EnhancedServicesShowcase'));
-const InnovativeServicesShowcase = lazy(() => import('./pages/InnovativeServicesShowcase'));
 
 // Solutions pages
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
@@ -114,7 +98,7 @@ const Testimonials = lazy(() => import('./pages/Testimonials'));
 const Support = lazy(() => import('./pages/HelpCenter'));
 const Docs = lazy(() => import('./pages/HelpCenter'));
 const Marketplace = lazy(() => import('./pages/Marketplace'));
-const Community = lazy(() => import('./pages/CommunityPage'));
+const Community = lazy(() => import('../pages/community'));
 
 // AI Autonomous Service pages
 const AIAutonomousBusinessManager = lazy(() => import('./pages/services/AIAutonomousBusinessManager'));
@@ -165,48 +149,38 @@ const App: React.FC = () => {
 
   return (
     <EnhancedErrorBoundary>
+
       <EnhancedAccessibility />
       <PerformanceMonitor />
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
-            <PerformanceOptimizer />
-            <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+            <PerformanceOptimizer>
+              <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
                 {/* Enhanced SEO */}
                 <EnhancedSEO 
-                  seoData={{
-                    title: "Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services",
-                    description: "Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology.",
-                    keywords: ["AI solutions", "quantum computing", "cybersecurity", "digital transformation", "enterprise technology", "machine learning", "cloud services", "IT infrastructure"],
-                    canonicalUrl: "https://ziontechgroup.com",
-                    ogImage: "https://ziontechgroup.com/og-image.jpg",
-                    ogType: "website",
-                    twitterCard: "summary_large_image"
-                  }}
-                  pageType="home"
+                  title="Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services"
+                  description="Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology."
+                  keywords="AI solutions, quantum computing, cybersecurity, digital transformation, enterprise technology, machine learning, cloud services, IT infrastructure"
+                  type="website"
+                  url="https://ziontechgroup.com"
                 />
                 
                 <Header />
                 <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
                 
-                <main id="main-content" className="pt-20">
+                <main className="pt-20">
                   <Suspense fallback={<LoadingSpinner />}>
                     <Routes>
                       {/* Main Routes */}
                       <Route path="/" element={<Home />} />
-                      <Route path="/home" element={<Home />} />
                       <Route path="/services" element={<Services />} />
                       <Route path="/ai-solutions" element={<AISolutions />} />
                       <Route path="/services-showcase" element={<ServicesShowcase />} />
-                      <Route path="/innovative-services-showcase" element={<InnovativeServicesShowcase />} />
                       <Route path="/ai-matcher" element={<AIMatcherPage />} />
                       <Route path="/talent-directory" element={<TalentDirectory />} />
                       <Route path="/talents" element={<TalentsPage />} />
                       <Route path="/emerging-tech" element={<EmergingTech />} />
-                      
-                      {/* New routes from incoming branch */}
-                      <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
-                      <Route path="/pricing" element={<PricingPage />} />
                       
                       {/* Service Routes */}
                       <Route path="/ai-services" element={<AIServices />} />
@@ -225,19 +199,12 @@ const App: React.FC = () => {
                       <Route path="/help" element={<HelpCenter />} />
                       <Route path="/new-services" element={<NewServices />} />
                       
-                      {/* Additional missing pages */}
-                      <Route path="/ai-autonomous-business-manager" element={<AIAutonomousBusinessManager />} />
-                      <Route path="/ai-autonomous-business-platform" element={<AIAutonomousBusinessPlatform />} />
-                      <Route path="/ai-autonomous-research" element={<AIAutonomousResearch />} />
-                      <Route path="/ai-autonomous-systems-platform" element={<AIAutonomousSystemsPlatform />} />
-                      <Route path="/ai-autonomous-code-review" element={<AIAutonomousCodeReview />} />
-                      <Route path="/ai-autonomous-creative-director" element={<AIAutonomousCreativeDirector />} />
-                      
                       {/* Company Routes */}
                       <Route path="/about" element={<About />} />
                       <Route path="/contact" element={<Contact />} />
                       <Route path="/mission" element={<Mission />} />
                       <Route path="/team" element={<Team />} />
+                      <Route path="/pricing" element={<Pricing />} />
                       <Route path="/careers" element={<Careers />} />
                       <Route path="/partners" element={<Partners />} />
                       <Route path="/blog" element={<Blog />} />
@@ -258,18 +225,11 @@ const App: React.FC = () => {
                       <Route path="/innovative-micro-saas-services" element={<InnovativeMicroSaasServices />} />
                       <Route path="/comprehensive-innovative-services" element={<ComprehensiveInnovativeServices />} />
                       <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview />} />
-                      <Route path="/enhanced-services-showcase" element={<EnhancedServicesShowcase />} />
-                      <Route path="/innovative-services-showcase" element={<InnovativeServicesShowcase />} />
                       
                       {/* New innovative service routes */}
                       <Route path="/ai-workflow-automation" element={<AIWorkflowAutomation />} />
                       <Route path="/blockchain-enterprise-solutions" element={<BlockchainEnterpriseSolutions />} />
                       <Route path="/iot-data-analytics" element={<IoTDataAnalytics />} />
-                      
-                      {/* Additional innovative service routes */}
-                      <Route path="/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-                      <Route path="/iot-management-platform" element={<IoTManagementPlatform />} />
-                      <Route path="/blockchain-defi-solutions" element={<BlockchainDeFiSolutions />} />
                       
                       {/* Solutions Routes */}
                       <Route path="/services/enterprise" element={<EnterpriseSolutions />} />
@@ -350,21 +310,9 @@ const App: React.FC = () => {
                 
                 <Footer />
                 <SonnerToaster />
-              </div>
-            </PerformanceOptimizer>
                 
                 {/* Enhanced Accessibility Controls */}
-                <EnhancedAccessibility 
-                  position="bottom-right" 
-                  showOnLoad={false}
-                  enableKeyboardShortcuts={true}
-                  enableVoiceCommands={import.meta.env.DEV}
-                />
-                
-                {/* Website Improvement Tools */}
-                <ContentQualityEnhancer />
-                <BrokenLinkFixer />
-                <WebsiteImprovementDashboard />
+                <EnhancedAccessibility position="bottom-right" />
                 
                 {/* AI Chatbot - Always Available */}
                 <AIChatbot />
@@ -420,31 +368,13 @@ const App: React.FC = () => {
                     </div>
                   </>
                 )}
-                
-                {/* Enhanced Performance Monitor - Always Available */}
-                <PerformanceMonitor />
-                
-                {/* Link Health Monitor - Development Mode */}
-                {import.meta.env.DEV && (
-                  <LinkHealthMonitor
-                    links={[
-                      'https://ziontechgroup.com',
-                      'https://www.linkedin.com/company/ziontechgroup',
-                      'https://twitter.com/ziontechgroup',
-                      'https://github.com/ziontechgroup',
-                      'https://www.youtube.com/@ziontechgroup'
-                    ]}
-                    autoCheck={true}
-                    checkInterval={600000} // 10 minutes
-                    timeout={5000} // 5 seconds
-                  />
-                )}
               </div>
-            </Router>
-          </WhitelabelProvider>
-        </ThemeProvider>
-      </EnhancedErrorBoundary>
-    );
-  };
+            </PerformanceOptimizer>
+          </Router>
+        </WhitelabelProvider>
+      </ThemeProvider>
+    </EnhancedErrorBoundary>
+  );
+};
 
 export default App;
