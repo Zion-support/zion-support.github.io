@@ -98,7 +98,7 @@ const LoadingSpinner = () => (
 
 const App = () => {
   useScrollToTop();
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  
 
   return (
     <EnhancedErrorBoundary>
@@ -117,7 +117,7 @@ const App = () => {
                 />
                 
                 <Header />
-                <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+                <Sidebar />
                 
                 <main className="pt-20">
                   <Suspense fallback={<LoadingSpinner />}>
