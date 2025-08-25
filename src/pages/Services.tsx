@@ -26,7 +26,19 @@ import {
   Star,
   CheckCircle,
   Clock,
-  TrendingUp
+  TrendingUp,
+  Atom,
+  Car,
+  Leaf,
+  Factory,
+  Building2,
+  GraduationCap,
+  Store,
+  Scale,
+  Truck,
+  Home,
+  Utensils,
+  BookOpen
 } from 'lucide-react';
 
 export default function Services() {
@@ -42,46 +54,54 @@ export default function Services() {
       description: 'Intelligent solutions powered by artificial intelligence',
       services: [
         {
-          name: 'AI Autonomous Systems',
-          path: '/services/ai-autonomous-systems',
-          description: 'Advanced autonomous AI systems that operate independently',
-          icon: Brain,
-          features: ['Self-learning algorithms', 'Predictive analytics', 'Automated decision making'],
-          pricing: 'Starting from $5,000/month'
-        },
-        {
-          name: 'AI Research Assistant',
-          path: '/ai-autonomous-research-assistant',
-          description: 'AI-powered research automation and insights',
-          icon: Brain,
-          features: ['Data analysis', 'Literature review', 'Trend identification'],
-          pricing: 'Starting from $3,000/month'
-        },
-        {
-          name: 'AI Business Intelligence',
+          name: 'AI Business Intelligence Platform',
           path: '/services/ai-business-intelligence',
-          description: 'Advanced analytics and business insights',
+          description: 'Advanced AI-powered business intelligence platform with real-time insights and predictive analytics',
           icon: BarChart3,
-          features: ['Real-time dashboards', 'Predictive modeling', 'Performance tracking'],
-          pricing: 'Starting from $4,000/month'
+          features: ['Real-time data visualization', 'Predictive analytics engine', 'Natural language querying', 'Automated reporting'],
+          pricing: 'Starting from $899/month'
         },
         {
-          name: 'AI Marketing Automation',
-          path: '/services/ai-marketing-automation',
-          description: 'Smart marketing optimization and automation',
+          name: 'AI Content Creation Suite',
+          path: '/services/ai-content-creation',
+          description: 'Comprehensive AI-powered content creation platform for blogs, social media, and marketing',
+          icon: Brain,
+          features: ['AI blog post generator', 'Social media content creator', 'SEO optimization', 'Plagiarism detection'],
+          pricing: 'Starting from $199/month'
+        },
+        {
+          name: 'AI Customer Support Automation',
+          path: '/services/ai-customer-support',
+          description: 'Intelligent customer support automation with AI chatbots and sentiment analysis',
+          icon: Users,
+          features: ['AI-powered chatbots', 'Intelligent ticket routing', 'Sentiment analysis', '24/7 support'],
+          pricing: 'Starting from $299/month'
+        },
+        {
+          name: 'AI Project Management Platform',
+          path: '/services/ai-project-management',
+          description: 'Intelligent project management with AI-powered resource optimization and timeline prediction',
           icon: Target,
-          features: ['Customer segmentation', 'Campaign optimization', 'ROI tracking'],
-          pricing: 'Starting from $2,500/month'
+          features: ['AI task prioritization', 'Resource optimization', 'Timeline prediction', 'Risk assessment'],
+          pricing: 'Starting from $399/month'
         }
       ]
     },
     {
       id: 'quantum',
       title: 'Quantum Technology',
-      icon: Brain,
+      icon: Atom,
       color: 'from-blue-500 to-cyan-500',
       description: 'Next-generation quantum computing solutions',
       services: [
+        {
+          name: 'Quantum AI Orchestrator Platform',
+          path: '/services/quantum-ai-orchestrator',
+          description: 'Revolutionary platform combining quantum computing with AI for complex optimization problems',
+          icon: Atom,
+          features: ['Quantum resource orchestration', 'AI problem decomposition', 'Hybrid workflows', 'Real-time simulation'],
+          pricing: 'Starting from $4,999/month'
+        },
         {
           name: 'Quantum Neural Networks',
           path: '/quantum-neural-network-platform',
@@ -89,39 +109,307 @@ export default function Services() {
           icon: Brain,
           features: ['Quantum algorithms', 'Superior performance', 'Future-proof technology'],
           pricing: 'Starting from $15,000/month'
-        },
-        {
-          name: 'Quantum Computing',
-          path: '/services/quantum-technology',
-          description: 'Quantum computing platforms and solutions',
-          icon: Cpu,
-          features: ['Quantum supremacy', 'Complex simulations', 'Cryptography'],
-          pricing: 'Starting from $20,000/month'
         }
       ]
     },
     {
       id: 'cybersecurity',
-      title: 'Cybersecurity',
+      title: 'Cybersecurity & Threat Intelligence',
       icon: Shield,
       color: 'from-red-500 to-pink-500',
       description: 'Comprehensive security and compliance solutions',
       services: [
         {
-          name: 'Cybersecurity Services',
-          path: '/services/cybersecurity',
-          description: 'Complete security solutions for your business',
+          name: 'AI Threat Intelligence Platform',
+          path: '/services/ai-threat-intelligence',
+          description: 'Advanced AI-powered threat intelligence with predictive analysis and automated response',
           icon: Shield,
-          features: ['Threat detection', 'Vulnerability assessment', 'Incident response'],
-          pricing: 'Starting from $3,500/month'
+          features: ['AI threat detection', 'Predictive analysis', 'Automated response', '24/7 monitoring'],
+          pricing: 'Starting from $2,499/month'
         },
         {
-          name: 'SOC2 Compliance Automation',
-          path: '/soc2-compliance-automation',
-          description: 'Automated compliance management and monitoring',
+          name: 'AI Cybersecurity Platform',
+          path: '/services/ai-cybersecurity',
+          description: 'Next-generation cybersecurity with AI-powered threat detection and prevention',
           icon: Lock,
-          features: ['Automated audits', 'Real-time monitoring', 'Compliance reporting'],
-          pricing: 'Starting from $4,500/month'
+          features: ['AI threat detection', 'Behavioral analytics', 'Automated response', 'Real-time protection'],
+          pricing: 'Starting from $1,499/month'
+        }
+      ]
+    },
+    {
+      id: 'blockchain',
+      title: 'Blockchain & Web3',
+      icon: Globe,
+      color: 'from-green-500 to-emerald-500',
+      description: 'Enterprise blockchain and decentralized solutions',
+      services: [
+        {
+          name: 'Blockchain Enterprise Orchestrator',
+          path: '/services/blockchain-enterprise',
+          description: 'Enterprise-grade blockchain platform for smart contracts and DeFi protocols',
+          icon: Globe,
+          features: ['Multi-blockchain management', 'Smart contract orchestration', 'DeFi integration', 'Cross-chain support'],
+          pricing: 'Starting from $1,999/month'
+        },
+        {
+          name: 'Blockchain Smart Contract Platform',
+          path: '/services/blockchain-smart-contracts',
+          description: 'Enterprise blockchain platform for creating and managing smart contracts',
+          icon: Code,
+          features: ['Multi-chain support', 'Smart contract templates', 'Security auditing', 'Compliance monitoring'],
+          pricing: 'Starting from $2,500/month'
+        }
+      ]
+    },
+    {
+      id: 'healthcare',
+      title: 'Healthcare & Medical Research',
+      icon: Heart,
+      color: 'from-pink-500 to-red-500',
+      description: 'AI-powered healthcare solutions and medical research',
+      services: [
+        {
+          name: 'AI Medical Research Platform',
+          path: '/services/ai-medical-research',
+          description: 'Revolutionary AI platform accelerating drug discovery and clinical trials',
+          icon: Heart,
+          features: ['AI drug discovery', 'Clinical trial optimization', 'Medical image analysis', 'Genomic processing'],
+          pricing: 'Starting from $3,999/month'
+        },
+        {
+          name: 'AI Healthcare Management Platform',
+          path: '/services/ai-healthcare-management',
+          description: 'Comprehensive AI-powered healthcare management for patient care and analytics',
+          icon: Building2,
+          features: ['AI patient scheduling', 'Medical record management', 'Diagnostic assistance', 'HIPAA compliance'],
+          pricing: 'Starting from $1,299/month'
+        }
+      ]
+    },
+    {
+      id: 'finance',
+      title: 'Financial Services & Trading',
+      icon: DollarSign,
+      color: 'from-yellow-500 to-orange-500',
+      description: 'AI-powered financial solutions and trading platforms',
+      services: [
+        {
+          name: 'AI Financial Trading Platform',
+          path: '/services/ai-financial-trading',
+          description: 'Advanced AI-powered trading platform with algorithmic trading and risk management',
+          icon: TrendingUp,
+          features: ['AI trading algorithms', 'Real-time market analysis', 'Risk management', 'Portfolio optimization'],
+          pricing: 'Starting from $4,999/month'
+        },
+        {
+          name: 'AI Financial Management Suite',
+          path: '/services/ai-financial-management',
+          description: 'Comprehensive AI-powered financial management for businesses',
+          icon: DollarSign,
+          features: ['Automated bookkeeping', 'Financial forecasting', 'Tax preparation', 'Expense tracking'],
+          pricing: 'Starting from $149/month'
+        }
+      ]
+    },
+    {
+      id: 'manufacturing',
+      title: 'Manufacturing & Industry 4.0',
+      icon: Factory,
+      color: 'from-gray-500 to-blue-500',
+      description: 'Smart manufacturing and industrial automation',
+      services: [
+        {
+          name: 'AI Industry 4.0 Platform',
+          path: '/services/ai-industry-4-0',
+          description: 'Comprehensive AI platform for Industry 4.0 optimization and automation',
+          icon: Factory,
+          features: ['Predictive maintenance', 'Quality control automation', 'Production optimization', 'IoT integration'],
+          pricing: 'Starting from $3,499/month'
+        },
+        {
+          name: 'AI Manufacturing Intelligence Platform',
+          path: '/services/ai-manufacturing-intelligence',
+          description: 'Advanced AI platform for manufacturing optimization and quality control',
+          icon: Cpu,
+          features: ['Predictive maintenance', 'Quality control', 'Production optimization', 'Real-time monitoring'],
+          pricing: 'Starting from $1,999/month'
+        }
+      ]
+    },
+    {
+      id: 'energy',
+      title: 'Energy & Sustainability',
+      icon: Zap,
+      color: 'from-yellow-400 to-green-500',
+      description: 'Sustainable energy management and optimization',
+      services: [
+        {
+          name: 'AI Energy & Sustainability Platform',
+          path: '/services/ai-energy-sustainability',
+          description: 'Intelligent platform for energy optimization and sustainability tracking',
+          icon: Zap,
+          features: ['Energy consumption optimization', 'Renewable energy management', 'Carbon tracking', 'Sustainability reporting'],
+          pricing: 'Starting from $1,999/month'
+        },
+        {
+          name: 'AI Energy Management Platform',
+          path: '/services/ai-energy-management',
+          description: 'Intelligent energy management for buildings and facilities',
+          icon: Building,
+          features: ['Energy optimization', 'Usage prediction', 'Automated efficiency', 'Real-time monitoring'],
+          pricing: 'Starting from $799/month'
+        }
+      ]
+    },
+    {
+      id: 'transportation',
+      title: 'Transportation & Smart Cities',
+      icon: Truck,
+      color: 'from-blue-600 to-purple-600',
+      description: 'Intelligent transportation and urban management',
+      services: [
+        {
+          name: 'AI Smart City Platform',
+          path: '/services/ai-smart-city',
+          description: 'Comprehensive AI platform for smart city management and optimization',
+          icon: Building2,
+          features: ['Traffic optimization', 'Public safety monitoring', 'Utility management', 'Urban planning'],
+          pricing: 'Starting from $4,999/month'
+        },
+        {
+          name: 'AI Transportation & Logistics Platform',
+          path: '/services/ai-transportation-logistics',
+          description: 'Intelligent transportation platform for route optimization and fleet management',
+          icon: Truck,
+          features: ['Route optimization', 'Fleet management', 'Real-time tracking', 'Performance analytics'],
+          pricing: 'Starting from $599/month'
+        },
+        {
+          name: 'AI Autonomous Fleet Management',
+          path: '/services/ai-autonomous-fleet',
+          description: 'Next-generation autonomous fleet management with AI coordination',
+          icon: Car,
+          features: ['Autonomous coordination', 'AI route optimization', 'Safety monitoring', 'Predictive maintenance'],
+          pricing: 'Starting from $2,999/month'
+        }
+      ]
+    },
+    {
+      id: 'education',
+      title: 'Education & Learning',
+      icon: GraduationCap,
+      color: 'from-indigo-500 to-purple-500',
+      description: 'AI-powered education and learning analytics',
+      services: [
+        {
+          name: 'AI Education Analytics Platform',
+          path: '/services/ai-education-analytics',
+          description: 'Advanced AI platform for learning analytics and student performance tracking',
+          icon: GraduationCap,
+          features: ['Learning analytics', 'Performance tracking', 'Personalized recommendations', 'Predictive modeling'],
+          pricing: 'Starting from $1,499/month'
+        },
+        {
+          name: 'AI Education & Learning Platform',
+          path: '/services/ai-education-learning',
+          description: 'Intelligent education platform with personalized learning experiences',
+          icon: BookOpen,
+          features: ['Personalized learning paths', 'Adaptive assessments', 'Progress tracking', 'Administrative automation'],
+          pricing: 'Starting from $299/month'
+        }
+      ]
+    },
+    {
+      id: 'retail',
+      title: 'Retail & E-commerce',
+      icon: Store,
+      color: 'from-orange-500 to-red-500',
+      description: 'AI-powered retail optimization and innovation',
+      services: [
+        {
+          name: 'AI Retail Innovation Platform',
+          path: '/services/ai-retail-innovation',
+          description: 'Cutting-edge AI platform revolutionizing retail through personalization and optimization',
+          icon: Store,
+          features: ['Personalized experiences', 'Inventory optimization', 'Predictive analytics', 'Customer insights'],
+          pricing: 'Starting from $2,499/month'
+        },
+        {
+          name: 'AI E-commerce Optimization Platform',
+          path: '/services/ai-ecommerce-optimization',
+          description: 'Intelligent e-commerce optimization for conversion rates and customer experience',
+          icon: ShoppingCart,
+          features: ['AI recommendations', 'Dynamic pricing', 'Conversion optimization', 'Customer analytics'],
+          pricing: 'Starting from $299/month'
+        }
+      ]
+    },
+    {
+      id: 'legal',
+      title: 'Legal & Compliance',
+      icon: Scale,
+      color: 'from-gray-700 to-blue-700',
+      description: 'AI-powered legal automation and compliance',
+      services: [
+        {
+          name: 'AI Legal & Compliance Platform',
+          path: '/services/ai-legal-compliance',
+          description: 'Advanced AI platform for legal document automation and compliance monitoring',
+          icon: Scale,
+          features: ['Document automation', 'Compliance monitoring', 'Regulatory reporting', 'Risk assessment'],
+          pricing: 'Starting from $3,999/month'
+        }
+      ]
+    },
+    {
+      id: 'agriculture',
+      title: 'Agriculture & Precision Farming',
+      icon: Leaf,
+      color: 'from-green-600 to-emerald-600',
+      description: 'AI-powered agricultural optimization and sustainability',
+      services: [
+        {
+          name: 'AI Precision Farming Platform',
+          path: '/services/ai-precision-farming',
+          description: 'Revolutionary AI platform for precision farming and sustainable agriculture',
+          icon: Leaf,
+          features: ['Precision farming optimization', 'Crop monitoring', 'Soil analysis', 'Weather prediction'],
+          pricing: 'Starting from $1,999/month'
+        }
+      ]
+    },
+    {
+      id: 'construction',
+      title: 'Construction & Infrastructure',
+      icon: Building2,
+      color: 'from-orange-600 to-red-600',
+      description: 'AI-powered construction optimization and project management',
+      services: [
+        {
+          name: 'AI Construction Optimization Platform',
+          path: '/services/ai-construction-optimization',
+          description: 'Advanced AI platform for construction project optimization and management',
+          icon: Building2,
+          features: ['Project planning optimization', 'Resource management', 'Performance analytics', 'Safety monitoring'],
+          pricing: 'Starting from $2,999/month'
+        }
+      ]
+    },
+    {
+      id: 'hospitality',
+      title: 'Hospitality & Guest Experience',
+      icon: Utensils,
+      color: 'from-pink-600 to-purple-600',
+      description: 'AI-powered hospitality optimization and guest experience',
+      services: [
+        {
+          name: 'AI Hospitality Optimization Platform',
+          path: '/services/ai-hospitality-optimization',
+          description: 'Intelligent platform for hospitality operations and guest experience optimization',
+          icon: Utensils,
+          features: ['Guest experience optimization', 'Operational efficiency', 'Revenue optimization', 'Customer analytics'],
+          pricing: 'Starting from $1,999/month'
         }
       ]
     },
@@ -157,64 +445,6 @@ export default function Services() {
           pricing: 'Starting from $5,000/month'
         }
       ]
-    },
-    {
-      id: 'business',
-      title: 'Business Operations',
-      icon: Building,
-      color: 'from-green-500 to-emerald-500',
-      description: 'Streamlined business process automation',
-      services: [
-        {
-          name: 'Autonomous Business Platform',
-          path: '/autonomous-business-operations-platform',
-          description: 'Self-operating business systems and automation',
-          icon: Building,
-          features: ['Process automation', 'Workflow optimization', 'Performance analytics'],
-          pricing: 'Starting from $6,000/month'
-        },
-        {
-          name: 'AI Asset Management',
-          path: '/ai-powered-it-asset-management',
-          description: 'Intelligent IT asset management and tracking',
-          icon: Database,
-          features: ['Asset tracking', 'Lifecycle management', 'Cost optimization'],
-          pricing: 'Starting from $2,000/month'
-        }
-      ]
-    },
-    {
-      id: 'industry',
-      title: 'Industry Solutions',
-      icon: Target,
-      color: 'from-orange-500 to-yellow-500',
-      description: 'Tailored solutions for specific industries',
-      services: [
-        {
-          name: 'Healthcare Technology',
-          path: '/solutions/healthcare',
-          description: 'Technology solutions for healthcare industry',
-          icon: Heart,
-          features: ['Patient management', 'Medical analytics', 'Compliance'],
-          pricing: 'Starting from $8,000/month'
-        },
-        {
-          name: 'Financial Services',
-          path: '/services/financial-services',
-          description: 'Fintech solutions and financial technology',
-          icon: DollarSign,
-          features: ['Risk management', 'Fraud detection', 'Compliance'],
-          pricing: 'Starting from $7,000/month'
-        },
-        {
-          name: 'Manufacturing Intelligence',
-          path: '/services/manufacturing-intelligence',
-          description: 'Smart manufacturing and Industry 4.0 solutions',
-          icon: Cpu,
-          features: ['Predictive maintenance', 'Quality control', 'Supply chain optimization'],
-          pricing: 'Starting from $6,500/month'
-        }
-      ]
     }
   ];
 
@@ -235,10 +465,11 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Services</span>
+            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Innovative Services</span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Comprehensive AI-powered technology solutions designed to transform your business and drive innovation across all industries.
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+            Comprehensive AI-powered technology solutions designed to transform your business and drive innovation across all industries. 
+            From quantum computing to autonomous systems, we deliver cutting-edge solutions that give you a competitive advantage.
           </p>
           
           {/* Search and Filter */}
@@ -247,7 +478,7 @@ export default function Services() {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
-                placeholder="Search services..."
+                placeholder="Search innovative services..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
@@ -351,10 +582,11 @@ export default function Services() {
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-8">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
+              Ready to Transform Your Business with AI?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let our AI experts help you implement the right technology solutions to drive growth and innovation.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Let our AI experts help you implement the right technology solutions to drive growth, innovation, and competitive advantage. 
+              From quantum computing to autonomous systems, we deliver cutting-edge solutions that give you the future today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
