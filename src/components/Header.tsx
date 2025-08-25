@@ -23,7 +23,8 @@ export function Header() {
         { name: 'Cloud & DevOps', href: '/cloud-devops' },
         { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
         { name: 'Digital Transformation', href: '/digital-transformation' },
-        { name: 'View All Services', href: '/services', highlight: true }
+        { name: 'Advanced Services 2025', href: '/advanced-innovative-services-2025', highlight: true },
+        { name: 'View All Services', href: '/services' }
       ]
     },
     { 
@@ -164,7 +165,8 @@ export function Header() {
         { name: 'Blockchain Solutions', path: '/services/blockchain-solutions', description: 'Decentralized applications', icon: Code },
         { name: 'IoT Platforms', path: '/services/iot-platforms', description: 'Connected device management', icon: Network },
         { name: 'Quantum Computing', path: '/services/quantum-computing', description: 'Next-generation computing', icon: Cpu },
-        { name: 'AR/VR Solutions', path: '/services/ar-vr-solutions', description: 'Immersive experiences', icon: Eye }
+        { name: 'AR/VR Solutions', path: '/services/ar-vr-solutions', description: 'Immersive experiences', icon: Eye },
+        { name: 'Advanced Services 2025', path: '/advanced-innovative-services-2025', description: 'Cutting-edge 2025 solutions', icon: Rocket }
       ]
     },
     {
@@ -179,7 +181,6 @@ export function Header() {
         { name: 'Retail Technology', path: '/services/retail-technology', description: 'Digital retail transformation', icon: ShoppingCart }
       ]
     }
->>>>>>> origin/main
   ];
 
   const socialLinks = [
