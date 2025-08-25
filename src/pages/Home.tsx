@@ -227,6 +227,7 @@ import { FloatingCTA } from "@/components/FloatingCTA";
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
       <SEOHead {...seoMetadata} />
       
@@ -373,6 +374,19 @@ import { FloatingCTA } from "@/components/FloatingCTA";
     <div className="min-h-screen bg-background">
       <HomePageSEO />
 >>>>>>> origin/cursor/website-audit-and-enhancement-ba38
+=======
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-purple-dark relative overflow-hidden">
+      {/* Futuristic Background Effects */}
+      <div className="absolute inset-0 cyber-grid opacity-10"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,221,210,0.1),transparent_50%)]"></div>
+      
+      <SEO 
+        title="Zion - The Tech & AI Marketplace" 
+        description="Discover top AI and tech talent, services, and equipment in one place."
+        keywords="AI, technology, marketplace, services, talent"
+        canonical="https://ziontechgroup.com/"
+      />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-73d5
 
       {/* Stats Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">

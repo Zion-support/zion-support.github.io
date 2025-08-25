@@ -158,6 +158,7 @@ export function Footer() {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <footer className="bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.05),transparent_50%)]"></div>
@@ -208,6 +209,18 @@ export function Footer() {
     <footer className="bg-zion-blue-dark border-t border-zion-blue-light pt-12 pb-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+=======
+    <footer className="bg-zion-blue-dark border-t border-zion-blue-light pt-12 pb-8 relative overflow-hidden">
+      {/* Futuristic Background Effects */}
+      <div className="absolute inset-0 cyber-grid opacity-20"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-zion-purple/10 to-zion-blue-dark"></div>
+      
+      {/* Animated Top Border */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60"></div>
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-73d5
           <div>
             <div className="mb-4">
               <span className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">ZION</span>
@@ -361,6 +374,11 @@ export function Footer() {
             <ul className="space-y-2">
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
               <li><Link to="/marketplace" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Products</Link></li>
+<<<<<<< HEAD
+=======
+              <li><Link to="/services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Services</Link></li>
+              <li><Link to="/micro-saas-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Micro SAAS</Link></li>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-73d5
               <li><Link to="/talent" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Talent</Link></li>
               <li><Link to="/equipment" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Equipment</Link></li>
               <li><Link to="/categories" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Categories</Link></li>

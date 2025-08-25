@@ -421,6 +421,7 @@ export function Header() {
   
   return (
     <header 
+<<<<<<< HEAD
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md shadow-2xl"
       style={headerStyle}
     >
@@ -430,6 +431,17 @@ export function Header() {
         <div className="absolute top-2 right-1/3 w-1 h-1 bg-zion-purple rounded-full animate-pulse delay-1000"></div>
         <div className="absolute top-4 left-1/2 w-1 h-1 bg-zion-blue rounded-full animate-pulse delay-2000"></div>
       </div>
+=======
+      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/95 backdrop-blur-xl relative overflow-hidden"
+      style={headerStyle}
+    >
+      {/* Futuristic Background Effects */}
+      <div className="absolute inset-0 cyber-grid opacity-30"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/80 via-zion-slate/60 to-zion-purple-dark/80"></div>
+      
+      {/* Animated Border Glow */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60"></div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-73d5
       
       <div className="container flex h-16 items-center px-4 sm:px-6 relative z-10">
         <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />

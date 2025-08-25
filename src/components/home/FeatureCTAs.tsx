@@ -248,6 +248,7 @@ export function FeatureCTAs() {
       details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution."
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
     // New innovative micro SAAS services
     {
       title: "AI Content Generation",
@@ -322,6 +323,15 @@ export function FeatureCTAs() {
       badge: "Premium",
       details: "Navigate the digital age with our comprehensive transformation strategies and implementation services."
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4df9
+=======
+    {
+      title: "Micro SAAS Services",
+      description: "Comprehensive suite of micro SAAS solutions including AI tools, IT services, and business automation.",
+      icon: <Zap className="h-10 w-10 p-2 rounded-md bg-emerald-100 text-emerald-700" />,
+      link: "/micro-saas-services",
+      badge: "New",
+      details: "Transform your business with our cutting-edge micro SAAS solutions. From AI-powered tools to enterprise-grade services."
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-73d5
     }
   ];
 
@@ -358,6 +368,7 @@ export function FeatureCTAs() {
   };
 
   return (
+<<<<<<< HEAD
     <section className="py-24 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -380,6 +391,20 @@ export function FeatureCTAs() {
           </h2>
           <p className="text-zion-slate-light text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed">
             Discover the comprehensive suite of tools and services designed to revolutionize your tech experience
+=======
+    <section className="py-16 relative overflow-hidden">
+      {/* Futuristic Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark/20 via-zion-slate/10 to-zion-purple-dark/20"></div>
+      <div className="absolute inset-0 cyber-grid opacity-5"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="mb-12 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-3 bg-gradient-to-r from-zion-cyan via-white to-zion-purple-light bg-clip-text text-transparent">
+            Discover Zion's Powerful Features
+          </h2>
+          <p className="text-xl text-zion-cyan max-w-4xl mx-auto">
+            Explore our comprehensive suite of tools designed to transform how you connect, collaborate, and create in the tech ecosystem.
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-73d5
           </p>
         </motion.div>
         
@@ -391,6 +416,7 @@ export function FeatureCTAs() {
           viewport={{ once: true }}
         >
           {features.map((feature, index) => (
+<<<<<<< HEAD
             <motion.div key={index} variants={itemVariants}>
               <Card className={`group bg-gradient-to-br ${feature.gradient} border-zion-blue-light/20 hover:border-zion-purple/50 rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-zion-purple/20 transform hover:scale-105 backdrop-blur-sm`}>
                 <CardHeader className="pb-4">
@@ -431,6 +457,33 @@ export function FeatureCTAs() {
                 </CardFooter>
               </Card>
             </motion.div>
+=======
+            <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50 bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/20 hover:scale-105 group">
+              <CardHeader className="pb-2">
+                <div className="flex justify-between items-start">
+                  {feature.icon}
+                  {feature.badge && (
+                    <Badge variant="secondary" className="bg-primary/20 text-primary">
+                      {feature.badge}
+                    </Badge>
+                  )}
+                </div>
+                <CardTitle className="mt-4">{feature.title}</CardTitle>
+                <CardDescription className="line-clamp-2">{feature.description}</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">{feature.details}</p>
+              </CardContent>
+              <CardFooter>
+                <Button asChild className="w-full gap-1">
+                  <Link to={feature.link}>
+                    <span>Explore {feature.title}</span>
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                </Button>
+              </CardFooter>
+            </Card>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-73d5
           ))}
         </motion.div>
       </div>

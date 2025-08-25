@@ -95,6 +95,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       key: 'services',
       href: '/services',
 =======
@@ -126,6 +127,16 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: '/services',
       matches: (path: string) => path.startsWith('/services') || path.startsWith('/ai-services') || path.startsWith('/it-services') || path.startsWith('/digital-marketing') || path.startsWith('/business-solutions')
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
+=======
+      key: 'services',
+      href: '/services',
+      matches: (path: string) => path.startsWith('/services')
+    },
+    {
+      key: 'micro-saas',
+      href: '/micro-saas-services',
+      matches: (path: string) => path.startsWith('/micro-saas-services')
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-73d5
     },
     {
       key: 'categories',

@@ -231,3 +231,153 @@ src/pages/Home.tsx
 [2025-08-25 23:35:02] Processing unmerged file: src/pages/Home.tsx
 [2025-08-25 23:35:02] File exists in HEAD, keeping it
 [2025-08-25 23:35:02] Still have unmerged paths, attempting additional resolution...
+[main b504acaf396] Merge PR #6668: cursor/expand-services-and-deploy-updates-302a (advanced conflict resolution)
+[2025-08-25 23:35:03] ✓ Advanced conflict resolution successful for PR #6668
+[2025-08-25 23:35:03] ✓ PR #6668 processed successfully
+==========================================
+
+
+==========================================
+[2025-08-25 23:35:03] Processing PR #6666 from branch: cursor/analyze-improve-and-deploy-ziontechgroup-app-9715
+==========================================
+[2025-08-25 23:35:03] Processing PR #6666 from branch: cursor/analyze-improve-and-deploy-ziontechgroup-app-9715
+[2025-08-25 23:35:04] Attempting regular merge...
+Already up to date.
+[2025-08-25 23:35:04] ✓ Successfully merged PR #6666
+[2025-08-25 23:35:04] ✓ PR #6666 processed successfully
+==========================================
+
+
+==========================================
+[2025-08-25 23:35:04] Processing PR #6664 from branch: cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
+==========================================
+[2025-08-25 23:35:04] Processing PR #6664 from branch: cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
+[2025-08-25 23:35:05] Attempting regular merge...
+Auto-merging package-lock.json
+CONFLICT (content): Merge conflict in package-lock.json
+Auto-merging pages/talent/[id].tsx
+CONFLICT (content): Merge conflict in pages/talent/[id].tsx
+Auto-merging src/components/BenefitsSection.tsx
+CONFLICT (content): Merge conflict in src/components/BenefitsSection.tsx
+Auto-merging src/components/CategoriesSection.tsx
+CONFLICT (content): Merge conflict in src/components/CategoriesSection.tsx
+Auto-merging src/components/FeaturedListingsSection.tsx
+CONFLICT (content): Merge conflict in src/components/FeaturedListingsSection.tsx
+Auto-merging src/components/FloatingCTA.tsx
+CONFLICT (content): Merge conflict in src/components/FloatingCTA.tsx
+Auto-merging src/components/HeroSection.tsx
+CONFLICT (content): Merge conflict in src/components/HeroSection.tsx
+Auto-merging src/components/HowItWorksSection.tsx
+CONFLICT (content): Merge conflict in src/components/HowItWorksSection.tsx
+Auto-merging src/components/NewsletterSection.tsx
+CONFLICT (content): Merge conflict in src/components/NewsletterSection.tsx
+Auto-merging src/components/SEO.tsx
+CONFLICT (content): Merge conflict in src/components/SEO.tsx
+Auto-merging src/components/home/ITServiceRequestHero.tsx
+CONFLICT (content): Merge conflict in src/components/home/ITServiceRequestHero.tsx
+Auto-merging src/pages/Home.tsx
+CONFLICT (content): Merge conflict in src/pages/Home.tsx
+Automatic merge failed; fix conflicts and then commit the result.
+[2025-08-25 23:35:05] ✗ Merge failed for PR #6664, attempting advanced conflict resolution...
+[2025-08-25 23:35:05] Resolving complex conflicts for PR #6664 (cursor/analyze-improve-and-deploy-ziontechgroup-app-099e)...
+[2025-08-25 23:35:05] Found unmerged files: package-lock.json
+pages/talent/[id].tsx
+src/components/BenefitsSection.tsx
+src/components/CategoriesSection.tsx
+src/components/FeaturedListingsSection.tsx
+src/components/FloatingCTA.tsx
+src/components/HeroSection.tsx
+src/components/HowItWorksSection.tsx
+src/components/NewsletterSection.tsx
+src/components/SEO.tsx
+src/components/home/ITServiceRequestHero.tsx
+src/pages/Home.tsx
+[2025-08-25 23:35:05] Processing unmerged file: package-lock.json
+[2025-08-25 23:35:05] File exists in HEAD, keeping it
+[2025-08-25 23:35:05] Processing unmerged file: pages/talent/[id].tsx
+[2025-08-25 23:35:05] File exists in HEAD, keeping it
+[2025-08-25 23:35:05] Processing unmerged file: src/components/BenefitsSection.tsx
+[2025-08-25 23:35:05] File exists in HEAD, keeping it
+[2025-08-25 23:35:05] Processing unmerged file: src/components/CategoriesSection.tsx
+[2025-08-25 23:35:05] File exists in HEAD, keeping it
+[2025-08-25 23:35:05] Processing unmerged file: src/components/FeaturedListingsSection.tsx
+[2025-08-25 23:35:05] File exists in HEAD, keeping it
+[2025-08-25 23:35:05] Processing unmerged file: src/components/FloatingCTA.tsx
+[2025-08-25 23:35:05] File exists in HEAD, keeping it
+[2025-08-25 23:35:05] Processing unmerged file: src/components/HeroSection.tsx
+[2025-08-25 23:35:05] File exists in HEAD, keeping it
+[2025-08-25 23:35:05] Processing unmerged file: src/components/HowItWorksSection.tsx
+[2025-08-25 23:35:05] File exists in HEAD, keeping it
+[2025-08-25 23:35:05] Processing unmerged file: src/components/NewsletterSection.tsx
+[2025-08-25 23:35:05] File exists in HEAD, keeping it
+[2025-08-25 23:35:05] Processing unmerged file: src/components/SEO.tsx
+[2025-08-25 23:35:05] File exists in HEAD, keeping it
+[2025-08-25 23:35:05] Processing unmerged file: src/components/home/ITServiceRequestHero.tsx
+[2025-08-25 23:35:05] File exists in HEAD, keeping it
+[2025-08-25 23:35:06] Processing unmerged file: src/pages/Home.tsx
+[2025-08-25 23:35:06] File exists in HEAD, keeping it
+[main cd87f186168] Merge PR #6664: cursor/analyze-improve-and-deploy-ziontechgroup-app-099e (advanced conflict resolution)
+[2025-08-25 23:35:06] ✓ Advanced conflict resolution successful for PR #6664
+[2025-08-25 23:35:06] ✓ PR #6664 processed successfully
+==========================================
+
+
+==========================================
+[2025-08-25 23:35:06] Processing PR #6663 from branch: cursor/enhance-app-with-new-services-and-futuristic-design-73d5
+==========================================
+[2025-08-25 23:35:06] Processing PR #6663 from branch: cursor/enhance-app-with-new-services-and-futuristic-design-73d5
+[2025-08-25 23:35:07] Attempting regular merge...
+Auto-merging package-lock.json
+CONFLICT (content): Merge conflict in package-lock.json
+Auto-merging src/App.tsx
+CONFLICT (content): Merge conflict in src/App.tsx
+Auto-merging src/components/CategoriesSection.tsx
+CONFLICT (content): Merge conflict in src/components/CategoriesSection.tsx
+Auto-merging src/components/Footer.tsx
+CONFLICT (content): Merge conflict in src/components/Footer.tsx
+Auto-merging src/components/HeroSection.tsx
+CONFLICT (content): Merge conflict in src/components/HeroSection.tsx
+Auto-merging src/components/header/Header.tsx
+CONFLICT (content): Merge conflict in src/components/header/Header.tsx
+Auto-merging src/components/home/FeatureCTAs.tsx
+CONFLICT (content): Merge conflict in src/components/home/FeatureCTAs.tsx
+Auto-merging src/data/microSaasServices.ts
+CONFLICT (add/add): Merge conflict in src/data/microSaasServices.ts
+Auto-merging src/index.css
+Auto-merging src/layout/MainNavigation.tsx
+CONFLICT (content): Merge conflict in src/layout/MainNavigation.tsx
+Auto-merging src/pages/Home.tsx
+CONFLICT (content): Merge conflict in src/pages/Home.tsx
+Auto-merging src/pages/MicroSaasServicesPage.tsx
+CONFLICT (add/add): Merge conflict in src/pages/MicroSaasServicesPage.tsx
+Automatic merge failed; fix conflicts and then commit the result.
+[2025-08-25 23:35:08] ✗ Merge failed for PR #6663, attempting advanced conflict resolution...
+[2025-08-25 23:35:08] Resolving complex conflicts for PR #6663 (cursor/enhance-app-with-new-services-and-futuristic-design-73d5)...
+[2025-08-25 23:35:08] Found unmerged files: package-lock.json
+src/App.tsx
+src/components/CategoriesSection.tsx
+src/components/Footer.tsx
+src/components/HeroSection.tsx
+src/components/header/Header.tsx
+src/components/home/FeatureCTAs.tsx
+src/layout/MainNavigation.tsx
+src/pages/Home.tsx
+[2025-08-25 23:35:08] Processing unmerged file: package-lock.json
+[2025-08-25 23:35:08] File exists in HEAD, keeping it
+[2025-08-25 23:35:08] Processing unmerged file: src/App.tsx
+[2025-08-25 23:35:08] File exists in HEAD, keeping it
+[2025-08-25 23:35:08] Processing unmerged file: src/components/CategoriesSection.tsx
+[2025-08-25 23:35:08] File exists in HEAD, keeping it
+[2025-08-25 23:35:08] Processing unmerged file: src/components/Footer.tsx
+[2025-08-25 23:35:08] File exists in HEAD, keeping it
+[2025-08-25 23:35:08] Processing unmerged file: src/components/HeroSection.tsx
+[2025-08-25 23:35:08] File exists in HEAD, keeping it
+[2025-08-25 23:35:08] Processing unmerged file: src/components/header/Header.tsx
+[2025-08-25 23:35:08] File exists in HEAD, keeping it
+[2025-08-25 23:35:08] Processing unmerged file: src/components/home/FeatureCTAs.tsx
+[2025-08-25 23:35:08] File exists in HEAD, keeping it
+[2025-08-25 23:35:08] Processing unmerged file: src/layout/MainNavigation.tsx
+[2025-08-25 23:35:08] File exists in HEAD, keeping it
+[2025-08-25 23:35:08] Processing unmerged file: src/pages/Home.tsx
+[2025-08-25 23:35:08] File exists in HEAD, keeping it
+[2025-08-25 23:35:08] Still have unmerged paths, attempting additional resolution...
