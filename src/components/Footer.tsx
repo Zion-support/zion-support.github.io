@@ -18,11 +18,11 @@ export function Footer() {
         { label: "Cybersecurity", path: "/services/cybersecurity" },
         { label: "SOC2 Compliance Automation", path: "/soc2-compliance-automation" },
         { label: "Industry Solutions", path: "/services/industry-solutions" },
-        { label: "AI & Machine Learning", path: "/services#ai-ml" },
-        { label: "Cloud & Infrastructure", path: "/services#cloud" },
+        { label: "AI & Machine Learning", path: "/services/ai-autonomous-systems" },
+        { label: "Cloud & Infrastructure", path: "/services/it-infrastructure" },
         { label: "5G Enterprise Solutions", path: "/5g-enterprise-solutions" },
-        { label: "Blockchain Solutions", path: "/services#blockchain" },
-        { label: "IoT & Edge Computing", path: "/services#iot" }
+        { label: "Blockchain Solutions", path: "/emerging-tech" },
+        { label: "IoT & Edge Computing", path: "/emerging-tech" }
       ]
     },
     {
@@ -35,9 +35,9 @@ export function Footer() {
         { label: "Retail Solutions", path: "/solutions/retail" },
         { label: "Government Solutions", path: "/solutions/government" },
         { label: "Business Intelligence", path: "/services/business-intelligence" },
-        { label: "Marketing Automation", path: "/services/ai-marketing" },
-        { label: "HR & Recruitment", path: "/services/ai-hr" },
-        { label: "Legal Tech", path: "/services/ai-legal" }
+        { label: "Marketing Automation", path: "/services/ai-marketing-automation" },
+        { label: "HR & Recruitment", path: "/services/ai-hr-recruitment" },
+        { label: "Legal Tech", path: "/services/ai-legal-tech" }
       ]
     },
     {

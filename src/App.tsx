@@ -67,6 +67,12 @@ const SpecializedITInfrastructure = lazy(() => import('./pages/services/Speciali
 const InnovativeMicroSaasServices = lazy(() => import('./pages/InnovativeMicroSaasServices'));
 const ComprehensiveInnovativeServices = lazy(() => import('./pages/ComprehensiveInnovativeServices'));
 
+// New service pages
+const BusinessIntelligence = lazy(() => import('./pages/services/BusinessIntelligence'));
+const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAutomation'));
+const AIHRRecruitment = lazy(() => import('./pages/services/AIHRRecruitment'));
+const AILegalTech = lazy(() => import('./pages/services/AILegalTech'));
+
 // Solutions pages
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
 const HealthcareSolutions = lazy(() => import('./pages/solutions/Healthcare'));
@@ -149,6 +155,12 @@ const App = () => {
                     <Route path="/services/specialized-it-infrastructure" element={<SpecializedITInfrastructure />} />
                     <Route path="/innovative-micro-saas-services" element={<InnovativeMicroSaasServices />} />
                     <Route path="/comprehensive-innovative-services" element={<ComprehensiveInnovativeServices />} />
+                    
+                    {/* New service routes */}
+                    <Route path="/services/business-intelligence" element={<BusinessIntelligence />} />
+                    <Route path="/services/ai-marketing-automation" element={<AIMarketingAutomation />} />
+                    <Route path="/services/ai-hr-recruitment" element={<AIHRRecruitment />} />
+                    <Route path="/services/ai-legal-tech" element={<AILegalTech />} />
                     
                     {/* Solutions Routes */}
                     <Route path="/services/enterprise" element={<EnterpriseSolutions />} />

@@ -114,10 +114,10 @@ export function Header() {
       services: [
         { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', description: 'Advanced autonomous AI systems' },
         { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', description: 'AI-powered research automation' },
-        { name: 'AI Business Intelligence', path: '/services#ai-bi', description: 'Advanced analytics and insights' },
-        { name: 'AI Marketing Automation', path: '/services#ai-marketing', description: 'Smart marketing optimization' },
-        { name: 'AI HR & Recruitment', path: '/services#ai-hr', description: 'Intelligent talent management' },
-        { name: 'AI Legal Tech', path: '/services#ai-legal', description: 'Automated legal processes' }
+        { name: 'AI Business Intelligence', path: '/services/business-intelligence', description: 'Advanced analytics and insights' },
+        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', description: 'Smart marketing optimization' },
+        { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', description: 'Intelligent talent management' },
+        { name: 'AI Legal Tech', path: '/services/ai-legal-tech', description: 'Automated legal processes' }
       ]
     },
     {
