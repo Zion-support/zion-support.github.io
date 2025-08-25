@@ -141,10 +141,11 @@ export function Footer() {
       color: 'hover:text-blue-400'
     },
     { 
-      icon: Github, 
-      href: 'https://github.com/ziontechgroup', 
-      label: 'GitHub',
-      color: 'hover:text-gray-400'
+      name: 'GitHub', 
+      url: 'https://github.com/ziontechgroup', 
+      icon: Github,
+      fallback: 'https://github.com',
+      color: 'hover:bg-gray-600/20 hover:text-gray-400'
     },
     { 
       icon: Youtube, 
