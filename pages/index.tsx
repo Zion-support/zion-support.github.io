@@ -21,15 +21,18 @@ import { realOperationalServices } from '../data/real-operational-services';
 import { newOperationalServices2025 } from '../data/new-operational-services-2025';
 import { realVerifiedServiceAdditions2025 } from '../data/real-verified-service-additions-2025';
 
-export default function HomePage() {
-  const heroStats = [
-    { value: '600+', label: 'Revolutionary Services & Solutions', color: 'text-cyan-400', icon: <Cpu className="w-6 h-6" /> },
-    { value: '99.99%', label: 'Uptime Guarantee', color: 'text-fuchsia-400', icon: <ShieldCheck className="w-6 h-6" /> },
-    { value: '45+', label: 'Day Free Trials', color: 'text-cyan-400', icon: <Clock className="w-6 h-6" /> },
-    { value: '24/7', label: 'AI Support', color: 'text-green-400', icon: <Brain className="w-6 h-6" /> },
-    { value: '$150B+', label: 'Combined Market Value', color: 'text-yellow-400', icon: <TrendingUp className="w-6 h-6" /> },
-    { value: '1200%+', label: 'Average ROI', color: 'text-purple-400', icon: <DollarSign className="w-6 h-6" /> },
-  ];
+// Import 2026 innovative services
+import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-services';
+import { innovativeAIServices2026 } from '../data/2026-innovative-ai-services';
+import { innovativeITServices2026 } from '../data/2026-innovative-it-services';
+import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
 
   const contactInfo = {
     mobile: '+1 302 464 0950',

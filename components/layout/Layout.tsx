@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import UltraFuturisticNavigation2035 from './UltraFuturisticNavigation2035';
-import UltraFuturisticFooter2035 from './UltraFuturisticFooter2035';
+import UltraFuturisticNavigation2034 from './UltraFuturisticNavigation2034';
+import UltraFuturisticFooter2034 from './UltraFuturisticFooter2034';
 import EnhancedSidebar2025 from './EnhancedSidebar2025';
 import UltraFuturisticBackground2035 from '../ui/UltraFuturisticBackground2035';
 import TopContactBar from './TopContactBar';
@@ -26,15 +26,15 @@ export default function Layout({ children }: LayoutProps) {
 				enableSpaceTime={true}
 			>
 				<TopContactBar />
-				<UltraFuturisticNavigation2035 onMenuClick={() => setSidebarOpen(true)} />
+				<UltraFuturisticNavigation2034 onMenuClick={() => setSidebarOpen(true)} />
 				<div className="flex">
 					<EnhancedSidebar2025 isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 					<main id="main" className="flex-1 pt-24 lg:pt-28">
 						{children}
 					</main>
 				</div>
-				<UltraFuturisticFooter2035 />
-			</UltraFuturisticBackground2035>
+				<UltraFuturisticFooter2034 />
+			</UltraAdvancedFuturisticBackground>
 		</div>
 	);
 };

@@ -17,6 +17,17 @@ import { innovativeAIServicesV2 } from '../data/2025-innovative-ai-services-v2';
 import { innovativeITServicesV2 } from '../data/2025-innovative-it-services-v2';
 import { emergingTechServicesV2 } from '../data/2025-emerging-tech-services-v2';
 
+// Import 2026 innovative services
+import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-services';
+import { innovativeAIServices2026 } from '../data/2026-innovative-ai-services';
+import { innovativeITServices2026 } from '../data/2026-innovative-it-services';
+import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
+
+// Import existing services for comprehensive coverage
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
+import { quantumSpaceServices } from '../data/quantum-space-services';
+import { enterpriseITServices } from '../data/enterprise-it-services';
 
 
 const allServices = [
@@ -33,24 +44,30 @@ const allServices = [
 const categories = [
   {
     id: 'ai-consciousness',
-    name: 'AI & Consciousness',
-    icon: <Brain className="w-6 h-6" />,
-    color: 'from-cyan-500 to-blue-500',
-    description: 'Revolutionary AI consciousness and emotional intelligence'
+    title: '🧠 AI & Consciousness',
+    description: 'Revolutionary AI consciousness and emotional intelligence platforms',
+    icon: Brain,
+    color: 'from-violet-500 to-purple-500',
+    services: [...innovativeAIServices2025, ...innovativeAIServices2026],
+    gradient: 'from-violet-500/20 to-indigo-500/20'
   },
   {
     id: 'quantum-emerging',
-    name: 'Quantum & Emerging Tech',
-    icon: <Atom className="w-6 h-6" />,
-    color: 'from-purple-500 to-pink-500',
-    description: 'Quantum computing and breakthrough technologies'
+    title: '⚛️ Quantum & Emerging Tech',
+    description: 'Quantum computing, DNA computing, and beyond',
+    icon: Atom,
+    color: 'from-indigo-500 to-blue-500',
+    services: [...emergingTechServices2025, ...emergingTechServices2026],
+    gradient: 'from-indigo-500/20 to-cyan-500/20'
   },
   {
     id: 'enterprise-it',
-    name: 'Enterprise IT',
-    icon: <Shield className="w-6 h-6" />,
-    color: 'from-green-500 to-emerald-500',
-    description: 'Enterprise solutions and infrastructure'
+    title: '🏙️ Enterprise IT',
+    description: 'Autonomous operations and zero-trust security',
+    icon: Shield,
+    color: 'from-blue-500 to-cyan-500',
+    services: [...innovativeITServices2025, ...innovativeITServices2026],
+    gradient: 'from-blue-500/20 to-teal-500/20'
   },
   {
     id: 'space-metaverse',
@@ -61,10 +78,12 @@ const categories = [
   },
   {
     id: 'micro-saas',
-    name: 'Micro SAAS',
-    icon: <Target className="w-6 h-6" />,
-    color: 'from-orange-500 to-red-500',
-    description: 'Innovative business solutions'
+    title: '🎯 Micro SAAS',
+    description: 'Innovative solutions for every business need',
+    icon: Target,
+    color: 'from-green-500 to-yellow-500',
+    services: [...realMicroSaasServices2025, ...enhancedRealMicroSaasServices, ...innovativeMicroSaasServices2026],
+    gradient: 'from-green-500/20 to-orange-500/20'
   },
   {
     id: 'creative-media',
