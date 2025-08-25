@@ -6,6 +6,8 @@ import Sidebar from './components/Sidebar';
 import { AccessibilityControls } from './components/AccessibilityControls';
 import { PerformanceDashboard } from './components/PerformanceDashboard';
 import { AnalyticsDashboard } from './components/AnalyticsDashboard';
+import EnhancedPerformanceDashboard from './components/EnhancedPerformanceDashboard';
+import EnhancedAnalytics from './components/EnhancedAnalytics';
 import { AIChatbot } from './components/AIChatbot';
 import { CollaborativeTextEditor } from './components/CollaborativeTextEditor';
 import { AICodeGenerator } from './components/AICodeGenerator';
@@ -191,15 +193,11 @@ const App = () => {
               {/* Development Dashboards */}
               {import.meta.env.DEV && (
                 <>
-                  {/* Performance Dashboard */}
-                  <div className="fixed top-4 left-4 z-40">
-                    <PerformanceDashboard />
-                  </div>
+                  {/* Enhanced Performance Dashboard */}
+                  <EnhancedPerformanceDashboard />
                   
-                  {/* Analytics Dashboard */}
-                  <div className="fixed top-4 right-4 z-40">
-                    <AnalyticsDashboard />
-                  </div>
+                  {/* Enhanced Analytics Dashboard */}
+                  <EnhancedAnalytics />
                   
                   {/* Enterprise Dashboard */}
                   <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-40">
@@ -208,11 +206,6 @@ const App = () => {
                   
                   {/* Security & Compliance Dashboard */}
                   <div className="fixed top-4 right-1/2 transform translate-x-1/2 z-40">
-                    <SecurityComplianceDashboard />
-                  </div>
-                  
-                  {/* Machine Learning Dashboard */}
-                  <div className="fixed top-4 right-4 z-40">
                     <MachineLearningDashboard />
                   </div>
                 </>
