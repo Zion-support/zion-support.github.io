@@ -1,257 +1,222 @@
-import React, { useMemo } from 'react';
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, Users, Zap, Shield, Globe, Cpu, Brain } from "lucide-react";
+import React, { useState, useEffect } from 'react';
+import { ArrowRight, Play, Pause, Volume2, VolumeX, ChevronLeft, ChevronRight, Zap, Shield, Users, Globe } from 'lucide-react';
 
-export function HeroSection() {
-  // Memoize static data to prevent unnecessary re-renders
-  const containerVariants = useMemo(() => ({
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1
-      }
+const HeroSection: React.FC = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [isMuted, setIsMuted] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const heroSlides = [
+    {
+      title: "AI-Powered Business Solutions",
+      subtitle: "Transform your business with cutting-edge artificial intelligence and automation",
+      description: "From autonomous business management to intelligent workflow automation, we help organizations thrive in the digital age.",
+      features: ["AI Automation", "Business Intelligence", "Cloud Infrastructure", "Cybersecurity"],
+      icon: Zap,
+      color: "from-green-400 to-blue-500"
+    },
+    {
+      title: "Micro SAAS Excellence",
+      subtitle: "Scalable software solutions that grow with your business",
+      description: "Custom micro SAAS applications designed for efficiency, productivity, and seamless user experience.",
+      features: ["Custom Development", "Scalable Architecture", "User Experience", "Performance"],
+      icon: Globe,
+      color: "from-blue-400 to-purple-500"
+    },
+    {
+      title: "Enterprise Security & Compliance",
+      subtitle: "Protect your business with enterprise-grade security solutions",
+      description: "Comprehensive cybersecurity, compliance automation, and risk management for modern enterprises.",
+      features: ["SOC2 Compliance", "Threat Detection", "Data Protection", "Risk Management"],
+      icon: Shield,
+      color: "from-red-400 to-pink-500"
     }
-  }), []);
+  ];
 
-  const itemVariants = useMemo(() => ({
-    hidden: { y: 30, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut"
-      }
+  useEffect(() => {
+    setIsVisible(true);
+    
+    if (isPlaying) {
+      const interval = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+      }, 5000);
+      return () => clearInterval(interval);
     }
-  }), []);
+  }, [isPlaying, heroSlides.length]);
 
-  const floatingVariants = useMemo(() => ({
-    animate: {
-      y: [0, -20, 0],
-      opacity: [0.3, 0.8, 0.3],
-      transition: {
-        duration: 4,
-        repeat: Infinity,
-        ease: "easeInOut"
-      }
-    }
-  }), []);
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+  };
 
-  const stats = useMemo(() => [
-    { icon: Users, label: "10K+ Talents", value: "Verified", color: "text-zion-cyan", ariaLabel: "Over 10,000 verified talents available" },
-    { icon: Zap, label: "AI-Powered", value: "Matching", color: "text-zion-purple", ariaLabel: "AI-powered smart matching system" },
-    { icon: Shield, label: "Enterprise", value: "Security", color: "text-green-400", ariaLabel: "Enterprise-grade security protocols" },
-    { icon: Globe, label: "Global", value: "Reach", color: "text-blue-400", ariaLabel: "Global reach and accessibility" }
-  ], []);
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+  };
 
-  const features = useMemo(() => [
-    { icon: Brain, text: "AI-Powered Matching", color: "from-purple-500 to-pink-500", ariaLabel: "AI-powered matching technology" },
-    { icon: Cpu, text: "Micro SAAS Solutions", color: "from-blue-500 to-cyan-500", ariaLabel: "Micro SAAS software solutions" },
-    { icon: Shield, text: "Enterprise Security", color: "from-green-500 to-emerald-500", ariaLabel: "Enterprise-grade security features" }
-  ], []);
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+
+  const togglePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+
+  const toggleMute = () => {
+    setIsMuted(!isMuted);
+  };
+
+  const currentSlideData = heroSlides[currentSlide];
 
   return (
-    <section 
-      className="relative overflow-hidden py-20 md:py-32 min-h-[90vh] flex items-center"
-      aria-labelledby="hero-heading"
-      role="banner"
-    >
-      {/* Background Layers */}
-      <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple opacity-95" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-black via-gray-900 to-blue-900">
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0.1),transparent_50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.1),transparent_50%)]"></div>
       
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0" aria-hidden="true">
-        <motion.div 
-          className="absolute top-1/4 left-1/4 w-4 h-4 rounded-full bg-zion-purple-light opacity-60 blur-sm"
-          variants={floatingVariants}
-          animate="animate"
-        />
-        <motion.div 
-          className="absolute top-1/3 right-1/3 w-6 h-6 rounded-full bg-zion-cyan opacity-50 blur-sm"
-          variants={floatingVariants}
-          animate="animate"
-          style={{ animationDelay: "1s" }}
-        />
-        <motion.div 
-          className="absolute bottom-1/4 left-1/2 w-3 h-3 rounded-full bg-zion-purple opacity-70 blur-sm"
-          variants={floatingVariants}
-          animate="animate"
-          style={{ animationDelay: "2s" }}
-        />
-        <motion.div 
-          className="absolute top-1/2 right-1/4 w-8 h-8 rounded-full bg-zion-cyan-light opacity-30 blur-sm"
-          variants={floatingVariants}
-          animate="animate"
-          style={{ animationDelay: "0.5s" }}
-        />
-        <motion.div 
-          className="absolute top-3/4 left-1/6 w-3 h-3 rounded-full bg-zion-purple-light opacity-50 blur-sm"
-          variants={floatingVariants}
-          animate="animate"
-          style={{ animationDelay: "1.5s" }}
-        />
+      {/* Animated Grid */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(34,197,94,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,197,94,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
       </div>
 
-      {/* Floating Stats Cards - Desktop Only */}
-      <motion.div 
-        className="absolute top-1/4 right-1/6 hidden lg:block"
-        initial={{ x: 100, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ delay: 1, duration: 0.8 }}
-        aria-label="Talent statistics"
-      >
-        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 shadow-2xl">
-          <div className="flex items-center gap-3 text-white">
-            <Users className="w-5 h-5 text-zion-cyan" aria-hidden="true" />
-            <div>
-              <div className="text-sm font-medium">10K+ Talents</div>
-              <div className="text-xs text-zion-slate-light">Verified & Ready</div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Hero Content */}
+        <div className={`transition-all duration-1000 ease-in-out ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}>
+          {/* Icon */}
+          <div className="mb-8">
+            <div className={`w-24 h-24 mx-auto bg-gradient-to-br ${currentSlideData.color} rounded-2xl flex items-center justify-center shadow-2xl shadow-green-500/25`}>
+              <currentSlideData.icon className="w-12 h-12 text-white" />
             </div>
           </div>
-        </div>
-      </motion.div>
 
-      <motion.div 
-        className="absolute bottom-1/4 left-1/6 hidden lg:block"
-        initial={{ x: -100, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.8 }}
-        aria-label="AI-powered matching"
-      >
-        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 shadow-2xl">
-          <div className="flex items-center gap-3 text-white">
-            <Zap className="w-5 h-5 text-zion-purple" aria-hidden="true" />
-            <div>
-              <div className="text-sm font-medium">AI-Powered</div>
-              <div className="text-xs text-zion-slate-light">Smart Matching</div>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-
-      {/* Main Content */}
-      <div className="container relative z-10 px-4 mx-auto text-center">
-        <motion.div 
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          {/* Badge */}
-          <motion.div variants={itemVariants} className="mb-8">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md rounded-full px-6 py-3 border border-white/20 mb-6 shadow-lg">
-              <Sparkles className="w-5 h-5 text-zion-cyan animate-pulse" aria-hidden="true" />
-              <span className="text-sm text-white font-medium">AI-Powered Tech Marketplace</span>
-            </div>
-          </motion.div>
-
-          {/* Main Heading */}
-          <motion.div variants={itemVariants} className="mb-8">
-            <h1 
-              id="hero-heading"
-              className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6"
-            >
-              <span className="bg-gradient-to-r from-white via-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                The Future of
-              </span>
-              <br />
-              <span className="bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue-light bg-clip-text text-transparent">
-                Tech is Here
-              </span>
-            </h1>
-          </motion.div>
+          {/* Title */}
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            <span className="bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
+              {currentSlideData.title}
+            </span>
+          </h1>
 
           {/* Subtitle */}
-          <motion.div variants={itemVariants} className="mb-12">
-            <p className="text-lg sm:text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed px-4">
-              Discover cutting-edge AI solutions, connect with top tech talent, and access innovative micro SAAS services 
-              that transform your business operations and drive digital transformation.
-            </p>
-          </motion.div>
+          <h2 className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-6 font-medium">
+            {currentSlideData.subtitle}
+          </h2>
 
-          {/* Feature Pills */}
-          <motion.div variants={itemVariants} className="mb-12">
-            <div className="flex flex-wrap justify-center gap-3 sm:gap-4 px-4">
-              {features.map((feature) => {
-                const IconComponent = feature.icon;
-                return (
-                  <div
-                    key={feature.text}
-                    className={`inline-flex items-center gap-2 bg-gradient-to-r ${feature.color} bg-opacity-20 backdrop-blur-md rounded-full px-3 sm:px-4 py-2 border border-white/20`}
-                    aria-label={feature.ariaLabel}
-                  >
-                    <IconComponent className="w-4 h-4 text-white" aria-hidden="true" />
-                    <span className="text-sm text-white font-medium">{feature.text}</span>
-                  </div>
-                );
-              })}
-            </div>
-          </motion.div>
+          {/* Description */}
+          <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">
+            {currentSlideData.description}
+          </p>
+
+          {/* Features */}
+          <div className="flex flex-wrap justify-center gap-3 mb-10">
+            {currentSlideData.features.map((feature, index) => (
+              <span
+                key={feature}
+                className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white text-sm font-medium"
+              >
+                {feature}
+              </span>
+            ))}
+          </div>
 
           {/* CTA Buttons */}
-          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mb-12 px-4">
-            <Button 
-              className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-lg py-6 px-8 shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 rounded-xl"
-              size="lg"
-              asChild
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+            <a
+              href="/micro-saas-services"
+              className="group flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/25"
             >
-              <Link to="/signup" role="button" aria-label="Get Started Today">
-                Get Started Today
-                <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
-              </Link>
-            </Button>
-            
-            <Link 
-              to="/marketplace"
-              className="group border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark text-lg py-6 px-8 rounded-xl inline-flex items-center justify-center transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25 backdrop-blur-md bg-white/5"
-              aria-label="Explore our marketplace"
+              <span>Explore Services</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+            </a>
+            <a
+              href="/contact"
+              className="group flex items-center space-x-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 text-white font-semibold rounded-xl transition-all duration-300"
             >
-              Explore Marketplace
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true" />
-            </Link>
-          </motion.div>
+              <span>Get Started</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
+            </a>
+          </div>
 
-          {/* Stats */}
-          <motion.div variants={itemVariants} className="mb-8">
-            <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-8 text-zion-slate-light text-sm px-4">
-              {stats.map((stat) => {
-                const IconComponent = stat.icon;
-                return (
-                  <div 
-                    key={stat.label} 
-                    className="flex items-center gap-2"
-                    aria-label={stat.ariaLabel}
-                  >
-                    <div className={`w-2 h-2 ${stat.color} rounded-full animate-pulse`} aria-hidden="true" />
-                    <span>{stat.label}</span>
-                  </div>
-                );
-              })}
+          {/* Contact Info */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-gray-400">
+            <div className="flex items-center space-x-2">
+              <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+              <span className="text-sm">+1 302 464 0950</span>
             </div>
-          </motion.div>
-        </motion.div>
+            <div className="flex items-center space-x-2">
+              <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+              <span className="text-sm">kleber@ziontechgroup.com</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
+              <span className="text-sm">Middletown, DE</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Carousel Controls */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex items-center space-x-4">
+          {/* Play/Pause Button */}
+          <button
+            onClick={togglePlayPause}
+            className="p-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white hover:bg-white/20 transition-colors duration-200"
+            aria-label={isPlaying ? 'Pause slideshow' : 'Play slideshow'}
+          >
+            {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
+          </button>
+
+          {/* Mute Button */}
+          <button
+            onClick={toggleMute}
+            className="p-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white hover:bg-white/20 transition-colors duration-200"
+            aria-label={isMuted ? 'Unmute' : 'Mute'}
+          >
+            {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
+          </button>
+
+          {/* Previous/Next Buttons */}
+          <button
+            onClick={prevSlide}
+            className="p-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white hover:bg-white/20 transition-colors duration-200"
+            aria-label="Previous slide"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+
+          <button
+            onClick={nextSlide}
+            className="p-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white hover:bg-white/20 transition-colors duration-200"
+            aria-label="Next slide"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
+        </div>
+
+        {/* Slide Indicators */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex items-center space-x-2 mt-8">
+          {heroSlides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide
+                  ? 'bg-white scale-125'
+                  : 'bg-white/30 hover:bg-white/50'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
       </div>
 
-      {/* Mobile Floating Action Button */}
-      <motion.div 
-        className="fixed bottom-6 right-6 z-50 lg:hidden"
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: 2, duration: 0.5 }}
-      >
-        <Button 
-          asChild
-          className="rounded-full w-16 h-16 p-0 bg-gradient-to-r from-zion-cyan to-zion-purple shadow-2xl hover:shadow-zion-cyan/50 transition-all duration-300"
-          aria-label="Quick access to marketplace"
-        >
-          <Link to="/marketplace">
-            <ArrowRight className="w-7 h-7" aria-hidden="true" />
-          </Link>
-        </Button>
-      </motion.div>
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-bounce"></div>
+        </div>
+      </div>
     </section>
   );
-}
+};
+
+export default HeroSection;

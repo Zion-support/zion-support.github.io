@@ -1172,8 +1172,6 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       website: "https://ziontechgroup.com"
     }
   },
-
-  // NEW INNOVATIVE MICRO SAAS SERVICES
   {
     id: "ai-content-generator-pro",
     title: "AI Content Generator Pro",
@@ -1763,194 +1761,64 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
   },
   
   {
-    id: "ai-powered-legal-assistant",
-    title: "AI-Powered Legal Assistant",
-    description: "Intelligent legal research and document analysis platform that streamlines legal workflows and improves case outcomes.",
-    category: "AI & Machine Learning",
-    subcategory: "Legal Technology",
-    price: 899,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Legal document analysis",
-      "Case law research",
-      "Contract review automation",
-      "Legal precedent search",
-      "Compliance monitoring",
-      "Client communication tools"
-    ],
-    benefits: [
-      "Reduce research time by 70%",
-      "Improve case outcomes",
-      "Lower legal costs",
-      "Automate routine tasks",
-      "Better client service"
-    ],
-    useCases: [
-      "Law firms",
-      "Corporate legal departments",
-      "Legal consultants",
-      "Compliance teams",
-      "Legal research institutions"
-    ],
-    targetAudience: [
-      "Attorneys",
-      "Legal researchers",
-      "Compliance officers",
-      "Law firm managers",
-      "Corporate counsel"
-    ],
-    tags: ["Legal Tech", "AI", "Document Analysis", "Research", "Automation"],
-    estimatedDelivery: "4-5 weeks",
-    supportLevel: "premium",
-    marketPrice: "$899 - $3,499/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  },
-  
-  {
-    id: "quantum-cryptography-platform",
-    title: "Quantum Cryptography Platform",
-    description: "Next-generation cryptographic platform using quantum key distribution for unbreakable encryption and secure communications.",
-    category: "Cybersecurity",
-    subcategory: "Quantum Security",
-    price: 4000,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Quantum key distribution",
-      "Post-quantum cryptography",
-      "Secure communication channels",
-      "Key management system",
-      "Compliance certification",
-      "Integration APIs"
-    ],
-    benefits: [
-      "Unbreakable encryption",
-      "Future-proof security",
-      "Regulatory compliance",
-      "Global communication security",
-      "Competitive advantage"
-    ],
-    useCases: [
-      "Government agencies",
-      "Financial institutions",
-      "Healthcare organizations",
-      "Defense contractors",
-      "Critical infrastructure"
-    ],
-    targetAudience: [
-      "Security architects",
-      "CISOs",
-      "Government officials",
-      "Defense contractors",
-      "Financial security teams"
-    ],
-    tags: ["Quantum", "Cryptography", "Security", "Encryption", "Compliance"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$4,000 - $15,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  },
-  
-  {
-    id: "autonomous-marketing-orchestrator",
-    title: "Autonomous Marketing Orchestrator",
-    description: "AI-driven marketing platform that automatically optimizes campaigns, personalizes content, and maximizes ROI across all channels.",
-    category: "AI & Machine Learning",
-    subcategory: "Marketing Automation",
-    price: 1299,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Cross-channel campaign management",
-      "AI content personalization",
-      "Predictive analytics",
-      "Automated A/B testing",
-      "ROI optimization",
-      "Customer journey mapping"
-    ],
-    benefits: [
-      "Increase ROI by 300%",
-      "Reduce manual work by 80%",
-      "Improve customer engagement",
-      "Personalized experiences",
-      "Data-driven decisions"
-    ],
-    useCases: [
-      "Marketing agencies",
-      "E-commerce businesses",
-      "B2B companies",
-      "SaaS businesses",
-      "Retail brands"
-    ],
-    targetAudience: [
-      "Marketing directors",
-      "Digital marketers",
-      "Growth hackers",
-      "Marketing managers",
-      "Business owners"
-    ],
-    tags: ["Marketing", "AI", "Automation", "Personalization", "Analytics"],
-    estimatedDelivery: "3-4 weeks",
-    supportLevel: "premium",
-    marketPrice: "$1,299 - $4,999/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  },
-  
-  {
-    id: "iot-smart-city-platform",
-    title: "IoT Smart City Platform",
-    description: "Comprehensive smart city management platform integrating IoT sensors, AI analytics, and automation for sustainable urban development.",
-    category: "IoT & Smart Cities",
-    subcategory: "Urban Technology",
+    id: "blockchain-governance-platform",
+    title: "Blockchain Governance Platform",
+    description: "Decentralized governance platform that enables transparent voting, proposal management, and community decision-making using blockchain technology.",
+    category: "Blockchain & Web3",
+    subcategory: "Governance",
     price: 2500,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Traffic optimization",
-      "Environmental monitoring",
-      "Smart lighting systems",
-      "Waste management",
-      "Public safety monitoring",
-      "Citizen engagement portal"
+      "Voting mechanisms",
+      "Proposal management",
+      "Token-based governance",
+      "Transparent decision-making",
+      "Integration with DAOs",
+      "Mobile applications",
+      "Analytics dashboard",
+      "API for developers"
     ],
     benefits: [
-      "Reduce traffic congestion by 30%",
-      "Lower energy consumption by 25%",
-      "Improve public safety",
-      "Enhance citizen satisfaction",
-      "Sustainable urban development"
+      "Transparent governance",
+      "Community engagement",
+      "Decentralized decision-making",
+      "Reduced corruption",
+      "Better accountability"
     ],
     useCases: [
-      "City governments",
-      "Municipalities",
-      "Urban planners",
-      "Transportation departments",
-      "Public works agencies"
+      "Decentralized organizations",
+      "Community projects",
+      "Investment funds",
+      "Non-profit organizations",
+      "Government agencies"
     ],
     targetAudience: [
-      "City managers",
-      "Urban planners",
-      "Government officials",
-      "Infrastructure managers",
-      "Public safety directors"
+      "DAO founders",
+      "Community managers",
+      "Project leaders",
+      "Business owners",
+      "Government officials"
     ],
-    tags: ["IoT", "Smart Cities", "Urban Planning", "Sustainability", "Public Safety"],
-    estimatedDelivery: "6-8 weeks",
+    tags: ["Blockchain", "Governance", "DAO", "Voting", "Web3"],
+    estimatedDelivery: "4-5 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$2,500 - $10,000/month",
+    marketPrice: "$2,500 - $8,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+    price: 1200,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+    ],
+    useCases: [
+      "Financial institutions",
+      "Healthcare organizations",
+      "Government agencies",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -1959,28 +1827,25 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
   },
   
   {
-    id: "ai-powered-education-platform",
-    title: "AI-Powered Education Platform",
-    description: "Intelligent learning platform that personalizes education, tracks progress, and adapts content to individual learning styles.",
-    category: "AI & Machine Learning",
-    subcategory: "Education Technology",
-    price: 599,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+  
+  {
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+  {
     currency: "$",
     pricingModel: "monthly",
     features: [
       "Personalized learning paths",
-      "Adaptive content delivery",
-      "Progress tracking analytics",
-      "Interactive assessments",
-      "Collaborative learning tools",
-      "Mobile learning support"
-    ],
-    benefits: [
-      "Improve learning outcomes by 40%",
-      "Reduce dropout rates",
-      "Personalized education",
-      "Better student engagement",
-      "Scalable learning solutions"
     ],
     useCases: [
       "K-12 schools",
@@ -1990,16 +1855,20 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
       "Skill development programs"
     ],
     targetAudience: [
-      "Educators",
-      "Training managers",
-      "School administrators",
-      "Corporate trainers",
-      "Learning designers"
-    ],
-    tags: ["Education", "AI", "Personalization", "Learning Analytics", "EdTech"],
-    estimatedDelivery: "3-4 weeks",
-    supportLevel: "premium",
-    marketPrice: "$599 - $2,499/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+  {
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    }
+  },
+  {
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -2009,99 +1878,6 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
   
   // NEW INNOVATIVE SERVICES ADDED
   {
-    id: "ai-powered-legal-contract-generator",
-    title: "AI-Powered Legal Contract Generator",
-    description: "Intelligent contract creation platform that generates legally compliant documents using AI, with built-in risk assessment and compliance checking.",
-    category: "AI & Machine Learning",
-    subcategory: "Legal Technology",
-    price: 799,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI-powered contract generation",
-      "Legal compliance checking",
-      "Risk assessment algorithms",
-      "Template library (500+ contracts)",
-      "Real-time collaboration",
-      "Version control and tracking",
-      "Electronic signature integration",
-      "Multi-jurisdiction support"
-    ],
-    benefits: [
-      "Reduce contract creation time by 80%",
-      "Minimize legal risks and errors",
-      "Ensure compliance across jurisdictions",
-      "Streamline approval workflows",
-      "Cost-effective legal operations"
-    ],
-    useCases: [
-      "Law firms",
-      "Corporate legal departments",
-      "Real estate agencies",
-      "HR departments",
-      "Business consultants"
-    ],
-    targetAudience: [
-      "Legal professionals",
-      "Contract managers",
-      "HR managers",
-      "Business owners",
-      "Compliance officers"
-    ],
-    tags: ["AI", "Legal Tech", "Contract Management", "Compliance", "Risk Assessment"],
-    estimatedDelivery: "2-3 weeks",
-    supportLevel: "premium",
-    marketPrice: "$799 - $2,499/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  },
-  {
-    id: "autonomous-financial-advisory-platform",
-    title: "Autonomous Financial Advisory Platform",
-    description: "AI-driven financial planning and investment advisory platform that provides personalized financial advice, portfolio optimization, and risk management.",
-    category: "AI & Machine Learning",
-    subcategory: "Financial Technology",
-    price: 1499,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI-powered financial planning",
-      "Portfolio optimization algorithms",
-      "Risk assessment and management",
-      "Tax optimization strategies",
-      "Real-time market analysis",
-      "Goal-based planning",
-      "Retirement planning tools",
-      "Estate planning assistance"
-    ],
-    benefits: [
-      "Improve investment returns by 15-25%",
-      "Reduce financial planning costs by 60%",
-      "Personalized financial strategies",
-      "24/7 financial guidance",
-      "Comprehensive wealth management"
-    ],
-    useCases: [
-      "Financial advisors",
-      "Wealth management firms",
-      "Individual investors",
-      "Retirement planning",
-      "Estate planning"
-    ],
-    targetAudience: [
-      "Financial advisors",
-      "High-net-worth individuals",
-      "Retirement planners",
-      "Investment managers",
-      "Financial planners"
-    ],
-    tags: ["AI", "Financial Planning", "Investment Advisory", "Wealth Management", "Risk Management"],
-    estimatedDelivery: "4-5 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$1,499 - $4,999/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -2111,47 +1887,10 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
   {
     id: "quantum-machine-learning-platform",
     title: "Quantum Machine Learning Platform",
-    description: "Revolutionary platform that combines quantum computing with machine learning to solve complex problems that are impossible for classical computers.",
-    category: "Quantum Technology",
-    subcategory: "Machine Learning",
-    price: 8000,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Quantum neural networks",
-      "Quantum optimization algorithms",
-      "Hybrid classical-quantum computing",
-      "Quantum feature selection",
-      "Quantum clustering algorithms",
-      "Real-time quantum simulations",
-      "API for quantum algorithms",
-      "Performance benchmarking tools"
-    ],
-    benefits: [
-      "Solve previously intractable problems",
-      "Exponential speedup for ML tasks",
-      "Superior pattern recognition",
-      "Future-proof technology investment",
-      "Competitive advantage in research"
-    ],
-    useCases: [
-      "Drug discovery",
-      "Financial modeling",
-      "Climate modeling",
-      "Cryptography",
-      "Material science research"
     ],
     targetAudience: [
-      "Research institutions",
-      "Pharmaceutical companies",
-      "Financial institutions",
-      "Government agencies",
-      "Technology companies"
-    ],
-    tags: ["Quantum Computing", "Machine Learning", "AI", "Research", "Advanced Computing"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$8,000 - $25,000/month",
+      "Data scientists",
+      "ML engineers",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -2159,49 +1898,6 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     }
   },
   {
-    id: "autonomous-cybersecurity-operations-center",
-    title: "Autonomous Cybersecurity Operations Center",
-    description: "Fully automated SOC that uses AI to detect, analyze, and respond to cybersecurity threats without human intervention, providing 24/7 protection.",
-    category: "Cybersecurity",
-    subcategory: "Security Operations",
-    price: 3500,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI-powered threat detection",
-      "Automated incident response",
-      "Zero-day threat prevention",
-      "Behavioral anomaly detection",
-      "Threat intelligence correlation",
-      "Automated remediation",
-      "Compliance automation",
-      "Real-time threat hunting"
-    ],
-    benefits: [
-      "Reduce response time to seconds",
-      "Eliminate human error in security",
-      "24/7 automated protection",
-      "Reduce security team workload by 80%",
-      "Proactive threat prevention"
-    ],
-    useCases: [
-      "Enterprise security operations",
-      "Critical infrastructure protection",
-      "Financial services security",
-      "Healthcare security",
-      "Government cybersecurity"
-    ],
-    targetAudience: [
-      "CISOs",
-      "Security operations teams",
-      "Critical infrastructure operators",
-      "Financial institutions",
-      "Government agencies"
-    ],
-    tags: ["Cybersecurity", "AI", "Automation", "SOC", "Threat Response"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$3,500 - $12,000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -2209,299 +1905,6 @@ export const COMPREHENSIVE_SERVICES: ComprehensiveService[] = [
     }
   },
   {
-    id: "iot-predictive-maintenance-platform",
-    title: "IoT Predictive Maintenance Platform",
-    description: "Advanced IoT platform that predicts equipment failures before they happen, reducing downtime and maintenance costs through real-time monitoring and AI analytics.",
-    category: "Internet of Things",
-    subcategory: "Predictive Maintenance",
-    price: 899,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Real-time equipment monitoring",
-      "AI-powered failure prediction",
-      "Maintenance scheduling optimization",
-      "Performance analytics dashboard",
-      "Alert system for anomalies",
-      "Integration with existing systems",
-      "Mobile app for technicians",
-      "Historical data analysis"
-    ],
-    benefits: [
-      "Reduce unplanned downtime by 70%",
-      "Lower maintenance costs by 40%",
-      "Extend equipment lifespan",
-      "Improve operational efficiency",
-      "Data-driven maintenance decisions"
-    ],
-    useCases: [
-      "Manufacturing plants",
-      "Power plants",
-      "Oil and gas facilities",
-      "Transportation systems",
-      "Building management"
-    ],
-    targetAudience: [
-      "Maintenance managers",
-      "Operations directors",
-      "Facility managers",
-      "Plant engineers",
-      "Asset managers"
-    ],
-    tags: ["IoT", "Predictive Maintenance", "AI", "Equipment Monitoring", "Operational Efficiency"],
-    estimatedDelivery: "3-4 weeks",
-    supportLevel: "premium",
-    marketPrice: "$899 - $2,999/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  },
-  {
-    id: "ai-powered-content-marketing-suite",
-    title: "AI-Powered Content Marketing Suite",
-    description: "Comprehensive content marketing platform that uses AI to create, optimize, and distribute content across multiple channels with maximum engagement.",
-    category: "AI & Machine Learning",
-    subcategory: "Digital Marketing",
-    price: 599,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "AI content generation",
-      "Multi-channel publishing",
-      "SEO optimization",
-      "Content performance analytics",
-      "Audience targeting",
-      "Automated distribution",
-      "Content calendar management",
-      "ROI tracking and reporting"
-    ],
-    benefits: [
-      "Increase content engagement by 50%",
-      "Reduce content creation time by 60%",
-      "Improve SEO rankings",
-      "Better audience targeting",
-      "Measurable marketing ROI"
-    ],
-    useCases: [
-      "Marketing agencies",
-      "E-commerce businesses",
-      "Content creators",
-      "B2B companies",
-      "Brand managers"
-    ],
-    targetAudience: [
-      "Marketing managers",
-      "Content creators",
-      "SEO specialists",
-      "Brand managers",
-      "Digital marketers"
-    ],
-    tags: ["AI", "Content Marketing", "SEO", "Digital Marketing", "Content Creation"],
-    estimatedDelivery: "2-3 weeks",
-    supportLevel: "premium",
-    marketPrice: "$599 - $1,999/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  },
-  {
-    id: "blockchain-identity-verification-platform",
-    title: "Blockchain Identity Verification Platform",
-    description: "Decentralized identity verification system that provides secure, tamper-proof identity verification using blockchain technology and zero-knowledge proofs.",
-    category: "Blockchain & Web3",
-    subcategory: "Identity Management",
-    price: 1200,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Decentralized identity verification",
-      "Zero-knowledge proof technology",
-      "Multi-factor authentication",
-      "Biometric integration",
-      "Compliance with regulations",
-      "API for integration",
-      "Real-time verification",
-      "Audit trail and transparency"
-    ],
-    benefits: [
-      "Eliminate identity fraud",
-      "Reduce verification costs by 60%",
-      "Comply with privacy regulations",
-      "User-controlled identity",
-      "Tamper-proof verification"
-    ],
-    useCases: [
-      "Financial services",
-      "Healthcare verification",
-      "Government services",
-      "E-commerce verification",
-      "Employment screening"
-    ],
-    targetAudience: [
-      "Financial institutions",
-      "Healthcare providers",
-      "Government agencies",
-      "E-commerce platforms",
-      "HR departments"
-    ],
-    tags: ["Blockchain", "Identity Verification", "Web3", "Security", "Privacy"],
-    estimatedDelivery: "4-5 weeks",
-    supportLevel: "premium",
-    marketPrice: "$1,200 - $3,999/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  },
-  {
-    id: "ai-powered-customer-experience-platform",
-    title: "AI-Powered Customer Experience Platform",
-    description: "Intelligent customer experience platform that personalizes interactions, predicts customer needs, and optimizes every touchpoint for maximum satisfaction.",
-    category: "AI & Machine Learning",
-    subcategory: "Customer Experience",
-    price: 999,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Customer journey mapping",
-      "AI-powered personalization",
-      "Sentiment analysis",
-      "Predictive customer needs",
-      "Omnichannel optimization",
-      "Real-time feedback collection",
-      "Customer satisfaction scoring",
-      "Automated customer service"
-    ],
-    benefits: [
-      "Increase customer satisfaction by 35%",
-      "Improve customer retention by 40%",
-      "Reduce customer service costs",
-      "Personalized customer experiences",
-      "Data-driven CX optimization"
-    ],
-    useCases: [
-      "E-commerce platforms",
-      "SaaS companies",
-      "Retail businesses",
-      "Service providers",
-      "B2B companies"
-    ],
-    targetAudience: [
-      "Customer experience managers",
-      "Marketing directors",
-      "Product managers",
-      "Customer service managers",
-      "Business owners"
-    ],
-    tags: ["AI", "Customer Experience", "Personalization", "Customer Analytics", "CX Optimization"],
-    estimatedDelivery: "3-4 weeks",
-    supportLevel: "premium",
-    marketPrice: "$999 - $3,499/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  },
-  {
-    id: "quantum-cryptography-security-platform",
-    title: "Quantum Cryptography Security Platform",
-    description: "Next-generation security platform that uses quantum cryptography to provide unbreakable encryption and secure communication channels.",
-    category: "Quantum Technology",
-    subcategory: "Cryptography",
-    price: 6000,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Quantum key distribution",
-      "Post-quantum cryptography",
-      "Quantum-resistant algorithms",
-      "Secure communication channels",
-      "Real-time encryption",
-      "Quantum random number generation",
-      "Compliance with standards",
-      "Integration APIs"
-    ],
-    benefits: [
-      "Unbreakable encryption",
-      "Future-proof security",
-      "Quantum-resistant protection",
-      "Compliance with regulations",
-      "Competitive security advantage"
-    ],
-    useCases: [
-      "Government communications",
-      "Financial transactions",
-      "Healthcare data protection",
-      "Military communications",
-      "Critical infrastructure"
-    ],
-    targetAudience: [
-      "Government agencies",
-      "Financial institutions",
-      "Healthcare organizations",
-      "Defense contractors",
-      "Critical infrastructure operators"
-    ],
-    tags: ["Quantum Technology", "Cryptography", "Security", "Encryption", "Quantum Computing"],
-    estimatedDelivery: "8-10 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$6,000 - $20,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    }
-  },
-  {
-    id: "autonomous-business-process-optimization",
-    title: "Autonomous Business Process Optimization Platform",
-    description: "AI-driven platform that continuously analyzes and optimizes business processes, identifying inefficiencies and implementing improvements automatically.",
-    category: "AI & Machine Learning",
-    subcategory: "Process Automation",
-    price: 1800,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Process mining and analysis",
-      "AI-powered optimization",
-      "Automated process improvement",
-      "Performance monitoring",
-      "Bottleneck identification",
-      "Resource optimization",
-      "ROI measurement",
-      "Continuous improvement cycles"
-    ],
-    benefits: [
-      "Improve process efficiency by 40%",
-      "Reduce operational costs by 30%",
-      "Eliminate process bottlenecks",
-      "Automated optimization",
-      "Continuous improvement"
-    ],
-    useCases: [
-      "Manufacturing operations",
-      "Supply chain management",
-      "Customer service processes",
-      "Financial operations",
-      "HR processes"
-    ],
-    targetAudience: [
-      "Operations managers",
-      "Process improvement specialists",
-      "Business analysts",
-      "Operations directors",
-      "Continuous improvement teams"
-    ],
-    tags: ["AI", "Process Optimization", "Automation", "Business Intelligence", "Operational Excellence"],
-    estimatedDelivery: "4-5 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$1,800 - $5,999/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -2536,5 +1939,4 @@ export const SERVICE_CATEGORIES = [
   "DeFi Services",
   "Security Testing",
   "Process Automation",
-  "Governance"
 ];

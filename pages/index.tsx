@@ -23,6 +23,9 @@ import { newInnovativeServices } from '../data/innovative-micro-saas-services';
 import { enhancedEnterpriseITServices } from '../data/enhanced-enterprise-it-services';
 import { advancedAISolutions } from '../data/advanced-ai-solutions';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import ContactInfo from '../components/ui/ContactInfo';
+import ServiceShowcase from '../components/sections/ServiceShowcase';
+import PerformanceOptimizer from '../components/PerformanceOptimizer';
 
 export default function HomePage() {
   const heroStats = [
@@ -421,19 +424,8 @@ export default function HomePage() {
               Join thousands of companies achieving breakthrough results with our revolutionary services
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="flex items-center justify-center space-x-3">
-                <Phone className="w-6 h-6 text-cyan-400" />
-                <span className="text-lg">{contactInfo.mobile}</span>
-              </div>
-              <div className="flex items-center justify-center space-x-3">
-                <Mail className="w-6 h-6 text-purple-400" />
-                <span className="text-lg">{contactInfo.email}</span>
-              </div>
-              <div className="flex items-center justify-center space-x-3">
-                <MapPin className="w-6 h-6 text-green-400" />
-                <span className="text-lg">{contactInfo.address}</span>
-              </div>
+            <div className="mb-8">
+              <ContactInfo className="text-white" showSocial={false} />
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -457,6 +449,20 @@ export default function HomePage() {
               </Button>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Service Showcase */}
+      <section className="relative z-10 py-16 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ServiceShowcase />
+        </div>
+      </section>
+
+      {/* Performance Optimization */}
+      <section className="relative z-10 py-16 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <PerformanceOptimizer />
         </div>
       </section>
 

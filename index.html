@@ -40,6 +40,9 @@
     <!-- Apple Touch Icon -->
     <link rel="apple-touch-icon" href="https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc" />
     
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
     <!-- DNS Prefetch for performance -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com" />
     <link rel="dns-prefetch" href="//api.ziontechgroup.com" />
@@ -171,7 +174,7 @@
       // Service Worker registration for PWA capabilities
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
+          navigator.serviceWorker.register('/service-worker.js')
             .then((registration) => {
               console.log('SW registered: ', registration);
             })
