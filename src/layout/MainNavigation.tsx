@@ -7,6 +7,7 @@ import { useAuth } from "@/hooks/useAuth";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 <<<<<<< HEAD
@@ -40,6 +41,9 @@ import { useState } from "react";
 >>>>>>> origin/cursor/website-audit-and-enhancement-3b60
 =======
 import { MessageSquare } from "lucide-react";
+=======
+import { MessageSquare, Briefcase, Users, Settings, BarChart3 } from "lucide-react";
+>>>>>>> origin/cursor/website-audit-and-enhancement-de4e
 import { useTranslation } from "react-i18next";
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
 
@@ -127,6 +131,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     {
       key: 'home',
       href: '/',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       name: 'Home',
@@ -663,15 +668,22 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   ];
 
 =======
+=======
+      name: 'Home',
+      icon: null,
+>>>>>>> origin/cursor/website-audit-and-enhancement-de4e
       matches: (path: string) => path === '/'
     },
     {
       key: 'marketplace',
       href: '/marketplace',
+      name: 'Marketplace',
+      icon: Briefcase,
       matches: (path: string) => path.startsWith('/marketplace')
     },
     {
       key: 'services',
+<<<<<<< HEAD
 <<<<<<< HEAD
       href: '/services',
       matches: (path: string) => path.startsWith('/services') || path.startsWith('/ai-services') || path.startsWith('/it-services') || path.startsWith('/digital-marketing') || path.startsWith('/business-solutions')
@@ -684,33 +696,71 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'categories',
       href: '/categories',
       matches: (path: string) => path.startsWith('/categories')
+=======
+      href: '/services',
+      name: 'Services',
+      icon: null,
+      matches: (path: string) => path.startsWith('/services')
+>>>>>>> origin/cursor/website-audit-and-enhancement-de4e
     },
     {
       key: 'talent',
       href: '/talent',
+      name: 'Talent',
+      icon: Users,
       matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard')
     },
     {
       key: 'equipment',
       href: '/equipment',
+      name: 'Equipment',
+      icon: null,
       matches: (path: string) => path.startsWith('/equipment')
     },
     {
       key: 'community',
       href: '/community',
+      name: 'Community',
+      icon: null,
       matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
+    },
+    {
+      key: 'blog',
+      href: '/blog',
+      name: 'Blog',
+      icon: null,
+      matches: (path: string) => path.startsWith('/blog')
+    },
+    {
+      key: 'about',
+      href: '/about',
+      name: 'About',
+      icon: null,
+      matches: (path: string) => path.startsWith('/about')
+    },
+    {
+      key: 'contact',
+      href: '/contact',
+      name: 'Contact',
+      icon: null,
+      matches: (path: string) => path === '/contact'
     }
   ];
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
   let links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) }));
+=======
+  let links = baseLinks;
+>>>>>>> origin/cursor/website-audit-and-enhancement-de4e
   
   // Add authenticated-only links
   if (isAuthenticated) {
     links.push({
       key: 'dashboard',
-      name: t('nav.dashboard'),
+      name: 'Dashboard',
       href: '/dashboard',
+      icon: BarChart3,
       matches: (path: string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard'
     });
   }
@@ -719,8 +769,9 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   if (isAdmin) {
     links.push({
       key: 'analytics',
-      name: t('nav.analytics'),
+      name: 'Analytics',
       href: '/analytics',
+      icon: BarChart3,
       matches: (path: string) => path.startsWith('/analytics')
     });
   }
@@ -774,6 +825,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     <nav className={cn("navbar ml-6 hidden lg:flex", className)} ref={dropdownRef}>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-da9e
       <ul className="flex items-center gap-1">
+<<<<<<< HEAD
         {links.map((link) => (
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -915,6 +967,12 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 )}
               </div>
             ) : (
+=======
+        {links.map((link) => {
+          const IconComponent = link.icon;
+          return (
+            <li key={link.name}>
+>>>>>>> origin/cursor/website-audit-and-enhancement-de4e
               <Link
                 to={link.href}
                 className={cn(
@@ -924,6 +982,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                     : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
                 )}
               >
+<<<<<<< HEAD
                 {link.name}
               </Link>
             )}
@@ -975,6 +1034,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 >>>>>>> origin/cursor/website-audit-and-enhancement-3b60
           </li>
         ))}
+=======
+                {IconComponent && <IconComponent className="w-4 h-4 mr-2" />}
+                {link.name}
+              </Link>
+            </li>
+          );
+        })}
+>>>>>>> origin/cursor/website-audit-and-enhancement-de4e
         
 <<<<<<< HEAD
         {/* Company Dropdown */}
@@ -1151,8 +1218,13 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan hover:scale-105"
               )}
             >
+<<<<<<< HEAD
               <MessageSquare className="w-4 h-4 mr-2" />
               {t('nav.messages')}
+=======
+              <MessageSquare className="w-4 h-4 mr-1" />
+              Messages
+>>>>>>> origin/cursor/website-audit-and-enhancement-de4e
               {unreadCount > 0 && (
 <<<<<<< HEAD
 <<<<<<< HEAD

@@ -26,9 +26,14 @@ import SearchPage from "@/pages/SearchPage";
 import { SitemapPage } from "@/components/SitemapPage";
 import Sitemap from "@/pages/Sitemap";
 import Terms from "@/pages/Terms";
+<<<<<<< HEAD
 import Cookies from "@/pages/Cookies";
 import ApiDocs from "@/pages/ApiDocs";
 import HelpCenterPage from "@/pages/HelpCenterPage";
+=======
+import HelpCenter from "@/pages/HelpCenter";
+import Cookies from "@/pages/Cookies";
+>>>>>>> origin/cursor/website-audit-and-enhancement-de4e
 import AccountSettings from "@/pages/AccountSettings";
 import ProjectRoom from "@/pages/ProjectRoom";
 import VideoCall from "@/pages/VideoCall";
@@ -45,12 +50,20 @@ const ContentRoutes = () => {
       <Route path="/privacy" element={<Privacy />} />
       
       {/* Help Center Routes */}
+<<<<<<< HEAD
       <Route path="/help" element={<HelpCenterPage />} />
       <Route path="/support" element={<HelpCenterPage />} />
       <Route path="/faq" element={<HelpCenterPage />} />
       
       {/* Profile Creation Routes */}
       <Route path="/create-profile" element={<CreateProfile />} />
+=======
+      <Route path="/help" element={<HelpCenter />} />
+      <Route path="/support" element={<HelpCenter />} />
+      
+      {/* Cookie Policy */}
+      <Route path="/cookies" element={<Cookies />} />
+>>>>>>> origin/cursor/website-audit-and-enhancement-de4e
       
       {/* Blog Routes */}
       <Route path="/blog" element={<Blog />} />

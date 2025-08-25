@@ -78,6 +78,7 @@ const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServicesPage'));
 const ServicesOverviewPage = React.lazy(() => import('./pages/ServicesOverviewPage'));
 const AIServicesShowcase = React.lazy(() => import('./pages/AIServicesShowcase'));
@@ -192,6 +193,10 @@ const ComprehensiveServicesPage = React.lazy(() => import('./pages/Comprehensive
 const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
 const CybersecurityServicesPage = React.lazy(() => import('./pages/CybersecurityServicesPage'));
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-1010
+=======
+const HelpCenter = React.lazy(() => import('./pages/HelpCenter'));
+const Cookies = React.lazy(() => import('./pages/Cookies'));
+>>>>>>> origin/cursor/website-audit-and-enhancement-de4e
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -225,6 +230,7 @@ const baseRoutes = [
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-1010
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
+<<<<<<< HEAD
   
   // Additional routes from HEAD branch
   { path: '/micro-saas-services', element: <MicroSaasServicesPage /> },
@@ -309,6 +315,10 @@ const baseRoutes = [
   { path: '/research-development', element: <News /> },
   { path: '/enterprise-it', element: <ITInfrastructure /> },
   { path: '/micro-saas', element: <MicroSAASSolutions /> },
+=======
+  { path: '/help', element: <HelpCenter /> },
+  { path: '/cookies', element: <Cookies /> },
+>>>>>>> origin/cursor/website-audit-and-enhancement-de4e
 ];
 >>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fad7
 

@@ -15,6 +15,7 @@ import { FooterNewsletter } from "@/components/FooterNewsletter";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin } from "lucide-react";
 =======
 import { Twitter, Linkedin, Facebook, Instagram, Github, Phone, Mail, MapPin, Sparkles, Zap, Shield, Brain, Code, Database, BarChart3, Link as LinkIcon, UserCheck } from "lucide-react";
@@ -41,6 +42,9 @@ import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, Ex
 =======
 import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, ArrowRight, Sparkles, Zap, Brain, Shield, Globe, Code, TrendingUp, Users, Building } from "lucide-react";
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d816
+=======
+import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin } from "lucide-react";
+>>>>>>> origin/cursor/website-audit-and-enhancement-de4e
 import { Link } from "react-router-dom";
 >>>>>>> origin/cursor/website-audit-and-enhancement-ba38
 =======
@@ -377,6 +381,7 @@ export function Footer() {
     <footer className="bg-zion-blue-dark border-t border-zion-blue-light pt-12 pb-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -847,9 +852,37 @@ export function Footer() {
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d816
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-099c
+=======
+          {/* Company Info */}
+          <div className="lg:col-span-2">
+            <div className="mb-4">
+              <span className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">ZION TECH GROUP</span>
+            </div>
+            <p className="text-zion-slate-light mb-4 max-w-xs">
+              The world's first free marketplace dedicated to high-tech and artificial intelligence. Connecting talent, services, and innovation.
+            </p>
+            
+            {/* Contact Info */}
+            <div className="space-y-2 mb-4">
+              <div className="flex items-center text-zion-slate-light">
+                <Mail className="h-4 w-4 mr-2" />
+                <span>info@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center text-zion-slate-light">
+                <Phone className="h-4 w-4 mr-2" />
+                <span>+1 (555) 123-4567</span>
+              </div>
+              <div className="flex items-center text-zion-slate-light">
+                <MapPin className="h-4 w-4 mr-2" />
+                <span>San Francisco, CA</span>
+              </div>
+            </div>
+            
+            {/* Social Links */}
+>>>>>>> origin/cursor/website-audit-and-enhancement-de4e
             <div className="flex space-x-4">
               <a
-                href="https://twitter.com/lovable_dev"
+                href="https://twitter.com/ziontechgroup"
                 target="_blank"
                 rel="noopener noreferrer"
 <<<<<<< HEAD
@@ -893,6 +926,7 @@ export function Footer() {
               <a
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 href="https://www.linkedin.com/company/zion-tech-group"
 =======
                 href="https://www.linkedin.com/company/ziontechgroup"
@@ -900,6 +934,9 @@ export function Footer() {
 =======
                 href="https://www.linkedin.com/company/zion-marketplace"
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
+=======
+                href="https://www.linkedin.com/company/zion-tech-group"
+>>>>>>> origin/cursor/website-audit-and-enhancement-de4e
                 target="_blank"
                 rel="noopener noreferrer"
 <<<<<<< HEAD
@@ -941,7 +978,7 @@ export function Footer() {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="https://www.facebook.com/zionmarketplace"
+                href="https://www.facebook.com/ziontechgroup"
                 target="_blank"
                 rel="noopener noreferrer"
 <<<<<<< HEAD
@@ -983,7 +1020,7 @@ export function Footer() {
                 <Facebook className="h-5 w-5" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/ziontechgroup"
                 target="_blank"
                 rel="noopener noreferrer"
 <<<<<<< HEAD
@@ -1025,7 +1062,7 @@ export function Footer() {
                 <Instagram className="h-5 w-5" />
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/ziontechgroup"
                 target="_blank"
                 rel="noopener noreferrer"
 <<<<<<< HEAD
@@ -1290,6 +1327,7 @@ function Footer() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           {/* Marketplace */}
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
@@ -1320,6 +1358,8 @@ function Footer() {
               <li><Link to="/request-quote" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Request Quote</Link></li>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-dfab
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-de4e
           {/* Marketplace */}
           <div>
             <h3 className="text-white font-semibold mb-4 text-lg">Marketplace</h3>
@@ -1331,8 +1371,12 @@ function Footer() {
               <li><Link to="/categories" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Categories</Link></li>
               <li><Link to="/green-it" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Green IT</Link></li>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <li><Link to="/featured" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Featured</Link></li>
 >>>>>>> origin/cursor/website-audit-and-enhancement-3b60
+=======
+              <li><Link to="/zion-hire-ai" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Hiring</Link></li>
+>>>>>>> origin/cursor/website-audit-and-enhancement-de4e
             </ul>
           </div>
 
@@ -1669,6 +1713,7 @@ function Footer() {
             </ul>
           </div>
 
+<<<<<<< HEAD
           {/* Newsletter */}
           <div>
 <<<<<<< HEAD
@@ -2142,6 +2187,24 @@ function Footer() {
               Subscribe to our newsletter for the latest tech insights, AI developments, and marketplace opportunities.
             </p>
             <FooterNewsletter />
+=======
+          {/* Resources */}
+          <div>
+            <h3 className="text-white font-semibold mb-4 text-lg">Resources</h3>
+            <ul className="space-y-2">
+              <li><Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Help Center</Link></li>
+              <li><Link to="/developers" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Developer Portal</Link></li>
+              <li><Link to="/api-docs" className="text-zion-slate-light hover:text-zion-cyan transition-colors">API Documentation</Link></li>
+              <li><Link to="/community" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Community</Link></li>
+              <li><Link to="/mobile" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Mobile App</Link></li>
+            </ul>
+            
+            {/* Newsletter */}
+            <div className="mt-6">
+              <h4 className="text-white font-semibold mb-3 text-sm">Newsletter</h4>
+              <FooterNewsletter />
+            </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-de4e
           </div>
         </div>
 
@@ -2318,9 +2381,15 @@ function Footer() {
               <FooterNewsletter />
 =======
             <div className="flex space-x-6 mt-4 md:mt-0">
+<<<<<<< HEAD
               <Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors duration-300">Privacy Policy</Link>
               <Link to="/terms" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors duration-300">Terms of Service</Link>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-099c
+=======
+              <Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">Privacy Policy</Link>
+              <Link to="/terms" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">Terms of Service</Link>
+              <Link to="/cookies" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">Cookie Policy</Link>
+>>>>>>> origin/cursor/website-audit-and-enhancement-de4e
             </div>
           </div>
         </div>
