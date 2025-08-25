@@ -2,13 +2,11 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
 import { visualizer } from 'rollup-plugin-visualizer'
-import { splitVendorChunkPlugin } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig(async () => ({
   plugins: [
     react(),
-    splitVendorChunkPlugin(),
     visualizer({
       filename: 'dist/stats.html',
       open: false,
@@ -36,10 +34,13 @@ export default defineConfig(async () => ({
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug'],
+<<<<<<< HEAD
         passes: 2,
       },
       mangle: {
         toplevel: true,
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
       },
     },
     rollupOptions: {
@@ -50,7 +51,11 @@ export default defineConfig(async () => ({
             return 'react-vendor';
           }
           
+<<<<<<< HEAD
           // UI Component libraries - group by size
+=======
+          // UI Component libraries
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
           if (id.includes('@radix-ui')) {
             return 'ui-vendor';
           }
@@ -120,6 +125,7 @@ export default defineConfig(async () => ({
             return 'query-vendor';
           }
           
+<<<<<<< HEAD
           // Page-specific chunks for better caching
           if (id.includes('/pages/')) {
             const pageName = id.split('/pages/')[1]?.split('.')[0];
@@ -134,6 +140,11 @@ export default defineConfig(async () => ({
             if (componentName) {
               return `component-${componentName}`;
             }
+=======
+          // Default vendor chunk for other dependencies
+          if (id.includes('node_modules')) {
+            return 'vendor';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
           }
         },
         chunkFileNames: (chunkInfo) => {
@@ -155,9 +166,18 @@ export default defineConfig(async () => ({
     },
     chunkSizeWarningLimit: 500, // Reduced from 1000
     sourcemap: false,
+<<<<<<< HEAD
     cssCodeSplit: true,
     reportCompressedSize: true,
     emptyOutDir: true,
+=======
+    // Enable CSS code splitting
+    cssCodeSplit: true,
+    // Optimize dependencies
+    commonjsOptions: {
+      include: [/node_modules/],
+    },
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
   },
   optimizeDeps: {
     include: [
@@ -213,7 +233,12 @@ export default defineConfig(async () => ({
       '@supabase/supabase-js',
       '@tanstack/react-query',
     ],
+<<<<<<< HEAD
     exclude: ['@vite/client', '@vite/env'],
+=======
+    // Exclude problematic packages from optimization
+    exclude: ['@cypress/request'],
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
   },
   server: {
     port: 3000,
