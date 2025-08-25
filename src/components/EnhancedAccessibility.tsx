@@ -1,72 +1,247 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  EyeIcon,
-  EyeSlashIcon,
-  SpeakerWaveIcon,
+  EyeIcon, 
+  EyeSlashIcon, 
+  SpeakerWaveIcon, 
   SpeakerXMarkIcon,
-  AdjustmentsHorizontalIcon,
   SunIcon,
   MoonIcon,
-  ComputerDesktopIcon,
-  MagnifyingGlassIcon,
+  AdjustmentsHorizontalIcon,
+  InformationCircleIcon,
   CheckCircleIcon,
   ExclamationTriangleIcon,
-  InformationCircleIcon,
   XMarkIcon
 } from '@heroicons/react/24/outline';
 
 interface AccessibilitySettings {
   highContrast: boolean;
-  fontSize: 'small' | 'medium' | 'large' | 'xlarge';
   reducedMotion: boolean;
+  largeText: boolean;
   screenReader: boolean;
+  keyboardNavigation: boolean;
   focusIndicator: boolean;
   colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
-  dyslexia: boolean;
-  highContrastMode: 'none' | 'high-contrast' | 'inverted' | 'monochrome';
+  fontSize: 'small' | 'medium' | 'large' | 'xlarge';
 }
 
 interface AccessibilityIssue {
   id: string;
   type: 'error' | 'warning' | 'info';
-  title: string;
-  description: string;
-  wcagLevel: 'A' | 'AA' | 'AAA';
-  element?: HTMLElement;
-  fixable: boolean;
-  suggestion: string;
+  message: string;
+  element?: string;
+  severity: 'low' | 'medium' | 'high';
+  fix?: string;
 }
 
 interface EnhancedAccessibilityProps {
   position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
+  showScanner?: boolean;
   className?: string;
-  showIssues?: boolean;
-  autoCheck?: boolean;
 }
 
-export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
+const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   position = 'bottom-right',
-  className = '',
-  showIssues = true,
-  autoCheck = true
+  showScanner = true,
+  className = ''
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
-    fontSize: 'medium',
     reducedMotion: false,
+    largeText: false,
     screenReader: false,
+    keyboardNavigation: true,
     focusIndicator: true,
     colorBlindness: 'none',
-    dyslexia: false,
-    highContrastMode: 'none'
+    fontSize: 'medium'
   });
   
   const [issues, setIssues] = useState<AccessibilityIssue[]>([]);
-  const [complianceScore, setComplianceScore] = useState(0);
-  const [isChecking, setIsChecking] = useState(false);
-  const [activeTab, setActiveTab] = useState<'controls' | 'issues' | 'settings'>('controls');
+  const [isScanning, setIsScanning] = useState(false);
+  const [activeTab, setActiveTab] = useState<'settings' | 'scanner' | 'help'>('settings');
+
+  // Apply accessibility settings to document
+  useEffect(() => {
+    const root = document.documentElement;
+    
+    // High contrast mode
+    if (settings.highContrast) {
+      root.classList.add('high-contrast');
+    } else {
+      root.classList.remove('high-contrast');
+    }
+    
+    // Reduced motion
+    if (settings.reducedMotion) {
+      root.classList.add('reduced-motion');
+    } else {
+      root.classList.remove('reduced-motion');
+    }
+    
+    // Large text
+    if (settings.largeText) {
+      root.classList.add('large-text');
+    } else {
+      root.classList.remove('large-text');
+    }
+    
+    // Font size
+    root.style.setProperty('--font-size-base', {
+      'small': '14px',
+      'medium': '16px',
+      'large': '18px',
+      'xlarge': '20px'
+    }[settings.fontSize]);
+    
+    // Color blindness simulation
+    root.style.setProperty('--color-blindness', settings.colorBlindness);
+    
+    // Save settings to localStorage
+    localStorage.setItem('accessibility-settings', JSON.stringify(settings));
+  }, [settings]);
+
+  // Load saved settings on mount
+  useEffect(() => {
+    const saved = localStorage.getItem('accessibility-settings');
+    if (saved) {
+      try {
+        setSettings(JSON.parse(saved));
+      } catch (error) {
+        console.warn('Failed to load accessibility settings:', error);
+      }
+    }
+  }, []);
+
+  // Keyboard navigation support
+  useEffect(() => {
+    if (!settings.keyboardNavigation) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      // Skip to main content
+      if (event.key === 'Tab' && event.altKey) {
+        event.preventDefault();
+        const mainContent = document.querySelector('main') || document.querySelector('#main');
+        if (mainContent) {
+          (mainContent as HTMLElement).focus();
+        }
+      }
+      
+      // Skip to navigation
+      if (event.key === 'Tab' && event.shiftKey && event.altKey) {
+        event.preventDefault();
+        const nav = document.querySelector('nav') || document.querySelector('header');
+        if (nav) {
+          (nav as HTMLElement).focus();
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [settings.keyboardNavigation]);
+
+  // Focus indicator
+  useEffect(() => {
+    if (settings.focusIndicator) {
+      document.body.classList.add('show-focus-indicator');
+    } else {
+      document.body.classList.remove('show-focus-indicator');
+    }
+  }, [settings.focusIndicator]);
+
+  // Accessibility scanner
+  const runAccessibilityScan = useCallback(async () => {
+    setIsScanning(true);
+    setIssues([]);
+    
+    // Simulate scanning delay
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    const newIssues: AccessibilityIssue[] = [];
+    
+    // Check for missing alt text on images
+    const images = document.querySelectorAll('img');
+    images.forEach((img, index) => {
+      if (!img.alt && !img.getAttribute('aria-label')) {
+        newIssues.push({
+          id: `img-${index}`,
+          type: 'error',
+          message: 'Image missing alt text or aria-label',
+          element: img.tagName.toLowerCase(),
+          severity: 'medium',
+          fix: 'Add alt text or aria-label attribute'
+        });
+      }
+    });
+    
+    // Check for proper heading structure
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    let previousLevel = 0;
+    headings.forEach((heading, index) => {
+      const level = parseInt(heading.tagName.charAt(1));
+      if (level > previousLevel + 1) {
+        newIssues.push({
+          id: `heading-${index}`,
+          type: 'warning',
+          message: `Heading level skipped from h${previousLevel} to h${level}`,
+          element: heading.tagName.toLowerCase(),
+          severity: 'low',
+          fix: 'Ensure proper heading hierarchy'
+        });
+      }
+      previousLevel = level;
+    });
+    
+    // Check for form labels
+    const formControls = document.querySelectorAll('input, select, textarea');
+    formControls.forEach((control, index) => {
+      const id = control.getAttribute('id');
+      const label = document.querySelector(`label[for="${id}"]`);
+      const ariaLabel = control.getAttribute('aria-label');
+      
+      if (!label && !ariaLabel && !control.getAttribute('aria-labelledby')) {
+        newIssues.push({
+          id: `form-${index}`,
+          type: 'error',
+          message: 'Form control missing label or aria-label',
+          element: control.tagName.toLowerCase(),
+          severity: 'high',
+          fix: 'Add label element or aria-label attribute'
+        });
+      }
+    });
+    
+    // Check for color contrast (simplified)
+    const textElements = document.querySelectorAll('p, span, div, h1, h2, h3, h4, h5, h6');
+    textElements.forEach((element, index) => {
+      const style = window.getComputedStyle(element);
+      const color = style.color;
+      const backgroundColor = style.backgroundColor;
+      
+      if (color === backgroundColor || color === 'transparent') {
+        newIssues.push({
+          id: `contrast-${index}`,
+          type: 'warning',
+          message: 'Potential color contrast issue',
+          element: element.tagName.toLowerCase(),
+          severity: 'medium',
+          fix: 'Ensure sufficient color contrast ratio'
+        });
+      }
+    });
+    
+    setIssues(newIssues);
+    setIsScanning(false);
+  }, []);
+
+  // Toggle setting
+  const toggleSetting = (key: keyof AccessibilitySettings, value?: any) => {
+    setSettings(prev => ({
+      ...prev,
+      [key]: value !== undefined ? value : !prev[key]
+    }));
+  };
 
   // Position classes
   const getPositionClasses = () => {
@@ -79,301 +254,15 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     }
   };
 
-  // Apply accessibility settings
-  const applySettings = useCallback((newSettings: Partial<AccessibilitySettings>) => {
-    const updatedSettings = { ...settings, ...newSettings };
-    setSettings(updatedSettings);
-
-    // Apply high contrast
-    if (updatedSettings.highContrast) {
-      document.documentElement.classList.add('high-contrast');
-    } else {
-      document.documentElement.classList.remove('high-contrast');
-    }
-
-    // Apply font size
-    document.documentElement.style.fontSize = {
-      'small': '14px',
-      'medium': '16px',
-      'large': '18px',
-      'xlarge': '20px'
-    }[updatedSettings.fontSize];
-
-    // Apply reduced motion
-    if (updatedSettings.reducedMotion) {
-      document.documentElement.style.setProperty('--reduced-motion', 'reduce');
-    } else {
-      document.documentElement.style.removeProperty('--reduced-motion');
-    }
-
-    // Apply focus indicator
-    if (updatedSettings.focusIndicator) {
-      document.documentElement.classList.add('focus-visible');
-    } else {
-      document.documentElement.classList.remove('focus-visible');
-    }
-
-    // Apply color blindness simulation
-    document.documentElement.style.filter = updatedSettings.colorBlindness !== 'none' 
-      ? `url(#${updatedSettings.colorBlindness})` 
-      : 'none';
-
-    // Apply dyslexia-friendly font
-    if (updatedSettings.dyslexia) {
-      document.documentElement.classList.add('dyslexia-friendly');
-    } else {
-      document.documentElement.classList.remove('dyslexia-friendly');
-    }
-
-    // Apply high contrast mode
-    document.documentElement.className = document.documentElement.className
-      .replace(/high-contrast-mode-\w+/g, '');
-    if (updatedSettings.highContrastMode !== 'none') {
-      document.documentElement.classList.add(`high-contrast-mode-${updatedSettings.highContrastMode}`);
-    }
-
-    // Save to localStorage
-    localStorage.setItem('accessibility-settings', JSON.stringify(updatedSettings));
-  }, [settings]);
-
-  // Check accessibility compliance
-  const checkAccessibility = useCallback(async () => {
-    setIsChecking(true);
-    const newIssues: AccessibilityIssue[] = [];
-    let score = 100;
-
-    // Check for missing alt text on images
-    const images = document.querySelectorAll('img');
-    images.forEach((img, index) => {
-      if (!img.alt && !img.getAttribute('aria-label')) {
-        newIssues.push({
-          id: `missing-alt-${index}`,
-          type: 'error',
-          title: 'Missing Alt Text',
-          description: 'Image is missing alternative text for screen readers',
-          wcagLevel: 'A',
-          element: img,
-          fixable: true,
-          suggestion: 'Add alt attribute or aria-label to describe the image content'
-        });
-        score -= 5;
-      }
-    });
-
-    // Check for proper heading structure
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    let previousLevel = 0;
-    headings.forEach((heading, index) => {
-      const level = parseInt(heading.tagName.charAt(1));
-      if (level - previousLevel > 1) {
-        newIssues.push({
-          id: `heading-skip-${index}`,
-          type: 'warning',
-          title: 'Heading Level Skipped',
-          description: `Heading level jumps from h${previousLevel} to h${level}`,
-          wcagLevel: 'AA',
-          element: heading as HTMLElement,
-          fixable: true,
-          suggestion: 'Ensure heading levels follow a logical sequence (h1 → h2 → h3)'
-        });
-        score -= 3;
-      }
-      previousLevel = level;
-    });
-
-    // Check for proper form labels
-    const formControls = document.querySelectorAll('input, select, textarea');
-    formControls.forEach((control, index) => {
-      const id = control.getAttribute('id');
-      const label = document.querySelector(`label[for="${id}"]`);
-      const ariaLabel = control.getAttribute('aria-label');
-      
-      if (!label && !ariaLabel && !control.getAttribute('aria-labelledby')) {
-        newIssues.push({
-          id: `missing-label-${index}`,
-          type: 'error',
-          title: 'Missing Form Label',
-          description: 'Form control is missing an associated label',
-          wcagLevel: 'A',
-          element: control as HTMLElement,
-          fixable: true,
-          suggestion: 'Add a label element with matching for attribute, or use aria-label'
-        });
-        score -= 5;
-      }
-    });
-
-    // Check for proper color contrast (simplified)
-    const textElements = document.querySelectorAll('p, span, div, h1, h2, h3, h4, h5, h6');
-    textElements.forEach((element, index) => {
-      const style = window.getComputedStyle(element);
-      const color = style.color;
-      const backgroundColor = style.backgroundColor;
-      
-      // This is a simplified check - in a real implementation, you'd use a proper contrast ratio calculator
-      if (color === backgroundColor) {
-        newIssues.push({
-          id: `contrast-issue-${index}`,
-          type: 'warning',
-          title: 'Potential Color Contrast Issue',
-          description: 'Text and background colors may be too similar',
-          wcagLevel: 'AA',
-          element: element as HTMLElement,
-          fixable: true,
-          suggestion: 'Ensure sufficient color contrast between text and background (minimum 4.5:1 for normal text)'
-        });
-        score -= 3;
-      }
-    });
-
-    // Check for keyboard navigation
-    const interactiveElements = document.querySelectorAll('a, button, input, select, textarea, [tabindex]');
-    interactiveElements.forEach((element, index) => {
-      if (element.getAttribute('tabindex') === '-1' && !element.hasAttribute('aria-hidden')) {
-        newIssues.push({
-          id: `keyboard-nav-${index}`,
-          type: 'warning',
-          title: 'Keyboard Navigation Issue',
-          description: 'Element is not keyboard accessible',
-          wcagLevel: 'A',
-          element: element as HTMLElement,
-          fixable: true,
-          suggestion: 'Ensure all interactive elements are keyboard accessible'
-        });
-        score -= 3;
-      }
-    });
-
-    // Check for proper ARIA usage
-    const ariaElements = document.querySelectorAll('[aria-*]');
-    ariaElements.forEach((element, index) => {
-      const ariaLabel = element.getAttribute('aria-label');
-      const ariaLabelledby = element.getAttribute('aria-labelledby');
-      
-      if (ariaLabel && ariaLabelledby) {
-        newIssues.push({
-          id: `aria-conflict-${index}`,
-          type: 'warning',
-          title: 'ARIA Attribute Conflict',
-          description: 'Both aria-label and aria-labelledby are present',
-          wcagLevel: 'AA',
-          element: element as HTMLElement,
-          fixable: true,
-          suggestion: 'Use either aria-label or aria-labelledby, not both'
-        });
-        score -= 2;
-      }
-    });
-
-    // Ensure score doesn't go below 0
-    score = Math.max(0, score);
-
-    setIssues(newIssues);
-    setComplianceScore(score);
-    setIsChecking(false);
-  }, []);
-
-  // Auto-fix accessibility issues
-  const autoFixIssues = useCallback(() => {
-    const fixableIssues = issues.filter(issue => issue.fixable);
-    let fixedCount = 0;
-
-    fixableIssues.forEach(issue => {
-      if (issue.element) {
-        switch (issue.id.split('-')[0]) {
-          case 'missing-alt':
-            if (issue.element.tagName === 'IMG') {
-              const img = issue.element as HTMLImageElement;
-              if (!img.alt) {
-                img.alt = 'Image';
-                fixedCount++;
-              }
-            }
-            break;
-          
-          case 'heading-skip':
-            // This would require more complex logic to fix
-            break;
-          
-          case 'missing-label':
-            // This would require more complex logic to fix
-            break;
-          
-          case 'contrast-issue':
-            // This would require more complex logic to fix
-            break;
-          
-          case 'keyboard-nav':
-            if (issue.element.getAttribute('tabindex') === '-1') {
-              issue.element.removeAttribute('tabindex');
-              fixedCount++;
-            }
-            break;
-          
-          case 'aria-conflict':
-            if (issue.element.hasAttribute('aria-label') && issue.element.hasAttribute('aria-labelledby')) {
-              issue.element.removeAttribute('aria-labelledby');
-              fixedCount++;
-            }
-            break;
-        }
-      }
-    });
-
-    if (fixedCount > 0) {
-      // Re-check accessibility after fixes
-      setTimeout(checkAccessibility, 500);
-    }
-
-    return fixedCount;
-  }, [issues, checkAccessibility]);
-
-  // Load saved settings
-  useEffect(() => {
-    const savedSettings = localStorage.getItem('accessibility-settings');
-    if (savedSettings) {
-      try {
-        const parsed = JSON.parse(savedSettings);
-        applySettings(parsed);
-      } catch (error) {
-        console.warn('Failed to load accessibility settings:', error);
-      }
-    }
-  }, [applySettings]);
-
-  // Auto-check accessibility
-  useEffect(() => {
-    if (autoCheck) {
-      const timer = setTimeout(checkAccessibility, 2000);
-      return () => clearTimeout(timer);
-    }
-  }, [autoCheck, checkAccessibility]);
-
-  // Get compliance color
-  const getComplianceColor = (score: number) => {
-    if (score >= 90) return 'text-green-600';
-    if (score >= 70) return 'text-yellow-600';
-    return 'text-red-600';
-  };
-
-  // Get compliance background color
-  const getComplianceBgColor = (score: number) => {
-    if (score >= 90) return 'bg-green-100 dark:bg-green-900/20';
-    if (score >= 70) return 'bg-yellow-100 dark:bg-yellow-900/20';
-    return 'bg-red-100 dark:bg-red-900/20';
-  };
-
   return (
     <>
-      {/* Accessibility Toggle Button */}
+      {/* Accessibility Button */}
       <motion.button
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
+        onClick={() => setIsOpen(!isOpen)}
+        className={`fixed ${getPositionClasses()} z-50 p-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-blue-300 ${className}`}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        onClick={() => setIsOpen(!isOpen)}
-        className={`fixed ${getPositionClasses()} z-50 w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${className}`}
-        aria-label="Accessibility Controls"
+        aria-label="Accessibility settings"
         aria-expanded={isOpen}
       >
         <AdjustmentsHorizontalIcon className="w-6 h-6" />
@@ -386,17 +275,17 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
-            className={`fixed ${getPositionClasses()} z-40 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700`}
-            style={{ marginTop: position.startsWith('top') ? '5rem' : 'auto', marginBottom: position.startsWith('bottom') ? '5rem' : 'auto' }}
+            className={`fixed ${getPositionClasses()} z-50 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 max-h-[80vh] overflow-hidden`}
           >
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
               <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
-                Accessibility Controls
+                Accessibility Settings
               </h2>
               <button
                 onClick={() => setIsOpen(false)}
                 className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+                aria-label="Close accessibility panel"
               >
                 <XMarkIcon className="w-5 h-5" />
               </button>
@@ -404,241 +293,261 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
 
             {/* Tabs */}
             <div className="flex border-b border-gray-200 dark:border-gray-700">
-              {['controls', 'issues', 'settings'].map((tab) => (
+              {[
+                { id: 'settings', label: 'Settings', icon: AdjustmentsHorizontalIcon },
+                { id: 'scanner', label: 'Scanner', icon: InformationCircleIcon },
+                { id: 'help', label: 'Help', icon: InformationCircleIcon }
+              ].map(tab => (
                 <button
-                  key={tab}
-                  onClick={() => setActiveTab(tab as any)}
-                  className={`flex-1 px-4 py-2 text-sm font-medium transition-colors ${
-                    activeTab === tab
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id as any)}
+                  className={`flex-1 flex items-center justify-center gap-2 px-4 py-3 text-sm font-medium transition-colors ${
+                    activeTab === tab.id
                       ? 'text-blue-600 border-b-2 border-blue-600'
                       : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'
                   }`}
                 >
-                  {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                  <tab.icon className="w-4 h-4" />
+                  {tab.label}
                 </button>
               ))}
             </div>
 
             {/* Content */}
-            <div className="p-4 max-h-96 overflow-y-auto">
-              {/* Controls Tab */}
-              {activeTab === 'controls' && (
-                <div className="space-y-4">
-                  {/* High Contrast */}
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h3 className="font-medium text-gray-900 dark:text-white">High Contrast</h3>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">Improve text visibility</p>
-                    </div>
-                    <button
-                      onClick={() => applySettings({ highContrast: !settings.highContrast })}
-                      className={`w-12 h-6 rounded-full transition-colors ${
-                        settings.highContrast ? 'bg-blue-600' : 'bg-gray-300'
-                      }`}
-                    >
-                      <div className={`w-4 h-4 bg-white rounded-full transition-transform ${
-                        settings.highContrast ? 'translate-x-6' : 'translate-x-1'
-                      }`} />
-                    </button>
-                  </div>
-
-                  {/* Font Size */}
-                  <div>
-                    <h3 className="font-medium text-gray-900 dark:text-white mb-2">Font Size</h3>
-                    <div className="grid grid-cols-4 gap-2">
-                      {(['small', 'medium', 'large', 'xlarge'] as const).map((size) => (
-                        <button
-                          key={size}
-                          onClick={() => applySettings({ fontSize: size })}
-                          className={`px-3 py-2 text-sm rounded-lg transition-colors ${
-                            settings.fontSize === size
-                              ? 'bg-blue-600 text-white'
-                              : 'bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700'
-                          }`}
-                        >
-                          {size.charAt(0).toUpperCase() + size.slice(1)}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Reduced Motion */}
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h3 className="font-medium text-gray-900 dark:text-white">Reduced Motion</h3>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">Minimize animations</p>
-                    </div>
-                    <button
-                      onClick={() => applySettings({ reducedMotion: !settings.reducedMotion })}
-                      className={`w-12 h-6 rounded-full transition-colors ${
-                        settings.reducedMotion ? 'bg-blue-600' : 'bg-gray-300'
-                      }`}
-                    >
-                      <div className={`w-4 h-4 bg-white rounded-full transition-transform ${
-                        settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'
-                      }`} />
-                    </button>
-                  </div>
-
-                  {/* Focus Indicator */}
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h3 className="font-medium text-gray-900 dark:text-white">Focus Indicator</h3>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">Show focus outlines</p>
-                    </div>
-                    <button
-                      onClick={() => applySettings({ focusIndicator: !settings.focusIndicator })}
-                      className={`w-12 h-6 rounded-full transition-colors ${
-                        settings.focusIndicator ? 'bg-blue-600' : 'bg-gray-300'
-                      }`}
-                    >
-                      <div className={`w-4 h-4 bg-white rounded-full transition-transform ${
-                        settings.focusIndicator ? 'translate-x-6' : 'translate-x-1'
-                      }`} />
-                    </button>
-                  </div>
-
-                  {/* Color Blindness */}
-                  <div>
-                    <h3 className="font-medium text-gray-900 dark:text-white mb-2">Color Blindness Support</h3>
-                    <select
-                      value={settings.colorBlindness}
-                      onChange={(e) => applySettings({ colorBlindness: e.target.value as any })}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg dark:bg-gray-800 dark:border-gray-600 dark:text-white"
-                    >
-                      <option value="none">None</option>
-                      <option value="protanopia">Protanopia (Red-Blind)</option>
-                      <option value="deuteranopia">Deuteranopia (Green-Blind)</option>
-                      <option value="tritanopia">Tritanopia (Blue-Blind)</option>
-                    </select>
-                  </div>
-
-                  {/* Dyslexia Support */}
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <h3 className="font-medium text-gray-900 dark:text-white">Dyslexia Support</h3>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">Use dyslexia-friendly font</p>
-                    </div>
-                    <button
-                      onClick={() => applySettings({ dyslexia: !settings.dyslexia })}
-                      className={`w-12 h-6 rounded-full transition-colors ${
-                        settings.dyslexia ? 'bg-blue-600' : 'bg-gray-300'
-                      }`}
-                    >
-                      <div className={`w-4 h-4 bg-white rounded-full transition-transform ${
-                        settings.dyslexia ? 'translate-x-6' : 'translate-x-1'
-                      }`} />
-                    </button>
-                  </div>
-                </div>
-              )}
-
-              {/* Issues Tab */}
-              {activeTab === 'issues' && (
-                <div className="space-y-4">
-                  {/* Compliance Score */}
-                  <div className={`p-4 rounded-lg ${getComplianceBgColor(complianceScore)}`}>
-                    <div className="text-center">
-                      <div className={`text-3xl font-bold ${getComplianceColor(complianceScore)}`}>
-                        {complianceScore}/100
-                      </div>
-                      <div className="text-sm text-gray-600 dark:text-gray-400">
-                        WCAG Compliance Score
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Check Button */}
-                  <button
-                    onClick={checkAccessibility}
-                    disabled={isChecking}
-                    className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors"
-                  >
-                    {isChecking ? 'Checking...' : 'Check Accessibility'}
-                  </button>
-
-                  {/* Auto-fix Button */}
-                  {issues.length > 0 && (
-                    <button
-                      onClick={autoFixIssues}
-                      className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors"
-                    >
-                      Auto-fix Issues
-                    </button>
-                  )}
-
-                  {/* Issues List */}
-                  <div className="space-y-3">
-                    {issues.map((issue) => (
-                      <div
-                        key={issue.id}
-                        className={`p-3 rounded-lg border ${
-                          issue.type === 'error' ? 'border-red-200 bg-red-50 dark:bg-red-900/20' :
-                          issue.type === 'warning' ? 'border-yellow-200 bg-yellow-50 dark:bg-yellow-900/20' :
-                          'border-blue-200 bg-blue-50 dark:bg-blue-900/20'
-                        }`}
-                      >
-                        <div className="flex items-start gap-2">
-                          {issue.type === 'error' && (
-                            <ExclamationTriangleIcon className="w-4 h-4 text-red-600 mt-0.5" />
-                          )}
-                          {issue.type === 'warning' && (
-                            <ExclamationTriangleIcon className="w-4 h-4 text-yellow-600 mt-0.5" />
-                          )}
-                          {issue.type === 'info' && (
-                            <InformationCircleIcon className="w-4 h-4 text-blue-600 mt-0.5" />
-                          )}
-                          
-                          <div className="flex-1">
-                            <h4 className="font-medium text-gray-900 dark:text-white text-sm">
-                              {issue.title}
-                            </h4>
-                            <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
-                              {issue.description}
-                            </p>
-                            <div className="flex items-center gap-2 mt-2">
-                              <span className={`text-xs px-2 py-1 rounded ${
-                                issue.wcagLevel === 'A' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' :
-                                issue.wcagLevel === 'AA' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300' :
-                                'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'
-                              }`}>
-                                WCAG {issue.wcagLevel}
-                              </span>
-                              {issue.fixable && (
-                                <span className="text-xs bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300 px-2 py-1 rounded">
-                                  Auto-fixable
-                                </span>
-                              )}
-                            </div>
-                            <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
-                              <strong>Suggestion:</strong> {issue.suggestion}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* Settings Tab */}
+            <div className="p-4 overflow-y-auto max-h-[calc(80vh-120px)]">
               {activeTab === 'settings' && (
                 <div className="space-y-4">
-                  <div className="text-center text-gray-500 dark:text-gray-400">
-                    <InformationCircleIcon className="w-12 h-12 mx-auto mb-3 text-blue-500" />
-                    <p>Accessibility settings are automatically saved to your browser.</p>
-                    <p className="text-sm mt-2">These settings will persist across sessions.</p>
+                  {/* Visual Settings */}
+                  <div>
+                    <h3 className="text-sm font-medium text-gray-900 dark:text-white mb-3">
+                      Visual Settings
+                    </h3>
+                    <div className="space-y-3">
+                      <label className="flex items-center gap-3">
+                        <input
+                          type="checkbox"
+                          checked={settings.highContrast}
+                          onChange={() => toggleSetting('highContrast')}
+                          className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                        />
+                        <span className="text-sm text-gray-700 dark:text-gray-300">
+                          High Contrast Mode
+                        </span>
+                      </label>
+                      
+                      <label className="flex items-center gap-3">
+                        <input
+                          type="checkbox"
+                          checked={settings.largeText}
+                          onChange={() => toggleSetting('largeText')}
+                          className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                        />
+                        <span className="text-sm text-gray-700 dark:text-gray-300">
+                          Large Text
+                        </span>
+                      </label>
+                      
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                          Font Size
+                        </label>
+                        <select
+                          value={settings.fontSize}
+                          onChange={(e) => toggleSetting('fontSize', e.target.value)}
+                          className="w-full rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                        >
+                          <option value="small">Small</option>
+                          <option value="medium">Medium</option>
+                          <option value="large">Large</option>
+                          <option value="xlarge">Extra Large</option>
+                        </select>
+                      </div>
+                      
+                      <div>
+                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                          Color Blindness Support
+                        </label>
+                        <select
+                          value={settings.colorBlindness}
+                          onChange={(e) => toggleSetting('colorBlindness', e.target.value)}
+                          className="w-full rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
+                        >
+                          <option value="none">None</option>
+                          <option value="protanopia">Protanopia (Red-Blind)</option>
+                          <option value="deuteranopia">Deuteranopia (Green-Blind)</option>
+                          <option value="tritanopia">Tritanopia (Blue-Blind)</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Motion Settings */}
+                  <div>
+                    <h3 className="text-sm font-medium text-gray-900 dark:text-white mb-3">
+                      Motion & Navigation
+                    </h3>
+                    <div className="space-y-3">
+                      <label className="flex items-center gap-3">
+                        <input
+                          type="checkbox"
+                          checked={settings.reducedMotion}
+                          onChange={() => toggleSetting('reducedMotion')}
+                          className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                        />
+                        <span className="text-sm text-gray-700 dark:text-gray-300">
+                          Reduced Motion
+                        </span>
+                      </label>
+                      
+                      <label className="flex items-center gap-3">
+                        <input
+                          type="checkbox"
+                          checked={settings.keyboardNavigation}
+                          onChange={() => toggleSetting('keyboardNavigation')}
+                          className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                        />
+                        <span className="text-sm text-gray-700 dark:text-gray-300">
+                          Enhanced Keyboard Navigation
+                        </span>
+                      </label>
+                      
+                      <label className="flex items-center gap-3">
+                        <input
+                          type="checkbox"
+                          checked={settings.focusIndicator}
+                          onChange={() => toggleSetting('focusIndicator')}
+                          className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                        />
+                        <span className="text-sm text-gray-700 dark:text-gray-300">
+                          Enhanced Focus Indicators
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+
+                  {/* Screen Reader */}
+                  <div>
+                    <h3 className="text-sm font-medium text-gray-900 dark:text-white mb-3">
+                      Screen Reader
+                    </h3>
+                    <div className="space-y-3">
+                      <label className="flex items-center gap-3">
+                        <input
+                          type="checkbox"
+                          checked={settings.screenReader}
+                          onChange={() => toggleSetting('screenReader')}
+                          className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                        />
+                        <span className="text-sm text-gray-700 dark:text-gray-300">
+                          Enhanced Screen Reader Support
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {activeTab === 'scanner' && (
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-sm font-medium text-gray-900 dark:text-white">
+                      Accessibility Scanner
+                    </h3>
+                    <button
+                      onClick={runAccessibilityScan}
+                      disabled={isScanning}
+                      className="px-4 py-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white text-sm rounded-md transition-colors"
+                    >
+                      {isScanning ? 'Scanning...' : 'Run Scan'}
+                    </button>
                   </div>
                   
-                  <button
-                    onClick={() => {
-                      localStorage.removeItem('accessibility-settings');
-                      window.location.reload();
-                    }}
-                    className="w-full bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-colors"
-                  >
-                    Reset All Settings
-                  </button>
+                  {issues.length > 0 && (
+                    <div className="space-y-3">
+                      <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                        Found {issues.length} issue{issues.length !== 1 ? 's' : ''}
+                      </h4>
+                      {issues.map(issue => (
+                        <div
+                          key={issue.id}
+                          className={`p-3 rounded-md border-l-4 ${
+                            issue.type === 'error'
+                              ? 'bg-red-50 border-red-400 dark:bg-red-900/20 dark:border-red-600'
+                              : issue.type === 'warning'
+                              ? 'bg-yellow-50 border-yellow-400 dark:bg-yellow-900/20 dark:border-yellow-600'
+                              : 'bg-blue-50 border-blue-400 dark:bg-blue-900/20 dark:border-blue-600'
+                          }`}
+                        >
+                          <div className="flex items-start gap-2">
+                            {issue.type === 'error' ? (
+                              <ExclamationTriangleIcon className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" />
+                            ) : issue.type === 'warning' ? (
+                              <ExclamationTriangleIcon className="w-4 h-4 text-yellow-500 mt-0.5 flex-shrink-0" />
+                            ) : (
+                              <InformationCircleIcon className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
+                            )}
+                            <div className="flex-1">
+                              <p className="text-sm text-gray-900 dark:text-white font-medium">
+                                {issue.message}
+                              </p>
+                              {issue.element && (
+                                <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
+                                  Element: {issue.element}
+                                </p>
+                              )}
+                              {issue.fix && (
+                                <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
+                                  Fix: {issue.fix}
+                                </p>
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  
+                  {issues.length === 0 && !isScanning && (
+                    <div className="text-center py-8 text-gray-500 dark:text-gray-400">
+                      <InformationCircleIcon className="w-12 h-12 mx-auto mb-3 opacity-50" />
+                      <p className="text-sm">Click "Run Scan" to check for accessibility issues</p>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {activeTab === 'help' && (
+                <div className="space-y-4">
+                  <h3 className="text-sm font-medium text-gray-900 dark:text-white">
+                    Accessibility Help
+                  </h3>
+                  
+                  <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300">
+                    <div>
+                      <h4 className="font-medium mb-2">Keyboard Shortcuts</h4>
+                      <ul className="space-y-1 text-xs">
+                        <li>• <kbd className="px-1 py-0.5 bg-gray-100 dark:bg-gray-800 rounded">Tab</kbd> - Navigate through interactive elements</li>
+                        <li>• <kbd className="px-1 py-0.5 bg-gray-100 dark:bg-gray-800 rounded">Alt + Tab</kbd> - Skip to main content</li>
+                        <li>• <kbd className="px-1 py-0.5 bg-gray-100 dark:bg-gray-800 rounded">Shift + Alt + Tab</kbd> - Skip to navigation</li>
+                        <li>• <kbd className="px-1 py-0.5 bg-gray-100 dark:bg-gray-800 rounded">Enter</kbd> or <kbd className="px-1 py-0.5 bg-gray-100 dark:bg-gray-800 rounded">Space</kbd> - Activate buttons and links</li>
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h4 className="font-medium mb-2">Screen Reader Support</h4>
+                      <p className="text-xs">
+                        This website is optimized for screen readers with proper ARIA labels, 
+                        semantic HTML, and keyboard navigation support.
+                      </p>
+                    </div>
+                    
+                    <div>
+                      <h4 className="font-medium mb-2">Need More Help?</h4>
+                      <p className="text-xs">
+                        Contact our support team for additional accessibility assistance.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               )}
             </div>
@@ -646,20 +555,62 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
         )}
       </AnimatePresence>
 
-      {/* SVG Filters for Color Blindness Simulation */}
-      <svg style={{ position: 'absolute', width: 0, height: 0 }}>
-        <defs>
-          <filter id="protanopia">
-            <feColorMatrix type="matrix" values="0.567,0.433,0,0,0 0.558,0.442,0,0,0 0,0.242,0.758,0,0 0,0,0,1,0"/>
-          </filter>
-          <filter id="deuteranopia">
-            <feColorMatrix type="matrix" values="0.625,0.375,0,0,0 0.7,0.3,0,0,0 0,0.3,0.7,0,0 0,0,0,1,0"/>
-          </filter>
-          <filter id="tritanopia">
-            <feColorMatrix type="matrix" values="0.95,0.05,0,0,0 0,0.433,0.567,0,0 0,0.475,0.525,0,0 0,0,0,1,0"/>
-          </filter>
-        </defs>
-      </svg>
+      {/* Global CSS for accessibility features */}
+      <style>{`
+        /* High contrast mode */
+        .high-contrast {
+          --text-color: #000000;
+          --bg-color: #ffffff;
+          --border-color: #000000;
+          --accent-color: #0000ff;
+        }
+        
+        .high-contrast * {
+          color: var(--text-color) !important;
+          background-color: var(--bg-color) !important;
+          border-color: var(--border-color) !important;
+        }
+        
+        /* Reduced motion */
+        .reduced-motion * {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+        }
+        
+        /* Large text */
+        .large-text {
+          font-size: 1.2em;
+        }
+        
+        /* Focus indicators */
+        .show-focus-indicator *:focus {
+          outline: 3px solid #3b82f6 !important;
+          outline-offset: 2px !important;
+        }
+        
+        /* Color blindness support */
+        [style*="--color-blindness: protanopia"] {
+          filter: url('#protanopia');
+        }
+        
+        [style*="--color-blindness: deuteranopia"] {
+          filter: url('#deuteranopia');
+        }
+        
+        [style*="--color-blindness: tritanopia"] {
+          filter: url('#tritanopia');
+        }
+        
+        /* Font size variables */
+        :root {
+          --font-size-base: 16px;
+        }
+        
+        body {
+          font-size: var(--font-size-base);
+        }
+      `}</style>
     </>
   );
 };
