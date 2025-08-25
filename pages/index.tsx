@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon, Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon, Sparkles as SparklesIcon, Brain as BrainIcon, Atom as AtomIcon, Rocket as RocketIcon } from 'lucide-react';
+import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, Shield, Mail, MapPin, Rocket, Brain, Users, Globe, Award, Atom, Lock } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-micro-saas-services';
@@ -26,137 +26,7 @@ export default function HomePage() {
     website: 'https://ziontechgroup.com'
   };
 
-  // Enhanced service advertising content with real market data and competitive advantages
-  const serviceHighlights = [
-    {
-      title: '🧠 Revolutionary Neural Quantum Brain Interface',
-      description: 'World\'s first direct neural interface with quantum AI for cognitive enhancement. Achieve breakthrough discoveries with 1000% ROI within 6 months.',
-      price: 'Starting at $25,999/month',
-      features: ['Direct neural signal processing', 'Quantum AI cognitive enhancement', 'Real-time memory augmentation', 'Neural pattern recognition', 'Secure quantum encryption', 'Multi-modal interface support', 'Advanced analytics dashboard', 'API for research integration', 'Compliance with medical standards', '24/7 quantum AI support'],
-      link: 'https://ziontechgroup.com/quantum-ai-brain-computer-interface',
-      color: 'from-purple-600 to-indigo-700',
-      marketData: '$2B BCI market, 500% annual growth',
-      competitors: 'Neuralink ($10,000+/month), Kernel ($50,000+/month)',
-      savings: 'Save 60% vs. competitors with quantum AI integration',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709'
-      }
-    },
-    {
-      title: '⚛️ AI Quantum Computing Platform',
-      description: 'Enterprise quantum computing with AI optimization for financial modeling, drug discovery, and scientific research. Achieve quantum advantage with 800% ROI.',
-      price: 'Starting at $25,999/month',
-      features: ['Quantum processing units (QPUs)', 'AI-optimized quantum algorithms', 'Real-time quantum error correction', 'Hybrid classical-quantum computing', 'Advanced quantum simulation tools', 'API for quantum applications', '24/7 quantum operations support', 'Custom quantum algorithm development', 'Integration with existing IT infrastructure', 'Quantum security protocols'],
-      link: 'https://ziontechgroup.com/ai-quantum-computing-platform',
-      color: 'from-cyan-600 to-blue-700',
-      marketData: '$1.8B quantum computing market, 400% annual growth',
-      competitors: 'IBM Quantum ($10,000+/month), Google Quantum AI ($15,000+/month)',
-      savings: 'Save 40% vs. competitors with AI optimization and hybrid computing',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709'
-      }
-    },
-    {
-      title: '🔐 Quantum Cybersecurity Suite',
-      description: 'Post-quantum cryptography and quantum-resistant security for financial institutions and government agencies. Protect against future quantum threats.',
-      price: 'Starting at $18,999/month',
-      features: ['Post-quantum cryptography algorithms', 'Quantum-resistant encryption', 'Real-time threat detection', 'Advanced intrusion prevention', 'Zero-trust architecture', 'Quantum key distribution', 'Compliance with NIST standards', '24/7 security monitoring', 'AI-powered threat analysis', 'Integration with existing security tools'],
-      link: 'https://ziontechgroup.com/quantum-cybersecurity-suite',
-      color: 'from-red-600 to-orange-700',
-      marketData: '$150B cybersecurity market, 400% annual growth in quantum security',
-      competitors: 'Traditional cybersecurity ($50,000+/month)',
-      savings: 'Save 70% vs. traditional cybersecurity with quantum-resistant technology',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709'
-      }
-    },
-    {
-      title: '🌐 Quantum Internet Security Platform',
-      description: 'Unhackable quantum-secured internet infrastructure with quantum key distribution and post-quantum cryptography. First-to-market quantum internet security.',
-      price: 'Starting at $12,999/month',
-      features: ['Quantum key distribution (QKD)', 'Post-quantum cryptography', 'Quantum entanglement security', 'Real-time threat detection', 'Multi-node quantum network', 'Government compliance (FIPS 140-3)', 'Quantum network monitoring', 'API for enterprise integration', '24/7 quantum security operations', 'Unhackable communication channels'],
-      link: 'https://ziontechgroup.com/quantum-internet-security-platform',
-      color: 'from-indigo-600 to-purple-700',
-      marketData: '$150B cybersecurity market, quantum segment growing 400% annually',
-      competitors: 'Traditional cybersecurity (Palo Alto, CrowdStrike)',
-      savings: 'First-to-market quantum internet security with no direct competitors',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709'
-      }
-    },
-    {
-      title: '🏢 Enterprise IT Infrastructure Management',
-      description: 'Complete enterprise IT infrastructure with 99.99% uptime guarantee. Modern technology stack with AI operations and competitive pricing.',
-      price: 'Starting at $25,999/month',
-      features: ['Network infrastructure management', 'Server and storage management', 'Security monitoring and management', '24/7 infrastructure monitoring', 'Performance optimization', 'Disaster recovery planning', 'Compliance management', 'IT asset management', 'Help desk support', 'Strategic IT consulting'],
-      link: 'https://ziontechgroup.com/enterprise-it-infrastructure',
-      color: 'from-gray-600 to-blue-700',
-      marketData: '$1.2T IT services market, 8% annual growth',
-      competitors: 'IBM Global Services ($100K+), Accenture ($150K+), Deloitte ($200K+)',
-      savings: 'Save 75% vs. traditional consulting with modern technology stack',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709'
-      }
-    },
-    {
-      title: '☁️ Cloud Migration & Optimization Service',
-      description: 'Seamless cloud migration with 50% cost reduction guarantee. Fixed pricing vs. hourly consulting rates.',
-      price: 'Starting at $15,999/month',
-      features: ['Cloud migration planning', 'Workload assessment', 'Cost optimization', 'Performance optimization', 'Security migration', 'Data migration', 'Application modernization', 'Cloud governance', 'Training and support', 'Post-migration optimization'],
-      link: 'https://ziontechgroup.com/cloud-migration-optimization',
-      color: 'from-blue-600 to-cyan-700',
-      marketData: '$400B cloud services market, 20% annual growth',
-      competitors: 'AWS Professional Services ($200/hour), Microsoft Consulting ($250/hour), Google Cloud ($180/hour)',
-      savings: 'Fixed pricing vs. hourly rates, guaranteed 50% cost reduction',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709'
-      }
-    },
-    {
-      title: '🚗 AI-Powered Autonomous Vehicles Platform',
-      description: 'Complete autonomous vehicle AI platform with advanced computer vision, sensor fusion, and safety systems. Achieve Level 4 autonomy.',
-      price: 'Starting at $55,999/month',
-      features: ['Advanced computer vision', 'Sensor fusion algorithms', 'Safety systems integration', 'Real-time decision making', 'Path planning optimization', 'Traffic prediction', 'Weather adaptation', 'Fleet management', 'Performance analytics', '24/7 AI monitoring'],
-      link: 'https://ziontechgroup.com/ai-powered-autonomous-vehicles',
-      color: 'from-blue-600 to-indigo-700',
-      marketData: '$100B autonomous vehicle market, 30% annual growth',
-      competitors: 'Waymo ($100M+ setup), Tesla ($50M+ setup), Cruise ($75M+ setup)',
-      savings: 'Save 90%+ vs. building from scratch with complete AI platform',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709'
-      }
-    },
-    {
-      title: '🧬 AI-Powered Biotech Drug Discovery',
-      description: 'AI-powered biotech drug discovery platform with molecular modeling, protein folding, and clinical trial optimization. Achieve 10x faster drug development.',
-      price: 'Starting at $85,999/month',
-      features: ['AI molecular modeling', 'Protein folding prediction', 'Drug target identification', 'Clinical trial optimization', 'Toxicity prediction', 'Drug repurposing', 'Biomarker discovery', 'Real-time analytics', 'Research collaboration tools', '24/7 AI research support'],
-      link: 'https://ziontechgroup.com/ai-powered-biotech-drug-discovery',
-      color: 'from-green-600 to-emerald-700',
-      marketData: '$50B AI drug discovery market, 40% annual growth',
-      competitors: 'Insilico Medicine ($500K+ setup), Atomwise ($300K+ setup), BenevolentAI ($1M+ setup)',
-      savings: 'Save 80% vs. competitors with subscription model and advanced AI',
-      contactInfo: {
-        mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        address: '364 E Main St STE 1008 Middletown DE 19709'
-      }
-    }
-  ];
+
 
 const serviceCategories = [
   {
@@ -289,19 +159,13 @@ const testimonials = [
 
 const pricingPlans = [
   {
-    name: 'Starter',
-    price: '$299',
-    period: '/month',
-    description: 'Perfect for small teams and startups',
-    features: [
-      'Up to 5 services',
-      'Basic support',
-      'Standard features',
-      'Email support',
-      'Basic analytics'
-    ],
-    popular: false,
-    color: 'from-blue-500 to-cyan-600'
+    title: 'AI Consciousness Evolution Platform',
+    description: 'Breakthrough platform enabling AI systems to develop genuine consciousness and emotional intelligence.',
+    price: '$2,999/month',
+    category: 'AI & Consciousness',
+    icon: '🧠',
+    color: 'from-violet-500 to-purple-600',
+    href: '/ai-consciousness-evolution-2025'
   },
   {
     name: 'Professional',
@@ -320,23 +184,63 @@ const pricingPlans = [
     color: 'from-purple-500 to-pink-600'
   },
   {
-    name: 'Enterprise',
-    price: '$1,999',
-    period: '/month',
-    description: 'For large organizations',
-    features: [
-      'Unlimited services',
-      '24/7 dedicated support',
-      'Custom development',
-      'Dedicated account manager',
-      'Custom analytics',
-      'White-label solutions',
-      'On-premise deployment'
-    ],
-    popular: false,
-    color: 'from-emerald-500 to-teal-600'
+    title: 'Quantum Cloud Infrastructure',
+    description: 'Next-generation quantum-enhanced cloud computing infrastructure with unprecedented power.',
+    price: '$2,999/month',
+    category: 'Quantum Infrastructure',
+    icon: '☁️',
+    color: 'from-blue-500 to-indigo-600',
+    href: '/quantum-cloud-infrastructure-platform'
+  },
+  {
+    title: 'AI Multimodal Fusion Platform',
+    description: 'Unified AI processing across text, image, audio, and video with 95% accuracy.',
+    price: '$1,999/month',
+    category: 'AI Multimodal',
+    icon: '🔗',
+    color: 'from-indigo-500 to-purple-600',
+    href: '/ai-multimodal-fusion-platform'
+  },
+  {
+    title: 'Brain-Computer Interface Platform',
+    description: 'Revolutionary neural interface technology for human-AI collaboration.',
+    price: '$25,000/month',
+    category: 'Neural Technology',
+    icon: '🧠',
+    color: 'from-pink-500 to-rose-600',
+    href: '/brain-computer-interface-platform'
+  },
+  {
+    title: 'Zero Trust Security Platform',
+    description: 'Advanced zero trust architecture reducing security breaches by 95%.',
+    price: '$1,499/month',
+    category: 'Cybersecurity',
+    icon: '🔒',
+    color: 'from-red-500 to-pink-600',
+    href: '/zero-trust-security-platform'
   }
 ];
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5
+    }
+  }
+};
 
 export default function Home() {
   return (
@@ -657,71 +561,70 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-20 bg-black">
-        <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+      {/* Latest Innovations Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div 
             className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Flexible Pricing Plans
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Latest Innovations 2025
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your business needs. All plans include 
-              our cutting-edge technology and expert support.
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Discover our breakthrough technologies that are reshaping industries and creating new possibilities.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {latestInnovations.map((innovation, index) => (
               <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`relative ${plan.popular ? 'scale-105' : ''}`}
+                key={innovation.title}
+                variants={itemVariants}
+                className="group relative bg-gray-900/50 border border-gray-800 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20"
               >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
+                <div className="text-4xl mb-4">{innovation.icon}</div>
                 
-                <div className={`p-8 rounded-2xl bg-gradient-to-br ${plan.color} h-full`}>
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="mb-4">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-200">{plan.period}</span>
-                  </div>
-                  <p className="text-gray-200 mb-6">{plan.description}</p>
-                  
-                  <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-white">
-                        <CheckCircle className="w-5 h-5 mr-3 text-green-300" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <button className={`w-full py-3 px-6 rounded-full font-semibold transition-all duration-300 ${
-                    plan.popular 
-                      ? 'bg-white text-purple-600 hover:bg-gray-100' 
-                      : 'bg-white/20 text-white hover:bg-white/30'
-                  }`}>
-                    Get Started
-                  </button>
+                <div className="mb-4">
+                  <span className={`inline-block px-3 py-1 bg-gradient-to-r ${innovation.color} text-white text-xs font-semibold rounded-full`}>
+                    {innovation.category}
+                  </span>
                 </div>
+                
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                  {innovation.title}
+                </h3>
+                
+                <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+                  {innovation.description}
+                </p>
+                
+                <div className="flex items-center justify-between mb-6">
+                  <div className="text-2xl font-bold text-cyan-400">
+                    {innovation.price}
+                  </div>
+                  <div className="text-sm text-gray-500">Starting from</div>
+                </div>
+                
+                <Link
+                  href={innovation.href}
+                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
+                >
+                  Explore Innovation
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
