@@ -146,6 +146,27 @@ function Footer() {
               </div>
             </div>
 
+<<<<<<< HEAD
+            {/* Footer Sections */}
+            {footerSections.map((section) => (
+              <div key={section.title}>
+                <h4 className="text-lg font-semibold text-white mb-4">{section.title}</h4>
+                <ul className="space-y-2">
+                  {category.services.map((service, serviceIndex) => (
+                    <li key={serviceIndex}>
+                      <Link 
+                        to={service.link} 
+                        className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm flex items-center group"
+                      >
+                        <ArrowRight className="h-3 w-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        {service.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+=======
           <div>
             <h3 className="text-white font-semibold mb-4 text-lg">Marketplace</h3>
             <ul className="space-y-2">
@@ -178,6 +199,7 @@ function Footer() {
               Stay updated with the latest news on tech, AI, and marketplace opportunities.
             </p>
             <FooterNewsletter />
+>>>>>>> origin/cursor/website-audit-and-enhancement-f8cc
           </div>
         </div>
 
