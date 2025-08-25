@@ -516,5 +516,731 @@ def user_profile(user_id):
         certificates=certificates,
     )
 
+# ----- New Micro SAAS Services Endpoints -----
+
+@app.route('/api/services/ai-consulting', methods=['POST'])
+def api_ai_consulting():
+    """AI Strategy Consulting Service"""
+    data = request.get_json() or {}
+    
+    # AI consulting service logic
+    service_data = {
+        'service_name': 'AI Strategy Consulting',
+        'description': 'Comprehensive AI strategy development and implementation consulting',
+        'features': [
+            'AI readiness assessment',
+            'Strategy roadmap development',
+            'Technology stack recommendations',
+            'Implementation planning',
+            'ROI analysis and forecasting'
+        ],
+        'pricing': {
+            'basic': 2500,
+            'professional': 5000,
+            'enterprise': 10000
+        },
+        'delivery_time': '2-4 weeks',
+        'contact': 'kleber@ziontechgroup.com',
+        'phone': '+1 302 464 0950'
+    }
+    
+    return jsonify(service_data)
+
+@app.route('/api/services/quantum-computing', methods=['POST'])
+def api_quantum_computing():
+    """Quantum Computing Solutions Service"""
+    data = request.get_json() or {}
+    
+    service_data = {
+        'service_name': 'Quantum Computing Solutions',
+        'description': 'Advanced quantum computing implementation and optimization',
+        'features': [
+            'Quantum algorithm development',
+            'Quantum software optimization',
+            'Quantum hardware integration',
+            'Performance benchmarking',
+            'Quantum security implementation'
+        ],
+        'pricing': {
+            'basic': 5000,
+            'professional': 15000,
+            'enterprise': 50000
+        },
+        'delivery_time': '4-8 weeks',
+        'contact': 'kleber@ziontechgroup.com',
+        'phone': '+1 302 464 0950'
+    }
+    
+    return jsonify(service_data)
+
+@app.route('/api/services/cybersecurity', methods=['POST'])
+def api_cybersecurity():
+    """Advanced Cybersecurity Services"""
+    data = request.get_json() or {}
+    
+    service_data = {
+        'service_name': 'Advanced Cybersecurity Solutions',
+        'description': 'Comprehensive cybersecurity assessment and implementation',
+        'features': [
+            'Security audit and assessment',
+            'Threat detection systems',
+            'Incident response planning',
+            'Compliance management',
+            'Security training programs'
+        ],
+        'pricing': {
+            'basic': 3000,
+            'professional': 8000,
+            'enterprise': 20000
+        },
+        'delivery_time': '3-6 weeks',
+        'contact': 'kleber@ziontechgroup.com',
+        'phone': '+1 302 464 0950'
+    }
+    
+    return jsonify(service_data)
+
+@app.route('/api/services/cloud-migration', methods=['POST'])
+def api_cloud_migration():
+    """Cloud Migration and Optimization Service"""
+    data = request.get_json() or {}
+    
+    service_data = {
+        'service_name': 'Cloud Migration & Optimization',
+        'description': 'Seamless cloud migration with optimization and cost management',
+        'features': [
+            'Migration strategy planning',
+            'Infrastructure assessment',
+            'Data migration services',
+            'Performance optimization',
+            'Cost optimization analysis'
+        ],
+        'pricing': {
+            'basic': 4000,
+            'professional': 12000,
+            'enterprise': 30000
+        },
+        'delivery_time': '6-12 weeks',
+        'contact': 'kleber@ziontechgroup.com',
+        'phone': '+1 302 464 0950'
+    }
+    
+    return jsonify(service_data)
+
+@app.route('/api/services/data-analytics', methods=['POST'])
+def api_data_analytics():
+    """Advanced Data Analytics Platform"""
+    data = request.get_json() or {}
+    
+    service_data = {
+        'service_name': 'Advanced Data Analytics Platform',
+        'description': 'Comprehensive data analytics and business intelligence solutions',
+        'features': [
+            'Data warehouse design',
+            'ETL pipeline development',
+            'Business intelligence dashboards',
+            'Predictive analytics models',
+            'Real-time data processing'
+        ],
+        'pricing': {
+            'basic': 2000,
+            'professional': 6000,
+            'enterprise': 15000
+        },
+        'delivery_time': '4-8 weeks',
+        'contact': 'kleber@ziontechgroup.com',
+        'phone': '+1 302 464 0950'
+    }
+    
+    return jsonify(service_data)
+
+@app.route('/api/services/automation-platform', methods=['POST'])
+def api_automation_platform():
+    """Business Process Automation Platform"""
+    data = request.get_json() or {}
+    
+    service_data = {
+        'service_name': 'Business Process Automation Platform',
+        'description': 'End-to-end business process automation and workflow optimization',
+        'features': [
+            'Process mapping and analysis',
+            'Workflow automation design',
+            'Integration with existing systems',
+            'Performance monitoring',
+            'Continuous optimization'
+        ],
+        'pricing': {
+            'basic': 1500,
+            'professional': 4000,
+            'enterprise': 10000
+        },
+        'delivery_time': '3-6 weeks',
+        'contact': 'kleber@ziontechgroup.com',
+        'phone': '+1 302 464 0950'
+    }
+    
+    return jsonify(service_data)
+
+@app.route('/api/services/blockchain-solutions', methods=['POST'])
+def api_blockchain_solutions():
+    """Blockchain and Web3 Solutions"""
+    data = request.get_json() or {}
+    
+    service_data = {
+        'service_name': 'Blockchain & Web3 Solutions',
+        'description': 'Comprehensive blockchain development and Web3 integration',
+        'features': [
+            'Smart contract development',
+            'DeFi platform creation',
+            'NFT marketplace development',
+            'Blockchain integration',
+            'Web3 strategy consulting'
+        ],
+        'pricing': {
+            'basic': 8000,
+            'professional': 25000,
+            'enterprise': 75000
+        },
+        'delivery_time': '8-16 weeks',
+        'contact': 'kleber@ziontechgroup.com',
+        'phone': '+1 302 464 0950'
+    }
+    
+    return jsonify(service_data)
+
+@app.route('/api/services/iot-platform', methods=['POST'])
+def api_iot_platform():
+    """Internet of Things Platform Development"""
+    data = request.get_json() or {}
+    
+    service_data = {
+        'service_name': 'IoT Platform Development',
+        'description': 'Complete IoT platform development and device management',
+        'features': [
+            'IoT device integration',
+            'Data collection and processing',
+            'Real-time monitoring dashboards',
+            'Predictive maintenance',
+            'Scalable infrastructure'
+        ],
+        'pricing': {
+            'basic': 6000,
+            'professional': 18000,
+            'enterprise': 45000
+        },
+        'delivery_time': '6-12 weeks',
+        'contact': 'kleber@ziontechgroup.com',
+        'phone': '+1 302 464 0950'
+    }
+    
+    return jsonify(service_data)
+
+@app.route('/api/services/ai-content-generation', methods=['POST'])
+def api_ai_content_generation():
+    """AI-Powered Content Generation Platform"""
+    data = request.get_json() or {}
+    
+    service_data = {
+        'service_name': 'AI Content Generation Platform',
+        'description': 'Advanced AI-powered content creation and management system',
+        'features': [
+            'Multi-format content generation',
+            'Brand voice customization',
+            'SEO optimization',
+            'Content scheduling',
+            'Performance analytics'
+        ],
+        'pricing': {
+            'basic': 1000,
+            'professional': 3000,
+            'enterprise': 8000
+        },
+        'delivery_time': '2-4 weeks',
+        'contact': 'kleber@ziontechgroup.com',
+        'phone': '+1 302 464 0950'
+    }
+    
+    return jsonify(service_data)
+
+@app.route('/api/services/customer-intelligence', methods=['POST'])
+def api_customer_intelligence():
+    """Customer Intelligence and Analytics Platform"""
+    data = request.get_json() or {}
+    
+    service_data = {
+        'service_name': 'Customer Intelligence Platform',
+        'description': 'Comprehensive customer behavior analysis and prediction',
+        'features': [
+            'Customer journey mapping',
+            'Behavioral analytics',
+            'Predictive modeling',
+            'Personalization engine',
+            'ROI optimization'
+        ],
+        'pricing': {
+            'basic': 2500,
+            'professional': 7000,
+            'enterprise': 18000
+        },
+        'delivery_time': '4-8 weeks',
+        'contact': 'kleber@ziontechgroup.com',
+        'phone': '+1 302 464 0950'
+    }
+    
+    return jsonify(service_data)
+
+@app.route('/api/services/healthcare-ai', methods=['POST'])
+def api_healthcare_ai():
+    """Healthcare AI Solutions Platform"""
+    data = request.get_json() or {}
+    
+    service_data = {
+        'service_name': 'Healthcare AI Solutions',
+        'description': 'AI-powered healthcare diagnostics and patient care optimization',
+        'features': [
+            'Medical image analysis',
+            'Diagnostic assistance',
+            'Patient care optimization',
+            'Drug discovery support',
+            'Compliance management'
+        ],
+        'pricing': {
+            'basic': 15000,
+            'professional': 45000,
+            'enterprise': 120000
+        },
+        'delivery_time': '12-24 weeks',
+        'contact': 'kleber@ziontechgroup.com',
+        'phone': '+1 302 464 0950'
+    }
+    
+    return jsonify(service_data)
+
+@app.route('/api/services/fintech-solutions', methods=['POST'])
+def api_fintech_solutions():
+    """FinTech Innovation Platform"""
+    data = request.get_json() or {}
+    
+    service_data = {
+        'service_name': 'FinTech Innovation Platform',
+        'description': 'Advanced financial technology solutions and digital banking',
+        'features': [
+            'Digital banking platform',
+            'Payment processing systems',
+            'Risk assessment AI',
+            'Compliance automation',
+            'Financial analytics'
+        ],
+        'pricing': {
+            'basic': 20000,
+            'professional': 60000,
+            'enterprise': 150000
+        },
+        'delivery_time': '16-32 weeks',
+        'contact': 'kleber@ziontechgroup.com',
+        'phone': '+1 302 464 0950'
+    }
+    
+    return jsonify(service_data)
+
+@app.route('/api/services/supply-chain-ai', methods=['POST'])
+def api_supply_chain_ai():
+    """AI-Powered Supply Chain Optimization"""
+    data = request.get_json() or {}
+    
+    service_data = {
+        'service_name': 'Supply Chain AI Optimization',
+        'description': 'Intelligent supply chain management and optimization',
+        'features': [
+            'Demand forecasting',
+            'Inventory optimization',
+            'Route optimization',
+            'Supplier management',
+            'Risk assessment'
+        ],
+        'pricing': {
+            'basic': 8000,
+            'professional': 25000,
+            'enterprise': 75000
+        },
+        'delivery_time': '8-16 weeks',
+        'contact': 'kleber@ziontechgroup.com',
+        'phone': '+1 302 464 0950'
+    }
+    
+    return jsonify(service_data)
+
+@app.route('/api/services/energy-optimization', methods=['POST'])
+def api_energy_optimization():
+    """AI Energy Management and Optimization"""
+    data = request.get_json() or {}
+    
+    service_data = {
+        'service_name': 'AI Energy Management Platform',
+        'description': 'Intelligent energy consumption optimization and management',
+        'features': [
+            'Energy consumption analysis',
+            'Predictive maintenance',
+            'Renewable energy integration',
+            'Cost optimization',
+            'Sustainability reporting'
+        ],
+        'pricing': {
+            'basic': 12000,
+            'professional': 35000,
+            'enterprise': 90000
+        },
+        'delivery_time': '10-20 weeks',
+        'contact': 'kleber@ziontechgroup.com',
+        'phone': '+1 302 464 0950'
+    }
+    
+    return jsonify(service_data)
+
+@app.route('/api/services/retail-ai', methods=['POST'])
+def api_retail_ai():
+    """Retail AI and Customer Experience Platform"""
+    data = request.get_json() or {}
+    
+    service_data = {
+        'service_name': 'Retail AI Platform',
+        'description': 'AI-powered retail optimization and customer experience',
+        'features': [
+            'Inventory management AI',
+            'Customer behavior analysis',
+            'Personalized recommendations',
+            'Price optimization',
+            'Store layout optimization'
+        ],
+        'pricing': {
+            'basic': 5000,
+            'professional': 15000,
+            'enterprise': 45000
+        },
+        'delivery_time': '6-12 weeks',
+        'contact': 'kleber@ziontechgroup.com',
+        'phone': '+1 302 464 0950'
+    }
+    
+    return jsonify(service_data)
+
+@app.route('/api/services/legal-ai', methods=['POST'])
+def api_legal_ai():
+    """Legal AI and Document Analysis Platform"""
+    data = request.get_json() or {}
+    
+    service_data = {
+        'service_name': 'Legal AI Platform',
+        'description': 'AI-powered legal document analysis and contract review',
+        'features': [
+            'Document analysis AI',
+            'Contract review automation',
+            'Legal research assistance',
+            'Compliance checking',
+            'Risk assessment'
+        ],
+        'pricing': {
+            'basic': 8000,
+            'professional': 25000,
+            'enterprise': 75000
+        },
+        'delivery_time': '8-16 weeks',
+        'contact': 'kleber@ziontechgroup.com',
+        'phone': '+1 302 464 0950'
+    }
+    
+    return jsonify(service_data)
+
+@app.route('/api/services/education-ai', methods=['POST'])
+def api_education_ai():
+    """AI-Powered Education and Learning Platform"""
+    data = request.get_json() or {}
+    
+    service_data = {
+        'service_name': 'AI Education Platform',
+        'description': 'Personalized learning and educational AI solutions',
+        'features': [
+            'Adaptive learning algorithms',
+            'Student performance tracking',
+            'Content personalization',
+            'Assessment automation',
+            'Learning analytics'
+        ],
+        'pricing': {
+            'basic': 3000,
+            'professional': 9000,
+            'enterprise': 25000
+        },
+        'delivery_time': '6-12 weeks',
+        'contact': 'kleber@ziontechgroup.com',
+        'phone': '+1 302 464 0950'
+    }
+    
+    return jsonify(service_data)
+
+@app.route('/api/services/real-estate-ai', methods=['POST'])
+def api_real_estate_ai():
+    """Real Estate AI and Market Analysis Platform"""
+    data = request.get_json() or {}
+    
+    service_data = {
+        'service_name': 'Real Estate AI Platform',
+        'description': 'AI-powered real estate market analysis and investment insights',
+        'features': [
+            'Market trend analysis',
+            'Property valuation AI',
+            'Investment opportunity identification',
+            'Risk assessment',
+            'Portfolio optimization'
+        ],
+        'pricing': {
+            'basic': 6000,
+            'professional': 18000,
+            'enterprise': 50000
+        },
+        'delivery_time': '6-12 weeks',
+        'contact': 'kleber@ziontechgroup.com',
+        'phone': '+1 302 464 0950'
+    }
+    
+    return jsonify(service_data)
+
+@app.route('/api/services/transportation-ai', methods=['POST'])
+def api_transportation_ai():
+    """AI Transportation and Logistics Platform"""
+    data = request.get_json() or {}
+    
+    service_data = {
+        'service_name': 'Transportation AI Platform',
+        'description': 'Intelligent transportation and logistics optimization',
+        'features': [
+            'Route optimization AI',
+            'Fleet management',
+            'Predictive maintenance',
+            'Traffic analysis',
+            'Cost optimization'
+        ],
+        'pricing': {
+            'basic': 10000,
+            'professional': 30000,
+            'enterprise': 80000
+        },
+        'delivery_time': '8-16 weeks',
+        'contact': 'kleber@ziontechgroup.com',
+        'phone': '+1 302 464 0950'
+    }
+    
+    return jsonify(service_data)
+
+@app.route('/api/services/agriculture-ai', methods=['POST'])
+def api_agriculture_ai():
+    """AI-Powered Agriculture and Precision Farming"""
+    data = request.get_json() or {}
+    
+    service_data = {
+        'service_name': 'Agriculture AI Platform',
+        'description': 'Precision farming and agricultural optimization',
+        'features': [
+            'Crop monitoring AI',
+            'Soil analysis',
+            'Weather prediction',
+            'Yield optimization',
+            'Resource management'
+        ],
+        'pricing': {
+            'basic': 8000,
+            'professional': 25000,
+            'enterprise': 70000
+        },
+        'delivery_time': '8-16 weeks',
+        'contact': 'kleber@ziontechgroup.com',
+        'phone': '+1 302 464 0950'
+    }
+    
+    return jsonify(service_data)
+
+@app.route('/api/services/construction-ai', methods=['POST'])
+def api_construction_ai():
+    """AI Construction and Project Management Platform"""
+    data = request.get_json() or {}
+    
+    service_data = {
+        'service_name': 'Construction AI Platform',
+        'description': 'AI-powered construction project management and optimization',
+        'features': [
+            'Project planning AI',
+            'Resource optimization',
+            'Safety monitoring',
+            'Quality control',
+            'Cost management'
+        ],
+        'pricing': {
+            'basic': 12000,
+            'professional': 35000,
+            'enterprise': 90000
+        },
+        'delivery_time': '10-20 weeks',
+        'contact': 'kleber@ziontechgroup.com',
+        'phone': '+1 302 464 0950'
+    }
+    
+    return jsonify(service_data)
+
+@app.route('/api/services/entertainment-ai', methods=['POST'])
+def api_entertainment_ai():
+    """AI Entertainment and Media Platform"""
+    data = request.get_json() or {}
+    
+    service_data = {
+        'service_name': 'Entertainment AI Platform',
+        'description': 'AI-powered content creation and entertainment optimization',
+        'features': [
+            'Content generation AI',
+            'Audience analysis',
+            'Trend prediction',
+            'Personalization engine',
+            'Performance analytics'
+        ],
+        'pricing': {
+            'basic': 5000,
+            'professional': 15000,
+            'enterprise': 45000
+        },
+        'delivery_time': '6-12 weeks',
+        'contact': 'kleber@ziontechgroup.com',
+        'phone': '+1 302 464 0950'
+    }
+    
+    return jsonify(service_data)
+
+@app.route('/api/services/services-directory', methods=['GET'])
+def api_services_directory():
+    """Get comprehensive services directory"""
+    
+    services_directory = {
+        'ai_services': [
+            {
+                'name': 'AI Strategy Consulting',
+                'endpoint': '/api/services/ai-consulting',
+                'category': 'AI & Machine Learning',
+                'starting_price': 2500,
+                'description': 'Comprehensive AI strategy development and implementation consulting'
+            },
+            {
+                'name': 'AI Content Generation Platform',
+                'endpoint': '/api/services/ai-content-generation',
+                'category': 'AI & Machine Learning',
+                'starting_price': 1000,
+                'description': 'Advanced AI-powered content creation and management system'
+            },
+            {
+                'name': 'Customer Intelligence Platform',
+                'endpoint': '/api/services/customer-intelligence',
+                'category': 'AI & Machine Learning',
+                'starting_price': 2500,
+                'description': 'Comprehensive customer behavior analysis and prediction'
+            }
+        ],
+        'quantum_services': [
+            {
+                'name': 'Quantum Computing Solutions',
+                'endpoint': '/api/services/quantum-computing',
+                'category': 'Quantum & Emerging Tech',
+                'starting_price': 5000,
+                'description': 'Advanced quantum computing implementation and optimization'
+            }
+        ],
+        'it_services': [
+            {
+                'name': 'Advanced Cybersecurity Solutions',
+                'endpoint': '/api/services/cybersecurity',
+                'category': 'IT & Infrastructure',
+                'starting_price': 3000,
+                'description': 'Comprehensive cybersecurity assessment and implementation'
+            },
+            {
+                'name': 'Cloud Migration & Optimization',
+                'endpoint': '/api/services/cloud-migration',
+                'category': 'IT & Infrastructure',
+                'starting_price': 4000,
+                'description': 'Seamless cloud migration with optimization and cost management'
+            }
+        ],
+        'data_services': [
+            {
+                'name': 'Advanced Data Analytics Platform',
+                'endpoint': '/api/services/data-analytics',
+                'category': 'Data & Analytics',
+                'starting_price': 2000,
+                'description': 'Comprehensive data analytics and business intelligence solutions'
+            }
+        ],
+        'automation_services': [
+            {
+                'name': 'Business Process Automation Platform',
+                'endpoint': '/api/services/automation-platform',
+                'category': 'Automation',
+                'starting_price': 1500,
+                'description': 'End-to-end business process automation and workflow optimization'
+            }
+        ],
+        'emerging_tech': [
+            {
+                'name': 'Blockchain & Web3 Solutions',
+                'endpoint': '/api/services/blockchain-solutions',
+                'category': 'Quantum & Emerging Tech',
+                'starting_price': 8000,
+                'description': 'Comprehensive blockchain development and Web3 integration'
+            },
+            {
+                'name': 'IoT Platform Development',
+                'endpoint': '/api/services/iot-platform',
+                'category': 'Quantum & Emerging Tech',
+                'starting_price': 6000,
+                'description': 'Complete IoT platform development and device management'
+            }
+        ],
+        'industry_solutions': [
+            {
+                'name': 'Healthcare AI Solutions',
+                'endpoint': '/api/services/healthcare-ai',
+                'category': 'Industry Solutions',
+                'starting_price': 15000,
+                'description': 'AI-powered healthcare diagnostics and patient care optimization'
+            },
+            {
+                'name': 'FinTech Innovation Platform',
+                'endpoint': '/api/services/fintech-solutions',
+                'category': 'Industry Solutions',
+                'starting_price': 20000,
+                'description': 'Advanced financial technology solutions and digital banking'
+            },
+            {
+                'name': 'Supply Chain AI Optimization',
+                'endpoint': '/api/services/supply-chain-ai',
+                'category': 'Industry Solutions',
+                'starting_price': 8000,
+                'description': 'Intelligent supply chain management and optimization'
+            }
+        ],
+        'contact_info': {
+            'phone': '+1 302 464 0950',
+            'email': 'kleber@ziontechgroup.com',
+            'address': '364 E Main St STE 1008 Middletown DE 19709',
+            'website': 'https://ziontechgroup.com'
+        },
+        'total_services': 98,
+        'categories': [
+            'AI & Machine Learning',
+            'Quantum & Emerging Tech',
+            'IT & Infrastructure',
+            'Data & Analytics',
+            'Automation',
+            'Industry Solutions'
+        ]
+    }
+    
+    return jsonify(services_directory)
+
 if __name__ == '__main__':
     app.run(debug=True)
