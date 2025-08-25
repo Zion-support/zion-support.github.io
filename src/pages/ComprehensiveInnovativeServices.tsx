@@ -296,14 +296,14 @@ export default function ComprehensiveInnovativeServices() {
                       </div>
                     </div>
 
-                    {/* Innovation Level */}
+                    {/* Category */}
                     <div className="mb-4">
                       <div className="flex items-center justify-between">
-                        <span className="text-xs text-zion-cyan/70">Innovation Level:</span>
+                        <span className="text-xs text-zion-cyan/70">Category:</span>
                         <div className="flex items-center">
                           <Award className="w-4 h-4 text-yellow-400 mr-1" />
                           <span className="text-xs text-yellow-400 font-semibold">
-                            {service.category.split(' ')[0]}
+                            {service.category}
                           </span>
                         </div>
                       </div>
