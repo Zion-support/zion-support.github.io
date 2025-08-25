@@ -17,6 +17,7 @@ import React, { useState } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -238,11 +239,15 @@ export default function HelpCenter() {
 =======
 >>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fe6d
 import { motion } from 'framer-motion';
+=======
+import { motion } from 'framer-motion';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
 import { Search, BookOpen, MessageCircle, FileText, Video, Users, Phone, Mail, Clock, CheckCircle, ChevronDown, ChevronRight } from 'lucide-react';
 
 const HelpCenter = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-b812
 =======
 import { motion } from 'framer-motion';
@@ -439,6 +444,8 @@ const HelpCenter = () => {
     }
   ];
 >>>>>>> origin/cursor/website-audit-and-enhancement-53a4
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
 
   const toggleCategory = (categoryId: string) => {
     setExpandedCategories(prev => 
@@ -449,6 +456,7 @@ const HelpCenter = () => {
   };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const toggleFAQ = (faqId: string) => {
     setExpandedFAQs(prev => 
@@ -457,12 +465,15 @@ const HelpCenter = () => {
         : [...prev, faqId]
     );
   };
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
 
 <<<<<<< HEAD
   const helpCategories = [
     {
       id: 'getting-started',
       title: 'Getting Started',
+<<<<<<< HEAD
       icon: Rocket,
       description: 'New to Zion Tech Group? Start here to learn the basics.',
       articles: [
@@ -1727,6 +1738,8 @@ const HelpCenter = () => {
 =======
       id: 'getting-started',
       title: 'Getting Started',
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       icon: BookOpen,
       description: 'Essential information to begin using our services',
       articles: [
@@ -1940,8 +1953,9 @@ const HelpCenter = () => {
 >>>>>>> origin/cursor/website-audit-and-enhancement-b812
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2967,6 +2981,8 @@ export default function HelpCenter() {
 =======
 =======
 >>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fe6d
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1 
@@ -3664,6 +3680,7 @@ export default function HelpCenter() {
                 <p className="text-gray-300 mb-4">{resource.description}</p>
                 <div className="text-2xl font-bold text-cyan-400">{resource.count}</div>
               </motion.div>
+<<<<<<< HEAD
 >>>>>>> origin/main
 =======
               <div key={index} className="bg-gray-800/30 rounded-lg p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300">
@@ -4373,11 +4390,24 @@ export default function HelpCenter() {
         <div className="max-w-7xl mx-auto">
           <motion.h2 
             className="text-3xl font-bold text-white text-center mb-12"
+=======
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Support CTA */}
+      <section className="pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div 
+            className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
+<<<<<<< HEAD
             Popular Help Articles
           </motion.h2>
           
@@ -4430,6 +4460,23 @@ export default function HelpCenter() {
             </div>
           </motion.div>
 >>>>>>> origin/main
+=======
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Still Need Help?
+            </h2>
+            <p className="text-gray-300 mb-6">
+              Our expert support team is here to help you with any questions or technical issues.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
+                Contact Support
+              </button>
+              <button className="px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/20 transition-all duration-300">
+                Schedule a Call
+              </button>
+            </div>
+          </motion.div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
         </div>
       </section>
 
@@ -5824,6 +5871,7 @@ export default HelpCenter;
 =======
     </div>
   );
+<<<<<<< HEAD
 }
 >>>>>>> origin/cursor/website-audit-and-enhancement-4d8c
 =======
@@ -6071,3 +6119,8 @@ export default HelpCenter;
   );
 }
 >>>>>>> origin/cursor/website-audit-and-enhancement-ab27
+=======
+};
+
+export default HelpCenter;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2

@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
@@ -53,6 +54,11 @@ import React from 'react';
 =======
 import React, { useState } from 'react';
 >>>>>>> origin/cursor/website-audit-and-enhancement-3b60
+=======
+import { useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Rocket, Building, Target, Zap, Database, Network, Cloud, Lock, BarChart3, Palette, Smartphone, Server, Github, Youtube } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { 
@@ -215,21 +221,12 @@ interface SidebarProps {
 export default function Sidebar({ isOpen, onClose }: SidebarProps) {
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631b
   const location = useLocation();
-  const [expandedSections, setExpandedSections] = useState<string[]>([]);
 
   // Close sidebar when route changes
   useEffect(() => {
 <<<<<<< HEAD
     setIsSidebarOpen(false);
   }, [location.pathname, setIsSidebarOpen]);
-
-  const toggleSection = (sectionTitle: string) => {
-    setExpandedSections(prev => 
-      prev.includes(sectionTitle) 
-        ? prev.filter(title => title !== sectionTitle)
-        : [...prev, sectionTitle]
-    );
-  };
 
   const navigationItems = [
     {
@@ -296,6 +293,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       items: [
         { name: 'Home', path: '/', icon: Home },
         { name: 'Services', path: '/services', icon: Briefcase },
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1556,12 +1554,16 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
 >>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
 =======
         { name: 'Solutions', path: '/solutions/enterprise', icon: Zap },
+=======
+        { name: 'Solutions', path: '/solutions/enterprise', icon: Target },
+        { name: 'Pricing', path: '/pricing', icon: Briefcase },
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
         { name: 'About', path: '/about', icon: Users },
-        { name: 'Contact', path: '/contact', icon: Phone },
-        { name: 'Pricing', path: '/pricing', icon: Star }
+        { name: 'Contact', path: '/contact', icon: Phone }
       ]
     },
     {
+<<<<<<< HEAD
       title: 'AI & Autonomous Systems',
       items: [
         { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
@@ -1845,11 +1847,50 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         { name: 'Legal AI', path: '/ai-autonomous-legal-counsel', icon: Shield },
         { name: 'Logistics AI', path: '/ai-autonomous-logistics', icon: Globe }
 >>>>>>> origin/cursor/website-audit-and-enhancement-ac08
+=======
+      title: 'AI & Technology',
+      items: [
+        { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
+        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Brain },
+        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain },
+        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Rocket },
+        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Database },
+        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
+        { name: 'Machine Learning', path: '/services/ai-machine-learning', icon: Brain },
+        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 }
+      ]
+    },
+    {
+      title: 'Infrastructure & Security',
+      items: [
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Server },
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
+        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Lock },
+        { name: 'Cloud DevOps', path: '/cloud-devops', icon: Cloud },
+        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Network },
+        { name: 'Network Infrastructure', path: '/services/network-infrastructure', icon: Network },
+        { name: 'Managed IT Services', path: '/services/managed-it-services', icon: Server },
+        { name: 'Security Assessment', path: '/services/security-assessment', icon: Shield }
+      ]
+    },
+    {
+      title: 'Industry Solutions',
+      items: [
+        { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
+        { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Users },
+        { name: 'Financial Solutions', path: '/solutions/financial', icon: BarChart3 },
+        { name: 'Manufacturing Solutions', path: '/solutions/manufacturing', icon: Cpu },
+        { name: 'Retail Solutions', path: '/solutions/retail', icon: Smartphone },
+        { name: 'Government Solutions', path: '/solutions/government', icon: Building },
+        { name: 'Digital Transformation', path: '/digital-transformation', icon: Zap },
+        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       ]
     },
     {
       title: 'Company & Resources',
       items: [
+<<<<<<< HEAD
 <<<<<<< HEAD
         { name: 'About Us', path: '/about', icon: Users },
         { name: 'Our Mission', path: '/mission', icon: Target },
@@ -2228,6 +2269,28 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
         { label: 'Contact', href: '/contact', icon: MessageSquare },
         { label: 'Sitemap', href: '/sitemap', icon: Globe },
 >>>>>>> origin/cursor/website-audit-and-enhancement-3b60
+=======
+        { name: 'About Us', path: '/about', icon: Users },
+        { name: 'Our Mission', path: '/mission', icon: Target },
+        { name: 'Our Team', path: '/team', icon: Users },
+        { name: 'Careers', path: '/careers', icon: Briefcase },
+        { name: 'Partners', path: '/partners', icon: Handshake },
+        { name: 'Blog', path: '/blog', icon: Globe },
+        { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
+        { name: 'Help Center', path: '/help', icon: Globe }
+      ]
+    },
+    {
+      title: 'Support & Legal',
+      items: [
+        { name: 'Help Center', path: '/help', icon: Users },
+        { name: 'Documentation', path: '/docs', icon: Globe },
+        { name: 'Contact Support', path: '/contact', icon: Phone },
+        { name: 'Status Page', path: '/status', icon: Globe },
+        { name: 'Privacy Policy', path: '/privacy', icon: Lock },
+        { name: 'Terms of Service', path: '/terms', icon: Lock },
+        { name: 'Cookie Policy', path: '/cookies', icon: Lock }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       ]
     }
   ];
@@ -2242,10 +2305,19 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
   ];
 
   const socialLinks = [
+<<<<<<< HEAD
     { icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
     { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
     { icon: Facebook, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' },
     { icon: Instagram, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' }
+=======
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
+    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
+    { icon: Facebook, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' },
+    { icon: Instagram, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' },
+    { icon: Github, href: 'https://github.com/ziontechgroup', label: 'GitHub' },
+    { icon: Youtube, href: 'https://youtube.com/@ziontechgroup', label: 'YouTube' }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
   ];
 
   const sidebarVariants = {
@@ -2515,6 +2587,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
             className="fixed inset-0 bg-black/50 z-40 lg:hidden"
             onClick={onClose}
           />
+<<<<<<< HEAD
           
           {/* Sidebar */}
 >>>>>>> origin/cursor/website-audit-and-enhancement-a3a9
@@ -2599,10 +2672,16 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
         {isOpen && (
           <motion.div
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631b
+=======
+
+          {/* Sidebar */}
+          <motion.aside
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
             variants={sidebarVariants}
             initial="closed"
             animate="open"
             exit="closed"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2712,6 +2791,8 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
 <<<<<<< HEAD
                 className="p-2 rounded-lg hover:bg-zion-blue-light/20 transition-colors"
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
             className="fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-md border-r border-gray-800 z-50 lg:hidden overflow-y-auto"
           >
             {/* Header */}
@@ -2731,6 +2812,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               </button>
             </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3448,9 +3530,31 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
                     </a>
                   ))}
 >>>>>>> origin/cursor/website-audit-and-enhancement-4b00
+=======
+            {/* Navigation */}
+            <nav className="p-6 space-y-8">
+              {navigationItems.map((section) => (
+                <div key={section.title}>
+                  <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
+                    {section.title}
+                  </h3>
+                  <div className="space-y-2">
+                    {section.items.map((item) => (
+                      <Link
+                        key={item.name}
+                        to={item.path}
+                        className="flex items-center space-x-3 px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-all duration-200"
+                      >
+                        <item.icon className="w-5 h-5 text-cyan-500" />
+                        <span className="text-sm">{item.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
                 </div>
               ))}
 
+<<<<<<< HEAD
               {/* Contact Information */}
               <div className="pt-6 border-t border-cyan-500/20">
                 <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider mb-4 neon-text-cyan">
@@ -3890,6 +3994,8 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               ))}
             </nav>
 
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
             {/* Contact Information */}
             <div className="p-6 border-t border-gray-800">
               <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
@@ -3952,6 +4058,7 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
               </Link>
             </div>
           </motion.aside>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-a3a9
@@ -3990,6 +4097,8 @@ export function Sidebar({ isOpen, onToggle, className }: SidebarProps) {
             </div>
           </motion.aside>
 >>>>>>> origin/cursor/website-audit-and-enhancement-1f82
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
         </>
       )}
     </AnimatePresence>

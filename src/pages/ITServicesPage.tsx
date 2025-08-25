@@ -2,8 +2,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 <<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
 import { Search, Filter, Server, Cloud, Shield, Database, Network, Zap, Users, TrendingUp, BarChart3, MessageSquare, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Star, Clock, DollarSign, Globe, Bot, Cpu, Settings, Monitor, HardDrive, Wifi, Lock } from 'lucide-react';
 
 const ITServicesPage: React.FC = () => {
@@ -30,6 +34,7 @@ const ITServicesPage: React.FC = () => {
       marketPrice: "$150/month (Industry average: $280/month)",
       roi: "300% ROI within 6 months",
       implementationTime: "2-3 weeks",
+<<<<<<< HEAD
 =======
 import { 
   Server, Cloud, Shield, Database, Wifi, Lock, Brain, Zap, Rocket, Globe, 
@@ -119,6 +124,8 @@ const ITServicesPage: React.FC = () => {
       expertise: "Senior Cloud Architects",
       technologies: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "Terraform"],
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3158
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
@@ -128,6 +135,9 @@ const ITServicesPage: React.FC = () => {
     {
       id: 2,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       name: "Cybersecurity Defense Suite",
       category: "Security",
       subcategory: "Threat Protection",
@@ -143,6 +153,7 @@ const ITServicesPage: React.FC = () => {
       marketPrice: "$200/month (Industry average: $400/month)",
       roi: "250% ROI within 8 months",
       implementationTime: "3-4 weeks",
+<<<<<<< HEAD
 =======
       name: "Managed IT Services",
       category: "infrastructure",
@@ -168,6 +179,8 @@ const ITServicesPage: React.FC = () => {
       expertise: "IT Operations Specialists",
       technologies: ["Monitoring Tools", "Automation", "Cloud Platforms", "Security Tools"],
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3158
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
@@ -177,6 +190,9 @@ const ITServicesPage: React.FC = () => {
     {
       id: 3,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       name: "Network Performance Monitor",
       category: "Networking",
       subcategory: "Performance Monitoring",
@@ -192,6 +208,7 @@ const ITServicesPage: React.FC = () => {
       marketPrice: "$120/month (Industry average: $220/month)",
       roi: "280% ROI within 5 months",
       implementationTime: "1-2 weeks",
+<<<<<<< HEAD
 =======
       name: "Network Infrastructure Design",
       category: "infrastructure",
@@ -217,6 +234,8 @@ const ITServicesPage: React.FC = () => {
       expertise: "Network Engineers",
       technologies: ["Cisco", "Juniper", "Aruba", "SD-WAN", "WiFi 6", "5G"],
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3158
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
@@ -224,6 +243,9 @@ const ITServicesPage: React.FC = () => {
       }
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
     {
       id: 4,
       name: "Data Backup & Recovery Pro",
@@ -241,6 +263,7 @@ const ITServicesPage: React.FC = () => {
       marketPrice: "$95/month (Industry average: $180/month)",
       roi: "400% ROI within 3 months",
       implementationTime: "1 week",
+<<<<<<< HEAD
 =======
 
     // Cybersecurity Services
@@ -270,6 +293,8 @@ const ITServicesPage: React.FC = () => {
       expertise: "Security Analysts",
       technologies: ["Nessus", "Metasploit", "Burp Suite", "Wireshark", "Nmap"],
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3158
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
@@ -279,6 +304,9 @@ const ITServicesPage: React.FC = () => {
     {
       id: 5,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       name: "DevOps Automation Platform",
       category: "DevOps",
       subcategory: "Automation",
@@ -294,6 +322,7 @@ const ITServicesPage: React.FC = () => {
       marketPrice: "$180/month (Industry average: $320/month)",
       roi: "350% ROI within 6 months",
       implementationTime: "2-3 weeks",
+<<<<<<< HEAD
 =======
       name: "Security Operations Center (SOC)",
       category: "security",
@@ -319,6 +348,8 @@ const ITServicesPage: React.FC = () => {
       expertise: "Security Engineers",
       technologies: ["SIEM", "EDR", "SOAR", "Threat Intel", "Analytics"],
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3158
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
@@ -326,6 +357,9 @@ const ITServicesPage: React.FC = () => {
       }
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
     {
       id: 6,
       name: "IT Asset Management System",
@@ -343,6 +377,7 @@ const ITServicesPage: React.FC = () => {
       marketPrice: "$85/month (Industry average: $160/month)",
       roi: "300% ROI within 4 months",
       implementationTime: "1-2 weeks",
+<<<<<<< HEAD
 =======
 
     // AI & ML Services
@@ -372,6 +407,8 @@ const ITServicesPage: React.FC = () => {
       expertise: "AI Specialists",
       technologies: ["TensorFlow", "PyTorch", "Azure ML", "AWS SageMaker", "Python"],
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3158
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
@@ -381,6 +418,9 @@ const ITServicesPage: React.FC = () => {
     {
       id: 7,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       name: "Help Desk & Support Platform",
       category: "Support Services",
       subcategory: "Help Desk",
@@ -396,6 +436,7 @@ const ITServicesPage: React.FC = () => {
       marketPrice: "$75/month (Industry average: $140/month)",
       roi: "280% ROI within 5 months",
       implementationTime: "1-2 weeks",
+<<<<<<< HEAD
 =======
       name: "Machine Learning Models",
       category: "ai-ml",
@@ -454,6 +495,8 @@ const ITServicesPage: React.FC = () => {
       expertise: "DevOps Engineers",
       technologies: ["Jenkins", "GitLab CI", "GitHub Actions", "Docker", "Kubernetes"],
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3158
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
@@ -462,6 +505,9 @@ const ITServicesPage: React.FC = () => {
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       id: 8,
       name: "Database Performance Optimizer",
       category: "Database",
@@ -478,6 +524,7 @@ const ITServicesPage: React.FC = () => {
       marketPrice: "$140/month (Industry average: $250/month)",
       roi: "320% ROI within 6 months",
       implementationTime: "2-3 weeks",
+<<<<<<< HEAD
 =======
       id: 9,
       name: "Infrastructure as Code",
@@ -601,6 +648,8 @@ const ITServicesPage: React.FC = () => {
       expertise: "Digital Transformation Consultants",
       technologies: ["Cloud", "AI/ML", "IoT", "Automation", "Analytics"],
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3158
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       contactInfo: {
         phone: "+1 302 464 0950",
         email: "kleber@ziontechgroup.com",
@@ -610,6 +659,9 @@ const ITServicesPage: React.FC = () => {
   ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
   const categories = ['all', 'Cloud Services', 'Security', 'Networking', 'Data Management', 'DevOps', 'Asset Management', 'Support Services', 'Database'];
   const pricingModels = ['all', 'Freemium', 'Subscription', 'One-time'];
 
@@ -671,6 +723,7 @@ const ITServicesPage: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Comprehensive IT infrastructure, security, and technical solutions designed to modernize and optimize your business technology operations
           </p>
+<<<<<<< HEAD
         </div>
 
         {/* Search and Filters */}
@@ -2071,6 +2124,8 @@ export default function ITServicesPage() {
               <span className="text-white">364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
           </div>
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
         </div>
       </div>
 
@@ -2196,6 +2251,7 @@ export default function ITServicesPage() {
                       <span className="text-sm text-zion-slate-light ml-2">({service.reviewCount})</span>
                     </div>
                   </div>
+<<<<<<< HEAD
                   <div className="text-center mb-4">
                     <span className="text-3xl font-bold text-zion-cyan">{service.currency}{service.price.toLocaleString()}</span>
                     <span className="text-zion-slate-light">/project</span>
@@ -2257,6 +2313,95 @@ export default function ITServicesPage() {
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
               </Card>
             ))}
+=======
+                </div>
+              </div>
+              
+              <p className="text-gray-300 mb-4">{service.description}</p>
+              
+              <div className="mb-4">
+                <div className="text-2xl font-bold text-white mb-2">
+                  {formatPrice(service.price, service.pricingModel)}
+                </div>
+                <div className="text-sm text-gray-400">{service.userLimit}</div>
+                <div className="text-sm text-green-400 font-medium">{service.marketPrice}</div>
+              </div>
+
+              <div className="mb-4">
+                <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {service.features.slice(0, 3).map((feature, index) => (
+                    <span key={index} className="px-2 py-1 text-xs bg-blue-500/20 text-blue-300 rounded">
+                      {feature}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mb-4">
+                <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {service.benefits.slice(0, 2).map((benefit, index) => (
+                    <span key={index} className="px-2 py-1 text-xs bg-green-500/20 text-green-300 rounded">
+                      {benefit}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mb-4">
+                <h4 className="text-sm font-semibold text-white mb-2">Perfect For:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {service.targetAudience.slice(0, 2).map((audience, index) => (
+                    <span key={index} className="px-2 py-1 text-xs bg-purple-500/20 text-purple-300 rounded">
+                      {audience}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="border-t border-gray-600 pt-4">
+                <div className="flex items-center justify-between text-sm text-gray-400">
+                  <span>Start your free trial today</span>
+                  <a 
+                    href={service.contactInfo.website}
+                    className="text-blue-400 hover:text-blue-300 transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Get Started →
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Contact Information */}
+        <div className="mt-16 text-center">
+          <div className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-8">
+            <h2 className="text-2xl font-bold text-white mb-4">Ready to Modernize Your IT Infrastructure?</h2>
+            <p className="text-gray-300 mb-6">
+              Our IT solutions are designed to scale with your business and provide enterprise-grade reliability
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <div>
+                <Phone className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+                <p className="text-white font-semibold">Phone</p>
+                <p className="text-gray-300">+1 302 464 0950</p>
+              </div>
+              <div>
+                <Mail className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+                <p className="text-white font-semibold">Email</p>
+                <p className="text-gray-300">kleber@ziontechgroup.com</p>
+              </div>
+              <div>
+                <MapPin className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+                <p className="text-white font-semibold">Address</p>
+                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              </div>
+            </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
           </div>
         </div>
       </div>
@@ -2307,6 +2452,7 @@ export default function ITServicesPage() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -2676,3 +2822,8 @@ export default function ITServicesPage() {
 =======
 }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
+=======
+};
+
+export default ITServicesPage;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2

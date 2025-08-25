@@ -10,7 +10,22 @@ import {
   Building, 
   Rocket, 
   Cpu, 
+<<<<<<< HEAD
   BarChart3 
+=======
+  BarChart3,
+  Database,
+  Cloud,
+  Lock,
+  Smartphone,
+  Target,
+  DollarSign,
+  Clock,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Brain
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
 } from 'lucide-react';
 
 export default function MicroSAASSolutions() {

@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
+<<<<<<< HEAD:pages.disabled/micro-saas.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
   Rocket, Cpu, Shield, Zap, Globe, Star, Users,
@@ -205,6 +206,8 @@ export default function MicroSaas() {
           <div className="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-black to-purple-900/20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/micro-saas.tsx
   Rocket, Zap, Target, Users, 
   Shield, Globe, Sparkles, TrendingUp,
   Check, ArrowRight, Star, Award,
@@ -389,6 +392,7 @@ export default function MicroSaas() {
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD:pages.disabled/micro-saas.tsx
 >>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
 =======
           <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 via-emerald-500/5 to-purple-500/10" />
@@ -396,11 +400,16 @@ export default function MicroSaas() {
           
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/micro-saas.tsx
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD:pages.disabled/micro-saas.tsx
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/micro-saas.tsx
               className="text-center"
             >
 <<<<<<< HEAD
@@ -845,11 +854,15 @@ export default function MicroSaas() {
                 ))}
               </div>
             </motion.div>
+<<<<<<< HEAD:pages.disabled/micro-saas.tsx
 >>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/micro-saas.tsx
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD:pages.disabled/micro-saas.tsx
 <<<<<<< HEAD
         <section className="py-20 bg-gradient-to-r from-teal-900/20 to-purple-900/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -862,10 +875,15 @@ export default function MicroSaas() {
         <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/micro-saas.tsx
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD:pages.disabled/micro-saas.tsx
 <<<<<<< HEAD
             >
 <<<<<<< HEAD
@@ -900,6 +918,9 @@ export default function MicroSaas() {
                 >
                   View All Services
 =======
+=======
+            >
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/micro-saas.tsx
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Build Your Micro-SaaS?
               </h2>
@@ -915,6 +936,7 @@ export default function MicroSaas() {
                 </Link>
                 <Link href="/case-studies" className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-300 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200">
                   View Case Studies
+<<<<<<< HEAD:pages.disabled/micro-saas.tsx
 >>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
 =======
                   className="px-8 py-4 bg-gradient-to-r from-teal-500 to-emerald-600 text-white rounded-xl font-semibold hover:from-teal-600 hover:to-emerald-700 transition-all duration-200 hover:scale-105"
@@ -927,6 +949,8 @@ export default function MicroSaas() {
                 >
                   Explore All Services
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/micro-saas.tsx
                 </Link>
               </div>
             </motion.div>

@@ -7,6 +7,7 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { 
   ServerIcon, 
@@ -1016,6 +1017,13 @@ const AIPoweredITAssetManagement: React.FC = () => {
               provides complete visibility and control over your technology infrastructure.
 >>>>>>> origin/cursor/website-audit-and-enhancement-9d3a
 =======
+=======
+import { Link } from 'react-router-dom';
+import { Database, Brain, Shield, TrendingUp, ArrowRight, Users, Target, Clock, BarChart3, Zap } from 'lucide-react';
+
+export default function AIPoweredITAssetManagement() {
+  return (
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -1813,12 +1821,16 @@ const AIPoweredITAssetManagement: React.FC = () => {
                   </p>
                 </div>
               </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-a260
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4">
@@ -2382,6 +2394,8 @@ const AIPoweredITAssetManagement: React.FC = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-20ee
             ))}
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       {/* Benefits Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -2438,6 +2452,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
                 </li>
               </ul>
             </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-a260
 =======
       {/* Integration Section */}
@@ -2487,11 +2502,14 @@ const AIPoweredITAssetManagement: React.FC = () => {
               </div>
             ))}
 >>>>>>> origin/cursor/website-audit-and-enhancement-d426
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2605,6 +2623,8 @@ const AIPoweredITAssetManagement: React.FC = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4867
             </Link>
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-indigo-500/10 to-purple-600/10 rounded-2xl p-12 text-center border border-indigo-500/20">
@@ -2648,6 +2668,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
             </button>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5b65
           </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-98d1
 =======
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -2962,6 +2983,8 @@ const AIPoweredITAssetManagement: React.FC = () => {
               View Pricing
             </Link>
           </div>
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
         </div>
       </section>
     </div>

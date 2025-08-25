@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowUp } from 'lucide-react';
@@ -41,6 +42,31 @@ import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, Ar
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d816
 import { Link } from "react-router-dom";
 >>>>>>> origin/cursor/website-audit-and-enhancement-ba38
+=======
+import { Link } from 'react-router-dom';
+import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Linkedin, 
+  Twitter, 
+  Github, 
+  Youtube, 
+  Facebook, 
+  Instagram,
+  Globe,
+  Shield,
+  Brain,
+  Cpu,
+  Rocket,
+  Building,
+  Users,
+  Target,
+  Zap,
+  Database,
+  Network
+} from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -52,7 +78,12 @@ export function Footer() {
 
   const footerSections = [
     {
+<<<<<<< HEAD
       title: "AI & Micro SAAS",
+=======
+      title: "AI & Technology Services",
+      icon: Brain,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       links: [
         { label: "AI Content Hub Pro", path: "/services/ai-content-hub-pro" },
         { label: "AI Customer Service Automation", path: "/services/ai-customer-service-automation" },
@@ -61,6 +92,7 @@ export function Footer() {
         { label: "AI Healthcare Technology", path: "/services/ai-healthcare-tech-platform" },
         { label: "AI & Autonomous Systems", path: "/services/ai-autonomous-systems" },
         { label: "AI Research Assistant", path: "/ai-autonomous-research-assistant" },
+<<<<<<< HEAD
         { label: "Quantum Enterprise Platform", path: "/services/quantum-enterprise-platform" },
         { label: "Autonomous Business Platform", path: "/autonomous-business-operations-platform" },
         { label: "AI Asset Management", path: "/ai-powered-it-asset-management" },
@@ -70,6 +102,14 @@ export function Footer() {
         { label: "Cybersecurity", path: "/services/cybersecurity" },
         { label: "SOC2 Compliance Automation", path: "/soc2-compliance-automation" },
         { label: "Industry Solutions", path: "/services/industry-solutions" }
+=======
+        { label: "Quantum Neural Networks", path: "/quantum-neural-network-platform" },
+        { label: "Autonomous Business Platform", path: "/autonomous-business-operations-platform" },
+        { label: "AI Asset Management", path: "/ai-powered-it-asset-management" },
+        { label: "Quantum Technology", path: "/services/quantum-technology" },
+        { label: "Machine Learning Solutions", path: "/services/ai-machine-learning" },
+        { label: "AI Business Intelligence", path: "/services/ai-business-intelligence" }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       ]
     },
     {
@@ -85,7 +125,12 @@ export function Footer() {
       ]
     },
     {
+<<<<<<< HEAD
       title: "Solutions",
+=======
+      title: "Industry Solutions",
+      icon: Building,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       links: [
         { label: "Enterprise Solutions", path: "/solutions/enterprise" },
         { label: "Healthcare Solutions", path: "/solutions/healthcare" },
@@ -93,6 +138,7 @@ export function Footer() {
         { label: "Manufacturing Solutions", path: "/solutions/manufacturing" },
         { label: "Retail Solutions", path: "/solutions/retail" },
         { label: "Government Solutions", path: "/solutions/government" },
+<<<<<<< HEAD
         { label: "Business Intelligence", path: "/services/business-intelligence" },
         { label: "Marketing Automation", path: "/services/ai-marketing" },
         { label: "HR & Recruitment", path: "/services/ai-hr" },
@@ -147,11 +193,21 @@ export function Footer() {
     },
     {
       title: "Company",
+=======
+        { label: "Digital Transformation", path: "/digital-transformation" },
+        { label: "Micro SAAS Solutions", path: "/services/micro-saas-solutions" }
+      ]
+    },
+    {
+      title: "Company & Resources",
+      icon: Users,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       links: [
 <<<<<<< HEAD
         { label: "About Us", path: "/about" },
         { label: "Our Mission", path: "/mission" },
         { label: "Team", path: "/team" },
+<<<<<<< HEAD
         { label: "Pricing", path: "/pricing" },
         { label: "Careers", path: "/careers" },
         { label: "Partners", path: "/partners" },
@@ -167,32 +223,56 @@ export function Footer() {
         { label: "Help Center", path: "/help" },
         { label: "Documentation", path: "/docs" },
         { label: "Support Center", path: "/support" }
+=======
+        { label: "Careers", path: "/careers" },
+        { label: "Partners", path: "/partners" },
+        { label: "Blog", path: "/blog" },
+        { label: "Case Studies", path: "/case-studies" },
+        { label: "Help Center", path: "/help" }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       ]
     }
   ];
 
+<<<<<<< HEAD
   // Fixed social media links with proper error handling
+=======
+  // Fixed social media links with proper URLs
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
   const socialLinks = [
     { 
       name: 'LinkedIn', 
       url: 'https://www.linkedin.com/company/ziontechgroup', 
+<<<<<<< HEAD
       icon: '💼',
+=======
+      icon: Linkedin,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       fallback: 'https://linkedin.com'
     },
     { 
       name: 'Twitter', 
       url: 'https://twitter.com/ziontechgroup', 
+<<<<<<< HEAD
       icon: '🐦',
+=======
+      icon: Twitter,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       fallback: 'https://twitter.com'
     },
     { 
       name: 'GitHub', 
       url: 'https://github.com/ziontechgroup', 
+<<<<<<< HEAD
       icon: '💻',
+=======
+      icon: Github,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       fallback: 'https://github.com'
     },
     { 
       name: 'YouTube', 
+<<<<<<< HEAD
       url: 'https://www.youtube.com/@ziontechgroup', 
       icon: '📺',
       fallback: 'https://youtube.com'
@@ -2184,6 +2264,82 @@ export function Footer() {
             {/* Social Links */}
             <div className="flex items-center space-x-4">
               {socialLinks.map((link) => (
+=======
+      url: 'https://youtube.com/@ziontechgroup', 
+      icon: Youtube,
+      fallback: 'https://youtube.com'
+    },
+    { 
+      name: 'Facebook', 
+      url: 'https://facebook.com/ziontechgroup', 
+      icon: Facebook,
+      fallback: 'https://facebook.com'
+    },
+    { 
+      name: 'Instagram', 
+      url: 'https://instagram.com/ziontechgroup', 
+      icon: Instagram,
+      fallback: 'https://instagram.com'
+    }
+  ];
+
+  const quickLinks = [
+    { label: "Pricing", path: "/pricing" },
+    { label: "Contact", path: "/contact" },
+    { label: "Support", path: "/help" },
+    { label: "Privacy Policy", path: "/privacy" },
+    { label: "Terms of Service", path: "/terms" },
+    { label: "Cookie Policy", path: "/cookies" }
+  ];
+
+  return (
+    <footer className="bg-black text-white">
+      {/* Main Footer Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="lg:col-span-1">
+            <div className="flex items-center space-x-2 mb-6">
+              <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-xl">Z</span>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>
+                <p className="text-sm text-gray-400">AI-Powered Innovation</p>
+              </div>
+            </div>
+            
+            <p className="text-gray-400 text-sm mb-6 leading-relaxed">
+              Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.
+            </p>
+
+            {/* Contact Information */}
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center space-x-3 text-sm text-gray-300">
+                <Phone className="w-4 h-4 text-cyan-500" />
+                <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
+                  +1 (302) 464-0950
+                </a>
+              </div>
+              <div className="flex items-center space-x-3 text-sm text-gray-300">
+                <Mail className="w-4 h-4 text-cyan-500" />
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex items-start space-x-3 text-sm text-gray-300">
+                <MapPin className="w-4 h-4 text-cyan-500 mt-0.5" />
+                <span>
+                  364 E Main St STE 1008<br />
+                  Middletown DE 19709
+                </span>
+              </div>
+            </div>
+
+            {/* Social Media Links */}
+            <div className="flex space-x-4">
+              {socialLinks.map((social) => (
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
                 <a
                   key={link.name}
                   href={link.url}
@@ -2217,6 +2373,7 @@ export function Footer() {
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Scroll to Top Button */}
       <motion.button
         onClick={scrollToTop}
@@ -2230,3 +2387,23 @@ export function Footer() {
     </footer>
   );
 }
+=======
+      {/* Bottom Bar */}
+      <div className="border-t border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="text-sm text-gray-400">
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </div>
+            <div className="flex items-center space-x-6 text-sm text-gray-400">
+              <span>Made with ❤️ in Delaware</span>
+              <span>•</span>
+              <span>AI-Powered Technology</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2

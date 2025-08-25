@@ -9,6 +9,7 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
 =======
@@ -48,6 +49,8 @@ import SEOHead from '../../components/SEOHead';
 import { motion } from 'framer-motion';
 >>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fe6d
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -69,6 +72,7 @@ import {
   LineChart,
   Activity
 } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
 =======
 import { Link } from 'react-router-dom';
@@ -136,10 +140,13 @@ import {
   CheckCircle
 } from 'lucide-react';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-459c
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
 
 export default function AIBusinessIntelligence() {
   const features = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -225,10 +232,16 @@ const AIBusinessIntelligence = () => {
       title: "AI-Powered Analytics",
       description: "Advanced machine learning algorithms that automatically identify patterns, trends, and insights in your data."
 >>>>>>> origin/cursor/website-audit-and-enhancement-9620
+=======
+      icon: Brain,
+      title: "AI-Powered Analytics",
+      description: "Advanced machine learning algorithms that automatically identify patterns, trends, and insights from your data."
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
     },
     {
       icon: BarChart3,
       title: "Real-Time Dashboards",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       description: "Live monitoring and visualization of key performance indicators with instant updates and alerts."
@@ -238,10 +251,14 @@ const AIBusinessIntelligence = () => {
 =======
       description: "Interactive visualizations that provide instant insights into your business performance and KPIs."
 >>>>>>> origin/cursor/website-audit-and-enhancement-9620
+=======
+      description: "Live monitoring and visualization of key performance indicators with instant updates and alerts."
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
     },
     {
       icon: TrendingUp,
       title: "Predictive Analytics",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       description: "Forecast future trends and outcomes using historical data and AI models for better decision-making."
@@ -249,10 +266,14 @@ const AIBusinessIntelligence = () => {
 =======
       description: "Forecast future trends and outcomes using historical data and AI models."
 >>>>>>> origin/cursor/website-audit-and-enhancement-9620
+=======
+      description: "Forecast future trends and outcomes using historical data and AI models for better decision-making."
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
     },
     {
       icon: Database,
       title: "Data Integration",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       description: "Seamless integration with existing data sources, databases, and business applications for unified insights.",
@@ -272,10 +293,14 @@ const AIBusinessIntelligence = () => {
       title: "Customer Intelligence",
       description: "Deep insights into customer behavior, preferences, and lifetime value for targeted strategies"
 >>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+=======
+      description: "Seamlessly connect and consolidate data from multiple sources for comprehensive analysis."
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
     },
     {
       icon: Zap,
       title: "Automated Reporting",
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: "Generate intelligent reports automatically with AI-generated insights and recommendations."
 =======
@@ -288,10 +313,14 @@ const AIBusinessIntelligence = () => {
       title: "Real-time Insights",
       description: "Instant access to key performance indicators and business metrics through interactive dashboards."
 >>>>>>> origin/cursor/website-audit-and-enhancement-500e
+=======
+      description: "Generate intelligent reports automatically with AI-generated insights and recommendations."
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
     },
     {
       icon: Target,
       title: "Goal Tracking",
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: "Monitor progress towards business objectives with AI-powered performance tracking."
 >>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
@@ -516,10 +545,14 @@ const AIBusinessIntelligence = () => {
       icon: Activity,
       features: ["Process monitoring", "Efficiency tracking", "Resource optimization", "Quality control"]
 >>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+=======
+      description: "Monitor progress towards business objectives with AI-powered performance tracking."
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
     }
   ];
 
   const benefits = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -530,17 +563,23 @@ const AIBusinessIntelligence = () => {
     "Identify new market opportunities with AI-powered trend analysis",
     "Enhance risk management with predictive risk modeling"
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
     "Make data-driven decisions with confidence",
     "Identify hidden opportunities and risks",
     "Optimize business processes automatically",
     "Improve customer experience and satisfaction",
     "Reduce operational costs through efficiency",
     "Stay ahead of market trends and competition"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
   ];
 
   const useCases = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       industry: "Financial Services",
       applications: [
@@ -1147,6 +1186,8 @@ const AIBusinessIntelligence = () => {
               );
             })}
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       title: "Sales & Marketing",
       description: "Optimize campaigns, predict customer behavior, and maximize ROI with AI-driven insights.",
       icon: TrendingUp
@@ -1165,6 +1206,7 @@ const AIBusinessIntelligence = () => {
       title: "Customer Intelligence",
       description: "Understand customer preferences, predict churn, and personalize experiences.",
       icon: Users
+<<<<<<< HEAD
 =======
     {
       title: "10x Faster Insights",
@@ -1844,10 +1886,13 @@ const AIBusinessIntelligence = () => {
       description: "Identify and mitigate risks before they impact your business with advanced risk modeling.",
       icon: Shield,
       color: "from-red-500 to-orange-500"
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
     }
   ];
 
   return (
+<<<<<<< HEAD
     <>
       <SEOHead 
         title="AI Business Intelligence Solutions | Zion Tech Group"
@@ -1949,6 +1994,43 @@ const AIBusinessIntelligence = () => {
       {/* Features Section */}
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-9620
+=======
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="flex items-center justify-center space-x-2 mb-6">
+            <Brain className="w-8 h-8 text-cyan-500" />
+            <span className="text-cyan-500 font-semibold">AI Business Intelligence</span>
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Transform Your Business with
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-purple-600">
+              {" "}AI-Powered Intelligence
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Unlock the full potential of your data with advanced AI analytics, real-time insights, and predictive intelligence that drives smarter business decisions.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
+            >
+              Get Started
+            </Link>
+            <Link
+              to="/services"
+              className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold hover:border-cyan-500 hover:text-cyan-500 transition-all duration-200"
+            >
+              View All Services
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -1958,6 +2040,7 @@ const AIBusinessIntelligence = () => {
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Our AI Business Intelligence platform provides comprehensive analytics capabilities designed for modern businesses.
+<<<<<<< HEAD
 =======
       </section>
 
@@ -1978,6 +2061,8 @@ const AIBusinessIntelligence = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI Business Intelligence platform combines cutting-edge technology with intuitive design to deliver insights that drive growth.
 >>>>>>> origin/cursor/website-audit-and-enhancement-9620
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
             </p>
           </div>
           
@@ -1997,6 +2082,7 @@ const AIBusinessIntelligence = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
 =======
@@ -2109,6 +2195,9 @@ const AIBusinessIntelligence = () => {
               </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-62c0
             ))}
+=======
+            ))}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
           </div>
         </div>
       </section>
@@ -2124,6 +2213,7 @@ const AIBusinessIntelligence = () => {
             <motion.div
 =======
       {/* Benefits Section */}
+<<<<<<< HEAD
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900/30">
         <div className="max-w-7xl mx-auto">
           <motion.h2 
@@ -2442,6 +2532,8 @@ export default AIBusinessIntelligence;
 >>>>>>> origin/cursor/website-audit-and-enhancement-b812
 =======
       {/* Benefits Section */}
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -2467,6 +2559,7 @@ export default AIBusinessIntelligence;
                 <div key={index} className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-cyan-500 mt-1 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
+<<<<<<< HEAD
 =======
               className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
             >
@@ -2526,6 +2619,8 @@ export default AIBusinessIntelligence;
                   <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
                   <span className="text-zion-slate-light">{benefit}</span>
 >>>>>>> origin/cursor/website-audit-and-enhancement-500e
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
                 </div>
               ))}
             </div>
@@ -2570,6 +2665,7 @@ export default AIBusinessIntelligence;
                   <h3 className="text-xl font-semibold text-white">{useCase.title}</h3>
                 </div>
                 <p className="text-gray-300">{useCase.description}</p>
+<<<<<<< HEAD
 =======
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -2591,6 +2687,8 @@ export default AIBusinessIntelligence;
                 </div>
                 <p className="text-gray-300">{benefit}</p>
 >>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
               </div>
             ))}
           </div>
@@ -2598,6 +2696,9 @@ export default AIBusinessIntelligence;
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       {/* Technology Stack Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
         <div className="max-w-7xl mx-auto">
@@ -2635,6 +2736,7 @@ export default AIBusinessIntelligence;
               </div>
               <h3 className="text-white font-semibold">Cloud Native</h3>
             </div>
+<<<<<<< HEAD
 =======
       {/* Data Sources */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
@@ -2658,12 +2760,17 @@ export default AIBusinessIntelligence;
               </div>
             ))}
 >>>>>>> origin/cursor/website-audit-and-enhancement-62c0
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       <section className="py-20 px-4 sm:px-6 lg:px-8">
 =======
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/50 to-blue-900/50">
@@ -3190,6 +3297,7 @@ const AIBusinessIntelligence: React.FC = () => {
       </section>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 >>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
@@ -3772,3 +3880,6 @@ export default AIBusinessIntelligence;
 =======
 export default AIBusinessIntelligence;
 >>>>>>> origin/cursor/website-audit-and-enhancement-9620
+=======
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2

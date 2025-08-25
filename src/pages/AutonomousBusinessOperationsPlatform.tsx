@@ -9,6 +9,7 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { 
   CogIcon, 
@@ -1296,6 +1297,13 @@ export default function AutonomousBusinessOperationsPlatform() {
               works tirelessly to grow your business while you focus on what matters most.
 >>>>>>> origin/cursor/website-audit-and-enhancement-9d3a
 =======
+=======
+import { Link } from 'react-router-dom';
+import { Building, Brain, Zap, Shield, ArrowRight, Users, Target, TrendingUp, Clock, BarChart3 } from 'lucide-react';
+
+export default function AutonomousBusinessOperationsPlatform() {
+  return (
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -2550,6 +2558,7 @@ export default function AutonomousBusinessOperationsPlatform() {
                   </p>
                 </div>
               </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-a260
 =======
                 className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/30 flex items-center justify-center gap-2"
@@ -2564,11 +2573,14 @@ export default function AutonomousBusinessOperationsPlatform() {
                 View All Services
               </Link>
 >>>>>>> origin/cursor/website-audit-and-enhancement-311e
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
             </div>
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       {/* Analytics Dashboard Section */}
@@ -2645,6 +2657,8 @@ export default function AutonomousBusinessOperationsPlatform() {
             ))}
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-20ee
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       {/* Benefits Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -2701,6 +2715,7 @@ export default function AutonomousBusinessOperationsPlatform() {
                 </li>
               </ul>
             </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-a260
 =======
       {/* Features Section */}
@@ -3029,11 +3044,14 @@ export default function AutonomousBusinessOperationsPlatform() {
               </div>
             ))}
 >>>>>>> origin/cursor/website-audit-and-enhancement-d426
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3477,6 +3495,8 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
             </Link>
 >>>>>>> origin/cursor/website-audit-and-enhancement-98d1
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-green-500/10 to-emerald-600/10 rounded-2xl p-12 text-center border border-green-500/20">
@@ -3520,6 +3540,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
             </button>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-5b65
           </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-ee8a
 =======
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -4343,6 +4364,8 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
             </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-79b4
           </div>
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
         </div>
       </section>
     </div>

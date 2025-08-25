@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
+<<<<<<< HEAD:pages.disabled/quantum-services.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
   Atom, Cpu, Rocket, Shield, Zap, Globe, Star, Users,
@@ -207,6 +208,8 @@ export default function QuantumServices() {
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-black to-indigo-900/20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/quantum-services.tsx
   Atom, Zap, Target, Cpu, 
   Shield, Rocket, Globe, Sparkles,
   Check, ArrowRight, Star, Award,
@@ -391,6 +394,7 @@ export default function QuantumServices() {
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD:pages.disabled/quantum-services.tsx
 >>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
 =======
           <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-indigo-500/5 to-purple-500/10" />
@@ -398,11 +402,16 @@ export default function QuantumServices() {
           
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/quantum-services.tsx
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD:pages.disabled/quantum-services.tsx
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/quantum-services.tsx
               className="text-center"
             >
 <<<<<<< HEAD
@@ -502,6 +511,7 @@ export default function QuantumServices() {
                     </Link>
                   </motion.div>
                 ))}
+<<<<<<< HEAD:pages.disabled/quantum-services.tsx
 >>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
 =======
                   className="px-8 py-4 border border-blue-500/40 text-blue-300 rounded-xl font-semibold hover:bg-blue-500/10 transition-all duration-200"
@@ -509,11 +519,14 @@ export default function QuantumServices() {
                   View All Services
                 </Link>
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/quantum-services.tsx
               </div>
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD:pages.disabled/quantum-services.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
         {/* Benefits Section */}
@@ -529,10 +542,60 @@ export default function QuantumServices() {
         <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+        {/* Quantum Capabilities */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-black/50">
+          <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              className="mb-16"
+            >
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">Quantum Capabilities</h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {capabilities.map((capability, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-xl p-6"
+                  >
+                    <div className="flex items-center mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
+                        {capability.icon}
+                      </div>
+                      <h3 className="text-xl font-bold text-white">{capability.title}</h3>
+                    </div>
+                    
+                    <p className="text-gray-300 mb-4">{capability.description}</p>
+                    
+                    <div className="space-y-2">
+                      {capability.examples.map((example, exampleIndex) => (
+                        <div key={exampleIndex} className="flex items-center text-sm text-gray-400">
+                          <Star className="w-3 h-3 text-indigo-400 mr-2 flex-shrink-0" />
+                          {example}
+                        </div>
+                      ))}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Industry Applications */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/quantum-services.tsx
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+<<<<<<< HEAD:pages.disabled/quantum-services.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
               className="text-center mb-16"
@@ -785,6 +848,8 @@ export default function QuantumServices() {
               ))}
             </div>
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/quantum-services.tsx
               className="mb-16"
             >
               <h2 className="text-3xl font-bold text-white mb-8 text-center">Industry Applications</h2>
@@ -847,11 +912,15 @@ export default function QuantumServices() {
                 ))}
               </div>
             </motion.div>
+<<<<<<< HEAD:pages.disabled/quantum-services.tsx
 >>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/quantum-services.tsx
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD:pages.disabled/quantum-services.tsx
 <<<<<<< HEAD
         <section className="py-20 bg-gradient-to-r from-blue-900/20 to-indigo-900/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -864,11 +933,18 @@ export default function QuantumServices() {
         <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/quantum-services.tsx
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD:pages.disabled/quantum-services.tsx
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/quantum-services.tsx
             >
 <<<<<<< HEAD
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -917,6 +993,7 @@ export default function QuantumServices() {
                 </Link>
                 <Link href="/case-studies" className="inline-flex items-center px-8 py-4 border border-indigo-500/30 text-indigo-300 font-semibold rounded-lg hover:bg-indigo-500/10 transition-all duration-200">
                   View Case Studies
+<<<<<<< HEAD:pages.disabled/quantum-services.tsx
 >>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
 =======
                   className="px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-xl font-semibold hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 hover:scale-105"
@@ -929,6 +1006,8 @@ export default function QuantumServices() {
                 >
                   Explore All Services
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/quantum-services.tsx
                 </Link>
               </div>
             </motion.div>

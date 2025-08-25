@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
+<<<<<<< HEAD:pages.disabled/enterprise-it.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
   Shield, Cpu, Rocket, Zap, Globe, Star, Users,
@@ -204,6 +205,8 @@ export default function EnterpriseIT() {
           <div className="absolute inset-0 bg-gradient-to-br from-green-900/20 via-black to-blue-900/20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/enterprise-it.tsx
   Building2, Zap, Target, Users, 
   Shield, Rocket, Globe, Sparkles,
   Check, ArrowRight, Star, Award,
@@ -388,6 +391,7 @@ export default function EnterpriseIT() {
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD:pages.disabled/enterprise-it.tsx
 >>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
 =======
           <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 via-blue-500/5 to-cyan-500/10" />
@@ -395,11 +399,16 @@ export default function EnterpriseIT() {
           
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/enterprise-it.tsx
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD:pages.disabled/enterprise-it.tsx
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/enterprise-it.tsx
               className="text-center"
             >
 <<<<<<< HEAD
@@ -499,6 +508,7 @@ export default function EnterpriseIT() {
                     </Link>
                   </motion.div>
                 ))}
+<<<<<<< HEAD:pages.disabled/enterprise-it.tsx
 >>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
 =======
                   className="px-8 py-4 border border-green-500/40 text-green-300 rounded-xl font-semibold hover:bg-green-500/10 transition-all duration-200"
@@ -506,11 +516,14 @@ export default function EnterpriseIT() {
                   View All Services
                 </Link>
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/enterprise-it.tsx
               </div>
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD:pages.disabled/enterprise-it.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
         {/* Benefits Section */}
@@ -526,10 +539,60 @@ export default function EnterpriseIT() {
         <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+        {/* Enterprise Solutions */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-black/50">
+          <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              className="mb-16"
+            >
+              <h2 className="text-3xl font-bold text-white mb-8 text-center">Enterprise Solutions</h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {solutions.map((solution, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-xl p-6"
+                  >
+                    <div className="flex items-center mb-4">
+                      <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mr-4">
+                        {solution.icon}
+                      </div>
+                      <h3 className="text-xl font-bold text-white">{solution.title}</h3>
+                    </div>
+                    
+                    <p className="text-gray-300 mb-4">{solution.description}</p>
+                    
+                    <div className="space-y-2">
+                      {solution.benefits.map((benefit, benefitIndex) => (
+                        <div key={benefitIndex} className="flex items-center text-sm text-gray-400">
+                          <Star className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0" />
+                          {benefit}
+                        </div>
+                      ))}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Industry Solutions */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/enterprise-it.tsx
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+<<<<<<< HEAD:pages.disabled/enterprise-it.tsx
 <<<<<<< HEAD
 <<<<<<< HEAD
               className="text-center mb-16"
@@ -782,6 +845,8 @@ export default function EnterpriseIT() {
               ))}
             </div>
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/enterprise-it.tsx
               className="mb-16"
             >
               <h2 className="text-3xl font-bold text-white mb-8 text-center">Industry Solutions</h2>
@@ -844,11 +909,15 @@ export default function EnterpriseIT() {
                 ))}
               </div>
             </motion.div>
+<<<<<<< HEAD:pages.disabled/enterprise-it.tsx
 >>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/enterprise-it.tsx
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD:pages.disabled/enterprise-it.tsx
 <<<<<<< HEAD
         <section className="py-20 bg-gradient-to-r from-green-900/20 to-blue-900/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -861,11 +930,18 @@ export default function EnterpriseIT() {
         <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/enterprise-it.tsx
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD:pages.disabled/enterprise-it.tsx
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/enterprise-it.tsx
             >
 <<<<<<< HEAD
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -914,6 +990,7 @@ export default function EnterpriseIT() {
                 </Link>
                 <Link href="/case-studies" className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200">
                   View Case Studies
+<<<<<<< HEAD:pages.disabled/enterprise-it.tsx
 >>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
 =======
                   className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white rounded-xl font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-200 hover:scale-105"
@@ -926,6 +1003,8 @@ export default function EnterpriseIT() {
                 >
                   Explore All Services
 >>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/enterprise-it.tsx
                 </Link>
               </div>
             </motion.div>

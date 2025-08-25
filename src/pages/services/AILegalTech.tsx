@@ -5,6 +5,9 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
 import { motion } from 'framer-motion';
 =======
 import { Link } from 'react-router-dom';
@@ -122,6 +125,7 @@ export default function AILegalTech() {
       icon: Shield,
       title: "Risk Assessment",
       description: "Intelligent legal risk analysis and mitigation strategies"
+<<<<<<< HEAD
 =======
       icon: Brain,
       title: "AI-Powered Contract Analysis",
@@ -433,6 +437,8 @@ export default function AILegalTech() {
       description: "Monitor regulatory changes and identify compliance risks with automated AI systems.",
       icon: Shield
 >>>>>>> origin/cursor/website-audit-and-enhancement-9620
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
     }
   ];
 
@@ -442,6 +448,9 @@ export default function AILegalTech() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
     "Reduce legal document review time by 80%",
     "Improve contract accuracy by 95%",
     "Lower legal costs by 40-60%",
@@ -622,6 +631,7 @@ export default function AILegalTech() {
               </button>
             </div>
           </motion.div>
+<<<<<<< HEAD
 =======
     "Reduce legal research time by 70%",
     "Improve contract review accuracy by 90%",
@@ -1221,6 +1231,8 @@ export default function AILegalTech() {
           <div className="absolute top-40 right-20 w-3 h-3 bg-orange-400 rounded-full animate-pulse"></div>
           <div className="absolute bottom-20 left-1/4 w-1 h-1 bg-amber-400 rounded-full animate-bounce"></div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-9620
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
         </div>
       </section>
 
@@ -1231,6 +1243,9 @@ export default function AILegalTech() {
         <div className="max-w-7xl mx-auto">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1263,6 +1278,7 @@ export default function AILegalTech() {
                 <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
+<<<<<<< HEAD
 =======
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -1494,6 +1510,8 @@ export default function AILegalTech() {
                 </ul>
               </div>
 >>>>>>> origin/main
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
             ))}
 =======
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
@@ -1584,6 +1602,7 @@ export default function AILegalTech() {
                 ))}
               </div>
             </motion.div>
+<<<<<<< HEAD
 =======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1614,11 +1633,16 @@ export default function AILegalTech() {
               ))}
             </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-82f7
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
           </div>
         </div>
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       {/* Practice Areas Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1650,6 +1674,7 @@ export default function AILegalTech() {
                 <Gavel className="w-8 h-8 text-cyan-500 mx-auto mb-3" />
                 <h3 className="font-semibold">{area}</h3>
               </motion.div>
+<<<<<<< HEAD
 =======
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
@@ -1954,6 +1979,8 @@ export default function AILegalTech() {
                 </button>
               </div>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-459c
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
             ))}
           </div>
         </div>
@@ -1963,6 +1990,9 @@ export default function AILegalTech() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -1987,6 +2017,7 @@ export default function AILegalTech() {
               </button>
             </div>
           </motion.div>
+<<<<<<< HEAD
 =======
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -2287,10 +2318,13 @@ export default function AILegalTech() {
             </Link>
           </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-9620
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
         </div>
       </section>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2479,3 +2513,6 @@ export default AILegalTech;
 
 export default AILegalTech;
 >>>>>>> origin/cursor/website-audit-and-enhancement-9620
+=======
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2

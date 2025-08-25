@@ -18,6 +18,7 @@ import { QuoteRequestForm } from "@/components/QuoteRequestForm";
 import { SEO } from "@/components/SEO";
 <<<<<<< HEAD
 import { MainNavigation } from "@/layout/MainNavigation";
+<<<<<<< HEAD
 import Footer from "@/components/Footer";
 =======
 import React, { useState } from 'react';
@@ -30,6 +31,9 @@ import Footer from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { Header } from "@/components/Header";
 >>>>>>> origin/cursor/website-audit-and-enhancement-8717
+=======
+import { Footer } from "@/components/Footer";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
 
 export default function RequestQuote() {
   const [form, setForm] = useState({

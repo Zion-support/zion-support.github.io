@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD:pages.disabled/talent/[id].tsx
 import { useParams } from 'react-router-dom';
+=======
+import { useParams, Navigate } from 'react-router-dom';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/talent/[id].tsx
 import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
 import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
 import type { TalentProfile as TalentProfileType } from '@/types/talent';
@@ -53,11 +57,15 @@ const TalentProfilePage: React.FC = () => {
   }, [id]);
 
   if (loading) return <ProfileLoadingState />;
+<<<<<<< HEAD:pages.disabled/talent/[id].tsx
   if (error || !profile) {
     // Redirect to 404 page or show error state
     navigate('/404', { replace: true });
     return null;
   }
+=======
+  if (error || !profile) return <Navigate to="/404" replace />;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/talent/[id].tsx
 
   return (
     <main className="min-h-screen bg-zion-blue py-8 text-white">

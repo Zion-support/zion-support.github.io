@@ -3,6 +3,7 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { 
   Activity, 
@@ -32,6 +33,8 @@ import {
   AlertTriangle,
   FileText
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
 import { motion } from 'framer-motion';
 import { 
   Heart, 
@@ -51,6 +54,7 @@ import {
   TrendingUp,
   Stethoscope,
   Database
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
 =======
 =======
@@ -130,11 +134,14 @@ import {
   Zap,
   Target
 >>>>>>> origin/cursor/website-audit-and-enhancement-500e
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
 } from 'lucide-react';
 
 export default function AIHealthcareAnalytics() {
   const features = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       icon: Brain,
 <<<<<<< HEAD
@@ -166,6 +173,9 @@ const AIHealthcareAnalytics: React.FC = () => {
       title: "Data Integration",
       description: "Seamless integration with EHR systems, medical devices, and healthcare applications"
 =======
+=======
+      icon: Brain,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       title: "Predictive Patient Analytics",
       description: "AI-powered prediction of patient outcomes and risk assessment"
     },
@@ -178,11 +188,15 @@ const AIHealthcareAnalytics: React.FC = () => {
       icon: Target,
       title: "Personalized Treatment Plans",
       description: "AI-generated treatment recommendations based on patient data"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
     },
     {
       icon: BarChart3,
       title: "Population Health Analytics",
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: "Comprehensive analysis of population health trends and disease patterns"
     },
@@ -203,10 +217,14 @@ const AIHealthcareAnalytics: React.FC = () => {
       description: "Comprehensive analytics that identify health trends, risk factors, and opportunities for preventive care.",
       benefits: ["Trend analysis", "Risk stratification", "Preventive strategies"]
 >>>>>>> origin/main
+=======
+      description: "Comprehensive analysis of population health trends and patterns"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
     },
     {
       icon: Zap,
       title: "Clinical Decision Support",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       description: "AI-powered clinical recommendations and treatment optimization suggestions"
@@ -266,12 +284,15 @@ const AIHealthcareAnalytics: React.FC = () => {
       cta: "Contact Sales",
       popular: false
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       description: "Intelligent assistance for healthcare professionals"
     },
     {
       icon: Shield,
       title: "HIPAA Compliant Security",
       description: "Enterprise-grade security with full HIPAA compliance"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
 =======
       title: "AI-Powered Patient Analytics",
@@ -363,10 +384,13 @@ const AIHealthcareAnalytics: React.FC = () => {
       title: "Care Coordination",
       description: "AI-powered care coordination that optimizes patient care pathways and resource allocation."
 >>>>>>> origin/cursor/website-audit-and-enhancement-500e
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
     }
   ];
 
   const benefits = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1501,6 +1525,8 @@ const AIHealthcareAnalytics: React.FC = () => {
       </div>
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
     "Improve patient outcomes by 25-40%",
     "Reduce hospital readmissions by 30%",
     "Lower healthcare costs by 20-35%",
@@ -1731,6 +1757,7 @@ const AIHealthcareAnalytics: React.FC = () => {
               </button>
             </div>
           </motion.div>
+<<<<<<< HEAD
         </div>
       </section>
 >>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
@@ -1785,12 +1812,15 @@ const AIHealthcareAnalytics: React.FC = () => {
               Schedule Demo
             </Link>
           </div>
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
         </div>
       </section>
 <<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-82f7
     </div>
   );
+<<<<<<< HEAD
 }
 =======
     </div>
@@ -1804,3 +1834,6 @@ export default AIHealthcareAnalytics;
   );
 }
 >>>>>>> origin/cursor/website-audit-and-enhancement-500e
+=======
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2

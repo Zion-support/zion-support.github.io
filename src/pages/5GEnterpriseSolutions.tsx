@@ -5,6 +5,7 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1084,6 +1085,10 @@ export default function FiveGEnterpriseSolutions() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-9eb9
     }
   ];
+=======
+import { Link } from 'react-router-dom';
+import { Network, Zap, Shield, ArrowRight, Users, Target, Clock, BarChart3, Globe, Cpu } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
 
   const solutions = [
     {
@@ -1122,6 +1127,7 @@ export default function FiveGEnterpriseSolutions() {
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1197,6 +1203,8 @@ import { Network, Zap, Shield, ArrowRight, Users, Target, Clock, BarChart3, Glob
 
 export default function FiveGEnterpriseSolutions() {
   return (
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -1217,6 +1225,7 @@ export default function FiveGEnterpriseSolutions() {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your enterprise with next-generation 5G connectivity. Experience ultra-fast speeds, 
               ultra-low latency, and massive IoT connectivity for the future of business.
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-a260
 =======
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
@@ -1590,12 +1599,15 @@ const FiveGEnterpriseSolutions = () => {
               Ultra-fast speeds, ultra-low latency, and massive IoT support for the next generation 
               of business applications.
 >>>>>>> origin/cursor/website-audit-and-enhancement-2b07
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
 <<<<<<< HEAD
               <Link
                 to="/contact"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1609,11 +1621,15 @@ const FiveGEnterpriseSolutions = () => {
 =======
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg text-white font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-200 transform hover:scale-105"
 >>>>>>> origin/cursor/website-audit-and-enhancement-a260
+=======
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg text-white font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-200 transform hover:scale-105"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
               >
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 to="/demo"
@@ -1702,10 +1718,13 @@ const FiveGEnterpriseSolutions = () => {
               </Link>
 >>>>>>> origin/cursor/website-audit-and-enhancement-9d3a
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
                 to="/services/it-infrastructure"
                 className="inline-flex items-center px-8 py-4 border border-blue-500 text-blue-400 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-200"
               >
                 Learn More
+<<<<<<< HEAD
 =======
                 className="bg-white text-zion-blue px-8 py-4 rounded-lg font-semibold hover:bg-zion-slate-light transition-all duration-300 transform hover:scale-105"
               >
@@ -1717,6 +1736,8 @@ const FiveGEnterpriseSolutions = () => {
               >
                 Schedule Demo
 >>>>>>> origin/cursor/website-audit-and-enhancement-08b8
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
               </Link>
             </div>
           </div>
@@ -1816,6 +1837,7 @@ const FiveGEnterpriseSolutions = () => {
               <p className="text-gray-400">
                 Live network performance monitoring and analytics for optimal business operations.
               </p>
+<<<<<<< HEAD
 =======
     <>
       <SEO 
@@ -1886,6 +1908,8 @@ const FiveGEnterpriseSolutions = () => {
                 </Link>
               </motion.div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-53a4
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
             </div>
           </div>
         </motion.section>
@@ -1995,6 +2019,7 @@ const FiveGEnterpriseSolutions = () => {
                   </p>
                 </div>
               </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-a260
 =======
 >>>>>>> origin/main
@@ -2586,11 +2611,14 @@ const FiveGEnterpriseSolutions = () => {
                   <p className="text-lg text-gray-700">{benefit}</p>
                 </div>
               ))}
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
             </div>
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 bg-white dark:bg-slate-800">
@@ -3060,6 +3088,12 @@ const FiveGEnterpriseSolutions = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
+=======
+      {/* Benefits Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
@@ -3070,6 +3104,7 @@ const FiveGEnterpriseSolutions = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+<<<<<<< HEAD
 >>>>>>> origin/main
             {useCases.map((useCase, index) => (
               <motion.div
@@ -3087,10 +3122,56 @@ const FiveGEnterpriseSolutions = () => {
 =======
 >>>>>>> origin/main
             ))}
+=======
+            <div className="bg-gradient-to-r from-blue-500/10 to-cyan-600/10 rounded-2xl p-8 border border-blue-500/20">
+              <h3 className="text-2xl font-semibold text-white mb-4">Operational Excellence</h3>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <span>Increase operational efficiency by up to 50%</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <span>Real-time data processing and analytics</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <span>Seamless remote work and collaboration</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <span>Enhanced customer experiences</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-gradient-to-r from-green-500/10 to-emerald-600/10 rounded-2xl p-8 border border-green-500/20">
+              <h3 className="text-2xl font-semibold text-white mb-4">Competitive Advantage</h3>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span>First-mover advantage in 5G adoption</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span>Innovation in products and services</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span>Future-ready business infrastructure</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span>Scalable growth opportunities</span>
+                </li>
+              </ul>
+            </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3355,6 +3436,14 @@ const FiveGEnterpriseSolutions = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform with 5G?
+=======
+      {/* CTA Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-r from-blue-500/10 to-cyan-600/10 rounded-2xl p-12 text-center border border-blue-500/20">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Embrace 5G Enterprise Solutions?
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Join leading enterprises that have transformed their operations with our 5G solutions.
@@ -3375,6 +3464,7 @@ const FiveGEnterpriseSolutions = () => {
               </Link>
             </div>
           </div>
+<<<<<<< HEAD
         </section>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ec46
       </div>
@@ -3501,6 +3591,10 @@ const FiveGEnterpriseSolutions = () => {
           animation: float-delayed 8s ease-in-out infinite;
         }
       `}</style>
+=======
+        </div>
+      </section>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
     </div>
 =======
                 className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"

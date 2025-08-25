@@ -271,6 +271,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+<<<<<<< HEAD
     // Here you would typically send the form data to your backend
     console.log('Form submitted:', formData);
     setIsSubmitted(true);
@@ -469,6 +470,12 @@ export function Contact() {
 >>>>>>> origin/cursor/build-and-fix-errors-e276
     setIsSubmitting(true);
 <<<<<<< HEAD
+=======
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
     
     // Simulate form submission
 <<<<<<< HEAD
@@ -2589,6 +2596,9 @@ export function Contact() {
                   )}
                 </button>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
               </form>
             </div>
 
@@ -2984,6 +2994,7 @@ export function Contact() {
                   />
                 </div>
               </div>
+<<<<<<< HEAD
 
               <div>
                 <label htmlFor="service" className="block text-sm font-medium text-zion-slate-light mb-2">
@@ -3556,6 +3567,8 @@ export function Contact() {
                 </div>
               </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-f30b
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
             </div>
           </div>
         </div>

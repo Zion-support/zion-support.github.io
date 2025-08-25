@@ -31,6 +31,7 @@ import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-1f82
 import { 
@@ -80,6 +81,8 @@ export default function Blog() {
     { id: 'innovation', name: 'Innovation & Trends', icon: Lightbulb, count: 6 },
     { id: 'development', name: 'Development', icon: Code, count: 4 }
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
 import { ArrowRight, Calendar, Clock, User, Tag, Search, Filter, TrendingUp, Brain, Atom, Shield, Cloud, Rocket, Lightbulb, Globe, Database, Code, Target, Zap, Star, BookOpen, MessageSquare, Heart, Share2 } from 'lucide-react';
 
 const Blog = () => {
@@ -93,6 +96,7 @@ const Blog = () => {
     { name: 'Cybersecurity', count: 5, icon: Shield },
     { name: 'Cloud & DevOps', count: 3, icon: Cloud },
     { name: 'Digital Transformation', count: 4, icon: Rocket }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-a3a9
 =======
 import { 
@@ -193,6 +197,8 @@ export default function Blog() {
     'AI', 'Machine Learning', 'Quantum Computing', 'Cybersecurity', 'Cloud Migration',
     'Digital Transformation', 'Business Intelligence', 'Automation', 'Innovation',
     'Technology Trends', 'Enterprise Solutions', 'Startups', 'Healthcare', 'Finance'
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
   ];
 =======
 import React from 'react';
@@ -215,6 +221,7 @@ export default function Blog() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-bc98
     {
       id: 1,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -366,6 +373,8 @@ export default function Blog() {
       likes: 312,
       image: '/images/blog/microservices.jpg'
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       title: "The Future of AI: Autonomous Business Systems in 2025",
       excerpt: "Discover how autonomous AI systems are revolutionizing business operations and what this means for the future of enterprise technology.",
       author: "Dr. Sarah Chen",
@@ -499,6 +508,7 @@ export default function Blog() {
       comments: 67,
       image: "/images/blog/iot-data-analytics.jpg",
       icon: Database
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-a3a9
 =======
       title: "The Future of AI in Enterprise: 2024 Trends and Predictions",
@@ -759,9 +769,23 @@ export default function Blog() {
     }
   ];
 
+=======
+    }
+  ];
+
+  const filteredPosts = blogPosts.filter(post => {
+    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
   const featuredPosts = blogPosts.filter(post => post.featured);
   const regularPosts = blogPosts.filter(post => !post.featured);
 
+<<<<<<< HEAD
   const filteredPosts = blogPosts.filter(post => {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1118,6 +1142,9 @@ const Blog = () => {
               Stay ahead of the curve with expert insights on AI, quantum technology, cybersecurity, 
               and the latest trends shaping the future of business and technology.
 =======
+=======
+  return (
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -1131,6 +1158,7 @@ const Blog = () => {
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
               Stay ahead of the curve with expert insights on AI, quantum computing, cybersecurity, 
               and the latest technology trends shaping the future of business.
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-a3a9
 =======
   const getCategoryColor = (categoryId: string) => {
@@ -1171,11 +1199,14 @@ const Blog = () => {
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
               Expert perspectives on artificial intelligence, tech innovation, and digital transformation
 >>>>>>> origin/cursor/website-audit-and-enhancement-3805
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
             </p>
             
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto mb-8">
               <div className="relative">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1191,6 +1222,8 @@ const Blog = () => {
                 />
               </div>
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-zion-slate-light" />
                 <input
                   type="text"
@@ -1217,6 +1250,7 @@ const Blog = () => {
                   <category.icon className="h-4 w-4" />
                   <span>{category.name}</span>
                   <span className="bg-white/20 text-white px-2 py-1 rounded-full text-xs">
+<<<<<<< HEAD
                     {category.count}
                   </span>
                 </button>
@@ -1308,11 +1342,14 @@ const Blog = () => {
                   {category.name}
                   <span className="text-xs bg-gray-700 px-2 py-1 rounded-full">
 >>>>>>> origin/cursor/website-audit-and-enhancement-1f82
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
                     {category.count}
                   </span>
                 </button>
               ))}
             </div>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
             {/* Tag Filter */}
@@ -1353,8 +1390,11 @@ const Blog = () => {
             Insights, updates, and thought leadership on AI, quantum computing, 
             cybersecurity, and digital transformation.
           </p>
+=======
+          </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
         </div>
-      </section>
+      </div>
 
       {/* Search and Filters */}
       <section className="py-8 px-4 sm:px-6 lg:px-8">
@@ -1541,6 +1581,7 @@ const Blog = () => {
 >>>>>>> origin/cursor/website-audit-and-enhancement-1f82
                         >
                           {tag}
+<<<<<<< HEAD
                         </span>
                       ))}
                     </div>
@@ -2870,64 +2911,12 @@ const Blog = () => {
                       <div className="flex items-center space-x-2 mb-4">
                         <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium border border-cyan-500/30">
                           Featured
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
                         </span>
-                        <span className="bg-gray-700 text-gray-300 px-3 py-1 rounded-full text-sm border border-gray-600">
-                          {getCategoryName(post.category)}
-                        </span>
-                      </div>
-                      
-                      <h3 className="text-2xl font-bold text-white mb-4 hover:text-cyan-400 transition-colors">
-                        {post.title}
-                      </h3>
-                      
-                      <p className="text-gray-300 mb-6 leading-relaxed">
-                        {post.excerpt}
-                      </p>
-                      
-                      <div className="flex items-center space-x-6 text-sm text-gray-400 mb-6">
-                        <div className="flex items-center space-x-2">
-                          <User className="w-4 h-4" />
-                          <span>{post.author}</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <Calendar className="w-4 h-4" />
-                          <span>{formatDate(post.publishDate)}</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <Clock className="w-4 h-4" />
-                          <span>{post.readTime}</span>
-                        </div>
-                      </div>
-                      
-                      <div className="flex items-center justify-between">
-                        <div className="flex space-x-2">
-                          {post.tags.slice(0, 3).map((tag, index) => (
-                            <span key={index} className="bg-gray-700 text-gray-300 px-2 py-1 rounded text-xs border border-gray-600">
-                              {tag}
-                            </span>
-                          ))}
-                        </div>
-                        
-                        <div className="flex items-center space-x-4 text-sm text-gray-400">
-                          <div className="flex items-center space-x-1">
-                            <Eye className="w-4 h-4" />
-                            <span>{post.views.toLocaleString()}</span>
-                          </div>
-                          <div className="flex items-center space-x-1">
-                            <Heart className="w-4 h-4" />
-                            <span>{post.likes.toLocaleString()}</span>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <Link
-                        to={`/blog/${post.id}`}
-                        className="inline-flex items-center mt-6 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
-                      >
-                        Read Full Article
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Link>
+                      ))}
                     </div>
+<<<<<<< HEAD
                   </article>
                 );
               })}
@@ -2950,10 +2939,24 @@ const Blog = () => {
               Subscribe
             </button>
 >>>>>>> origin/cursor/website-audit-and-enhancement-82f7
+=======
+                    <Link
+                      to={`/blog/${post.id}`}
+                      className="text-zion-cyan hover:text-white transition-colors font-medium group-hover:underline flex items-center space-x-2"
+                    >
+                      <span>Read More</span>
+                      <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
           </div>
-        </section>
+        </div>
       )}
 
+<<<<<<< HEAD
       {/* All Posts */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -3060,6 +3063,72 @@ const Blog = () => {
                   </article>
                 );
               })}
+=======
+      {/* Regular Posts */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="flex items-center justify-between mb-8">
+          <h2 className="text-3xl font-bold text-white">Latest Articles</h2>
+          <div className="flex items-center space-x-2 text-zion-slate-light">
+            <Filter className="h-5 w-5" />
+            <span>{filteredPosts.length} articles found</span>
+          </div>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {regularPosts.map((post) => (
+            <div
+              key={post.id}
+              className="bg-zion-slate-dark border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 hover:shadow-xl hover:shadow-zion-cyan/10 transition-all duration-300 group"
+            >
+              <div className="p-6">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="p-2 bg-zion-cyan/20 rounded-lg">
+                    <post.icon className="h-4 w-4 text-zion-cyan" />
+                  </div>
+                  <span className="text-zion-cyan text-sm font-medium">{post.category}</span>
+                </div>
+                
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors line-clamp-2">
+                  {post.title}
+                </h3>
+                
+                <p className="text-zion-slate-light mb-4 leading-relaxed line-clamp-3">
+                  {post.excerpt}
+                </p>
+                
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center space-x-3 text-sm text-zion-slate-light">
+                    <div className="flex items-center space-x-1">
+                      <User className="h-3 w-3" />
+                      <span>{post.author}</span>
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      <Clock className="h-3 w-3" />
+                      <span>{post.readTime}</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-4 text-sm text-zion-slate-light">
+                    <div className="flex items-center space-x-1">
+                      <MessageSquare className="h-4 w-4" />
+                      <span>{post.comments}</span>
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      <Heart className="h-4 w-4" />
+                      <span>{post.likes}</span>
+                    </div>
+                  </div>
+                  <Link
+                    to={`/blog/${post.id}`}
+                    className="text-zion-cyan hover:text-white transition-colors font-medium text-sm group-hover:underline"
+                  >
+                    Read More →
+                  </Link>
+                </div>
+              </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
             </div>
           )}
 =======
@@ -3120,6 +3189,7 @@ const Blog = () => {
           </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-ee8a
         </div>
+<<<<<<< HEAD
       </section>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3137,6 +3207,19 @@ const Blog = () => {
           <p className="text-xl text-gray-400 mb-8">
 <<<<<<< HEAD
             Get the latest insights delivered to your inbox. No spam, just valuable content.
+=======
+      </div>
+
+      {/* Newsletter Signup */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="bg-zion-slate-dark border border-zion-cyan/20 rounded-xl p-12 text-center max-w-4xl mx-auto">
+          <BookOpen className="h-16 w-16 text-zion-cyan mx-auto mb-6" />
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Stay Updated with Our Latest Insights
+          </h2>
+          <p className="text-zion-slate-light mb-8 text-lg">
+            Get the latest articles, research, and technology insights delivered directly to your inbox.
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
 =======
@@ -3146,6 +3229,7 @@ const Blog = () => {
 >>>>>>> origin/cursor/website-audit-and-enhancement-ee8a
             <input
               type="email"
+<<<<<<< HEAD
               placeholder="Enter your email"
               className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
             />
@@ -3154,10 +3238,17 @@ const Blog = () => {
 =======
             <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200">
 >>>>>>> origin/cursor/website-audit-and-enhancement-ee8a
+=======
+              placeholder="Enter your email address"
+              className="flex-1 px-4 py-3 bg-zion-slate border border-zion-cyan/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"
+            />
+            <button className="bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/30">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
               Subscribe
             </button>
           </div>
         </div>
+<<<<<<< HEAD
       </section>
 <<<<<<< HEAD
 
@@ -3238,6 +3329,14 @@ const Blog = () => {
   );
 <<<<<<< HEAD
 }
+=======
+      </div>
+    </div>
+  );
+};
+
+export default Blog;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
 
 =======
 

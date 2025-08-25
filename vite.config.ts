@@ -15,7 +15,7 @@ import path from 'path';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-675b
 
 // https://vitejs.dev/config/
-export default defineConfig(async () => ({
+export default defineConfig({
   plugins: [
     react(),
     visualizer({
@@ -581,6 +581,7 @@ export default defineConfig({
     host: true,
     open: true,
   },
+<<<<<<< HEAD
 
   css: {
     devSourcemap: true,
@@ -595,9 +596,16 @@ export default defineConfig({
   },
 
   // Define environment variables
+=======
+  // PostCSS configuration removed due to ES module compatibility issues
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
     __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
   },
+<<<<<<< HEAD
 });
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
+=======
+})
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2

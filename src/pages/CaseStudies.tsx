@@ -13,6 +13,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -1102,6 +1103,8 @@ const CaseStudies = () => {
 =======
 =======
 >>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fe6d
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, TrendingUp, Users, DollarSign, Clock, Target } from 'lucide-react';
@@ -1201,6 +1204,7 @@ const CaseStudies = () => {
         roi: "380%",
         timeframe: "36 months",
         teamSize: "25 network engineers"
+<<<<<<< HEAD
 =======
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -1400,6 +1404,12 @@ export default function CaseStudies() {
   ];
 
 <<<<<<< HEAD
+=======
+      }
+    }
+  ];
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -1409,6 +1419,7 @@ export default function CaseStudies() {
       }
     }
   };
+<<<<<<< HEAD
 =======
 import { Link } from 'react-router-dom';
 import { ArrowRight, Building2, TrendingUp, Users, Award, Clock, DollarSign, CheckCircle, Star, Zap, Shield, Globe, Target, Brain, Rocket } from 'lucide-react';
@@ -2256,10 +2267,28 @@ const CaseStudies = () => {
 =======
 =======
 >>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fe6d
+=======
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+      {/* Hero Section */}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1 
             className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -2522,10 +2551,17 @@ export default function CaseStudies() {
             className="text-center"
           >
 <<<<<<< HEAD
+=======
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
             Success Stories
           </motion.h1>
           <motion.p 
             className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8"
+<<<<<<< HEAD
 =======
   const stats = [
     { label: "Successful Projects", value: "150+", icon: CheckCircle },
@@ -2558,6 +2594,12 @@ export default function CaseStudies() {
             className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8"
           >
 <<<<<<< HEAD
+=======
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
             Discover how Zion Tech Group has transformed businesses across industries with cutting-edge AI, quantum computing, and autonomous solutions.
           </motion.p>
           <motion.div 
@@ -2582,6 +2624,7 @@ export default function CaseStudies() {
               <CheckCircle className="w-4 h-4 text-green-400" />
               Cybersecurity
             </span>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">
@@ -2911,6 +2954,20 @@ const CaseStudies = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+=======
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Case Studies Grid */}
+      <section className="pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Success Stories That
@@ -3086,6 +3143,7 @@ const CaseStudies = () => {
         </div>
       </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Industry Overview */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -3506,6 +3564,36 @@ const CaseStudies = () => {
 =======
 >>>>>>> origin/main
           <motion.div
+=======
+                  <div className="pt-4 border-t border-gray-700/50">
+                    <div className="grid grid-cols-3 gap-4 text-center">
+                      <div>
+                        <div className="text-2xl font-bold text-cyan-400">{study.metrics.roi}</div>
+                        <div className="text-xs text-gray-400">ROI</div>
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold text-blue-400">{study.metrics.timeframe}</div>
+                        <div className="text-xs text-gray-400">Timeline</div>
+                      </div>
+                      <div>
+                        <div className="text-2xl font-bold text-purple-400">{study.metrics.teamSize}</div>
+                        <div className="text-xs text-gray-400">Team</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div 
+            className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -3519,6 +3607,7 @@ const CaseStudies = () => {
               technology solutions across diverse industries and use cases.
             </p>
           </motion.div>
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 =======
@@ -6057,3 +6146,12 @@ export default CaseStudies;
   );
 }
 >>>>>>> origin/cursor/website-audit-and-enhancement-b7ac
+=======
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default CaseStudies;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2

@@ -4,7 +4,7 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import Sidebar from './components/Sidebar';
 import { AccessibilityControls } from './components/AccessibilityControls';
-import { PerformanceDashboard } from './components/PerformanceDashboard';
+import PerformanceDashboard from './components/PerformanceDashboard';
 import { AnalyticsDashboard } from './components/AnalyticsDashboard';
 import { AIChatbot } from './components/AIChatbot';
 import { CollaborativeTextEditor } from './components/CollaborativeTextEditor';
@@ -12,7 +12,7 @@ import { AICodeGenerator } from './components/AICodeGenerator';
 import { EnterpriseDashboard } from './components/EnterpriseDashboard';
 import { SecurityComplianceDashboard } from './components/SecurityComplianceDashboard';
 import { MachineLearningDashboard } from './components/MachineLearningDashboard';
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
 import { LinkHealthMonitor } from './components/LinkHealthMonitor';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
@@ -157,7 +157,10 @@ const App: React.FC = () => {
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
+<<<<<<< HEAD
             <PerformanceOptimizer>
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
               <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
                 {/* Enhanced SEO */}
                 <EnhancedSEO 
@@ -371,6 +374,7 @@ const App: React.FC = () => {
                     </div>
                   </>
                 )}
+<<<<<<< HEAD
                 
                 {/* Enhanced Performance Monitor - Always Available */}
                 <PerformanceMonitor />
@@ -396,5 +400,14 @@ const App: React.FC = () => {
         </ThemeProvider>
       </EnhancedErrorBoundary>
     );
+=======
+                              </div>
+          </Router>
+        </WhitelabelProvider>
+      </ThemeProvider>
+    </EnhancedErrorBoundary>
+  );
+};
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
 
 export default App;

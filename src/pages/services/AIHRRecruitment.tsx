@@ -7,6 +7,9 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
 import { motion } from 'framer-motion';
 =======
 import { Link } from 'react-router-dom';
@@ -92,6 +95,7 @@ export default function AIHRRecruitment() {
       icon: BarChart3,
       title: "Performance Analytics",
       description: "Comprehensive insights into hiring metrics and process optimization"
+<<<<<<< HEAD
 =======
 import { Link } from 'react-router-dom';
 import { 
@@ -140,17 +144,23 @@ const AIHRRecruitment: React.FC = () => {
       description: "Data-driven insights that forecast hiring success, employee retention, and workforce planning needs.",
       benefits: ["Hiring success prediction", "Retention forecasting", "Workforce planning"]
 >>>>>>> origin/main
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
     },
     {
       icon: Zap,
       title: "Automated Screening",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       description: "Intelligent pre-screening to save time and improve quality"
     },
     {
       icon: Shield,
       title: "Bias-Free Hiring",
       description: "AI algorithms designed to eliminate unconscious bias in recruitment"
+<<<<<<< HEAD
 =======
       icon: Brain,
       title: "AI-Powered Candidate Matching",
@@ -406,6 +416,8 @@ export default function AIHRRecruitment() {
       title: "Compliance & Security",
       description: "Enterprise-grade security with GDPR compliance and data protection measures."
 >>>>>>> origin/cursor/website-audit-and-enhancement-500e
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
     }
   ];
 
@@ -415,6 +427,9 @@ export default function AIHRRecruitment() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
     "Reduce time-to-hire by 60-80%",
     "Improve candidate quality by 40%",
     "Reduce recruitment costs by 30-50%",
@@ -621,6 +636,7 @@ export default function AIHRRecruitment() {
               </button>
             </div>
           </motion.div>
+<<<<<<< HEAD
 =======
     "Reduce time-to-hire by 60%",
     "Improve candidate quality by 40%",
@@ -1424,6 +1440,8 @@ const AIHRRecruitment = () => {
           <div className="absolute top-40 right-20 w-3 h-3 bg-teal-400 rounded-full animate-pulse"></div>
           <div className="absolute bottom-20 left-1/4 w-1 h-1 bg-green-400 rounded-full animate-bounce"></div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-9620
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
         </div>
       </section>
 
@@ -1434,6 +1452,9 @@ const AIHRRecruitment = () => {
         <div className="max-w-7xl mx-auto">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1466,6 +1487,7 @@ const AIHRRecruitment = () => {
                 <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
+<<<<<<< HEAD
 =======
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -1719,6 +1741,8 @@ const AIHRRecruitment = () => {
 >>>>>>> origin/main
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-459c
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
             ))}
           </div>
         </div>
@@ -1728,6 +1752,9 @@ const AIHRRecruitment = () => {
       {/* Benefits Section */}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -1779,6 +1806,7 @@ const AIHRRecruitment = () => {
                 ))}
               </div>
             </motion.div>
+<<<<<<< HEAD
 =======
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1842,12 +1870,17 @@ const AIHRRecruitment = () => {
               </div>
             ))}
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-459c
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
           </div>
         </div>
       </section>
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       {/* Industries Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1879,6 +1912,7 @@ const AIHRRecruitment = () => {
                 <Briefcase className="w-8 h-8 text-cyan-500 mx-auto mb-3" />
                 <h3 className="font-semibold">{industry}</h3>
               </motion.div>
+<<<<<<< HEAD
 =======
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
@@ -2102,6 +2136,8 @@ const AIHRRecruitment = () => {
                 </button>
               </div>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-459c
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
             ))}
           </div>
         </div>
@@ -2111,6 +2147,9 @@ const AIHRRecruitment = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -2135,6 +2174,7 @@ const AIHRRecruitment = () => {
               </button>
             </div>
           </motion.div>
+<<<<<<< HEAD
 =======
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -2507,10 +2547,13 @@ const AIHRRecruitment = () => {
             </p>
           </div>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-459c
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
         </div>
       </section>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -2956,3 +2999,6 @@ export default AIHRRecruitment;
 
 export default AIHRRecruitment;
 >>>>>>> origin/cursor/website-audit-and-enhancement-9620
+=======
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2

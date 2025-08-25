@@ -6,6 +6,7 @@ import { useAuth } from "@/hooks/useAuth";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 <<<<<<< HEAD
@@ -37,6 +38,10 @@ import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 >>>>>>> origin/cursor/website-audit-and-enhancement-3b60
+=======
+import { MessageSquare } from "lucide-react";
+import { useTranslation } from "react-i18next";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
 
 interface MainNavigationProps {
   isAdmin?: boolean;
@@ -44,6 +49,7 @@ interface MainNavigationProps {
   className?: string;
 }
 
+<<<<<<< HEAD
 interface DropdownItem {
   key: string;
   name: string;
@@ -52,11 +58,14 @@ interface DropdownItem {
   icon: React.ReactNode;
 }
 
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {
   const { user } = useAuth();
   const isAuthenticated = !!user;
   const location = useLocation();
   const { t } = useTranslation();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -111,10 +120,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 >>>>>>> origin/cursor/website-audit-and-enhancement-3b60
 
+=======
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
   const baseLinks = [
     {
       key: 'home',
       href: '/',
+<<<<<<< HEAD
 <<<<<<< HEAD
       name: 'Home',
       matches: (path: string) => path === '/'
@@ -649,6 +662,42 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     { key: 'green-it', href: '/green-it', name: 'Green IT' }
   ];
 
+=======
+      matches: (path: string) => path === '/'
+    },
+    {
+      key: 'marketplace',
+      href: '/marketplace',
+      matches: (path: string) => path.startsWith('/marketplace')
+    },
+    {
+      key: 'services',
+      href: '/services',
+      matches: (path: string) => path.startsWith('/services') || path.startsWith('/ai-services') || path.startsWith('/it-services') || path.startsWith('/digital-marketing') || path.startsWith('/business-solutions')
+    },
+    {
+      key: 'categories',
+      href: '/categories',
+      matches: (path: string) => path.startsWith('/categories')
+    },
+    {
+      key: 'talent',
+      href: '/talent',
+      matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard')
+    },
+    {
+      key: 'equipment',
+      href: '/equipment',
+      matches: (path: string) => path.startsWith('/equipment')
+    },
+    {
+      key: 'community',
+      href: '/community',
+      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
+    }
+  ];
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
   let links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) }));
   
   // Add authenticated-only links
@@ -670,6 +719,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith('/analytics')
     });
   }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -875,18 +925,33 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+  
+  return (
+    <nav className={cn("navbar ml-6 hidden md:flex", className)}>
+      <ul className="flex items-center gap-1">
+        {links.map((link) => (
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
           <li key={link.name}>
             <Link
               to={link.href}
               className={cn(
+<<<<<<< HEAD
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-all duration-300 hover:scale-105",
                 link.matches(location.pathname)
                   ? "bg-zion-purple/20 text-zion-cyan neon-glow"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan hover-glow"
+=======
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
+                link.matches(location.pathname)
+                  ? "bg-zion-purple/20 text-zion-cyan"
+                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
               )}
             >
               {link.name}
             </Link>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
@@ -1053,6 +1118,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
           )}
         </li>
         
+=======
+          </li>
+        ))}
+        
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
         {/* Messages link with unread counter */}
         {isAuthenticated && (
           <li>
@@ -1069,10 +1139,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               {t('nav.messages')}
               {unreadCount > 0 && (
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center animate-pulse">
 =======
                 <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
+=======
+                <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
                   {unreadCount}
                 </span>
               )}

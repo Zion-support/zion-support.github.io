@@ -5,11 +5,14 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
 import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/website-audit-and-enhancement-9eb9
 =======
@@ -103,6 +106,7 @@ import SEOHead from '../components/SEOHead';
   Cpu,
   Network
 } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-9eb9
 =======
 import { Helmet } from 'react-helmet-async';
@@ -310,12 +314,15 @@ const AIAutonomousResearchAssistant = () => {
 =======
 import { motion } from 'framer-motion';
 import { Brain, Search, Database, TrendingUp, Users, Globe, Shield, Zap } from 'lucide-react';
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
 
-export default function AIAutonomousResearchAssistant() {
+const AIAutonomousResearchAssistant: React.FC = () => {
   const features = [
     {
       icon: Brain,
       title: "AI-Powered Research",
+<<<<<<< HEAD
       description: "Advanced machine learning algorithms that understand context and generate insights from vast datasets"
     },
     {
@@ -348,6 +355,8 @@ export default function AIAutonomousResearchAssistant() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-232f
 =======
       title: "AI-Powered Research",
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       description: "Advanced artificial intelligence that autonomously conducts comprehensive research"
     },
     {
@@ -966,6 +975,7 @@ export default function AIAutonomousResearchAssistant() {
       title: "Education",
       icon: Users,
       description: "Educational technology, pedagogy, and learning innovation"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-9eb9
 =======
       metric: '10x',
@@ -989,6 +999,8 @@ export default function AIAutonomousResearchAssistant() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-1b0a
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
     }
   ];
 =======
@@ -1005,6 +1017,7 @@ const AIAutonomousResearchAssistant = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-green-50 to-blue-100">
       {/* Hero Section */}
 <<<<<<< HEAD
@@ -1012,6 +1025,8 @@ const AIAutonomousResearchAssistant = () => {
 <<<<<<< HEAD
       <section className="relative overflow-hidden bg-gradient-to-r from-green-600 via-blue-600 to-indigo-700 text-white">
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
       <Helmet>
         <title>AI Autonomous Research Assistant - Zion Tech Group</title>
@@ -1608,6 +1623,7 @@ const AIAutonomousResearchAssistant = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4867
             </div>
           </div>
+<<<<<<< HEAD
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             AI Autonomous Research Assistant
           </h1>
@@ -1630,6 +1646,8 @@ const AIAutonomousResearchAssistant = () => {
               Learn More
             </Link>
           </div>
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
         </div>
         
         {/* Floating Elements */}
@@ -1641,6 +1659,7 @@ const AIAutonomousResearchAssistant = () => {
         </div>
         <div className="absolute bottom-20 left-1/4 animate-float">
           <div className="w-3 h-3 bg-indigo-400 rounded-full opacity-60"></div>
+<<<<<<< HEAD
         </div>
       </section>
 
@@ -1730,15 +1749,35 @@ const AIAutonomousResearchAssistant = () => {
               transform how research is conducted across industries.
 <<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-232f
+=======
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Intelligent Research Capabilities
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our AI Autonomous Research Assistant combines cutting-edge artificial intelligence with comprehensive research methodologies
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
             </p>
-          </motion.div>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
               <div key={index} className="bg-gradient-to-br from-green-50 to-blue-50 p-8 rounded-xl border border-green-100 hover:shadow-lg transition-shadow">
                 <div className="p-3 bg-green-600 rounded-lg w-fit mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
+=======
+              <div key={index} className="bg-gradient-to-br from-purple-50 to-blue-50 p-8 rounded-2xl border border-purple-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <div className="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mb-6">
+                  <feature.icon className="h-8 w-8 text-white" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   {feature.title}
@@ -1773,6 +1812,7 @@ const AIAutonomousResearchAssistant = () => {
                 <p className="text-gray-300">{feature.description}</p>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4867
               </div>
+<<<<<<< HEAD
 =======
               <motion.div
                 key={feature.title}
@@ -1918,6 +1958,8 @@ const AIAutonomousResearchAssistant = () => {
               comprehensive data access to deliver unprecedented research capabilities.
 =======
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
             ))}
           </div>
         </div>
@@ -1925,6 +1967,7 @@ const AIAutonomousResearchAssistant = () => {
 
 >>>>>>> origin/main
       {/* Capabilities Section */}
+<<<<<<< HEAD
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -1940,9 +1983,20 @@ const AIAutonomousResearchAssistant = () => {
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
               From initial discovery to final publication, our AI assistant handles every aspect of the research process.
 >>>>>>> origin/cursor/website-audit-and-enhancement-232f
+=======
+      <section className="py-20 bg-gradient-to-r from-purple-50 to-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Research Specializations
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive research capabilities across multiple domains and industries
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
             </p>
-          </motion.div>
+          </div>
           
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -2281,6 +2335,8 @@ const AIAutonomousResearchAssistant = () => {
             </p>
           </div>
           
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {capabilities.map((capability, index) => (
               <div key={index} className="bg-white p-8 rounded-2xl border border-purple-100 hover:shadow-lg transition-all duration-300">
@@ -2434,13 +2490,20 @@ const AIAutonomousResearchAssistant = () => {
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Use Cases Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
+=======
+      {/* Research Areas Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Who Benefits?
             </h2>
+<<<<<<< HEAD
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI research assistant is designed for organizations that need comprehensive, 
               fast, and accurate research capabilities.
@@ -2465,9 +2528,14 @@ const AIAutonomousResearchAssistant = () => {
 >>>>>>> origin/cursor/website-audit-and-enhancement-232f
 =======
 >>>>>>> origin/main
+=======
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive research coverage across all major industries and domains
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
             </p>
-          </motion.div>
+          </div>
           
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2609,6 +2677,8 @@ const AIAutonomousResearchAssistant = () => {
             </p>
           </div>
           
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {researchAreas.map((area, index) => (
               <div key={index} className="text-center">
@@ -2619,6 +2689,7 @@ const AIAutonomousResearchAssistant = () => {
                 <p className="text-gray-600 text-xs">{area.description}</p>
 >>>>>>> origin/cursor/website-audit-and-enhancement-9eb9
               </div>
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/main
@@ -2646,11 +2717,14 @@ const AIAutonomousResearchAssistant = () => {
 >>>>>>> origin/cursor/website-audit-and-enhancement-232f
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* CTA Section */}
 <<<<<<< HEAD
@@ -2748,6 +2822,8 @@ const AIAutonomousResearchAssistant = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4867
             </Link>
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       {/* Technology Stack Section */}
       <section className="py-20 bg-gradient-to-r from-gray-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -2787,6 +2863,7 @@ const AIAutonomousResearchAssistant = () => {
             </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-9eb9
           </div>
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/main
@@ -2819,6 +2896,8 @@ const AIAutonomousResearchAssistant = () => {
 >>>>>>> origin/cursor/website-audit-and-enhancement-232f
 =======
 >>>>>>> origin/main
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
         </div>
       </section>
 
@@ -2948,4 +3027,6 @@ const AIAutonomousResearchAssistant = () => {
     </>
 >>>>>>> origin/cursor/website-audit-and-enhancement-803a
   );
-}
+};
+
+export default AIAutonomousResearchAssistant;

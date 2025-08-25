@@ -851,6 +851,7 @@ html {
     display: none !important;
   }
   
+<<<<<<< HEAD
   .print-break {
     page-break-before: always;
 <<<<<<< HEAD
@@ -2558,6 +2559,23 @@ html {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
+=======
+  .glass-card {
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: none;
+  }
+  
+  .neon-text {
+    text-shadow: none;
+    color: black;
+  }
+  
+  .futuristic-btn {
+    background: #ccc;
+    color: black;
+    box-shadow: none;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
   }
 
   .border-gradient {

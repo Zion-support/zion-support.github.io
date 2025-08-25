@@ -98,7 +98,11 @@ const config: Config = {
           light: '#CBD5E1',
           dark: '#64748B',
         },
+<<<<<<< HEAD
         // Futuristic accents
+=======
+        // New futuristic colors
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
         'neon-pink': '#ff0080',
         'neon-green': '#00ff41',
         'neon-orange': '#ff6b35',
@@ -106,6 +110,7 @@ const config: Config = {
         'quantum-blue': '#1e40af',
         'quantum-purple': '#7c3aed',
         'quantum-cyan': '#0891b2',
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
@@ -168,6 +173,8 @@ const config: Config = {
           yellow: "#ffff00",
         },
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-de94
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -639,6 +646,7 @@ const config: Config = {
         },
       },
       animation: {
+<<<<<<< HEAD
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
 <<<<<<< HEAD
@@ -698,6 +706,19 @@ const config: Config = {
         "glow": "glow 2s ease-in-out infinite",
         "shimmer": "shimmer 2s linear infinite",
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-dfab
+=======
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
+        'neon-pulse': 'neon-pulse 2s ease-in-out infinite',
+        'quantum-float': 'quantum-float 6s ease-in-out infinite',
+        'holographic-shift': 'holographic-shift 3s ease infinite',
+        'matrix-rain': 'matrix-rain 20s linear infinite',
+        'neon-flicker': 'neon-flicker 0.15s ease-in-out infinite alternate',
+        'quantum-spin': 'quantum-spin 20s linear infinite',
+        'gradient-x': 'gradient-x 15s ease infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'glow': 'glow 2s ease-in-out infinite alternate',
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       },
       backgroundImage: {
         'quantum-gradient': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',

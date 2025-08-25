@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
+<<<<<<< HEAD:pages.disabled/resources.tsx
 <<<<<<< HEAD
   FileText, Code, TrendingUp, Lightbulb, Users, 
   BookOpen, Download, ExternalLink, ArrowRight,
@@ -93,6 +94,8 @@ const featuredResources = [
 
 export default function Resources() {
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/resources.tsx
   FileText, Download, ArrowRight, Star, Users, 
   Brain, Atom, Shield, Rocket, Globe,
   TrendingUp, Award, Sparkles, ExternalLink,
@@ -186,11 +189,15 @@ export default function Resources() {
     { name: 'Technical Papers', icon: <Database className="w-6 h-6" />, count: 1 }
   ];
 
+<<<<<<< HEAD:pages.disabled/resources.tsx
 >>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/resources.tsx
   return (
     <>
       <Head>
         <title>Resources - Zion Tech Group</title>
+<<<<<<< HEAD:pages.disabled/resources.tsx
 <<<<<<< HEAD
         <meta name="description" content="Knowledge base, documentation, case studies, and training materials. Comprehensive resources for technology professionals." />
         <meta name="keywords" content="resources, documentation, API, case studies, blog, training, whitepapers, guides" />
@@ -203,6 +210,8 @@ export default function Resources() {
           <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-black to-purple-900/20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/resources.tsx
         <meta name="description" content="Access exclusive whitepapers, guides, and educational resources from Zion Tech Group. Learn about AI, quantum computing, and technology innovation." />
         <meta name="keywords" content="resources, whitepapers, guides, AI guides, quantum computing resources, technology education, business automation guides" />
         <link rel="canonical" href="https://ziontechgroup.com/resources" />
@@ -212,13 +221,17 @@ export default function Resources() {
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD:pages.disabled/resources.tsx
 >>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/resources.tsx
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center"
             >
+<<<<<<< HEAD:pages.disabled/resources.tsx
 <<<<<<< HEAD
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
                 Resources
@@ -240,6 +253,8 @@ export default function Resources() {
                   View Case Studies
                 </Link>
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/resources.tsx
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 text-orange-300 text-sm font-medium mb-6">
                 <Star className="w-4 h-4 mr-2" />
                 Educational Resources
@@ -468,17 +483,23 @@ export default function Resources() {
                 >
                   {category.name} ({category.count})
                 </button>
+<<<<<<< HEAD:pages.disabled/resources.tsx
 >>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/resources.tsx
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD:pages.disabled/resources.tsx
 <<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-indigo-900/20 to-purple-900/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/resources.tsx
         {/* Resources Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-black/50">
           <div className="max-w-7xl mx-auto">
@@ -539,12 +560,16 @@ export default function Resources() {
         {/* Newsletter Signup */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
+<<<<<<< HEAD:pages.disabled/resources.tsx
 >>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/resources.tsx
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
+<<<<<<< HEAD:pages.disabled/resources.tsx
 <<<<<<< HEAD
               <h2 className="text-4xl font-bold text-white mb-6">
                 Need Help Finding Resources?
@@ -566,6 +591,8 @@ export default function Resources() {
                   Browse Documentation
                 </Link>
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/resources.tsx
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Stay Informed
               </h2>
@@ -583,7 +610,10 @@ export default function Resources() {
                 <button className="px-8 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:scale-105 transition-all duration-200">
                   Subscribe
                 </button>
+<<<<<<< HEAD:pages.disabled/resources.tsx
 >>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/resources.tsx
               </div>
             </motion.div>
           </div>

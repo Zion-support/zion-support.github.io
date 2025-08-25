@@ -2495,10 +2495,15 @@ export const getEmergingTechServiceBySubcategory = (subcategory: string) => {
 };
 
 export const getFeaturedEmergingTechServices = () => {
+<<<<<<< HEAD
+=======
+  // Return first 8 services since rating property doesn't exist
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
   return EMERGING_TECH_SERVICES.slice(0, 8);
 };
 
 export const getServicesByInnovationScore = (minScore: number) => {
+<<<<<<< HEAD
   return EMERGING_TECH_SERVICES.slice(0, Math.max(1, Math.floor(EMERGING_TECH_SERVICES.length * (minScore / 100))));
 };
 =======
@@ -2515,3 +2520,9 @@ export const getServicesByInnovationScore = (minScore: number) => {
 
 export default EMERGING_TECH_SERVICES;
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e4ee
+=======
+  // Return all services since innovationScore property doesn't exist
+  // In the future, this could be enhanced with actual innovation scoring
+  return EMERGING_TECH_SERVICES;
+};
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
