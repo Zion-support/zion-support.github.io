@@ -2,9 +2,8 @@
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
-import { MessageSquare, ChevronDown } from "lucide-react";
+import { MessageSquare } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
 
 interface MainNavigationProps {
   isAdmin?: boolean;
@@ -17,64 +16,22 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const isAuthenticated = !!user;
   const location = useLocation();
   const { t } = useTranslation();
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const baseLinks = [
     {
       key: 'home',
       href: '/',
-      name: 'Home',
       matches: (path: string) => path === '/'
-    },
-    {
-      key: 'services',
-      href: '/services',
-      matches: (path: string) => path.startsWith('/services') || path.includes('quantum') || path.includes('ai-autonomous'),
-      hasDropdown: true,
-      dropdownItems: [
-        { name: 'All Services', href: '/services' },
-        { name: 'AI & Autonomous Systems', href: '/services#ai-autonomous' },
-        { name: 'Quantum Technology', href: '/services#quantum' },
-        { name: 'IT Infrastructure', href: '/services#it-infrastructure' },
-        { name: 'Cybersecurity', href: '/services#cybersecurity' },
-        { name: 'Industry Solutions', href: '/services#industry-solutions' }
-      ]
-    },
-    {
-      key: 'solutions',
-      href: '/solutions',
-      matches: (path: string) => path.startsWith('/solutions'),
-      hasDropdown: true,
-      dropdownItems: [
-        { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
-        { name: 'Healthcare Solutions', href: '/solutions/healthcare' },
-        { name: 'Financial Solutions', href: '/solutions/financial' },
-        { name: 'Manufacturing Solutions', href: '/solutions/manufacturing' },
-        { name: 'Government Solutions', href: '/government-technology-solutions' }
-      ]
     },
     {
       key: 'marketplace',
       href: '/marketplace',
-      name: 'Marketplace',
       matches: (path: string) => path.startsWith('/marketplace')
     },
     {
       key: 'services',
-      href: '/services',
-      matches: (path: string) => path.startsWith('/services')
-    },
-    {
-      key: 'talent',
-      href: '/talent',
-      name: 'Talent',
-      matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard')
-    },
-    {
-      key: 'equipment',
-      href: '/equipment',
-      name: 'Equipment',
-      matches: (path: string) => path.startsWith('/equipment')
+      href: '/enhanced-services',
+      matches: (path: string) => path.startsWith('/services') || path.startsWith('/enhanced-services')
     },
     {
       key: 'categories',
@@ -82,29 +39,20 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith('/categories')
     },
     {
-      key: 'community',
-      href: '/community',
-      name: 'Community',
-      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
+      key: 'talent',
+      href: '/talent',
+      matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard')
     },
     {
-      key: 'blog',
-      href: '/blog',
-      matches: (path: string) => path.startsWith('/blog')
+      key: 'equipment',
+      href: '/equipment',
+      matches: (path: string) => path.startsWith('/equipment')
+    },
+    {
+      key: 'community',
+      href: '/community',
+      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
     }
-  ];
-
-  const companyLinks = [
-    { key: 'about', href: '/about', name: 'About Us' },
-    { key: 'careers', href: '/careers', name: 'Careers' },
-    { key: 'partners', href: '/partners', name: 'Partners' },
-    { key: 'contact', href: '/contact', name: 'Contact' }
-  ];
-
-  const supportLinks = [
-    { key: 'faq', href: '/faq', name: 'FAQ' },
-    { key: 'help', href: '/help', name: 'Help Center' },
-    { key: 'green-it', href: '/green-it', name: 'Green IT' }
   ];
 
   let links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) }));
@@ -128,125 +76,29 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith('/analytics')
     });
   }
-
-  const toggleDropdown = (key: string) => {
-    setActiveDropdown(activeDropdown === key ? null : key);
-  };
   
-  const isActive = (path: string) => {
-    return location.pathname === path || location.pathname.startsWith(path + '/');
-  };
-
   return (
-    <nav className={cn("navbar ml-6 hidden md:flex", className)} ref={dropdownRef}>
-      <ul className="flex items-center gap-1">
+    <nav className={cn("navbar hidden lg:flex", className)}>
+      <ul className="flex items-center gap-2">
         {links.map((link) => (
-          <li key={link.name} className="relative">
-            {link.hasDropdown ? (
-              <div className="relative">
-                <button
-                  onClick={() => toggleDropdown(link.key)}
-                  className={cn(
-                    "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
-                    link.matches(location.pathname)
-                      ? "bg-zion-purple/20 text-zion-cyan"
-                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
-                  )}
-                >
-                  {link.name}
-                  <ChevronDown className={cn("ml-1 w-3 h-3 transition-transform", activeDropdown === link.key && "rotate-180")} />
-                </button>
-                
-                {activeDropdown === link.key && (
-                  <div className="absolute top-full left-0 mt-1 w-64 bg-zion-blue-dark border border-zion-purple/20 rounded-lg shadow-xl z-50">
-                    <div className="py-2">
-                      {link.dropdownItems?.map((item, index) => (
-                        <Link
-                          key={index}
-                          to={item.href}
-                          className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
-                          onClick={() => setActiveDropdown(null)}
-                        >
-                          {item.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            ) : (
-              <Link
-                to={link.href}
-                className={cn(
-                  "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
-                  link.matches(location.pathname)
-                    ? "bg-zion-purple/20 text-zion-cyan"
-                    : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
-                )}
-              >
-                {link.name}
-              </Link>
-            )}
+          <li key={link.name}>
+            <Link
+              to={link.href}
+              className={cn(
+                "inline-flex h-12 items-center justify-center rounded-xl px-6 text-sm font-medium transition-all duration-300 relative group",
+                link.matches(location.pathname)
+                  ? "bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 text-zion-cyan border border-zion-purple/30 shadow-lg shadow-zion-purple/20"
+                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan hover:scale-105"
+              )}
+            >
+              {link.name}
+              {link.matches(location.pathname) && (
+                <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-8 h-1 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full"></div>
+              )}
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-zion-purple/5 to-zion-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </Link>
           </li>
         ))}
-        
-        {/* Company Dropdown */}
-        <li className="relative">
-          <button
-            onMouseEnter={() => setActiveDropdown('company')}
-            onMouseLeave={() => setActiveDropdown(null)}
-            className="inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
-          >
-            Company
-            <ChevronDown className="ml-1 h-4 w-4" />
-          </button>
-          {activeDropdown === 'company' && (
-            <div
-              onMouseEnter={() => setActiveDropdown('company')}
-              onMouseLeave={() => setActiveDropdown(null)}
-              className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-lg py-2 z-50"
-            >
-              {companyLinks.map((link) => (
-                <Link
-                  key={link.key}
-                  to={link.href}
-                  className="block px-4 py-2 text-sm text-zion-slate-light hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </div>
-          )}
-        </li>
-
-        {/* Support Dropdown */}
-        <li className="relative">
-          <button
-            onMouseEnter={() => setActiveDropdown('support')}
-            onMouseLeave={() => setActiveDropdown(null)}
-            className="inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
-          >
-            Support
-            <ChevronDown className="ml-1 h-4 w-4" />
-          </button>
-          {activeDropdown === 'support' && (
-            <div
-              onMouseEnter={() => setActiveDropdown('support')}
-              onMouseLeave={() => setActiveDropdown(null)}
-              className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-lg py-2 z-50"
-            >
-              {supportLinks.map((link) => (
-                <Link
-                  key={link.key}
-                  to={link.href}
-                  className="block px-4 py-2 text-sm text-zion-slate-light hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </div>
-          )}
-        </li>
         
         {/* Messages link with unread counter */}
         {isAuthenticated && (
@@ -254,19 +106,20 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             <Link
               to="/messages"
               className={cn(
-                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative",
+                "inline-flex h-12 items-center justify-center rounded-xl px-6 text-sm font-medium transition-all duration-300 relative group",
                 location.pathname === "/messages" || location.pathname === "/inbox"
-                  ? "bg-zion-purple/20 text-zion-cyan"
-                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                  ? "bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 text-zion-cyan border border-zion-purple/30 shadow-lg shadow-zion-purple/20"
+                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan hover:scale-105"
               )}
             >
-              <MessageSquare className="w-4 h-4 mr-1" />
+              <MessageSquare className="w-4 h-4 mr-2" />
               {t('nav.messages')}
               {unreadCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs rounded-full h-6 w-6 flex items-center justify-center animate-pulse">
                   {unreadCount}
                 </span>
               )}
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-zion-purple/5 to-zion-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Link>
           </li>
         )}
