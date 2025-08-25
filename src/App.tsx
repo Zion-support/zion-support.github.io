@@ -85,6 +85,9 @@ const baseRoutes = [
   { path: '/request-quote', element: <RequestQuotePage /> },
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
+  { path: '/ai-services', element: <AIServicesShowcase /> },
+  { path: '/micro-saas', element: <MicroSAASShowcase /> },
+  { path: '/all-services', element: <ComprehensiveServicesPage /> },
 ];
 
 // Loading component with better UX

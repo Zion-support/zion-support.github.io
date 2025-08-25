@@ -118,6 +118,8 @@ export default function Home() {
       <FeatureCTAs />
       
       <FeatureHighlights />
+
+      <EnhancedServicesShowcase />
       
       <TrustedBySection />
       
