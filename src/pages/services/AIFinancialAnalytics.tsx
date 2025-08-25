@@ -1,114 +1,112 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Brain, 
   TrendingUp, 
   BarChart3, 
-  Target, 
-  Users, 
-  Zap, 
   Shield, 
-  Globe,
-  ArrowRight,
+  Brain, 
+  Zap, 
+  DollarSign, 
   CheckCircle,
-  Star,
+  ArrowRight,
   Clock,
-  DollarSign,
-  Award
+  Target,
+  Users,
+  Activity
 } from 'lucide-react';
 
-export default function AIBusinessIntelligence() {
+export default function AIFinancialAnalytics() {
   const features = [
     {
-      icon: Brain,
-      title: "Predictive Analytics",
-      description: "Advanced machine learning algorithms that forecast trends and identify patterns in your business data."
-    },
-    {
       icon: TrendingUp,
-      title: "Real-time Insights",
-      description: "Instant access to key performance indicators and business metrics through interactive dashboards."
+      title: "Risk Assessment",
+      description: "AI-powered risk models that identify and quantify financial risks in real-time."
     },
     {
-      icon: Target,
-      title: "Goal Tracking",
-      description: "Monitor progress towards business objectives with automated alerts and performance scoring."
-    },
-    {
-      icon: Users,
-      title: "Customer Intelligence",
-      description: "Deep insights into customer behavior, preferences, and lifetime value analysis."
-    },
-    {
-      icon: Zap,
-      title: "Automated Reporting",
-      description: "AI-powered report generation that adapts to your business needs and schedule."
+      icon: BarChart3,
+      title: "Portfolio Optimization",
+      description: "Machine learning algorithms that optimize investment portfolios for maximum returns."
     },
     {
       icon: Shield,
-      title: "Data Security",
-      description: "Enterprise-grade security with role-based access control and data encryption."
+      title: "Fraud Detection",
+      description: "Advanced fraud detection systems that identify suspicious transactions and patterns."
+    },
+    {
+      icon: Brain,
+      title: "Market Prediction",
+      description: "Predictive analytics that forecast market trends and investment opportunities."
+    },
+    {
+      icon: Zap,
+      title: "Real-Time Trading",
+      description: "AI-powered trading systems that execute trades based on market analysis."
+    },
+    {
+      icon: DollarSign,
+      title: "Compliance Monitoring",
+      description: "Automated compliance tracking and regulatory reporting for financial institutions."
     }
   ];
 
   const benefits = [
-    "Increase revenue by 15-25% through data-driven decision making",
-    "Reduce operational costs by 20-30% with process optimization",
-    "Improve customer retention by 25-35% with predictive insights",
-    "Accelerate time-to-market by 40-50% with agile analytics",
-    "Enhance employee productivity by 30-40% with self-service analytics",
-    "Achieve 99.9% data accuracy with automated validation"
+    "Increase investment returns by 20-40% with AI optimization",
+    "Reduce risk exposure by 30-50% through predictive analytics",
+    "Cut operational costs by 25-40% with automation",
+    "Improve fraud detection accuracy by 90-95%",
+    "Enhance compliance efficiency by 60-80%",
+    "Achieve 24/7 market monitoring and analysis"
   ];
 
   const useCases = [
     {
-      industry: "Retail",
-      description: "Customer segmentation, inventory optimization, and demand forecasting",
-      metrics: ["Customer Lifetime Value", "Inventory Turnover", "Sales Conversion Rate"]
+      industry: "Investment Banking",
+      description: "Portfolio management, risk assessment, and market analysis",
+      metrics: ["Portfolio Performance", "Risk-Adjusted Returns", "Market Alpha"]
     },
     {
-      industry: "Healthcare",
-      description: "Patient outcome prediction, resource optimization, and risk assessment",
-      metrics: ["Patient Satisfaction", "Resource Utilization", "Risk Scores"]
+      industry: "Commercial Banking",
+      description: "Credit risk assessment, fraud detection, and compliance monitoring",
+      metrics: ["Credit Risk Score", "Fraud Detection Rate", "Compliance Rate"]
     },
     {
-      industry: "Manufacturing",
-      description: "Predictive maintenance, quality control, and supply chain optimization",
-      metrics: ["Equipment Uptime", "Quality Metrics", "Supply Chain Efficiency"]
+      industry: "Insurance",
+      description: "Risk modeling, claims analysis, and premium optimization",
+      metrics: ["Risk Assessment", "Claims Accuracy", "Premium Optimization"]
     },
     {
-      industry: "Financial Services",
-      description: "Fraud detection, credit risk assessment, and portfolio optimization",
-      metrics: ["Fraud Detection Rate", "Credit Risk Score", "Portfolio Performance"]
+      industry: "Fintech",
+      description: "Algorithmic trading, robo-advisory, and digital banking",
+      metrics: ["Trading Performance", "Customer Satisfaction", "Operational Efficiency"]
     }
   ];
 
   const pricing = [
     {
       name: "Starter",
-      price: "$2,500",
+      price: "$3,500",
       period: "/month",
-      description: "Perfect for small businesses getting started with AI analytics",
+      description: "Perfect for small financial institutions starting with AI analytics",
       features: [
-        "Up to 5 data sources",
-        "Basic predictive analytics",
-        "Standard dashboards",
-        "Email support",
-        "Monthly reports"
+        "Up to 1,000 transactions/month",
+        "Basic risk assessment",
+        "Fraud detection",
+        "Standard reporting",
+        "Email support"
       ]
     },
     {
       name: "Professional",
-      price: "$7,500",
+      price: "$10,000",
       period: "/month",
-      description: "Ideal for growing companies with advanced analytics needs",
+      description: "Ideal for growing financial organizations with advanced analytics needs",
       features: [
-        "Up to 20 data sources",
-        "Advanced ML algorithms",
-        "Custom dashboards",
+        "Up to 10,000 transactions/month",
+        "Advanced AI models",
+        "Real-time monitoring",
+        "Portfolio optimization",
         "Priority support",
-        "Real-time analytics",
-        "API access"
+        "Custom integrations"
       ],
       popular: true
     },
@@ -116,14 +114,14 @@ export default function AIBusinessIntelligence() {
       name: "Enterprise",
       price: "Custom",
       period: "",
-      description: "Tailored solutions for large organizations with complex requirements",
+      description: "Tailored solutions for large financial institutions with complex requirements",
       features: [
-        "Unlimited data sources",
-        "Custom ML models",
+        "Unlimited transactions",
+        "Custom AI models",
         "White-label solutions",
         "Dedicated support",
         "Advanced security",
-        "Custom integrations"
+        "API access"
       ]
     }
   ];
@@ -135,22 +133,22 @@ export default function AIBusinessIntelligence() {
         <div className="text-center mb-16">
           <div className="flex justify-center mb-6">
             <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
-              <Brain className="w-10 h-10 text-white" />
+              <TrendingUp className="w-10 h-10 text-white" />
             </div>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI Business Intelligence
+            AI Financial Analytics
           </h1>
           <p className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8">
-            Transform your business data into actionable insights with our advanced AI-powered business intelligence platform. 
-            Make data-driven decisions that drive growth and competitive advantage.
+            Transform your financial operations with intelligent AI that assesses risks, 
+            optimizes portfolios, and provides real-time insights for better decision-making.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
             >
-              Get Started Today
+              Start Free Trial
             </Link>
             <Link
               to="/request-quote"
@@ -164,7 +162,7 @@ export default function AIBusinessIntelligence() {
         {/* Features Grid */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Powerful Features for Modern Business
+            Advanced Financial Analytics Features
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => {
@@ -186,7 +184,7 @@ export default function AIBusinessIntelligence() {
         <div className="mb-20">
           <div className="bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-8">
             <h2 className="text-3xl font-bold text-white text-center mb-8">
-              Proven Business Impact
+              Proven Financial Results
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
@@ -202,7 +200,7 @@ export default function AIBusinessIntelligence() {
         {/* Use Cases */}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Industry Applications
+            Financial Industry Applications
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
@@ -275,11 +273,11 @@ export default function AIBusinessIntelligence() {
         <div className="text-center">
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 backdrop-blur-sm border border-zion-cyan/30 rounded-2xl p-8">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
+              Ready to Transform Your Financial Operations?
             </h2>
             <p className="text-zion-slate-light text-lg mb-6 max-w-2xl mx-auto">
-              Join hundreds of companies already using our AI Business Intelligence platform 
-              to make smarter decisions and drive growth.
+              Join hundreds of financial institutions already using our AI-powered analytics platform 
+              to optimize performance and reduce risks.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

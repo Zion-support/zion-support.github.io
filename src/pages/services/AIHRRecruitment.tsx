@@ -2,397 +2,300 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Users, 
-  Brain, 
+  Search, 
   Target, 
+  Brain, 
   Zap, 
-  BarChart3, 
-  Clock, 
-  CheckCircle, 
+  Shield, 
+  CheckCircle,
   ArrowRight,
-  Star,
-  Shield,
-  Mail,
-  MessageSquare,
-  Calendar,
-  FileText,
-  TrendingUp,
-  UserCheck,
-  UserPlus,
-  UserX,
-  Briefcase,
-  GraduationCap,
-  Heart,
+  Clock,
   DollarSign,
-  Graph
+  TrendingUp,
+  UserCheck
 } from 'lucide-react';
 
-const AIHRRecruitment: React.FC = () => {
+export default function AIHRRecruitment() {
   const features = [
     {
-      icon: Brain,
-      title: "AI-Powered Candidate Matching",
-      description: "Advanced algorithms that analyze skills, experience, and cultural fit to find the perfect candidates for your organization.",
-      benefits: ["Skill-based matching", "Cultural fit analysis", "Predictive success modeling"]
+      icon: Users,
+      title: "Smart Candidate Sourcing",
+      description: "AI-powered talent discovery that identifies and attracts top candidates across multiple platforms."
+    },
+    {
+      icon: Search,
+      title: "Intelligent Resume Parsing",
+      description: "Advanced NLP algorithms that extract key information and match candidates to job requirements."
     },
     {
       icon: Target,
-      title: "Intelligent Sourcing",
-      description: "Automated talent discovery across multiple platforms and databases to identify passive candidates and expand your talent pool.",
-      benefits: ["Multi-platform sourcing", "Passive candidate discovery", "Talent pipeline building"]
+      title: "Predictive Candidate Scoring",
+      description: "Machine learning models that predict candidate success and cultural fit based on multiple data points."
     },
     {
-      icon: BarChart3,
-      title: "Predictive Analytics",
-      description: "Data-driven insights that forecast hiring success, employee retention, and workforce planning needs.",
-      benefits: ["Hiring success prediction", "Retention forecasting", "Workforce planning"]
+      icon: Brain,
+      title: "Automated Interview Scheduling",
+      description: "Smart scheduling system that coordinates interviews across multiple stakeholders and time zones."
     },
     {
       icon: Zap,
-      title: "Automated Screening",
-      description: "Intelligent resume parsing and initial screening that saves time and ensures consistent evaluation criteria.",
-      benefits: ["Resume parsing", "Automated screening", "Bias reduction"]
-    }
-  ];
-
-  const services = [
-    {
-      title: "Talent Acquisition",
-      description: "End-to-end recruitment process automation from job posting to candidate onboarding.",
-      icon: UserPlus,
-      features: ["Job posting optimization", "Candidate sourcing", "Interview scheduling", "Offer management"]
+      title: "Bias-Free Screening",
+      description: "AI algorithms designed to eliminate unconscious bias and ensure fair candidate evaluation."
     },
     {
-      title: "Employee Retention",
-      description: "AI-driven insights to improve employee satisfaction and reduce turnover rates.",
-      icon: Heart,
-      features: ["Satisfaction monitoring", "Retention prediction", "Engagement strategies", "Exit interview analysis"]
-    },
-    {
-      title: "Performance Management",
-      description: "Continuous performance tracking and development planning powered by AI analytics.",
-      icon: TrendingUp,
-      features: ["Goal tracking", "Performance analytics", "Development planning", "Feedback systems"]
-    },
-    {
-      title: "Workforce Planning",
-      description: "Strategic workforce planning using predictive analytics and market intelligence.",
-      icon: Graph,
-      features: ["Demand forecasting", "Skill gap analysis", "Succession planning", "Market intelligence"]
+      icon: Shield,
+      title: "Compliance & Security",
+      description: "Enterprise-grade security with GDPR compliance and data protection measures."
     }
   ];
 
   const benefits = [
+    "Reduce time-to-hire by 40-60% with automated screening",
+    "Improve candidate quality by 30-50% with AI matching",
+    "Cut recruitment costs by 25-40% through automation",
+    "Increase diversity by 35-45% with bias-free screening",
+    "Enhance candidate experience with 24/7 engagement",
+    "Achieve 90%+ candidate satisfaction scores"
+  ];
+
+  const useCases = [
     {
-      title: "Reduce Time-to-Hire",
-      value: "60%",
-      description: "Faster candidate identification and screening processes"
+      industry: "Technology",
+      description: "Technical skill assessment, coding challenges, and culture fit evaluation",
+      metrics: ["Time-to-Hire", "Quality of Hire", "Retention Rate"]
     },
     {
-      title: "Improve Quality of Hire",
-      value: "45%",
-      description: "Better candidate matching and cultural fit assessment"
+      industry: "Healthcare",
+      description: "Clinical competency verification, license validation, and patient safety assessment",
+      metrics: ["Credential Verification", "Clinical Skills", "Patient Outcomes"]
     },
     {
-      title: "Lower Recruitment Costs",
-      value: "35%",
-      description: "Reduced manual processes and improved efficiency"
+      industry: "Finance",
+      description: "Regulatory compliance, background checks, and risk assessment",
+      metrics: ["Compliance Rate", "Background Check Speed", "Risk Score"]
     },
     {
-      title: "Increase Retention",
-      value: "40%",
-      description: "Better candidate selection and cultural alignment"
+      industry: "Manufacturing",
+      description: "Safety training verification, skill assessment, and operational readiness",
+      metrics: ["Safety Score", "Skill Proficiency", "Training Completion"]
     }
   ];
 
   const pricing = [
     {
       name: "Starter",
-      price: "$399",
+      price: "$2,000",
       period: "/month",
-      description: "Perfect for small businesses with basic HR needs",
+      description: "Perfect for small companies starting with AI recruitment",
       features: [
-        "AI candidate matching (up to 50 positions/month)",
-        "Basic resume parsing",
+        "Up to 50 job postings",
+        "Basic AI screening",
+        "Resume parsing",
         "Interview scheduling",
-        "Standard reporting",
         "Email support"
-      ],
-      popular: false
+      ]
     },
     {
       name: "Professional",
-      price: "$799",
+      price: "$6,000",
       period: "/month",
-      description: "Ideal for growing companies with comprehensive HR requirements",
+      description: "Ideal for growing companies with advanced recruitment needs",
       features: [
-        "Unlimited AI candidate matching",
-        "Advanced resume parsing",
-        "Multi-channel sourcing",
+        "Up to 200 job postings",
+        "Advanced AI matching",
         "Predictive analytics",
-        "Performance management",
-        "Priority support"
+        "Multi-channel sourcing",
+        "Priority support",
+        "Custom integrations"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,599",
-      period: "/month",
-      description: "Complete HR solution for large organizations",
+      price: "Custom",
+      period: "",
+      description: "Tailored solutions for large organizations with complex hiring requirements",
       features: [
+        "Unlimited job postings",
         "Custom AI models",
-        "Full HR suite integration",
-        "Advanced analytics & reporting",
-        "Dedicated account manager",
-        "Custom training & onboarding",
-        "24/7 phone support"
-      ],
-      popular: false
+        "White-label solutions",
+        "Dedicated support",
+        "Advanced security",
+        "API access"
+      ]
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
-              <Users className="w-4 h-4 mr-2" />
-              AI-Powered HR & Recruitment
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Revolutionize Your
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> HR & Recruitment</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your human resources and recruitment processes with AI-powered automation. 
-              Find the best talent faster, reduce costs, and build stronger teams with intelligent insights.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 transform hover:scale-105"
-              >
-                Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link
-                to="/demo"
-                className="inline-flex items-center px-8 py-4 rounded-lg border border-gray-600 text-gray-300 hover:text-white hover:border-gray-500 transition-all duration-200"
-              >
-                Schedule Demo
-              </Link>
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
+      <div className="container mx-auto px-4 py-12">
+        {/* Hero Section */}
+        <div className="text-center mb-16">
+          <div className="flex justify-center mb-6">
+            <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
+              <Users className="w-10 h-10 text-white" />
             </div>
           </div>
-          
-          {/* Key Metrics */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-16">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-400 mb-2">60%</div>
-              <div className="text-gray-400">Faster Hiring</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">45%</div>
-              <div className="text-gray-400">Better Hires</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-400 mb-2">35%</div>
-              <div className="text-gray-400">Cost Reduction</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">40%</div>
-              <div className="text-gray-400">Higher Retention</div>
-            </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            AI HR & Recruitment
+          </h1>
+          <p className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8">
+            Revolutionize your hiring process with intelligent AI that finds, screens, and matches 
+            the best candidates while eliminating bias and reducing time-to-hire.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+            >
+              Start Free Trial
+            </Link>
+            <Link
+              to="/request-quote"
+              className="bg-transparent border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+            >
+              Request Demo
+            </Link>
           </div>
         </div>
-      </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              AI-Powered Features That Transform HR
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI HR platform combines cutting-edge technology with human expertise to deliver 
-              exceptional results in talent acquisition and management.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-gray-800/50 rounded-xl p-8 border border-gray-700 hover:border-blue-500/50 transition-all duration-300">
-                <div className="flex items-center mb-6">
-                  <div className="p-3 rounded-lg bg-blue-500/20 mr-4">
-                    <feature.icon className="w-8 h-8 text-blue-400" />
+        {/* Features Grid */}
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Advanced HR & Recruitment Features
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => {
+              const Icon = feature.icon;
+              return (
+                <div key={index} className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-4">
+                    <Icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                  <p className="text-zion-slate-light">{feature.description}</p>
                 </div>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
-      </section>
 
-      {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive HR Solutions
+        {/* Benefits Section */}
+        <div className="mb-20">
+          <div className="bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-8">
+            <h2 className="text-3xl font-bold text-white text-center mb-8">
+              Proven Recruitment Results
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              From talent acquisition to employee retention, our AI platform covers every aspect of modern HR management.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index) => (
-              <div key={index} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500/50 transition-all duration-300 text-center">
-                <div className="p-4 rounded-lg bg-blue-500/20 inline-block mb-4">
-                  <service.icon className="w-8 h-8 text-blue-400" />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-3">
+                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
+                  <span className="text-zion-slate-light">{benefit}</span>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
-                <ul className="space-y-1 text-sm">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="text-gray-400">
-                      • {feature}
-                    </li>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Use Cases */}
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Industry Applications
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <div key={index} className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-2xl p-6">
+                <h3 className="text-2xl font-bold text-white mb-4">{useCase.industry}</h3>
+                <p className="text-zion-slate-light mb-4">{useCase.description}</p>
+                <div className="space-y-2">
+                  <h4 className="font-semibold text-zion-cyan">Key Metrics:</h4>
+                  {useCase.metrics.map((metric, metricIndex) => (
+                    <div key={metricIndex} className="flex items-center space-x-2">
+                      <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
+                      <span className="text-zion-slate-light text-sm">{metric}</span>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             ))}
           </div>
         </div>
-      </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Measurable Results
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              See the real impact of AI-powered HR on your organization's bottom line and team performance.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 text-center">
-                <div className="text-4xl font-bold text-blue-400 mb-2">{benefit.value}</div>
-                <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
-                <p className="text-gray-300 text-sm">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Choose Your Plan
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Flexible pricing options designed to scale with your organization's HR needs and growth.
-            </p>
-          </div>
-          
+        {/* Pricing */}
+        <div className="mb-20">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Transparent Pricing
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-              <div key={index} className={`relative bg-gray-800/50 rounded-xl p-8 border transition-all duration-300 ${
-                plan.popular 
-                  ? 'border-blue-500/50 scale-105' 
-                  : 'border-gray-700 hover:border-gray-600'
+              <div key={index} className={`relative bg-zion-blue-dark/50 backdrop-blur-sm border rounded-2xl p-6 ${
+                plan.popular ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' : 'border-zion-cyan/20'
               }`}>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
                 )}
-                
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                    <span className="text-4xl font-bold text-zion-cyan">{plan.price}</span>
+                    <span className="text-zion-slate-light ml-1">{plan.period}</span>
                   </div>
-                  <p className="text-gray-300 mt-2">{plan.description}</p>
+                  <p className="text-zion-slate-light mt-2">{plan.description}</p>
                 </div>
-                
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
+                <ul className="space-y-3 mb-6">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
+                      <span className="text-zion-slate-light">{feature}</span>
                     </li>
                   ))}
                 </ul>
-                
                 <Link
                   to="/contact"
-                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
+                  className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600'
-                      : 'border border-gray-600 text-gray-300 hover:text-white hover:border-gray-500'
+                      ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:from-zion-cyan-light hover:to-zion-purple-light'
+                      : 'bg-transparent border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white'
                   }`}
                 >
                   Get Started
-                  <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </div>
             ))}
           </div>
         </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-500/10 to-cyan-500/10">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your HR?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join forward-thinking organizations that have already revolutionized their HR processes with AI. 
-            Start building better teams today with intelligent recruitment and management.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 transform hover:scale-105"
-            >
-              Get Started
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-            <Link
-              to="/demo"
-              className="inline-flex items-center px-8 py-4 rounded-lg border border-gray-600 text-gray-300 hover:text-white hover:border-gray-500 transition-all duration-200"
-            >
-              Schedule Demo
-            </Link>
+        {/* CTA Section */}
+        <div className="text-center">
+          <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 backdrop-blur-sm border border-zion-cyan/30 rounded-2xl p-8">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Transform Your Hiring?
+            </h2>
+            <p className="text-zion-slate-light text-lg mb-6 max-w-2xl mx-auto">
+              Join hundreds of companies already using our AI-powered recruitment platform 
+              to find and hire the best talent faster and more efficiently.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+              >
+                Start Free Trial
+              </Link>
+              <Link
+                to="/request-quote"
+                className="bg-transparent border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+              >
+                Schedule Consultation
+              </Link>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
-};
-
-export default AIHRRecruitment;
+}
