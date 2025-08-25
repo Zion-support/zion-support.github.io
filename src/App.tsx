@@ -211,7 +211,7 @@ const App = () => {
                 <SonnerToaster />
                 
                 {/* Enhanced Accessibility Controls */}
-                <EnhancedAccessibility position="bottom-right" />
+                <EnhancedAccessibility />
                 
                 {/* AI Chatbot - Always Available */}
                 <AIChatbot />
