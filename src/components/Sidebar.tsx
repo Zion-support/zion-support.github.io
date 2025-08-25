@@ -50,6 +50,17 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       ]
     },
     {
+      title: 'AI Solutions',
+      items: [
+        { name: 'AI Autonomous Data', path: '/ai-autonomous-data', icon: Briefcase },
+        { name: 'AI Autonomous Decision Engine', path: '/ai-autonomous-decision-engine', icon: Briefcase },
+        { name: 'AI Autonomous Research', path: '/ai-autonomous-research-assistant', icon: Briefcase },
+        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Briefcase },
+        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Briefcase },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', icon: Briefcase }
+      ]
+    },
+    {
       title: 'Company',
       items: [
         { name: 'About Us', path: '/about', icon: Users },

@@ -1,245 +1,230 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Server, Shield, BarChart3, Zap, Users, Globe, Database, Settings } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { 
+  ServerIcon, 
+  ShieldCheckIcon, 
+  ChartBarIcon, 
+  CogIcon,
+  ClockIcon,
+  CurrencyDollarIcon,
+  GlobeAltIcon,
+  UserGroupIcon
+} from '@heroicons/react/24/outline';
 
 const AIPoweredITAssetManagement: React.FC = () => {
   const features = [
     {
-      icon: Server,
+      icon: ServerIcon,
       title: "Intelligent Asset Discovery",
-      description: "Automated discovery and mapping of all IT assets across your infrastructure."
+      description: "AI-powered automatic discovery and classification of all IT assets across your infrastructure."
     },
     {
-      icon: Shield,
-      title: "Security Monitoring",
-      description: "Real-time security threat detection and vulnerability assessment for all assets."
+      icon: ShieldCheckIcon,
+      title: "Security & Compliance",
+      description: "Advanced security monitoring and automated compliance reporting for all IT assets."
     },
     {
-      icon: BarChart3,
-      title: "Performance Analytics",
-      description: "Advanced analytics and reporting on asset performance, utilization, and health."
+      icon: ChartBarIcon,
+      title: "Predictive Analytics",
+      description: "AI-driven insights for asset lifecycle management and optimization recommendations."
     },
     {
-      icon: Zap,
-      title: "Predictive Maintenance",
-      description: "AI-powered predictive maintenance to prevent downtime and optimize asset lifecycle."
+      icon: CogIcon,
+      title: "Automated Maintenance",
+      description: "Smart scheduling and automated maintenance tasks based on asset health and usage patterns."
     },
     {
-      icon: Users,
-      title: "User Access Management",
-      description: "Comprehensive user access control and permission management across all assets."
+      icon: ClockIcon,
+      title: "Real-time Monitoring",
+      description: "24/7 monitoring of asset performance, health, and security status with instant alerts."
     },
     {
-      icon: Globe,
-      title: "Multi-Cloud Support",
-      description: "Unified management of assets across on-premises, cloud, and hybrid environments."
-    }
-  ];
-
-  const assetTypes = [
-    {
-      title: "Hardware Assets",
-      description: "Servers, workstations, networking equipment, and peripheral devices"
-    },
-    {
-      title: "Software Assets",
-      description: "Applications, operating systems, licenses, and development tools"
-    },
-    {
-      title: "Cloud Resources",
-      description: "Virtual machines, storage, databases, and cloud services"
-    },
-    {
-      title: "Network Infrastructure",
-      description: "Switches, routers, firewalls, and network security devices"
-    },
-    {
-      title: "Data Assets",
-      description: "Databases, file systems, backups, and data warehouses"
-    },
-    {
-      title: "Security Assets",
-      description: "Security tools, certificates, keys, and compliance systems"
+      icon: CurrencyDollarIcon,
+      title: "Cost Optimization",
+      description: "AI-powered cost analysis and optimization recommendations for IT asset management."
     }
   ];
 
   const benefits = [
-    {
-      metric: "100%",
-      label: "Asset Visibility",
-      description: "Complete visibility into all IT assets across your organization"
-    },
-    {
-      metric: "60%",
-      label: "Cost Reduction",
-      description: "Significant cost savings through optimized asset utilization"
-    },
-    {
-      metric: "90%",
-      label: "Security Improvement",
-      description: "Enhanced security posture and threat detection capabilities"
-    },
-    {
-      metric: "24/7",
-      label: "Monitoring",
-      description: "Continuous monitoring and alerting for all critical assets"
-    }
+    "Reduce IT asset costs by up to 35%",
+    "Improve asset utilization by 50%",
+    "Automate 80% of maintenance tasks",
+    "Real-time security threat detection",
+    "Predictive failure prevention",
+    "Compliance automation"
+  ];
+
+  const assetTypes = [
+    "Hardware Assets",
+    "Software Licenses",
+    "Cloud Resources",
+    "Network Equipment",
+    "Security Devices",
+    "Mobile Devices",
+    "Data Centers",
+    "Virtual Machines"
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 quantum-particles"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-cyan-400 text-sm font-medium mb-6">
-              <Server className="w-4 h-4 mr-2" />
-              AI-Powered IT Management
-            </div>
-            <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
-              AI-Powered IT Asset Management
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+        <div className="relative mx-auto max-w-7xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+              AI-Powered IT Asset
+              <span className="block bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+                Management
+              </span>
             </h1>
-            <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Revolutionize your IT infrastructure management with intelligent asset tracking, security monitoring, and predictive maintenance powered by artificial intelligence.
+            <p className="mt-6 text-xl text-gray-300 max-w-3xl mx-auto">
+              Transform your IT infrastructure with intelligent asset management. 
+              Optimize costs, enhance security, and maximize efficiency.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30"
-              >
-                Get Started
-              </Link>
-              <button className="px-8 py-4 border border-cyan-400/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">
-                Request Demo
+            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="px-8 py-3 border border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300">
+                Schedule Demo
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your IT Asset Management
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
+              Intelligent Capabilities
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience unprecedented visibility, control, and optimization of your IT infrastructure with AI-powered asset management.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Discover how AI transforms traditional IT asset management into a smart, proactive system.
             </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
                 key={index}
-                className="text-center p-6 bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-cyan-500/30"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-green-400/50 transition-all duration-300"
               >
-                <div className="text-4xl font-bold text-cyan-400 mb-2">
-                  {benefit.metric}
-                </div>
-                <div className="text-lg font-semibold text-white mb-2">
-                  {benefit.label}
-                </div>
-                <p className="text-gray-300 text-sm">
-                  {benefit.description}
-                </p>
-              </div>
+                <feature.icon className="h-12 w-12 text-green-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black/50 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Features
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="mx-auto max-w-7xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
+              Measurable Impact
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered platform provides comprehensive IT asset management capabilities designed for modern enterprises.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              See the real results of AI-powered IT asset management on your organization.
             </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <div
-                  key={index}
-                  className="p-6 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300">
-                    {feature.description}
-                  </p>
-                </div>
-              );
-            })}
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="flex items-center space-x-3 bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10"
+              >
+                <ChartBarIcon className="h-6 w-6 text-green-400 flex-shrink-0" />
+                <span className="text-white font-medium">{benefit}</span>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Asset Types Section */}
-      <section className="py-20 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Asset Coverage
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
+              Comprehensive Coverage
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Manage all types of IT assets from a single, intelligent platform with unified visibility and control.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Manage all types of IT assets from a single, intelligent platform.
             </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {assetTypes.map((assetType, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="p-8 bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-green-400/50 transition-all duration-300 text-center"
               >
-                <h3 className="text-2xl font-semibold text-cyan-400 mb-4">
-                  {assetType.title}
-                </h3>
-                <p className="text-gray-300 text-lg">
-                  {assetType.description}
-                </p>
-              </div>
+                <ServerIcon className="h-8 w-8 text-green-400 mx-auto mb-3" />
+                <span className="text-white font-medium">{assetType}</span>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 text-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Optimize Your IT Assets?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join leading organizations that trust our AI-powered platform for comprehensive IT asset management.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105"
-            >
-              Start Free Trial
-            </Link>
-            <Link
-              to="/pricing"
-              className="px-8 py-4 border border-cyan-400/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300"
-            >
-              View Pricing
-            </Link>
-          </div>
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-3xl font-bold text-white sm:text-4xl mb-6">
+              Ready to Optimize Your IT Assets?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join the AI revolution in IT asset management and transform your infrastructure today.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105">
+                Get Started Now
+              </button>
+              <button className="px-8 py-4 border border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
