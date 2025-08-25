@@ -25,7 +25,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          // Vendor chunks
+          // Core React chunks
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
           'ui-vendor': ['@radix-ui/react-accordion', '@radix-ui/react-alert-dialog', '@radix-ui/react-aspect-ratio', '@radix-ui/react-avatar', '@radix-ui/react-checkbox', '@radix-ui/react-context-menu', '@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-label', '@radix-ui/react-popover', '@radix-ui/react-progress', '@radix-ui/react-radio-group', '@radix-ui/react-scroll-area', '@radix-ui/react-select', '@radix-ui/react-separator', '@radix-ui/react-slider', '@radix-ui/react-slot', '@radix-ui/react-switch', '@radix-ui/react-tabs', '@radix-ui/react-toast', '@radix-ui/react-tooltip'],
           'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
@@ -69,7 +69,18 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        passes: 2,
       },
+      mangle: {
+        toplevel: true,
+      },
+    },
+    // Enable CSS code splitting
+    cssCodeSplit: true,
+    // Optimize dependencies
+    commonjsOptions: {
+      include: [/node_modules/],
     },
   },
   optimizeDeps: {
@@ -110,11 +121,17 @@ export default defineConfig({
       'vaul',
       'cmdk',
     ],
+    // Force pre-bundling for better performance
+    force: true,
   },
   server: {
     port: 3000,
     host: true,
     open: true,
+    // Enable HMR optimization
+    hmr: {
+      overlay: false,
+    },
   },
   preview: {
     port: 4173,
@@ -125,5 +142,19 @@ export default defineConfig({
   },
   esbuild: {
     logOverride: { 'this-is-undefined-in-esm': 'silent' },
+    // Enable tree shaking
+    treeShaking: true,
+    // Optimize JSX
+    jsx: 'automatic',
+  },
+  // Enable experimental features for better performance
+  experimental: {
+    renderBuiltUrl(filename, { hostType }) {
+      if (hostType === 'js') {
+        return { js: `/${filename}` }
+      } else {
+        return { relative: true }
+      }
+    },
   },
 })
