@@ -4,108 +4,90 @@ import { cn } from '@/lib/utils';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
-  variant?: 'default' | 'pulse' | 'dots' | 'bars';
+  variant?: 'default' | 'pulse' | 'dots' | 'bars' | 'quantum';
   className?: string;
   text?: string;
-  ariaLabel?: string;
+  showText?: boolean;
 }
+
+const sizeClasses = {
+  sm: 'w-4 h-4',
+  md: 'w-6 h-6',
+  lg: 'w-8 h-8',
+  xl: 'w-12 h-12'
+};
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
   variant = 'default',
-  className,
-  text,
-  ariaLabel = 'Loading...'
+  className = '',
+  text = 'Loading...',
+  showText = false
 }) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12',
-    xl: 'w-16 h-16'
-  };
-
-  const textSizes = {
-    sm: 'text-sm',
-    md: 'text-base',
-    lg: 'text-lg',
-    xl: 'text-xl'
-  };
-
   const renderSpinner = () => {
     switch (variant) {
       case 'pulse':
         return (
-          <div className={cn('relative', sizeClasses[size])}>
-            <motion.div
-              className="absolute inset-0 rounded-full bg-gradient-to-r from-zion-cyan to-zion-purple"
-              animate={{
-                scale: [1, 1.2, 1],
-                opacity: [0.5, 1, 0.5]
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            />
-            <motion.div
-              className="absolute inset-1 rounded-full bg-zion-blue-dark"
-              animate={{
-                scale: [1, 0.8, 1]
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            />
+          <div className={cn('flex space-x-1', className)}>
+            <div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce"></div>
+            <div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+            <div className="w-2 h-2 bg-zion-cyan rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
           </div>
         );
 
       case 'dots':
         return (
-          <div className="flex space-x-2">
-            {[0, 1, 2].map((i) => (
-              <motion.div
-                key={i}
-                className={cn('rounded-full bg-zion-cyan', size === 'sm' ? 'w-2 h-2' : 'w-3 h-3')}
-                animate={{
-                  y: [0, -10, 0],
-                  opacity: [0.3, 1, 0.3]
-                }}
-                transition={{
-                  duration: 0.6,
-                  repeat: Infinity,
-                  delay: i * 0.2,
-                  ease: "easeInOut"
-                }}
-              />
-            ))}
+          <div className={cn('flex space-x-1', className)}>
+            <motion.div
+              className="w-2 h-2 bg-zion-cyan rounded-full"
+              animate={{ scale: [1, 1.5, 1] }}
+              transition={{ duration: 0.6, repeat: Infinity, delay: 0 }}
+            />
+            <motion.div
+              className="w-2 h-2 bg-zion-cyan rounded-full"
+              animate={{ scale: [1, 1.5, 1] }}
+              transition={{ duration: 0.6, repeat: Infinity, delay: 0.2 }}
+            />
+            <motion.div
+              className="w-2 h-2 bg-zion-cyan rounded-full"
+              animate={{ scale: [1, 1.5, 1] }}
+              transition={{ duration: 0.6, repeat: Infinity, delay: 0.4 }}
+            />
           </div>
         );
 
       case 'bars':
         return (
-          <div className="flex space-x-1">
+          <div className={cn('flex space-x-1', className)}>
             {[0, 1, 2, 3].map((i) => (
               <motion.div
                 key={i}
-                className={cn(
-                  'bg-gradient-to-t from-zion-cyan to-zion-purple rounded-sm',
-                  size === 'sm' ? 'w-1 h-4' : size === 'md' ? 'w-1.5 h-6' : 'w-2 h-8'
-                )}
-                animate={{
-                  scaleY: [1, 1.5, 1],
-                  opacity: [0.5, 1, 0.5]
-                }}
-                transition={{
-                  duration: 0.8,
-                  repeat: Infinity,
-                  delay: i * 0.1,
-                  ease: "easeInOut"
-                }}
+                className="w-1 bg-zion-cyan"
+                animate={{ height: ['20px', '40px', '20px'] }}
+                transition={{ duration: 0.6, repeat: Infinity, delay: i * 0.1 }}
               />
             ))}
+          </div>
+        );
+
+      case 'quantum':
+        return (
+          <div className={cn('relative', sizeClasses[size], className)}>
+            <motion.div
+              className="absolute inset-0 border-4 border-zion-cyan/30 rounded-full"
+              animate={{ rotate: 360 }}
+              transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
+            />
+            <motion.div
+              className="absolute inset-0 border-4 border-transparent border-t-zion-cyan rounded-full"
+              animate={{ rotate: -360 }}
+              transition={{ duration: 1.5, repeat: Infinity, ease: 'linear' }}
+            />
+            <motion.div
+              className="absolute inset-2 bg-zion-cyan/20 rounded-full"
+              animate={{ scale: [1, 1.2, 1] }}
+              transition={{ duration: 1, repeat: Infinity }}
+            />
           </div>
         );
 
@@ -113,30 +95,23 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         return (
           <motion.div
             className={cn(
-              'border-2 border-zion-cyan/20 border-t-zion-cyan rounded-full',
-              sizeClasses[size]
+              'border-4 border-zion-cyan/30 border-t-zion-cyan rounded-full',
+              sizeClasses[size],
+              className
             )}
             animate={{ rotate: 360 }}
-            transition={{
-              duration: 1,
-              repeat: Infinity,
-              ease: "linear"
-            }}
+            transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
           />
         );
     }
   };
 
   return (
-    <div 
-      className={cn('flex flex-col items-center justify-center', className)}
-      role="status"
-      aria-label={ariaLabel}
-    >
+    <div className="flex flex-col items-center justify-center space-y-3">
       {renderSpinner()}
-      {text && (
+      {showText && (
         <motion.p
-          className={cn('mt-4 text-zion-slate-light font-medium', textSizes[size])}
+          className="text-zion-slate-light text-sm font-medium"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
@@ -144,38 +119,56 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           {text}
         </motion.p>
       )}
-      <span className="sr-only">{ariaLabel}</span>
     </div>
   );
 };
 
-// Full page loading component
-export const FullPageLoader: React.FC<{ text?: string }> = ({ text = 'Loading...' }) => {
+// Full screen loading overlay
+export const LoadingOverlay: React.FC<{
+  isVisible: boolean;
+  text?: string;
+  variant?: LoadingSpinnerProps['variant'];
+  className?: string;
+}> = ({ isVisible, text = 'Loading...', variant = 'quantum', className = '' }) => {
+  if (!isVisible) return null;
+
   return (
-    <div className="fixed inset-0 bg-zion-blue-dark flex items-center justify-center z-50">
-      <LoadingSpinner size="xl" variant="pulse" text={text} />
-    </div>
+    <motion.div
+      className={cn(
+        'fixed inset-0 bg-zion-blue-dark/95 backdrop-blur-md z-50 flex items-center justify-center',
+        className
+      )}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <LoadingSpinner
+        size="xl"
+        variant={variant}
+        text={text}
+        showText={true}
+      />
+    </motion.div>
   );
 };
 
 // Inline loading component
-export const InlineLoader: React.FC<{ size?: 'sm' | 'md'; className?: string }> = ({ 
-  size = 'sm', 
-  className 
-}) => {
-  return (
-    <div className={cn('inline-flex items-center', className)}>
-      <LoadingSpinner size={size} variant="dots" />
-    </div>
-  );
-};
+export const InlineLoader: React.FC<{
+  size?: LoadingSpinnerProps['size'];
+  variant?: LoadingSpinnerProps['variant'];
+  className?: string;
+}> = ({ size = 'sm', variant = 'default', className = '' }) => (
+  <div className={cn('inline-flex items-center', className)}>
+    <LoadingSpinner size={size} variant={variant} />
+  </div>
+);
 
 // Button loading state
-export const ButtonLoader: React.FC<{ size?: 'sm' | 'md' }> = ({ size = 'sm' }) => {
-  return (
-    <div className="flex items-center space-x-2">
-      <LoadingSpinner size={size} variant="default" />
-      <span>Loading...</span>
-    </div>
-  );
-};
+export const ButtonLoader: React.FC<{
+  size?: LoadingSpinnerProps['size'];
+  className?: string;
+}> = ({ size = 'sm', className = '' }) => (
+  <div className={cn('inline-flex items-center', className)}>
+    <LoadingSpinner size={size} variant="default" />
+  </div>
+);
