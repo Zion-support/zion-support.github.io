@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake } from 'lucide-react';
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Eye } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 interface SidebarProps {
@@ -29,20 +29,42 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       ]
     },
     {
-      title: 'Services',
+      title: 'AI & Autonomous Systems',
       items: [
         { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
         { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Briefcase },
         { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Briefcase },
         { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Briefcase },
         { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Briefcase },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Shield },
-        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Briefcase },
+        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe }
+      ]
+    },
+    {
+      title: '5G & Network Solutions',
+      items: [
         { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Briefcase },
+        { name: '5G Enterprise Network', path: '/5g-enterprise-network', icon: Briefcase },
+        { name: '5G Network Optimization', path: '/5g-network-optimization', icon: Briefcase },
+        { name: '5G Private Network Solutions', path: '/5g-private-network-solutions', icon: Briefcase },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Briefcase },
+        { name: 'Cloud DevOps', path: '/cloud-devops', icon: Briefcase }
+      ]
+    },
+    {
+      title: 'Cybersecurity & Compliance',
+      items: [
+        { name: 'Cybersecurity Services', path: '/services/cybersecurity', icon: Shield },
+        { name: 'Advanced Cybersecurity Suite', path: '/advanced-cybersecurity-suite', icon: Shield },
+        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Shield },
+        { name: 'Accessibility Auditor', path: '/accessibility-auditor', icon: Eye }
+      ]
+    },
+    {
+      title: 'Other Services',
+      items: [
         { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
-        { name: 'Emerging Technology', path: '/emerging-tech', icon: Globe }
+        { name: 'Emerging Technology', path: '/emerging-tech', icon: Globe },
+        { name: 'Industry Solutions', path: '/services/industry-solutions', icon: Globe }
       ]
     },
     {

@@ -32,7 +32,9 @@ import {
   Cloud,
   DollarSign,
   ShoppingCart,
-  Heart
+  Heart,
+  CheckCircle,
+  FileText
 } from 'lucide-react';
 
 export function Header() {
@@ -80,6 +82,13 @@ export function Header() {
       hasDropdown: true
     },
     { 
+      path: '/5g-enterprise-solutions', 
+      label: '5G Solutions', 
+      icon: '📡',
+      description: '5G network infrastructure and solutions',
+      hasDropdown: true
+    },
+    { 
       path: '/pricing', 
       label: 'Pricing', 
       icon: '💰',
@@ -120,6 +129,7 @@ export function Header() {
       services: [
         { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', description: 'Advanced autonomous AI systems', icon: Brain },
         { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', description: 'AI-powered research automation', icon: Brain },
+        { name: 'Advanced Research Automation', path: '/advanced-research-automation', description: 'Intelligent research automation', icon: Brain },
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', description: 'Advanced analytics and insights', icon: BarChart3 },
         { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', description: 'Smart marketing optimization', icon: Target },
         { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', description: 'Intelligent talent management', icon: Users },
@@ -156,10 +166,23 @@ export function Header() {
       color: 'from-red-500 to-pink-500',
       services: [
         { name: 'Cybersecurity Services', path: '/services/cybersecurity', description: 'Complete security solutions', icon: Shield },
+        { name: 'Advanced Cybersecurity Suite', path: '/advanced-cybersecurity-suite', description: 'Enterprise-grade security suite', icon: Shield },
         { name: 'SOC2 Compliance Automation', path: '/soc2-compliance-automation', description: 'Automated compliance management', icon: Lock },
         { name: 'Security Assessment', path: '/services/security-assessment', description: 'Security audit and testing', icon: Shield },
         { name: 'Compliance & Audit', path: '/services/compliance-audit', description: 'Regulatory compliance support', icon: Lock },
         { name: 'Threat Detection', path: '/services/threat-detection', description: 'Real-time security monitoring', icon: Shield }
+      ]
+    },
+    {
+      title: '5G Network Solutions',
+      icon: Network,
+      description: 'Advanced 5G network infrastructure and optimization',
+      color: 'from-cyan-500 to-blue-500',
+      services: [
+        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', description: 'High-speed 5G connectivity', icon: Network },
+        { name: '5G Enterprise Network', path: '/5g-enterprise-network', description: 'Enterprise 5G network infrastructure', icon: Network },
+        { name: '5G Network Optimization', path: '/5g-network-optimization', description: 'Network performance optimization', icon: Network },
+        { name: '5G Private Network Solutions', path: '/5g-private-network-solutions', description: 'Secure private 5G networks', icon: Lock }
       ]
     },
     {
@@ -170,11 +193,22 @@ export function Header() {
       services: [
         { name: 'Cloud DevOps', path: '/cloud-devops', description: 'Cloud development and operations', icon: Cpu },
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', description: 'Complete IT infrastructure solutions', icon: Network },
-        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', description: 'High-speed 5G connectivity', icon: Network },
         { name: 'Cloud Migration', path: '/services/cloud-migration', description: 'Seamless cloud transition', icon: Cloud },
         { name: 'Network Infrastructure', path: '/services/network-infrastructure', description: 'Robust network solutions', icon: Network },
         { name: 'Managed IT Services', path: '/services/managed-it-services', description: '24/7 IT support', icon: Clock },
         { name: 'DevOps Automation', path: '/services/devops-automation', description: 'Streamlined development', icon: Code }
+      ]
+    },
+    {
+      title: 'Accessibility & Compliance',
+      icon: Eye,
+      description: 'Digital accessibility and compliance solutions',
+      color: 'from-green-500 to-emerald-500',
+      services: [
+        { name: 'Accessibility Auditor', path: '/accessibility-auditor', description: 'Comprehensive accessibility auditing', icon: Eye },
+        { name: 'WCAG Compliance', path: '/services/wcag-compliance', description: 'Web accessibility compliance', icon: CheckCircle },
+        { name: 'Accessibility Testing', path: '/services/accessibility-testing', description: 'User experience accessibility testing', icon: Users },
+        { name: 'Compliance Reporting', path: '/services/compliance-reporting', description: 'Detailed compliance documentation', icon: FileText }
       ]
     },
     {

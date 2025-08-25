@@ -45,14 +45,25 @@ export function Footer() {
         { label: "Quantum Technology", path: "/services/quantum-technology" },
         { label: "IT Infrastructure", path: "/services/it-infrastructure" },
         { label: "Micro SAAS Solutions", path: "/services/micro-saas-solutions" },
-        { label: "Cybersecurity", path: "/services/cybersecurity" },
-        { label: "SOC2 Compliance Automation", path: "/soc2-compliance-automation" },
         { label: "Industry Solutions", path: "/services/industry-solutions" },
         { label: "AI & Machine Learning", path: "/services#ai-ml" },
-        { label: "Cloud & Infrastructure", path: "/services#cloud" },
-        { label: "5G Enterprise Solutions", path: "/5g-enterprise-solutions" },
         { label: "Blockchain Solutions", path: "/services#blockchain" },
         { label: "IoT & Edge Computing", path: "/services#iot" }
+      ]
+    },
+    {
+      title: "5G & Network Solutions",
+      icon: Network,
+      color: "from-cyan-500 to-blue-500",
+      links: [
+        { label: "5G Enterprise Solutions", path: "/5g-enterprise-solutions" },
+        { label: "5G Enterprise Network", path: "/5g-enterprise-network" },
+        { label: "5G Network Optimization", path: "/5g-network-optimization" },
+        { label: "5G Private Network Solutions", path: "/5g-private-network-solutions" },
+        { label: "Cloud & Infrastructure", path: "/services#cloud" },
+        { label: "Network Infrastructure", path: "/services/network-infrastructure" },
+        { label: "Cloud DevOps", path: "/cloud-devops" },
+        { label: "IT Infrastructure", path: "/services/it-infrastructure" }
       ]
     },
     {
@@ -70,6 +81,21 @@ export function Footer() {
         { label: "Marketing Automation", path: "/services/ai-marketing" },
         { label: "HR & Recruitment", path: "/services/ai-hr" },
         { label: "Legal Tech", path: "/services/ai-legal" }
+      ]
+    },
+    {
+      title: "Cybersecurity & Compliance",
+      icon: Shield,
+      color: "from-red-500 to-pink-500",
+      links: [
+        { label: "Cybersecurity Services", path: "/services/cybersecurity" },
+        { label: "Advanced Cybersecurity Suite", path: "/advanced-cybersecurity-suite" },
+        { label: "SOC2 Compliance Automation", path: "/soc2-compliance-automation" },
+        { label: "Security Assessment", path: "/services/security-assessment" },
+        { label: "Threat Detection", path: "/services/threat-detection" },
+        { label: "Compliance & Audit", path: "/services/compliance-audit" },
+        { label: "Accessibility Auditor", path: "/accessibility-auditor" },
+        { label: "WCAG Compliance", path: "/services/wcag-compliance" }
       ]
     },
     {
