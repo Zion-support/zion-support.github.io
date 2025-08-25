@@ -58,6 +58,12 @@ const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 const NewServices = lazy(() => import('./pages/NewServices'));
 
+// Additional missing pages to fix broken links
+const AccessibilityAuditor = lazy(() => import('./pages/accessibility-auditor'));
+const AdvancedCybersecuritySuite = lazy(() => import('./pages/advanced-cybersecurity-suite'));
+const AdvancedResearchAutomation = lazy(() => import('./pages/advanced-research-automation'));
+const AffiliateAttributionHub = lazy(() => import('./pages/affiliate-attribution-hub'));
+
 // Company information pages
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
@@ -304,6 +310,26 @@ const App: React.FC = () => {
                       <Route path="/research-development" element={<EmergingTech />} />
                       <Route path="/enterprise-it" element={<ITInfrastructure />} />
                       <Route path="/micro-saas" element={<MicroSAASSolutions />} />
+                      <Route path="/webinars" element={<Webinars />} />
+                      <Route path="/white-papers" element={<WhitePapers />} />
+
+                      {/* Additional missing pages to fix broken links */}
+                      <Route path="/privacy" element={<Privacy />} />
+                      <Route path="/terms" element={<Terms />} />
+                      <Route path="/cookies" element={<Cookies />} />
+                      <Route path="/faq" element={<FAQ />} />
+                      <Route path="/events" element={<Events />} />
+                      <Route path="/testimonials" element={<Testimonials />} />
+                      <Route path="/support" element={<Support />} />
+                      <Route path="/docs" element={<Docs />} />
+                      <Route path="/marketplace" element={<Marketplace />} />
+                      <Route path="/community" element={<Community />} />
+                      
+                      {/* New pages to fix broken links */}
+                      <Route path="/accessibility-auditor" element={<AccessibilityAuditor />} />
+                      <Route path="/advanced-cybersecurity-suite" element={<AdvancedCybersecuritySuite />} />
+                      <Route path="/advanced-research-automation" element={<AdvancedResearchAutomation />} />
+                      <Route path="/affiliate-attribution-hub" element={<AffiliateAttributionHub />} />
                     </Routes>
                   </Suspense>
                 </main>

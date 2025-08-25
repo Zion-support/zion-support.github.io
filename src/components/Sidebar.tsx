@@ -43,6 +43,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       title: 'AI & Micro SAAS Services',
       icon: Brain,
       items: [
+<<<<<<< HEAD
         { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain, description: 'Intelligent automation solutions' },
         { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Brain, description: 'Autonomous research platform' },
         { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain, description: 'Quantum AI training' },
@@ -55,12 +56,38 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         { name: 'AI HR Analytics Suite', path: '/services/ai-hr-analytics-suite', icon: Users, description: 'Employee performance insights' },
         { name: 'AI Financial Analytics', path: '/services/ai-powered-financial-analytics', icon: Briefcase, description: 'Real-time market insights' },
         { name: 'AI Marketing Orchestrator', path: '/services/autonomous-marketing-orchestrator', icon: Rocket, description: 'AI-driven campaign optimization' }
+=======
+        { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
+        { name: 'AI Workflow Automation', path: '/services/ai-workflow-automation', icon: Brain },
+        { name: 'AI Customer Intelligence', path: '/services/ai-customer-intelligence', icon: Users },
+        { name: 'AI Predictive Analytics', path: '/services/ai-predictive-analytics', icon: BarChart3 },
+        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Brain },
+        { name: 'Advanced Research Automation', path: '/advanced-research-automation', icon: Brain },
+        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Brain },
+        { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Rocket },
+        { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Database },
+        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
+        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Target },
+        { name: 'Affiliate Attribution Hub', path: '/affiliate-attribution-hub', icon: BarChart3 },
+        { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', icon: Users },
+        { name: 'AI Legal Tech', path: '/services/ai-legal-tech', icon: Shield },
+        { name: 'Quantum-Secure Cloud', path: '/services/quantum-secure-cloud', icon: Shield },
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
+        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Shield },
+        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
+        { name: 'Accessibility Auditor', path: '/accessibility-auditor', icon: Eye },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Cpu },
+        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Network },
+        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Code },
+        { name: 'Emerging Technology', path: '/emerging-tech', icon: Rocket }
+>>>>>>> origin/cursor/website-audit-and-enhancement-acb8
       ]
     },
     {
       title: 'Cybersecurity & Quantum',
       icon: Shield,
       items: [
+<<<<<<< HEAD
         { name: 'Quantum Encryption', path: '/services/quantum-encryption-platform', icon: Shield, description: 'Future-proof security' },
         { name: 'Quantum Cybersecurity', path: '/services/quantum-enhanced-cybersecurity', icon: Shield, description: 'Post-quantum protection' },
         { name: 'Quantum Communication', path: '/services/quantum-secure-communication', icon: Shield, description: 'Unhackable messaging' },
@@ -97,6 +124,17 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         { name: 'Autonomous Accounting', path: '/services/autonomous-accounting-platform', icon: Briefcase, description: 'AI-powered bookkeeping' },
         { name: 'Smart HR Management', path: '/services/smart-hr-management-system', icon: Users, description: 'Employee lifecycle automation' },
         { name: 'AI Market Research', path: '/services/ai-market-research-platform', icon: Globe, description: 'Market trend analysis' }
+=======
+        { name: 'Cybersecurity Services', path: '/services/cybersecurity', icon: Shield },
+        { name: 'Advanced Cybersecurity Suite', path: '/advanced-cybersecurity-suite', icon: Shield },
+        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: Lock },
+        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Cpu },
+        { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Network },
+        { name: 'Cloud DevOps', path: '/cloud-devops', icon: Cloud },
+        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Code },
+        { name: 'Network Infrastructure', path: '/services/network-infrastructure', icon: Network }
+>>>>>>> origin/cursor/website-audit-and-enhancement-acb8
       ]
     },
     {
