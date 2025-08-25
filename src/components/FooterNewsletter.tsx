@@ -71,4 +71,8 @@ export const FooterNewsletter = () => {
       </p>
     </form>
   );
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> origin/cursor/check-and-fix-github-actions-e92c
