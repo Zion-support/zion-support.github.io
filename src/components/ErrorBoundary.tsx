@@ -1,12 +1,16 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   AlertTriangle, 
   RefreshCw, 
   Home, 
-  Bug, 
   Mail, 
+  Bug, 
   Copy,
-  CheckCircle
+  CheckCircle,
+  ArrowLeft,
+  Zap,
+  Shield
 } from 'lucide-react';
 
 interface Props {
@@ -22,9 +26,10 @@ interface State {
   errorInfo: ErrorInfo | null;
   showDetails: boolean;
   copied: boolean;
+  errorId: string | null;
 }
 
-export class ErrorBoundary extends Component<Props, State> {
+class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
@@ -32,7 +37,8 @@ export class ErrorBoundary extends Component<Props, State> {
       error: null,
       errorInfo: null,
       showDetails: props.showDetails || false,
-      copied: false
+      copied: false,
+      errorId: null
     };
   }
 
@@ -42,8 +48,13 @@ export class ErrorBoundary extends Component<Props, State> {
       error,
       errorInfo: null,
       showDetails: false,
-      copied: false
+      copied: false,
+      errorId: ErrorBoundary.generateErrorId()
     };
+  }
+
+  static generateErrorId(): string {
+    return `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -52,8 +63,10 @@ export class ErrorBoundary extends Component<Props, State> {
       errorInfo
     });
 
-    // Log error to console
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
+    }
 
     // Call custom error handler if provided
     if (this.props.onError) {
@@ -88,7 +101,8 @@ export class ErrorBoundary extends Component<Props, State> {
           componentStack: errorInfo.componentStack,
           url: window.location.href,
           userAgent: navigator.userAgent,
-          timestamp: new Date().toISOString()
+          timestamp: new Date().toISOString(),
+          errorId: this.state.errorId
         })
       }).catch(() => {
         // Silently fail if error logging fails
@@ -104,7 +118,8 @@ export class ErrorBoundary extends Component<Props, State> {
       error: null,
       errorInfo: null,
       showDetails: false,
-      copied: false
+      copied: false,
+      errorId: null
     });
   };
 
@@ -116,6 +131,7 @@ export class ErrorBoundary extends Component<Props, State> {
     if (this.state.error && this.state.errorInfo) {
       const errorReport = `
 Error Report - ${new Date().toISOString()}
+Error ID: ${this.state.errorId}
 
 Error: ${this.state.error.message}
 Stack: ${this.state.error.stack}
@@ -136,12 +152,13 @@ User Agent: ${navigator.userAgent}
 
   private handleReportError = () => {
     if (this.state.error) {
-      const subject = encodeURIComponent(`Bug Report: ${this.state.error.message}`);
+      const subject = encodeURIComponent(`Bug Report: ${this.state.error.message} [${this.state.errorId}]`);
       const body = encodeURIComponent(`
 Hi Zion Tech Group Team,
 
 I encountered an error while using the website:
 
+Error ID: ${this.state.errorId}
 Error: ${this.state.error.message}
 URL: ${window.location.href}
 Time: ${new Date().toISOString()}
@@ -172,12 +189,17 @@ Best regards,
             {/* Header */}
             <div className="bg-gradient-to-r from-red-500 to-red-600 p-6 text-white">
               <div className="flex items-center gap-3">
-                <AlertTriangle className="w-8 h-8" />
+                <Shield className="w-8 h-8" />
                 <div>
                   <h1 className="text-2xl font-bold">Something went wrong</h1>
                   <p className="text-red-100 mt-1">
                     We're sorry, but something unexpected happened. Our team has been notified.
                   </p>
+                  {this.state.errorId && (
+                    <p className="text-red-100 text-sm mt-2">
+                      Error ID: {this.state.errorId}
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
@@ -287,6 +309,7 @@ Best regards,
                       <div>URL: {window.location.href}</div>
                       <div>User Agent: {navigator.userAgent}</div>
                       <div>Timestamp: {new Date().toISOString()}</div>
+                      <div>Error ID: {this.state.errorId}</div>
                     </div>
                   </div>
                 </div>
@@ -321,28 +344,4 @@ Best regards,
   }
 }
 
-// Hook for functional components to handle errors
-export const useErrorHandler = () => {
-  const handleError = (error: Error, errorInfo?: any) => {
-    console.error('Error caught by hook:', error, errorInfo);
-    
-    // Log to external service
-    if (process.env.NODE_ENV === 'production') {
-      fetch('/api/errors', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          message: error.message,
-          stack: error.stack,
-          componentStack: errorInfo?.componentStack,
-          timestamp: new Date().toISOString(),
-          url: window.location.href
-        })
-      }).catch(console.error);
-    }
-  };
-
-  return { handleError };
-};
-
-export default ErrorBoundary;
+export { ErrorBoundary };

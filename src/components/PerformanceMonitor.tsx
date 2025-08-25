@@ -61,8 +61,8 @@ export const PerformanceMonitor: React.FC = () => {
     const fid = getFID();
     const cls = getCLS();
     const ttfb = navigation.responseStart - navigation.requestStart;
-    const domLoad = navigation.domContentLoadedEventEnd - navigation.navigationStart;
-    const windowLoad = navigation.loadEventEnd - navigation.navigationStart;
+    const domLoad = navigation.domContentLoadedEventEnd - (navigation as any).navigationStart;
+    const windowLoad = navigation.loadEventEnd - (navigation as any).navigationStart;
 
     const newMetrics: PerformanceMetrics = {
       fcp,
@@ -101,7 +101,7 @@ export const PerformanceMonitor: React.FC = () => {
         const observer = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const firstEntry = entries[0];
-          resolve(firstEntry.processingStart - firstEntry.startTime);
+          resolve((firstEntry as any).processingStart - firstEntry.startTime);
         });
         observer.observe({ entryTypes: ['first-input'] });
       }) as any;
