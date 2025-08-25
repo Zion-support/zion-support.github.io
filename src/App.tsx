@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
 import { AccessibilityControls } from './components/AccessibilityControls';
-import PerformanceDashboard from './components/PerformanceDashboard';
+import { PerformanceDashboard } from './components/PerformanceDashboard';
 import { AnalyticsDashboard } from './components/AnalyticsDashboard';
 import { AIChatbot } from './components/AIChatbot';
 import { CollaborativeTextEditor } from './components/CollaborativeTextEditor';
@@ -387,9 +387,6 @@ const App: React.FC = () => {
                 
                 {/* AI Chatbot - Always Available */}
                 <AIChatbot />
-                
-                {/* Scroll to Top Button */}
-                <ScrollToTop />
                 
                 {/* Collaborative Text Editor - Development Mode */}
                 {import.meta.env.DEV && (
