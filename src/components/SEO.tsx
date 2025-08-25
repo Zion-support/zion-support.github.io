@@ -25,6 +25,7 @@ interface SEOProps {
   author?: string;
   canonical?: string;
   ogImage?: string;
+<<<<<<< HEAD
   ogType?: 'website' | 'article' | 'product';
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6685
@@ -45,6 +46,16 @@ interface SEOProps {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-60a2
   noindex?: boolean;
   nofollow?: boolean;
+=======
+  ogType?: string;
+  twitterCard?: string;
+  article?: boolean;
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  section?: string;
+  tags?: string[];
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
 }
 
 <<<<<<< HEAD
@@ -82,6 +93,7 @@ export function SEO({
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6685
   ogType = 'website',
   twitterCard = 'summary_large_image',
+<<<<<<< HEAD
   structuredData,
   noindex = false,
 <<<<<<< HEAD
@@ -94,6 +106,14 @@ export function SEO({
   
 =======
   nofollow = false
+=======
+  article = false,
+  publishedTime,
+  modifiedTime,
+  author = 'Zion Tech Group',
+  section,
+  tags = []
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
 }: SEOProps) {
   const siteName = 'Zion Tech Group';
   const fullTitle = title === siteName ? title : `${title} | ${siteName}`;
@@ -151,6 +171,7 @@ export function SEO({
   tags?: string[];
 }
 
+<<<<<<< HEAD
 export const SEO: React.FC<SEOProps> = ({
   title,
   description,
@@ -198,10 +219,15 @@ export function SEO({
   // Default structured data for Zion Tech Group
   const defaultStructuredData = {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6b26
+=======
+  // Enhanced structured data
+  const organizationSchema = {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -212,6 +238,16 @@ export function SEO({
     "logo": "https://ziontechgroup.com/logo.png",
     "description": "Transform your business with cutting-edge AI services, Micro SAAS solutions, and comprehensive IT services.",
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6b26
+=======
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ziontechgroup.com/logo.png",
+      "width": 512,
+      "height": 512
+    },
+    "description": "Leading technology solutions provider specializing in AI, cloud computing, micro SAAS services, and digital transformation for modern enterprises.",
+    "foundingDate": "2020",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
@@ -219,6 +255,7 @@ export function SEO({
       "addressRegion": "DE",
       "postalCode": "19709",
       "addressCountry": "US"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
@@ -292,6 +329,26 @@ export function SEO({
       "geoRadius": "50000"
     },
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-60a2
+=======
+    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+1-302-464-0950",
+        "contactType": "customer service",
+        "email": "kleber@ziontechgroup.com",
+        "availableLanguage": "English"
+      }
+    ],
+    "sameAs": [
+      "https://facebook.com/ziontechgroup",
+      "https://twitter.com/ziontechgroup",
+      "https://linkedin.com/company/ziontechgroup",
+      "https://instagram.com/ziontechgroup",
+      "https://github.com/ziontechgroup",
+      "https://youtube.com/@ziontechgroup"
+    ],
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Technology Services",
@@ -301,26 +358,37 @@ export function SEO({
           "itemOffered": {
             "@type": "Service",
 <<<<<<< HEAD
+<<<<<<< HEAD
             "name": "AI Business Intelligence",
             "description": "Advanced analytics and insights powered by artificial intelligence"
 =======
             "name": "AI-Powered CRM Solutions",
             "description": "Intelligent customer relationship management with predictive analytics"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-60a2
+=======
+            "name": "AI & Machine Learning Solutions",
+            "description": "Cutting-edge AI solutions for business transformation"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
+<<<<<<< HEAD
             "name": "Cybersecurity Platform",
             "description": "Comprehensive threat detection and response system"
+=======
+            "name": "Micro SAAS Services",
+            "description": "Scalable software solutions for growing businesses"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
+<<<<<<< HEAD
             "name": "Cloud Cost Optimization",
             "description": "AI-driven cloud cost management solutions"
           }
@@ -344,34 +412,75 @@ export function SEO({
 
   // Website schema
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
+=======
+            "name": "Cloud & DevOps Solutions",
+            "description": "Infrastructure optimization and automated deployment"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Digital Transformation",
+            "description": "Complete business modernization services"
+          }
+        }
+      ]
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.4496,
+        "longitude": -75.7163
+      },
+      "geoRadius": "50000"
+    }
+  };
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "description": "AI-powered innovation and enterprise IT solutions",
     "publisher": {
       "@type": "Organization",
       "name": "Zion Tech Group"
     },
+=======
+    "description": "Your comprehensive marketplace for all things technology and AI",
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
     "potentialAction": {
       "@type": "SearchAction",
       "target": {
         "@type": "EntryPoint",
         "urlTemplate": "https://ziontechgroup.com/search?q={search_term_string}"
       },
+<<<<<<< HEAD
 =======
     "potentialAction": {
       "@type": "SearchAction",
       "target": "https://ziontechgroup.com/search?q={search_term_string}",
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
       "query-input": "required name=search_term_string"
     }
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   // Structured data for breadcrumbs
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -385,9 +494,12 @@ export function SEO({
     ]
   };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-60a2
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -395,6 +507,7 @@ export function SEO({
 <<<<<<< HEAD
 <<<<<<< HEAD
       <meta name="description" content={description} />
+<<<<<<< HEAD
 <<<<<<< HEAD
       <meta name="keywords" content={finalKeywords} />
       <meta name="author" content="Zion Tech Group" />
@@ -430,14 +543,32 @@ export function SEO({
       {nofollow && <meta name="robots" content="nofollow" />}
       {!noindex && !nofollow && <meta name="robots" content="index, follow" />}
       
+=======
+      <meta name="keywords" content={keywords} />
+      <link rel="canonical" href={fullCanonical} />
+      
+      {/* Language and Locale */}
+      <meta httpEquiv="content-language" content="en" />
+      <meta name="language" content="English" />
+      <meta name="geo.region" content="US-DE" />
+      <meta name="geo.placename" content="Middletown, Delaware" />
+      <meta name="geo.position" content="39.4496;-75.7163" />
+      <meta name="ICBM" content="39.4496, -75.7163" />
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={fullTitle} />
 <<<<<<< HEAD
       <meta property="og:description" content={fullDescription} />
       <meta property="og:type" content={ogType} />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <meta property="og:url" content={canonical || window.location.href} />
       <meta property="og:image" content={ogImage} />
+=======
+      <meta property="og:url" content={fullCanonical} />
+      <meta property="og:image" content={ogImage || defaultOgImage} />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content={siteName} />
@@ -455,13 +586,29 @@ export function SEO({
       <meta property="og:site_name" content="Zion Tech Group" />
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-60a2
       <meta property="og:locale" content="en_US" />
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6685
       
+=======
+      {article && (
+        <>
+          {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+          {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+          {author && <meta property="article:author" content={author} />}
+          {section && <meta property="article:section" content={section} />}
+          {tags.map((tag, index) => (
+            <meta key={index} property="article:tag" content={tag} />
+          ))}
+        </>
+      )}
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
       {/* Twitter Card Meta Tags */}
 <<<<<<< HEAD
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
+<<<<<<< HEAD
 <<<<<<< HEAD
       
       {/* Additional Meta Tags */}
@@ -634,11 +781,45 @@ export function SEO({
       {/* Structured Data */}
       <script type="application/ld+json">
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
+=======
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage || defaultOgImage} />
+
+      {/* Additional Meta Tags */}
+      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      <meta name="author" content={author} />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+      <meta name="theme-color" content="#172d67" />
+      <meta name="msapplication-TileColor" content="#172d67" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      
+      {/* Performance and Security */}
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="referrer" content="strict-origin-when-cross-origin" />
+      
+      {/* Preconnect to external domains for performance */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+      
+      {/* Favicon and App Icons */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+      
+      {/* Structured Data */}
+      <script type="application/ld+json">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
         {JSON.stringify(organizationSchema)}
       </script>
       <script type="application/ld+json">
         {JSON.stringify(websiteSchema)}
       </script>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <script type="application/ld+json">
         {JSON.stringify(breadcrumbSchema)}
@@ -877,6 +1058,10 @@ export default SEO;
             }
           ]
         })}
+=======
+      <script type="application/ld+json">
+        {JSON.stringify(breadcrumbSchema)}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
       </script>
     </Helmet>
   );
