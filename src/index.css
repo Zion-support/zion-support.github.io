@@ -123,6 +123,7 @@ html {
   }
 }
 
+<<<<<<< HEAD
 /* Custom Zion Tech Group Colors */
 @layer base {
   :root {
@@ -136,6 +137,67 @@ html {
     --zion-cyan-light: #67e8f9;
     --zion-slate: #64748b;
     --zion-slate-light: #94a3b8;
+=======
+/* Zion-specific custom properties */
+:root {
+  --zion-blue: #2e73ea;
+  --zion-blue-light: #8ab1f3;
+  --zion-blue-dark: #172d67;
+  --zion-purple: #8c15e9;
+  --zion-purple-light: #b971f2;
+  --zion-purple-dark: #530c8b;
+  --zion-cyan: #22ddd2;
+  --zion-cyan-light: #7aeae4;
+  --zion-cyan-dark: #14847e;
+  --zion-slate: #17072b;
+  --zion-slate-light: #451582;
+  --zion-slate-dark: #000000;
+}
+
+/* Accessibility Enhancements */
+.high-contrast {
+  --background: 0 0% 0%;
+  --foreground: 0 0% 100%;
+  --card: 0 0% 0%;
+  --card-foreground: 0 0% 100%;
+  --border: 0 0% 100%;
+  --input: 0 0% 100%;
+  --primary: 0 0% 100%;
+  --primary-foreground: 0 0% 0%;
+}
+
+.high-contrast * {
+  border-color: white !important;
+}
+
+.high-contrast .bg-muted {
+  background-color: #333 !important;
+}
+
+.large-text {
+  font-size: 1.2em;
+}
+
+.large-text h1 { font-size: 2.5em; }
+.large-text h2 { font-size: 2em; }
+.large-text h3 { font-size: 1.75em; }
+.large-text p, .large-text span { font-size: 1.2em; }
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  a {
+    color: black !important;
+    text-decoration: underline !important;
+>>>>>>> origin/cursor/website-audit-and-enhancement-ba38
   }
 }
 

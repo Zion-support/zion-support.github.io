@@ -32,6 +32,7 @@ import {
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 
+<<<<<<< HEAD
 // Lazy load components for better performance
 const LazyServicesSection = React.lazy(() => import('../components/home/ServicesSection'));
 const LazyFeaturesSection = React.lazy(() => import('../components/home/FeaturesSection'));
@@ -197,8 +198,27 @@ const Home: React.FC = () => {
     setCurrentSlide(index);
     setIsAutoPlaying(false);
   };
+=======
+import React from 'react';
+import { CategoriesSection } from "@/components/CategoriesSection";
+import { BenefitsSection } from "@/components/BenefitsSection";
+import { HowItWorksSection } from "@/components/HowItWorksSection";
+import { NewsletterSection } from "@/components/NewsletterSection";
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
+import { HomePageSEO } from "@/components/SEO";
+import { HeroSection } from "@/components/HeroSection";
+import { QuickAccess } from "@/components/home/QuickAccess";
+import { FeatureCTAs } from "@/components/home/FeatureCTAs";
+import { FeatureHighlights } from "@/components/home/FeatureHighlights";
+import { MicroSaasShowcase } from "@/components/home/MicroSaasShowcase";
+import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
+import { EnhancedServicesShowcase } from "@/components/home/EnhancedServicesShowcase";
+import { BottomNavigation } from "@/components/MobileNavigation";
+import { MicroSaasServicesSection } from "@/components/home/MicroSaasServicesSection";
+>>>>>>> origin/cursor/website-audit-and-enhancement-ba38
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
       <SEOHead {...seoMetadata} />
       
@@ -341,6 +361,10 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
+=======
+    <div className="min-h-screen bg-background">
+      <HomePageSEO />
+>>>>>>> origin/cursor/website-audit-and-enhancement-ba38
 
       {/* Stats Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -360,6 +384,7 @@ const Home: React.FC = () => {
             </p>
           </motion.div>
 
+<<<<<<< HEAD
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <motion.div
@@ -496,6 +521,28 @@ const Home: React.FC = () => {
           </motion.div>
         </div>
       </section>
+=======
+      <HeroSection />
+      
+      <QuickAccess />
+      
+      <FeatureCTAs />
+      
+      <MicroSaasServicesSection />
+      
+      <FeatureHighlights />
+      
+      <MicroSaasShowcase />
+      
+      <CategoriesSection />
+      <BenefitsSection />
+      <HowItWorksSection />
+      <FeaturedListingsSection />
+      <NewsletterSection />
+      
+      {/* Mobile Bottom Navigation */}
+      <BottomNavigation />
+>>>>>>> origin/cursor/website-audit-and-enhancement-ba38
     </div>
   );
 };

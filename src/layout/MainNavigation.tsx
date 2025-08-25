@@ -5,10 +5,14 @@ import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useRef, useEffect } from "react";
 =======
 import { useState } from "react";
 >>>>>>> origin/cursor/website-audit-and-enhancement-3805
+=======
+import { useState } from "react";
+>>>>>>> origin/cursor/website-audit-and-enhancement-ba38
 
 interface MainNavigationProps {
   isAdmin?: boolean;
@@ -22,6 +26,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const location = useLocation();
   const { t } = useTranslation();
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+<<<<<<< HEAD
 <<<<<<< HEAD
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -37,6 +42,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   }, []);
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-3805
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-ba38
 
   const baseLinks = [
     {
@@ -81,6 +88,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       key: 'services',
       href: '/services',
 =======
@@ -88,6 +96,10 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: '/services',
       name: 'Services',
 >>>>>>> origin/cursor/website-audit-and-enhancement-3805
+=======
+      key: 'services',
+      href: '/services',
+>>>>>>> origin/cursor/website-audit-and-enhancement-ba38
       matches: (path: string) => path.startsWith('/services')
     },
     {
@@ -105,12 +117,18 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith('/equipment')
     },
     {
+      key: 'categories',
+      href: '/categories',
+      matches: (path: string) => path.startsWith('/categories')
+    },
+    {
       key: 'community',
       href: '/community',
       name: 'Community',
       matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       key: 'about',
@@ -140,19 +158,34 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       name: 'Blog',
       matches: (path: string) => path.startsWith('/blog')
 >>>>>>> origin/cursor/website-audit-and-enhancement-3805
+=======
+      key: 'blog',
+      href: '/blog',
+      matches: (path: string) => path.startsWith('/blog')
+>>>>>>> origin/cursor/website-audit-and-enhancement-ba38
     }
   ];
 
   const companyLinks = [
+<<<<<<< HEAD
     { key: 'about', href: '/about', name: 'About' },
+=======
+    { key: 'about', href: '/about', name: 'About Us' },
+>>>>>>> origin/cursor/website-audit-and-enhancement-ba38
     { key: 'careers', href: '/careers', name: 'Careers' },
     { key: 'partners', href: '/partners', name: 'Partners' },
     { key: 'contact', href: '/contact', name: 'Contact' }
   ];
 
+<<<<<<< HEAD
   const resourceLinks = [
     { key: 'help', href: '/help', name: 'Help Center' },
     { key: 'sitemap', href: '/sitemap', name: 'Sitemap' },
+=======
+  const supportLinks = [
+    { key: 'faq', href: '/faq', name: 'FAQ' },
+    { key: 'help', href: '/help', name: 'Help Center' },
+>>>>>>> origin/cursor/website-audit-and-enhancement-ba38
     { key: 'green-it', href: '/green-it', name: 'Green IT' }
   ];
 
@@ -242,6 +275,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         {/* Company Dropdown */}
         <li className="relative">
           <button
+<<<<<<< HEAD
             onClick={() => setActiveDropdown(activeDropdown === 'company' ? null : 'company')}
             className={cn(
               "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
@@ -249,22 +283,40 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 ? "bg-zion-purple/20 text-zion-cyan"
                 : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
             )}
+=======
+            onMouseEnter={() => setActiveDropdown('company')}
+            onMouseLeave={() => setActiveDropdown(null)}
+            className="inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+>>>>>>> origin/cursor/website-audit-and-enhancement-ba38
           >
             Company
             <ChevronDown className="ml-1 h-4 w-4" />
           </button>
+<<<<<<< HEAD
           
           {activeDropdown === 'company' && (
             <div className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-purple/20 rounded-md shadow-lg py-2 z-50">
+=======
+          {activeDropdown === 'company' && (
+            <div
+              onMouseEnter={() => setActiveDropdown('company')}
+              onMouseLeave={() => setActiveDropdown(null)}
+              className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-lg py-2 z-50"
+            >
+>>>>>>> origin/cursor/website-audit-and-enhancement-ba38
               {companyLinks.map((link) => (
                 <Link
                   key={link.key}
                   to={link.href}
+<<<<<<< HEAD
                   className={cn(
                     "block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors",
                     isActive(link.href) && "bg-zion-purple/20 text-zion-cyan"
                   )}
                   onClick={() => setActiveDropdown(null)}
+=======
+                  className="block px-4 py-2 text-sm text-zion-slate-light hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
+>>>>>>> origin/cursor/website-audit-and-enhancement-ba38
                 >
                   {link.name}
                 </Link>
@@ -273,6 +325,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
           )}
         </li>
 
+<<<<<<< HEAD
         {/* Resources Dropdown */}
         <li className="relative">
           <button
@@ -299,6 +352,29 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                     isActive(link.href) && "bg-zion-purple/20 text-zion-cyan"
                   )}
                   onClick={() => setActiveDropdown(null)}
+=======
+        {/* Support Dropdown */}
+        <li className="relative">
+          <button
+            onMouseEnter={() => setActiveDropdown('support')}
+            onMouseLeave={() => setActiveDropdown(null)}
+            className="inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+          >
+            Support
+            <ChevronDown className="ml-1 h-4 w-4" />
+          </button>
+          {activeDropdown === 'support' && (
+            <div
+              onMouseEnter={() => setActiveDropdown('support')}
+              onMouseLeave={() => setActiveDropdown(null)}
+              className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-lg py-2 z-50"
+            >
+              {supportLinks.map((link) => (
+                <Link
+                  key={link.key}
+                  to={link.href}
+                  className="block px-4 py-2 text-sm text-zion-slate-light hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
+>>>>>>> origin/cursor/website-audit-and-enhancement-ba38
                 >
                   {link.name}
                 </Link>

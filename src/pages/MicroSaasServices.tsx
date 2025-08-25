@@ -20,7 +20,10 @@ import FuturisticAnimatedBackground from '../components/ui/FuturisticAnimatedBac
 import FuturisticNeonButton from '../components/ui/FuturisticNeonButton';
 =======
 import { Header } from '@/components/Header';
+<<<<<<< HEAD
 import Footer from '@/components/Footer';
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-ba38
 import { SEO } from '@/components/SEO';
 import { MICRO_SAAS_SERVICES, MicroSaasService, getServiceByCategory, getServiceBySubcategory } from '@/data/microSaasServices';
 import { Button } from '@/components/ui/button';
@@ -2159,10 +2162,17 @@ const MicroSaasServices: React.FC = () => {
             <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
             <p>📧 kleber@ziontechgroup.com</p>
           </div>
+<<<<<<< HEAD
         </Card>
       </motion.div>
 >>>>>>> origin/cursor/build-and-fix-errors-e276
     </div>
+=======
+        </section>
+      </main>
+
+    </>
+>>>>>>> origin/cursor/website-audit-and-enhancement-ba38
   );
 };
 
