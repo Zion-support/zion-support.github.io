@@ -28,7 +28,7 @@ import {
   ArrowRight,
   ExternalLink
 } from 'lucide-react';
-import { comprehensiveServices } from '@/data/comprehensiveServices';
+import { COMPREHENSIVE_SERVICES as comprehensiveServices } from '@/data/comprehensiveServices';
 
 export default function EnhancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');
