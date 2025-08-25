@@ -1,413 +1,276 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Star, 
-  Users, 
-  TrendingUp, 
-  DollarSign, 
-  Clock, 
-  ArrowRight,
-  CheckCircle,
-  Brain,
-  Shield,
-  Cpu,
-  Database,
-  Network,
-  Target,
-  BarChart3,
+  Building2, 
+  Shield, 
+  Brain, 
+  Cloud, 
+  Database, 
+  Network, 
   Zap,
-  Heart,
-  Building,
-  Globe,
-  Award,
-  Briefcase,
-  Rocket,
-  Lightbulb,
-  CheckSquare,
-  ShoppingCart,
-  GraduationCap
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Users,
+  Globe
 } from 'lucide-react';
 
 export default function CaseStudies() {
   const caseStudies = [
     {
       id: 1,
-      title: "AI-Powered Healthcare Analytics Transformation",
-      company: "MetroHealth Medical Center",
-      industry: "Healthcare",
-      challenge: "MetroHealth was struggling with inefficient patient data analysis, leading to delayed diagnoses and increased costs.",
-      solution: "Implemented our AI healthcare analytics platform with predictive modeling and real-time monitoring capabilities.",
+      title: "AI-Powered Business Intelligence Transformation",
+      company: "Fortune 500 Manufacturing Corp",
+      industry: "Manufacturing",
+      challenge: "Complex data silos and manual reporting processes causing 3-week delays in business insights",
+      solution: "Implemented AI-driven business intelligence platform with autonomous data processing",
       results: [
-        "85% improvement in diagnostic accuracy",
-        "40% reduction in treatment costs",
-        "70% faster patient data analysis",
-        "60% improvement in patient outcomes"
+        "Reduced reporting time from 3 weeks to 24 hours",
+        "Increased data accuracy by 99.7%",
+        "Generated $2.3M in cost savings annually",
+        "Improved decision-making speed by 85%"
       ],
-      technologies: ["AI Analytics", "Machine Learning", "Predictive Modeling", "Real-time Monitoring"],
-      icon: Heart,
-      color: "from-red-500 to-pink-500",
-      featured: true
+      technologies: ["AI Business Intelligence", "Data Automation", "Real-time Analytics"],
+      icon: Brain,
+      color: "from-blue-500 to-cyan-500"
     },
     {
       id: 2,
-      title: "Enterprise AI Automation Platform",
-      company: "GlobalTech Solutions",
-      industry: "Technology",
-      challenge: "GlobalTech needed to automate complex business processes and reduce operational costs across multiple departments.",
-      solution: "Deployed our autonomous business operations platform with AI workflow automation and intelligent decision-making.",
+      title: "Quantum-Safe Cybersecurity Implementation",
+      company: "Global Financial Services Inc",
+      industry: "Financial Services",
+      challenge: "Traditional encryption methods vulnerable to quantum computing threats",
+      solution: "Deployed quantum-resistant security framework with AI-powered threat detection",
       results: [
-        "300% increase in operational efficiency",
-        "50% reduction in operational costs",
-        "80% automation of repetitive tasks",
-        "Real-time business intelligence"
+        "Enhanced security posture by 300%",
+        "Reduced security incidents by 95%",
+        "Achieved SOC2 Type II compliance in 6 months",
+        "Protected $50B+ in financial assets"
       ],
-      technologies: ["AI Automation", "Workflow Optimization", "Business Intelligence", "Process Mining"],
-      icon: Brain,
-      color: "from-purple-500 to-pink-500",
-      featured: true
+      technologies: ["Quantum Cryptography", "AI Security", "SOC2 Compliance"],
+      icon: Shield,
+      color: "from-green-500 to-emerald-500"
     },
     {
       id: 3,
-      title: "Quantum Neural Network Implementation",
-      company: "Quantum Research Labs",
-      industry: "Research & Development",
-      challenge: "Quantum Research Labs required advanced neural network capabilities for complex scientific computations.",
-      solution: "Implemented our quantum neural network platform with hybrid quantum-classical algorithms.",
+      title: "5G Enterprise Network Optimization",
+      company: "Tech Innovation Hub",
+      industry: "Technology",
+      challenge: "Network congestion and poor performance affecting 10,000+ users",
+      solution: "Implemented AI-driven 5G network optimization with autonomous traffic management",
       results: [
-        "1000x faster computation speed",
-        "90% improvement in accuracy",
-        "Real-time quantum processing",
-        "Advanced research capabilities"
+        "Increased network performance by 400%",
+        "Reduced latency by 85%",
+        "Improved user experience scores by 92%",
+        "Cut operational costs by 60%"
       ],
-      technologies: ["Quantum Computing", "Neural Networks", "Hybrid Algorithms", "Scientific Computing"],
-      icon: Cpu,
-      color: "from-blue-500 to-cyan-500",
-      featured: false
+      technologies: ["5G Networks", "AI Optimization", "Network Automation"],
+      icon: Network,
+      color: "from-purple-500 to-pink-500"
     },
     {
       id: 4,
-      title: "Cybersecurity & Compliance Automation",
-      company: "SecureBank Financial",
-      industry: "Financial Services",
-      challenge: "SecureBank needed to automate SOC2 compliance processes and enhance threat detection capabilities.",
-      solution: "Deployed our SOC2 compliance automation platform with advanced cybersecurity monitoring.",
+      title: "Autonomous DevOps Platform Deployment",
+      company: "E-commerce Giant",
+      industry: "Retail",
+      challenge: "Manual deployment processes causing 40% deployment failures and slow time-to-market",
+      solution: "Built autonomous DevOps platform with AI-powered testing and deployment",
       results: [
-        "95% automation of compliance tasks",
-        "99.9% threat detection accuracy",
-        "60% reduction in compliance costs",
-        "Real-time security monitoring"
+        "Reduced deployment failures by 95%",
+        "Accelerated time-to-market by 70%",
+        "Improved system reliability to 99.99%",
+        "Cut operational overhead by 80%"
       ],
-      technologies: ["SOC2 Compliance", "Threat Detection", "Automation", "Security Monitoring"],
-      icon: Shield,
-      color: "from-green-500 to-emerald-500",
-      featured: false
+      technologies: ["Autonomous DevOps", "AI Testing", "Continuous Deployment"],
+      icon: Zap,
+      color: "from-orange-500 to-red-500"
     },
     {
       id: 5,
-      title: "5G Enterprise Network Solutions",
-      company: "ConnectCorp Telecommunications",
-      industry: "Telecommunications",
-      challenge: "ConnectCorp needed to deploy high-speed 5G networks for enterprise clients with minimal downtime.",
-      solution: "Implemented our 5G enterprise solutions with intelligent network optimization and management.",
+      title: "AI-Powered IT Asset Management",
+      company: "Healthcare Network",
+      industry: "Healthcare",
+      challenge: "Inefficient IT asset tracking causing $2M in annual losses",
+      solution: "Implemented AI-driven asset management system with predictive maintenance",
       results: [
-        "10x faster network speeds",
-        "99.9% network uptime",
-        "50% reduction in deployment time",
-        "Advanced network analytics"
+        "Eliminated asset loss completely",
+        "Reduced maintenance costs by 65%",
+        "Improved asset utilization by 40%",
+        "Enhanced compliance reporting by 100%"
       ],
-      technologies: ["5G Networks", "Network Optimization", "Enterprise Solutions", "Network Management"],
-      icon: Network,
-      color: "from-indigo-500 to-purple-500",
-      featured: false
+      technologies: ["AI Asset Management", "Predictive Maintenance", "IoT Integration"],
+      icon: Database,
+      color: "from-indigo-500 to-purple-500"
     },
     {
       id: 6,
-      title: "AI Marketing Automation Success",
-      company: "GrowthMarketing Inc",
-      industry: "Marketing",
-      challenge: "GrowthMarketing struggled with manual campaign management and poor ROI tracking across multiple channels.",
-      solution: "Deployed our AI marketing automation platform with intelligent campaign optimization.",
+      title: "Quantum Neural Network Research Platform",
+      company: "Research University",
+      industry: "Education & Research",
+      challenge: "Limited computational power for complex neural network research",
+      solution: "Deployed quantum-enhanced neural network platform for advanced AI research",
       results: [
-        "300% increase in conversion rates",
-        "60% reduction in marketing costs",
-        "200% improvement in customer engagement",
-        "Real-time campaign optimization"
+        "Accelerated research by 1000x",
+        "Enabled breakthrough discoveries in 6 months",
+        "Published 15 peer-reviewed papers",
+        "Secured $10M in research funding"
       ],
-      technologies: ["AI Marketing", "Campaign Automation", "ROI Tracking", "Multi-channel Management"],
-      icon: Target,
-      color: "from-orange-500 to-yellow-500",
-      featured: false
+      technologies: ["Quantum Computing", "Neural Networks", "AI Research"],
+      icon: Brain,
+      color: "from-violet-500 to-purple-500"
     }
   ];
 
   const industries = [
-    { name: "Healthcare", icon: Heart, count: 12 },
-    { name: "Financial Services", icon: DollarSign, count: 8 },
-    { name: "Technology", icon: Cpu, count: 15 },
-    { name: "Manufacturing", icon: Building, count: 6 },
-    { name: "Retail", icon: ShoppingCart, count: 4 },
-    { name: "Education", icon: GraduationCap, count: 3 }
-  ];
-
-  const testimonials = [
-    {
-      quote: "Zion Tech Group's AI solutions transformed our healthcare operations completely. The results exceeded our expectations.",
-      author: "Dr. Sarah Johnson",
-      position: "CTO, MetroHealth Medical Center",
-      rating: 5
-    },
-    {
-      quote: "The autonomous business platform reduced our operational costs by 50% while improving efficiency by 300%.",
-      author: "Michael Chen",
-      position: "CEO, GlobalTech Solutions",
-      rating: 5
-    },
-    {
-      quote: "Implementing their quantum neural network platform accelerated our research capabilities by 1000x.",
-      author: "Dr. Robert Kim",
-      position: "Research Director, Quantum Research Labs",
-      rating: 5
-    }
+    { name: "Manufacturing", count: 12, icon: Building2 },
+    { name: "Financial Services", count: 8, icon: Shield },
+    { name: "Healthcare", count: 15, icon: Users },
+    { name: "Technology", count: 20, icon: Globe },
+    { name: "Retail", count: 6, icon: TrendingUp },
+    { name: "Education", count: 4, icon: Brain }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 text-blue-300 text-sm font-medium mb-6">
-              <Award className="w-4 h-4 mr-2" />
-              Success Stories & Case Studies
-            </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Real Results from
-              <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-green-400 bg-clip-text text-transparent">
-                {" "}Real Clients
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Success Stories That
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                {" "}Transform Industries
               </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover how leading organizations across industries have transformed their operations 
-              with Zion Tech Group's AI-powered solutions. See the measurable impact and real ROI.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Discover how leading organizations leverage Zion Tech Group's cutting-edge AI and quantum technologies 
+              to achieve breakthrough results and competitive advantages.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Start Your Success Story
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
-                to="/demo"
-                className="inline-flex items-center px-8 py-4 rounded-lg border border-gray-600 text-white font-semibold hover:border-blue-500 hover:text-blue-400 transition-all duration-300"
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
               >
-                Request Demo
+                Explore Our Services
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Featured Case Studies */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      {/* Industry Overview */}
+      <section className="py-20 bg-black/20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Featured Success Stories
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Trusted Across Industries
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Explore our most impactful client transformations and the technologies that made them possible.
+            <p className="text-xl text-gray-300">
+              Our solutions have delivered measurable results across diverse sectors
             </p>
           </div>
           
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {industries.map((industry) => (
+              <div
+                key={industry.name}
+                className="text-center p-6 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/70"
+              >
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
+                  <industry.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{industry.name}</h3>
+                <p className="text-cyan-400 font-bold">{industry.count}+ Cases</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Case Studies Grid */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Featured Case Studies
+            </h2>
+            <p className="text-xl text-gray-300">
+              Real results from real organizations using our innovative solutions
+            </p>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {caseStudies.filter(cs => cs.featured).map((caseStudy) => (
+            {caseStudies.map((study) => (
               <div
-                key={caseStudy.id}
-                className="p-8 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
+                key={study.id}
+                className="bg-gray-800/50 rounded-2xl border border-gray-700 overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
               >
-                <div className="flex items-start justify-between mb-6">
-                  <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${caseStudy.color} flex items-center justify-center`}>
-                    <caseStudy.icon className="w-8 h-8 text-white" />
+                <div className={`h-2 bg-gradient-to-r ${study.color}`}></div>
+                <div className="p-8">
+                  <div className="flex items-start justify-between mb-6">
+                    <div className={`w-16 h-16 bg-gradient-to-br ${study.color} rounded-xl flex items-center justify-center`}>
+                      <study.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <div className="text-right">
+                      <p className="text-sm text-gray-400">{study.industry}</p>
+                      <p className="text-sm text-cyan-400 font-semibold">{study.company}</p>
+                    </div>
                   </div>
-                  <div className="text-right">
-                    <div className="text-sm text-gray-400">{caseStudy.industry}</div>
-                    <div className="text-lg font-semibold text-white">{caseStudy.company}</div>
-                  </div>
-                </div>
-                
-                <h3 className="text-2xl font-bold text-white mb-4">{caseStudy.title}</h3>
-                
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-blue-400 mb-2">Challenge</h4>
-                  <p className="text-gray-300">{caseStudy.challenge}</p>
-                </div>
-                
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-green-400 mb-2">Solution</h4>
-                  <p className="text-gray-300">{caseStudy.solution}</p>
-                </div>
-                
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-purple-400 mb-2">Results</h4>
-                  <ul className="space-y-2">
-                    {caseStudy.results.map((result, index) => (
-                      <li key={index} className="flex items-center space-x-2">
-                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        <span className="text-gray-300 text-sm">{result}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-cyan-400 mb-2">Technologies Used</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {caseStudy.technologies.map((tech, index) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1 rounded-full bg-gray-700/50 text-gray-300 text-sm border border-gray-600"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                
-                <Link
-                  to={`/case-studies/${caseStudy.id}`}
-                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300"
-                >
-                  Read Full Case Study
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* All Case Studies Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              All Success Stories
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Browse our complete collection of client success stories across all industries and technologies.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {caseStudies.map((caseStudy) => (
-              <div
-                key={caseStudy.id}
-                className="p-6 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${caseStudy.color} flex items-center justify-center`}>
-                    <caseStudy.icon className="w-6 h-6 text-white" />
+                  <h3 className="text-2xl font-bold text-white mb-4">{study.title}</h3>
+                  
+                  <div className="space-y-4 mb-6">
+                    <div>
+                      <h4 className="text-sm font-semibold text-gray-400 mb-2">Challenge</h4>
+                      <p className="text-gray-300">{study.challenge}</p>
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-semibold text-gray-400 mb-2">Solution</h4>
+                      <p className="text-gray-300">{study.solution}</p>
+                    </div>
                   </div>
-                  <div className="text-right">
-                    <div className="text-xs text-gray-400">{caseStudy.industry}</div>
-                    <div className="text-sm font-semibold text-white">{caseStudy.company}</div>
+
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-400 mb-3">Results</h4>
+                    <ul className="space-y-2">
+                      {study.results.map((result, index) => (
+                        <li key={index} className="flex items-center text-gray-300">
+                          <Star className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                          {result}
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                </div>
-                
-                <h3 className="text-lg font-bold text-white mb-3">{caseStudy.title}</h3>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-blue-400 mb-1">Challenge</h4>
-                  <p className="text-gray-300 text-sm line-clamp-2">{caseStudy.challenge}</p>
-                </div>
-                
-                <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-green-400 mb-1">Results</h4>
-                  <ul className="space-y-1">
-                    {caseStudy.results.slice(0, 2).map((result, index) => (
-                      <li key={index} className="flex items-center space-x-2">
-                        <CheckCircle className="w-3 h-3 text-green-400 flex-shrink-0" />
-                        <span className="text-gray-300 text-xs">{result}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                
-                <Link
-                  to={`/case-studies/${caseStudy.id}`}
-                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300 text-sm"
-                >
-                  Read More
-                  <ArrowRight className="w-3 h-3 ml-1" />
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Industry Breakdown */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Success Across Industries
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI solutions have delivered measurable results across diverse industry sectors.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {industries.map((industry, index) => (
-              <div
-                key={index}
-                className="p-6 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
-              >
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center mb-4">
-                  <industry.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{industry.name}</h3>
-                <p className="text-gray-400">{industry.count} success stories</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-400 mb-3">Technologies Used</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {study.technologies.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-3 py-1 bg-gray-700/50 text-cyan-400 text-sm rounded-full border border-gray-600"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
 
-      {/* Testimonials */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              What Our Clients Say
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Hear directly from the leaders who have experienced our AI transformation firsthand.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="p-6 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300"
-              >
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                
-                <blockquote className="text-gray-300 mb-6 italic">
-                  "{testimonial.quote}"
-                </blockquote>
-                
-                <div>
-                  <div className="font-semibold text-white">{testimonial.author}</div>
-                  <div className="text-gray-400 text-sm">{testimonial.position}</div>
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold transition-colors duration-300"
+                  >
+                    Learn More About This Solution
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </Link>
                 </div>
               </div>
             ))}
@@ -416,27 +279,27 @@ export default function CaseStudies() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+      <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Write Your Success Story?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join the growing list of organizations that have transformed their operations with Zion Tech Group's AI solutions.
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join the ranks of industry leaders who have transformed their operations with our AI and quantum technologies.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >
-              Start Your Transformation
-              <ArrowRight className="w-5 h-5 ml-2" />
+              Schedule a Consultation
+              <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <Link
-              to="/demo"
-              className="inline-flex items-center px-8 py-4 rounded-lg border border-gray-600 text-white font-semibold hover:border-blue-500 hover:text-blue-400 transition-all duration-300"
+              to="/services"
+              className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
             >
-              Schedule Demo
+              Explore Solutions
             </Link>
           </div>
         </div>

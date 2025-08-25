@@ -1,147 +1,98 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Eye, 
-  Accessibility, 
-  Shield, 
-  CheckCircle, 
-  AlertTriangle, 
-  BarChart3, 
-  Users, 
-  Globe,
-  ArrowRight,
-  Target,
-  Clock,
-  Star,
-  FileText,
-  Code,
-  Monitor,
-  Smartphone,
-  Tablet
-} from 'lucide-react';
+import { Shield, Eye, CheckCircle, AlertTriangle, Zap, Users, Globe, BarChart3, ArrowRight } from 'lucide-react';
 
 export default function AccessibilityAuditor() {
   const features = [
     {
       icon: Eye,
-      title: 'Comprehensive Auditing',
-      description: 'Complete accessibility evaluation across all digital touchpoints'
+      title: 'WCAG 2.1 Compliance',
+      description: 'Full compliance with WCAG 2.1 AA standards for accessibility',
+      benefits: ['Screen reader compatibility', 'Keyboard navigation support', 'Color contrast optimization']
     },
     {
       icon: Shield,
-      title: 'Compliance Standards',
-      description: 'WCAG 2.1 AA/AAA, Section 508, and international accessibility standards'
+      title: 'Automated Testing',
+      description: 'AI-powered automated accessibility testing and validation',
+      benefits: ['Real-time scanning', 'Comprehensive reports', 'Issue prioritization']
     },
     {
-      icon: BarChart3,
-      title: 'Detailed Reporting',
-      description: 'Comprehensive reports with actionable recommendations'
+      icon: CheckCircle,
+      title: 'Manual Auditing',
+      description: 'Expert manual accessibility audits by certified professionals',
+      benefits: ['Human expertise', 'Context-aware analysis', 'Custom recommendations']
     },
     {
-      icon: Users,
-      title: 'User Experience',
-      description: 'Focus on real user accessibility needs and experiences'
+      icon: Zap,
+      title: 'Performance Optimization',
+      description: 'Accessibility improvements that also enhance performance',
+      benefits: ['Faster loading times', 'Better SEO', 'Improved user experience']
     }
   ];
 
-  const auditTypes = [
+  const auditProcess = [
     {
-      title: 'Website Accessibility',
-      description: 'Comprehensive evaluation of website accessibility',
-      features: ['Navigation testing', 'Content readability', 'Form accessibility', 'Media accessibility']
+      step: '01',
+      title: 'Initial Assessment',
+      description: 'Comprehensive evaluation of current accessibility status'
     },
     {
-      title: 'Mobile App Accessibility',
-      description: 'Mobile application accessibility assessment',
-      features: ['Touch targets', 'Screen reader support', 'Gesture navigation', 'Color contrast']
+      step: '02',
+      title: 'Automated Testing',
+      description: 'AI-powered scanning for common accessibility issues'
     },
     {
-      title: 'Document Accessibility',
-      description: 'PDF and document accessibility compliance',
-      features: ['Text recognition', 'Structure tagging', 'Alt text', 'Reading order']
+      step: '03',
+      title: 'Manual Review',
+      description: 'Expert manual testing and validation'
     },
     {
-      title: 'Software Accessibility',
-      description: 'Desktop and enterprise software evaluation',
-      features: ['Keyboard navigation', 'Screen reader compatibility', 'Focus management', 'Error handling']
-    }
-  ];
-
-  const benefits = [
-    {
-      metric: '100%',
-      label: 'WCAG Compliance',
-      description: 'Full accessibility standards compliance'
+      step: '04',
+      title: 'Report & Recommendations',
+      description: 'Detailed report with actionable improvement suggestions'
     },
     {
-      metric: '24/7',
-      label: 'Continuous Monitoring',
-      description: 'Round-the-clock accessibility oversight'
-    },
-    {
-      metric: '50+',
-      label: 'Test Scenarios',
-      description: 'Comprehensive testing coverage'
-    },
-    {
-      metric: '99%',
-      label: 'Issue Detection',
-      description: 'High accuracy problem identification'
-    }
-  ];
-
-  const industries = [
-    {
-      industry: 'E-commerce',
-      focus: ['Product accessibility', 'Checkout process', 'Mobile shopping', 'Customer support']
-    },
-    {
-      industry: 'Healthcare',
-      focus: ['Patient portals', 'Medical forms', 'Emergency information', 'Telemedicine platforms']
-    },
-    {
-      industry: 'Education',
-      focus: ['Learning management systems', 'Course materials', 'Student portals', 'Assessment tools']
-    },
-    {
-      industry: 'Financial Services',
-      focus: ['Banking applications', 'Investment platforms', 'Insurance portals', 'Payment systems']
+      step: '05',
+      title: 'Implementation Support',
+      description: 'Ongoing support for implementing accessibility improvements'
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-4">
-                <Accessibility className="w-8 h-8 text-white" />
-              </div>
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="mb-8">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium">
+              <Eye className="w-4 h-4 mr-2" />
+              Accessibility Excellence
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
-              Accessibility Auditor
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Ensure your digital products are accessible to everyone. 
-              Comprehensive auditing, compliance testing, and actionable recommendations.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg text-white font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-200 transform hover:scale-105"
-              >
-                Get Audit
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link
-                to="/demo"
-                className="inline-flex items-center px-8 py-4 border border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-200"
-              >
-                Try Demo
-              </Link>
-            </div>
+          </div>
+          
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+            Accessibility Auditor
+          </h1>
+          
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
+            Ensure your digital products are accessible to everyone with our comprehensive 
+            accessibility auditing services. From automated testing to expert manual reviews.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold transition-colors duration-200"
+            >
+              Get Accessibility Audit
+              <Zap className="w-5 h-5 ml-2" />
+            </Link>
+            <Link
+              to="/services/accessibility"
+              className="inline-flex items-center px-8 py-4 rounded-lg border border-slate-600 hover:border-slate-500 text-slate-300 hover:text-white font-semibold transition-colors duration-200"
+            >
+              Learn More
+            </Link>
           </div>
         </div>
       </section>
@@ -150,50 +101,28 @@ export default function AccessibilityAuditor() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Professional Accessibility Auditing
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Comprehensive Accessibility Solutions
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Expert evaluation using industry-standard tools and methodologies
+            <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+              Our accessibility auditor provides everything you need to make your digital products 
+              inclusive and compliant with international standards.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="text-center p-6 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-green-500 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-white" />
+              <div key={index} className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300">
+                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-blue-400" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                <p className="text-gray-400">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Audit Types Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Comprehensive Audit Services
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Specialized accessibility evaluation for all digital platforms
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {auditTypes.map((audit, index) => (
-              <div key={index} className="p-8 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-green-500 transition-all duration-300">
-                <h3 className="text-2xl font-semibold mb-4">{audit.title}</h3>
-                <p className="text-gray-400 mb-6">{audit.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-slate-400 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
-                  {audit.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-slate-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {benefit}
                     </li>
                   ))}
                 </ul>
@@ -203,60 +132,26 @@ export default function AccessibilityAuditor() {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      {/* Audit Process Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Audit Performance Metrics
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Our Accessibility Audit Process
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Quantifiable results and comprehensive coverage
+            <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+              A systematic approach to identifying and resolving accessibility issues
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center p-6 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-green-500 transition-all duration-300">
-                <div className="text-4xl font-bold text-green-400 mb-2">
-                  {benefit.metric}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+            {auditProcess.map((step, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4 border-2 border-blue-500/30">
+                  <span className="text-2xl font-bold text-blue-400">{step.step}</span>
                 </div>
-                <div className="text-lg font-semibold text-white mb-2">
-                  {benefit.label}
-                </div>
-                <p className="text-gray-400 text-sm">
-                  {benefit.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Industries Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Industry-Specific Focus
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Tailored accessibility solutions for different business sectors
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {industries.map((industry, index) => (
-              <div key={index} className="p-6 bg-gray-800/50 rounded-xl border border-gray-700">
-                <h3 className="text-2xl font-semibold mb-4 text-green-400">{industry.industry}</h3>
-                <ul className="space-y-2">
-                  {industry.focus.map((focus, focusIndex) => (
-                    <li key={focusIndex} className="flex items-center text-gray-300">
-                      <Target className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                      {focus}
-                    </li>
-                  ))}
-                </ul>
+                <h3 className="text-lg font-semibold text-white mb-2">{step.title}</h3>
+                <p className="text-slate-400 text-sm">{step.description}</p>
               </div>
             ))}
           </div>
@@ -264,27 +159,28 @@ export default function AccessibilityAuditor() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-900/20 to-emerald-900/20">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Make Your Digital Products Accessible?
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            Ready to Make Your Products Accessible?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Ensure compliance and improve user experience for all users
+          <p className="text-xl text-slate-400 mb-8">
+            Join thousands of organizations that trust us to ensure their digital products 
+            are accessible to everyone, regardless of ability.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg text-white font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-200 transform hover:scale-105"
+              className="inline-flex items-center px-8 py-4 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold transition-colors duration-200"
             >
-              Schedule Audit
-              <ArrowRight className="ml-2 w-5 h-5" />
+              Start Accessibility Audit
+              <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link
-              to="/pricing"
-              className="inline-flex items-center px-8 py-4 border border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-200"
+              to="/case-studies"
+              className="inline-flex items-center px-8 py-4 rounded-lg border border-slate-600 hover:border-slate-500 text-slate-300 hover:text-white font-semibold transition-colors duration-200"
             >
-              View Pricing
+              View Case Studies
             </Link>
           </div>
         </div>
