@@ -244,7 +244,6 @@ export default function Home() {
                   <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>
                     <IconComponent />
                   </div>
-                </div>
 
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
                   {service.title}
@@ -279,7 +278,7 @@ export default function Home() {
                   <span>Learn More</span>
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
-              </article>
+              </motion.div>
             ))}
           </div>
 
@@ -305,7 +304,7 @@ export default function Home() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Real results from real businesses. See how we've transformed operations across industries.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => {
@@ -326,10 +325,10 @@ export default function Home() {
                       <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                       <p className="text-zion-slate-light leading-relaxed">{feature.description}</p>
                     </div>
-                  ))}
-                </div>
-              </div>
-            ))}
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>

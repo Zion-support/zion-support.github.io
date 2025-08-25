@@ -249,7 +249,7 @@ export const usePerformanceMonitor = (componentName: string) => {
 };
 
 // Debounce Hook
-export const useDebounce = <T>(value: T, delay: number): T => {
+export const useDebounce = <T,>(value: T, delay: number): T => {
   const [debouncedValue, setDebouncedValue] = useState<T>(value);
 
   useEffect(() => {
@@ -266,7 +266,7 @@ export const useDebounce = <T>(value: T, delay: number): T => {
 };
 
 // Throttle Hook
-export const useThrottle = <T>(value: T, limit: number): T => {
+export const useThrottle = <T,>(value: T, limit: number): T => {
   const [throttledValue, setThrottledValue] = useState<T>(value);
   const lastRan = useRef<number>(Date.now());
 

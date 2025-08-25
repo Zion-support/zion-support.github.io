@@ -167,6 +167,7 @@ export function Footer() {
                 </a>
               ))}
             </div>
+          </div>
 
           {/* Footer Sections */}
           {footerSections.map((section) => (
