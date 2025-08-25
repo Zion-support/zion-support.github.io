@@ -20,6 +20,9 @@ import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
 import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
 import { SidebarProvider } from './context/SidebarContext';
+import { EnhancedSEO } from './components/EnhancedSEO';
+import { EnhancedAccessibility } from './components/EnhancedAccessibility';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
 
 // Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
@@ -95,6 +98,7 @@ const LoadingSpinner = () => (
 
 const App = () => {
   useScrollToTop();
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <EnhancedErrorBoundary>
@@ -103,8 +107,17 @@ const App = () => {
           <SidebarProvider>
             <Router>
               <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+                {/* Enhanced SEO */}
+                <EnhancedSEO 
+                  title="Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services"
+                  description="Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology."
+                  keywords="AI solutions, quantum computing, cybersecurity, digital transformation, enterprise technology, machine learning, cloud services, IT infrastructure"
+                  type="website"
+                  url="https://ziontechgroup.com"
+                />
+                
                 <Header />
-                <Sidebar />
+                <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
                 
                 <main className="pt-20">
                   <Suspense fallback={<LoadingSpinner />}>
@@ -175,7 +188,7 @@ const App = () => {
                 <SonnerToaster />
                 
                 {/* Enhanced Accessibility Controls */}
-                <AccessibilityControls position="bottom-right" />
+                <EnhancedAccessibility position="bottom-right" />
                 
                 {/* AI Chatbot - Always Available */}
                 <AIChatbot />
@@ -231,6 +244,23 @@ const App = () => {
                     </div>
                   </>
                 )}
+                
+                {/* Enhanced Performance Monitor - Always Available */}
+                <PerformanceMonitor 
+                  showMetrics={true}
+                  autoRefresh={true}
+                  refreshInterval={30000}
+                  onMetricsUpdate={(metrics) => {
+                    if (import.meta.env.DEV) {
+                      console.log('Performance metrics updated:', metrics);
+                    }
+                  }}
+                  onScoreUpdate={(score) => {
+                    if (import.meta.env.DEV) {
+                      console.log('Performance score updated:', score);
+                    }
+                  }}
+                />
                 
                 {/* Link Health Monitor - Development Mode */}
                 {import.meta.env.DEV && (
