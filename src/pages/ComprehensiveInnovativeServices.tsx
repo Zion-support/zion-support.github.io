@@ -287,30 +287,23 @@ export default function ComprehensiveInnovativeServices() {
                         <span className="text-white font-semibold">{service.marketPrice}</span>
                       </div>
                       <div className="flex items-center justify-between text-sm mt-1">
-<<<<<<< HEAD
-                        <span className="text-zion-cyan/70">ROI:</span>
-                        <span className="text-green-400 font-semibold">High</span>
+                        <span className="text-zion-cyan/70">Support Level:</span>
+                        <span className="text-green-400 font-semibold">{service.supportLevel}</span>
                       </div>
                       <div className="flex items-center justify-between text-sm mt-1">
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-3843
                         <span className="text-zion-cyan/70">Delivery:</span>
                         <span className="text-white font-semibold">{service.estimatedDelivery}</span>
                       </div>
                     </div>
 
-                    {/* Support Level */}
+                    {/* Innovation Level */}
                     <div className="mb-4">
                       <div className="flex items-center justify-between">
-                        <span className="text-xs text-zion-cyan/70">Support Level:</span>
+                        <span className="text-xs text-zion-cyan/70">Innovation Level:</span>
                         <div className="flex items-center">
                           <Award className="w-4 h-4 text-yellow-400 mr-1" />
                           <span className="text-xs text-yellow-400 font-semibold">
-<<<<<<< HEAD
-                            Advanced
-=======
-                            {service.supportLevel}
->>>>>>> origin/cursor/website-audit-and-enhancement-3843
+                            {service.category.split(' ')[0]}
                           </span>
                         </div>
                       </div>
