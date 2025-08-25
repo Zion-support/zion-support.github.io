@@ -116,7 +116,12 @@ export default function Sidebar() {
         { name: 'About', path: '/about', icon: Users },
         { name: 'Services', path: '/services', icon: Briefcase },
         { name: 'Solutions', path: '/solutions/enterprise', icon: Target },
+<<<<<<< HEAD
         { name: 'Pricing', path: '/pricing', icon: BarChart3 },
+=======
+        { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
+        { name: 'About', path: '/about', icon: Users },
+>>>>>>> origin/cursor/website-audit-and-enhancement-803a
         { name: 'Contact', path: '/contact', icon: Phone }
       ]
     },

@@ -24,10 +24,43 @@ export function HeroSection() {
       y: 0,
       opacity: 1,
       transition: {
+<<<<<<< HEAD
         duration: 0.8
       }
     }
   };
+=======
+        duration: 0.8,
+        ease: "easeOut" as const
+      }
+    }
+  }), []);
+
+  const floatingVariants = useMemo(() => ({
+    animate: {
+      y: [0, -20, 0],
+      opacity: [0.3, 0.8, 0.3],
+      transition: {
+        duration: 4,
+        repeat: Infinity,
+        ease: "easeInOut" as const
+      }
+    }
+  }), []);
+
+  const stats = useMemo(() => [
+    { icon: Users, label: "10K+ Talents", value: "Verified", color: "text-zion-cyan", ariaLabel: "Over 10,000 verified talents available" },
+    { icon: Zap, label: "AI-Powered", value: "Matching", color: "text-zion-purple", ariaLabel: "AI-powered smart matching system" },
+    { icon: Shield, label: "Enterprise", value: "Security", color: "text-green-400", ariaLabel: "Enterprise-grade security protocols" },
+    { icon: Globe, label: "Global", value: "Reach", color: "text-blue-400", ariaLabel: "Global reach and accessibility" }
+  ], []);
+
+  const features = useMemo(() => [
+    { icon: Brain, text: "AI-Powered Matching", color: "from-purple-500 to-pink-500", ariaLabel: "AI-powered matching technology" },
+    { icon: Cpu, text: "Micro SAAS Solutions", color: "from-blue-500 to-cyan-500", ariaLabel: "Micro SAAS software solutions" },
+    { icon: Shield, text: "Enterprise Security", color: "from-green-500 to-emerald-500", ariaLabel: "Enterprise-grade security features" }
+  ], []);
+>>>>>>> origin/cursor/website-audit-and-enhancement-803a
 
   return (
     <section className="relative py-20 md:py-32 min-h-[90vh] flex items-center overflow-hidden">
