@@ -4,410 +4,458 @@ export interface SpecializedITService {
   description: string;
   category: string;
   subcategory: string;
-  price: {
-    starter: number;
-    professional: number;
-    enterprise: number;
-    currency: string;
-  };
+  price: number;
+  currency: string;
+  pricingModel: string;
   features: string[];
   benefits: string[];
-  targetAudience: string[];
   useCases: string[];
-  integration: string[];
-  pricingTier: 'Starter' | 'Professional' | 'Enterprise' | 'Custom';
-  website: string;
-  contactInfo: {
-    email: string;
-    phone: string;
-    address: string;
-  };
-  rating: number;
-  reviewCount: number;
-  launchDate: string;
-  status: 'Active' | 'Beta' | 'Coming Soon';
+  targetAudience: string[];
+  tags: string[];
+  estimatedDelivery: string;
+  supportLevel: string;
   marketPrice: string;
-  deliveryTime: string;
+  contactInfo: {
+    phone: string;
+    email: string;
+    website: string;
+  };
+  technology: string[];
+  integrations: string[];
+  compliance: string[];
+  roi: string;
+  competitors: string[];
+  freeTrial: boolean;
+  freeTrialDays: number;
+  demoUrl: string;
+  industryFocus: string[];
 }
 
 export const SPECIALIZED_IT_SERVICES: SpecializedITService[] = [
-  // DevOps Automation Platform
+  // FinTech Solutions
   {
-    id: 'zion-devops-automation',
-    title: 'Zion DevOps Automation Platform',
-    description: 'Comprehensive DevOps automation platform that streamlines CI/CD pipelines, infrastructure management, and deployment processes across multiple environments.',
-    category: 'DevOps & Automation',
-    subcategory: 'CI/CD & Deployment',
-    price: {
-      starter: 299,
-      professional: 799,
-      enterprise: 1999,
-      currency: '$'
-    },
+    id: "fintech-compliance-platform",
+    title: "FinTech Compliance & Risk Management Platform",
+    description: "Comprehensive compliance platform for financial institutions with real-time monitoring, automated reporting, and regulatory compliance management.",
+    category: "FinTech & Banking",
+    subcategory: "Compliance & Risk",
+    price: 899,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      'Multi-environment CI/CD pipelines',
-      'Infrastructure as Code (IaC)',
-      'Automated testing and deployment',
-      'Container orchestration',
-      'Monitoring and alerting',
-      'Security scanning integration',
-      'Multi-cloud deployment',
-      'Performance optimization'
+      "Real-time compliance monitoring",
+      "Automated regulatory reporting",
+      "Risk assessment algorithms",
+      "AML/KYC automation",
+      "Transaction monitoring",
+      "Regulatory change management",
+      "Audit trail management",
+      "Multi-jurisdiction compliance"
     ],
     benefits: [
-      'Reduce deployment time by 80%',
-      'Improve code quality and reliability',
-      'Automate infrastructure management',
-      'Reduce human errors',
-      'Scale operations efficiently'
-    ],
-    targetAudience: [
-      'DevOps engineers',
-      'Software developers',
-      'IT operations teams',
-      'Startups and enterprises',
-      'Cloud-native companies'
+      "Reduce compliance costs by 40%",
+      "Automate 90% of regulatory reporting",
+      "Real-time risk detection",
+      "Ensure regulatory compliance",
+      "Reduce audit preparation time"
     ],
     useCases: [
-      'Continuous integration and deployment',
-      'Infrastructure automation',
-      'Container management',
-      'Multi-cloud deployments',
-      'DevOps transformation'
+      "Banking compliance",
+      "Payment processing",
+      "Cryptocurrency exchanges",
+      "Insurance companies",
+      "Investment firms"
     ],
-    integration: [
-      'GitHub',
-      'GitLab',
-      'Jenkins',
-      'Docker',
-      'Kubernetes',
-      'AWS',
-      'Azure',
-      'GCP',
-      'Terraform'
+    targetAudience: [
+      "Banks and credit unions",
+      "FinTech startups",
+      "Payment processors",
+      "Insurance companies",
+      "Investment firms"
     ],
-    pricingTier: 'Professional',
-    website: 'https://ziontechgroup.com/services/devops-automation',
+    tags: ["FinTech", "Compliance", "Risk Management", "AML/KYC", "Regulatory Reporting"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$899 - $5,000/month",
     contactInfo: {
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    rating: 4.8,
-    reviewCount: 189,
-    launchDate: '2024-01-25',
-    status: 'Active',
-    marketPrice: '$299 - $1,999/month',
-    deliveryTime: '3-4 weeks'
+    technology: ["AI/ML", "Blockchain", "Cloud Computing", "Real-time Processing", "Big Data"],
+    integrations: ["Core Banking Systems", "Payment Gateways", "Regulatory APIs", "Risk Management Tools"],
+    compliance: ["PCI DSS", "SOC 2", "ISO 27001", "GDPR", "Financial Regulations"],
+    roi: "450% within 8 months",
+    competitors: ["ComplyAdvantage", "Refinitiv", "LexisNexis", "Thomson Reuters"],
+    freeTrial: true,
+    freeTrialDays: 14,
+    demoUrl: "https://demo.ziontechgroup.com/fintech-compliance",
+    industryFocus: ["Banking", "FinTech", "Insurance", "Investment"]
   },
 
-  // API Management & Gateway
+  // Healthcare IT Solutions
   {
-    id: 'zion-api-management-gateway',
-    title: 'Zion API Management & Gateway',
-    description: 'Enterprise-grade API management platform that provides secure, scalable, and monitored API access with advanced analytics and developer portal capabilities.',
-    category: 'API & Integration',
-    subcategory: 'API Management',
-    price: {
-      starter: 199,
-      professional: 599,
-      enterprise: 1499,
-      currency: '$'
-    },
+    id: "healthcare-ai-platform",
+    title: "Healthcare AI & Telemedicine Platform",
+    description: "Advanced healthcare platform with AI-powered diagnostics, telemedicine capabilities, and patient management systems for modern healthcare providers.",
+    category: "Healthcare IT",
+    subcategory: "AI & Telemedicine",
+    price: 699,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      'API gateway and routing',
-      'Rate limiting and throttling',
-      'Authentication and authorization',
-      'API analytics and monitoring',
-      'Developer portal',
-      'Documentation generation',
-      'Version management',
-      'Security policies'
+      "AI-powered diagnostics",
+      "Telemedicine consultations",
+      "Patient management system",
+      "Electronic health records",
+      "Medical imaging analysis",
+      "Prescription management",
+      "Appointment scheduling",
+      "Health analytics dashboard"
     ],
     benefits: [
-      'Centralize API management',
-      'Improve API security',
-      'Monitor API performance',
-      'Streamline developer onboarding',
-      'Reduce API maintenance costs'
-    ],
-    targetAudience: [
-      'API developers',
-      'Integration teams',
-      'Enterprise architects',
-      'Startups and enterprises',
-      'Digital transformation teams'
+      "Improve diagnostic accuracy by 30%",
+      "Reduce patient wait times by 60%",
+      "Streamline healthcare operations",
+      "Enhance patient care quality",
+      "Reduce administrative overhead"
     ],
     useCases: [
-      'Microservices architecture',
-      'Third-party integrations',
-      'Mobile app backends',
-      'Partner API access',
-      'Internal API governance'
+      "Primary care practices",
+      "Specialist consultations",
+      "Remote patient monitoring",
+      "Medical imaging analysis",
+      "Healthcare analytics"
     ],
-    integration: [
-      'Kong',
-      'AWS API Gateway',
-      'Azure API Management',
-      'Postman',
-      'Swagger',
-      'OAuth providers',
-      'LDAP/Active Directory'
+    targetAudience: [
+      "Hospitals and clinics",
+      "Private practices",
+      "Telemedicine providers",
+      "Medical imaging centers",
+      "Healthcare networks"
     ],
-    pricingTier: 'Professional',
-    website: 'https://ziontechgroup.com/services/api-management-gateway',
+    tags: ["Healthcare", "AI", "Telemedicine", "EHR", "Medical Imaging", "Patient Care"],
+    estimatedDelivery: "5-7 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$699 - $3,500/month",
     contactInfo: {
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    rating: 4.7,
-    reviewCount: 145,
-    launchDate: '2024-02-10',
-    status: 'Active',
-    marketPrice: '$199 - $1,499/month',
-    deliveryTime: '2-3 weeks'
+    technology: ["AI/ML", "Computer Vision", "Natural Language Processing", "Cloud Computing", "IoT"],
+    integrations: ["EHR Systems", "Medical Devices", "Insurance Systems", "Pharmacy Systems"],
+    compliance: ["HIPAA", "HITECH", "FDA", "SOC 2", "ISO 27001"],
+    roi: "400% within 10 months",
+    competitors: ["Epic", "Cerner", "Teladoc", "Amwell"],
+    freeTrial: true,
+    freeTrialDays: 21,
+    demoUrl: "https://demo.ziontechgroup.com/healthcare-ai",
+    industryFocus: ["Healthcare", "Medical", "Pharmaceutical", "Telemedicine"]
   },
 
-  // Data Pipeline & ETL Platform
+  // Manufacturing & Industry 4.0
   {
-    id: 'zion-data-pipeline-etl',
-    title: 'Zion Data Pipeline & ETL Platform',
-    description: 'Scalable data pipeline and ETL platform that automates data extraction, transformation, and loading processes with real-time processing capabilities.',
-    category: 'Data & Analytics',
-    subcategory: 'Data Engineering',
-    price: {
-      starter: 399,
-      professional: 999,
-      enterprise: 2499,
-      currency: '$'
-    },
+    id: "industry-4-0-platform",
+    title: "Industry 4.0 & Smart Manufacturing Platform",
+    description: "Comprehensive Industry 4.0 platform integrating IoT, AI, and automation for smart manufacturing, predictive maintenance, and supply chain optimization.",
+    category: "Manufacturing & Industry 4.0",
+    subcategory: "Smart Manufacturing",
+    price: 799,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      'Real-time data streaming',
-      'Batch processing pipelines',
-      'Data transformation engine',
-      'Schema evolution management',
-      'Data quality monitoring',
-      'Error handling and recovery',
-      'Scalable infrastructure',
-      'Multi-source connectors'
+      "IoT device integration",
+      "Predictive maintenance",
+      "Quality control automation",
+      "Supply chain optimization",
+      "Energy management",
+      "Production analytics",
+      "Digital twin integration",
+      "Real-time monitoring"
     ],
     benefits: [
-      'Automate data workflows',
-      'Improve data quality',
-      'Reduce processing time',
-      'Scale data operations',
-      'Enable real-time analytics'
-    ],
-    targetAudience: [
-      'Data engineers',
-      'Data scientists',
-      'Analytics teams',
-      'Business intelligence teams',
-      'Enterprise organizations'
+      "Reduce downtime by 40%",
+      "Improve quality by 30%",
+      "Reduce energy costs by 25%",
+      "Optimize production efficiency",
+      "Real-time decision making"
     ],
     useCases: [
-      'Data warehouse automation',
-      'Real-time analytics',
-      'Customer data integration',
-      'IoT data processing',
-      'Business intelligence automation'
+      "Smart manufacturing",
+      "Predictive maintenance",
+      "Quality control",
+      "Supply chain management",
+      "Energy optimization"
     ],
-    integration: [
-      'Apache Kafka',
-      'Apache Spark',
-      'Snowflake',
-      'BigQuery',
-      'Redshift',
-      'PostgreSQL',
-      'MongoDB',
-      'REST APIs'
+    targetAudience: [
+      "Manufacturing companies",
+      "Industrial facilities",
+      "Automotive industry",
+      "Chemical plants",
+      "Food processing"
     ],
-    pricingTier: 'Professional',
-    website: 'https://ziontechgroup.com/services/data-pipeline-etl',
+    tags: ["Industry 4.0", "IoT", "Smart Manufacturing", "Predictive Maintenance", "Automation"],
+    estimatedDelivery: "6-8 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$799 - $4,500/month",
     contactInfo: {
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    rating: 4.9,
-    reviewCount: 167,
-    launchDate: '2024-01-30',
-    status: 'Active',
-    marketPrice: '$399 - $2,499/month',
-    deliveryTime: '4-5 weeks'
+    technology: ["IoT", "AI/ML", "Edge Computing", "Cloud Computing", "Digital Twin"],
+    integrations: ["ERP Systems", "MES Systems", "SCADA Systems", "PLM Software"],
+    compliance: ["ISO 27001", "IEC 62443", "Industry-specific standards"],
+    roi: "500% within 12 months",
+    competitors: ["Siemens", "GE Digital", "PTC", "Rockwell Automation"],
+    freeTrial: true,
+    freeTrialDays: 30,
+    demoUrl: "https://demo.ziontechgroup.com/industry-4-0",
+    industryFocus: ["Manufacturing", "Industrial", "Automotive", "Chemical"]
   },
 
-  // Network Security & Monitoring
+  // Retail & E-commerce Solutions
   {
-    id: 'zion-network-security-monitoring',
-    title: 'Zion Network Security & Monitoring',
-    description: 'Advanced network security and monitoring platform that provides real-time threat detection, network visibility, and automated incident response.',
-    category: 'Network Security',
-    subcategory: 'Threat Detection',
-    price: {
-      starter: 499,
-      professional: 1299,
-      enterprise: 2999,
-      currency: '$'
-    },
+    id: "retail-omnichannel-platform",
+    title: "Retail Omnichannel & AI Commerce Platform",
+    description: "Advanced omnichannel retail platform with AI-powered personalization, inventory management, and seamless customer experience across all channels.",
+    category: "Retail & E-commerce",
+    subcategory: "Omnichannel Commerce",
+    price: 599,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      'Real-time threat detection',
-      'Network traffic analysis',
-      'Behavioral analytics',
-      'Automated incident response',
-      'Vulnerability scanning',
-      'Compliance reporting',
-      'SIEM integration',
-      '24/7 monitoring'
+      "Omnichannel inventory management",
+      "AI-powered personalization",
+      "Customer journey tracking",
+      "Unified commerce platform",
+      "Predictive analytics",
+      "Mobile commerce",
+      "Social commerce integration",
+      "Loyalty program management"
     ],
     benefits: [
-      'Detect threats in real-time',
-      'Reduce incident response time',
-      'Improve network visibility',
-      'Automate security operations',
-      'Maintain compliance'
-    ],
-    targetAudience: [
-      'Network administrators',
-      'Security analysts',
-      'CISOs and security teams',
-      'IT managers',
-      'Enterprise organizations'
+      "Increase sales by 25-40%",
+      "Improve customer retention by 30%",
+      "Reduce inventory costs by 20%",
+      "Unified customer experience",
+      "Data-driven decision making"
     ],
     useCases: [
-      'Network security monitoring',
-      'Threat hunting',
-      'Incident response',
-      'Compliance monitoring',
-      'Security operations center'
+      "Brick-and-mortar retail",
+      "E-commerce platforms",
+      "Mobile commerce",
+      "Social commerce",
+      "Loyalty programs"
     ],
-    integration: [
-      'Splunk',
-      'ELK Stack',
-      'Cisco',
-      'Palo Alto Networks',
-      'Fortinet',
-      'Active Directory',
-      'LDAP',
-      'SIEM systems'
+    targetAudience: [
+      "Retail chains",
+      "E-commerce businesses",
+      "Fashion brands",
+      "Consumer goods",
+      "Department stores"
     ],
-    pricingTier: 'Professional',
-    website: 'https://ziontechgroup.com/services/network-security-monitoring',
+    tags: ["Retail", "E-commerce", "Omnichannel", "AI", "Personalization", "Mobile Commerce"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "premium",
+    marketPrice: "$599 - $2,800/month",
     contactInfo: {
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    rating: 4.8,
-    reviewCount: 203,
-    launchDate: '2024-02-05',
-    status: 'Active',
-    marketPrice: '$499 - $2,999/month',
-    deliveryTime: '3-4 weeks'
+    technology: ["AI/ML", "Cloud Computing", "Mobile Development", "API Integration", "Big Data"],
+    integrations: ["POS Systems", "E-commerce Platforms", "Payment Gateways", "Social Media"],
+    compliance: ["PCI DSS", "GDPR", "CCPA", "SOC 2"],
+    roi: "400% within 8 months",
+    competitors: ["Shopify Plus", "Salesforce Commerce", "Adobe Commerce", "BigCommerce"],
+    freeTrial: true,
+    freeTrialDays: 21,
+    demoUrl: "https://demo.ziontechgroup.com/retail-omnichannel",
+    industryFocus: ["Retail", "E-commerce", "Fashion", "Consumer Goods"]
   },
 
-  // Cloud Migration & Modernization
+  // Logistics & Supply Chain
   {
-    id: 'zion-cloud-migration-modernization',
-    title: 'Zion Cloud Migration & Modernization',
-    description: 'Comprehensive cloud migration and modernization platform that helps organizations transition to cloud-native architectures with minimal disruption.',
-    category: 'Cloud & Infrastructure',
-    subcategory: 'Migration & Modernization',
-    price: {
-      starter: 999,
-      professional: 2499,
-      enterprise: 4999,
-      currency: '$'
-    },
+    id: "logistics-ai-platform",
+    title: "AI-Powered Logistics & Supply Chain Platform",
+    description: "Intelligent logistics platform with route optimization, demand forecasting, and real-time tracking for efficient supply chain management.",
+    category: "Logistics & Supply Chain",
+    subcategory: "AI Optimization",
+    price: 649,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      'Migration assessment tools',
-      'Automated migration workflows',
-      'Application modernization',
-      'Performance optimization',
-      'Cost analysis and planning',
-      'Security and compliance',
-      'Training and support',
-      'Post-migration monitoring'
+      "Route optimization",
+      "Demand forecasting",
+      "Real-time tracking",
+      "Warehouse management",
+      "Fleet management",
+      "Cost optimization",
+      "Sustainability tracking",
+      "Risk management"
     ],
     benefits: [
-      'Reduce migration risks',
-      'Accelerate cloud adoption',
-      'Optimize cloud costs',
-      'Improve application performance',
-      'Enhance security posture'
-    ],
-    targetAudience: [
-      'IT directors',
-      'Cloud architects',
-      'DevOps teams',
-      'Enterprise organizations',
-      'Digital transformation teams'
+      "Reduce logistics costs by 25-35%",
+      "Improve delivery times by 30%",
+      "Optimize warehouse operations",
+      "Reduce carbon footprint",
+      "Real-time visibility"
     ],
     useCases: [
-      'Legacy application migration',
-      'Data center consolidation',
-      'Application modernization',
-      'Multi-cloud strategies',
-      'Disaster recovery planning'
+      "E-commerce logistics",
+      "Manufacturing supply chains",
+      "Retail distribution",
+      "Cold chain logistics",
+      "International shipping"
     ],
-    integration: [
-      'AWS Migration Hub',
-      'Azure Migrate',
-      'Google Cloud Migrate',
-      'VMware',
-      'Hyper-V',
-      'Docker',
-      'Kubernetes',
-      'Terraform'
+    targetAudience: [
+      "Logistics companies",
+      "E-commerce businesses",
+      "Manufacturing companies",
+      "Retail chains",
+      "3PL providers"
     ],
-    pricingTier: 'Enterprise',
-    website: 'https://ziontechgroup.com/services/cloud-migration-modernization',
+    tags: ["Logistics", "Supply Chain", "AI", "Route Optimization", "Fleet Management", "Warehouse"],
+    estimatedDelivery: "5-7 weeks",
+    supportLevel: "premium",
+    marketPrice: "$649 - $3,200/month",
     contactInfo: {
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    rating: 4.9,
-    reviewCount: 89,
-    launchDate: '2024-02-20',
-    status: 'Active',
-    marketPrice: '$999 - $4,999/month',
-    deliveryTime: '6-8 weeks'
+    technology: ["AI/ML", "IoT", "GPS", "Cloud Computing", "Big Data Analytics"],
+    integrations: ["ERP Systems", "WMS Systems", "TMS Systems", "Carrier APIs"],
+    compliance: ["ISO 28000", "C-TPAT", "GDPR", "Industry-specific regulations"],
+    roi: "450% within 10 months",
+    competitors: ["Flexport", "Convoy", "Project44", "FourKites"],
+    freeTrial: true,
+    freeTrialDays: 21,
+    demoUrl: "https://demo.ziontechgroup.com/logistics-ai",
+    industryFocus: ["Logistics", "Supply Chain", "E-commerce", "Manufacturing"]
+  },
+
+  // Education Technology
+  {
+    id: "edtech-ai-platform",
+    title: "AI-Powered Education Technology Platform",
+    description: "Comprehensive EdTech platform with personalized learning, adaptive assessments, and virtual classroom capabilities for modern education.",
+    category: "Education Technology",
+    subcategory: "AI Learning",
+    price: 449,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Personalized learning paths",
+      "Adaptive assessments",
+      "Virtual classrooms",
+      "Content management",
+      "Student analytics",
+      "Parent communication",
+      "Mobile learning",
+      "Gamification"
+    ],
+    benefits: [
+      "Improve learning outcomes by 35%",
+      "Reduce administrative workload by 40%",
+      "Personalized student experience",
+      "Real-time progress tracking",
+      "Engaging learning environment"
+    ],
+    useCases: [
+      "K-12 education",
+      "Higher education",
+      "Corporate training",
+      "Online learning",
+      "Special education"
+    ],
+    targetAudience: [
+      "Schools and districts",
+      "Universities",
+      "Training companies",
+      "EdTech startups",
+      "Corporate trainers"
+    ],
+    tags: ["EdTech", "AI", "Personalized Learning", "Virtual Classrooms", "Adaptive Learning"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "premium",
+    marketPrice: "$449 - $2,200/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technology: ["AI/ML", "Natural Language Processing", "Cloud Computing", "Mobile Development", "WebRTC"],
+    integrations: ["LMS Systems", "Student Information Systems", "Content Providers", "Assessment Tools"],
+    compliance: ["FERPA", "COPPA", "GDPR", "Accessibility Standards"],
+    roi: "350% within 8 months",
+    competitors: ["Canvas", "Blackboard", "Moodle", "Coursera"],
+    freeTrial: true,
+    freeTrialDays: 30,
+    demoUrl: "https://demo.ziontechgroup.com/edtech-ai",
+    industryFocus: ["Education", "Training", "EdTech", "Corporate Learning"]
+  },
+
+  // Real Estate Technology
+  {
+    id: "proptech-platform",
+    title: "Proptech & Real Estate Management Platform",
+    description: "Advanced real estate platform with AI-powered property valuation, virtual tours, and comprehensive property management solutions.",
+    category: "Real Estate Technology",
+    subcategory: "Property Management",
+    price: 549,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI property valuation",
+      "Virtual property tours",
+      "Property management",
+      "Tenant screening",
+      "Maintenance tracking",
+      "Financial reporting",
+      "Market analytics",
+      "Mobile app access"
+    ],
+    benefits: [
+      "Increase property value by 15-25%",
+      "Reduce vacancy rates by 30%",
+      "Streamline property management",
+      "Improve tenant satisfaction",
+      "Data-driven decisions"
+    ],
+    useCases: [
+      "Property management",
+      "Real estate investment",
+      "Commercial real estate",
+      "Residential rentals",
+      "Property development"
+    ],
+    targetAudience: [
+      "Property managers",
+      "Real estate investors",
+      "Real estate agencies",
+      "Property developers",
+      "Landlords"
+    ],
+    tags: ["Proptech", "Real Estate", "AI", "Virtual Tours", "Property Management", "Valuation"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "premium",
+    marketPrice: "$549 - $2,600/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technology: ["AI/ML", "Computer Vision", "3D Modeling", "Cloud Computing", "Mobile Development"],
+    integrations: ["MLS Systems", "Property Management Software", "Payment Processors", "Insurance APIs"],
+    compliance: ["Fair Housing Laws", "Real Estate Regulations", "GDPR", "SOC 2"],
+    roi: "400% within 10 months",
+    competitors: ["Buildium", "AppFolio", "Yardi", "RealPage"],
+    freeTrial: true,
+    freeTrialDays: 21,
+    demoUrl: "https://demo.ziontechgroup.com/proptech",
+    industryFocus: ["Real Estate", "Property Management", "Construction", "Development"]
   }
 ];
-
-export const SPECIALIZED_IT_CATEGORIES = [
-  { 
-    label: 'DevOps & Automation', 
-    value: 'devops-automation',
-    description: 'CI/CD pipelines and infrastructure automation'
-  },
-  { 
-    label: 'API & Integration', 
-    value: 'api-integration',
-    description: 'API management and integration solutions'
-  },
-  { 
-    label: 'Data & Analytics', 
-    value: 'data-analytics',
-    description: 'Data engineering and analytics platforms'
-  },
-  { 
-    label: 'Network Security', 
-    value: 'network-security',
-    description: 'Network security and threat detection'
-  },
-  { 
-    label: 'Cloud & Infrastructure', 
-    value: 'cloud-infrastructure',
-    description: 'Cloud migration and modernization'
-  }
-];
-
-export const CONTACT_INFO = {
-  mobile: "+1 302 464 0950",
-  email: "kleber@ziontechgroup.com",
-  address: "364 E Main St STE 1008, Middletown DE 19709",
-  website: "https://ziontechgroup.com"
-};
