@@ -2,13 +2,11 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
 import { visualizer } from 'rollup-plugin-visualizer'
-import { splitVendorChunkPlugin } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig(async () => ({
   plugins: [
     react(),
-    splitVendorChunkPlugin(),
     visualizer({
       filename: 'dist/stats.html',
       open: false,
@@ -35,77 +33,91 @@ export default defineConfig(async () => ({
       compress: {
         drop_console: true,
         drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
       },
     },
     rollupOptions: {
       output: {
-        manualChunks: {
+        manualChunks: (id) => {
           // Core React libraries
-          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          if (id.includes('react') || id.includes('react-dom') || id.includes('react-router-dom')) {
+            return 'react-vendor';
+          }
           
           // UI Component libraries
-          'ui-vendor': [
-            '@radix-ui/react-accordion',
-            '@radix-ui/react-alert-dialog',
-            '@radix-ui/react-aspect-ratio',
-            '@radix-ui/react-avatar',
-            '@radix-ui/react-checkbox',
-            '@radix-ui/react-context-menu',
-            '@radix-ui/react-dialog',
-            '@radix-ui/react-dropdown-menu',
-            '@radix-ui/react-label',
-            '@radix-ui/react-popover',
-            '@radix-ui/react-progress',
-            '@radix-ui/react-radio-group',
-            '@radix-ui/react-scroll-area',
-            '@radix-ui/react-select',
-            '@radix-ui/react-separator',
-            '@radix-ui/react-slider',
-            '@radix-ui/react-slot',
-            '@radix-ui/react-switch',
-            '@radix-ui/react-tabs',
-            '@radix-ui/react-toast',
-            '@radix-ui/react-tooltip',
-          ],
+          if (id.includes('@radix-ui')) {
+            return 'ui-vendor';
+          }
           
           // Animation and motion libraries
-          'animation-vendor': ['framer-motion', 'embla-carousel-react'],
+          if (id.includes('framer-motion') || id.includes('embla-carousel-react')) {
+            return 'animation-vendor';
+          }
           
           // Form and validation libraries
-          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
+          if (id.includes('react-hook-form') || id.includes('@hookform/resolvers') || id.includes('zod')) {
+            return 'form-vendor';
+          }
           
           // State management
-          'state-vendor': ['@reduxjs/toolkit', 'react-redux'],
+          if (id.includes('@reduxjs/toolkit') || id.includes('react-redux')) {
+            return 'state-vendor';
+          }
           
           // Data visualization and charts
-          'chart-vendor': ['recharts'],
+          if (id.includes('recharts')) {
+            return 'chart-vendor';
+          }
           
           // Drag and drop
-          'dnd-vendor': ['@hello-pangea/dnd'],
+          if (id.includes('@hello-pangea/dnd')) {
+            return 'dnd-vendor';
+          }
           
           // Internationalization
-          'i18n-vendor': ['i18next', 'i18next-browser-languagedetector', 'react-i18next'],
+          if (id.includes('i18next') || id.includes('react-i18next')) {
+            return 'i18n-vendor';
+          }
           
           // Input components
-          'input-vendor': ['input-otp', 'react-day-picker', 'date-fns'],
+          if (id.includes('input-otp') || id.includes('react-day-picker') || id.includes('date-fns')) {
+            return 'input-vendor';
+          }
           
           // Utility libraries
-          'utility-vendor': ['axios', 'clsx', 'tailwind-merge', 'class-variance-authority', 'cmdk'],
+          if (id.includes('axios') || id.includes('clsx') || id.includes('tailwind-merge') || id.includes('class-variance-authority') || id.includes('cmdk')) {
+            return 'utility-vendor';
+          }
           
           // Icon libraries
-          'icon-vendor': ['lucide-react', 'react-icons'],
+          if (id.includes('lucide-react') || id.includes('react-icons')) {
+            return 'icon-vendor';
+          }
           
           // PDF and document generation
-          'pdf-vendor': ['jspdf', 'jspdf-autotable'],
+          if (id.includes('jspdf')) {
+            return 'pdf-vendor';
+          }
           
           // Payment processing
-          'stripe-vendor': ['@stripe/stripe-js'],
+          if (id.includes('@stripe/stripe-js')) {
+            return 'stripe-vendor';
+          }
           
           // Database and backend
-          'supabase-vendor': ['@supabase/supabase-js'],
+          if (id.includes('@supabase/supabase-js')) {
+            return 'supabase-vendor';
+          }
           
           // Query management
-          'query-vendor': ['@tanstack/react-query'],
+          if (id.includes('@tanstack/react-query')) {
+            return 'query-vendor';
+          }
+          
+          // Default vendor chunk for other dependencies
+          if (id.includes('node_modules')) {
+            return 'vendor';
+          }
         },
         chunkFileNames: (chunkInfo) => {
           const facadeModuleId = chunkInfo.facadeModuleId ? chunkInfo.facadeModuleId.split('/').pop() : 'chunk';
@@ -126,6 +138,12 @@ export default defineConfig(async () => ({
     },
     chunkSizeWarningLimit: 1000,
     sourcemap: false,
+    // Enable CSS code splitting
+    cssCodeSplit: true,
+    // Optimize dependencies
+    commonjsOptions: {
+      include: [/node_modules/],
+    },
   },
   optimizeDeps: {
     include: [
@@ -181,6 +199,8 @@ export default defineConfig(async () => ({
       '@supabase/supabase-js',
       '@tanstack/react-query',
     ],
+    // Exclude problematic packages from optimization
+    exclude: ['@cypress/request'],
   },
   server: {
     port: 3000,
