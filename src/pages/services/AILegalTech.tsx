@@ -1,439 +1,358 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Shield, 
+  Scale, 
   FileText, 
-  Brain, 
+  Search, 
+  Shield, 
   Zap, 
-  BarChart3, 
-  Clock, 
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Users,
-  Mail,
-  Phone,
-  MapPin,
-  TrendingUp,
-  Search,
-  UserCheck,
-  Calendar,
-  Award,
-  Briefcase,
-  Heart,
+  Brain, 
+  Users, 
+  BarChart3,
   Globe,
-  Lock,
-  Database,
-  Scale,
-  Gavel,
-  BookOpen,
-  Search as SearchIcon,
-  AlertTriangle,
-  CheckSquare,
-  FileCheck,
-  Clock as ClockIcon,
-  DollarSign
+  Rocket,
+  Star,
+  Clock,
+  Target,
+  CheckCircle,
+  TrendingUp,
+  Building,
+  DollarSign,
+  Heart,
+  Home
 } from 'lucide-react';
 
 export default function AILegalTech() {
-  const features = [
+  const services = [
     {
-      icon: Brain,
-      title: "AI-Powered Contract Analysis",
-      description: "Intelligent contract review and analysis using advanced natural language processing."
+      title: 'AI-Powered Contract Analysis',
+      description: 'Intelligent contract review and analysis using natural language processing and machine learning algorithms.',
+      icon: FileText,
+      features: [
+        'Automated contract review',
+        'Risk identification and assessment',
+        'Clause analysis and comparison',
+        'Compliance checking',
+        'Contract summarization',
+        'Version control and tracking'
+      ],
+      price: 'Starting at $4,999/month'
     },
     {
-      icon: SearchIcon,
-      title: "Legal Research Automation",
-      description: "Automated legal research with AI-powered case law and precedent analysis."
+      title: 'Legal Research Automation',
+      description: 'AI-driven legal research platform that accelerates case law analysis and precedent discovery.',
+      icon: Search,
+      features: [
+        'Case law research automation',
+        'Precedent identification',
+        'Legal document search',
+        'Citation analysis',
+        'Research summarization',
+        'Multi-jurisdiction support'
+      ],
+      price: 'Starting at $3,499/month'
     },
     {
-      icon: FileCheck,
-      title: "Document Review & Due Diligence",
-      description: "Efficient document review and due diligence processes with AI accuracy."
+      title: 'Compliance & Risk Management',
+      description: 'Automated compliance monitoring and risk assessment for regulatory requirements across industries.',
+      icon: Shield,
+      features: [
+        'Regulatory compliance monitoring',
+        'Risk assessment automation',
+        'Policy management',
+        'Audit trail generation',
+        'Compliance reporting',
+        'Real-time alerts'
+      ],
+      price: 'Starting at $2,999/month'
     },
     {
+      title: 'Document Generation & Management',
+      description: 'Intelligent legal document creation and management with automated templates and workflows.',
       icon: Zap,
-      title: "Automated Legal Workflows",
-      description: "Streamlined legal processes with intelligent automation and workflow optimization."
+      features: [
+        'Automated document generation',
+        'Template management',
+        'Workflow automation',
+        'Document collaboration',
+        'Version control',
+        'Electronic signatures'
+      ],
+      price: 'Starting at $2,499/month'
+    }
+  ];
+
+  const legalTechFeatures = [
+    {
+      title: 'Contract Intelligence',
+      description: 'AI-powered contract analysis and risk assessment',
+      icon: FileText,
+      benefits: ['Risk identification', 'Compliance checking', 'Clause analysis', 'Automated review']
     },
     {
-      icon: BarChart3,
-      title: "Predictive Legal Analytics",
-      description: "Data-driven insights to predict case outcomes and optimize legal strategies."
+      title: 'Legal Research AI',
+      description: 'Intelligent legal research and precedent discovery',
+      icon: Search,
+      benefits: ['Case law analysis', 'Precedent identification', 'Research automation', 'Citation tracking']
     },
     {
-      icon: Clock,
-      title: "Compliance Monitoring",
-      description: "Real-time compliance monitoring and automated regulatory updates."
+      title: 'Compliance Automation',
+      description: 'Automated regulatory compliance and risk management',
+      icon: Shield,
+      benefits: ['Regulatory monitoring', 'Risk assessment', 'Policy management', 'Audit trails']
+    },
+    {
+      title: 'Document Automation',
+      description: 'Intelligent document generation and management',
+      icon: Zap,
+      benefits: ['Template automation', 'Workflow management', 'Collaboration tools', 'Version control']
     }
   ];
 
   const benefits = [
-    "Reduce legal research time by 70%",
-    "Improve contract review accuracy by 90%",
-    "Cut legal costs by 40-60%",
-    "Increase productivity by 300%",
-    "Automate 80% of repetitive legal tasks",
-    "Enhance risk assessment and compliance"
-  ];
-
-  const pricingPlans = [
     {
-      name: "Starter",
-      price: "$499",
-      period: "/month",
-      description: "Perfect for small law firms",
-      features: [
-        "Basic AI contract analysis",
-        "Legal research automation",
-        "Document review tools",
-        "Basic compliance monitoring",
-        "Up to 100 documents/month",
-        "Email support"
-      ]
+      title: 'Time Savings',
+      description: 'Reduce legal research and document review time by up to 80%',
+      icon: Clock
     },
     {
-      name: "Professional",
-      price: "$999",
-      period: "/month",
-      description: "Ideal for growing practices",
-      features: [
-        "Advanced AI legal analysis",
-        "Predictive analytics",
-        "Automated workflows",
-        "Advanced compliance tools",
-        "Up to 500 documents/month",
-        "Priority support",
-        "Custom integrations"
-      ],
-      popular: true
+      title: 'Cost Reduction',
+      description: 'Lower legal costs through automation and efficiency gains',
+      icon: TrendingUp
     },
     {
-      name: "Enterprise",
-      price: "$1,999",
-      period: "/month",
-      description: "For large law firms",
-      features: [
-        "Full AI legal suite access",
-        "Custom AI models",
-        "Advanced reporting",
-        "Dedicated account manager",
-        "Unlimited documents",
-        "24/7 phone support",
-        "Custom development"
-      ]
-    }
-  ];
-
-  const useCases = [
-    {
-      title: "Contract Management",
-      description: "AI-powered contract analysis, review, and management for legal teams.",
-      icon: FileText
-    },
-    {
-      title: "Legal Research",
-      description: "Automated legal research with comprehensive case law analysis.",
-      icon: BookOpen
-    },
-    {
-      title: "Compliance & Risk",
-      description: "Real-time compliance monitoring and risk assessment automation.",
+      title: 'Risk Mitigation',
+      description: 'Identify and mitigate legal risks with AI-powered analysis',
       icon: Shield
     },
     {
-      title: "Due Diligence",
-      description: "Streamlined due diligence processes with AI-powered document review.",
-      icon: SearchIcon
+      title: 'Improved Accuracy',
+      description: 'Enhance accuracy and consistency in legal work',
+      icon: CheckCircle
     }
   ];
 
-  const legalProcesses = [
+  const industries = [
     {
-      step: "01",
-      title: "AI Document Analysis",
-      description: "Intelligent document parsing and content analysis"
+      title: 'Corporate Law',
+      description: 'Contract management, compliance, and corporate governance',
+      icon: Building
     },
     {
-      step: "02",
-      title: "Legal Research Automation",
-      description: "AI-powered case law and precedent research"
+      title: 'Financial Services',
+      description: 'Regulatory compliance, risk management, and contract analysis',
+      icon: DollarSign
     },
     {
-      step: "03",
-      title: "Contract Review & Analysis",
-      description: "Automated contract review with risk assessment"
+      title: 'Healthcare',
+      description: 'HIPAA compliance, medical contracts, and regulatory adherence',
+      icon: Heart
     },
     {
-      step: "04",
-      title: "Compliance Monitoring",
-      description: "Real-time regulatory compliance tracking"
-    },
-    {
-      step: "05",
-      title: "Predictive Analytics",
-      description: "Data-driven legal outcome predictions"
-    },
-    {
-      step: "06",
-      title: "Workflow Automation",
-      description: "Streamlined legal process automation"
+      title: 'Real Estate',
+      description: 'Property contracts, lease agreements, and compliance',
+      icon: Home
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 text-green-300 text-sm font-medium mb-6">
-              <Shield className="w-4 h-4 mr-2" />
-              AI-Powered Legal Technology
-            </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Transform Your Legal Practice with
-              <span className="bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent">
-                {" "}AI Intelligence
-              </span>
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
+          <div className="text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              AI Legal Tech Solutions
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Revolutionize your legal practice with AI-powered tools that automate research, 
-              analyze contracts, and streamline compliance. Work smarter, not harder.
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Revolutionize your legal practice with AI-powered contract analysis, legal research automation, 
+              and intelligent compliance management. Work smarter, not harder.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
               >
-                Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
+                Schedule a Demo
               </Link>
               <Link
-                to="/demo"
-                className="inline-flex items-center px-8 py-4 rounded-lg border border-gray-600 text-white font-semibold hover:border-green-500 hover:text-green-400 transition-all duration-300"
+                to="/case-studies"
+                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
               >
-                Watch Demo
+                View Success Stories
               </Link>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      {/* Services Section */}
+      <div className="py-20 bg-black/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Powerful AI Features for Modern Legal Practice
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI legal technology platform combines cutting-edge artificial intelligence 
-              with proven legal expertise to deliver exceptional results.
+            <h2 className="text-4xl font-bold mb-4">AI Legal Tech Services</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive solutions that transform legal practice through intelligent automation
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="p-6 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-green-500/50 transition-all duration-300 hover:transform hover:scale-105"
-              >
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service, index) => {
+              const Icon = service.icon;
+              return (
+                <div key={index} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mr-4">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-white">{service.title}</h3>
+                      <p className="text-gray-400">{service.price}</p>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-300 mb-6">{service.description}</p>
+                  
+                  <ul className="space-y-3 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <div className="w-2 h-2 bg-cyan-500 rounded-full mr-3"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <Link
+                    to="/contact"
+                    className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+                  >
+                    Learn More
+                  </Link>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Legal Processes Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
-        <div className="max-w-7xl mx-auto">
+      {/* Legal Tech Features Section */}
+      <div className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              The AI-Powered Legal Workflow
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              From document analysis to compliance monitoring, our AI streamlines every aspect of your legal practice.
+            <h2 className="text-4xl font-bold mb-4">Advanced Legal Tech Features</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Cutting-edge AI capabilities that streamline legal operations and enhance productivity
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {legalProcesses.map((process, index) => (
-              <div
-                key={index}
-                className="p-6 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-green-500/50 transition-all duration-300"
-              >
-                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center mb-4 mx-auto">
-                  <span className="text-white font-bold text-xl">{process.step}</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {legalTechFeatures.map((feature, index) => {
+              const Icon = feature.icon;
+              return (
+                <div key={index} className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300">
+                  <div className="flex items-center mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mr-4">
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-white">{feature.title}</h3>
+                      <p className="text-gray-300">{feature.description}</p>
+                    </div>
+                  </div>
+                  
+                  <ul className="space-y-3">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-gray-300">
+                        <div className="w-2 h-2 bg-cyan-500 rounded-full mr-3"></div>
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3 text-center">{process.title}</h3>
-                <p className="text-gray-300 text-center">{process.description}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
-      </section>
+      </div>
+
+      {/* Industries Section */}
+      <div className="py-20 bg-black/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Industries We Serve</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI legal tech solutions are designed for various industries and practice areas
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {industries.map((industry, index) => {
+              const Icon = industry.icon;
+              return (
+                <div key={index} className="text-center group">
+                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
+                    <Icon className="w-10 h-10 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-white">{industry.title}</h3>
+                  <p className="text-gray-300">{industry.description}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <div className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Why Choose AI Legal Technology?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience unprecedented efficiency and accuracy in your legal practice.
+            <h2 className="text-4xl font-bold mb-4">Why Choose AI Legal Tech?</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the future of legal practice with intelligent automation and AI-powered insights
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              {benefits.slice(0, 3).map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
-                </div>
-              ))}
-            </div>
-            <div className="space-y-6">
-              {benefits.slice(3).map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300 text-lg">{benefit}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Perfect For Every Legal Need
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI legal technology platform adapts to your specific practice area and requirements.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-              <div
-                key={index}
-                className="p-6 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 hover:border-green-500/50 transition-all duration-300"
-              >
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center mb-4">
-                  <useCase.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                <p className="text-gray-300">{useCase.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Choose Your Plan
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Flexible pricing options designed to scale with your legal practice.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-              <div
-                key={index}
-                className={`p-8 rounded-xl border transition-all duration-300 ${
-                  plan.popular
-                    ? 'bg-gradient-to-br from-green-900/50 to-emerald-900/50 border-green-500/50 transform scale-105'
-                    : 'bg-gradient-to-br from-gray-800/50 to-gray-900/50 border-gray-700/50'
-                }`}
-              >
-                {plan.popular && (
-                  <div className="text-center mb-4">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-500 text-white">
-                      <Star className="w-3 h-3 mr-1" />
-                      Most Popular
-                    </span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => {
+              const Icon = benefit.icon;
+              return (
+                <div key={index} className="text-center group">
+                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
+                    <Icon className="w-10 h-10 text-white" />
                   </div>
-                )}
-                
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
-                  </div>
-                  <p className="text-gray-300 mt-2">{plan.description}</p>
+                  <h3 className="text-xl font-bold mb-3 text-white">{benefit.title}</h3>
+                  <p className="text-gray-300">{benefit.description}</p>
                 </div>
-                
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                
-                <Link
-                  to="/contact"
-                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:from-green-600 hover:to-emerald-600'
-                      : 'border border-gray-600 text-white hover:border-green-500 hover:text-green-400'
-                  }`}
-                >
-                  Get Started
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
-      </section>
+      </div>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Legal Practice?
-          </h2>
+      <div className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Legal Practice?</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join thousands of legal professionals who have already revolutionized their practice with AI technology.
+            Join thousands of legal professionals who have revolutionized their practice with AI-powered solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
             >
-              Start Your Free Trial
-              <ArrowRight className="w-5 h-5 ml-2" />
+              Get Started Today
             </Link>
             <Link
-              to="/demo"
-              className="inline-flex items-center px-8 py-4 rounded-lg border border-gray-600 text-white font-semibold hover:border-green-500 hover:text-green-400 transition-all duration-300"
+              to="/pricing"
+              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
             >
-              Schedule Demo
+              View Pricing Plans
             </Link>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }

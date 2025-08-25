@@ -30,6 +30,10 @@ export default function Sidebar() {
       items: [
         { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
         { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Briefcase },
+        { name: 'Business Intelligence', path: '/services/business-intelligence', icon: Briefcase },
+        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Briefcase },
+        { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', icon: Briefcase },
+        { name: 'AI Legal Tech', path: '/services/ai-legal-tech', icon: Briefcase },
         { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Briefcase },
         { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Briefcase },
         { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Briefcase },
