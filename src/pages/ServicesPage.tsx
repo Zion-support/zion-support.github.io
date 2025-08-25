@@ -42,8 +42,10 @@ import { TrustedBySection } from "@/components/TrustedBySection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Globe } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES } from "@/data/comprehensiveServices";
 
+<<<<<<< HEAD
 // Sample service listings
 const SERVICE_LISTINGS: ProductListing[] = [
   {
@@ -1018,6 +1020,16 @@ export default function ServicesPage() {
   const filteredServices = activeCategory === 'all' 
     ? allServices 
     : allServices.filter(service => service.category === activeCategory);
+=======
+// Use comprehensive services instead of sample listings
+const SERVICE_LISTINGS: ProductListing[] = COMPREHENSIVE_SERVICES;
+
+// Use comprehensive service categories for filtering
+const SERVICE_FILTERS = SERVICE_CATEGORIES;
+
+export default function ServicesPage() {
+  const [listings] = useState<ProductListing[]>(SERVICE_LISTINGS);
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-936f
 
   return (
 <<<<<<< HEAD
@@ -2487,8 +2499,12 @@ export default function ServicesPage() {
         categorySlug="services"
         listings={listings}
         categoryFilters={SERVICE_FILTERS}
+<<<<<<< HEAD
         initialPrice={{ min: 3000, max: 10000 }}
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-8fa6
+=======
+        initialPrice={{ min: 1000, max: 10000 }}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-936f
       />
       <Header />
       <main className="min-h-screen bg-zion-blue">

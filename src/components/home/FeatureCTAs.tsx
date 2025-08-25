@@ -22,6 +22,7 @@ import {
   Clock,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   PenTool,
   Link as LinkIcon,
   Shield,
@@ -37,6 +38,11 @@ import {
   Server,
   TrendingUp
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4df9
+=======
+  Brain,
+  Shield,
+  Cloud
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-936f
 } from "lucide-react";
 
 =======
@@ -250,6 +256,7 @@ export function FeatureCTAs() {
     },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     // New innovative micro SAAS services
     {
       title: "AI Content Generation",
@@ -333,6 +340,31 @@ export function FeatureCTAs() {
       badge: "New",
       details: "Transform your business with our cutting-edge micro SAAS solutions. From AI-powered tools to enterprise-grade services."
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-73d5
+=======
+    {
+      title: "AI Development Services",
+      description: "Custom AI solutions including chatbots, content generation, and machine learning models tailored to your business needs.",
+      icon: <Brain className="h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700" />,
+      link: "/comprehensive-services",
+      badge: "New",
+      details: "From AI chatbots to predictive analytics, we build intelligent solutions that drive business growth and efficiency."
+    },
+    {
+      title: "Cybersecurity Solutions",
+      description: "Comprehensive security services including audits, zero trust implementation, and 24/7 incident response.",
+      icon: <Shield className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" />,
+      link: "/comprehensive-services",
+      badge: "Featured",
+      details: "Protect your business with enterprise-grade security solutions, compliance frameworks, and proactive threat detection."
+    },
+    {
+      title: "Cloud & DevOps",
+      description: "Cloud migration, DevOps automation, and infrastructure management for scalable, secure operations.",
+      icon: <Cloud className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />,
+      link: "/comprehensive-services",
+      badge: "Popular",
+      details: "Modernize your infrastructure with cloud-native solutions, automated CI/CD pipelines, and cost optimization strategies."
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-936f
     }
   ];
 

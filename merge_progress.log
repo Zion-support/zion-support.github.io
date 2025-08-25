@@ -864,3 +864,90 @@ src/pages/Terms.tsx
 [2025-08-25 23:35:22] Processing unmerged file: src/pages/Terms.tsx
 [2025-08-25 23:35:22] File exists in HEAD, keeping it
 [2025-08-25 23:35:23] Still have unmerged paths, attempting additional resolution...
+[main 676e2aee234] Merge PR #6651: cursor/website-audit-and-enhancement-1f4f (advanced conflict resolution)
+[2025-08-25 23:35:24] ✓ Advanced conflict resolution successful for PR #6651
+[2025-08-25 23:35:24] ✓ PR #6651 processed successfully
+==========================================
+
+
+==========================================
+[2025-08-25 23:35:24] Processing PR #6648 from branch: cursor/expand-services-and-deploy-updates-936f
+==========================================
+[2025-08-25 23:35:24] Processing PR #6648 from branch: cursor/expand-services-and-deploy-updates-936f
+[2025-08-25 23:35:24] Attempting regular merge...
+Auto-merging package-lock.json
+CONFLICT (content): Merge conflict in package-lock.json
+CONFLICT (rename/delete): pages/about.jsx renamed to pages.disabled/about.jsx in HEAD, but deleted in origin/cursor/expand-services-and-deploy-updates-936f.
+CONFLICT (rename/delete): pages/api/auth/login.ts renamed to pages.disabled/api/auth/login.ts in HEAD, but deleted in origin/cursor/expand-services-and-deploy-updates-936f.
+CONFLICT (rename/delete): pages/api/auth/register.ts renamed to pages.disabled/api/auth/register.ts in HEAD, but deleted in origin/cursor/expand-services-and-deploy-updates-936f.
+CONFLICT (rename/delete): pages/api/services.ts renamed to pages.disabled/api/services.ts in HEAD, but deleted in origin/cursor/expand-services-and-deploy-updates-936f.
+CONFLICT (rename/delete): pages/api/stripe/webhook.ts renamed to pages.disabled/api/stripe/webhook.ts in HEAD, but deleted in origin/cursor/expand-services-and-deploy-updates-936f.
+CONFLICT (rename/delete): pages/api/talent/[id].ts renamed to pages.disabled/api/talent/[id].ts in HEAD, but deleted in origin/cursor/expand-services-and-deploy-updates-936f.
+CONFLICT (rename/delete): pages/blog/[slug].tsx renamed to pages.disabled/blog/[slug].tsx in HEAD, but deleted in origin/cursor/expand-services-and-deploy-updates-936f.
+CONFLICT (rename/delete): pages/marketplace/listing/[slug].tsx renamed to pages.disabled/marketplace/listing/[slug].tsx in HEAD, but deleted in origin/cursor/expand-services-and-deploy-updates-936f.
+CONFLICT (modify/delete): pages/talent/[id].tsx deleted in origin/cursor/expand-services-and-deploy-updates-936f and modified in HEAD.  Version HEAD of pages/talent/[id].tsx left in tree.
+Auto-merging src/App.tsx
+CONFLICT (content): Merge conflict in src/App.tsx
+Auto-merging src/components/CategoriesSection.tsx
+CONFLICT (content): Merge conflict in src/components/CategoriesSection.tsx
+Auto-merging src/components/home/FeatureCTAs.tsx
+CONFLICT (content): Merge conflict in src/components/home/FeatureCTAs.tsx
+Auto-merging src/components/home/ServicesShowcase.tsx
+CONFLICT (add/add): Merge conflict in src/components/home/ServicesShowcase.tsx
+Auto-merging src/data/comprehensiveServices.ts
+CONFLICT (add/add): Merge conflict in src/data/comprehensiveServices.ts
+Auto-merging src/pages/ComprehensiveServicesPage.tsx
+CONFLICT (add/add): Merge conflict in src/pages/ComprehensiveServicesPage.tsx
+Auto-merging src/pages/Home.tsx
+CONFLICT (content): Merge conflict in src/pages/Home.tsx
+Auto-merging src/pages/ServicesPage.tsx
+CONFLICT (content): Merge conflict in src/pages/ServicesPage.tsx
+Automatic merge failed; fix conflicts and then commit the result.
+[2025-08-25 23:35:25] ✗ Merge failed for PR #6648, attempting advanced conflict resolution...
+[2025-08-25 23:35:25] Resolving complex conflicts for PR #6648 (cursor/expand-services-and-deploy-updates-936f)...
+[2025-08-25 23:35:25] Found unmerged files: package-lock.json
+pages.disabled/about.jsx
+pages.disabled/api/auth/login.ts
+pages.disabled/api/auth/register.ts
+pages.disabled/api/services.ts
+pages.disabled/api/stripe/webhook.ts
+pages.disabled/api/talent/[id].ts
+pages.disabled/blog/[slug].tsx
+pages.disabled/marketplace/listing/[slug].tsx
+pages/talent/[id].tsx
+src/App.tsx
+src/components/CategoriesSection.tsx
+src/components/home/FeatureCTAs.tsx
+src/pages/Home.tsx
+src/pages/ServicesPage.tsx
+[2025-08-25 23:35:25] Processing unmerged file: package-lock.json
+[2025-08-25 23:35:25] File exists in HEAD, keeping it
+[2025-08-25 23:35:25] Processing unmerged file: pages.disabled/about.jsx
+[2025-08-25 23:35:25] File exists in HEAD, keeping it
+[2025-08-25 23:35:25] Processing unmerged file: pages.disabled/api/auth/login.ts
+[2025-08-25 23:35:25] File exists in HEAD, keeping it
+[2025-08-25 23:35:25] Processing unmerged file: pages.disabled/api/auth/register.ts
+[2025-08-25 23:35:25] File exists in HEAD, keeping it
+[2025-08-25 23:35:25] Processing unmerged file: pages.disabled/api/services.ts
+[2025-08-25 23:35:25] File exists in HEAD, keeping it
+[2025-08-25 23:35:25] Processing unmerged file: pages.disabled/api/stripe/webhook.ts
+[2025-08-25 23:35:25] File exists in HEAD, keeping it
+[2025-08-25 23:35:25] Processing unmerged file: pages.disabled/api/talent/[id].ts
+[2025-08-25 23:35:25] File exists in HEAD, keeping it
+[2025-08-25 23:35:25] Processing unmerged file: pages.disabled/blog/[slug].tsx
+[2025-08-25 23:35:25] File exists in HEAD, keeping it
+[2025-08-25 23:35:25] Processing unmerged file: pages.disabled/marketplace/listing/[slug].tsx
+[2025-08-25 23:35:25] File exists in HEAD, keeping it
+[2025-08-25 23:35:25] Processing unmerged file: pages/talent/[id].tsx
+[2025-08-25 23:35:25] File exists in HEAD, keeping it
+[2025-08-25 23:35:25] Processing unmerged file: src/App.tsx
+[2025-08-25 23:35:25] File exists in HEAD, keeping it
+[2025-08-25 23:35:25] Processing unmerged file: src/components/CategoriesSection.tsx
+[2025-08-25 23:35:25] File exists in HEAD, keeping it
+[2025-08-25 23:35:25] Processing unmerged file: src/components/home/FeatureCTAs.tsx
+[2025-08-25 23:35:25] File exists in HEAD, keeping it
+[2025-08-25 23:35:25] Processing unmerged file: src/pages/Home.tsx
+[2025-08-25 23:35:25] File exists in HEAD, keeping it
+[2025-08-25 23:35:25] Processing unmerged file: src/pages/ServicesPage.tsx
+[2025-08-25 23:35:25] File exists in HEAD, keeping it
+[2025-08-25 23:35:26] Still have unmerged paths, attempting additional resolution...

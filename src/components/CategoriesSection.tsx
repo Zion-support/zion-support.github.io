@@ -999,11 +999,18 @@ export function CategoriesSection({ showTitle = true, className = "" }: Categori
               </Link>
             ))}
             <Link 
+<<<<<<< HEAD
               to="/services-pricing"
               className="px-6 py-3 bg-zion-purple hover:bg-zion-purple-dark border border-zion-purple/50 hover:border-zion-purple rounded-full text-white transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-2"
             >
               <Target className="w-4 h-4" />
               View Pricing
+=======
+              to="/comprehensive-services"
+              className="px-6 py-3 bg-zion-purple hover:bg-zion-purple-dark border border-zion-purple/50 hover:border-zion-purple text-white transition-all duration-300"
+            >
+              View All Services
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-936f
             </Link>
           </div>
         </div>

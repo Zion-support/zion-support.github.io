@@ -215,6 +215,7 @@ import { MicroSaasShowcase } from "@/components/home/MicroSaasShowcase";
 import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { EnhancedServicesShowcase } from "@/components/home/EnhancedServicesShowcase";
 import { BottomNavigation } from "@/components/MobileNavigation";
 import { MicroSaasServicesSection } from "@/components/home/MicroSaasServicesSection";
@@ -392,6 +393,10 @@ import { SEO } from "@/components/SEO";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { PerformanceOptimizations } from "@/components/PerformanceOptimizations";
 import { AdvancedAnalytics } from "@/components/AdvancedAnalytics";
+=======
+import { ServicesShowcase } from "@/components/home/ServicesShowcase";
+import { ContactInfo } from "@/components/ContactInfo";
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-936f
 
 export default function Home() {
   const features = [
@@ -752,15 +757,20 @@ export default function Home() {
       <FeatureHighlights />
       
 <<<<<<< HEAD
+<<<<<<< HEAD
       <MicroSaasShowcase />
 =======
       <ServicesOverview />
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-302a
+=======
+      <ServicesShowcase />
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-936f
       
       <CategoriesSection />
       <BenefitsSection />
       <HowItWorksSection />
       <FeaturedListingsSection />
+      <ContactInfo />
       <NewsletterSection />
       
 <<<<<<< HEAD
