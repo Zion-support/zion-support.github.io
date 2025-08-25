@@ -588,9 +588,12 @@ export default function GreenIT() {
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
         canonical="https://ziontechgroup.com/marketplace/category/green-it"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-3805
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-a0eb
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-8717
       />
       <Header />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">

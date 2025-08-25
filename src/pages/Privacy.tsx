@@ -88,11 +88,14 @@ import { GradientHeading } from "@/components/GradientHeading";
         canonical="https://ziontechgroup.com/privacy"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-3805
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-1f4f
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-a0eb
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-8717
       />
       
       <div className="min-h-screen bg-zion-blue-dark">

@@ -156,6 +156,7 @@ export default function BlogPost() {
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-background py-20">
       <div className="container mx-auto px-4">
         {/* Back Button */}
@@ -195,6 +196,19 @@ export default function BlogPost() {
           </div>
 
           {/* Featured Image */}
+=======
+    <>
+      <SEO
+        title={post.title}
+        description={post.excerpt}
+        keywords={post.tags.join(", ")}
+        ogImage={post.featuredImage}
+        canonical={`https://ziontechgroup.com/blog/${post.slug}`}
+      />
+      <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
+        <div className="container mx-auto">
+          {/* Back to blog button */}
+>>>>>>> origin/cursor/website-audit-and-enhancement-8717
           <div className="mb-8">
             <img
               src={blogPost.image}

@@ -18,7 +18,10 @@ export default function Index() {
         description={t("home.seo_description")} 
         keywords={t("home.seo_keywords")}
         canonical="https://ziontechgroup.com/"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-a0eb
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-8717
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

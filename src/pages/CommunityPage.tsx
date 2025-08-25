@@ -465,8 +465,14 @@ export default function CommunityPage() {
   return (
     <>
       <SEO
+<<<<<<< HEAD
         title="Community - Zion Tech Group"
         description="Join our tech community and connect with fellow professionals."
+=======
+        title="Community Forum | Zion AI Marketplace"
+        description="Join the Zion AI Marketplace community forum. Ask questions, share knowledge, and connect with other AI professionals."
+        keywords="community, forum, discussion, AI marketplace, questions, answers"
+>>>>>>> origin/cursor/website-audit-and-enhancement-8717
         canonical="https://ziontechgroup.com/community"
       />
       <Header />

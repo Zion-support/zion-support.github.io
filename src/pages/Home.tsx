@@ -665,6 +665,7 @@ export default function Home() {
         keywords="AI, technology, marketplace, services, talent"
         canonical="https://ziontechgroup.com/"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         title="Leading Tech & AI Marketplace - Connect with World-Class Talent & Services" 
         description="Zion Tech Group is the premier marketplace for AI talent, IT services, and cutting-edge technology solutions. Connect with 10,000+ verified professionals, get 24/7 global IT support, and accelerate your digital transformation."
@@ -688,6 +689,8 @@ export default function Home() {
         keywords="AI, technology, marketplace, services, talent, micro SAAS, IT consulting, business automation, cloud migration, cybersecurity, data analytics"
         canonical="https://ziontechgroup.com/"
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-445a
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-8717
       />
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-73d5
 

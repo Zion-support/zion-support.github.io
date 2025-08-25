@@ -302,6 +302,7 @@ export function Footer() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <footer className="bg-zion-blue-dark border-t border-zion-blue-light pt-12 pb-8 relative overflow-hidden">
       {/* Futuristic Background Effects */}
@@ -346,6 +347,8 @@ export function Footer() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-bdc0
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-dfab
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-8717
           <div>
 <<<<<<< HEAD
 =======
@@ -973,6 +976,7 @@ export function Footer() {
               <li><Link to="/equipment" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Equipment</Link></li>
               <li><Link to="/categories" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Categories</Link></li>
               <li><Link to="/green-it" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Green IT</Link></li>
+<<<<<<< HEAD
               <li><Link to="/featured" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Featured</Link></li>
 >>>>>>> origin/cursor/website-audit-and-enhancement-3b60
             </ul>
@@ -1059,6 +1063,9 @@ export function Footer() {
               <li><Link to="/digital-transformation" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Digital Transformation</Link></li>
               <li><Link to="/it-onsite-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Global IT Support</Link></li>
               <li><Link to="/zion-hire-ai" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Recruiting</Link></li>
+=======
+              <li><Link to="/zion-hire-ai" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Hire AI</Link></li>
+>>>>>>> origin/cursor/website-audit-and-enhancement-8717
             </ul>
           </div>
 
@@ -1273,10 +1280,25 @@ export function Footer() {
               <li><Link to="/partners" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Partners</Link></li>
               <li><Link to="/careers" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Careers</Link></li>
               <li><Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Contact</Link></li>
+<<<<<<< HEAD
               <li><Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Help Center</Link></li>
               <li><Link to="/faq" className="text-zion-slate-light hover:text-zion-cyan transition-colors">FAQ</Link></li>
               <li><Link to="/sitemap" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Sitemap</Link></li>
 >>>>>>> origin/cursor/website-audit-and-enhancement-76ca
+=======
+              <li><Link to="/sitemap" className="text-zion-cyan transition-colors">Sitemap</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-white font-semibold mb-4 text-lg">Resources & Support</h3>
+            <ul className="space-y-2">
+              <li><Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Help Center</Link></li>
+              <li><Link to="/support" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Support</Link></li>
+              <li><Link to="/community" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Community</Link></li>
+              <li><Link to="/developers" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Developer Portal</Link></li>
+              <li><Link to="/developers/docs" className="text-zion-slate-light hover:text-zion-cyan transition-colors">API Documentation</Link></li>
+>>>>>>> origin/cursor/website-audit-and-enhancement-8717
             </ul>
           </div>
 
