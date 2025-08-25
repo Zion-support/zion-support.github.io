@@ -120,7 +120,7 @@ export function Header() {
       color: 'from-purple-500 to-pink-500',
       services: [
         { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', description: 'Advanced autonomous AI systems', icon: Brain },
-        { name: 'AI Workflow Automation', path: '/services/ai-workflow-automation', description: 'Intelligent process automation', icon: Brain },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Intelligent process automation', icon: Brain },
         { name: 'AI Customer Intelligence', path: '/services/ai-customer-intelligence', description: 'Customer behavior insights', icon: Users },
         { name: 'AI Predictive Analytics', path: '/services/ai-predictive-analytics', description: 'Future-focused analytics', icon: BarChart3 },
         { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', description: 'AI-powered research automation', icon: Brain },
@@ -145,7 +145,9 @@ export function Header() {
       services: [
         { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', description: 'Quantum-powered neural networks', icon: Brain },
         { name: 'Quantum Computing', path: '/services/quantum-technology', description: 'Quantum computing platforms', icon: Cpu },
-        { name: 'Quantum-Safe Security', path: '/services/quantum-security', description: 'Future-proof quantum security', icon: Shield }
+        { name: 'Quantum-Safe Security', path: '/services/quantum-security', description: 'Future-proof quantum security', icon: Shield },
+        { name: 'Quantum Cloud Infrastructure', path: '/quantum-cloud-infrastructure', description: 'Quantum-secured cloud solutions', icon: Cloud },
+        { name: 'Quantum Financial Trading', path: '/quantum-financial-trading', description: 'Quantum-powered trading algorithms', icon: DollarSign }
       ]
     },
     {
@@ -198,20 +200,9 @@ export function Header() {
       services: [
         { name: 'Blockchain Solutions', path: '/services/blockchain-solutions', description: 'Decentralized applications', icon: Code },
         { name: 'IoT Platforms', path: '/services/iot-platforms', description: 'Connected device management', icon: Network },
-        { name: 'Quantum Computing', path: '/services/quantum-computing', description: 'Next-generation computing', icon: Cpu },
-        { name: 'AR/VR Solutions', path: '/services/ar-vr-solutions', description: 'Immersive experiences', icon: Eye }
-      ]
-    },
-    {
-      title: 'Industry Solutions',
-      icon: Building,
-      description: 'Tailored solutions for specific industries',
-      color: 'from-orange-500 to-yellow-500',
-      services: [
-        { name: 'Healthcare Technology', path: '/solutions/healthcare', description: 'Medical innovation', icon: Heart },
-        { name: 'Financial Services', path: '/services/financial-services', description: 'Fintech solutions', icon: DollarSign },
-        { name: 'Manufacturing Intelligence', path: '/services/manufacturing-intelligence', description: 'Smart manufacturing', icon: Cpu },
-        { name: 'Retail Technology', path: '/services/retail-technology', description: 'Digital retail transformation', icon: ShoppingCart }
+        { name: 'Space Technology', path: '/space-tech', description: 'Space exploration and satellite solutions', icon: Rocket },
+        { name: 'Research & Development', path: '/research-development', description: 'Innovation and technology research', icon: Lightbulb },
+        { name: 'Micro SAAS Solutions', path: '/micro-saas', description: 'Scalable software solutions', icon: Code }
       ]
     }
   ];
@@ -220,34 +211,25 @@ export function Header() {
     {
       title: 'Enterprise Solutions',
       icon: Building,
-      description: 'Large-scale business transformation',
-      color: 'from-blue-500 to-indigo-500',
+      description: 'Large-scale business solutions',
+      color: 'from-blue-600 to-indigo-600',
       solutions: [
-        { name: 'Digital Transformation', path: '/digital-transformation', description: 'Complete business modernization', icon: Rocket },
-        { name: 'Enterprise AI', path: '/solutions/enterprise', description: 'AI-powered enterprise solutions', icon: Brain },
-        { name: 'Data Analytics', path: '/services/data-analytics', description: 'Business intelligence platform', icon: BarChart3 }
+        { name: 'Enterprise IT', path: '/enterprise-it', description: 'Complete enterprise IT solutions' },
+        { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization services' },
+        { name: 'Enterprise Security', path: '/services/cybersecurity', description: 'Enterprise-grade security' }
       ]
     },
     {
-      title: 'SMB Solutions',
-      icon: Users,
-      description: 'Scalable solutions for growing businesses',
-      color: 'from-green-500 to-emerald-500',
+      title: 'Industry Solutions',
+      icon: Target,
+      description: 'Sector-specific solutions',
+      color: 'from-green-600 to-emerald-600',
       solutions: [
-        { name: 'Micro SAAS', path: '/services/micro-saas-solutions', description: 'Custom software solutions', icon: Code },
-        { name: 'Cloud Migration', path: '/cloud-devops', description: 'Affordable cloud solutions', icon: Cloud },
-        { name: 'IT Support', path: '/services/it-support', description: 'Managed IT services', icon: Clock }
-      ]
-    },
-    {
-      title: 'Healthcare Solutions',
-      icon: Heart,
-      description: 'Technology solutions for healthcare',
-      color: 'from-red-500 to-pink-500',
-      solutions: [
-        { name: 'Healthcare AI', path: '/solutions/healthcare', description: 'AI-powered healthcare solutions', icon: Brain },
-        { name: 'Patient Management', path: '/services/patient-management', description: 'Comprehensive patient care', icon: Users },
-        { name: 'Medical Analytics', path: '/services/medical-analytics', description: 'Healthcare data insights', icon: BarChart3 }
+        { name: 'Healthcare', path: '/solutions/healthcare', description: 'Healthcare technology solutions' },
+        { name: 'Financial Services', path: '/solutions/financial', description: 'Fintech and banking solutions' },
+        { name: 'Manufacturing', path: '/solutions/manufacturing', description: 'Smart manufacturing solutions' },
+        { name: 'Retail', path: '/solutions/retail', description: 'Retail technology solutions' },
+        { name: 'Government', path: '/solutions/government', description: 'Public sector solutions' }
       ]
     }
   ];
