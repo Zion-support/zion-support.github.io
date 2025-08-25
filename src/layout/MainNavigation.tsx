@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 <<<<<<< HEAD
@@ -19,11 +20,24 @@ import { MessageSquare, Sparkles, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState, useRef, useEffect } from "react";
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-da9e
+=======
+import { MessageSquare, ChevronDown, Sparkles, Zap, Shield, Database, Cloud, Code, Users, HardDrive, Lightbulb } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useState, useRef, useEffect } from "react";
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
 
 interface MainNavigationProps {
   isAdmin?: boolean;
   unreadCount?: number;
   className?: string;
+}
+
+interface DropdownItem {
+  key: string;
+  name: string;
+  href: string;
+  description: string;
+  icon: React.ReactNode;
 }
 
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {
@@ -35,8 +49,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const dropdownRef = useRef<HTMLDivElement>(null);
 
+=======
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Close dropdown when clicking outside
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
@@ -47,6 +67,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-3805
 =======
@@ -54,6 +75,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 =======
   const dropdownRef = useRef<HTMLDivElement>(null);
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-da9e
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
 
   const baseLinks = [
     {
@@ -139,6 +162,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       key: 'services',
       href: '/services',
 =======
@@ -151,6 +175,56 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: '/services',
 >>>>>>> origin/cursor/website-audit-and-enhancement-ba38
       matches: (path: string) => path.startsWith('/services')
+=======
+      key: 'services',
+      href: '/services',
+      matches: (path: string) => path.startsWith('/services') || path.startsWith('/category'),
+      hasDropdown: true,
+      dropdownItems: [
+        {
+          key: 'ai-services',
+          name: 'AI & Machine Learning',
+          href: '/category/ai-services',
+          description: 'Custom AI development and ML solutions',
+          icon: <Sparkles className="h-4 w-4" />
+        },
+        {
+          key: 'cloud-services',
+          name: 'Cloud & Infrastructure',
+          href: '/category/cloud-services',
+          description: 'Cloud migration and DevOps automation',
+          icon: <Cloud className="h-4 w-4" />
+        },
+        {
+          key: 'security-services',
+          name: 'Cybersecurity',
+          href: '/category/security-services',
+          description: 'Security audits and compliance',
+          icon: <Shield className="h-4 w-4" />
+        },
+        {
+          key: 'data-services',
+          name: 'Data & Analytics',
+          href: '/category/data-services',
+          description: 'Big data engineering and BI',
+          icon: <Database className="h-4 w-4" />
+        },
+        {
+          key: 'development-services',
+          name: 'Development Services',
+          href: '/category/development-services',
+          description: 'Web, mobile, and API development',
+          icon: <Code className="h-4 w-4" />
+        },
+        {
+          key: 'it-services',
+          name: 'IT Support & Management',
+          href: '/category/it-services',
+          description: 'IT consulting and managed services',
+          icon: <Zap className="h-4 w-4" />
+        }
+      ]
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
     },
     {
 =======
@@ -257,6 +331,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       key: 'blog',
       href: '/blog',
       matches: (path: string) => path.startsWith('/blog')
@@ -352,6 +427,13 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith('/about') || path.startsWith('/careers') || path.startsWith('/partners')
 >>>>>>> origin/cursor/website-audit-and-enhancement-ab27
 =======
+=======
+      key: 'ai-assistant',
+      href: '/zion-hire-ai',
+      matches: (path: string) => path.startsWith('/zion-hire-ai') || path.startsWith('/hire-ai')
+    },
+    {
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
       key: 'community',
       href: '/community',
       matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
@@ -426,6 +508,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const toggleDropdown = (key: string) => {
     setActiveDropdown(activeDropdown === key ? null : key);
   };
@@ -449,12 +532,18 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     };
   }, []);
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-da9e
+=======
+  const toggleDropdown = (key: string) => {
+    setActiveDropdown(activeDropdown === key ? null : key);
+  };
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
   
   const isActive = (path: string) => {
     return location.pathname === path || location.pathname.startsWith(path + '/');
   };
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <nav className={cn("navbar ml-6 hidden md:flex", className)} ref={dropdownRef}>
 =======
@@ -463,6 +552,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       <ul className="flex items-center gap-1">
         {links.map((link) => (
 <<<<<<< HEAD
+=======
+    <nav className={cn("navbar ml-6 hidden lg:flex", className)} ref={dropdownRef}>
+      <ul className="flex items-center gap-1">
+        {links.map((link) => (
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
           <li key={link.name} className="relative">
             {link.hasDropdown ? (
               <div className="relative">
@@ -475,6 +569,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                       : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
                   )}
                 >
+<<<<<<< HEAD
 <<<<<<< HEAD
                   {link.name}
                   <ChevronDown className={cn("ml-1 w-3 h-3 transition-transform", activeDropdown === link.key && "rotate-180")} />
@@ -494,10 +589,16 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   )}
                   <ChevronDown className={cn(
                     "w-4 h-4 ml-1 transition-transform duration-200",
+=======
+                  {link.name}
+                  <ChevronDown className={cn(
+                    "ml-1 h-4 w-4 transition-transform",
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
                     activeDropdown === link.key ? "rotate-180" : ""
                   )} />
                 </button>
                 
+<<<<<<< HEAD
                 {activeDropdown === link.key && (
                   <div className="absolute top-full left-0 mt-1 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-xl shadow-zion-purple/20 backdrop-blur-md z-50">
                     <div className="p-2">
@@ -519,6 +620,46 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-da9e
                         </Link>
                       ))}
+=======
+                {/* Dropdown Menu */}
+                {activeDropdown === link.key && (
+                  <div className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark/95 border border-zion-purple/30 rounded-xl shadow-2xl shadow-zion-purple/20 backdrop-blur-xl z-50">
+                    <div className="p-4">
+                      <div className="grid grid-cols-1 gap-2">
+                        {link.dropdownItems?.map((item: DropdownItem) => (
+                          <Link
+                            key={item.key}
+                            to={item.href}
+                            onClick={() => setActiveDropdown(null)}
+                            className="flex items-start gap-3 p-3 rounded-lg hover:bg-zion-purple/20 transition-colors group"
+                          >
+                            <div className="flex-shrink-0 w-8 h-8 bg-zion-purple/20 rounded-lg flex items-center justify-center group-hover:bg-zion-purple/30 transition-colors">
+                              {item.icon}
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <h4 className="text-white font-medium text-sm group-hover:text-zion-cyan transition-colors">
+                                {item.name}
+                              </h4>
+                              <p className="text-zion-slate-light text-xs mt-1 leading-relaxed">
+                                {item.description}
+                              </p>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                      
+                      {/* View All Services Link */}
+                      <div className="mt-4 pt-4 border-t border-zion-purple/20">
+                        <Link
+                          to="/services"
+                          onClick={() => setActiveDropdown(null)}
+                          className="flex items-center justify-center gap-2 w-full px-4 py-2 bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-cyan hover:text-white rounded-lg transition-colors text-sm font-medium"
+                        >
+                          View All Services
+                          <ChevronDown className="h-4 w-4 rotate-[-90deg]" />
+                        </Link>
+                      </div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
                     </div>
                   </div>
                 )}
@@ -536,6 +677,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 {link.name}
               </Link>
             )}
+<<<<<<< HEAD
 =======
           <li key={link.name}>
             <Link
@@ -550,6 +692,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               {link.name}
             </Link>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
           </li>
         ))}
         
