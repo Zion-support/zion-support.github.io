@@ -23,6 +23,9 @@ import EnhancedSEO from './components/EnhancedSEO';
 import EnhancedAccessibility from './components/EnhancedAccessibility';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
 import { ScrollToTop } from './components/ScrollToTop';
+import { ContentQualityEnhancer } from './components/ContentQualityEnhancer';
+import { BrokenLinkFixer } from './components/BrokenLinkFixer';
+import { WebsiteImprovementDashboard } from './components/WebsiteImprovementDashboard';
 
 // Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
@@ -89,6 +92,7 @@ const InnovativeMicroSaasServices = lazy(() => import('./pages/InnovativeMicroSa
 const ComprehensiveInnovativeServices = lazy(() => import('./pages/ComprehensiveInnovativeServices'));
 const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveServicesOverview'));
 const EnhancedServicesShowcase = lazy(() => import('./pages/EnhancedServicesShowcase'));
+const InnovativeServicesShowcase = lazy(() => import('./pages/InnovativeServicesShowcase'));
 
 // Solutions pages
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
@@ -162,15 +166,24 @@ const App: React.FC = () => {
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
-            <PerformanceOptimizer />
-            <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+            <PerformanceOptimizer
+              enableMonitoring={true}
+              enableOptimizations={true}
+              showMetrics={import.meta.env.DEV}
+            >
+              <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
                 {/* Enhanced SEO */}
                 <EnhancedSEO 
-                  title="Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services"
-                  description="Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology."
-                  keywords="AI solutions, quantum computing, cybersecurity, digital transformation, enterprise technology, machine learning, cloud services, IT infrastructure"
-                  type="website"
-                  url="https://ziontechgroup.com"
+                  seoData={{
+                    title: "Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services",
+                    description: "Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology.",
+                    keywords: ["AI solutions", "quantum computing", "cybersecurity", "digital transformation", "enterprise technology", "machine learning", "cloud services", "IT infrastructure"],
+                    canonicalUrl: "https://ziontechgroup.com",
+                    ogImage: "https://ziontechgroup.com/og-image.jpg",
+                    ogType: "website",
+                    twitterCard: "summary_large_image"
+                  }}
+                  pageType="home"
                 />
                 
                 <Header />
@@ -184,6 +197,7 @@ const App: React.FC = () => {
                       <Route path="/services" element={<Services />} />
                       <Route path="/ai-solutions" element={<AISolutions />} />
                       <Route path="/services-showcase" element={<ServicesShowcase />} />
+                      <Route path="/innovative-services-showcase" element={<InnovativeServicesShowcase />} />
                       <Route path="/ai-matcher" element={<AIMatcherPage />} />
                       <Route path="/talent-directory" element={<TalentDirectory />} />
                       <Route path="/talents" element={<TalentsPage />} />
@@ -241,6 +255,7 @@ const App: React.FC = () => {
                       <Route path="/comprehensive-innovative-services" element={<ComprehensiveInnovativeServices />} />
                       <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview />} />
                       <Route path="/enhanced-services-showcase" element={<EnhancedServicesShowcase />} />
+                      <Route path="/innovative-services-showcase" element={<InnovativeServicesShowcase />} />
                       
                       {/* New innovative service routes */}
                       <Route path="/ai-workflow-automation" element={<AIWorkflowAutomation />} />
@@ -331,6 +346,8 @@ const App: React.FC = () => {
                 
                 <Footer />
                 <SonnerToaster />
+              </div>
+            </PerformanceOptimizer>
                 
                 {/* Enhanced Accessibility Controls */}
                 <EnhancedAccessibility 
@@ -339,6 +356,11 @@ const App: React.FC = () => {
                   enableKeyboardShortcuts={true}
                   enableVoiceCommands={import.meta.env.DEV}
                 />
+                
+                {/* Website Improvement Tools */}
+                <ContentQualityEnhancer />
+                <BrokenLinkFixer />
+                <WebsiteImprovementDashboard />
                 
                 {/* AI Chatbot - Always Available */}
                 <AIChatbot />
@@ -398,11 +420,12 @@ const App: React.FC = () => {
                   </>
                 )}
               </div>
+            </PerformanceOptimizer>
           </Router>
         </WhitelabelProvider>
       </ThemeProvider>
     </EnhancedErrorBoundary>
   );
-}
+};
 
 export default App;

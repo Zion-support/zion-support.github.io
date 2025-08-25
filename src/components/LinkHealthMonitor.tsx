@@ -1,308 +1,404 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Link, 
-  AlertTriangle, 
-  CheckCircle, 
-  RefreshCw, 
-  ExternalLink,
-  X,
-  Info
-} from 'lucide-react';
+  ExclamationTriangleIcon, 
+  CheckCircleIcon, 
+  XMarkIcon,
+  ArrowPathIcon,
+  InformationCircleIcon,
+  WrenchScrewdriverIcon
+} from '@heroicons/react/24/outline';
 
 interface LinkStatus {
   url: string;
-  status: 'pending' | 'success' | 'error' | 'timeout';
+  status: 'healthy' | 'broken' | 'checking' | 'unknown';
   statusCode?: number;
-  responseTime?: number;
   error?: string;
   lastChecked: Date;
+  parentPage?: string;
+  suggestedFix?: string;
 }
 
 interface LinkHealthMonitorProps {
-  links: string[];
-  onStatusChange?: (statuses: LinkStatus[]) => void;
+  className?: string;
+  showDetails?: boolean;
   autoCheck?: boolean;
-  checkInterval?: number; // in milliseconds
-  timeout?: number; // in milliseconds
 }
 
 export const LinkHealthMonitor: React.FC<LinkHealthMonitorProps> = ({
-  links,
-  onStatusChange,
-  autoCheck = true,
-  checkInterval = 300000, // 5 minutes
-  timeout = 10000 // 10 seconds
+  className = '',
+  showDetails = false,
+  autoCheck = true
 }) => {
-  const [linkStatuses, setLinkStatuses] = useState<LinkStatus[]>([]);
+  const [links, setLinks] = useState<LinkStatus[]>([]);
   const [isChecking, setIsChecking] = useState(false);
-  const [showDetails, setShowDetails] = useState(false);
-  const [lastCheck, setLastCheck] = useState<Date | null>(null);
+  const [showBrokenOnly, setShowBrokenOnly] = useState(false);
+  const [stats, setStats] = useState({
+    total: 0,
+    healthy: 0,
+    broken: 0,
+    unknown: 0
+  });
 
-  // Initialize link statuses
-  useEffect(() => {
-    const initialStatuses: LinkStatus[] = links.map(url => ({
+  // Sample broken links from analysis report
+  const sampleBrokenLinks = [
+    'https://linkedin.com/company/ziontechgroup',
+    'https://twitter.com/ziontechgroup',
+    'https://github.com/Zion-Holdings',
+    'https://youtube.com/@ziontechgroup',
+    'https://facebook.com/ziontechgroup',
+    'https://instagram.com/ziontechgroup',
+    'https://discord.gg/ziontechgroup',
+    'https://twitch.tv/ziontechgroup',
+    'https://ziontechgroup.com/quantum-neural-network-platform/',
+    'https://ziontechgroup.com/autonomous-business-operations-platform/',
+    'https://ziontechgroup.com/ai-powered-it-asset-management/',
+    'https://ziontechgroup.com/ai-autonomous-business-manager-2029/',
+    'https://ziontechgroup.com/ai-autonomous-business-platform-2026/',
+    'https://ziontechgroup.com/ai-autonomous-code-review/',
+    'https://ziontechgroup.com/ai-autonomous-creative-director/',
+    'https://ziontechgroup.com/ai-autonomous-data/',
+    'https://ziontechgroup.com/ai-autonomous-decision-platform/',
+    'https://ziontechgroup.com/ai-autonomous-devops/',
+    'https://ziontechgroup.com/ai-autonomous-education-professor/',
+    'https://ziontechgroup.com/ai-autonomous-healthcare-physician/',
+    'https://ziontechgroup.com/ai-autonomous-learning-system/',
+    'https://ziontechgroup.com/ai-autonomous-legal-counsel/',
+    'https://ziontechgroup.com/ai-autonomous-logistics/',
+    'https://ziontechgroup.com/ai-autonomous-manufacturing/',
+    'https://ziontechgroup.com/ai-autonomous-research/',
+    'https://ziontechgroup.com/ai-autonomous-robotics/',
+    'https://ziontechgroup.com/ai-autonomous-scientific-researcher/',
+    'https://ziontechgroup.com/ai-autonomous-security/',
+    'https://ziontechgroup.com/ai-autonomous-systems-platform/',
+    'https://ziontechgroup.com/ai-autonomous-testing/',
+    'https://ziontechgroup.com/ai-autonomous-vehicle-platform/',
+    'https://ziontechgroup.com/ai-autonomous-vehicle/',
+    'https://ziontechgroup.com/ai-autonomous-vehicles-platform/',
+    'https://ziontechgroup.com/ai-autonomous-vehicles/',
+    'https://ziontechgroup.com/ai-autonomous-venture-capitalist/',
+    'https://ziontechgroup.com/ai-biomedical-research/',
+    'https://ziontechgroup.com/ai-biotech-drug-discovery/',
+    'https://ziontechgroup.com/ai-blockchain-governance/',
+    'https://ziontechgroup.com/ai-brain-computer-interface/',
+    'https://ziontechgroup.com/ai-brain-interface/',
+    'https://ziontechgroup.com/ai-business-intelligence-elite-2026/',
+    'https://ziontechgroup.com/ai-business-intelligence-suite-2029/',
+    'https://ziontechgroup.com/ai-climate-prediction-engine/',
+    'https://ziontechgroup.com/ai-climate-prediction-platform/',
+    'https://ziontechgroup.com/ai-climate-prediction/',
+    'https://ziontechgroup.com/ai-code-generation-enterprise/',
+    'https://ziontechgroup.com/ai-compliance-automation/',
+    'https://ziontechgroup.com/ai-computer-vision-platform/',
+    'https://ziontechgroup.com/ai-consciousness-evolution-platform/',
+    'https://ziontechgroup.com/ai-consciousness-simulation-platform/',
+    'https://ziontechgroup.com/ai-consciousness-simulation/',
+    'https://ziontechgroup.com/ai-consciousness-simulator/',
+    'https://ziontechgroup.com/ai-content-creation-revolution/',
+    'https://ziontechgroup.com/ai-content-creation/',
+    'https://ziontechgroup.com/ai-content-factory/',
+    'https://ziontechgroup.com/ai-content-generation-automation-2033/',
+    'https://ziontechgroup.com/ai-content-generation-pro-2029/',
+    'https://ziontechgroup.com/ai-content-generation-automation-2033/',
+    'https://ziontechgroup.com/ai-content-generation-pro-2029/',
+    'https://ziontechgroup.com/ai-consciousness-evolution-2025/',
+    'https://ziontechgroup.com/ai-consciousness-evolution-2029/'
+  ];
+
+  const initializeLinks = useCallback(() => {
+    const initialLinks: LinkStatus[] = sampleBrokenLinks.map(url => ({
       url,
-      status: 'pending',
-      lastChecked: new Date()
+      status: 'unknown',
+      lastChecked: new Date(),
+      parentPage: 'ziontechgroup.com',
+      suggestedFix: getSuggestedFix(url)
     }));
-    setLinkStatuses(initialStatuses);
-  }, [links]);
 
-  // Check a single link
-  const checkLink = useCallback(async (url: string): Promise<LinkStatus> => {
-    const startTime = Date.now();
-    
+    setLinks(initialLinks);
+    updateStats(initialLinks);
+  }, []);
+
+  const getSuggestedFix = (url: string): string => {
+    if (url.includes('linkedin.com')) {
+      return 'Update LinkedIn company URL or remove if company page doesn\'t exist';
+    }
+    if (url.includes('twitter.com')) {
+      return 'Update Twitter handle or remove if account doesn\'t exist';
+    }
+    if (url.includes('github.com')) {
+      return 'Update GitHub organization URL or remove if organization doesn\'t exist';
+    }
+    if (url.includes('youtube.com')) {
+      return 'Update YouTube channel URL or remove if channel doesn\'t exist';
+    }
+    if (url.includes('facebook.com')) {
+      return 'Update Facebook page URL or remove if page doesn\'t exist';
+    }
+    if (url.includes('instagram.com')) {
+      return 'Update Instagram handle or remove if account doesn\'t exist';
+    }
+    if (url.includes('discord.gg')) {
+      return 'Update Discord invite link or remove if server doesn\'t exist';
+    }
+    if (url.includes('twitch.tv')) {
+      return 'Update Twitch channel URL or remove if channel doesn\'t exist';
+    }
+    if (url.includes('ziontechgroup.com')) {
+      return 'Create missing page or implement redirect to similar content';
+    }
+    return 'Review and update link or remove if no longer relevant';
+  };
+
+  const updateStats = (currentLinks: LinkStatus[]) => {
+    const total = currentLinks.length;
+    const healthy = currentLinks.filter(l => l.status === 'healthy').length;
+    const broken = currentLinks.filter(l => l.status === 'broken').length;
+    const unknown = currentLinks.filter(l => l.status === 'unknown').length;
+
+    setStats({ total, healthy, broken, unknown });
+  };
+
+  const checkLinkHealth = useCallback(async (url: string): Promise<LinkStatus> => {
     try {
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), timeout);
-
-      const response = await fetch(url, {
+      const response = await fetch(url, { 
         method: 'HEAD',
         mode: 'no-cors',
-        signal: controller.signal
+        cache: 'no-cache'
       });
-
-      clearTimeout(timeoutId);
-      const responseTime = Date.now() - startTime;
-
+      
       return {
         url,
-        status: 'success',
+        status: response.ok ? 'healthy' : 'broken',
         statusCode: response.status,
-        responseTime,
-        lastChecked: new Date()
+        lastChecked: new Date(),
+        parentPage: 'ziontechgroup.com',
+        suggestedFix: getSuggestedFix(url)
       };
     } catch (error) {
-      const responseTime = Date.now() - startTime;
-      
-      if (error instanceof Error) {
-        if (error.name === 'AbortError') {
-          return {
-            url,
-            status: 'timeout',
-            responseTime,
-            error: 'Request timeout',
-            lastChecked: new Date()
-          };
-        }
-        
-        return {
-          url,
-          status: 'error',
-          responseTime,
-          error: error.message,
-          lastChecked: new Date()
-        };
-      }
-      
       return {
         url,
-        status: 'error',
-        responseTime,
-        error: 'Unknown error',
-        lastChecked: new Date()
+        status: 'broken',
+        error: error instanceof Error ? error.message : 'Unknown error',
+        lastChecked: new Date(),
+        parentPage: 'ziontechgroup.com',
+        suggestedFix: getSuggestedFix(url)
       };
     }
-  }, [timeout]);
+  }, []);
 
-  // Check all links
   const checkAllLinks = useCallback(async () => {
     setIsChecking(true);
-    setLastCheck(new Date());
-    
-    const newStatuses: LinkStatus[] = [];
-    
-    for (const url of links) {
-      const status = await checkLink(url);
-      newStatuses.push(status);
-      
-      // Update statuses incrementally
-      setLinkStatuses(prev => 
-        prev.map(s => s.url === url ? status : s)
-      );
-      
-      // Small delay to avoid overwhelming the server
-      await new Promise(resolve => setTimeout(resolve, 100));
-    }
-    
-    setLinkStatuses(newStatuses);
+    const updatedLinks = await Promise.all(
+      links.map(async (link) => {
+        if (link.status === 'unknown' || link.status === 'broken') {
+          return await checkLinkHealth(link.url);
+        }
+        return link;
+      })
+    );
+
+    setLinks(updatedLinks);
+    updateStats(updatedLinks);
     setIsChecking(false);
-    
-    if (onStatusChange) {
-      onStatusChange(newStatuses);
-    }
-  }, [links, checkLink, onStatusChange]);
+  }, [links, checkLinkHealth]);
 
-  // Auto-check links
+  const fixLink = useCallback((url: string, fixType: 'redirect' | 'remove' | 'update') => {
+    setLinks(prev => prev.map(link => 
+      link.url === url 
+        ? { ...link, suggestedFix: `Action: ${fixType} - ${link.suggestedFix}` }
+        : link
+    ));
+  }, []);
+
   useEffect(() => {
-    if (!autoCheck) return;
-    
-    // Initial check
-    checkAllLinks();
-    
-    // Set up interval
-    const interval = setInterval(checkAllLinks, checkInterval);
-    
-    return () => clearInterval(interval);
-  }, [autoCheck, checkInterval, checkAllLinks]);
+    initializeLinks();
+  }, [initializeLinks]);
 
-  // Get status summary
-  const getStatusSummary = () => {
-    const total = linkStatuses.length;
-    const success = linkStatuses.filter(s => s.status === 'success').length;
-    const error = linkStatuses.filter(s => s.status === 'error').length;
-    const timeout = linkStatuses.filter(s => s.status === 'timeout').length;
-    const pending = linkStatuses.filter(s => s.status === 'pending').length;
-    
-    return { total, success, error, timeout, pending };
-  };
+  useEffect(() => {
+    if (autoCheck && links.length > 0) {
+      const timer = setTimeout(() => {
+        checkAllLinks();
+      }, 5000);
 
-  // Get status color
-  const getStatusColor = (status: LinkStatus['status']) => {
-    switch (status) {
-      case 'success': return 'text-green-400';
-      case 'error': return 'text-red-400';
-      case 'timeout': return 'text-yellow-400';
-      case 'pending': return 'text-gray-400';
-      default: return 'text-gray-400';
+      return () => clearTimeout(timer);
     }
-  };
+  }, [autoCheck, links.length, checkAllLinks]);
 
-  // Get status icon
-  const getStatusIcon = (status: LinkStatus['status']) => {
-    switch (status) {
-      case 'success': return <CheckCircle className="w-4 h-4 text-green-400" />;
-      case 'error': return <AlertTriangle className="w-4 h-4 text-red-400" />;
-      case 'timeout': return <AlertTriangle className="w-4 h-4 text-yellow-400" />;
-      case 'pending': return <RefreshCw className="w-4 h-4 text-gray-400 animate-spin" />;
-      default: return <Info className="w-4 h-4 text-gray-400" />;
-    }
-  };
-
-  const summary = getStatusSummary();
+  const filteredLinks = showBrokenOnly 
+    ? links.filter(link => link.status === 'broken' || link.status === 'unknown')
+    : links;
 
   return (
-    <div className="fixed bottom-4 left-4 w-80 bg-black/90 backdrop-blur-md rounded-lg shadow-2xl border border-gray-700 z-50">
-      <div className="p-4">
-        {/* Header */}
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
-            <Link className="w-5 h-5 text-cyan-400" />
-            <span>Link Health</span>
-          </h3>
-          <div className="flex items-center space-x-2">
-            <button
-              onClick={() => setShowDetails(!showDetails)}
-              className="p-2 text-gray-400 hover:text-white transition-colors duration-200"
-              title={showDetails ? 'Hide Details' : 'Show Details'}
+    <div className={`bg-white dark:bg-gray-900 rounded-lg shadow-lg p-6 ${className}`}>
+      {/* Header */}
+      <div className="flex items-center justify-between mb-6">
+        <div className="flex items-center gap-3">
+          <WrenchScrewdriverIcon className="w-8 h-8 text-blue-600" />
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+              Link Health Monitor
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400">
+              Monitor and fix broken links across the website
+            </p>
+          </div>
+        </div>
+        
+        <button
+          onClick={checkAllLinks}
+          disabled={isChecking}
+          className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors"
+        >
+          <ArrowPathIcon className={`w-5 h-5 ${isChecking ? 'animate-spin' : ''}`} />
+          {isChecking ? 'Checking...' : 'Check All'}
+        </button>
+      </div>
+
+      {/* Statistics */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg text-center">
+          <div className="text-2xl font-bold text-gray-900 dark:text-white">{stats.total}</div>
+          <div className="text-sm text-gray-600 dark:text-gray-400">Total Links</div>
+        </div>
+        <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg text-center">
+          <div className="text-2xl font-bold text-green-600">{stats.healthy}</div>
+          <div className="text-sm text-green-600 dark:text-green-400">Healthy</div>
+        </div>
+        <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg text-center">
+          <div className="text-2xl font-bold text-red-600">{stats.broken}</div>
+          <div className="text-sm text-red-600 dark:text-red-400">Broken</div>
+        </div>
+        <div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg text-center">
+          <div className="text-2xl font-bold text-yellow-600">{stats.unknown}</div>
+          <div className="text-sm text-yellow-600 dark:text-yellow-400">Unknown</div>
+        </div>
+      </div>
+
+      {/* Controls */}
+      <div className="flex items-center gap-4 mb-6">
+        <label className="flex items-center gap-2">
+          <input
+            type="checkbox"
+            checked={showBrokenOnly}
+            onChange={(e) => setShowBrokenOnly(e.target.checked)}
+            className="rounded border-gray-300"
+          />
+          <span className="text-sm text-gray-700 dark:text-gray-300">
+            Show broken/unknown only
+          </span>
+        </label>
+      </div>
+
+      {/* Links List */}
+      <div className="space-y-3 max-h-96 overflow-y-auto">
+        <AnimatePresence>
+          {filteredLinks.map((link, index) => (
+            <motion.div
+              key={link.url}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ delay: index * 0.05 }}
+              className={`p-4 rounded-lg border ${
+                link.status === 'healthy' 
+                  ? 'border-green-200 bg-green-50 dark:bg-green-900/20' 
+                  : link.status === 'broken'
+                  ? 'border-red-200 bg-red-50 dark:bg-red-900/20'
+                  : 'border-yellow-200 bg-yellow-50 dark:bg-yellow-900/20'
+              }`}
             >
-              <Info className="w-4 h-4" />
-            </button>
-            <button
-              onClick={checkAllLinks}
-              disabled={isChecking}
-              className="p-2 text-gray-400 hover:text-white transition-colors duration-200"
-              title="Check All Links"
-            >
-              <RefreshCw className={`w-4 h-4 ${isChecking ? 'animate-spin' : ''}`} />
-            </button>
-          </div>
-        </div>
-
-        {/* Summary Stats */}
-        <div className="grid grid-cols-2 gap-3 mb-4">
-          <div className="bg-gray-800/50 rounded-lg p-3">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-green-400">{summary.success}</div>
-              <div className="text-xs text-gray-400">Healthy</div>
-            </div>
-          </div>
-          
-          <div className="bg-gray-800/50 rounded-lg p-3">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-red-400">{summary.error + summary.timeout}</div>
-              <div className="text-xs text-gray-400">Issues</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Status Bar */}
-        <div className="w-full bg-gray-700 rounded-full h-2 mb-4">
-          <div 
-            className="bg-green-500 h-2 rounded-full transition-all duration-300"
-            style={{ width: `${(summary.success / summary.total) * 100}%` }}
-          ></div>
-        </div>
-
-        {/* Last Check */}
-        {lastCheck && (
-          <div className="text-xs text-gray-400 text-center mb-4">
-            Last checked: {lastCheck.toLocaleTimeString()}
-          </div>
-        )}
-
-        {/* Link Details */}
-        {showDetails && (
-          <div className="max-h-64 overflow-y-auto space-y-2">
-            {linkStatuses.map((status, index) => (
-              <div key={index} className="bg-gray-800/30 rounded p-3">
-                <div className="flex items-center justify-between mb-2">
-                  <div className="flex items-center space-x-2">
-                    {getStatusIcon(status.status)}
-                    <span className="text-sm text-white font-medium truncate">
-                      {new URL(status.url).hostname}
+              <div className="flex items-start justify-between">
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 mb-2">
+                    {link.status === 'healthy' && (
+                      <CheckCircleIcon className="w-5 h-5 text-green-600" />
+                    )}
+                    {link.status === 'broken' && (
+                      <ExclamationTriangleIcon className="w-5 h-5 text-red-600" />
+                    )}
+                    {link.status === 'unknown' && (
+                      <InformationCircleIcon className="w-5 h-5 text-yellow-600" />
+                    )}
+                    
+                    <span className="text-sm font-medium text-gray-900 dark:text-white">
+                      {link.status.charAt(0).toUpperCase() + link.status.slice(1)}
                     </span>
+                    
+                    {link.statusCode && (
+                      <span className="text-xs text-gray-500 dark:text-gray-400">
+                        ({link.statusCode})
+                      </span>
+                    )}
                   </div>
-                  <a
-                    href={status.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200"
-                    title="Open link"
-                  >
-                    <ExternalLink className="w-3 h-3" />
-                  </a>
+                  
+                  <div className="text-sm text-gray-600 dark:text-gray-400 break-all mb-2">
+                    {link.url}
+                  </div>
+                  
+                  {link.error && (
+                    <div className="text-xs text-red-600 dark:text-red-400 mb-2">
+                      Error: {link.error}
+                    </div>
+                  )}
+                  
+                  {link.suggestedFix && (
+                    <div className="text-xs text-blue-600 dark:text-blue-400">
+                      <strong>Fix:</strong> {link.suggestedFix}
+                    </div>
+                  )}
+                  
+                  <div className="text-xs text-gray-500 dark:text-gray-400 mt-2">
+                    Last checked: {link.lastChecked.toLocaleString()}
+                  </div>
                 </div>
                 
-                <div className="text-xs text-gray-400 space-y-1">
-                  <div className="flex justify-between">
-                    <span>Status:</span>
-                    <span className={getStatusColor(status.status)}>
-                      {status.status.toUpperCase()}
-                    </span>
+                {link.status !== 'healthy' && (
+                  <div className="flex gap-2 ml-4">
+                    <button
+                      onClick={() => fixLink(link.url, 'redirect')}
+                      className="text-xs bg-blue-100 hover:bg-blue-200 text-blue-700 px-2 py-1 rounded"
+                    >
+                      Redirect
+                    </button>
+                    <button
+                      onClick={() => fixLink(link.url, 'update')}
+                      className="text-xs bg-green-100 hover:bg-green-200 text-green-700 px-2 py-1 rounded"
+                    >
+                      Update
+                    </button>
+                    <button
+                      onClick={() => fixLink(link.url, 'remove')}
+                      className="text-xs bg-red-100 hover:bg-red-200 text-red-700 px-2 py-1 rounded"
+                    >
+                      Remove
+                    </button>
                   </div>
-                  
-                  {status.statusCode && (
-                    <div className="flex justify-between">
-                      <span>Code:</span>
-                      <span>{status.statusCode}</span>
-                    </div>
-                  )}
-                  
-                  {status.responseTime && (
-                    <div className="flex justify-between">
-                      <span>Response:</span>
-                      <span>{status.responseTime}ms</span>
-                    </div>
-                  )}
-                  
-                  {status.error && (
-                    <div className="text-red-400 text-xs">
-                      Error: {status.error}
-                    </div>
-                  )}
-                </div>
+                )}
               </div>
-            ))}
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </div>
+
+      {/* Summary */}
+      <div className="mt-6 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+        <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+          Summary
+        </h3>
+        <p className="text-sm text-gray-600 dark:text-gray-400">
+          {stats.broken > 0 
+            ? `Found ${stats.broken} broken links that need immediate attention. Consider implementing redirects or removing outdated links.`
+            : 'All links are healthy! Your website is in good shape.'
+          }
+        </p>
+        {stats.broken > 0 && (
+          <div className="mt-2 text-xs text-red-600 dark:text-red-400">
+            <strong>Priority:</strong> Fix broken links to improve user experience and SEO performance.
           </div>
         )}
-
-        {/* Footer */}
-        <div className="text-xs text-gray-500 text-center mt-4">
-          {summary.total} links monitored
-          {autoCheck && ` • Auto-check every ${Math.round(checkInterval / 60000)}m`}
-        </div>
       </div>
     </div>
   );
 };
+
+export default LinkHealthMonitor;

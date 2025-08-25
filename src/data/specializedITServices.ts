@@ -2,720 +2,511 @@ export interface SpecializedITService {
   id: string;
   title: string;
   description: string;
-  category: 'Enterprise Infrastructure' | 'Digital Transformation' | 'Industry Solutions' | 'Advanced Analytics' | 'Integration Services' | 'Managed Services' | 'Consulting' | 'Training & Support';
+  category: string;
   subcategory: string;
-  price: {
-    monthly: number;
-    yearly: number;
-    enterprise: number;
-    oneTime: number;
-    currency: string;
-  };
+  price: number;
+  currency: string;
+  pricingModel: string;
   features: string[];
   benefits: string[];
   useCases: string[];
   targetAudience: string[];
-  technologies: string[];
-  integration: string[];
-  pricingTier: 'Starter' | 'Professional' | 'Enterprise' | 'Custom';
-  website: string;
-  contactInfo: {
-    email: string;
-    phone: string;
-    address: string;
-  };
-  rating: number;
-  reviewCount: number;
-  launchDate: string;
-  status: 'Active' | 'Beta' | 'Coming Soon';
-  marketPrice: string;
+  tags: string[];
   estimatedDelivery: string;
   supportLevel: string;
-  industryFocus: string[];
+  marketPrice: string;
+  contactInfo: {
+    phone: string;
+    email: string;
+    website: string;
+  };
+  websiteUrl: string;
+  demoUrl?: string;
+  documentationUrl?: string;
+  technicalSpecs?: string[];
+  integrations?: string[];
+  compliance?: string[];
+  sla?: string;
+  uptime?: string;
 }
 
 export const SPECIALIZED_IT_SERVICES: SpecializedITService[] = [
-  // Enterprise Infrastructure Services
+  // Advanced Network Infrastructure
   {
-    id: 'zion-enterprise-architecture-transformation',
-    title: 'Zion Enterprise Architecture Transformation',
-    description: 'Comprehensive enterprise architecture transformation service that modernizes legacy systems, implements microservices architecture, and establishes scalable digital foundations.',
-    category: 'Enterprise Infrastructure',
-    subcategory: 'Architecture Modernization',
-    price: {
-      monthly: 0,
-      yearly: 0,
-      enterprise: 0,
-      oneTime: 50000,
-      currency: '$'
-    },
+    id: "ai-network-optimization",
+    title: "AI-Powered Network Infrastructure Optimization",
+    description: "Intelligent network management platform that uses AI to optimize network performance, predict failures, and automatically adjust configurations for maximum efficiency.",
+    category: "Network Infrastructure",
+    subcategory: "AI Network Management",
+    price: 3200,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      'Legacy system assessment and analysis',
-      'Microservices architecture design',
-      'API-first strategy development',
-      'Data architecture optimization',
-      'Security architecture implementation',
-      'Performance optimization',
-      'Scalability planning',
-      'Migration roadmap creation'
+      "AI-powered network traffic analysis",
+      "Predictive network failure detection",
+      "Automated bandwidth optimization",
+      "Real-time performance monitoring",
+      "Intelligent load balancing",
+      "Network security threat detection",
+      "Automated configuration management",
+      "Multi-vendor equipment support"
     ],
     benefits: [
-      'Reduce technical debt by 60%',
-      'Improve system performance by 300%',
-      'Enable rapid feature development',
-      'Enhance system reliability',
-      'Future-proof architecture foundation'
+      "Improve network performance by 40%",
+      "Reduce network downtime by 60%",
+      "Optimize bandwidth utilization",
+      "Enhanced security monitoring",
+      "Automated network management"
     ],
     useCases: [
-      'Legacy system modernization',
-      'Digital transformation initiatives',
-      'Microservices migration',
-      'API strategy development',
-      'Enterprise scalability planning'
+      "Enterprise networks",
+      "Data centers",
+      "Cloud infrastructure",
+      "Multi-site organizations",
+      "High-traffic applications"
     ],
     targetAudience: [
-      'Chief Technology Officers',
-      'Enterprise Architects',
-      'IT Directors',
-      'Digital Transformation Leaders',
-      'System Architects'
+      "Network administrators",
+      "IT infrastructure managers",
+      "System engineers",
+      "Network architects",
+      "IT directors"
     ],
-    technologies: [
-      'Microservices Architecture',
-      'API Management',
-      'Container Technologies',
-      'Cloud Platforms',
-      'DevOps Practices'
-    ],
-    integration: [
-      'Existing enterprise systems',
-      'Cloud platforms',
-      'Monitoring tools',
-      'Security frameworks',
-      'Development tools'
-    ],
-    pricingTier: 'Custom',
-    website: 'https://ziontechgroup.com/enterprise-architecture',
+    tags: ["AI", "Network Infrastructure", "Network Optimization", "Performance Monitoring", "Automation"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,200 - $8,500/month",
     contactInfo: {
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    rating: 4.9,
-    reviewCount: 45,
-    launchDate: '2024-01-10',
-    status: 'Active',
-    marketPrice: '$50,000 - $500,000',
-    estimatedDelivery: '12-24 weeks',
-    supportLevel: 'Dedicated Enterprise Support Team',
-    industryFocus: ['Financial Services', 'Healthcare', 'Manufacturing', 'Retail', 'Government']
+    websiteUrl: "https://ziontechgroup.com/ai-network-optimization",
+    technicalSpecs: ["Machine Learning", "Network Analytics", "Real-time Monitoring", "API Integration"],
+    integrations: ["Cisco", "Juniper", "Aruba", "VMware", "AWS", "Azure", "Google Cloud"],
+    compliance: ["ISO 27001", "SOC 2", "PCI DSS", "HIPAA"],
+    sla: "99.9% uptime guarantee",
+    uptime: "99.9%"
   },
 
+  // Advanced Data Center Management
   {
-    id: 'zion-hybrid-cloud-orchestration-platform',
-    title: 'Zion Hybrid Cloud Orchestration Platform',
-    description: 'Advanced hybrid cloud orchestration platform that seamlessly manages workloads across on-premises, private cloud, and public cloud environments with intelligent resource optimization.',
-    category: 'Enterprise Infrastructure',
-    subcategory: 'Cloud Orchestration',
-    price: {
-      monthly: 899,
-      yearly: 8990,
-      enterprise: 29999,
-      oneTime: 0,
-      currency: '$'
-    },
+    id: "ai-data-center-management",
+    title: "AI Data Center Management & Automation Platform",
+    description: "Comprehensive data center management platform that uses AI to optimize resource allocation, energy consumption, and operational efficiency across all data center operations.",
+    category: "Data Center Management",
+    subcategory: "AI Automation",
+    price: 4500,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      'Multi-cloud workload management',
-      'Intelligent resource allocation',
-      'Cost optimization algorithms',
-      'Security and compliance automation',
-      'Performance monitoring',
-      'Disaster recovery orchestration',
-      'API management',
-      'Custom dashboards'
+      "AI-powered resource allocation",
+      "Energy consumption optimization",
+      "Predictive maintenance scheduling",
+      "Automated capacity planning",
+      "Real-time performance monitoring",
+      "Intelligent cooling management",
+      "Security threat detection",
+      "Compliance automation"
     ],
     benefits: [
-      'Reduce cloud costs by 40%',
-      'Improve resource utilization by 60%',
-      'Enhance security posture',
-      'Simplify multi-cloud management',
-      'Accelerate deployment cycles'
+      "Reduce energy costs by 25-35%",
+      "Improve resource utilization by 30%",
+      "Minimize downtime through predictive maintenance",
+      "Enhanced operational efficiency",
+      "Automated compliance reporting"
     ],
     useCases: [
-      'Hybrid cloud management',
-      'Multi-cloud operations',
-      'Workload optimization',
-      'Cost management',
-      'Compliance automation'
+      "Enterprise data centers",
+      "Cloud service providers",
+      "Colocation facilities",
+      "Edge computing locations",
+      "Hybrid cloud environments"
     ],
     targetAudience: [
-      'Cloud Architects',
-      'DevOps Engineers',
-      'Infrastructure Managers',
-      'IT Operations Teams',
-      'Security Engineers'
+      "Data center managers",
+      "Infrastructure directors",
+      "Operations managers",
+      "Facility managers",
+      "IT executives"
     ],
-    technologies: [
-      'Kubernetes',
-      'Terraform',
-      'Cloud APIs',
-      'Monitoring tools',
-      'Security frameworks'
-    ],
-    integration: [
-      'AWS, Azure, GCP',
-      'On-premises systems',
-      'Monitoring platforms',
-      'Security tools',
-      'CI/CD pipelines'
-    ],
-    pricingTier: 'Enterprise',
-    website: 'https://ziontechgroup.com/hybrid-cloud',
+    tags: ["AI", "Data Center", "Resource Management", "Energy Optimization", "Automation"],
+    estimatedDelivery: "6-8 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$4,500 - $12,000/month",
     contactInfo: {
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    rating: 4.8,
-    reviewCount: 78,
-    launchDate: '2024-02-15',
-    status: 'Active',
-    marketPrice: '$899 - $29,999/month',
-    estimatedDelivery: '4-6 weeks',
-    supportLevel: '24/7 Enterprise Support',
-    industryFocus: ['Technology', 'Financial Services', 'Healthcare', 'Manufacturing', 'Retail']
+    websiteUrl: "https://ziontechgroup.com/ai-data-center-management",
+    technicalSpecs: ["Machine Learning", "IoT Integration", "Predictive Analytics", "Real-time Monitoring"],
+    integrations: ["VMware", "OpenStack", "Kubernetes", "Docker", "Monitoring Tools", "BMS Systems"],
+    compliance: ["ISO 27001", "SOC 2", "Uptime Institute", "LEED", "Energy Star"],
+    sla: "99.99% uptime guarantee",
+    uptime: "99.99%"
   },
 
-  // Digital Transformation Services
+  // Advanced Cloud Migration
   {
-    id: 'zion-digital-workplace-transformation',
-    title: 'Zion Digital Workplace Transformation',
-    description: 'End-to-end digital workplace transformation service that modernizes collaboration, communication, and productivity tools for the hybrid work environment.',
-    category: 'Digital Transformation',
-    subcategory: 'Workplace Modernization',
-    price: {
-      monthly: 0,
-      yearly: 0,
-      enterprise: 0,
-      oneTime: 75000,
-      currency: '$'
-    },
+    id: "ai-cloud-migration-platform",
+    title: "AI Cloud Migration & Optimization Platform",
+    description: "Intelligent cloud migration platform that uses AI to analyze applications, optimize migration strategies, and ensure seamless transitions to cloud environments.",
+    category: "Cloud Services",
+    subcategory: "Migration & Optimization",
+    price: 2800,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      'Collaboration platform implementation',
-      'Communication tools integration',
-      'Productivity suite deployment',
-      'Mobile-first strategy',
-      'Security and compliance',
-      'Change management',
-      'Training and adoption',
-      'Ongoing optimization'
+      "AI-powered application analysis",
+      "Migration strategy optimization",
+      "Cost optimization recommendations",
+      "Performance benchmarking",
+      "Automated migration workflows",
+      "Risk assessment & mitigation",
+      "Multi-cloud support",
+      "Migration monitoring & rollback"
     ],
     benefits: [
-      'Increase productivity by 35%',
-      'Improve employee satisfaction',
-      'Reduce operational costs',
-      'Enhance collaboration',
-      'Support hybrid work models'
+      "Reduce migration time by 40%",
+      "Optimize cloud costs by 30%",
+      "Minimize migration risks",
+      "Enhanced performance optimization",
+      "Automated migration processes"
     ],
     useCases: [
-      'Remote work enablement',
-      'Collaboration improvement',
-      'Productivity enhancement',
-      'Digital transformation',
-      'Workplace modernization'
+      "Legacy system modernization",
+      "Data center consolidation",
+      "Multi-cloud strategies",
+      "Application modernization",
+      "Disaster recovery planning"
     ],
     targetAudience: [
-      'Chief Human Resources Officers',
-      'IT Directors',
-      'Change Management Teams',
-      'Operations Managers',
-      'Employee Experience Leaders'
+      "Cloud architects",
+      "DevOps engineers",
+      "IT managers",
+      "Application developers",
+      "Infrastructure teams"
     ],
-    technologies: [
-      'Microsoft 365',
-      'Google Workspace',
-      'Slack, Teams',
-      'Video conferencing',
-      'Mobile applications'
-    ],
-    integration: [
-      'Existing IT systems',
-      'HR platforms',
-      'Security tools',
-      'Communication systems',
-      'Productivity tools'
-    ],
-    pricingTier: 'Custom',
-    website: 'https://ziontechgroup.com/digital-workplace',
+    tags: ["AI", "Cloud Migration", "Cloud Optimization", "Application Modernization", "Multi-cloud"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "premium",
+    marketPrice: "$2,800 - $7,500/month",
     contactInfo: {
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    rating: 4.7,
-    reviewCount: 92,
-    launchDate: '2024-01-25',
-    status: 'Active',
-    marketPrice: '$75,000 - $300,000',
-    estimatedDelivery: '16-20 weeks',
-    supportLevel: 'Dedicated Transformation Team',
-    industryFocus: ['Professional Services', 'Technology', 'Financial Services', 'Healthcare', 'Education']
+    websiteUrl: "https://ziontechgroup.com/ai-cloud-migration",
+    technicalSpecs: ["Machine Learning", "Application Analysis", "Migration Automation", "Performance Testing"],
+    integrations: ["AWS", "Azure", "Google Cloud", "VMware", "Kubernetes", "Docker", "Terraform"],
+    compliance: ["SOC 2", "ISO 27001", "Cloud Security Standards"],
+    sla: "99.5% uptime guarantee",
+    uptime: "99.5%"
   },
 
+  // Advanced DevOps Automation
   {
-    id: 'zion-customer-experience-transformation',
-    title: 'Zion Customer Experience Transformation',
-    description: 'Comprehensive customer experience transformation service that leverages AI, analytics, and digital technologies to create seamless, personalized customer journeys.',
-    category: 'Digital Transformation',
-    subcategory: 'Customer Experience',
-    price: {
-      monthly: 0,
-      yearly: 0,
-      enterprise: 0,
-      oneTime: 100000,
-      currency: '$'
-    },
+    id: "ai-devops-automation-platform",
+    title: "AI DevOps Automation & CI/CD Optimization",
+    description: "Intelligent DevOps platform that uses AI to automate software development workflows, optimize CI/CD pipelines, and enhance development team productivity.",
+    category: "DevOps & Automation",
+    subcategory: "CI/CD Optimization",
+    price: 1800,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      'Customer journey mapping',
-      'Omnichannel strategy',
-      'AI-powered personalization',
-      'Analytics and insights',
-      'Integration services',
-      'Change management',
-      'Performance optimization',
-      'Ongoing support'
+      "AI-powered pipeline optimization",
+      "Automated testing & quality assurance",
+      "Intelligent deployment strategies",
+      "Performance monitoring & alerting",
+      "Security scanning integration",
+      "Code quality analysis",
+      "Team collaboration tools",
+      "Analytics & reporting"
     ],
     benefits: [
-      'Increase customer satisfaction by 45%',
-      'Improve conversion rates by 30%',
-      'Reduce customer churn',
-      'Enhance brand loyalty',
-      'Optimize customer lifetime value'
+      "Reduce deployment time by 70%",
+      "Improve code quality by 40%",
+      "Automate repetitive tasks",
+      "Enhanced team productivity",
+      "Reduced production incidents"
     ],
     useCases: [
-      'Customer experience improvement',
-      'Digital transformation',
-      'Omnichannel strategy',
-      'Personalization implementation',
-      'Customer journey optimization'
+      "Software development teams",
+      "DevOps engineering",
+      "Quality assurance",
+      "System administration",
+      "Microservices deployment"
     ],
     targetAudience: [
-      'Chief Customer Officers',
-      'Marketing Directors',
-      'Customer Experience Managers',
-      'Digital Transformation Leaders',
-      'Product Managers'
+      "DevOps engineers",
+      "Software developers",
+      "QA engineers",
+      "System administrators",
+      "IT operations teams"
     ],
-    technologies: [
-      'Customer Data Platforms',
-      'AI and Machine Learning',
-      'Analytics platforms',
-      'Marketing automation',
-      'CRM systems'
-    ],
-    integration: [
-      'Existing customer systems',
-      'Marketing platforms',
-      'Analytics tools',
-      'CRM systems',
-      'E-commerce platforms'
-    ],
-    pricingTier: 'Custom',
-    website: 'https://ziontechgroup.com/customer-experience',
+    tags: ["AI", "DevOps", "CI/CD", "Automation", "Quality Assurance"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,800 - $4,999/month",
     contactInfo: {
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    rating: 4.9,
-    reviewCount: 67,
-    launchDate: '2024-03-05',
-    status: 'Active',
-    marketPrice: '$100,000 - $500,000',
-    estimatedDelivery: '20-24 weeks',
-    supportLevel: 'Dedicated CX Transformation Team',
-    industryFocus: ['Retail', 'E-commerce', 'Financial Services', 'Healthcare', 'Travel & Hospitality']
+    websiteUrl: "https://ziontechgroup.com/ai-devops-automation",
+    technicalSpecs: ["Machine Learning", "Pipeline Automation", "Testing Automation", "Performance Monitoring"],
+    integrations: ["Jenkins", "GitLab", "GitHub", "Docker", "Kubernetes", "AWS", "Azure", "Google Cloud"],
+    compliance: ["SOC 2", "Security Standards", "Development Best Practices"],
+    sla: "99.5% uptime guarantee",
+    uptime: "99.5%"
   },
 
-  // Industry Solutions
+  // Advanced Security Operations
   {
-    id: 'zion-healthcare-digital-transformation-suite',
-    title: 'Zion Healthcare Digital Transformation Suite',
-    description: 'Comprehensive digital transformation solution specifically designed for healthcare organizations, including patient engagement, operational efficiency, and compliance automation.',
-    category: 'Industry Solutions',
-    subcategory: 'Healthcare',
-    price: {
-      monthly: 1299,
-      yearly: 12990,
-      enterprise: 39999,
-      oneTime: 0,
-      currency: '$'
-    },
+    id: "ai-security-operations-center",
+    title: "AI Security Operations Center (SOC) Platform",
+    description: "Intelligent security operations platform that uses AI to detect threats, automate incident response, and provide comprehensive security monitoring across all systems.",
+    category: "Cybersecurity",
+    subcategory: "Security Operations",
+    price: 3500,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      'Patient portal and engagement',
-      'Electronic health records integration',
-      'Telemedicine platform',
-      'Compliance automation (HIPAA)',
-      'Operational analytics',
-      'Staff productivity tools',
-      'Security and privacy',
-      'Mobile applications'
+      "AI-powered threat detection",
+      "Automated incident response",
+      "Behavioral analytics",
+      "Threat intelligence integration",
+      "Security orchestration",
+      "Compliance monitoring",
+      "Real-time alerting",
+      "Forensic analysis tools"
     ],
     benefits: [
-      'Improve patient satisfaction by 50%',
-      'Reduce administrative costs by 30%',
-      'Enhance compliance automation',
-      'Streamline operations',
-      'Improve care quality'
+      "Reduce security incidents by 80%",
+      "Improve incident response time by 60%",
+      "24/7 automated monitoring",
+      "Enhanced threat detection",
+      "Comprehensive compliance reporting"
     ],
     useCases: [
-      'Patient engagement',
-      'Operational efficiency',
-      'Compliance management',
-      'Telemedicine services',
-      'Healthcare analytics'
+      "Enterprise security operations",
+      "Financial services security",
+      "Healthcare data protection",
+      "Government cybersecurity",
+      "Critical infrastructure protection"
     ],
     targetAudience: [
-      'Chief Medical Officers',
-      'Healthcare Administrators',
-      'IT Directors',
-      'Compliance Officers',
-      'Clinical Staff'
+      "Security analysts",
+      "CISOs",
+      "Security engineers",
+      "IT security teams",
+      "Compliance officers"
     ],
-    technologies: [
-      'Healthcare APIs',
-      'HIPAA-compliant platforms',
-      'Telemedicine solutions',
-      'Analytics tools',
-      'Security frameworks'
-    ],
-    integration: [
-      'Electronic Health Records',
-      'Practice management systems',
-      'Billing systems',
-      'Laboratory systems',
-      'Pharmacy systems'
-    ],
-    pricingTier: 'Enterprise',
-    website: 'https://ziontechgroup.com/healthcare-solutions',
+    tags: ["AI", "Cybersecurity", "SOC", "Threat Detection", "Incident Response"],
+    estimatedDelivery: "5-6 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,500 - $9,500/month",
     contactInfo: {
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    rating: 4.8,
-    reviewCount: 156,
-    launchDate: '2024-01-15',
-    status: 'Active',
-    marketPrice: '$1,299 - $39,999/month',
-    estimatedDelivery: '8-12 weeks',
-    supportLevel: 'Healthcare-Specific Support Team',
-    industryFocus: ['Healthcare', 'Medical Practices', 'Hospitals', 'Clinics', 'Healthcare Networks']
+    websiteUrl: "https://ziontechgroup.com/ai-security-operations",
+    technicalSpecs: ["Machine Learning", "Threat Intelligence", "Behavioral Analytics", "Security Orchestration"],
+    integrations: ["SIEM Systems", "EDR Solutions", "Firewalls", "IDS/IPS", "Vulnerability Scanners"],
+    compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"],
+    sla: "99.9% uptime guarantee",
+    uptime: "99.9%"
   },
 
+  // Advanced Data Analytics Platform
   {
-    id: 'zion-financial-services-innovation-platform',
-    title: 'Zion Financial Services Innovation Platform',
-    description: 'Advanced financial services innovation platform that enables digital banking, fintech integration, regulatory compliance, and customer experience transformation.',
-    category: 'Industry Solutions',
-    subcategory: 'Financial Services',
-    price: {
-      monthly: 1999,
-      yearly: 19990,
-      enterprise: 59999,
-      oneTime: 0,
-      currency: '$'
-    },
+    id: "ai-data-analytics-platform",
+    title: "AI Data Analytics & Business Intelligence Platform",
+    description: "Comprehensive data analytics platform that uses AI to transform raw data into actionable insights, automate reporting, and provide predictive analytics for business decision-making.",
+    category: "Data Analytics",
+    subcategory: "Business Intelligence",
+    price: 2200,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      'Digital banking platform',
-      'Fintech integration hub',
-      'Regulatory compliance automation',
-      'Risk management tools',
-      'Customer analytics',
-      'API management',
-      'Security and fraud detection',
-      'Mobile banking applications'
+      "AI-powered data processing",
+      "Automated insight generation",
+      "Predictive analytics models",
+      "Real-time data visualization",
+      "Natural language querying",
+      "Custom dashboard builder",
+      "Data storytelling tools",
+      "Mobile BI applications"
     ],
     benefits: [
-      'Accelerate digital transformation',
-      'Improve regulatory compliance',
-      'Enhance customer experience',
-      'Reduce operational costs',
-      'Enable fintech partnerships'
+      "Improve decision-making by 50%",
+      "Reduce reporting time by 80%",
+      "Identify hidden business opportunities",
+      "Real-time performance monitoring",
+      "Democratize data access"
     ],
     useCases: [
-      'Digital banking',
-      'Fintech integration',
-      'Regulatory compliance',
-      'Risk management',
-      'Customer experience'
+      "Business performance analysis",
+      "Customer behavior insights",
+      "Financial forecasting",
+      "Operational efficiency metrics",
+      "Market trend analysis"
     ],
     targetAudience: [
-      'Chief Technology Officers',
-      'Chief Risk Officers',
-      'Digital Banking Directors',
-      'Compliance Officers',
-      'Product Managers'
+      "Business analysts",
+      "Data scientists",
+      "Executives",
+      "Marketing teams",
+      "Operations managers"
     ],
-    technologies: [
-      'Banking APIs',
-      'Blockchain technology',
-      'AI and Machine Learning',
-      'Security frameworks',
-      'Compliance tools'
-    ],
-    integration: [
-      'Core banking systems',
-      'Payment processors',
-      'Regulatory reporting systems',
-      'Risk management platforms',
-      'Customer systems'
-    ],
-    pricingTier: 'Enterprise',
-    website: 'https://ziontechgroup.com/financial-services',
+    tags: ["AI", "Data Analytics", "Business Intelligence", "Predictive Analytics", "Data Visualization"],
+    estimatedDelivery: "4-5 weeks",
+    supportLevel: "premium",
+    marketPrice: "$2,200 - $6,000/month",
     contactInfo: {
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    rating: 4.9,
-    reviewCount: 89,
-    launchDate: '2024-02-20',
-    status: 'Active',
-    marketPrice: '$1,999 - $59,999/month',
-    estimatedDelivery: '12-16 weeks',
-    supportLevel: 'Financial Services Expert Support',
-    industryFocus: ['Banks', 'Credit Unions', 'Fintech Companies', 'Investment Firms', 'Insurance Companies']
+    websiteUrl: "https://ziontechgroup.com/ai-data-analytics",
+    technicalSpecs: ["Machine Learning", "Data Processing", "Predictive Analytics", "Real-time Analytics"],
+    integrations: ["Databases", "Data Warehouses", "Cloud Storage", "Business Applications", "API Connectors"],
+    compliance: ["SOC 2", "Data Privacy", "GDPR", "Industry Standards"],
+    sla: "99.5% uptime guarantee",
+    uptime: "99.5%"
   },
 
-  // Advanced Analytics Services
+  // Advanced API Management
   {
-    id: 'zion-real-time-business-intelligence-platform',
-    title: 'Zion Real-Time Business Intelligence Platform',
-    description: 'Advanced real-time business intelligence platform that provides instant insights, predictive analytics, and automated reporting for data-driven decision making.',
-    category: 'Advanced Analytics',
-    subcategory: 'Business Intelligence',
-    price: {
-      monthly: 599,
-      yearly: 5990,
-      enterprise: 19999,
-      oneTime: 0,
-      currency: '$'
-    },
+    id: "ai-api-management-platform",
+    title: "AI API Management & Integration Platform",
+    description: "Intelligent API management platform that uses AI to optimize API performance, monitor usage patterns, and provide seamless integration capabilities across all systems.",
+    category: "API Management",
+    subcategory: "Integration & Optimization",
+    price: 1600,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      'Real-time data processing',
-      'Predictive analytics',
-      'Automated reporting',
-      'Interactive dashboards',
-      'Data visualization',
-      'Alert systems',
-      'API access',
-      'Mobile applications'
+      "AI-powered API optimization",
+      "Intelligent rate limiting",
+      "Usage pattern analysis",
+      "Automated documentation",
+      "Performance monitoring",
+      "Security & authentication",
+      "Developer portal",
+      "Integration templates"
     ],
     benefits: [
-      'Make decisions 10x faster',
-      'Identify opportunities proactively',
-      'Reduce manual reporting time',
-      'Improve data accuracy',
-      'Enable data-driven culture'
+      "Improve API performance by 35%",
+      "Reduce integration time by 50%",
+      "Enhanced developer experience",
+      "Automated API management",
+      "Comprehensive monitoring"
     ],
     useCases: [
-      'Business intelligence',
-      'Performance monitoring',
-      'Predictive analytics',
-      'Operational reporting',
-      'Strategic planning'
+      "Microservices architecture",
+      "Third-party integrations",
+      "Mobile app backends",
+      "E-commerce platforms",
+      "Enterprise system integration"
     ],
     targetAudience: [
-      'Business Analysts',
-      'Data Scientists',
-      'Executives',
-      'Operations Managers',
-      'Marketing Teams'
+      "API developers",
+      "Integration engineers",
+      "System architects",
+      "DevOps teams",
+      "Product managers"
     ],
-    technologies: [
-      'Real-time processing',
-      'Machine Learning',
-      'Data visualization',
-      'Cloud computing',
-      'API frameworks'
-    ],
-    integration: [
-      'Data warehouses',
-      'ERP systems',
-      'CRM platforms',
-      'Marketing tools',
-      'Custom data sources'
-    ],
-    pricingTier: 'Professional',
-    website: 'https://ziontechgroup.com/business-intelligence',
+    tags: ["AI", "API Management", "Integration", "Microservices", "Developer Experience"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,600 - $4,500/month",
     contactInfo: {
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    rating: 4.7,
-    reviewCount: 234,
-    launchDate: '2024-01-30',
-    status: 'Active',
-    marketPrice: '$599 - $19,999/month',
-    estimatedDelivery: '4-6 weeks',
-    supportLevel: 'Premium Analytics Support',
-    industryFocus: ['All Industries', 'Technology', 'Financial Services', 'Retail', 'Manufacturing']
+    websiteUrl: "https://ziontechgroup.com/ai-api-management",
+    technicalSpecs: ["Machine Learning", "API Analytics", "Performance Monitoring", "Integration Engine"],
+    integrations: ["REST APIs", "GraphQL", "SOAP", "Webhooks", "Message Queues", "Cloud Services"],
+    compliance: ["SOC 2", "API Security Standards", "Data Privacy"],
+    sla: "99.5% uptime guarantee",
+    uptime: "99.5%"
   },
 
-  // Integration Services
+  // Advanced Backup & Disaster Recovery
   {
-    id: 'zion-enterprise-integration-hub',
-    title: 'Zion Enterprise Integration Hub',
-    description: 'Comprehensive enterprise integration platform that connects disparate systems, automates workflows, and enables seamless data flow across the organization.',
-    category: 'Integration Services',
-    subcategory: 'System Integration',
-    price: {
-      monthly: 799,
-      yearly: 7990,
-      enterprise: 24999,
-      oneTime: 0,
-      currency: '$'
-    },
+    id: "ai-backup-disaster-recovery",
+    title: "AI Backup & Disaster Recovery Platform",
+    description: "Intelligent backup and disaster recovery platform that uses AI to optimize backup strategies, automate recovery processes, and ensure business continuity across all environments.",
+    category: "Data Protection",
+    subcategory: "Backup & Recovery",
+    price: 1900,
+    currency: "$",
+    pricingModel: "monthly",
     features: [
-      'API management',
-      'Data transformation',
-      'Workflow automation',
-      'Real-time synchronization',
-      'Error handling',
-      'Monitoring and alerting',
-      'Security and compliance',
-      'Custom connectors'
+      "AI-powered backup optimization",
+      "Automated disaster recovery",
+      "Intelligent data deduplication",
+      "Real-time backup monitoring",
+      "Recovery testing automation",
+      "Multi-site replication",
+      "Compliance reporting",
+      "Ransomware protection"
     ],
     benefits: [
-      'Eliminate data silos',
-      'Automate manual processes',
-      'Improve data accuracy',
-      'Reduce integration costs',
-      'Accelerate time to market'
+      "Reduce backup time by 40%",
+      "Improve recovery time by 60%",
+      "Automated disaster recovery",
+      "Enhanced data protection",
+      "Comprehensive compliance"
     ],
     useCases: [
-      'System integration',
-      'Data synchronization',
-      'Workflow automation',
-      'API management',
-      'Legacy system modernization'
+      "Enterprise data protection",
+      "Cloud backup strategies",
+      "Disaster recovery planning",
+      "Compliance requirements",
+      "Business continuity"
     ],
     targetAudience: [
-      'Integration Architects',
-      'DevOps Engineers',
-      'Data Engineers',
-      'IT Managers',
-      'Business Analysts'
+      "IT administrators",
+      "Data protection specialists",
+      "Compliance officers",
+      "Business continuity managers",
+      "System administrators"
     ],
-    technologies: [
-      'API management',
-      'ETL/ELT tools',
-      'Workflow engines',
-      'Message queues',
-      'Data transformation'
-    ],
-    integration: [
-      'ERP systems',
-      'CRM platforms',
-      'Cloud services',
-      'Legacy systems',
-      'Third-party APIs'
-    ],
-    pricingTier: 'Professional',
-    website: 'https://ziontechgroup.com/enterprise-integration',
+    tags: ["AI", "Backup", "Disaster Recovery", "Data Protection", "Business Continuity"],
+    estimatedDelivery: "4-5 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,900 - $5,500/month",
     contactInfo: {
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
-    rating: 4.8,
-    reviewCount: 167,
-    launchDate: '2024-02-10',
-    status: 'Active',
-    marketPrice: '$799 - $24,999/month',
-    estimatedDelivery: '6-8 weeks',
-    supportLevel: 'Integration Expert Support',
-    industryFocus: ['All Industries', 'Technology', 'Financial Services', 'Healthcare', 'Manufacturing']
-  },
-
-  // Managed Services
-  {
-    id: 'zion-24-7-it-operations-center',
-    title: 'Zion 24/7 IT Operations Center',
-    description: 'Comprehensive 24/7 IT operations center that provides proactive monitoring, incident management, and technical support for enterprise IT infrastructure.',
-    category: 'Managed Services',
-    subcategory: 'IT Operations',
-    price: {
-      monthly: 1499,
-      yearly: 14990,
-      enterprise: 49999,
-      oneTime: 0,
-      currency: '$'
-    },
-    features: [
-      '24/7 proactive monitoring',
-      'Incident management',
-      'Performance optimization',
-      'Security monitoring',
-      'Backup and recovery',
-      'Capacity planning',
-      'Technical support',
-      'Monthly reporting'
-    ],
-    benefits: [
-      'Reduce downtime by 80%',
-      'Improve system performance',
-      'Reduce IT staff workload',
-      'Enhance security posture',
-      'Predict and prevent issues'
-    ],
-    useCases: [
-      'IT operations management',
-      'Infrastructure monitoring',
-      'Incident response',
-      'Performance optimization',
-      'Security monitoring'
-    ],
-    targetAudience: [
-      'IT Directors',
-      'Operations Managers',
-      'System Administrators',
-      'Network Engineers',
-      'Security Teams'
-    ],
-    technologies: [
-      'Monitoring tools',
-      'Automation platforms',
-      'Security tools',
-      'Backup systems',
-      'Communication platforms'
-    ],
-    integration: [
-      'Existing IT systems',
-      'Monitoring tools',
-      'Security platforms',
-      'Communication systems',
-      'Reporting tools'
-    ],
-    pricingTier: 'Enterprise',
-    website: 'https://ziontechgroup.com/it-operations',
-    contactInfo: {
-      email: 'kleber@ziontechgroup.com',
-      phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008, Middletown DE 19709'
-    },
-    rating: 4.9,
-    reviewCount: 123,
-    launchDate: '2024-01-20',
-    status: 'Active',
-    marketPrice: '$1,499 - $49,999/month',
-    estimatedDelivery: '2-4 weeks',
-    supportLevel: '24/7 Operations Center Support',
-    industryFocus: ['All Industries', 'Technology', 'Financial Services', 'Healthcare', 'Manufacturing']
+    websiteUrl: "https://ziontechgroup.com/ai-backup-recovery",
+    technicalSpecs: ["Machine Learning", "Data Deduplication", "Replication Engine", "Recovery Automation"],
+    integrations: ["Storage Systems", "Cloud Storage", "Virtualization Platforms", "Databases", "Applications"],
+    compliance: ["SOC 2", "ISO 27001", "GDPR", "Industry Standards"],
+    sla: "99.9% uptime guarantee",
+    uptime: "99.9%"
   }
 ];
+
+export const getSpecializedITServiceByCategory = (category: string) => {
+  return SPECIALIZED_IT_SERVICES.filter(service => service.category === category);
+};
+
+export const getSpecializedITServiceBySubcategory = (subcategory: string) => {
+  return SPECIALIZED_IT_SERVICES.filter(service => service.subcategory === subcategory);
+};
+
+export const getFeaturedSpecializedITServices = () => {
+  return SPECIALIZED_IT_SERVICES.slice(0, 6);
+};
 
 export const SPECIALIZED_SERVICE_CATEGORIES = [
   {

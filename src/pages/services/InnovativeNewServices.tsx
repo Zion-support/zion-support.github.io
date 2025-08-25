@@ -16,7 +16,8 @@ import {
   Users,
   BarChart3,
   Target,
-  Award
+  Award,
+  Clock
 } from 'lucide-react';
 import { INNOVATIVE_NEW_SERVICES } from '../../data/innovativeNewServices';
 
@@ -192,19 +193,19 @@ export default function InnovativeNewServices() {
                       <span className="text-white font-semibold">{service.marketPrice}</span>
                     </div>
                     <div className="flex items-center justify-between text-sm mt-1">
-                      <span className="text-zion-cyan/70">ROI:</span>
-                      <span className="text-green-400 font-semibold">{service.roi}</span>
+                      <span className="text-zion-cyan/70">Support Level:</span>
+                      <span className="text-green-400 font-semibold">{service.supportLevel}</span>
                     </div>
                   </div>
 
-                  {/* Innovation Level */}
+                  {/* Delivery Time */}
                   <div className="mb-4">
                     <div className="flex items-center justify-between">
-                      <span className="text-xs text-zion-cyan/70">Innovation Level:</span>
+                      <span className="text-xs text-zion-cyan/70">Delivery Time:</span>
                       <div className="flex items-center">
-                        <Award className="w-4 h-4 text-yellow-400 mr-1" />
+                        <Clock className="w-4 h-4 text-yellow-400 mr-1" />
                         <span className="text-xs text-yellow-400 font-semibold">
-                          {service.innovationLevel.split(' ')[0]}
+                          {service.estimatedDelivery}
                         </span>
                       </div>
                     </div>
