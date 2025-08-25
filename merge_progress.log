@@ -2858,3 +2858,127 @@ src/routes/MarketplaceRoutes.tsx
 [2025-08-25 23:37:03] Processing unmerged file: src/routes/MarketplaceRoutes.tsx
 [2025-08-25 23:37:03] File exists in HEAD, keeping it
 [2025-08-25 23:37:03] Still have unmerged paths, attempting additional resolution...
+[main d28ccca013d] Merge PR #6529: cursor/website-audit-and-enhancement-76ca (advanced conflict resolution)
+[2025-08-25 23:37:04] ✓ Advanced conflict resolution successful for PR #6529
+[2025-08-25 23:37:04] ✓ PR #6529 processed successfully
+==========================================
+
+
+==========================================
+[2025-08-25 23:37:04] Processing PR #6526 from branch: cursor/website-audit-and-enhancement-bdc0
+==========================================
+[2025-08-25 23:37:04] Processing PR #6526 from branch: cursor/website-audit-and-enhancement-bdc0
+[2025-08-25 23:37:05] Attempting regular merge...
+Auto-merging package-lock.json
+CONFLICT (content): Merge conflict in package-lock.json
+Auto-merging src/App.tsx
+CONFLICT (content): Merge conflict in src/App.tsx
+Auto-merging src/components/Footer.tsx
+CONFLICT (content): Merge conflict in src/components/Footer.tsx
+Auto-merging src/layout/MainNavigation.tsx
+CONFLICT (content): Merge conflict in src/layout/MainNavigation.tsx
+Auto-merging src/pages/About.tsx
+CONFLICT (content): Merge conflict in src/pages/About.tsx
+Auto-merging src/pages/Careers.tsx
+CONFLICT (content): Merge conflict in src/pages/Careers.tsx
+Auto-merging src/pages/GreenIT.tsx
+CONFLICT (content): Merge conflict in src/pages/GreenIT.tsx
+Auto-merging src/pages/Sitemap.tsx
+CONFLICT (content): Merge conflict in src/pages/Sitemap.tsx
+Auto-merging tsconfig.json
+CONFLICT (content): Merge conflict in tsconfig.json
+Automatic merge failed; fix conflicts and then commit the result.
+[2025-08-25 23:37:05] ✗ Merge failed for PR #6526, attempting advanced conflict resolution...
+[2025-08-25 23:37:05] Resolving complex conflicts for PR #6526 (cursor/website-audit-and-enhancement-bdc0)...
+[2025-08-25 23:37:05] Found unmerged files: package-lock.json
+src/App.tsx
+src/components/Footer.tsx
+src/layout/MainNavigation.tsx
+src/pages/About.tsx
+src/pages/Careers.tsx
+src/pages/GreenIT.tsx
+src/pages/Sitemap.tsx
+tsconfig.json
+[2025-08-25 23:37:05] Processing unmerged file: package-lock.json
+[2025-08-25 23:37:05] File exists in HEAD, keeping it
+[2025-08-25 23:37:05] Processing unmerged file: src/App.tsx
+[2025-08-25 23:37:05] File exists in HEAD, keeping it
+[2025-08-25 23:37:05] Processing unmerged file: src/components/Footer.tsx
+[2025-08-25 23:37:05] File exists in HEAD, keeping it
+[2025-08-25 23:37:05] Processing unmerged file: src/layout/MainNavigation.tsx
+[2025-08-25 23:37:05] File exists in HEAD, keeping it
+[2025-08-25 23:37:05] Processing unmerged file: src/pages/About.tsx
+[2025-08-25 23:37:05] File exists in HEAD, keeping it
+[2025-08-25 23:37:05] Processing unmerged file: src/pages/Careers.tsx
+[2025-08-25 23:37:05] File exists in HEAD, keeping it
+[2025-08-25 23:37:06] Processing unmerged file: src/pages/GreenIT.tsx
+[2025-08-25 23:37:06] File exists in HEAD, keeping it
+[2025-08-25 23:37:06] Processing unmerged file: src/pages/Sitemap.tsx
+[2025-08-25 23:37:06] File exists in HEAD, keeping it
+[2025-08-25 23:37:06] Processing unmerged file: tsconfig.json
+[2025-08-25 23:37:06] File exists in HEAD, keeping it
+[main b85266f7237] Merge PR #6526: cursor/website-audit-and-enhancement-bdc0 (advanced conflict resolution)
+[2025-08-25 23:37:07] ✓ Advanced conflict resolution successful for PR #6526
+[2025-08-25 23:37:07] ✓ PR #6526 processed successfully
+==========================================
+
+
+==========================================
+[2025-08-25 23:37:07] Processing PR #6525 from branch: cursor/expand-services-and-deploy-updates-7114
+==========================================
+[2025-08-25 23:37:07] Processing PR #6525 from branch: cursor/expand-services-and-deploy-updates-7114
+[2025-08-25 23:37:07] Attempting regular merge...
+Already up to date.
+[2025-08-25 23:37:07] ✓ Successfully merged PR #6525
+[2025-08-25 23:37:07] ✓ PR #6525 processed successfully
+==========================================
+
+
+==========================================
+[2025-08-25 23:37:07] Processing PR #6523 from branch: cursor/enhance-app-with-new-services-and-futuristic-design-2f34
+==========================================
+[2025-08-25 23:37:07] Processing PR #6523 from branch: cursor/enhance-app-with-new-services-and-futuristic-design-2f34
+[2025-08-25 23:37:08] Attempting regular merge...
+Auto-merging package-lock.json
+CONFLICT (content): Merge conflict in package-lock.json
+Auto-merging pages/talent/[id].tsx
+CONFLICT (content): Merge conflict in pages/talent/[id].tsx
+Auto-merging src/App.tsx
+CONFLICT (content): Merge conflict in src/App.tsx
+Auto-merging src/components/Footer.tsx
+CONFLICT (content): Merge conflict in src/components/Footer.tsx
+Auto-merging src/components/header/Header.tsx
+CONFLICT (content): Merge conflict in src/components/header/Header.tsx
+Auto-merging src/components/home/FeatureCTAs.tsx
+CONFLICT (content): Merge conflict in src/components/home/FeatureCTAs.tsx
+Auto-merging src/data/microSaasServices.ts
+CONFLICT (add/add): Merge conflict in src/data/microSaasServices.ts
+Auto-merging src/index.css
+CONFLICT (content): Merge conflict in src/index.css
+Auto-merging src/pages/MicroSaasServicesPage.tsx
+CONFLICT (add/add): Merge conflict in src/pages/MicroSaasServicesPage.tsx
+Automatic merge failed; fix conflicts and then commit the result.
+[2025-08-25 23:37:08] ✗ Merge failed for PR #6523, attempting advanced conflict resolution...
+[2025-08-25 23:37:08] Resolving complex conflicts for PR #6523 (cursor/enhance-app-with-new-services-and-futuristic-design-2f34)...
+[2025-08-25 23:37:08] Found unmerged files: package-lock.json
+pages/talent/[id].tsx
+src/App.tsx
+src/components/Footer.tsx
+src/components/header/Header.tsx
+src/components/home/FeatureCTAs.tsx
+src/index.css
+[2025-08-25 23:37:08] Processing unmerged file: package-lock.json
+[2025-08-25 23:37:08] File exists in HEAD, keeping it
+[2025-08-25 23:37:08] Processing unmerged file: pages/talent/[id].tsx
+[2025-08-25 23:37:08] File exists in HEAD, keeping it
+[2025-08-25 23:37:08] Processing unmerged file: src/App.tsx
+[2025-08-25 23:37:08] File exists in HEAD, keeping it
+[2025-08-25 23:37:08] Processing unmerged file: src/components/Footer.tsx
+[2025-08-25 23:37:08] File exists in HEAD, keeping it
+[2025-08-25 23:37:09] Processing unmerged file: src/components/header/Header.tsx
+[2025-08-25 23:37:09] File exists in HEAD, keeping it
+[2025-08-25 23:37:09] Processing unmerged file: src/components/home/FeatureCTAs.tsx
+[2025-08-25 23:37:09] File exists in HEAD, keeping it
+[2025-08-25 23:37:09] Processing unmerged file: src/index.css
+[2025-08-25 23:37:09] File exists in HEAD, keeping it
+[2025-08-25 23:37:09] Still have unmerged paths, attempting additional resolution...

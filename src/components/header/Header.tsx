@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Search, ChevronDown, Globe, Phone, Mail } from "lucide-react";
@@ -11,6 +12,10 @@ import React, { useState } from 'react';
 =======
 >>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 import { Link, useNavigate, useLocation } from 'react-router-dom';
+=======
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2f34
 import { Logo } from './Logo';
 import { UserMenu } from './UserMenu';
 import { LanguageSelector } from './LanguageSelector';
@@ -27,6 +32,7 @@ import { Menu, X } from 'lucide-react';
 >>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
 =======
 import { useNavigate } from "react-router-dom";
+<<<<<<< HEAD
 import { useState } from "react";
 <<<<<<< HEAD
 import { Button } from '@/components/ui/button';
@@ -35,6 +41,23 @@ import { Sparkles, Menu, X } from 'lucide-react';
 =======
 import { Menu, X, Search, Sparkles } from "lucide-react";
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
+=======
+import { Button } from "@/components/ui/button";
+import { 
+  Menu, 
+  X, 
+  Search, 
+  ChevronDown, 
+  Zap, 
+  Brain, 
+  Cloud, 
+  Shield,
+  Users,
+  Building,
+  Code,
+  Globe
+} from "lucide-react";
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2f34
 
 export interface HeaderProps {
   hideLogin?: boolean;
@@ -55,6 +78,7 @@ export function Header({ onMenuToggle }: HeaderProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [isSearchExpanded, setIsSearchExpanded] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 =======
@@ -63,6 +87,10 @@ export function Header({ onMenuToggle }: HeaderProps) {
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-da9e
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
+=======
+  const [isSearchExpanded, setIsSearchExpanded] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2f34
   const searchSuggestions = generateSearchSuggestions();
 >>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
   
@@ -72,6 +100,7 @@ export function Header({ onMenuToggle }: HeaderProps) {
     setIsSearchExpanded(false);
   }, [navigate]);
 
+<<<<<<< HEAD
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
@@ -95,11 +124,21 @@ export function Header() {
       setIsScrolled(window.scrollY > 10);
 >>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
     };
+=======
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2f34
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2f34
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (query.trim()) {
@@ -109,6 +148,7 @@ export function Header() {
     }
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -464,6 +504,70 @@ export function Header() {
 =======
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md glass-effect-dark"
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2048
+=======
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
+  const navigationItems = [
+    {
+      label: "Marketplace",
+      href: "/marketplace",
+      icon: <Globe className="h-4 w-4" />,
+      children: [
+        { label: "AI & ML Services", href: "/micro-saas-services", icon: <Brain className="h-4 w-4" /> },
+        { label: "IT Services", href: "/services", icon: <Zap className="h-4 w-4" /> },
+        { label: "Cloud Solutions", href: "/services", icon: <Cloud className="h-4 w-4" /> },
+        { label: "Cybersecurity", href: "/services", icon: <Shield className="h-4 w-4" /> },
+      ]
+    },
+    {
+      label: "Talent",
+      href: "/talent",
+      icon: <Users className="h-4 w-4" />,
+      children: [
+        { label: "AI Engineers", href: "/talent", icon: <Brain className="h-4 w-4" /> },
+        { label: "DevOps Specialists", href: "/talent", icon: <Code className="h-4 w-4" /> },
+        { label: "Data Scientists", href: "/talent", icon: <Brain className="h-4 w-4" /> },
+        { label: "Full-Stack Developers", href: "/talent", icon: <Code className="h-4 w-4" /> },
+      ]
+    },
+    {
+      label: "Enterprise",
+      href: "/enterprise",
+      icon: <Building className="h-4 w-4" />,
+      children: [
+        { label: "Custom Solutions", href: "/enterprise", icon: <Code className="h-4 w-4" /> },
+        { label: "White-Label Platform", href: "/enterprise", icon: <Building className="h-4 w-4" /> },
+        { label: "Dedicated Support", href: "/enterprise", icon: <Users className="h-4 w-4" /> },
+        { label: "API Access", href: "/developers", icon: <Code className="h-4 w-4" /> },
+      ]
+    },
+    {
+      label: "Resources",
+      href: "/blog",
+      icon: <Code className="h-4 w-4" />,
+      children: [
+        { label: "Blog & Insights", href: "/blog", icon: <Code className="h-4 w-4" /> },
+        { label: "Developer Docs", href: "/developers", icon: <Code className="h-4 w-4" /> },
+        { label: "Community", href: "/community", icon: <Users className="h-4 w-4" /> },
+        { label: "Help Center", href: "/help", icon: <Code className="h-4 w-4" /> },
+      ]
+    }
+  ];
+  
+  return (
+    <header 
+      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-zion-blue-dark/95 backdrop-blur-xl border-b border-zion-purple/30 shadow-2xl shadow-zion-purple/20' 
+          : 'bg-zion-blue-dark/90 backdrop-blur-md border-b border-zion-purple/20'
+      }`}
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2f34
       style={headerStyle}
     >
       {/* Animated background elements */}
@@ -516,6 +620,7 @@ export function Header() {
         <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
 
         {/* Desktop Navigation */}
+<<<<<<< HEAD
 <<<<<<< HEAD
         <nav className="hidden lg:flex ml-8 space-x-6">
           <Link 
@@ -794,6 +899,84 @@ export function Header() {
             {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
+=======
+        <nav className="hidden lg:flex ml-8 space-x-1">
+          {navigationItems.map((item) => (
+            <div key={item.label} className="relative group">
+              <Link
+                to={item.href}
+                className="flex items-center gap-2 px-4 py-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-200 rounded-lg hover:bg-zion-purple/10"
+              >
+                {item.icon}
+                <span>{item.label}</span>
+                <ChevronDown className="h-4 w-4 transition-transform group-hover:rotate-180" />
+              </Link>
+              
+              {/* Dropdown Menu */}
+              {item.children && (
+                <div className="absolute top-full left-0 mt-2 w-64 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0">
+                  <div className="bg-zion-slate/95 backdrop-blur-xl border border-zion-purple/30 rounded-xl p-4 shadow-2xl shadow-zion-purple/20">
+                    <div className="grid gap-2">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.label}
+                          to={child.href}
+                          className="flex items-center gap-3 p-3 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded-lg transition-all duration-200"
+                          onClick={closeMobileMenu}
+                        >
+                          <div className="text-zion-purple-light">{child.icon}</div>
+                          <span>{child.label}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+        </nav>
+
+        {/* Search Bar */}
+        <div className="hidden md:block flex-1 max-w-md mx-8">
+          <form onSubmit={handleSubmit} className="relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
+            <input
+              type="text"
+              placeholder="Search AI services, talent, equipment..."
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              className="w-full pl-10 pr-4 py-2 bg-zion-slate/30 border border-zion-purple/30 rounded-lg text-white placeholder:text-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-purple/50 focus:border-zion-purple transition-all duration-200"
+            />
+          </form>
+        </div>
+
+        {/* Mobile Search Toggle */}
+        <div className="md:hidden ml-4">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => setIsSearchExpanded(!isSearchExpanded)}
+            className="text-zion-slate-light hover:text-zion-cyan"
+          >
+            <Search className="h-5 w-5" />
+          </Button>
+        </div>
+
+        {/* Right Side Actions */}
+        <div className="flex items-center gap-2 ml-auto">
+          <LanguageSelector />
+          {!hideLogin && <UserMenu />}
+          
+          {/* Mobile Menu Button */}
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={toggleMobileMenu}
+            className="lg:hidden text-zion-slate-light hover:text-zion-cyan"
+          >
+            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </Button>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2f34
         </div>
 
         {/* Mobile Menu Button */}
@@ -804,6 +987,7 @@ export function Header() {
           {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -1116,6 +1300,61 @@ export function Header() {
       {/* Glowing border effect */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60"></div>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-de94
+=======
+
+      {/* Mobile Search Bar */}
+      {isSearchExpanded && (
+        <div className="md:hidden border-t border-zion-purple/20 bg-zion-blue-dark/95 backdrop-blur-xl p-4">
+          <form onSubmit={handleSubmit} className="relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
+            <input
+              type="text"
+              placeholder="Search AI services, talent, equipment..."
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              className="w-full pl-10 pr-4 py-2 bg-zion-slate/30 border border-zion-purple/30 rounded-lg text-white placeholder:text-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-purple/50 focus:border-zion-purple"
+            />
+          </form>
+        </div>
+      )}
+
+      {/* Mobile Navigation Menu */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden border-t border-zion-purple/20 bg-zion-blue-dark/95 backdrop-blur-xl">
+          <nav className="p-4 space-y-2">
+            {navigationItems.map((item) => (
+              <div key={item.label}>
+                <Link
+                  to={item.href}
+                  className="flex items-center gap-3 p-3 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded-lg transition-colors"
+                  onClick={closeMobileMenu}
+                >
+                  {item.icon}
+                  <span>{item.label}</span>
+                </Link>
+                
+                {/* Mobile Submenu */}
+                {item.children && (
+                  <div className="ml-6 space-y-1">
+                    {item.children.map((child) => (
+                      <Link
+                        key={child.label}
+                        to={child.href}
+                        className="flex items-center gap-3 p-2 text-zion-slate-light/80 hover:text-zion-cyan rounded-lg transition-colors"
+                        onClick={closeMobileMenu}
+                      >
+                        <div className="text-zion-purple-light">{child.icon}</div>
+                        <span className="text-sm">{child.label}</span>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </nav>
+        </div>
+      )}
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2f34
     </header>
   );
 }
