@@ -3,6 +3,7 @@ import React from 'react';
 <<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { Shield, Building2, Users, Lock, Database, Globe, CheckCircle, Star, ArrowRight, TrendingUp, Zap, Cpu } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
@@ -124,6 +125,13 @@ import { Link } from 'react-router-dom';
 
 const EnterpriseSolutions = () => {
   const solutions = [
+=======
+import { ArrowRight, Shield, Zap, Users, TrendingUp, CheckCircle, Star, Database, Building2, Network, Rocket } from 'lucide-react';
+import { SEO } from '@/components/SEO';
+
+const EnterpriseSolutions: React.FC = () => {
+  const services = [
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d2d6
     {
       icon: Building,
       title: "Enterprise AI Platform",
