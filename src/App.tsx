@@ -181,7 +181,7 @@ const App: React.FC = () => {
                 <Header />
                 <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
                 
-                <main className="pt-20">
+                <main id="main-content" className="pt-20">
                   <Suspense fallback={<LoadingSpinner />}>
                     <Routes>
                       {/* Main Routes */}
@@ -400,6 +400,25 @@ const App: React.FC = () => {
                       <MachineLearningDashboard />
                     </div>
                   </>
+                )}
+                
+                {/* Enhanced Performance Monitor - Always Available */}
+                <PerformanceMonitor />
+                
+                {/* Link Health Monitor - Development Mode */}
+                {import.meta.env.DEV && (
+                  <LinkHealthMonitor
+                    links={[
+                      'https://ziontechgroup.com',
+                      'https://www.linkedin.com/company/ziontechgroup',
+                      'https://twitter.com/ziontechgroup',
+                      'https://github.com/ziontechgroup',
+                      'https://www.youtube.com/@ziontechgroup'
+                    ]}
+                    autoCheck={true}
+                    checkInterval={600000} // 10 minutes
+                    timeout={5000} // 5 seconds
+                  />
                 )}
               </div>
             </PerformanceOptimizer>
