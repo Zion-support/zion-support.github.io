@@ -41,6 +41,11 @@ const AutonomousBusinessOperationsPlatform = lazy(() => import('./pages/Autonomo
 const AIPoweredITAssetManagement = lazy(() => import('./pages/AIPoweredITAssetManagement'));
 const SOC2ComplianceAutomation = lazy(() => import('./pages/SOC2ComplianceAutomation'));
 const AIAutonomousResearchAssistant = lazy(() => import('./pages/AIAutonomousResearchAssistant'));
+const AIAutonomousBusinessManager = lazy(() => import('./pages/AIAutonomousBusinessManager'));
+const AIAutonomousResearch = lazy(() => import('./pages/AIAutonomousResearch'));
+const AIAutonomousSystemsPlatform = lazy(() => import('./pages/AIAutonomousSystemsPlatform'));
+const AIAutonomousCodeReview = lazy(() => import('./pages/AIAutonomousCodeReview'));
+const AIBusinessIntelligenceSuite = lazy(() => import('./pages/AIBusinessIntelligenceSuite'));
 const FiveGEnterpriseSolutions = lazy(() => import('./pages/5GEnterpriseSolutions'));
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
@@ -124,6 +129,11 @@ const App = () => {
                     <Route path="/ai-powered-it-asset-management" element={<AIPoweredITAssetManagement />} />
                     <Route path="/soc2-compliance-automation" element={<SOC2ComplianceAutomation />} />
                     <Route path="/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
+                    <Route path="/ai-autonomous-business-manager" element={<AIAutonomousBusinessManager />} />
+                    <Route path="/ai-autonomous-research" element={<AIAutonomousResearch />} />
+                    <Route path="/ai-autonomous-systems-platform" element={<AIAutonomousSystemsPlatform />} />
+                    <Route path="/ai-autonomous-code-review" element={<AIAutonomousCodeReview />} />
+                    <Route path="/ai-business-intelligence-suite" element={<AIBusinessIntelligenceSuite />} />
                     <Route path="/5g-enterprise-solutions" element={<FiveGEnterpriseSolutions />} />
                     <Route path="/case-studies" element={<CaseStudies />} />
                     <Route path="/help" element={<HelpCenter />} />

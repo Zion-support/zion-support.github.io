@@ -112,12 +112,13 @@ export function Header() {
       icon: Brain,
       description: 'Intelligent solutions powered by artificial intelligence',
       services: [
-        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', description: 'Advanced autonomous AI systems' },
+        { name: 'AI Autonomous Systems', path: '/ai-autonomous-systems-platform', description: 'Advanced autonomous AI systems' },
         { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', description: 'AI-powered research automation' },
-        { name: 'AI Business Intelligence', path: '/services#ai-bi', description: 'Advanced analytics and insights' },
-        { name: 'AI Marketing Automation', path: '/services#ai-marketing', description: 'Smart marketing optimization' },
-        { name: 'AI HR & Recruitment', path: '/services#ai-hr', description: 'Intelligent talent management' },
-        { name: 'AI Legal Tech', path: '/services#ai-legal', description: 'Automated legal processes' }
+        { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', description: 'Autonomous business management' },
+        { name: 'AI Research Platform', path: '/ai-autonomous-research', description: 'Autonomous research systems' },
+        { name: 'AI Business Intelligence', path: '/ai-business-intelligence-suite', description: 'Advanced analytics and insights' },
+        { name: 'AI Code Review', path: '/ai-autonomous-code-review', description: 'Automated code analysis and review' },
+        { name: 'AI Marketing Automation', path: '/services#ai-marketing', description: 'Smart marketing optimization' }
       ]
     },
     {

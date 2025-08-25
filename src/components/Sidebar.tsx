@@ -31,8 +31,12 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     {
       title: 'Services',
       items: [
-        { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
+        { name: 'AI Autonomous Systems Platform', path: '/ai-autonomous-systems-platform', icon: Briefcase },
         { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Briefcase },
+        { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
+        { name: 'AI Research Platform', path: '/ai-autonomous-research', icon: Briefcase },
+        { name: 'AI Code Review', path: '/ai-autonomous-code-review', icon: Briefcase },
+        { name: 'AI Business Intelligence', path: '/ai-business-intelligence-suite', icon: Briefcase },
         { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Briefcase },
         { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Briefcase },
         { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Briefcase },
@@ -61,9 +65,9 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       title: 'Support',
       items: [
         { name: 'Help Center', path: '/help', icon: Users },
-        { name: 'Documentation', path: '/docs', icon: Globe },
-        { name: 'Contact Support', path: '/support', icon: Phone },
-        { name: 'Status Page', path: '/status', icon: Globe }
+        { name: 'Contact Us', path: '/contact', icon: Phone },
+        { name: 'FAQ', path: '/faq', icon: Users },
+        { name: 'News', path: '/news', icon: Globe }
       ]
     }
   ];
