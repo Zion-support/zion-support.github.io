@@ -41,9 +41,15 @@ import { ProductListing } from "@/types/listings";
 import { TrustedBySection } from "@/components/TrustedBySection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import { Globe } from "lucide-react";
 import { useState } from "react";
 import { COMPREHENSIVE_SERVICES, SERVICE_CATEGORIES } from "@/data/comprehensiveServices";
+=======
+import { Globe, ArrowRight, Star, TrendingUp } from "lucide-react";
+import { useEffect, useState } from "react";
+import { EXPANDED_SERVICES, FEATURED_SERVICES, NEW_SERVICES } from "@/data/expandedServices";
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-32cc
 
 <<<<<<< HEAD
 // Sample service listings
@@ -1084,6 +1090,7 @@ export default function ServicesPage() {
               </Button>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-4e39
             </Link>
+<<<<<<< HEAD
             <Link
               to="/pricing"
               className="px-8 py-3 border border-cyan-500 text-cyan-400 font-medium rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
@@ -2109,6 +2116,14 @@ export default function ServicesPage() {
             </div>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+=======
+            <Link to="/expanded-services">
+              <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
+                <TrendingUp className="h-4 w-4 mr-2" />
+                Enterprise Solutions
+              </Button>
+            </Link>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-32cc
             <Link to="/request-quote">
               <Button className="bg-white text-zion-blue-dark hover:bg-gray-100 px-8 py-3">
                 Request Free Quote
@@ -2493,6 +2508,56 @@ export default function ServicesPage() {
         </div>
       </div>
 
+<<<<<<< HEAD
+=======
+      {/* Featured Services Showcase */}
+      <section className="py-16 bg-gradient-to-r from-zion-blue to-zion-blue-dark">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Featured Enterprise Services</h2>
+            <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
+              Discover our most popular and innovative technology solutions
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            {FEATURED_SERVICES.slice(0, 3).map((service) => (
+              <div key={service.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-zion-cyan/20 rounded-full flex items-center justify-center">
+                    <Star className="w-6 h-6 text-zion-cyan" />
+                  </div>
+                  <div>
+                    <h3 className="text-white font-semibold">{service.title}</h3>
+                    <p className="text-zion-slate-light text-sm">{service.subcategory}</p>
+                  </div>
+                </div>
+                <p className="text-zion-slate-light text-sm mb-4 line-clamp-2">
+                  {service.description}
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-white font-bold">{service.currency}{service.price.toLocaleString()}</span>
+                  <Link to={`/service/${service.id}`}>
+                    <Button size="sm" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
+                      Learn More <ArrowRight className="w-4 h-4 ml-1" />
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link to="/expanded-services">
+              <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-dark text-white">
+                View All Enterprise Services <ArrowRight className="w-4 w-4 ml-2" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-32cc
       <DynamicListingPage 
         title="IT & AI Services"
         description="Find expert technology service providers for your business needs, from AI development to infrastructure management."

@@ -1348,3 +1348,68 @@ src/pages/RequestQuote.tsx
 [2025-08-25 23:35:43] Processing unmerged file: src/pages/RequestQuote.tsx
 [2025-08-25 23:35:43] File exists in HEAD, keeping it
 [2025-08-25 23:35:44] Still have unmerged paths, attempting additional resolution...
+[main d3971d04f15] Merge PR #6638: cursor/website-audit-and-enhancement-6664 (advanced conflict resolution)
+[2025-08-25 23:35:45] ✓ Advanced conflict resolution successful for PR #6638
+[2025-08-25 23:35:45] ✓ PR #6638 processed successfully
+==========================================
+
+
+==========================================
+[2025-08-25 23:35:45] Processing PR #6635 from branch: cursor/expand-services-and-deploy-updates-df26
+==========================================
+[2025-08-25 23:35:45] Processing PR #6635 from branch: cursor/expand-services-and-deploy-updates-df26
+[2025-08-25 23:35:45] Attempting regular merge...
+Already up to date.
+[2025-08-25 23:35:45] ✓ Successfully merged PR #6635
+[2025-08-25 23:35:45] ✓ PR #6635 processed successfully
+==========================================
+
+
+==========================================
+[2025-08-25 23:35:45] Processing PR #6634 from branch: cursor/expand-services-and-deploy-updates-e7f5
+==========================================
+[2025-08-25 23:35:45] Processing PR #6634 from branch: cursor/expand-services-and-deploy-updates-e7f5
+[2025-08-25 23:35:46] Attempting regular merge...
+Already up to date.
+[2025-08-25 23:35:46] ✓ Successfully merged PR #6634
+[2025-08-25 23:35:46] ✓ PR #6634 processed successfully
+==========================================
+
+
+==========================================
+[2025-08-25 23:35:46] Processing PR #6633 from branch: cursor/expand-services-and-deploy-updates-32cc
+==========================================
+[2025-08-25 23:35:46] Processing PR #6633 from branch: cursor/expand-services-and-deploy-updates-32cc
+[2025-08-25 23:35:46] Attempting regular merge...
+Auto-merging package-lock.json
+CONFLICT (content): Merge conflict in package-lock.json
+Auto-merging src/App.tsx
+CONFLICT (content): Merge conflict in src/App.tsx
+Auto-merging src/components/CategoriesSection.tsx
+CONFLICT (content): Merge conflict in src/components/CategoriesSection.tsx
+Auto-merging src/data/expandedServices.ts
+CONFLICT (add/add): Merge conflict in src/data/expandedServices.ts
+Auto-merging src/pages/EnterpriseSolutionsPage.tsx
+CONFLICT (add/add): Merge conflict in src/pages/EnterpriseSolutionsPage.tsx
+Auto-merging src/pages/ExpandedServicesPage.tsx
+CONFLICT (add/add): Merge conflict in src/pages/ExpandedServicesPage.tsx
+Auto-merging src/pages/ServiceDetailPage.tsx
+CONFLICT (add/add): Merge conflict in src/pages/ServiceDetailPage.tsx
+Auto-merging src/pages/ServicesPage.tsx
+CONFLICT (content): Merge conflict in src/pages/ServicesPage.tsx
+Automatic merge failed; fix conflicts and then commit the result.
+[2025-08-25 23:35:47] ✗ Merge failed for PR #6633, attempting advanced conflict resolution...
+[2025-08-25 23:35:47] Resolving complex conflicts for PR #6633 (cursor/expand-services-and-deploy-updates-32cc)...
+[2025-08-25 23:35:47] Found unmerged files: package-lock.json
+src/App.tsx
+src/components/CategoriesSection.tsx
+src/pages/ServicesPage.tsx
+[2025-08-25 23:35:47] Processing unmerged file: package-lock.json
+[2025-08-25 23:35:47] File exists in HEAD, keeping it
+[2025-08-25 23:35:47] Processing unmerged file: src/App.tsx
+[2025-08-25 23:35:47] File exists in HEAD, keeping it
+[2025-08-25 23:35:47] Processing unmerged file: src/components/CategoriesSection.tsx
+[2025-08-25 23:35:47] File exists in HEAD, keeping it
+[2025-08-25 23:35:47] Processing unmerged file: src/pages/ServicesPage.tsx
+[2025-08-25 23:35:47] File exists in HEAD, keeping it
+[2025-08-25 23:35:48] Still have unmerged paths, attempting additional resolution...

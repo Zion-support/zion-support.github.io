@@ -71,6 +71,13 @@ const categories = [
     color: "from-emerald-500 to-green-600",
   },
   {
+    title: "Enterprise Solutions",
+    description: "Advanced AI, cybersecurity, cloud, and digital transformation services",
+    icon: <Lightbulb className="w-10 h-10" />,
+    link: "/expanded-services",
+    color: "from-emerald-500 to-green-600",
+  },
+  {
     title: "Talents",
     description: "Connect with AI experts, developers, and tech specialists",
     icon: <Users className="w-8 h-8" />,
@@ -95,6 +102,7 @@ const categories = [
     borderColor: "border-zion-blue/20",
     features: ["Premium Hardware", "Flexible Rental", "Global Shipping"]
   },
+<<<<<<< HEAD
   {
     title: "Innovation",
     description: "Discover cutting-edge solutions and tech breakthroughs",
@@ -160,6 +168,8 @@ const categories = [
     link: "/expanded-services?category=enterprise",
     features: ["ERP Systems", "CRM", "Workflow Automation", "Integration"]
   }
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-32cc
 ];
 
 const specialServices = [

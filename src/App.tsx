@@ -102,6 +102,7 @@ const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
 const TalentsPage = React.lazy(() => import('./pages/TalentsPage'));
 const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
 <<<<<<< HEAD
+<<<<<<< HEAD
 const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
 const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
 const DigitalMarketingServicesPage = React.lazy(() => import('./pages/DigitalMarketingServicesPage'));
@@ -113,6 +114,12 @@ const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
 const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
 const DigitalTransformationPage = React.lazy(() => import('./pages/DigitalTransformationPage'));
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4df9
+=======
+const ExpandedServicesPage = React.lazy(() => import('./pages/ExpandedServicesPage'));
+const ServiceDetailPage = React.lazy(() => import('./pages/ServiceDetailPage'));
+const ServicePricingPage = React.lazy(() => import('./pages/ServicePricingPage'));
+const EnterpriseSolutionsPage = React.lazy(() => import('./pages/EnterpriseSolutionsPage'));
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-32cc
 const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage'));
 const EquipmentDetail = React.lazy(() => import('./pages/EquipmentDetail'));
 const Analytics = React.lazy(() => import('./pages/Analytics'));
@@ -208,6 +215,7 @@ const baseRoutes = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   { path: '/micro-saas-services', element: <MicroSaasServicesPage /> },
 =======
   { path: '/services-overview', element: <ServicesOverviewPage /> },
@@ -237,6 +245,12 @@ const baseRoutes = [
 =======
   { path: '/micro-saas-services', element: <MicroSaasServicesPage /> },
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-eb69
+=======
+  { path: '/expanded-services', element: <ExpandedServicesPage /> },
+  { path: '/service/:serviceId', element: <ServiceDetailPage /> },
+  { path: '/pricing', element: <ServicePricingPage /> },
+  { path: '/enterprise-solutions', element: <EnterpriseSolutionsPage /> },
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-32cc
   { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
   { path: '/ai-services', element: <AIServicesPage /> },
   { path: '/blockchain-services', element: <BlockchainServicesPage /> },
