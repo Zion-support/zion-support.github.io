@@ -3,7 +3,7 @@ import {
   Kanban, Brain, Zap, Settings, X, Maximize2, Minimize2, Plus, Search, 
   Filter, Calendar, Clock, CheckCircle, AlertCircle, UserPlus, Lock, Unlock,
   BarChart3, TrendingUp, Target, Activity, Users, FileText, GitBranch, 
-  Workflow, Automation, Bot, Sparkles, Target, GanttChart, Milestone,
+  Workflow, Automation, Bot, Sparkles, GanttChart, Milestone,
   Flag, AlertTriangle, Info, Star, Award, Trophy, Rocket, Lightbulb
 } from 'lucide-react';
 

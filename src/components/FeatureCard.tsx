@@ -1,6 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import { CheckCircle, ArrowRight } from 'lucide-react';
+=======
+import { ArrowRight } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d0e7
 
 interface FeatureCardProps {
   title: string;

@@ -26,12 +26,13 @@ export default defineConfig(async () => ({
     },
   },
   build: {
-    target: 'es2015',
+    target: 'es2020',
     minify: 'terser',
     terserOptions: {
       compress: {
         drop_console: true,
         drop_debugger: true,
+<<<<<<< HEAD
         pure_funcs: ['console.log', 'console.info', 'console.debug'],
 <<<<<<< HEAD
         passes: 2,
@@ -40,6 +41,17 @@ export default defineConfig(async () => ({
         toplevel: true,
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
+=======
+        pure_funcs: ['console.log', 'console.info'],
+        dead_code: true,
+        unused: true,
+      },
+      mangle: {
+        safari10: true,
+      },
+      output: {
+        comments: false,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d0e7
       },
     },
     rollupOptions: {
@@ -182,6 +194,7 @@ export default defineConfig(async () => ({
       }
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
     chunkSizeWarningLimit: 500, // Reduced from 1000
     sourcemap: false,
 <<<<<<< HEAD
@@ -196,6 +209,13 @@ export default defineConfig(async () => ({
       include: [/node_modules/],
     },
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
+=======
+    chunkSizeWarningLimit: 500,
+    sourcemap: false,
+    reportCompressedSize: false,
+    cssCodeSplit: true,
+    assetsInlineLimit: 4096,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d0e7
   },
   optimizeDeps: {
     include: [

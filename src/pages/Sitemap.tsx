@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-ee8a
@@ -20,6 +21,20 @@ import {
   Zap,
   Users
 =======
+=======
+import { motion } from 'framer-motion';
+import { 
+  Map, 
+  Home, 
+  Info, 
+  Settings, 
+  MessageSquare, 
+  HelpCircle, 
+  FileText, 
+  Shield, 
+  Cookie, 
+  Globe,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d0e7
   Brain,
   Cloud,
   Zap,
@@ -122,6 +137,7 @@ export default function Sitemap() {
   ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { 
   Map, 
@@ -205,6 +221,8 @@ export default function Sitemap() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a191
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d0e7
   const renderPageSection = (title: string, pages: any[], IconComponent: any) => (
     <motion.div
       key={title}
@@ -235,6 +253,7 @@ export default function Sitemap() {
   );
 
   return (
+<<<<<<< HEAD
     <>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
         <main className="container mx-auto px-4 py-8 pt-24">
@@ -456,5 +475,49 @@ export default function Sitemap() {
       </section>
     </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-ee8a
+=======
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      <div className="max-w-6xl mx-auto px-4 py-12">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center mb-12"
+        >
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Zion Tech Group Sitemap
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Navigate through our comprehensive range of services, solutions, and resources. 
+            Find everything you need to transform your business with cutting-edge technology.
+          </p>
+        </motion.div>
+
+        {/* Sitemap Content */}
+        <div className="space-y-8">
+          {renderPageSection('Main Pages', mainPages, Map)}
+          {renderPageSection('Services', servicePages, Settings)}
+          {renderPageSection('Legal & Support', legalPages, Shield)}
+        </div>
+
+        {/* Footer */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="mt-16 text-center text-gray-400"
+        >
+          <p>&copy; {currentYear} Zion Tech Group. All rights reserved.</p>
+          <p className="mt-2">
+            Last updated: {new Date().toLocaleDateString('en-US', { 
+              year: 'numeric', 
+              month: 'long', 
+              day: 'numeric' 
+            })}
+          </p>
+        </motion.div>
+      </div>
+    </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d0e7
   );
 }

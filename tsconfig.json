@@ -29,14 +29,14 @@
     "noImplicitAny": false,
     "noImplicitReturns": false,
     "noImplicitThis": false,
-    "strictNullChecks": false
+    "strictNullChecks": false,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": false
   },
   "include": [
-    "src/main.tsx",
-    "src/App.tsx",
-    "src/App.css",
-    "src/pages/Home.tsx",
-    "src/pages/Services.tsx",
+    "src/**/*",
     "src/vite-env.d.ts"
   ],
   "exclude": [
