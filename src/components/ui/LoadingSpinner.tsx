@@ -7,12 +7,18 @@ import { cn } from '@/lib/utils';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
+<<<<<<< HEAD
   variant?: 'default' | 'pulse' | 'dots' | 'bars' | 'quantum';
+=======
+  color?: 'primary' | 'secondary' | 'white' | 'custom';
+  customColor?: string;
+>>>>>>> origin/cursor/build-and-fix-errors-e276
   className?: string;
   text?: string;
   showText?: boolean;
 }
 
+<<<<<<< HEAD
 const sizeClasses = {
   sm: 'w-4 h-4',
   md: 'w-6 h-6',
@@ -144,6 +150,78 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
           className="mt-3 text-sm text-zion-slate-light text-center"
+=======
+export function LoadingSpinner({
+  size = 'md',
+  color = 'primary',
+  customColor,
+  className,
+  text = 'Loading...',
+  showText = false
+}: LoadingSpinnerProps) {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+    xl: 'w-16 h-16'
+  };
+
+  const colorClasses = {
+    primary: 'border-zion-purple',
+    secondary: 'border-zion-cyan',
+    white: 'border-white',
+    custom: ''
+  };
+
+  const borderColor = customColor || colorClasses[color];
+
+  return (
+    <div className={cn('flex flex-col items-center justify-center gap-3', className)}>
+      <div className="relative">
+        <motion.div
+          className={cn(
+            'border-2 border-gray-200 rounded-full',
+            sizeClasses[size],
+            borderColor
+          )}
+          style={{
+            borderTopColor: customColor || 'transparent'
+          }}
+          animate={{
+            rotate: 360
+          }}
+          transition={{
+            duration: 1,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        />
+        
+        {/* Pulsing effect */}
+        <motion.div
+          className={cn(
+            'absolute inset-0 rounded-full',
+            sizeClasses[size]
+          )}
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.1, 0.3]
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+      </div>
+      
+      {showText && (
+        <motion.p
+          className="text-sm text-muted-foreground text-center"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+>>>>>>> origin/cursor/build-and-fix-errors-e276
         >
           {text}
         </motion.p>
@@ -209,6 +287,7 @@ export const PageLoader: React.FC = () => (
           </div>
         );
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       case 'bars':
         return (
@@ -404,10 +483,62 @@ export const PageLoader: React.FC = () => (
         </motion.p>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-434d
       )}
+=======
+export function LoadingDots({ className }: { className?: string }) {
+  return (
+    <div className={cn('flex space-x-2', className)}>
+      {[0, 1, 2].map((index) => (
+        <motion.div
+          key={index}
+          className="w-2 h-2 bg-zion-cyan rounded-full"
+          animate={{
+            scale: [1, 1.5, 1],
+            opacity: [0.5, 1, 0.5]
+          }}
+          transition={{
+            duration: 1.5,
+            repeat: Infinity,
+            delay: index * 0.2
+          }}
+        />
+      ))}
+    </div>
+  );
+}
+
+// Skeleton loading component
+export function Skeleton({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) {
+  return (
+    <div
+      className={cn(
+        'animate-pulse rounded-md bg-muted',
+        className
+      )}
+      {...props}
+    />
+  );
+}
+
+// Page loading component
+export function PageLoader({ 
+  text = "Loading Zion...", 
+  className = "" 
+}: { 
+  text?: string; 
+  className?: string; 
+}) {
+  return (
+    <div className={cn("min-h-screen flex items-center justify-center bg-background", className)}>
+      <LoadingSpinner size="xl" showText text={text} />
+>>>>>>> origin/cursor/build-and-fix-errors-e276
     </div>
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 // Full screen loading overlay
@@ -442,6 +573,27 @@ export const FullPageLoader: React.FC<{ text?: string }> = ({ text = 'Loading Zi
 =======
 export const PageLoader: React.FC = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-434d
+=======
+export function LoadingPulse({ className }: { className?: string }) {
+  return (
+    <motion.div
+      className={cn('w-4 h-4 bg-zion-purple rounded-full', className)}
+      animate={{
+        scale: [1, 1.2, 1],
+        opacity: [0.5, 1, 0.5]
+      }}
+      transition={{
+        duration: 1.5,
+        repeat: Infinity,
+        ease: 'easeInOut'
+      }}
+    />
+  );
+}
+
+// Inline loading component
+export function InlineLoader({ className }: { className?: string }) {
+>>>>>>> origin/cursor/build-and-fix-errors-e276
   return (
     <div className="min-h-screen bg-zion-blue-dark flex items-center justify-center">
       <div className="text-center">
@@ -471,7 +623,10 @@ export const PageLoader: React.FC = () => {
         </motion.div>
       </div>
     </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6e83
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-e276
   );
 };
 

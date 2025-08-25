@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 interface ButtonProps {
@@ -61,6 +62,8 @@ const Button: React.FC<ButtonProps> = ({
 
 export { Button };
 =======
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-e276
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
@@ -161,6 +164,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 )
 Button.displayName = "Button"
 
+<<<<<<< HEAD
 export { Button, buttonVariants }
 >>>>>>> origin/cursor/build-and-fix-errors-fb38
 =======
@@ -171,3 +175,6 @@ Button.displayName = "Button";
 
 export { Button, buttonVariants };
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
+=======
+export { Button, buttonVariants }
+>>>>>>> origin/cursor/build-and-fix-errors-e276

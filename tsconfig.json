@@ -4,6 +4,7 @@
     "useDefineForClassFields": true,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
     "lib": [
@@ -13,6 +14,8 @@
     ],
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-e276
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
 >>>>>>> origin/cursor/build-and-fix-errors-fb38
 =======
@@ -25,6 +28,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+<<<<<<< HEAD
 <<<<<<< HEAD
     "strict": false,
 =======
@@ -84,6 +88,16 @@
     "incremental": true,
     "esModuleInterop": true
 >>>>>>> origin/cursor/build-and-fix-errors-fb38
+=======
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+>>>>>>> origin/cursor/build-and-fix-errors-e276
   },
   "include": [
     "src/main.tsx",
@@ -130,8 +144,36 @@
   ],
   "exclude": [
     "node_modules",
+<<<<<<< HEAD
     "dist"
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
+=======
+    "zion.app/recovered-content/**",
+    "contracts/**",
+    "dao/**",
+    "zion-os/**",
+    "zion_academy/**",
+    "packages/**",
+    "monitoring/**",
+    "scripts/**",
+    "server/**",
+    "cypress/**",
+    "**/*.disabled/**",
+    "__tests__.disabled/**",
+    "plugins.disabled/**",
+    "test.disabled/**",
+    "services.disabled.temp/**",
+    "data.temp/**",
+    "src_backup/**",
+    "components/**",
+    "pages/**"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+>>>>>>> origin/cursor/build-and-fix-errors-e276
 }

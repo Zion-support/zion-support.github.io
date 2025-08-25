@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
@@ -8,6 +9,10 @@ const EquipmentDetail: React.FC = () => {
 =======
 
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
+=======
+import { motion } from 'framer-motion';
+import { ArrowLeft, Star, Clock, DollarSign, Users, MapPin, Phone, Mail } from 'lucide-react';
+>>>>>>> origin/cursor/build-and-fix-errors-e276
 
   return (
     <>

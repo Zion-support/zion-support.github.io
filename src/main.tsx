@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/build-and-fix-errors-fb38
 import React from 'react'
@@ -109,12 +110,19 @@ root.render(
 );
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
 =======
+=======
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import './index.css';
+>>>>>>> origin/cursor/build-and-fix-errors-e276
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
 )
+<<<<<<< HEAD
 >>>>>>> origin/cursor/build-and-fix-errors-fb38
 =======
     <BrowserRouter>
@@ -123,3 +131,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   </React.StrictMode>
 );
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
+=======
+
+>>>>>>> origin/cursor/build-and-fix-errors-e276

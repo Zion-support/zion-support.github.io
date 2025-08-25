@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,10 @@ import React, { useState } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+>>>>>>> origin/cursor/build-and-fix-errors-e276
 import { Link } from 'react-router-dom';
 import { 
 <<<<<<< HEAD
@@ -676,6 +681,7 @@ const HelpCenter = () => {
       articles: [
         'Contact Support',
         'Live Chat',
+<<<<<<< HEAD
         'Phone Support',
         'Email Support'
       ]
@@ -785,6 +791,12 @@ const HelpCenter = () => {
         { title: 'Backup & Recovery', path: '/help/backup-recovery', description: 'Data protection strategies' }
       ]
 >>>>>>> origin/cursor/website-audit-and-enhancement-9ebb
+=======
+        'Emergency Contacts',
+        'Support Hours'
+      ],
+      color: 'from-orange-500 to-red-500'
+>>>>>>> origin/cursor/build-and-fix-errors-e276
     }
   ];
 
@@ -798,6 +810,7 @@ const HelpCenter = () => {
   const popularArticles = [
 <<<<<<< HEAD
     {
+<<<<<<< HEAD
       title: "AI Business Intelligence Implementation Guide",
       category: "AI Services",
       readTime: "8 min read",
@@ -1236,6 +1249,8 @@ const HelpCenter = () => {
       title: "Phone Support",
 <<<<<<< HEAD
       description: "Speak directly with our experts",
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-e276
       icon: Phone,
 =======
       description: "Speak directly with our technical experts",
@@ -5647,7 +5662,10 @@ export default function HelpCenter() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-8a01
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-e276
   );
 <<<<<<< HEAD
 <<<<<<< HEAD

@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+import { Link } from 'react-router-dom';
+>>>>>>> origin/cursor/build-and-fix-errors-e276
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Shield, Lock, Eye, Users, Database, Globe, CheckCircle } from 'lucide-react';

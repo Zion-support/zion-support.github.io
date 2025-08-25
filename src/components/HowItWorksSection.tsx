@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { GradientHeading } from "./GradientHeading";
 import { Check, Handshake, Search, Send, ArrowRight, Zap, Users, Globe } from "lucide-react";
 import { motion } from "framer-motion";
@@ -12,6 +13,16 @@ const steps = [
   {
     title: "Define Your Needs",
     description: "Describe your project requirements, budget, and timeline using our AI-powered intelligent form that adapts to your needs.",
+=======
+import { GradientHeading } from "./GradientHeading";
+import { Check, Handshake, Search, Send, ArrowRight, Sparkles, Zap, TrendingUp } from "lucide-react";
+import { motion } from "framer-motion";
+
+const steps = [
+  {
+    title: "Create & Post",
+    description: "Publish your service, job, or equipment in minutes with our AI-powered smart forms that guide you through the process.",
+>>>>>>> origin/cursor/build-and-fix-errors-e276
     icon: Send,
     color: "from-zion-purple to-zion-purple-dark",
     features: ["AI-Powered Forms", "Smart Suggestions", "Instant Validation"]
@@ -34,6 +45,7 @@ const steps = [
     title: "Deliver & Support",
     description: "Complete your project with confidence. Our platform ensures quality delivery and provides ongoing support for all solutions.",
     icon: Check,
+<<<<<<< HEAD
     color: "from-zion-cyan-light to-zion-cyan",
     features: ["Quality Assurance", "24/7 Support", "Escrow Protection"]
   },
@@ -44,6 +56,11 @@ const stats = [
   { number: "150+", label: "Countries", icon: Globe },
   { number: "95%", label: "Success Rate", icon: Check },
   { number: "<2hr", label: "Response Time", icon: Zap }
+=======
+    color: "from-zion-purple-light to-zion-cyan",
+    step: "04"
+  },
+>>>>>>> origin/cursor/build-and-fix-errors-e276
 ];
 
 export function HowItWorksSection() {
@@ -59,15 +76,39 @@ export function HowItWorksSection() {
   };
 
   const itemVariants = {
+<<<<<<< HEAD
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
       transition: { duration: 0.6 }
+=======
+    hidden: { opacity: 0, y: 30, scale: 0.9 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6
+      }
+    }
+  };
+
+  const stepVariants = {
+    hidden: { scale: 0, rotate: -180 },
+    visible: {
+      scale: 1,
+      rotate: 0,
+      transition: {
+        duration: 0.5,
+        ease: "backOut"
+      }
+>>>>>>> origin/cursor/build-and-fix-errors-e276
     }
   };
 
   return (
+<<<<<<< HEAD
     <section className="py-24 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple-dark relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -75,16 +116,30 @@ export function HowItWorksSection() {
           backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.2) 1px, transparent 0)`,
           backgroundSize: '120px 120px'
         }}></div>
+=======
+    <section className="py-20 bg-gradient-to-b from-zion-blue to-zion-blue-dark relative overflow-hidden">
+      {/* Background pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `radial-gradient(circle at 50% 50%, ${'#8c15e9'} 2px, transparent 2px)`,
+          backgroundSize: '80px 80px'
+        }} />
+>>>>>>> origin/cursor/build-and-fix-errors-e276
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <motion.div 
           className="text-center mb-20"
+<<<<<<< HEAD
           initial={{ opacity: 0, y: 20 }}
+=======
+          initial={{ opacity: 0, y: 30 }}
+>>>>>>> origin/cursor/build-and-fix-errors-e276
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
+<<<<<<< HEAD
           <GradientHeading className="text-4xl md:text-5xl lg:text-6xl mb-6">
             How Zion Works
           </GradientHeading>
@@ -95,6 +150,14 @@ export function HowItWorksSection() {
         </motion.div>
 
         {/* Stats Section */}
+=======
+          <GradientHeading className="text-4xl md:text-5xl mb-6">How Zion Works</GradientHeading>
+          <p className="text-zion-slate-light text-lg md:text-xl mt-4 max-w-3xl mx-auto leading-relaxed">
+            A streamlined four-step process that leverages AI to connect technology providers with clients seamlessly
+          </p>
+        </motion.div>
+
+>>>>>>> origin/cursor/build-and-fix-errors-e276
         <motion.div 
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20"
           initial={{ opacity: 0, y: 20 }}
@@ -127,8 +190,13 @@ export function HowItWorksSection() {
           whileInView="visible"
           viewport={{ once: true }}
         >
+<<<<<<< HEAD
           {/* Enhanced Timeline line */}
           <div className="absolute left-4 md:left-1/2 top-0 h-full w-1 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden rounded-full"></div>
+=======
+          {/* Enhanced timeline line */}
+          <div className="absolute left-1/2 top-0 h-full w-1 bg-gradient-to-b from-zion-purple via-zion-cyan via-zion-blue to-zion-purple-light transform -translate-x-1/2 hidden md:block" />
+>>>>>>> origin/cursor/build-and-fix-errors-e276
           
           <div className="space-y-16 md:space-y-0">
             {steps.map((step, index) => (
@@ -197,6 +265,7 @@ export function HowItWorksSection() {
               </motion.div>
             ))}
           </div>
+<<<<<<< HEAD
         </motion.div>
 
         {/* CTA Section */}
@@ -222,6 +291,23 @@ export function HowItWorksSection() {
               </button>
             </div>
           </div>
+=======
+
+          {/* CTA section */}
+          <motion.div 
+            className="mt-20 text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.8 }}
+          >
+                      <div className="inline-flex items-center gap-3 px-8 py-4 bg-zion-purple/20 backdrop-blur-sm border border-zion-purple/30 rounded-full">
+            <TrendingUp className="w-6 h-6 text-zion-cyan" />
+            <span className="text-zion-cyan font-semibold text-lg">Ready to get started?</span>
+            <ArrowRight className="w-5 h-5 text-zion-cyan" />
+          </div>
+          </motion.div>
+>>>>>>> origin/cursor/build-and-fix-errors-e276
         </motion.div>
       </div>
     </section>

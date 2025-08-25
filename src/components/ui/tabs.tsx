@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';
 import { cn } from '@/lib/utils';
+=======
+import React, { createContext, useContext, useState } from 'react';
+>>>>>>> origin/cursor/build-and-fix-errors-e276
 
 <<<<<<< HEAD
 interface TabsContextType {
@@ -81,10 +85,29 @@ export const Tabs: React.FC<TabsProps> = ({
       </div>
     </TabsContext.Provider>
   );
+<<<<<<< HEAD
 };
 
 <<<<<<< HEAD
 interface TabsListProps {
+=======
+}
+
+interface TabsListProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export function TabsList({ children, className = '' }: TabsListProps) {
+  return (
+    <div className={`inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground ${className}`}>
+      {children}
+    </div>
+  );
+}
+
+interface TabsTriggerProps {
+>>>>>>> origin/cursor/build-and-fix-errors-e276
   children: React.ReactNode;
   className?: string;
 }
@@ -191,9 +214,13 @@ export const TabsContent: React.FC<TabsContentProps> = ({ value, children, class
       {children}
     </div>
   );
+<<<<<<< HEAD
 };
 <<<<<<< HEAD
 
 export { Tabs, TabsList, TabsTrigger, TabsContent };
 =======
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
+=======
+}
+>>>>>>> origin/cursor/build-and-fix-errors-e276

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-e276
 
 <<<<<<< HEAD
 =======
@@ -51,9 +54,13 @@ export function FeatureHighlights() {
         "Advanced analytics and reporting capabilities",
         "API access for seamless integration with your HR systems",
         "Customizable workflow and approval processes"
+<<<<<<< HEAD
       ],
       stats: "60% Cost Reduction",
       cta: "Enterprise Solutions"
+=======
+      ]
+>>>>>>> origin/cursor/build-and-fix-errors-e276
     }
   ];
 
@@ -68,6 +75,7 @@ export function FeatureHighlights() {
   };
 
   const itemVariants = {
+<<<<<<< HEAD
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -112,6 +120,59 @@ export function FeatureHighlights() {
           initial="hidden"
 <<<<<<< HEAD
           animate="visible"
+=======
+    hidden: { y: 30, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const cardVariants = {
+    hover: {
+      y: -8,
+      scale: 1.02,
+      transition: {
+        duration: 0.3,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  return (
+    <section className="py-16 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-slate-dark relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-20 w-64 h-64 border border-zion-cyan/10 rounded-full opacity-30"></div>
+        <div className="absolute bottom-20 right-20 w-48 h-48 border border-zion-purple/10 rotate-45 opacity-30"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-zion-cyan/5 rounded-full opacity-20"></div>
+      </div>
+
+      <motion.div 
+        className="container mx-auto px-4 relative z-10"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <motion.div 
+          className="text-center mb-12"
+          variants={itemVariants}
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Tailored Solutions for Everyone</h2>
+          <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
+            Whatever your role in the tech ecosystem, Zion offers specialized features to help you succeed
+          </p>
+        </motion.div>
+        
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8"
+          variants={containerVariants}
+>>>>>>> origin/cursor/build-and-fix-errors-e276
         >
           {highlightsData.map((category, index) => (
             <motion.div key={index} variants={itemVariants}>
@@ -327,6 +388,7 @@ export const FeatureHighlights: React.FC = () => {
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Zion Tech Group?
             </span>
+<<<<<<< HEAD
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             We combine cutting-edge technology with proven expertise to deliver solutions 
@@ -430,6 +492,11 @@ export const FeatureHighlights: React.FC = () => {
 =======
       </motion.div>
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
+=======
+          </div>
+        </motion.div>
+      </motion.div>
+>>>>>>> origin/cursor/build-and-fix-errors-e276
     </section>
   );
 };

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 import * as React from "react";
@@ -72,6 +73,8 @@ const CardFooter: React.FC<CardProps> = ({ children, className = '' }) => {
 
 export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
 =======
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-e276
 import * as React from "react"
 import { cn } from "@/lib/utils"
 
@@ -149,6 +152,7 @@ const CardFooter = React.forwardRef<
 ))
 CardFooter.displayName = "CardFooter"
 
+<<<<<<< HEAD
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 >>>>>>> origin/cursor/build-and-fix-errors-fb38
 =======
@@ -213,3 +217,6 @@ CardFooter.displayName = "CardFooter";
 
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
+=======
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
+>>>>>>> origin/cursor/build-and-fix-errors-e276

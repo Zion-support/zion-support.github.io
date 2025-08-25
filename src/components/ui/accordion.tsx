@@ -58,6 +58,7 @@ const AccordionContent = React.forwardRef<
     </div>
   </AccordionPrimitive.Content>
 ))
+<<<<<<< HEAD
 
 AccordionContent.displayName = "AccordionContent"
 
@@ -222,3 +223,8 @@ export const AccordionContent: React.FC<AccordionContentProps> = ({ children, cl
   );
 };
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
+=======
+AccordionContent.displayName = AccordionPrimitive.Content.displayName
+
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
+>>>>>>> origin/cursor/build-and-fix-errors-e276

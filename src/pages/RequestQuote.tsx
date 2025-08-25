@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
@@ -52,6 +53,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
+=======
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+>>>>>>> origin/cursor/build-and-fix-errors-e276
 import { 
   HardDrive, 
   DollarSign, 
@@ -848,4 +853,8 @@ export default function RequestQuote() {
     </>
 >>>>>>> origin/cursor/check-and-fix-github-actions-e92c
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/build-and-fix-errors-e276

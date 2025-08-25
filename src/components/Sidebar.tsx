@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
@@ -35,6 +36,9 @@ import {
 
 import React from 'react';
 import { motion } from 'framer-motion';
+=======
+import React from 'react';
+>>>>>>> origin/cursor/build-and-fix-errors-e276
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { 

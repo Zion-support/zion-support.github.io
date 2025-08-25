@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-89a0
 import React, { useState } from 'react';
@@ -1156,6 +1157,10 @@ const Services = () => {
           </p>
 =======
 import React from 'react';
+=======
+import React from 'react';
+import { motion } from 'framer-motion';
+>>>>>>> origin/cursor/build-and-fix-errors-e276
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -1165,6 +1170,7 @@ import {
   Globe, 
   Database, 
   Smartphone, 
+<<<<<<< HEAD
   Cpu,
   BarChart3,
   Users,
@@ -2459,10 +2465,125 @@ const Services = () => {
       icon: Shield,
       title: "Enterprise Security",
       description: "Bank-level security protocols and compliance frameworks for enterprise environments."
+=======
+  BarChart3,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Users,
+  Clock,
+  Award
+} from 'lucide-react';
+
+export default function Services() {
+  const services = [
+    {
+      icon: Brain,
+      title: 'AI Solutions & Machine Learning',
+      description: 'Cutting-edge artificial intelligence solutions that transform your business operations.',
+      features: [
+        'Machine Learning Models',
+        'Natural Language Processing',
+        'Computer Vision',
+        'Predictive Analytics',
+        'AI-Powered Automation',
+        'Custom AI Solutions'
+      ],
+      href: '/services/ai',
+      color: 'from-purple-500 to-pink-500',
+      bgColor: 'bg-purple-500/10',
+      borderColor: 'border-purple-500/30'
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud Infrastructure & DevOps',
+      description: 'Scalable cloud solutions and automated deployment pipelines for modern applications.',
+      features: [
+        'AWS, Azure & GCP Migration',
+        'Container Orchestration',
+        'Serverless Architecture',
+        'CI/CD Pipelines',
+        'Infrastructure as Code',
+        'Cloud Security & Compliance'
+      ],
+      href: '/services/cloud',
+      color: 'from-blue-500 to-cyan-500',
+      bgColor: 'bg-blue-500/10',
+      borderColor: 'border-blue-500/30'
+    },
+    {
+      icon: Shield,
+      title: 'Cybersecurity & Compliance',
+      description: 'Comprehensive security solutions to protect your digital assets and ensure compliance.',
+      features: [
+        'Zero Trust Security',
+        'Penetration Testing',
+        'Security Audits',
+        'Compliance Management',
+        'Incident Response',
+        'Security Training'
+      ],
+      href: '/services/security',
+      color: 'from-green-500 to-emerald-500',
+      bgColor: 'bg-green-500/10',
+      borderColor: 'border-green-500/30'
+    },
+    {
+      icon: Zap,
+      title: 'Digital Transformation',
+      description: 'End-to-end business process modernization and digital strategy implementation.',
+      features: [
+        'Process Automation',
+        'Legacy System Modernization',
+        'API Integration',
+        'Data Migration',
+        'Change Management',
+        'Digital Strategy Consulting'
+      ],
+      href: '/services/transformation',
+      color: 'from-yellow-500 to-orange-500',
+      bgColor: 'bg-yellow-500/10',
+      borderColor: 'border-yellow-500/30'
+    },
+    {
+      icon: Smartphone,
+      title: 'Web & Mobile Development',
+      description: 'Custom web and mobile applications built with modern technologies and best practices.',
+      features: [
+        'React & Next.js Development',
+        'Mobile App Development',
+        'Progressive Web Apps',
+        'E-commerce Solutions',
+        'API Development',
+        'Performance Optimization'
+      ],
+      href: '/services/development',
+      color: 'from-indigo-500 to-purple-500',
+      bgColor: 'bg-indigo-500/10',
+      borderColor: 'border-indigo-500/30'
+    },
+    {
+      icon: BarChart3,
+      title: 'Data Analytics & BI',
+      description: 'Transform your data into actionable insights with advanced analytics and visualization.',
+      features: [
+        'Data Warehousing',
+        'Business Intelligence',
+        'Real-time Analytics',
+        'Data Visualization',
+        'Predictive Modeling',
+        'Data Governance'
+      ],
+      href: '/services/analytics',
+      color: 'from-red-500 to-pink-500',
+      bgColor: 'bg-red-500/10',
+      borderColor: 'border-red-500/30'
+>>>>>>> origin/cursor/build-and-fix-errors-e276
     }
   ];
 
   const stats = [
+<<<<<<< HEAD
     { label: "Services Delivered", value: "500+", icon: CheckCircle },
     { label: "Happy Clients", value: "200+", icon: Users },
     { label: "Success Rate", value: "99%", icon: Star },
@@ -2780,6 +2901,57 @@ const Services = () => {
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
               Our most popular and impactful solutions that are transforming businesses worldwide.
+=======
+    { value: '200+', label: 'Projects Delivered', icon: CheckCircle, color: 'text-green-400' },
+    { value: '99.99%', label: 'Uptime Guarantee', icon: Shield, color: 'text-blue-400' },
+    { value: '24/7', label: 'Support Available', icon: Clock, color: 'text-purple-400' },
+    { value: '15+', label: 'Years Experience', icon: Award, color: 'text-yellow-400' }
+  ];
+
+  const process = [
+    {
+      step: '01',
+      title: 'Discovery & Analysis',
+      description: 'We analyze your requirements and business objectives to understand your needs.',
+      icon: Globe
+    },
+    {
+      step: '02',
+      title: 'Solution Design',
+      description: 'Our experts design a tailored solution that aligns with your goals and budget.',
+      icon: Brain
+    },
+    {
+      step: '03',
+      title: 'Development & Testing',
+      description: 'We build and thoroughly test your solution using industry best practices.',
+      icon: Zap
+    },
+    {
+      step: '04',
+      title: 'Deployment & Support',
+      description: 'Smooth deployment followed by ongoing support and maintenance.',
+      icon: Cloud
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              Our Services
+            </h1>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto mb-8">
+              Comprehensive technology solutions designed to transform your business and drive innovation. 
+              From AI and cloud infrastructure to cybersecurity and digital transformation.
+>>>>>>> origin/cursor/build-and-fix-errors-e276
             </p>
           </div>
           <div className="grid lg:grid-cols-3 gap-8">
@@ -3223,6 +3395,7 @@ export default Services;
       </section>
     </div>
   );
+<<<<<<< HEAD
 };
 
 const CheckCircle = ({ className }: { className?: string }) => (
@@ -3647,3 +3820,6 @@ export default Services;
 
 export default Services;
 >>>>>>> origin/cursor/website-audit-and-enhancement-f30b
+=======
+}
+>>>>>>> origin/cursor/build-and-fix-errors-e276

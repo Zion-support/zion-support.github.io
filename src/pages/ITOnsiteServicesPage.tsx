@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -846,6 +847,9 @@ const ITOnsiteServicesPage: React.FC = () => {
 =======
 
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
+=======
+import React from 'react';
+>>>>>>> origin/cursor/build-and-fix-errors-e276
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">

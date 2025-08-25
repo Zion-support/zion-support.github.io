@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
@@ -50,6 +51,18 @@ import { Search, Star, Users, Zap, Brain, Shield, Settings, Phone, Mail, MapPin 
 
 const EnterpriseSolutionsPage = () => {
   const enterpriseServices = [
+=======
+import React, { useState } from 'react';
+import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Building, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon } from 'lucide-react';
+
+const EnterpriseSolutionsPage: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedIndustry, setSelectedIndustry] = useState<string>('all');
+  const [selectedSolutionType, setSelectedSolutionType] = useState<string>('all');
+
+  // Enterprise Solution data directly in the component
+  const enterpriseSolutions = [
+>>>>>>> origin/cursor/build-and-fix-errors-e276
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1411,4 +1424,10 @@ export default function EnterpriseSolutionsPage() {
       </section>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default EnterpriseSolutionsPage;
+>>>>>>> origin/cursor/build-and-fix-errors-e276

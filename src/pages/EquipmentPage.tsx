@@ -1,7 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { SEO } from '@/components/SEO';
 =======
+=======
+import { motion } from 'framer-motion';
+import { Search, Filter, Star, Clock, DollarSign, Users, MapPin, Phone, Mail } from 'lucide-react';
+>>>>>>> origin/cursor/build-and-fix-errors-e276
 
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
 

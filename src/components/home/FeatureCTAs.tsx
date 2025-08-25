@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -20,6 +21,67 @@ import {
   Clock
 } from "lucide-react";
 
+=======
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { ArrowRight, Phone, Mail, Globe, Brain, Shield, Zap, Database, Cloud, Lock, Leaf, DollarSign, Eye, Users, CheckCircle } from 'lucide-react';
+
+const features = [
+  {
+    title: "AI-Powered Matching",
+    description: "Advanced AI algorithms connect you with the perfect tech professionals and services",
+    details: "Our intelligent matching system analyzes your requirements and preferences to find the ideal matches from our extensive network of verified professionals.",
+    icon: <Brain className="h-8 w-8 text-zion-purple" />,
+    link: "/ai-matcher",
+    badge: "AI"
+  },
+  {
+    title: "Secure Platform",
+    description: "Enterprise-grade security protecting your data and transactions",
+    details: "Bank-level encryption, secure payment processing, and comprehensive data protection ensure your information stays safe and confidential.",
+    icon: <Shield className="h-8 w-8 text-zion-cyan" />,
+    link: "/security",
+    badge: "Secure"
+  },
+  {
+    title: "Global Network",
+    description: "Access to worldwide tech talent and innovative solutions",
+    details: "Connect with professionals and companies from around the globe, bringing diverse perspectives and cutting-edge solutions to your projects.",
+    icon: <Globe className="h-8 w-8 text-zion-blue" />,
+    link: "/network",
+    badge: "Global"
+  },
+  {
+    title: "Real-time Analytics",
+    description: "Comprehensive insights into your tech ecosystem performance",
+    details: "Monitor project progress, track performance metrics, and gain valuable insights to optimize your technology investments and strategies.",
+    icon: <Database className="h-8 w-8 text-zion-green" />,
+    link: "/analytics",
+    badge: "Analytics"
+  },
+  {
+    title: "24/7 Support",
+    description: "Round-the-clock assistance for all your tech needs",
+    details: "Our dedicated support team is available 24/7 to help you with any questions, technical issues, or guidance you may need.",
+    icon: <Users className="h-8 w-8 text-zion-orange" />,
+    link: "/support",
+    badge: "Support"
+  },
+  {
+    title: "Innovation Hub",
+    description: "Stay ahead with the latest tech trends and emerging solutions",
+    details: "Access cutting-edge technologies, research insights, and innovative approaches to keep your business at the forefront of digital transformation.",
+    icon: <Zap className="h-8 w-8 text-zion-yellow" />,
+    link: "/innovation",
+    badge: "Innovation"
+  }
+];
+
+>>>>>>> origin/cursor/build-and-fix-errors-e276
 export function FeatureCTAs() {
   const features = [
     {
@@ -126,11 +188,19 @@ export function FeatureCTAs() {
     }
   };
 
+<<<<<<< HEAD
   const itemVariants = {
     hidden: { opacity: 0, y: 30, scale: 0.95 },
     visible: {
       opacity: 1,
       y: 0,
+=======
+  const cardVariants = {
+    hidden: { y: 20, opacity: 0, scale: 0.95 },
+    visible: {
+      y: 0,
+      opacity: 1,
+>>>>>>> origin/cursor/build-and-fix-errors-e276
       scale: 1,
       transition: {
         duration: 0.6,

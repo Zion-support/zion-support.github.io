@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, Search, HelpCircle, MessageCircle, Phone, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -24,6 +25,20 @@ export default function FAQ() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-bc98
 import React from 'react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion';
+=======
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  ChevronDown, 
+  ChevronUp, 
+  Search,
+  MessageSquare,
+  Clock,
+  Shield,
+  Brain,
+  Cloud
+} from 'lucide-react';
+>>>>>>> origin/cursor/build-and-fix-errors-e276
 
 export default function FAQ() {
   const faqs = [

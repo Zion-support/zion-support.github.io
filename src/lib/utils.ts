@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -118,4 +119,11 @@ export function isDesktop(): boolean {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6e83
 =======
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
+=======
+import { type ClassValue, clsx } from "clsx"
+import { twMerge } from "tailwind-merge"
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+>>>>>>> origin/cursor/build-and-fix-errors-e276
 }

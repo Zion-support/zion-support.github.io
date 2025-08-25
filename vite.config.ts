@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+<<<<<<< HEAD
 import { resolve } from 'path'
 import { visualizer } from 'rollup-plugin-visualizer'
 <<<<<<< HEAD
@@ -31,11 +32,17 @@ export default defineConfig(async () => ({
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
+=======
+import path from 'node:path'
+>>>>>>> origin/cursor/build-and-fix-errors-e276
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+<<<<<<< HEAD
   
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-e276
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
@@ -52,6 +59,7 @@ export default defineConfig({
   },
 
   build: {
+<<<<<<< HEAD
 <<<<<<< HEAD
     target: 'es2020',
     minify: 'terser',
@@ -355,6 +363,12 @@ export default defineConfig({
         toplevel: true
       }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6685
+=======
+    target: 'es2015',
+    minify: 'esbuild',
+    esbuildOptions: {
+      drop: ['console', 'debugger'],
+>>>>>>> origin/cursor/build-and-fix-errors-e276
     },
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
 =======
@@ -380,6 +394,7 @@ export default defineConfig({
       drop: process.env.DEBUG ? [] : ['console', 'debugger'],
     },
     chunkSizeWarningLimit: 1000,
+<<<<<<< HEAD
   },
 
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
@@ -537,6 +552,10 @@ export default defineConfig({
     port: 4173,
     host: true
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6b26
+=======
+    // Enable source maps for debugging
+    sourcemap: false
+>>>>>>> origin/cursor/build-and-fix-errors-e276
   }
 })
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6685

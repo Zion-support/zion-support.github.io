@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-ee8a
@@ -265,6 +266,8 @@ export default function Sitemap() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-e276
 import { motion } from 'framer-motion';
 import { 
   Map, 
@@ -1581,6 +1584,10 @@ export default function Sitemap() {
     </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-74a8
   );
+<<<<<<< HEAD
 };
 
 export default Sitemap;
+=======
+}
+>>>>>>> origin/cursor/build-and-fix-errors-e276

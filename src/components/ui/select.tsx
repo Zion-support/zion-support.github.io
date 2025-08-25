@@ -1,12 +1,23 @@
 import React from 'react';
+<<<<<<< HEAD
 import { cn } from '@/lib/utils';
 
 export interface SelectProps extends React.HTMLAttributes<HTMLDivElement> {
   value?: string;
+=======
+
+interface SelectProps {
+  children: React.ReactNode;
+  className?: string;
+  value?: string;
+  onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+>>>>>>> origin/cursor/build-and-fix-errors-e276
   onValueChange?: (value: string) => void;
   disabled?: boolean;
+  defaultValue?: string;
 }
 
+<<<<<<< HEAD
 export interface SelectTriggerProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
 }
@@ -42,10 +53,30 @@ export const Select: React.FC<SelectProps> = ({
   const handleValueChange = (newValue: string) => {
     if (!disabled && onValueChange) {
       onValueChange(newValue);
+=======
+export function Select({ 
+  children, 
+  className = '', 
+  value, 
+  onChange, 
+  onValueChange,
+  disabled = false,
+  defaultValue
+}: SelectProps) {
+  const baseClasses = 'flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50';
+  
+  const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    if (onChange) {
+      onChange(e);
+    }
+    if (onValueChange) {
+      onValueChange(e.target.value);
+>>>>>>> origin/cursor/build-and-fix-errors-e276
     }
   };
 
   return (
+<<<<<<< HEAD
     <SelectContext.Provider value={{ value, onValueChange: handleValueChange, disabled }}>
       <div className={cn('relative', className)} {...props}>
         {children}
@@ -68,6 +99,14 @@ export const SelectTrigger: React.FC<SelectTriggerProps> = ({ children, classNam
       )}
       disabled={context.disabled}
       {...props}
+=======
+    <select
+      className={`${baseClasses} ${className}`}
+      value={value}
+      onChange={handleChange}
+      disabled={disabled}
+      defaultValue={defaultValue}
+>>>>>>> origin/cursor/build-and-fix-errors-e276
     >
       {children}
     </button>
@@ -101,6 +140,7 @@ export const SelectItem: React.FC<SelectItemProps> = ({ value, children, disable
     throw new Error('SelectItem must be used within a Select component');
   }
 
+<<<<<<< HEAD
   return (
     <div
       className={cn(
@@ -115,3 +155,8 @@ export const SelectItem: React.FC<SelectItemProps> = ({ value, children, disable
     </div>
   );
 };
+=======
+export function SelectContent({ children, className = '' }: { children: React.ReactNode; className?: string }) {
+  return <div className={`relative ${className}`}>{children}</div>;
+}
+>>>>>>> origin/cursor/build-and-fix-errors-e276

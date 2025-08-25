@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-e276
 import React, { useState } from 'react';
 import { Mail, ArrowRight, CheckCircle } from 'lucide-react';
 
@@ -77,6 +80,9 @@ export const FooterNewsletter = () => {
   );
 <<<<<<< HEAD
 };
+<<<<<<< HEAD
 =======
 };
 >>>>>>> origin/cursor/check-and-fix-github-actions-e92c
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-e276

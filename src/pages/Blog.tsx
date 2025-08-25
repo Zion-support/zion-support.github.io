@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/build-and-fix-errors-c9ef
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-e276
 import React, { useState } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3202,6 +3205,7 @@ const Blog = () => {
 >>>>>>> origin/cursor/website-audit-and-enhancement-2bc0
     </div>
   );
+<<<<<<< HEAD
 }
 
 =======
@@ -3258,3 +3262,6 @@ export default Blog;
 >>>>>>> origin/cursor/website-audit-and-enhancement-e1a1
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-48a5
+=======
+}
+>>>>>>> origin/cursor/build-and-fix-errors-e276

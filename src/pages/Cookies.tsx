@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -337,6 +338,11 @@ export default function Cookies() {
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Cookie, Shield, Settings, Eye, Database, Globe } from 'lucide-react';
+=======
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Shield, Lock, Eye, CheckCircle } from 'lucide-react';
+>>>>>>> origin/cursor/build-and-fix-errors-e276
 
 export default function Cookies() {
   return (
@@ -350,7 +356,7 @@ export default function Cookies() {
         >
           <div className="flex justify-center mb-4">
             <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center">
-              <Cookie className="w-8 h-8 text-white" />
+              <Shield className="w-8 h-8 text-white" />
             </div>
           </div>
           <h1 className="text-4xl font-bold text-white mb-4">Cookie Policy</h1>
@@ -367,7 +373,7 @@ export default function Cookies() {
           className="bg-white/10 backdrop-blur-md rounded-lg p-6 mb-8"
         >
           <div className="flex items-center text-cyan-400 mb-2">
-            <Settings className="w-5 h-5 mr-2" />
+            <Lock className="w-5 h-5 mr-2" />
             <span className="font-semibold">Last Updated:</span>
           </div>
           <p className="text-white">December 2024</p>
@@ -383,7 +389,7 @@ export default function Cookies() {
             className="bg-white/10 backdrop-blur-md rounded-lg p-6"
           >
             <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-              <Cookie className="w-6 h-6 mr-3 text-cyan-400" />
+              <Shield className="w-6 h-6 mr-3 text-cyan-400" />
               What Are Cookies?
             </h2>
             <div className="space-y-4 text-gray-300">
@@ -430,9 +436,48 @@ export default function Cookies() {
             className="bg-white/10 backdrop-blur-md rounded-lg p-6"
           >
             <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-              <Database className="w-6 h-6 mr-3 text-cyan-400" />
+              <CheckCircle className="w-6 h-6 mr-3 text-cyan-400" />
               Types of Cookies We Use
             </h2>
+<<<<<<< HEAD
+=======
+            <div className="space-y-6 text-gray-300">
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-2">Session Cookies</h3>
+                <p>
+                  These cookies are temporary and are deleted when you close your browser. They help 
+                  maintain your session and remember your preferences during your visit.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-2">Persistent Cookies</h3>
+                <p>
+                  These cookies remain on your device for a set period or until you delete them. 
+                  They help us remember your preferences for future visits.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-white mb-2">Third-Party Cookies</h3>
+                <p>
+                  These cookies are set by third-party services we use, such as analytics providers 
+                  and social media platforms.
+                </p>
+              </div>
+            </div>
+          </motion.section>
+
+          {/* Specific Cookies */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="bg-white/10 backdrop-blur-md rounded-lg p-6"
+          >
+            <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
+              <Lock className="w-6 h-6 mr-3 text-cyan-400" />
+              Specific Cookies We Use
+            </h2>
+>>>>>>> origin/cursor/build-and-fix-errors-e276
             <div className="space-y-4 text-gray-300">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-white/5 rounded-lg p-4 border border-cyan-500/30">
@@ -687,6 +732,7 @@ export default function Cookies() {
             transition={{ delay: 0.7 }}
             className="text-center mt-12"
           >
+<<<<<<< HEAD
             <Link
               to="/"
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-500 hover:to-purple-700 transition-all duration-200"
@@ -697,6 +743,98 @@ export default function Cookies() {
             </Link>
           </motion.div>
         </div>
+=======
+            <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
+              <CheckCircle className="w-6 h-6 mr-3 text-cyan-400" />
+              Third-Party Services
+            </h2>
+            <div className="space-y-4 text-gray-300">
+              <p>
+                We use third-party services that may set cookies on your device:
+              </p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li><strong>Google Analytics:</strong> Website analytics and performance monitoring</li>
+                <li><strong>Social Media:</strong> Social media integration and sharing features</li>
+                <li><strong>Payment Processors:</strong> Secure payment processing services</li>
+                <li><strong>Customer Support:</strong> Live chat and support tools</li>
+              </ul>
+              <p>
+                These services have their own privacy policies and cookie practices. We recommend 
+                reviewing their policies for more information.
+              </p>
+            </div>
+          </motion.section>
+
+          {/* Updates to Policy */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8 }}
+            className="bg-white/10 backdrop-blur-md rounded-lg p-6"
+          >
+            <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
+              <Lock className="w-6 h-6 mr-3 text-cyan-400" />
+              Updates to This Policy
+            </h2>
+            <div className="space-y-4 text-gray-300">
+              <p>
+                We may update this Cookie Policy from time to time to reflect changes in our 
+                practices or for other operational, legal, or regulatory reasons.
+              </p>
+              <p>
+                We will notify you of any material changes by posting the new policy on this page 
+                and updating the "Last Updated" date. We encourage you to review this policy 
+                periodically.
+              </p>
+            </div>
+          </motion.section>
+
+          {/* Contact Information */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.9 }}
+            className="bg-white/10 backdrop-blur-md rounded-lg p-6"
+          >
+            <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
+              <CheckCircle className="w-6 h-6 mr-3 text-cyan-400" />
+              Contact Us
+            </h2>
+            <div className="space-y-4 text-gray-300">
+              <p>
+                If you have any questions about our use of cookies or this Cookie Policy, 
+                please contact us:
+              </p>
+              <div className="space-y-2">
+                <div className="flex items-center">
+                  <CheckCircle className="w-4 h-4 mr-2 text-cyan-400" />
+                  <span>Email: kleber@ziontechgroup.com</span>
+                </div>
+                <div className="flex items-center">
+                  <Shield className="w-4 h-4 mr-2 text-cyan-400" />
+                  <span>Phone: +1 (302) 464-0950</span>
+                </div>
+              </div>
+            </div>
+          </motion.section>
+        </div>
+
+        {/* Back to Home */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.0 }}
+          className="text-center mt-12"
+        >
+          <Link
+            to="/"
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-500 hover:to-purple-700 transition-all duration-200"
+          >
+            <CheckCircle className="w-5 h-5 mr-2" />
+            Back to Home
+          </Link>
+        </motion.div>
+>>>>>>> origin/cursor/build-and-fix-errors-e276
       </div>
     </div>
 <<<<<<< HEAD

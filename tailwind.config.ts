@@ -48,9 +48,12 @@ const config: Config = {
           foreground: 'hsl(var(--card-foreground))',
         },
         // Enhanced Zion colors for futuristic design
+<<<<<<< HEAD
 =======
         // Zion color palette (consolidated)
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d2d6
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-e276
         'zion-blue': {
           DEFAULT: '#0a0f1f',
           light: '#1e263b',
@@ -106,8 +109,11 @@ const config: Config = {
         },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-e276
         'neon-pulse': {
           '0%, 100%': { 
             textShadow: '0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor',
@@ -139,6 +145,7 @@ const config: Config = {
           '0%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(360deg)' },
         },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-434d
         'gradient-x': {
           '0%, 100%': {
@@ -214,6 +221,8 @@ const config: Config = {
           '100%': { transform: 'translateX(100%)' },
         },
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-434d
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-e276
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
