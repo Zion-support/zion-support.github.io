@@ -493,34 +493,37 @@ export default function Pricing() {
             <h2 className="text-3xl font-bold text-white mb-6">
               Frequently Asked Questions
             </h2>
-          </div>
-
-          <div className="space-y-6">
-            {[
-              {
-                question: "Can I change my plan at any time?",
-                answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the start of your next billing cycle."
-              },
-              {
-                question: "Do you offer custom pricing for enterprise clients?",
-                answer: "Absolutely! We provide custom pricing and solutions for enterprise clients with specific requirements and volume needs."
-              },
-              {
-                question: "What payment methods do you accept?",
-                answer: "We accept all major credit cards, bank transfers, and can arrange custom payment terms for enterprise clients."
-              },
-              {
-                question: "Is there a setup fee?",
-                answer: "No setup fees for our subscription plans. Custom service packages may have one-time setup costs depending on complexity."
-              },
-              {
-                question: "What happens after my free trial ends?",
-                answer: "After your free trial, you'll automatically be charged for your selected plan. You can cancel anytime before the trial ends."
-              }
-            ].map((faq, index) => (
-              <div key={index} className="bg-gray-800/50 rounded-lg border border-gray-700 p-6">
-                <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
-                <p className="text-gray-300">{faq.answer}</p>
+            <p className="text-xl text-zion-slate-light mb-12 max-w-3xl mx-auto">
+              Our team of experts is ready to help you choose the perfect solution and get you up and running quickly. 
+              Get in touch today to start your digital transformation journey.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-zion-cyan/20 border border-zion-cyan/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Phone className="w-8 h-8 text-zion-cyan" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
+                <p className="text-zion-slate-light">+1 (302) 464-0950</p>
+                <p className="text-sm text-zion-slate-light">Available 24/7</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-zion-cyan/20 border border-zion-cyan/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Mail className="w-8 h-8 text-zion-cyan" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
+                <p className="text-zion-slate-light">kleber@ziontechgroup.com</p>
+                <p className="text-sm text-zion-slate-light">Response within 2 hours</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-zion-cyan/20 border border-zion-cyan/30 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="w-8 h-8 text-zion-cyan" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
+                <p className="text-zion-slate-light">364 E Main St STE 1008</p>
+                <p className="text-sm text-zion-slate-light">Middletown DE 19709</p>
               </div>
             ))}
           </div>

@@ -19,20 +19,13 @@ import {
   Globe,
   Rocket,
   Star,
-  ArrowRight,
-  Bell,
-  User,
-  Settings,
-  Cloud
+  ArrowRight
 } from 'lucide-react';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [showSearch, setShowSearch] = useState(false);
-  const [notifications, setNotifications] = useState(3); // Example notification count
   const location = useLocation();
 
   useEffect(() => {
@@ -64,87 +57,18 @@ export function Header() {
       type: 'link'
     },
     { 
-      name: 'Services', 
-      href: '/services', 
-      current: location.pathname === '/services',
-      type: 'dropdown',
-      dropdownItems: [
-        { name: 'AI & Autonomous Systems', href: '/services/ai-autonomous-systems' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity' },
-        { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
-        { name: 'Quantum Technology', href: '/services/quantum-technology' },
-        { name: 'Micro SAAS Solutions', href: '/services/micro-saas-solutions' },
-        { name: 'Industry Solutions', href: '/services/industry-solutions' },
-        { name: 'Advanced Cybersecurity Suite', href: '/advanced-cybersecurity-suite' },
-        { name: 'Accessibility Auditor', href: '/accessibility-auditor' },
-        { name: 'Affiliate Attribution Hub', href: '/affiliate-attribution-hub' }
-      ]
+      path: '/services', 
+      label: 'Services', 
+      icon: '🤖',
+      description: 'Explore our comprehensive service offerings',
+      hasDropdown: true
     },
     { 
-      name: 'AI Solutions', 
-      href: '/ai-solutions', 
-      current: location.pathname === '/ai-solutions',
-      type: 'dropdown',
-      dropdownItems: [
-        { name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager' },
-        { name: 'AI Autonomous Research Assistant', href: '/ai-autonomous-research-assistant' },
-        { name: 'AI Autonomous Decision Engine', href: '/ai-autonomous-decision-engine' },
-        { name: 'AI Autonomous Code Review', href: '/ai-autonomous-code-review' },
-        { name: 'AI Autonomous Creative Director', href: '/ai-autonomous-creative-director' },
-        { name: 'AI Autonomous Data', href: '/ai-autonomous-data' },
-        { name: 'AI Autonomous Research', href: '/ai-autonomous-research' },
-        { name: 'AI Autonomous Systems Platform', href: '/ai-autonomous-systems-platform' },
-        { name: 'AI Autonomous DevOps', href: '/ai-autonomous-devops' },
-        { name: 'AI Autonomous Education Professor', href: '/ai-autonomous-education-professor' },
-        { name: 'AI Autonomous Healthcare Physician', href: '/ai-autonomous-healthcare-physician' },
-        { name: 'AI Autonomous Learning System', href: '/ai-autonomous-learning-system' },
-        { name: 'AI Autonomous Legal Counsel', href: '/ai-autonomous-legal-counsel' },
-        { name: 'AI Autonomous Logistics', href: '/ai-autonomous-logistics' },
-        { name: 'AI Autonomous Manufacturing', href: '/ai-autonomous-manufacturing' },
-        { name: 'AI Autonomous Robotics', href: '/ai-autonomous-robotics' },
-        { name: 'AI Autonomous Scientific Researcher', href: '/ai-autonomous-scientific-researcher' },
-        { name: 'AI Autonomous Security', href: '/ai-autonomous-security' },
-        { name: 'AI Autonomous Testing', href: '/ai-autonomous-testing' },
-        { name: 'AI Autonomous Vehicle Platform', href: '/ai-autonomous-vehicle-platform' },
-        { name: 'AI Autonomous Vehicles', href: '/ai-autonomous-vehicles' },
-        { name: 'AI Autonomous Venture Capitalist', href: '/ai-autonomous-venture-capitalist' },
-        { name: 'AI Biomedical Research', href: '/ai-biomedical-research' },
-        { name: 'AI Biotech Drug Discovery', href: '/ai-biotech-drug-discovery' },
-        { name: 'AI Blockchain Analytics', href: '/ai-blockchain-analytics' },
-        { name: 'AI Blockchain Governance', href: '/ai-blockchain-governance' },
-        { name: 'AI Brain Computer Interface', href: '/ai-brain-computer-interface' },
-        { name: 'AI Brain Interface', href: '/ai-brain-interface' },
-        { name: 'AI Brand Personality Generator', href: '/ai-brand-personality-generator' },
-        { name: 'AI Business Intelligence Elite', href: '/ai-business-intelligence-elite' },
-        { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' },
-        { name: 'AI Business Intelligence Suite', href: '/ai-business-intelligence-suite' },
-        { name: 'AI Business Intelligence', href: '/ai-business-intelligence' },
-        { name: 'AI Climate Prediction Engine', href: '/ai-climate-prediction-engine' },
-        { name: 'AI Climate Prediction Platform', href: '/ai-climate-prediction-platform' },
-        { name: 'AI Climate Prediction', href: '/ai-climate-prediction' },
-        { name: 'AI Code Generation Enterprise', href: '/ai-code-generation-enterprise' },
-        { name: 'AI Code Review Copilot', href: '/ai-code-review-copilot' },
-        { name: 'AI Code Review', href: '/ai-code-review' },
-        { name: 'AI Compliance Automation', href: '/ai-compliance-automation' },
-        { name: 'AI Computer Vision Platform', href: '/ai-computer-vision-platform' },
-        { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution' },
-        { name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-platform' },
-        { name: 'AI Consciousness Simulation Platform', href: '/ai-consciousness-simulation-platform' },
-        { name: 'AI Consciousness Simulation', href: '/ai-consciousness-simulation' },
-        { name: 'AI Consciousness Simulator', href: '/ai-consciousness-simulator' },
-        { name: 'AI Content Creation Revolution', href: '/ai-content-creation-revolution' },
-        { name: 'AI Content Creation', href: '/ai-content-creation' },
-        { name: 'AI Content Factory', href: '/ai-content-factory' },
-        { name: 'AI Content Generation Automation', href: '/ai-content-generation-automation' },
-        { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro' },
-        { name: 'AI Content Generator', href: '/ai-content-generator' },
-        { name: 'AI Content Marketing Automation', href: '/ai-content-marketing-automation' },
-        { name: 'AI Content Personalization Engine', href: '/ai-content-personalization-engine' },
-        { name: 'AI Creativity Studio', href: '/ai-creativity-studio' },
-        { name: 'AI Market Research', href: '/ai-market-research' },
-        { name: 'AI Powered Enterprise Security', href: '/ai-powered-enterprise-security' },
-        { name: 'AI Workflow Automation', href: '/ai-workflow-automation' }
-      ]
+      path: '/solutions/enterprise', 
+      label: 'Solutions', 
+      icon: '💼',
+      description: 'Industry-specific solutions',
+      hasDropdown: true
     },
     { 
       name: 'Solutions', 
@@ -213,43 +137,78 @@ export function Header() {
       icon: Brain,
       description: 'Intelligent solutions powered by artificial intelligence',
       services: [
-        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', description: 'Advanced autonomous AI systems' },
-        { name: 'Machine Learning Models', path: '/services/machine-learning', description: 'Custom ML model development' },
-        { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', description: 'AI-powered research tools' },
-        { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', description: 'Next-gen neural computing' }
+        { name: 'AI Business Intelligence', path: '/services#ai-bi', description: 'Advanced analytics and insights' },
+        { name: 'AI Marketing Automation', path: '/services#ai-marketing', description: 'Smart marketing optimization' },
+        { name: 'AI HR & Recruitment', path: '/services#ai-hr', description: 'Intelligent talent management' },
+        { name: 'AI Legal Tech', path: '/services#ai-legal', description: 'Automated legal processes' },
+        { name: 'AI Healthcare Analytics', path: '/services#ai-healthcare', description: 'Patient care optimization' }
       ]
     },
     {
-      title: 'Cloud & DevOps',
-      icon: Cloud,
-      description: 'Scalable cloud infrastructure and automation',
-      services: [
-        { name: 'Cloud Migration', path: '/services/cloud-migration', description: 'Seamless cloud transition' },
-        { name: 'DevOps Automation', path: '/services/devops', description: 'CI/CD pipeline optimization' },
-        { name: 'Infrastructure as Code', path: '/services/iac', description: 'Automated infrastructure management' },
-        { name: 'Container Orchestration', path: '/services/kubernetes', description: 'Kubernetes expertise' }
-      ]
-    },
-    {
-      title: 'Cybersecurity',
+      title: 'Cybersecurity & Compliance',
       icon: Shield,
-      description: 'Comprehensive security solutions',
+      description: 'Protect your digital assets with cutting-edge security',
       services: [
-        { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', description: 'Automated compliance management' },
-        { name: 'Threat Detection', path: '/services/threat-detection', description: 'Advanced threat monitoring' },
-        { name: 'Security Audits', path: '/services/security-audits', description: 'Comprehensive security assessments' },
-        { name: 'Incident Response', path: '/services/incident-response', description: '24/7 security monitoring' }
+        { name: 'Quantum-Safe Security', path: '/services#quantum-security', description: 'Future-proof protection' },
+        { name: 'Security Assessment', path: '/services#security-assessment', description: 'Comprehensive security audit' },
+        { name: 'Compliance & Audit', path: '/services#compliance', description: 'Regulatory compliance solutions' },
+        { name: 'Threat Detection', path: '/services#threat-detection', description: 'Real-time security monitoring' }
       ]
     },
+    {
+      title: 'Cloud & Infrastructure',
+      icon: Cpu,
+      description: 'Scalable cloud solutions and infrastructure management',
+      services: [
+        { name: 'Cloud Migration', path: '/services#cloud-migration', description: 'Seamless cloud transition' },
+        { name: 'Network Infrastructure', path: '/services#network', description: 'Robust network solutions' },
+        { name: 'Managed IT Services', path: '/services#managed-it', description: '24/7 IT support' },
+        { name: 'DevOps Automation', path: '/services#devops', description: 'Streamlined development' }
+      ]
+    },
+    {
+      title: 'Emerging Technologies',
+      icon: Rocket,
+      description: 'Cutting-edge solutions for tomorrow\'s challenges',
+      services: [
+        { name: 'Blockchain Solutions', path: '/services#blockchain', description: 'Decentralized applications' },
+        { name: 'IoT Platforms', path: '/services#iot', description: 'Connected device management' },
+        { name: 'Quantum Computing', path: '/services#quantum', description: 'Next-generation computing' },
+        { name: 'AR/VR Solutions', path: '/services#ar-vr', description: 'Immersive experiences' }
+      ]
+    },
+    {
+      title: 'Industry Solutions',
+      icon: Building,
+      description: 'Tailored solutions for specific industries',
+      services: [
+        { name: 'Healthcare Technology', path: '/solutions/healthcare', description: 'Medical innovation' },
+        { name: 'Financial Services', path: '/services#financial', description: 'Fintech solutions' },
+        { name: 'Manufacturing Intelligence', path: '/services#manufacturing', description: 'Smart manufacturing' },
+        { name: 'Retail Technology', path: '/services#retail', description: 'Digital retail transformation' }
+      ]
+    }
+  ];
+
+  const solutionCategories = [
     {
       title: 'Enterprise Solutions',
       icon: Building,
       description: 'Large-scale business transformation',
-      services: [
-        { name: 'Digital Transformation', path: '/digital-transformation', description: 'End-to-end business modernization' },
-        { name: 'IT Asset Management', path: '/ai-powered-it-asset-management', description: 'AI-powered asset tracking' },
-        { name: 'Business Operations', path: '/autonomous-business-operations-platform', description: 'Automated business processes' },
-        { name: '5G Enterprise', path: '/5g-enterprise-solutions', description: 'Next-gen network solutions' }
+      solutions: [
+        { name: 'Digital Transformation', path: '/digital-transformation', description: 'Complete business modernization' },
+        { name: 'Enterprise AI', path: '/solutions/enterprise', description: 'AI-powered enterprise solutions' },
+        { name: 'Data Analytics', path: '/services#analytics', description: 'Business intelligence platform' }
+      ]
+    },
+    {
+      title: 'SMB Solutions',
+      icon: Users,
+      description: 'Scalable solutions for growing businesses',
+      solutions: [
+        { name: 'Micro SAAS', path: '/services/micro-saas-solutions', description: 'Custom software solutions' },
+        { name: 'Cloud Migration', path: '/cloud-devops', description: 'Affordable cloud solutions' },
+        { name: 'IT Support', path: '/services#it-support', description: 'Managed IT services' }
       ]
     },
     {
@@ -257,136 +216,152 @@ export function Header() {
       icon: Rocket,
       description: 'Accelerate your startup growth',
       solutions: [
-        { name: 'MVP Development', path: '/services/mvp-development', description: 'Rapid prototype development' },
+        { name: 'MVP Development', path: '/services#mvp', description: 'Rapid prototype development' },
         { name: 'AI Integration', path: '/ai-solutions', description: 'AI-powered features' },
-        { name: 'Scalable Architecture', path: '/services/scalable-architecture', description: 'Growth-ready infrastructure' }
+        { name: 'Scalable Architecture', path: '/services#architecture', description: 'Growth-ready infrastructure' }
       ]
     }
   };
 
-  const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
+  const handleDropdownToggle = (dropdown: string) => {
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  };
+
+  const closeDropdowns = () => {
+    setActiveDropdown(null);
   };
 
   const isActive = (path: string) => location.pathname === path;
 
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      // Implement search functionality
-      console.log('Searching for:', searchQuery);
-      setSearchQuery('');
-      setShowSearch(false);
-    }
-  };
-
   return (
-    <header className={`bg-background/80 backdrop-blur-md border-b border-border sticky top-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'shadow-lg' : ''
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-zion-blue-dark/95 backdrop-blur-md border-b border-zion-cyan/20 shadow-2xl shadow-zion-cyan/10' 
+        : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-zion-blue to-zion-purple rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">Z</span>
+          <Link to="/" className="flex items-center space-x-3 group">
+            <div className="relative">
+              <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Rocket className="w-7 h-7 text-white" />
+              </div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl blur opacity-25 group-hover:opacity-40 transition-opacity duration-300"></div>
             </div>
-            <span className="text-xl font-bold text-gradient">Zion Tech Group</span>
+            <div className="hidden md:block">
+              <div className="text-2xl font-bold text-white group-hover:text-zion-cyan transition-colors">
+                Zion Tech Group
+              </div>
+              <div className="text-xs text-zion-slate-light">Revolutionary Technology Solutions</div>
+            </div>
           </Link>
-
-          {/* Search Bar */}
-          <div className="hidden md:flex flex-1 max-w-md mx-8">
-            <form onSubmit={handleSearch} className="relative w-full">
-              <input
-                type="text"
-                placeholder="Search services..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-2 pl-10 pr-4 text-sm bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-              />
-              <Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
-            </form>
-          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
-              <div key={item.path} className="relative group dropdown-container">
+              <div key={item.path} className="relative">
                 {item.hasDropdown ? (
                   <button
                     onClick={() => handleDropdownToggle(item.label.toLowerCase())}
-                    className={`flex items-center space-x-1 px-3 py-2 rounded-lg transition-all duration-300 ${
-                      isActive(item.path) 
-                        ? 'text-zion-cyan bg-zion-cyan/10' 
-                        : 'text-gray-300 hover:text-white hover:bg-white/10'
-                    }`}
+                    className="flex items-center space-x-1 text-white hover:text-zion-cyan transition-colors py-2 px-3 rounded-lg hover:bg-white/10"
                   >
-                    <span>{item.icon}</span>
                     <span>{item.label}</span>
-                    <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                      activeDropdown === item.label.toLowerCase() ? 'rotate-180' : ''
+                    }`} />
                   </button>
                 ) : (
                   <Link
-                    to={item.href}
-                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                      item.current
-                        ? 'text-zion-cyan bg-zion-cyan/10'
-                        : 'text-muted-foreground hover:text-foreground hover:bg-muted'
-                    }`}
+                    to={item.path}
+                    className="text-white hover:text-zion-cyan transition-colors py-2 px-3 rounded-lg hover:bg-white/10"
                   >
-                    {item.name}
+                    {item.label}
                   </Link>
                 )}
 
-                {/* Enhanced Dropdown Menus */}
-                {item.hasDropdown && activeDropdown === item.label.toLowerCase() && (
-                  <div className="absolute top-full left-0 mt-2 w-96 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-cyan/30 rounded-xl shadow-2xl shadow-zion-cyan/10 overflow-hidden">
-                    <div className="p-6">
-                      <h3 className="text-xl font-semibold text-white mb-6 flex items-center">
-                        <span className="mr-2">{item.icon}</span>
-                        {item.label}
-                      </h3>
-                      <div className="grid grid-cols-1 gap-4">
-                        {item.label.toLowerCase() === 'services' && serviceCategories.map((category) => (
-                          <div key={category.title} className="group">
-                            <div className="flex items-center space-x-3 p-4 rounded-lg hover:bg-zion-cyan/10 transition-colors duration-200">
-                              <category.icon className="w-6 h-6 text-zion-cyan" />
-                              <div className="flex-1">
-                                <h4 className="font-semibold text-white group-hover:text-zion-cyan transition-colors duration-200">
-                                  {category.title}
-                                </h4>
-                                <p className="text-sm text-gray-400 mt-1">{category.description}</p>
-                              </div>
+                {/* Services Dropdown */}
+                {item.hasDropdown && item.label === 'Services' && activeDropdown === 'services' && (
+                  <div className="absolute top-full left-0 mt-2 w-96 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/25 p-6">
+                    <div className="grid grid-cols-1 gap-4">
+                      {serviceCategories.map((category) => (
+                        <div key={category.title} className="group">
+                          <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/10 transition-colors">
+                            <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
+                              <category.icon className="w-5 h-5 text-white" />
                             </div>
-                            <div className="ml-9 space-y-2">
-                              {category.services?.map((service) => (
-                                <Link
-                                  key={service.name}
-                                  to={service.path}
-                                  className="block p-3 rounded-lg hover:bg-zion-cyan/10 transition-colors duration-200"
-                                >
-                                  <div className="text-sm font-medium text-gray-300 hover:text-zion-cyan transition-colors duration-200">
-                                    {service.name}
-                                  </div>
-                                  <div className="text-xs text-gray-500 mt-1">{service.description}</div>
-                                </Link>
-                              ))}
-                              {category.solutions?.map((solution) => (
-                                <Link
-                                  key={solution.name}
-                                  to={solution.path}
-                                  className="block p-3 rounded-lg hover:bg-zion-cyan/10 transition-colors duration-200"
-                                >
-                                  <div className="text-sm font-medium text-gray-300 hover:text-zion-cyan transition-colors duration-200">
-                                    {solution.name}
-                                  </div>
-                                  <div className="text-xs text-gray-500 mt-1">{solution.description}</div>
-                                </Link>
-                              ))}
+                            <div className="flex-1">
+                              <h4 className="font-semibold text-white group-hover:text-zion-cyan transition-colors">
+                                {category.title}
+                              </h4>
+                              <p className="text-sm text-zion-slate-light">{category.description}</p>
                             </div>
                           </div>
-                        ))}
-                      </div>
+                          <div className="ml-13 pl-4 border-l border-zion-cyan/20">
+                            {category.services.map((service) => (
+                              <Link
+                                key={service.name}
+                                to={service.path}
+                                onClick={closeDropdowns}
+                                className="block p-2 rounded-lg hover:bg-white/5 transition-colors"
+                              >
+                                <div className="font-medium text-white hover:text-zion-cyan transition-colors">
+                                  {service.name}
+                                </div>
+                                <div className="text-sm text-zion-slate-light">{service.description}</div>
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="mt-4 pt-4 border-t border-zion-cyan/20">
+                      <Link
+                        to="/services-showcase"
+                        onClick={closeDropdowns}
+                        className="flex items-center justify-center w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                      >
+                        <span>View All Services</span>
+                        <ArrowRight className="ml-2 w-4 h-4" />
+                      </Link>
+                    </div>
+                  </div>
+                )}
+
+                {/* Solutions Dropdown */}
+                {item.hasDropdown && item.label === 'Solutions' && activeDropdown === 'solutions' && (
+                  <div className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark/95 backdrop-blur-md border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/25 p-6">
+                    <div className="space-y-4">
+                      {solutionCategories.map((category) => (
+                        <div key={category.title} className="group">
+                          <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/10 transition-colors">
+                            <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
+                              <category.icon className="w-5 h-5 text-white" />
+                            </div>
+                            <div className="flex-1">
+                              <h4 className="font-semibold text-white group-hover:text-zion-cyan transition-colors">
+                                {category.title}
+                              </h4>
+                              <p className="text-sm text-zion-slate-light">{category.description}</p>
+                            </div>
+                          </div>
+                          <div className="ml-13 pl-4 border-l border-zion-cyan/20">
+                            {category.solutions.map((solution) => (
+                              <Link
+                                key={solution.name}
+                                to={solution.path}
+                                onClick={closeDropdowns}
+                                className="block p-2 rounded-lg hover:bg-white/5 transition-colors"
+                              >
+                                <div className="font-medium text-white hover:text-zion-cyan transition-colors">
+                                  {solution.name}
+                                </div>
+                                <div className="text-sm text-zion-slate-light">{solution.description}</div>
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 )}
@@ -394,70 +369,41 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Right Side Actions */}
-          <div className="flex items-center space-x-4">
-            {/* Search */}
-            <button
-              onClick={() => setShowSearch(!showSearch)}
-              className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200"
-            >
-              <Search className="w-5 h-5" />
-            </button>
+          {/* Contact Info & CTA */}
+          <div className="hidden lg:flex items-center space-x-6">
+            {/* Contact Info */}
+            <div className="flex items-center space-x-4 text-zion-slate-light">
+              <div className="flex items-center space-x-2 hover:text-zion-cyan transition-colors cursor-pointer">
+                <Phone className="w-4 h-4" />
+                <span className="text-sm">+1 (302) 464-0950</span>
+              </div>
+              <div className="flex items-center space-x-2 hover:text-zion-cyan transition-colors cursor-pointer">
+                <Mail className="w-4 h-4" />
+                <span className="text-sm">kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center space-x-2 text-green-400">
+                <Shield className="w-4 h-4" />
+                <span className="text-sm">ISO 27001</span>
+              </div>
+            </div>
 
-            {/* Notifications */}
-            <button className="relative p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200">
-              <Bell className="w-5 h-5" />
-              {notifications > 0 && (
-                <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">
-                  {notifications}
-                </span>
-              )}
-            </button>
-
-            {/* User Menu */}
-            <button className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200">
-              <User className="w-5 h-5" />
-            </button>
-
-            {/* Contact Button */}
+            {/* CTA Button */}
             <Link
               to="/contact"
-              className="hidden sm:flex items-center space-x-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25"
             >
-              <span>Get Started</span>
-              <ArrowRight className="w-4 h-4" />
+              Get Started
             </Link>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsSidebarOpen(true)}
-              className="lg:hidden p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200"
-            >
-              <Menu className="w-6 h-6" />
-            </button>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsSidebarOpen(true)}
+            className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors"
+          >
+            <Menu className="w-6 h-6" />
+          </button>
         </div>
-
-        {/* Enhanced Search Bar */}
-        {showSearch && (
-          <div className="pb-4">
-            <form onSubmit={handleSearch} className="relative">
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search services, solutions, or resources..."
-                className="w-full bg-white/10 border border-zion-cyan/30 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan/50 backdrop-blur-sm"
-              />
-              <button
-                type="submit"
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 p-2 text-zion-cyan hover:text-white transition-colors duration-200"
-              >
-                <Search className="w-5 h-5" />
-              </button>
-            </form>
-          </div>
-        )}
       </div>
 
       {/* Mobile Sidebar */}

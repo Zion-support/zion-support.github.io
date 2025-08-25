@@ -251,7 +251,7 @@ export function Services() {
               <div>
                 <h4 className="text-lg font-semibold text-white mb-4">Contact</h4>
                 <div className="space-y-2 text-zion-slate-light">
-                  <p>📱 +1 302 464 0950</p>
+                  <p>📱 +1 (302) 464-0950</p>
                   <p>✉️ kleber@ziontechgroup.com</p>
                   <p>📍 364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
