@@ -84,6 +84,7 @@ const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServicesPage'));
 const ServicesOverviewPage = React.lazy(() => import('./pages/ServicesOverviewPage'));
 const AIServicesShowcase = React.lazy(() => import('./pages/AIServicesShowcase'));
@@ -205,6 +206,9 @@ const Cookies = React.lazy(() => import('./pages/Cookies'));
 =======
 const FAQPage = React.lazy(() => import('./pages/FAQ'));
 >>>>>>> origin/cursor/website-audit-and-enhancement-bbee
+=======
+const MicroSaasServices = React.lazy(() => import('./pages/MicroSaasServices'));
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b8ff
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -215,12 +219,16 @@ const baseRoutes = [
   { path: '/talents', element: <TalentsPage /> },
   { path: '/services', element: <ServicesPage /> },
 <<<<<<< HEAD
+<<<<<<< HEAD
   { path: '/enhanced-services', element: <EnhancedServicesPage /> },
 =======
   { path: '/enhanced-services', element: <EnhancedServicesShowcase /> },
   { path: '/ai-services', element: <AIServicesPage /> },
   { path: '/cybersecurity-services', element: <CybersecurityServicesPage /> },
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-017a
+=======
+  { path: '/micro-saas-services', element: <MicroSaasServices /> },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b8ff
   { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
   { path: '/categories', element: <Categories /> },
   { path: '/equipment', element: <EquipmentPage /> },

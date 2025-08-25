@@ -8,6 +8,7 @@ import { useAuth } from "@/hooks/useAuth";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 <<<<<<< HEAD
@@ -46,6 +47,11 @@ import { MessageSquare, Briefcase, Users, Settings, BarChart3 } from "lucide-rea
 >>>>>>> origin/cursor/website-audit-and-enhancement-de4e
 import { useTranslation } from "react-i18next";
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+=======
+import { MessageSquare, ChevronDown } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useState, useRef, useEffect } from "react";
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b8ff
 
 interface MainNavigationProps {
   isAdmin?: boolean;
@@ -72,12 +78,28 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   const dropdownRef = useRef<HTMLDivElement>(null);
+=======
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setActiveDropdown(null);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b8ff
 
 =======
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -686,12 +708,24 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       href: '/services',
       matches: (path: string) => path.startsWith('/services') || path.startsWith('/ai-services') || path.startsWith('/it-services') || path.startsWith('/digital-marketing') || path.startsWith('/business-solutions')
 =======
       href: '/enhanced-services',
       matches: (path: string) => path.startsWith('/services') || path.startsWith('/enhanced-services')
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-099c
+=======
+      href: '/services',
+      matches: (path: string) => path.startsWith('/services') || path.startsWith('/micro-saas-services'),
+      hasDropdown: true,
+      dropdownItems: [
+        { href: '/services', label: 'IT Services' },
+        { href: '/micro-saas-services', label: 'Micro SAAS' },
+        { href: '/it-onsite-services', label: 'Onsite Support' },
+        { href: '/zion-hire-ai', label: 'AI Hiring' }
+      ]
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b8ff
     },
     {
       key: 'categories',
@@ -834,6 +868,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <nav className={cn("navbar ml-6 hidden md:flex", className)} ref={dropdownRef}>
 =======
     <nav className={cn("navbar ml-6 hidden lg:flex", className)} ref={dropdownRef}>
@@ -850,15 +885,24 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-3b60
+=======
+    <nav className={cn("navbar ml-6 hidden md:flex", className)} ref={dropdownRef}>
+      <ul className="flex items-center gap-1">
+        {links.map((link) => (
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b8ff
           <li key={link.name} className="relative">
             {link.hasDropdown ? (
               <div className="relative">
                 <button
 <<<<<<< HEAD
+<<<<<<< HEAD
                   onClick={() => toggleDropdown(link.key)}
 =======
                   onClick={() => handleDropdownToggle(link.key)}
 >>>>>>> origin/cursor/website-audit-and-enhancement-3b60
+=======
+                  onClick={() => setActiveDropdown(activeDropdown === link.key ? null : link.key)}
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b8ff
                   className={cn(
                     "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
                     link.matches(location.pathname)
@@ -866,6 +910,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                       : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
                   )}
                 >
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -977,16 +1022,39 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                       </Link>
                     ))}
 >>>>>>> origin/cursor/website-audit-and-enhancement-3b60
+=======
+                  {link.name}
+                  <ChevronDown className="ml-1 w-3 h-3" />
+                </button>
+                
+                {activeDropdown === link.key && (
+                  <div className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-blue-light rounded-lg shadow-xl z-50">
+                    <div className="py-2">
+                      {link.dropdownItems?.map((item) => (
+                        <Link
+                          key={item.href}
+                          to={item.href}
+                          className="block px-4 py-2 text-sm text-zion-slate-light hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
+                          onClick={() => setActiveDropdown(null)}
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b8ff
                   </div>
                 )}
               </div>
             ) : (
+<<<<<<< HEAD
 =======
         {links.map((link) => {
           const IconComponent = link.icon;
           return (
             <li key={link.name}>
 >>>>>>> origin/cursor/website-audit-and-enhancement-de4e
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b8ff
               <Link
                 to={link.href}
                 className={cn(
@@ -996,6 +1064,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                     : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
                 )}
               >
+<<<<<<< HEAD
 <<<<<<< HEAD
                 {link.name}
               </Link>
@@ -1216,6 +1285,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         </li>
         
 =======
+=======
+                {link.name}
+              </Link>
+            )}
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b8ff
           </li>
         ))}
         

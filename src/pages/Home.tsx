@@ -215,6 +215,7 @@ import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { HomePageSEO } from "@/components/SEO";
 import { HeroSection } from "@/components/HeroSection";
 =======
@@ -233,6 +234,11 @@ import { EnhancedHeroSection } from "@/components/home/EnhancedHeroSection";
 import { SEO } from "@/components/SEO";
 import { EnhancedHeroSection } from "@/components/home/EnhancedHeroSection";
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-099c
+=======
+import { SEO } from "@/components/SEO";
+import { FuturisticHero } from "@/components/home/FuturisticHero";
+import { EnhancedServicesShowcase } from "@/components/home/EnhancedServicesShowcase";
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b8ff
 import { QuickAccess } from "@/components/home/QuickAccess";
 import { FeatureCTAs } from "@/components/home/FeatureCTAs";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
@@ -670,6 +676,7 @@ export default function Home() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         title="Zion - The Tech & AI Marketplace" 
         description="Discover top AI and tech talent, services, and equipment in one place."
         keywords="AI, technology, marketplace, services, talent"
@@ -710,6 +717,12 @@ export default function Home() {
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-099c
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-bbee
+=======
+        title="Zion Tech Group - The Future of Tech Solutions" 
+        description="Discover cutting-edge AI services, innovative IT solutions, and transformative business tools. Zion Tech Group - Where innovation meets excellence."
+        keywords="AI services, IT solutions, business automation, cloud services, cybersecurity, micro SAAS, Zion Tech Group"
+        canonical="https://ziontechgroup.com/"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b8ff
       />
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-73d5
 
@@ -738,6 +751,7 @@ export default function Home() {
       <AnimatedBackground variant="particles" intensity="medium" />
       <FloatingElements />
 
+<<<<<<< HEAD
       <ITServiceRequestHero />
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
 
@@ -994,6 +1008,11 @@ export default function Home() {
 =======
       <EnhancedHeroSection />
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-099c
+=======
+      <FuturisticHero />
+
+      <EnhancedServicesShowcase />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b8ff
       
       <QuickAccess />
       
