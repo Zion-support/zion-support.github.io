@@ -98,54 +98,43 @@ export function Services() {
       case 'Voice AI': return Brain;
       case 'Quantum Security': return Shield;
       case 'Content Creation': return Sparkles;
-      case 'Identity Management': return Lock;
-      case 'Sales Intelligence': return TrendingUp;
-      case 'Incident Response': return Shield;
-      case 'Customer Analytics': return Database;
-      case 'Supply Chain': return Target;
-      case 'HR Technology': return Users;
-      case 'Financial Security': return Shield;
-      case 'Storage Solutions': return Database;
-      case 'Customer Experience': return Users;
-      case 'Zero Trust Security': return Shield;
-      case 'NFT Platform': return Lock;
-      case 'DeFi Services': return TrendingUp;
-      case 'Security Testing': return Shield;
-      case 'Process Automation': return Zap;
-      case 'Governance': return Award;
       default: return Rocket;
     }
   };
 
   const getCategoryColor = (category: string) => {
     switch (category) {
-      case 'AI & Machine Learning': return 'neon-cyan';
-      case 'Cybersecurity': return 'neon-red';
-      case 'Cloud & Infrastructure': return 'neon-blue';
-      case 'Data & Analytics': return 'neon-green';
-      case 'Digital Transformation': return 'neon-purple';
-      case 'Blockchain & Web3': return 'neon-orange';
-      case 'Voice AI': return 'neon-pink';
-      case 'Quantum Security': return 'neon-yellow';
-      default: return 'neon-cyan';
+      case 'AI & Machine Learning': return 'from-purple-500 to-pink-500';
+      case 'Cybersecurity': return 'from-red-500 to-pink-500';
+      case 'Cloud & Infrastructure': return 'from-blue-500 to-indigo-500';
+      case 'Data & Analytics': return 'from-green-500 to-emerald-500';
+      case 'Digital Transformation': return 'from-orange-500 to-yellow-500';
+      case 'Web & Mobile Development': return 'from-cyan-500 to-blue-500';
+      case 'IT Support & Consulting': return 'from-gray-500 to-slate-500';
+      case 'Blockchain & Web3': return 'from-purple-500 to-violet-500';
+      case 'Internet of Things': return 'from-teal-500 to-cyan-500';
+      case 'Voice AI': return 'from-pink-500 to-rose-500';
+      case 'Quantum Security': return 'from-indigo-500 to-purple-500';
+      case 'Content Creation': return 'from-yellow-500 to-orange-500';
+      default: return 'from-gray-500 to-slate-500';
     }
   };
 
   return (
-    <div className="min-h-screen futuristic-bg text-white relative overflow-hidden">
+    <div className="min-h-screen futuristic-bg">
       {/* Animated Background */}
-      <div className="absolute inset-0 quantum-mesh opacity-30"></div>
+      <div className="absolute inset-0 quantum-mesh opacity-20"></div>
       
       {/* Matrix Rain Effect */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(30)].map((_, i) => (
+        {[...Array(20)].map((_, i) => (
           <div
             key={i}
-            className="absolute text-cyan-500 text-xs animate-matrix-rain opacity-20"
+            className="absolute text-cyan-500 text-xs animate-matrix-rain opacity-10"
             style={{
               left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 20}s`,
-              animationDuration: `${20 + Math.random() * 10}s`
+              animationDelay: `${Math.random() * 15}s`,
+              animationDuration: `${15 + Math.random() * 10}s`
             }}
           >
             {Math.random() > 0.5 ? '1' : '0'}
@@ -153,114 +142,102 @@ export function Services() {
         ))}
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header Section */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 neon-text neon-cyan">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text neon-cyan">
             Our Services
           </h1>
-          <p className="text-xl md:text-2xl text-cyan-300 mb-8 max-w-4xl mx-auto">
-            Discover our comprehensive range of cutting-edge technology solutions designed to transform your business
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Discover our comprehensive suite of cutting-edge AI, cybersecurity, and technology solutions 
+            designed to transform your business and drive innovation.
           </p>
+        </motion.div>
+
+        {/* Search and Filters */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 mb-12"
+        >
+          <h2 className="text-2xl font-bold text-white mb-6 text-center">Search and Filters</h2>
           
-          {/* Contact Information */}
-          <div className="bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 mb-8 max-w-2xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-              <div className="flex flex-col items-center space-y-2">
-                <Phone className="w-5 h-5 text-cyan-400" />
-                <span className="text-sm text-gray-300">Phone</span>
-                <span className="text-cyan-300 font-medium">+1 302 464 0950</span>
-              </div>
-              <div className="flex flex-col items-center space-y-2">
-                <Mail className="w-5 h-5 text-cyan-400" />
-                <span className="text-sm text-gray-300">Email</span>
-                <span className="text-cyan-300 font-medium">kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex flex-col items-center space-y-2">
-                <MapPin className="w-5 h-5 text-cyan-400" />
-                <span className="text-sm text-gray-300">Address</span>
-                <span className="text-cyan-300 font-medium text-xs">364 E Main St STE 1008<br />Middletown DE 19709</span>
-              </div>
+          {/* Search Bar */}
+          <div className="mb-6">
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search services..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-12 pr-4 py-3 futuristic-input"
+              />
             </div>
           </div>
-          
-          {/* Search and Filters */}
-          <div className="max-w-4xl mx-auto mb-12">
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
-              {/* Search Bar */}
-              <div className="lg:col-span-2">
-                <div className="relative">
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-cyan-400 w-5 h-5" />
-                  <input
-                    type="text"
-                    placeholder="Search services..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-12 pr-4 py-3 futuristic-input"
-                  />
-                </div>
-              </div>
-              
-              {/* Category Filter */}
-              <div>
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full futuristic-input"
-                >
-                  {categories.map(category => (
-                    <option key={category} value={category}>
-                      {category === 'all' ? 'All Categories' : category}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              
-              {/* Subcategory Filter */}
-              <div>
-                <select
-                  value={selectedSubcategory}
-                  onChange={(e) => setSelectedSubcategory(e.target.value)}
-                  className="w-full futuristic-input"
-                >
-                  {subcategories.map(subcategory => (
-                    <option key={subcategory} value={subcategory}>
-                      {subcategory === 'all' ? 'All Subcategories' : subcategory}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-            
-            {/* Sort Options */}
-            <div className="flex justify-center mt-4">
-              <div className="flex items-center space-x-4 text-sm">
-                <span className="text-gray-400">Sort by:</span>
-                {[
-                  { value: 'name', label: 'Name' },
-                  { value: 'price-low', label: 'Price: Low to High' },
-                  { value: 'price-high', label: 'Price: High to Low' },
-                  { value: 'category', label: 'Category' }
-                ].map(option => (
-                  <button
-                    key={option.value}
-                    onClick={() => setSortBy(option.value)}
-                    className={`px-3 py-1 rounded-lg transition-colors duration-200 ${
-                      sortBy === option.value
-                        ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/50'
-                        : 'text-gray-400 hover:text-cyan-300 hover:bg-cyan-500/10'
-                    }`}
-                  >
-                    {option.label}
-                  </button>
+
+          {/* Filters */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            {/* Category Filter */}
+            <div>
+              <label className="block text-sm font-medium text-cyan-300 mb-2">Category</label>
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="w-full futuristic-input"
+              >
+                {categories.map((category) => (
+                  <option key={category} value={category}>
+                    {category === 'all' ? 'All Categories' : category}
+                  </option>
                 ))}
-              </div>
+              </select>
             </div>
+
+            {/* Subcategory Filter */}
+            <div>
+              <label className="block text-sm font-medium text-cyan-300 mb-2">Subcategory</label>
+              <select
+                value={selectedSubcategory}
+                onChange={(e) => setSelectedSubcategory(e.target.value)}
+                className="w-full futuristic-input"
+              >
+                {subcategories.map((subcategory) => (
+                  <option key={subcategory} value={subcategory}>
+                    {subcategory === 'all' ? 'All Subcategories' : subcategory}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Sort By */}
+            <div>
+              <label className="block text-sm font-medium text-cyan-300 mb-2">Sort By</label>
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className="w-full futuristic-input"
+              >
+                <option value="name">Name</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="category">Category</option>
+              </select>
+            </div>
+          </div>
+
+          {/* Results Count */}
+          <div className="text-center">
+            <p className="text-gray-300">
+              Showing <span className="text-cyan-400 font-semibold">{sortedServices.length}</span> of{' '}
+              <span className="text-cyan-400 font-semibold">{allServices.length}</span> services
+            </p>
           </div>
         </motion.div>
 
@@ -269,10 +246,10 @@ export function Services() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
-          {sortedServices.map((service) => {
-            const CategoryIcon = getCategoryIcon(service.category);
+          {sortedServices.map((service, index) => {
+            const IconComponent = getCategoryIcon(service.category);
             const categoryColor = getCategoryColor(service.category);
             
             return (
@@ -282,117 +259,99 @@ export function Services() {
                 className="futuristic-card group"
               >
                 {/* Service Header */}
-                <div className="p-6 border-b border-cyan-500/20">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className={`w-12 h-12 bg-gradient-to-br from-${categoryColor} to-${categoryColor}/50 rounded-xl flex items-center justify-center`}>
-                      <CategoryIcon className="w-6 h-6 text-white" />
+                <div className="flex items-start justify-between mb-4">
+                  <div className="flex items-center space-x-3">
+                    <div className={`p-3 bg-gradient-to-r ${categoryColor} rounded-xl`}>
+                      <IconComponent className="w-6 h-6 text-white" />
                     </div>
-                    <div className="text-right">
-                      <div className="text-2xl font-bold text-cyan-400">
-                        {service.currency}{service.price}
-                      </div>
-                      <div className="text-sm text-gray-400">per {service.pricingModel}</div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors duration-200">
+                        {service.title}
+                      </h3>
+                      <p className="text-sm text-gray-400">{service.category}</p>
                     </div>
                   </div>
-                  
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200">
-                    {service.title}
-                  </h3>
-                  
-                  <p className="text-gray-300 text-sm leading-relaxed">
-                    {service.description}
-                  </p>
-                  
-                  <div className="flex items-center justify-between mt-4">
-                    <span className="text-xs text-cyan-400 bg-cyan-400/10 px-2 py-1 rounded-full">
-                      {service.category}
-                    </span>
-                    <span className="text-xs text-purple-400 bg-purple-400/10 px-2 py-1 rounded-full">
-                      {service.subcategory}
-                    </span>
+                  <div className="text-right">
+                    <div className="text-2xl font-bold text-cyan-400">${service.price}</div>
+                    <div className="text-sm text-gray-400">per month</div>
                   </div>
                 </div>
 
-                {/* Service Details */}
-                <div className="p-6">
-                  {/* Key Features */}
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-cyan-300 mb-2 flex items-center">
-                      <Zap className="w-4 h-4 mr-2" />
-                      Key Features
-                    </h4>
-                    <div className="space-y-1">
-                      {service.features.slice(0, 3).map((feature, index) => (
-                        <div key={index} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
-                          <span>{feature}</span>
-                        </div>
-                      ))}
-                      {service.features.length > 3 && (
-                        <div className="text-xs text-cyan-400">
-                          +{service.features.length - 3} more features
-                        </div>
-                      )}
-                    </div>
-                  </div>
+                {/* Description */}
+                <p className="text-gray-300 mb-4 leading-relaxed">
+                  {service.description}
+                </p>
 
-                  {/* Benefits */}
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-cyan-300 mb-2 flex items-center">
-                      <TrendingUp className="w-4 h-4 mr-2" />
-                      Key Benefits
-                    </h4>
-                    <div className="space-y-1">
-                      {service.benefits.slice(0, 2).map((benefit, index) => (
-                        <div key={index} className="flex items-center text-sm text-gray-300">
-                          <Star className="w-3 h-3 text-yellow-400 mr-2 flex-shrink-0" />
-                          <span>{benefit}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+                {/* Features */}
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-cyan-300 mb-2">Key Features</h4>
+                  <ul className="space-y-1">
+                    {service.features.slice(0, 3).map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-                  {/* Service Info */}
-                  <div className="grid grid-cols-2 gap-4 mb-6 text-xs">
-                    <div className="flex items-center text-gray-400">
-                      <Clock className="w-3 h-3 mr-1" />
-                      <span>{service.estimatedDelivery}</span>
-                    </div>
-                    <div className="flex items-center text-gray-400">
-                      <Shield className="w-3 h-3 mr-1" />
-                      <span>{service.supportLevel}</span>
-                    </div>
-                    <div className="flex items-center text-gray-400">
-                      <Users className="w-3 h-3 mr-1" />
-                      <span>{service.targetAudience.length} audiences</span>
-                    </div>
-                    <div className="flex items-center text-gray-400">
-                      <Target className="w-3 h-3 mr-1" />
-                      <span>{service.useCases.length} use cases</span>
-                    </div>
-                  </div>
+                {/* Benefits */}
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-cyan-300 mb-2">Benefits</h4>
+                  <ul className="space-y-1">
+                    {service.benefits.slice(0, 2).map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-sm text-gray-300">
+                        <TrendingUp className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
 
-                  {/* Market Price */}
-                  <div className="mb-6 p-3 bg-black/20 rounded-lg border border-cyan-500/20">
-                    <div className="text-center">
-                      <div className="text-xs text-gray-400 mb-1">Market Price Range</div>
-                      <div className="text-lg font-bold text-cyan-400">{service.marketPrice}</div>
-                    </div>
+                {/* Market Price Comparison */}
+                <div className="mb-4 p-3 bg-gray-800/30 rounded-lg border border-gray-700/50">
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-gray-400">Market Price:</span>
+                    <span className="text-gray-300 line-through">${service.marketPrice}</span>
                   </div>
-
-                  {/* CTA Button */}
-                  <div className="flex space-x-3">
-                    <Link
-                      to="/contact"
-                      className="flex-1 futuristic-btn neon-glow neon-cyan text-center"
-                    >
-                      Get Quote
-                    </Link>
-                    <button className="px-4 py-2 border border-cyan-500/50 text-cyan-300 rounded-lg hover:bg-cyan-500/10 transition-colors duration-200">
-                      Learn More
-                    </button>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-gray-400">Our Price:</span>
+                    <span className="text-cyan-400 font-semibold">${service.price}</span>
+                  </div>
+                  <div className="text-xs text-green-400 text-center mt-1">
+                    Save ${Number(service.marketPrice) - service.price}/month
                   </div>
                 </div>
+
+                {/* Action Buttons */}
+                <div className="flex space-x-3">
+                  <Link
+                    to="/contact"
+                    className="flex-1 futuristic-btn neon-glow neon-cyan text-center"
+                  >
+                    Get Quote
+                  </Link>
+                  <Link
+                    to={`/services/${service.id}`}
+                    className="flex-1 futuristic-btn neon-glow neon-purple text-center"
+                  >
+                    Learn More
+                  </Link>
+                </div>
+
+                {/* Service Tags */}
+                {service.tags && service.tags.length > 0 && (
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {service.tags.slice(0, 3).map((tag, idx) => (
+                      <span
+                        key={idx}
+                        className="px-2 py-1 bg-cyan-500/20 text-cyan-300 text-xs rounded-full border border-cyan-500/30"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </motion.div>
             );
           })}
