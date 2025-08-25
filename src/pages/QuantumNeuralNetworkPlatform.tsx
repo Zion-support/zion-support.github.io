@@ -1,181 +1,184 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Brain, Zap, Cpu, Network, Shield, TrendingUp, Users, Globe } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { 
+  CpuChipIcon, 
+  ChartBarIcon, 
+  RocketLaunchIcon,
+  ShieldCheckIcon,
+  LightBulbIcon,
+  CogIcon,
+  GlobeAltIcon
+} from '@heroicons/react/24/outline';
 
 const QuantumNeuralNetworkPlatform: React.FC = () => {
   const features = [
     {
-      icon: Brain,
+      icon: CpuChipIcon,
       title: "Quantum Neural Processing",
       description: "Advanced quantum computing algorithms for neural network optimization and training acceleration."
     },
     {
-      icon: Zap,
-      title: "Real-time Learning",
-      description: "Continuous adaptation and learning from data streams with quantum-enhanced processing capabilities."
+      icon: CpuChipIcon,
+      title: "Hybrid Quantum-Classical Architecture",
+      description: "Seamless integration of quantum and classical computing resources for optimal performance."
     },
     {
-      icon: Cpu,
-      title: "Hybrid Architecture",
-      description: "Combines classical and quantum computing for optimal performance across different problem domains."
+      icon: ChartBarIcon,
+      title: "Real-time Analytics",
+      description: "Live monitoring and analysis of quantum neural network performance and learning patterns."
     },
     {
-      icon: Network,
-      title: "Distributed Processing",
-      description: "Scalable quantum neural networks distributed across multiple quantum processors."
+      icon: RocketLaunchIcon,
+      title: "Scalable Infrastructure",
+      description: "Enterprise-grade scalability supporting thousands of concurrent quantum neural operations."
     },
     {
-      icon: Shield,
+      icon: ShieldCheckIcon,
       title: "Quantum Security",
-      description: "Built-in quantum-resistant encryption and secure communication protocols."
+      description: "Advanced quantum-resistant encryption and security protocols for sensitive neural data."
     },
     {
-      icon: TrendingUp,
-      title: "Performance Analytics",
-      description: "Advanced monitoring and optimization tools for quantum neural network performance."
+      icon: LightBulbIcon,
+      title: "AI-Powered Optimization",
+      description: "Machine learning algorithms that continuously optimize quantum neural network parameters."
     }
   ];
 
   const useCases = [
-    {
-      title: "Financial Modeling",
-      description: "Quantum-enhanced risk assessment and portfolio optimization using neural networks."
-    },
-    {
-      title: "Drug Discovery",
-      description: "Accelerated molecular simulation and drug candidate screening with quantum neural networks."
-    },
-    {
-      title: "Climate Prediction",
-      description: "Complex climate modeling and weather forecasting using quantum-enhanced neural networks."
-    },
-    {
-      title: "Supply Chain Optimization",
-      description: "Real-time logistics optimization and demand forecasting with quantum neural processing."
-    }
+    "Drug Discovery & Molecular Modeling",
+    "Financial Risk Assessment",
+    "Climate Change Modeling",
+    "Cryptography & Cybersecurity",
+    "Machine Learning Acceleration",
+    "Complex System Simulation"
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 quantum-particles"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-cyan-400 text-sm font-medium mb-6">
-              <Brain className="w-4 h-4 mr-2" />
-              Quantum AI Innovation
-            </div>
-            <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
-              Quantum Neural Network Platform
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+        <div className="relative mx-auto max-w-7xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+              Quantum Neural Network
+              <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                Platform
+              </span>
             </h1>
-            <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Revolutionizing artificial intelligence with quantum computing power. Experience unprecedented speed, accuracy, and scalability in neural network processing.
+            <p className="mt-6 text-xl text-gray-300 max-w-3xl mx-auto">
+              Revolutionizing artificial intelligence with quantum computing power. 
+              Experience unprecedented speed and accuracy in neural network operations.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30"
-              >
-                Get Started
-              </Link>
-              <button className="px-8 py-4 border border-cyan-400/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">
+            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="px-8 py-3 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300">
                 Watch Demo
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
               Revolutionary Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our quantum neural network platform combines cutting-edge quantum computing with advanced AI algorithms to deliver unprecedented performance.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Discover the cutting-edge capabilities that make our platform the future of AI computing.
             </p>
-          </div>
-          
+          </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <div
-                  key={index}
-                  className="p-6 bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300">
-                    {feature.description}
-                  </p>
-                </div>
-              );
-            })}
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-400/50 transition-all duration-300"
+              >
+                <feature.icon className="h-12 w-12 text-purple-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black/50 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Real-World Applications
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="mx-auto max-w-7xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
+              Transform Your Industry
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how quantum neural networks are transforming industries and solving complex problems.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our platform is revolutionizing industries across the globe with quantum-powered AI solutions.
             </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {useCases.map((useCase, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="p-8 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300"
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="flex items-center space-x-3 bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10"
               >
-                <h3 className="text-2xl font-semibold text-cyan-400 mb-4">
-                  {useCase.title}
-                </h3>
-                <p className="text-gray-300 text-lg">
-                  {useCase.description}
-                </p>
-              </div>
+                <CogIcon className="h-6 w-6 text-purple-400 flex-shrink-0" />
+                <span className="text-white font-medium">{useCase}</span>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 text-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Experience the Future of AI?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join the quantum revolution and transform your business with the most advanced neural network platform available.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105"
-            >
-              Schedule Consultation
-            </Link>
-            <Link
-              to="/pricing"
-              className="px-8 py-4 border border-cyan-400/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300"
-            >
-              View Pricing
-            </Link>
-          </div>
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-3xl font-bold text-white sm:text-4xl mb-6">
+              Ready to Experience the Future?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join the quantum revolution and transform your AI capabilities today.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
+                Get Started Now
+              </button>
+              <button className="px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>

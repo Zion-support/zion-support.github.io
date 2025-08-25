@@ -1,261 +1,183 @@
-import React, { useEffect, useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import React, { useEffect, useState, useRef } from 'react';
 
-interface PerformanceOptimizerProps {
-  children: React.ReactNode;
+interface PerformanceMetrics {
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
+  overall: number;
 }
 
-export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-  const location = useLocation();
-  const [isLoading, setIsLoading] = useState(false);
+export function PerformanceOptimizer() {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Show loading state on route change
-    setIsLoading(true);
-    
-    // Hide loading state after a short delay to prevent flickering
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 100);
-
-    return () => clearTimeout(timer);
-  }, [location.pathname]);
-
-  useEffect(() => {
-    // Preload critical resources
-    const preloadCriticalResources = () => {
-      // Preload critical CSS
-      const criticalCSS = document.createElement('link');
-      criticalCSS.rel = 'preload';
-      criticalCSS.as = 'style';
-      criticalCSS.href = '/src/index.css';
-      document.head.appendChild(criticalCSS);
-
-      // Preload critical fonts
-      const fontPreload = document.createElement('link');
-      fontPreload.rel = 'preload';
-      fontPreload.as = 'font';
-      fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap';
-      fontPreload.crossOrigin = 'anonymous';
-      document.head.appendChild(fontPreload);
-
-      // Preload critical images
-      const imagePreload = document.createElement('link');
-      imagePreload.rel = 'preload';
-      imagePreload.as = 'image';
-      imagePreload.href = '/images/zion-tech-group-og.jpg';
-      document.head.appendChild(imagePreload);
-    };
-
-    // Preload resources when component mounts
-    preloadCriticalResources();
-
-    // Implement intersection observer for lazy loading
-    const observerOptions = {
-      root: null,
-      rootMargin: '50px',
-      threshold: 0.1
-    };
-
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const img = entry.target as HTMLImageElement;
-          if (img.dataset.src) {
-            img.src = img.dataset.src;
-            img.classList.remove('lazy');
-            imageObserver.unobserve(img);
-          }
-        }
-      });
-    }, observerOptions);
-
-    // Observe all lazy images
-    const lazyImages = document.querySelectorAll('img[data-src]');
-    lazyImages.forEach((img) => imageObserver.observe(img));
-
-    // Cleanup observer
-    return () => {
-      imageObserver.disconnect();
-    };
+    // Only show when explicitly enabled
+    if (localStorage.getItem('showPerformance') === 'true') {
+      setIsVisible(true);
+      measurePerformance();
+    }
   }, []);
 
-  useEffect(() => {
-    // Implement service worker for caching
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
-          console.log('SW registered: ', registration);
-        })
-        .catch((registrationError) => {
-          console.log('SW registration failed: ', registrationError);
-        });
-    }
-
-    // Implement resource hints
-    const addResourceHints = () => {
-      // DNS prefetch for external domains
-      const dnsPrefetch = document.createElement('link');
-      dnsPrefetch.rel = 'dns-prefetch';
-      dnsPrefetch.href = '//fonts.googleapis.com';
-      document.head.appendChild(dnsPrefetch);
-
-      // Preconnect to external domains
-      const preconnect = document.createElement('link');
-      preconnect.rel = 'preconnect';
-      preconnect.href = 'https://fonts.googleapis.com';
-      document.head.appendChild(preconnect);
-    };
-
-    addResourceHints();
-
-    // Monitor Core Web Vitals
+  const measurePerformance = () => {
     if ('PerformanceObserver' in window) {
-      // Largest Contentful Paint (LCP)
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        if (lastEntry) {
-          console.log('LCP:', lastEntry.startTime);
-          // You can send this to analytics
-        }
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-      // First Input Delay (FID)
-      const fidObserver = new PerformanceObserver((list) => {
+      // Measure Core Web Vitals
+      const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
-          const fidEntry = entry as PerformanceEntry & { processingStart: number };
-          const fid = fidEntry.processingStart - fidEntry.startTime;
-          console.log('FID:', fid);
-          // You can send this to analytics
+          if (entry.entryType === 'largest-contentful-paint') {
+            updateMetrics('lcp', entry.startTime);
+          } else if (entry.entryType === 'first-input') {
+            const firstInputEntry = entry as PerformanceEventTiming;
+            updateMetrics('fid', firstInputEntry.processingStart - firstInputEntry.startTime);
+          }
         });
       });
-      fidObserver.observe({ entryTypes: ['first-input'] });
 
-      // Cumulative Layout Shift (CLS)
-      const clsObserver = new PerformanceObserver((list) => {
-        let cls = 0;
-        for (const entry of list.getEntries()) {
-          const layoutShiftEntry = entry as PerformanceEntry & { value: number };
-          cls += layoutShiftEntry.value;
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
+
+      // Measure other metrics
+      setTimeout(() => {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        if (navigation) {
+          updateMetrics('ttfb', navigation.responseStart - navigation.requestStart);
         }
-        console.log('CLS:', cls);
-        // You can send this to analytics
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-      return () => {
-        lcpObserver.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
-      };
+      }, 1000);
     }
-  }, []);
+  };
 
-  if (isLoading) {
-    return (
-      <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-        <div className="text-center">
-          <div className="relative">
-            <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-            <div className="absolute inset-0 w-16 h-16 border-4 border-purple-500 border-t-transparent rounded-full animate-spin mx-auto" style={{ animationDelay: '-0.5s' }}></div>
-          </div>
-          <p className="text-cyan-400 text-lg font-medium">Loading...</p>
-        </div>
-      </div>
-    );
-  }
+  const updateMetrics = (key: keyof PerformanceMetrics, value: number) => {
+    setMetrics(prev => {
+      if (!prev) return null;
+      const newMetrics = { ...prev, [key]: value };
+      
+      // Calculate overall score
+      const scores = [
+        newMetrics.fcp < 1800 ? 100 : Math.max(0, 100 - (newMetrics.fcp - 1800) / 10),
+        newMetrics.lcp < 2500 ? 100 : Math.max(0, 100 - (newMetrics.lcp - 2500) / 25),
+        newMetrics.fid < 100 ? 100 : Math.max(0, 100 - (newMetrics.fid - 100) / 2),
+        newMetrics.cls < 0.1 ? 100 : Math.max(0, 100 - newMetrics.cls * 1000),
+        newMetrics.ttfb < 800 ? 100 : Math.max(0, 100 - (newMetrics.ttfb - 800) / 8)
+      ];
+      
+      newMetrics.overall = Math.round(scores.reduce((a, b) => a + b, 0) / scores.length);
+      
+      return newMetrics;
+    });
+  };
 
-  return <>{children}</>;
-};
+  const getScoreColor = (score: number) => {
+    if (score >= 90) return 'bg-green-500';
+    if (score >= 70) return 'bg-yellow-500';
+    return 'bg-red-500';
+  };
 
-// Lazy loading wrapper for images
-export const LazyImage: React.FC<{
-  src: string;
-  alt: string;
-  className?: string;
-  width?: number;
-  height?: number;
-}> = ({ src, alt, className, width, height }) => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const getScoreIcon = (score: number) => {
+    if (score >= 90) return '✅';
+    if (score >= 70) return '⏰';
+    return '⚠️';
+  };
+
+  if (!isVisible || !metrics) return null;
 
   return (
-    <img
-      data-src={src}
-      alt={alt}
-      className={`lazy ${className || ''} ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
-      width={width}
-      height={height}
-      onLoad={() => setIsLoaded(true)}
-      style={{
-        transition: 'opacity 0.3s ease-in-out',
-        filter: isLoaded ? 'none' : 'blur(5px)'
-      }}
-    />
+    <div ref={ref} className="fixed bottom-4 right-4 w-80 z-50 bg-background/95 backdrop-blur-sm border-zion-cyan/20 rounded-lg border p-4 shadow-2xl">
+      <div className="pb-2">
+        <h3 className="flex items-center gap-2 text-sm font-semibold">
+          <span>⚡</span>
+          Performance Monitor
+          <span className="ml-auto px-2 py-1 bg-muted rounded text-xs font-mono">
+            {metrics.overall}/100
+          </span>
+        </h3>
+        <p className="text-xs text-muted-foreground">
+          Core Web Vitals & Performance Metrics
+        </p>
+      </div>
+      
+      <div className="space-y-3">
+        <div className="space-y-2">
+          <div className="flex justify-between text-xs">
+            <span>First Contentful Paint</span>
+            <span className="font-mono">{Math.round(metrics.fcp)}ms</span>
+          </div>
+          <div className="w-full bg-muted rounded-full h-1">
+            <div 
+              className="bg-zion-cyan h-1 rounded-full transition-all duration-300"
+              style={{ width: `${Math.min(100, (metrics.fcp / 1800) * 100)}%` }}
+            />
+          </div>
+        </div>
+        
+        <div className="space-y-2">
+          <div className="flex justify-between text-xs">
+            <span>Largest Contentful Paint</span>
+            <span className="font-mono">{Math.round(metrics.lcp)}ms</span>
+          </div>
+          <div className="w-full bg-muted rounded-full h-1">
+            <div 
+              className="bg-zion-cyan h-1 rounded-full transition-all duration-300"
+              style={{ width: `${Math.min(100, (metrics.lcp / 2500) * 100)}%` }}
+            />
+          </div>
+        </div>
+        
+        <div className="space-y-2">
+          <div className="flex justify-between text-xs">
+            <span>First Input Delay</span>
+            <span className="font-mono">{Math.round(metrics.fid)}ms</span>
+          </div>
+          <div className="w-full bg-muted rounded-full h-1">
+            <div>
+              <div 
+                className="bg-zion-cyan h-1 rounded-full transition-all duration-300"
+                style={{ width: `${Math.min(100, (metrics.fid / 100) * 100)}%` }}
+              />
+            </div>
+          </div>
+        </div>
+        
+        <div className="space-y-2">
+          <div className="flex justify-between text-xs">
+            <span>Cumulative Layout Shift</span>
+            <span className="font-mono">{metrics.cls.toFixed(3)}</span>
+          </div>
+          <div className="w-full bg-muted rounded-full h-1">
+            <div 
+              className="bg-zion-cyan h-1 rounded-full transition-all duration-300"
+              style={{ width: `${Math.min(100, (metrics.cls / 0.1) * 100)}%` }}
+            />
+          </div>
+        </div>
+        
+        <div className="space-y-2">
+          <div className="flex justify-between text-xs">
+            <span>Time to First Byte</span>
+            <span className="font-mono">{Math.round(metrics.ttfb)}ms</span>
+          </div>
+          <div className="w-full bg-muted rounded-full h-1">
+            <div 
+              className="bg-zion-cyan h-1 rounded-full transition-all duration-300"
+              style={{ width: `${Math.min(100, (metrics.ttfb / 800) * 100)}%` }}
+            />
+          </div>
+        </div>
+        
+        <div className="pt-2 border-t border-border">
+          <div className="flex items-center justify-between">
+            <span className="text-xs font-medium">Overall Score</span>
+            <div className="flex items-center gap-2">
+              <span>{getScoreIcon(metrics.overall)}</span>
+              <span className={`text-sm font-bold ${getScoreColor(metrics.overall).replace('bg-', 'text-')}`}>
+                {metrics.overall}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
-};
-
-// Performance monitoring hook
-export const usePerformanceMonitor = () => {
-  const [metrics, setMetrics] = useState({
-    fcp: 0,
-    lcp: 0,
-    fid: 0,
-    cls: 0
-  });
-
-  useEffect(() => {
-    if ('performance' in window) {
-      // First Contentful Paint
-      const fcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const fcp = entries[entries.length - 1];
-        setMetrics(prev => ({ ...prev, fcp: fcp.startTime }));
-      });
-      fcpObserver.observe({ entryTypes: ['paint'] });
-
-      // Largest Contentful Paint
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lcp = entries[entries.length - 1];
-        setMetrics(prev => ({ ...prev, lcp: lcp.startTime }));
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-      // First Input Delay
-      const fidObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          const fidEntry = entry as PerformanceEntry & { processingStart: number };
-          const fid = fidEntry.processingStart - fidEntry.startTime;
-          setMetrics(prev => ({ ...prev, fid }));
-        });
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-
-      // Cumulative Layout Shift
-      const clsObserver = new PerformanceObserver((list) => {
-        let cls = 0;
-        for (const entry of list.getEntries()) {
-          const layoutShiftEntry = entry as PerformanceEntry & { value: number };
-          cls += layoutShiftEntry.value;
-        }
-        setMetrics(prev => ({ ...prev, cls }));
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-
-      return () => {
-        fcpObserver.disconnect();
-        lcpObserver.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
-      };
-    }
-  }, []);
-
-  return metrics;
-};
-
-export default PerformanceOptimizer;
+}

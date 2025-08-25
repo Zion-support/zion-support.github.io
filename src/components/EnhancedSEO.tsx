@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
 
 interface SEOProps {
   title: string;
@@ -87,17 +88,17 @@ interface SEOProps {
 }
 
 const EnhancedSEO: React.FC<SEOProps> = ({
-  title,
-  description,
-  keywords,
+  title = "Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services",
+  description = "Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology.",
+  keywords = "AI solutions, quantum computing, cybersecurity, digital transformation, enterprise technology, machine learning, cloud services, IT infrastructure",
   type = 'website',
-  url,
-  image,
-  author,
+  url = "https://ziontechgroup.com",
+  image = "/images/zion-tech-group-og.jpg",
+  author = "Zion Tech Group",
   publishedTime,
   modifiedTime,
   section,
-  tags,
+  tags = [],
   structuredData,
   canonicalUrl,
   noindex = false,
@@ -170,7 +171,11 @@ const EnhancedSEO: React.FC<SEOProps> = ({
   logflareId,
   betterstackId,
 }) => {
+  const location = useLocation();
   const defaultImage = image || 'https://ziontechgroup.com/images/og-default.jpg';
+  const currentUrl = canonicalUrl || `${url}${location.pathname}`;
+  const fullImageUrl = defaultImage.startsWith('http') ? defaultImage : `${url}${defaultImage}`;
+  
   const defaultStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -222,14 +227,14 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="robots" content={robots || `${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`} />
       
       {/* Canonical URL */}
-      <link rel="canonical" href={canonicalUrl || url} />
+      <link rel="canonical" href={currentUrl} />
       
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content={ogType || type} />
-      <meta property="og:url" content={url} />
-      <meta property="og:image" content={defaultImage} />
+      <meta property="og:url" content={currentUrl} />
+      <meta property="og:image" content={fullImageUrl} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="Zion Tech Group" />
@@ -241,7 +246,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="twitter:creator" content={twitterCreator} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={twitterImage || defaultImage} />
+      <meta name="twitter:image" content={twitterImage || fullImageUrl} />
       
       {/* Article-specific meta tags */}
       {type === 'article' && (
@@ -276,7 +281,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
               gtag('js', new Date());
               gtag('config', '${googleAnalyticsId}', {
                 page_title: '${title}',
-                page_location: '${url}'
+                page_location: '${currentUrl}'
               });
             `}
           </script>
@@ -420,6 +425,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <link rel="preconnect" href="https://widget.intercom.io" />
       
       {/* DNS Prefetch for additional performance */}
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       <link rel="dns-prefetch" href="//connect.facebook.net" />
@@ -441,6 +447,21 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="mobile-web-app-capable" content="yes" />
       <meta name="apple-touch-fullscreen" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      
+      {/* Language and Region */}
+      <meta httpEquiv="Content-Language" content="en" />
+      <meta name="language" content="English" />
+      <meta name="geo.region" content="US-DE" />
+      <meta name="geo.placename" content="Wilmington, Delaware" />
+      
+      {/* Business Information */}
+      <meta name="business:contact_data:street_address" content="123 Technology Drive" />
+      <meta name="business:contact_data:locality" content="Wilmington" />
+      <meta name="business:contact_data:region" content="DE" />
+      <meta name="business:contact_data:postal_code" content="19801" />
+      <meta name="business:contact_data:country_name" content="United States" />
+      <meta name="business:contact_data:phone_number" content="+1-302-464-0950" />
+      <meta name="business:contact_data:email" content="info@ziontechgroup.com" />
       
       {/* Security Headers */}
       <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' https:; connect-src 'self' https:; frame-src 'self' https:;" />

@@ -1,85 +1,64 @@
-import React from "react";
-import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { 
+  MapPinIcon,
+  PhoneIcon,
+  EnvelopeIcon,
+  GlobeAltIcon,
+  ArrowUpIcon
+} from '@heroicons/react/24/outline';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   const footerSections = [
     {
-      title: "AI & Micro SAAS",
+      title: "Services",
       links: [
-        { label: "AI & Autonomous Systems", path: "/services/ai-autonomous-systems" },
-        { label: "AI Research Assistant", path: "/ai-autonomous-research-assistant" },
-        { label: "Quantum Neural Networks", path: "/quantum-neural-network-platform" },
-        { label: "Autonomous Business Platform", path: "/autonomous-business-operations-platform" },
-        { label: "AI Asset Management", path: "/ai-powered-it-asset-management" },
-        { label: "Quantum Technology", path: "/services/quantum-technology" },
-        { label: "IT Infrastructure", path: "/services/it-infrastructure" },
-        { label: "Micro SAAS Solutions", path: "/services/micro-saas-solutions" },
-        { label: "Cybersecurity", path: "/services/cybersecurity" },
-        { label: "SOC2 Compliance Automation", path: "/soc2-compliance-automation" },
-        { label: "Industry Solutions", path: "/services/industry-solutions" },
-        { label: "AI & Machine Learning", path: "/services#ai-ml" },
-        { label: "Cloud & Infrastructure", path: "/services#cloud" },
-        { label: "5G Enterprise Solutions", path: "/5g-enterprise-solutions" },
-        { label: "Blockchain Solutions", path: "/services#blockchain" },
-        { label: "IoT & Edge Computing", path: "/services#iot" }
+        { name: "AI Solutions", href: "/ai-solutions" },
+        { name: "Cybersecurity", href: "/cybersecurity" },
+        { name: "Cloud & DevOps", href: "/cloud-devops" },
+        { name: "Data Analytics", href: "/data-analytics" },
+        { name: "Quantum Technology", href: "/quantum-technology" },
+        { name: "Enterprise Solutions", href: "/enterprise-solutions" }
       ]
     },
     {
       title: "Solutions",
       links: [
-        { label: "Enterprise Solutions", path: "/solutions/enterprise" },
-        { label: "Healthcare Solutions", path: "/solutions/healthcare" },
-        { label: "Financial Solutions", path: "/solutions/financial" },
-        { label: "Manufacturing Solutions", path: "/solutions/manufacturing" },
-        { label: "Retail Solutions", path: "/solutions/retail" },
-        { label: "Government Solutions", path: "/solutions/government" },
-        { label: "Business Intelligence", path: "/services/business-intelligence" },
-        { label: "Marketing Automation", path: "/services/ai-marketing" },
-        { label: "HR & Recruitment", path: "/services/ai-hr" },
-        { label: "Legal Tech", path: "/services/ai-legal" }
-      ]
-    },
-    {
-      title: "Emerging Tech",
-      links: [
-        { label: "Quantum Computing", path: "/emerging-tech" },
-        { label: "Blockchain & DeFi", path: "/emerging-tech" },
-        { label: "IoT & Edge Computing", path: "/emerging-tech" },
-        { label: "Extended Reality (XR)", path: "/emerging-tech" },
-        { label: "5G & Networks", path: "/emerging-tech" },
-        { label: "Green Technology", path: "/emerging-tech" },
-        { label: "Digital Twins", path: "/emerging-tech" }
+        { name: "Healthcare", href: "/solutions/healthcare" },
+        { name: "Finance", href: "/solutions/finance" },
+        { name: "Manufacturing", href: "/solutions/manufacturing" },
+        { name: "Retail", href: "/solutions/retail" },
+        { name: "Education", href: "/solutions/education" },
+        { name: "Government", href: "/solutions/government" }
       ]
     },
     {
       title: "Company",
       links: [
-        { label: "About Us", path: "/about" },
-        { label: "Our Mission", path: "/mission" },
-        { label: "Team", path: "/team" },
-        { label: "Pricing", path: "/pricing" },
-        { label: "Careers", path: "/careers" },
-        { label: "Partners", path: "/partners" },
-        { label: "Contact", path: "/contact" },
-        { label: "Blog", path: "/blog" }
+        { name: "About Us", href: "/about" },
+        { name: "Our Team", href: "/team" },
+        { name: "Careers", href: "/careers" },
+        { name: "News & Blog", href: "/news" },
+        { name: "Case Studies", href: "/case-studies" },
+        { name: "Partners", href: "/partners" }
       ]
     },
     {
       title: "Resources",
       links: [
-        { label: "Blog & Articles", path: "/blog" },
-        { label: "Case Studies", path: "/case-studies" },
-        { label: "Help Center", path: "/help" },
-        { label: "Documentation", path: "/docs" },
-        { label: "Support Center", path: "/support" }
+        { name: "Documentation", href: "/docs" },
+        { name: "API Reference", href: "/api" },
+        { name: "Help Center", href: "/help" },
+        { name: "Webinars", href: "/webinars" },
+        { name: "White Papers", href: "/white-papers" },
+        { name: "Support", href: "/support" }
       ]
     }
   ];
 
-  // Fixed social media links with proper error handling
   const socialLinks = [
     { 
       name: 'LinkedIn', 
@@ -156,10 +135,10 @@ export function Footer() {
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
                     <Link 
-                      to={link.path} 
+                      to={link.href} 
                       className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm"
                     >
-                      {link.label}
+                      {link.name}
                     </Link>
                   </li>
                 ))}
@@ -171,70 +150,73 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-zion-blue-light">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h4 className="text-white font-semibold mb-4">Contact Information</h4>
-              <div className="space-y-2 text-sm text-zion-slate-light">
-                <div className="flex items-center space-x-2">
-                  <span>📞</span>
+              <h3 className="text-white font-semibold mb-4">Contact Information</h3>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <PhoneIcon className="h-5 w-5 text-zion-cyan" />
                   <button 
                     onClick={() => handleContactClick('phone')}
-                    className="hover:text-zion-cyan transition-colors"
+                    className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm"
                   >
                     {contactInfo.phone}
                   </button>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <span>✉️</span>
+                <div className="flex items-center space-x-3">
+                  <EnvelopeIcon className="h-5 w-5 text-zion-cyan" />
                   <button 
                     onClick={() => handleContactClick('email')}
-                    className="hover:text-zion-cyan transition-colors"
+                    className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm"
                   >
                     {contactInfo.email}
                   </button>
                 </div>
-                <div className="flex items-start space-x-2">
-                  <span>📍</span>
-                  <span>{contactInfo.address}</span>
+                <div className="flex items-start space-x-3">
+                  <MapPinIcon className="h-5 w-5 text-zion-cyan mt-0.5" />
+                  <span className="text-zion-slate-light text-sm">{contactInfo.address}</span>
                 </div>
               </div>
             </div>
 
             <div>
-              <h4 className="text-white font-semibold mb-4">Follow Us</h4>
+              <h3 className="text-white font-semibold mb-4">Follow Us</h3>
               <div className="flex flex-wrap gap-3">
                 {socialLinks.map((link, index) => (
                   <button
                     key={index}
                     onClick={(e) => handleSocialLinkClick(link, e)}
-                    className="flex items-center space-x-2 bg-zion-slate-light bg-opacity-20 hover:bg-opacity-30 px-3 py-2 rounded-lg transition-all hover:scale-105"
+                    className="w-10 h-10 bg-zion-slate-light/20 hover:bg-zion-cyan/20 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
                     title={link.name}
                   >
                     <span className="text-lg">{link.icon}</span>
-                    <span className="text-sm text-zion-slate-light">{link.name}</span>
                   </button>
                 ))}
               </div>
             </div>
 
             <div>
-              <h4 className="text-white font-semibold mb-4">Company</h4>
-              <div className="space-y-2 text-sm text-zion-slate-light">
-                <div className="mb-4">
-                  <span className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">ZION</span>
-                </div>
-                <p className="text-zion-slate-light text-sm leading-relaxed">
-                  Empowering businesses with cutting-edge AI solutions and innovative technology services. 
-                  Transform your digital future with Zion Tech Group.
-                </p>
+              <h3 className="text-white font-semibold mb-4">Newsletter</h3>
+              <p className="text-zion-slate-light text-sm mb-4">
+                Stay updated with our latest insights and innovations
+              </p>
+              <div className="flex">
+                <input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="flex-1 px-3 py-2 bg-zion-slate-light/20 border border-zion-blue-light/30 rounded-l-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan"
+                />
+                <button className="px-4 py-2 bg-zion-cyan hover:bg-zion-cyan-light text-white rounded-r-lg transition-colors">
+                  Subscribe
+                </button>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="mt-8 pt-6 border-t border-zion-blue-light">
+        <div className="mt-8 pt-6 border-t border-zion-blue-light/30">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-zion-slate-light text-sm">
+            <div className="text-zion-slate-light text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
-            </p>
+            </div>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">
                 Privacy Policy
@@ -242,12 +224,22 @@ export function Footer() {
               <Link to="/terms" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">
                 Terms of Service
               </Link>
+              <Link to="/cookies" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">
+                Cookie Policy
+              </Link>
             </div>
           </div>
         </div>
+
+        <motion.button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="absolute bottom-6 right-6 w-12 h-12 bg-zion-cyan hover:bg-zion-cyan-light rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg"
+          whileHover={{ y: -2 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <ArrowUpIcon className="h-6 w-6 text-white" />
+        </motion.button>
       </div>
     </footer>
   );
 }
-
-export default Footer;
