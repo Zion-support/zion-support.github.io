@@ -1,141 +1,130 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
-import { visualizer } from 'rollup-plugin-visualizer'
 
 // https://vitejs.dev/config/
-export default defineConfig(async () => ({
-  plugins: [
-    react(),
-    visualizer({
-      filename: 'dist/stats.html',
-      open: false,
-      gzipSize: true,
-      brotliSize: true,
-    }),
-  ],
+export default defineConfig({
+  plugins: [react()],
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src'),
-      '@components': resolve(__dirname, 'src/components'),
-      '@pages': resolve(__dirname, 'src/pages'),
-      '@utils': resolve(__dirname, 'src/utils'),
-      '@hooks': resolve(__dirname, 'src/hooks'),
-      '@types': resolve(__dirname, 'src/types'),
-      '@store': resolve(__dirname, 'src/store'),
-      '@lib': resolve(__dirname, 'src/lib'),
+      '@': resolve(__dirname, './src'),
+      '@components': resolve(__dirname, './src/components'),
+      '@pages': resolve(__dirname, './src/pages'),
+      '@hooks': resolve(__dirname, './src/hooks'),
+      '@lib': resolve(__dirname, './src/lib'),
+      '@types': resolve(__dirname, './src/types'),
+      '@context': resolve(__dirname, './src/context'),
+      '@data': resolve(__dirname, './src/data'),
+      '@layout': resolve(__dirname, './src/layout'),
     },
   },
   build: {
-    target: 'es2020',
+    target: 'esnext',
     minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info'],
-        dead_code: true,
-        unused: true,
-      },
-      mangle: {
-        safari10: true,
-      },
-      output: {
-        comments: false,
-      },
-    },
+    sourcemap: false,
     rollupOptions: {
       output: {
         manualChunks: {
-          // Core React libraries
-          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          // Core React chunks
+          'react-core': ['react', 'react-dom'],
+          'react-router': ['react-router-dom'],
           
-          // UI Component libraries
-          'ui-vendor': [
-            '@radix-ui/react-accordion',
-            '@radix-ui/react-alert-dialog',
-            '@radix-ui/react-aspect-ratio',
-            '@radix-ui/react-avatar',
-            '@radix-ui/react-checkbox',
-            '@radix-ui/react-context-menu',
+          // UI Component chunks - grouped by usage frequency
+          'ui-core': [
             '@radix-ui/react-dialog',
             '@radix-ui/react-dropdown-menu',
-            '@radix-ui/react-label',
-            '@radix-ui/react-popover',
-            '@radix-ui/react-progress',
-            '@radix-ui/react-radio-group',
-            '@radix-ui/react-scroll-area',
             '@radix-ui/react-select',
-            '@radix-ui/react-separator',
-            '@radix-ui/react-slider',
-            '@radix-ui/react-slot',
+            '@radix-ui/react-tabs'
+          ],
+          'ui-forms': [
+            '@radix-ui/react-checkbox',
+            '@radix-ui/react-radio-group',
             '@radix-ui/react-switch',
-            '@radix-ui/react-tabs',
-            '@radix-ui/react-toast',
+            'react-hook-form',
+            '@hookform/resolvers',
+            'zod'
+          ],
+          'ui-layout': [
+            '@radix-ui/react-accordion',
+            '@radix-ui/react-aspect-ratio',
+            '@radix-ui/react-avatar',
+            '@radix-ui/react-separator',
+            '@radix-ui/react-scroll-area'
+          ],
+          'ui-overlays': [
+            '@radix-ui/react-alert-dialog',
+            '@radix-ui/react-context-menu',
+            '@radix-ui/react-popover',
             '@radix-ui/react-tooltip',
+            '@radix-ui/react-toast'
+          ],
+          'ui-controls': [
+            '@radix-ui/react-label',
+            '@radix-ui/react-progress',
+            '@radix-ui/react-slider',
+            '@radix-ui/react-slot'
           ],
           
-          // Animation and motion libraries
-          'animation-vendor': ['framer-motion', 'embla-carousel-react'],
-          
-          // Form and validation libraries
-          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
-          
-          // State management
-          'state-vendor': ['@reduxjs/toolkit', 'react-redux'],
-          
-          // Data visualization and charts
-          'chart-vendor': ['recharts'],
-          
-          // Drag and drop
-          'dnd-vendor': ['@hello-pangea/dnd'],
-          
-          // Internationalization
-          'i18n-vendor': ['i18next', 'i18next-browser-languagedetector', 'react-i18next'],
-          
-          // Input components
-          'input-vendor': ['input-otp', 'react-day-picker', 'date-fns'],
+          // Animation and interaction
+          'animation': ['framer-motion', 'embla-carousel-react'],
           
           // Utility libraries
-          'utility-vendor': ['axios', 'clsx', 'tailwind-merge', 'class-variance-authority', 'cmdk'],
+          'utils': ['clsx', 'class-variance-authority', 'tailwind-merge', 'date-fns'],
           
-          // Icon libraries
-          'icon-vendor': ['lucide-react', 'react-icons'],
+          // Icons
+          'icons': ['lucide-react', 'react-icons'],
           
-          // PDF and document generation
-          'pdf-vendor': ['jspdf', 'jspdf-autotable'],
+          // State management
+          'state': ['@reduxjs/toolkit', 'react-redux'],
           
-          // Payment processing
-          'stripe-vendor': ['@stripe/stripe-js'],
+          // Data fetching
+          'data': ['@tanstack/react-query', '@supabase/supabase-js'],
           
-          // Database and backend
-          'supabase-vendor': ['@supabase/supabase-js'],
+          // External integrations
+          'integrations': ['@stripe/stripe-js', 'jspdf', 'jspdf-autotable'],
           
-          // Query management
-          'query-vendor': ['@tanstack/react-query'],
+          // Specialized features
+          'features': ['@hello-pangea/dnd', 'input-otp', 'vaul', 'cmdk', 'sonner'],
+          
+          // Charts and visualization
+          'charts': ['recharts'],
+          
+          // Internationalization
+          'i18n': ['i18next', 'i18next-browser-languagedetector', 'react-i18next']
         },
         chunkFileNames: (chunkInfo) => {
           const facadeModuleId = chunkInfo.facadeModuleId ? chunkInfo.facadeModuleId.split('/').pop() : 'chunk';
           return `js/[name]-[hash].js`;
         },
+        entryFileNames: 'js/[name]-[hash].js',
         assetFileNames: (assetInfo) => {
           const info = assetInfo.name.split('.');
           const ext = info[info.length - 1];
-          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(ext)) {
-            return `images/[name]-[hash][extname]`;
+          if (/\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/i.test(assetInfo.name)) {
+            return `media/[name]-[hash][extname]`;
           }
-          if (/css/i.test(ext)) {
-            return `css/[name]-[hash][extname]`;
+          if (/\.(png|jpe?g|gif|svg|ico|webp)(\?.*)?$/i.test(assetInfo.name)) {
+            return `img/[name]-[hash][extname]`;
+          }
+          if (/\.(woff2?|eot|ttf|otf)(\?.*)?$/i.test(assetInfo.name)) {
+            return `fonts/[name]-[hash][extname]`;
           }
           return `assets/[name]-[hash][extname]`;
         },
       },
     },
-    chunkSizeWarningLimit: 500,
-    sourcemap: false,
-    reportCompressedSize: false,
-    cssCodeSplit: true,
-    assetsInlineLimit: 4096,
+    chunkSizeWarningLimit: 500, // Reduced from 1000 for better optimization
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        passes: 2
+      },
+      mangle: {
+        toplevel: true
+      }
+    },
   },
   optimizeDeps: {
     include: [
@@ -165,32 +154,17 @@ export default defineConfig(async () => ({
       '@radix-ui/react-tooltip',
       'framer-motion',
       'embla-carousel-react',
-      'react-hook-form',
-      '@hookform/resolvers',
-      'zod',
-      '@reduxjs/toolkit',
-      'react-redux',
-      'recharts',
-      '@hello-pangea/dnd',
-      'i18next',
-      'i18next-browser-languagedetector',
-      'react-i18next',
-      'input-otp',
-      'react-day-picker',
-      'date-fns',
-      'axios',
       'clsx',
-      'tailwind-merge',
       'class-variance-authority',
-      'cmdk',
+      'tailwind-merge',
+      'date-fns',
       'lucide-react',
       'react-icons',
-      'jspdf',
-      'jspdf-autotable',
-      '@stripe/stripe-js',
-      '@supabase/supabase-js',
-      '@tanstack/react-query',
+      'sonner',
+      'vaul',
+      'cmdk',
     ],
+    exclude: ['@stripe/stripe-js'], // Exclude Stripe from pre-bundling
   },
   server: {
     port: 3000,
@@ -202,14 +176,23 @@ export default defineConfig(async () => ({
     host: true,
   },
   css: {
-    postcss: {
-      plugins: [
-        (await import('tailwindcss')).default,
-        (await import('autoprefixer')).default,
-      ],
-    },
+    devSourcemap: true,
   },
+  esbuild: {
+    logOverride: { 'this-is-undefined-in-esm': 'silent' },
+  },
+  // Performance optimizations
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
   },
-}))
+  // Experimental features for better performance
+  experimental: {
+    renderBuiltUrl(filename, { hostType }) {
+      if (hostType === 'js') {
+        return { js: `/${filename}` }
+      } else {
+        return { relative: true }
+      }
+    }
+  }
+})
