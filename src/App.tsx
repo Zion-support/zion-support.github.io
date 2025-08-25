@@ -49,6 +49,11 @@ const FiveGEnterpriseSolutions = lazy(() => import('./pages/5GEnterpriseSolution
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 
+// Additional missing pages
+const AccessibilityAuditor = lazy(() => import('./pages/AccessibilityAuditor'));
+const AffiliateAttributionHub = lazy(() => import('./pages/AffiliateAttributionHub'));
+const AgenticRagHelpdesk = lazy(() => import('./pages/AgenticRagHelpdesk'));
+
 // Company information pages
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
@@ -233,6 +238,11 @@ const App = () => {
                     <Route path="/docs" element={<Docs />} />
                     <Route path="/marketplace" element={<Marketplace />} />
                     <Route path="/community" element={<Community />} />
+
+                    {/* New missing pages */}
+                    <Route path="/accessibility-auditor" element={<AccessibilityAuditor />} />
+                    <Route path="/affiliate-attribution-hub" element={<AffiliateAttributionHub />} />
+                    <Route path="/agentic-rag-helpdesk" element={<AgenticRagHelpdesk />} />
 
                     {/* AI Service specific routes */}
                     <Route path="/ai-autonomous-business-manager" element={<AIAutonomousBusinessManager />} />

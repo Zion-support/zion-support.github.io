@@ -49,6 +49,7 @@ export function Footer() {
       links: [
         { label: "AI & Autonomous Systems", path: "/services/ai-autonomous-systems" },
         { label: "AI Research Assistant", path: "/ai-autonomous-research-assistant" },
+        { label: "Agentic RAG Helpdesk", path: "/agentic-rag-helpdesk" },
         { label: "Quantum Neural Networks", path: "/quantum-neural-network-platform" },
         { label: "Autonomous Business Platform", path: "/autonomous-business-operations-platform" },
         { label: "AI Asset Management", path: "/ai-powered-it-asset-management" },
@@ -80,6 +81,7 @@ export function Footer() {
         { label: "Marketing Automation", path: "/services#ai-marketing" },
         { label: "HR & Recruitment", path: "/services#ai-hr" },
         { label: "Legal Tech", path: "/services#ai-legal" },
+        { label: "Affiliate Attribution Hub", path: "/affiliate-attribution-hub" },
         { label: "Quantum Financial Trading", path: "/quantum-financial-trading" },
         { label: "Space Technology", path: "/space-tech" },
         { label: "Research & Development", path: "/research-development" }
@@ -98,6 +100,7 @@ export function Footer() {
         { label: "Partners", path: "/partners" },
         { label: "Contact", path: "/contact" },
         { label: "Case Studies", path: "/case-studies" },
+        { label: "Accessibility Auditor", path: "/accessibility-auditor" },
         { label: "Blog", path: "/blog" },
         { label: "News", path: "/news" },
         { label: "Webinars", path: "/webinars" },

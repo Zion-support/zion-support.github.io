@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Cloud, Database, Network, Settings, BookOpen, MessageCircle, FileText, Star, Rocket, Target, Lightbulb, CheckCircle } from 'lucide-react';
+import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Zap, Cloud, Database, Network, Settings, BookOpen, MessageCircle, FileText, Star, Rocket, Target, Lightbulb, CheckCircle, Eye } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 interface SidebarProps {
@@ -33,6 +33,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       items: [
         { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Brain },
         { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', icon: Brain },
+        { name: 'Agentic RAG Helpdesk', path: '/agentic-rag-helpdesk', icon: MessageCircle },
         { name: 'Quantum Neural Networks', path: '/quantum-neural-network-platform', icon: Zap },
         { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform', icon: Rocket },
         { name: 'AI Asset Management', path: '/ai-powered-it-asset-management', icon: Database },
@@ -48,6 +49,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       items: [
         { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
         { name: 'SOC2 Compliance', path: '/soc2-compliance-automation', icon: CheckCircle },
+        { name: 'Accessibility Auditor', path: '/accessibility-auditor', icon: Eye },
         { name: 'Security Assessment', path: '/services#security-assessment', icon: Shield },
         { name: 'Compliance & Audit', path: '/services#compliance', icon: FileText }
       ]
@@ -64,7 +66,8 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         { name: 'News', path: '/news', icon: Globe },
         { name: 'Webinars', path: '/webinars', icon: MessageCircle },
         { name: 'White Papers', path: '/white-papers', icon: FileText },
-        { name: 'Testimonials', path: '/testimonials', icon: Star }
+        { name: 'Testimonials', path: '/testimonials', icon: Star },
+        { name: 'Affiliate Attribution Hub', path: '/affiliate-attribution-hub', icon: Target }
       ]
     },
     {

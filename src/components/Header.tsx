@@ -95,7 +95,8 @@ export function Header() {
         { name: 'AI HR & Recruitment', path: '/services#ai-hr' },
         { name: 'AI Legal Tech', path: '/services#ai-legal' },
         { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant' },
-        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems' }
+        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems' },
+        { name: 'Agentic RAG Helpdesk', path: '/agentic-rag-helpdesk' }
       ]
     },
     {
@@ -113,7 +114,8 @@ export function Header() {
         { name: 'SOC2 Compliance Automation', path: '/soc2-compliance-automation' },
         { name: 'Security Assessment', path: '/services#security-assessment' },
         { name: 'Compliance & Audit', path: '/services#compliance' },
-        { name: 'AI-Powered Security', path: '/services#ai-security' }
+        { name: 'AI-Powered Security', path: '/services#ai-security' },
+        { name: 'Accessibility Auditor', path: '/accessibility-auditor' }
       ]
     },
     {
@@ -132,7 +134,8 @@ export function Header() {
         { name: 'Blockchain Solutions', path: '/services#blockchain' },
         { name: 'IoT Integration', path: '/services#iot' },
         { name: 'Autonomous Business Platform', path: '/autonomous-business-operations-platform' },
-        { name: 'Space Technology', path: '/space-tech' }
+        { name: 'Space Technology', path: '/space-tech' },
+        { name: 'Affiliate Attribution Hub', path: '/affiliate-attribution-hub' }
       ]
     }
   ], []);
