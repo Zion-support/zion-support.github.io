@@ -36,6 +36,7 @@ import {
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import { SEOConfigs } from '../components/SEOHead';
+import { HomepagePromotion } from '../components/HomepagePromotion';
 
 // Lazy load components for better performance
 const LazyServicesSection = React.lazy(() => import('../components/home/ServicesSection'));
@@ -520,6 +521,7 @@ const Home: React.FC = () => {
 
       {/* CTA Section */}
       <Suspense fallback={<LoadingFallback message="Loading CTA..." />}>
+        <HomepagePromotion />
         <LazyCTASection />
       </Suspense>
     </div>
