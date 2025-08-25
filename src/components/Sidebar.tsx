@@ -152,7 +152,12 @@ export default function Sidebar() {
         { name: 'Home', path: '/', icon: Home },
         { name: 'Services', path: '/services', icon: Briefcase },
         { name: 'Solutions', path: '/solutions/enterprise', icon: Briefcase },
+<<<<<<< HEAD
         { name: 'Pricing', path: '/pricing', icon: DollarSign },
+=======
+        { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
+        { name: 'Pricing', path: '/pricing', icon: Briefcase },
+>>>>>>> origin/cursor/website-audit-and-enhancement-4b12
         { name: 'About', path: '/about', icon: Users },
 >>>>>>> origin/main
         { name: 'Contact', path: '/contact', icon: Phone }
@@ -174,6 +179,7 @@ export default function Sidebar() {
       title: 'AI & Autonomous Systems',
 <<<<<<< HEAD
       items: [
+<<<<<<< HEAD
 <<<<<<< HEAD
         { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Brain },
         { name: 'AI Autonomous Business Platform', path: '/ai-autonomous-business-platform', icon: Brain },
@@ -227,6 +233,16 @@ export default function Sidebar() {
         { name: 'AI Autonomous Vehicles Platform', path: '/ai-autonomous-vehicles-platform', icon: Briefcase },
         { name: 'AI Autonomous Vehicles', path: '/ai-autonomous-vehicles', icon: Briefcase },
         { name: 'AI Autonomous Venture Capitalist', path: '/ai-autonomous-venture-capitalist', icon: Briefcase }
+=======
+        { name: 'AI & Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
+        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Globe },
+        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
+        { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Globe },
+        { name: 'Digital Transformation', path: '/digital-transformation', icon: Globe },
+        { name: 'Emerging Technology', path: '/emerging-tech', icon: Globe }
+>>>>>>> origin/cursor/website-audit-and-enhancement-4b12
       ]
     },
     {
@@ -581,6 +597,7 @@ export default function Sidebar() {
 =======
         { name: 'Our Mission', path: '/mission', icon: Target },
         { name: 'Our Team', path: '/team', icon: Users },
+<<<<<<< HEAD
         { name: 'Careers', path: '/careers', icon: Briefcase },
 >>>>>>> origin/cursor/website-audit-and-enhancement-ea9e
         { name: 'Partners', path: '/partners', icon: Handshake },
@@ -617,10 +634,15 @@ export default function Sidebar() {
         { name: 'Careers', path: '/careers', icon: Users },
         { name: 'Pricing', path: '/pricing', icon: Target }
 >>>>>>> origin/cursor/website-audit-and-enhancement-efd3
+=======
+        { name: 'Our Mission', path: '/mission', icon: Users },
+        { name: 'Partners', path: '/partners', icon: Handshake }
+>>>>>>> origin/cursor/website-audit-and-enhancement-4b12
       ]
     },
     {
       title: 'Support & Resources',
+<<<<<<< HEAD
 =======
         { name: 'Our Mission', path: '/mission', icon: Star },
         { name: 'Team', path: '/team', icon: Users },
@@ -1391,6 +1413,14 @@ export default function Sidebar() {
         { name: 'Cookie Policy', path: '/cookies', icon: Shield },
         { name: 'Accessibility', path: '/accessibility', icon: Users }
 >>>>>>> origin/cursor/website-audit-and-enhancement-ea9e
+=======
+      items: [
+        { name: 'Help Center', path: '/help', icon: Users },
+        { name: 'Documentation', path: '/docs', icon: Globe },
+        { name: 'Support Center', path: '/support', icon: Phone },
+        { name: 'System Status', path: '/status', icon: Globe },
+        { name: 'Case Studies', path: '/case-studies', icon: Briefcase }
+>>>>>>> origin/cursor/website-audit-and-enhancement-4b12
       ]
     }
   ];

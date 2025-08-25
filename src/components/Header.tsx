@@ -27,32 +27,20 @@ export function Header() {
     { 
       path: '/services', 
       label: 'Services', 
-      icon: '🚀',
-      description: 'Explore our comprehensive service offerings'
-    },
-    { 
-      path: '/services/micro-saas-solutions', 
-      label: 'Micro SAAS', 
-      icon: '💻',
-      description: 'AI-powered micro SAAS solutions'
-    },
-    { 
-      path: '/services/ai-business-intelligence', 
-      label: 'AI BI', 
-      icon: '🧠',
-      description: 'AI Business Intelligence Platform'
-    },
-    { 
-      path: '/services/quantum-cybersecurity', 
-      label: 'Security', 
-      icon: '🔒',
-      description: 'Quantum-Safe Cybersecurity Suite'
+      icon: '🤖',
+      description: 'Explore our service offerings'
     },
     { 
       path: '/solutions/enterprise', 
       label: 'Solutions', 
       icon: '💼',
       description: 'Industry-specific solutions'
+    },
+    { 
+      path: '/case-studies', 
+      label: 'Case Studies', 
+      icon: '📊',
+      description: 'Success stories and results'
     },
     { 
       path: '/pricing', 
@@ -78,222 +66,312 @@ export function Header() {
     {
       title: 'AI & Machine Learning',
       services: [
-        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence' },
-        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation' },
-        { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment' },
-        { name: 'AI Legal Tech', path: '/services/ai-legal-tech' },
-        { name: 'AI Customer Success', path: '/services/ai-customer-success' }
-      ]
-    },
-    {
-      title: 'Micro SAAS Solutions',
-      services: [
-        { name: 'AI-Powered CRM', path: '/services/ai-powered-crm' },
-        { name: 'Workflow Automation', path: '/services/workflow-automation' },
-        { name: 'Document Processing', path: '/services/document-processing' },
-        { name: 'Predictive Maintenance', path: '/services/predictive-maintenance' },
-        { name: 'Supply Chain Intelligence', path: '/services/supply-chain-intelligence' }
+        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems' },
+        { name: 'AI Business Intelligence', path: '/services#ai-bi' },
+        { name: 'AI Marketing Automation', path: '/services#ai-marketing' },
+        { name: 'AI HR & Recruitment', path: '/services#ai-hr' },
+        { name: 'AI Legal Tech', path: '/services#ai-legal' }
       ]
     },
     {
       title: 'Cybersecurity',
       services: [
-        { name: 'Quantum-Safe Security', path: '/services/quantum-cybersecurity' },
-        { name: 'AI Threat Detection', path: '/services/ai-threat-detection' },
-        { name: 'Zero-Trust Architecture', path: '/services/zero-trust-architecture' },
-        { name: 'Compliance & Audit', path: '/services/compliance-audit' }
+        { name: 'Cybersecurity Services', path: '/services/cybersecurity' },
+        { name: 'Quantum-Safe Security', path: '/services#quantum-security' },
+        { name: 'Security Assessment', path: '/services#security-assessment' },
+        { name: 'Compliance & Audit', path: '/services#compliance' }
       ]
     },
     {
       title: 'Cloud & Infrastructure',
       services: [
-        { name: 'Cloud Migration', path: '/services/cloud-migration' },
-        { name: 'Network Infrastructure', path: '/services/network-infrastructure' },
-        { name: 'Managed IT Services', path: '/services/managed-it-services' },
-        { name: 'DevOps Automation', path: '/services/devops-automation' }
+        { name: 'Cloud & DevOps', path: '/cloud-devops' },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure' },
+        { name: 'Cloud Migration', path: '/services#cloud-migration' },
+        { name: 'Network Infrastructure', path: '/services#network' },
+        { name: 'Managed IT Services', path: '/services#managed-it' }
       ]
     },
     {
       title: 'Emerging Tech',
       services: [
-        { name: 'Blockchain Solutions', path: '/services/blockchain-solutions' },
-        { name: 'Quantum Computing', path: '/services#quantum' },
-        { name: 'IoT & Edge Computing', path: '/services#iot-edge' }
+        { name: 'Quantum Technology', path: '/services/quantum-technology' },
+        { name: 'Blockchain Solutions', path: '/services#blockchain' },
+        { name: 'IoT Integration', path: '/services#iot' },
+        { name: 'Emerging Technology', path: '/emerging-tech' }
       ]
     }
   ];
 
-  const isActive = (path: string) => location.pathname === path;
+  // Fixed social media links with proper error handling
+  const socialLinks = [
+    {
+      name: 'LinkedIn',
+      url: 'https://www.linkedin.com/company/ziontechgroup',
+      icon: '💼',
+      fallback: 'https://linkedin.com'
+    },
+    {
+      name: 'Twitter',
+      url: 'https://twitter.com/ziontechgroup',
+      icon: '🐦',
+      fallback: 'https://twitter.com'
+    },
+    {
+      name: 'GitHub',
+      url: 'https://github.com/ziontechgroup',
+      icon: '💻',
+      fallback: 'https://github.com'
+    },
+    {
+      name: 'YouTube',
+      url: 'https://www.youtube.com/@ziontechgroup',
+      icon: '📺',
+      fallback: 'https://youtube.com'
+    }
+  ];
+
+  const handleSocialLinkClick = (link: typeof socialLinks[0], e: React.MouseEvent) => {
+    e.preventDefault();
+    
+    // Try to open the primary URL first
+    const newWindow = window.open(link.url, '_blank', 'noopener,noreferrer');
+    
+    // If the window fails to open, try the fallback
+    if (!newWindow) {
+      window.open(link.fallback, '_blank', 'noopener,noreferrer');
+    }
+  };
+
+  const handleContactClick = (type: 'phone' | 'email') => {
+    if (type === 'phone') {
+      // Use a proper phone number format that works across devices
+      window.location.href = 'tel:+13024640950';
+    } else {
+      window.location.href = 'mailto:kleber@ziontechgroup.com';
+    }
+  };
 
   return (
-    <>
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled 
-          ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/20' 
-          : 'bg-gradient-to-r from-black/80 via-blue-900/80 to-purple-900/80 backdrop-blur-md'
-      }`}>
-        {/* Enhanced Animated Background */}
-        <div className="absolute inset-0 futuristic-bg opacity-60"></div>
-        
-        {/* Enhanced Matrix Rain Effect */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {[...Array(25)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute text-cyan-400/20 text-xs animate-matrix-rain"
-              style={{
-                left: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 20}s`,
-                animationDuration: `${10 + Math.random() * 20}s`
-              }}
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-black/90 backdrop-blur-md shadow-lg' 
+        : 'bg-transparent'
+    }`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Link to="/" className="flex items-center space-x-2">
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-xl">Z</span>
+              </div>
+              <span className="text-white font-bold text-xl hidden sm:block">
+                Zion Tech Group
+              </span>
+            </Link>
+          </div>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex space-x-8">
+            {navigationItems.map((item) => (
+              <div key={item.path} className="relative group">
+                {item.path === '/services' ? (
+                  <>
+                    {/* Services dropdown */}
+                    <button className="flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 text-gray-300 hover:text-white hover:bg-white/10">
+                      <span>{item.icon}</span>
+                      <span>{item.label}</span>
+                      <span className="text-xs">▼</span>
+                    </button>
+                    
+                    {/* Services Dropdown */}
+                    <div className="absolute top-full left-0 mt-2 w-96 bg-black/95 backdrop-blur-md border border-gray-700 rounded-lg shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none group-hover:pointer-events-auto z-50">
+                      <div className="p-4">
+                        <div className="grid grid-cols-2 gap-4">
+                          {serviceCategories.map((category) => (
+                            <div key={category.title}>
+                              <h4 className="text-sm font-semibold text-cyan-400 mb-2">{category.title}</h4>
+                              <ul className="space-y-1">
+                                {category.services.map((service) => (
+                                  <li key={service.name}>
+                                    <Link
+                                      to={service.path}
+                                      className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors duration-200 py-1"
+                                    >
+                                      {service.name}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                        <div className="mt-4 pt-4 border-t border-gray-700">
+                          <Link
+                            to="/services"
+                            className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-center"
+                          >
+                            View All Services →
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    {/* Regular navigation item */}
+                    <Link
+                      to={item.path}
+                      className={`flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                        location.pathname === item.path
+                          ? 'text-cyan-400 bg-cyan-400/10'
+                          : 'text-gray-300 hover:text-white hover:bg-white/10'
+                      }`}
+                    >
+                      <span>{item.icon}</span>
+                      <span>{item.label}</span>
+                    </Link>
+                    
+                    {/* Tooltip for non-dropdown items */}
+                    <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-black text-white text-xs rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-50">
+                      {item.description}
+                      <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black"></div>
+                    </div>
+                  </>
+                )}
+              </div>
+            ))}
+          </nav>
+
+          {/* Contact & Social Links */}
+          <div className="hidden lg:flex items-center space-x-4">
+            {/* Contact Buttons */}
+            <button
+              onClick={() => handleContactClick('phone')}
+              className="flex items-center space-x-2 px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-md transition-colors duration-200"
             >
-              {String.fromCharCode(0x30A0 + Math.random() * 96)}
-            </div>
-          ))}
-        </div>
+              <span>📞</span>
+              <span className="hidden sm:block">Call Us</span>
+            </button>
+            
+            <button
+              onClick={() => handleContactClick('email')}
+              className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors duration-200"
+            >
+              <span>✉️</span>
+              <span className="hidden sm:block">Email</span>
+            </button>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 lg:h-20">
-            {/* Logo */}
-            <div className="flex items-center space-x-3">
-              <Link to="/" className="flex items-center space-x-3 group">
-                <div className="relative">
-                  <div className="w-10 h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center text-white font-bold text-lg lg:text-xl shadow-lg shadow-cyan-500/50 group-hover:shadow-cyan-400/70 transition-all duration-300 group-hover:scale-110">
-                    Z
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl blur-lg opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
-                </div>
-                <div className="hidden sm:block">
-                  <h1 className="text-xl lg:text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent group-hover:from-cyan-300 group-hover:to-blue-300 transition-all duration-300">
-                    Zion Tech Group
-                  </h1>
-                  <p className="text-xs text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                    The Tech & AI Marketplace
-                  </p>
-                </div>
-              </Link>
-            </div>
-
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-1">
-              {navigationItems.map((item) => (
-                <div key={item.path} className="relative group">
-                  <Link
-                    to={item.path}
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 flex items-center space-x-2 group-hover:bg-cyan-500/20 group-hover:border-cyan-400/50 ${
-                      isActive(item.path)
-                        ? 'text-cyan-400 border border-cyan-400/50 bg-cyan-500/10'
-                        : 'text-gray-300 hover:text-white border border-transparent'
-                    }`}
-                  >
-                    <span className="text-lg">{item.icon}</span>
-                    <span>{item.label}</span>
-                  </Link>
-                  
-                  {/* Enhanced Tooltip */}
-                  <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-black/90 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap z-50">
-                    {item.description}
-                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black/90"></div>
-                  </div>
-                </div>
-              ))}
-            </nav>
-
-            {/* CTA Buttons */}
-            <div className="hidden lg:flex items-center space-x-4">
-              <button className="px-4 py-2 text-cyan-400 border border-cyan-400/50 rounded-lg hover:bg-cyan-400/20 hover:border-cyan-400 transition-all duration-300 text-sm font-medium">
-                Get Quote
-              </button>
-              <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 text-sm font-medium transform hover:scale-105 shadow-lg shadow-cyan-500/30">
-                Start Project
-              </button>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <div className="lg:hidden">
-              <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="p-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800/50 transition-all duration-300"
-                aria-label="Toggle mobile menu"
-              >
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+            {/* Social Links */}
+            <div className="flex items-center space-x-2">
+              {socialLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.url}
+                  onClick={(e) => handleSocialLinkClick(link, e)}
+                  className="p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200"
+                  title={link.name}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  {isMenuOpen ? (
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M6 18L18 6M6 6l12 12"
-                    />
-                  ) : (
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M4 6h16M4 12h16M4 18h16"
-                    />
-                  )}
-                </svg>
-              </button>
+                  <span className="text-lg">{link.icon}</span>
+                </a>
+              ))}
             </div>
           </div>
 
-          {/* Enhanced Mobile Menu */}
-          {isMenuOpen && (
-            <div className="lg:hidden">
-              <div className="px-2 pt-2 pb-3 space-y-1 bg-black/50 backdrop-blur-xl rounded-xl border border-cyan-500/30 mt-4">
-                {navigationItems.map((item) => (
-                  <Link
-                    key={item.path}
-                    to={item.path}
-                    onClick={() => setIsMenuOpen(false)}
-                    className={`block px-3 py-2 rounded-lg text-base font-medium transition-all duration-300 ${
-                      isActive(item.path)
-                        ? 'text-cyan-400 bg-cyan-500/20 border border-cyan-400/50'
-                        : 'text-gray-300 hover:text-white hover:bg-gray-800/50'
-                    }`}
-                  >
-                    <div className="flex items-center space-x-3">
-                      <span className="text-xl">{item.icon}</span>
-                      <div>
-                        <div className="font-medium">{item.label}</div>
-                        <div className="text-xs text-gray-400">{item.description}</div>
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-                
-                {/* Mobile CTA Buttons */}
-                <div className="pt-4 space-y-2">
-                  <button className="w-full px-4 py-2 text-cyan-400 border border-cyan-400/50 rounded-lg hover:bg-cyan-400/20 transition-all duration-300 text-sm font-medium">
-                    Get Quote
-                  </button>
-                  <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 text-sm font-medium">
-                    Start Project
-                  </button>
-                </div>
-              </div>
-            </div>
-          )}
+          {/* Mobile menu button */}
+          <div className="lg:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-gray-300 hover:text-white p-2"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {isMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
 
-        {/* Enhanced Floating Elements */}
-        <div className="absolute top-20 right-20 w-2 h-2 bg-cyan-400 rounded-full animate-ping animate-energy-pulse"></div>
-        <div className="absolute bottom-32 left-32 w-3 h-3 bg-blue-400 rounded-full animate-pulse animate-energy-pulse"></div>
-        <div className="absolute top-1/2 left-20 w-1 h-1 bg-purple-400 rounded-full animate-bounce animate-energy-pulse"></div>
-        
-        {/* Additional Quantum Particles */}
-        <div className="absolute top-40 right-40 w-1 h-1 bg-cyan-400 rounded-full animate-ping animate-energy-pulse animation-delay-1000"></div>
-        <div className="absolute bottom-40 right-40 w-1 h-1 bg-blue-400 rounded-full animate-ping animate-energy-pulse animation-delay-2000"></div>
-        <div className="absolute top-1/3 left-40 w-1 h-1 bg-purple-400 rounded-full animate-ping animate-energy-pulse animation-delay-3000"></div>
-      </header>
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="lg:hidden bg-black/95 backdrop-blur-md rounded-lg mt-2 p-4">
+            <nav className="space-y-2">
+              {navigationItems.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={() => setIsMenuOpen(false)}
+                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
+                    location.pathname === item.path
+                      ? 'text-cyan-400 bg-cyan-400/10'
+                      : 'text-gray-300 hover:text-white hover:bg-white/10'
+                  }`}
+                >
+                  <span className="flex items-center space-x-2">
+                    <span>{item.icon}</span>
+                    <span>{item.label}</span>
+                  </span>
+                </Link>
+              ))}
+              
+              {/* Mobile Contact & Social */}
+              <div className="pt-4 border-t border-gray-700">
+                <div className="flex flex-col space-y-2">
+                  <button
+                    onClick={() => {
+                      handleContactClick('phone');
+                      setIsMenuOpen(false);
+                    }}
+                    className="flex items-center space-x-2 px-3 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-md transition-colors duration-200"
+                  >
+                    <span>📞</span>
+                    <span>Call Us</span>
+                  </button>
+                  
+                  <button
+                    onClick={() => {
+                      handleContactClick('email');
+                      setIsMenuOpen(false);
+                    }}
+                    className="flex items-center space-x-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors duration-200"
+                  >
+                    <span>✉️</span>
+                    <span>Email Us</span>
+                  </button>
+                </div>
+                
+                <div className="flex items-center justify-center space-x-4 pt-4">
+                  {socialLinks.map((link) => (
+                    <a
+                      key={link.name}
+                      href={link.url}
+                      onClick={(e) => {
+                        handleSocialLinkClick(link, e);
+                        setIsMenuOpen(false);
+                      }}
+                      className="p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-md transition-all duration-200"
+                      title={link.name}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span className="text-xl">{link.icon}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </nav>
+          </div>
+        )}
+      </div>
 
       {/* Sidebar */}
       <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
-    </>
+    </header>
   );
 }
