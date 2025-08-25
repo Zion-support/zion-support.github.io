@@ -1,13 +1,141 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 import React, { useState, useMemo } from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 import { 
   Search, 
   Filter, 
   Star, 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  TrendingUp, 
+  Zap, 
+  Brain, 
+  Shield, 
+  Cpu, 
+  Rocket, 
+  Users, 
+  Globe, 
+  Target,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  CheckCircle,
+  Clock,
+  DollarSign,
+  Award,
+  Lightbulb,
+  Sparkles
+} from 'lucide-react';
+import SEOHead from '../components/SEOHead';
+
+// Import service data
+import { COMPREHENSIVE_SERVICES } from '../data/comprehensiveServices';
+import { INNOVATIVE_NEW_SERVICES } from '../data/innovativeNewServices';
+import { ADVANCED_MICRO_SAAS_SERVICES } from '../data/advancedMicroSaasServices';
+import { EMERGING_TECH_SERVICES } from '../data/emergingTechServices';
+import { SPECIALIZED_IT_INFRASTRUCTURE_SERVICES } from '../data/specializedITInfrastructureServices';
+
+const ComprehensiveServicesOverview: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
+  const [sortBy, setSortBy] = useState('innovation');
+
+  // Combine all services
+  const allServices = [
+    ...COMPREHENSIVE_SERVICES,
+    ...INNOVATIVE_NEW_SERVICES,
+    ...ADVANCED_MICRO_SAAS_SERVICES,
+    ...EMERGING_TECH_SERVICES,
+    ...SPECIALIZED_IT_INFRASTRUCTURE_SERVICES
+  ];
+
+  // Get unique categories
+  const categories = ['all', ...new Set(allServices.map(service => service.category))];
+
+  // Price ranges
+  const priceRanges = [
+    { value: 'all', label: 'All Prices' },
+    { value: '0-500', label: '$0 - $500/month' },
+    { value: '500-1000', label: '$500 - $1,000/month' },
+    { value: '1000-2000', label: '$1,000 - $2,000/month' },
+    { value: '2000+', label: '$2,000+/month' }
+  ];
+
+  // Helper function to get service price
+  const getServicePrice = (service: any) => {
+    if (typeof service.price === 'number') {
+      return service.price;
+    }
+    if (service.price && typeof service.price === 'object' && service.price.monthly) {
+      return service.price.monthly;
+    }
+    return 0;
+  };
+
+  // Helper function to get service tags
+  const getServiceTags = (service: any) => {
+    if (service.tags && Array.isArray(service.tags)) {
+      return service.tags;
+    }
+    return [];
+  };
+
+  // Filter and sort services
+  const filteredServices = allServices
+    .filter(service => {
+      const serviceTitle = 'title' in service ? service.title : 'name' in service ? service.name : '';
+      const matchesSearch = serviceTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           getServiceTags(service).some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+      
+      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+      
+      const servicePrice = getServicePrice(service);
+      const matchesPrice = selectedPriceRange === 'all' || 
+        (selectedPriceRange === '0-500' && servicePrice <= 500) ||
+        (selectedPriceRange === '500-1000' && servicePrice > 500 && servicePrice <= 1000) ||
+        (selectedPriceRange === '1000-2000' && servicePrice > 1000 && servicePrice <= 2000) ||
+        (selectedPriceRange === '2000+' && servicePrice > 2000);
+      
+      return matchesSearch && matchesCategory && matchesPrice;
+    })
+    .sort((a, b) => {
+      switch (sortBy) {
+        case 'price-low':
+          return getServicePrice(a) - getServicePrice(b);
+        case 'price-high':
+          return getServicePrice(b) - getServicePrice(a);
+        case 'innovation':
+          const aTags = getServiceTags(a);
+          const bTags = getServiceTags(b);
+          return bTags.filter(tag => ['AI', 'Quantum', 'Autonomous', 'Innovation'].includes(tag)).length - 
+                 aTags.filter(tag => ['AI', 'Quantum', 'Autonomous', 'Innovation'].includes(tag)).length;
+        case 'name':
+          const aTitle = 'title' in a ? a.title : 'name' in a ? a.name : '';
+          const bTitle = 'title' in b ? b.title : 'name' in b ? b.name : '';
+          return aTitle.localeCompare(bTitle);
+        default:
+          return 0;
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   Users, 
   Zap, 
   Shield, 
@@ -160,18 +288,109 @@ export default function ComprehensiveServicesOverview() {
             return price > 3000;
           });
           break;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       }
     }
   };
 
+<<<<<<< HEAD
   const getServicePrice = (service: any) => {
     if (typeof service.price === 'number') {
       return service.price;
+=======
+<<<<<<< HEAD
+  const getServiceColor = (category: string) => {
+    switch (category) {
+      case 'AI & Machine Learning':
+      case 'AI & Digital Marketing':
+      case 'AI & Customer Service':
+      case 'AI & Legal Tech':
+      case 'AI & Supply Chain':
+      case 'AI & Human Resources':
+      case 'AI & Financial Services':
+      case 'AI & Healthcare':
+      case 'AI & Consciousness':
+        return 'from-blue-500 to-purple-600';
+      case 'Quantum Computing':
+        return 'from-purple-500 to-pink-600';
+      case 'Cybersecurity':
+        return 'from-red-500 to-orange-600';
+      case 'IT Infrastructure':
+        return 'from-green-500 to-emerald-600';
+      case 'Space Technology':
+        return 'from-indigo-500 to-blue-600';
+      case 'Neurotechnology':
+        return 'from-pink-500 to-red-600';
+      case 'Autonomous Systems':
+        return 'from-yellow-500 to-orange-600';
+      case 'Blockchain & Web3':
+        return 'from-cyan-500 to-blue-600';
+      case 'Internet of Things':
+        return 'from-emerald-500 to-green-600';
+      default:
+        return 'from-gray-500 to-gray-600';
+=======
+  const getServicePrice = (service: any) => {
+    if (typeof service.price === 'number') {
+      return service.price;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     }
   };
 
   return (
     <>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <SEOHead 
+        title="Comprehensive Technology Services - Zion Tech Group"
+        description="Explore our comprehensive portfolio of cutting-edge technology services including AI, Quantum Computing, Cybersecurity, IT Infrastructure, and more. Transform your business with innovative solutions."
+        keywords="technology services, AI services, quantum computing, cybersecurity, IT infrastructure, micro SaaS, autonomous systems, space technology, neurotechnology"
+        image="/images/services-overview-og.jpg"
+        canonical="https://ziontechgroup.com/comprehensive-services-overview"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-b from-gray-900 via-black to-gray-900">
+        {/* Hero Section */}
+        <section className="relative py-20 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="mb-8">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
+                <Sparkles className="w-4 h-4 mr-2" />
+                Cutting-Edge Technology Solutions
+              </div>
+            </div>
+            
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Comprehensive Technology
+              <span className="block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                Services Portfolio
+              </span>
+            </h1>
+            
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+              Discover our extensive range of innovative technology services designed to accelerate your business growth, 
+              enhance security, and drive digital transformation. From AI-powered solutions to quantum computing, 
+              we deliver cutting-edge technology that gives you a competitive advantage.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="flex items-center text-gray-300">
+                <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
+                <span>500+ Services Available</span>
+              </div>
+              <div className="flex items-center text-gray-300">
+                <Award className="w-5 h-5 text-yellow-400 mr-2" />
+                <span>Industry Leading Innovation</span>
+              </div>
+              <div className="flex items-center text-gray-300">
+                <Globe className="w-5 h-5 text-blue-400 mr-2" />
+                <span>Global Support</span>
+              </div>
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               <EnhancedSEO
           title="Comprehensive Services Overview | Zion Tech Group"
           description="Explore our complete portfolio of AI-powered services, IT solutions, and innovative micro SAAS platforms. From legal tech to quantum computing, discover how we can transform your business."
@@ -478,10 +697,24 @@ export default function ComprehensiveServicesOverview() {
                   Call Us
                 </a>
               </Button>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             </div>
           </div>
         </div>
       </div>
     </>
   );
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+};
+
+export default ComprehensiveServicesOverview;
+=======
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7

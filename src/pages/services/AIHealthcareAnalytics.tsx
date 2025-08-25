@@ -1,5 +1,44 @@
 import React from 'react';
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+import { 
+  Activity, 
+  Heart, 
+  Brain, 
+  Shield, 
+  Users, 
+  BarChart3, 
+  Clock, 
+  DollarSign,
+  ArrowRight,
+  Stethoscope,
+  Pill,
+  Microscope,
+  Search,
+  Edit3,
+  Download,
+  Eye,
+  Lock,
+  Globe,
+  Smartphone,
+  Headphones,
+  Database,
+  Zap,
+  CheckCircle,
+  TrendingUp,
+  AlertTriangle,
+  FileText
+=======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 import { motion } from 'framer-motion';
 import { 
   Heart, 
@@ -19,6 +58,11 @@ import {
   TrendingUp,
   Stethoscope,
   Database
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
 import { Link } from 'react-router-dom';
 import { 
@@ -60,12 +104,29 @@ import {
   DollarSign,
   Zap,
   Target
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-500e
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 } from 'lucide-react';
 
 export default function AIHealthcareAnalytics() {
   const features = [
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      icon: Brain,
+<<<<<<< HEAD
+<<<<<<< HEAD
+      title: "Predictive Diagnostics",
+      description: "AI-powered early disease detection and risk assessment using advanced machine learning algorithms"
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   LineChart,
   Building
 } from 'lucide-react';
@@ -82,7 +143,13 @@ const AIHealthcareAnalytics: React.FC = () => {
       icon: Activity,
       title: "Real-time Monitoring",
 =======
+<<<<<<< HEAD
       icon: Brain,
+=======
+=======
+      icon: Brain,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       title: "Predictive Patient Analytics",
       description: "AI-powered prediction of patient outcomes and risk assessment"
     },
@@ -95,10 +162,29 @@ const AIHealthcareAnalytics: React.FC = () => {
       icon: Target,
       title: "Personalized Treatment Plans",
       description: "AI-generated treatment recommendations based on patient data"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     },
     {
       icon: BarChart3,
       title: "Population Health Analytics",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      description: "Comprehensive analysis of population health trends and disease patterns"
+    },
+    {
+      icon: Shield,
+      title: "HIPAA Compliance",
+      description: "Enterprise-grade security and full HIPAA compliance for patient data protection"
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       description: "Comprehensive analysis of population health trends and patterns"
 =======
       description: "Continuous monitoring of patient vital signs and health metrics with instant alerts for critical changes.",
@@ -109,19 +195,97 @@ const AIHealthcareAnalytics: React.FC = () => {
       title: "Population Health Insights",
       description: "Comprehensive analytics that identify health trends, risk factors, and opportunities for preventive care.",
       benefits: ["Trend analysis", "Risk stratification", "Preventive strategies"]
+<<<<<<< HEAD
 =======
       description: "Comprehensive analysis of population health trends and patterns"
+=======
+>>>>>>> origin/main
+=======
+      description: "Comprehensive analysis of population health trends and patterns"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     },
     {
       icon: Zap,
       title: "Clinical Decision Support",
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      description: "AI-powered clinical recommendations and treatment optimization suggestions"
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Clinical",
+      price: "$799",
+      period: "/month",
+      description: "For individual healthcare providers and small clinics",
+      features: [
+        "Up to 1,000 patients",
+        "Basic predictive analytics",
+        "Standard monitoring tools",
+        "Email support",
+        "Basic reporting",
+        "Mobile app access"
+      ],
+      cta: "Start Free Trial",
+      popular: false
+    },
+    {
+      name: "Hospital",
+      price: "$2,499",
+      period: "/month",
+      description: "Ideal for hospitals and large healthcare facilities",
+      features: [
+        "Up to 10,000 patients",
+        "Advanced AI diagnostics",
+        "Real-time monitoring",
+        "Priority support",
+        "Custom dashboards",
+        "API integration",
+        "Multi-department access",
+        "Advanced analytics"
+      ],
+      cta: "Start Free Trial",
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "$5,999",
+      period: "/month",
+      description: "For healthcare systems and large organizations",
+      features: [
+        "Unlimited patients",
+        "Custom AI models",
+        "White-label solution",
+        "Dedicated support team",
+        "Custom integrations",
+        "On-premise deployment",
+        "Advanced security",
+        "Compliance automation"
+      ],
+      cta: "Contact Sales",
+      popular: false
+=======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       description: "Intelligent assistance for healthcare professionals"
     },
     {
       icon: Shield,
       title: "HIPAA Compliant Security",
       description: "Enterprise-grade security with full HIPAA compliance"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       title: "AI-Powered Patient Analytics",
       description: "Advanced machine learning algorithms that analyze patient data for predictive insights."
     },
@@ -208,11 +372,55 @@ const AIHealthcareAnalytics: React.FC = () => {
       icon: Users,
       title: "Care Coordination",
       description: "AI-powered care coordination that optimizes patient care pathways and resource allocation."
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-500e
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     }
   ];
 
   const benefits = [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    {
+      icon: Heart,
+      title: "Improved Patient Outcomes",
+      description: "Early detection and intervention lead to better treatment results and patient recovery"
+    },
+    {
+      icon: DollarSign,
+      title: "Cost Reduction",
+      description: "Reduce healthcare costs by preventing complications and optimizing resource allocation"
+    },
+    {
+      icon: Clock,
+      title: "Faster Diagnosis",
+      description: "AI-powered analysis reduces diagnosis time from days to minutes"
+    },
+    {
+      icon: Users,
+      title: "Enhanced Care Coordination",
+      description: "Better communication and coordination between healthcare teams and departments"
+    },
+    {
+      icon: Shield,
+      title: "Risk Mitigation",
+      description: "Identify and address potential health risks before they become critical issues"
+    },
+    {
+      icon: TrendingUp,
+      title: "Data-Driven Insights",
+      description: "Make informed decisions based on comprehensive healthcare analytics and trends"
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     "Improve diagnostic accuracy by 85%",
     "Reduce treatment costs by 30-40%",
     "Enhance patient outcomes by 60%",
@@ -887,6 +1095,11 @@ const AIHealthcareAnalytics: React.FC = () => {
         </div>
       </div>
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     "Improve patient outcomes by 25-40%",
     "Reduce hospital readmissions by 30%",
     "Lower healthcare costs by 20-35%",
@@ -1117,6 +1330,14 @@ const AIHealthcareAnalytics: React.FC = () => {
               </button>
             </div>
           </motion.div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        </div>
+      </section>
+>>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       </section>
 
       {/* CTA Section */}
@@ -1156,8 +1377,21 @@ const AIHealthcareAnalytics: React.FC = () => {
             </Link>
           </div>
 =======
+<<<<<<< HEAD
         </div>
       </section>
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+        </div>
+      </section>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-82f7
+    </div>
+  );
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     </div>
   );
 };
@@ -1167,5 +1401,12 @@ export default AIHealthcareAnalytics;
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 }
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-500e
+=======
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7

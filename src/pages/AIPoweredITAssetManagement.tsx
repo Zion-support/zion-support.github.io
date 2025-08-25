@@ -1,4 +1,28 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import { 
+  ServerIcon, 
+  ShieldCheckIcon, 
+  ChartBarIcon, 
+  CogIcon,
+  ClockIcon,
+  CurrencyDollarIcon,
+  GlobeAltIcon,
+  UserGroupIcon
+} from '@heroicons/react/24/outline';
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive } from 'lucide-react';
@@ -476,11 +500,19 @@ const AIPoweredITAssetManagement: React.FC = () => {
         <section className="relative pt-32 pb-20 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 import { Link } from 'react-router-dom';
 import { Database, Brain, Shield, TrendingUp, ArrowRight, Users, Target, Clock, BarChart3, Zap } from 'lucide-react';
 
 export default function AIPoweredITAssetManagement() {
   return (
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -929,11 +961,153 @@ export default function AIPoweredITAssetManagement() {
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {/* Technology Stack Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Technology Stack
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Built with cutting-edge technologies for maximum performance and reliability.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+              { icon: Cpu, name: "AI Processing" },
+              { icon: Database, name: "Big Data" },
+              { icon: Network, name: "Cloud Native" },
+              { icon: Code, name: "Machine Learning" }
+            ].map((tech, index) => (
+              <div key={index} className="text-center">
+                <div className="p-4 bg-gray-800/50 rounded-xl mb-4 mx-auto w-fit">
+                  <tech.icon className="h-8 w-8 text-cyan-500 mx-auto" />
+                </div>
+                <p className="text-white font-medium">{tech.name}</p>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4867
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <Target className="w-4 h-4 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Software Assets</h3>
+                  <p className="text-gray-400">
+                    Operating systems, applications, databases, and development tools with license tracking.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <Users className="w-4 h-4 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Cloud Resources</h3>
+                  <p className="text-gray-400">
+                    Virtual machines, cloud storage, containers, and serverless functions across multiple providers.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-8">
+              <div className="flex items-start space-x-4">
+                <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <Shield className="w-4 h-4 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Network Infrastructure</h3>
+                  <p className="text-gray-400">
+                    Routers, switches, firewalls, load balancers, and wireless access points.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <TrendingUp className="w-4 h-4 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Data Assets</h3>
+                  <p className="text-gray-400">
+                    Databases, file systems, backup systems, and data warehouses with classification.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start space-x-4">
+                <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <Clock className="w-4 h-4 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">IoT Devices</h3>
+                  <p className="text-gray-400">
+                    Smart sensors, connected devices, and industrial IoT equipment with monitoring.
+                  </p>
+                </div>
+              </div>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-a260
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             </div>
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      {/* Features Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Platform Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI-powered platform provides comprehensive IT asset management with intelligent automation, 
+              security, and optimization capabilities.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:transform hover:scale-105"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 bg-gray-900/50">
+        <div className="container mx-auto max-w-6xl">
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Revolutionize your IT infrastructure with intelligent asset management. Monitor, optimize, and secure every device with AI-driven insights.
             </p>
@@ -1265,6 +1439,10 @@ export default function AIPoweredITAssetManagement() {
             ))}
 =======
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       {/* Benefits Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1321,6 +1499,12 @@ export default function AIPoweredITAssetManagement() {
                 </li>
               </ul>
             </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-a260
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       {/* Integration Section */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1366,12 +1550,33 @@ export default function AIPoweredITAssetManagement() {
                 <h3 className="text-lg font-semibold text-white">{assetType}</h3>
               </div>
             ))}
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-d426
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl text-center">
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-4xl text-center">
 =======
@@ -1441,6 +1646,10 @@ export default function AIPoweredITAssetManagement() {
             </Link>
 =======
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-indigo-500/10 to-purple-600/10 rounded-2xl p-12 text-center border border-indigo-500/20">
@@ -1482,6 +1691,12 @@ export default function AIPoweredITAssetManagement() {
               Contact Sales
             </button>
           </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-98d1
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Optimize Your IT Assets?
             </h2>
@@ -1789,6 +2004,10 @@ export default function AIPoweredITAssetManagement() {
             </Link>
           </div>
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         </div>
       </section>
     </div>

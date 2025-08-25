@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
 =======
 import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Star, Zap, Globe, Shield } from "lucide-react";
@@ -100,6 +101,29 @@ const categories = [
   },
   {
     title: "Talents",
+=======
+import { Briefcase, HardDrive, Lightbulb, Users, Brain, Monitor, Zap, Settings, Zap as ZapIcon } from "lucide-react";
+
+const categories = [
+  {
+    title: "Micro SAAS Services",
+    description: "AI-powered tools, business automation, and innovative solutions",
+    icon: <ZapIcon className="w-10 h-10" />,
+    link: "/micro-saas-services",
+    color: "from-zion-cyan to-zion-blue",
+    featured: true
+  },
+  {
+    title: "AI & IT Services",
+    description: "Professional IT consulting, development, and AI integration",
+    icon: <Brain className="w-10 h-10" />,
+    link: "/services",
+    color: "from-zion-purple to-zion-purple-dark",
+    featured: true
+  },
+  {
+    title: "Talent Network",
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b8ff
     description: "Connect with AI experts, developers, and tech specialists",
     icon: <Users className="w-8 h-8" />,
 =======
@@ -202,6 +226,7 @@ const categories = [
     link: "/talent",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     color: "from-cyan-500 to-blue-600",
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -214,12 +239,17 @@ const categories = [
 =======
     color: "from-emerald-500 to-green-600",
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-de94
+=======
+    color: "from-zion-cyan to-zion-blue",
+    featured: false
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b8ff
   },
   {
-    title: "Equipment",
+    title: "Equipment & Hardware",
     description: "Rent or buy specialized hardware, servers, and devices",
     icon: <HardDrive className="w-8 h-8" />,
     link: "/equipment",
+<<<<<<< HEAD
     color: "from-zion-blue to-zion-blue-dark",
     bgColor: "bg-zion-blue/10",
     borderColor: "border-zion-blue/20",
@@ -251,6 +281,13 @@ const categories = [
   {
 <<<<<<< HEAD
     title: "Innovation",
+=======
+    color: "from-amber-500 to-orange-600",
+    featured: false
+  },
+  {
+    title: "Innovation Hub",
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b8ff
     description: "Discover cutting-edge solutions and tech breakthroughs",
     icon: <Lightbulb className="w-8 h-8" />,
     link: "/category/innovation",
@@ -381,17 +418,32 @@ const categories = [
     description: "Cutting-edge solutions and breakthrough technology consulting",
     icon: <Lightbulb className="w-10 h-10" />,
     link: "/category/innovation",
+<<<<<<< HEAD
     color: "from-pink-500 to-rose-600",
     services: ["Innovation", "Research", "Prototyping", "Consulting"]
   }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-de94
+=======
+    color: "from-emerald-500 to-green-600",
+    featured: false
+  },
+  {
+    title: "AI Hiring Platform",
+    description: "AI-powered recruitment and talent acquisition tools",
+    icon: <ZapIcon className="w-10 h-10" />,
+    link: "/zion-hire-ai",
+    color: "from-zion-purple to-zion-purple-dark",
+    featured: true
+  }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b8ff
 ];
 
 const specialServices = [
   {
     title: "IT Onsite Services",
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -940,6 +992,20 @@ const advancedCategories = [
     title: "Comprehensive Services",
     link: "/comprehensive-services"
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-f15c
+=======
+    link: "/it-onsite-services",
+    description: "Global IT support and maintenance"
+  },
+  {
+    title: "Cloud Solutions",
+    link: "/services",
+    description: "Scalable cloud infrastructure"
+  },
+  {
+    title: "Cybersecurity",
+    link: "/micro-saas-services",
+    description: "Advanced threat protection"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b8ff
   }
 ];
 
@@ -948,7 +1014,14 @@ interface CategoriesSectionProps {
   className?: string;
 }
 
+<<<<<<< HEAD
 export function CategoriesSection({ showTitle = true, className = "" }: CategoriesSectionProps) {
+=======
+export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
+  const featuredCategories = categories.filter(cat => cat.featured);
+  const regularCategories = categories.filter(cat => !cat.featured);
+
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b8ff
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1007,11 +1080,17 @@ export function CategoriesSection({ showTitle = true, className = "" }: Categori
       <div className="container mx-auto px-4">
         {showTitle && (
           <div className="text-center mb-16">
+<<<<<<< HEAD
             <GradientHeading>Explore Our Service Ecosystem</GradientHeading>
             <p className="text-zion-slate-light text-lg mt-4 max-w-3xl mx-auto">
               Discover our comprehensive ecosystem of cutting-edge tech services, AI solutions, 
               and innovative micro SAAS offerings designed to transform your business
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
+=======
+            <GradientHeading>Explore Our Ecosystem</GradientHeading>
+            <p className="text-zion-slate-light text-lg mt-4 max-w-3xl mx-auto">
+              Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation solutions
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b8ff
             </p>
           </motion.div>
         )}
@@ -1114,17 +1193,54 @@ export function CategoriesSection({ showTitle = true, className = "" }: Categori
         )}
         
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-da9e
 =======
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
           {categories.map((category) => (
+=======
+        {/* Featured Categories */}
+        <div className="mb-16">
+          <h3 className="text-2xl font-bold text-white text-center mb-8">Featured Services</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {featuredCategories.map((category) => (
+              <Link 
+                key={category.title} 
+                to={category.link} 
+                className="group block"
+              >
+                <div className="rounded-xl overflow-hidden h-full border-2 border-zion-blue-light bg-zion-blue-dark p-8 transition-all duration-300 hover:border-zion-purple/50 hover:translate-y-[-8px] hover:shadow-2xl hover:shadow-zion-purple/20">
+                  <div className={`rounded-2xl w-20 h-20 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                    <div className="text-white">
+                      {category.icon}
+                    </div>
+                  </div>
+                  <h3 className="text-white text-2xl font-bold mb-3">{category.title}</h3>
+                  <p className="text-zion-slate-light text-lg leading-relaxed">{category.description}</p>
+                  <div className="mt-6 flex items-center text-zion-cyan group-hover:text-zion-purple-light transition-colors">
+                    <span className="font-semibold">Learn More</span>
+                    <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Regular Categories */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {regularCategories.map((category) => (
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b8ff
             <Link 
               key={category.title} 
               to={category.link} 
               className="group block"
             >
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
               <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-md p-6 transition-all duration-300 hover:border-zion-purple/50 hover:translate-y-[-5px] hover:bg-white/10 hover:scale-105 group-hover:shadow-2xl group-hover:shadow-zion-purple/20">
@@ -1202,6 +1318,9 @@ export function CategoriesSection({ showTitle = true, className = "" }: Categori
               className="group block"
             >
               <div className="rounded-xl overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm p-6 transition-all duration-300 hover:border-zion-purple/50 hover:translate-y-[-5px] hover:shadow-2xl hover:shadow-zion-purple/20 group-hover:bg-zion-blue-dark/90">
+=======
+              <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 hover:border-zion-purple/50 hover:translate-y-[-5px] hover:shadow-xl hover:shadow-zion-purple/20">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b8ff
                 <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
 =======
               <div className="rounded-xl overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark/80 p-6 transition-all duration-500 hover:border-zion-purple/50 hover:translate-y-[-8px] hover:shadow-2xl hover:shadow-zion-purple/20 backdrop-blur-sm">
@@ -1277,6 +1396,7 @@ export function CategoriesSection({ showTitle = true, className = "" }: Categori
 <<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-73d5
         
+<<<<<<< HEAD
 <<<<<<< HEAD
         {/* Bottom CTA */}
         <motion.div 
@@ -1390,6 +1510,11 @@ export function CategoriesSection({ showTitle = true, className = "" }: Categori
         <div className="mb-8">
           <h3 className="text-center text-2xl font-bold text-white mb-8">Featured Service Categories</h3>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-da9e
+=======
+        {/* Special Services */}
+        <div className="mb-8">
+          <h3 className="text-center text-xl font-bold text-white mb-6">Specialized Solutions</h3>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b8ff
           <div className="flex flex-wrap justify-center gap-4">
 =======
         <div className="mt-12">
@@ -1400,6 +1525,7 @@ export function CategoriesSection({ showTitle = true, className = "" }: Categori
               <Link 
                 key={service.title}
                 to={service.link}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1422,6 +1548,14 @@ export function CategoriesSection({ showTitle = true, className = "" }: Categori
                   {service.description}
                 </p>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
+=======
+                className="group px-6 py-4 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-xl text-zion-cyan transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20"
+              >
+                <div className="text-center">
+                  <div className="font-semibold text-lg mb-1">{service.title}</div>
+                  <div className="text-sm text-zion-slate-light opacity-80">{service.description}</div>
+                </div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b8ff
               </Link>
             ))}
             <Link 
@@ -1503,6 +1637,7 @@ export function CategoriesSection({ showTitle = true, className = "" }: Categori
           </div>
         </div>
         
+<<<<<<< HEAD
         <div className="text-center">
           <Link 
 <<<<<<< HEAD
@@ -1529,6 +1664,18 @@ export function CategoriesSection({ showTitle = true, className = "" }: Categori
             Explore All Categories
             <BarChart3 className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
+=======
+        {/* CTA */}
+        <div className="mt-12 flex justify-center">
+          <Link 
+            to="/micro-saas-services" 
+            className="inline-flex items-center gap-2 text-zion-cyan border-b-2 border-zion-cyan hover:border-zion-cyan-dark transition-colors text-lg font-semibold pb-1"
+          >
+            Explore All Services
+            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b8ff
           </Link>
         </div>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-2857

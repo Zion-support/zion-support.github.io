@@ -1,6 +1,119 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { Users, Target, Award, Globe, Zap, ArrowRight, CheckCircle, Star, Rocket, Shield, Cpu, Brain, Mail, MapPin, Phone } from 'lucide-react';
+import { SEO } from '@/components/SEO';
+>>>>>>> origin/cursor/website-audit-and-enhancement-89a0
+
+const openPositions = [
+  {
+    title: "Senior AI Engineer",
+    department: "AI & Machine Learning",
+    location: "Remote / Middletown, DE",
+    type: "Full-time",
+    experience: "5+ years",
+    description: "Join our AI team to develop cutting-edge machine learning models and AI solutions for enterprise clients.",
+    requirements: [
+      "Strong background in machine learning and deep learning",
+      "Experience with Python, TensorFlow, PyTorch",
+      "Knowledge of cloud platforms (AWS, Azure, GCP)",
+      "Experience with MLOps and model deployment"
+    ]
+  },
+  {
+    title: "Cloud DevOps Engineer",
+    department: "Cloud & DevOps",
+    location: "Remote / Middletown, DE",
+    type: "Full-time",
+    experience: "3+ years",
+    description: "Help us build scalable cloud infrastructure and automate deployment processes for our clients.",
+    requirements: [
+      "Experience with AWS, Azure, or Google Cloud",
+      "Knowledge of Kubernetes and Docker",
+      "Experience with CI/CD pipelines",
+      "Infrastructure as Code (Terraform, CloudFormation)"
+    ]
+  },
+  {
+    title: "Full Stack Developer",
+    department: "Engineering",
+    location: "Remote / Middletown, DE",
+    type: "Full-time",
+    experience: "3+ years",
+    description: "Build modern web applications and microservices that power our technology platform.",
+    requirements: [
+      "Proficiency in React, Node.js, and TypeScript",
+      "Experience with modern web technologies",
+      "Knowledge of database design and APIs",
+      "Understanding of cloud-native development"
+    ]
+  },
+  {
+    title: "Digital Transformation Consultant",
+    department: "Consulting",
+    location: "Remote / Middletown, DE",
+    type: "Full-time",
+    experience: "5+ years",
+    description: "Guide clients through their digital transformation journey with strategic planning and implementation.",
+    requirements: [
+      "Experience in business transformation projects",
+      "Knowledge of emerging technologies",
+      "Strong consulting and communication skills",
+      "Project management experience"
+    ]
+  }
+];
+
+const benefits = [
+  {
+    title: "Remote-First Culture",
+    description: "Work from anywhere with flexible hours and a supportive remote environment",
+    icon: Globe,
+    color: "text-zion-cyan"
+  },
+  {
+    title: "Professional Growth",
+    description: "Continuous learning opportunities, conferences, and career development programs",
+    icon: Brain,
+    color: "text-zion-purple"
+  },
+  {
+    title: "Innovation Projects",
+    description: "Work on cutting-edge technology projects that shape the future of business",
+    icon: Zap,
+    color: "text-green-400"
+  },
+  {
+    title: "Competitive Benefits",
+    description: "Health insurance, 401k, unlimited PTO, and equity participation",
+    icon: Award,
+    color: "text-blue-400"
+  }
+];
+
+const values = [
+  {
+    title: "Innovation",
+    description: "We encourage creative thinking and experimentation with new technologies."
+  },
+  {
+    title: "Collaboration",
+    description: "Teamwork and knowledge sharing are at the heart of our success."
+  },
+  {
+    title: "Excellence",
+    description: "We strive for the highest quality in everything we deliver."
+  },
+  {
+    title: "Growth",
+    description: "Continuous learning and personal development are core to our culture."
+  }
+];
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/Button";
@@ -302,10 +415,126 @@ export default function Careers() {
     'New York, NY',
     'Austin, TX',
     'Seattle, WA'
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   ];
 
   const jobOpenings = [
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      id: 'senior-ai-engineer',
+      title: 'Senior AI Engineer',
+      department: 'ai',
+      location: 'Remote / Middletown, DE',
+      type: 'Full-time',
+      experience: '5+ years',
+      salary: '$120,000 - $180,000',
+      description: 'Lead the development of cutting-edge AI solutions and machine learning platforms.',
+      requirements: [
+        'Advanced degree in Computer Science, AI, or related field',
+        'Expertise in Python, TensorFlow, PyTorch',
+        'Experience with large language models and NLP',
+        'Strong background in machine learning algorithms',
+        'Experience with cloud platforms (AWS, Azure, GCP)'
+      ],
+      benefits: [
+        'Competitive salary with equity options',
+        'Flexible remote work policy',
+        'Professional development budget',
+        'Health, dental, and vision insurance',
+        '401(k) with company match'
+      ]
+    },
+    {
+      id: 'full-stack-developer',
+      title: 'Full Stack Developer',
+>>>>>>> origin/cursor/build-and-fix-errors-e276
+      department: 'engineering',
+      location: 'Remote / Middletown, DE',
+      type: 'Full-time',
+      experience: '3+ years',
+<<<<<<< HEAD
+      description: 'Create beautiful and responsive user interfaces for our AI-powered applications.',
+      requirements: [
+        'Expertise in React, TypeScript, and modern frontend frameworks',
+        'Experience with responsive design and accessibility',
+        'Knowledge of state management and API integration',
+        'Strong UI/UX design principles'
+      ],
+      benefits: [
+        'Competitive salary with equity options',
+        'Remote work flexibility',
+        'Professional development opportunities',
+        'Health and dental insurance'
+      ],
+      urgent: false
+    },
+    {
+      id: 'ai-product-manager',
+      title: 'AI Product Manager',
+      department: 'ai-research',
+      location: 'Remote / Middletown, DE',
+      type: 'Full-time',
+      experience: '5+ years',
+      description: 'Lead product strategy and development for our AI-powered solutions.',
+      requirements: [
+        'Experience in AI/ML product management',
+        'Strong technical background and understanding of AI technologies',
+        'Excellent communication and stakeholder management skills',
+        'Experience with agile development methodologies'
+      ],
+      benefits: [
+        'Competitive salary with equity options',
+        'Remote work options',
+        'Professional development budget',
+        'Comprehensive benefits package'
+      ],
+      urgent: true
+    }
+  ];
+
+  const companyBenefits = [
+    {
+      icon: Heart,
+      title: 'Health & Wellness',
+      description: 'Comprehensive health, dental, and vision insurance for you and your family.',
+      color: 'from-red-500 to-pink-500'
+    },
+    {
+      icon: DollarSign,
+      title: 'Competitive Compensation',
+      description: 'Attractive salary packages with equity options and performance bonuses.',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      icon: Clock,
+      title: 'Flexible Work',
+      description: 'Remote work options and flexible hours to support work-life balance.',
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      icon: GraduationCap,
+      title: 'Learning & Growth',
+      description: 'Professional development budget and continuous learning opportunities.',
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      icon: Globe,
+      title: 'Global Impact',
+      description: 'Work on cutting-edge technology that transforms businesses worldwide.',
+      color: 'from-indigo-500 to-purple-500'
+    },
+    {
+      icon: Star,
+      title: 'Innovation Culture',
+      description: 'Be part of a team that pushes the boundaries of what\'s possible.',
+      color: 'from-yellow-500 to-orange-500'
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       id: 1,
       title: "Senior AI Research Scientist",
       department: "AI & Machine Learning",
@@ -1484,6 +1713,12 @@ const Careers = () => {
     {
       icon: Globe,
       title: 'Global Impact',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      description: 'We build solutions that make a difference in businesses worldwide.'
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       id: 1,
       title: "Senior AI Engineer",
       department: "AI & Research",
@@ -1758,11 +1993,38 @@ const Careers = () => {
       title: "Integrity",
       description: "We maintain the highest ethical standards in all our interactions",
       icon: Shield
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     }
   ];
 
   const benefits = [
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      icon: Award,
+      title: 'Competitive Compensation',
+      description: 'Above-market salaries, equity, and performance bonuses'
+    },
+    {
+      icon: BookOpen,
+      title: 'Learning & Development',
+      description: 'Unlimited learning budget, conferences, and certifications'
+    },
+    {
+      icon: Users,
+      title: 'Flexible Work',
+      description: 'Remote-first culture with flexible hours and locations'
+    },
+    {
+      icon: Heart,
+      title: 'Health & Wellness',
+      description: 'Comprehensive health insurance and wellness programs'
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       icon: '🚀',
       title: 'Innovation First',
       description: 'Work on cutting-edge AI and quantum technologies'
@@ -2167,6 +2429,10 @@ export default function Careers() {
       icon: <Star className="h-8 w-8" />,
       title: "Excellence",
       description: "We strive for excellence in everything we do, from code to customer experience"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-cbd5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
     {
       icon: <Lightbulb className="w-6 h-6 text-zion-purple" />,
@@ -2187,6 +2453,10 @@ export default function Careers() {
       icon: <Zap className="w-6 h-6 text-zion-purple" />,
       title: "Excellence",
       description: "We strive for quality in everything we do"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-bdc0
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
       title: "Competitive Compensation",
       description: "Attractive salary packages with equity options",
@@ -2206,10 +2476,26 @@ export default function Careers() {
       title: "Health & Wellness",
       description: "Comprehensive health, dental, and vision coverage",
       icon: Shield
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     }
   ];
 
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-cyan text-white py-20">
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     <div className="min-h-screen bg-zion-blue-dark text-white">
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
@@ -2238,6 +2524,10 @@ export default function Careers() {
 
       {/* Company Culture */}
       <section className="py-20 bg-zion-blue-dark">
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-cbd5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
     <>
       <SEO
@@ -2247,6 +2537,10 @@ export default function Careers() {
         canonical="https://ziontechgroup.com/careers"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3805
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -2270,11 +2564,87 @@ export default function Careers() {
                 Contact Us
               </Link>
             </div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-54e3
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Company Values */}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      {/* Company Culture */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+<<<<<<< HEAD
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+              Our Culture
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              We foster an environment of innovation, collaboration, and continuous learning 
+              where every team member can thrive and make a meaningful impact.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {cultureValues.map((value, index) => (
+              <div key={index} className="text-center group">
+                <div className={`w-16 h-16 mx-auto mb-4 rounded-xl bg-gradient-to-r ${value.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
+                  <value.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-white">{value.title}</h3>
+                <p className="text-gray-400 leading-relaxed">{value.description}</p>
+              </div>
+            ))}
+          </div>
+=======
+      {/* Company Values */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-white mb-4">Our Values</h2>
+          <p className="text-zion-slate-light text-lg">
+            The principles that guide everything we do
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {companyValues.map((value, index) => (
+            <div
+              key={index}
+              className="bg-zion-slate-dark border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 hover:shadow-xl hover:shadow-zion-cyan/10 transition-all duration-300"
+            >
+              <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <value.icon className="h-8 w-8 text-zion-cyan" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
+              <p className="text-zion-slate-light">{value.description}</p>
+            </div>
+          ))}
+>>>>>>> origin/cursor/website-audit-and-enhancement-a3a9
+        </div>
+      </section>
+
+<<<<<<< HEAD
+      {/* Benefits */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+              Why Work With Us?
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              We offer comprehensive benefits and opportunities that support your professional 
+              growth and personal well-being.
+            </p>
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -2331,11 +2701,63 @@ export default function Careers() {
             {values.map((value, index) => (
               <div key={index} className="text-center p-6 rounded-xl border border-gray-700 bg-gray-800/30 hover:border-cyan-400/50 transition-all duration-300">
                 <h3 className="text-xl font-semibold text-cyan-400 mb-3">{value.title}</h3>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-bc98
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                 <p className="text-gray-300">{value.description}</p>
               </div>
             ))}
           </div>
         </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      </section>
+
+      {/* Benefits */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Why Work With Us?
+            </h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              We believe in taking care of our team so they can do their best work.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {benefits.map((benefit, idx) => (
+              <div key={idx} className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <benefit.icon className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
+                  <p className="text-gray-300">{benefit.description}</p>
+                </div>
+              </div>
+            ))}
+>>>>>>> origin/cursor/website-audit-and-enhancement-82f7
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {companyBenefits.map((benefit, index) => (
+              <div
+                key={index}
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 group"
+              >
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${benefit.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <benefit.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
+                <p className="text-gray-400 leading-relaxed">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       {/* Benefits Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
@@ -2344,6 +2766,39 @@ export default function Careers() {
             We invest in our people because they're our greatest asset
           </p>
         </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {benefits.map((benefit, index) => (
+            <div
+              key={index}
+              className="bg-zion-slate-dark border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 hover:shadow-xl hover:shadow-zion-cyan/10 transition-all duration-300"
+            >
+              <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4">
+                <benefit.icon className="h-6 w-6 text-zion-cyan" />
+              </div>
+              <h3 className="text-lg font-bold text-white mb-2">{benefit.title}</h3>
+              <p className="text-zion-slate-light text-sm">{benefit.description}</p>
+            </div>
+          ))}
+>>>>>>> origin/cursor/website-audit-and-enhancement-a3a9
+        </div>
+      </section>
+
+      {/* Job Openings */}
+<<<<<<< HEAD
+      <section id="openings" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+              Open Positions
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Explore exciting opportunities to join our team and contribute to groundbreaking 
+              technology solutions.
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       </section>
 
       {/* Job Openings */}
@@ -2355,10 +2810,32 @@ export default function Careers() {
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
               Find the perfect role for your skills and career goals.
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-82f7
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             </p>
           </div>
 
           {/* Department Filter */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {departments.map((dept) => (
+              <button
+                key={dept.id}
+                onClick={() => setActiveDepartment(dept.id)}
+                className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+                  activeDepartment === dept.id
+                    ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
+                    : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white'
+                }`}
+              >
+                <dept.icon className="w-5 h-5" />
+                <span>{dept.name}</span>
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           <div className="flex flex-wrap justify-center gap-3 mb-12">
             {departments.map((dept) => (
               <button
@@ -2375,12 +2852,31 @@ export default function Careers() {
                 <span className="text-xs bg-gray-700 px-2 py-1 rounded-full">
                   {dept.count}
                 </span>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-82f7
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               </button>
             ))}
           </div>
           
           <div className="space-y-6">
             {filteredJobs.map((job) => (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              <div
+                key={job.id}
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"
+              >
+                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                  <div className="mb-4 lg:mb-0">
+                    <div className="flex items-center space-x-3 mb-2">
+                      <h3 className="text-xl font-semibold text-white">{job.title}</h3>
+                      {job.urgent && (
+                        <span className="px-2 py-1 bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs font-medium rounded-full">
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               <div key={job.id} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8 hover:border-purple-500/50 transition-all duration-300">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
                   <div className="mb-4 lg:mb-0">
@@ -2388,14 +2884,31 @@ export default function Careers() {
                       <h3 className="text-2xl font-bold">{job.title}</h3>
                       {job.urgent && (
                         <span className="px-3 py-1 bg-red-500/20 text-red-400 text-sm rounded-full border border-red-500/30">
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-82f7
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                           Urgent
                         </span>
                       )}
                     </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400">
+                      <div className="flex items-center space-x-1">
+                        <Briefcase className="w-4 h-4" />
+                        <span>{job.type}</span>
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                     <div className="flex flex-wrap items-center gap-4 text-gray-400 text-sm">
                       <div className="flex items-center space-x-1">
                         <Building className="w-4 h-4" />
                         <span>{departments.find(d => d.id === job.department)?.name}</span>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-82f7
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                       </div>
                       <div className="flex items-center space-x-1">
                         <MapPin className="w-4 h-4" />
@@ -2403,6 +2916,33 @@ export default function Careers() {
                       </div>
                       <div className="flex items-center space-x-1">
                         <Clock className="w-4 h-4" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                        <span>{job.experience}</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex space-x-3">
+                    <a
+                      href={`mailto:careers@ziontechgroup.com?subject=Application for ${job.title}`}
+                      className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+                    >
+                      <Mail className="w-4 h-4" />
+                      <span>Apply</span>
+                    </a>
+                    <a
+                      href={`https://linkedin.com/company/zion-tech-group/jobs`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center space-x-2 px-4 py-2 border border-cyan-500 text-cyan-400 rounded-lg font-medium hover:bg-cyan-500 hover:text-white transition-all duration-200"
+                    >
+                      <Linkedin className="w-4 h-4" />
+                      <span>LinkedIn</span>
+                    </a>
+                  </div>
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                         <span>{job.type}</span>
                       </div>
                       <div className="flex items-center space-x-1">
@@ -2422,18 +2962,37 @@ export default function Careers() {
                     <span>Apply Now</span>
                     <ArrowRight className="w-4 h-4" />
                   </Link>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-82f7
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                 </div>
                 
                 <p className="text-gray-300 mb-4">{job.description}</p>
                 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                   <div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    <h4 className="font-medium text-white mb-2">Requirements:</h4>
+                    <ul className="space-y-1">
+                      {job.requirements.map((req, index) => (
+                        <li key={index} className="flex items-start space-x-2 text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-cyan-400 mt-0.5 flex-shrink-0" />
+                          <span>{req}</span>
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                     <h4 className="font-semibold mb-3 text-purple-400">Requirements</h4>
                     <ul className="space-y-2">
                       {job.requirements.map((req, idx) => (
                         <li key={idx} className="flex items-center space-x-2">
                           <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0" />
                           <span className="text-gray-300 text-sm">{req}</span>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-82f7
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                         </li>
                       ))}
                     </ul>
@@ -2518,12 +3077,72 @@ export default function Careers() {
                 <p className="text-zion-slate">
                   {value.description}
                 </p>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-54e3
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               </div>
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {/* Job Filters */}
+      <section className="py-12 bg-black/20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+            {/* Department Filters */}
+            <div className="flex flex-wrap gap-3">
+              {departments.map((dept) => (
+                <button
+                  key={dept.id}
+                  onClick={() => setSelectedDepartment(dept.id)}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-all duration-300 ${
+                    selectedDepartment === dept.id
+                      ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400'
+                      : 'bg-gray-800/50 border-gray-700 text-gray-300 hover:border-cyan-500/30 hover:bg-gray-800/70'
+                  }`}
+                >
+                  <dept.icon className="w-4 h-4" />
+                  {dept.name}
+                  <span className="text-xs bg-gray-700 px-2 py-1 rounded-full">
+                    {dept.count}
+                  </span>
+                </button>
+              ))}
+            </div>
+
+            {/* Additional Filters */}
+            <div className="flex items-center gap-3">
+              <select
+                value={selectedLocation}
+                onChange={(e) => setSelectedLocation(e.target.value)}
+                className="bg-gray-800/50 border border-gray-700 text-white rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              >
+                {locations.map((location) => (
+                  <option key={location.id} value={location.id}>
+                    {location.name} ({location.count})
+                  </option>
+                ))}
+              </select>
+              
+              <select
+                value={selectedType}
+                onChange={(e) => setSelectedType(e.target.value)}
+                className="bg-gray-800/50 border border-gray-700 text-white rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              >
+                {jobTypes.map((type) => (
+                  <option key={type.id} value={type.id}>
+                    {type.name} ({type.count})
+                  </option>
+                ))}
+              </select>
+            </div>
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       {/* Featured Positions */}
       {featuredPositions.length > 0 && (
         <section className="pb-20 px-4 sm:px-6 lg:px-8">
@@ -2631,10 +3250,286 @@ export default function Careers() {
                 <div className="text-4xl mb-4">{benefit.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
                 <p className="text-gray-300">{benefit.description}</p>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-bc98
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               </div>
             ))}
           </div>
         </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      </section>
+
+      {/* Open Positions */}
+      <section id="open-positions" className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
+              Open Positions
+            </h2>
+            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
+              Find the perfect role for your skills and career goals. 
+              Join us in building the future of technology.
+            </p>
+          </div>
+
+          {/* Search and Filter */}
+          <div className="max-w-4xl mx-auto mb-12">
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <label className="block text-sm font-medium text-zion-blue-dark mb-2">
+                  Search Positions
+                </label>
+                <input
+                  type="text"
+                  placeholder="Search by title, skills, or keywords..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full px-4 py-3 border border-zion-slate-light rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-colors"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-zion-blue-dark mb-2">
+                  Department
+                </label>
+                <select
+                  value={selectedDepartment}
+                  onChange={(e) => setSelectedDepartment(e.target.value)}
+                  className="w-full px-4 py-3 border border-zion-slate-light rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-colors"
+                >
+                  {departments.map((dept) => (
+                    <option key={dept} value={dept}>
+                      {dept === 'all' ? 'All Departments' : dept}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          </div>
+
+          {/* Job Listings */}
+          <div className="max-w-4xl mx-auto space-y-6">
+            {filteredJobs.length === 0 ? (
+              <div className="text-center py-12">
+                <p className="text-zion-slate text-lg">
+                  No positions match your current search criteria. 
+                  Please try different keywords or check back later for new opportunities.
+                </p>
+              </div>
+            ) : (
+              filteredJobs.map((job) => (
+                <div key={job.id} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                    <div>
+                      <h3 className="text-2xl font-bold text-zion-blue-dark mb-2">
+                        {job.title}
+                      </h3>
+                      <div className="flex flex-wrap gap-4 text-sm text-zion-slate">
+                        <span className="flex items-center gap-1">
+                          <Briefcase className="w-4 h-4" />
+                          {job.department}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <MapPin className="w-4 h-4" />
+                          {job.location}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Clock className="w-4 h-4" />
+                          {job.type}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Users className="w-4 h-4" />
+                          {job.experience}
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <DollarSign className="w-4 h-4" />
+                          {job.salary}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="mt-4 lg:mt-0">
+                      <button className="px-6 py-2 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors">
+                        Apply Now
+                      </button>
+                    </div>
+                  </div>
+                  
+                  <p className="text-zion-slate mb-4">
+                    {job.description}
+                  </p>
+
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h4 className="font-semibold text-zion-blue-dark mb-2">Requirements:</h4>
+                      <ul className="space-y-1">
+                        {job.requirements.map((req, index) => (
+                          <li key={index} className="flex items-start text-sm text-zion-slate">
+                            <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mr-2 mt-2 flex-shrink-0"></div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-54e3
+                            {req}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+<<<<<<< HEAD
+                    
+                    <div className="flex items-center justify-between">
+                      <div className="flex flex-wrap gap-2">
+                        <span className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-md">
+                          {jobTypes.find(t => t.id === position.type)?.name}
+                        </span>
+                        <span className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-md">
+                          {departments.find(d => d.id === position.department)?.name}
+                        </span>
+                      </div>
+                      
+                      <button className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200">
+                        Apply Now
+                        <ArrowRight className="w-4 h-4 ml-1" />
+                      </button>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Regular Positions */}
+      <section className="pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Open Positions</h2>
+            <p className="text-gray-300">
+              {filteredPositions.length > 0 
+                ? `Showing ${filteredPositions.length} positions` 
+                : 'No positions found matching your criteria'
+              }
+            </p>
+          </div>
+          
+          {regularPositions.length > 0 && (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {regularPositions.map((position, index) => (
+                <motion.div
+                  key={position.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
+                >
+                  <div className="h-48 bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center">
+                    <Briefcase className="w-12 h-12 text-purple-400" />
+                  </div>
+                  
+                  <div className="p-6">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="text-gray-400 text-sm capitalize">{position.department}</span>
+                    </div>
+                    
+                    <h3 className="text-xl font-bold text-white mb-3 hover:text-cyan-400 transition-colors duration-200">
+                      {position.title}
+                    </h3>
+                    
+                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">
+                      {position.description}
+                    </p>
+                    
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center gap-4 text-xs text-gray-400">
+                        <div className="flex items-center gap-1">
+                          <MapPin className="w-3 h-3" />
+                          {locations.find(l => l.id === position.location)?.name}
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Clock className="w-3 h-3" />
+                          {position.experience}
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex flex-wrap gap-1">
+                        <span className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-md">
+                          {jobTypes.find(t => t.id === position.type)?.name}
+                        </span>
+                        <span className="px-2 py-1 bg-gray-700/50 text-gray-300 text-xs rounded-md">
+                          {position.applications} apps
+                        </span>
+                      </div>
+                    </div>
+                    
+                    <button className="w-full text-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm py-2 border border-cyan-500/30 rounded-lg hover:border-cyan-500/50">
+                      View Details & Apply
+                    </button>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          )}
+          
+          {regularPositions.length === 0 && (
+            <div className="text-center py-12">
+              <Briefcase className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">No positions found</h3>
+              <p className="text-gray-300">Try adjusting your search or filter criteria</p>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Why Work With Us */}
+      <section className="pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">Why Work With Zion Tech Group?</h2>
+            <p className="text-gray-300">Discover what makes us an exceptional place to grow your career</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                icon: Brain,
+                title: "Cutting-Edge Technology",
+                description: "Work with the latest AI, quantum computing, and emerging technologies"
+              },
+              {
+                icon: Rocket,
+                title: "Career Growth",
+                description: "Continuous learning opportunities and clear advancement paths"
+              },
+              {
+                icon: Heart,
+                title: "Inclusive Culture",
+                description: "Diverse, collaborative environment that values every team member"
+              },
+              {
+                icon: Zap,
+                title: "Impact & Innovation",
+                description: "Shape the future of technology and transform businesses worldwide"
+              }
+            ].map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center p-6"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="w-8 h-8 text-cyan-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                <p className="text-gray-300 text-sm">{benefit.description}</p>
+              </motion.div>
+            ))}
+>>>>>>> origin/cursor/website-audit-and-enhancement-bd86
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                     <div>
                       <h4 className="font-semibold text-zion-blue-dark mb-2">Benefits:</h4>
                       <ul className="space-y-1">
@@ -2650,6 +3545,10 @@ export default function Careers() {
                 </div>
               ))
             )}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-54e3
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
     <div className="min-h-screen bg-background">
       <SEO 
@@ -2695,10 +3594,30 @@ export default function Careers() {
                 </CardContent>
               </Card>
             ))}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-bdc0
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      {/* Job Openings */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Open Positions
+            </h2>
+            <p className="text-xl text-gray-300">
+              {filteredJobs.length} job{filteredJobs.length !== 1 ? 's' : ''} available
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       </div>
 
       {/* Open Positions */}
@@ -2710,10 +3629,86 @@ export default function Careers() {
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Find your next opportunity to make a difference
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-bc98
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             </p>
           </div>
 
           <div className="space-y-6">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            {filteredJobs.map((job) => (
+              <div
+                key={job.id}
+                className="bg-gray-800/50 rounded-xl border border-gray-700 p-6 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/70"
+              >
+                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+                  <div className="flex-1">
+                    <div className="flex items-start justify-between mb-3">
+                      <div>
+                        <h3 className="text-2xl font-bold text-white mb-2">
+                          {job.title}
+                          {job.urgent && (
+                            <span className="ml-3 px-2 py-1 bg-red-500/20 text-red-400 text-xs rounded-full border border-red-500/50">
+                              Urgent
+                            </span>
+                          )}
+                        </h3>
+                        <div className="flex flex-wrap items-center gap-4 text-sm text-gray-400 mb-4">
+                          <div className="flex items-center gap-2">
+                            <Briefcase className="w-4 h-4" />
+                            {departments.find(d => d.id === job.department)?.name}
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <MapPin className="w-4 h-4" />
+                            {locations.find(l => l.id === job.location)?.name}
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Clock className="w-4 h-4" />
+                            {jobTypes.find(t => t.id === job.type)?.name}
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Users className="w-4 h-4" />
+                            {job.experience}
+                          </div>
+                        </div>
+                      </div>
+                      <div className="text-right">
+                        <p className="text-cyan-400 font-bold text-lg">{job.salary}</p>
+                        <p className="text-gray-400 text-sm">Posted {formatDate(job.postedDate)}</p>
+                      </div>
+                    </div>
+                    
+                    <p className="text-gray-300 mb-4">{job.description}</p>
+                    
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                      <div>
+                        <h4 className="text-white font-semibold mb-2">Requirements:</h4>
+                        <ul className="space-y-1">
+                          {job.requirements.map((req, index) => (
+                            <li key={index} className="flex items-start gap-2 text-gray-300 text-sm">
+                              <CheckCircle className="w-4 h-4 text-cyan-400 mt-0.5 flex-shrink-0" />
+                              {req}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div>
+                        <h4 className="text-white font-semibold mb-2">Responsibilities:</h4>
+                        <ul className="space-y-1">
+                          {job.responsibilities.map((resp, index) => (
+                            <li key={index} className="flex items-start gap-2 text-gray-300 text-sm">
+                              <CheckCircle className="w-4 h-4 text-cyan-400 mt-0.5 flex-shrink-0" />
+                              {resp}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     "Innovation at the core of everything we do",
     "Customer success drives our decisions",
     "Continuous learning and improvement",
@@ -2845,16 +3840,58 @@ export default function Careers() {
                     <div className="flex items-center space-x-2">
                       <Clock className="w-4 h-4 text-blue-400" />
                       <span>{position.experience}</span>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-9620
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                     </div>
                   </div>
                 </div>
                 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                <div className="mt-6 pt-6 border-t border-gray-700">
+                  <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div className="flex flex-wrap gap-2">
+                      {job.benefits.slice(0, 3).map((benefit, index) => (
+                        <span
+                          key={index}
+                          className="px-3 py-1 bg-gray-700/50 text-cyan-400 text-sm rounded-full border border-gray-600"
+                        >
+                          {benefit}
+                        </span>
+                      ))}
+                    </div>
+                    <Link
+                      to="/contact"
+                      className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                    >
+                      Apply Now
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </Link>
+>>>>>>> origin/cursor/website-audit-and-enhancement-1f82
+                  </div>
+                  <div>
+<<<<<<< HEAD
+                    <h4 className="font-medium text-white mb-2">Benefits:</h4>
+                    <ul className="space-y-1">
+                      {job.benefits.map((benefit, index) => (
+                        <li key={index} className="flex items-start space-x-2 text-sm text-gray-400">
+                          <Star className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
+                          <span>{benefit}</span>
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                     <h4 className="font-semibold mb-3 text-purple-400">Benefits</h4>
                     <ul className="space-y-2">
                       {job.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center space-x-2">
                           <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0" />
                           <span className="text-gray-300 text-sm">{benefit}</span>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-82f7
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
     <div className="min-h-screen bg-background relative overflow-hidden">
       <SEO 
@@ -2987,10 +4024,157 @@ export default function Careers() {
                 <span>Rapid Growth</span>
               </div>
             </motion.div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-e276
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           </motion.div>
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {/* Why Work With Us */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
+            Why Work With Us?
+          </h2>
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+            Join a company that values innovation, growth, and making a real impact in the technology world.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {benefits.map((benefit, index) => {
+            const IconComponent = benefit.icon;
+            return (
+              <motion.div
+                key={benefit.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300"
+              >
+                <div className="flex items-start gap-4">
+                  <div className={`p-3 bg-zion-purple/20 rounded-lg ${benefit.color}`}>
+                    <IconComponent className="w-8 h-8" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
+                    <p className="text-zion-slate-light leading-relaxed">{benefit.description}</p>
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* Company Values */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
+            Our Company Values
+          </h2>
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+            These principles guide our work and shape our company culture.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {values.map((value, index) => (
+            <motion.div
+              key={value.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-6 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300 text-center"
+            >
+              <h3 className="text-lg font-semibold text-white mb-3">{value.title}</h3>
+              <p className="text-zion-slate-light text-sm">{value.description}</p>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Open Positions */}
+      <section id="open-positions" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
+            Open Positions
+          </h2>
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+            Explore our current job openings and find the perfect role for your skills and career goals.
+          </p>
+        </motion.div>
+
+        <div className="space-y-6">
+          {openPositions.map((position, index) => (
+            <motion.div
+              key={position.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="bg-zion-blue-light/10 backdrop-blur-md border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/50 hover:bg-zion-blue-light/20 transition-all duration-300"
+            >
+              <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+                <div className="flex-1">
+                  <div className="flex flex-wrap items-center gap-3 mb-4">
+                    <h3 className="text-2xl font-semibold text-white">{position.title}</h3>
+                    <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full">
+                      {position.type}
+                    </span>
+                  </div>
+                  
+                  <div className="flex flex-wrap items-center gap-4 mb-4 text-zion-slate-light">
+                    <div className="flex items-center gap-2">
+                      <Users className="w-4 h-4" />
+                      {position.department}
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <MapPin className="w-4 h-4" />
+                      {position.location}
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Award className="w-4 h-4" />
+                      {position.experience}
+                    </div>
+                  </div>
+                  
+                  <p className="text-zion-slate-light mb-4">{position.description}</p>
+                  
+                  <div>
+                    <h4 className="text-white font-semibold mb-3">Requirements:</h4>
+                    <ul className="space-y-2">
+                      {position.requirements.map((requirement) => (
+                        <li key={requirement} className="flex items-center gap-2 text-zion-slate-light">
+                          <CheckCircle className="w-4 h-4 text-zion-cyan" />
+                          {requirement}
+>>>>>>> origin/cursor/website-audit-and-enhancement-89a0
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+<<<<<<< HEAD
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       <div className="container mx-auto px-4 py-16">
         <div className="flex flex-col lg:flex-row gap-8 mb-12">
           <div className="lg:w-1/3">
@@ -3023,6 +4207,10 @@ export default function Careers() {
                       </span>
                     </button>
                   ))}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-a3a9
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                 </div>
               </div>
               
@@ -3052,6 +4240,17 @@ export default function Careers() {
               </div>
             </div>
           </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+          {filteredJobs.length === 0 && (
+            <div className="text-center py-12">
+              <p className="text-gray-400 text-lg">No positions available in this department at the moment.</p>
+              <p className="text-gray-500 mt-2">Check back later or contact us for future opportunities.</p>
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           
           <div className="lg:w-2/3">
             <div className="flex items-center justify-between mb-6">
@@ -3061,6 +4260,10 @@ export default function Careers() {
               <span className="text-zion-slate-light text-sm">
                 Updated {new Date().toLocaleDateString()}
               </span>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-a3a9
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             </div>
             
             <div className="space-y-6">
@@ -3177,6 +4380,10 @@ export default function Careers() {
                   <div className="text-zion-cyan mb-4 mx-auto">{value.icon}</div>
                   <h4 className="text-lg font-semibold mb-2">{value.title}</h4>
                   <p className="text-zion-slate-light text-sm">{value.description}</p>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-cbd5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
       {/* Company Culture */}
       <section className="py-20 bg-zion-blue-dark/50">
@@ -3215,6 +4422,10 @@ export default function Careers() {
                   <div className="text-zion-cyan font-semibold">Remote Work</div>
                   <div className="text-zion-cyan font-semibold">Team Events</div>
                   <div className="text-zion-cyan font-semibold">Hackathons</div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-bdc0
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                 </div>
               </div>
             </div>
@@ -3222,6 +4433,58 @@ export default function Careers() {
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      {/* Application Process */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+              How to Apply
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Our simple and transparent application process designed to find the best talent.
+            </p>
+          </div>
+<<<<<<< HEAD
+          
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-white">1</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-white">Submit Application</h3>
+              <p className="text-gray-400">Send your resume and cover letter to careers@ziontechgroup.com</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-white">2</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-white">Initial Review</h3>
+              <p className="text-gray-400">Our team reviews your application within 48 hours</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-white">3</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-white">Technical Interview</h3>
+              <p className="text-gray-400">Discuss your skills and experience with our team</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-white">4</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-white">Join Our Team</h3>
+              <p className="text-gray-400">Welcome aboard! Start your journey with us</p>
+            </div>
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="bg-zion-slate-dark border border-zion-cyan/20 rounded-xl p-12 text-center max-w-4xl mx-auto">
@@ -3244,6 +4507,10 @@ export default function Careers() {
               <span>Contact Us</span>
               <ArrowRight className="h-5 w-5" />
             </Link>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-a3a9
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
       {/* Application Process */}
       <section className="py-20 bg-white">
@@ -3304,6 +4571,10 @@ export default function Careers() {
                 </p>
               </div>
             </div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-54e3
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
                 <p className="text-gray-300 mb-6">{position.description}</p>
                 
@@ -3362,10 +4633,20 @@ export default function Careers() {
                 </div>
 
                 <button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan/90 hover:to-zion-purple/90 text-white py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-cbd5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                   Apply Now
                 </button>
               </div>
             ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-9620
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       {/* Company Values Section */}
       <section className="relative z-10 py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -3421,10 +4702,209 @@ export default function Careers() {
                 Send Us Your Resume
               </button>
             </Link>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-cbd5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {/* Perks Section */}
+      <section className="relative z-10 py-20 px-4 bg-zion-blue-dark/30">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Why Work at <span className="text-zion-cyan">Zion Tech Group</span>?
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              We offer more than just a job – we provide an environment where you can 
+              thrive, grow, and make a real impact.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {perks.map((perk, index) => (
+              <motion.div
+                key={perk}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ scale: 1.05 }}
+                className="group"
+              >
+                <Card className="bg-zion-blue-dark/30 backdrop-blur-lg border-zion-blue-light/20 hover:border-zion-cyan/50 transition-all duration-300 p-4 text-center">
+                  <p className="text-zion-slate-light group-hover:text-zion-cyan transition-colors font-medium">
+                    {perk}
+                  </p>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Job Openings Section */}
+      <section className="relative z-10 py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Open <span className="text-zion-cyan">Positions</span>
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Find the perfect role that matches your skills, passion, and career goals. 
+              We're always looking for talented individuals to join our team.
+            </p>
+          </motion.div>
+
+          {/* Department Filter */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {departments.map((dept) => {
+              const isActive = selectedDepartment === dept.id;
+              
+              return (
+                <motion.button
+                  key={dept.id}
+                  onClick={() => setSelectedDepartment(dept.id)}
+                  className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
+                    isActive
+                      ? 'bg-gradient-to-r ' + dept.color + ' text-white shadow-lg shadow-zion-cyan/25'
+                      : 'bg-zion-blue-dark/30 text-zion-slate-light hover:text-white hover:bg-zion-blue-light/20 border border-zion-blue-light/20'
+                  }`}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {dept.name}
+                </motion.button>
+              );
+            })}
+          </div>
+
+          {/* Jobs Grid */}
+          <div className="space-y-6">
+            {filteredJobs.map((job, index) => (
+              <motion.div
+                key={job.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+                className="group"
+              >
+                <Card className="bg-zion-blue-dark/30 backdrop-blur-lg border-zion-blue-light/20 hover:border-zion-cyan/50 transition-all duration-300 overflow-hidden">
+                  <div className="p-8">
+                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-3 mb-4">
+                          <Badge className="bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30">
+                            {departments.find(d => d.id === job.department)?.name}
+                          </Badge>
+                          <Badge variant="outline" className="border-zion-blue-light/30 text-zion-slate-light">
+                            {job.type}
+                          </Badge>
+                        </div>
+                        
+                        <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
+                          {job.title}
+                        </h3>
+                        
+                        <p className="text-zion-slate-light mb-4">
+                          {job.description}
+                        </p>
+                        
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-zion-slate-light">
+                          <div className="flex items-center gap-2">
+                            <MapPin className="w-4 h-4 text-zion-cyan" />
+                            <span>{job.location}</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Clock className="w-4 h-4 text-zion-cyan" />
+                            <span>{job.experience}</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <DollarSign className="w-4 h-4 text-zion-cyan" />
+                            <span>{job.salary}</span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="flex flex-col gap-3">
+                        <FuturisticNeonButton
+                          onClick={() => setIsApplying(job.id)}
+                          size="sm"
+                          className="px-6"
+                        >
+                          Apply Now
+                        </FuturisticNeonButton>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          onClick={() => setIsApplying(job.id)}
+                          className="border-zion-cyan/50 text-zion-cyan hover:bg-zion-cyan/10"
+                        >
+                          View Details
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              </motion.div>
+            ))}
+>>>>>>> origin/cursor/build-and-fix-errors-e276
+          </div>
+        </div>
+      </section>
+
+<<<<<<< HEAD
+      {/* CTA Section */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+            Ready to Join Our Mission?
+          </h2>
+          <p className="text-xl text-gray-400 mb-8">
+            Help us revolutionize technology and shape the future of AI and digital transformation.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="mailto:careers@ziontechgroup.com"
+              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+            >
+              <Mail className="w-5 h-5" />
+              <span>Send Application</span>
+              <ArrowRight className="w-5 h-5" />
+            </a>
+            <a
+              href="/contact"
+              className="inline-flex items-center space-x-2 px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-medium hover:bg-cyan-500 hover:text-white transition-all duration-200"
+            >
+              <span>Get in Touch</span>
+              <ArrowRight className="w-5 h-5" />
+            </a>
+          </div>
+        </div>
+      </section>
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 
           {filteredJobs.length === 0 && (
             <div className="text-center py-16">
@@ -3438,19 +4918,61 @@ export default function Careers() {
               <Briefcase className="w-16 h-16 text-gray-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">No jobs found</h3>
               <p className="text-gray-300">Try adjusting your search or filter criteria</p>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-1f82
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             </div>
           )}
         </div>
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
 =======
       <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-blue">
+=======
+<<<<<<< HEAD
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Don't See the Right Fit?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            We're always looking for talented individuals. Send us your resume 
+            and we'll keep you in mind for future opportunities.
+=======
+      <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
+=======
+      <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-blue">
+>>>>>>> origin/cursor/website-audit-and-enhancement-54e3
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Join Our Team?
           </h2>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Don't see the perfect role? Send us your resume and we'll keep you in mind for future opportunities.
+>>>>>>> origin/cursor/website-audit-and-enhancement-1f82
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+<<<<<<< HEAD
+              className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg text-white font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-200 flex items-center justify-center space-x-2"
+            >
+              <span>Send General Application</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+            <Link
+              to="/about"
+              className="px-8 py-4 border border-purple-500 text-purple-400 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-200"
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >
               Submit Your Resume
@@ -3459,12 +4981,23 @@ export default function Careers() {
             <Link
               to="/about"
               className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-1f82
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             >
               Learn More About Us
             </Link>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-82f7
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-1f82
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
       {/* General Application CTA */}
       <section className="pb-20 px-4 sm:px-6 lg:px-8">
@@ -3492,6 +5025,10 @@ export default function Careers() {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-bd86
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
             Don't see the perfect role? We're always looking for talented individuals 
@@ -3513,6 +5050,10 @@ export default function Careers() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-54e3
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
         <div className="max-w-4xl mx-auto text-center">
@@ -3580,6 +5121,10 @@ export default function Careers() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-9620
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
                 </div>
                 
@@ -3658,6 +5203,10 @@ export default function Careers() {
           </div>
         </motion.div>
       </section>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-89a0
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
 
 
@@ -3677,6 +5226,10 @@ const Careers = () => {
           </p>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-48a5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
       {/* Application Modal */}
       <AnimatePresence>
@@ -3831,10 +5384,22 @@ const Careers = () => {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-e276
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     </div>
   );
 };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+export default Careers;
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             {openPositions.map((position, index) => (
               <div key={index} className="p-6 rounded-xl border border-gray-700 bg-gray-800/30 hover:border-cyan-400/50 transition-all duration-300">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
@@ -4111,10 +5676,33 @@ const Careers = () => {
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Icon className="w-8 h-8 text-white" />
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-3">{benefit.title}</h3>
                 <p className="text-gray-300 text-sm">{benefit.description}</p>
               </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Application Process */}
+      <div className="px-4 sm:px-6 lg:px-8 pb-16">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Application Process
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Simple steps to join our team
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       {/* Application Process */}
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -4127,12 +5715,56 @@ const Careers = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+<<<<<<< HEAD
             );
           })}
+=======
+<<<<<<< HEAD
+            {[
+              { step: '1', title: 'Apply', description: 'Submit your application and resume' },
+              { step: '2', title: 'Review', description: 'Our team reviews your application' },
+              { step: '3', title: 'Interview', description: 'Technical and cultural fit interviews' },
+              { step: '4', title: 'Offer', description: 'Welcome to the team!' }
+            ].map((process, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4">
+                  {process.step}
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{process.title}</h3>
+                <p className="text-gray-300 text-sm">{process.description}</p>
+              </div>
+            ))}
+          </div>
+=======
+            );
+          })}
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         </div>
       </div>
 
       {/* CTA Section */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <div className="px-4 sm:px-6 lg:px-8 pb-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Don't See the Right Role?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
+                Submit Resume
+              </button>
+              <Link
+                to="/contact"
+                className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-medium hover:bg-cyan-400/20 transition-all duration-300"
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
@@ -4154,6 +5786,10 @@ const Careers = () => {
               <Link
                 to="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-medium rounded-lg transition-all duration-200"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               >
                 Contact Us
               </Link>
@@ -4295,6 +5931,10 @@ const Careers = () => {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-bc98
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
 export default Careers;
 =======
@@ -4360,4 +6000,15 @@ export default Careers;
       </section>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+};
+
+export default CareersPage;
+>>>>>>> origin/cursor/website-audit-and-enhancement-cbd5
+=======
+}
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7

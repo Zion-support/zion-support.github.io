@@ -8,6 +8,14 @@ import {
 =======
   AlertTriangle,
   CheckCircle,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  Info,
+<<<<<<< HEAD
+  BarChart3
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   BarChart3,
   Gauge,
   Smartphone,
@@ -26,6 +34,13 @@ interface PerformanceMetrics {
   fid: number; // First Input Delay
   cls: number; // Cumulative Layout Shift
   ttfb: number; // Time to First Byte
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  fmp: number; // First Meaningful Paint
+<<<<<<< HEAD
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   X,
   BarChart3,
   Gauge,
@@ -43,6 +58,10 @@ interface PerformanceMetrics {
   bundleLoadTime: number | null;
   memoryUsage: number | null;
   networkSpeed: number | null;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 }
 
 interface PerformanceThresholds {
@@ -153,6 +172,12 @@ const PerformanceMonitor: React.FC = () => {
       default:
         return 'text-gray-500';
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  }, [calculateScore, getGrade, generateRecommendations]);
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   si: number; // Speed Index
   tti: number; // Time to Interactive
 }
@@ -180,6 +205,10 @@ const PerformanceMonitor: React.FC = () => {
         return value.toString();
     }
   };
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 
 interface PerformanceScore {
   overall: number;
@@ -205,6 +234,179 @@ interface PerformanceMetrics {
   chunkCount: number;
 }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+interface ResourceTiming {
+  name: string;
+  duration: number;
+  size: number;
+  type: string;
+}
+
+// Performance API type extensions
+interface PerformanceEventTiming extends PerformanceEntry {
+  processingStart: number;
+  processingEnd: number;
+  target?: EventTarget;
+}
+
+interface LayoutShift extends PerformanceEntry {
+  value: number;
+  hadRecentInput: boolean;
+  lastInputTime: number;
+  sources: Array<{
+    node?: Node;
+    currentRect: DOMRectReadOnly;
+    previousRect: DOMRectReadOnly;
+  }>;
+}
+
+export const PerformanceMonitor: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: 0,
+    lcp: 0,
+    fid: 0,
+    cls: 0,
+    ttfb: 0,
+    fmp: 0,
+    si: 0,
+    tti: 0
+  });
+  const [score, setScore] = useState<PerformanceScore>({
+    overall: 0,
+    fcp: 0,
+    lcp: 0,
+    fid: 0,
+    cls: 0,
+    ttfb: 0
+  });
+  const [resourceTimings, setResourceTimings] = useState<ResourceTiming[]>([]);
+  const [memoryUsage, setMemoryUsage] = useState<{
+    used: number;
+    total: number;
+    limit: number;
+  }>({ used: 0, total: 0, limit: 0 });
+  const [networkInfo, setNetworkInfo] = useState<{
+    effectiveType: string;
+    downlink: number;
+    rtt: number;
+  }>({ effectiveType: 'unknown', downlink: 0, rtt: 0 });
+  const [alerts, setAlerts] = useState<string[]>([]);
+  const [isMonitoring, setIsMonitoring] = useState(false);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f07c
+
+  // Calculate performance scores
+  const calculateScore = useCallback((metric: number, thresholds: { good: number; needsImprovement: number }): number => {
+    if (metric <= thresholds.good) return 100;
+    if (metric <= thresholds.needsImprovement) return 50;
+    return 0;
+  }, []);
+
+  // Update performance metrics
+  const updateMetrics = useCallback(() => {
+    if ('PerformanceObserver' in window) {
+      // FCP
+      new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const fcp = entries[entries.length - 1];
+        if (fcp) {
+          setMetrics(prev => ({ ...prev, fcp: fcp.startTime }));
+        }
+      }).observe({ entryTypes: ['paint'] });
+
+      // LCP
+      new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lcp = entries[entries.length - 1];
+        if (lcp) {
+          setMetrics(prev => ({ ...prev, lcp: lcp.startTime }));
+        }
+      }).observe({ entryTypes: ['largest-contentful-paint'] });
+
+      // FID
+      new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const fid = entries[entries.length - 1] as PerformanceEventTiming;
+        if (fid && 'processingStart' in fid) {
+          setMetrics(prev => ({ ...prev, fid: (fid as any).processingStart - fid.startTime }));
+        }
+      }).observe({ entryTypes: ['first-input'] });
+
+      // CLS
+      new PerformanceObserver((list) => {
+        let clsValue = 0;
+        for (const entry of list.getEntries()) {
+          const layoutShiftEntry = entry as LayoutShift;
+          if (!layoutShiftEntry.hadRecentInput) {
+            clsValue += layoutShiftEntry.value;
+          }
+        }
+        setMetrics(prev => ({ ...prev, cls: clsValue }));
+      }).observe({ entryTypes: ['layout-shift'] });
+    }
+
+    // TTFB
+    if ('performance' in window) {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        setMetrics(prev => ({ ...prev, ttfb: navigation.responseStart - navigation.requestStart }));
+      }
+    }
+  }, []);
+
+  // Monitor resource loading
+  const monitorResources = useCallback(() => {
+    if ('PerformanceObserver' in window) {
+      new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const resources: ResourceTiming[] = entries.map((entry: any) => ({
+          name: entry.name,
+          duration: entry.duration,
+          size: entry.transferSize || 0,
+          type: entry.initiatorType || 'unknown'
+        }));
+        setResourceTimings(resources.slice(-10)); // Keep last 10
+      }).observe({ entryTypes: ['resource'] });
+    }
+  }, []);
+
+  // Monitor memory usage
+  const monitorMemory = useCallback(() => {
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      setMemoryUsage({
+        used: memory.usedJSHeapSize,
+        total: memory.totalJSHeapSize,
+        limit: memory.jsHeapSizeLimit
+      });
+    }
+  }, []);
+
+  // Monitor network conditions
+  const monitorNetwork = useCallback(() => {
+    if ('connection' in navigator) {
+      const connection = (navigator as any).connection;
+      setNetworkInfo({
+        effectiveType: connection.effectiveType || 'unknown',
+        downlink: connection.downlink || 0,
+        rtt: connection.rtt || 0
+      });
+    }
+  }, []);
+
+  // Calculate overall score
+  useEffect(() => {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    measurePerformance();
+    
+    // Re-measure on route changes
+    const handleRouteChange = () => {
+      setTimeout(measurePerformance, 1000);
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     const newScore = {
       fcp: calculateScore(metrics.fcp, { good: 1800, needsImprovement: 3000 }),
       lcp: calculateScore(metrics.lcp, { good: 2500, needsImprovement: 4000 }),
@@ -384,6 +586,47 @@ const PerformanceMonitor: React.FC = () => {
     return Math.max(0, score);
   }, [thresholds]);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const getMetricStatus = (metric: number | null, threshold: { good: number; needsImprovement: number }): 'good' | 'needsImprovement' | 'poor' => {
+    if (!metric) return 'good';
+    if (metric <= threshold.good) return 'good';
+    if (metric <= threshold.needsImprovement) return 'needsImprovement';
+    return 'poor';
+  };
+
+  const getStatusColor = (status: 'good' | 'needsImprovement' | 'poor'): string => {
+    switch (status) {
+      case 'good': return 'text-green-500';
+      case 'needsImprovement': return 'text-yellow-500';
+      case 'poor': return 'text-red-500';
+      default: return 'text-gray-500';
+    }
+  };
+
+  const getStatusIcon = (status: 'good' | 'needsImprovement' | 'poor') => {
+    switch (status) {
+      case 'good': return <CheckCircle className="w-4 h-4" />;
+      case 'needsImprovement': return <AlertTriangle className="w-4 h-4" />;
+      case 'poor': return <AlertTriangle className="w-4 h-4" />;
+      default: return <Info className="w-4 h-4" />;
+    }
+  };
+
+  const formatMetric = (value: number | null, unit: string = 'ms'): string => {
+    if (value === null) return 'N/A';
+    return `${value.toFixed(2)}${unit}`;
+  };
+
+  const formatMemory = (bytes: number): string => {
+    const mb = bytes / (1024 * 1024);
+    return `${mb.toFixed(2)} MB`;
+  };
+
+  useEffect(() => {
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     // Measure bundle load time
     const startTime = performance.now();
     window.addEventListener('load', () => {
@@ -414,12 +657,30 @@ const PerformanceMonitor: React.FC = () => {
 
   useEffect(() => {
     // Core Web Vitals
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     if ('PerformanceObserver' in window) {
       // First Contentful Paint
       const fcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const fcp = entries[entries.length - 1];
+<<<<<<< HEAD
         setMetrics(prev => ({ ...prev, fcp: fcp.startTime }));
+=======
+<<<<<<< HEAD
+        if (fcp) {
+          setMetrics(prev => ({
+            ...prev,
+            fcp: fcp.startTime,
+            score: getScore({ ...prev, fcp: fcp.startTime })
+          }));
+        }
+=======
+        setMetrics(prev => ({ ...prev, fcp: fcp.startTime }));
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
 
@@ -427,19 +688,67 @@ const PerformanceMonitor: React.FC = () => {
       const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const lcp = entries[entries.length - 1];
+<<<<<<< HEAD
         setMetrics(prev => ({ ...prev, lcp: lcp.startTime }));
+=======
+<<<<<<< HEAD
+        if (lcp) {
+          setMetrics(prev => ({
+            ...prev,
+            lcp: lcp.startTime,
+            score: getScore({ ...prev, lcp: lcp.startTime })
+          }));
+        }
+=======
+        setMetrics(prev => ({ ...prev, lcp: lcp.startTime }));
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
       // First Input Delay
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
+<<<<<<< HEAD
         const fid = entries[entries.length - 1];
         setMetrics(prev => ({ ...prev, fid: (fid as any).processingStart - fid.startTime }));
+=======
+<<<<<<< HEAD
+        const fid = entries[entries.length - 1] as FirstInputEntry;
+        if (fid && 'processingStart' in fid) {
+          setMetrics(prev => ({
+            ...prev,
+            fid: fid.processingStart - fid.startTime,
+            score: getScore({ ...prev, fid: fid.processingStart - fid.startTime })
+          }));
+        }
+=======
+        const fid = entries[entries.length - 1];
+        setMetrics(prev => ({ ...prev, fid: (fid as any).processingStart - fid.startTime }));
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
 
       // Cumulative Layout Shift
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      const clsObserver = new PerformanceObserver((list) => {
+        let clsValue = 0;
+        for (const entry of list.getEntries()) {
+          const layoutShiftEntry = entry as LayoutShiftEntry;
+          if (!layoutShiftEntry.hadRecentInput) {
+            clsValue += layoutShiftEntry.value;
+          }
+        }
+        setMetrics(prev => ({
+          ...prev,
+          cls: clsValue,
+          score: getScore({ ...prev, cls: clsValue })
+        }));
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       let clsValue = 0;
       const clsObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
@@ -448,22 +757,118 @@ const PerformanceMonitor: React.FC = () => {
           }
         }
         setMetrics(prev => ({ ...prev, cls: clsValue }));
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
 
       // Time to First Byte
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigationEntry) {
+        const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
+        setMetrics(prev => ({
+          ...prev,
+          ttfb,
+          score: getScore({ ...prev, ttfb })
+        }));
+      }
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       const navigationObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const navigation = entries[entries.length - 1] as PerformanceNavigationTiming;
         setMetrics(prev => ({ ...prev, ttfb: navigation.responseStart - navigation.requestStart }));
       });
       navigationObserver.observe({ entryTypes: ['navigation'] });
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 
       return () => {
         fcpObserver.disconnect();
         lcpObserver.disconnect();
         fidObserver.disconnect();
         clsObserver.disconnect();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      };
+    }
+  }, [getScore]);
+
+  useEffect(() => {
+    // Memory monitoring
+    if ('memory' in performance) {
+      const updateMemory = () => {
+        const memory = (performance as any).memory;
+        setMetrics(prev => ({
+          ...prev,
+          memory: {
+            used: memory.usedJSHeapSize,
+            total: memory.totalJSHeapSize,
+            limit: memory.jsHeapSizeLimit,
+          }
+        }));
+      };
+
+      updateMemory();
+      const interval = setInterval(updateMemory, 5000);
+      return () => clearInterval(interval);
+    }
+  }, []);
+
+  useEffect(() => {
+    // Store metrics history
+    if (metrics.score > 0) {
+      setHistory(prev => [...prev.slice(-9), metrics]);
+    }
+  }, [metrics.score]);
+
+  const toggleVisibility = () => setIsVisible(!isVisible);
+
+  if (!isVisible) {
+    return (
+      <button
+        onClick={toggleVisibility}
+        className="fixed bottom-4 right-4 z-50 p-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg transition-all duration-200 hover:scale-110"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
+        title="Performance Monitor"
+      >
+        <BarChart3 className="w-6 h-6" />
+      </button>
+    );
+  }
+
+  return (
+<<<<<<< HEAD
+    <div className="fixed bottom-4 right-4 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 z-50 max-w-sm">
+      <div className="p-4">
+        <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center space-x-2">
+            <Activity className="w-5 h-5 text-blue-600" />
+            <h3 className="font-semibold text-gray-900 dark:text-white">Performance Monitor</h3>
+          </div>
+          <div className="flex space-x-2">
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+            >
+              {isExpanded ? '−' : '+'}
+            </button>
+            <button
+              onClick={() => setIsVisible(false)}
+              className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+            >
+              ×
+            </button>
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         navigationObserver.disconnect();
       };
     }
@@ -509,6 +914,10 @@ const PerformanceMonitor: React.FC = () => {
                 <X className="w-4 h-4" />
               </button>
             </div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           </div>
         </div>
 
@@ -594,6 +1003,15 @@ const PerformanceMonitor: React.FC = () => {
           </div>
         )}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        {!report && (
+          <div className="text-center py-4">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-2"></div>
+            <p className="text-sm text-gray-600 dark:text-gray-400">Measuring performance...</p>
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     <div className="fixed bottom-4 right-4 z-50 w-80 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700">
       <div className="p-4 border-b border-gray-200 dark:border-gray-700">
         <div className="flex items-center justify-between">
@@ -718,6 +1136,10 @@ const PerformanceMonitor: React.FC = () => {
                 />
               ))}
             </div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
         {/* Collapsed View */}
         {!isExpanded && (
@@ -734,6 +1156,10 @@ const PerformanceMonitor: React.FC = () => {
               </div>
               <Clock className="w-4 h-4 text-gray-400" />
             </div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           </div>
         )}
       </div>
@@ -2154,6 +2580,15 @@ const MetricCard: React.FC<MetricCardProps> = ({ label, value, status }) => {
   );
 };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+export { PerformanceMonitor };
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 export default PerformanceMonitor;
 =======
 export { PerformanceMonitor };
@@ -2340,5 +2775,12 @@ export const PerformanceMonitor: React.FC = () => {
     </motion.div>
   );
 };
+<<<<<<< HEAD
 =======
 export default PerformanceMonitor;
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
+=======
+export default PerformanceMonitor;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7

@@ -3,6 +3,13 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   Calendar, Clock, ArrowRight, Star, Users, 
   Brain, Atom, Shield, Rocket, Globe,
   TrendingUp, Award, Sparkles, ExternalLink
@@ -81,6 +88,11 @@ export default function News() {
     { name: 'Company', count: 1, active: false }
   ];
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   FileText, Calendar, User, Tag, ArrowRight, 
   TrendingUp, Star, Zap, Brain, Atom, Shield
 } from 'lucide-react';
@@ -164,11 +176,24 @@ const categories = [
 ];
 
 export default function News() {
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   return (
     <>
       <Head>
         <title>News & Updates - Zion Tech Group</title>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         <meta name="description" content="Stay updated with the latest news, product launches, and industry insights from Zion Tech Group. Discover breakthroughs in AI, quantum computing, and technology innovation." />
         <meta name="keywords" content="news, updates, AI news, quantum computing, technology news, company updates, industry insights" />
         <link rel="canonical" href="https://ziontechgroup.com/news" />
@@ -178,6 +203,11 @@ export default function News() {
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         <meta name="description" content="Stay updated with the latest news, announcements, and insights from Zion Tech Group. AI breakthroughs, quantum computing advances, and technology innovations." />
         <meta name="keywords" content="news, updates, AI technology, quantum computing, enterprise IT, space technology" />
         <link rel="canonical" href="https://ziontechgroup.com/news" />
@@ -190,11 +220,24 @@ export default function News() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]" />
           
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               className="text-center"
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 text-blue-300 text-sm font-medium mb-6">
@@ -210,6 +253,11 @@ export default function News() {
                 Stay informed about our latest breakthroughs, product launches, and industry insights. 
                 Discover how Zion Tech Group is shaping the future of technology.
               </p>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             >
               <div className="flex items-center justify-center space-x-2 mb-6">
                 <FileText className="w-12 h-12 text-blue-400" />
@@ -235,21 +283,49 @@ export default function News() {
                   Explore Our Services
                 </Link>
               </div>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             </motion.div>
           </div>
         </section>
 
         {/* Featured Article */}
+<<<<<<< HEAD
         <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 =======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+=======
+        <section className="py-20 relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               className="mb-16"
             >
               <h2 className="text-3xl font-bold text-white mb-8">Featured Article</h2>
@@ -290,6 +366,11 @@ export default function News() {
                           <Star className="w-12 h-12 text-white" />
                         </div>
                         <p className="text-gray-400 text-sm">Featured Article</p>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               viewport={{ once: true }}
               className="text-center mb-16"
             >
@@ -357,11 +438,24 @@ export default function News() {
                           <FileText className="w-24 h-24 text-blue-400/50 mx-auto mb-4" />
                           <p className="text-blue-400/50">Featured Article</p>
                         </div>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                       </div>
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               ))}
             </motion.div>
           </div>
@@ -382,6 +476,11 @@ export default function News() {
                 >
                   {category.name} ({category.count})
                 </button>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               </motion.div>
             ))}
 
@@ -447,12 +546,25 @@ export default function News() {
                     </div>
                   </div>
                 </motion.div>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         {/* News Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -510,20 +622,48 @@ export default function News() {
         {/* Newsletter Signup */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-black/50">
           <div className="max-w-4xl mx-auto text-center">
+<<<<<<< HEAD
         {/* Newsletter Signup */}
         <section className="py-20 relative bg-gradient-to-br from-gray-900/30 to-gray-800/30">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 =======
+=======
+<<<<<<< HEAD
+=======
+        {/* Newsletter Signup */}
+        <section className="py-20 relative bg-gradient-to-br from-gray-900/30 to-gray-800/30">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
               viewport={{ once: true }}
 =======
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              viewport={{ once: true }}
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Stay Updated
               </h2>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               <p className="text-xl text-gray-300 mb-8">
                 Subscribe to our newsletter for the latest news, product updates, and industry insights.
               </p>
@@ -535,6 +675,11 @@ export default function News() {
                   className="flex-1 px-6 py-3 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500/50"
                 />
                 <button className="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:scale-105 transition-all duration-200">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               <p className="text-xl text-gray-400 mb-8 leading-relaxed">
                 Subscribe to our newsletter for the latest news, insights, and technology updates
               </p>
@@ -545,7 +690,13 @@ export default function News() {
                   className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-500/50 transition-colors"
                 />
                 <button className="px-8 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-xl font-semibold hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 hover:scale-105">
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                   Subscribe
                 </button>
               </div>

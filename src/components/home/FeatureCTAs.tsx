@@ -1,4 +1,18 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from "react";
+<<<<<<< HEAD
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/Button";
+import { Badge } from "@/components/ui/Badge";
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -8,6 +22,10 @@ import { motion } from "framer-motion";
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-217b
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 import { 
 import React from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -18,6 +36,21 @@ import {
   ArrowRight, 
   Users, 
   Zap, 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+import React from "react";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
+import { 
+  ArrowRight, 
+  Users, 
+  Zap, 
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   Settings, 
   Search, 
   MessageSquare, 
@@ -27,6 +60,25 @@ import {
   Code,
   Building,
   Clock,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  PenTool,
+  Link as LinkIcon,
+  Shield,
+  BarChart3
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   Brain,
   Server,
   TrendingUp,
@@ -62,6 +114,10 @@ import {
   TrendingUp,
   Sparkles,
   Lock
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d816
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 } from "lucide-react";
 =======
   Users, 
@@ -301,6 +357,15 @@ const features = [
 ];
 
 export function FeatureCTAs() {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  const features = [
+    // Core Platform Features
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   Bot,
   Cloud,
   Shield,
@@ -311,6 +376,7 @@ export function FeatureCTAs() {
 
 export function FeatureCTAs() {
   const features = [
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
     {
       title: "AI Services & Solutions",
       description: "Comprehensive AI services from strategy to implementation, including custom model development and AI consulting.",
@@ -345,7 +411,17 @@ export function FeatureCTAs() {
     {
       title: "AI Talent Matching",
       description: "Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.",
+<<<<<<< HEAD
       icon: <Search className="h-10 w-10 p-2 rounded-md bg-indigo-100 text-indigo-700" />,
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      icon: <Search className="h-12 w-12 p-3 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 text-white shadow-lg" />,
+=======
+      icon: <Search className="h-10 w-10 p-2 rounded-md bg-indigo-100 text-indigo-700" />,
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       link: "/marketplace",
       badge: "Popular",
       details: "Leveraging advanced machine learning, our matching system analyzes over 100+ data points to create perfect connections between talents and opportunities.",
@@ -428,6 +504,10 @@ export function FeatureCTAs() {
       badge: "Popular",
       category: "Core Platform",
       details: "Leveraging advanced machine learning, our matching system analyzes over 100+ data points to create perfect connections between talents and opportunities."
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d816
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
       icon: <Search className="h-10 w-10 p-2 rounded-md bg-indigo-100 text-indigo-700" />,
       link: "/marketplace",
@@ -491,16 +571,44 @@ export function FeatureCTAs() {
       link: "/micro-saas-services?category=integration",
       badge: "Connect",
       details: "Enterprise system integration, API development, and third-party platform connectors for streamlined workflows."
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     },
     {
       title: "Talent Directory",
       description: "Browse our extensive database of verified AI and tech specialists, filtered by expertise and availability.",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      icon: <Users className="h-12 w-12 p-3 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 text-white shadow-lg" />,
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       icon: <Users className="h-10 w-10 p-2 rounded-md bg-pink-100 text-pink-700" />,
       link: "/talent",
       category: "Core Platform",
       details: "Every talent in our directory undergoes a rigorous verification process to ensure quality, authenticity, and reliability."
     },
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      title: "Services Marketplace",
+      description: "Discover professional tech and AI services for your business needs, from development to consulting.",
+      icon: <Zap className="h-12 w-12 p-3 rounded-2xl bg-gradient-to-br from-cyan-500 to-cyan-600 text-white shadow-lg" />,
+      link: "/services",
+<<<<<<< HEAD
+      badge: "New",
+<<<<<<< HEAD
+      details: "From on-demand IT support to specialized AI development, our marketplace offers verified services with transparent pricing and reviews.",
+      gradient: "from-cyan-500/20 to-cyan-600/20"
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       title: "AI Services",
       description: "Transform your business with cutting-edge AI solutions including chatbots, content generation, and predictive analytics.",
       icon: <Zap className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />,
@@ -576,12 +684,26 @@ export function FeatureCTAs() {
     },
     {
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       title: "Equipment Catalog",
       description: "Find specialized hardware and tech equipment for AI development and research.",
       icon: <Settings className="h-12 w-12 p-3 rounded-2xl bg-gradient-to-br from-amber-500 to-amber-600 text-white shadow-lg" />,
       link: "/equipment",
+<<<<<<< HEAD
       category: "Core Platform",
       details: "Access cutting-edge technology with flexible options to buy, rent, or lease specialized equipment for your tech projects."
+=======
+<<<<<<< HEAD
+      details: "Access cutting-edge technology with flexible options to buy, rent, or lease specialized equipment for your tech projects.",
+      gradient: "from-amber-500/20 to-amber-600/20"
+=======
+      category: "Core Platform",
+      details: "Access cutting-edge technology with flexible options to buy, rent, or lease specialized equipment for your tech projects."
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d816
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     },
     
     // Micro SAAS Services
@@ -641,9 +763,27 @@ export function FeatureCTAs() {
       details: "Join thousands of tech professionals in discussions, AMAs with industry leaders, and exclusive community events."
     },
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      title: "Mobile Experience",
+      description: "Take Zion with you on the go with our mobile app for iOS and Android devices.",
+      icon: <Smartphone className="h-12 w-12 p-3 rounded-2xl bg-gradient-to-br from-indigo-500 to-indigo-600 text-white shadow-lg" />,
+      link: "/mobile-launch",
+<<<<<<< HEAD
+      badge: "Featured",
+<<<<<<< HEAD
+      details: "Manage your projects, communicate with clients or talents, and receive real-time updates wherever you are.",
+      gradient: "from-indigo-500/20 to-indigo-600/20"
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
       category: "Mobile",
       details: "Manage your projects, communicate with clients or talents, and receive real-time updates wherever you are."
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2f34
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     },
     {
       title: "Enterprise Solutions",
@@ -653,11 +793,27 @@ export function FeatureCTAs() {
       title: "Enterprise Solutions",
       description: "Custom-branded hiring portal, dedicated talent pool, and powerful admin controls for your organization.",
       icon: <Building className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" />,
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       link: "/enterprise",
       category: "Enterprise",
       details: "Scale your talent acquisition with white-labeled solutions, analytics dashboards, and dedicated account managers."
     },
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      title: "Developer Tools",
+      description: "Access our API documentation, SDKs, and integration guides to build on top of the Zion platform.",
+      icon: <Code className="h-12 w-12 p-3 rounded-2xl bg-gradient-to-br from-gray-500 to-gray-600 text-white shadow-lg" />,
+      link: "/developers",
+<<<<<<< HEAD
+      details: "Leverage our robust API with comprehensive documentation, code examples, and developer support.",
+      gradient: "from-gray-500/20 to-gray-600/20"
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       category: "Development",
       details: "Leverage our robust API with comprehensive documentation, code examples, and developer support."
     },
@@ -666,6 +822,24 @@ export function FeatureCTAs() {
       description: "Access tutorials, courses, and documentation to enhance your skills in AI and tech.",
       icon: <BookOpen className="h-12 w-12 p-3 rounded-2xl bg-gradient-to-br from-teal-500 to-teal-600 text-white shadow-lg" />,
       link: "/blog",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      details: "From beginner guides to advanced technical content, our learning resources help you stay at the cutting edge of technology.",
+      gradient: "from-teal-500/20 to-teal-600/20"
+    },
+    {
+      title: "Project Management",
+      description: "Streamlined tools to manage projects, track milestones, and ensure successful delivery.",
+      icon: <Calendar className="h-12 w-12 p-3 rounded-2xl bg-gradient-to-br from-red-500 to-red-600 text-white shadow-lg" />,
+      link: "/dashboard/projects",
+      details: "Our intuitive project management tools help you track progress, manage deliverables, and ensure timely completion.",
+      gradient: "from-red-500/20 to-red-600/20"
+    },
+    {
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       title: "Zion Hire AI",
       description: "AI-powered recruiting assistant to streamline your hiring process and find better matches.",
       icon: <Clock className="h-12 w-12 p-3 rounded-2xl bg-gradient-to-br from-violet-500 to-violet-600 text-white shadow-lg" />,
@@ -729,17 +903,36 @@ export function FeatureCTAs() {
       details: "From beginner guides to advanced technical content, our learning resources help you stay at the cutting edge of technology."
     },
     {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d816
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
       icon: <Users className="h-10 w-10 p-2 rounded-md bg-pink-100 text-pink-700" />,
       link: "/talent",
       details: "Every talent in our directory undergoes a rigorous verification process to ensure quality, authenticity, and reliability."
     },
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       title: "Services Marketplace",
       description: "Discover professional tech and AI services for your business needs, from development to consulting.",
       icon: <Code className="h-10 w-10 p-2 rounded-md bg-orange-100 text-orange-700" />,
       link: "/services",
       details: "From on-demand IT support to specialized AI development, our marketplace offers verified services with transparent pricing and reviews."
+<<<<<<< HEAD
+=======
+=======
+      title: "Premium Services",
+      description: "Discover our comprehensive suite of AI-powered solutions, enterprise IT services, and innovative SaaS platforms.",
+      icon: <Zap className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />,
+      link: "/enhanced-services",
+      badge: "New",
+      details: "From AI content generation to cybersecurity assessment, our premium services drive innovation and accelerate business growth."
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-099c
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     },
     {
       title: "Equipment Catalog",
@@ -763,10 +956,77 @@ export function FeatureCTAs() {
       details: "Scale your talent acquisition with white-labeled solutions, analytics dashboards, and dedicated account managers."
     },
     {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       title: "Zion Hire AI",
       description: "AI-powered recruiting assistant to streamline your hiring process and find better matches.",
       icon: <Clock className="h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700" />,
       link: "/zion-hire-ai",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f15c
+      badge: "Premium",
+      category: "AI Recruiting",
+      details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution."
+    },
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    // New innovative micro SAAS services
+    {
+      title: "AI Content Generation",
+      description: "Automated content creation for blogs, social media, and marketing using advanced language models.",
+      icon: <PenTool className="h-10 w-10 p-2 rounded-md bg-green-100 text-green-700" />,
+      link: "/ai-services",
+      badge: "AI-Powered",
+      details: "Generate high-quality, SEO-optimized content at scale with our AI writing platform that learns your brand voice."
+    },
+    {
+      title: "Smart Contract Development",
+      description: "Blockchain smart contract development and auditing for DeFi, NFTs, and enterprise solutions.",
+      icon: <LinkIcon className="h-10 w-10 p-2 rounded-md bg-orange-100 text-orange-700" />,
+      link: "/blockchain-services",
+      badge: "Blockchain",
+      details: "Build secure, audited smart contracts with our expert blockchain developers and comprehensive security testing."
+    },
+    {
+      title: "IoT Device Management",
+      description: "Complete IoT platform for device provisioning, monitoring, and data analytics.",
+      icon: <Settings className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />,
+      link: "/iot-services",
+      badge: "IoT",
+      details: "Manage your connected devices with our comprehensive IoT platform featuring real-time monitoring and predictive analytics."
+    },
+    {
+      title: "Zero-Trust Security",
+      description: "Implement zero-trust security architecture with identity verification and continuous monitoring.",
+      icon: <Shield className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" />,
+      link: "/cybersecurity-services",
+      badge: "Security",
+      details: "Protect your business with modern zero-trust security that verifies every user and device before granting access."
+    },
+    {
+      title: "Predictive Analytics",
+      description: "Real-time business intelligence with predictive modeling for forecasting and trend analysis.",
+      icon: <BarChart3 className="h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700" />,
+      link: "/ai-services",
+      badge: "Analytics",
+      details: "Transform your data into actionable insights with our AI-powered predictive analytics platform."
+    },
+    {
+      title: "Edge Computing Platform",
+      description: "Distributed edge computing for real-time data processing and low-latency IoT applications.",
+      icon: <Zap className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />,
+      link: "/iot-services",
+      badge: "Edge",
+      details: "Process data closer to the source with our edge computing platform for faster response times and reduced latency."
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-7440
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     {
       title: "AI Services & Solutions",
       description: "Comprehensive AI development, machine learning, and automation services for modern businesses.",
@@ -950,6 +1210,57 @@ export function FeatureCTAs() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        >
+          {features.map((feature, index) => (
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <motion.div key={index} variants={itemVariants}>
+              <Card className={`group bg-gradient-to-br ${feature.gradient} border-zion-blue-light/20 hover:border-zion-purple/50 rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-zion-purple/20 transform hover:scale-105 backdrop-blur-sm`}>
+                <CardHeader className="pb-4">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="group-hover:scale-110 transition-transform duration-300">
+                      {feature.icon}
+                    </div>
+                    {feature.badge && (
+                      <Badge className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white border-0 px-3 py-1 rounded-full text-xs font-medium">
+                        {feature.badge}
+                      </Badge>
+                    )}
+                  </div>
+                  <CardTitle className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">
+                    {feature.title}
+                  </CardTitle>
+                  <CardDescription className="text-zion-slate-light text-base leading-relaxed">
+                    {feature.description}
+                  </CardDescription>
+                </CardHeader>
+                
+                <CardContent className="pb-4">
+                  <p className="text-zion-slate-light/80 text-sm leading-relaxed">
+                    {feature.details}
+                  </p>
+                </CardContent>
+                
+                <CardFooter className="pt-0">
+                  <Button 
+                    asChild 
+                    className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white border-0 rounded-xl py-3 group-hover:shadow-lg group-hover:shadow-zion-cyan/25 transition-all duration-300"
+                  >
+                    <Link to={feature.link} className="flex items-center justify-center gap-2">
+                      Explore {feature.title}
+                      <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" />
+                    </Link>
+                  </Button>
+                </CardFooter>
+              </Card>
+            </motion.div>
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50 bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/20 hover:scale-105 group">
 =======
             <Card key={index} className="overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50 hover:scale-105 group">
@@ -1434,6 +1745,10 @@ export function FeatureCTAs() {
         </motion.div>
 =======
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d816
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
       badge: "Premium",
       details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution."
@@ -1497,6 +1812,10 @@ export function FeatureCTAs() {
             </Card>
           ))}
         </div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       </div>
     </section>
   );

@@ -1,4 +1,27 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { 
+<<<<<<< HEAD
+<<<<<<< HEAD
+  Network, 
+  Zap, 
+  Shield, 
+  Users, 
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 import { 
   Brain, 
   Cpu, 
@@ -774,6 +797,10 @@ export default function FiveGEnterpriseSolutions() {
 =======
 import { Link } from 'react-router-dom';
 import { Network, Zap, Shield, ArrowRight, Users, Target, Clock, BarChart3, Globe, Cpu } from 'lucide-react';
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 
   const solutions = [
     {
@@ -810,6 +837,24 @@ import { Network, Zap, Shield, ArrowRight, Users, Target, Clock, BarChart3, Glob
   ];
 
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+      {/* Hero Section */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 text-white">
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       <Helmet>
         <title>5G Enterprise Solutions - Zion Tech Group</title>
@@ -857,6 +902,10 @@ import { Network, Zap, Shield, ArrowRight, Users, Target, Clock, BarChart3, Glob
 export default function FiveGEnterpriseSolutions() {
   return (
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -877,6 +926,12 @@ export default function FiveGEnterpriseSolutions() {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your enterprise with next-generation 5G connectivity. Experience ultra-fast speeds, 
               ultra-low latency, and massive IoT connectivity for the future of business.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-a260
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-zion-blue via-zion-purple to-zion-cyan text-white py-20">
@@ -1244,20 +1299,59 @@ const FiveGEnterpriseSolutions = () => {
               Experience the future of enterprise connectivity with our revolutionary 5G solutions. 
               Ultra-fast speeds, ultra-low latency, and massive IoT support for the next generation 
               of business applications.
+<<<<<<< HEAD
 =======
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-2b07
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
+              <Link
+                to="/contact"
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors"
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
 =======
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg text-white font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-200 transform hover:scale-105"
+<<<<<<< HEAD
 =======
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg text-white font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-200 transform hover:scale-105"
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-a260
+=======
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg text-white font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-200 transform hover:scale-105"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               >
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
+              >
+                Watch Demo
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
               >
@@ -1332,10 +1426,19 @@ const FiveGEnterpriseSolutions = () => {
               </Link>
 =======
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                 to="/services/it-infrastructure"
                 className="inline-flex items-center px-8 py-4 border border-blue-500 text-blue-400 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-200"
               >
                 Learn More
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                 className="bg-white text-zion-blue px-8 py-4 rounded-lg font-semibold hover:bg-zion-slate-light transition-all duration-300 transform hover:scale-105"
               >
                 Get Started Today
@@ -1345,7 +1448,13 @@ const FiveGEnterpriseSolutions = () => {
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-zion-blue transition-all duration-300"
               >
                 Schedule Demo
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-08b8
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               </Link>
             </div>
           </div>
@@ -1369,6 +1478,70 @@ const FiveGEnterpriseSolutions = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-6">
+                <Zap className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4">Ultra-Fast Connectivity</h3>
+              <p className="text-gray-400">
+                Experience speeds up to 100x faster than 4G with gigabit-per-second data transfer rates.
+              </p>
+            </div>
+
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6">
+                <Clock className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4">Ultra-Low Latency</h3>
+              <p className="text-gray-400">
+                Sub-1ms latency for real-time applications, gaming, and critical business operations.
+              </p>
+            </div>
+
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">
+                <Globe className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4">Massive IoT Support</h3>
+              <p className="text-gray-400">
+                Connect millions of IoT devices simultaneously with efficient network management.
+              </p>
+            </div>
+
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-6">
+                <Shield className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4">Enhanced Security</h3>
+              <p className="text-gray-400">
+                Advanced security protocols and encryption for enterprise-grade data protection.
+              </p>
+            </div>
+
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-6">
+                <Cpu className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4">Network Slicing</h3>
+              <p className="text-gray-400">
+                Customized network segments for different business applications and requirements.
+              </p>
+            </div>
+
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">
+                <BarChart3 className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4">Real-Time Analytics</h3>
+              <p className="text-gray-400">
+                Live network performance monitoring and analytics for optimal business operations.
+              </p>
+<<<<<<< HEAD
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     <>
       <SEO 
         title="5G Enterprise Solutions | Next-Generation Connectivity"
@@ -1437,7 +1610,13 @@ const FiveGEnterpriseSolutions = () => {
                   Request Demo
                 </Link>
               </motion.div>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-53a4
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             </div>
           </div>
         </motion.section>
@@ -1522,6 +1701,13 @@ const FiveGEnterpriseSolutions = () => {
                   </p>
                 </div>
               </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-a260
+=======
+>>>>>>> origin/main
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             </div>
           </motion.div>
         </div>
@@ -1999,6 +2185,93 @@ const FiveGEnterpriseSolutions = () => {
                   <p className="text-lg text-gray-700">{benefit}</p>
                 </div>
               ))}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+            </div>
+          </div>
+        </div>
+      </section>
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+      {/* Benefits Section */}
+      <section className="py-20 bg-white dark:bg-slate-800">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-6">
+                Key Benefits
+              </h2>
+              <p className="text-xl text-slate-600 dark:text-slate-300">
+                Experience the advantages of enterprise-grade 5G connectivity
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-3">
+                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
+                  <span className="text-slate-700 dark:text-slate-300 text-lg">
+                    {benefit}
+                  </span>
+                </div>
+              ))}
+            </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-08b8
+          </div>
+        </div>
+      </section>
+
+      {/* Solutions Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Comprehensive 5G Solutions
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              From private networks to edge computing, we provide end-to-end 5G solutions for enterprises
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {solutions.map((solution, index) => (
+              <div
+                key={index}
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300"
+              >
+                <h3 className="text-2xl font-semibold text-white mb-4">{solution.title}</h3>
+                <p className="text-gray-400 mb-6">{solution.description}</p>
+                <ul className="space-y-3">
+                  {solution.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+>>>>>>> origin/cursor/website-audit-and-enhancement-9d3a
+          </div>
+        </div>
+      </section>
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+      {/* Solutions Section */}
+<<<<<<< HEAD
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Enterprise 5G Solutions
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive 5G solutions designed to meet the unique needs of modern enterprises.
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
             </div>
           </div>
@@ -2322,6 +2595,10 @@ const FiveGEnterpriseSolutions = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
@@ -2332,6 +2609,26 @@ const FiveGEnterpriseSolutions = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300"
+              >
+                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                <p className="text-gray-300">{useCase.description}</p>
+              </motion.div>
+<<<<<<< HEAD
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d2cf
+=======
+>>>>>>> origin/main
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             ))}
 =======
             <div className="bg-gradient-to-r from-blue-500/10 to-cyan-600/10 rounded-2xl p-8 border border-blue-500/20">
@@ -2377,10 +2674,33 @@ const FiveGEnterpriseSolutions = () => {
                 </li>
               </ul>
             </div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      {/* CTA Section */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Deploy 5G in Your Enterprise?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Join the 5G revolution and transform your business connectivity with Zion Tech Group.
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/50 to-purple-900/50">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -2627,6 +2947,10 @@ const FiveGEnterpriseSolutions = () => {
           <div className="bg-gradient-to-r from-blue-500/10 to-cyan-600/10 rounded-2xl p-12 text-center border border-blue-500/20">
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Embrace 5G Enterprise Solutions?
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Join leading enterprises that have transformed their operations with our 5G solutions.
@@ -2647,8 +2971,142 @@ const FiveGEnterpriseSolutions = () => {
               </Link>
             </div>
           </div>
+<<<<<<< HEAD
         </div>
       </section>
+=======
+<<<<<<< HEAD
+        </section>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ec46
+      </div>
+    </>
+  );
+};
+>>>>>>> origin/cursor/website-audit-and-enhancement-2b07
+
+      {/* Technology Stack Section */}
+      <section className="py-20 bg-gradient-to-r from-gray-50 to-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Advanced 5G Technology
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Built on cutting-edge 5G standards and technologies for optimal performance
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-20 h-20 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Signal className="h-10 w-10 text-white" />
+              </div>
+              <h3 className="font-semibold text-gray-900">5G NR</h3>
+            </div>
+            <div className="text-center">
+              <div className="w-20 h-20 bg-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Cloud className="h-10 w-10 text-white" />
+              </div>
+              <h3 className="font-semibold text-gray-900">Network Slicing</h3>
+            </div>
+            <div className="text-center">
+              <div className="w-20 h-20 bg-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Server className="h-10 w-10 text-white" />
+              </div>
+              <h3 className="font-semibold text-gray-900">Edge Computing</h3>
+            </div>
+            <div className="text-center">
+              <div className="w-20 h-20 bg-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Shield className="h-10 w-10 text-white" />
+              </div>
+              <h3 className="font-semibold text-gray-900">Security</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold mb-6">
+            Ready to Transform Your Enterprise?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Join the 5G revolution and unlock new possibilities for your business
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+              Start Free Trial
+            </button>
+            <button className="border-2 border-blue-300 text-blue-300 hover:bg-blue-300 hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
+              Schedule Demo
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Get in Touch
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Ready to revolutionize your enterprise with 5G? Contact our experts today
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Phone className="h-8 w-8 text-blue-600" />
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">Call Us</h3>
+              <p className="text-gray-600">+1 (302) 464-0950</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Mail className="h-8 w-8 text-blue-600" />
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">Email Us</h3>
+              <p className="text-gray-600">kleber@ziontechgroup.com</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <MapPin className="h-8 w-8 text-blue-600" />
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">Visit Us</h3>
+              <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <style>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes float-delayed {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-15px); }
+        }
+        
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
+        
+        .animate-float-delayed {
+          animation: float-delayed 8s ease-in-out infinite;
+        }
+      `}</style>
+=======
+        </div>
+      </section>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     </div>
 =======
                 className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"

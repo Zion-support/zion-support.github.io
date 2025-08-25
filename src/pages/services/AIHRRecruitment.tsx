@@ -1,4 +1,18 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 import { motion } from 'framer-motion';
 =======
 import { Link } from 'react-router-dom';
@@ -45,6 +59,31 @@ import { Brain, Users, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircle, 
 export default function AIHRRecruitment() {
   const features = [
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      icon: Search,
+      title: "Intelligent Candidate Sourcing",
+      description: "AI-powered talent discovery across multiple platforms and databases"
+    },
+    {
+      icon: Brain,
+      title: "Smart Resume Parsing",
+      description: "Advanced AI algorithms to extract and analyze candidate information"
+    },
+    {
+      icon: Target,
+      title: "Predictive Candidate Matching",
+      description: "Machine learning models to find the perfect fit for your roles"
+    },
+    {
+      icon: BarChart3,
+      title: "Performance Analytics",
+      description: "Comprehensive insights into hiring metrics and process optimization"
+<<<<<<< HEAD
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 import { Link } from 'react-router-dom';
 import { 
   Users, 
@@ -91,17 +130,35 @@ const AIHRRecruitment: React.FC = () => {
       title: "Predictive Analytics",
       description: "Data-driven insights that forecast hiring success, employee retention, and workforce planning needs.",
       benefits: ["Hiring success prediction", "Retention forecasting", "Workforce planning"]
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     },
     {
       icon: Zap,
       title: "Automated Screening",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       description: "Intelligent pre-screening to save time and improve quality"
     },
     {
       icon: Shield,
       title: "Bias-Free Hiring",
       description: "AI algorithms designed to eliminate unconscious bias in recruitment"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       icon: Brain,
       title: "AI-Powered Candidate Matching",
       description: "Advanced algorithms that analyze skills, experience, and cultural fit to find the perfect candidates."
@@ -321,10 +378,56 @@ import {
 export default function AIHRRecruitment() {
   const features = [
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      icon: Users,
+      title: "Smart Candidate Sourcing",
+      description: "AI-powered talent discovery that identifies and attracts top candidates across multiple platforms."
+    },
+    {
+      icon: Search,
+      title: "Intelligent Resume Parsing",
+      description: "Advanced NLP algorithms that extract key information and match candidates to job requirements."
+    },
+    {
+      icon: Target,
+      title: "Predictive Candidate Scoring",
+      description: "Machine learning models that predict candidate success and cultural fit based on multiple data points."
+    },
+    {
+      icon: Brain,
+      title: "Automated Interview Scheduling",
+      description: "Smart scheduling system that coordinates interviews across multiple stakeholders and time zones."
+    },
+    {
+      icon: Zap,
+      title: "Bias-Free Screening",
+      description: "AI algorithms designed to eliminate unconscious bias and ensure fair candidate evaluation."
+    },
+    {
+      icon: Shield,
+      title: "Compliance & Security",
+      description: "Enterprise-grade security with GDPR compliance and data protection measures."
+>>>>>>> origin/cursor/website-audit-and-enhancement-500e
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     }
   ];
 
   const benefits = [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     "Reduce time-to-hire by 60-80%",
     "Improve candidate quality by 40%",
     "Reduce recruitment costs by 30-50%",
@@ -488,6 +591,53 @@ export default function AIHRRecruitment() {
   ];
 
   const industries = [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    "Technology",
+    "Healthcare",
+    "Finance",
+    "Manufacturing",
+    "Retail",
+    "Education",
+    "Government",
+    "Non-profit"
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="flex justify-center mb-6">
+              <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center">
+                <Users className="w-10 h-10 text-white" />
+              </div>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              AI HR & Recruitment
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Revolutionize your hiring process with intelligent AI-powered recruitment solutions. 
+              Find the best talent faster, reduce bias, and optimize your HR operations.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200">
+                Schedule Demo
+              </button>
+            </div>
+          </motion.div>
+<<<<<<< HEAD
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     "Reduce time-to-hire by 60%",
     "Improve candidate quality by 40%",
     "Cut recruitment costs by 50%",
@@ -1076,11 +1226,29 @@ const AIHRRecruitment = () => {
           <div className="absolute top-20 left-10 w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
           <div className="absolute top-40 right-20 w-3 h-3 bg-teal-400 rounded-full animate-pulse"></div>
           <div className="absolute bottom-20 left-1/4 w-1 h-1 bg-green-400 rounded-full animate-bounce"></div>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-9620
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         </div>
       </section>
 
       {/* Features Section */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1113,6 +1281,11 @@ const AIHRRecruitment = () => {
                 <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Powerful AI Features for Modern HR
@@ -1282,11 +1455,27 @@ const AIHRRecruitment = () => {
                 </ul>
               </div>
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-459c
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {/* Benefits Section */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -1338,6 +1527,11 @@ const AIHRRecruitment = () => {
                 ))}
               </div>
             </motion.div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -1379,11 +1573,25 @@ const AIHRRecruitment = () => {
                 </ul>
               </div>
             ))}
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-459c
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       {/* Industries Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1415,6 +1623,11 @@ const AIHRRecruitment = () => {
                 <Briefcase className="w-8 h-8 text-cyan-500 mx-auto mb-3" />
                 <h3 className="font-semibold">{industry}</h3>
               </motion.div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
         <div className="max-w-7xl mx-auto">
@@ -1569,13 +1782,28 @@ const AIHRRecruitment = () => {
                   {plan.cta}
                 </button>
               </div>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-459c
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -1600,6 +1828,11 @@ const AIHRRecruitment = () => {
               </button>
             </div>
           </motion.div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-blue-900/50">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
@@ -1909,11 +2142,25 @@ const AIHRRecruitment = () => {
               Need enterprise pricing? <a href="/contact" className="text-green-400 hover:text-green-300 underline">Contact our sales team</a>
             </p>
           </div>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-459c
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         </div>
       </section>
     </div>
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 };
 
 export default AIHRRecruitment;
@@ -2239,5 +2486,12 @@ export default AIHRRecruitment;
 };
 
 export default AIHRRecruitment;
+<<<<<<< HEAD
 =======
 }
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-9620
+=======
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7

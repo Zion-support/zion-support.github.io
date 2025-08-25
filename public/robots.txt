@@ -2,10 +2,16 @@ User-agent: *
 Allow: /
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Sitemaps
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-638c
 Sitemap: https://ziontechgroup.com/sitemap.xml
+=======
+# Sitemap location
+Sitemap: https://ziontechgroup.com/sitemap.xml
+Sitemap: https://ziontechgroup.com/sitemap
+>>>>>>> origin/cursor/website-audit-and-enhancement-bbee
 
 <<<<<<< HEAD
 =======

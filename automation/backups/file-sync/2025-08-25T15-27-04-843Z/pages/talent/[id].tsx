@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD:automation/backups/file-sync/2025-08-25T15-27-04-843Z/pages/talent/[id].tsx
 import { useParams, Navigate } from 'react-router-dom';
+=======
+import { useParams } from 'react-router-dom';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-017a:pages/talent/[id].tsx
 import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
 import type { TalentProfile as TalentProfileType } from '@/types/talent';
 import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
@@ -53,7 +57,11 @@ const TalentProfilePage: React.FC = () => {
   }, [id]);
 
   if (loading) return <ProfileLoadingState />;
+<<<<<<< HEAD:automation/backups/file-sync/2025-08-25T15-27-04-843Z/pages/talent/[id].tsx
   if (error || !profile) return <Navigate to="/404" replace />;
+=======
+  if (error || !profile) return <ProfileErrorState error={error} />;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-017a:pages/talent/[id].tsx
 
   return (
     <main className="min-h-screen bg-zion-blue py-8 text-white">

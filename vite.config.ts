@@ -331,9 +331,39 @@ export default defineConfig({
     host: true,
     open: true,
   },
+<<<<<<< HEAD
   // PostCSS configuration removed due to ES module compatibility issues
+=======
+<<<<<<< HEAD
+
+  css: {
+    devSourcemap: true,
+  },
+
+  // Performance optimizations
+  esbuild: {
+    target: 'es2015',
+    supported: {
+      'bigint': false,
+    },
+  },
+
+  // Define environment variables
+=======
+  // PostCSS configuration removed due to ES module compatibility issues
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
     __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
   },
+<<<<<<< HEAD
 })
+=======
+<<<<<<< HEAD
+});
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
+=======
+})
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7

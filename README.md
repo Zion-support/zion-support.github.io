@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # Zion Tech Group - Comprehensive Tech & AI Marketplace
 =======
@@ -5,6 +6,35 @@
 
 ## 🚀 About Zion Tech Group
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+# Zion Tech Group - AI-Powered Technology Solutions
+
+A modern, responsive web application showcasing Zion Tech Group's comprehensive technology services, AI solutions, and enterprise offerings.
+=======
+
+# Zion Tech Group - Comprehensive Tech & AI Marketplace
+>>>>>>> origin/cursor/check-and-fix-github-actions-e92c
+=======
+# Zion Tech Group - Revolutionary Micro SAAS Services & AI Solutions
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+
+## 🚀 About Zion Tech Group
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+- **AI-Powered Solutions**: Comprehensive AI and machine learning services
+- **Cloud & DevOps**: Scalable cloud infrastructure and development operations
+- **Cybersecurity**: Enterprise-grade security and compliance solutions
+- **Digital Transformation**: End-to-end business transformation services
+- **Micro-SaaS Solutions**: Custom software applications for businesses
+- **Responsive Design**: Mobile-first, modern UI/UX design
+- **Performance Optimized**: Fast loading times and optimized performance
+- **SEO Optimized**: Comprehensive SEO with structured data and sitemaps
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 Zion Tech Group is a cutting-edge technology company specializing in innovative micro SAAS services, AI solutions, and next-generation technology platforms. We help businesses transform their operations through intelligent automation, advanced cybersecurity, and breakthrough innovations.
 
 ## 📞 Contact Information
@@ -24,6 +54,10 @@ Zion Tech Group is a cutting-edge technology company specializing in innovative 
 - **Features:** Multi-platform voice shopping, natural language processing, voice-activated checkout
 - **Benefits:** Increase conversion rates by 45%, reduce cart abandonment by 60%
 - **Use Cases:** E-commerce platforms, retail mobile apps, smart home devices
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 
 #### AI-Powered Content Localization & Cultural Adaptation
 - **Price:** $650/month
@@ -32,6 +66,19 @@ Zion Tech Group is a cutting-edge technology company specializing in innovative 
 - **Benefits:** Reduce localization costs by 70%, speed up market entry by 80%
 - **Use Cases:** Global marketing campaigns, e-commerce internationalization, software localization
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+- **Frontend**: React 18 + TypeScript + Vite
+- **Styling**: Tailwind CSS + CSS Modules
+- **UI Components**: Radix UI + Lucide React Icons
+- **State Management**: Redux Toolkit + React Query
+- **Routing**: React Router DOM
+- **Build Tool**: Vite
+- **Testing**: Jest + Cypress
+- **Linting**: ESLint + Prettier
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 Zion Tech Group is the world's leading marketplace for high-tech and artificial intelligence solutions. We connect businesses with cutting-edge technology, expert talent, and innovative services through our comprehensive ecosystem of micro SAAS, IT infrastructure, and AI solutions.
 
 ## 🌟 New Features & Services
@@ -400,11 +447,50 @@ git clone <repository-url>
 - Rapid deployment and configuration
 - Team training and knowledge transfer
 - Ongoing support and optimization
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 
 ## 📞 Ready to Transform Your Business?
 
 **Contact Zion Tech Group today:**
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+# Build for production
+npm run build
+```
+
+### Available Scripts
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+- `npm run test` - Run tests
+>>>>>>> origin/cursor/check-and-fix-github-actions-e92c
+
+## 🌐 Live Demo
+
+<<<<<<< HEAD
+```
+src/
+├── components/          # Reusable UI components
+│   ├── ui/             # Base UI components
+│   ├── header/         # Header components
+│   ├── home/           # Homepage components
+│   └── layout/         # Layout components
+├── pages/              # Page components
+├── hooks/              # Custom React hooks
+├── utils/              # Utility functions
+├── types/              # TypeScript type definitions
+├── context/            # React context providers
+├── store/              # Redux store configuration
+└── lib/                # Third-party library configurations
+```
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 # Zion Tech Group - Revolutionary Technology Solutions
 
 ## 🚀 Overview
@@ -765,6 +851,10 @@ For support, questions, or business inquiries:
 **Zion Tech Group** - Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide.
 
 *Built with ❤️ and cutting-edge technology*
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9077
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
 - **Call:** +1 302 464 0950
 - **Email:** kleber@ziontechgroup.com
@@ -774,3 +864,7 @@ For support, questions, or business inquiries:
 ---
 
 *Transform your business with Zion Tech Group's revolutionary micro SAAS services and AI solutions. Experience the future of technology today.*
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7

@@ -1,3 +1,30 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import { 
+  CogIcon, 
+  ChartBarIcon, 
+  RocketLaunchIcon,
+  ShieldCheckIcon,
+  LightBulbIcon,
+  UserGroupIcon,
+  GlobeAltIcon,
+  ClockIcon
+} from '@heroicons/react/24/outline';
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 import { motion } from 'framer-motion';
 import { Bot, TrendingUp, Zap, Shield, Users, Globe, BarChart3, Settings } from 'lucide-react';
 =======
@@ -841,11 +868,19 @@ export default function AutonomousBusinessOperationsPlatform() {
 
         {/* Benefits Section */}
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 import { Link } from 'react-router-dom';
 import { Building, Brain, Zap, Shield, ArrowRight, Users, Target, TrendingUp, Clock, BarChart3 } from 'lucide-react';
 
 export default function AutonomousBusinessOperationsPlatform() {
   return (
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
@@ -1796,6 +1831,12 @@ export default function AutonomousBusinessOperationsPlatform() {
                   </p>
                 </div>
               </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-a260
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                 className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-light hover:to-zion-purple-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/30 flex items-center justify-center gap-2"
               >
                 Get Started
@@ -1807,12 +1848,62 @@ export default function AutonomousBusinessOperationsPlatform() {
               >
                 View All Services
               </Link>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-311e
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             </div>
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      {/* Analytics Dashboard Section */}
+      <section className="py-20 px-4 bg-white/5 backdrop-blur-sm">
+        <div className="container mx-auto">
+          <h2 className="text-4xl font-bold text-white text-center mb-16">
+            Intelligent Analytics Dashboard
+          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
+                <BarChart3 className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-2xl font-semibold text-white mb-4">Real-Time Metrics</h3>
+              <p className="text-zion-slate-light">
+                Monitor key performance indicators and business metrics in real-time
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
+                <Settings className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-2xl font-semibold text-white mb-4">Automated Optimization</h3>
+              <p className="text-zion-slate-light">
+                AI continuously optimizes operations based on performance data
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
+                <TrendingUp className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-2xl font-semibold text-white mb-4">Predictive Insights</h3>
+              <p className="text-zion-slate-light">
+                Get predictive analytics and insights for better decision making
+              </p>
+            </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-3be4
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       {/* ROI Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -1849,6 +1940,10 @@ export default function AutonomousBusinessOperationsPlatform() {
             ))}
 =======
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       {/* Benefits Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1905,6 +2000,12 @@ export default function AutonomousBusinessOperationsPlatform() {
                 </li>
               </ul>
             </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-a260
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       {/* Features Section */}
       <section className="py-20 px-4 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto max-w-7xl">
@@ -2228,12 +2329,35 @@ export default function AutonomousBusinessOperationsPlatform() {
                 <h3 className="text-lg font-semibold text-white">{industry}</h3>
               </div>
             ))}
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-d426
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl text-center">
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-4xl text-center">
 =======
@@ -2551,6 +2675,10 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
             </Link>
 =======
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-green-500/10 to-emerald-600/10 rounded-2xl p-12 text-center border border-green-500/20">
@@ -2592,6 +2720,12 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
               Contact Sales
             </button>
           </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-ee8a
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Automate Your Business?
             </h2>
@@ -3182,6 +3316,10 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
             </div>
           </div>
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         </div>
       </section>
     </div>

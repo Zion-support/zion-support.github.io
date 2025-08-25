@@ -1,10 +1,45 @@
 import { motion } from 'framer-motion';
 import { 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  Search, 
+<<<<<<< HEAD
+=======
+import { motion } from 'framer-motion';
+import { 
+>>>>>>> origin/cursor/website-audit-and-enhancement-bd86
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   Calendar, 
   Clock, 
   User, 
   Tag, 
   ArrowRight,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  Newspaper,
+  TrendingUp,
+  Lightbulb,
+  Code,
+  Shield,
+  Cloud,
+  Brain,
+  Cpu,
+  Zap,
+  Building,
+  Users,
+  Globe,
+  Star,
+  Eye,
+  Heart,
+  Share2,
+  ExternalLink,
+  Filter,
+  Bookmark,
+  BookmarkPlus
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   Filter, 
   Calendar, 
   User, 
@@ -21,6 +56,10 @@ import {
   Database,
   TrendingUp,
   Globe
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-82f7
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
   Search,
   Filter,
@@ -32,11 +71,33 @@ import {
   Zap,
   Eye,
   Share2
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-bd86
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 } from 'lucide-react';
 
 export default function News() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const [selectedSource, setSelectedSource] = useState('all');
+  const [selectedTimeframe, setSelectedTimeframe] = useState('all');
+
+  const categories = [
+<<<<<<< HEAD
+    { id: 'all', name: 'All News', icon: Newspaper, count: 45 },
+    { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain, count: 12 },
+    { id: 'quantum', name: 'Quantum Technology', icon: Cpu, count: 6 },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: 8 },
+    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: 7 },
+    { id: 'business', name: 'Business & Industry', icon: Building, count: 9 },
+    { id: 'innovation', name: 'Innovation & Trends', icon: Lightbulb, count: 8 },
+    { id: 'development', name: 'Development', icon: Code, count: 5 }
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   Calendar, 
   User, 
   Tag, 
@@ -64,6 +125,10 @@ export default function News() {
     'Partnerships',
     'Research & Development',
     'Market Trends'
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   ];
 
   const sources = [
@@ -105,6 +170,153 @@ export default function News() {
   const newsArticles = [
     {
       id: 1,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      title: 'Zion Tech Group Launches Revolutionary AI Autonomous Business Platform',
+      excerpt: 'New platform enables businesses to automate complex decision-making processes using advanced AI algorithms.',
+      content: 'Zion Tech Group today announced the launch of its groundbreaking AI Autonomous Business Platform, designed to revolutionize how organizations approach business automation...',
+      author: 'Zion Tech Group',
+      source: 'Company Press Releases',
+      publishDate: '2024-01-15',
+      readTime: '5 min read',
+      category: 'ai-ml',
+      tags: ['AI', 'Business Platform', 'Automation', 'Launch'],
+      featured: true,
+      views: 25420,
+      likes: 1245,
+      image: '/images/news/ai-platform-launch.jpg',
+      externalLink: 'https://ziontechgroup.com/press-releases/ai-platform-launch',
+      isBookmarked: false
+    },
+    {
+      id: 2,
+      title: 'Quantum Computing Breakthrough: Zion Tech Achieves 1000+ Qubit Milestone',
+      excerpt: 'Company reaches significant milestone in quantum computing development, opening new possibilities for complex problem-solving.',
+      content: 'Zion Tech Group has achieved a major breakthrough in quantum computing technology, successfully scaling its quantum systems to over 1000 qubits...',
+      author: 'Dr. Michael Chen',
+      source: 'Research Papers',
+      publishDate: '2024-01-14',
+      readTime: '8 min read',
+      category: 'quantum',
+      tags: ['Quantum Computing', 'Breakthrough', 'Research', '1000+ Qubits'],
+      featured: true,
+      views: 19850,
+      likes: 987,
+      image: '/images/news/quantum-breakthrough.jpg',
+      externalLink: 'https://ziontechgroup.com/research/quantum-breakthrough',
+      isBookmarked: false
+    },
+    {
+      id: 3,
+      title: 'Cybersecurity Threat Report: AI-Powered Attacks on the Rise',
+      excerpt: 'New research reveals increasing sophistication of cyber threats using artificial intelligence.',
+      content: 'A comprehensive cybersecurity threat report released by Zion Tech Group reveals a concerning trend in AI-powered cyber attacks...',
+      author: 'Security Research Team',
+      source: 'Industry Reports',
+      publishDate: '2024-01-13',
+      readTime: '6 min read',
+      category: 'cybersecurity',
+      tags: ['Cybersecurity', 'AI Threats', 'Research', 'Security'],
+      featured: false,
+      views: 15670,
+      likes: 756,
+      image: '/images/news/cybersecurity-threats.jpg',
+      externalLink: 'https://ziontechgroup.com/security/ai-threat-report',
+      isBookmarked: false
+    },
+    {
+      id: 4,
+      title: 'Cloud Migration Success: Fortune 500 Company Achieves 40% Cost Reduction',
+      excerpt: 'Case study demonstrates significant cost savings and performance improvements through strategic cloud migration.',
+      content: 'A Fortune 500 manufacturing company has achieved remarkable results through its cloud migration partnership with Zion Tech Group...',
+      author: 'Cloud Solutions Team',
+      source: 'Customer Success Stories',
+      publishDate: '2024-01-12',
+      readTime: '7 min read',
+      category: 'cloud',
+      tags: ['Cloud Migration', 'Cost Reduction', 'Case Study', 'Success'],
+      featured: false,
+      views: 12890,
+      likes: 634,
+      image: '/images/news/cloud-migration-success.jpg',
+      externalLink: 'https://ziontechgroup.com/case-studies/cloud-migration',
+      isBookmarked: false
+    },
+    {
+      id: 5,
+      title: 'Digital Transformation in Healthcare: AI-Powered Patient Care',
+      excerpt: 'Healthcare organizations are leveraging AI to improve patient outcomes and operational efficiency.',
+      content: 'The healthcare industry is undergoing a digital transformation revolution, with AI-powered solutions leading the charge...',
+      author: 'Healthcare Innovation Team',
+      source: 'Industry Reports',
+      publishDate: '2024-01-11',
+      readTime: '9 min read',
+      category: 'business',
+      tags: ['Healthcare', 'Digital Transformation', 'AI', 'Patient Care'],
+      featured: false,
+      views: 11230,
+      likes: 567,
+      image: '/images/news/healthcare-ai.jpg',
+      externalLink: 'https://ziontechgroup.com/insights/healthcare-transformation',
+      isBookmarked: false
+    },
+    {
+      id: 6,
+      title: 'Edge Computing Revolution: Real-Time Processing for IoT Applications',
+      excerpt: 'New edge computing solutions enable faster processing and reduced latency in IoT deployments.',
+      content: 'Edge computing is revolutionizing the Internet of Things (IoT) landscape, enabling real-time processing and decision-making...',
+      author: 'IoT Solutions Team',
+      source: 'Technology News',
+      publishDate: '2024-01-10',
+      readTime: '6 min read',
+      category: 'innovation',
+      tags: ['Edge Computing', 'IoT', 'Real-time', 'Innovation'],
+      featured: false,
+      views: 9870,
+      likes: 445,
+      image: '/images/news/edge-computing-iot.jpg',
+      externalLink: 'https://ziontechgroup.com/technology/edge-computing',
+      isBookmarked: false
+    },
+    {
+      id: 7,
+      title: 'Machine Learning in Financial Services: Risk Assessment and Fraud Detection',
+      excerpt: 'Financial institutions are adopting ML solutions for improved risk management and security.',
+      content: 'Machine learning is transforming the financial services industry, particularly in areas of risk assessment and fraud detection...',
+      author: 'Financial Services Team',
+      source: 'Industry Reports',
+      publishDate: '2024-01-09',
+      readTime: '8 min read',
+      category: 'ai-ml',
+      tags: ['Machine Learning', 'Financial Services', 'Risk Assessment', 'Fraud Detection'],
+      featured: false,
+      views: 8760,
+      likes: 398,
+      image: '/images/news/ml-financial-services.jpg',
+      externalLink: 'https://ziontechgroup.com/insights/financial-ml',
+      isBookmarked: false
+    },
+    {
+      id: 8,
+      title: 'Microservices Architecture: Building Scalable Applications',
+      excerpt: 'Best practices for implementing microservices that can scale with business growth.',
+      content: 'Microservices architecture has become the preferred approach for building scalable, maintainable applications...',
+      author: 'Software Architecture Team',
+      source: 'Technology News',
+      publishDate: '2024-01-08',
+      readTime: '10 min read',
+      category: 'development',
+      tags: ['Microservices', 'Architecture', 'Scalability', 'Development'],
+      featured: false,
+      views: 7650,
+      likes: 312,
+      image: '/images/news/microservices-architecture.jpg',
+      externalLink: 'https://ziontechgroup.com/technology/microservices',
+      isBookmarked: false
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       title: "Zion Tech Group Launches Revolutionary Quantum Neural Network Platform",
       excerpt: "The company introduces a breakthrough quantum computing solution that combines neural networks with quantum processing for unprecedented computational power.",
       content: "Zion Tech Group today announced the launch of its revolutionary Quantum Neural Network Platform, marking a significant milestone in the convergence of quantum computing and artificial intelligence. This breakthrough technology represents a paradigm shift in computational capabilities, enabling organizations to solve complex problems that were previously impossible with classical computing methods...",
@@ -222,10 +434,62 @@ export default function News() {
       image: "/news/5g-solutions.jpg",
       views: 7890,
       shares: 445
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-bd86
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     }
   ];
 
   const filteredNews = newsArticles.filter(article => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    const searchMatch = article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                       article.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                       article.content.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                       article.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    
+    const categoryMatch = selectedCategory === 'all' || article.category === selectedCategory;
+    const sourceMatch = selectedSource === 'all' || article.source === selectedSource;
+    
+    let timeframeMatch = true;
+    if (selectedTimeframe !== 'all') {
+      const articleDate = new Date(article.publishDate);
+      const now = new Date();
+      const diffTime = Math.abs(now.getTime() - articleDate.getTime());
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      
+      switch (selectedTimeframe) {
+        case 'Last 24 Hours':
+          timeframeMatch = diffDays <= 1;
+          break;
+        case 'Last Week':
+          timeframeMatch = diffDays <= 7;
+          break;
+        case 'Last Month':
+          timeframeMatch = diffDays <= 30;
+          break;
+        case 'Last 3 Months':
+          timeframeMatch = diffDays <= 90;
+          break;
+        case 'Last Year':
+          timeframeMatch = diffDays <= 365;
+          break;
+      }
+    }
+    
+    return searchMatch && categoryMatch && sourceMatch && timeframeMatch;
+  });
+
+  const featuredNews = newsArticles.filter(article => article.featured);
+  const recentNews = newsArticles.slice(0, 3);
+
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', {
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     { id: 'all', name: 'All News', icon: Newspaper, count: 18 },
     { id: 'ai', name: 'AI & ML', icon: Brain, count: 6 },
     { id: 'innovation', name: 'Innovation', icon: Rocket, count: 4 },
@@ -298,50 +562,162 @@ const News = () => {
       date: "2024-01-10",
       author: "Dr. Sarah Chen",
       readTime: "8 min read",
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-9620
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       image: "/api/placeholder/400/250"
     },
     {
       id: 3,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      title: "Zion Tech Group Expands Global Operations with New European Office",
+      excerpt: "The company opens its first European headquarters in Berlin, Germany, to better serve clients across the European Union...",
+      author: "Corporate Communications",
+      date: "2024-01-16",
+      readTime: "4 min read",
+      views: "2.9k",
+      category: "business",
+      tags: ["Global Expansion", "European Market", "Business Growth", "International"],
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       title: "Cybersecurity in the AI Era: New Threats and Solutions",
       excerpt: "As AI becomes more prevalent, we explore the evolving cybersecurity landscape and our innovative defense strategies.",
       category: "Cybersecurity",
       date: "2024-01-08",
       author: "Michael Rodriguez",
       readTime: "6 min read",
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-9620
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       image: "/api/placeholder/400/250"
     },
     {
       id: 4,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      title: "New Cybersecurity Framework Released for Enterprise Clients",
+      excerpt: "Zion Tech Group introduces comprehensive security framework designed to protect against emerging cyber threats...",
+      author: "Security Team",
+      date: "2024-01-14",
+      readTime: "6 min read",
+      views: "4.1k",
+      category: "security",
+      tags: ["Cybersecurity", "Enterprise", "Security Framework", "Threat Protection"],
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       title: "The Future of Work: How AI is Reshaping Industries",
       excerpt: "Discover how artificial intelligence is transforming traditional industries and creating new opportunities for growth.",
       category: "Industry Insights",
       date: "2024-01-05",
       author: "Jennifer Kim",
       readTime: "7 min read",
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-9620
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       image: "/api/placeholder/400/250"
     },
     {
       id: 5,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      title: "Partnership Announced with Leading Cloud Infrastructure Provider",
+      excerpt: "Strategic collaboration to deliver enhanced cloud solutions and accelerate digital transformation for enterprise clients...",
+      author: "Partnership Team",
+      date: "2024-01-12",
+      readTime: "5 min read",
+      views: "3.3k",
+      category: "cloud",
+      tags: ["Partnership", "Cloud Infrastructure", "Digital Transformation", "Enterprise"],
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       title: "Zion Tech Group Named Top AI Company by Tech Innovators Association",
       excerpt: "We're honored to be recognized for our contributions to AI innovation and technological advancement.",
       category: "Company News",
       date: "2024-01-03",
       author: "Zion Tech Team",
       readTime: "3 min read",
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-9620
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       image: "/api/placeholder/400/250"
     },
     {
       id: 6,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      title: "Zion Tech Group Recognized as Top AI Solutions Provider",
+      excerpt: "Industry recognition for excellence in artificial intelligence solutions and innovative technology implementations...",
+      author: "Awards Team",
+      date: "2024-01-10",
+      readTime: "4 min read",
+      views: "2.7k",
+      category: "ai",
+      tags: ["Awards", "Recognition", "AI Solutions", "Industry Leadership"],
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       title: "Micro SAAS Revolution: Democratizing Technology for Small Businesses",
       excerpt: "Learn how our micro SAAS solutions are making enterprise-grade technology accessible to businesses of all sizes.",
       category: "Product Updates",
       date: "2024-01-01",
       author: "David Thompson",
       readTime: "5 min read",
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-9620
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       image: "/api/placeholder/400/250"
     }
   ];
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const filteredArticles = newsArticles.filter(article => {
+    const matchesSearch = article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         article.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         article.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
+
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+>>>>>>> origin/cursor/website-audit-and-enhancement-82f7
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
+
+<<<<<<< HEAD
+  const getCategoryIcon = (categoryId: string) => {
+    const category = categories.find(cat => cat.id === categoryId);
+    return category ? category.icon : Newspaper;
+  };
+
+  const getCategoryName = (categoryId: string) => {
+    const category = categories.find(cat => cat.id === categoryId);
+    return category ? category.name : 'General';
+  };
+
+  const toggleBookmark = (articleId: number) => {
+    // This would typically update a state or make an API call
+    console.log('Toggle bookmark for article:', articleId);
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   const categories = [
     "All News",
     "Product Launch",
@@ -356,10 +732,29 @@ const News = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-9620
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
+              Latest News & Updates
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+              Stay informed with the latest developments in AI, quantum technology, cybersecurity, 
+              and industry insights from Zion Tech Group and the technology world.
+            </p>
+            
+            {/* Search Bar */}
+            <div className="max-w-2xl mx-auto mb-8">
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     const matchesCategory = selectedCategory === 'all' || article.category === selectedCategory;
     const matchesYear = selectedYear === 'all' || article.publishDate.startsWith(selectedYear);
     const matchesSearch = searchQuery === '' || 
@@ -474,16 +869,51 @@ export default function News() {
       date: '2025-01-15',
       category: 'Product Launch',
       image: '/images/news/quantum-edge-launch.jpg',
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-b7ac
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       featured: true
     },
     {
       id: 2,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      title: 'Partnership with Microsoft Azure for Enhanced AI Services',
+      excerpt: 'Strategic collaboration brings enterprise-grade AI solutions to our clients with enhanced security and scalability.',
+      category: 'Partnership',
+      date: '2024-08-20',
+      readTime: '3 min read',
+      image: '🤝',
+>>>>>>> origin/cursor/website-audit-and-enhancement-bc98
+      featured: true
+    },
+    {
+      id: 3,
+<<<<<<< HEAD
+      title: "Breakthrough in Quantum Neural Network Technology",
+      excerpt: "Our research team achieves significant milestone in quantum computing, reducing processing time for complex AI models by 95% while maintaining accuracy.",
+      author: "Dr. Sarah Chen",
+      publishDate: "2025-01-10",
+      readTime: "5 min read",
+      category: "technology",
+      tags: ["Quantum Computing", "AI", "Research", "Breakthrough"],
+      image: "/api/placeholder/600/400",
+      views: "18.5k",
+      type: "research",
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       title: 'New Cybersecurity Framework for Quantum Threats',
       excerpt: 'Introducing quantum-safe security protocols to protect against future quantum computing threats.',
       category: 'Security',
       date: '2024-08-15',
       readTime: '7 min read',
       image: '🔒',
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-bc98
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       featured: true
     }
   ];
@@ -491,6 +921,112 @@ export default function News() {
   const recentNews = [
     {
       id: 4,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      title: "Zion Tech Group Expands European Operations",
+      excerpt: "New office opening in Berlin, Germany to serve growing demand for AI solutions across European markets.",
+      author: "Zion Tech Group",
+      publishDate: "2025-01-08",
+      readTime: "2 min read",
+      category: "company",
+      tags: ["Expansion", "Europe", "AI Solutions"],
+      image: "/api/placeholder/400/250",
+      views: "8.9k",
+      type: "announcement"
+    },
+    {
+      id: 5,
+      title: "SOC2 Type II Certification Achieved",
+      excerpt: "Successfully completed SOC2 Type II audit, demonstrating our commitment to security and compliance excellence.",
+      author: "Zion Tech Group",
+      publishDate: "2025-01-06",
+      readTime: "2 min read",
+      category: "company",
+      tags: ["SOC2", "Certification", "Security", "Compliance"],
+      image: "/api/placeholder/400/250",
+      views: "7.2k",
+      type: "announcement"
+    },
+    {
+      id: 6,
+      title: "New AI Research Lab Opens in Silicon Valley",
+      excerpt: "State-of-the-art facility dedicated to advancing autonomous systems and quantum computing research.",
+      author: "Zion Tech Group",
+      publishDate: "2025-01-04",
+      readTime: "3 min read",
+      category: "company",
+      tags: ["Research Lab", "Silicon Valley", "AI", "Quantum"],
+      image: "/api/placeholder/400/250",
+      views: "6.8k",
+      type: "announcement"
+    },
+    {
+      id: 7,
+      title: "Industry Report: AI Adoption in Manufacturing",
+      excerpt: "Comprehensive study reveals 40% increase in AI adoption across manufacturing sector, with Zion Tech Group leading implementations.",
+      author: "Industry Research Team",
+      publishDate: "2025-01-02",
+      readTime: "4 min read",
+      category: "industry",
+      tags: ["Manufacturing", "AI Adoption", "Research", "Report"],
+      image: "/api/placeholder/400/250",
+      views: "5.4k",
+      type: "report"
+    },
+    {
+      id: 8,
+      title: "5G Enterprise Solutions Launch",
+      excerpt: "Introducing next-generation 5G enterprise solutions designed for high-performance, low-latency business applications.",
+      author: "Zion Tech Group",
+      publishDate: "2024-12-30",
+      readTime: "3 min read",
+      category: "technology",
+      tags: ["5G", "Enterprise", "Technology", "Launch"],
+      image: "/api/placeholder/400/250",
+      views: "4.9k",
+      type: "product-launch"
+    },
+    {
+      id: 9,
+      title: "Cybersecurity Excellence Award",
+      excerpt: "Recognized for outstanding contributions to cybersecurity innovation and threat prevention.",
+      author: "Zion Tech Group",
+      publishDate: "2024-12-28",
+      readTime: "2 min read",
+      category: "awards",
+      tags: ["Cybersecurity", "Award", "Innovation", "Security"],
+      image: "/api/placeholder/400/250",
+      views: "4.2k",
+      type: "award"
+    }
+  ];
+
+  const allNews = [...featuredNews, ...recentNews];
+
+  const filteredNews = allNews.filter(news => {
+    const matchesCategory = selectedCategory === 'all' || news.category === selectedCategory;
+    const matchesSearch = 
+      news.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      news.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      news.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    return matchesCategory && matchesSearch;
+  });
+
+  const sortedNews = filteredNews.sort((a, b) => {
+    switch (sortBy) {
+      case 'latest':
+        return new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime();
+      case 'popular':
+        return b.views.localeCompare(a.views, undefined, { numeric: true });
+      case 'featured':
+        return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
+      default:
+        return 0;
+    }
+  });
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       title: "Zion Tech Group Named Top AI Solutions Provider 2025",
       excerpt: "Leading technology research firm recognizes Zion Tech Group for excellence in AI-powered business solutions and innovation.",
       content: "Zion Tech Group has been recognized as a Top AI Solutions Provider for 2025 by TechResearch Insights, a leading technology research and advisory firm. This recognition highlights our commitment to delivering cutting-edge AI solutions that drive real business value...",
@@ -661,6 +1197,10 @@ export default function News() {
 
   const featuredNews = newsItems.filter(item => item.featured);
   const regularNews = filteredNews.filter(item => !item.featured);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -671,6 +1211,80 @@ export default function News() {
     });
   };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const getCategoryColor = (categoryId: string) => {
+    const category = categories.find(cat => cat.id === categoryId);
+    return category ? category.color : 'from-gray-500 to-slate-500';
+  };
+
+  const getNewsTypeIcon = (type: string) => {
+    switch (type) {
+      case 'press-release':
+        return FileText;
+      case 'announcement':
+        return Newspaper;
+      case 'research':
+        return TrendingUp;
+      case 'report':
+        return FileText;
+      case 'product-launch':
+        return Star;
+      case 'award':
+        return Award;
+      default:
+        return Newspaper;
+    }
+  };
+
+  const getNewsTypeColor = (type: string) => {
+    switch (type) {
+      case 'press-release':
+        return 'from-blue-500 to-cyan-500';
+      case 'announcement':
+        return 'from-green-500 to-emerald-500';
+      case 'research':
+        return 'from-purple-500 to-pink-500';
+      case 'report':
+        return 'from-orange-500 to-red-500';
+      case 'product-launch':
+        return 'from-yellow-500 to-orange-500';
+      case 'award':
+        return 'from-pink-500 to-rose-500';
+      default:
+        return 'from-gray-500 to-slate-500';
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+>>>>>>> origin/cursor/website-audit-and-enhancement-2bc0
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+            transition={{ duration: 0.6 }}
+          >
+            <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-cyan-400 text-sm font-medium mb-6">
+              <Newspaper className="w-4 h-4 mr-2" />
+              Latest Updates
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
+              Company News & Updates
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+              Stay informed about Zion Tech Group's latest innovations, partnerships, awards, and industry developments.
+            </p>
+            
+            {/* Search Bar */}
+            <div className="max-w-2xl mx-auto">
+>>>>>>> origin/cursor/website-audit-and-enhancement-bd86
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -1657,10 +2271,30 @@ export default function News() {
                 </button>
               ))}
             </div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {/* Category Filter */}
+      <div className="px-4 sm:px-6 lg:px-8 pb-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-2">
+            {categories.map((category, index) => (
+              <button
+                key={index}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  index === 0
+                    ? 'bg-cyan-500 text-white'
+                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       {featuredArticle && (
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -1757,6 +2391,44 @@ export default function News() {
                   <h3 className="text-2xl font-bold text-white mb-4 leading-tight">
                     {item.title}
                   </h3>
+<<<<<<< HEAD
+=======
+                  <p className="text-gray-300 mb-4 line-clamp-3">{news.excerpt}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400 text-sm">{news.date}</span>
+                    <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
+                      Read More →
+                    </button>
+=======
+      {/* Featured News */}
+      {featuredNews.length > 0 && (
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured News</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {featuredNews.map((item) => (
+              <article
+                key={item.id}
+                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700 hover:border-cyan-500"
+              >
+                <div className="p-6">
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="px-3 py-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs font-medium rounded-full">
+                      Featured
+                    </span>
+                    <span className="px-3 py-1 bg-gray-700 text-gray-300 text-xs rounded-full">
+                      {item.category}
+                    </span>
+                    {item.isPressRelease && (
+                      <span className="px-3 py-1 bg-red-600 text-white text-xs rounded-full">
+                        Press Release
+                      </span>
+                    )}
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-white mb-4 leading-tight">
+                    {item.title}
+                  </h3>
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                   
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     {item.excerpt}
@@ -1781,6 +2453,10 @@ export default function News() {
                       <Eye className="w-4 h-4 mr-2" />
                       {item.views}
                     </div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                   </div>
                   
                   <div className="flex flex-wrap gap-2 mb-6">
@@ -1805,6 +2481,127 @@ export default function News() {
         </div>
       </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {/* Recent News */}
+      <div className="px-4 sm:px-6 lg:px-8 pb-16">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Latest News
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Recent updates and industry insights
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {recentNews.map((news) => (
+              <div key={news.id} className="group">
+                <div className="p-6 rounded-xl border border-gray-700 bg-gray-800/30 hover:border-cyan-400/50 transition-all duration-300 h-full">
+                  <div className="text-4xl mb-4">{news.image}</div>
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="px-2 py-1 bg-gray-700 text-gray-300 rounded-full text-xs font-medium">
+                      {news.category}
+                    </span>
+                    <span className="text-gray-400 text-sm">{news.readTime}</span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2">
+                    {news.title}
+                  </h3>
+                  <p className="text-gray-300 mb-4 line-clamp-3 text-sm">{news.excerpt}</p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400 text-xs">{news.date}</span>
+                    <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm">
+                      Read More →
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Newsletter Signup */}
+      <div className="px-4 sm:px-6 lg:px-8 pb-16">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Stay Updated
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get the latest news, insights, and updates delivered directly to your inbox
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+              />
+              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300">
+                Subscribe
+              </button>
+            </div>
+            <p className="text-sm text-gray-400 mt-4">
+              No spam, unsubscribe at any time. We respect your privacy.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Press Kit */}
+      <div className="px-4 sm:px-6 lg:px-8 pb-16">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Press & Media
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Resources for journalists and media professionals
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                title: 'Press Releases',
+                description: 'Official announcements and company news',
+                icon: '📰',
+                action: 'View Releases'
+              },
+              {
+                title: 'Media Kit',
+                description: 'Company logos, images, and brand guidelines',
+                icon: '🎨',
+                action: 'Download Kit'
+              },
+              {
+                title: 'Contact Media',
+                description: 'Get in touch with our PR team',
+                icon: '📞',
+                action: 'Contact Us'
+              }
+            ].map((item, index) => (
+              <div key={index} className="p-6 rounded-xl border border-gray-700 bg-gray-800/30 hover:border-cyan-400/50 transition-all duration-300 text-center">
+                <div className="text-4xl mb-4">{item.icon}</div>
+                <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
+                <p className="text-gray-300 mb-4 text-sm">{item.description}</p>
+                <button className="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-colors duration-300 text-sm">
+                  {item.action}
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-bc98
+    </div>
+  );
+}
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       </section>
 
       {/* News Grid */}
@@ -1933,6 +2730,10 @@ export default function News() {
 };
 
 export default News;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-9620
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
       title: 'Zion Tech Group Named Top AI Company by Tech Innovation Awards',
       excerpt: 'Recognition for our groundbreaking work in autonomous AI systems and machine learning solutions that are transforming industries worldwide.',
@@ -2218,6 +3019,10 @@ export default News;
               </Link>
               <button className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-medium rounded-lg transition-all duration-200">
                 Download Press Kit
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               </button>
             </div>
           </div>
@@ -2225,4 +3030,12 @@ export default News;
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-b7ac
+=======
+}
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7

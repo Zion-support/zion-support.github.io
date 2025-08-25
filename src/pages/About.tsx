@@ -78,6 +78,22 @@ export default function About() {
 =======
 =======
 import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import { Users, Award, Globe, Target, TrendingUp, Zap, Shield, Brain, Rocket, Star, CheckCircle, ArrowRight } from 'lucide-react';
+
+export function About() {
+  const stats = [
+    { label: 'Years of Experience', value: '10+', icon: Award },
+    { label: 'Projects Completed', value: '500+', icon: CheckCircle },
+    { label: 'Global Clients', value: '50+', icon: Globe },
+    { label: 'Team Members', value: '25+', icon: Users },
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
 =======
 import React from 'react';
@@ -487,10 +503,53 @@ const About = () => {
 
 =======
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 import { Link } from 'react-router-dom';
 import { 
   Building, 
   Users, 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  Globe, 
+  Award, 
+  TrendingUp, 
+  Cpu, 
+  Cloud,
+  Brain,
+  Rocket,
+  CheckCircle,
+  Target
+} from 'lucide-react';
+
+const About = () => {
+  const stats = [
+    { number: '500+', label: 'Projects Completed', icon: CheckCircle },
+    { number: '50+', label: 'Team Members', icon: Users },
+    { number: '25+', label: 'Technologies', icon: Cpu },
+    { number: '99%', label: 'Client Satisfaction', icon: Award }
+  ];
+
+  const values = [
+    {
+      icon: Zap,
+      title: 'Innovation First',
+      description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and creative solutions.'
+    },
+    {
+      icon: Shield,
+      title: 'Trust & Security',
+      description: 'Your data and systems are protected with enterprise-grade security and compliance standards.'
+    },
+    {
+      icon: Users,
+      title: 'Client Partnership',
+      description: 'We work as an extension of your team, understanding your business goals and delivering tailored solutions.'
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       icon: Brain,
       title: 'Innovation First',
       description: 'We push the boundaries of what\'s possible with cutting-edge technology and creative solutions.',
@@ -507,10 +566,59 @@ import {
       title: 'Client Success',
       description: 'We measure our success by the growth and success of our clients\' businesses.',
       color: 'from-red-500 to-orange-500'
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-e276
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     },
     {
       icon: Globe,
       title: 'Global Impact',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      description: 'Our solutions reach businesses worldwide, driving digital transformation across industries.'
+    }
+  ];
+
+  const services = [
+    {
+      icon: Brain,
+      title: 'AI & Machine Learning',
+      description: 'Cutting-edge artificial intelligence solutions that transform business operations and decision-making.',
+      link: '/ai-services'
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud & DevOps',
+      description: 'Scalable cloud infrastructure and automation that ensures reliability and performance.',
+      link: '/cloud-devops'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Solutions',
+      description: 'Comprehensive business technology solutions designed for enterprise-scale operations.',
+      link: '/enterprise-solutions'
+    },
+    {
+      icon: Cpu,
+      title: 'Micro SAAS Services',
+      description: 'Custom software solutions that address specific business needs with rapid deployment.',
+      link: '/micro-saas-services'
+    },
+    {
+      icon: Rocket,
+      title: 'Digital Transformation',
+      description: 'End-to-end business modernization that drives growth and competitive advantage.',
+      link: '/digital-transformation'
+    },
+    {
+      icon: TrendingUp,
+      title: 'Emerging Tech',
+      description: 'Next-generation technology solutions that keep you ahead of the curve.',
+      link: '/emerging-tech'
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   Award, 
   Globe, 
   Rocket, 
@@ -680,12 +788,28 @@ export default function About() {
       organization: "Global Technology Awards",
       description: "Acknowledged as an emerging leader in the technology industry",
       year: "2022"
+<<<<<<< HEAD
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+    }
+  ];
+
+>>>>>>> origin/cursor/website-audit-and-enhancement-796c
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+      {/* Hero Section */}
+<<<<<<< HEAD
+      <section className="relative pt-32 pb-20 overflow-hidden">
+<<<<<<< HEAD
+        <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue-light/20"></div>
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/10 via-zion-purple/10 to-zion-blue-light/10"></div>
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
 =======
@@ -1142,10 +1266,56 @@ const About = () => {
                 <span>Innovation Leader</span>
               </div>
             </div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {/* Mission Section */}
+      <section className="py-20 bg-gray-800/50">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">
+                Our Mission
+              </h2>
+              <p className="text-xl text-gray-300 mb-6">
+                To democratize access to cutting-edge technology and empower organizations 
+                to achieve unprecedented levels of efficiency, security, and innovation.
+              </p>
+              <p className="text-lg text-gray-400 mb-8">
+                We believe that the future belongs to those who can harness the power of 
+                artificial intelligence, quantum computing, and autonomous systems. Our 
+                mission is to make these technologies accessible, reliable, and transformative 
+                for businesses of all sizes.
+>>>>>>> origin/cursor/website-audit-and-enhancement-cbd5
+              </p>
+              <Link 
+                to="/mission" 
+                className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors text-lg font-medium"
+              >
+                <span>Learn More About Our Mission</span>
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+<<<<<<< HEAD
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <Target className="w-16 h-16 text-zion-cyan mb-4" />
+              <h3 className="text-2xl font-bold text-white mb-4">Vision 2030</h3>
+              <p className="text-zion-slate-light">
+                To become the leading platform for AI-powered business solutions, connecting talent, 
+                technology, and innovation across the global marketplace.
+              </p>
+            </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-e1a1
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                 To democratize access to cutting-edge technology solutions, enabling businesses 
                 of all sizes to thrive in the digital age through innovative micro SAAS platforms 
                 and AI-powered services.
@@ -1570,6 +1740,10 @@ const About = () => {
                     ))}
                   </ul>
                 </div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               );
             })}
 =======
@@ -1647,6 +1821,44 @@ const About = () => {
         </div>
       </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      {/* Mission & Vision */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-zion-blue-dark mb-6">
+                Our Mission
+              </h2>
+              <p className="text-lg text-zion-slate mb-6 leading-relaxed">
+                To empower businesses with innovative technology solutions that drive growth, 
+                efficiency, and competitive advantage in the digital age.
+              </p>
+              <p className="text-lg text-zion-slate mb-6 leading-relaxed">
+                We believe that every organization deserves access to cutting-edge technology 
+                that can transform their operations and unlock new possibilities.
+              </p>
+            </div>
+            <div className="bg-white p-8 rounded-2xl shadow-xl">
+              <h3 className="text-2xl font-bold text-zion-blue-dark mb-4">
+                Our Vision
+              </h3>
+              <p className="text-zion-slate leading-relaxed">
+                To be the leading technology partner for businesses worldwide, 
+                known for innovation, reliability, and exceptional results.
+              </p>
+              <div className="mt-6">
+                <TrendingUp className="w-12 h-12 text-zion-cyan" />
+              </div>
+            </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-54e3
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       {/* Company Stats */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
@@ -2197,9 +2409,76 @@ const About = () => {
               <p className="text-gray-300 text-sm">{award.description}</p>
             </div>
           ))}
+<<<<<<< HEAD
         </div>
       </div>
 
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+        </div>
+      </div>
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+      {/* Timeline Section */}
+      <section className="relative z-10 py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Our <span className="text-zion-cyan">Journey</span>
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              From humble beginnings to global technology leadership, here's how 
+              we've grown and evolved over the years.
+            </p>
+          </motion.div>
+
+          <div className="relative">
+            {/* Timeline Line */}
+            <div className="absolute left-1/2 transform -translate-x-px w-0.5 h-full bg-gradient-to-b from-zion-cyan via-zion-purple to-zion-pink"></div>
+            
+            <div className="space-y-12">
+              {milestones.map((milestone, index) => (
+                <motion.div
+                  key={milestone.year}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className={`relative flex items-center ${
+                    index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
+                  }`}
+                >
+                  {/* Timeline Dot */}
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-zion-cyan rounded-full border-4 border-zion-blue-dark"></div>
+                  
+                  {/* Content */}
+                  <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
+                    <Card className="bg-zion-blue-dark/30 backdrop-blur-lg border-zion-blue-light/20 hover:border-zion-cyan/50 transition-all duration-300 p-6">
+                      <div className="text-zion-cyan font-bold text-lg mb-2">
+                        {milestone.year}
+                      </div>
+                      <h3 className="text-xl font-bold text-white mb-3">
+                        {milestone.title}
+                      </h3>
+                      <p className="text-zion-slate-light">
+                        {milestone.description}
+                      </p>
+                    </Card>
+                  </div>
+                </motion.div>
+              ))}
+>>>>>>> origin/cursor/build-and-fix-errors-e276
+            </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-e1a1
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       {/* Company Story */}
       <section className="py-20 px-6 bg-zion-blue-dark">
         <div className="max-w-6xl mx-auto">
@@ -2919,10 +3198,26 @@ const About = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Discover how our innovative solutions can transform your business and help you 
               achieve extraordinary results in the digital age.
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
+              >
+                Start a Conversation
+              </Link>
+              <Link
+                to="/request-quote"
+                className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan rounded-xl font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                 className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"
               >
                 Get Started Today
@@ -2931,10 +3226,21 @@ const About = () => {
               <Link
                 to="/services"
                 className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-medium rounded-lg transition-all duration-200"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               >
                 Request a Quote
               </Link>
             </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          </motion.div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3133
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -4167,9 +4473,24 @@ export default About;
               Explore Our Services
             </Link>
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           </div>
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+};
+
+export default About;
+>>>>>>> origin/cursor/website-audit-and-enhancement-cbd5
+=======
+}
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7

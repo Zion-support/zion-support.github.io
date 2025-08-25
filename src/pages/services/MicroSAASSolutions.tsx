@@ -7,6 +7,7 @@ import {
   TrendingUp, 
   Shield, 
   Globe, 
+<<<<<<< HEAD
   Palette,
   FileText,
   Video,
@@ -71,6 +72,27 @@ import {
   Rocket, 
   Cpu, 
   BarChart3 
+=======
+  Building, 
+  Rocket, 
+  Cpu, 
+<<<<<<< HEAD
+  BarChart3 
+=======
+  BarChart3,
+  Database,
+  Cloud,
+  Lock,
+  Smartphone,
+  Target,
+  DollarSign,
+  Clock,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Brain
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 } from 'lucide-react';
 
 export default function MicroSAASSolutions() {

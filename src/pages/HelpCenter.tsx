@@ -1,3 +1,46 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState } from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+>>>>>>> origin/cursor/build-and-fix-errors-e276
+import { Link } from 'react-router-dom';
+import { 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { 
+  HelpCircle, 
+>>>>>>> origin/cursor/website-audit-and-enhancement-ee8a
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-889e
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   Search, 
   BookOpen, 
   MessageCircle, 
@@ -14,6 +57,34 @@
   Users, 
   Settings, 
   Shield, 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  Zap,
+=======
+import { 
+  Search, 
+  BookOpen, 
+  MessageCircle, 
+  FileText, 
+  Video, 
+  Headphones, 
+  Mail, 
+  Phone,
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+  ArrowRight,
+  ChevronDown,
+  ChevronRight,
+  ExternalLink,
+<<<<<<< HEAD
+  Download,
+  Play,
+  Star,
+  Clock,
+  CheckCircle
+>>>>>>> origin/cursor/website-audit-and-enhancement-1f82
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 import { Helmet } from 'react-helmet-async';
 =======
 import { motion } from 'framer-motion';
@@ -126,12 +197,25 @@ export default function HelpCenter() {
 =======
 import { motion } from 'framer-motion';
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fe6d
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 import { motion } from 'framer-motion';
+=======
+import { motion } from 'framer-motion';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
 import { Search, BookOpen, MessageCircle, FileText, Video, Users, Phone, Mail, Clock, CheckCircle, ChevronDown, ChevronRight } from 'lucide-react';
 
 const HelpCenter = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-b812
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Search, Book, MessageCircle, Phone, Mail, FileText, Video, Download, ChevronDown, ChevronRight, Star, Clock, Users, HelpCircle, Zap, Shield, Settings, Globe } from 'lucide-react';
@@ -150,6 +234,7 @@ const HelpCenter = () => {
         : [...prev, category]
     );
   };
+<<<<<<< HEAD
 =======
 import React, { useState } from 'react';
 import { 
@@ -165,6 +250,10 @@ import {
   ChevronDown,
   ChevronRight,
   ExternalLink,
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-889e
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   HelpCircle,
   Lightbulb,
   Clock,
@@ -181,10 +270,84 @@ export default function HelpCenter() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedFaqs, setExpandedFaqs] = useState<Set<string>>(new Set());
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 
   const categories = [
     {
       id: 'getting-started',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      title: 'Getting Started',
+<<<<<<< HEAD
+      icon: Zap,
+      description: 'Learn the basics and get up and running quickly',
+      articles: [
+        { title: 'Account Setup Guide', views: '2.3k', time: '5 min read' },
+        { title: 'First Steps with AI Solutions', views: '1.8k', time: '8 min read' },
+        { title: 'Understanding Our Services', views: '3.1k', time: '6 min read' },
+        { title: 'Initial Consultation Process', views: '1.5k', time: '4 min read' }
+=======
+      icon: Rocket,
+      articles: [
+        { title: 'Welcome to Zion Tech Group', path: '/help/getting-started', description: 'Learn the basics of our platform' },
+        { title: 'Creating Your First Project', path: '/help/first-project', description: 'Step-by-step guide to get started' },
+        { title: 'Account Setup & Verification', path: '/help/account-setup', description: 'Complete your profile setup' }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-889e
+      ]
+    },
+    {
+      id: 'ai-solutions',
+      title: 'AI Solutions',
+<<<<<<< HEAD
+      icon: Globe,
+      description: 'Everything about our AI and machine learning services',
+      articles: [
+        { title: 'AI Implementation Best Practices', views: '2.8k', time: '12 min read' },
+        { title: 'Machine Learning Model Training', views: '1.9k', time: '15 min read' },
+        { title: 'Data Preparation Guidelines', views: '2.2k', time: '10 min read' },
+        { title: 'AI Ethics and Compliance', views: '1.4k', time: '8 min read' }
+      ]
+    },
+<<<<<<< HEAD
+    {
+      id: 'cybersecurity',
+      title: 'Cybersecurity',
+      icon: Shield,
+      description: 'Security protocols, compliance, and protection measures',
+=======
+    'talent-hiring': {
+      title: 'Talent & Hiring',
+      icon: Users,
+>>>>>>> origin/cursor/website-audit-and-enhancement-4d8c
+      articles: [
+        { title: 'Security Assessment Process', views: '3.5k', time: '9 min read' },
+        { title: 'Compliance Framework Setup', views: '2.1k', time: '11 min read' },
+        { title: 'Incident Response Procedures', views: '1.7k', time: '7 min read' },
+        { title: 'Zero Trust Architecture Guide', views: '2.9k', time: '14 min read' }
+      ]
+    },
+<<<<<<< HEAD
+    {
+      id: 'technical-support',
+      title: 'Technical Support',
+      icon: Settings,
+      description: 'Technical assistance and troubleshooting guides',
+=======
+    'technical-support': {
+      title: 'Technical Support',
+      icon: HelpCircle,
+>>>>>>> origin/cursor/website-audit-and-enhancement-4d8c
+      articles: [
+        { title: 'Common Integration Issues', views: '4.2k', time: '6 min read' },
+        { title: 'API Documentation', views: '3.8k', time: '20 min read' },
+        { title: 'System Requirements', views: '2.6k', time: '5 min read' },
+        { title: 'Performance Optimization', views: '1.8k', time: '13 min read' }
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       icon: Brain,
       articles: [
         { title: 'AI Business Intelligence Guide', path: '/help/ai-bi-guide', description: 'Understanding AI-powered analytics' },
@@ -241,6 +404,43 @@ export default function HelpCenter() {
     'Account security best practices'
   ];
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const quickHelp = [
+    {
+      title: 'Contact Support',
+      description: 'Get direct help from our technical team',
+      icon: MessageCircle,
+      action: 'Chat Now',
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      title: 'Schedule Consultation',
+      description: 'Book a free consultation with our experts',
+      icon: Phone,
+      action: 'Book Now',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      title: 'Documentation',
+      description: 'Access comprehensive technical docs',
+      icon: Book,
+      action: 'Browse Docs',
+      color: 'from-purple-500 to-indigo-500'
+    },
+    {
+      title: 'Video Tutorials',
+      description: 'Watch step-by-step video guides',
+      icon: Video,
+      action: 'Watch Now',
+      color: 'from-orange-500 to-red-500'
+    }
+  ];
+>>>>>>> origin/cursor/website-audit-and-enhancement-53a4
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 
   const toggleCategory = (categoryId: string) => {
     setExpandedCategories(prev => 
@@ -249,7 +449,39 @@ export default function HelpCenter() {
         : [...prev, categoryId]
     );
   };
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  const toggleFAQ = (faqId: string) => {
+    setExpandedFAQs(prev => 
+      prev.includes(faqId) 
+        ? prev.filter(id => id !== faqId)
+        : [...prev, faqId]
+    );
+  };
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+
+<<<<<<< HEAD
+  const helpCategories = [
+    {
+      id: 'getting-started',
+      title: 'Getting Started',
+<<<<<<< HEAD
+      icon: Rocket,
+      description: 'New to Zion Tech Group? Start here to learn the basics.',
+      articles: [
+        { title: 'Welcome to Zion Tech Group', path: '/docs/getting-started/welcome' },
+        { title: 'Setting Up Your Account', path: '/docs/getting-started/setup' },
+        { title: 'First Steps with AI Services', path: '/docs/getting-started/first-steps' },
+        { title: 'Platform Overview', path: '/docs/getting-started/platform-overview' }
+      ]
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 
   const helpCategories = [
     {
@@ -763,10 +995,133 @@ const HelpCenter = () => {
       helpful: '96%',
       excerpt: 'Common reasons why workflows might not trigger and how to fix them quickly.'
     }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   ];
 
   const faqs = [
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      id: 1,
+      category: 'ai',
+      question: "How does Zion Tech Group's AI solutions differ from competitors?",
+      answer: "Our AI solutions are built on proprietary algorithms and quantum-enhanced processing capabilities. We combine traditional machine learning with quantum computing principles, resulting in faster processing, more accurate predictions, and superior scalability. Our AI systems are also designed with explainability and ethical AI principles at their core.",
+      tags: ['AI', 'Machine Learning', 'Quantum Computing']
+    },
+    {
+      id: 2,
+      category: 'ai',
+      question: "What industries can benefit from your AI autonomous systems?",
+      answer: "Our AI autonomous systems are designed for cross-industry applications. We've successfully implemented solutions in healthcare (patient monitoring and diagnosis), manufacturing (predictive maintenance and quality control), financial services (fraud detection and risk assessment), retail (inventory management and customer service), and government (data analysis and process automation).",
+      tags: ['AI', 'Autonomous Systems', 'Industry Solutions']
+    },
+    {
+      id: 3,
+      category: 'quantum',
+      question: "How secure are quantum neural networks against cyber threats?",
+      answer: "Quantum neural networks provide unprecedented security through quantum entanglement and superposition principles. They're resistant to traditional cryptographic attacks and can detect intrusion attempts in real-time. Our quantum systems also include quantum-safe encryption protocols that remain secure even against future quantum computers.",
+      tags: ['Quantum Computing', 'Cybersecurity', 'Neural Networks']
+    },
+    {
+      id: 4,
+      category: 'cybersecurity',
+      question: "What compliance standards does your SOC2 automation support?",
+      answer: "Our SOC2 compliance automation covers all Trust Service Criteria: Security, Availability, Processing Integrity, Confidentiality, and Privacy. We support SOC2 Type I and Type II certifications, with automated evidence collection, continuous monitoring, and real-time compliance reporting. Our system integrates with major compliance frameworks including ISO 27001, NIST, and GDPR.",
+      tags: ['SOC2', 'Compliance', 'Automation']
+    },
+    {
+      id: 5,
+      category: 'infrastructure',
+      question: "How do you ensure 99.99% uptime for 5G enterprise solutions?",
+      answer: "Our 5G enterprise solutions achieve 99.99% uptime through redundant network architecture, AI-powered predictive maintenance, real-time monitoring, and automated failover systems. We use edge computing to reduce latency and implement load balancing across multiple network nodes. Our infrastructure includes backup power systems and geographically distributed data centers.",
+      tags: ['5G', 'Network Infrastructure', 'Uptime']
+    },
+    {
+      id: 6,
+      category: 'cloud',
+      question: "What cloud platforms do you support for migration?",
+      answer: "We support migration to and from all major cloud platforms including AWS, Azure, Google Cloud Platform, IBM Cloud, and Oracle Cloud. Our cloud migration services include automated assessment tools, cost optimization analysis, security compliance verification, and seamless data migration with zero downtime. We also provide hybrid cloud solutions and multi-cloud management.",
+      tags: ['Cloud Migration', 'Multi-Cloud', 'DevOps']
+    },
+    {
+      id: 7,
+      category: 'general',
+      question: "How quickly can you respond to support requests?",
+      answer: "We provide 24/7 support with guaranteed response times: Critical issues (system down) - 15 minutes, High priority (major functionality affected) - 1 hour, Medium priority (minor issues) - 4 hours, Low priority (general questions) - 24 hours. Our support team includes certified engineers and AI-powered diagnostic tools for faster resolution.",
+      tags: ['Support', 'Response Time', '24/7']
+    },
+    {
+      id: 8,
+      category: 'general',
+      question: "Do you offer training for our team on new technologies?",
+      answer: "Yes, we provide comprehensive training programs including hands-on workshops, certification courses, and ongoing support. Our training covers AI implementation, quantum computing basics, cybersecurity best practices, and cloud infrastructure management. We also offer customized training programs tailored to your specific technology stack and business needs.",
+      tags: ['Training', 'Certification', 'Workshops']
+    }
+  ];
+
+  const resources = [
+    {
+      title: "AI Implementation Guide",
+      description: "Step-by-step guide to implementing AI solutions in your organization",
+      type: "PDF",
+      icon: FileText,
+      downloadUrl: "#",
+      rating: 4.8,
+      downloads: "2.3k"
+    },
+    {
+      title: "Quantum Computing Primer",
+      description: "Introduction to quantum computing and its business applications",
+      type: "Video",
+      icon: Video,
+      downloadUrl: "#",
+      rating: 4.9,
+      downloads: "1.8k"
+    },
+    {
+      title: "Cybersecurity Best Practices",
+      description: "Comprehensive security guidelines for enterprise environments",
+      type: "PDF",
+      icon: Shield,
+      downloadUrl: "#",
+      rating: 4.7,
+      downloads: "3.1k"
+    },
+    {
+      title: "5G Network Planning",
+      description: "Strategic guide for 5G enterprise network implementation",
+      type: "Interactive",
+      icon: Network,
+      downloadUrl: "#",
+      rating: 4.6,
+      downloads: "1.2k"
+    }
+  ];
+
+  const supportChannels = [
+    {
+      title: "Live Chat",
+      description: "Get instant help from our AI-powered support team",
+      icon: MessageCircle,
+      responseTime: "Immediate",
+      availability: "24/7",
+>>>>>>> origin/cursor/website-audit-and-enhancement-2bc0
+      action: "Start Chat",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "Phone Support",
+<<<<<<< HEAD
+      description: "Speak directly with our experts",
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-e276
+      icon: Phone,
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       description: "Speak directly with our technical experts",
       icon: Phone,
       responseTime: "< 15 min",
@@ -929,6 +1284,10 @@ const HelpCenter = () => {
       availability: '24/7',
       responseTime: 'Varies',
       color: 'from-orange-500 to-red-500'
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     }
   ];
 =======
@@ -1274,6 +1633,10 @@ const HelpCenter = () => {
       id: 'getting-started',
       title: 'Getting Started',
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       icon: BookOpen,
       description: 'Essential information to begin using our services',
       articles: [
@@ -1459,11 +1822,124 @@ const HelpCenter = () => {
     selectedCategory === 'all' || article.category.toLowerCase().includes(selectedCategory.toLowerCase())
   );
 
+  const toggleFaq = (faqId: string) => {
+    const newExpanded = new Set(expandedFaqs);
+    if (newExpanded.has(faqId)) {
+      newExpanded.delete(faqId);
+    } else {
+      newExpanded.add(faqId);
+    }
+    setExpandedFaqs(newExpanded);
+  };
+
+  const filteredCategories = selectedCategory === 'all' 
+    ? categories 
+    : categories.filter(cat => cat.id === selectedCategory);
+
+  const filteredArticles = popularArticles.filter(article => 
+    selectedCategory === 'all' || article.category.toLowerCase().includes(selectedCategory.toLowerCase())
+  );
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
+              Help Center
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+              Find answers to your questions, access comprehensive documentation, and get the support you need.
+=======
+      <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-6">
+              Help Center
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+              Find answers to your questions, learn how to use our platform, and get the support you need.
+>>>>>>> origin/cursor/website-audit-and-enhancement-98d1
+=======
+
+
+<<<<<<< HEAD
+  return (
+    <>
+      <Helmet>
+        <title>Help Center - Zion Tech Group</title>
+        <meta name="description" content="Get help and support for Zion Tech Group's AI-powered solutions. Find documentation, tutorials, troubleshooting guides, and connect with our support team." />
+        <meta name="keywords" content="help center, support, documentation, tutorials, troubleshooting, customer service" />
+        <link rel="canonical" href="https://ziontechgroup.com/help" />
+      </Helmet>
+
+<<<<<<< HEAD
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+        {/* Hero Section */}
+        <section className="relative pt-32 pb-20 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.1),transparent_50%)]"></div>
+          
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div className="flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-4">
+                <HelpCircle className="w-8 h-8 text-white" />
+=======
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              How can we help you?
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Find answers to common questions, learn how to use our platform, 
+              and get support when you need it most.
+            </p>
+            
+            {/* Search Bar */}
+            <div className="max-w-2xl mx-auto">
+              <div className="relative">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <input
+                  type="text"
+                  placeholder="Search for help articles, tutorials, and more..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-12 pr-4 py-4 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                />
+                <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-md hover:from-cyan-400 hover:to-blue-500 transition-all duration-200">
+                  Search
+                </button>
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+              </div>
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              How Can We
+              <span className="block bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
+                Help You?
+              </span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Find answers to your questions, get technical support, and access comprehensive 
+              resources to make the most of our AI-powered solutions.
+>>>>>>> origin/cursor/website-audit-and-enhancement-2b07
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
@@ -2352,6 +2828,7 @@ export default function HelpCenter() {
         </div>
       </div>
 
+<<<<<<< HEAD
 
             {/* Quick Stats */}
             <div className="flex flex-wrap justify-center gap-6">
@@ -2363,6 +2840,64 @@ export default function HelpCenter() {
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white">
                 <span className="font-semibold">99%</span> Satisfaction
+=======
+<<<<<<< HEAD
+      {/* Additional Resources */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Additional Resources
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Access additional learning materials and resources to help you succeed.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 text-center">
+              <BookOpen className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-3">Documentation</h3>
+              <p className="text-gray-300 mb-6">Comprehensive technical documentation and API references.</p>
+              <Link
+                to="#"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              >
+                View Documentation
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </div>
+            
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 text-center">
+              <Video className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-3">Video Tutorials</h3>
+              <p className="text-gray-300 mb-6">Step-by-step video guides and tutorials for all features.</p>
+              <Link
+                to="#"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              >
+                Watch Videos
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </div>
+            
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 text-center">
+              <Download className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-3">Downloads</h3>
+              <p className="text-gray-300 mb-6">Download SDKs, tools, and sample code for development.</p>
+              <Link
+                to="#"
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+              >
+                Download Resources
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-98d1
+=======
+                  className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20"
+                />
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               </div>
             </div>
           </motion.div>
@@ -2559,9 +3094,476 @@ export default function HelpCenter() {
               );
             })}
           </div>
+<<<<<<< HEAD
         </div>
       </div>
 
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+        </div>
+      </div>
+
+<<<<<<< HEAD
+      {/* Search Results */}
+      {searchQuery && searchResults.length > 0 && (
+        <section className="pb-12 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-white mb-6">Search Results</h2>
+            <div className="space-y-4">
+              {searchResults.map((faq) => (
+                <motion.div
+                  key={faq.id}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50"
+                >
+                  <h3 className="text-lg font-semibold text-white mb-2">{faq.question}</h3>
+                  <p className="text-gray-300">{faq.answer}</p>
+                </motion.div>
+              ))}
+            </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-bd86
+          </div>
+        </section>
+      )}
+
+<<<<<<< HEAD
+      {/* Support Channels */}
+<<<<<<< HEAD
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12 text-white">
+=======
+      {/* Support Channels */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-889e
+            Get Support
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {supportChannels.map((channel, index) => (
+<<<<<<< HEAD
+              <div key={index} className="bg-gray-800/50 rounded-lg border border-gray-700 p-6 text-center hover:border-cyan-500/50 transition-all duration-300">
+                <div className="flex justify-center mb-4">
+                  <channel.icon className="w-12 h-12 text-cyan-400" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2 text-white">
+                  {channel.title}
+                </h3>
+                <p className="text-gray-400 text-sm mb-4">
+                  {channel.description}
+                </p>
+                <div className="text-sm text-cyan-400 mb-4">
+                  Response time: {channel.responseTime}
+                </div>
+                <button className="w-full px-4 py-2 bg-cyan-500/20 border border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300">
+                  {channel.action}
+                </button>
+=======
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">
+            Get Support
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {supportChannels.map((channel) => (
+              <div
+                key={channel.title}
+                className="text-center p-8 bg-gray-800/50 border border-gray-700 rounded-xl hover:border-cyan-500/50 transition-all duration-200"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-r ${channel.color} rounded-full flex items-center justify-center mx-auto mb-6`}>
+                  <channel.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{channel.title}</h3>
+                <p className="text-gray-400 mb-4">{channel.description}</p>
+                <div className="space-y-2">
+                  <p className="text-cyan-400 font-medium">{channel.contact}</p>
+                  <p className="text-sm text-gray-500">Available: {channel.availability}</p>
+                </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-ee8a
+              </div>
+=======
+=======
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fe6d
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.h1 
+            className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            Help Center
+          </motion.h1>
+          <motion.p 
+            className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            Find answers to common questions and get the support you need
+          </motion.p>
+          
+          {/* Search Bar */}
+          <motion.div 
+            className="max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+<<<<<<< HEAD
+            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+            <input
+              type="text"
+              placeholder="Search for help articles, tutorials, or solutions..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20"
+            />
+=======
+  const supportChannels = [
+    {
+=======
+>>>>>>> origin/main
+      title: "Live Chat",
+      description: "Get instant help from our support team",
+      icon: ChatBubbleLeftRightIcon,
+      action: "Start Chat",
+      color: "from-cyan-500 to-blue-600"
+    },
+    {
+      title: "Phone Support",
+      description: "Speak directly with our experts",
+      icon: PhoneIcon,
+      action: "Call Now",
+      color: "from-green-500 to-emerald-600"
+    },
+    {
+      title: "Email Support",
+      description: "Send us a detailed message",
+      icon: EnvelopeIcon,
+      action: "Send Email",
+      color: "from-purple-500 to-pink-600"
+    },
+    {
+      title: "Documentation",
+      description: "Browse our comprehensive guides",
+      icon: BookOpenIcon,
+      action: "View Docs",
+      color: "from-orange-500 to-red-600"
+    }
+  ];
+
+  const resources = [
+    {
+      title: "User Guides",
+      description: "Step-by-step instructions for all our services",
+      icon: BookOpenIcon,
+      count: "50+"
+    },
+    {
+      title: "Video Tutorials",
+      description: "Visual guides and demonstrations",
+      icon: VideoCameraIcon,
+      count: "100+"
+    },
+    {
+      title: "API Documentation",
+      description: "Technical documentation for developers",
+      icon: DocumentTextIcon,
+      count: "25+"
+    },
+    {
+      title: "Training Materials",
+      description: "Educational resources and courses",
+      icon: AcademicCapIcon,
+      count: "30+"
+=======
+      title: "Live Chat",
+      description: "Get instant help from our support team",
+      icon: MessageCircle,
+      color: "from-green-500 to-emerald-500",
+      action: "Start Chat",
+      available: true
+    },
+    {
+      title: "Phone Support",
+      description: "Speak directly with our experts",
+      icon: Phone,
+      color: "from-blue-500 to-cyan-500",
+      action: "Call Now",
+      available: true,
+      details: "+1 302 464 0950"
+    },
+    {
+      title: "Email Support",
+      description: "Send us a detailed message",
+      icon: Mail,
+      color: "from-purple-500 to-pink-500",
+      action: "Send Email",
+      available: true,
+      details: "kleber@ziontechgroup.com"
+    },
+    {
+      title: "Documentation",
+      description: "Comprehensive guides and tutorials",
+      icon: FileText,
+      color: "from-indigo-500 to-purple-500",
+      action: "Browse Docs",
+      available: true
+>>>>>>> origin/cursor/website-audit-and-enhancement-1f82
+    }
+  ];
+
+  const filteredCategories = categories.filter(category =>
+    category.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    category.articles.some(article => article.toLowerCase().includes(searchQuery.toLowerCase()))
+  );
+
+  return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+      <Helmet>
+        <title>Help Center - Zion Tech Group</title>
+        <meta name="description" content="Get help and support for Zion Tech Group services. Find answers to frequently asked questions, access documentation, and connect with our support team." />
+        <meta name="keywords" content="help center, support, FAQ, documentation, customer service, technical support" />
+        <link rel="canonical" href="https://ziontechgroup.com/help" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">
+              Help Center
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+              Find answers to your questions, access comprehensive documentation, 
+              and get the support you need to succeed with our technology solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Search Help
+=======
+          <div className="max-w-2xl mx-auto">
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-zion-slate-light" />
+              <input
+                type="text"
+                placeholder="Search for help articles, guides, and solutions..."
+                className="w-full pl-12 pr-4 py-4 bg-white/10 border border-zion-cyan/20 rounded-xl text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+              />
+              <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-6 py-2 rounded-lg font-semibold hover:from-zion-cyan-light hover:to-zion-purple-light transition-all duration-300">
+                Search
+>>>>>>> origin/cursor/website-audit-and-enhancement-9ebb
+              </button>
+              <button className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300">
+                Contact Support
+              </button>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              How Can We
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                {" "}Help You?
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Find answers to your questions, learn about our services, and get the support you need 
+              to succeed with Zion Tech Group's cutting-edge technologies.
+            </p>
+            
+            {/* Search Bar */}
+            <div className="relative max-w-2xl mx-auto mb-8">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Search for help articles, guides, and solutions..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+              />
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Contact Support
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border-2 border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
+              >
+                Explore Services
+              </Link>
+>>>>>>> origin/cursor/website-audit-and-enhancement-1f82
+            </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-d2cf
+=======
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search for help topics..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300"
+              />
+            </div>
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fe6d
+          </motion.div>
+        </div>
+      </section>
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      {/* Support Channels */}
+      <section className="pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2 
+            className="text-3xl font-bold text-white text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            Get Help Through Multiple Channels
+          </motion.h2>
+          
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {supportChannels.map((channel, index) => (
+              <motion.div
+                key={index}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5, scale: 1.02 }}
+              >
+                <div className={`w-12 h-12 bg-gradient-to-r ${channel.color} rounded-lg flex items-center justify-center mb-4`}>
+                  <channel.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{channel.title}</h3>
+                <p className="text-gray-400 text-sm mb-4">{channel.description}</p>
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">Availability:</span>
+                    <span className="text-cyan-400">{channel.availability}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">Response:</span>
+                    <span className="text-green-400">{channel.responseTime}</span>
+                  </div>
+=======
+      {/* Support Channels Section */}
+=======
+
+            {/* Quick Stats */}
+            <div className="flex flex-wrap justify-center gap-6">
+              <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white">
+                <span className="font-semibold">500+</span> Help Articles
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white">
+                <span className="font-semibold">24/7</span> Support
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white">
+                <span className="font-semibold">99%</span> Satisfaction
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Support Channels */}
+>>>>>>> origin/cursor/website-audit-and-enhancement-2bc0
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              How Can We Help You?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose from multiple support channels to get the help you need, 
+              when you need it.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {supportChannels.map((channel, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300 text-center"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-r ${channel.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
+                  <channel.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{channel.title}</h3>
+                <p className="text-gray-300 mb-6">{channel.description}</p>
+                <button className={`w-full bg-gradient-to-r ${channel.color} hover:opacity-90 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300`}>
+                  {channel.action}
+                </button>
+              </motion.div>
+=======
+      {/* Support Channels */}
+      <section className="py-20 bg-black/20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Multiple Ways to Get Help
+            </h2>
+            <p className="text-xl text-gray-300">
+              Choose the support channel that works best for you
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {supportChannels.map((channel, index) => (
+              <div
+                key={index}
+                className="bg-gray-800/50 rounded-xl border border-gray-700 p-6 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/70"
+              >
+                <div className={`w-16 h-16 bg-gradient-to-br ${channel.color} rounded-xl flex items-center justify-center mb-4`}>
+                  <channel.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{channel.title}</h3>
+                <p className="text-gray-300 mb-4">{channel.description}</p>
+                {channel.details && (
+                  <p className="text-cyan-400 font-mono text-sm mb-4">{channel.details}</p>
+                )}
+                <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
+                  {channel.action}
+                </button>
+              </div>
+            ))}
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         {/* Categories Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -2633,7 +3635,89 @@ export default function HelpCenter() {
                 </div>
               </motion.div>
             ))}
+<<<<<<< HEAD
           </div>
+=======
+=======
+      {/* Additional Resources */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold text-white mb-6">Additional Resources</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Explore more ways to learn and get the most out of our platform
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 border border-gray-700 text-center">
+            <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-6">
+              <Video className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-3">Video Tutorials</h3>
+            <p className="text-gray-400 mb-6">Step-by-step video guides for all major features</p>
+            <button className="bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-400 hover:to-cyan-400 text-white px-6 py-3 rounded-lg transition-all duration-200">
+              Watch Videos
+            </button>
+          </div>
+          
+          <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 border border-gray-700 text-center">
+            <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-6">
+              <FileText className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-xl font-semibold text-white mb-3">API Documentation</h3>
+            <p className="text-gray-400 mb-6">Complete API reference and integration guides</p>
+            <button className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white px-6 py-3 rounded-lg transition-all duration-200">
+              View Docs
+            </button>
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+          </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+        </div>
+      </section>
+
+      {/* Help Categories */}
+      <section className="pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2 
+            className="text-3xl font-bold text-white text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            Browse Help Categories
+          </motion.h2>
+          
+<<<<<<< HEAD
+          <div className="space-y-6">
+            {filteredCategories.map((category, index) => (
+              <motion.div
+                key={category.id}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700/50 overflow-hidden"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+<<<<<<< HEAD
+                <button
+                  onClick={() => toggleCategory(category.id)}
+                  className="w-full p-6 text-left hover:bg-gray-700/30 transition-colors duration-200"
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-4">
+                      <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
+                        <category.icon className="w-5 h-5 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-semibold text-white">{category.title}</h3>
+                        <p className="text-gray-400">{category.description}</p>
+                      </div>
+                    </div>
+                    {expandedCategories.includes(category.id) ? (
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           {/* Popular Articles */}
           <div className="mb-20">
             <h2 className="text-3xl font-bold text-center mb-12 text-white">
@@ -2666,6 +3750,12 @@ export default function HelpCenter() {
                 <p className="text-gray-300 mb-4">{resource.description}</p>
                 <div className="text-2xl font-bold text-cyan-400">{resource.count}</div>
               </motion.div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               <div key={index} className="bg-gray-800/30 rounded-lg p-6 border border-gray-700 hover:border-cyan-500 transition-all duration-300">
                 <div className={`w-12 h-12 bg-gradient-to-r ${channel.color} rounded-lg flex items-center justify-center mb-4`}>
                   <channel.icon className="w-6 h-6 text-white" />
@@ -2820,6 +3910,7 @@ export default function HelpCenter() {
                 </button>
               </motion.div>
             ))}
+<<<<<<< HEAD
 =======
       {/* Additional Resources */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -2853,6 +3944,10 @@ export default function HelpCenter() {
             </button>
           </div>
           
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-2bc0
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 border border-gray-700 text-center">
             <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-6">
               <Users className="w-8 h-8 text-white" />
@@ -2862,6 +3957,10 @@ export default function HelpCenter() {
             <button className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-400 hover:to-emerald-400 text-white px-6 py-3 rounded-lg transition-all duration-200">
               Join Community
             </button>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           </div>
         </div>
       </div>
@@ -2993,6 +4092,23 @@ export default function HelpCenter() {
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      {/* CTA Section */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6 text-white">
+            Still Need Help?
+          </h2>
+          <p className="text-xl text-gray-400 mb-8">
+            Our expert team is here to help you succeed with our technology solutions.
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/50 to-purple-900/50">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -3163,11 +4279,46 @@ export default function HelpCenter() {
         <div className="max-w-4xl mx-auto text-center">
           <motion.div 
             className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            Popular Help Articles
+          </motion.h2>
+          
+          <div className="grid gap-6 md:grid-cols-3">
+            {popularArticles.map((article, index) => (
+              <motion.div
+                key={index}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 cursor-pointer"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5, scale: 1.02 }}
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full">
+                    {article.category}
+                  </span>
+                  <span className="text-gray-400 text-sm">{article.views} views</span>
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{article.title}</h3>
+                <p className="text-gray-400 text-sm">{article.description}</p>
+              </motion.div>
+            ))}
+>>>>>>> origin/cursor/website-audit-and-enhancement-b812
+          </div>
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       {/* Contact Support Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600/20 to-blue-600/20">
         <div className="max-w-4xl mx-auto text-center">
@@ -3192,6 +4343,10 @@ export default function HelpCenter() {
               </button>
             </div>
           </motion.div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
             <h2 className="text-3xl font-bold text-white mb-4">
               Still Need Help?
@@ -3208,6 +4363,10 @@ export default function HelpCenter() {
               </button>
             </div>
           </motion.div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         </div>
       </section>
 
@@ -4170,30 +5329,110 @@ export default function HelpCenter() {
         { title: 'Cybersecurity Solutions', path: '/help/cybersecurity' },
         { title: 'Cloud & Infrastructure', path: '/help/cloud-infrastructure' },
         { title: 'Digital Transformation', path: '/help/digital-transformation' }
+=======
+import React from 'react';
+import { SEO } from '@/components/SEO';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Search, BookOpen, MessageCircle, FileText, Users, Settings, HelpCircle, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+export default function HelpCenter() {
+  const faqCategories = [
+    {
+      title: 'Getting Started',
+      icon: BookOpen,
+      items: [
+        {
+          question: 'How do I create an account?',
+          answer: 'Click the "Sign Up" button in the top right corner and fill out the registration form with your email and password.'
+        },
+        {
+          question: 'How do I post a job or service?',
+          answer: 'After logging in, go to your dashboard and click "Post Job" or "Create Service" to get started.'
+        },
+        {
+          question: 'What information do I need to create a profile?',
+          answer: 'You\'ll need basic information like your name, skills, experience, and optionally a profile picture and portfolio.'
+        }
+      ]
+    },
+    {
+      title: 'Marketplace',
+      icon: Settings,
+      items: [
+        {
+          question: 'How do I find talent or services?',
+          answer: 'Use the search bar or browse categories to find what you\'re looking for. You can also use our AI-powered matching system.'
+        },
+        {
+          question: 'How do payments work?',
+          answer: 'We support secure payments through Stripe. Payments are held in escrow until the work is completed and approved.'
+        },
+        {
+          question: 'What if I\'m not satisfied with the work?',
+          answer: 'We have a dispute resolution process. Contact our support team if you need help resolving an issue.'
+        }
+>>>>>>> origin/cursor/website-audit-and-enhancement-de4e
       ]
     },
     {
       title: 'Account & Billing',
+<<<<<<< HEAD
       icon: '💰',
       items: [
         { title: 'Managing your account', path: '/help/account-management' },
         { title: 'Billing & payments', path: '/help/billing' },
         { title: 'Subscription plans', path: '/help/subscriptions' },
         { title: 'Invoice history', path: '/help/invoices' }
+=======
+      icon: Users,
+      items: [
+        {
+          question: 'How do I update my profile?',
+          answer: 'Go to your dashboard and click on "Edit Profile" to make changes to your information.'
+        },
+        {
+          question: 'How do I change my password?',
+          answer: 'Go to Account Settings and click on "Change Password" to update your password.'
+        },
+        {
+          question: 'What are the fees?',
+          answer: 'We charge a small percentage fee on successful transactions. There are no upfront costs to use our platform.'
+        }
+>>>>>>> origin/cursor/website-audit-and-enhancement-de4e
       ]
     },
     {
       title: 'Technical Support',
+<<<<<<< HEAD
       icon: '🔧',
       items: [
         { title: 'Common issues & solutions', path: '/help/troubleshooting' },
         { title: 'API documentation', path: '/help/api-docs' },
         { title: 'Integration guides', path: '/help/integrations' },
         { title: 'Performance optimization', path: '/help/performance' }
+=======
+      icon: HelpCircle,
+      items: [
+        {
+          question: 'The website is not loading properly',
+          answer: 'Try refreshing the page, clearing your browser cache, or using a different browser. If the issue persists, contact support.'
+        },
+        {
+          question: 'I can\'t upload files',
+          answer: 'Check that your file size is under 10MB and that you\'re using a supported file format (PDF, DOC, JPG, PNG).'
+        },
+        {
+          question: 'How do I contact support?',
+          answer: 'You can reach us through the contact form, email us at support@ziontechgroup.com, or call us at +1 (555) 123-4567.'
+        }
+>>>>>>> origin/cursor/website-audit-and-enhancement-de4e
       ]
     }
   ];
 
+<<<<<<< HEAD
   const faqs = [
     {
       question: 'What services does Zion Tech Group offer?',
@@ -4305,6 +5544,13 @@ export default function HelpCenter() {
 =======
     </div>
   );
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/website-audit-and-enhancement-4d8c
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         </div>
 
         {/* Popular Articles */}
@@ -4377,11 +5623,39 @@ const HelpCenter = () => {
             Our comprehensive help center is coming soon! In the meantime, feel free to contact our support team.
           </p>
         </div>
+<<<<<<< HEAD
+=======
+=======
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Still Need Help?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Can't find what you're looking for? Our support team is here to help 
+            you get the most out of our platform.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105">
+              Contact Support
+              <MessageCircle className="w-5 h-5 ml-2" />
+            </button>
+            <button className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-medium rounded-lg transition-all duration-200">
+              Schedule a Call
+            </button>
+          </div>
+        </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       </div>
     </div>
   );
 };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 export default HelpCenter;
         </section>
 
@@ -4458,6 +5732,10 @@ export default HelpCenter;
   );
 }
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-48a5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
           {/* Help Categories */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
@@ -4542,10 +5820,18 @@ export default HelpCenter;
     </>
   );
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-ab27
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
 };
 
 export default HelpCenter;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
 // CreditCard icon component since it's not in lucide-react
 function CreditCard(props: React.SVGProps<SVGSVGElement>) {
@@ -4567,3 +5853,137 @@ function CreditCard(props: React.SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+=======
+  const quickLinks = [
+    { title: 'Contact Support', href: '/contact', icon: MessageCircle, description: 'Get in touch with our support team' },
+    { title: 'API Documentation', href: '/api-docs', icon: FileText, description: 'Developer resources and API guides' },
+    { title: 'Community Forum', href: '/community', icon: Users, description: 'Connect with other users' },
+    { title: 'Blog & Updates', href: '/blog', icon: FileText, description: 'Latest news and platform updates' }
+  ];
+
+  return (
+    <div className="min-h-screen bg-background">
+      <SEO 
+        title="Help Center | Zion Tech Group" 
+        description="Get help and support for using the Zion Tech Group platform. Find answers to frequently asked questions and contact our support team."
+        keywords="help, support, FAQ, customer service, Zion Tech Group"
+        canonical="https://ziontechgroup.com/help"
+      />
+
+      <div className="container mx-auto px-4 py-8">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-white mb-4">Help Center</h1>
+          <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+            Find answers to common questions and get the support you need to make the most of our platform.
+          </p>
+        </div>
+
+        {/* Search Bar */}
+        <div className="max-w-2xl mx-auto mb-12">
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-5 w-5" />
+            <input
+              type="text"
+              placeholder="Search for help articles, FAQs, or topics..."
+              className="w-full pl-10 pr-4 py-3 bg-zion-blue-dark border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent"
+            />
+          </div>
+        </div>
+
+        {/* Quick Links */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          {quickLinks.map((link) => {
+            const IconComponent = link.icon;
+            return (
+              <Link key={link.title} to={link.href}>
+                <Card className="h-full hover:bg-zion-blue-dark/50 transition-colors cursor-pointer border-zion-blue-light">
+                  <CardHeader className="pb-3">
+                    <div className="flex items-center space-x-2">
+                      <IconComponent className="h-5 w-5 text-zion-cyan" />
+                      <CardTitle className="text-white text-lg">{link.title}</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-zion-slate-light">
+                      {link.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </Link>
+            );
+          })}
+        </div>
+
+        {/* FAQ Categories */}
+        <div className="space-y-8">
+          {faqCategories.map((category) => {
+            const IconComponent = category.icon;
+            return (
+              <Card key={category.title} className="border-zion-blue-light">
+                <CardHeader>
+                  <div className="flex items-center space-x-3">
+                    <IconComponent className="h-6 w-6 text-zion-cyan" />
+                    <CardTitle className="text-white text-xl">{category.title}</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <Accordion type="single" collapsible className="w-full">
+                    {category.items.map((item, index) => (
+                      <AccordionItem key={index} value={`item-${index}`}>
+                        <AccordionTrigger className="text-left text-zion-slate-light hover:text-white">
+                          {item.question}
+                        </AccordionTrigger>
+                        <AccordionContent className="text-zion-slate-light">
+                          {item.answer}
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </CardContent>
+              </Card>
+            );
+          })}
+        </div>
+
+        {/* Contact Support Section */}
+        <div className="mt-16 text-center">
+          <Card className="border-zion-blue-light bg-zion-blue-dark/50">
+            <CardHeader>
+              <CardTitle className="text-white text-2xl">Still Need Help?</CardTitle>
+              <CardDescription className="text-zion-slate-light text-lg">
+                Can't find what you're looking for? Our support team is here to help.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-zion-purple text-white font-medium rounded-lg hover:bg-zion-purple/90 transition-colors"
+                >
+                  <MessageCircle className="h-5 w-5 mr-2" />
+                  Contact Support
+                </Link>
+                <a
+                  href="mailto:support@ziontechgroup.com"
+                  className="inline-flex items-center justify-center px-6 py-3 border border-zion-blue-light text-white font-medium rounded-lg hover:bg-zion-blue-light/20 transition-colors"
+                >
+                  <Mail className="h-5 w-5 mr-2" />
+                  Email Support
+                </a>
+              </div>
+              <p className="text-zion-slate-light">
+                Response time: Usually within 24 hours
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/website-audit-and-enhancement-de4e
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7

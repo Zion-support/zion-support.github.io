@@ -3,6 +3,22 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/enterprise-it.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+  Shield, Cpu, Rocket, Zap, Globe, Star, Users,
+  Target, Microscope, Database, Lock, Cloud, 
+  BarChart3, Settings, Eye, Code, Palette, Layers,
+  Network, Server, ShieldCheck, ZapIcon, GlobeIcon, 
+  StarIcon, TrendingUpIcon, UsersIcon, CheckCircleIcon, 
+  ArrowRightIcon, CpuIcon, DollarSign, Phone, 
+  ArrowRight, Mail, MapPin, Dna, HelpCircle,
+  Sparkles, Crown, Infinity, Target as TargetIcon, 
+  Award, MessageCircle, ChevronRight, Building
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   Shield, Cloud, Server, ShieldCheck, Settings, Database, 
   Zap, Building, ArrowRight, Star, CheckCircle, 
   Lock, Network, Cpu, BarChart3
@@ -93,6 +109,11 @@ export default function EnterpriseIT() {
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/enterprise-it.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   Building2, Zap, Target, Users, 
   Shield, Rocket, Globe, Sparkles,
   Check, ArrowRight, Star, Award,
@@ -277,15 +298,34 @@ export default function EnterpriseIT() {
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/enterprise-it.tsx
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 via-blue-500/5 to-cyan-500/10" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0.1),transparent_50%)]" />
           
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/enterprise-it.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/enterprise-it.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/enterprise-it.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               className="text-center"
             >
             >
@@ -367,16 +407,38 @@ export default function EnterpriseIT() {
                     </Link>
                   </motion.div>
                 ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/enterprise-it.tsx
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                   className="px-8 py-4 border border-green-500/40 text-green-300 rounded-xl font-semibold hover:bg-green-500/10 transition-all duration-200"
                 >
                   View All Services
                 </Link>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/enterprise-it.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               </div>
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/enterprise-it.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+        {/* Benefits Section */}
+        <section className="py-20 bg-gray-900/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         {/* Enterprise Solutions */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-black/50">
           <div className="max-w-7xl mx-auto">
@@ -384,6 +446,10 @@ export default function EnterpriseIT() {
         {/* Services Grid */}
         <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
         {/* Enterprise Solutions */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-black/50">
@@ -432,10 +498,26 @@ export default function EnterpriseIT() {
         {/* Industry Solutions */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/enterprise-it.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/enterprise-it.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Enterprise IT Services?</h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                Experience enterprise-grade solutions that provide security, performance, and scalability for your business
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               viewport={{ once: true }}
               className="text-center mb-16"
             >
@@ -600,6 +682,11 @@ export default function EnterpriseIT() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/enterprise-it.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               className="mb-16"
             >
               <h2 className="text-3xl font-bold text-white mb-8 text-center">Industry Solutions</h2>
@@ -662,23 +749,53 @@ export default function EnterpriseIT() {
                 ))}
               </div>
             </motion.div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/enterprise-it.tsx
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/enterprise-it.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/enterprise-it.tsx
+<<<<<<< HEAD
+        <section className="py-20 bg-gradient-to-r from-green-900/20 to-blue-900/20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
 =======
         {/* CTA Section */}
         <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<<<<<<< HEAD
 =======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/enterprise-it.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/enterprise-it.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/enterprise-it.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             >
               viewport={{ once: true }}
               className="max-w-4xl mx-auto"
@@ -708,6 +825,12 @@ export default function EnterpriseIT() {
                 </Link>
                 <Link href="/case-studies" className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200">
                   View Case Studies
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/enterprise-it.tsx
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                   className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white rounded-xl font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-200 hover:scale-105"
                 >
                   Get Started Today
@@ -717,7 +840,13 @@ export default function EnterpriseIT() {
                   className="px-8 py-4 border border-green-500/40 text-green-300 rounded-xl font-semibold hover:bg-green-500/10 transition-all duration-200"
                 >
                   Explore All Services
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/enterprise-it.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                 </Link>
               </div>
             </motion.div>

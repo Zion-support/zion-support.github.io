@@ -5,6 +5,36 @@ import {
   MapPin, 
   Clock, 
 import React, { useState } from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Clock, 
+  Send, 
+  CheckCircle, 
+  MessageSquare, 
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9077
+  Globe,
+  Linkedin,
+  Twitter,
+  Facebook,
+  Instagram,
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-ee8a
+  CheckCircle,
+  Globe,
+  Building,
+  Users,
+  Shield,
+  Brain
+} from 'lucide-react';
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -37,11 +67,37 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Badge } from "@/components/ui/badge";
 =======
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-e276
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 import { 
   Mail, 
   Phone, 
   MapPin, 
   Clock, 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  MessageSquare, 
+  Users, 
+  Globe,
+  Building,
+  CheckCircle,
+  ArrowRight,
+  Shield,
+  Brain,
+  Cloud,
+  Database,
+  TrendingUp,
+  Zap
+} from "lucide-react";
+import { Link } from "react-router-dom";
+>>>>>>> origin/cursor/check-and-fix-github-actions-e92c
+
+const ContactPage: React.FC = () => {
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   MessageSquare,
   Send,
   CheckCircle,
@@ -108,6 +164,10 @@ import { toast } from "@/components/ui/use-toast";
 import z from "zod";
 import { ChatAssistant } from "@/components/ChatAssistant/ChatAssistant";
 import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
 import { 
   Mail, 
@@ -123,6 +183,10 @@ import {
   CheckCircle,
   AlertCircle
 } from 'lucide-react';
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 
 export default function Contact() {
 import React, { useState } from 'react';
@@ -145,11 +209,36 @@ const Contact = () => {
     email: '',
     company: '',
     phone: '',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    service: '',
+    message: ''
+  });
+<<<<<<< HEAD
+  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const offices = [
+    {
+      name: "Main Office",
+      address: "364 E Main St STE 1008, Middletown DE 19709",
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com"
+=======
+
+  const [isSubmitted, setIsSubmitted] = useState(false);
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     subject: '',
     message: ''
   });
 
   const [formStatus, setFormStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -161,6 +250,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+<<<<<<< HEAD
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -273,6 +363,22 @@ export function Contact() {
 =======
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    // Here you would typically send the form data to your backend
+    console.log('Form submitted:', formData);
+    setIsSubmitted(true);
+    setFormData({
+      name: '',
+      email: '',
+      company: '',
+      phone: '',
+      service: '',
+      message: ''
+    });
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     setFormStatus('submitting');
     
     // Simulate form submission
@@ -370,10 +476,458 @@ export function Contact() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown DE 19709',
     hours: 'Monday - Friday: 9:00 AM - 6:00 PM EST'
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   };
 
   const contactMethods = [
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      icon: Phone,
+      title: "Call Us",
+      details: "+1 302 464 0950",
+      description: "Speak with our technology experts",
+      color: "from-cyan-500 to-blue-500"
+    },
+    {
+      icon: Mail,
+      title: "Email Us",
+      details: "kleber@ziontechgroup.com",
+      description: "Send us a detailed message",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      icon: MapPin,
+      title: "Visit Us",
+      details: "364 E Main St STE 1008<br>Middletown DE 19709",
+      description: "Our headquarters location",
+      color: "from-green-500 to-teal-500"
+    },
+    {
+      icon: Clock,
+      title: "Business Hours",
+      details: "Mon - Fri: 9:00 AM - 6:00 PM<br>Sat: 10:00 AM - 4:00 PM",
+      description: "Eastern Time Zone",
+      color: "from-orange-500 to-red-500"
+>>>>>>> origin/cursor/website-audit-and-enhancement-cbd5
+    }
+  ];
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+>>>>>>> origin/cursor/website-audit-and-enhancement-e1a1
+=======
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+>>>>>>> origin/cursor/website-audit-and-enhancement-f30b
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+<<<<<<< HEAD
+=======
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+<<<<<<< HEAD
+    setErrors(prev => ({ ...prev, [name]: '' }));
+=======
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+=======
+  Github
+} from 'lucide-react';
+
+export default function Contact() {
+=======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Mail, Phone, MapPin, Clock, MessageSquare, Globe, Send, CheckCircle, AlertCircle } from 'lucide-react';
+
+export function Contact() {
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    message: ''
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9077
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+<<<<<<< HEAD
+  const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+>>>>>>> origin/cursor/build-and-fix-errors-e276
+  };
+
+<<<<<<< HEAD
+  const validateForm = () => {
+    const newErrors: {[key: string]: string} = {};
+
+    if (!formData.name.trim()) {
+      newErrors.name = 'Name is required';
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email';
+    }
+
+    if (!formData.subject.trim()) {
+      newErrors.subject = 'Subject is required';
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+>>>>>>> origin/main
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3dcd
+=======
+=======
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+>>>>>>> origin/cursor/check-and-fix-github-actions-e92c
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+>>>>>>> origin/cursor/website-audit-and-enhancement-54e3
+  };
+
+<<<<<<< HEAD
+  const handleSubmit = (e: React.FormEvent) => {
+=======
+  const handleSelectChange = (name: string, value: string) => {
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+=======
+    if (errors[name]) {
+      setErrors(prev => ({ ...prev, [name]: "" }));
+    }
+  };
+
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
+  const handleSubmit = async (e: React.FormEvent) => {
+>>>>>>> origin/cursor/check-and-fix-github-actions-e92c
+    e.preventDefault();
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    
+    if (!validateForm()) {
+      return;
+    }
+
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-e276
+    setIsSubmitting(true);
+<<<<<<< HEAD
+=======
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+    
+    // Simulate form submission
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    setSubmitStatus('success');
+    setIsSubmitting(false);
+=======
+    // Here you would typically send the form data to your backend
+    // Form submitted successfully - console.log removed for production
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-675b
+    
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setSubmitStatus('idle');
+=======
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+    
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setIsSubmitted(false);
+>>>>>>> origin/cursor/website-audit-and-enhancement-ee8a
+      setFormData({
+        firstName: '',
+        lastName: '',
+=======
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+    
+    // Reset form after 5 seconds
+    setTimeout(() => {
+=======
+=======
+=======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
+    message: '',
+    budget: '',
+    timeline: ''
+  });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }));
+  };
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9077
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+    
+    // Reset form after 3 seconds
+    setTimeout(() => {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/build-and-fix-errors-e276
+      setIsSubmitted(false);
+      setFormData({
+        name: '',
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3dcd
+=======
+    try {
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      setSubmitStatus('success');
+      setFormData({
+        firstName: '',
+        lastName: '',
+>>>>>>> origin/cursor/website-audit-and-enhancement-54e3
+=======
+      setIsSubmitted(false);
+      setFormData({
+        name: '',
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9077
+=======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setSubmitStatus('success');
+      setFormData({
+        name: '',
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+        message: '',
+        budget: '',
+        timeline: '',
+        preferredContact: 'email'
+      });
+<<<<<<< HEAD
+    }, 3000);
+=======
+        message: ''
+      });
+<<<<<<< HEAD
+    }, 5000);
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3dcd
+=======
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+>>>>>>> origin/cursor/website-audit-and-enhancement-54e3
+=======
+    // Here you would typically send the form data to your backend
+    console.log('Form submitted:', formData);
+    setIsSubmitted(true);
+=======
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission
+    console.log('Form submitted:', formData);
+    // Reset form
+>>>>>>> origin/cursor/website-audit-and-enhancement-f30b
+    setFormData({
+      name: '',
+      email: '',
+      company: '',
+      phone: '',
+      service: '',
+      message: ''
+    });
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-e1a1
+=======
+    setIsSubmitting(false);
+    setSubmitSuccess(true);
+    
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setSubmitSuccess(false);
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        company: '',
+        service: '',
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
+        message: '',
+        budget: '',
+        timeline: ''
+      });
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    }, 3000);
+>>>>>>> origin/cursor/check-and-fix-github-actions-e92c
+=======
+    }, 3000);
+>>>>>>> origin/cursor/build-and-fix-errors-e276
+=======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
+      
+      // Reset success message after 5 seconds
+      setTimeout(() => setSubmitStatus('idle'), 5000);
+    }, 2000);
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
+  };
+
+  const contactMethods = [
+    {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      icon: Phone,
+<<<<<<< HEAD
+      title: 'Phone',
+<<<<<<< HEAD
+<<<<<<< HEAD
+      details: ['+1 (302) 464-0950', '+1 (800) 123-4567'],
+      description: 'Speak directly with our team',
+      action: 'Call Now',
+=======
+      value: '+1 (302) 464-0950',
+<<<<<<< HEAD
+>>>>>>> origin/main
+      href: 'tel:+13024640950',
+      color: 'from-blue-500 to-cyan-500'
+=======
+      value: '+1 302 464 0950',
+      description: 'Call us directly for immediate assistance',
+      action: 'tel:+13024640950',
+      color: 'from-green-500 to-emerald-500'
+>>>>>>> origin/cursor/website-audit-and-enhancement-ee8a
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       description: 'Call us directly for immediate assistance',
       action: () => window.location.href = 'tel:+13024640950',
       color: 'from-green-500 to-emerald-500'
@@ -395,12 +949,23 @@ export function Contact() {
       address: "364 E Main St STE 1008, Middletown DE 19709",
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-ae1c
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
 =======
       name: "Zion Tech Group Headquarters",
       address: "364 E Main St STE 1008, Middletown, DE 19709",
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-eb69
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     }
   ];
 
@@ -1348,6 +1913,135 @@ export function Contact() {
                 Send Us a Message
               </h2>
               <p className="text-xl text-zion-slate max-w-3xl mx-auto">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                Tell us about your project or inquiry. We'll get back to you within 4 hours 
+                with a personalized response and next steps.
+              </p>
+=======
+      title: "General Inquiries",
+      description: "Questions about our services and solutions",
+      email: "info@ziontechgroup.com",
+      response: "Within 24 hours"
+    },
+    {
+      title: "Sales & Business Development",
+      description: "Discuss partnership opportunities and sales inquiries",
+      email: "sales@ziontechgroup.com",
+      response: "Within 4 hours"
+    },
+    {
+      title: "Technical Support",
+      description: "Technical questions and implementation support",
+      email: "support@ziontechgroup.com",
+      response: "Within 2 hours"
+    },
+    {
+      title: "Careers & HR",
+      description: "Job opportunities and human resources",
+      email: "careers@ziontechgroup.com",
+      response: "Within 48 hours"
+    }
+  ];
+
+  const officeLocations = [
+    {
+      city: "Middletown, DE",
+      country: "United States",
+      address: "364 E Main St STE 1008",
+      type: "Headquarters",
+      phone: "+1 302 464 0950"
+    },
+    {
+      city: "Silicon Valley, CA",
+      country: "United States",
+      address: "Innovation Center",
+      type: "Research & Development",
+      phone: "+1 650 123 4567"
+    },
+    {
+      city: "New York, NY",
+      country: "United States",
+      address: "Financial District Office",
+      type: "Business Development",
+      phone: "+1 212 987 6543"
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Get in Touch
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Ready to transform your business with cutting-edge AI solutions? 
+              Let's discuss how we can help you achieve extraordinary results.
+            </p>
+            <div className="flex items-center justify-center space-x-8 text-gray-400">
+              <div className="flex items-center">
+                <Mail className="w-5 h-5 mr-2" />
+                <span>24/7 Support</span>
+              </div>
+              <div className="flex items-center">
+                <Clock className="w-5 h-5 mr-2" />
+                <span>Quick Response</span>
+              </div>
+              <div className="flex items-center">
+                <Users className="w-5 h-5 mr-2" />
+                <span>Expert Team</span>
+              </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+            </div>
+          </div>
+        </div>
+      </div>
+
+<<<<<<< HEAD
+            {isSubmitted ? (
+              <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
+                <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-green-800 mb-2">
+                  Message Sent Successfully!
+                </h3>
+                <p className="text-green-700">
+                  Thank you for contacting Zion Tech Group. We'll get back to you within 4 hours 
+                  with a detailed response and next steps for your project.
+                </p>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="bg-zion-blue-light rounded-xl p-8 shadow-lg">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  <div>
+<<<<<<< HEAD
+                    <label htmlFor="name" className="block text-sm font-semibold text-zion-blue-dark mb-2">
+                      Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      required
+                      className="w-full px-4 py-3 border border-zion-blue-light rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all"
+                      placeholder="Enter your full name"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-semibold text-zion-blue-dark mb-2">
+                      Email Address *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
 =======
                       name="email"
@@ -1450,6 +2144,10 @@ export function Contact() {
                     required
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all duration-300"
                     placeholder="Enter your email address"
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9077
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
       {/* Contact Form & Info */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
@@ -1463,6 +2161,8 @@ export function Contact() {
                 <div className="flex items-center">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
                   <span className="text-green-400">Thank you! Your message has been sent successfully.</span>
+<<<<<<< HEAD
+=======
                 </div>
               </div>
             )}
@@ -1506,10 +2206,192 @@ export function Contact() {
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="Enter your last name"
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+                  />
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+                </div>
+              </div>
+            )}
+
+<<<<<<< HEAD
+            {formStatus === 'error' && (
+              <div className="mb-6 p-4 bg-red-900/20 border border-red-500/30 rounded-lg">
+                <div className="flex items-center">
+                  <AlertCircle className="w-5 h-5 text-red-400 mr-2" />
+                  <span className="text-red-400">There was an error sending your message. Please try again.</span>
+                </div>
+              </div>
+            )}
+
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-2">
+                    First Name *
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="company" className="block text-sm font-medium text-zion-slate-light mb-2">
+>>>>>>> origin/cursor/website-audit-and-enhancement-e1a1
+                    Company
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+                  </label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    required
+                    value={formData.firstName}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    placeholder="Enter your first name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="lastName" className="block text-sm font-medium text-gray-300 mb-2">
+                    Last Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    required
+                    value={formData.lastName}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    placeholder="Enter your last name"
                   />
                 </div>
               </div>
 
+<<<<<<< HEAD
+=======
+              <div className="mb-6">
+                <label className="block text-sm font-medium text-zion-slate-light mb-2">Service of Interest</label>
+                <select
+                  name="service"
+                  value={formData.service}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all duration-300"
+                >
+                  <option value="">Select a service</option>
+                  {services.map(service => (
+                    <option key={service} value={service}>{service}</option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="mb-8">
+                <label className="block text-sm font-medium text-zion-slate-light mb-2">Message *</label>
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  required
+                  rows={6}
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan transition-all duration-300 resize-none"
+                  placeholder="Tell us about your project, requirements, and goals..."
+                />
+              </div>
+
+              <div className="text-center">
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold py-4 px-8 rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 flex items-center justify-center gap-2 mx-auto disabled:opacity-50 disabled:cursor-not-allowed"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9077
+                >
+                  {isSubmitting ? (
+                    <>
+                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+<<<<<<< HEAD
+                      <span>Sending Message...</span>
+=======
+                      <span>Sending...</span>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9077
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-5 h-5" />
+                      <span>Send Message</span>
+                    </>
+                  )}
+                </button>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+              </form>
+            </div>
+
+            {/* Office Locations */}
+            <div>
+              <h2 className="text-3xl font-bold mb-8 text-white">Our Offices</h2>
+              <div className="space-y-6">
+                {officeLocations.map((office, index) => (
+                  <div key={index} className="bg-gray-800/50 rounded-lg border border-gray-700 p-6 hover:border-cyan-500/50 transition-all duration-300">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Building className="w-6 h-6 text-cyan-400" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-semibold text-white mb-2">
+                          {office.city}, {office.country}
+                        </h3>
+                        <div className="space-y-2 text-gray-300">
+                          <p className="flex items-center space-x-2">
+                            <MapPin className="w-4 h-4 text-gray-400" />
+                            <span>{office.address}, {office.city}, {office.zip}</span>
+                          </p>
+                          <p className="flex items-center space-x-2">
+                            <Phone className="w-4 h-4 text-gray-400" />
+                            <a href={`tel:${office.phone}`} className="hover:text-cyan-400 transition-colors">
+                              {office.phone}
+                            </a>
+                          </p>
+                          <p className="flex items-center space-x-2">
+                            <Mail className="w-4 h-4 text-gray-400" />
+                            <a href={`mailto:${office.email}`} className="hover:text-cyan-400 transition-colors">
+                              {office.email}
+                            </a>
+                          </p>
+                          <p className="flex items-center space-x-2">
+                            <Clock className="w-4 h-4 text-gray-400" />
+                            <span>{office.hours}</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Social Media */}
+              <div className="mt-8">
+                <h3 className="text-xl font-semibold text-white mb-4">Follow Us</h3>
+                <div className="flex space-x-4">
+                  {[
+                    { icon: Linkedin, href: '#', label: 'LinkedIn' },
+                    { icon: Twitter, href: '#', label: 'Twitter' },
+                    { icon: Facebook, href: '#', label: 'Facebook' },
+                    { icon: Instagram, href: '#', label: 'Instagram' }
+                  ].map((social, index) => {
+                    const Icon = social.icon;
+                    return (
+                      <a
+                        key={index}
+                        href={social.href}
+                        aria-label={social.label}
+                        className="w-12 h-12 bg-gray-800/50 border border-gray-700 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:border-cyan-500/50 transition-all duration-300"
+                      >
+                        <Icon className="w-5 h-5" />
+                      </a>
+                    );
+                  })}
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {contactMethods.map((method, index) => (
               <div
@@ -1635,6 +2517,56 @@ export function Contact() {
                   />
                 </div>
               </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+              <div>
+                <label htmlFor="service" className="block text-sm font-medium text-zion-slate-light mb-2">
+                  Service of Interest
+                </label>
+                <select
+                  id="service"
+                  name="service"
+                  value={formData.service}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                >
+                  <option value="">Select a service</option>
+                  {services.map((service, index) => (
+                    <option key={index} value={service} className="bg-zion-blue-dark text-white">
+                      {service}
+                    </option>
+>>>>>>> origin/cursor/website-audit-and-enhancement-e1a1
+                  ))}
+                </select>
+              </div>
+<<<<<<< HEAD
+
+              {/* Why Contact Us */}
+              <div>
+                <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
+                  <MessageSquare className="w-5 h-5 mr-2 text-cyan-400" />
+                  Why Contact Us?
+                </h3>
+                <div className="space-y-3">
+                  <div className="flex items-start space-x-3">
+                    <Brain className="w-5 h-5 text-cyan-400 mt-1" />
+                    <p className="text-gray-400 text-sm">Expert consultation on AI and emerging technologies</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <Shield className="w-5 h-5 text-cyan-400 mt-1" />
+                    <p className="text-gray-400 text-sm">Cybersecurity assessment and implementation</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <Users className="w-5 h-5 text-cyan-400 mt-1" />
+                    <p className="text-gray-400 text-sm">Custom solution development for your business</p>
+                  </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-ee8a
+                </div>
+              </div>
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       {/* Why Choose Us */}
       <section className="py-20 bg-zion-blue-light">
         <div className="container mx-auto px-4">
@@ -1732,6 +2664,10 @@ export function Contact() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                     Email Address *
                   </label>
                   <input
@@ -1741,12 +2677,26 @@ export function Contact() {
                     required
                     value={formData.email}
                     onChange={handleInputChange}
+<<<<<<< HEAD
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+=======
+<<<<<<< HEAD
+                    required
+                    className="w-full px-4 py-3 border border-zion-slate-light rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-colors"
+=======
+                    className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                     placeholder="Enter your email address"
                   />
                 </div>
                 <div>
+<<<<<<< HEAD
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+=======
+<<<<<<< HEAD
+                  <label htmlFor="phone" className="block text-sm font-medium text-zion-blue-dark mb-2">
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                     Phone Number
                   </label>
                   <input
@@ -1755,6 +2705,60 @@ export function Contact() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
+<<<<<<< HEAD
+=======
+                    className="w-full px-4 py-3 border border-zion-slate-light rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-colors"
+                    placeholder="Enter your phone number"
+                  />
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="company" className="block text-sm font-medium text-zion-blue-dark mb-2">
+                    Company
+=======
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+                    Phone Number
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+<<<<<<< HEAD
+                    className="w-full px-4 py-3 border border-zion-slate-light rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-colors"
+                    placeholder="Enter your company name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="service" className="block text-sm font-medium text-zion-blue-dark mb-2">
+                    Service Interest *
+                  </label>
+                  <select
+                    id="service"
+                    name="service"
+                    value={formData.service}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 border border-zion-slate-light rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-colors"
+                  >
+                    <option value="">Select a service</option>
+                    {services.map((service, index) => (
+                      <option key={index} value={service}>
+                        {service}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-zion-blue-dark mb-2">
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                     placeholder="Enter your phone number"
                   />
@@ -1800,6 +2804,10 @@ export function Contact() {
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                   Message *
                 </label>
                 <textarea
@@ -1809,6 +2817,122 @@ export function Contact() {
                   rows={5}
                   value={formData.message}
                   onChange={handleInputChange}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  required
+                  rows={6}
+                  className="w-full px-4 py-3 border border-zion-slate-light rounded-lg focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-colors"
+                  placeholder="Tell us about your project or how we can help..."
+                />
+              </div>
+
+              {/* Submit Status Messages */}
+              {submitStatus === 'success' && (
+                <div className="flex items-center gap-3 p-4 bg-green-50 border border-green-200 rounded-lg">
+                  <CheckCircle className="w-5 h-5 text-green-600" />
+                  <p className="text-green-800">
+                    Thank you! Your message has been sent successfully. We'll get back to you within 24 hours.
+                  </p>
+                </div>
+              )}
+
+              {submitStatus === 'error' && (
+                <div className="flex items-center gap-3 p-4 bg-red-50 border border-red-200 rounded-lg">
+                  <AlertCircle className="w-5 h-5 text-red-600" />
+                  <p className="text-red-800">
+                    Sorry, there was an error sending your message. Please try again or contact us directly.
+                  </p>
+                </div>
+              )}
+
+              <div className="text-center">
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="inline-flex items-center px-8 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-5 h-5 mr-2" />
+                      Send Message
+                    </>
+                  )}
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Contact Options */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
+              Other Ways to Connect
+            </h2>
+            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
+              Prefer a different approach? We offer multiple ways to get in touch and start your project.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
+              <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full mx-auto mb-6 flex items-center justify-center">
+                <MessageSquare className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-zion-blue-dark mb-4">
+                Live Chat
+              </h3>
+              <p className="text-zion-slate mb-6">
+                Get instant answers to your questions with our live chat support during business hours.
+              </p>
+              <button className="px-6 py-2 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors">
+                Start Chat
+              </button>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
+              <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full mx-auto mb-6 flex items-center justify-center">
+                <Phone className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-zion-blue-dark mb-4">
+                Schedule a Call
+              </h3>
+              <p className="text-zion-slate mb-6">
+                Book a convenient time for a detailed discussion about your project requirements.
+              </p>
+              <Link 
+                to="/request-quote"
+                className="inline-block px-6 py-2 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
+              >
+                Book Call
+              </Link>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow">
+              <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full mx-auto mb-6 flex items-center justify-center">
+                <Mail className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-zion-blue-dark mb-4">
+                Request Quote
+              </h3>
+              <p className="text-zion-slate mb-6">
+                Get a detailed quote for your specific project requirements and timeline.
+              </p>
+              <Link 
+                to="/request-quote"
+                className="inline-block px-6 py-2 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
+              >
+                Get Quote
+              </Link>
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="company" className="block text-white font-medium mb-2">
@@ -1913,6 +3037,79 @@ export function Contact() {
                 </div>
 
                 <div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  <label htmlFor="message" className="block text-white font-medium mb-2">
+                    Message *
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                    rows={5}
+                    className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent resize-none"
+                    placeholder="Tell us about your project or inquiry..."
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full bg-zion-cyan hover:bg-zion-cyan-light text-white py-3 px-6 rounded-lg font-semibold transition-colors flex items-center justify-center gap-2"
+                >
+                  <Send className="w-5 h-5" />
+                  Send Message
+                </button>
+              </form>
+            </div>
+
+            {/* Map & Additional Info */}
+            <div className="space-y-8">
+              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20">
+                <h3 className="text-2xl font-bold text-white mb-4">Visit Our Office</h3>
+                <div className="bg-zion-slate-dark h-64 rounded-lg mb-4 flex items-center justify-center">
+                  <div className="text-center text-zion-slate-light">
+                    <MapPin className="w-16 h-16 mx-auto mb-4 text-zion-cyan" />
+                    <p className="text-lg font-medium">Interactive Map</p>
+                    <p className="text-sm">Map integration coming soon</p>
+                  </div>
+                </div>
+                <div className="space-y-3 text-zion-slate-light">
+                  <p><strong>Address:</strong> 364 E Main St STE 1008, Middletown, DE 19709</p>
+                  <p><strong>Phone:</strong> +1 (302) 464-0950</p>
+                  <p><strong>Email:</strong> kleber@ziontechgroup.com</p>
+                </div>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg border border-white/20">
+                <h3 className="text-2xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h3>
+                <div className="space-y-4 text-zion-slate-light">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>
+                    <p>Expert team with 15+ years of experience</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>
+                    <p>Cutting-edge AI and machine learning solutions</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>
+                    <p>24/7 support and maintenance</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-zion-cyan rounded-full mt-2 flex-shrink-0"></div>
+                    <p>Proven track record of successful projects</p>
+                  </div>
+                </div>
+              </div>
+>>>>>>> origin/cursor/website-audit-and-enhancement-f30b
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             </div>
           </div>
         </div>
@@ -2107,8 +3304,43 @@ export function Contact() {
                   className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
                   placeholder="Tell us about your project or inquiry..."
                 />
+<<<<<<< HEAD
               </div>
 
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+              </div>
+
+<<<<<<< HEAD
+            {/* Additional Information */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                <MessageSquare className="w-8 h-8 text-zion-cyan" />
+                Additional Information
+              </h3>
+              <div className="space-y-4">
+                <div className="bg-white/5 rounded-lg p-4">
+                  <h4 className="text-lg font-semibold text-white mb-2">Response Time</h4>
+                  <p className="text-zion-slate-light">We typically respond to all inquiries within 24 hours during business days.</p>
+                </div>
+                <div className="bg-white/5 rounded-lg p-4">
+                  <h4 className="text-lg font-semibold text-white mb-2">Consultation</h4>
+                  <p className="text-zion-slate-light">Free initial consultation to discuss your project requirements and goals.</p>
+                </div>
+                <div className="bg-white/5 rounded-lg p-4">
+                  <h4 className="text-lg font-semibold text-white mb-2">Support</h4>
+                  <p className="text-zion-slate-light">24/7 technical support available for all our enterprise clients.</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9077
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               <button
                 type="submit"
                 disabled={formStatus === 'submitting'}
@@ -2192,6 +3424,10 @@ export function Contact() {
               </div>
             </div>
           </div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         </div>
       </div>
 
@@ -2223,6 +3459,80 @@ export function Contact() {
       </div>
 
       {/* CTA Section */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6 text-white">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-gray-400 mb-8">
+            Schedule a free consultation with our experts to discuss your project requirements 
+            and discover how we can help you achieve your business goals.
+=======
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+            Ready to Start Your Digital Transformation?
+          </h2>
+          <p className="text-xl text-gray-400 mb-8">
+            Let's discuss how our AI and technology solutions can help you achieve your business goals.
+>>>>>>> origin/cursor/website-audit-and-enhancement-ee8a
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+<<<<<<< HEAD
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+=======
+      <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Start Your Project?
+          </h2>
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
+            Don't wait to transform your business. Contact us today and let's discuss 
+            how we can help you achieve your technology goals.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a 
+              href="tel:+13024640950"
+              className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 flex items-center"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3dcd
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Call Now
+            </a>
+<<<<<<< HEAD
+            <a
+              href="mailto:info@ziontechgroup.com"
+              className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
+            >
+              <Mail className="w-5 h-5 mr-2" />
+              Send Email
+=======
+              className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+            >
+              <Phone className="w-5 h-5" />
+              <span>Call Now</span>
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="inline-flex items-center space-x-2 px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg font-medium hover:bg-cyan-500 hover:text-white transition-all duration-200"
+            >
+              <Mail className="w-5 h-5" />
+              <span>Send Email</span>
+>>>>>>> origin/cursor/website-audit-and-enhancement-ee8a
+            </a>
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
@@ -2758,18 +4068,41 @@ const Contact = () => {
               
               <div className="mt-8 bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden">
                 <iframe 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.678901234567!2d-75.7166667!3d39.4500000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c7c8c8c8c8c8c8%3A0x8c8c8c8c8c8c8c8c!2s364%20E%20Main%20St%2C%20Middletown%2C%20DE%2019709!5e0!3m2!1sen!2sus!4v1651234567890!5m2!1sen!2sus" 
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.678901234567!2d-75.7167!3d39.4496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c7a8b8b8b8b8b8%3A0x8b8b8b8b8b8b8b8b!2s364%20E%20Main%20St%2C%20Middletown%2C%20DE%2019709!5e0!3m2!1sen!2sus!4v1234567890!5m2!1sen!2sus" 
 =======
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.678901234567!2d-75.7167!3d39.4496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c7a8b8b8b8b8b8%3A0x8b8b8b8b8b8b8b8!2s364%20E%20Main%20St%2C%20Middletown%2C%20DE%2019709%2C%20USA!5e0!3m2!1sen!2sus!4v1651234567890!5m2!1sen!2sus" 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-eb69
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                   width="100%" 
                   height="300" 
                   style={{ border: 0 }} 
                   allowFullScreen={true} 
                   loading="lazy" 
                   referrerPolicy="no-referrer-when-downgrade"
+<<<<<<< HEAD
                   title="Zion Tech Group Office Location"
 =======
                   title="Zion Tech Group Office Location"
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  title="Zion Office Location - Middletown, DE"
+=======
+                  title="Zion Tech Group Office Location"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
+=======
+                  title="Zion Tech Group Office Location"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-eb69
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                 ></iframe>
               </div>
 
@@ -3290,7 +4623,25 @@ export default Contact;
                   Request Free Quote
                 </Link>
               </Button>
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
+                asChild
+              >
+<<<<<<< HEAD
+<<<<<<< HEAD
+                <a href="tel:+13024640950">
+                  <Phone className="mr-2 h-5 w-5" />
+                  Call Now
+=======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                 <a href="mailto:kleber@ziontechgroup.com">
                   <Mail className="mr-2 h-5 w-5" />
                   Email Support
@@ -3416,6 +4767,10 @@ export default Contact;
               <Mail className="w-5 h-5 ml-2" />
             </a>
           </div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-3ce5
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         </div>
       </div>
     </div>

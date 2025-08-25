@@ -1,8 +1,27 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+=======
 import React, { useState, useEffect, useCallback } from 'react';
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect, useRef } from 'react';
+=======
+import React, { useState, useEffect, useCallback } from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4e87
 =======
 import React, { useState, useEffect, useRef } from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 import { 
 =======
 import React, { useState, useEffect, useCallback, useRef } from 'react';
@@ -14,6 +33,22 @@ import {
   Eye, 
   EyeOff, 
   Type, 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  Contrast, 
+  Volume2, 
+  VolumeX, 
+<<<<<<< HEAD
+<<<<<<< HEAD
+  Type, 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  Contrast, 
+  MousePointer, 
+  Keyboard,
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
   Palette, 
   MousePointer, 
@@ -66,6 +101,10 @@ import {
   Plus,
   Minus,
   RotateCcw
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4e87
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
   Volume2, 
   VolumeX, 
@@ -92,6 +131,10 @@ import {
   ArrowLeft,
   ArrowRight,
   Space
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 } from 'lucide-react';
 
 interface AccessibilitySettings {
@@ -100,6 +143,26 @@ interface AccessibilitySettings {
   largeText: boolean;
 =======
   fontSize: number;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4e87
+  reducedMotion: boolean;
+<<<<<<< HEAD
+  soundEffects: boolean;
+  autoPlayMedia: boolean;
+  voiceCommands: boolean;
+  screenReader: boolean;
+  keyboardNavigation: boolean;
+  focusIndicator: boolean;
+<<<<<<< HEAD
+  colorBlindSupport: boolean;
+}
+
+<<<<<<< HEAD
+const EnhancedAccessibility: React.FC = () => {
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   EyeIcon, 
   EyeSlashIcon, 
   SpeakerWaveIcon, 
@@ -120,11 +183,19 @@ interface AccessibilitySettings {
   screenReader: boolean;
   keyboardNavigation: boolean;
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   reducedMotion: boolean;
   screenReader: boolean;
   keyboardNavigation: boolean;
   focusIndicator: boolean;
   colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   dyslexia: boolean;
   highContrastText: boolean;
   largeCursor: boolean;
@@ -134,6 +205,14 @@ interface AccessibilitySettings {
   showKeyboardShortcuts: boolean;
   showScreenReaderHints: boolean;
   showAccessibilityInfo: boolean;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-3b7b
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-0fd3
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
   fontSize: number;
   colorBlindMode: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
@@ -170,29 +249,71 @@ export const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
 }
 
 export const EnhancedAccessibility: React.FC = () => {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-7a35
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
 }
 
 const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right' }> = ({ 
   position = 'bottom-right' 
 }) => {
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   const [isOpen, setIsOpen] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
+<<<<<<< HEAD
     largeText: false,
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    fontSize: 100,
+    colorBlindness: 'none',
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
     largeText: false,
 =======
     fontSize: 100,
     reducedMotion: false,
+<<<<<<< HEAD
     fontSize: 16,
     reducedMotion: false,
+=======
+<<<<<<< HEAD
+    soundEffects: true,
+    autoPlayMedia: false,
+    voiceCommands: false,
+=======
+    fontSize: 16,
+    reducedMotion: false,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     screenReader: false,
     keyboardNavigation: false,
     colorBlindness: 'none',
 =======
     focusIndicator: true,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    theme: 'auto'
+>>>>>>> origin/main
+  });
+  const [activeTab, setActiveTab] = useState<'quick' | 'advanced' | 'help'>('quick');
+  const [announcement, setAnnouncement] = useState<string>('');
+  const [isAnnouncing, setIsAnnouncing] = useState(false);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     colorBlindness: 'none',
     dyslexia: false,
     highContrastText: false,
@@ -204,6 +325,10 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
     showScreenReaderHints: false,
     showAccessibilityInfo: false,
   });
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 
   const [currentFocus, setCurrentFocus] = useState<string>('');
   const [focusHistory, setFocusHistory] = useState<string[]>([]);
@@ -219,6 +344,11 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
 
   // Initialize accessibility features
   useEffect(() => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     theme: 'auto'
   });
 
@@ -373,7 +503,143 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
       root.classList.add('large-cursor');
     } else {
       root.classList.remove('large-cursor');
+<<<<<<< HEAD
     }
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+    }
+<<<<<<< HEAD
+
+    // Focus indicator
+<<<<<<< HEAD
+    if (settings.focusIndicator) {
+      root.classList.add('focus-visible');
+      root.style.setProperty('--focus-outline', '3px solid #3b82f6');
+    } else {
+      root.classList.remove('focus-visible');
+      root.style.removeProperty('--focus-outline');
+    }
+
+    // Color blind support
+    if (settings.colorBlindSupport) {
+      root.classList.add('color-blind-support');
+      root.style.setProperty('--color-blind-filter', 'protanopia');
+    } else {
+      root.classList.remove('color-blind-support');
+      root.style.removeProperty('--color-blind-filter');
+    }
+
+    // Announce changes to screen readers
+    if (settings.screenReader) {
+      announceChange('Accessibility settings updated');
+    }
+  }, [settings]);
+
+  // Keyboard navigation support
+  useEffect(() => {
+    if (!settings.keyboardNavigation) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Skip if user is typing in an input
+      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
+        return;
+      }
+
+      switch (e.key) {
+        case 'Tab':
+          // Enhanced tab navigation
+          e.preventDefault();
+          const focusableElements = document.querySelectorAll(
+            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+          );
+          const currentIndex = Array.from(focusableElements).findIndex(el => el === document.activeElement);
+          const nextIndex = e.shiftKey ? (currentIndex - 1 + focusableElements.length) % focusableElements.length : (currentIndex + 1) % focusableElements.length;
+          (focusableElements[nextIndex] as HTMLElement)?.focus();
+          break;
+        case 'Escape':
+          if (isOpen) {
+            setIsOpen(false);
+            setIsExpanded(false);
+          }
+          break;
+        case 'h':
+        case 'H':
+          if (e.ctrlKey) {
+            e.preventDefault();
+            setIsOpen(!isOpen);
+          }
+          break;
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [settings.keyboardNavigation, isOpen]);
+
+  // Screen reader announcements
+  const announceChange = (message: string) => {
+    if (!settings.screenReader) return;
+    
+    setAnnouncement(message);
+    setIsAnnouncing(true);
+    
+    setTimeout(() => {
+      setIsAnnouncing(false);
+      setAnnouncement('');
+    }, 3000);
+  };
+
+  // Toggle setting with announcement
+  const toggleSetting = (key: keyof AccessibilitySettings) => {
+    const newSettings = { ...settings, [key]: !settings[key] };
+    setSettings(newSettings);
+    
+    const settingNames = {
+      highContrast: 'High contrast',
+      largeText: 'Large text',
+      reducedMotion: 'Reduced motion',
+      screenReader: 'Screen reader support',
+      keyboardNavigation: 'Keyboard navigation',
+      focusIndicator: 'Focus indicator',
+      colorBlindSupport: 'Color blind support'
+    };
+    
+    announceChange(`${settingNames[key]} ${newSettings[key] ? 'enabled' : 'disabled'}`);
+  };
+
+  // Quick actions
+  const quickActions = [
+    {
+      icon: Contrast,
+      label: 'High Contrast',
+      description: 'Increase color contrast',
+      action: () => toggleSetting('highContrast'),
+      active: settings.highContrast
+    },
+    {
+      icon: Type,
+      label: 'Large Text',
+      description: 'Increase text size',
+      action: () => toggleSetting('largeText'),
+      active: settings.largeText
+    },
+    {
+      icon: MousePointer,
+      label: 'Focus Indicator',
+      description: 'Show focus outlines',
+      action: () => toggleSetting('focusIndicator'),
+      active: settings.focusIndicator
+    },
+    {
+      icon: Volume2,
+      label: 'Screen Reader',
+      description: 'Enable announcements',
+      action: () => toggleSetting('screenReader'),
+      active: settings.screenReader
+    }
+  ];
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     
     // Color blindness
     if (newSettings.colorBlindness !== 'none') {
@@ -511,6 +777,33 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, adjustFontSize, updateSetting]);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const handleVoiceCommand = (command: string) => {
+    if (command.includes('open accessibility') || command.includes('open panel')) {
+      setIsOpen(true);
+    } else if (command.includes('close accessibility') || command.includes('close panel')) {
+      setIsOpen(false);
+    } else if (command.includes('high contrast')) {
+      setSettings(prev => ({ ...prev, highContrast: !prev.highContrast }));
+    } else if (command.includes('normal contrast')) {
+      setSettings(prev => ({ ...prev, highContrast: false }));
+    } else if (command.includes('increase font') || command.includes('bigger font')) {
+      setSettings(prev => ({ ...prev, fontSize: Math.min(200, prev.fontSize + 10) }));
+    } else if (command.includes('decrease font') || command.includes('smaller font')) {
+      setSettings(prev => ({ ...prev, fontSize: Math.max(50, prev.fontSize - 10) }));
+    } else if (command.includes('reset font')) {
+      setSettings(prev => ({ ...prev, fontSize: 100 }));
+    } else if (command.includes('dark theme')) {
+      setSettings(prev => ({ ...prev, theme: 'dark' }));
+    } else if (command.includes('light theme')) {
+      setSettings(prev => ({ ...prev, theme: 'light' }));
+    } else if (command.includes('auto theme')) {
+      setSettings(prev => ({ ...prev, theme: 'auto' }));
+    }
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     if (newSettings.focusIndicator) {
       root.classList.add('show-focus');
     } else {
@@ -539,6 +832,10 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
       ['Arrow keys', 'Navigate through options'],
     ]);
     setKeyboardShortcuts(shortcuts);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   };
 
   const setupFocusTracking = () => {
@@ -570,6 +867,17 @@ const EnhancedAccessibility: React.FC<{ position?: 'top-left' | 'top-right' | 'b
     document.body.appendChild(liveRegion);
   };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const toggleVoiceCommands = () => {
+    if (settings.voiceCommands) {
+      setIsListening(!isListening);
+    } else {
+      setSettings(prev => ({ ...prev, voiceCommands: true }));
+      setIsListening(true);
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     reducedMotion: false,
     largeText: false,
     screenReader: false,
@@ -911,6 +1219,11 @@ const EnhancedAccessibility: React.FC = () => {
   const getPositionClasses = () => {
     switch (position) {
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   const announceToScreenReader = (message: string) => {
     if (settings.screenReader) {
       setAnnouncements(prev => [...prev, message]);
@@ -919,6 +1232,10 @@ const EnhancedAccessibility: React.FC = () => {
       setTimeout(() => {
         setAnnouncements(prev => prev.filter(a => a !== message));
       }, 5000);
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     }
   };
 
@@ -1207,6 +1524,22 @@ const EnhancedAccessibility: React.FC = () => {
 
   return (
     <>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      {/* Accessibility Button */}
+      <motion.button
+<<<<<<< HEAD
+        className="fixed bottom-6 right-6 z-50 bg-green-600 hover:bg-green-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-green-300"
+        onClick={() => setIsOpen(!isOpen)}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        aria-label="Open accessibility settings"
+        title="Accessibility Settings (Alt + A)"
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         onClick={() => setIsOpen(!isOpen)}
         className={`fixed ${getPositionClasses()} z-50 p-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-blue-300 ${className}`}
         whileHover={{ scale: 1.1 }}
@@ -1621,12 +1954,41 @@ const EnhancedAccessibility: React.FC = () => {
                       <ZoomIn className="w-3 h-3" />
                     </button>
                   </div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                 </div>
                 <p className="text-blue-100 text-sm mt-1">
                   Customize your experience
                 </p>
               </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              {/* Tab Navigation */}
+              <div className="flex border-b border-gray-200 dark:border-gray-700">
+                {[
+                  { id: 'quick', label: 'Quick', icon: Settings },
+                  { id: 'advanced', label: 'Advanced', icon: Settings },
+                  { id: 'help', label: 'Help', icon: Info }
+                ].map(({ id, label, icon: Icon }) => (
+                  <button
+                    key={id}
+                    onClick={() => setActiveTab(id as any)}
+                    className={`flex-1 flex items-center justify-center gap-2 py-3 px-4 text-sm font-medium transition-colors ${
+                      activeTab === id
+                        ? 'text-blue-600 border-b-2 border-blue-600 bg-blue-50 dark:bg-blue-900/20'
+                        : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'
+                    }`}
+                    aria-selected={activeTab === id}
+                    role="tab"
+                  >
+                    <Icon className="w-4 h-4" />
+                    {label}
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       {isOpen && (
         <div 
           className={`fixed ${getPositionClasses()} z-50 w-80 bg-white dark:bg-gray-800 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 p-6`}
@@ -1914,6 +2276,10 @@ const EnhancedAccessibility: React.FC = () => {
                     {theme === 'light' && <Sun className="w-4 h-4" />}
                     {theme === 'dark' && <Moon className="w-4 h-4" />}
                     {theme === 'auto' && <Monitor className="w-4 h-4" />}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-4e87
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
               {/* Motion and Interaction */}
               <div>
@@ -2084,6 +2450,10 @@ const EnhancedAccessibility: React.FC = () => {
                   >
                     <RotateCcw className="w-4 h-4 inline mr-1" />
                     Reset
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                   </button>
                   
                   <button
@@ -2099,6 +2469,167 @@ const EnhancedAccessibility: React.FC = () => {
         </div>
       </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              {/* Tab Content */}
+              <div className="p-4 max-h-96 overflow-y-auto">
+                {/* Quick Actions Tab */}
+                {activeTab === 'quick' && (
+                  <div className="space-y-3">
+                    {quickActions.map((action, index) => (
+                      <button
+                        key={index}
+                        onClick={action.action}
+                        className={`w-full p-3 rounded-lg border transition-all duration-200 text-left hover:shadow-md ${
+                          action.active
+                            ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300'
+                            : 'border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600'
+                        }`}
+                        aria-pressed={action.active}
+                      >
+                        <div className="flex items-center gap-3">
+                          <div className={`p-2 rounded-lg ${
+                            action.active 
+                              ? 'bg-blue-100 dark:bg-blue-800 text-blue-600 dark:text-blue-400' 
+                              : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400'
+                          }`}>
+                            <action.icon className="w-5 h-5" />
+                          </div>
+                          <div className="flex-1">
+                            <div className="font-medium text-gray-900 dark:text-white">
+                              {action.label}
+                            </div>
+                            <div className="text-sm text-gray-600 dark:text-gray-400">
+                              {action.description}
+                            </div>
+                          </div>
+                          {action.active && (
+                            <Check className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                          )}
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+                )}
+
+                {/* Advanced Settings Tab */}
+                {activeTab === 'advanced' && (
+                  <div className="space-y-4">
+                    <div className="space-y-3">
+                      <h4 className="font-medium text-gray-900 dark:text-white">Advanced Features</h4>
+                      
+                      <label className="flex items-center justify-between p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 transition-colors cursor-pointer">
+                        <div className="flex items-center gap-3">
+                          <Keyboard className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+                          <div>
+                            <div className="font-medium text-gray-900 dark:text-white">Keyboard Navigation</div>
+                            <div className="text-sm text-gray-600 dark:text-gray-400">Enhanced keyboard shortcuts</div>
+                          </div>
+                        </div>
+                        <input
+                          type="checkbox"
+                          checked={settings.keyboardNavigation}
+                          onChange={() => toggleSetting('keyboardNavigation')}
+                          className="sr-only"
+                        />
+                        <div className={`w-6 h-6 rounded-full border-2 transition-colors ${
+                          settings.keyboardNavigation
+                            ? 'border-blue-500 bg-blue-500'
+                            : 'border-gray-300 dark:border-gray-600'
+                        }`}>
+                          {settings.keyboardNavigation && (
+                            <Check className="w-4 h-4 text-white m-0.5" />
+                          )}
+                        </div>
+                      </label>
+
+                      <label className="flex items-center justify-between p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 transition-colors cursor-pointer">
+                        <div className="flex items-center gap-3">
+                          <Eye className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+                          <div>
+                            <div className="font-medium text-gray-900 dark:text-white">Color Blind Support</div>
+                            <div className="text-sm text-gray-600 dark:text-gray-400">Enhanced color perception</div>
+                          </div>
+                        </div>
+                        <input
+                          type="checkbox"
+                          checked={settings.colorBlindSupport}
+                          onChange={() => toggleSetting('colorBlindSupport')}
+                          className="sr-only"
+                        />
+                        <div className={`w-6 h-6 rounded-full border-2 transition-colors ${
+                          settings.colorBlindSupport
+                            ? 'border-blue-500 bg-blue-500'
+                            : 'border-gray-300 dark:border-gray-600'
+                        }`}>
+                          {settings.colorBlindSupport && (
+                            <Check className="w-4 h-4 text-white m-0.5" />
+                          )}
+                        </div>
+                      </label>
+
+                      <label className="flex items-center justify-between p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 transition-colors cursor-pointer">
+                        <div className="flex items-center gap-3">
+                          <MousePointer className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+                          <div>
+                            <div className="font-medium text-gray-900 dark:text-white">Reduced Motion</div>
+                            <div className="text-sm text-gray-600 dark:text-gray-400">Minimize animations</div>
+                          </div>
+                        </div>
+                        <input
+                          type="checkbox"
+                          checked={settings.reducedMotion}
+                          onChange={() => toggleSetting('reducedMotion')}
+                          className="sr-only"
+                        />
+                        <div className={`w-6 h-6 rounded-full border-2 transition-colors ${
+                          settings.reducedMotion
+                            ? 'border-blue-500 bg-blue-500'
+                            : 'border-gray-300 dark:border-gray-600'
+                        }`}>
+                          {settings.reducedMotion && (
+                            <Check className="w-4 h-4 text-white m-0.5" />
+                          )}
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                )}
+
+                {/* Help Tab */}
+                {activeTab === 'help' && (
+                  <div className="space-y-4">
+                    <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+                      <div className="flex items-start gap-3">
+                        <Info className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5" />
+                        <div className="text-sm text-blue-800 dark:text-blue-200">
+                          <p className="font-medium mb-2">Keyboard Shortcuts</p>
+                          <ul className="space-y-1 text-xs">
+                            <li><kbd className="bg-white dark:bg-gray-800 px-1 py-0.5 rounded text-xs">Ctrl + H</kbd> Toggle accessibility panel</li>
+                            <li><kbd className="bg-white dark:bg-gray-800 px-1 py-0.5 rounded text-xs">Tab</kbd> Navigate between elements</li>
+                            <li><kbd className="bg-white dark:bg-gray-800 px-1 py-0.5 rounded text-xs">Escape</kbd> Close panels</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg p-4">
+                      <div className="flex items-start gap-3">
+                        <AlertTriangle className="w-5 h-5 text-yellow-600 dark:text-yellow-400 mt-0.5" />
+                        <div className="text-sm text-yellow-800 dark:text-yellow-200">
+                          <p className="font-medium mb-2">Need Help?</p>
+                          <p>Contact our support team for additional accessibility assistance.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+<<<<<<< HEAD
+            </motion.div>
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
@@ -2208,6 +2739,10 @@ const EnhancedAccessibility: React.FC = () => {
           </div>
         </div>
       )}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     </>
   );
 };

@@ -3,6 +3,22 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/quantum-services.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+  Atom, Cpu, Rocket, Shield, Zap, Globe, Star, Users,
+  Target, Microscope, Database, Lock, Cloud, 
+  BarChart3, Settings, Eye, Code, Palette, Layers,
+  Network, Server, ShieldCheck, ZapIcon, GlobeIcon, 
+  StarIcon, TrendingUpIcon, UsersIcon, CheckCircleIcon, 
+  ArrowRightIcon, CpuIcon, DollarSign, Phone, 
+  ArrowRight, Mail, MapPin, Dna, HelpCircle,
+  Sparkles, Crown, Infinity, Target as TargetIcon, 
+  Award, MessageCircle, ChevronRight, Flame, Brain
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   Atom, Lock, Database, Cpu, Target, Flame, 
   Zap, Shield, Rocket, ArrowRight, Star,
   CheckCircle, Clock, DollarSign, TrendingUp,
@@ -94,6 +110,11 @@ export default function QuantumServices() {
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/quantum-services.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   Atom, Zap, Target, Cpu, 
   Shield, Rocket, Globe, Sparkles,
   Check, ArrowRight, Star, Award,
@@ -278,15 +299,34 @@ export default function QuantumServices() {
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/quantum-services.tsx
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-indigo-500/5 to-purple-500/10" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]" />
           
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/quantum-services.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/quantum-services.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/quantum-services.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               className="text-center"
             >
             >
@@ -368,16 +408,38 @@ export default function QuantumServices() {
                     </Link>
                   </motion.div>
                 ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/quantum-services.tsx
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                   className="px-8 py-4 border border-blue-500/40 text-blue-300 rounded-xl font-semibold hover:bg-blue-500/10 transition-all duration-200"
                 >
                   View All Services
                 </Link>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/quantum-services.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               </div>
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/quantum-services.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+        {/* Benefits Section */}
+        <section className="py-20 bg-gray-900/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         {/* Quantum Capabilities */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-black/50">
           <div className="max-w-7xl mx-auto">
@@ -385,6 +447,10 @@ export default function QuantumServices() {
         {/* Services Grid */}
         <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
         {/* Quantum Capabilities */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-black/50">
@@ -433,10 +499,26 @@ export default function QuantumServices() {
         {/* Industry Applications */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/quantum-services.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/quantum-services.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Quantum Services?</h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                Experience the power of quantum computing and emerging technologies that solve previously impossible problems
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               viewport={{ once: true }}
               className="text-center mb-16"
             >
@@ -601,6 +683,11 @@ export default function QuantumServices() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/quantum-services.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               className="mb-16"
             >
               <h2 className="text-3xl font-bold text-white mb-8 text-center">Industry Applications</h2>
@@ -663,23 +750,53 @@ export default function QuantumServices() {
                 ))}
               </div>
             </motion.div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/quantum-services.tsx
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/quantum-services.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           </div>
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/quantum-services.tsx
+<<<<<<< HEAD
+        <section className="py-20 bg-gradient-to-r from-blue-900/20 to-indigo-900/20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
 =======
         {/* CTA Section */}
         <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<<<<<<< HEAD
 =======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/quantum-services.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/quantum-services.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/quantum-services.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             >
               viewport={{ once: true }}
               className="max-w-4xl mx-auto"
@@ -709,6 +826,12 @@ export default function QuantumServices() {
                 </Link>
                 <Link href="/case-studies" className="inline-flex items-center px-8 py-4 border border-indigo-500/30 text-indigo-300 font-semibold rounded-lg hover:bg-indigo-500/10 transition-all duration-200">
                   View Case Studies
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/quantum-services.tsx
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                   className="px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-xl font-semibold hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 hover:scale-105"
                 >
                   Get Started Today
@@ -718,7 +841,13 @@ export default function QuantumServices() {
                   className="px-8 py-4 border border-blue-500/40 text-blue-300 rounded-xl font-semibold hover:bg-blue-500/10 transition-all duration-200"
                 >
                   Explore All Services
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/quantum-services.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                 </Link>
               </div>
             </motion.div>

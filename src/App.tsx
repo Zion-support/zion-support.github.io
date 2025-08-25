@@ -1,11 +1,55 @@
+<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
+=======
+<<<<<<< HEAD
+import React, { Suspense, lazy, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+import Sidebar from './components/Sidebar';
+import { AccessibilityControls } from './components/AccessibilityControls';
+import PerformanceDashboard from './components/PerformanceDashboard';
+import { AnalyticsDashboard } from './components/AnalyticsDashboard';
+import { AIChatbot } from './components/AIChatbot';
+import { CollaborativeTextEditor } from './components/CollaborativeTextEditor';
+import { AICodeGenerator } from './components/AICodeGenerator';
+import { EnterpriseDashboard } from './components/EnterpriseDashboard';
+import { SecurityComplianceDashboard } from './components/SecurityComplianceDashboard';
+import { MachineLearningDashboard } from './components/MachineLearningDashboard';
+import PerformanceOptimizer from './components/PerformanceOptimizer';
+import { LinkHealthMonitor } from './components/LinkHealthMonitor';
+=======
+import React, { Suspense, lazy } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import './App.css';
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fad7
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster } from "./components/ui/toaster";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
+import EnhancedSEO from './components/EnhancedSEO';
+import EnhancedAccessibility from './components/EnhancedAccessibility';
+import PerformanceMonitor from './components/PerformanceMonitor';
+
+// Enhanced lazy loading with preloading hints
+const Home = lazy(() => import('./pages/Home'));
+const Services = lazy(() => import('./pages/Services'));
+const AISolutions = lazy(() => import('./pages/AISolutions'));
+const ServicesShowcase = lazy(() => import('./pages/ServicesShowcase'));
+const AIMatcherPage = lazy(() => import('./pages/AIMatcher'));
+const TalentDirectory = lazy(() => import('./pages/TalentDirectory'));
+const TalentsPage = lazy(() => import('./pages/TalentsPage'));
+const EmergingTech = lazy(() => import('./pages/EmergingTech'));
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -60,16 +104,29 @@ const PartnersPage = React.lazy(() => import('./pages/Partners'));
 const Login = React.lazy(() => import('./pages/Login'));
 const Signup = React.lazy(() => import('./pages/Signup'));
 const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage'));
+const EnhancedServicesShowcase = React.lazy(() => import('./pages/EnhancedServicesShowcase'));
+const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
+const CybersecurityServicesPage = React.lazy(() => import('./pages/CybersecurityServicesPage'));
+const ComprehensiveContact = React.lazy(() => import('./pages/ComprehensiveContact'));
 const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
 const ContactPage = React.lazy(() => import('./pages/Contact'));
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
+<<<<<<< HEAD
 const MicroSaasServicesPage = React.lazy(() => import('./pages/MicroSaasServicesPage'));
 =======
 const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
 const BlockchainServicesPage = React.lazy(() => import('./pages/BlockchainServicesPage'));
 const IoTServicesPage = React.lazy(() => import('./pages/IoTServicesPage'));
 const CybersecurityServicesPage = React.lazy(() => import('./pages/CybersecurityServicesPage'));
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServicesPage'));
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 const ServicesOverviewPage = React.lazy(() => import('./pages/ServicesOverviewPage'));
 =======
 const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage'));
@@ -282,6 +339,24 @@ const AIConsciousnessEvolution = lazy(() => import('./pages/services/AIConscious
 // Enhanced AI service pages
 const AIBusinessIntelligenceElite = lazy(() => import('./pages/services/AIBusinessIntelligenceElite'));
 const AIBusinessIntelligenceSuite = lazy(() => import('./pages/services/AIBusinessIntelligenceSuite'));
+=======
+const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage'));
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-099c
+=======
+const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServicesPage'));
+const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
+const CybersecurityServicesPage = React.lazy(() => import('./pages/CybersecurityServicesPage'));
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1010
+=======
+const HelpCenter = React.lazy(() => import('./pages/HelpCenter'));
+const Cookies = React.lazy(() => import('./pages/Cookies'));
+>>>>>>> origin/cursor/website-audit-and-enhancement-de4e
+=======
+const FAQPage = React.lazy(() => import('./pages/FAQ'));
+>>>>>>> origin/cursor/website-audit-and-enhancement-bbee
+=======
+const MicroSaasServices = React.lazy(() => import('./pages/MicroSaasServices'));
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b8ff
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -294,6 +369,7 @@ const baseRoutes = [
   { path: '/signup', element: <Signup /> },
   { path: '/talent', element: <TalentDirectory /> },
   { path: '/talents', element: <TalentsPage /> },
+<<<<<<< HEAD
   { path: '/services-overview', element: <ServicesOverviewPage /> },
 =======
   { path: '/services', element: <ServicesOverviewPage /> },
@@ -360,6 +436,20 @@ const baseRoutes = [
   { path: '/comprehensive-services', element: <ComprehensiveServicesPage /> },
 =======
   { path: '/micro-saas-services', element: <MicroSaasServices /> },
+=======
+  { path: '/services', element: <ServicesPage /> },
+<<<<<<< HEAD
+<<<<<<< HEAD
+  { path: '/enhanced-services', element: <EnhancedServicesPage /> },
+=======
+  { path: '/enhanced-services', element: <EnhancedServicesShowcase /> },
+  { path: '/ai-services', element: <AIServicesPage /> },
+  { path: '/cybersecurity-services', element: <CybersecurityServicesPage /> },
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-017a
+=======
+  { path: '/micro-saas-services', element: <MicroSaasServices /> },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-b8ff
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
   { path: '/ai-services', element: <AIServicesPage /> },
   { path: '/blockchain-services', element: <BlockchainServicesPage /> },
@@ -373,11 +463,13 @@ const baseRoutes = [
   { path: '/open-app', element: <OpenAppRedirect /> },
   { path: '/community', element: <CommunityPage /> },
   { path: '/contact', element: <ContactPage /> },
+  { path: '/comprehensive-contact', element: <ComprehensiveContact /> },
   { path: '/partners', element: <PartnersPage /> },
   { path: '/zion-hire-ai', element: <ZionHireAI /> },
   { path: '/hire-ai', element: <ZionHireAI /> },
   { path: '/request-quote', element: <RequestQuotePage /> },
   { path: '/comprehensive-services', element: <ComprehensiveServicesPage /> },
+<<<<<<< HEAD
 =======
   { path: '/faq', element: <FAQPage /> },
 =======
@@ -411,6 +503,19 @@ const baseRoutes = [
   { path: '/create-profile', element: <CreateProfile /> },
 =======
 =======
+=======
+<<<<<<< HEAD
+  { path: '/services-overview', element: <ServicesOverviewPage /> },
+  { path: '/ai-services', element: <AIServicesShowcase /> },
+=======
+  { path: '/ai-services', element: <AIServicesPage /> },
+  { path: '/cybersecurity-services', element: <CybersecurityServicesPage /> },
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-1010
+  { path: '/blog', element: <Blog /> },
+  { path: '/blog/:slug', element: <BlogPost /> },
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   
   // Additional routes from HEAD branch
   { path: '/micro-saas-services', element: <MicroSaasServicesPage /> },
@@ -520,7 +625,15 @@ const baseRoutes = [
   { path: '/research-development', element: <News /> },
   { path: '/enterprise-it', element: <ITInfrastructure /> },
   { path: '/micro-saas', element: <MicroSAASSolutions /> },
+=======
+  { path: '/help', element: <HelpCenter /> },
+  { path: '/cookies', element: <Cookies /> },
+>>>>>>> origin/cursor/website-audit-and-enhancement-de4e
+=======
+  { path: '/faq', element: <FAQPage /> },
+>>>>>>> origin/cursor/website-audit-and-enhancement-bbee
 ];
+<<<<<<< HEAD
 
 const App = () => {
   // Ensure each navigation starts at the top of the page
@@ -560,6 +673,9 @@ const AIMatcherPage = lazy(() => import('./pages/AIMatcher'));
 const TalentDirectory = lazy(() => import('./pages/TalentDirectory'));
 const TalentsPage = lazy(() => import('./pages/TalentsPage'));
 const EmergingTech = lazy(() => import('./pages/EmergingTech'));
+=======
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-fad7
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 
 // Service pages
 const AIServices = lazy(() => import('./pages/AIServices'));
@@ -698,6 +814,7 @@ const Contact = React.lazy(() => import('./pages/Contact'));
 
 const App = () => {
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-background">
       <main>
         <Suspense fallback={<div className="min-h-screen bg-zion-blue-dark flex items-center justify-center text-white">Loading...</div>}>
@@ -712,12 +829,21 @@ const App = () => {
   );
 }
 =======
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     <EnhancedErrorBoundary>
       <EnhancedAccessibility />
       <PerformanceMonitor />
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <PerformanceOptimizer>
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
                 {/* Enhanced SEO */}
                 <EnhancedSEO 
@@ -931,6 +1057,7 @@ const App = () => {
                     </div>
                   </>
                 )}
+<<<<<<< HEAD
                               </div>
           </Router>
         </WhitelabelProvider>
@@ -1161,6 +1288,9 @@ const App = () => {
                     </div>
                   </>
                 )}
+=======
+<<<<<<< HEAD
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                 
                 {/* Enhanced Performance Monitor - Always Available */}
                 <PerformanceMonitor />
@@ -1186,5 +1316,17 @@ const App = () => {
         </ThemeProvider>
       </EnhancedErrorBoundary>
     );
+<<<<<<< HEAD
+=======
+=======
+                              </div>
+          </Router>
+        </WhitelabelProvider>
+      </ThemeProvider>
+    </EnhancedErrorBoundary>
+  );
+};
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 
 export default App;

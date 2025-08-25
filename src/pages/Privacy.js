@@ -1,8 +1,22 @@
 import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
+<<<<<<< HEAD
 import { Header } from "@/components/header/Header";
 import { Footer } from "@/components/Footer";
 =======
 import { Footer } from "@/components/Footer";
+=======
+<<<<<<< HEAD
+import Header from "@/components/Header";
+<<<<<<< HEAD
+import Footer from "@/components/Footer";
+=======
+import { Header } from "@/components/header/Header";
+import { Footer } from "@/components/Footer";
+>>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+=======
+import { Footer } from "@/components/Footer";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 export default function Privacy() {

@@ -7,6 +7,7 @@
 import { useState } from 'react';
 import { useMessaging } from '@/context/MessagingContext';
 import { MainNavigation } from './MainNavigation';
+import { MainSidebar } from '@/components/layout/MainSidebar';
 import { Logo } from '@/components/header/Logo';
 import { ModeToggle } from '@/components/ModeToggle';
 import { Menu, X, PanelLeft } from 'lucide-react';
@@ -95,6 +96,7 @@ export function AppHeader({ onSidebarToggle }: AppHeaderProps) {
 >>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
         <div className="container flex h-16 items-center px-4 sm:px-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
           {/* Sidebar Toggle */}
           <button
             onClick={() => setSidebarOpen(!sidebarOpen)}
@@ -103,10 +105,17 @@ export function AppHeader({ onSidebarToggle }: AppHeaderProps) {
 =======
             className="mr-4 p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 rounded-md lg:hidden"
 >>>>>>> origin/cursor/website-audit-and-enhancement-050f
+=======
+          {/* Sidebar Toggle */}
+          <button
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+            className="mr-4 p-2 text-white/70 hover:text-white hover:bg-zion-purple/10 rounded-md transition-colors"
+>>>>>>> origin/cursor/website-audit-and-enhancement-de4e
             aria-label="Toggle sidebar"
           >
             <PanelLeft className="h-5 w-5" />
           </button>
+<<<<<<< HEAD
 =======
           {/* Sidebar Toggle for Mobile */}
           <div className="lg:hidden mr-3">
@@ -118,6 +127,8 @@ export function AppHeader({ onSidebarToggle }: AppHeaderProps) {
             </button>
           </div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-3b60
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-de4e
           
           <Logo />
           <div className="ml-6 flex-1 hidden md:block">
@@ -181,6 +192,9 @@ export function AppHeader({ onSidebarToggle }: AppHeaderProps) {
         </div>
 <<<<<<< HEAD
       </header>
+      
+      {/* Main Sidebar */}
+      <MainSidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
       
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
       {mobileMenuOpen && (

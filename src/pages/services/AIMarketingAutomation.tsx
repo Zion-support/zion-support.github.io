@@ -1,16 +1,51 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
 import { motion } from 'framer-motion';
 import { 
   Brain, 
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   Target, 
   TrendingUp, 
   Users, 
   BarChart3, 
   Zap, 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  Eye,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Brain,
+  Mail,
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   Brain, 
   Mail, 
   MessageSquare,
@@ -29,6 +64,11 @@ import {
 } from 'lucide-react';
 
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   Shield, 
 =======
 =======
@@ -37,6 +77,28 @@ import {
   Target, 
   TrendingUp, 
   Users, 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  BarChart3, 
+  Mail, 
+  MessageSquare,
+  Zap,
+  Shield,
+>>>>>>> origin/cursor/website-audit-and-enhancement-8a01
+  Globe,
+  ArrowRight,
+  CheckCircle,
+  Star,
+<<<<<<< HEAD
+  Rocket
+} from 'lucide-react';
+
+export default function AIMarketingAutomation() {
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 const AIMarketingAutomation: React.FC = () => {
 =======
   Clock,
@@ -142,10 +204,18 @@ export default function AIMarketingAutomation() {
       icon: Zap,
       title: "Automated Workflows",
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   const features = [
     {
       icon: Target,
       title: "Intelligent Audience Targeting",
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       description: "AI-powered audience segmentation and targeting for maximum campaign effectiveness"
     },
     {
@@ -174,6 +244,14 @@ export default function AIMarketingAutomation() {
     {
       icon: Shield,
       title: "Compliance & Security",
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      description: "Built-in compliance features and enterprise-grade security"
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       description: "Streamlined marketing processes with intelligent automation and workflow optimization."
     },
     {
@@ -390,11 +468,28 @@ const AIMarketingAutomation = () => {
       title: "Social Media Marketing",
       description: "Automated social media posting, engagement, and audience growth strategies.",
       icon: Globe
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-9620
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     }
   ];
 
   const benefits = [
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       title: "Lead Generation",
       description: "Automated lead scoring and nurturing processes that convert prospects into customers.",
       icon: Users,
@@ -433,6 +528,11 @@ const AIMarketingAutomation = () => {
 
   const pricing = [
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     "Increase conversion rates by up to 300%",
     "Reduce marketing costs by 40-60%",
     "Improve customer engagement and retention",
@@ -575,6 +675,28 @@ export default function AIMarketingAutomation() {
 
   const useCases = [
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      title: "E-commerce Marketing",
+<<<<<<< HEAD
+      description: "Personalized product recommendations and dynamic pricing optimization"
+    },
+    {
+      title: "B2B Lead Generation",
+      description: "Intelligent lead scoring and nurturing campaigns"
+    },
+    {
+      title: "Content Marketing",
+      description: "AI-generated content and automated content distribution"
+    },
+    {
+      title: "Social Media Marketing",
+      description: "Automated social media management and engagement optimization"
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       description: "Automated product recommendations, abandoned cart recovery, and personalized shopping experiences.",
       icon: ShoppingCart
     },
@@ -818,24 +940,60 @@ export default function AIMarketingAutomation() {
       metric: "5.2x",
       description: "ROI improvement",
       detail: "Automated optimization and personalization"
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-459c
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     }
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
 =======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
+=======
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <div className="inline-flex items-center px-4 py-2 bg-orange-500/20 border border-orange-500/50 rounded-full text-orange-400 text-sm font-medium mb-6">
+              <Target className="w-4 h-4 mr-2" />
+              AI-Powered Marketing
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
@@ -905,6 +1063,10 @@ export default function AIMarketingAutomation() {
               </Link>
 =======
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center">
                 <Brain className="w-10 h-10 text-white" />
@@ -924,18 +1086,74 @@ export default function AIMarketingAutomation() {
               <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200">
                 Watch Demo
               </button>
+<<<<<<< HEAD
             </div>
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
+            </div>
+<<<<<<< HEAD
+=======
+            </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           </motion.div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Features Section */}
 =======
       {/* Features Section */}
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+      {/* Key Benefits */}
+=======
+      {/* Features Section */}
+>>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
+=======
+      {/* Features Section */}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Marketing That Works Smarter
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our AI marketing automation platform delivers unprecedented results through intelligent optimization.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 + index * 0.1 }}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center hover:border-orange-400/50 transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-3xl font-bold text-orange-400 mb-2">{benefit.metric}</div>
+                <p className="text-gray-300">{benefit.description}</p>
+              </motion.div>
+            ))}
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                 className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial
@@ -1144,6 +1362,11 @@ export default function AIMarketingAutomation() {
                   ))}
                 </ul>
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -1173,6 +1396,13 @@ export default function AIMarketingAutomation() {
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
+              </motion.div>
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1202,13 +1432,31 @@ export default function AIMarketingAutomation() {
               </div>
 =======
               </div>
+<<<<<<< HEAD
 =======
               </motion.div>
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-459c
+=======
+              </motion.div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      {/* Use Cases */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
@@ -1218,6 +1466,11 @@ export default function AIMarketingAutomation() {
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
@@ -1234,10 +1487,23 @@ export default function AIMarketingAutomation() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the future of marketing with intelligent automation that learns, adapts, and optimizes 
               your campaigns for maximum impact.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               From email campaigns to social media management, our AI platform handles every aspect of your marketing strategy.
             </p>
           </div>
@@ -1414,6 +1680,11 @@ export default function AIMarketingAutomation() {
                 </ul>
                 
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -1447,6 +1718,12 @@ export default function AIMarketingAutomation() {
                 ))}
               </div>
             </motion.div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular
                     ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:scale-105'
@@ -1456,12 +1733,38 @@ export default function AIMarketingAutomation() {
                 </button>
               </div>
             ))}
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-459c
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.4 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Marketing?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join leading organizations that are already leveraging AI to automate and optimize their marketing campaigns.
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -1484,6 +1787,11 @@ export default function AIMarketingAutomation() {
               </Link>
               <Link
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -1506,6 +1814,14 @@ export default function AIMarketingAutomation() {
               <button className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-200">
                 Schedule Demo
               </button>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-c0fa
+            </div>
+          </motion.div>
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -1854,14 +2170,32 @@ export default function AIMarketingAutomation() {
               Need enterprise pricing? <a href="/contact" className="text-purple-400 hover:text-purple-300 underline">Contact our sales team</a>
             </p>
           </div>
+<<<<<<< HEAD
 =======
             </div>
           </motion.div>
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-459c
+=======
+            </div>
+          </motion.div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         </div>
       </section>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+};
+
+export default AIMarketingAutomation;
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
 }
 =======
@@ -2147,5 +2481,12 @@ export default AIMarketingAutomation;
 };
 
 export default AIMarketingAutomation;
+<<<<<<< HEAD
 =======
 }
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-9620
+=======
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7

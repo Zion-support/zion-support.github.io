@@ -3,6 +3,22 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/pricing.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+  DollarSign, Cpu, Shield, Zap, Globe, Star, Users,
+  Target, Microscope, Database, Lock, Cloud, 
+  BarChart3, Settings, Eye, Code, Palette, Layers,
+  Network, Server, ShieldCheck, ZapIcon, GlobeIcon, 
+  StarIcon, TrendingUpIcon, UsersIcon, CheckCircleIcon, 
+  ArrowRightIcon, CpuIcon, Phone, 
+  ArrowRight, Mail, MapPin, Dna, HelpCircle,
+  Sparkles, Crown, Infinity, Target as TargetIcon, 
+  Award, MessageCircle, ChevronRight, Building, Calculator
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   DollarSign, CheckCircle, Star, Zap, Shield, 
   Brain, Atom, Rocket, Building, ArrowRight,
   Users, Globe, Cpu, Database, Lock
@@ -125,6 +141,11 @@ export default function Pricing() {
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/pricing.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   Check, Star, ArrowRight, Zap, Crown, 
   Brain, Atom, Shield, Rocket, Users,
   CheckCircle, TrendingUp, Award, Sparkles
@@ -230,15 +251,34 @@ export default function Pricing() {
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/pricing.tsx
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
           <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/10 via-orange-500/5 to-red-500/10" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(251,191,36,0.1),transparent_50%)]" />
           
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/pricing.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/pricing.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/pricing.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               className="text-center"
             >
             >
@@ -279,21 +319,85 @@ export default function Pricing() {
                 Choose the perfect plan for your business needs. All plans include our revolutionary 
                 AI and quantum computing technology with transparent, predictable pricing.
               </p>
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD:pages.disabled/pricing.tsx
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/pricing.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             </motion.div>
           </div>
         </section>
 
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD:pages.disabled/pricing.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+        {/* Benefits Section */}
+        <section className="py-20 bg-gray-900/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Pricing?</h2>
+              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                Experience transparent, competitive pricing with enterprise-grade value
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index) => (
+=======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/pricing.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         {/* Pricing Plans Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {plans.map((plan, index) => (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/pricing.tsx
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/pricing.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/pricing.tsx
+<<<<<<< HEAD
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                  className="text-center p-6 rounded-xl bg-gray-800/50 border border-gray-700/50 hover:border-green-500/50 transition-all duration-200"
+                >
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gray-800 rounded-full mb-4">
+                    {benefit.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                  <p className="text-gray-400">{benefit.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Plans */}
+        <section className="py-20">
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         {/* Pricing Plans */}
         <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -319,6 +423,11 @@ export default function Pricing() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
 =======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/pricing.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 border rounded-2xl p-8 ${
                     plan.popular 
@@ -329,6 +438,12 @@ export default function Pricing() {
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/pricing.tsx
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="relative group"
@@ -336,13 +451,51 @@ export default function Pricing() {
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-600 text-white text-sm font-bold rounded-full">
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/pricing.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                         Most Popular
                       </span>
                     </div>
                   )}
                   
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< HEAD:pages.disabled/pricing.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+                  <div className="text-center mb-6">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <div className="flex items-baseline justify-center">
+                      <span className="text-4xl font-bold text-green-400">{plan.price}</span>
+                      <span className="text-gray-400 ml-1">{plan.period}</span>
+                    </div>
+                    <p className="text-gray-400 mt-2">{plan.description}</p>
+                  </div>
+                  
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-gray-300">
+                        <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <Link
+                    href="/contact"
+                    className={`block w-full text-center px-6 py-3 bg-gradient-to-r ${plan.color} text-white rounded-lg font-semibold hover:scale-105 transition-all duration-200`}
+                  >
+                    Get Started
+=======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/pricing.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                   <div className="text-center mb-8">
                     <div className="flex justify-center mb-4">{plan.icon}</div>
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -370,6 +523,11 @@ export default function Pricing() {
                     Get Started
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/pricing.tsx
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                   <div className={`relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border-2 ${
                     plan.popular ? 'border-purple-500/50' : 'border-gray-700/50'
                   } hover:border-yellow-500/50 transition-all duration-300 hover:scale-105`}>
@@ -404,13 +562,29 @@ export default function Pricing() {
                       {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
                     </Link>
                   </div>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/pricing.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/pricing.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+        {/* Service Pricing */}
+        <section className="py-20 bg-gray-900/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         {/* Add-ons Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-black/50">
           <div className="max-w-7xl mx-auto">
@@ -418,14 +592,29 @@ export default function Pricing() {
         {/* Service Categories Pricing */}
         <section className="py-20 relative bg-gradient-to-br from-gray-900/30 to-gray-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 =======
         {/* Add-ons Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-black/50">
           <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/pricing.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/pricing.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/pricing.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               className="text-center mb-16"
             >
               viewport={{ once: true }}
@@ -475,6 +664,11 @@ export default function Pricing() {
                   >
                     Add Service
                   </Link>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/pricing.tsx
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="group"
@@ -498,24 +692,54 @@ export default function Pricing() {
                       <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/pricing.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 =======
+<<<<<<< HEAD:pages.disabled/pricing.tsx
+<<<<<<< HEAD
         {/* FAQ Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
+=======
+        {/* Benefits Section */}
+        <section className="py-20 relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
+=======
+        {/* FAQ Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/pricing.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/pricing.tsx
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/pricing.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -551,6 +775,12 @@ export default function Pricing() {
                 >
                   <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
                   <p className="text-gray-300">{faq.answer}</p>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/pricing.tsx
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               viewport={{ once: true }}
               className="text-center mb-16"
             >
@@ -581,7 +811,13 @@ export default function Pricing() {
                   <p className="text-gray-400 leading-relaxed">
                     {benefit.description}
                   </p>
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/pricing.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                 </motion.div>
               ))}
             </div>
@@ -589,29 +825,90 @@ export default function Pricing() {
         </section>
 
         {/* CTA Section */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/pricing.tsx
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <section className="py-20 bg-gradient-to-r from-green-900/20 to-yellow-900/20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-black/50">
           <div className="max-w-4xl mx-auto text-center">
 =======
         <section className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<<<<<<< HEAD
 =======
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-black/50">
           <div className="max-w-4xl mx-auto text-center">
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-black/50">
+          <div className="max-w-4xl mx-auto text-center">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/pricing.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
               viewport={{ once: true }}
               className="max-w-4xl mx-auto"
 =======
+=======
+<<<<<<< HEAD:pages.disabled/pricing.tsx
+<<<<<<< HEAD
+            >
+<<<<<<< HEAD
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
+                Contact us for custom pricing, enterprise quotes, or to discuss your specific needs. We'll help you find the perfect solution.
+=======
+              viewport={{ once: true }}
+              className="max-w-4xl mx-auto"
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/pricing.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Get Started?
               </h2>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/pricing.tsx
+              <p className="text-xl text-gray-400 mb-8 leading-relaxed">
+                Choose the plan that fits your business needs or contact us for a custom solution. 
+                Start transforming your business today.
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  href="/contact"
+<<<<<<< HEAD
+                  className="px-8 py-4 bg-gradient-to-r from-green-500 to-yellow-600 text-white rounded-lg font-semibold hover:from-green-600 hover:to-yellow-700 transition-all duration-200 hover:scale-105"
+                >
+                  Contact Sales
+                </Link>
+                <Link
+                  href="/roi-calculator"
+                  className="px-8 py-4 border border-green-500/50 text-green-400 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-200"
+                >
+                  ROI Calculator
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Get Started?
               </h2>
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/pricing.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
               <p className="text-xl text-gray-300 mb-8">
                 Choose the perfect plan for your business and start your journey with 
                 revolutionary AI and quantum computing technology.
@@ -624,6 +921,12 @@ export default function Pricing() {
                 </Link>
                 <Link href="/contact" className="inline-flex items-center px-8 py-4 border border-green-500/30 text-green-300 font-semibold rounded-lg hover:bg-green-500/10 transition-all duration-200">
                   Schedule Consultation
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:pages.disabled/pricing.tsx
+>>>>>>> origin/cursor/resolve-and-merge-open-pull-requests-b4e5
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                   className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-600 text-white rounded-xl font-semibold hover:from-yellow-600 hover:to-orange-700 transition-all duration-200 hover:scale-105"
                 >
                   Get Started Today
@@ -633,7 +936,13 @@ export default function Pricing() {
                   className="px-8 py-4 border border-yellow-500/40 text-yellow-300 rounded-xl font-semibold hover:bg-yellow-500/10 transition-all duration-200"
                 >
                   View Market Pricing
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-5aba
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2:pages/pricing.tsx
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                 </Link>
               </div>
             </motion.div>

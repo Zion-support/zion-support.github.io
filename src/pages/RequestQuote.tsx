@@ -1,14 +1,36 @@
 
 import { QuoteRequestForm } from "@/components/QuoteRequestForm";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
+import { SEO } from "@/components/SEO";
+<<<<<<< HEAD
+import { MainNavigation } from "@/layout/MainNavigation";
+<<<<<<< HEAD
+import Footer from "@/components/Footer";
+=======
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 import React, { useState } from 'react';
 =======
 import { AppHeader } from "@/layout/AppHeader";
 import Footer from "@/components/Footer";
+<<<<<<< HEAD
 =======
 import { SEO } from "@/components/SEO";
 import { Header } from "@/components/Header";
 =======
 import { Footer } from "@/components/Footer";
+=======
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
+=======
+import { SEO } from "@/components/SEO";
+import { Header } from "@/components/Header";
+>>>>>>> origin/cursor/website-audit-and-enhancement-8717
+=======
+import { Footer } from "@/components/Footer";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
 
 export default function RequestQuote() {
   const [form, setForm] = useState({

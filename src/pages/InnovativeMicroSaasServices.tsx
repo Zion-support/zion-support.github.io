@@ -41,9 +41,21 @@ interface Service {
   description: string;
   category: string;
   subcategory: string;
+<<<<<<< HEAD
   price: number;
   currency?: string;
   pricingModel: string;
+=======
+<<<<<<< HEAD
+  price: number | { monthly?: number; yearly?: number; oneTime?: number; currency: string; pricingModel: string };
+  currency?: string;
+  pricingModel?: string;
+=======
+  price: number;
+  currency?: string;
+  pricingModel: string;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
   features: string[];
   benefits: string[];
   useCases?: string[];
@@ -93,8 +105,17 @@ const InnovativeMicroSaasServices: React.FC = () => {
   
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+<<<<<<< HEAD
     const serviceTitle = service.title || service.name || '';
     const matchesSearch = serviceTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
+=======
+<<<<<<< HEAD
+    const matchesSearch = (service.title || service.name || '').toLowerCase().includes(searchTerm.toLowerCase()) ||
+=======
+    const serviceTitle = service.title || service.name || '';
+    const matchesSearch = serviceTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
     return matchesCategory && matchesSearch;
@@ -263,7 +284,15 @@ const InnovativeMicroSaasServices: React.FC = () => {
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
+<<<<<<< HEAD
                       <h3 className="text-xl font-bold text-white mb-2">{service.title || service.name}</h3>
+=======
+<<<<<<< HEAD
+                                              <h3 className="text-xl font-bold text-white mb-2">{service.title || service.name}</h3>
+=======
+                      <h3 className="text-xl font-bold text-white mb-2">{service.title || service.name}</h3>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+>>>>>>> 7e44fe087b87ab51f22d8d86375661aa15d586d7
                       <p className="text-gray-400 text-sm mb-3">{service.description}</p>
                     </div>
                     <button

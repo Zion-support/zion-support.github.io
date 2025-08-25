@@ -30,6 +30,7 @@ import {
 } from 'lucide-react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { COMPREHENSIVE_SERVICES as comprehensiveServices } from '@/data/comprehensiveServices';
 =======
 import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
@@ -37,11 +38,15 @@ import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
 =======
 import { comprehensiveServices, serviceCategories } from '@/data/comprehensiveServices';
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
+=======
+import { ENHANCED_SERVICES, SERVICE_CATEGORIES, SERVICE_FEATURES, MARKET_PRICING } from '@/data/enhancedServices';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-017a
 
 export default function EnhancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const filteredServices = selectedCategory === 'all' 
+<<<<<<< HEAD
 <<<<<<< HEAD
     ? COMPREHENSIVE_SERVICES 
     : COMPREHENSIVE_SERVICES.filter(service => service.category.toLowerCase().includes(selectedCategory.toLowerCase()));
@@ -52,6 +57,12 @@ export default function EnhancedServicesShowcase() {
     ? comprehensiveServices 
     : comprehensiveServices.filter(service => service.category.toLowerCase().includes(selectedCategory.toLowerCase()));
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
+=======
+    ? ENHANCED_SERVICES 
+    : ENHANCED_SERVICES.filter(service => 
+        SERVICE_CATEGORIES.find(cat => cat.id === selectedCategory)?.services.includes(service)
+      );
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-017a
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
@@ -124,6 +135,7 @@ export default function EnhancedServicesShowcase() {
             All Services
           </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
           {categories.map((category) => (
             <Button
               key={category}
@@ -134,14 +146,22 @@ export default function EnhancedServicesShowcase() {
               {category}
 =======
           {serviceCategories.map((category) => (
+=======
+          {SERVICE_CATEGORIES.map((category) => (
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-017a
             <Button
               key={category.id}
               variant={selectedCategory === category.id ? 'default' : 'outline'}
               onClick={() => setSelectedCategory(category.id)}
               className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
             >
+<<<<<<< HEAD
               {category.icon} {category.name}
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
+=======
+              <span className="mr-2">{category.icon}</span>
+              {category.name}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-017a
             </Button>
           ))}
         </div>
@@ -154,6 +174,47 @@ export default function EnhancedServicesShowcase() {
         </div>
       </div>
 
+<<<<<<< HEAD
+=======
+      {/* Market Analysis Section */}
+      <div className="bg-white/5 backdrop-blur-sm py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Market Analysis & ROI
+            </h2>
+            <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
+              Understand the market trends, competitive landscape, and expected returns on your technology investments.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {Object.entries(MARKET_PRICING).map(([key, data]) => (
+              <Card key={key} className="bg-white/10 backdrop-blur-sm border-zion-cyan/30">
+                <CardHeader>
+                  <CardTitle className="text-zion-cyan capitalize">{key.replace('-', ' ')}</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <div className="flex items-center gap-2">
+                    <CreditCard className="h-4 w-4 text-zion-purple" />
+                    <span className="text-white">{data.averagePrice}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <TrendingUp className="h-4 w-4 text-green-400" />
+                    <span className="text-zion-cyan-light">{data.marketTrend}</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Zap className="h-4 w-4 text-yellow-400" />
+                    <span className="text-zion-cyan-light">{data.roi}</span>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </div>
+
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-017a
       {/* Why Choose Us Section */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -281,9 +342,17 @@ function ServiceCard({ service }: { service: any }) {
           <Badge variant="secondary" className="bg-zion-purple/20 text-zion-purple border-zion-purple/30">
             {service.category}
           </Badge>
+<<<<<<< HEAD
           <Badge variant="secondary" className="bg-zion-cyan/20 text-zion-cyan border-zion-cyan/30">
             {service.subcategory}
           </Badge>
+=======
+          {service.featured && (
+            <Badge variant="secondary" className="bg-yellow-500/20 text-yellow-400 border-yellow-500/30">
+              Featured
+            </Badge>
+          )}
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-017a
         </div>
         <CardTitle className="text-xl text-white mb-2">{service.title}</CardTitle>
         <CardDescription className="text-zion-cyan-light">
@@ -327,10 +396,17 @@ function ServiceCard({ service }: { service: any }) {
             ))}
           </div>
 
+<<<<<<< HEAD
           {/* Delivery */}
           <div className="flex items-center gap-2 text-zion-cyan-light">
             <Clock className="h-4 w-4" />
             <span className="text-sm">Delivery: {service.estimatedDelivery}</span>
+=======
+          {/* Availability */}
+          <div className="flex items-center gap-2 text-zion-cyan-light">
+            <Clock className="h-4 w-4" />
+            <span className="text-sm">Available: {service.availability}</span>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-017a
           </div>
 
           {/* Action Buttons */}
@@ -357,6 +433,7 @@ function ServiceCard({ service }: { service: any }) {
                   </AccordionTrigger>
                   <AccordionContent className="text-zion-cyan-light">
                     <div className="space-y-2">
+<<<<<<< HEAD
                       <h4 className="font-semibold text-white mb-2">Features:</h4>
                       {service.features.map((feature: string, index: number) => (
                         <div key={index} className="flex items-center gap-2">
@@ -371,6 +448,20 @@ function ServiceCard({ service }: { service: any }) {
                           <span>{benefit}</span>
                         </div>
                       ))}
+=======
+                      <div className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-green-400" />
+                        <span>Advanced AI algorithms</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-green-400" />
+                        <span>24/7 support</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-green-400" />
+                        <span>Custom integration</span>
+                      </div>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-017a
                     </div>
                   </AccordionContent>
                 </AccordionItem>
@@ -384,11 +475,19 @@ function ServiceCard({ service }: { service: any }) {
                       <div className="space-y-2">
                         <div className="flex items-center gap-2">
                           <Phone className="h-4 w-4 text-zion-cyan" />
+<<<<<<< HEAD
                           <span>{service.contactInfo.phone}</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <Mail className="h-4 w-4 text-zion-cyan" />
                           <span>{service.contactInfo.email}</span>
+=======
+                          <span>+1 302 464 0950</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <Mail className="h-4 w-4 text-zion-cyan" />
+                          <span>kleber@ziontechgroup.com</span>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-017a
                         </div>
                       </div>
                       <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white">
