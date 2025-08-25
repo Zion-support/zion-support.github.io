@@ -152,7 +152,7 @@ export async function getStaticPaths() {
 	};
 }
 
-export async function getStaticProps({ params }: { params: { slug: string } }) {
+	export async function getStaticProps({ params }: { params: { slug: string } }) {
 	const services = getAllServices();
 	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
 
