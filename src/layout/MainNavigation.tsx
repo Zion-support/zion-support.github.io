@@ -369,6 +369,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path === '/'
     },
     {
+      key: 'services',
+      href: '/services',
+      matches: (path: string) => path.startsWith('/services') || path.startsWith('/ai-services') || path.startsWith('/it-services') || path.startsWith('/digital-transformation') || path.startsWith('/cloud-services')
+    },
+    {
       key: 'marketplace',
       href: '/marketplace',
 <<<<<<< HEAD

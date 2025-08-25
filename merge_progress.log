@@ -2982,3 +2982,66 @@ src/index.css
 [2025-08-25 23:37:09] Processing unmerged file: src/index.css
 [2025-08-25 23:37:09] File exists in HEAD, keeping it
 [2025-08-25 23:37:09] Still have unmerged paths, attempting additional resolution...
+[main e3445965c77] Merge PR #6523: cursor/enhance-app-with-new-services-and-futuristic-design-2f34 (advanced conflict resolution)
+[2025-08-25 23:37:10] ✓ Advanced conflict resolution successful for PR #6523
+[2025-08-25 23:37:10] ✓ PR #6523 processed successfully
+==========================================
+
+
+==========================================
+[2025-08-25 23:37:10] Processing PR #6520 from branch: cursor/enhance-app-with-new-services-and-futuristic-design-8eef
+==========================================
+[2025-08-25 23:37:10] Processing PR #6520 from branch: cursor/enhance-app-with-new-services-and-futuristic-design-8eef
+[2025-08-25 23:37:11] Attempting regular merge...
+Auto-merging package-lock.json
+CONFLICT (content): Merge conflict in package-lock.json
+Auto-merging package.json
+CONFLICT (content): Merge conflict in package.json
+Auto-merging src/App.tsx
+CONFLICT (content): Merge conflict in src/App.tsx
+Auto-merging src/components/Footer.tsx
+CONFLICT (content): Merge conflict in src/components/Footer.tsx
+Auto-merging src/components/HeroSection.tsx
+CONFLICT (content): Merge conflict in src/components/HeroSection.tsx
+Auto-merging src/components/home/FeatureCTAs.tsx
+CONFLICT (content): Merge conflict in src/components/home/FeatureCTAs.tsx
+Auto-merging src/components/ui/AnimatedBackground.tsx
+CONFLICT (add/add): Merge conflict in src/components/ui/AnimatedBackground.tsx
+Auto-merging src/layout/MainNavigation.tsx
+Auto-merging src/pages/AIServicesPage.tsx
+CONFLICT (add/add): Merge conflict in src/pages/AIServicesPage.tsx
+Auto-merging src/pages/CloudServicesPage.tsx
+CONFLICT (add/add): Merge conflict in src/pages/CloudServicesPage.tsx
+Auto-merging src/pages/DigitalTransformationPage.tsx
+CONFLICT (add/add): Merge conflict in src/pages/DigitalTransformationPage.tsx
+Auto-merging src/pages/Home.tsx
+CONFLICT (content): Merge conflict in src/pages/Home.tsx
+Auto-merging src/pages/ITServicesPage.tsx
+CONFLICT (add/add): Merge conflict in src/pages/ITServicesPage.tsx
+Auto-merging src/pages/ServicesOverviewPage.tsx
+CONFLICT (add/add): Merge conflict in src/pages/ServicesOverviewPage.tsx
+Automatic merge failed; fix conflicts and then commit the result.
+[2025-08-25 23:37:11] ✗ Merge failed for PR #6520, attempting advanced conflict resolution...
+[2025-08-25 23:37:11] Resolving complex conflicts for PR #6520 (cursor/enhance-app-with-new-services-and-futuristic-design-8eef)...
+[2025-08-25 23:37:11] Found unmerged files: package-lock.json
+package.json
+src/App.tsx
+src/components/Footer.tsx
+src/components/HeroSection.tsx
+src/components/home/FeatureCTAs.tsx
+src/pages/Home.tsx
+[2025-08-25 23:37:11] Processing unmerged file: package-lock.json
+[2025-08-25 23:37:11] File exists in HEAD, keeping it
+[2025-08-25 23:37:11] Processing unmerged file: package.json
+[2025-08-25 23:37:11] File exists in HEAD, keeping it
+[2025-08-25 23:37:12] Processing unmerged file: src/App.tsx
+[2025-08-25 23:37:12] File exists in HEAD, keeping it
+[2025-08-25 23:37:12] Processing unmerged file: src/components/Footer.tsx
+[2025-08-25 23:37:12] File exists in HEAD, keeping it
+[2025-08-25 23:37:12] Processing unmerged file: src/components/HeroSection.tsx
+[2025-08-25 23:37:12] File exists in HEAD, keeping it
+[2025-08-25 23:37:12] Processing unmerged file: src/components/home/FeatureCTAs.tsx
+[2025-08-25 23:37:12] File exists in HEAD, keeping it
+[2025-08-25 23:37:12] Processing unmerged file: src/pages/Home.tsx
+[2025-08-25 23:37:12] File exists in HEAD, keeping it
+[2025-08-25 23:37:12] Still have unmerged paths, attempting additional resolution...

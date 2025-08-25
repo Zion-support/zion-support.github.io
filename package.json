@@ -224,6 +224,7 @@
     "@radix-ui/react-toast": "^1.2.15",
     "@radix-ui/react-tooltip": "^1.0.7",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "@reduxjs/toolkit": "^2.8.2",
     "@stripe/stripe-js": "^2.3.0",
     "@supabase/supabase-js": "^2.39.3",
@@ -234,6 +235,8 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
     "@stripe/stripe-js": "^2.3.0",
     "@supabase/supabase-js": "^2.39.3",
     "@tanstack/react-query": "^5.17.19",
@@ -250,6 +253,10 @@
     "jspdf": "^2.5.1",
     "jspdf-autotable": "^3.8.1",
     "lucide-react": "^0.541.0",
+<<<<<<< HEAD
+=======
+    "next-themes": "^0.2.1",
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
     "react": "^18.2.0",
     "react-day-picker": "^8.10.0",
     "react-dom": "^18.2.0",
@@ -293,9 +300,12 @@
     "rimraf": "^5.0.5",
     "tailwindcss": "^3.4.1",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     "terser": "^5.43.1",
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
     "ts-jest": "^29.1.1",
     "typescript": "^5.2.2",
     "vite": "^5.0.8",
@@ -309,6 +319,7 @@
 <<<<<<< HEAD
 =======
   "overrides": {
+<<<<<<< HEAD
     "@humanwhocodes/object-schema": "@eslint/object-schema@1.0.0",
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -327,6 +338,9 @@
 =======
     "glob": "^10.3.10",
 >>>>>>> origin/cursor/website-audit-and-enhancement-7286
+=======
+    "glob": "^10.3.10",
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
     "rimraf": "^5.0.5"
   },
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fb01
@@ -336,6 +350,7 @@
     "glob": "^10.4.5",
     "rimraf": "^5.0.5",
     "@humanwhocodes/object-schema": "@eslint/object-schema@1.0.0"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -362,5 +377,7 @@
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6350
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-7286
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
   }
 }

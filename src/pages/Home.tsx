@@ -225,6 +225,7 @@ import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { EnhancedServicesShowcase } from "@/components/home/EnhancedServicesShowcase";
 import { BottomNavigation } from "@/components/MobileNavigation";
 import { MicroSaasServicesSection } from "@/components/home/MicroSaasServicesSection";
@@ -504,6 +505,9 @@ import { ServiceRecommendations } from "@/components/ServiceRecommendations";
 =======
 import { AdvancedServicesShowcase } from "@/components/home/AdvancedServicesShowcase";
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-1ab5
+=======
+import { AnimatedBackground, FloatingElements } from "@/components/ui/AnimatedBackground";
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
 
 export default function Home() {
   const features = [
@@ -591,6 +595,7 @@ export default function Home() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen bg-background" id="main-content">
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 =======
@@ -613,6 +618,9 @@ export default function Home() {
       <FuturisticBackground intensity="low" />
       
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a2e5
+=======
+    <div className="min-h-screen bg-background relative overflow-hidden">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
       <SEO 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -620,6 +628,7 @@ export default function Home() {
         description="Discover top AI and tech talent, services, and equipment in one place."
         keywords="AI, technology, marketplace, services, talent"
         canonical="https://ziontechgroup.com/"
+<<<<<<< HEAD
 =======
         title="Leading Tech & AI Marketplace - Connect with World-Class Talent & Services" 
         description="Zion Tech Group is the premier marketplace for AI talent, IT services, and cutting-edge technology solutions. Connect with 10,000+ verified professionals, get 24/7 global IT support, and accelerate your digital transformation."
@@ -635,9 +644,12 @@ export default function Home() {
         keywords="AI services, machine learning, cloud migration, cybersecurity, data analytics, tech talent, micro SAAS, IT services"
         canonical="https://ziontechgroup.com/"
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
       />
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-73d5
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       {/* Stats Section */}
@@ -657,6 +669,13 @@ export default function Home() {
               Our solutions are powering businesses around the world with proven results.
             </p>
           </motion.div>
+=======
+      {/* Animated Background */}
+      <AnimatedBackground variant="particles" intensity="medium" />
+      <FloatingElements />
+
+      <ITServiceRequestHero />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
 
 <<<<<<< HEAD
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">

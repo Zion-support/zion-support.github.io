@@ -39,6 +39,7 @@ import {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   PenTool,
   Link as LinkIcon,
   Shield,
@@ -65,6 +66,10 @@ import {
 =======
   Server
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2048
+=======
+  TrendingUp,
+  Cloud
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
 } from "lucide-react";
 =======
   Users, 
@@ -444,6 +449,7 @@ export function FeatureCTAs() {
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       title: "Services Marketplace",
       description: "Discover professional tech and AI services for your business needs, from development to consulting.",
       icon: <Zap className="h-12 w-12 p-3 rounded-2xl bg-gradient-to-br from-cyan-500 to-cyan-600 text-white shadow-lg" />,
@@ -462,6 +468,38 @@ export function FeatureCTAs() {
 =======
       details: "From on-demand IT support to specialized AI development, our marketplace offers verified services with transparent pricing and reviews."
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2f34
+=======
+      title: "AI Services",
+      description: "Comprehensive AI solutions including development, automation, analytics, and more.",
+      icon: <Zap className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />,
+      link: "/ai-services",
+      badge: "New",
+      details: "Transform your business with cutting-edge AI services including machine learning, automation, and intelligent analytics."
+    },
+    {
+      title: "IT Services",
+      description: "Professional IT services including infrastructure, security, cloud, and managed services.",
+      icon: <Settings className="h-10 w-10 p-2 rounded-md bg-amber-100 text-amber-700" />,
+      link: "/it-services",
+      badge: "Featured",
+      details: "Comprehensive IT solutions to modernize your infrastructure, enhance security, and drive business growth."
+    },
+    {
+      title: "Digital Transformation",
+      description: "End-to-end digital transformation services to modernize your business operations.",
+      icon: <TrendingUp className="h-10 w-10 p-2 rounded-md bg-emerald-100 text-emerald-700" />,
+      link: "/digital-transformation",
+      badge: "Strategic",
+      details: "Strategic digital transformation services including process automation, customer experience, and innovation labs."
+    },
+    {
+      title: "Cloud Services",
+      description: "Comprehensive cloud solutions including migration, architecture, and optimization.",
+      icon: <Cloud className="h-10 w-10 p-2 rounded-md bg-indigo-100 text-indigo-700" />,
+      link: "/cloud-services",
+      badge: "Scalable",
+      details: "Expert cloud services including migration, security, cost optimization, and multi-cloud strategies."
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
     },
     {
       title: "IT Services",
