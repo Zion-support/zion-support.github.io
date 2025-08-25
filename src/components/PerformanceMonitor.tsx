@@ -52,14 +52,14 @@ export const PerformanceMonitor: React.FC = () => {
     }
   };
 
-  const collectMetrics = () => {
+  const collectMetrics = async () => {
     const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     const paint = performance.getEntriesByType('paint');
     
     const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
-    const lcp = getLCP();
-    const fid = getFID();
-    const cls = getCLS();
+    const lcp = await getLCP();
+    const fid = await getFID();
+    const cls = await getCLS();
     const ttfb = navigation.responseStart - navigation.requestStart;
     const domLoad = navigation.domContentLoadedEventEnd - (navigation as any).navigationStart;
     const windowLoad = navigation.loadEventEnd - (navigation as any).navigationStart;
