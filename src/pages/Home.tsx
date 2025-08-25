@@ -201,12 +201,17 @@ const Home: React.FC = () => {
   };
 =======
 import React from 'react';
+<<<<<<< HEAD
 import { CategoriesSection } from "@/components/CategoriesSection";
 <<<<<<< HEAD
+=======
+import { EnhancedCategoriesSection } from "@/components/EnhancedCategoriesSection";
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-445a
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { NewsletterSection } from "@/components/NewsletterSection";
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
+<<<<<<< HEAD
 <<<<<<< HEAD
 import { HomePageSEO } from "@/components/SEO";
 import { HeroSection } from "@/components/HeroSection";
@@ -214,6 +219,10 @@ import { HeroSection } from "@/components/HeroSection";
 import { SEO } from "@/components/SEO";
 import { EnhancedHeroSection } from "@/components/home/EnhancedHeroSection";
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-dfab
+=======
+import { SEO } from "@/components/SEO";
+import { EnhancedHeroSection } from "@/components/home/EnhancedHeroSection";
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-445a
 import { QuickAccess } from "@/components/home/QuickAccess";
 import { FeatureCTAs } from "@/components/home/FeatureCTAs";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
@@ -637,6 +646,7 @@ export default function Home() {
       <SEO 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         title="Zion - The Tech & AI Marketplace" 
         description="Discover top AI and tech talent, services, and equipment in one place."
         keywords="AI, technology, marketplace, services, talent"
@@ -659,6 +669,12 @@ export default function Home() {
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
+=======
+        title="Zion Tech Group - The Tech & AI Marketplace" 
+        description="Discover top AI and tech talent, services, and equipment in one place. Transform your business with cutting-edge AI services, IT solutions, and intelligent automation tools."
+        keywords="AI, technology, marketplace, services, talent, micro SAAS, IT consulting, business automation, cloud migration, cybersecurity, data analytics"
+        canonical="https://ziontechgroup.com/"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-445a
       />
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-73d5
 
@@ -690,6 +706,7 @@ export default function Home() {
       <ITServiceRequestHero />
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -931,6 +948,9 @@ export default function Home() {
 =======
       <EnhancedHeroSection />
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-dfab
+=======
+      <EnhancedHeroSection />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-445a
       
       <QuickAccess />
       
@@ -948,6 +968,7 @@ export default function Home() {
       
       <FeatureHighlights />
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1197,6 +1218,9 @@ export default function Home() {
       
       {/* Benefits Section */}
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-681f
+=======
+      <EnhancedCategoriesSection />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-445a
       <BenefitsSection />
       
       {/* How It Works Section */}
