@@ -116,6 +116,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       key: 'services',
 <<<<<<< HEAD
       href: '/services',
@@ -372,6 +373,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'services',
       href: '/services',
       matches: (path: string) => path.startsWith('/services') || path.startsWith('/ai-services') || path.startsWith('/it-services') || path.startsWith('/digital-transformation') || path.startsWith('/cloud-services')
+=======
+      key: 'services',
+      href: '/micro-saas-services',
+      matches: (path: string) => path.startsWith('/micro-saas-services') || path.startsWith('/services') || path.startsWith('/it-onsite-services')
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-dfab
     },
     {
       key: 'marketplace',

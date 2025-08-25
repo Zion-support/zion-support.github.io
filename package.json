@@ -320,6 +320,7 @@
 =======
   "overrides": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "@humanwhocodes/object-schema": "@eslint/object-schema@1.0.0",
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -341,6 +342,10 @@
 =======
     "glob": "^10.3.10",
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
+=======
+    "@humanwhocodes/object-schema": "@eslint/object-schema@1.0.0",
+    "glob": "^10.3.10",
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-dfab
     "rimraf": "^5.0.5"
   },
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fb01
@@ -350,6 +355,7 @@
     "glob": "^10.4.5",
     "rimraf": "^5.0.5",
     "@humanwhocodes/object-schema": "@eslint/object-schema@1.0.0"
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -379,5 +385,7 @@
 >>>>>>> origin/cursor/website-audit-and-enhancement-7286
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-dfab
   }
 }

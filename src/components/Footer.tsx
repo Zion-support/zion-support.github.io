@@ -290,6 +290,7 @@ export function Footer() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <footer className="bg-zion-blue-dark border-t border-zion-blue-light pt-12 pb-8 relative overflow-hidden">
       {/* Futuristic Background Effects */}
@@ -332,6 +333,8 @@ export function Footer() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-ab27
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-bdc0
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-dfab
           <div>
 <<<<<<< HEAD
 =======
@@ -700,6 +703,7 @@ export function Footer() {
           <div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h3 className="text-white font-semibold mb-6 text-lg">Marketplace</h3>
             <ul className="space-y-3">
 =======
@@ -713,6 +717,15 @@ export function Footer() {
               <li><Link to="/digital-transformation" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Digital Transformation</Link></li>
               <li><Link to="/cloud-services" className="text-zion-cyan transition-colors">Cloud Services</Link></li>
               <li><Link to="/it-onsite-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Onsite Services</Link></li>
+=======
+            <h3 className="text-white font-semibold mb-4 text-lg">Services & Solutions</h3>
+            <ul className="space-y-2">
+              <li><Link to="/micro-saas-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Micro SAAS Services</Link></li>
+              <li><Link to="/services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">IT Services</Link></li>
+              <li><Link to="/it-onsite-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Onsite IT Support</Link></li>
+              <li><Link to="/zion-hire-ai" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Hiring Solutions</Link></li>
+              <li><Link to="/request-quote" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Request Quote</Link></li>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-dfab
             </ul>
           </div>
 
@@ -971,6 +984,7 @@ export function Footer() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h3 className="text-white font-semibold mb-6 text-lg">Support</h3>
             <ul className="space-y-3">
               <li><Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Contact</Link></li>
@@ -1023,6 +1037,19 @@ export function Footer() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-76ca
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-bdc0
+=======
+            <h3 className="text-white font-semibold mb-4 text-lg">Marketplace</h3>
+            <ul className="space-y-2">
+              <li><Link to="/marketplace" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Products</Link></li>
+              <li><Link to="/talent" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Talent</Link></li>
+              <li><Link to="/equipment" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Equipment</Link></li>
+              <li><Link to="/categories" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Categories</Link></li>
+              <li><Link to="/green-it" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Green IT</Link></li>
+            </ul>
+          </div>
+
+          <div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-dfab
             <h3 className="text-white font-semibold mb-4 text-lg">Subscribe to our newsletter</h3>
             <p className="text-zion-slate-light mb-4">
               Stay updated with the latest news on tech, AI, and marketplace opportunities.

@@ -207,13 +207,19 @@ import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { NewsletterSection } from "@/components/NewsletterSection";
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
+<<<<<<< HEAD
 import { HomePageSEO } from "@/components/SEO";
 import { HeroSection } from "@/components/HeroSection";
+=======
+import { SEO } from "@/components/SEO";
+import { EnhancedHeroSection } from "@/components/home/EnhancedHeroSection";
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-dfab
 import { QuickAccess } from "@/components/home/QuickAccess";
 import { FeatureCTAs } from "@/components/home/FeatureCTAs";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { MicroSaasShowcase } from "@/components/home/MicroSaasShowcase";
 import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -512,6 +518,9 @@ import { AnimatedBackground, FloatingElements } from "@/components/ui/AnimatedBa
 =======
 import { ServicesShowcase } from "@/components/ServicesShowcase";
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-ad2d
+=======
+import { MicroSaasShowcase } from "@/components/home/MicroSaasShowcase";
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-dfab
 
 export default function Home() {
   const features = [
@@ -681,6 +690,7 @@ export default function Home() {
       <ITServiceRequestHero />
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
 
+<<<<<<< HEAD
 <<<<<<< HEAD
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -918,16 +928,23 @@ export default function Home() {
       </section>
 =======
       <HeroSection />
+=======
+      <EnhancedHeroSection />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-dfab
       
       <QuickAccess />
       
       <FeatureCTAs />
       
 <<<<<<< HEAD
+<<<<<<< HEAD
       <MicroSaasServicesSection />
 =======
       <MicroSaasShowcase />
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-eb69
+=======
+      <MicroSaasShowcase />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-dfab
       
       <FeatureHighlights />
       

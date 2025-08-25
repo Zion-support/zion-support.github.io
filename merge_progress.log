@@ -3098,3 +3098,76 @@ tsconfig.json
 [2025-08-25 23:37:14] Processing unmerged file: tsconfig.json
 [2025-08-25 23:37:14] File exists in HEAD, keeping it
 [2025-08-25 23:37:15] Still have unmerged paths, attempting additional resolution...
+[main 64ca244f825] Merge PR #6518: cursor/expand-services-and-deploy-updates-ad2d (advanced conflict resolution)
+[2025-08-25 23:37:16] ✓ Advanced conflict resolution successful for PR #6518
+[2025-08-25 23:37:16] ✓ PR #6518 processed successfully
+==========================================
+
+
+==========================================
+[2025-08-25 23:37:16] Processing PR #6517 from branch: cursor/enhance-app-with-new-services-and-futuristic-design-dfab
+==========================================
+[2025-08-25 23:37:16] Processing PR #6517 from branch: cursor/enhance-app-with-new-services-and-futuristic-design-dfab
+[2025-08-25 23:37:17] Attempting regular merge...
+Auto-merging package-lock.json
+CONFLICT (content): Merge conflict in package-lock.json
+Auto-merging package.json
+CONFLICT (content): Merge conflict in package.json
+Auto-merging pages/talent/[id].tsx
+CONFLICT (content): Merge conflict in pages/talent/[id].tsx
+Auto-merging src/App.tsx
+CONFLICT (content): Merge conflict in src/App.tsx
+Auto-merging src/components/Footer.tsx
+CONFLICT (content): Merge conflict in src/components/Footer.tsx
+Auto-merging src/components/header/Header.tsx
+CONFLICT (content): Merge conflict in src/components/header/Header.tsx
+Auto-merging src/components/home/EnhancedHeroSection.tsx
+CONFLICT (add/add): Merge conflict in src/components/home/EnhancedHeroSection.tsx
+Auto-merging src/components/home/MicroSaasShowcase.tsx
+CONFLICT (add/add): Merge conflict in src/components/home/MicroSaasShowcase.tsx
+Auto-merging src/data/microSaasServices.ts
+CONFLICT (add/add): Merge conflict in src/data/microSaasServices.ts
+Auto-merging src/index.css
+CONFLICT (content): Merge conflict in src/index.css
+Auto-merging src/layout/MainNavigation.tsx
+CONFLICT (content): Merge conflict in src/layout/MainNavigation.tsx
+Auto-merging src/pages/Home.tsx
+CONFLICT (content): Merge conflict in src/pages/Home.tsx
+Auto-merging src/pages/MicroSaasServicesPage.tsx
+CONFLICT (add/add): Merge conflict in src/pages/MicroSaasServicesPage.tsx
+Auto-merging tailwind.config.ts
+CONFLICT (content): Merge conflict in tailwind.config.ts
+Automatic merge failed; fix conflicts and then commit the result.
+[2025-08-25 23:37:17] ✗ Merge failed for PR #6517, attempting advanced conflict resolution...
+[2025-08-25 23:37:17] Resolving complex conflicts for PR #6517 (cursor/enhance-app-with-new-services-and-futuristic-design-dfab)...
+[2025-08-25 23:37:17] Found unmerged files: package-lock.json
+package.json
+pages/talent/[id].tsx
+src/App.tsx
+src/components/Footer.tsx
+src/components/header/Header.tsx
+src/index.css
+src/layout/MainNavigation.tsx
+src/pages/Home.tsx
+tailwind.config.ts
+[2025-08-25 23:37:17] Processing unmerged file: package-lock.json
+[2025-08-25 23:37:17] File exists in HEAD, keeping it
+[2025-08-25 23:37:17] Processing unmerged file: package.json
+[2025-08-25 23:37:17] File exists in HEAD, keeping it
+[2025-08-25 23:37:17] Processing unmerged file: pages/talent/[id].tsx
+[2025-08-25 23:37:17] File exists in HEAD, keeping it
+[2025-08-25 23:37:17] Processing unmerged file: src/App.tsx
+[2025-08-25 23:37:17] File exists in HEAD, keeping it
+[2025-08-25 23:37:17] Processing unmerged file: src/components/Footer.tsx
+[2025-08-25 23:37:17] File exists in HEAD, keeping it
+[2025-08-25 23:37:17] Processing unmerged file: src/components/header/Header.tsx
+[2025-08-25 23:37:17] File exists in HEAD, keeping it
+[2025-08-25 23:37:17] Processing unmerged file: src/index.css
+[2025-08-25 23:37:17] File exists in HEAD, keeping it
+[2025-08-25 23:37:17] Processing unmerged file: src/layout/MainNavigation.tsx
+[2025-08-25 23:37:17] File exists in HEAD, keeping it
+[2025-08-25 23:37:17] Processing unmerged file: src/pages/Home.tsx
+[2025-08-25 23:37:17] File exists in HEAD, keeping it
+[2025-08-25 23:37:18] Processing unmerged file: tailwind.config.ts
+[2025-08-25 23:37:18] File exists in HEAD, keeping it
+[2025-08-25 23:37:18] Still have unmerged paths, attempting additional resolution...

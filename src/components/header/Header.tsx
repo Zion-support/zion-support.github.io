@@ -496,6 +496,7 @@ export function Header() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/95 backdrop-blur-md shadow-lg shadow-zion-purple/10"
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-da9e
 =======
@@ -568,6 +569,9 @@ export function Header() {
           : 'bg-zion-blue-dark/90 backdrop-blur-md border-b border-zion-purple/20'
       }`}
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2f34
+=======
+      className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-gradient-to-r from-zion-blue-dark/95 via-zion-slate/95 to-zion-purple-dark/95 backdrop-blur-xl shadow-2xl shadow-zion-purple/10"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-dfab
       style={headerStyle}
     >
       {/* Animated background elements */}
