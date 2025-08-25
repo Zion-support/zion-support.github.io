@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect, Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -214,8 +212,177 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <SEOHead {...SEOConfigs.home} />
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
+      <SEOHead {...seoMetadata} />
+      description: "Custom SaaS applications designed to streamline operations and boost productivity. Built with modern technologies and best practices.",
+      image: "/images/hero-saas.jpg",
+      cta: "Learn More",
+      path: "/services/micro-saas-solutions",
+      features: ["Custom Development", "Scalable Architecture", "API Integration", "User Management"]
+    }
+  ];
+
+  const stats = [
+    { icon: Users, value: "500+", label: "Happy Clients", description: "Trusted by businesses worldwide" },
+    { icon: TrendingUp, value: "95%", label: "Success Rate", description: "Proven track record of delivery" },
+    { icon: Award, value: "10+", label: "Years Experience", description: "Deep industry expertise" },
+    { icon: Globe, value: "25+", label: "Countries Served", description: "Global reach and support" }
+  ];
+
+  const featuredServices = [
+    {
+      title: "AI Business Intelligence",
+      description: "Transform data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive modeling, and automated reporting.",
+      icon: Brain,
+      path: "/services/ai-business-intelligence",
+      category: "AI Solutions",
+      price: "$2,500/mo",
+      rating: 4.9,
+      reviewCount: 127,
+      highlights: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "AI Insights"],
+      features: ["Machine Learning", "Data Visualization", "API Integration", "24/7 Support", "Custom Alerts", "Performance Monitoring"]
+    },
+    {
+      title: "Cloud Infrastructure",
+      description: "Scalable cloud solutions designed for enterprise performance and security. Optimize costs while maintaining high availability and performance.",
+      icon: Cloud,
+      path: "/services/cloud-infrastructure",
+      category: "Infrastructure",
+      price: "$1,800/mo",
+      rating: 4.8,
+      reviewCount: 89,
+      highlights: ["99.9% Uptime", "Auto-scaling", "Security First", "Cost Optimization"],
+      features: ["AWS/Azure/GCP", "Load Balancing", "Backup & Recovery", "Monitoring", "Security Compliance", "Disaster Recovery"]
+    },
+    {
+      title: "Cybersecurity Solutions",
+      description: "Comprehensive security services to protect your digital assets and data. Stay ahead of threats with proactive security measures.",
+      icon: Shield,
+      path: "/services/cybersecurity",
+      category: "Security",
+      price: "$3,200/mo",
+      rating: 4.9,
+      reviewCount: 156,
+      highlights: ["Threat Detection", "Compliance Ready", "24/7 Monitoring", "Incident Response"],
+      features: ["Penetration Testing", "Security Audits", "Incident Response", "Training", "Vulnerability Assessment", "Security Architecture"]
+    }
+  ];
+
+  const whyChooseUs = [
+    {
+      icon: Zap,
+      title: "Lightning Fast",
+      description: "Optimized performance and rapid deployment with cutting-edge technologies"
+    },
+    {
+      icon: Lock,
+      title: "Secure by Design",
+      description: "Enterprise-grade security built into every solution from the ground up"
+    },
+    {
+      icon: Cpu,
+      title: "Scalable Architecture",
+      description: "Grow without limits with our flexible and scalable infrastructure solutions"
+    },
+    {
+      icon: Database,
+      title: "Data-Driven",
+      description: "Insights that drive better business decisions and strategic planning"
+    }
+  ];
+
+  const trustSignals = [
+    { icon: Eye, label: "Transparent Pricing", description: "No hidden fees or surprises" },
+    { icon: Heart, label: "Customer First", description: "Your success is our priority" },
+    { icon: TargetIcon, label: "Results Focused", description: "Measurable outcomes guaranteed" },
+    { icon: Sparkles, label: "Innovation Leader", description: "Cutting-edge technology solutions" }
+  ];
+
+  const aiServices = [
+    {
+      title: "AI Autonomous Systems",
+      description: "Self-managing AI systems that operate independently",
+      icon: Bot,
+      path: "/services/ai-autonomous-systems",
+      features: ["Self-Learning", "Automated Decision Making", "Continuous Optimization"]
+    },
+    {
+      title: "Quantum Technology",
+      description: "Next-generation computing solutions",
+      icon: Microchip,
+      path: "/services/quantum-technology",
+      features: ["Quantum Computing", "Quantum Security", "Quantum Algorithms"]
+    },
+    {
+      title: "Machine Learning",
+      description: "Custom ML models for your business needs",
+      icon: Brain,
+      path: "/ai-solutions",
+      features: ["Custom Models", "Training Data", "Model Deployment"]
+    }
+  ];
+
+  const industrySolutions = [
+    {
+      title: "Healthcare",
+      description: "AI-powered healthcare solutions",
+      icon: ShieldCheck,
+      path: "/solutions/healthcare",
+      features: ["Patient Care", "Diagnostics", "Administrative Efficiency"]
+    },
+    {
+      title: "Finance",
+      description: "Financial technology innovations",
+      icon: BarChart,
+      path: "/solutions/enterprise",
+      features: ["Risk Management", "Fraud Detection", "Automated Trading"]
+    },
+    {
+      title: "Manufacturing",
+      description: "Smart manufacturing solutions",
+      icon: Cpu,
+      path: "/solutions/enterprise",
+      features: ["Predictive Maintenance", "Quality Control", "Supply Chain Optimization"]
+    }
+  ];
+
+  useEffect(() => {
+    let interval: NodeJS.Timeout;
+    
+    if (isAutoPlaying) {
+      interval = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+      }, 6000);
+    }
+
+    return () => {
+      if (interval) clearInterval(interval);
+    };
+  }, [isAutoPlaying, heroSlides.length]);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    setIsAutoPlaying(false);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+    setIsAutoPlaying(false);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+    setIsAutoPlaying(false);
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
+      <SEOHead {...seoMetadata} />
+>>>>>>> origin/main
       
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
@@ -719,6 +886,12 @@ const Home: React.FC = () => {
       </Suspense>
     </div>
   );
+<<<<<<< HEAD
 };
 
 export default Home;
+=======
+}
+
+export default Home;
+>>>>>>> origin/main
