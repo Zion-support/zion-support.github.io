@@ -8,6 +8,7 @@
   "display": "standalone",
   "background_color": "#0f172a",
   "theme_color": "#10B981",
+<<<<<<< HEAD
 =======
   "name": "Zion Tech Group - AI-Powered Business Solutions",
   "short_name": "Zion Tech",
@@ -26,6 +27,8 @@
   "background_color": "#1e40af",
   "theme_color": "#1e40af",
 >>>>>>> origin/main
+=======
+>>>>>>> origin/main
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en",
@@ -40,6 +43,9 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
       "src": "/icons/icon-72x72.png",
 =======
       "src": "/images/icon-72x72.png",
@@ -75,11 +81,14 @@
     {
 <<<<<<< HEAD
       "src": "/icons/icon-192x192.png",
+<<<<<<< HEAD
 =======
       "src": "/logo192.png",
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
 =======
       "src": "/images/icon-192x192.png",
+>>>>>>> origin/main
+=======
 >>>>>>> origin/main
       "sizes": "192x192",
       "type": "image/png",
@@ -88,6 +97,9 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
       "src": "/icons/icon-384x384.png",
 =======
       "src": "/images/icon-384x384.png",
@@ -101,6 +113,7 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable any"
+<<<<<<< HEAD
 =======
       "src": "/logo512.png",
       "sizes": "512x512",
@@ -151,6 +164,8 @@
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Zion Tech Group Mobile View"
+=======
+>>>>>>> origin/main
     }
   ],
   "shortcuts": [
@@ -187,6 +202,9 @@
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
       "name": "Pricing",
       "short_name": "Pricing",
       "description": "View pricing plans",
@@ -199,7 +217,11 @@
 >>>>>>> origin/main
       "icons": [
         {
+<<<<<<< HEAD
           "src": "/images/services-icon.png",
+=======
+          "src": "/icons/icon-96x96.png",
+>>>>>>> origin/main
           "sizes": "96x96"
 =======
       "name": "Services",
@@ -222,7 +244,11 @@
       "url": "/contact",
       "icons": [
         {
+<<<<<<< HEAD
           "src": "/images/contact-icon.png",
+=======
+          "src": "/icons/icon-96x96.png",
+>>>>>>> origin/main
           "sizes": "96x96"
 =======
       "description": "Get in touch with our team",
@@ -272,7 +298,16 @@
     "client_mode": "navigate-existing"
   },
   "handle_links": "preferred",
+<<<<<<< HEAD
   "capture_links": "new-client",
+=======
+  "protocol_handlers": [
+    {
+      "protocol": "web+zion",
+      "url": "/?protocol=%s"
+    }
+  ],
+>>>>>>> origin/main
   "file_handlers": [
     {
 <<<<<<< HEAD
@@ -297,12 +332,15 @@
       }
     }
   ],
+<<<<<<< HEAD
   "protocol_handlers": [
     {
       "protocol": "web+zion",
       "url": "/protocol-handler?protocol=%s"
     }
   ],
+=======
+>>>>>>> origin/main
   "share_target": {
     "action": "/share",
     "method": "POST",

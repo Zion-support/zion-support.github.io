@@ -11,6 +11,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
 import { 
   X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, 
   Shield, Handshake, ChevronDown, ChevronRight, Brain, Cpu, Database, Network, Code, Palette, 
@@ -19,6 +22,7 @@ import {
   TestTube, PenTool, Building2, Atom, FileText, Quote, Newspaper, Calendar, Video, HelpCircle, 
   LifeBuoy, Store, PieChart, Share2, Monitor, Smartphone
 } from 'lucide-react';
+<<<<<<< HEAD
 =======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Brain, Cpu, Database, Network, Zap, Target, Rocket, Cloud, Github } from 'lucide-react';
 >>>>>>> origin/cursor/website-audit-and-enhancement-efd3
@@ -52,6 +56,8 @@ import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitte
 =======
 import { X, Home, Briefcase, Users, Phone, Mail, MapPin, Globe, Linkedin, Twitter, Facebook, Instagram, Shield, Handshake, Eye } from 'lucide-react';
 >>>>>>> origin/cursor/website-audit-and-enhancement-3121
+=======
+>>>>>>> origin/main
 import { Link, useLocation } from 'react-router-dom';
 import { useSidebar } from '../context/SidebarContext';
 
@@ -75,6 +81,7 @@ export default function Sidebar() {
 
   const navigationItems = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       title: 'Main',
@@ -130,6 +137,15 @@ export default function Sidebar() {
         { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
         { name: 'About', path: '/about', icon: Users },
 >>>>>>> origin/cursor/website-audit-and-enhancement-803a
+=======
+      title: 'Main',
+      items: [
+        { name: 'Home', path: '/', icon: Home },
+        { name: 'Services', path: '/services', icon: Briefcase },
+        { name: 'Solutions', path: '/solutions/enterprise', icon: Briefcase },
+        { name: 'Pricing', path: '/pricing', icon: DollarSign },
+        { name: 'About', path: '/about', icon: Users },
+>>>>>>> origin/main
         { name: 'Contact', path: '/contact', icon: Phone }
       ]
     },
@@ -146,6 +162,7 @@ export default function Sidebar() {
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-3121
       title: 'AI & Autonomous Systems',
+<<<<<<< HEAD
       items: [
 <<<<<<< HEAD
         { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Brain },
@@ -268,6 +285,8 @@ export default function Sidebar() {
     },
     {
       title: '5G & Network Solutions',
+=======
+>>>>>>> origin/main
       items: [
         { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Briefcase },
         { name: '5G Enterprise Network', path: '/5g-enterprise-network', icon: Briefcase },
@@ -382,6 +401,7 @@ export default function Sidebar() {
         { name: '5G Enterprise Solutions', path: '/5g-enterprise-solutions', icon: Network },
         { name: 'Autonomous Business Operations Platform', path: '/autonomous-business-operations-platform', icon: Briefcase },
         { name: 'AI Powered IT Asset Management', path: '/ai-powered-it-asset-management', icon: Database }
+<<<<<<< HEAD
 =======
       title: 'AI & Autonomous Systems',
       items: [
@@ -1154,6 +1174,48 @@ export default function Sidebar() {
         { name: 'Contact Support', path: '/support', icon: Phone },
         { name: 'Status Page', path: '/status', icon: Globe }
 >>>>>>> origin/cursor/website-audit-and-enhancement-1f82
+=======
+      ]
+    },
+    {
+      title: 'Solutions & Industries',
+      items: [
+        { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
+        { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart },
+        { name: 'Financial Solutions', path: '/solutions/financial', icon: DollarSign },
+        { name: 'Manufacturing Solutions', path: '/solutions/manufacturing', icon: Building2 },
+        { name: 'Retail Solutions', path: '/solutions/retail', icon: ShoppingCart },
+        { name: 'Government Solutions', path: '/solutions/government', icon: Building },
+        { name: 'Space Technology', path: '/space-tech', icon: Rocket },
+        { name: 'Research & Development', path: '/research-development', icon: Search },
+        { name: 'Quantum Cloud Infrastructure', path: '/quantum-cloud-infrastructure', icon: Cloud },
+        { name: 'Quantum Financial Trading', path: '/quantum-financial-trading', icon: DollarSign },
+        { name: 'Quantum Services', path: '/quantum-services', icon: Atom }
+      ]
+    },
+    {
+      title: 'Company & Resources',
+      items: [
+        { name: 'About Us', path: '/about', icon: Users },
+        { name: 'Our Mission', path: '/mission', icon: Target },
+        { name: 'Team', path: '/team', icon: Users },
+        { name: 'Leadership', path: '/leadership', icon: Users },
+        { name: 'Partners', path: '/partners', icon: Handshake },
+        { name: 'Careers', path: '/careers', icon: Briefcase },
+        { name: 'Case Studies', path: '/case-studies', icon: FileText },
+        { name: 'Testimonials', path: '/testimonials', icon: Quote },
+        { name: 'News', path: '/news', icon: Newspaper },
+        { name: 'Blog', path: '/blog', icon: PenTool },
+        { name: 'Events', path: '/events', icon: Calendar },
+        { name: 'Webinars', path: '/webinars', icon: Video },
+        { name: 'White Papers', path: '/white-papers', icon: FileText },
+        { name: 'Documentation', path: '/docs', icon: FileText },
+        { name: 'Help Center', path: '/help', icon: HelpCircle },
+        { name: 'Support', path: '/support', icon: LifeBuoy },
+        { name: 'FAQ', path: '/faq', icon: HelpCircle },
+        { name: 'Marketplace', path: '/marketplace', icon: Store },
+        { name: 'Community', path: '/community', icon: Users }
+>>>>>>> origin/main
       ]
     }
   ];
@@ -1166,6 +1228,7 @@ export default function Sidebar() {
   ];
 
   const socialLinks = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1210,6 +1273,12 @@ export default function Sidebar() {
     { icon: Github, href: 'https://github.com/Zion-Holdings', label: 'GitHub' },
     { icon: Youtube, href: 'https://www.youtube.com/@ziontechgroup', label: 'YouTube' }
 >>>>>>> origin/cursor/website-audit-and-enhancement-2b07
+=======
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/zion-tech-group', label: 'LinkedIn' },
+    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
+    { icon: Facebook, href: 'https://facebook.com/ziontechgroup', label: 'Facebook' },
+    { icon: Instagram, href: 'https://instagram.com/ziontechgroup', label: 'Instagram' }
+>>>>>>> origin/main
   ];
 
   const sidebarVariants = {
@@ -1231,6 +1300,7 @@ export default function Sidebar() {
     }
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1462,12 +1532,91 @@ export default function Sidebar() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+  const overlayVariants = {
+    closed: { opacity: 0 },
+    open: { opacity: 1 }
+  };
+
+  return (
+    <>
+      {/* Overlay */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            variants={overlayVariants}
+            initial="closed"
+            animate="open"
+            exit="closed"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
+            onClick={onClose}
+          />
+        )}
+      </AnimatePresence>
+
+      {/* Sidebar */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            variants={sidebarVariants}
+            initial="closed"
+            animate="open"
+            exit="closed"
+            className="fixed left-0 top-0 h-full w-80 max-w-[90vw] z-50 overflow-hidden"
+          >
+            {/* Futuristic Background */}
+            <div className="absolute inset-0 futuristic-bg opacity-80"></div>
+            <div className="absolute inset-0 cyber-grid-bg opacity-30"></div>
+            
+            {/* Neural Network Lines */}
+            <div className="absolute inset-0 pointer-events-none">
+              <div className="neural-line" style={{ top: '20%', width: '60%', left: '20%', animationDelay: '0s' }}></div>
+              <div className="neural-line" style={{ top: '40%', width: '40%', left: '10%', animationDelay: '1s' }}></div>
+              <div className="neural-line" style={{ top: '60%', width: '70%', left: '15%', animationDelay: '2s' }}></div>
+              <div className="neural-line" style={{ top: '80%', width: '50%', left: '25%', animationDelay: '3s' }}></div>
+            </div>
+
+            {/* Floating Quantum Elements */}
+            <div className="absolute inset-0 pointer-events-none">
+              <div className="quantum-particle" style={{ top: '15%', left: '80%', animationDelay: '0s' }}></div>
+              <div className="quantum-particle" style={{ top: '35%', left: '85%', animationDelay: '1s' }}></div>
+              <div className="quantum-particle" style={{ top: '55%', left: '90%', animationDelay: '2s' }}></div>
+              <div className="quantum-particle" style={{ top: '75%', left: '88%', animationDelay: '3s' }}></div>
+            </div>
+
+            <div className="relative h-full flex flex-col">
+              {/* Header */}
+              <div className="flex items-center justify-between p-6 border-b border-zion-cyan/30">
+                <div className="flex items-center gap-3">
+                  <div className="relative">
+                    <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center animate-quantum-float">
+                      <span className="text-white font-bold text-xl">Z</span>
+                    </div>
+                    <div className="absolute -top-1 -right-1 w-3 h-3 bg-zion-cyan rounded-full animate-ping"></div>
+                  </div>
+                  <div>
+                    <h2 className="text-xl font-bold neon-text">Zion Tech</h2>
+                    <p className="text-sm text-zion-slate-light">Navigation</p>
+                  </div>
+                </div>
+                <button
+                  onClick={onClose}
+                  className="p-2 futuristic-card hover:bg-white/20 rounded-lg transition-colors group"
+                >
+                  <X className="w-5 h-5 text-zion-slate-light group-hover:neon-text transition-colors" />
+                </button>
+              </div>
+
+>>>>>>> origin/main
               {/* Navigation Content */}
               <div className="flex-1 overflow-y-auto p-6 space-y-6">
                 {/* Main Navigation */}
                 {navigationItems.map((section) => (
                   <div key={section.title} className="space-y-3">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
                     <button
                       onClick={() => toggleSection(section.title)}
                       className="flex items-center justify-between w-full text-sm font-semibold text-zion-cyan uppercase tracking-wider neon-text hover:bg-white/10 rounded-lg p-2 transition-colors"
@@ -1508,6 +1657,7 @@ export default function Sidebar() {
                         })}
                       </div>
                     )}
+<<<<<<< HEAD
 =======
                     <h3 className="text-sm font-semibold text-zion-cyan uppercase tracking-wider neon-text">
 =======
@@ -1562,6 +1712,8 @@ export default function Sidebar() {
                       ))}
                     </ul>
 >>>>>>> origin/cursor/website-audit-and-enhancement-a3a9
+=======
+>>>>>>> origin/main
                   </div>
                 ))}
               </nav>
@@ -1578,6 +1730,9 @@ export default function Sidebar() {
                   </h3>
                   <div className="space-y-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
                     <Link
                       to="/contact"
                       className="w-full quantum-button py-3 px-4 rounded-lg font-medium transform hover:scale-105 transition-transform text-center"
@@ -1587,6 +1742,7 @@ export default function Sidebar() {
                     <button className="w-full futuristic-card border border-zion-cyan/30 text-zion-cyan py-3 px-4 rounded-lg font-medium hover:bg-zion-cyan/10 transition-colors">
                       Schedule Demo
                     </button>
+<<<<<<< HEAD
 =======
             {/* Navigation */}
             <div className="p-6 space-y-8">
@@ -1670,6 +1826,8 @@ export default function Sidebar() {
                       Schedule Demo
                     </Link>
 >>>>>>> origin/cursor/website-audit-and-enhancement-118f
+=======
+>>>>>>> origin/main
                   </div>
 =======
                   {contactInfo.map((contact, index) => (
@@ -1682,6 +1840,7 @@ export default function Sidebar() {
                   ))}
 >>>>>>> origin/cursor/website-audit-and-enhancement-a3a9
                 </div>
+<<<<<<< HEAD
               ))}
             </div>
 
@@ -1881,6 +2040,10 @@ export default function Sidebar() {
                   ))}
 >>>>>>> origin/cursor/website-audit-and-enhancement-4b00
 =======
+=======
+              </div>
+
+>>>>>>> origin/main
               {/* Footer */}
               <div className="border-t border-zion-cyan/30 p-6 space-y-4">
                 {/* Contact Info */}
@@ -1889,6 +2052,7 @@ export default function Sidebar() {
                   <div className="space-y-2">
                     {contactInfo.map((contact, index) => {
                       const Icon = contact.icon;
+<<<<<<< HEAD
 =======
             className="fixed left-0 top-0 h-full w-80 bg-background/95 backdrop-blur-md border-r border-border z-50 overflow-y-auto"
           >
@@ -1920,48 +2084,55 @@ export default function Sidebar() {
                       const IconComponent = item.icon;
                       const isActive = location.pathname === item.path;
 >>>>>>> origin/cursor/website-audit-and-enhancement-232f
+=======
+>>>>>>> origin/main
                       return (
-                        <Link
-                          key={item.name}
-                          to={item.path}
-                          className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                            isActive
-                              ? 'text-zion-cyan bg-zion-cyan/10 border border-zion-cyan/20'
-                              : 'text-muted-foreground hover:text-foreground hover:bg-muted'
-                          }`}
+                        <a
+                          key={index}
+                          href={contact.href}
+                          className="flex items-center gap-3 text-sm text-zion-slate-light hover:neon-text transition-colors group"
                         >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
                           <Icon className="w-4 h-4 text-zion-cyan group-hover:neon-text" />
-                          <span className="flex-1 text-xs">{contact.text}</span>
+                          <span className="flex-1">{contact.text}</span>
                         </a>
+<<<<<<< HEAD
 =======
                           <IconComponent className="w-4 h-4 flex-shrink-0" />
                           <span className="truncate">{item.name}</span>
                         </Link>
 >>>>>>> origin/cursor/website-audit-and-enhancement-232f
+=======
+>>>>>>> origin/main
                       );
                     })}
                   </div>
                 </div>
-              ))}
-            </nav>
 
-            {/* Contact Information */}
-            <div className="p-6 border-t border-border">
-              <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">
-                Contact Information
-              </h3>
-              <div className="space-y-3">
-                {contactInfo.map((contact, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <contact.icon className="w-4 h-4 text-zion-cyan flex-shrink-0" />
-                    <a 
-                      href={contact.href} 
-                      className="text-sm text-muted-foreground hover:text-foreground transition-colors truncate"
-                    >
-                      {contact.text}
-                    </a>
+                {/* Social Links */}
+                <div className="space-y-3">
+                  <h4 className="text-sm font-semibold text-zion-cyan neon-text">Follow Us</h4>
+                  <div className="flex gap-3">
+                    {socialLinks.map((social, index) => {
+                      const Icon = social.icon;
+                      return (
+                        <a
+                          key={index}
+                          href={social.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-2 futuristic-card hover:bg-white/20 rounded-lg transition-colors group"
+                          aria-label={social.label}
+                        >
+                          <Icon className="w-4 h-4 text-zion-slate-light group-hover:neon-text transition-colors" />
+                        </a>
+                      );
+                    })}
                   </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                 </div>
 
@@ -2227,5 +2398,24 @@ export default function Sidebar() {
         </>
       )}
     </AnimatePresence>
+=======
+                </div>
+
+                {/* Company Info */}
+                <div className="text-center pt-4 border-t border-zion-cyan/20">
+                  <p className="text-xs text-zion-slate-light">
+                    © 2024 Zion Tech Group
+                  </p>
+                  <p className="text-xs text-zion-slate-light mt-1">
+                    Transforming Business with AI & Tech
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+>>>>>>> origin/main
   );
 }

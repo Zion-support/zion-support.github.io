@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-ee8a
@@ -493,6 +494,8 @@ export default function Sitemap() {
             Navigate through our comprehensive range of services, solutions, and resources. 
             Find everything you need to transform your business with cutting-edge technology.
 =======
+=======
+>>>>>>> origin/main
 import { 
   Brain, 
   Cpu, 

@@ -7,6 +7,7 @@
   "display": "standalone",
   "background_color": "#0f172a",
   "theme_color": "#10B981",
+<<<<<<< HEAD
 =======
   "name": "Zion Tech Group - AI-Powered Business Solutions",
   "short_name": "Zion Tech",
@@ -16,6 +17,8 @@
   "background_color": "#ffffff",
   "theme_color": "#667eea",
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
+=======
+>>>>>>> origin/main
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en-US",
@@ -23,6 +26,9 @@
   "icons": [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
       "src": "/icons/icon-72x72.png",
       "sizes": "72x72",
       "type": "image/png",
@@ -54,15 +60,21 @@
     },
     {
       "src": "/icons/icon-192x192.png",
+<<<<<<< HEAD
 =======
       "src": "/logo192.png",
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
+=======
+>>>>>>> origin/main
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable any"
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
       "src": "/icons/icon-384x384.png",
       "sizes": "384x384",
       "type": "image/png",
@@ -73,6 +85,7 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable any"
+<<<<<<< HEAD
 =======
       "src": "/logo512.png",
       "sizes": "512x512",
@@ -107,6 +120,8 @@
       "form_factor": "narrow",
       "label": "Zion Tech Group Mobile View"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
+=======
+>>>>>>> origin/main
     }
   ],
   "shortcuts": [
@@ -135,6 +150,9 @@
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
       "name": "Pricing",
       "short_name": "Pricing",
       "description": "View pricing plans",
@@ -166,6 +184,7 @@
         {
           "src": "/icons/icon-96x96.png",
           "sizes": "96x96"
+<<<<<<< HEAD
 =======
       "description": "Get in touch with our team",
       "url": "/contact",
@@ -174,6 +193,8 @@
           "src": "/logo192.png",
           "sizes": "192x192"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-601c
+=======
+>>>>>>> origin/main
         }
       ]
     }

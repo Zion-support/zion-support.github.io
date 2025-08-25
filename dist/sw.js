@@ -20,6 +20,9 @@ const STATIC_ASSETS = [
   '/static/css/main.css',
   '/manifest.json',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
   '/offline.html',
   '/css/index.css',
   '/js/index.js',
@@ -54,8 +57,13 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
+<<<<<<< HEAD
         console.log('Opened static cache');
         return cache.addAll(STATIC_ASSETS);
+=======
+        console.log('Caching static files');
+        return cache.addAll(STATIC_FILES);
+>>>>>>> origin/main
       })
       .then(() => {
         console.log('Static assets cached');
@@ -77,6 +85,9 @@ self.addEventListener('activate', (event) => {
   
   event.waitUntil(
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
     caches.keys()
       .then((cacheNames) => {
         return Promise.all(
@@ -171,6 +182,7 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(handleDefaultRequest(request));
 });
 
+<<<<<<< HEAD
 // Handle API requests
 async function handleApiRequest(request) {
   try {
@@ -308,6 +320,8 @@ function isCriticalAsset(request) {
   );
 }
 
+=======
+>>>>>>> origin/main
 // Background sync for offline actions
 self.addEventListener('sync', (event) => {
   console.log('Background sync triggered:', event.tag);

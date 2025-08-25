@@ -109,6 +109,7 @@ interface AccessibilitySettings {
   screenReader: boolean;
   keyboardNavigation: boolean;
   focusIndicator: boolean;
+<<<<<<< HEAD
   colorBlindSupport: boolean;
 }
 
@@ -167,6 +168,9 @@ interface AccessibilityIssue {
   colorBlindMode: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
   deviceMode: 'desktop' | 'tablet' | 'mobile';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-638c
+=======
+  theme: 'light' | 'dark' | 'auto';
+>>>>>>> origin/main
 }
 
 interface EnhancedAccessibilityProps {
@@ -229,6 +233,7 @@ export const EnhancedAccessibility: React.FC = () => {
     keyboardNavigation: false,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     focusIndicator: true,
     colorBlindSupport: false,
 =======
@@ -246,6 +251,10 @@ export const EnhancedAccessibility: React.FC = () => {
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-3b7b
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-0fd3
+=======
+    focusIndicator: true,
+    theme: 'auto'
+>>>>>>> origin/main
   });
   const [activeTab, setActiveTab] = useState<'quick' | 'advanced' | 'help'>('quick');
   const [announcement, setAnnouncement] = useState<string>('');

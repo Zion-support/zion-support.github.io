@@ -8,6 +8,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -2358,6 +2359,9 @@ export default function CaseStudies() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-232f
 =======
 import React from 'react';
+=======
+import React, { useState } from 'react';
+>>>>>>> origin/main
 import { Link } from 'react-router-dom';
 import { ArrowRight, Star, TrendingUp, Users, DollarSign, Clock, Target, Award, CheckCircle, Lightbulb, Zap, Shield, Globe, Database, Cloud, Brain, Atom, Rocket, Wifi, Building2 } from 'lucide-react';
 
@@ -2538,7 +2542,54 @@ const CaseStudies = () => {
           </motion.div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-bd86
         </div>
+<<<<<<< HEAD
       </div>
+=======
+      </section>
+
+      {/* Filters Section */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-6 justify-center items-center">
+            {/* Industry Filter */}
+            <div className="flex flex-wrap gap-3">
+              {industries.map((industry) => (
+                <button
+                  key={industry.id}
+                  onClick={() => setSelectedIndustry(industry.id)}
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg border transition-all duration-300 ${
+                    selectedIndustry === industry.id
+                      ? 'border-cyan-500 bg-cyan-500/20 text-cyan-400'
+                      : 'border-gray-600 text-gray-400 hover:border-cyan-500/50 hover:text-cyan-400'
+                  }`}
+                >
+                  <industry.icon className="w-4 h-4" />
+                  <span>{industry.name}</span>
+                </button>
+              ))}
+            </div>
+
+            {/* Service Filter */}
+            <div className="flex flex-wrap gap-3">
+              {services.map((service) => (
+                <button
+                  key={service.id}
+                  onClick={() => setSelectedService(service.id)}
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg border transition-all duration-300 ${
+                    selectedService === service.id
+                      ? 'border-purple-500 bg-purple-500/20 text-purple-400'
+                      : 'border-gray-600 text-gray-400 hover:border-purple-500/50 hover:text-purple-400'
+                  }`}
+                >
+                  <service.icon className="w-4 h-4" />
+                  <span>{service.name}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+>>>>>>> origin/main
 
 <<<<<<< HEAD
       {/* Case Studies Grid */}
@@ -2549,6 +2600,9 @@ const CaseStudies = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
 <<<<<<< HEAD
@@ -2628,6 +2682,7 @@ const CaseStudies = () => {
                     {study.tags.map((tag, index) => (
                       <span key={index} className="text-xs bg-gray-700 text-gray-300 px-2 py-1 rounded">
                         {tag}
+<<<<<<< HEAD
 =======
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -2653,6 +2708,10 @@ const CaseStudies = () => {
                     <span className="text-sm text-gray-400">{caseStudy.company}</span>
                     <span className="text-gray-500">•</span>
                     <span className="text-sm text-gray-400">{caseStudy.industry}</span>
+=======
+                      </span>
+                    ))}
+>>>>>>> origin/main
                   </div>
 
                   {/* Title */}
@@ -3462,6 +3521,7 @@ const CaseStudies = () => {
               </div>
             ))}
           </div>
+<<<<<<< HEAD
         </div>
       </section>
 
@@ -3490,6 +3550,8 @@ const CaseStudies = () => {
             ))}
           </div>
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
 
           {filteredCaseStudies.length === 0 && (
             <div className="text-center py-20">
@@ -3498,6 +3560,7 @@ const CaseStudies = () => {
               <p className="text-gray-500">Try adjusting your filters to see more results.</p>
             </div>
           )}
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-ee8a
 =======
@@ -3561,10 +3624,13 @@ const CaseStudies = () => {
           </div>
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-232f
+=======
+>>>>>>> origin/main
         </div>
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3610,6 +3676,8 @@ const CaseStudies = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/main
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
@@ -3618,6 +3686,7 @@ const CaseStudies = () => {
           <p className="text-xl text-gray-400 mb-8">
             Let's discuss how our AI and technology solutions can transform your business 
             and deliver measurable results like the ones you see above.
+<<<<<<< HEAD
 =======
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/50 to-purple-900/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -3646,6 +3715,8 @@ const CaseStudies = () => {
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Join the ranks of industry leaders who have transformed their operations with our AI and quantum technologies.
 >>>>>>> origin/cursor/website-audit-and-enhancement-1f82
+=======
+>>>>>>> origin/main
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -3653,6 +3724,9 @@ const CaseStudies = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >
               <Zap className="w-5 h-5 mr-2" />
@@ -3664,6 +3738,7 @@ const CaseStudies = () => {
             >
               <Rocket className="w-5 h-5 mr-2" />
               Explore Our Services
+<<<<<<< HEAD
 =======
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             >
@@ -4191,6 +4266,10 @@ const CaseStudies = () => {
             </div>
           </motion.div>
 >>>>>>> origin/cursor/website-audit-and-enhancement-bd86
+=======
+            </Link>
+          </div>
+>>>>>>> origin/main
         </div>
       </section>
     </div>
