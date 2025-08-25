@@ -792,7 +792,7 @@ h3 {
 
 /* Enhanced Responsive Design */
 @media (max-width: 768px) {
-  .quantum-grid {
+  .quantum-matrix-grid {
     background-size: 25px 25px;
     opacity: 0.35;
   }
