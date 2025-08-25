@@ -6,6 +6,8 @@ import Sidebar from './components/Sidebar';
 import { AccessibilityControls } from './components/AccessibilityControls';
 import { PerformanceDashboard } from './components/PerformanceDashboard';
 import { AnalyticsDashboard } from './components/AnalyticsDashboard';
+import EnhancedPerformanceDashboard from './components/EnhancedPerformanceDashboard';
+import EnhancedAnalytics from './components/EnhancedAnalytics';
 import { AIChatbot } from './components/AIChatbot';
 import { CollaborativeTextEditor } from './components/CollaborativeTextEditor';
 import { AICodeGenerator } from './components/AICodeGenerator';
@@ -130,8 +132,75 @@ const App = () => {
                 </Suspense>
               </main>
               <Footer />
-              <Toaster />
-              <SonnerToaster position="top-right" />
+              <SonnerToaster />
+              
+              {/* Enhanced Accessibility Controls */}
+              <AccessibilityControls position="bottom-right" />
+              
+              {/* AI Chatbot - Always Available */}
+              <AIChatbot />
+              
+              {/* Collaborative Text Editor - Development Mode */}
+              {import.meta.env.DEV && (
+                <div className="fixed bottom-24 left-6 z-40 w-96">
+                  <CollaborativeTextEditor
+                    roomId="dev-editor"
+                    userId="dev-user"
+                    userName="Developer"
+                    initialContent="Welcome to the collaborative text editor! Start typing to see AI suggestions and real-time collaboration features."
+                    enableAI={true}
+                    enableCollaboration={true}
+                    enableVersioning={true}
+                  />
+                </div>
+              )}
+              
+              {/* AI Code Generator - Development Mode */}
+              {import.meta.env.DEV && (
+                <div className="fixed bottom-24 right-6 z-40 w-96">
+                  <AICodeGenerator />
+                </div>
+              )}
+              
+              {/* Development Dashboards */}
+              {import.meta.env.DEV && (
+                <>
+                  {/* Enhanced Performance Dashboard */}
+                  <EnhancedPerformanceDashboard />
+                  
+                  {/* Enhanced Analytics Dashboard */}
+                  <EnhancedAnalytics />
+                  
+                  {/* Enterprise Dashboard */}
+                  <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-40">
+                    <EnterpriseDashboard />
+                  </div>
+                  
+                  {/* Security & Compliance Dashboard */}
+                  <div className="fixed top-4 right-1/2 transform translate-x-1/2 z-40">
+                    <MachineLearningDashboard />
+                  </div>
+                </>
+              )}
+              
+              {/* Performance Optimizer - Always Available */}
+              <PerformanceOptimizer showMetrics={import.meta.env.DEV} />
+              
+              {/* Link Health Monitor - Development Mode */}
+              {import.meta.env.DEV && (
+                <LinkHealthMonitor
+                  links={[
+                    'https://ziontechgroup.com',
+                    'https://www.linkedin.com/company/ziontechgroup',
+                    'https://twitter.com/ziontechgroup',
+                    'https://github.com/ziontechgroup',
+                    'https://www.youtube.com/@ziontechgroup'
+                  ]}
+                  autoCheck={true}
+                  checkInterval={600000} // 10 minutes
+                  timeout={5000} // 5 seconds
+                />
+              )}
             </div>
           </AccessibilityEnhancer>
         </ThemeProvider>
