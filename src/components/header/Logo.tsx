@@ -1,20 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-interface LogoProps {
-  customLogo?: string;
-  customColor?: string;
-}
-
-export function Logo({ customLogo, customColor }: LogoProps) {
-  const logoColor = customColor || '#3b82f6'; // Default blue color
-  
+export const Logo: React.FC = () => {
   return (
-    <Link to="/" className="flex items-center">
-      <div className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent" style={colorToUse ? { color: colorToUse } : {}}>
-        {isWhitelabel ? brandName : 'ZION'} <span className="text-zion-cyan">TECH</span>
+    <Link to="/" className="flex items-center space-x-2">
+      <div className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-zion-cyan via-blue-500 to-zion-cyan bg-clip-text text-transparent">
+        Zion Tech
       </div>
-      <span className="text-xl font-bold text-white">Zion Tech Group</span>
+      <div className="text-xs lg:text-sm text-gray-300 font-medium">Group</div>
     </Link>
   );
-}
+};

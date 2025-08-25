@@ -41,7 +41,6 @@ import {
   Zap as ZapIcon
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
-import { SEOConfigs } from '../components/SEOHead';
 
 // Lazy load components for better performance
 const LazyServicesSection = React.lazy(() => import('../components/home/ServicesSection'));
@@ -251,7 +250,11 @@ const Home: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
-      <SEOHead {...SEOConfigs.home} />
+      <SEOHead config={{
+        title: "Zion Tech Group - AI-Powered Business Solutions",
+        description: "Pioneering the future with AI-powered solutions, quantum technology, and innovative IT services. Transform your business with cutting-edge technology.",
+        keywords: "AI solutions, artificial intelligence, IT services, cybersecurity, cloud infrastructure, digital transformation, micro SaaS, quantum technology"
+      }} />
       
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">

@@ -1,275 +1,286 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  MapPinIcon, 
-  PhoneIcon, 
-  EnvelopeIcon, 
-  ClockIcon,
-  ChatBubbleLeftRightIcon
-} from '@heroicons/react/24/outline';
+import React, { useState } from 'react';
+import { SEO } from '../components/SEO';
+import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 
 const Contact: React.FC = () => {
-  const contactMethods = [
-    {
-      name: 'Phone Support',
-      description: 'Speak directly with our technical experts',
-      icon: PhoneIcon,
-      contact: '+1 (302) 464-0950',
-      href: 'tel:+13024640950',
-      available: '24/7'
-    },
-    {
-      name: 'Email Support',
-      description: 'Send us detailed inquiries and get comprehensive responses',
-      icon: EnvelopeIcon,
-      contact: 'info@ziontechgroup.com',
-      href: 'mailto:info@ziontechgroup.com',
-      available: 'Within 4 hours'
-    },
-    {
-      name: 'Live Chat',
-      description: 'Get instant help from our AI-powered support team',
-      icon: ChatBubbleLeftRightIcon,
-      contact: 'Available Now',
-      href: '#',
-      available: '24/7'
-    }
-  ];
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const officeLocations = [
-    {
-      name: 'Global Headquarters',
-      address: '364 E Main St STE 1008',
-      city: 'Middletown, DE 19709',
-      country: 'United States',
-      icon: MapPinIcon,
-      hours: 'Mon-Fri: 9:00 AM - 6:00 PM EST'
-    }
-  ];
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
 
-  const contactMethods = [
-    {
-      name: "Headquarters",
-      address: "364 E Main St STE 1008, Middletown DE 19709",
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com"
-    }
-  ];
-
-  const services = [
-    "AI & Autonomous Systems",
-    "Quantum Technology",
-    "Cybersecurity",
-    "IT Infrastructure",
-    "Micro SAAS Solutions",
-    "Industry Solutions",
-    "Custom Development",
-    "Consulting Services"
-  ];
-
-  if (isSubmitted) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white flex items-center justify-center">
-        <div className="text-center">
-          <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-6">
-            <CheckCircle className="w-10 h-10 text-white" />
-          </div>
-          <h1 className="text-4xl font-bold text-white mb-4">Thank You!</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Your message has been sent successfully. We'll get back to you within 24 hours.
-          </p>
-          <Link 
-            to="/" 
-            className="btn-primary text-lg px-8 py-4"
-          >
-            Return to Home
-          </Link>
-        </div>
-      </div>
-    );
-  }
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+    
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setIsSubmitted(false);
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        subject: '',
+        message: ''
+      });
+    }, 3000);
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Header Section */}
-      <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
-          >
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+      <SEO 
+        title="Contact Us | Zion Tech Group"
+        description="Get in touch with Zion Tech Group for technology consulting, AI solutions, and digital transformation services."
+      />
+      
+      {/* Hero Section */}
+      <section className="pt-32 pb-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Get in Touch
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-gray-300 max-w-3xl mx-auto"
-          >
-            Ready to transform your business with cutting-edge AI and technology solutions? 
-            Our team is here to help you succeed.
-          </motion.p>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Ready to transform your business with cutting-edge technology? 
+            Let's discuss how we can help you achieve your goals.
+          </p>
         </div>
-      </div>
+      </section>
 
-      {/* Contact Methods */}
-      <div className="px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="max-w-7xl mx-auto">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-            {contactMethods.map((method, index) => (
-              <div key={index} className="text-center group">
-                <div className={`w-16 h-16 bg-gradient-to-r ${method.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <method.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{method.title}</h3>
-                <div 
-                  className="text-cyan-400 font-medium mb-2"
-                  dangerouslySetInnerHTML={{ __html: method.details }}
-                />
-                <p className="text-gray-400 text-sm">{method.description}</p>
+      {/* Contact Information */}
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center p-8 bg-gray-800/50 rounded-xl border border-gray-700">
+              <div className="w-16 h-16 bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail className="w-8 h-8 text-blue-400" />
               </div>
-            ))}
+              <h3 className="text-xl font-semibold mb-2">Email</h3>
+              <p className="text-gray-300 mb-4">info@ziontechgroup.com</p>
+              <a 
+                href="mailto:info@ziontechgroup.com"
+                className="text-blue-400 hover:text-blue-300 transition-colors"
+              >
+                Send Email
+              </a>
+            </div>
+
+            <div className="text-center p-8 bg-gray-800/50 rounded-xl border border-gray-700">
+              <div className="w-16 h-16 bg-green-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Phone className="w-8 h-8 text-green-400" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Phone</h3>
+              <p className="text-gray-300 mb-4">+1 302 464 0950</p>
+              <a 
+                href="tel:+13024640950"
+                className="text-green-400 hover:text-green-300 transition-colors"
+              >
+                Call Now
+              </a>
+            </div>
+
+            <div className="text-center p-8 bg-gray-800/50 rounded-xl border border-gray-700">
+              <div className="w-16 h-16 bg-purple-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MapPin className="w-8 h-8 text-purple-400" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Office</h3>
+              <p className="text-gray-300 mb-4">
+                364 E Main St STE 1008<br />
+                Middletown, DE 19709
+              </p>
+              <a 
+                href="https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-purple-400 hover:text-purple-300 transition-colors"
+              >
+                View on Map
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Contact Form Section */}
+      {/* Contact Form */}
       <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">
-                Send Us a Message
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Tell us about your project and we'll get back to you with a customized solution
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold mb-4">
+              Send Us a Message
+            </h2>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              Fill out the form below and we'll get back to you within 24 hours. 
+              We're here to help with all your technology needs.
+            </p>
+          </div>
+
+          {isSubmitted ? (
+            <div className="text-center p-8 bg-green-600/20 border border-green-600/30 rounded-xl">
+              <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
+              <h3 className="text-2xl font-semibold mb-2">Message Sent!</h3>
+              <p className="text-gray-300">
+                Thank you for contacting us. We'll get back to you soon.
               </p>
             </div>
-            
-            <form onSubmit={handleSubmit} className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium mb-2">
                     Full Name *
                   </label>
                   <input
                     type="text"
                     id="name"
                     name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
                     placeholder="Enter your full name"
                   />
                 </div>
+
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium mb-2">
                     Email Address *
                   </label>
                   <input
                     type="email"
                     id="email"
                     name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
                     placeholder="Enter your email address"
                   />
                 </div>
               </div>
-              
-              <div className="mt-8 bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden">
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.678901234567!2d-75.7166667!3d39.4500000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c7c8c8c8c8c8c8%3A0x8c8c8c8c8c8c8c8c!2s364%20E%20Main%20St%2C%20Middletown%2C%20DE%2019709!5e0!3m2!1sen!2sus!4v1651234567890!5m2!1sen!2sus" 
-                  width="100%" 
-                  height="300" 
-                  style={{ border: 0 }} 
-                  allowFullScreen={true} 
-                  loading="lazy" 
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Zion Office Location - Middletown, DE"
-                ></iframe>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="company" className="block text-sm font-medium mb-2">
+                    Company
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
+                    placeholder="Enter your company name"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="subject" className="block text-sm font-medium mb-2">
+                    Subject *
+                  </label>
+                  <select
+                    id="subject"
+                    name="subject"
+                    required
+                    value={formData.subject}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white"
+                  >
+                    <option value="">Select a subject</option>
+                    <option value="AI Solutions">AI Solutions</option>
+                    <option value="Cybersecurity">Cybersecurity</option>
+                    <option value="Cloud Services">Cloud Services</option>
+                    <option value="Digital Transformation">Digital Transformation</option>
+                    <option value="Consulting">Consulting</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
               </div>
 
-              <div className="mb-6">
-                <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                  Service of Interest
-                </label>
-                <select
-                  id="service"
-                  name="service"
-                  value={formData.service}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                >
-                  <option value="">Select a service</option>
-                  {services.map((service, index) => (
-                    <option key={index} value={service}>{service}</option>
-                  ))}
-                </select>
-              </div>
-
-              <div className="mb-8">
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium mb-2">
                   Message *
                 </label>
                 <textarea
                   id="message"
                   name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
-                  placeholder="Tell us about your project, requirements, or questions..."
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400 resize-none"
+                  placeholder="Tell us about your project, requirements, or any questions you have..."
                 />
               </div>
 
               <div className="text-center">
                 <button
                   type="submit"
-                  className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+                  disabled={isSubmitting}
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <Send className="w-5 h-5" />
-                  <span>Send Message</span>
+                  {isSubmitting ? (
+                    <>
+                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-5 h-5 mr-2" />
+                      Send Message
+                    </>
+                  )}
                 </button>
               </div>
             </form>
-          </motion.div>
+          )}
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient">
-            Ready to Get Started?
+      {/* Additional Information */}
+      <section className="py-20 bg-gray-800/30">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold mb-6">
+            Why Choose Zion Tech Group?
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Don't wait to transform your business with cutting-edge technology
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link 
-              to="/get-started" 
-              className="btn-primary text-lg px-8 py-4"
-            >
-              Get Started Today
-            </Link>
-            <Link 
-              to="/services" 
-              className="btn-secondary text-lg px-8 py-4"
-            >
-              Explore Our Services
-            </Link>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+              <h3 className="text-xl font-semibold mb-3">Expert Team</h3>
+              <p className="text-gray-300">
+                Our experienced professionals bring deep expertise in AI, cybersecurity, 
+                and digital transformation.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-3">Innovative Solutions</h3>
+              <p className="text-gray-300">
+                We leverage cutting-edge technology to deliver innovative solutions 
+                that drive business growth.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-3">Proven Results</h3>
+              <p className="text-gray-300">
+                We have a track record of successful projects and satisfied clients 
+                across various industries.
+              </p>
+            </div>
           </div>
         </div>
       </section>
