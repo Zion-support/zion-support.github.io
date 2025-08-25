@@ -1,7 +1,10 @@
 User-agent: *
 Allow: /
 
+<<<<<<< HEAD
 # Sitemaps
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-638c
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
 # Disallow admin and private areas
@@ -11,13 +14,17 @@ Disallow: /api/
 Disallow: /_next/
 
 # Allow important pages
+Allow: /
 Allow: /services/
 Allow: /ai-solutions/
 Allow: /about/
 Allow: /contact/
 Allow: /blog/
 Allow: /news/
+<<<<<<< HEAD
 Allow: /case-studies/
 
 # Crawl delay
 Crawl-delay: 1
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-638c
