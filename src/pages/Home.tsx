@@ -107,28 +107,28 @@ const Home: React.FC = () => {
       features: ["Machine Learning", "Data Visualization", "API Integration", "24/7 Support", "Custom Alerts", "Performance Monitoring"]
     },
     {
-      title: "Cloud Infrastructure",
-      description: "Scalable cloud solutions designed for enterprise performance and security. Optimize costs while maintaining high availability and performance.",
-      icon: Cloud,
-      path: "/services/cloud-infrastructure",
-      category: "Infrastructure",
-      price: "$1,800/mo",
-      rating: 4.8,
-      reviewCount: 89,
-      highlights: ["99.9% Uptime", "Auto-scaling", "Security First", "Cost Optimization"],
-      features: ["AWS/Azure/GCP", "Load Balancing", "Backup & Recovery", "Monitoring", "Security Compliance", "Disaster Recovery"]
+      title: "Zero Trust Security",
+      description: "Advanced zero trust security architecture with continuous verification, micro-segmentation, and automated threat response for enterprise-grade protection.",
+      icon: Shield,
+      path: "/enhanced-services-showcase",
+      category: "Cybersecurity",
+      price: "$3,500/mo",
+      rating: 4.9,
+      reviewCount: 203,
+      highlights: ["Zero Trust", "Micro-segmentation", "Continuous Verification", "Automated Response"],
+      features: ["Identity Management", "Network Security", "Threat Detection", "Compliance", "24/7 Monitoring", "AI-Powered Analytics"]
     },
     {
-      title: "Cybersecurity Solutions",
-      description: "Comprehensive security services to protect your digital assets and data. Stay ahead of threats with proactive security measures.",
-      icon: Shield,
-      path: "/services/cybersecurity",
-      category: "Security",
-      price: "$3,200/mo",
-      rating: 4.9,
+      title: "Multi-Cloud Management",
+      description: "Unified multi-cloud management platform with cost optimization, performance monitoring, and automated resource management across all cloud providers.",
+      icon: Cloud,
+      path: "/enhanced-services-showcase",
+      category: "Cloud & DevOps",
+      price: "$2,800/mo",
+      rating: 4.8,
       reviewCount: 156,
-      highlights: ["Threat Detection", "Compliance Ready", "24/7 Monitoring", "Incident Response"],
-      features: ["Penetration Testing", "Security Audits", "Incident Response", "Training", "Vulnerability Assessment", "Security Architecture"]
+      highlights: ["Multi-Cloud", "Cost Optimization", "Unified Management", "Automation"],
+      features: ["AWS/Azure/GCP", "Cost Management", "Performance Monitoring", "Security", "Automation", "Compliance"]
     }
   ];
 
@@ -269,6 +269,14 @@ const Home: React.FC = () => {
               aria-label="Explore all our services"
             >
               Explore Services
+            </Link>
+            
+            <Link
+              to="/enhanced-services-showcase"
+              className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25"
+              aria-label="View our enhanced innovative services"
+            >
+              Enhanced Services
             </Link>
           </div>
         </div>
@@ -441,6 +449,105 @@ const Home: React.FC = () => {
                 </Link>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Enhanced Services Showcase Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Enhanced <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Innovative Services</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Discover our cutting-edge technology solutions designed to transform your business with AI, quantum computing, cybersecurity, and more
+            </p>
+            <Link
+              to="/enhanced-services-showcase"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25"
+            >
+              Explore Enhanced Services
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+
+          {/* Service Categories Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* AI & Machine Learning */}
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-3 bg-purple-500/20 rounded-lg">
+                  <Brain className="w-8 h-8 text-purple-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white">AI & Machine Learning</h3>
+              </div>
+              <p className="text-gray-300 mb-4">
+                Advanced AI solutions including business intelligence, content generation, video analytics, and predictive maintenance.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="px-2 py-1 bg-purple-500/20 text-purple-400 text-xs rounded-full">AI Analytics</span>
+                <span className="px-2 py-1 bg-purple-500/20 text-purple-400 text-xs rounded-full">Content Generation</span>
+                <span className="px-2 py-1 bg-purple-500/20 text-purple-400 text-xs rounded-full">Predictive ML</span>
+              </div>
+              <div className="text-2xl font-bold text-purple-400 mb-2">From $899/mo</div>
+              <Link
+                to="/enhanced-services-showcase"
+                className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
+              >
+                Learn More <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+
+            {/* Cybersecurity */}
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-3 bg-cyan-500/20 rounded-lg">
+                  <Shield className="w-8 h-8 text-cyan-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white">Cybersecurity</h3>
+              </div>
+              <p className="text-gray-300 mb-4">
+                Enterprise-grade security solutions including zero trust architecture, threat detection, and cloud security.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">Zero Trust</span>
+                <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">Threat Detection</span>
+                <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">Cloud Security</span>
+              </div>
+              <div className="text-2xl font-bold text-cyan-400 mb-2">From $1,800/mo</div>
+              <Link
+                to="/enhanced-services-showcase"
+                className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+              >
+                Learn More <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+
+            {/* Cloud & DevOps */}
+            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="p-3 bg-blue-500/20 rounded-lg">
+                  <Cloud className="w-8 h-8 text-blue-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white">Cloud & DevOps</h3>
+              </div>
+              <p className="text-gray-300 mb-4">
+                Advanced cloud infrastructure and DevOps automation with multi-cloud management and container orchestration.
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">Multi-Cloud</span>
+                <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">CI/CD</span>
+                <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">Kubernetes</span>
+              </div>
+              <div className="text-2xl font-bold text-blue-400 mb-2">From $1,800/mo</div>
+              <Link
+                to="/enhanced-services-showcase"
+                className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
+              >
+                Learn More <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
