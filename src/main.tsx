@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/build-and-fix-errors-fb38
 import React from 'react'
@@ -47,9 +48,15 @@ if ('serviceWorker' in navigator) {
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { HelmetProvider } from 'react-helmet-async';
+=======
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
 import App from './App';
 import { AppWrapper } from './AppWrapper';
 import './index.css';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
 
 // Performance monitoring setup
@@ -70,9 +77,20 @@ window.addEventListener('error', (event) => {
   console.error('Uncaught error:', event.error);
   // In production, you might want to send this to an error reporting service
 });
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+const rootElement = document.getElementById('root');
+
+if (!rootElement) {
+  throw new Error('Root element not found');
+}
+
+const root = ReactDOM.createRoot(rootElement);
+
+root.render(
   <React.StrictMode>
+<<<<<<< HEAD
     <HelmetProvider>
 <<<<<<< HEAD
       <BrowserRouter>
@@ -98,3 +116,10 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   </React.StrictMode>,
 )
 >>>>>>> origin/cursor/build-and-fix-errors-fb38
+=======
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
+);
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -14,6 +15,18 @@ import {
   Rocket,
   Lightbulb
 } from 'lucide-react';
+=======
+
+import { Users, Target, Award, Zap, Globe, Shield, Sparkles, Lightbulb, TrendingUp } from 'lucide-react';
+
+export default function AboutPage() {
+  const stats = [
+    { label: 'Years of Experience', value: '5+', icon: Award },
+    { label: 'Projects Completed', value: '100+', icon: Target },
+    { label: 'Happy Clients', value: '50+', icon: Users },
+    { label: 'Team Members', value: '15+', icon: Users }
+  ];
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
 
 const AboutPage: React.FC = () => {
   const values = [

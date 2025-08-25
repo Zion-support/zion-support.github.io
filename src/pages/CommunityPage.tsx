@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -157,6 +158,9 @@ const CommunityPage: React.FC = () => {
   const filteredTopics = forumTopics.filter(topic => 
     selectedCategory === 'all' || topic.category === selectedCategory
   );
+=======
+
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">

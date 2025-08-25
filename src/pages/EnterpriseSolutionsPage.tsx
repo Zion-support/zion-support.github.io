@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
@@ -42,6 +43,10 @@ import {
   BarChart3
 } from 'lucide-react';
 >>>>>>> origin/cursor/website-audit-and-enhancement-796c
+=======
+import { useState } from 'react';
+import { Search, Star, Users, Zap, Brain, Shield, Settings, Phone, Mail, MapPin } from 'lucide-react';
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
 
 const EnterpriseSolutionsPage = () => {
   const enterpriseServices = [

@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+import { useState } from 'react';
+import { Search, Star, Users, Zap, Brain, Shield, Settings, Phone, Mail, MapPin } from 'lucide-react';
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
 
 import { motion } from 'framer-motion';
 import ComprehensiveServicesShowcase from '../components/ComprehensiveServicesShowcase';

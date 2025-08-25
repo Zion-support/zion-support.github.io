@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
 
 <<<<<<< HEAD
 import React, { useState } from 'react';

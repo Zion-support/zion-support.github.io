@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
+=======
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
 import { ChevronUp } from 'lucide-react';
 
 export const ScrollToTop: React.FC = () => {

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { Suspense } from 'react';
+=======
+
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { PageSkeleton } from './components/LoadingSkeleton';
 import { usePerformance } from './hooks/usePerformance';

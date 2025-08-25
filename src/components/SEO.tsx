@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
@@ -26,9 +30,16 @@ interface SEOProps {
   canonical?: string;
   ogImage?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   ogType?: 'website' | 'article' | 'product';
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6685
+=======
+  ogUrl?: string;
+  canonical?: string;
+  ogType?: string;
+  twitterCard?: string;
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
   structuredData?: object;
 =======
   title?: string;
@@ -144,6 +155,7 @@ export function SEO({
   publishedTime,
   modifiedTime,
   section,
+<<<<<<< HEAD
   tags = [],
   canonical,
   noindex = false,
@@ -151,12 +163,22 @@ export function SEO({
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullUrl = canonical || url;
+=======
+  tags = []
+}: SEOProps) => {
+  const siteName = 'Zion Tech Group';
+  const siteUrl = 'https://ziontechgroup.com';
+  const fullTitle = title?.includes(siteName) ? title : `${title} | ${siteName}`;
+  const fullUrl = canonical || ogUrl || `${siteUrl}${window.location.pathname}`;
+  const fullOgImage = ogImage?.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
   
   // Handle keywords - convert string to array if needed
   const keywordsArray = Array.isArray(keywords) ? keywords : keywords.split(',').map(k => k.trim());
   
   // Structured data for organization
   const organizationSchema = {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-60a2
 =======
   title: string;
@@ -394,6 +416,33 @@ export function SEO({
           }
         }
       ]
+=======
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Zion Tech Group',
+    url: siteUrl,
+    logo: `${siteUrl}/logo.png`,
+    description: 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.',
+    sameAs: [
+      'https://linkedin.com/company/ziontechgroup',
+      'https://twitter.com/ziontechgroup',
+      'https://github.com/ziontechgroup'
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+1-302-464-0950',
+      contactType: 'customer service',
+      email: 'kleber@ziontechgroup.com',
+      areaServed: 'Worldwide'
+    },
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'US',
+      addressLocality: 'Middletown',
+      addressRegion: 'DE',
+      postalCode: '19709',
+      streetAddress: '364 E Main St STE 1008'
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
     }
 <<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6685
@@ -455,6 +504,7 @@ export function SEO({
       "@type": "Organization",
       "name": "Zion Tech Group"
     },
+<<<<<<< HEAD
 =======
     "description": "Your comprehensive marketplace for all things technology and AI",
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
@@ -622,10 +672,48 @@ export function SEO({
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
+=======
+    publisher: {
+      '@type': 'Organization',
+      name: siteName,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteUrl}/logo.png`
+      }
+    },
+    datePublished: publishedTime,
+    dateModified: modifiedTime,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': fullUrl
+    },
+    ...(section && { articleSection: section }),
+    ...(tags.length > 0 && { keywords: tags.join(', ') })
+  } : null;
+
+  return (
+    <Helmet>
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
+      
+      {/* Open Graph */}
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={fullOgImage} />
+      <meta property="og:url" content={fullUrl} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:site_name" content={siteName} />
+      
+      {/* Twitter */}
+      <meta name="twitter:card" content={twitterCard} />
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       
+<<<<<<< HEAD
       {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#0891b2" />
@@ -814,11 +902,20 @@ export function SEO({
       {/* Structured Data */}
       <script type="application/ld+json">
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3bbb
+=======
+      {/* Canonical */}
+      <link rel="canonical" href={fullUrl} />
+      
+      {/* Structured Data */}
+      <script type="application/ld+json">
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
         {JSON.stringify(organizationSchema)}
       </script>
+      
       <script type="application/ld+json">
         {JSON.stringify(websiteSchema)}
       </script>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <script type="application/ld+json">
@@ -918,6 +1015,14 @@ export function SEO({
       <link rel="manifest" href="/site.webmanifest" />
 <<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f698
+=======
+      
+      {articleSchema && (
+        <script type="application/ld+json">
+          {JSON.stringify(articleSchema)}
+        </script>
+      )}
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
     </Helmet>
   );
 }
@@ -1006,6 +1111,7 @@ export function TalentPageSEO({
     />
   );
 }
+<<<<<<< HEAD
 =======
 export default SEO;
 
@@ -1067,3 +1173,5 @@ export default SEO;
   );
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6b26
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef

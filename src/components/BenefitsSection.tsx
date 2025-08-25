@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { GradientHeading } from "./GradientHeading";
 import { FeatureCard } from "./FeatureCard";
 import { Bot, Clock, Globe, TrendingDown, Zap, Shield, Users, Award } from "lucide-react";
@@ -83,6 +84,10 @@ const additionalFeatures = [
     color: "text-zion-cyan-light"
   }
 ];
+=======
+
+import { CheckCircle, Zap, Shield, Users, Globe, TrendingUp } from 'lucide-react';
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
 
 export function BenefitsSection() {
   const containerVariants = {

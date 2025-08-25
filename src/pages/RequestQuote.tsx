@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
 
 <<<<<<< HEAD
 <<<<<<< HEAD

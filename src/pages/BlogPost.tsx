@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -123,6 +124,9 @@ const BlogPost = () => {
       replies: 1
     }
   ];
+=======
+
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
 
   return (
     <div className="min-h-screen bg-background py-20">

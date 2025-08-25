@@ -4,6 +4,7 @@ import { twMerge } from "tailwind-merge";
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 
@@ -115,4 +116,6 @@ export function isTablet(): boolean {
 export function isDesktop(): boolean {
   return !isMobile() && !isTablet();
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6e83
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
 }

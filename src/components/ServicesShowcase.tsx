@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -9,6 +10,84 @@ import {
   RocketLaunchIcon,
   ChartBarIcon
 } from '@heroicons/react/24/outline';
+=======
+import { useState } from 'react';
+
+// Mock data for services since the comprehensiveServices file was removed
+const SERVICE_CATEGORIES = [
+  { id: 1, name: "AI Services", count: 10, icon: "🤖" },
+  { id: 2, name: "Micro SAAS", count: 8, icon: "💻" },
+  { id: 3, name: "IT Services", count: 12, icon: "🖥️" },
+  { id: 4, name: "Blockchain & Web3", count: 5, icon: "⛓️" },
+  { id: 5, name: "IoT & Edge Computing", count: 6, icon: "🌐" },
+  { id: 6, name: "Emerging Technologies", count: 4, icon: "🔮" },
+  { id: 7, name: "Cybersecurity Services", count: 3, icon: "🔒" },
+  { id: 8, name: "Data Science & Analytics", count: 4, icon: "📊" }
+];
+
+const COMPREHENSIVE_SERVICES = [
+  {
+    id: "ai-1",
+    name: "AI-Powered Chatbot Development",
+    description: "Custom AI chatbots for customer service, sales, and support with natural language processing capabilities",
+    category: "AI Services",
+    price: 2999,
+    rating: 4.8,
+    features: ["Natural language processing", "Multi-language support", "Integration APIs", "Analytics dashboard", "24/7 availability"]
+  },
+  {
+    id: "ai-2",
+    name: "Machine Learning Model Development",
+    description: "Custom ML models for predictive analytics, pattern recognition, and data-driven decision making",
+    category: "AI Services",
+    price: 5999,
+    rating: 4.9,
+    features: ["Custom algorithm development", "Data preprocessing", "Model training", "Performance optimization", "Deployment support"]
+  },
+  {
+    id: "micro-1",
+    name: "Project Management Platform",
+    description: "Comprehensive project management solution with task tracking, team collaboration, and reporting",
+    category: "Micro SAAS",
+    price: 199,
+    rating: 4.7,
+    features: ["Task management", "Team collaboration", "Time tracking", "Reporting", "Mobile app"]
+  },
+  {
+    id: "it-1",
+    name: "Cloud Infrastructure Setup",
+    description: "Complete cloud infrastructure design and implementation for scalable applications",
+    category: "IT Services",
+    price: 3999,
+    rating: 4.8,
+    features: ["Architecture design", "Security implementation", "Monitoring setup", "Backup solutions", "24/7 support"]
+  }
+];
+
+const SERVICE_ADDONS = [
+  {
+    id: "custom-model",
+    name: "Custom AI Model Training",
+    description: "Specialized training for your specific use case and data",
+    price: 2499,
+    category: "AI Services"
+  },
+  {
+    id: "api-access",
+    name: "API Access & Documentation",
+    description: "Full API access with comprehensive documentation and support",
+    price: 999,
+    category: "All Services"
+  },
+  {
+    id: "24-7-support",
+    name: "24/7 Priority Support",
+    description: "Round-the-clock technical support with guaranteed response times",
+    price: 1999,
+    category: "All Services"
+  }
+];
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
 
 export function ServicesShowcase() {
   const services = [

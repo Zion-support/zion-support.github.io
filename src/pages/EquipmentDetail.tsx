@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
 
 const EquipmentDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
+=======
+
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
 
   return (
     <>

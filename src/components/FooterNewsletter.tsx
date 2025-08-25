@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Mail, ArrowRight, CheckCircle } from 'lucide-react';
 
@@ -34,6 +35,9 @@ export const FooterNewsletter = () => {
       </div>
     );
   }
+=======
+
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
 
   return (
     <form onSubmit={handleSubmit} className="max-w-md mx-auto">

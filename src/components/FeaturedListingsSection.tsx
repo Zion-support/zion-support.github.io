@@ -183,6 +183,7 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
           whileInView="visible"
           viewport={{ once: true }}
         >
+<<<<<<< HEAD
           {featuredListings.map((listing, index) => (
             <motion.div key={listing.id} variants={itemVariants}>
               <div className="relative group">
@@ -198,7 +199,70 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
                   view="grid"
                   onRequestQuote={() => {}}
                 />
+=======
+          {featuredListings.map((listing) => (
+            <motion.div
+              key={listing.id}
+              className="bg-gradient-to-br from-zion-slate-dark to-zion-slate rounded-2xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:transform hover:scale-105 group"
+              variants={itemVariants}
+            >
+              <div className="relative mb-6">
+                <img
+                  src={listing.image}
+                  alt={listing.title}
+                  className="w-full h-48 object-cover rounded-xl"
+                />
+                <div className="absolute top-3 right-3 bg-zion-purple/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm font-medium">
+                  {listing.price}
+                </div>
               </div>
+              
+              <div className="mb-4">
+                <span className="inline-block bg-zion-cyan/20 text-zion-cyan text-xs px-2 py-1 rounded-full mb-2">
+                  {listing.category}
+                </span>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
+                  {listing.title}
+                </h3>
+                <p className="text-zion-slate-light text-sm leading-relaxed">
+                  {listing.description}
+                </p>
+              </div>
+              
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center space-x-1">
+                  <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                  <span className="text-white text-sm font-medium">{listing.rating}</span>
+                  <span className="text-zion-slate-light text-sm">({listing.reviews})</span>
+                </div>
+                <div className="flex items-center space-x-4 text-zion-slate-light text-sm">
+                  <div className="flex items-center space-x-1">
+                    <Eye className="w-4 h-4" />
+                    <span>{listing.views}</span>
+                  </div>
+                  <div className="flex items-center space-x-1">
+                    <Heart className="w-4 h-4" />
+                    <span>{listing.likes}</span>
+                  </div>
+                </div>
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
+              </div>
+              
+              <div className="flex flex-wrap gap-2 mb-4">
+                {listing.tags.map((tag, index) => (
+                  <span
+                    key={index}
+                    className="bg-zion-blue/20 text-zion-cyan text-xs px-2 py-1 rounded-full"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+              
+              <button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-4 rounded-xl font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center space-x-2 group-hover:scale-105">
+                <span>View Details</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </button>
             </motion.div>
           ))}
         </motion.div>
@@ -209,6 +273,7 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
         >
           <Button 
             className="group bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-10 py-6 text-lg font-semibold rounded-xl shadow-2xl shadow-zion-purple/25 transition-all duration-300 hover:scale-105"
@@ -223,6 +288,13 @@ export function FeaturedListingsSection({ showTitle = true }: FeaturedListingsSe
           <p className="text-zion-slate-light mt-4 text-sm">
             Join 10,000+ companies already using Zion
           </p>
+=======
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105">
+            View All Projects
+          </button>
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
         </motion.div>
       </div>
     </section>

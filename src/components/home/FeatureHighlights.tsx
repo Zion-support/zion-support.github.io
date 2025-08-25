@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, Star, TrendingUp, Users, Award, Zap } from "lucide-react";
@@ -83,6 +86,7 @@ export function FeatureHighlights() {
       <div className="container mx-auto px-4 relative z-10">
         <motion.div 
           className="text-center mb-16"
+<<<<<<< HEAD
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -90,13 +94,23 @@ export function FeatureHighlights() {
           <h2 className="text-4xl font-bold text-white mb-4">Tailored Solutions for Everyone</h2>
           <p className="text-zion-slate-light text-xl max-w-4xl mx-auto leading-relaxed">
             Whatever your role in the tech ecosystem, Zion offers specialized features to help you succeed
+=======
+          variants={itemVariants}
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Platform <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Highlights</span>
+          </h2>
+          <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
+            Discover how Zion Tech Group's platform serves different user types with tailored features and capabilities
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
           </p>
         </motion.div>
-        
+
         <motion.div 
           className="grid grid-cols-1 lg:grid-cols-3 gap-8"
           variants={containerVariants}
           initial="hidden"
+<<<<<<< HEAD
           animate="visible"
         >
           {highlightsData.map((category, index) => (
@@ -143,6 +157,45 @@ export function FeatureHighlights() {
                       <Zap className="w-4 h-4 group-hover:scale-110 transition-transform" />
                     </button>
                   </div>
+=======
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {highlightsData.map((highlight, index) => (
+            <motion.div
+              key={index}
+              variants={itemVariants}
+              whileHover="hover"
+              className="group"
+            >
+              <Card className={`h-full border-2 ${highlight.borderColor} bg-gradient-to-br from-zion-slate-dark to-zion-slate hover:shadow-2xl hover:shadow-zion-cyan/20 transition-all duration-300`}>
+                <CardContent className="p-8">
+                  <div className={`w-16 h-16 ${highlight.bgColor} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <div className={`text-white ${highlight.color} bg-gradient-to-r bg-clip-text`}>
+                      {highlight.icon}
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors">
+                    {highlight.title}
+                  </h3>
+                  
+                  <ul className="space-y-3 mb-6">
+                    {highlight.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-start space-x-3">
+                        <Check className="w-5 h-5 text-zion-cyan mt-0.5 flex-shrink-0" />
+                        <span className="text-zion-slate-light text-sm leading-relaxed">
+                          {feature}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-4 rounded-xl font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center space-x-2 group-hover:scale-105">
+                    <span>Learn More</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </button>
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
                 </CardContent>
               </Card>
             </motion.div>
@@ -150,6 +203,7 @@ export function FeatureHighlights() {
 <<<<<<< HEAD
 <<<<<<< HEAD
         </motion.div>
+<<<<<<< HEAD
         
         {/* Bottom CTA */}
 =======
@@ -373,6 +427,9 @@ export const FeatureHighlights: React.FC = () => {
           </div>
         </motion.div>
       </div>
+=======
+      </motion.div>
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
     </section>
   );
 };

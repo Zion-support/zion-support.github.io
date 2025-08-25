@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
@@ -490,6 +491,9 @@ export default function Partners() {
 
   const featuredPartners = filteredPartners.filter(partner => partner.featured);
   const regularPartners = filteredPartners.filter(partner => !partner.featured);
+=======
+
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">

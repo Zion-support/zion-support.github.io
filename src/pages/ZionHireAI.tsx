@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { SEO } from '@/components/SEO';
 import { Search, Filter, Star, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, Shield, Settings, Eye, Leaf, CreditCard, Heart, Truck, ShoppingCart, Phone, Mail, MapPin, Globe, Bot, Cpu, Network, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Building, Factory, Store, Car, Plane, Ship, Home, Building2, GraduationCap, Calendar, FileText, BarChart3, Users as UsersIcon, CreditCard as CreditCardIcon, MessageSquare, Camera, Video, Music, BookOpen, Target, TrendingUp, PieChart, Activity, Zap as ZapIcon2, Server, Code, Smartphone, Monitor, Router, HardDrive, Wifi, Lock, Key, Bug, CheckCircle, AlertTriangle, Info, ArrowRight, Wrench, Tool, Cog, Server as ServerIcon, Database as DatabaseIcon2, Shield as ShieldIcon2, Zap as ZapIcon3, Building as BuildingIcon, Factory as FactoryIcon, Store as StoreIcon, Car as CarIcon, Plane as PlaneIcon, Ship as ShipIcon, Home as HomeIcon, Building2 as Building2Icon, GraduationCap as GraduationCapIcon, Calendar as CalendarIcon, FileText as FileTextIcon, BarChart3 as BarChart3Icon, Users as UsersIcon2, CreditCard as CreditCardIcon2, MessageSquare as MessageSquareIcon, Camera as CameraIcon, Video as VideoIcon, Music as MusicIcon, BookOpen as BookOpenIcon, Target as TargetIcon, TrendingUp as TrendingUpIcon, PieChart as PieChartIcon, Activity as ActivityIcon, Zap as ZapIcon4, LucideUserCheck, LucideUser, LucideUserCog, LucideUserCircle } from 'lucide-react';
@@ -150,6 +151,9 @@ const ZionHireAI: React.FC = () => {
     { metric: '30%', label: 'Reduced Turnover' },
     { metric: '50%', label: 'Cost Reduction' }
   ];
+=======
+
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
 
   return (
     <>

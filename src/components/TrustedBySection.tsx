@@ -42,6 +42,7 @@ const testimonials = [
   }
 ];
 
+<<<<<<< HEAD
 export function TrustedBySection() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -214,7 +215,25 @@ export function TrustedBySection() {
             </p>
           </div>
         </motion.div>
+=======
+export const TrustedBySection: React.FC = () => {
+  return (
+    <section className="py-16 bg-zion-blue-dark">
+      <div className="container mx-auto px-4 text-center">
+        <h2 className="text-2xl font-bold text-white mb-8">Trusted By Leading Companies</h2>
+        <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
+          <div className="text-zion-slate-light text-lg font-semibold">Microsoft</div>
+          <div className="text-zion-slate-light text-lg font-semibold">Google</div>
+          <div className="text-zion-slate-light text-lg font-semibold">Amazon</div>
+          <div className="text-zion-slate-light text-lg font-semibold">Apple</div>
+          <div className="text-zion-slate-light text-lg font-semibold">Meta</div>
+          <div className="text-zion-slate-light text-lg font-semibold">TechCorp</div>
+          <div className="text-zion-slate-light text-lg font-semibold">InnovateLab</div>
+          <div className="text-zion-slate-light text-lg font-semibold">FutureTech</div>
+          <div className="text-zion-slate-light text-lg font-semibold">DigitalFlow</div>
+        </div>
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
       </div>
     </section>
   );
-}
+};

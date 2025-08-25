@@ -1,7 +1,12 @@
 
+<<<<<<< HEAD
 import { GradientHeading } from "./GradientHeading";
 import { Check, Handshake, Search, Send, ArrowRight, Zap, Users, Globe } from "lucide-react";
 import { motion } from "framer-motion";
+=======
+import { motion } from 'framer-motion';
+import { Search, Users, FileText, Rocket, CheckCircle } from 'lucide-react';
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
 
 const steps = [
   {

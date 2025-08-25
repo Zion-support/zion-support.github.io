@@ -1,7 +1,13 @@
 
+<<<<<<< HEAD
 import React from "react";
 import { motion } from "framer-motion";
 import { LoadingSpinner } from "@/components/ui/loading-spinner";
+=======
+
+import { motion } from 'framer-motion';
+import { Loader2, User, Sparkles } from 'lucide-react';
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
 
 export function ProfileLoadingState() {
   return (

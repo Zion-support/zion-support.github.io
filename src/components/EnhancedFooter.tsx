@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
+=======
+
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
 import { Link } from 'react-router-dom';
 import { 
   Twitter, 

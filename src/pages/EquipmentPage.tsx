@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';
 import { SEO } from '@/components/SEO';
+=======
+
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
 
 const EquipmentPage: React.FC = () => {
   return (

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -12,6 +13,10 @@ import {
   Shield,
   Users
 } from 'lucide-react';
+=======
+
+import { Mail, Phone, MapPin, Globe, Sparkles, Send, Clock, Users } from 'lucide-react';
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -149,6 +154,7 @@ const ContactPage: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Contact Information */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -167,6 +173,94 @@ const ContactPage: React.FC = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className="group text-center p-6 rounded-2xl bg-gradient-to-br from-zion-dark/60 to-zion-dark/40 backdrop-blur-sm border border-zion-primary/20 hover:border-zion-primary/40 transition-all duration-300 hover:-translate-y-2"
+=======
+      {/* Contact Form */}
+      <div className="py-20 bg-slate-50 dark:bg-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6">
+                Send Us a Message
+              </h2>
+              <p className="text-lg text-slate-600 dark:text-slate-400">
+                Fill out the form below and we'll get back to you within 24 hours.
+              </p>
+            </div>
+            
+            <form className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="firstName" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">
+                    First Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    required
+                    className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 hover:border-zion-cyan/50"
+                    placeholder="Your first name"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="lastName" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">
+                    Last Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    required
+                    className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 hover:border-zion-cyan/50"
+                    placeholder="Your last name"
+                  />
+                </div>
+              </div>
+              
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">
+                  Email Address *
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  required
+                  className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 hover:border-zion-cyan/50"
+                  placeholder="your.email@example.com"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="phone" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 hover:border-zion-cyan/50"
+                  placeholder="+1 (555) 123-4567"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="company" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">
+                  Company
+                </label>
+                <input
+                  type="text"
+                  id="company"
+                  className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 hover:border-zion-cyan/50"
+                  placeholder="Your company name"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="service" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-3">
+                  Service Interest
+                </label>
+                <select
+                  id="service"
+                  className="w-full px-4 py-3 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 hover:border-zion-cyan/50"
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
                 >
                   <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-zion-primary/20 to-zion-secondary/20 rounded-2xl flex items-center justify-center border border-zion-primary/30 group-hover:border-zion-primary/60 group-hover:scale-110 transition-all duration-300">
                     <info.icon className="w-8 h-8 text-zion-primary" />
@@ -402,6 +496,10 @@ const ContactPage: React.FC = () => {
       </div>
     </div>
   );
+<<<<<<< HEAD
 };
 
 export default ContactPage;
+=======
+}
+>>>>>>> origin/cursor/build-and-fix-errors-c9ef
