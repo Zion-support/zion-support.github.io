@@ -18,3 +18,4 @@ export { Toaster } from './ui/toaster';
 // Main components
 export { HeroSection } from './HeroSection';
 export { ServiceCard } from './ServiceCard';
+export { ComprehensiveServicesShowcase } from './ComprehensiveServicesShowcase';
