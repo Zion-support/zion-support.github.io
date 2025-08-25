@@ -1,289 +1,222 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Shield, Eye, Lock, Users, Database, Globe, Zap } from 'lucide-react';
+import { Shield, Lock, Eye, Database, Users, Globe, Mail, Phone } from 'lucide-react';
 
-const Privacy = () => {
-  const privacySections = [
-    {
-      title: 'Information We Collect',
-      description: 'We collect information you provide directly to us and information we obtain automatically.',
-      items: [
-        'Personal information (name, email, phone number)',
-        'Business information (company name, job title)',
-        'Usage data and analytics',
-        'Technical information (IP address, device information)'
-      ],
-      icon: Database,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'How We Use Information',
-      description: 'We use the information we collect to provide and improve our services.',
-      items: [
-        'Provide and maintain our services',
-        'Communicate with you about our services',
-        'Improve and personalize user experience',
-        'Ensure security and prevent fraud'
-      ],
-      icon: Users,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      title: 'Information Sharing',
-      description: 'We do not sell, trade, or rent your personal information to third parties.',
-      items: [
-        'Service providers and partners',
-        'Legal requirements and compliance',
-        'Business transfers and mergers',
-        'With your explicit consent'
-      ],
-      icon: Globe,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      title: 'Data Security',
-      description: 'We implement appropriate security measures to protect your information.',
-      items: [
-        'Encryption of sensitive data',
-        'Regular security assessments',
-        'Access controls and authentication',
-        'Secure data transmission'
-      ],
-      icon: Lock,
-      color: 'from-red-500 to-pink-500'
-    }
-  ];
-
-  const rights = [
-    {
-      title: 'Access',
-      description: 'Request access to your personal information',
-      icon: Eye
-    },
-    {
-      title: 'Correction',
-      description: 'Request correction of inaccurate information',
-      icon: Shield
-    },
-    {
-      title: 'Deletion',
-      description: 'Request deletion of your personal information',
-      icon: Lock
-    },
-    {
-      title: 'Portability',
-      description: 'Request transfer of your data to another service',
-      icon: Database
-    }
-  ];
-
+export default function Privacy() {
   return (
-    <div className="min-h-screen bg-zion-blue-dark text-white">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue-light/20"></div>
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      <div className="max-w-4xl mx-auto px-4 py-12">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center mb-12"
+        >
+          <div className="flex justify-center mb-4">
+            <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full flex items-center justify-center">
+              <Shield className="w-8 h-8 text-white" />
+            </div>
+          </div>
+          <h1 className="text-4xl font-bold text-white mb-4">Privacy Policy</h1>
+          <p className="text-xl text-gray-300">
+            Your privacy is important to us. Learn how we protect and handle your information.
+          </p>
+        </motion.div>
+
+        {/* Last Updated */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="bg-white/10 backdrop-blur-md rounded-lg p-6 mb-8"
+        >
+          <div className="flex items-center text-cyan-400 mb-2">
+            <Lock className="w-5 h-5 mr-2" />
+            <span className="font-semibold">Last Updated:</span>
+          </div>
+          <p className="text-white">December 2024</p>
+        </motion.div>
+
+        {/* Content Sections */}
+        <div className="space-y-8">
+          {/* Information We Collect */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
+            transition={{ delay: 0.2 }}
+            className="bg-white/10 backdrop-blur-md rounded-lg p-6"
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              Privacy{' '}
-              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                Policy
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-zion-slate-light leading-relaxed mb-8">
-              Your privacy is important to us. Learn how we collect, use, and protect your information.
-            </p>
-            <div className="flex items-center justify-center gap-4 text-zion-slate-light">
-              <Shield className="w-6 h-6" />
-              <span>Last updated: {new Date().toLocaleDateString()}</span>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Privacy Overview */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-6">
-              Our Privacy{' '}
-              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                Commitment
-              </span>
+            <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
+              <Database className="w-6 h-6 mr-3 text-cyan-400" />
+              Information We Collect
             </h2>
-            <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
-              At Zion Tech Group, we are committed to protecting your privacy and ensuring the security 
-              of your personal information. This policy explains how we collect, use, and safeguard your data.
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {privacySections.map((section, index) => {
-              const IconComponent = section.icon;
-              return (
-                <motion.div
-                  key={section.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="p-8 rounded-2xl bg-zion-blue-dark/50 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
-                >
-                  <div className={`w-20 h-20 bg-gradient-to-br ${section.color} rounded-2xl flex items-center justify-center mb-6`}>
-                    <IconComponent className="w-10 h-10 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-semibold mb-4">{section.title}</h3>
-                  <p className="text-zion-slate-light mb-6">{section.description}</p>
-                  <ul className="space-y-3">
-                    {section.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-center gap-3 text-zion-slate-light">
-                        <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Your Rights */}
-      <section className="py-20 bg-zion-blue-light/5">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-6">
-              Your Privacy{' '}
-              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                Rights
-              </span>
-            </h2>
-            <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
-              You have certain rights regarding your personal information under applicable privacy laws.
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {rights.map((right, index) => {
-              const IconComponent = right.icon;
-              return (
-                <motion.div
-                  key={right.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="text-center p-6 rounded-2xl bg-zion-blue-dark/50 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3">{right.title}</h3>
-                  <p className="text-zion-slate-light">{right.description}</p>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Information */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <h2 className="text-4xl font-bold mb-6">
-              Contact Our{' '}
-              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                Privacy Team
-              </span>
-            </h2>
-            <p className="text-lg text-zion-slate-light mb-8">
-              If you have questions about this privacy policy or would like to exercise your privacy rights, 
-              please contact us.
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-              <div className="p-6 rounded-2xl bg-zion-blue-dark/50 border border-zion-cyan/20">
-                <h3 className="text-xl font-semibold mb-4 text-zion-cyan">Email</h3>
-                <p className="text-zion-slate-light mb-2">For privacy inquiries:</p>
-                <a href="mailto:privacy@ziontechgroup.com" className="text-zion-cyan hover:text-zion-purple transition-colors">
-                  privacy@ziontechgroup.com
-                </a>
-              </div>
-              
-              <div className="p-6 rounded-2xl bg-zion-blue-dark/50 border border-zion-cyan/20">
-                <h3 className="text-xl font-semibold mb-4 text-zion-cyan">General Contact</h3>
-                <p className="text-zion-slate-light mb-2">For general inquiries:</p>
-                <a href="mailto:kleber@ziontechgroup.com" className="text-zion-cyan hover:text-zion-purple transition-colors">
-                  kleber@ziontechgroup.com
-                </a>
-              </div>
-            </div>
-            
-            <div className="mt-8 p-6 rounded-2xl bg-zion-blue-dark/50 border border-zion-cyan/20">
-              <h3 className="text-xl font-semibold mb-4 text-zion-cyan">Address</h3>
-              <p className="text-zion-slate-light">
-                Zion Tech Group<br />
-                364 E Main St STE 1008<br />
-                Middletown, DE 19709<br />
-                United States
+            <div className="space-y-4 text-gray-300">
+              <p>
+                We collect information you provide directly to us, such as when you:
+              </p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li>Contact us through our website or email</li>
+                <li>Request a quote or service</li>
+                <li>Subscribe to our newsletter</li>
+                <li>Apply for employment</li>
+                <li>Engage with our services</li>
+              </ul>
+              <p>
+                This information may include your name, email address, phone number, company information, 
+                and any other details you choose to provide.
               </p>
             </div>
-          </motion.div>
-        </div>
-      </section>
+          </motion.section>
 
-      {/* Updates Section */}
-      <section className="py-20 bg-zion-blue-light/5">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
+          {/* How We Use Information */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="bg-white/10 backdrop-blur-md rounded-lg p-6"
           >
-            <h2 className="text-4xl font-bold mb-6">
-              Policy{' '}
-              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                Updates
-              </span>
+            <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
+              <Eye className="w-6 h-6 mr-3 text-cyan-400" />
+              How We Use Your Information
             </h2>
-            <p className="text-lg text-zion-slate-light mb-8">
-              We may update this privacy policy from time to time to reflect changes in our practices 
-              or applicable laws. We will notify you of any material changes.
-            </p>
-            
-            <div className="p-6 rounded-2xl bg-zion-blue-dark/50 border border-zion-cyan/20">
-              <h3 className="text-xl font-semibold mb-4 text-zion-cyan">Notification of Changes</h3>
-              <p className="text-zion-slate-light">
-                When we make changes to this privacy policy, we will update the "Last updated" date 
-                at the top of this page and may send you an email notification for significant changes.
+            <div className="space-y-4 text-gray-300">
+              <p>We use the information we collect to:</p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li>Provide and improve our services</li>
+                <li>Communicate with you about our services</li>
+                <li>Send you technical notices and support messages</li>
+                <li>Respond to your comments and questions</li>
+                <li>Develop new products and services</li>
+                <li>Ensure the security of our services</li>
+              </ul>
+            </div>
+          </motion.section>
+
+          {/* Information Sharing */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="bg-white/10 backdrop-blur-md rounded-lg p-6"
+          >
+            <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
+              <Users className="w-6 h-6 mr-3 text-cyan-400" />
+              Information Sharing
+            </h2>
+            <div className="space-y-4 text-gray-300">
+              <p>
+                We do not sell, trade, or otherwise transfer your personal information to third parties 
+                without your consent, except as described in this policy.
+              </p>
+              <p>
+                We may share your information in the following circumstances:
+              </p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li>With your explicit consent</li>
+                <li>To comply with legal obligations</li>
+                <li>To protect our rights and safety</li>
+                <li>With trusted service providers who assist us in operating our business</li>
+              </ul>
+            </div>
+          </motion.section>
+
+          {/* Data Security */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="bg-white/10 backdrop-blur-md rounded-lg p-6"
+          >
+            <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
+              <Shield className="w-6 h-6 mr-3 text-cyan-400" />
+              Data Security
+            </h2>
+            <div className="space-y-4 text-gray-300">
+              <p>
+                We implement appropriate technical and organizational security measures to protect 
+                your personal information against unauthorized access, alteration, disclosure, or destruction.
+              </p>
+              <p>
+                These measures include encryption, secure servers, and regular security assessments. 
+                However, no method of transmission over the internet is 100% secure, and we cannot 
+                guarantee absolute security.
               </p>
             </div>
-          </motion.div>
+          </motion.section>
+
+          {/* Your Rights */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+            className="bg-white/10 backdrop-blur-md rounded-lg p-6"
+          >
+            <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
+              <Lock className="w-6 h-6 mr-3 text-cyan-400" />
+              Your Rights
+            </h2>
+            <div className="space-y-4 text-gray-300">
+              <p>You have the right to:</p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li>Access your personal information</li>
+                <li>Correct inaccurate information</li>
+                <li>Request deletion of your information</li>
+                <li>Object to processing of your information</li>
+                <li>Withdraw consent at any time</li>
+                <li>Request data portability</li>
+              </ul>
+              <p>
+                To exercise these rights, please contact us using the information provided below.
+              </p>
+            </div>
+          </motion.section>
+
+          {/* Contact Information */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 }}
+            className="bg-white/10 backdrop-blur-md rounded-lg p-6"
+          >
+            <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
+              <Globe className="w-6 h-6 mr-3 text-cyan-400" />
+              Contact Us
+            </h2>
+            <div className="space-y-4 text-gray-300">
+              <p>
+                If you have any questions about this Privacy Policy or our data practices, 
+                please contact us:
+              </p>
+              <div className="space-y-2">
+                <div className="flex items-center">
+                  <Mail className="w-4 h-4 mr-2 text-cyan-400" />
+                  <span>Email: kleber@ziontechgroup.com</span>
+                </div>
+                <div className="flex items-center">
+                  <Phone className="w-4 h-4 mr-2 text-cyan-400" />
+                  <span>Phone: +1 (302) 464-0950</span>
+                </div>
+              </div>
+            </div>
+          </motion.section>
         </div>
-      </section>
+
+        {/* Back to Home */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8 }}
+          className="text-center mt-12"
+        >
+          <Link
+            to="/"
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-500 hover:to-purple-700 transition-all duration-200"
+          >
+            <Globe className="w-5 h-5 mr-2" />
+            Back to Home
+          </Link>
+        </motion.div>
+      </div>
     </div>
   );
-};
-
-export default Privacy;
+}

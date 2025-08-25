@@ -140,28 +140,6 @@ const config: Config = {
           '0%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(360deg)' },
         },
-        'gradient-x': {
-          '0%, 100%': {
-            'background-size': '200% 200%',
-            'background-position': 'left center'
-          },
-          '50%': {
-            'background-size': '200% 200%',
-            'background-position': 'right center'
-          },
-        },
-        'float': {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' },
-        },
-        'glow': {
-          '0%, 100%': { boxShadow: '0 0 20px rgba(0, 229, 255, 0.5)' },
-          '50%': { boxShadow: '0 0 40px rgba(0, 229, 255, 0.8)' },
-        },
-        'shimmer': {
-          '0%': { transform: 'translateX(-100%)' },
-          '100%': { transform: 'translateX(100%)' },
-        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -172,10 +150,6 @@ const config: Config = {
         'matrix-rain': 'matrix-rain 20s linear infinite',
         'neon-flicker': 'neon-flicker 0.15s ease-in-out infinite alternate',
         'quantum-spin': 'quantum-spin 20s linear infinite',
-        'gradient-x': 'gradient-x 15s ease infinite',
-        'float': 'float 6s ease-in-out infinite',
-        'glow': 'glow 2s ease-in-out infinite alternate',
-        'shimmer': 'shimmer 2s ease infinite',
       },
       backgroundImage: {
         'quantum-gradient': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',

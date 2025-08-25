@@ -11,47 +11,47 @@ export default defineConfig({
     }
   },
   build: {
+    target: 'es2015',
+    minify: 'esbuild',
+    esbuildOptions: {
+      drop: ['console', 'debugger'],
+    },
     rollupOptions: {
       output: {
+        // Optimize chunk splitting for better caching
         manualChunks: {
+          // Vendor chunks
           'react-vendor': ['react', 'react-dom'],
-          'utils-vendor': ['clsx', 'tailwind-merge'],
           'animation-vendor': ['framer-motion'],
-          'ui-vendor': ['@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-tabs'],
-          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
-          'chart-vendor': ['recharts'],
-          'icon-vendor': ['lucide-react', 'react-icons']
-        }
-      }
+          'utils-vendor': ['lucide-react'],
+        },
+        // Optimize asset naming for better caching
+        chunkFileNames: (chunkInfo) => {
+          const facadeModuleId = chunkInfo.facadeModuleId
+            ? chunkInfo.facadeModuleId.split('/').pop()?.split('.')[0]
+            : 'chunk'
+          return `js/${facadeModuleId}-[hash].js`
+        },
+        entryFileNames: 'js/[name]-[hash].js',
+        assetFileNames: (assetInfo) => {
+          const info = assetInfo.name?.split('.') || []
+          const ext = info[info.length - 1]
+          if (/\.(css)$/.test(assetInfo.name || '')) {
+            return `css/[name]-[hash].${ext}`
+          }
+          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo.name || '')) {
+            return `images/[name]-[hash].${ext}`
+          }
+          if (/\.(woff2?|eot|ttf|otf)$/.test(assetInfo.name || '')) {
+            return `fonts/[name]-[hash].${ext}`
+          }
+          return `assets/[name]-[hash].${ext}`
+        },
+      },
     },
+    // Optimize chunk size warnings
     chunkSizeWarningLimit: 1000,
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn']
-      }
-    },
-    sourcemap: false,
-    target: 'es2015'
-  },
-  optimizeDeps: {
-    include: [
-      'react',
-      'react-dom',
-      'framer-motion',
-      'clsx',
-      'tailwind-merge'
-    ]
-  },
-  server: {
-    port: 5173,
-    host: true,
-    open: false
-  },
-  preview: {
-    port: 4173,
-    host: true
+    // Enable source maps for debugging
+    sourcemap: false
   }
 })
