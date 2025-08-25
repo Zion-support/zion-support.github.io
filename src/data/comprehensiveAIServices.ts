@@ -868,6 +868,457 @@ export const COMPREHENSIVE_AI_SERVICES: ComprehensiveAIService[] = [
   }
 ];
 
+export const NEW_COMPREHENSIVE_AI_SERVICES: ComprehensiveAIService[] = [
+  {
+    id: "ai-autonomous-research-platform",
+    name: "AI Autonomous Research Platform",
+    category: "AI Research & Development",
+    subcategory: "Autonomous Research",
+    description: "Fully autonomous research platform that conducts independent research, generates insights, and produces comprehensive reports across multiple domains using advanced AI algorithms.",
+    price: 3500,
+    pricingModel: "monthly",
+    userLimit: "Up to 100,000 words/month",
+    features: [
+      "Autonomous research execution",
+      "Multi-domain knowledge synthesis",
+      "Intelligent hypothesis generation",
+      "Automated report creation",
+      "Real-time data analysis",
+      "Cross-referencing & validation",
+      "Custom research protocols",
+      "API integration"
+    ],
+    benefits: [
+      "Accelerate research by 10x",
+      "24/7 autonomous operation",
+      "Comprehensive insights",
+      "Cost-effective research",
+      "Scalable knowledge discovery"
+    ],
+    targetAudience: [
+      "Researchers",
+      "Scientists",
+      "Analysts",
+      "Academic institutions",
+      "Research organizations"
+    ],
+    tags: ["AI", "Autonomous Research", "Knowledge Discovery", "Automation", "Insights"],
+    marketPrice: "$3,500 - $8,000/month",
+    roi: "300% within 8 months",
+    competitors: ["Verkada", "Eagle Eye Networks", "Milestone", "Avigilon", "Axis Communications"],
+    technology: ["OpenCV", "TensorFlow", "PyTorch", "CUDA", "Edge computing"],
+    integrations: ["IP cameras", "NVR systems", "Security platforms", "Analytics tools"],
+    compliance: ["GDPR", "CCPA", "Security standards"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "premium",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    demoUrl: "https://ziontechgroup.com/demo/video-analytics",
+    documentationUrl: "https://ziontechgroup.com/docs/video-analytics",
+    freeTrial: true,
+    freeTrialDays: 14,
+    aiModel: "Custom CNN + YOLO",
+    accuracy: "95%+",
+    trainingData: "1M+ video frames"
+  },
+  {
+    id: "quantum-ai-optimization-engine",
+    name: "Quantum AI Optimization Engine",
+    category: "AI & Quantum Computing",
+    subcategory: "Optimization",
+    description: "Revolutionary optimization engine that combines quantum computing principles with AI to solve complex optimization problems in logistics, finance, and scientific research.",
+    price: 4500,
+    pricingModel: "monthly",
+    userLimit: "Up to 1M transactions/month",
+    features: [
+      "Quantum-inspired algorithms",
+      "Multi-objective optimization",
+      "Real-time problem solving",
+      "Hybrid classical-quantum approach",
+      "Custom optimization models",
+      "Performance benchmarking",
+      "API ecosystem",
+      "Expert consultation"
+    ],
+    benefits: [
+      "Exponential speed improvements",
+      "Solve intractable problems",
+      "Optimal solutions",
+      "Future-proof technology",
+      "Competitive advantage"
+    ],
+    targetAudience: [
+      "Operations researchers",
+      "Data scientists",
+      "Financial analysts",
+      "Logistics managers",
+      "Research teams"
+    ],
+    tags: ["Quantum", "AI", "Optimization", "Algorithms", "Performance"],
+    marketPrice: "$4,500 - $12,000/month",
+    roi: "250% within 6 months",
+    competitors: ["Google Translate", "DeepL", "Microsoft Translator", "Amazon Translate"],
+    technology: ["Transformer models", "BERT", "GPT", "Neural networks", "Cloud computing"],
+    integrations: ["CMS platforms", "E-commerce systems", "Document management", "Communication tools"],
+    compliance: ["GDPR", "CCPA", "Data privacy"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "standard",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    demoUrl: "https://ziontechgroup.com/demo/language-translation",
+    documentationUrl: "https://ziontechgroup.com/docs/language-translation",
+    freeTrial: true,
+    freeTrialDays: 7,
+    aiModel: "Custom Transformer",
+    accuracy: "98%+",
+    trainingData: "500M+ sentence pairs"
+  },
+  {
+    id: "ai-powered-predictive-maintenance",
+    name: "AI-Powered Predictive Maintenance System",
+    category: "AI & IoT",
+    subcategory: "Predictive Maintenance",
+    description: "Intelligent predictive maintenance platform that uses AI and IoT sensors to predict equipment failures, optimize maintenance schedules, and reduce downtime in industrial operations.",
+    price: 2200,
+    pricingModel: "monthly",
+    userLimit: "Up to 1000 sensors",
+    features: [
+      "AI failure prediction",
+      "IoT sensor integration",
+      "Maintenance optimization",
+      "Real-time monitoring",
+      "Predictive analytics",
+      "Cost optimization",
+      "Mobile app",
+      "Custom dashboards"
+    ],
+    benefits: [
+      "Reduce downtime by 60%",
+      "Lower maintenance costs",
+      "Extend equipment life",
+      "Improve safety",
+      "Optimize operations"
+    ],
+    targetAudience: [
+      "Maintenance managers",
+      "Operations directors",
+      "Facility managers",
+      "Plant engineers",
+      "Asset managers"
+    ],
+    tags: ["AI", "IoT", "Predictive Maintenance", "Industrial", "Optimization"],
+    marketPrice: "$2,200 - $5,500/month",
+    roi: "300% within 18 months",
+    competitors: ["GE Digital", "Siemens", "ABB", "Schneider Electric", "Rockwell Automation"],
+    technology: ["Time series analysis", "LSTM networks", "IoT platforms", "Edge computing", "Cloud analytics"],
+    integrations: ["SCADA systems", "IoT sensors", "ERP systems", "Maintenance software"],
+    compliance: ["Industry standards", "Safety regulations", "Data protection"],
+    estimatedDelivery: "8-10 weeks",
+    supportLevel: "premium",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    demoUrl: "https://ziontechgroup.com/demo/predictive-maintenance",
+    documentationUrl: "https://ziontechgroup.com/docs/predictive-maintenance",
+    freeTrial: true,
+    freeTrialDays: 30,
+    aiModel: "LSTM + Random Forest",
+    accuracy: "92%+",
+    trainingData: "5+ years historical data"
+  },
+  {
+    id: "ai-autonomous-marketing-platform",
+    name: "AI Autonomous Marketing Platform",
+    category: "AI Marketing",
+    subcategory: "Autonomous Marketing",
+    description: "Fully autonomous marketing platform that creates, optimizes, and manages marketing campaigns across all channels using AI-driven insights and automation.",
+    price: 1800,
+    pricingModel: "monthly",
+    userLimit: "Up to 100 vehicles",
+    features: [
+      "Autonomous campaign creation",
+      "Multi-channel optimization",
+      "Content generation",
+      "Audience targeting",
+      "Performance analytics",
+      "A/B testing automation",
+      "ROI optimization",
+      "Custom integrations"
+    ],
+    benefits: [
+      "Increase conversion rates by 40%",
+      "Reduce marketing costs by 30%",
+      "24/7 campaign optimization",
+      "Data-driven decisions",
+      "Scalable marketing operations"
+    ],
+    targetAudience: [
+      "Marketing managers",
+      "Digital marketers",
+      "Business owners",
+      "Growth hackers",
+      "Marketing agencies"
+    ],
+    tags: ["AI", "Marketing", "Automation", "Optimization", "ROI"],
+    marketPrice: "$1,800 - $4,500/month",
+    roi: "250% within 6 months",
+    competitors: ["Amper Music", "AIVA", "Mubert", "Boomy", "Soundraw"],
+    technology: ["Neural networks", "Audio processing", "Music theory algorithms", "Machine learning"],
+    integrations: ["DAWs", "Audio software", "Streaming platforms", "Social media"],
+    compliance: ["Copyright protection", "Music licensing", "Data privacy"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "premium",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    demoUrl: "https://ziontechgroup.com/demo/music-generation",
+    documentationUrl: "https://ziontechgroup.com/docs/music-generation",
+    freeTrial: true,
+    freeTrialDays: 14,
+    aiModel: "Custom Music AI + Neural Networks",
+    accuracy: "82%+",
+    trainingData: "1M+ musical pieces"
+  },
+  {
+    id: "ai-powered-legal-assistant",
+    name: "AI-Powered Legal Assistant",
+    category: "AI & Legal Tech",
+    subcategory: "Legal Automation",
+    description: "Intelligent legal assistant that automates document review, contract analysis, legal research, and compliance monitoring using advanced natural language processing.",
+    price: 2800,
+    pricingModel: "monthly",
+    userLimit: "Up to 100 vehicles",
+    features: [
+      "Document review automation",
+      "Contract analysis",
+      "Legal research",
+      "Compliance monitoring",
+      "Risk assessment",
+      "Case law analysis",
+      "Custom legal workflows",
+      "Integration with legal tools"
+    ],
+    benefits: [
+      "Reduce review time by 80%",
+      "Improve accuracy by 95%",
+      "Lower legal costs",
+      "Enhanced compliance",
+      "Scalable legal operations"
+    ],
+    targetAudience: [
+      "Lawyers",
+      "Legal professionals",
+      "Compliance officers",
+      "General counsel",
+      "Legal operations managers"
+    ],
+    tags: ["AI", "Legal Tech", "Automation", "Compliance", "Document Review"],
+    marketPrice: "$2,800 - $6,500/month",
+    roi: "250% within 6 months",
+    competitors: ["NVIDIA GauGAN", "Artbreeder", "Runway ML", "DeepArt", "StyleGAN"],
+    technology: ["GANs", "Neural rendering", "3D reconstruction", "Computer vision", "Deep learning"],
+    integrations: ["3D software", "Game engines", "CAD systems", "Rendering engines"],
+    compliance: ["Design standards", "File formats", "Data protection"],
+    estimatedDelivery: "6-8 weeks",
+    supportLevel: "premium",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    demoUrl: "https://ziontechgroup.com/demo/autonomous-vehicles",
+    documentationUrl: "https://ziontechgroup.com/docs/autonomous-vehicles",
+    freeTrial: true,
+    freeTrialDays: 30,
+    aiModel: "Multi-Modal AI",
+    accuracy: "99.95%",
+    trainingData: "Real-world driving data, simulation data, safety scenarios"
+  },
+  {
+    id: "ai-autonomous-healthcare-diagnostics",
+    name: "AI Autonomous Healthcare Diagnostics",
+    category: "AI & Healthcare",
+    subcategory: "Medical Diagnostics",
+    description: "Advanced healthcare diagnostic platform that uses AI to analyze medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations.",
+    price: 3800,
+    pricingModel: "monthly",
+    userLimit: "Up to 100 vehicles",
+    features: [
+      "Medical image analysis",
+      "Symptom assessment",
+      "Diagnostic recommendations",
+      "Patient data analysis",
+      "Treatment planning",
+      "Clinical decision support",
+      "Integration with EHR systems",
+      "Compliance & security"
+    ],
+    benefits: [
+      "Improve diagnostic accuracy by 25%",
+      "Reduce diagnosis time by 60%",
+      "Enhance patient outcomes",
+      "Lower healthcare costs",
+      "Support clinical decisions"
+    ],
+    targetAudience: [
+      "Radiologists",
+      "Physicians",
+      "Healthcare administrators",
+      "Medical researchers",
+      "Healthcare IT teams"
+    ],
+    tags: ["AI", "Healthcare", "Diagnostics", "Medical Imaging", "Clinical Support"],
+    marketPrice: "$3,800 - $9,500/month",
+    roi: "200% within 24 months",
+    competitors: ["IBM Weather", "AccuWeather", "The Weather Company", "MeteoGroup", "WeatherBug"],
+    technology: ["Deep Learning", "Numerical modeling", "Big Data", "High-performance computing", "Cloud computing"],
+    integrations: ["Weather stations", "Satellite data", "Ocean buoys", "Research databases"],
+    compliance: ["Scientific standards", "Data quality", "Research ethics"],
+    estimatedDelivery: "10-12 weeks",
+    supportLevel: "premium",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    demoUrl: "https://ziontechgroup.com/demo/climate-modeling",
+    documentationUrl: "https://ziontechgroup.com/docs/climate-modeling",
+    freeTrial: true,
+    freeTrialDays: 30,
+    aiModel: "Custom LSTM + CNN",
+    accuracy: "87%+",
+    trainingData: "50+ years historical data"
+  },
+  {
+    id: "ai-powered-financial-fraud-detection",
+    name: "AI-Powered Financial Fraud Detection",
+    category: "AI & Financial Services",
+    subcategory: "Fraud Detection",
+    description: "Intelligent fraud detection system that uses machine learning to identify and prevent financial fraud in real-time across multiple channels and transaction types.",
+    price: 3200,
+    pricingModel: "monthly",
+    userLimit: "Up to 1M transactions/month",
+    features: [
+      "Real-time fraud detection",
+      "Multi-channel monitoring",
+      "Behavioral analysis",
+      "Risk scoring",
+      "Automated alerts",
+      "Investigation tools",
+      "Compliance reporting",
+      "Custom rules engine"
+    ],
+    benefits: [
+      "Detect fraud with 99.9% accuracy",
+      "Reduce false positives by 80%",
+      "Real-time protection",
+      "Lower fraud losses",
+      "Regulatory compliance"
+    ],
+    targetAudience: [
+      "Risk managers",
+      "Fraud analysts",
+      "Compliance officers",
+      "Security managers",
+      "Financial executives"
+    ],
+    tags: ["AI", "Fraud Detection", "Financial Services", "Security", "Compliance"],
+    marketPrice: "$3,200 - $7,500/month",
+    roi: "250% within 6 months",
+    competitors: ["Sift", "Signifyd", "Forter", "Riskified", "Kount"],
+    technology: ["Deep Learning", "Anomaly Detection", "Real-time processing", "Big Data", "Cloud computing"],
+    integrations: ["Payment gateways", "Banking systems", "E-commerce platforms", "CRM systems"],
+    compliance: ["PCI DSS", "SOC 2", "GDPR", "Financial regulations"],
+    estimatedDelivery: "6-8 weeks",
+    supportLevel: "premium",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    demoUrl: "https://ziontechgroup.com/demo/fraud-detection",
+    documentationUrl: "https://ziontechgroup.com/docs/fraud-detection",
+    freeTrial: true,
+    freeTrialDays: 30,
+    aiModel: "Custom Neural Network",
+    accuracy: "99.5%+",
+    trainingData: "100M+ transactions"
+  },
+  {
+    id: "ai-autonomous-content-creation",
+    name: "AI Autonomous Content Creation Platform",
+    category: "AI & Content Creation",
+    subcategory: "Autonomous Content",
+    description: "Fully autonomous content creation platform that generates high-quality articles, videos, social media posts, and marketing materials using advanced AI and natural language generation.",
+    price: 1500,
+    pricingModel: "monthly",
+    userLimit: "Up to 100 vehicles",
+    features: [
+      "Multi-format content generation",
+      "SEO optimization",
+      "Brand voice customization",
+      "Content planning",
+      "Performance analytics",
+      "Multi-language support",
+      "Integration with CMS",
+      "Custom content strategies"
+    ],
+    benefits: [
+      "Increase content output by 10x",
+      "Reduce content costs by 70%",
+      "Improve SEO performance",
+      "Consistent brand voice",
+      "Scalable content operations"
+    ],
+    targetAudience: [
+      "Content marketers",
+      "Social media managers",
+      "SEO specialists",
+      "Brand managers",
+      "Marketing directors"
+    ],
+    tags: ["AI", "Content Creation", "Automation", "SEO", "Marketing"],
+    marketPrice: "$1,500 - $3,500/month",
+    roi: "250% within 6 months",
+    competitors: ["Sudowrite", "Jasper", "Copy.ai", "Writesonic", "ContentBot"],
+    technology: ["GPT models", "Transformer architecture", "Natural language processing", "Creative algorithms"],
+    integrations: ["Writing software", "Publishing platforms", "Content management systems"],
+    compliance: ["Copyright protection", "Content guidelines", "Data privacy"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "premium",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    demoUrl: "https://ziontechgroup.com/demo/autonomous-vehicles",
+    documentationUrl: "https://ziontechgroup.com/docs/autonomous-vehicles",
+    freeTrial: true,
+    freeTrialDays: 30,
+    aiModel: "Custom GPT + Creative AI",
+    accuracy: "82%+",
+    trainingData: "1M+ musical pieces"
+  }
+];
+
 export const getServicesByCategory = (category: string) => {
   return COMPREHENSIVE_AI_SERVICES.filter(service => service.category === category);
 };
