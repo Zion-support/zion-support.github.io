@@ -9,6 +9,7 @@ import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
 // Lazy load only the pages we know work
 const MicroSaasServicesPage = React.lazy(() => import('./pages/MicroSaasServices'));
 const PricingPage = React.lazy(() => import('./pages/PricingPage'));
+const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage'));
 
 // Enhanced loading component with skeleton
 const PageLoader = () => (
@@ -21,8 +22,9 @@ const PageLoader = () => (
 );
 
 const baseRoutes = [
-  { path: '/', element: <MicroSaasServicesPage /> },
+  { path: '/', element: <EnhancedServicesPage /> },
   { path: '/micro-saas-services', element: <MicroSaasServicesPage /> },
+  { path: '/enhanced-services', element: <EnhancedServicesPage /> },
   { path: '/pricing', element: <PricingPage /> },
 ];
 
