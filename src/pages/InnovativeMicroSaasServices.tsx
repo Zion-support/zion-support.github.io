@@ -70,10 +70,9 @@ const InnovativeMicroSaasServices: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [expandedService, setExpandedService] = useState<string | null>(null);
 
-  // Combine all services
+  // Combine all services - temporarily using only compatible services
   const allServices: Service[] = [
-    ...ADVANCED_MICRO_SAAS_SERVICES,
-    ...EMERGING_TECH_SERVICES
+    ...ADVANCED_MICRO_SAAS_SERVICES
   ];
 
   const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
