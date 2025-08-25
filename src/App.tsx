@@ -1,6 +1,6 @@
 import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
+import { Header } from './components/Header';
 import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
 import { AccessibilityControls } from './components/AccessibilityControls';
@@ -70,7 +70,7 @@ const SOC2ComplianceAutomation = lazy(() => import('./pages/SOC2ComplianceAutoma
 const AIAutonomousResearchAssistant = lazy(() => import('./pages/AIAutonomousResearchAssistant'));
 const FiveGEnterpriseSolutions = lazy(() => import('./pages/5GEnterpriseSolutions'));
 const CaseStudies = lazy(() => import('./pages/CaseStudies'));
-const HelpCenter = lazy(() => import('./pages/HelpCenter'));
+// const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 const NewServices = lazy(() => import('./pages/NewServices'));
 
 // Additional missing pages
@@ -115,8 +115,8 @@ const Events = lazy(() => import('./pages/Events'));
 const Webinars = lazy(() => import('./pages/Webinars'));
 const WhitePapers = lazy(() => import('./pages/WhitePapers'));
 const Testimonials = lazy(() => import('./pages/Testimonials'));
-const Support = lazy(() => import('./pages/HelpCenter'));
-const Docs = lazy(() => import('./pages/HelpCenter'));
+const Support = () => <div>Support - Coming Soon</div>;
+const Docs = () => <div>Documentation - Coming Soon</div>;
 const Marketplace = lazy(() => import('./pages/Marketplace'));
 const Community = lazy(() => import('./pages/CommunityPage'));
 
@@ -227,7 +227,7 @@ const App: React.FC = () => {
                       <Route path="/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
                       <Route path="/5g-enterprise-solutions" element={<FiveGEnterpriseSolutions />} />
                       <Route path="/case-studies" element={<CaseStudies />} />
-                      <Route path="/help" element={<HelpCenter />} />
+                      <Route path="/help" element={<div>Help Center - Coming Soon</div>} />
                       <Route path="/new-services" element={<NewServices />} />
                       
                       {/* Additional missing pages */}

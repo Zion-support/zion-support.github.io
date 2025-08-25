@@ -321,7 +321,7 @@ const InnovativeServicesShowcase: React.FC = () => {
 
                   <div className="flex space-x-3">
                     <Link
-                      to={service.websiteUrl}
+                      to={service.contactInfo?.website || '#'}
                       className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg text-center font-medium hover:bg-blue-700 transition-colors flex items-center justify-center"
                     >
                       Learn More
