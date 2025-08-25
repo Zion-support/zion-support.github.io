@@ -173,6 +173,7 @@ const specialServices = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     title: "Comprehensive Services",
     link: "/comprehensive-services"
 =======
@@ -590,6 +591,14 @@ const advancedCategories = [
     link: "/expanded-services?category=FinTech%20%26%20Digital%20Banking",
     color: "from-blue-600 to-indigo-600",
     features: ["Digital Banking", "Payment Systems", "Lending Platforms"]
+=======
+    title: "Comprehensive Services",
+    link: "/comprehensive-services"
+  },
+  {
+    title: "Pricing & Plans",
+    link: "/pricing"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-63f3
   }
 ];
 
