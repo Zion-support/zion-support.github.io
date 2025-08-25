@@ -242,6 +242,7 @@ import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { EnhancedServicesShowcase } from "@/components/home/EnhancedServicesShowcase";
 import { BottomNavigation } from "@/components/MobileNavigation";
 import { MicroSaasServicesSection } from "@/components/home/MicroSaasServicesSection";
@@ -530,6 +531,9 @@ import { ServicesShowcase } from "@/components/ServicesShowcase";
 =======
 import { MicroSaasShowcase } from "@/components/home/MicroSaasShowcase";
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-dfab
+=======
+import { EnhancedServicesShowcase } from "@/components/home/EnhancedServicesShowcase";
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-defc
 
 export default function Home() {
   const features = [
@@ -978,6 +982,7 @@ export default function Home() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <MicroSaasShowcase />
 =======
       <ServicesOverview />
@@ -1008,6 +1013,9 @@ export default function Home() {
 =======
       <ServicesShowcase />
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-ad2d
+=======
+      <EnhancedServicesShowcase />
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-defc
       
       <CategoriesSection />
       <ServicesShowcase />

@@ -196,6 +196,7 @@ const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const AboutPage = React.lazy(() => import('./pages/About'));
 const CareersPage = React.lazy(() => import('./pages/Careers'));
 const SitemapPage = React.lazy(() => import('./pages/Sitemap'));
@@ -346,6 +347,10 @@ const MicroSaasServicesPage = React.lazy(() => import('./pages/MicroSaasServices
 const AllServicesPage = React.lazy(() => import('./pages/AllServicesPage'));
 const PricingPage = React.lazy(() => import('./pages/PricingPage'));
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-1716
+=======
+const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServicesPage'));
+const ServicesPricingPage = React.lazy(() => import('./pages/ServicesPricingPage'));
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-defc
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -487,6 +492,7 @@ const baseRoutes = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   { path: '/enhanced-services', element: <EnhancedServicesPage /> },
   { path: '/pricing', element: <PricingPage /> },
 =======
@@ -519,6 +525,10 @@ const baseRoutes = [
   { path: '/all-services', element: <AllServicesPage /> },
   { path: '/pricing', element: <PricingPage /> },
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-1716
+=======
+  { path: '/comprehensive-services', element: <ComprehensiveServicesPage /> },
+  { path: '/services-pricing', element: <ServicesPricingPage /> },
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-defc
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
 <<<<<<< HEAD

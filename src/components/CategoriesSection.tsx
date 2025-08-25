@@ -410,6 +410,7 @@ const specialServices = [
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     title: "Comprehensive Services",
     link: "/comprehensive-services"
 <<<<<<< HEAD
@@ -872,10 +873,15 @@ const advancedCategories = [
 =======
     title: "Micro SAAS Services",
     link: "/micro-saas-services"
+=======
+    title: "Comprehensive Services",
+    link: "/comprehensive-services"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-defc
   },
   {
     title: "Services Pricing",
     link: "/services-pricing"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-0682
 =======
     title: "Enhanced Services",
@@ -927,6 +933,8 @@ const advancedCategories = [
     title: "Micro SAAS Services",
     link: "/micro-saas-services"
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-ad2d
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-defc
   }
 ];
 
