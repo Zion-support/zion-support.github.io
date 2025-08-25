@@ -34,6 +34,10 @@ const TalentDirectory = lazy(() => import('./pages/TalentDirectory'));
 const TalentsPage = lazy(() => import('./pages/TalentsPage'));
 const EmergingTech = lazy(() => import('./pages/EmergingTech'));
 
+// New pages from incoming branch
+const MicroSaasServicesPage = lazy(() => import('./pages/MicroSaasServices'));
+const PricingPage = lazy(() => import('./pages/PricingPage'));
+
 // Service pages
 const AIServices = lazy(() => import('./pages/AIServices'));
 const CloudDevOps = lazy(() => import('./pages/CloudDevOps'));
@@ -181,6 +185,7 @@ const App: React.FC = () => {
                     <Routes>
                       {/* Main Routes */}
                       <Route path="/" element={<Home />} />
+                      <Route path="/home" element={<Home />} />
                       <Route path="/services" element={<Services />} />
                       <Route path="/ai-solutions" element={<AISolutions />} />
                       <Route path="/services-showcase" element={<ServicesShowcase />} />
@@ -188,6 +193,10 @@ const App: React.FC = () => {
                       <Route path="/talent-directory" element={<TalentDirectory />} />
                       <Route path="/talents" element={<TalentsPage />} />
                       <Route path="/emerging-tech" element={<EmergingTech />} />
+                      
+                      {/* New routes from incoming branch */}
+                      <Route path="/micro-saas-services" element={<MicroSaasServicesPage />} />
+                      <Route path="/pricing" element={<PricingPage />} />
                       
                       {/* Service Routes */}
                       <Route path="/ai-services" element={<AIServices />} />
@@ -219,7 +228,6 @@ const App: React.FC = () => {
                       <Route path="/contact" element={<Contact />} />
                       <Route path="/mission" element={<Mission />} />
                       <Route path="/team" element={<Team />} />
-                      <Route path="/pricing" element={<Pricing />} />
                       <Route path="/careers" element={<Careers />} />
                       <Route path="/partners" element={<Partners />} />
                       <Route path="/blog" element={<Blog />} />
