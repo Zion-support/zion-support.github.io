@@ -10,6 +10,7 @@ import { useParams } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-3805
 =======
@@ -27,6 +28,8 @@ import { ErrorPage } from '@/components/ErrorPage';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f4cb
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e6db
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a2e5
 import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
 import type { TalentProfile as TalentProfileType } from '@/types/talent';
 import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
@@ -39,6 +42,7 @@ import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
 import NotFound from '@/pages/NotFound';
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-302a
 
+<<<<<<< HEAD
 interface TalentProfile {
   full_name: string;
   skills?: string[];
@@ -46,6 +50,27 @@ interface TalentProfile {
 }
 
 interface TalentProfileWithSocial extends TalentProfile {
+=======
+// Create a simple ErrorPage component
+const ErrorPage = ({ statusCode }: { statusCode: number }) => (
+  <div className="min-h-screen flex items-center justify-center bg-zion-blue-dark">
+    <div className="text-center">
+      <h1 className="text-6xl font-bold text-zion-cyan mb-4">{statusCode}</h1>
+      <p className="text-xl text-zion-slate-light mb-8">
+        {statusCode === 404 ? 'Page Not Found' : 'Something went wrong'}
+      </p>
+      <a 
+        href="/" 
+        className="inline-block bg-zion-cyan text-zion-blue-dark px-6 py-3 rounded-lg hover:bg-zion-cyan/80 transition-colors"
+      >
+        Go Home
+      </a>
+    </div>
+  </div>
+);
+
+interface TalentProfileWithSocial extends TalentProfileType {
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a2e5
   social?: Record<string, string>;
 }
 
@@ -74,6 +99,7 @@ const ProfileLoadingState: React.FC = () => (
 const TalentProfilePage: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const { id } = useParams();
 =======
   const { id } = useParams() as { id?: string };
@@ -81,6 +107,9 @@ const TalentProfilePage: React.FC = () => {
 =======
   const { id } = useParams();
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e6db
+=======
+  const { id } = useParams();
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a2e5
   const [profile, setProfile] = useState<TalentProfileWithSocial | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);

@@ -501,6 +501,7 @@ export function Footer() {
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
               <li><Link to="/marketplace" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Products</Link></li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
               <li><Link to="/services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Services</Link></li>
 <<<<<<< HEAD
@@ -511,6 +512,12 @@ export function Footer() {
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-eb69
 =======
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
+=======
+              <li><Link to="/services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">All Services</Link></li>
+              <li><Link to="/micro-saas-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Micro SAAS</Link></li>
+              <li><Link to="/ai-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Services</Link></li>
+              <li><Link to="/it-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">IT Services</Link></li>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a2e5
               <li><Link to="/talent" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Talent</Link></li>
               <li><Link to="/equipment" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Equipment</Link></li>
               <li><Link to="/categories" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Categories</Link></li>

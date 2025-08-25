@@ -236,6 +236,24 @@ export function QuickAccess() {
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
     },
     {
+      title: "Micro SAAS",
+      description: "Business software solutions",
+      icon: <Briefcase className="h-6 w-6 text-zion-purple" />,
+      link: "/micro-saas-services"
+    },
+    {
+      title: "AI Services",
+      description: "Custom AI development",
+      icon: <Search className="h-6 w-6 text-zion-cyan" />,
+      link: "/ai-services"
+    },
+    {
+      title: "IT Services",
+      description: "Technology solutions",
+      icon: <Settings className="h-6 w-6 text-zion-purple" />,
+      link: "/it-services"
+    },
+    {
       title: t('home.tool_talent'),
       description: t('home.tool_talent_desc'),
       icon: <Users className="h-6 w-6 text-zion-purple" />,
@@ -247,6 +265,7 @@ export function QuickAccess() {
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
     },
     {
+<<<<<<< HEAD
       title: t('home.tool_services'),
       description: t('home.tool_services_desc'),
       icon: <Briefcase className="h-6 w-6 text-zion-cyan" />,
@@ -264,6 +283,8 @@ export function QuickAccess() {
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
     },
     {
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a2e5
       title: t('home.tool_equipment'),
       description: t('home.tool_equipment_desc'),
       icon: <Settings className="h-6 w-6 text-zion-purple" />,
@@ -279,6 +300,7 @@ export function QuickAccess() {
       color: "from-zion-cyan to-zion-cyan-light"
 =======
       link: "/equipment"
+<<<<<<< HEAD
     },
     {
       title: t('nav.community'),
@@ -381,6 +403,8 @@ export function QuickAccess() {
         delayChildren: 0.2
       }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-217b
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a2e5
     }
   };
 
@@ -581,6 +605,7 @@ export function QuickAccess() {
           </p>
         </motion.div>
         
+<<<<<<< HEAD
         <motion.div 
           className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-7xl mx-auto"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fb01
@@ -813,6 +838,28 @@ export function QuickAccess() {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-217b
               </Link>
             </motion.div>
+=======
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-6xl mx-auto">
+          {quickLinks.map((link, index) => (
+            <Link 
+              key={index} 
+              to={link.link} 
+              className="group bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-blue-light hover:border-zion-cyan hover:bg-zion-blue-dark/70 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-2xl hover:shadow-zion-cyan/20 hover:-translate-y-1"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              <div className="bg-gradient-to-br from-zion-blue to-zion-purple rounded-full w-14 h-14 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <div className="group-hover:animate-pulse">
+                  {link.icon}
+                </div>
+              </div>
+              <h3 className="text-white font-semibold mb-2 text-sm">{link.title}</h3>
+              <p className="text-zion-slate-light text-xs mb-3 leading-relaxed">{link.description}</p>
+              <div className="flex items-center text-zion-cyan text-xs mt-auto group-hover:text-zion-purple transition-colors duration-300">
+                <span className="font-medium">{t('general.explore')}</span>
+                <ArrowRight className="ml-1 h-3 w-3 group-hover:translate-x-1 transition-transform duration-300" />
+              </div>
+            </Link>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a2e5
           ))}
         </motion.div>
 

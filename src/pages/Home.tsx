@@ -221,6 +221,7 @@ import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { EnhancedServicesShowcase } from "@/components/home/EnhancedServicesShowcase";
 import { BottomNavigation } from "@/components/MobileNavigation";
 import { MicroSaasServicesSection } from "@/components/home/MicroSaasServicesSection";
@@ -418,6 +419,9 @@ import { ServicesShowcase } from "@/components/home/ServicesShowcase";
 =======
 import { ServicesOverview } from "@/components/ServicesOverview";
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e6db
+=======
+import { FuturisticBackground } from "@/components/FuturisticBackground";
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a2e5
 
 export default function Home() {
   const features = [
@@ -504,6 +508,7 @@ export default function Home() {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="min-h-screen bg-background" id="main-content">
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
 =======
@@ -521,6 +526,11 @@ export default function Home() {
       </div>
 
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-eb69
+=======
+    <div className="min-h-screen bg-background relative">
+      <FuturisticBackground intensity="low" />
+      
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a2e5
       <SEO 
 <<<<<<< HEAD
         title="Zion - The Tech & AI Marketplace" 
