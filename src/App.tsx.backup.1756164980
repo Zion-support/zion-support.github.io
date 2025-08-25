@@ -45,6 +45,15 @@ const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
 const ContactPage = React.lazy(() => import('./pages/Contact'));
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
+<<<<<<< HEAD
+const About = React.lazy(() => import('./pages/About'));
+const Careers = React.lazy(() => import('./pages/Careers'));
+const FAQ = React.lazy(() => import('./pages/FAQ'));
+const GreenIT = React.lazy(() => import('./pages/GreenIT'));
+const Privacy = React.lazy(() => import('./pages/Privacy'));
+const Terms = React.lazy(() => import('./pages/Terms'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+=======
 const AboutPage = React.lazy(() => import('./pages/About'));
 
 // New service pages
@@ -58,6 +67,7 @@ const PrivacyPage = React.lazy(() => import('./pages/Privacy'));
 const TermsPage = React.lazy(() => import('./pages/Terms'));
 const SupportPage = React.lazy(() => import('./pages/Support'));
 const GetStartedPage = React.lazy(() => import('./pages/GetStarted'));
+>>>>>>> origin/cursor/website-audit-and-enhancement-cbd5
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -85,6 +95,15 @@ const baseRoutes = [
   { path: '/request-quote', element: <RequestQuotePage /> },
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
+<<<<<<< HEAD
+  { path: '/about', element: <About /> },
+  { path: '/careers', element: <Careers /> },
+  { path: '/faq', element: <FAQ /> },
+  { path: '/green-it', element: <GreenIT /> },
+  { path: '/privacy', element: <Privacy /> },
+  { path: '/terms', element: <Terms /> },
+  { path: '/sitemap', element: <Sitemap /> },
+=======
   
   // New pages
   { path: '/about', element: <AboutPage /> },
@@ -155,6 +174,7 @@ const baseRoutes = [
   { path: '/status', element: <SupportPage /> },
   { path: '/cookies', element: <PrivacyPage /> },
   { path: '/accessibility', element: <SupportPage /> },
+>>>>>>> origin/cursor/website-audit-and-enhancement-cbd5
 ];
 
 // Loading spinner component

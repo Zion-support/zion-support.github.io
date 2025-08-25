@@ -38,6 +38,18 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path === '/'
     },
     {
+<<<<<<< HEAD
+      key: 'micro-saas',
+      href: '/micro-saas-services',
+      matches: (path: string) => path.startsWith('/micro-saas-services')
+    },
+    {
+      key: 'services',
+      href: '/services',
+      matches: (path: string) => path.startsWith('/services')
+    },
+    {
+=======
       key: 'services',
       href: '/services',
       matches: (path: string) => path.startsWith('/services') || path.includes('quantum') || path.includes('ai-autonomous'),
@@ -70,6 +82,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith('/marketplace')
     },
     {
+>>>>>>> origin/cursor/website-audit-and-enhancement-cbd5
       key: 'talent',
       href: '/talent',
       matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard')
@@ -85,6 +98,16 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
     },
     {
+<<<<<<< HEAD
+      key: 'about',
+      href: '/about',
+      matches: (path: string) => path === '/about'
+    },
+    {
+      key: 'contact',
+      href: '/contact',
+      matches: (path: string) => path === '/contact'
+=======
       key: 'company',
       href: '/about',
       matches: (path: string) => path.startsWith('/about') || path.startsWith('/careers') || path.startsWith('/team'),
@@ -96,6 +119,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         { name: 'Partners', href: '/partners' },
         { name: 'Contact', href: '/contact' }
       ]
+>>>>>>> origin/cursor/website-audit-and-enhancement-cbd5
     }
   ];
 

@@ -68,6 +68,11 @@ export function AppHeader({ isAdmin = false, unreadCount = 0 }: AppHeaderProps) 
             </div>
           </Link>
 
+<<<<<<< HEAD
+      {/* Mobile Bottom Navigation */}
+      {isMobile && <MobileBottomNav />}
+    </>
+=======
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             <MainNavigation isAdmin={isAdmin} unreadCount={unreadCount} />
@@ -209,5 +214,6 @@ export function AppHeader({ isAdmin = false, unreadCount = 0 }: AppHeaderProps) 
         )}
       </div>
     </header>
+>>>>>>> origin/cursor/website-audit-and-enhancement-cbd5
   );
 }

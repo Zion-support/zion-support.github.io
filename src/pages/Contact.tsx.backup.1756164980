@@ -1,3 +1,51 @@
+<<<<<<< HEAD
+import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  MapPinIcon, 
+  PhoneIcon, 
+  EnvelopeIcon, 
+  ClockIcon,
+  ChatBubbleLeftRightIcon
+} from '@heroicons/react/24/outline';
+
+const Contact: React.FC = () => {
+  const contactMethods = [
+    {
+      name: 'Phone Support',
+      description: 'Speak directly with our technical experts',
+      icon: PhoneIcon,
+      contact: '+1 (302) 464-0950',
+      href: 'tel:+13024640950',
+      available: '24/7'
+    },
+    {
+      name: 'Email Support',
+      description: 'Send us detailed inquiries and get comprehensive responses',
+      icon: EnvelopeIcon,
+      contact: 'info@ziontechgroup.com',
+      href: 'mailto:info@ziontechgroup.com',
+      available: 'Within 4 hours'
+    },
+    {
+      name: 'Live Chat',
+      description: 'Get instant help from our AI-powered support team',
+      icon: ChatBubbleLeftRightIcon,
+      contact: 'Available Now',
+      href: '#',
+      available: '24/7'
+    }
+  ];
+
+  const officeLocations = [
+    {
+      name: 'Global Headquarters',
+      address: '364 E Main St STE 1008',
+      city: 'Middletown, DE 19709',
+      country: 'United States',
+      icon: MapPinIcon,
+      hours: 'Mon-Fri: 9:00 AM - 6:00 PM EST'
+=======
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -74,6 +122,7 @@ const Contact = () => {
       details: "Mon - Fri: 9:00 AM - 6:00 PM<br>Sat: 10:00 AM - 4:00 PM",
       description: "Eastern Time Zone",
       color: "from-orange-500 to-red-500"
+>>>>>>> origin/cursor/website-audit-and-enhancement-cbd5
     }
   ];
 
@@ -111,6 +160,238 @@ const Contact = () => {
   }
 
   return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Header Section */}
+      <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-6xl font-bold text-white mb-6"
+          >
+            Get in Touch
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-xl text-gray-300 max-w-3xl mx-auto"
+          >
+            Ready to transform your business with cutting-edge AI and technology solutions? 
+            Our team is here to help you succeed.
+          </motion.p>
+        </div>
+      </div>
+
+      {/* Contact Methods */}
+      <div className="px-4 sm:px-6 lg:px-8 pb-16">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
+            {contactMethods.map((method, index) => (
+              <motion.div
+                key={method.name}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"
+              >
+                <div className="flex items-center space-x-4 mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <method.icon className="h-6 w-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white">{method.name}</h3>
+                    <p className="text-gray-400 text-sm">{method.description}</p>
+                  </div>
+                </div>
+                
+                <div className="space-y-3">
+                  <a 
+                    href={method.href}
+                    className="block text-2xl font-bold text-purple-400 hover:text-purple-300 transition-colors duration-200"
+                  >
+                    {method.contact}
+                  </a>
+                  <p className="text-gray-400 text-sm">
+                    Available: <span className="text-green-400">{method.available}</span>
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Office Locations */}
+      <div className="px-4 sm:px-6 lg:px-8 pb-16">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="text-3xl font-bold text-white text-center mb-12"
+          >
+            Our Offices
+          </motion.h2>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {officeLocations.map((office, index) => (
+              <motion.div
+                key={office.name}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
+                    <office.icon className="h-6 w-6 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold text-white mb-2">{office.name}</h3>
+                    <div className="space-y-2 text-gray-300">
+                      <p>{office.address}</p>
+                      <p>{office.city}</p>
+                      <p>{office.country}</p>
+                      <div className="flex items-center space-x-2 mt-3">
+                        <ClockIcon className="h-4 w-4 text-purple-400" />
+                        <span className="text-sm">{office.hours}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Contact Form */}
+      <div className="px-4 sm:px-6 lg:px-8 pb-16">
+        <div className="max-w-4xl mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.0 }}
+            className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"
+          >
+            <h2 className="text-3xl font-bold text-white text-center mb-8">
+              Send us a Message
+            </h2>
+            
+            <form className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-2">
+                    First Name
+                  </label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors duration-200"
+                    placeholder="Enter your first name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="lastName" className="block text-sm font-medium text-gray-300 mb-2">
+                    Last Name
+                  </label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors duration-200"
+                    placeholder="Enter your last name"
+                  />
+                </div>
+              </div>
+              
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors duration-200"
+                  placeholder="Enter your email address"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                  Company
+                </label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors duration-200"
+                  placeholder="Enter your company name"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={6}
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 transition-colors duration-200 resize-none"
+                  placeholder="Tell us about your project or inquiry..."
+                />
+              </div>
+              
+              <div className="text-center">
+                <button
+                  type="submit"
+                  className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-cyan-900 to-blue-900">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+            Let's Build Something Amazing Together
+          </h2>
+          <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">
+            Ready to take your business to the next level? Contact us today and discover 
+            how our technology solutions can drive innovation and growth.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="inline-flex items-center bg-white text-cyan-900 font-semibold py-4 px-8 rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+            >
+              <Phone className="mr-2 h-5 w-5" />
+              Call Us Now
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="inline-flex items-center border-2 border-white text-white font-semibold py-4 px-8 rounded-lg hover:bg-white hover:text-cyan-900 transition-all duration-300 transform hover:scale-105"
+            >
+              <Mail className="mr-2 h-5 w-5" />
+              Send Email
+            </a>
+=======
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
@@ -364,6 +645,7 @@ const Contact = () => {
             >
               Explore Our Services
             </Link>
+>>>>>>> origin/cursor/website-audit-and-enhancement-cbd5
           </div>
         </div>
       </section>
