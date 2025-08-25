@@ -212,10 +212,14 @@ import { FeatureCTAs } from "@/components/home/FeatureCTAs";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { MicroSaasShowcase } from "@/components/home/MicroSaasShowcase";
 import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
+<<<<<<< HEAD
 import { EnhancedServicesShowcase } from "@/components/home/EnhancedServicesShowcase";
 import { BottomNavigation } from "@/components/MobileNavigation";
 import { MicroSaasServicesSection } from "@/components/home/MicroSaasServicesSection";
 >>>>>>> origin/cursor/website-audit-and-enhancement-ba38
+=======
+import { ServicesOverview } from "@/components/home/ServicesOverview";
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-302a
 
   return (
 <<<<<<< HEAD
@@ -532,7 +536,11 @@ import { MicroSaasServicesSection } from "@/components/home/MicroSaasServicesSec
       
       <FeatureHighlights />
       
+<<<<<<< HEAD
       <MicroSaasShowcase />
+=======
+      <ServicesOverview />
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-302a
       
       <CategoriesSection />
       <BenefitsSection />

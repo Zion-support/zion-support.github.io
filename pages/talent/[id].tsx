@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-3805
 =======
@@ -12,6 +13,12 @@ import type { TalentProfile as TalentProfileType } from '@/types/talent';
 import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-cbd5
+=======
+import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
+import type { TalentProfile as TalentProfileType } from '@/types/talent';
+import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
+import NotFound from '@/pages/NotFound';
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-302a
 
 interface TalentProfile {
   full_name: string;
@@ -86,6 +93,7 @@ const TalentProfilePage: React.FC = () => {
   if (loading) return <ProfileLoadingState />;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
 =======
   if (error || !profile) return <ProfileErrorState error={error} />;
@@ -93,6 +101,9 @@ const TalentProfilePage: React.FC = () => {
 =======
   if (error || !profile) return <ProfileErrorState error={error} />;
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
+=======
+  if (error || !profile) return <NotFound />;
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-302a
 
   return (
     <main className="min-h-screen bg-zion-blue py-8 text-white">
