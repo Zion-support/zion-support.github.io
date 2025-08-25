@@ -1,24 +1,22 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { COMPREHENSIVE_SERVICES } from '../data/comprehensiveServices';
-import { INNOVATIVE_MICRO_SAAS_SERVICES } from '../data/innovativeMicroSaasServices';
-import { ADVANCED_ENTERPRISE_SOLUTIONS } from '../data/advancedEnterpriseSolutions';
-import { SPECIALIZED_IT_SERVICES } from '../data/specializedITServices';
 import { Link } from 'react-router-dom';
+import { NEXT_GEN_INNOVATIVE_SERVICES_2025 } from '../data/nextGenInnovativeServices2025';
+import { SPECIALIZED_AI_SERVICES_2025 } from '../data/specializedAIServices2025';
+import { SPECIALIZED_IT_INFRASTRUCTURE_2025 } from '../data/specializedITInfrastructure2025';
 
-export function Services() {
+export function NextGenServicesShowcase2025() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
 
   const allServices = [
-    ...COMPREHENSIVE_SERVICES,
-    ...INNOVATIVE_MICRO_SAAS_SERVICES,
-    ...ADVANCED_ENTERPRISE_SOLUTIONS,
-    ...SPECIALIZED_IT_SERVICES
+    ...NEXT_GEN_INNOVATIVE_SERVICES_2025,
+    ...SPECIALIZED_AI_SERVICES_2025,
+    ...SPECIALIZED_IT_INFRASTRUCTURE_2025
   ];
-  
+
   const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
-  
+
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -45,6 +43,39 @@ export function Services() {
       transition: {
         duration: 0.5
       }
+    }
+  };
+
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case 'Quantum AI & Computing':
+        return '⚛️';
+      case 'AI & Business Automation':
+        return '🤖';
+      case 'Neural Technology':
+        return '🧠';
+      case 'Immersive Technology':
+        return '🥽';
+      case 'Cybersecurity':
+        return '🔒';
+      case 'Sustainable Technology':
+        return '🌱';
+      case 'AI & Content Creation':
+        return '🎨';
+      case 'AI & Healthcare':
+        return '🏥';
+      case 'AI & Finance':
+        return '💰';
+      case 'AI & Supply Chain':
+        return '📦';
+      case 'AI & Legal Tech':
+        return '⚖️';
+      case 'AI & Education':
+        return '📚';
+      case 'IT Infrastructure':
+        return '🏗️';
+      default:
+        return '🚀';
     }
   };
 
@@ -80,41 +111,19 @@ export function Services() {
           className="text-center mb-16"
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-holographic-gradient bg-clip-text text-transparent animate-holographic-shift">
-            Our Services
+            Next-Gen Services 2025
           </h1>
-          <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Discover our comprehensive range of cutting-edge technology solutions designed to transform your business
+          <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
+            Discover our revolutionary next-generation technology solutions that are shaping the future of business, 
+            featuring cutting-edge AI, quantum computing, neural interfaces, and sustainable technology innovations.
           </p>
-          
-          {/* Next-Gen Services CTA */}
-          <div className="max-w-4xl mx-auto mb-8">
-            <div className="bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-purple/20 border border-zion-purple/30 rounded-2xl p-6 backdrop-blur-md">
-              <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                <div className="text-center md:text-left">
-                  <h3 className="text-2xl font-bold text-white mb-2">🚀 Explore Next-Gen Services 2025</h3>
-                  <p className="text-zion-slate-light">
-                    Discover revolutionary AI, quantum computing, neural interfaces, and sustainable technology solutions
-                  </p>
-                </div>
-                <Link
-                  to="/next-gen-services"
-                  className="px-6 py-3 bg-gradient-to-r from-zion-purple to-zion-cyan text-white rounded-xl font-semibold hover:shadow-xl hover:shadow-zion-purple/25 transition-all duration-300 flex items-center gap-2 group hover:scale-105"
-                >
-                  View Next-Gen Services
-                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </div>
-            </div>
-          </div>
           
           {/* Search Bar */}
           <div className="max-w-2xl mx-auto mb-8">
             <div className="relative">
               <input
                 type="text"
-                placeholder="Search services..."
+                placeholder="Search next-gen services..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full px-6 py-4 bg-zion-blue-light/20 border border-zion-cyan/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 backdrop-blur-sm"
@@ -161,11 +170,7 @@ export function Services() {
               {/* Service Icon */}
               <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300">
                 <span className="text-2xl">
-                  {service.category === 'ai-ml' ? '🤖' : 
-                   service.category === 'cybersecurity' ? '🔒' :
-                   service.category === 'cloud-devops' ? '☁️' :
-                   service.category === 'web-development' ? '🌐' :
-                   service.category === 'data-analytics' ? '📊' : '🚀'}
+                  {getCategoryIcon(service.category)}
                 </span>
               </div>
               
@@ -191,12 +196,44 @@ export function Services() {
                     ))}
                   </div>
                 )}
+
+                {/* Features Preview */}
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-zion-cyan mb-2">Key Features:</h4>
+                  <ul className="text-xs text-zion-slate-light space-y-1">
+                    {service.features.slice(0, 3).map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center gap-2">
+                        <span className="text-zion-cyan">•</span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
                 
-                {/* Price */}
+                {/* Price and Market Info */}
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-2xl font-bold text-white">
-                    ${service.price.toLocaleString()}
-                  </span>
+                  <div>
+                    <span className="text-2xl font-bold text-white">
+                      ${service.price.toLocaleString()}
+                    </span>
+                    <span className="text-sm text-zion-slate-light ml-1">/month</span>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-xs text-zion-cyan font-semibold">Market Price</div>
+                    <div className="text-xs text-zion-slate-light">{service.marketPrice}</div>
+                  </div>
+                </div>
+
+                {/* ROI and Launch Info */}
+                <div className="grid grid-cols-2 gap-4 mb-4 text-xs">
+                  <div>
+                    <div className="text-zion-cyan font-semibold">ROI</div>
+                    <div className="text-zion-slate-light">{service.roi}</div>
+                  </div>
+                  <div>
+                    <div className="text-zion-cyan font-semibold">Delivery</div>
+                    <div className="text-zion-slate-light">{service.estimatedDelivery}</div>
+                  </div>
                 </div>
               </div>
               
@@ -223,15 +260,15 @@ export function Services() {
         >
           <div className="bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20 border border-zion-cyan/30 rounded-2xl p-12 backdrop-blur-md">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
+              Ready to Experience the Future?
             </h2>
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Let's discuss how our technology solutions can accelerate your growth and 
-              give you a competitive edge in the market.
+              Join the technological revolution with our next-generation services. 
+              Transform your business with cutting-edge AI, quantum computing, and sustainable technology solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/request-quote"
+                to="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center group hover:scale-105"
               >
                 Get Free Consultation
@@ -246,14 +283,14 @@ export function Services() {
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                Call Sales Team
+                Call Innovation Team
               </a>
             </div>
           </div>
         </motion.div>
 
         {/* Footer Section */}
-        <div className="bg-zion-slate-dark py-12 border-t border-zion-blue-light">
+        <div className="bg-zion-slate-dark py-12 border-t border-zion-blue-light mt-16">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               {/* Company Info */}
@@ -282,19 +319,19 @@ export function Services() {
 
               {/* Quick Links */}
               <div>
-                <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
+                <h4 className="text-lg font-semibold text-white mb-4">Innovation Hub</h4>
                 <div className="space-y-2">
-                  <a href="/comprehensive-services" className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
-                    Comprehensive Services
+                  <a href="/next-gen-services" className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
+                    Next-Gen Services
                   </a>
-                  <a href="/ai-services" className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
-                    AI Services
+                  <a href="/ai-solutions" className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
+                    AI Solutions
                   </a>
-                  <a href="/enterprise-solutions" className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
-                    Enterprise Solutions
+                  <a href="/quantum-technology" className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
+                    Quantum Technology
                   </a>
-                  <a href="/micro-saas-services" className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
-                    Micro SAAS Services
+                  <a href="/sustainable-tech" className="block text-zion-slate-light hover:text-zion-cyan transition-colors">
+                    Sustainable Tech
                   </a>
                 </div>
               </div>
@@ -302,7 +339,7 @@ export function Services() {
             
             <div className="border-t border-zion-blue-light mt-8 pt-8 text-center">
               <p className="text-zion-slate-light text-sm">
-                © 2024 Zion Tech Group. All rights reserved. | 
+                © 2025 Zion Tech Group. All rights reserved. | 
                 <a href="/privacy" className="ml-2 hover:text-zion-cyan transition-colors">Privacy Policy</a> | 
                 <a href="/terms" className="ml-2 hover:text-zion-cyan transition-colors">Terms of Service</a>
               </p>
@@ -314,4 +351,4 @@ export function Services() {
   );
 }
 
-export default Services;
+export default NextGenServicesShowcase2025;
