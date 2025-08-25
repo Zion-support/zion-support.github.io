@@ -274,35 +274,35 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
     features: [
       "Patient outcome prediction",
       "Treatment optimization",
-      "Resource allocation",
+      "Operational efficiency analysis",
       "Risk assessment",
+      "Population health management",
       "Clinical decision support",
-      "Population health analytics",
-      "Real-time monitoring",
-      "HIPAA compliance"
+      "Healthcare cost optimization",
+      "Quality metrics tracking"
     ],
     benefits: [
       "Improve patient outcomes by 25%",
       "Reduce healthcare costs by 20%",
       "Optimize resource allocation",
-      "Faster diagnosis and treatment",
-      "Enhanced patient safety"
+      "Enhance clinical decision-making",
+      "Meet value-based care requirements"
     ],
     useCases: [
       "Hospitals and clinics",
-      "Health insurance",
+      "Health insurance companies",
       "Pharmaceutical companies",
-      "Research institutions",
-      "Public health agencies"
+      "Public health agencies",
+      "Research institutions"
     ],
     targetAudience: [
       "Healthcare administrators",
-      "Clinical staff",
-      "Health IT managers",
-      "Insurance companies",
-      "Research institutions"
+      "Clinical leaders",
+      "Data scientists",
+      "Health insurers",
+      "Public health officials"
     ],
-    tags: ["AI", "Healthcare", "Analytics", "Patient Care", "HIPAA"],
+    tags: ["AI", "Healthcare", "Analytics", "Patient Outcomes", "Cost Optimization"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "enterprise",
     marketPrice: "$899 - $3,000/month",
@@ -311,56 +311,56 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technology: ["Machine Learning", "NLP", "React", "Python", "TensorFlow"],
-    integrations: ["EHR systems", "PACS", "Lab systems", "Insurance databases"],
-    compliance: ["HIPAA", "HITECH", "SOC 2", "ISO 27001"],
+    technology: ["Machine Learning", "NLP", "React", "Python", "HIPAA-compliant cloud"],
+    integrations: ["EHR systems", "PACS", "Lab systems", "Insurance platforms", "Wearables"],
+    compliance: ["HIPAA", "HITECH", "SOC 2", "ISO 27001", "FDA guidelines"],
     roi: "300% within 12 months",
     competitors: ["Epic", "Cerner", "Allscripts", "Athenahealth"],
-    uniqueValue: "AI-powered healthcare analytics with real-time clinical decision support and outcome prediction"
+    uniqueValue: "AI-powered healthcare analytics with predictive modeling and automated clinical decision support"
   },
 
   // Edge Computing Solutions
   {
     id: "edge-computing-solutions",
     title: "Edge Computing Solutions Platform",
-    description: "Comprehensive edge computing platform that brings computation and data storage closer to data sources for faster processing and reduced latency.",
+    description: "Comprehensive edge computing platform that brings AI and data processing closer to data sources for real-time decision making.",
     category: "Edge Computing",
-    subcategory: "Infrastructure",
+    subcategory: "AI at the Edge",
     price: 799,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Edge node management",
-      "Real-time data processing",
-      "Low-latency applications",
       "Edge AI deployment",
-      "Load balancing",
-      "Security at the edge",
-      "Monitoring and analytics",
+      "Real-time data processing",
+      "Edge device management",
+      "5G optimization",
+      "Latency reduction",
+      "Bandwidth optimization",
+      "Edge security",
       "Scalable infrastructure"
     ],
     benefits: [
       "Reduce latency by 80%",
       "Lower bandwidth costs by 60%",
-      "Improve application performance",
-      "Enhanced user experience",
-      "Real-time decision making"
+      "Improve real-time decision making",
+      "Enhanced privacy and security",
+      "Scalable edge deployment"
     ],
     useCases: [
       "IoT applications",
-      "Real-time analytics",
-      "Gaming and streaming",
       "Autonomous vehicles",
-      "Smart cities"
+      "Smart cities",
+      "Industrial automation",
+      "Retail analytics"
     ],
     targetAudience: [
       "IoT developers",
-      "Cloud architects",
-      "DevOps engineers",
-      "Network administrators",
-      "Application developers"
+      "Manufacturing companies",
+      "Smart city planners",
+      "Retail chains",
+      "Transportation companies"
     ],
-    tags: ["Edge Computing", "IoT", "Real-time Processing", "Low Latency", "Distributed Systems"],
+    tags: ["Edge Computing", "AI", "IoT", "5G", "Real-time Processing"],
     estimatedDelivery: "3-4 weeks",
     supportLevel: "premium",
     marketPrice: "$799 - $2,500/month",
@@ -369,19 +369,19 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technology: ["Kubernetes", "Docker", "Node.js", "Python", "Rust"],
-    integrations: ["AWS", "Azure", "Google Cloud", "IoT platforms", "CDN services"],
-    compliance: ["SOC 2", "ISO 27001", "GDPR"],
+    technology: ["Kubernetes", "Docker", "TensorFlow Lite", "5G", "Edge AI chips"],
+    integrations: ["Cloud platforms", "IoT devices", "5G networks", "Enterprise systems"],
+    compliance: ["SOC 2", "ISO 27001", "GDPR", "Industry-specific standards"],
     roi: "280% within 9 months",
-    competitors: ["AWS Edge", "Azure Edge", "Google Edge", "Cloudflare Workers"],
-    uniqueValue: "Multi-cloud edge computing platform with AI-powered optimization and real-time analytics"
+    competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge"],
+    uniqueValue: "Comprehensive edge computing platform with AI optimization and 5G integration"
   },
 
   // AI-Powered Financial Planning
   {
     id: "ai-financial-planning-platform",
     title: "AI Financial Planning Platform",
-    description: "Intelligent financial planning platform that uses AI to provide personalized investment advice, retirement planning, and wealth management.",
+    description: "Intelligent financial planning platform that provides personalized investment advice, retirement planning, and wealth management using AI.",
     category: "AI & FinTech",
     subcategory: "Financial Planning",
     price: 199,
@@ -395,28 +395,28 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
       "Portfolio rebalancing",
       "Goal tracking",
       "Financial education",
-      "Secure document storage"
+      "Mobile app access"
     ],
     benefits: [
       "Improve investment returns by 15-25%",
-      "Reduce financial planning costs by 50%",
-      "Better retirement preparedness",
-      "Tax optimization",
-      "Personalized financial guidance"
+      "Reduce financial planning costs by 70%",
+      "Personalized financial advice",
+      "Automated portfolio management",
+      "Better financial literacy"
     ],
     useCases: [
       "Personal financial planning",
       "Retirement planning",
       "Investment management",
       "Tax planning",
-      "Estate planning"
+      "Wealth management"
     ],
     targetAudience: [
       "Individual investors",
       "Financial advisors",
       "Retirement planners",
-      "Tax professionals",
-      "Wealth managers"
+      "Wealth managers",
+      "Financial institutions"
     ],
     tags: ["AI", "FinTech", "Financial Planning", "Investment", "Retirement"],
     estimatedDelivery: "2-3 weeks",
@@ -427,70 +427,70 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technology: ["Machine Learning", "NLP", "React", "Python", "Blockchain"],
-    integrations: ["Banking APIs", "Investment platforms", "Tax software", "Accounting systems"],
-    compliance: ["SEC", "FINRA", "SOC 2", "GDPR"],
+    technology: ["Machine Learning", "NLP", "React Native", "Python", "Blockchain"],
+    integrations: ["Banking APIs", "Investment platforms", "Tax software", "CRM systems"],
+    compliance: ["SEC", "FINRA", "GDPR", "SOC 2", "Financial regulations"],
     roi: "320% within 6 months",
-    competitors: ["Betterment", "Wealthfront", "Personal Capital", "Mint"],
-    uniqueValue: "AI-powered financial planning with personalized investment strategies and comprehensive wealth management"
+    competitors: ["Betterment", "Wealthfront", "Personal Capital", "M1 Finance"],
+    uniqueValue: "AI-powered financial planning with personalized advice and automated portfolio optimization"
   },
 
   // Quantum Machine Learning Platform
   {
     id: "quantum-machine-learning-platform",
     title: "Quantum Machine Learning Platform",
-    description: "Revolutionary platform that combines quantum computing with machine learning to solve complex problems that are intractable for classical computers.",
+    description: "Revolutionary platform that combines quantum computing with machine learning to solve complex problems beyond classical computing capabilities.",
     category: "Quantum Computing",
-    subcategory: "Machine Learning",
-    price: 3500,
+    subcategory: "Quantum ML",
+    price: 5000,
     currency: "$",
     pricingModel: "monthly",
     features: [
       "Quantum ML algorithms",
-      "Hybrid classical-quantum models",
+      "Hybrid quantum-classical computing",
       "Quantum feature selection",
-      "Optimization algorithms",
+      "Quantum optimization",
       "Quantum neural networks",
       "Performance benchmarking",
-      "Cloud-based access",
-      "Real-time collaboration"
+      "Cloud quantum access",
+      "Expert consultation"
     ],
     benefits: [
       "Solve previously intractable problems",
-      "Exponential speedup for specific tasks",
-      "Enhanced optimization capabilities",
-      "Future-proof technology",
-      "Competitive advantage in research"
+      "Exponential speedup for specific algorithms",
+      "Competitive advantage in research",
+      "Future-proof technology investment",
+      "Access to quantum computing resources"
     ],
     useCases: [
       "Drug discovery",
       "Financial modeling",
       "Logistics optimization",
       "Climate modeling",
-      "Cryptography"
+      "Cryptography research"
     ],
     targetAudience: [
-      "Quantum researchers",
-      "Data scientists",
+      "Research institutions",
       "Pharmaceutical companies",
-      "Financial institutions",
-      "Academic institutions"
+      "Financial services",
+      "Government agencies",
+      "Technology companies"
     ],
-    tags: ["Quantum Computing", "Machine Learning", "AI", "Optimization", "Research"],
+    tags: ["Quantum Computing", "Machine Learning", "AI", "Research", "Advanced Computing"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$3,500 - $12,000/month",
+    marketPrice: "$5,000 - $20,000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technology: ["Qiskit", "PennyLane", "Python", "Jupyter", "Quantum simulators"],
-    integrations: ["AWS Braket", "Azure Quantum", "Google Quantum", "IBM Quantum"],
-    compliance: ["Research standards", "Academic protocols", "Enterprise security"],
+    technology: ["Qiskit", "Cirq", "PennyLane", "Python", "Quantum simulators"],
+    integrations: ["Cloud quantum platforms", "Classical ML frameworks", "Research tools"],
+    compliance: ["Research standards", "Data security", "Intellectual property protection"],
     roi: "150% within 18 months",
     competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "Amazon Braket"],
-    uniqueValue: "Hybrid classical-quantum ML platform with accessible algorithms and real-world applications"
+    uniqueValue: "Hybrid quantum-classical ML platform with access to multiple quantum backends"
   },
 
   // AI-Powered Supply Chain Optimization
@@ -499,7 +499,7 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
     title: "AI Supply Chain Optimization Platform",
     description: "Intelligent supply chain platform that uses AI to optimize inventory, predict demand, and streamline logistics operations.",
     category: "AI & Supply Chain",
-    subcategory: "Optimization",
+    subcategory: "Supply Chain Optimization",
     price: 699,
     currency: "$",
     pricingModel: "monthly",
@@ -511,101 +511,101 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
       "Risk assessment",
       "Real-time tracking",
       "Performance analytics",
-      "Automated reporting"
+      "Automated procurement"
     ],
     benefits: [
       "Reduce inventory costs by 20-30%",
       "Improve delivery times by 25%",
-      "Optimize supplier relationships",
-      "Reduce supply chain risks",
-      "Increase operational efficiency"
+      "Reduce supply chain disruptions",
+      "Optimize resource allocation",
+      "Enhance customer satisfaction"
     ],
     useCases: [
       "Manufacturing",
-      "Retail and e-commerce",
-      "Logistics and transportation",
-      "Healthcare supply chains",
-      "Food and beverage"
+      "Retail",
+      "E-commerce",
+      "Logistics",
+      "Distribution"
     ],
     targetAudience: [
       "Supply chain managers",
       "Operations directors",
       "Logistics coordinators",
-      "Procurement managers",
+      "Procurement officers",
       "Business analysts"
     ],
-    tags: ["AI", "Supply Chain", "Logistics", "Optimization", "Inventory Management"],
+    tags: ["AI", "Supply Chain", "Logistics", "Inventory Management", "Optimization"],
     estimatedDelivery: "3-4 weeks",
     supportLevel: "premium",
-    marketPrice: "$699 - $2,200/month",
+    marketPrice: "$699 - $2,500/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technology: ["Machine Learning", "Optimization algorithms", "React", "Python", "IoT"],
-    integrations: ["ERP systems", "WMS", "TMS", "Supplier portals", "E-commerce platforms"],
+    technology: ["Machine Learning", "IoT", "Blockchain", "React", "Python"],
+    integrations: ["ERP systems", "WMS", "TMS", "Supplier platforms", "E-commerce"],
     compliance: ["ISO 28000", "C-TPAT", "GDPR", "SOC 2"],
     roi: "280% within 8 months",
     competitors: ["SAP", "Oracle", "Manhattan Associates", "JDA Software"],
-    uniqueValue: "AI-powered supply chain optimization with real-time visibility and predictive analytics"
+    uniqueValue: "AI-powered supply chain platform with real-time optimization and predictive analytics"
   },
 
   // Metaverse Development Platform
   {
     id: "metaverse-development-platform",
     title: "Metaverse Development Platform",
-    description: "Comprehensive platform for building, deploying, and managing metaverse experiences with AI-powered content generation and virtual reality integration.",
-    category: "Metaverse & VR",
-    subcategory: "Development Platform",
-    price: 499,
+    description: "Comprehensive platform for creating, deploying, and managing immersive 3D virtual worlds and experiences for businesses and creators.",
+    category: "Metaverse & Web3",
+    subcategory: "Virtual Worlds",
+    price: 999,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "3D world building tools",
-      "AI content generation",
-      "VR/AR integration",
-      "Multi-user experiences",
+      "3D world creation tools",
       "Avatar customization",
-      "Virtual commerce",
+      "Virtual event hosting",
+      "NFT marketplace integration",
+      "Multi-user collaboration",
+      "VR/AR support",
       "Analytics dashboard",
       "Monetization tools"
     ],
     benefits: [
-      "Create immersive experiences quickly",
-      "Reduce development costs by 60%",
-      "Engage customers in new ways",
-      "Monetize virtual experiences",
-      "Future-proof business presence"
+      "Create immersive brand experiences",
+      "Host virtual events and conferences",
+      "Generate new revenue streams",
+      "Enhance customer engagement",
+      "Reduce physical event costs"
     ],
     useCases: [
       "Virtual events",
-      "Virtual retail",
+      "Brand experiences",
       "Training and education",
-      "Social networking",
-      "Gaming and entertainment"
+      "Virtual real estate",
+      "Social networking"
     ],
     targetAudience: [
-      "Game developers",
-      "Marketing agencies",
-      "Event planners",
-      "Educational institutions",
-      "Retail businesses"
+      "Event organizers",
+      "Brand managers",
+      "Educators",
+      "Real estate developers",
+      "Content creators"
     ],
-    tags: ["Metaverse", "VR/AR", "3D Development", "AI Content", "Virtual Commerce"],
-    estimatedDelivery: "4-5 weeks",
+    tags: ["Metaverse", "Web3", "Virtual Reality", "3D", "NFTs"],
+    estimatedDelivery: "4-6 weeks",
     supportLevel: "premium",
-    marketPrice: "$499 - $1,800/month",
+    marketPrice: "$999 - $3,500/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technology: ["Unity", "Unreal Engine", "WebXR", "AI content generation", "Blockchain"],
-    integrations: ["VR headsets", "Payment gateways", "Social platforms", "Analytics tools"],
-    compliance: ["GDPR", "CCPA", "VR safety standards"],
+    technology: ["Unity", "Unreal Engine", "WebGL", "Blockchain", "WebRTC"],
+    integrations: ["NFT marketplaces", "Payment gateways", "Social platforms", "Analytics tools"],
+    compliance: ["GDPR", "CCPA", "Accessibility standards", "Content moderation"],
     roi: "400% within 10 months",
-    competitors: ["Roblox", "Decentraland", "VRChat", "Spatial"],
-    uniqueValue: "All-in-one metaverse platform with AI-powered content generation and comprehensive monetization tools"
+    competitors: ["Roblox", "Decentraland", "The Sandbox", "Meta"],
+    uniqueValue: "Comprehensive metaverse platform with business-focused tools and NFT integration"
   }
 ];
