@@ -1,33 +1,11 @@
-<<<<<<< HEAD
-export const generateSearchSuggestions = (query: string): string[] => {
-  const suggestions = [
-    'AI Services',
-    'Cybersecurity',
-    'Cloud Migration',
-    'Web Development',
-    'Mobile Apps',
-    'Data Analytics',
-    'Blockchain',
-    'IT Consulting'
-  ];
-  
-  if (!query) return suggestions.slice(0, 5);
-  
-  return suggestions
-    .filter(suggestion => 
-      suggestion.toLowerCase().includes(query.toLowerCase())
-    )
-    .slice(0, 5);
-};
-=======
 export interface SearchSuggestion {
   id: string;
   text: string;
   type: string;
 }
 
-export function generateSearchSuggestions(): SearchSuggestion[] {
-  return [
+export function generateSearchSuggestions(query?: string): SearchSuggestion[] {
+  const suggestions: SearchSuggestion[] = [
     { id: '1', text: 'AI Services', type: 'category' },
     { id: '2', text: 'Cybersecurity', type: 'category' },
     { id: '3', text: 'Cloud Solutions', type: 'category' },
@@ -49,5 +27,12 @@ export function generateSearchSuggestions(): SearchSuggestion[] {
     { id: '19', text: 'Cybersecurity Audit', type: 'service' },
     { id: '20', text: 'Cloud Migration', type: 'service' }
   ];
+  
+  if (!query) return suggestions.slice(0, 5);
+  
+  return suggestions
+    .filter(suggestion => 
+      suggestion.text.toLowerCase().includes(query.toLowerCase())
+    )
+    .slice(0, 5);
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-a776

@@ -1,8 +1,11 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion';
+import { FaqSection } from "@/components/FaqSection";
+import { SEO } from "@/components/SEO";
+import { AppHeader } from "@/layout/AppHeader";
+import { Footer } from "@/components/Footer";
 
-export const FAQ: React.FC = () => {
+export default function FAQ() {
   const faqs = [
     {
       question: "What services does Zion Tech Group offer?",
@@ -39,68 +42,6 @@ export const FAQ: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      <div className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Frequently Asked <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Questions</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Find answers to common questions about our services, processes, and how we can help transform your business.
-            </p>
-          </div>
-
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <Accordion key={index} type="single" collapsible>
-                <AccordionItem value={`item-${index}`} className="bg-white/10 backdrop-blur-md border-white/20 rounded-lg">
-                  <AccordionTrigger className="text-left px-6 py-4 text-lg font-semibold text-white hover:text-cyan-400 transition-colors">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-4 text-gray-300 leading-relaxed">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-            ))}
-          </div>
-
-          <div className="text-center mt-16">
-            <h2 className="text-3xl font-bold mb-6 text-white">
-              Still Have Questions?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Can't find the answer you're looking for? Our team is here to help.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
-              >
-                Contact Us
-              </a>
-              <a
-                href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300"
-              >
-                Call Now
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-=======
-import { FaqSection } from "@/components/FaqSection";
-import { SEO } from "@/components/SEO";
-import { AppHeader } from "@/layout/AppHeader";
-import { Footer } from "@/components/Footer";
-
-export default function FAQ() {
-  return (
     <div className="min-h-screen bg-background">
       <SEO 
         title="FAQ - Zion Tech Group" 
@@ -112,15 +53,70 @@ export default function FAQ() {
       <AppHeader />
       
       <main className="pt-16">
+        {/* Enhanced FAQ Section */}
         <FaqSection />
         
-        {/* Additional FAQ content */}
+        {/* Comprehensive FAQ Content */}
+        <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-16">
+                <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                  Frequently Asked <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Questions</span>
+                </h1>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  Find answers to common questions about our services, processes, and how we can help transform your business.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                {faqs.map((faq, index) => (
+                  <Accordion key={index} type="single" collapsible>
+                    <AccordionItem value={`item-${index}`} className="bg-white/10 backdrop-blur-md border-white/20 rounded-lg">
+                      <AccordionTrigger className="text-left px-6 py-4 text-lg font-semibold text-white hover:text-cyan-400 transition-colors">
+                        {faq.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="px-6 pb-4 text-gray-300 leading-relaxed">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+                ))}
+              </div>
+
+              <div className="text-center mt-16">
+                <h2 className="text-3xl font-bold mb-6 text-white">
+                  Still Have Questions?
+                </h2>
+                <p className="text-xl text-gray-300 mb-8">
+                  Can't find the answer you're looking for? Our team is here to help.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <a
+                    href="/contact"
+                    className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
+                  >
+                    Contact Us
+                  </a>
+                  <a
+                    href="tel:+13024640950"
+                    className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300"
+                  >
+                    Call Now
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* Additional Support Options */}
         <section className="py-20 bg-zion-blue-dark">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Still Have Questions?</h2>
+              <h2 className="text-3xl font-bold text-white mb-4">Need More Help?</h2>
               <p className="text-zion-slate-light text-xl max-w-2xl mx-auto">
-                Can't find what you're looking for? Our support team is here to help.
+                We offer multiple ways to get the support you need.
               </p>
             </div>
             
@@ -169,4 +165,3 @@ export default function FAQ() {
     </div>
   );
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-a776
