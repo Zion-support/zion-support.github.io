@@ -19,7 +19,12 @@ const ServicesComparisonPage = lazy(() => import('./pages/ServicesComparison'));
 const ITOnsiteServicesPage = lazy(() => import('./pages/ITOnsiteServicesPage'));
 const Contact = lazy(() => import('./pages/Contact'));
 const About = lazy(() => import('./pages/About'));
-const NotFound = lazy(() => import('./pages/NotFound'));
+
+// New enhanced service pages
+const ComprehensiveITServices = lazy(() => import('./pages/ComprehensiveITServices'));
+const EnhancedMicroSaasServices = lazy(() => import('./pages/EnhancedMicroSaasServices'));
+const InnovativeAIServices = lazy(() => import('./pages/InnovativeAIServices'));
+// const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Enhanced loading fallback
 const EnhancedLoadingFallback = () => (
@@ -59,12 +64,17 @@ const App = () => {
                   <Route path="/services-comparison" element={<ServicesComparisonPage />} />
                   <Route path="/it-onsite-services" element={<ITOnsiteServicesPage />} />
                   
+                  {/* New enhanced service routes */}
+                  <Route path="/comprehensive-it-services" element={<ComprehensiveITServices />} />
+                  <Route path="/enhanced-micro-saas" element={<EnhancedMicroSaasServices />} />
+                  <Route path="/innovative-ai-services" element={<InnovativeAIServices />} />
+                  
                   {/* Our enhanced service routes */}
                   <Route path="/about" element={<About />} />
                   <Route path="/contact" element={<Contact />} />
                   
                   {/* Catch all route */}
-                  <Route path="*" element={<NotFound />} />
+                  <Route path="*" element={<Home />} />
                 </Routes>
               </Suspense>
             </main>
