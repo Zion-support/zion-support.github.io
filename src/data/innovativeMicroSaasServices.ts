@@ -1388,6 +1388,282 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
       website: "https://ziontechgroup.com"
     },
     websiteUrl: "https://ziontechgroup.com/quantum-optimization"
+  },
+  // NEW INNOVATIVE MICRO SAAS SERVICES ADDED
+  {
+    id: "ai-powered-voice-commerce-platform",
+    title: "AI-Powered Voice Commerce & Shopping Assistant Platform",
+    description: "Intelligent voice commerce platform that enables businesses to create voice-enabled shopping experiences using AI-powered voice recognition and natural language processing.",
+    category: "AI & Voice Technology",
+    subcategory: "Voice Commerce",
+    price: 1800,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Voice recognition and processing",
+      "Natural language understanding",
+      "Voice-enabled product search",
+      "Voice shopping cart management",
+      "Voice payment processing",
+      "Multi-language support",
+      "Integration with e-commerce platforms",
+      "Voice analytics dashboard",
+      "Custom voice skills development",
+      "Voice commerce API"
+    ],
+    benefits: [
+      "Increase conversion rates by 35%",
+      "Improve customer engagement",
+      "Accessibility for all users",
+      "Faster shopping experience",
+      "Competitive advantage",
+      "Future-ready technology"
+    ],
+    useCases: [
+      "E-commerce businesses",
+      "Retail stores",
+      "Voice assistant platforms",
+      "Mobile commerce apps",
+      "Smart home devices",
+      "Automotive commerce"
+    ],
+    targetAudience: [
+      "E-commerce managers",
+      "Digital marketers",
+      "Product managers",
+      "UX designers",
+      "Business owners"
+    ],
+    tags: ["AI", "Voice Technology", "E-commerce", "Voice Commerce", "Natural Language Processing"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,800 - $5,500/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/ai-voice-commerce"
+  },
+  {
+    id: "ai-powered-emotional-intelligence-platform",
+    title: "AI-Powered Emotional Intelligence & Sentiment Analysis Platform",
+    description: "Advanced emotional intelligence platform that analyzes human emotions, sentiment, and behavioral patterns using AI to improve customer interactions and business decisions.",
+    category: "AI & Psychology",
+    subcategory: "Emotional Intelligence",
+    price: 2200,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Real-time emotion detection",
+      "Sentiment analysis engine",
+      "Behavioral pattern recognition",
+      "Emotional response prediction",
+      "Multi-modal emotion analysis",
+      "Customer emotion tracking",
+      "Emotional intelligence scoring",
+      "Personalized recommendations",
+      "Integration with CRM systems",
+      "Emotional analytics dashboard"
+    ],
+    benefits: [
+      "Improve customer satisfaction by 45%",
+      "Better understanding of customer needs",
+      "Personalized customer experiences",
+      "Enhanced decision making",
+      "Competitive advantage",
+      "Data-driven insights"
+    ],
+    useCases: [
+      "Customer service departments",
+      "Sales teams",
+      "Marketing campaigns",
+      "Product development",
+      "HR departments",
+      "Healthcare providers"
+    ],
+    targetAudience: [
+      "Customer experience managers",
+      "Sales managers",
+      "Marketing managers",
+      "HR professionals",
+      "Business analysts"
+    ],
+    tags: ["AI", "Emotional Intelligence", "Sentiment Analysis", "Psychology", "Customer Experience"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "premium",
+    marketPrice: "$2,200 - $6,500/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/ai-emotional-intelligence"
+  },
+  {
+    id: "ai-powered-creative-design-automation",
+    title: "AI-Powered Creative Design & Brand Automation Platform",
+    description: "Intelligent design platform that automates creative processes, brand consistency, and visual content generation using AI to streamline marketing and design workflows.",
+    category: "AI & Creative Design",
+    subcategory: "Design Automation",
+    price: 1200,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered design generation",
+      "Brand consistency automation",
+      "Template customization",
+      "Visual content creation",
+      "Design trend analysis",
+      "Automated brand guidelines",
+      "Multi-format export",
+      "Collaborative design tools",
+      "Version control management",
+      "Design analytics dashboard"
+    ],
+    benefits: [
+      "Reduce design time by 70%",
+      "Maintain brand consistency",
+      "Faster content creation",
+      "Cost-effective design",
+      "Scalable creative operations",
+      "Better visual communication"
+    ],
+    useCases: [
+      "Marketing teams",
+      "Design agencies",
+      "Brand managers",
+      "Content creators",
+      "Small businesses",
+      "Enterprise marketing"
+    ],
+    targetAudience: [
+      "Marketing managers",
+      "Graphic designers",
+      "Brand managers",
+      "Content creators",
+      "Business owners"
+    ],
+    tags: ["AI", "Creative Design", "Brand Automation", "Visual Content", "Design Tools"],
+    estimatedDelivery: "2-3 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,200 - $3,800/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/ai-creative-design"
+  },
+  {
+    id: "ai-powered-predictive-maintenance-platform",
+    title: "AI-Powered Predictive Maintenance & Asset Management Platform",
+    description: "Intelligent maintenance platform that predicts equipment failures, optimizes maintenance schedules, and reduces downtime using AI-powered analytics and IoT sensors.",
+    category: "AI & Industrial IoT",
+    subcategory: "Predictive Maintenance",
+    price: 2800,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered failure prediction",
+      "Predictive maintenance scheduling",
+      "Real-time equipment monitoring",
+      "IoT sensor integration",
+      "Maintenance cost optimization",
+      "Asset performance analytics",
+      "Automated alert systems",
+      "Maintenance history tracking",
+      "Integration with CMMS systems",
+      "Predictive analytics dashboard"
+    ],
+    benefits: [
+      "Reduce unplanned downtime by 50%",
+      "Lower maintenance costs by 30%",
+      "Extend equipment lifespan",
+      "Improve operational efficiency",
+      "Better resource planning",
+      "Data-driven maintenance"
+    ],
+    useCases: [
+      "Manufacturing companies",
+      "Industrial facilities",
+      "Energy companies",
+      "Transportation companies",
+      "Healthcare facilities",
+      "Data centers"
+    ],
+    targetAudience: [
+      "Maintenance managers",
+      "Operations directors",
+      "Facility managers",
+      "Asset managers",
+      "Industrial engineers"
+    ],
+    tags: ["AI", "Predictive Maintenance", "IoT", "Asset Management", "Industrial Analytics"],
+    estimatedDelivery: "4-5 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$2,800 - $8,500/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/ai-predictive-maintenance"
+  },
+  {
+    id: "ai-powered-energy-optimization-platform",
+    title: "AI-Powered Energy Optimization & Sustainability Platform",
+    description: "Intelligent energy management platform that optimizes energy consumption, reduces costs, and improves sustainability using AI-powered analytics and smart grid integration.",
+    category: "AI & Energy Management",
+    subcategory: "Energy Optimization",
+    price: 3200,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered energy consumption analysis",
+      "Real-time energy monitoring",
+      "Predictive energy optimization",
+      "Smart grid integration",
+      "Renewable energy management",
+      "Carbon footprint tracking",
+      "Energy cost optimization",
+      "Sustainability reporting",
+      "Integration with building systems",
+      "Energy analytics dashboard"
+    ],
+    benefits: [
+      "Reduce energy costs by 25-40%",
+      "Improve sustainability metrics",
+      "Better energy efficiency",
+      "Regulatory compliance",
+      "Cost-effective operations",
+      "Environmental impact reduction"
+    ],
+    useCases: [
+      "Commercial buildings",
+      "Industrial facilities",
+      "Data centers",
+      "Retail chains",
+      "Educational institutions",
+      "Government buildings"
+    ],
+    targetAudience: [
+      "Facility managers",
+      "Energy managers",
+      "Sustainability officers",
+      "Operations directors",
+      "Building owners"
+    ],
+    tags: ["AI", "Energy Management", "Sustainability", "Smart Grid", "Energy Optimization"],
+    estimatedDelivery: "4-5 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,200 - $10,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/ai-energy-optimization"
   }
 ];
 
@@ -1409,5 +1685,9 @@ export const INNOVATIVE_SERVICE_CATEGORIES = [
   "AI & Legal Services",
   "AI & Real Estate",
   "AI & Manufacturing",
-  "AI & Energy Management"
+  "AI & Energy Management",
+  "AI & Voice Technology",
+  "AI & Psychology",
+  "AI & Creative Design",
+  "AI & Industrial IoT"
 ];
