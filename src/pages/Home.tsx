@@ -1,6 +1,6 @@
 
 
-import React, { useState, useEffect, Suspense } from 'react';
+import React, { useState, useEffect, Suspense, useCallback, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   ChevronLeft, 
@@ -32,7 +32,9 @@ import {
   Sparkles,
   Eye,
   Heart,
-  Target as TargetIcon
+  Target as TargetIcon,
+  Play,
+  Pause
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import { SEOConfigs } from '../components/SEOHead';
@@ -43,9 +45,14 @@ const LazyFeaturesSection = React.lazy(() => import('../components/home/Features
 const LazyTestimonialsSection = React.lazy(() => import('../components/home/TestimonialsSection'));
 const LazyCTASection = React.lazy(() => import('../components/home/CTASection'));
 
-// Loading fallback component
+// Loading fallback component with better accessibility
 const LoadingFallback = ({ message }: { message: string }) => (
-  <div className="flex items-center justify-center py-12">
+  <div 
+    className="flex items-center justify-center py-12"
+    role="status"
+    aria-live="polite"
+    aria-label={`Loading ${message}`}
+  >
     <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-500"></div>
     <span className="ml-3 text-gray-600">{message}</span>
   </div>
@@ -55,8 +62,10 @@ const Home: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
 
-  const heroSlides = [
+  // Memoized hero slides for better performance
+  const heroSlides = useMemo(() => [
     {
       title: "AI-Powered Business Solutions",
       subtitle: "Transform your business with cutting-edge artificial intelligence",
@@ -84,16 +93,18 @@ const Home: React.FC = () => {
       path: "/services/micro-saas-solutions",
       features: ["Custom Development", "Scalable Architecture", "API Integration", "User Management"]
     }
-  ];
+  ], []);
 
-  const stats = [
+  // Memoized stats for better performance
+  const stats = useMemo(() => [
     { icon: Users, value: "500+", label: "Happy Clients", description: "Trusted by businesses worldwide" },
     { icon: TrendingUp, value: "95%", label: "Success Rate", description: "Proven track record of delivery" },
     { icon: Award, value: "10+", label: "Years Experience", description: "Deep industry expertise" },
     { icon: Globe, value: "25+", label: "Countries Served", description: "Global reach and support" }
-  ];
+  ], []);
 
-  const featuredServices = [
+  // Memoized featured services for better performance
+  const featuredServices = useMemo(() => [
     {
       title: "AI Business Intelligence",
       description: "Transform data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive modeling, and automated reporting.",
@@ -130,9 +141,10 @@ const Home: React.FC = () => {
       highlights: ["Threat Detection", "Compliance Ready", "24/7 Monitoring", "Incident Response"],
       features: ["Penetration Testing", "Security Audits", "Incident Response", "Training", "Vulnerability Assessment", "Security Architecture"]
     }
-  ];
+  ], []);
 
-  const whyChooseUs = [
+  // Memoized why choose us section for better performance
+  const whyChooseUs = useMemo(() => [
     {
       icon: Zap,
       title: "Lightning Fast",
@@ -153,19 +165,21 @@ const Home: React.FC = () => {
       title: "Data-Driven",
       description: "Insights that drive better business decisions and strategic planning"
     }
-  ];
+  ], []);
 
-  const trustSignals = [
+  // Memoized trust signals for better performance
+  const trustSignals = useMemo(() => [
     { icon: Eye, label: "Transparent Pricing", description: "No hidden fees or surprises" },
     { icon: Heart, label: "Customer First", description: "Your success is our priority" },
     { icon: TargetIcon, label: "Results Focused", description: "Measurable outcomes guaranteed" },
     { icon: Sparkles, label: "Innovation Leader", description: "Cutting-edge technology solutions" }
-  ];
+  ], []);
 
+  // Enhanced auto-play functionality with pause on hover
   useEffect(() => {
     let interval: NodeJS.Timeout;
     
-    if (isAutoPlaying) {
+    if (isAutoPlaying && !isPaused) {
       interval = setInterval(() => {
         setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
       }, 6000);
@@ -174,40 +188,80 @@ const Home: React.FC = () => {
     return () => {
       if (interval) clearInterval(interval);
     };
-  }, [isAutoPlaying, heroSlides.length]);
+  }, [isAutoPlaying, isPaused, heroSlides.length]);
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
-  const nextSlide = () => {
+  // Memoized navigation functions for better performance
+  const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     setIsAutoPlaying(false);
-  };
+  }, [heroSlides.length]);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
     setIsAutoPlaying(false);
-  };
+  }, [heroSlides.length]);
 
-  const goToSlide = (index: number) => {
+  const goToSlide = useCallback((index: number) => {
     setCurrentSlide(index);
     setIsAutoPlaying(false);
-  };
+  }, []);
+
+  const toggleAutoPlay = useCallback(() => {
+    setIsAutoPlaying(prev => !prev);
+  }, []);
+
+  // Enhanced keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      switch (event.key) {
+        case 'ArrowLeft':
+          event.preventDefault();
+          prevSlide();
+          break;
+        case 'ArrowRight':
+          event.preventDefault();
+          nextSlide();
+          break;
+        case ' ':
+          event.preventDefault();
+          toggleAutoPlay();
+          break;
+        case 'Home':
+          event.preventDefault();
+          goToSlide(0);
+          break;
+        case 'End':
+          event.preventDefault();
+          goToSlide(heroSlides.length - 1);
+          break;
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [prevSlide, nextSlide, toggleAutoPlay, goToSlide, heroSlides.length]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
       <SEOHead {...SEOConfigs.home} />
       
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section 
+        className="relative h-screen flex items-center justify-center overflow-hidden"
+        role="banner"
+        aria-label="Hero section"
+      >
         {/* Animated Background */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-blue-900/20 to-purple-900/20"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)] animate-pulse"></div>
         </div>
         
-        {/* Background Image */}
+        {/* Background Image with lazy loading */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-in-out"
           style={{
@@ -215,6 +269,8 @@ const Home: React.FC = () => {
             opacity: 0.4,
             transform: `scale(${isVisible ? 1.1 : 1})`
           }}
+          role="img"
+          aria-label={`Background image for ${heroSlides[currentSlide].title}`}
         />
         
         {/* Overlay */}
@@ -224,7 +280,7 @@ const Home: React.FC = () => {
         <div className={`relative z-10 text-center px-4 max-w-5xl mx-auto transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="mb-6">
             <span className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/30 rounded-full text-cyan-300 text-sm font-medium backdrop-blur-sm">
-              <Sparkles className="w-4 h-4 mr-2" />
+              <Sparkles className="w-4 h-4 mr-2" aria-hidden="true" />
               Leading AI Technology Solutions
             </span>
           </div>
@@ -242,11 +298,12 @@ const Home: React.FC = () => {
           </p>
 
           {/* Feature Highlights */}
-          <div className="flex flex-wrap justify-center gap-3 mb-8">
+          <div className="flex flex-wrap justify-center gap-3 mb-8" role="list" aria-label="Key features">
             {heroSlides[currentSlide].features.map((feature, index) => (
               <span 
                 key={index}
                 className="px-3 py-1 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm text-gray-200"
+                role="listitem"
               >
                 {feature}
               </span>
@@ -260,7 +317,7 @@ const Home: React.FC = () => {
               aria-label={`Learn more about ${heroSlides[currentSlide].title}`}
             >
               {heroSlides[currentSlide].cta}
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true" />
             </Link>
             
             <Link
@@ -273,48 +330,73 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        {/* Navigation Controls */}
+        {/* Enhanced Navigation Controls */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 p-3 rounded-full bg-black/50 hover:bg-black/70 text-white transition-all duration-300 backdrop-blur-sm border border-white/20 hover:border-cyan-500"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 p-3 rounded-full bg-black/50 hover:bg-black/70 text-white transition-all duration-300 backdrop-blur-sm border border-white/20 hover:border-cyan-500 focus:outline-none focus:ring-4 focus:ring-cyan-500/50"
           aria-label="Previous slide"
         >
-          <ChevronLeft className="w-6 h-6" />
+          <ChevronLeft className="w-6 h-6" aria-hidden="true" />
         </button>
         
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 p-3 rounded-full bg-black/50 hover:bg-black/70 text-white transition-all duration-300 backdrop-blur-sm border border-white/20 hover:border-cyan-500"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 p-3 rounded-full bg-black/50 hover:bg-black/70 text-white transition-all duration-300 backdrop-blur-sm border border-white/20 hover:border-cyan-500 focus:outline-none focus:ring-4 focus:ring-cyan-500/50"
           aria-label="Next slide"
         >
-          <ChevronRight className="w-6 h-6" />
+          <ChevronRight className="w-6 h-6" aria-hidden="true" />
         </button>
 
-        {/* Slide Indicators */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3">
+        {/* Auto-play toggle */}
+        <button
+          onClick={toggleAutoPlay}
+          className="absolute top-4 right-4 p-2 rounded-full bg-black/50 hover:bg-black/70 text-white transition-all duration-300 backdrop-blur-sm border border-white/20 hover:border-cyan-500 focus:outline-none focus:ring-4 focus:ring-cyan-500/50"
+          aria-label={isAutoPlaying ? "Pause auto-play" : "Resume auto-play"}
+        >
+          {isAutoPlaying ? (
+            <Pause className="w-5 h-5" aria-hidden="true" />
+          ) : (
+            <Play className="w-5 h-5" aria-hidden="true" />
+          )}
+        </button>
+
+        {/* Enhanced Slide Indicators */}
+        <div 
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3"
+          role="tablist"
+          aria-label="Slide navigation"
+        >
           {heroSlides.map((_, index) => (
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-4 h-4 rounded-full transition-all duration-300 ${
+              className={`w-4 h-4 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-gray-900 ${
                 index === currentSlide 
                   ? 'bg-cyan-500 scale-125 shadow-lg shadow-cyan-500/50' 
                   : 'bg-white/50 hover:bg-white/75 hover:scale-110'
               }`}
               aria-label={`Go to slide ${index + 1}`}
+              aria-selected={index === currentSlide}
+              role="tab"
             />
           ))}
+        </div>
+
+        {/* Keyboard navigation hints */}
+        <div className="absolute bottom-4 left-4 text-xs text-gray-400 opacity-60">
+          <div>Use ← → keys to navigate</div>
+          <div>Space to pause/resume</div>
         </div>
       </section>
 
       {/* Trust Signals Section */}
-      <section className="py-12 bg-black/30 backdrop-blur-sm">
+      <section className="py-12 bg-black/30 backdrop-blur-sm" role="region" aria-label="Trust signals">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {trustSignals.map((signal, index) => (
-              <div key={index} className="text-center group">
+              <div key={index} className="text-center group" role="listitem">
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-lg mb-3 group-hover:scale-110 transition-transform duration-300">
-                  <signal.icon className="w-6 h-6 text-cyan-400" />
+                  <signal.icon className="w-6 h-6 text-cyan-400" aria-hidden="true" />
                 </div>
                 <div className="text-sm font-semibold text-white mb-1">{signal.label}</div>
                 <div className="text-xs text-gray-400">{signal.description}</div>
@@ -325,7 +407,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm">
+      <section className="py-20 bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm" role="region" aria-label="Company statistics">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -338,9 +420,9 @@ const Home: React.FC = () => {
           
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
+              <div key={index} className="text-center group" role="listitem">
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-500/25">
-                  <stat.icon className="w-10 h-10 text-white" />
+                  <stat.icon className="w-10 h-10 text-white" aria-hidden="true" />
                 </div>
                 <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors duration-300">
                   {stat.value}
@@ -354,7 +436,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Featured Services Section */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20 bg-gray-900" role="region" aria-label="Featured services">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -367,11 +449,11 @@ const Home: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredServices.map((service, index) => (
-              <article key={index} className="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 hover:bg-gradient-to-br hover:from-gray-700 hover:to-gray-800 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50">
+              <article key={index} className="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 hover:bg-gradient-to-br hover:from-gray-700 hover:to-gray-800 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/20 border border-gray-700/50 hover:border-cyan-500/50" role="article">
                 {/* Header */}
                 <div className="flex items-center justify-between mb-4">
                   <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="w-6 h-6 text-white" />
+                    <service.icon className="w-6 h-6 text-white" aria-hidden="true" />
                   </div>
                   <div className="text-right">
                     <div className="text-2xl font-bold text-white">{service.price}</div>
@@ -391,7 +473,7 @@ const Home: React.FC = () => {
                 <div className="mb-4">
                   {service.highlights.map((highlight, index) => (
                     <div key={index} className="flex items-center text-sm text-cyan-400 mb-2">
-                      <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" aria-hidden="true" />
                       {highlight}
                     </div>
                   ))}
@@ -400,7 +482,7 @@ const Home: React.FC = () => {
                 {/* Rating */}
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center">
-                    <div className="flex items-center mr-2">
+                    <div className="flex items-center mr-2" role="img" aria-label={`Rating: ${service.rating} out of 5 stars`}>
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
@@ -409,6 +491,7 @@ const Home: React.FC = () => {
                               ? 'text-yellow-400 fill-current'
                               : 'text-gray-600'
                           }`}
+                          aria-hidden="true"
                         />
                       ))}
                     </div>
@@ -424,7 +507,7 @@ const Home: React.FC = () => {
                   <div className="grid grid-cols-2 gap-2">
                     {service.features.map((feature, index) => (
                       <div key={index} className="flex items-center text-xs text-gray-300">
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-1 flex-shrink-0" />
+                        <CheckCircle className="w-3 h-3 text-green-400 mr-1 flex-shrink-0" aria-hidden="true" />
                         {feature}
                       </div>
                     ))}
@@ -437,7 +520,7 @@ const Home: React.FC = () => {
                   aria-label={`Learn more about ${service.title}`}
                 >
                   Learn More
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true" />
                 </Link>
               </article>
             ))}
@@ -446,7 +529,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm">
+      <section className="py-20 bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm" role="region" aria-label="Why choose us">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -459,9 +542,9 @@ const Home: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {whyChooseUs.map((feature, index) => (
-              <div key={index} className="text-center group">
+              <div key={index} className="text-center group" role="listitem">
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-500/25">
-                  <feature.icon className="w-10 h-10 text-white" />
+                  <feature.icon className="w-10 h-10 text-white" aria-hidden="true" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
                   {feature.title}
@@ -476,7 +559,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-900/80 to-blue-900/80 backdrop-blur-sm">
+      <section className="py-20 bg-gradient-to-r from-cyan-900/80 to-blue-900/80 backdrop-blur-sm" role="region" aria-label="Call to action">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Ready to Transform Your Business?
@@ -503,22 +586,19 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Lazy Loaded Sections */}
       <Suspense fallback={<LoadingFallback message="Loading services..." />}>
         <LazyServicesSection />
       </Suspense>
 
-      {/* Features Section */}
       <Suspense fallback={<LoadingFallback message="Loading features..." />}>
         <LazyFeaturesSection />
       </Suspense>
 
-      {/* Testimonials Section */}
       <Suspense fallback={<LoadingFallback message="Loading testimonials..." />}>
         <LazyTestimonialsSection />
       </Suspense>
 
-      {/* CTA Section */}
       <Suspense fallback={<LoadingFallback message="Loading CTA..." />}>
         <LazyCTASection />
       </Suspense>
