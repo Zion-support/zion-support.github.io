@@ -183,6 +183,7 @@ export default function Sidebar() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-d426
         { name: 'Solutions', path: '/solutions/enterprise', icon: Briefcase },
 <<<<<<< HEAD
+<<<<<<< HEAD
         { name: 'Pricing', path: '/pricing', icon: DollarSign },
 =======
         { name: 'Case Studies', path: '/case-studies', icon: Briefcase },
@@ -192,6 +193,8 @@ export default function Sidebar() {
         { name: 'Solutions', path: '/solutions', icon: Globe },
         { name: 'Pricing', path: '/pricing', icon: Star },
 >>>>>>> origin/cursor/website-audit-and-enhancement-3843
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-a8a0
         { name: 'About', path: '/about', icon: Users },
 >>>>>>> origin/main
 =======
@@ -208,6 +211,7 @@ export default function Sidebar() {
       ]
     },
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -411,10 +415,29 @@ export default function Sidebar() {
         { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Globe },
         { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Globe },
         { name: 'Digital Transformation', path: '/digital-transformation', icon: Briefcase },
+=======
+      title: 'AI & Autonomous Systems',
+      items: [
+        { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
+        { name: 'AI Agent Orchestrator', path: '/ai-agent-orchestrator', icon: Briefcase },
+        { name: 'AI Analytics Copilot', path: '/ai-analytics-copilot', icon: Briefcase },
+        { name: 'Autonomous Business Operations', path: '/autonomous-business-operations-platform', icon: Briefcase },
+        { name: 'AI-Powered IT Asset Management', path: '/ai-powered-it-asset-management', icon: Briefcase }
+      ]
+    },
+    {
+      title: 'Quantum & Emerging Tech',
+      items: [
+        { name: 'Quantum Neural Network Platform', path: '/quantum-neural-network-platform', icon: Globe },
+        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Briefcase },
+>>>>>>> origin/cursor/website-audit-and-enhancement-a8a0
         { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe }
       ]
     },
     {
+<<<<<<< HEAD
       title: 'Specialized Services',
       items: [
         { name: 'Affiliate Attribution Hub', path: '/affiliate-attribution-hub', icon: Briefcase },
@@ -808,6 +831,9 @@ export default function Sidebar() {
     },
     {
       title: 'Company & Resources',
+=======
+      title: 'Company & Support',
+>>>>>>> origin/cursor/website-audit-and-enhancement-a8a0
       items: [
         { name: 'About Us', path: '/about', icon: Users },
 <<<<<<< HEAD
@@ -820,6 +846,7 @@ export default function Sidebar() {
 =======
         { name: 'Our Mission', path: '/mission', icon: Target },
         { name: 'Our Team', path: '/team', icon: Users },
+<<<<<<< HEAD
 <<<<<<< HEAD
         { name: 'Careers', path: '/careers', icon: Briefcase },
 >>>>>>> origin/cursor/website-audit-and-enhancement-ea9e
@@ -885,6 +912,8 @@ export default function Sidebar() {
       title: 'Support & Help',
 >>>>>>> origin/cursor/website-audit-and-enhancement-4b00
       items: [
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-a8a0
         { name: 'Help Center', path: '/help', icon: Users },
 <<<<<<< HEAD
         { name: 'Case Studies', path: '/case-studies', icon: Globe },
@@ -895,6 +924,7 @@ export default function Sidebar() {
 >>>>>>> origin/cursor/website-audit-and-enhancement-98d1
 =======
         { name: 'Documentation', path: '/docs', icon: Globe },
+<<<<<<< HEAD
 <<<<<<< HEAD
         { name: 'Contact Support', path: '/contact', icon: Phone },
         { name: 'FAQ', path: '/faq', icon: Users },
@@ -1756,6 +1786,9 @@ export default function Sidebar() {
         { name: 'Webinars', path: '/webinars', icon: Globe },
         { name: 'White Papers', path: '/white-papers', icon: Globe }
 >>>>>>> origin/cursor/website-audit-and-enhancement-4d8c
+=======
+        { name: 'Contact Support', path: '/support', icon: Phone }
+>>>>>>> origin/cursor/website-audit-and-enhancement-a8a0
       ]
     }
   ];
@@ -1769,6 +1802,7 @@ export default function Sidebar() {
   ];
 
   const socialLinks = [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1860,6 +1894,12 @@ export default function Sidebar() {
     { icon: Facebook, href: 'https://www.facebook.com/ziontechgroup', label: 'Facebook' },
     { icon: Instagram, href: 'https://www.instagram.com/ziontechgroup', label: 'Instagram' }
 >>>>>>> origin/cursor/website-audit-and-enhancement-4d8c
+=======
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/ziontechgroup', label: 'LinkedIn' },
+    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
+    { icon: Facebook, href: 'https://www.facebook.com/ziontechgroup', label: 'Facebook' },
+    { icon: Instagram, href: 'https://www.instagram.com/ziontechgroup', label: 'Instagram' }
+>>>>>>> origin/cursor/website-audit-and-enhancement-a8a0
   ];
 
   const sidebarVariants = {
