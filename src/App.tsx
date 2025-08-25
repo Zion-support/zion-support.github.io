@@ -2,7 +2,7 @@ import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { EnhancedLoading } from "./components/ui/enhanced-loading";
 import { MainNavigation } from "./layout/MainNavigation";
-import { Footer } from "./components/Footer";
+import Footer from "./components/Footer";
 import { ToastContainer } from "./components/ui/toast";
 import { motion } from "framer-motion";
 import { ThemeProvider } from "./components/ThemeProvider";
