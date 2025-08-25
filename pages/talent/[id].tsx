@@ -5,12 +5,15 @@ import { useParams } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-3805
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fb01
 import { ProfileLoadingState } from '@/components/profile/ProfileLoadingState';
 import type { TalentProfile as TalentProfileType } from '@/types/talent';
 import { ProfileErrorState } from '@/components/profile/ProfileErrorState';
@@ -98,6 +101,7 @@ const TalentProfilePage: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
 =======
   if (error || !profile) return <ProfileErrorState error={error} />;
@@ -111,6 +115,9 @@ const TalentProfilePage: React.FC = () => {
 =======
   if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-099e
+=======
+  if (error || !profile) return <ProfileErrorState error={error || 'Profile not found'} />;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fb01
 
   return (
     <main className="min-h-screen bg-zion-blue py-8 text-white">

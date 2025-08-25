@@ -216,6 +216,7 @@ import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { EnhancedServicesShowcase } from "@/components/home/EnhancedServicesShowcase";
 import { BottomNavigation } from "@/components/MobileNavigation";
 import { MicroSaasServicesSection } from "@/components/home/MicroSaasServicesSection";
@@ -397,6 +398,10 @@ import { AdvancedAnalytics } from "@/components/AdvancedAnalytics";
 import { ServicesShowcase } from "@/components/home/ServicesShowcase";
 import { ContactInfo } from "@/components/ContactInfo";
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-936f
+=======
+import { FloatingCTA } from "@/components/FloatingCTA";
+import { TestimonialCarousel } from "@/components/TestimonialCarousel";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fb01
 
 export default function Home() {
   const features = [
@@ -758,6 +763,7 @@ export default function Home() {
       
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       <MicroSaasShowcase />
 =======
       <ServicesOverview />
@@ -765,6 +771,9 @@ export default function Home() {
 =======
       <ServicesShowcase />
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-936f
+=======
+      <TestimonialCarousel />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fb01
       
       <CategoriesSection />
       <BenefitsSection />
@@ -773,6 +782,7 @@ export default function Home() {
       <ContactInfo />
       <NewsletterSection />
       
+<<<<<<< HEAD
 <<<<<<< HEAD
       {/* Mobile Bottom Navigation */}
       <BottomNavigation />
@@ -864,6 +874,9 @@ export default function Home() {
         </div>
       </div>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
+=======
+      <FloatingCTA />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fb01
     </div>
   );
 };
