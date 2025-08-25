@@ -1,197 +1,231 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
 import { 
-  Brain, 
-  Zap, 
-  Workflow, 
-  BarChart3, 
-  Users, 
+  Server, 
+  Cloud, 
   Shield, 
+  Zap, 
+  Users, 
+  BarChart3, 
   Globe, 
   TrendingUp, 
   Cpu, 
   Target,
-  Clock,
-  DollarSign,
+  Database,
+  Network,
+  HardDrive,
   CheckCircle,
   ArrowRight,
   Play,
-  Pause,
   Settings,
   Monitor,
   AlertTriangle,
   FileText,
-  Building
+  Building,
+  Lock,
+  Wifi,
+  Activity
 } from 'lucide-react';
 
-export default function AIWorkflowAutomation() {
+export default function ITInfrastructureAsService() {
   const features = [
     {
-      title: "Intelligent Process Discovery",
-      description: "AI automatically identifies and maps your existing workflows for optimization",
-      icon: Brain,
-      benefits: ["Process visibility", "Bottleneck identification", "Automation opportunities"]
+      title: "Cloud Infrastructure Management",
+      description: "Comprehensive cloud infrastructure management with multi-cloud support and optimization",
+      icon: Cloud,
+      benefits: ["Multi-cloud support", "Auto-scaling", "Cost optimization", "Performance monitoring"]
     },
     {
-      title: "Smart Workflow Design",
-      description: "AI-powered workflow builder with drag-and-drop interface and intelligent suggestions",
-      icon: Workflow,
-      benefits: ["Visual workflow builder", "AI suggestions", "Best practice templates"]
+      title: "Network Security & Firewall",
+      description: "Advanced network security with next-generation firewalls and threat protection",
+      icon: Shield,
+      benefits: ["Next-gen firewalls", "Threat detection", "VPN services", "DDoS protection"]
     },
     {
-      title: "Predictive Analytics",
-      description: "Machine learning algorithms predict workflow performance and suggest improvements",
-      icon: BarChart3,
-      benefits: ["Performance forecasting", "Optimization insights", "Risk prediction"]
+      title: "Data Center Services",
+      description: "Enterprise-grade data center services with high availability and disaster recovery",
+      icon: Server,
+      benefits: ["High availability", "Disaster recovery", "Backup solutions", "Redundancy"]
     },
     {
-      title: "Automated Decision Making",
-      description: "AI makes intelligent decisions based on business rules and historical data",
-      icon: Cpu,
-      benefits: ["Rule-based automation", "Data-driven decisions", "Consistent outcomes"]
+      title: "Database Management",
+      description: "Professional database administration and optimization for all major database systems",
+      icon: Database,
+      benefits: ["Performance tuning", "Backup management", "Security hardening", "Monitoring"]
     },
     {
-      title: "Real-time Monitoring",
-      description: "Live dashboard with real-time workflow status and performance metrics",
+      title: "24/7 Monitoring & Support",
+      description: "Round-the-clock infrastructure monitoring with proactive issue resolution",
       icon: Monitor,
-      benefits: ["Live status updates", "Performance tracking", "Instant alerts"]
+      benefits: ["Real-time monitoring", "Proactive alerts", "24/7 support", "SLA guarantees"]
     },
     {
-      title: "Integration Hub",
-      description: "Seamlessly connect with 500+ business applications and systems",
-      icon: Globe,
-      benefits: ["Wide compatibility", "Easy setup", "Unified workflow"]
+      title: "Compliance & Governance",
+      description: "Comprehensive compliance frameworks and governance for regulated industries",
+      icon: Lock,
+      benefits: ["SOC 2 compliance", "GDPR support", "Industry standards", "Audit trails"]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: 299,
+      name: "Essential",
+      price: 499,
       period: "month",
-      description: "Perfect for small teams getting started with workflow automation",
+      description: "Perfect for small businesses with basic infrastructure needs",
       features: [
-        "Up to 10 workflows",
-        "Basic AI suggestions",
-        "5 integrations",
+        "Basic cloud infrastructure",
+        "Standard security",
         "Email support",
-        "Standard templates",
-        "Basic analytics"
+        "Basic monitoring",
+        "Monthly backups",
+        "Standard SLA"
       ],
       cta: "Start Free Trial",
       popular: false
     },
     {
       name: "Professional",
-      price: 799,
+      price: 1299,
       period: "month",
-      description: "Ideal for growing businesses with complex workflow needs",
+      description: "Ideal for growing businesses with advanced infrastructure requirements",
       features: [
-        "Up to 50 workflows",
-        "Advanced AI insights",
-        "25 integrations",
+        "Advanced cloud infrastructure",
+        "Enhanced security",
         "Priority support",
-        "Custom templates",
-        "Advanced analytics",
-        "Team collaboration",
-        "API access"
+        "Advanced monitoring",
+        "Daily backups",
+        "Enhanced SLA",
+        "Disaster recovery",
+        "Performance optimization"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
       name: "Enterprise",
-      price: 1999,
+      price: 2999,
       period: "month",
-      description: "For large organizations requiring enterprise-grade automation",
+      description: "For large organizations requiring enterprise-grade infrastructure",
       features: [
-        "Unlimited workflows",
-        "Custom AI models",
-        "Unlimited integrations",
+        "Enterprise cloud infrastructure",
+        "Maximum security",
         "24/7 dedicated support",
-        "Custom development",
-        "Advanced security",
-        "Multi-tenant support",
-        "SLA guarantees"
+        "Real-time monitoring",
+        "Continuous backups",
+        "Premium SLA",
+        "Custom solutions",
+        "Multi-region support"
       ],
       cta: "Contact Sales",
       popular: false
     }
   ];
 
-  const useCases = [
+  const services = [
     {
-      industry: "Healthcare",
-      examples: [
-        "Patient appointment scheduling",
-        "Medical record processing",
-        "Insurance claim automation",
-        "Prescription management"
+      category: "Cloud Services",
+      items: [
+        "AWS/Azure/GCP management",
+        "Cloud migration",
+        "Cost optimization",
+        "Auto-scaling",
+        "Load balancing",
+        "CDN services"
       ],
-      roi: "40-60% efficiency improvement"
+      icon: Cloud
     },
     {
-      industry: "Finance",
-      examples: [
-        "Loan application processing",
-        "KYC verification workflows",
-        "Fraud detection automation",
-        "Compliance reporting"
+      category: "Security Services",
+      items: [
+        "Firewall management",
+        "Intrusion detection",
+        "Vulnerability scanning",
+        "Security audits",
+        "Compliance management",
+        "Incident response"
       ],
-      roi: "50-70% cost reduction"
+      icon: Shield
     },
     {
-      industry: "Manufacturing",
-      examples: [
-        "Quality control processes",
-        "Supply chain management",
-        "Maintenance scheduling",
-        "Inventory optimization"
+      category: "Network Services",
+      items: [
+        "Network design",
+        "VPN management",
+        "Bandwidth optimization",
+        "Traffic analysis",
+        "Network monitoring",
+        "Performance tuning"
       ],
-      roi: "30-50% productivity increase"
+      icon: Network
     },
     {
-      industry: "Retail",
-      examples: [
-        "Order fulfillment",
-        "Customer service routing",
-        "Inventory management",
-        "Marketing campaign automation"
+      category: "Data Services",
+      items: [
+        "Database administration",
+        "Backup management",
+        "Data recovery",
+        "Storage optimization",
+        "Data migration",
+        "Archiving solutions"
       ],
-      roi: "35-55% operational efficiency"
+      icon: Database
     }
   ];
 
   const benefits = [
     {
-      metric: "80%",
-      description: "Faster process completion",
+      metric: "99.9%",
+      description: "Uptime guarantee",
       icon: Zap
     },
     {
-      metric: "65%",
-      description: "Reduced manual errors",
-      icon: CheckCircle
+      metric: "50%",
+      description: "Cost reduction",
+      icon: TrendingUp
     },
     {
-      metric: "45%",
-      description: "Cost savings",
-      icon: DollarSign
+      metric: "24/7",
+      description: "Expert support",
+      icon: Users
     },
     {
-      metric: "90%",
-      description: "Improved accuracy",
-      icon: Target
+      metric: "100%",
+      description: "Compliance ready",
+      icon: Shield
+    }
+  ];
+
+  const industries = [
+    {
+      name: "Healthcare",
+      requirements: ["HIPAA compliance", "High availability", "Data security", "Disaster recovery"],
+      icon: Building
+    },
+    {
+      name: "Finance",
+      requirements: ["PCI DSS compliance", "Real-time monitoring", "Fraud detection", "Audit trails"],
+      icon: Building
+    },
+    {
+      name: "E-commerce",
+      requirements: ["Scalability", "Performance", "Security", "CDN optimization"],
+      icon: Building
+    },
+    {
+      name: "Manufacturing",
+      requirements: ["IoT integration", "Real-time data", "Predictive maintenance", "Supply chain"],
+      icon: Building
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
       <SEO 
-        title="AI Workflow Automation - Zion Tech Group" 
-        description="Transform your business processes with AI-powered workflow automation. Reduce costs, improve efficiency, and eliminate manual errors with intelligent process management."
-        keywords="AI workflow automation, business process automation, workflow optimization, intelligent automation, process management"
-        canonical="https://ziontechgroup.com/services/ai-workflow-automation"
+        title="IT Infrastructure as a Service - Zion Tech Group" 
+        description="Comprehensive IT infrastructure management services. Cloud solutions, security, monitoring, and 24/7 support to keep your business running smoothly."
+        keywords="IT infrastructure, cloud services, network security, data center, managed services, infrastructure management"
+        canonical="https://ziontechgroup.com/services/it-infrastructure-as-service"
       />
 
       {/* Hero Section */}
@@ -200,21 +234,21 @@ export default function AIWorkflowAutomation() {
         <div className="relative z-10 container mx-auto px-4 py-24 text-center">
           <div className="flex items-center justify-center mb-6">
             <div className="bg-zion-cyan/20 backdrop-blur-sm rounded-full px-6 py-3 border border-zion-cyan mr-4">
-              <span className="text-zion-cyan font-semibold">AI-Powered</span>
+              <span className="text-zion-cyan font-semibold">IT Infrastructure</span>
             </div>
             <div className="bg-zion-purple/20 backdrop-blur-sm rounded-full px-6 py-3 border border-zion-purple">
-              <span className="text-zion-purple font-semibold">Workflow Automation</span>
+              <span className="text-zion-purple font-semibold">as a Service</span>
             </div>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Workflow Automation
+            IT Infrastructure as a Service
             <span className="block text-3xl md:text-4xl text-zion-cyan mt-2">
-              Transform Your Business Processes
+              Managed Infrastructure Solutions
             </span>
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Leverage artificial intelligence to automate complex workflows, eliminate manual processes, 
-            and achieve unprecedented efficiency gains across your organization.
+            Comprehensive IT infrastructure management services that provide reliability, security, 
+            and performance while reducing costs and complexity for your business.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <button className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center">
@@ -222,7 +256,7 @@ export default function AIWorkflowAutomation() {
               Start Free Trial
             </button>
             <button className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              Schedule Demo
+              Schedule Consultation
             </button>
           </div>
         </div>
@@ -233,11 +267,11 @@ export default function AIWorkflowAutomation() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
-              Transform Your Business with AI Automation
+              Why Choose Managed Infrastructure?
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Experience dramatic improvements in efficiency, accuracy, and cost savings with our 
-              AI-powered workflow automation platform.
+              Our managed infrastructure services deliver enterprise-grade reliability and performance 
+              while reducing your operational burden and costs.
             </p>
           </div>
           
@@ -264,11 +298,11 @@ export default function AIWorkflowAutomation() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
-              Powerful AI-Powered Features
+              Comprehensive Infrastructure Services
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Our platform combines cutting-edge AI technology with intuitive design to deliver 
-              the most advanced workflow automation solution available.
+              Our platform provides end-to-end infrastructure management with enterprise-grade 
+              security, performance, and reliability.
             </p>
           </div>
           
@@ -298,15 +332,51 @@ export default function AIWorkflowAutomation() {
         </div>
       </section>
 
-      {/* Pricing Plans */}
+      {/* Service Categories */}
       <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
+              Complete Service Portfolio
+            </h2>
+            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
+              From cloud management to security and monitoring, we provide comprehensive 
+              infrastructure services to meet all your business needs.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-zion-blue-light rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <service.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-zion-blue-dark mb-3 text-center">
+                  {service.category}
+                </h3>
+                <ul className="space-y-2">
+                  {service.items.map((item, idx) => (
+                    <li key={idx} className="text-sm text-zion-slate flex items-start">
+                      <ArrowRight className="w-3 h-3 text-zion-cyan mr-2 mt-1 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Plans */}
+      <section className="py-20 bg-zion-blue-light">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
               Flexible Pricing Plans
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Choose the plan that best fits your business needs. All plans include a 14-day free trial.
+              Choose the plan that best fits your infrastructure needs. All plans include a 14-day free trial.
             </p>
           </div>
           
@@ -360,72 +430,67 @@ export default function AIWorkflowAutomation() {
         </div>
       </section>
 
-      {/* Industry Use Cases */}
-      <section className="py-20 bg-zion-blue-light">
+      {/* Industry Solutions */}
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
               Industry-Specific Solutions
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Our AI workflow automation platform is designed to meet the unique needs of various industries, 
-              delivering measurable ROI and operational improvements.
+              Our infrastructure services are tailored to meet the unique requirements and 
+              compliance needs of different industries.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow">
+            {industries.map((industry, index) => (
+              <div key={index} className="bg-zion-blue-light rounded-xl p-6 hover:shadow-lg transition-shadow">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Building className="w-8 h-8 text-white" />
+                  <industry.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-zion-blue-dark mb-3 text-center">
-                  {useCase.industry}
+                  {industry.name}
                 </h3>
                 <ul className="space-y-2 mb-4">
-                  {useCase.examples.map((example, idx) => (
+                  {industry.requirements.map((requirement, idx) => (
                     <li key={idx} className="text-sm text-zion-slate flex items-start">
                       <ArrowRight className="w-3 h-3 text-zion-cyan mr-2 mt-1 flex-shrink-0" />
-                      {example}
+                      {requirement}
                     </li>
                   ))}
                 </ul>
-                <div className="text-center">
-                  <div className="text-sm font-semibold text-zion-cyan">
-                    {useCase.roi}
-                  </div>
-                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Market Comparison */}
-      <section className="py-20 bg-white">
+      {/* Technology Stack */}
+      <section className="py-20 bg-zion-blue-light">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
-              Why Choose Zion Tech Group?
+              Enterprise Technology Stack
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Our AI workflow automation platform stands out from the competition with advanced features, 
-              superior performance, and exceptional support.
+              Built on industry-leading technologies and platforms to deliver maximum 
+              performance, security, and reliability.
             </p>
           </div>
           
           <div className="max-w-4xl mx-auto">
-            <div className="bg-zion-blue-light rounded-xl p-8">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-xl p-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Brain className="w-8 h-8 text-white" />
+                    <Cloud className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-zion-blue-dark mb-2">
-                    Advanced AI Technology
+                    Cloud Platforms
                   </h3>
                   <p className="text-zion-slate text-sm">
-                    State-of-the-art machine learning algorithms that continuously improve and adapt to your business needs.
+                    AWS, Azure, Google Cloud, and hybrid cloud solutions for maximum flexibility.
                   </p>
                 </div>
                 
@@ -434,22 +499,34 @@ export default function AIWorkflowAutomation() {
                     <Shield className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-zion-blue-dark mb-2">
-                    Enterprise Security
+                    Security Tools
                   </h3>
                   <p className="text-zion-slate text-sm">
-                    Bank-level security with SOC 2 compliance, encryption, and advanced access controls.
+                    Next-generation firewalls, IDS/IPS, and advanced threat protection.
                   </p>
                 </div>
                 
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Users className="w-8 h-8 text-white" />
+                    <Monitor className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-zion-blue-dark mb-2">
-                    24/7 Expert Support
+                    Monitoring Tools
                   </h3>
                   <p className="text-zion-slate text-sm">
-                    Dedicated support team with deep expertise in workflow automation and AI technology.
+                    Enterprise-grade monitoring and alerting for proactive issue resolution.
+                  </p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Database className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-zion-blue-dark mb-2">
+                    Database Systems
+                  </h3>
+                  <p className="text-zion-slate text-sm">
+                    Support for all major database platforms with optimization expertise.
                   </p>
                 </div>
               </div>
@@ -462,11 +539,11 @@ export default function AIWorkflowAutomation() {
       <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Automate Your Workflows?
+            Ready to Optimize Your Infrastructure?
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Join thousands of businesses that have transformed their operations with AI-powered workflow automation. 
-            Start your free trial today and see the difference.
+            Join hundreds of businesses that trust us with their critical infrastructure. 
+            Start your free trial today and experience the difference.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <button className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center">
@@ -474,7 +551,7 @@ export default function AIWorkflowAutomation() {
               Start Free Trial
             </button>
             <button className="border-2 border-white text-white hover:bg-white hover:text-zion-blue-dark px-8 py-3 rounded-lg font-semibold transition-colors">
-              Schedule Demo
+              Schedule Consultation
             </button>
           </div>
           

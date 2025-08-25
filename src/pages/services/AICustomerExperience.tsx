@@ -2,98 +2,99 @@ import React from 'react';
 import { SEO } from '../../components/SEO';
 import { 
   Brain, 
-  Zap, 
-  Workflow, 
-  BarChart3, 
+  MessageCircle, 
   Users, 
+  BarChart3, 
   Shield, 
   Globe, 
   TrendingUp, 
   Cpu, 
   Target,
-  Clock,
-  DollarSign,
+  Heart,
+  Star,
+  Zap,
   CheckCircle,
   ArrowRight,
   Play,
-  Pause,
-  Settings,
+  Headphones,
+  Smartphone,
   Monitor,
-  AlertTriangle,
+  Bot,
   FileText,
-  Building
+  Settings,
+  Palette
 } from 'lucide-react';
 
-export default function AIWorkflowAutomation() {
+export default function AICustomerExperience() {
   const features = [
     {
-      title: "Intelligent Process Discovery",
-      description: "AI automatically identifies and maps your existing workflows for optimization",
+      title: "Intelligent Chatbots",
+      description: "AI-powered chatbots that understand context and provide human-like responses 24/7",
+      icon: Bot,
+      benefits: ["24/7 availability", "Context awareness", "Multi-language support", "Seamless handoff"]
+    },
+    {
+      title: "Personalized Recommendations",
+      description: "Machine learning algorithms that deliver hyper-personalized product and content recommendations",
       icon: Brain,
-      benefits: ["Process visibility", "Bottleneck identification", "Automation opportunities"]
+      benefits: ["Behavioral analysis", "Real-time personalization", "A/B testing", "Conversion optimization"]
     },
     {
-      title: "Smart Workflow Design",
-      description: "AI-powered workflow builder with drag-and-drop interface and intelligent suggestions",
-      icon: Workflow,
-      benefits: ["Visual workflow builder", "AI suggestions", "Best practice templates"]
+      title: "Sentiment Analysis",
+      description: "Advanced NLP that analyzes customer emotions and satisfaction in real-time",
+      icon: Heart,
+      benefits: ["Emotion detection", "Satisfaction tracking", "Proactive intervention", "Trend analysis"]
     },
     {
-      title: "Predictive Analytics",
-      description: "Machine learning algorithms predict workflow performance and suggest improvements",
-      icon: BarChart3,
-      benefits: ["Performance forecasting", "Optimization insights", "Risk prediction"]
-    },
-    {
-      title: "Automated Decision Making",
-      description: "AI makes intelligent decisions based on business rules and historical data",
+      title: "Predictive Customer Service",
+      description: "AI predicts customer issues before they arise and proactively addresses them",
       icon: Cpu,
-      benefits: ["Rule-based automation", "Data-driven decisions", "Consistent outcomes"]
+      benefits: ["Issue prevention", "Proactive support", "Customer satisfaction", "Reduced churn"]
     },
     {
-      title: "Real-time Monitoring",
-      description: "Live dashboard with real-time workflow status and performance metrics",
-      icon: Monitor,
-      benefits: ["Live status updates", "Performance tracking", "Instant alerts"]
-    },
-    {
-      title: "Integration Hub",
-      description: "Seamlessly connect with 500+ business applications and systems",
+      title: "Omnichannel Experience",
+      description: "Seamless customer experience across all touchpoints with unified AI intelligence",
       icon: Globe,
-      benefits: ["Wide compatibility", "Easy setup", "Unified workflow"]
+      benefits: ["Cross-channel consistency", "Unified customer view", "Seamless transitions", "Brand consistency"]
+    },
+    {
+      title: "Voice & Video AI",
+      description: "Advanced speech recognition and video analysis for enhanced customer interactions",
+      icon: Headphones,
+      benefits: ["Voice commands", "Video analysis", "Accessibility", "Multi-modal support"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: 299,
+      price: 199,
       period: "month",
-      description: "Perfect for small teams getting started with workflow automation",
+      description: "Perfect for small businesses starting their AI customer experience journey",
       features: [
-        "Up to 10 workflows",
-        "Basic AI suggestions",
-        "5 integrations",
+        "Basic chatbot (up to 1,000 conversations/month)",
         "Email support",
         "Standard templates",
-        "Basic analytics"
+        "Basic analytics",
+        "2 integrations",
+        "Mobile responsive"
       ],
       cta: "Start Free Trial",
       popular: false
     },
     {
       name: "Professional",
-      price: 799,
+      price: 599,
       period: "month",
-      description: "Ideal for growing businesses with complex workflow needs",
+      description: "Ideal for growing businesses with advanced customer experience needs",
       features: [
-        "Up to 50 workflows",
-        "Advanced AI insights",
-        "25 integrations",
+        "Advanced chatbot (up to 10,000 conversations/month)",
         "Priority support",
-        "Custom templates",
+        "Custom AI models",
         "Advanced analytics",
-        "Team collaboration",
+        "10 integrations",
+        "Multi-language support",
+        "Sentiment analysis",
         "API access"
       ],
       cta: "Start Free Trial",
@@ -101,18 +102,18 @@ export default function AIWorkflowAutomation() {
     },
     {
       name: "Enterprise",
-      price: 1999,
+      price: 1499,
       period: "month",
-      description: "For large organizations requiring enterprise-grade automation",
+      description: "For large organizations requiring enterprise-grade AI customer experience",
       features: [
-        "Unlimited workflows",
-        "Custom AI models",
-        "Unlimited integrations",
+        "Unlimited conversations",
+        "Custom AI development",
         "24/7 dedicated support",
-        "Custom development",
         "Advanced security",
+        "Unlimited integrations",
         "Multi-tenant support",
-        "SLA guarantees"
+        "SLA guarantees",
+        "White-label options"
       ],
       cta: "Contact Sales",
       popular: false
@@ -121,77 +122,100 @@ export default function AIWorkflowAutomation() {
 
   const useCases = [
     {
+      industry: "E-commerce",
+      examples: [
+        "Personalized product recommendations",
+        "Intelligent search and filtering",
+        "Automated customer support",
+        "Shopping cart optimization"
+      ],
+      roi: "35-60% increase in conversion rates"
+    },
+    {
+      industry: "Banking & Finance",
+      examples: [
+        "Intelligent fraud detection",
+        "Personalized financial advice",
+        "Automated account management",
+        "Proactive security alerts"
+      ],
+      roi: "40-70% improvement in customer satisfaction"
+    },
+    {
       industry: "Healthcare",
       examples: [
         "Patient appointment scheduling",
-        "Medical record processing",
-        "Insurance claim automation",
-        "Prescription management"
+        "Symptom assessment",
+        "Medication reminders",
+        "Health monitoring alerts"
       ],
-      roi: "40-60% efficiency improvement"
+      roi: "50-80% reduction in wait times"
     },
     {
-      industry: "Finance",
+      industry: "Travel & Hospitality",
       examples: [
-        "Loan application processing",
-        "KYC verification workflows",
-        "Fraud detection automation",
-        "Compliance reporting"
+        "Personalized travel recommendations",
+        "Intelligent booking assistance",
+        "Real-time customer support",
+        "Loyalty program optimization"
       ],
-      roi: "50-70% cost reduction"
-    },
-    {
-      industry: "Manufacturing",
-      examples: [
-        "Quality control processes",
-        "Supply chain management",
-        "Maintenance scheduling",
-        "Inventory optimization"
-      ],
-      roi: "30-50% productivity increase"
-    },
-    {
-      industry: "Retail",
-      examples: [
-        "Order fulfillment",
-        "Customer service routing",
-        "Inventory management",
-        "Marketing campaign automation"
-      ],
-      roi: "35-55% operational efficiency"
+      roi: "30-55% increase in customer loyalty"
     }
   ];
 
   const benefits = [
     {
-      metric: "80%",
-      description: "Faster process completion",
+      metric: "90%",
+      description: "Faster response times",
       icon: Zap
     },
     {
-      metric: "65%",
-      description: "Reduced manual errors",
-      icon: CheckCircle
+      metric: "75%",
+      description: "Higher customer satisfaction",
+      icon: Heart
     },
     {
-      metric: "45%",
-      description: "Cost savings",
-      icon: DollarSign
+      metric: "60%",
+      description: "Reduced support costs",
+      icon: TrendingUp
     },
     {
-      metric: "90%",
-      description: "Improved accuracy",
+      metric: "85%",
+      description: "Improved conversion rates",
       icon: Target
+    }
+  ];
+
+  const technologies = [
+    {
+      name: "Natural Language Processing",
+      description: "Advanced NLP for understanding customer intent and context",
+      icon: Brain
+    },
+    {
+      name: "Machine Learning",
+      description: "ML algorithms that continuously improve customer experience",
+      icon: Cpu
+    },
+    {
+      name: "Computer Vision",
+      description: "AI-powered image and video analysis for enhanced interactions",
+      icon: Monitor
+    },
+    {
+      name: "Voice Recognition",
+      description: "State-of-the-art speech recognition and synthesis",
+      icon: Headphones
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
       <SEO 
-        title="AI Workflow Automation - Zion Tech Group" 
-        description="Transform your business processes with AI-powered workflow automation. Reduce costs, improve efficiency, and eliminate manual errors with intelligent process management."
-        keywords="AI workflow automation, business process automation, workflow optimization, intelligent automation, process management"
-        canonical="https://ziontechgroup.com/services/ai-workflow-automation"
+        title="AI-Powered Customer Experience - Zion Tech Group" 
+        description="Revolutionize your customer experience with AI-powered solutions. Personalized interactions, intelligent support, and seamless omnichannel experiences that drive loyalty and growth."
+        keywords="AI customer experience, customer service AI, personalized recommendations, intelligent chatbots, customer analytics"
+        canonical="https://ziontechgroup.com/services/ai-customer-experience"
       />
 
       {/* Hero Section */}
@@ -203,18 +227,18 @@ export default function AIWorkflowAutomation() {
               <span className="text-zion-cyan font-semibold">AI-Powered</span>
             </div>
             <div className="bg-zion-purple/20 backdrop-blur-sm rounded-full px-6 py-3 border border-zion-purple">
-              <span className="text-zion-purple font-semibold">Workflow Automation</span>
+              <span className="text-zion-purple font-semibold">Customer Experience</span>
             </div>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Workflow Automation
+            AI-Powered Customer Experience
             <span className="block text-3xl md:text-4xl text-zion-cyan mt-2">
-              Transform Your Business Processes
+              Transform Customer Interactions with Intelligence
             </span>
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Leverage artificial intelligence to automate complex workflows, eliminate manual processes, 
-            and achieve unprecedented efficiency gains across your organization.
+            Deliver exceptional customer experiences with AI-powered personalization, intelligent support, 
+            and seamless omnichannel interactions that drive loyalty and business growth.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <button className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors flex items-center">
@@ -233,11 +257,11 @@ export default function AIWorkflowAutomation() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
-              Transform Your Business with AI Automation
+              Deliver Exceptional Customer Experiences
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Experience dramatic improvements in efficiency, accuracy, and cost savings with our 
-              AI-powered workflow automation platform.
+              Our AI-powered platform delivers measurable improvements in customer satisfaction, 
+              response times, and business outcomes.
             </p>
           </div>
           
@@ -264,11 +288,11 @@ export default function AIWorkflowAutomation() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
-              Powerful AI-Powered Features
+              Advanced AI-Powered Features
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
               Our platform combines cutting-edge AI technology with intuitive design to deliver 
-              the most advanced workflow automation solution available.
+              the most advanced customer experience solution available.
             </p>
           </div>
           
@@ -298,8 +322,39 @@ export default function AIWorkflowAutomation() {
         </div>
       </section>
 
-      {/* Pricing Plans */}
+      {/* Technology Stack */}
       <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
+              Cutting-Edge AI Technology
+            </h2>
+            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
+              Built on the latest advancements in artificial intelligence and machine learning 
+              to deliver superior customer experiences.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {technologies.map((tech, index) => (
+              <div key={index} className="text-center">
+                <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-6">
+                  <tech.icon className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
+                  {tech.name}
+                </h3>
+                <p className="text-zion-slate">
+                  {tech.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Plans */}
+      <section className="py-20 bg-zion-blue-light">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
@@ -361,23 +416,23 @@ export default function AIWorkflowAutomation() {
       </section>
 
       {/* Industry Use Cases */}
-      <section className="py-20 bg-zion-blue-light">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
               Industry-Specific Solutions
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Our AI workflow automation platform is designed to meet the unique needs of various industries, 
-              delivering measurable ROI and operational improvements.
+              Our AI customer experience platform is designed to meet the unique needs of various industries, 
+              delivering measurable ROI and customer satisfaction improvements.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
-              <div key={index} className="bg-white rounded-xl p-6 hover:shadow-lg transition-shadow">
+              <div key={index} className="bg-zion-blue-light rounded-xl p-6 hover:shadow-lg transition-shadow">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Building className="w-8 h-8 text-white" />
+                  <Users className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-zion-blue-dark mb-3 text-center">
                   {useCase.industry}
@@ -402,20 +457,20 @@ export default function AIWorkflowAutomation() {
       </section>
 
       {/* Market Comparison */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-zion-blue-light">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Our AI workflow automation platform stands out from the competition with advanced features, 
+              Our AI customer experience platform stands out from the competition with advanced features, 
               superior performance, and exceptional support.
             </p>
           </div>
           
           <div className="max-w-4xl mx-auto">
-            <div className="bg-zion-blue-light rounded-xl p-8">
+            <div className="bg-white rounded-xl p-8">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
@@ -425,7 +480,7 @@ export default function AIWorkflowAutomation() {
                     Advanced AI Technology
                   </h3>
                   <p className="text-zion-slate text-sm">
-                    State-of-the-art machine learning algorithms that continuously improve and adapt to your business needs.
+                    State-of-the-art machine learning algorithms that continuously improve customer interactions.
                   </p>
                 </div>
                 
@@ -449,7 +504,7 @@ export default function AIWorkflowAutomation() {
                     24/7 Expert Support
                   </h3>
                   <p className="text-zion-slate text-sm">
-                    Dedicated support team with deep expertise in workflow automation and AI technology.
+                    Dedicated support team with deep expertise in AI and customer experience technology.
                   </p>
                 </div>
               </div>
@@ -462,10 +517,10 @@ export default function AIWorkflowAutomation() {
       <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Automate Your Workflows?
+            Ready to Transform Your Customer Experience?
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Join thousands of businesses that have transformed their operations with AI-powered workflow automation. 
+            Join thousands of businesses that have revolutionized their customer interactions with AI-powered solutions. 
             Start your free trial today and see the difference.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
