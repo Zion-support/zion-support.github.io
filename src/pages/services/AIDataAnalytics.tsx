@@ -1,59 +1,60 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
 import { 
-  Users, 
-  Brain, 
+  BarChart3, 
   TrendingUp, 
+  Brain, 
   Shield, 
   Globe, 
   Building, 
   Rocket, 
   Cpu, 
-  BarChart3,
   Clock,
   CheckCircle,
   ArrowRight,
   Target,
-  MessageSquare,
   PieChart,
-  Zap
+  Zap,
+  Database,
+  LineChart,
+  MessageSquare
 } from 'lucide-react';
 
-export default function AICustomerIntelligence() {
+export default function AIDataAnalytics() {
   const features = [
     {
-      title: "Predictive Customer Behavior",
-      description: "AI algorithms that analyze customer patterns to predict future actions and preferences",
+      title: "Predictive Analytics",
+      description: "AI-powered forecasting that predicts trends, behaviors, and outcomes with high accuracy",
       icon: Brain,
-      benefits: ["Behavior prediction", "Churn prevention", "Lifetime value forecasting", "Personalization insights"]
+      benefits: ["Trend prediction", "Behavior forecasting", "Risk assessment", "Opportunity identification"]
     },
     {
-      title: "Real-time Sentiment Analysis",
-      description: "Monitor customer sentiment across all channels in real-time with advanced NLP",
+      title: "Real-time Dashboards",
+      description: "Interactive dashboards that provide instant insights and visualizations",
+      icon: BarChart3,
+      benefits: ["Live data updates", "Custom visualizations", "Interactive charts", "Mobile responsive"]
+    },
+    {
+      title: "Natural Language Query",
+      description: "Ask questions in plain English and get instant data insights",
       icon: MessageSquare,
-      benefits: ["Live sentiment tracking", "Multi-language support", "Emotion detection", "Trend analysis"]
+      benefits: ["Plain English queries", "Instant answers", "No SQL required", "Contextual insights"]
     },
     {
-      title: "Intelligent Segmentation",
-      description: "Dynamic customer segmentation that automatically adapts to changing behaviors",
-      icon: Target,
-      benefits: ["Auto-segmentation", "Behavioral clustering", "Dynamic personas", "Predictive grouping"]
-    },
-    {
-      title: "Customer Journey Mapping",
-      description: "Visualize and optimize customer touchpoints with AI-powered journey analytics",
-      icon: PieChart,
-      benefits: ["Journey visualization", "Bottleneck identification", "Optimization suggestions", "ROI tracking"]
+      title: "Automated Insights",
+      description: "AI automatically discovers patterns and insights in your data",
+      icon: Zap,
+      benefits: ["Pattern discovery", "Anomaly detection", "Correlation analysis", "Insight generation"]
     }
   ];
 
   const pricing = [
     {
       plan: "Starter",
-      price: "$199/month",
-      description: "Perfect for small businesses starting with customer intelligence",
+      price: "$249/month",
+      description: "Perfect for small businesses starting with data analytics",
       features: [
-        "Up to 10,000 customers",
+        "Up to 100GB data",
         "Basic AI insights",
         "Email support",
         "Standard integrations",
@@ -64,10 +65,10 @@ export default function AICustomerIntelligence() {
     },
     {
       plan: "Professional",
-      price: "$499/month",
-      description: "Ideal for growing businesses with advanced customer intelligence needs",
+      price: "$599/month",
+      description: "Ideal for growing businesses with advanced analytics needs",
       features: [
-        "Up to 100,000 customers",
+        "Up to 1TB data",
         "Advanced AI analytics",
         "Priority support",
         "Custom integrations",
@@ -79,10 +80,10 @@ export default function AICustomerIntelligence() {
     },
     {
       plan: "Enterprise",
-      price: "$1,299/month",
-      description: "For large organizations requiring enterprise-grade customer intelligence",
+      price: "$1,599/month",
+      description: "For large organizations requiring enterprise-grade analytics",
       features: [
-        "Unlimited customers",
+        "Unlimited data",
         "Custom AI models",
         "24/7 dedicated support",
         "White-label options",
@@ -97,84 +98,84 @@ export default function AICustomerIntelligence() {
   const useCases = [
     {
       industry: "E-commerce",
-      description: "Personalize shopping experiences and predict customer preferences",
+      description: "Optimize pricing, inventory, and customer behavior analysis",
       icon: Building,
-      benefits: ["Increased conversion", "Better recommendations", "Reduced cart abandonment", "Higher AOV"]
-    },
-    {
-      industry: "SaaS",
-      description: "Optimize user onboarding and reduce churn with predictive analytics",
-      icon: Building,
-      benefits: ["Lower churn rates", "Better onboarding", "Feature adoption", "Customer success"]
+      benefits: ["Price optimization", "Inventory management", "Customer segmentation", "Conversion analysis"]
     },
     {
       industry: "Healthcare",
-      description: "Improve patient engagement and predict health outcomes",
+      description: "Patient outcome prediction and resource optimization",
       icon: Building,
-      benefits: ["Better engagement", "Outcome prediction", "Resource optimization", "Patient satisfaction"]
+      benefits: ["Outcome prediction", "Resource planning", "Risk assessment", "Treatment optimization"]
     },
     {
       industry: "Finance",
-      description: "Enhance customer experience and predict financial needs",
+      description: "Risk assessment, fraud detection, and market analysis",
       icon: Building,
-      benefits: ["Better service", "Need prediction", "Risk assessment", "Customer retention"]
+      benefits: ["Risk modeling", "Fraud detection", "Market analysis", "Portfolio optimization"]
+    },
+    {
+      industry: "Manufacturing",
+      description: "Predictive maintenance and quality control optimization",
+      icon: Building,
+      benefits: ["Predictive maintenance", "Quality control", "Supply chain optimization", "Efficiency analysis"]
     }
   ];
 
   const benefits = [
     {
+      title: "Faster Decisions",
+      description: "Make data-driven decisions 10x faster with AI-powered insights",
+      icon: Clock
+    },
+    {
       title: "Increased Revenue",
-      description: "Drive 15-30% revenue growth through personalized customer experiences",
+      description: "Drive 20-40% revenue growth through data-driven strategies",
       icon: TrendingUp
     },
     {
-      title: "Reduced Churn",
-      description: "Decrease customer churn by 20-40% with predictive insights",
-      icon: Users
-    },
-    {
-      title: "Better ROI",
-      description: "Improve marketing ROI by 25-50% with targeted campaigns",
+      title: "Cost Reduction",
+      description: "Reduce operational costs by 15-30% with predictive analytics",
       icon: BarChart3
     },
     {
-      title: "Faster Growth",
-      description: "Accelerate business growth with data-driven customer strategies",
+      title: "Competitive Edge",
+      description: "Stay ahead of competition with predictive insights and trends",
       icon: Rocket
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-purple-900">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-green-900">
       <SEO 
-        title="AI Customer Intelligence - Zion Tech Group" 
-        description="Transform customer relationships with AI-powered intelligence. Predict behavior, personalize experiences, and drive growth."
-        keywords="AI customer intelligence, customer analytics, predictive analytics, customer behavior, AI marketing, customer insights"
-        canonical="https://ziontechgroup.com/services/ai-customer-intelligence"
+        title="AI Data Analytics - Zion Tech Group" 
+        description="Transform your data into actionable insights with AI-powered analytics. Predict trends, optimize operations, and drive growth."
+        keywords="AI data analytics, predictive analytics, business intelligence, data visualization, AI insights, data science"
+        canonical="https://ziontechgroup.com/services/ai-data-analytics"
       />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-20 pb-16">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-pink-600/20 to-blue-600/20"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(168,85,247,0.1),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-green-500/20 via-emerald-600/20 to-teal-600/20"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,197,94,0.1),transparent_50%)]"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="mb-8">
-            <Users className="w-20 h-20 mx-auto mb-6 text-purple-400" />
+            <BarChart3 className="w-20 h-20 mx-auto mb-6 text-green-400" />
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Customer Intelligence
-              <span className="block text-3xl md:text-4xl text-purple-400 mt-2">
-                Know Your Customers Like Never Before
+              AI Data Analytics
+              <span className="block text-3xl md:text-4xl text-green-400 mt-2">
+                Transform Data into Intelligence
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Leverage the power of artificial intelligence to understand, predict, and optimize customer 
-              experiences across all touchpoints for maximum engagement and growth.
+              Unlock the hidden value in your data with AI-powered analytics that predict trends, 
+              optimize operations, and drive informed decision-making across your organization.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+              <button className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
               </button>
-              <button className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
+                <button className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300">
                 Schedule Demo
               </button>
             </div>
@@ -187,18 +188,18 @@ export default function AICustomerIntelligence() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced AI-Powered Features
+              Advanced AI-Powered Analytics Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI customer intelligence platform combines cutting-edge machine learning with intuitive 
-              analytics to deliver actionable insights that drive business growth.
+              Our AI data analytics platform combines cutting-edge machine learning with intuitive 
+              visualizations to deliver actionable insights that drive business growth.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-green-500/20 hover:border-green-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/20">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">
@@ -210,7 +211,7 @@ export default function AICustomerIntelligence() {
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-purple-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
                       {benefit}
                     </li>
                   ))}
@@ -229,14 +230,14 @@ export default function AICustomerIntelligence() {
               Proven Business Impact
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI customer intelligence solutions deliver measurable results that directly impact your bottom line.
+              Our AI data analytics solutions deliver measurable results that directly impact your bottom line.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">
@@ -259,7 +260,7 @@ export default function AICustomerIntelligence() {
               Transparent Pricing Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that best fits your business needs. All plans include a 14-day free trial.
+              Choose the plan that best fits your analytics needs. All plans include a 14-day free trial.
             </p>
           </div>
           
@@ -267,12 +268,12 @@ export default function AICustomerIntelligence() {
             {pricing.map((plan, index) => (
               <div key={index} className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border transition-all duration-300 hover:scale-105 ${
                 plan.popular 
-                  ? 'border-purple-500 shadow-lg shadow-purple-500/20' 
-                  : 'border-gray-600 hover:border-purple-500/40'
+                  ? 'border-green-500 shadow-lg shadow-green-500/20' 
+                  : 'border-gray-600 hover:border-green-500/40'
               }`}>
                 {plan.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -280,14 +281,14 @@ export default function AICustomerIntelligence() {
                 
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
-                  <div className="text-4xl font-bold text-purple-400 mb-2">{plan.price}</div>
+                  <div className="text-4xl font-bold text-green-400 mb-2">{plan.price}</div>
                   <p className="text-gray-400">{plan.description}</p>
                 </div>
                 
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -295,8 +296,8 @@ export default function AICustomerIntelligence() {
                 
                 <button className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular
-                    ? 'bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white'
-                    : 'border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white'
+                    ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white'
+                    : 'border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white'
                 }`}>
                   {plan.cta}
                 </button>
@@ -314,14 +315,14 @@ export default function AICustomerIntelligence() {
               Industry-Specific Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI customer intelligence adapts to your industry's unique requirements and customer dynamics.
+              Our AI data analytics adapts to your industry's unique requirements and data challenges.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
-              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 text-center hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300 border border-gray-600 hover:border-purple-500/40">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+              <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 text-center hover:shadow-lg hover:shadow-green-500/20 transition-all duration-300 border border-gray-600 hover:border-green-500/40">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <useCase.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">
@@ -333,7 +334,7 @@ export default function AICustomerIntelligence() {
                 <ul className="space-y-1 text-left">
                   {useCase.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-xs text-gray-400">
-                      <CheckCircle className="w-3 h-3 text-purple-400 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
                   ))}
@@ -345,16 +346,16 @@ export default function AICustomerIntelligence() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-900/50 to-pink-900/50">
+      <section className="py-20 bg-gradient-to-r from-green-900/50 to-emerald-900/50">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Transform Customer Intelligence?
+            Ready to Transform Your Data?
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Join thousands of businesses that have already revolutionized their customer relationships with AI-powered intelligence.
+            Join thousands of businesses that have already revolutionized their decision-making with AI-powered data analytics.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+            <button className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
               Start Free Trial
             </button>
             <button className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300">
