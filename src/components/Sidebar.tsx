@@ -20,38 +20,32 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     {
       title: 'Main',
       items: [
-        { name: 'Home', path: '/', icon: Home, featured: false },
-        { name: 'Services', path: '/services', icon: Briefcase, featured: true },
-        { name: 'About', path: '/about', icon: Users, featured: false },
-        { name: 'Contact', path: '/contact', icon: Phone, featured: false }
+        { name: 'Home', path: '/', icon: Home },
+        { name: 'Services', path: '/services', icon: Briefcase },
+        { name: 'About', path: '/about', icon: Users },
+        { name: 'Contact', path: '/contact', icon: Phone }
       ]
     },
     {
-      title: 'Core Services',
+      title: 'Services',
       items: [
-        { name: 'AI & Machine Learning', path: '/services?category=AI%20%26%20Machine%20Learning', icon: Briefcase, featured: true },
-        { name: 'Cybersecurity', path: '/services?category=Cybersecurity', icon: Shield, featured: true },
-        { name: 'Micro SAAS Solutions', path: '/services?category=Micro%20SAAS%20Solutions', icon: Globe, featured: true },
-        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe, featured: true },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Briefcase, featured: false },
-        { name: 'Industry Solutions', path: '/services/industry-solutions', icon: Users, featured: false }
-      ]
-    },
-    {
-      title: 'Innovative Solutions',
-      items: [
-        { name: 'Innovative Services', path: '/innovative-services', icon: Globe, featured: true },
-        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Users, featured: true },
-        { name: 'Blockchain Solutions', path: '/services?category=Blockchain', icon: Globe, featured: true },
-        { name: 'IoT & Edge Computing', path: '/services?category=IoT%20%26%20Edge%20Computing', icon: Globe, featured: true },
-        { name: 'VR/AR Training', path: '/services?category=VR%2FAR%20%26%20Training', icon: Users, featured: false },
-        { name: 'Emerging Technology', path: '/emerging-tech', icon: Globe, featured: false }
+        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', icon: Briefcase },
+        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Briefcase },
+        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: Briefcase },
+        { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', icon: Users },
+        { name: 'AI Legal Tech', path: '/services/ai-legal-tech', icon: Shield },
+        { name: 'Quantum Technology', path: '/services/quantum-technology', icon: Globe },
+        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
+        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Globe },
+        { name: 'Micro SAAS Solutions', path: '/services/micro-saas-solutions', icon: Globe },
+        { name: 'Industry Solutions', path: '/services/industry-solutions', icon: Briefcase }
       ]
     },
     {
       title: 'Company',
       items: [
         { name: 'About Us', path: '/about', icon: Users },
+        { name: 'Our Mission', path: '/mission', icon: Users },
         { name: 'Our Team', path: '/team', icon: Users },
         { name: 'Careers', path: '/careers', icon: Briefcase },
         { name: 'News & Updates', path: '/news', icon: Globe }
@@ -186,30 +180,23 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                       {section.items.map((item) => {
                         const Icon = item.icon;
                         const isActive = location.pathname === item.path;
-                        const isFeatured = item.featured;
                         
                         return (
                           <Link
                             key={item.name}
                             to={item.path}
-                            className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 group relative ${
+                            className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 group ${
                               isActive
                                 ? 'quantum-button shadow-lg shadow-zion-cyan/30'
                                 : 'futuristic-card text-zion-slate-light hover:bg-white/20 hover:neon-text'
-                            } ${isFeatured ? 'border-l-2 border-zion-cyan/50' : ''}`}
+                            }`}
                           >
-                            {isFeatured && (
-                              <div className="absolute -left-1 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>
-                            )}
                             <Icon className={`w-4 h-4 ${
                               isActive ? 'text-white' : 'text-zion-cyan group-hover:neon-text'
                             }`} />
                             <span className="flex-1">{item.name}</span>
                             {isActive && (
                               <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                            )}
-                            {isFeatured && (
-                              <div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>
                             )}
                           </Link>
                         );
