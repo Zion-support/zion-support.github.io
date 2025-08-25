@@ -10,7 +10,7 @@ export function NewServices() {
   const [selectedService, setSelectedService] = useState<any>(null);
 
   // Combine all services
-  const allServices = [
+  const allServices: any[] = [
     ...COMPREHENSIVE_SERVICES,
     ...ADVANCED_INNOVATIVE_SERVICES,
     ...EMERGING_TECH_SERVICES
@@ -23,7 +23,7 @@ export function NewServices() {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
+                         ('tags' in service && service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
     return matchesCategory && matchesSearch;
   });
 
