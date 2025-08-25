@@ -6,8 +6,9 @@ import {
   Wifi, Package, Bot, Car, Building2, DollarSign, 
   Monitor, Users, Cpu, Zap, Star, TrendingUp, Grid, Lock, Truck, Gamepad2, Factory, List, ArrowRight
 } from 'lucide-react';
-import EnhancedQuantumBackground from '../components/ui/EnhancedQuantumBackground';
+import UltraAdvancedFuturisticBackgroundV2 from '../components/ui/UltraAdvancedFuturisticBackgroundV2';
 import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard';
+import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
 import { extraServices } from '../data/extra-services';

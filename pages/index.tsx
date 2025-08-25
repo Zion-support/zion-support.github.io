@@ -103,12 +103,12 @@ import { futuristicInnovations2030 } from '../data/2030-futuristic-innovations';
 
 export default function HomePage() {
   const heroStats = [
-    { value: '500+', label: 'Revolutionary Services & Solutions', color: 'text-cyan-400', icon: <Cpu className="w-6 h-6" /> },
+    { value: '600+', label: 'Revolutionary Services & Solutions', color: 'text-cyan-400', icon: <Cpu className="w-6 h-6" /> },
     { value: '99.99%', label: 'Uptime Guarantee', color: 'text-fuchsia-400', icon: <ShieldCheck className="w-6 h-6" /> },
-    { value: '30+', label: 'Day Free Trials', color: 'text-blue-400', icon: <Clock className="w-6 h-6" /> },
+    { value: '45+', label: 'Day Free Trials', color: 'text-cyan-400', icon: <Clock className="w-6 h-6" /> },
     { value: '24/7', label: 'AI Support', color: 'text-green-400', icon: <Brain className="w-6 h-6" /> },
-    { value: '$100B+', label: 'Combined Market Value', color: 'text-yellow-400', icon: <TrendingUp className="w-6 h-6" /> },
-    { value: '1000%+', label: 'Average ROI', color: 'text-purple-400', icon: <DollarSign className="w-6 h-6" /> },
+    { value: '$150B+', label: 'Combined Market Value', color: 'text-yellow-400', icon: <TrendingUp className="w-6 h-6" /> },
+    { value: '1200%+', label: 'Average ROI', color: 'text-purple-400', icon: <DollarSign className="w-6 h-6" /> },
   ];
 
   const contactInfo = {
@@ -130,6 +130,38 @@ export default function HomePage() {
       marketData: '$2B BCI market, 500% annual growth',
       competitors: 'Neuralink ($10,000+/month), Kernel ($50,000+/month)',
       savings: 'Save 60% vs. competitors with quantum AI integration',
+      contactInfo: {
+        mobile: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+      }
+    },
+    {
+      title: '⚛️ AI Quantum Computing Platform',
+      description: 'Enterprise quantum computing with AI optimization for financial modeling, drug discovery, and scientific research. Achieve quantum advantage with 800% ROI.',
+      price: 'Starting at $25,999/month',
+      features: ['Quantum processing units (QPUs)', 'AI-optimized quantum algorithms', 'Real-time quantum error correction', 'Hybrid classical-quantum computing', 'Advanced quantum simulation tools', 'API for quantum applications', '24/7 quantum operations support', 'Custom quantum algorithm development', 'Integration with existing IT infrastructure', 'Quantum security protocols'],
+      link: 'https://ziontechgroup.com/ai-quantum-computing-platform',
+      color: 'from-cyan-600 to-blue-700',
+      marketData: '$1.8B quantum computing market, 400% annual growth',
+      competitors: 'IBM Quantum ($10,000+/month), Google Quantum AI ($15,000+/month)',
+      savings: 'Save 40% vs. competitors with AI optimization and hybrid computing',
+      contactInfo: {
+        mobile: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        address: '364 E Main St STE 1008 Middletown DE 19709'
+      }
+    },
+    {
+      title: '🔐 Quantum Cybersecurity Suite',
+      description: 'Post-quantum cryptography and quantum-resistant security for financial institutions and government agencies. Protect against future quantum threats.',
+      price: 'Starting at $18,999/month',
+      features: ['Post-quantum cryptography algorithms', 'Quantum-resistant encryption', 'Real-time threat detection', 'Advanced intrusion prevention', 'Zero-trust architecture', 'Quantum key distribution', 'Compliance with NIST standards', '24/7 security monitoring', 'AI-powered threat analysis', 'Integration with existing security tools'],
+      link: 'https://ziontechgroup.com/quantum-cybersecurity-suite',
+      color: 'from-red-600 to-orange-700',
+      marketData: '$150B cybersecurity market, 400% annual growth in quantum security',
+      competitors: 'Traditional cybersecurity ($50,000+/month)',
+      savings: 'Save 70% vs. traditional cybersecurity with quantum-resistant technology',
       contactInfo: {
         mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
@@ -550,7 +582,7 @@ export default function HomePage() {
               Featured Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our most popular and innovative solutions
+              Our most popular and innovative solutions from 600+ services
             </p>
           </motion.div>
 
@@ -581,7 +613,7 @@ export default function HomePage() {
               size="lg"
               className="text-lg px-8 py-4"
             >
-              View All 500+ Services
+              View All 600+ Services
               <ArrowRight className="ml-2 w-6 h-6" />
             </Button>
           </motion.div>
