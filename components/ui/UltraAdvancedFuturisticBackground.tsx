@@ -198,6 +198,52 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
     };
   }, [variant]);
 
+  const drawQuantumField = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, colors: any, intensity: number) => {
+    const time = Date.now() * 0.001;
+    const gridSize = 50 * intensity;
+    
+    ctx.strokeStyle = colors.quantum;
+    ctx.lineWidth = 0.5;
+    ctx.globalAlpha = 0.3;
+
+    for (let x = 0; x < canvas.width; x += gridSize) {
+      for (let y = 0; y < canvas.height; y += gridSize) {
+        const wave = Math.sin(x * 0.01 + time) * Math.cos(y * 0.01 + time) * 20;
+        ctx.beginPath();
+        ctx.moveTo(x, y + wave);
+        ctx.lineTo(x + gridSize, y + wave);
+        ctx.stroke();
+      }
+    }
+  };
+
+  const drawHolographicGrid = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement, colors: any, intensity: number) => {
+    const time = Date.now() * 0.0005;
+    const gridSize = 80 * intensity;
+    
+    ctx.strokeStyle = colors.holographic;
+    ctx.lineWidth = 0.3;
+    ctx.globalAlpha = 0.2;
+
+    // Vertical lines
+    for (let x = 0; x < canvas.width; x += gridSize) {
+      const wave = Math.sin(x * 0.02 + time) * 30;
+      ctx.beginPath();
+      ctx.moveTo(x + wave, 0);
+      ctx.lineTo(x + wave, canvas.height);
+      ctx.stroke();
+    }
+
+    // Horizontal lines
+    for (let y = 0; y < canvas.height; y += gridSize) {
+      const wave = Math.cos(y * 0.02 + time) * 30;
+      ctx.beginPath();
+      ctx.moveTo(0, y + wave);
+      ctx.lineTo(canvas.width, y + wave);
+      ctx.stroke();
+    }
+  };
+
   return (
     <div className="relative min-h-screen overflow-hidden">
       {/* Enhanced animated background */}
@@ -298,6 +344,22 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           />
         </div>
       )}
+
+      {/* Neural Network Pattern */}
+      <div className="absolute inset-0 pointer-events-none z-30">
+        <div className="absolute inset-0 opacity-20">
+          <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+            <defs>
+              <pattern id="neural-grid" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+                <circle cx="5" cy="5" r="0.5" fill="currentColor" className="text-cyan-400">
+                  <animate attributeName="r" values="0.5;1;0.5" dur="3s" repeatCount="indefinite" />
+                </circle>
+              </pattern>
+            </defs>
+            <rect width="100" height="100" fill="url(#neural-grid)" />
+          </svg>
+        </div>
+      </div>
 
       {/* Content */}
       <div className="relative z-20">
