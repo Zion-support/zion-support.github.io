@@ -53,7 +53,7 @@ const navigationItems: NavigationItem[] = [
     name: '🧠 AI & Consciousness',
     href: '/ai-services',
     icon: <Brain className="w-5 h-5" />,
-    description: 'Revolutionary AI consciousness and emotional intelligence',
+    description: 'Revolutionary AI automation and autonomous business processing',
     badge: 'New',
     color: 'from-violet-500 to-purple-600',
     isHot: true,
