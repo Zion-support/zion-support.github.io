@@ -209,7 +209,7 @@ const PerformanceMonitor: React.FC = () => {
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const fid = entries[entries.length - 1];
-        setMetrics(prev => ({ ...prev, fid: fid.processingStart - fid.startTime }));
+        setMetrics(prev => ({ ...prev, fid: (fid as any).processingStart - fid.startTime }));
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
 

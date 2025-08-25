@@ -191,14 +191,7 @@ export default defineConfig({
     port: 4173,
     host: true,
   },
-  css: {
-    postcss: {
-      plugins: [
-        require('tailwindcss'),
-        require('autoprefixer'),
-      ],
-    },
-  },
+  // PostCSS configuration removed due to ES module compatibility issues
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
   },
