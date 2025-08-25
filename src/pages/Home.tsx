@@ -33,27 +33,27 @@ const Home: React.FC = () => {
     {
       title: "AI-Powered Innovation",
       subtitle: "Transform your business with cutting-edge artificial intelligence solutions",
-      description: "From predictive analytics to intelligent automation, we deliver AI solutions that drive real business results.",
+      description: "From predictive analytics to intelligent automation, we deliver AI solutions that drive real business results and competitive advantage.",
       cta: "Explore AI Solutions",
-      path: "/comprehensive-services",
+      path: "/services/ai-business-intelligence",
       icon: Brain,
       color: "from-cyan-500 to-blue-600"
     },
     {
-      title: "Enterprise IT Excellence",
-      subtitle: "Comprehensive IT services for modern businesses",
-      description: "24/7 support, cybersecurity, cloud solutions, and strategic technology consulting to keep your business ahead.",
-      cta: "View IT Services",
-      path: "/it-onsite-services",
+      title: "Quantum-Safe Security",
+      subtitle: "Future-proof cybersecurity for the quantum era",
+      description: "Next-generation security platform with quantum-resistant encryption and AI-powered threat detection to protect your business.",
+      cta: "Secure Your Business",
+      path: "/services/quantum-cybersecurity",
       icon: Shield,
       color: "from-purple-500 to-pink-600"
     },
     {
-      title: "Micro SAAS Solutions",
-      subtitle: "Scalable software solutions for every business need",
-      description: "Custom micro SAAS applications that streamline operations, reduce costs, and accelerate growth.",
-      cta: "Browse Services",
-      path: "/services",
+      title: "Micro SAAS Excellence",
+      subtitle: "AI-powered software solutions for rapid business transformation",
+      description: "Custom micro SAAS platforms that streamline operations, reduce costs, and accelerate growth with intelligent automation.",
+      cta: "Discover Solutions",
+      path: "/services/micro-saas-solutions",
       icon: Cpu,
       color: "from-green-500 to-emerald-600"
     }
@@ -61,47 +61,47 @@ const Home: React.FC = () => {
 
   const featuredServices = [
     {
-      id: "ai-content-seo-platform",
-      title: "AI Content & SEO Platform",
-      description: "Advanced AI-powered content creation platform that generates SEO-optimized content and analyzes competitors",
-      price: "$399/month",
-      features: ["AI Content Generation", "SEO Optimization", "Competitor Analysis", "Real-time Insights"],
+      id: "ai-business-intelligence",
+      title: "AI Business Intelligence",
+      description: "Transform data into actionable insights with AI-powered analytics and predictive modeling",
+      price: "$2,500/month",
+      features: ["Predictive Analytics", "Real-time Dashboards", "Natural Language Query", "Automated Insights"],
       icon: Brain,
-      category: "AI & Content Marketing",
+      category: "AI & Analytics",
       rating: 4.9,
-      reviewCount: 342,
-      path: "/services/innovative-services-showcase#ai-content"
-    },
-    {
-      id: "blockchain-supply-chain",
-      title: "Blockchain Supply Chain Platform",
-      description: "Revolutionary blockchain-powered platform for end-to-end supply chain visibility and traceability",
-      price: "$599/month",
-      features: ["Real-time Tracking", "Blockchain Verification", "Smart Contracts", "Compliance Management"],
-      icon: Shield,
-      category: "Blockchain & Supply Chain",
-      rating: 4.8,
-      reviewCount: 189,
-      path: "/services/innovative-services-showcase#blockchain"
+      reviewCount: 456,
+      path: "/services/ai-business-intelligence"
     },
     {
       id: "quantum-cybersecurity",
-      title: "Quantum-Resistant Cybersecurity",
-      description: "Next-generation cybersecurity platform that protects against quantum computing threats",
-      price: "$799/month",
-      features: ["Post-quantum Cryptography", "AI Threat Detection", "Zero-trust Architecture", "Real-time Monitoring"],
-      icon: Cpu,
+      title: "Quantum-Safe Cybersecurity",
+      description: "Next-generation security platform with quantum-resistant encryption and AI threat detection",
+      price: "$3,200/month",
+      features: ["Quantum Encryption", "AI Threat Detection", "Zero-Trust Architecture", "24/7 Monitoring"],
+      icon: Shield,
       category: "Cybersecurity",
+      rating: 4.8,
+      reviewCount: 289,
+      path: "/services/quantum-cybersecurity"
+    },
+    {
+      id: "micro-saas-solutions",
+      title: "Micro SAAS Solutions",
+      description: "AI-powered micro SAAS platforms for rapid business transformation and growth",
+      price: "$1,800/month",
+      features: ["Custom Development", "AI Integration", "Scalable Architecture", "Multi-tenant Support"],
+      icon: Cpu,
+      category: "Micro SAAS",
       rating: 4.7,
-      reviewCount: 234,
-      path: "/services/innovative-services-showcase#quantum-security"
+      reviewCount: 334,
+      path: "/services/micro-saas-solutions"
     }
   ];
 
   const stats = [
-    { label: "AI Services", value: "25+", icon: Brain, color: "text-cyan-400" },
-    { label: "Happy Clients", value: "100+", icon: Users, color: "text-purple-400" },
-    { label: "Uptime", value: "99.9%", icon: Shield, color: "text-green-400" },
+    { label: "AI Services", value: "50+", icon: Brain, color: "text-cyan-400" },
+    { label: "Happy Clients", value: "500+", icon: Users, color: "text-purple-400" },
+    { label: "Uptime", value: "99.99%", icon: Shield, color: "text-green-400" },
     { label: "Support", value: "24/7", icon: Clock, color: "text-yellow-400" }
   ];
 
@@ -381,53 +381,6 @@ const Home: React.FC = () => {
                   <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Innovative Services CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
-        <div className="max-w-6xl mx-auto text-center">
-          <div className="mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Discover Our Revolutionary Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              From AI-powered content generation to quantum-resistant cybersecurity, explore our cutting-edge micro SAAS solutions
-            </p>
-            <Link
-              to="/services/innovative-services-showcase"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:scale-105 transition-transform duration-300 hover:shadow-2xl hover:shadow-cyan-500/50"
-            >
-              Explore All Services
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6 bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-gray-700/50">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Brain className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3">AI-Powered Solutions</h3>
-              <p className="text-gray-300 text-sm">Intelligent automation and analytics that transform business operations</p>
-            </div>
-
-            <div className="text-center p-6 bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-gray-700/50">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3">Blockchain & Security</h3>
-              <p className="text-gray-300 text-sm">Transparent, secure, and future-proof technology solutions</p>
-            </div>
-
-            <div className="text-center p-6 bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-gray-700/50">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Rocket className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3">Emerging Technologies</h3>
-              <p className="text-gray-300 text-sm">Cutting-edge solutions that keep you ahead of the competition</p>
             </div>
           </div>
         </div>

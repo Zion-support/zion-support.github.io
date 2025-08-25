@@ -1,12 +1,10 @@
 import React from 'react';
 import { SEO } from '../../components/SEO';
 import { 
-  Brain, 
-  TrendingUp, 
-  BarChart3, 
-  Database, 
-  Zap, 
   Shield, 
+  Lock, 
+  Eye, 
+  Zap, 
   Users, 
   Globe, 
   CheckCircle, 
@@ -14,176 +12,178 @@ import {
   ArrowRight,
   Clock,
   Target,
-  PieChart,
-  LineChart,
   Activity,
-  Eye,
   Search,
-  Filter,
-  Download,
-  Share2,
-  Settings,
-  Lock,
-  Cloud,
+  AlertTriangle,
+  Database,
+  Network,
   Smartphone,
   Monitor,
-  ShoppingBag,
-  GraduationCap,
-  Home
+  Server,
+  Key,
+  Fingerprint,
+  Globe2,
+  Building,
+  Car,
+  Plane,
+  Train,
+  Cloud,
+  Mail,
+  Brain
 } from 'lucide-react';
 
-export default function AIBusinessIntelligence() {
+export default function QuantumCybersecurity() {
   const features = [
     {
-      title: "Predictive Analytics Engine",
-      description: "AI-powered forecasting that predicts future trends, customer behavior, and business outcomes with 95%+ accuracy",
-      icon: Brain,
+      title: "Quantum-Resistant Encryption",
+      description: "Next-generation cryptographic algorithms that remain secure even against quantum computers",
+      icon: Lock,
       color: "text-purple-400",
       details: [
-        "Machine learning algorithms",
-        "Time series forecasting",
-        "Anomaly detection",
-        "Scenario modeling"
+        "Post-quantum cryptography",
+        "Lattice-based encryption",
+        "Hash-based signatures",
+        "Code-based encryption"
       ]
     },
     {
-      title: "Real-Time Dashboards",
-      description: "Live monitoring dashboards that update in real-time with customizable widgets and interactive visualizations",
-      icon: Activity,
+      title: "AI-Powered Threat Detection",
+      description: "Advanced machine learning algorithms that detect and respond to threats in real-time",
+      icon: Eye,
       color: "text-cyan-400",
       details: [
-        "Customizable layouts",
-        "Real-time data streaming",
-        "Interactive charts",
-        "Mobile responsive"
+        "Behavioral analysis",
+        "Anomaly detection",
+        "Threat intelligence",
+        "Predictive security"
       ]
     },
     {
-      title: "Natural Language Query",
-      description: "Ask questions in plain English and get instant insights from your data using advanced NLP technology",
-      icon: Search,
+      title: "Zero-Trust Architecture",
+      description: "Never trust, always verify security model that protects against insider and external threats",
+      icon: Shield,
       color: "text-green-400",
       details: [
-        "Natural language processing",
-        "Voice commands",
-        "Smart suggestions",
-        "Context awareness"
+        "Identity verification",
+        "Access control",
+        "Network segmentation",
+        "Continuous monitoring"
       ]
     },
     {
-      title: "Advanced Data Visualization",
-      description: "Beautiful, interactive charts and graphs that make complex data easy to understand and act upon",
-      icon: PieChart,
+      title: "Advanced Endpoint Protection",
+      description: "Comprehensive protection for all devices with AI-driven threat prevention",
+      icon: Smartphone,
       color: "text-yellow-400",
       details: [
-        "100+ chart types",
-        "Interactive elements",
-        "Custom themes",
-        "Export capabilities"
+        "Real-time scanning",
+        "Behavioral blocking",
+        "Ransomware protection",
+        "Device control"
       ]
     },
     {
-      title: "Automated Insights",
-      description: "AI automatically discovers hidden patterns, correlations, and opportunities in your data",
-      icon: Eye,
+      title: "Network Security Monitoring",
+      description: "24/7 network surveillance with advanced intrusion detection and prevention",
+      icon: Network,
       color: "text-red-400",
       details: [
-        "Pattern recognition",
-        "Correlation analysis",
-        "Opportunity detection",
-        "Alert system"
+        "Traffic analysis",
+        "Threat hunting",
+        "Incident response",
+        "Forensic analysis"
       ]
     },
     {
-      title: "Multi-Data Source Integration",
-      description: "Connect to any data source - databases, APIs, cloud services, and spreadsheets",
-      icon: Database,
+      title: "Compliance & Governance",
+      description: "Automated compliance monitoring for industry standards and regulations",
+      icon: CheckCircle,
       color: "text-blue-400",
       details: [
-        "100+ connectors",
-        "Real-time sync",
-        "Data transformation",
-        "ETL automation"
+        "SOC 2 compliance",
+        "GDPR compliance",
+        "HIPAA compliance",
+        "PCI DSS compliance"
       ]
     }
   ];
 
-  const useCases = [
+  const securityLayers = [
     {
-      title: "Sales Performance Analytics",
-      description: "Track sales metrics, forecast revenue, and identify high-value opportunities",
-      icon: TrendingUp,
-      metrics: ["Revenue forecasting", "Sales pipeline analysis", "Customer lifetime value", "Conversion optimization"]
+      title: "Perimeter Security",
+      description: "Advanced firewall protection with DDoS mitigation and intrusion prevention",
+      icon: Shield,
+      features: ["Next-gen firewalls", "DDoS protection", "Web application firewall", "VPN solutions"]
     },
     {
-      title: "Customer Behavior Analysis",
-      description: "Understand customer patterns, preferences, and predict churn risk",
-      icon: Users,
-      metrics: ["Customer segmentation", "Behavioral analysis", "Churn prediction", "Personalization insights"]
+      title: "Identity & Access Management",
+      description: "Multi-factor authentication and privileged access management",
+      icon: Key,
+      features: ["MFA/2FA", "Single sign-on", "Privileged access", "Identity governance"]
     },
     {
-      title: "Financial Planning & Analysis",
-      description: "Monitor financial health, forecast cash flow, and optimize resource allocation",
-      icon: BarChart3,
-      metrics: ["Cash flow forecasting", "Budget tracking", "Cost analysis", "ROI optimization"]
+      title: "Data Protection",
+      description: "End-to-end encryption and data loss prevention",
+      icon: Database,
+      features: ["Data encryption", "DLP systems", "Backup encryption", "Key management"]
     },
     {
-      title: "Operational Intelligence",
-      description: "Monitor business operations in real-time and identify efficiency improvements",
-      icon: Activity,
-      metrics: ["Process monitoring", "Efficiency metrics", "Bottleneck identification", "Performance optimization"]
+      title: "Cloud Security",
+      description: "Comprehensive cloud security posture management",
+      icon: Cloud,
+      features: ["CSPM", "Cloud access security", "Container security", "Serverless protection"]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$1,200",
+      name: "Essential",
+      price: "$1,800",
       period: "/month",
-      description: "Perfect for small businesses starting their AI journey",
+      description: "Basic quantum-safe security for small businesses",
       features: [
-        "Up to 5 users",
-        "Basic AI models",
-        "Standard dashboards",
-        "Email support",
-        "Monthly reports",
-        "Basic integrations"
+        "Up to 50 endpoints",
+        "Basic threat detection",
+        "Email security",
+        "24/7 monitoring",
+        "Standard support",
+        "Basic compliance"
       ],
       popular: false,
       color: "from-gray-600 to-gray-700"
     },
     {
       name: "Professional",
-      price: "$2,500",
+      price: "$3,200",
       period: "/month",
-      description: "Ideal for growing businesses with advanced analytics needs",
+      description: "Advanced security for growing organizations",
       features: [
-        "Up to 25 users",
-        "Advanced AI models",
-        "Custom dashboards",
+        "Up to 500 endpoints",
+        "AI threat detection",
+        "Advanced analytics",
+        "Incident response",
         "Priority support",
-        "Real-time analytics",
-        "Advanced integrations",
-        "Custom AI training",
-        "API access"
+        "Full compliance",
+        "Custom integrations",
+        "Security training"
       ],
       popular: true,
       color: "from-cyan-500 to-blue-600"
     },
     {
       name: "Enterprise",
-      price: "$5,000",
+      price: "$6,500",
       period: "/month",
-      description: "For large organizations requiring enterprise-grade BI solutions",
+      description: "Enterprise-grade security with custom solutions",
       features: [
-        "Unlimited users",
+        "Unlimited endpoints",
         "Custom AI models",
-        "White-label dashboards",
-        "24/7 dedicated support",
-        "Advanced security",
+        "Dedicated team",
+        "24/7 support",
         "Custom development",
         "On-premise options",
-        "SLA guarantees"
+        "SLA guarantees",
+        "Executive reporting"
       ],
       popular: false,
       color: "from-purple-600 to-pink-600"
@@ -192,88 +192,115 @@ export default function AIBusinessIntelligence() {
 
   const benefits = [
     {
-      title: "10x Faster Insights",
-      description: "Get answers to complex business questions in seconds, not days",
-      icon: Zap,
-      color: "text-yellow-400"
-    },
-    {
-      title: "95%+ Accuracy",
-      description: "AI-powered predictions with industry-leading accuracy rates",
+      title: "Future-Proof Security",
+      description: "Quantum-resistant encryption that protects against tomorrow's threats",
       icon: Target,
       color: "text-green-400"
     },
     {
-      title: "Real-Time Updates",
-      description: "Always have the latest data with real-time synchronization",
+      title: "99.99% Uptime",
+      description: "Continuous protection with guaranteed service availability",
       icon: Clock,
       color: "text-cyan-400"
     },
     {
-      title: "Enterprise Security",
-      description: "Bank-grade security with SOC 2 compliance and data encryption",
-      icon: Shield,
-      color: "text-red-400"
-    },
-    {
-      title: "Scalable Architecture",
-      description: "Grows with your business from startup to enterprise",
-      icon: TrendingUp,
+      title: "AI-Powered Defense",
+      description: "Machine learning that adapts and improves threat detection",
+      icon: Brain,
       color: "text-purple-400"
     },
     {
-      title: "24/7 Support",
-      description: "Round-the-clock technical support and monitoring",
-      icon: Users,
+      title: "Global Coverage",
+      description: "Protect your business anywhere in the world",
+      icon: Globe,
       color: "text-blue-400"
+    },
+    {
+      title: "Compliance Ready",
+      description: "Meet all industry standards and regulatory requirements",
+      icon: CheckCircle,
+      color: "text-yellow-400"
+    },
+    {
+      title: "Expert Support",
+      description: "24/7 access to cybersecurity experts",
+      icon: Users,
+      color: "text-red-400"
     }
   ];
 
   const industries = [
     {
       name: "Healthcare",
-      description: "Patient analytics, treatment outcomes, and operational efficiency",
-      icon: Monitor,
+      description: "HIPAA-compliant security for patient data and medical systems",
+      icon: Building,
       color: "from-blue-500 to-cyan-500"
     },
     {
       name: "Finance",
-      description: "Risk assessment, fraud detection, and portfolio optimization",
-      icon: BarChart3,
+      description: "Bank-grade security for financial transactions and customer data",
+      icon: Building,
       color: "from-green-500 to-emerald-500"
     },
     {
-      name: "Retail",
-      description: "Customer behavior, inventory optimization, and sales forecasting",
-      icon: ShoppingBag,
+      name: "Government",
+      description: "FISMA and FedRAMP compliant security solutions",
+      icon: Building,
       color: "from-purple-500 to-pink-500"
     },
     {
       name: "Manufacturing",
-      description: "Supply chain optimization, quality control, and predictive maintenance",
-      icon: Settings,
+      description: "OT security for industrial control systems and IoT devices",
+      icon: Building,
       color: "from-orange-500 to-red-500"
     },
     {
-      name: "Education",
-      description: "Student performance, learning analytics, and institutional insights",
-      icon: GraduationCap,
+      name: "Retail",
+      description: "PCI DSS compliant security for payment processing",
+      icon: Building,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      name: "Real Estate",
-      description: "Market analysis, property valuation, and investment insights",
-      icon: Home,
+      name: "Education",
+      description: "FERPA compliant security for student and institutional data",
+      icon: Building,
       color: "from-gray-500 to-blue-500"
+    }
+  ];
+
+  const threatProtection = [
+    {
+      title: "Ransomware Protection",
+      description: "Advanced ransomware detection and prevention with instant recovery",
+      icon: AlertTriangle,
+      features: ["Behavioral analysis", "File monitoring", "Backup protection", "Instant recovery"]
+    },
+    {
+      title: "Phishing Prevention",
+      description: "AI-powered email security that blocks sophisticated phishing attacks",
+      icon: Mail,
+      features: ["URL analysis", "Content filtering", "Sender verification", "User training"]
+    },
+    {
+      title: "Insider Threat Detection",
+      description: "Monitor and prevent malicious activities from within your organization",
+      icon: Users,
+      features: ["User behavior analytics", "Privilege monitoring", "Data access tracking", "Anomaly detection"]
+    },
+    {
+      title: "Supply Chain Security",
+      description: "Protect against third-party and supply chain attacks",
+      icon: Globe2,
+      features: ["Vendor assessment", "Code scanning", "Dependency monitoring", "Risk scoring"]
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       <SEO 
-        title="AI Business Intelligence Platform - Zion Tech Group" 
-        description="Transform your business data into actionable insights with our AI-powered business intelligence platform. Real-time analytics, predictive modeling, and automated insights."
-        keywords="ai business intelligence, predictive analytics, data visualization, business analytics, ai insights, real-time dashboards"
+        title="Quantum-Safe Cybersecurity Suite - Zion Tech Group" 
+        description="Next-generation cybersecurity platform using quantum-resistant encryption and AI-powered threat detection. Protect your business against today's and tomorrow's threats."
+        keywords="quantum cybersecurity, quantum-safe encryption, ai threat detection, zero-trust security, endpoint protection, network security"
       />
       
       {/* Hero Section */}
@@ -281,22 +308,22 @@ export default function AIBusinessIntelligence() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              AI Business Intelligence
+              Quantum-Safe Cybersecurity
             </h1>
             <p className="text-xl md:text-2xl text-cyan-300 mb-8 font-medium">
-              Transform Data into Actionable Intelligence
+              Future-Proof Security for the Quantum Era
             </p>
             <p className="text-lg text-gray-300 mb-12 leading-relaxed">
-              Our AI-powered BI platform delivers real-time insights, predictive analytics, and automated 
-              intelligence that helps you make data-driven decisions faster than ever before.
+              Our quantum-resistant cybersecurity platform combines next-generation encryption with AI-powered 
+              threat detection to protect your business against today's threats and tomorrow's quantum attacks.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <a href="#features" className="futuristic-btn text-lg px-8 py-4 group">
-                <span>Explore Features</span>
+                <span>Explore Security</span>
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
               </a>
               <a href="/contact" className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 rounded-full font-semibold hover:bg-cyan-500/20 hover:border-cyan-500 transition-all duration-300">
-                Get Demo
+                Security Assessment
               </a>
             </div>
           </div>
@@ -308,10 +335,10 @@ export default function AIBusinessIntelligence() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Powerful AI Features
+              Advanced Security Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover the advanced capabilities that make our BI platform the most intelligent in the market
+              Discover the cutting-edge security capabilities that protect your business from all angles
             </p>
           </div>
 
@@ -343,37 +370,77 @@ export default function AIBusinessIntelligence() {
         </div>
       </section>
 
-      {/* Use Cases Section */}
+      {/* Security Layers Section */}
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Business Use Cases
+              Multi-Layer Security Architecture
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how our AI BI platform transforms different aspects of your business operations
+              Comprehensive protection across all security layers with defense in depth
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+            {securityLayers.map((layer, index) => (
               <div
-                key={useCase.title}
+                key={layer.title}
                 className="glass-card p-8 hover:scale-105 transition-all duration-300 group"
                 style={{ animationDelay: `${index * 200}ms` }}
               >
-                <useCase.icon className="w-16 h-16 text-cyan-400 mb-6 group-hover:scale-110 transition-transform duration-300" />
+                <layer.icon className="w-16 h-16 text-cyan-400 mb-6 group-hover:scale-110 transition-transform duration-300" />
                 <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
-                  {useCase.title}
+                  {layer.title}
                 </h3>
                 <p className="text-gray-300 mb-6 leading-relaxed">
-                  {useCase.description}
+                  {layer.description}
                 </p>
                 <div className="grid grid-cols-2 gap-3">
-                  {useCase.metrics.map((metric, metricIndex) => (
-                    <div key={metricIndex} className="flex items-center space-x-2 text-sm text-gray-300">
+                  {layer.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                      <span>{metric}</span>
+                      <span>{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Threat Protection Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Advanced Threat Protection
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Protect against the most sophisticated cyber threats with AI-powered detection and response
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {threatProtection.map((threat, index) => (
+              <div
+                key={threat.title}
+                className="glass-card p-8 hover:scale-105 transition-all duration-300 group"
+                style={{ animationDelay: `${index * 200}ms` }}
+              >
+                <threat.icon className="w-16 h-16 text-red-400 mb-6 group-hover:scale-110 transition-transform duration-300" />
+                <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
+                  {threat.title}
+                </h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  {threat.description}
+                </p>
+                <div className="grid grid-cols-2 gap-3">
+                  {threat.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                      <span>{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -388,10 +455,10 @@ export default function AIBusinessIntelligence() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Why Choose Our AI BI Platform?
+              Why Choose Our Cybersecurity Platform?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the competitive advantage of AI-powered business intelligence
+              Experience enterprise-grade security that adapts and evolves with emerging threats
             </p>
           </div>
 
@@ -420,10 +487,10 @@ export default function AIBusinessIntelligence() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Industry Solutions
+              Industry-Specific Security
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Tailored BI solutions designed for your industry's unique challenges and requirements
+              Tailored cybersecurity solutions designed for your industry's unique compliance and security needs
             </p>
           </div>
 
@@ -457,7 +524,7 @@ export default function AIBusinessIntelligence() {
               Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your business needs with our flexible pricing options
+              Choose the security plan that fits your business needs and budget
             </p>
           </div>
 
@@ -517,10 +584,10 @@ export default function AIBusinessIntelligence() {
             
             <div className="relative z-10">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Business Intelligence?
+                Ready to Secure Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Join hundreds of businesses that have already revolutionized their decision-making with our AI-powered BI platform
+                Join thousands of businesses that trust us with their cybersecurity. Get protected today with quantum-safe security.
               </p>
               
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
@@ -528,7 +595,7 @@ export default function AIBusinessIntelligence() {
                   href="/contact"
                   className="futuristic-btn text-lg px-8 py-4 group"
                 >
-                  <span>Get Started Today</span>
+                  <span>Get Protected Today</span>
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                 </a>
                 
@@ -536,7 +603,7 @@ export default function AIBusinessIntelligence() {
                   href="/contact"
                   className="px-8 py-4 border-2 border-cyan-500/50 text-cyan-400 rounded-full font-semibold hover:bg-cyan-500/20 hover:border-cyan-500 transition-all duration-300 group"
                 >
-                  <span>Schedule Demo</span>
+                  <span>Security Assessment</span>
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                 </a>
               </div>
