@@ -1,70 +1,82 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Search, Brain, Zap, Shield, BarChart3, Users, ArrowRight, CheckCircle, Star, Flask } from 'lucide-react';
+import { Brain, Cog, BarChart3, Zap, Shield, Users, ArrowRight, CheckCircle, Star, TrendingUp } from 'lucide-react';
 
-export default function AIAutonomousResearch() {
+export default function AIAutonomousBusinessOperations() {
   const features = [
     {
-      icon: Search,
-      title: 'Intelligent Research Discovery',
-      description: 'AI systems that autonomously discover and analyze research opportunities'
-    },
-    {
       icon: Brain,
-      title: 'Automated Literature Review',
-      description: 'Comprehensive analysis of existing research with intelligent insights'
+      title: 'Intelligent Process Automation',
+      description: 'AI-powered automation that learns and adapts to optimize business processes continuously'
     },
     {
-      icon: Zap,
-      title: 'Hypothesis Generation',
-      description: 'AI-powered hypothesis development based on data patterns and trends'
-    },
-    {
-      icon: Shield,
-      title: 'Quality Assurance',
-      description: 'Automated validation and verification of research methodologies'
+      icon: Cog,
+      title: 'Smart Workflow Management',
+      description: 'Automated workflow orchestration with intelligent decision-making capabilities'
     },
     {
       icon: BarChart3,
-      title: 'Predictive Analytics',
-      description: 'Forecast research outcomes and identify promising directions'
+      title: 'Real-time Analytics',
+      description: 'Continuous monitoring and analysis of business operations with predictive insights'
+    },
+    {
+      icon: Zap,
+      title: 'Adaptive Learning',
+      description: 'Systems that learn from patterns and improve performance over time'
+    },
+    {
+      icon: Shield,
+      title: 'Compliance Automation',
+      description: 'Automated compliance monitoring and reporting across all business operations'
     },
     {
       icon: Users,
-      title: 'Collaborative Research',
-      description: 'Enable seamless collaboration between human researchers and AI systems'
+      title: 'Human-AI Collaboration',
+      description: 'Seamless integration between human workers and AI systems for optimal results'
     }
   ];
 
-  const researchAreas = [
-    'Scientific Research',
-    'Market Research',
-    'Medical Research',
-    'Technology Research',
-    'Social Sciences',
-    'Environmental Studies',
-    'Business Intelligence',
-    'Academic Research'
+  const businessAreas = [
+    'Finance & Accounting',
+    'Human Resources',
+    'Supply Chain Management',
+    'Customer Service',
+    'Marketing & Sales',
+    'Research & Development',
+    'Quality Assurance',
+    'Risk Management'
   ];
 
   const benefits = [
-    'Accelerate research timelines by 3-5x',
-    'Reduce research costs by 40-60%',
-    'Improve research quality and accuracy',
-    'Enable 24/7 research operations',
-    'Discover hidden patterns and insights',
-    'Scale research capabilities exponentially'
+    'Reduce operational costs by 30-50%',
+    'Increase process efficiency by 60-80%',
+    'Eliminate manual errors and inconsistencies',
+    'Enable 24/7 business operations',
+    'Improve decision-making speed and accuracy',
+    'Scale operations without proportional cost increase'
   ];
 
-  const capabilities = [
-    'Data Collection & Processing',
-    'Literature Analysis',
-    'Pattern Recognition',
-    'Statistical Analysis',
-    'Report Generation',
-    'Trend Prediction',
-    'Cross-reference Validation',
-    'Research Optimization'
+  const implementationSteps = [
+    {
+      step: '01',
+      title: 'Assessment & Planning',
+      description: 'Analyze current business processes and identify automation opportunities'
+    },
+    {
+      step: '02',
+      title: 'AI System Design',
+      description: 'Design custom AI solutions tailored to your specific business needs'
+    },
+    {
+      step: '03',
+      title: 'Integration & Testing',
+      description: 'Seamlessly integrate AI systems with existing infrastructure'
+    },
+    {
+      step: '04',
+      title: 'Training & Deployment',
+      description: 'Train staff and deploy AI systems with full support'
+    }
   ];
 
   return (
@@ -74,19 +86,18 @@ export default function AIAutonomousResearch() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-              AI Autonomous Research
+              AI Autonomous Business Operations
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Transform your research capabilities with AI systems that work autonomously 
-              to discover, analyze, and generate insights 24/7, accelerating breakthroughs 
-              across all fields of study.
+              Transform your business with intelligent, self-managing operations that work 24/7, 
+              learn continuously, and optimize performance automatically.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
-                Start Research
+                Start Transformation
               </button>
               <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400/20 transition-all duration-300">
-                View Demo
+                View Case Studies
               </button>
             </div>
           </div>
@@ -98,11 +109,11 @@ export default function AIAutonomousResearch() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              Autonomous Research Intelligence
+              Autonomous Intelligence for Every Business Process
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our AI research systems operate independently, continuously learning and 
-              improving to deliver breakthrough insights and discoveries.
+              Our AI systems don't just automate tasks—they understand, learn, and optimize 
+              your entire business ecosystem autonomously.
             </p>
           </div>
           
@@ -123,23 +134,24 @@ export default function AIAutonomousResearch() {
         </div>
       </section>
 
-      {/* Research Areas */}
+      {/* Business Areas Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              Comprehensive Research Coverage
+              Comprehensive Business Coverage
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              From scientific discovery to market intelligence, our AI systems excel across all research domains
+              From finance to customer service, our AI systems can autonomously manage 
+              every aspect of your business operations
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {researchAreas.map((area, index) => (
+            {businessAreas.map((area, index) => (
               <div key={index} className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Flask className="w-6 h-6 text-white" />
+                  <TrendingUp className="w-6 h-6 text-white" />
                 </div>
                 <span className="text-lg font-medium text-white">{area}</span>
               </div>
@@ -153,10 +165,10 @@ export default function AIAutonomousResearch() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              Research Transformation Benefits
+              Measurable Business Impact
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              See the measurable impact of AI-powered autonomous research on your organization
+              See the real results that autonomous business operations deliver
             </p>
           </div>
           
@@ -171,22 +183,26 @@ export default function AIAutonomousResearch() {
         </div>
       </section>
 
-      {/* Capabilities Section */}
+      {/* Implementation Process */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-              Advanced Research Capabilities
+              Simple Implementation Process
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Our AI systems provide comprehensive research capabilities that go beyond human limitations
+              We make AI transformation simple with our proven implementation methodology
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {capabilities.map((capability, index) => (
-              <div key={index} className="bg-gray-800/30 backdrop-blur-sm rounded-lg p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center">
-                <span className="text-lg font-medium text-white">{capability}</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {implementationSteps.map((step, index) => (
+              <div key={index} className="text-center">
+                <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-white">{step.step}</span>
+                </div>
+                <h3 className="text-xl font-semibold mb-4 text-white">{step.title}</h3>
+                <p className="text-gray-400 leading-relaxed">{step.description}</p>
               </div>
             ))}
           </div>
@@ -197,17 +213,17 @@ export default function AIAutonomousResearch() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-            Ready to Revolutionize Your Research?
+            Ready to Automate Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join the future of autonomous research and accelerate your discoveries today
+            Join the autonomous business revolution and see your operations transform overnight
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
-              Start Free Trial
+              Get Free Assessment
             </button>
             <Link to="/contact" className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400/20 transition-all duration-300 flex items-center justify-center">
-              Schedule Consultation
+              Talk to Experts
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </div>
@@ -222,18 +238,18 @@ export default function AIAutonomousResearch() {
               Related Services
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Explore our other AI and research solutions
+              Explore our other AI and automation solutions
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Link to="/services/ai-autonomous-systems" className="group">
+            <Link to="/services/ai-agent-orchestrator" className="group">
               <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50 group-hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                 <h3 className="text-xl font-semibold mb-4 text-white group-hover:text-cyan-400 transition-colors">
-                  AI Autonomous Systems
+                  AI Agent Orchestrator
                 </h3>
                 <p className="text-gray-400 mb-4">
-                  Build intelligent systems that operate independently
+                  Coordinate multiple AI agents for complex business processes
                 </p>
                 <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
                   <span>Learn More</span>
@@ -242,13 +258,13 @@ export default function AIAutonomousResearch() {
               </div>
             </Link>
             
-            <Link to="/services/ai-autonomous-business-operations" className="group">
+            <Link to="/services/ai-autonomous-systems" className="group">
               <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700/50 group-hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                 <h3 className="text-xl font-semibold mb-4 text-white group-hover:text-cyan-400 transition-colors">
-                  AI Autonomous Business Operations
+                  AI Autonomous Systems
                 </h3>
                 <p className="text-gray-400 mb-4">
-                  Automate complex business processes with intelligent AI agents
+                  Build intelligent systems that operate independently
                 </p>
                 <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
                   <span>Learn More</span>
