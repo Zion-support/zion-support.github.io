@@ -226,22 +226,6 @@ export function Footer() {
               ))}
             </div>
           </div>
-
-          {/* Additional Links */}
-          <div className="flex flex-wrap items-center justify-center space-x-6 mt-6 text-sm text-gray-500">
-            <Link to="/privacy" className="hover:text-cyan-400 transition-colors duration-200">
-              Privacy Policy
-            </Link>
-            <Link to="/terms" className="hover:text-cyan-400 transition-colors duration-200">
-              Terms of Service
-            </Link>
-            <Link to="/cookies" className="hover:text-cyan-400 transition-colors duration-200">
-              Cookie Policy
-            </Link>
-            <Link to="/accessibility" className="hover:text-cyan-400 transition-colors duration-200">
-              Accessibility
-            </Link>
-          </div>
         </div>
       </div>
     </footer>

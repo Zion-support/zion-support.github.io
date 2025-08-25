@@ -157,7 +157,7 @@ export default function TestimonialsSection() {
           <div className="flex justify-center items-center space-x-8 opacity-60">
             <div className="text-2xl font-bold text-gray-600">Fortune 500</div>
             <div className="text-2xl font-bold text-gray-600">Startups</div>
-            <div className="text-2xl font-bold text-gray-600">Enterprises</div>
+            <div className="text-xl font-bold text-gray-600">Enterprises</div>
             <div className="text-2xl font-bold text-gray-600">Government</div>
           </div>
         </div>
@@ -165,3 +165,4 @@ export default function TestimonialsSection() {
     </section>
   );
 }
+

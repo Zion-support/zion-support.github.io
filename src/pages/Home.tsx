@@ -1,5 +1,4 @@
 
-
 import React, { useState, useEffect, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -99,80 +98,124 @@ const Home: React.FC = () => {
     },
     {
       title: "Cloud Infrastructure",
-      description: "Scalable cloud solutions designed for enterprise performance and security.",
+      description: "Scalable cloud solutions designed for enterprise-grade performance and reliability.",
       icon: Cloud,
       path: "/services/cloud-infrastructure",
       category: "Infrastructure",
       price: "$1,800/mo",
       rating: 4.8,
       reviewCount: 89,
-      highlights: ["99.9% Uptime", "Auto-scaling", "Security First"],
-      features: ["AWS/Azure/GCP", "Load Balancing", "Backup & Recovery", "Monitoring"]
+      highlights: ["Auto-scaling", "99.9% Uptime", "Global CDN"],
+      features: ["Load Balancing", "Database Management", "Security", "Monitoring"]
     },
     {
       title: "Cybersecurity Solutions",
-      description: "Comprehensive security services to protect your digital assets and data.",
+      description: "Comprehensive security services to protect your digital assets and maintain compliance.",
       icon: Shield,
       path: "/services/cybersecurity",
       category: "Security",
       price: "$3,200/mo",
       rating: 4.9,
       reviewCount: 156,
-      highlights: ["Threat Detection", "Compliance Ready", "24/7 Monitoring"],
-      features: ["Penetration Testing", "Security Audits", "Incident Response", "Training"]
-    }
-  ];
-
-  const whyChooseUs = [
+      highlights: ["Threat Detection", "Compliance", "24/7 Monitoring"],
+      features: ["Penetration Testing", "Incident Response", "Training", "Audit Support"]
+    },
     {
+      title: "Digital Transformation",
+      description: "End-to-end digital transformation services to modernize your business operations.",
       icon: Zap,
-      title: "Lightning Fast",
-      description: "Optimized performance and rapid deployment"
-    },
-    {
-      icon: Lock,
-      title: "Secure by Design",
-      description: "Enterprise-grade security built into every solution"
-    },
-    {
-      icon: Cpu,
-      title: "Scalable Architecture",
-      description: "Grow without limits with our flexible infrastructure"
-    },
-    {
-      icon: Database,
-      title: "Data-Driven",
-      description: "Insights that drive better business decisions"
+      path: "/services/digital-transformation",
+      category: "Consulting",
+      price: "$5,000/mo",
+      rating: 4.7,
+      reviewCount: 73,
+      highlights: ["Process Optimization", "Technology Integration", "Change Management"],
+      features: ["Strategy Planning", "Implementation", "Training", "Ongoing Support"]
     }
   ];
 
-  useEffect(() => {
-    let interval: NodeJS.Timeout;
-    
-    if (isAutoPlaying) {
-      interval = setInterval(() => {
-        setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-      }, 5000);
+  const features = [
+    {
+      title: "AI-Powered Analytics",
+      description: "Advanced machine learning algorithms provide real-time insights and predictive analytics.",
+      icon: Brain,
+      color: "text-purple-400"
+    },
+    {
+      title: "Cloud-Native Architecture",
+      description: "Built on modern cloud technologies for scalability, reliability, and performance.",
+      icon: Cloud,
+      color: "text-blue-400"
+    },
+    {
+      title: "Enterprise Security",
+      description: "Bank-grade security with SOC2 compliance and advanced threat protection.",
+      icon: Shield,
+      color: "text-green-400"
+    },
+    {
+      title: "24/7 Support",
+      description: "Round-the-clock technical support and monitoring for your critical systems.",
+      icon: Clock,
+      color: "text-yellow-400"
     }
+  ];
 
-    return () => {
-      if (interval) clearInterval(interval);
-    };
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      position: 'CTO, TechFlow Solutions',
+      company: 'TechFlow Solutions',
+      content: 'Zion Tech Group transformed our entire IT infrastructure. Their AI-powered solutions reduced our operational costs by 40% while improving system reliability to 99.9%. The team\'s expertise and dedication are unmatched.',
+      rating: 5,
+      avatar: '/avatars/sarah.jpg',
+      logo: '/logos/techflow.png'
+    },
+    {
+      name: 'Michael Chen',
+      position: 'VP of Engineering',
+      company: 'InnovateCorp',
+      content: 'Working with Zion has been a game-changer for our development team. Their micro SAAS solutions and cloud expertise helped us scale from startup to enterprise in just 18 months. Highly recommended!',
+      rating: 5,
+      avatar: '/avatars/michael.jpg',
+      logo: '/logos/innovatecorp.png'
+    },
+    {
+      name: 'Emily Rodriguez',
+      position: 'Director of Digital Transformation',
+      company: 'Global Retail Inc.',
+      content: 'Zion\'s digital transformation services revolutionized our customer experience. Their AI-driven insights helped us increase online sales by 65% and improve customer satisfaction scores significantly.',
+      rating: 5,
+      avatar: '/avatars/emily.jpg',
+      logo: '/logos/globalretail.png'
+    }
+  ];
+
+  // Auto-advance hero slides
+  useEffect(() => {
+    if (!isAutoPlaying) return;
+    
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
   }, [isAutoPlaying, heroSlides.length]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    setIsAutoPlaying(false);
   };
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
-    setIsAutoPlaying(false);
   };
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
-    setIsAutoPlaying(false);
+  };
+
+  const toggleAutoPlay = () => {
+    setIsAutoPlaying(!isAutoPlaying);
   };
 
   return (
@@ -265,6 +308,19 @@ const Home: React.FC = () => {
             />
           ))}
         </div>
+
+        {/* Auto-play Toggle */}
+        <button
+          onClick={toggleAutoPlay}
+          className="absolute bottom-8 right-8 p-2 rounded-full bg-black/50 hover:bg-black/70 text-white transition-all duration-300"
+          aria-label={isAutoPlaying ? "Pause auto-play" : "Resume auto-play"}
+        >
+          {isAutoPlaying ? (
+            <div className="w-4 h-4 border-2 border-white border-l-transparent rounded-full animate-spin" />
+          ) : (
+            <div className="w-4 h-4 border-2 border-white border-l-transparent rounded-full" />
+          )}
+        </button>
       </section>
 
       {/* Stats Section */}
@@ -273,12 +329,10 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mb-4">
-                  <stat.icon className="w-8 h-8 text-white" />
+                <div className="flex justify-center mb-4">
+                  <stat.icon className="w-12 h-12 text-cyan-400" />
                 </div>
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
-                  {stat.value}
-                </div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-400">{stat.label}</div>
               </div>
             ))}
@@ -286,175 +340,118 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Featured Services Section */}
+      {/* Featured Services */}
       <section className="py-20 bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Featured Services
-            </h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Featured Services</h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Discover our most popular solutions that are transforming businesses worldwide
+              Discover our most popular solutions that are transforming businesses across industries
             </p>
           </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {featuredServices.map((service, index) => (
-              <article key={index} className="group bg-gray-800 rounded-xl p-6 hover:bg-gray-700 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/10">
-                {/* Header */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg">
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="text-right">
-                    <div className="text-2xl font-bold text-white">{service.price}</div>
-                    <div className="text-sm text-gray-400">{service.category}</div>
-                  </div>
+              <div key={index} className="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <service.icon className="w-8 h-8 text-cyan-400 mr-3" />
+                  <span className="text-sm text-cyan-400 font-medium">{service.category}</span>
                 </div>
-
-                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-                  {service.title}
-                </h3>
                 
-                <p className="text-gray-400 mb-4 line-clamp-3">
-                  {service.description}
-                </p>
-
-                {/* Highlights */}
-                <div className="mb-4">
-                  {service.highlights.map((highlight, index) => (
-                    <div key={index} className="flex items-center text-sm text-cyan-400 mb-1">
-                      <CheckCircle className="w-4 h-4 mr-2" />
-                      {highlight}
-                    </div>
-                  ))}
-                </div>
-
-                {/* Rating */}
+                <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
+                <p className="text-gray-400 mb-4">{service.description}</p>
+                
                 <div className="flex items-center justify-between mb-4">
+                  <span className="text-2xl font-bold text-white">{service.price}</span>
                   <div className="flex items-center">
-                    <div className="flex items-center mr-2">
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className={`w-4 h-4 ${
-                            i < Math.floor(service.rating)
-                              ? 'text-yellow-400 fill-current'
-                              : 'text-gray-600'
-                          }`}
-                        />
-                      ))}
-                    </div>
-                    <span className="text-sm text-gray-400">
-                      {service.rating} ({service.reviewCount})
-                    </span>
+                    <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />
+                    <span className="text-white">{service.rating}</span>
+                    <span className="text-gray-400 text-sm ml-1">({service.reviewCount})</span>
                   </div>
                 </div>
-
-                {/* Features */}
-                <div className="mb-6">
-                  <div className="text-sm text-gray-400 mb-2">Key Features:</div>
-                  <div className="grid grid-cols-2 gap-2">
-                    {service.features.map((feature, index) => (
-                      <div key={index} className="flex items-center text-xs text-gray-300">
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-1" />
-                        {feature}
+                
+                <div className="mb-4">
+                  <h4 className="text-sm font-medium text-white mb-2">Highlights:</h4>
+                  <div className="space-y-1">
+                    {service.highlights.map((highlight, idx) => (
+                      <div key={idx} className="flex items-center text-sm text-gray-400">
+                        <CheckCircle className="w-3 h-3 text-green-400 mr-2" />
+                        {highlight}
                       </div>
                     ))}
                   </div>
                 </div>
-
+                
                 <Link
                   to={service.path}
-                  className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white rounded-lg transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
-                  aria-label={`Learn more about ${service.title}`}
+                  className="block w-full text-center py-2 bg-cyan-600 hover:bg-cyan-500 text-white rounded-lg transition-colors duration-300"
                 >
                   Learn More
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section className="py-20 bg-gray-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Why Choose Zion Tech Group?
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              We combine cutting-edge technology with proven expertise to deliver exceptional results
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {whyChooseUs.map((feature, index) => (
-              <div key={index} className="text-center group">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="w-10 h-10 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-400 leading-relaxed">
-                  {feature.description}
-                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-900 to-blue-900">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
-            Join hundreds of companies that have already revolutionized their operations with our solutions
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="px-8 py-4 bg-white text-cyan-900 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-              aria-label="Get started today with our solutions"
-            >
-              Get Started Today
-            </Link>
-            <Link
-              to="/pricing"
-              className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-900 transition-all duration-300 transform hover:scale-105"
-              aria-label="View our pricing plans"
-            >
-              View Pricing
-            </Link>
+      {/* Features Section */}
+      <section className="py-20 bg-gray-800">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              We combine cutting-edge technology with proven expertise to deliver exceptional results
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-gray-700 rounded-lg p-6 hover:bg-gray-600 transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className={`p-3 bg-gray-600 rounded-lg ${feature.color}`}>
+                    <feature.icon className="w-8 h-8" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <Suspense fallback={<LoadingFallback message="Loading services..." />}>
-        <LazyServicesSection />
-      </Suspense>
-
-      {/* Features Section */}
-      <Suspense fallback={<LoadingFallback message="Loading features..." />}>
-        <LazyFeaturesSection />
-      </Suspense>
-
-      {/* Testimonials Section */}
+      {/* Testimonials */}
       <Suspense fallback={<LoadingFallback message="Loading testimonials..." />}>
         <LazyTestimonialsSection />
       </Suspense>
 
-      {/* CTA Section */}
-      <Suspense fallback={<LoadingFallback message="Loading CTA..." />}>
-        <LazyCTASection />
-      </Suspense>
+      {/* Call to Action */}
+      <section className="py-20 bg-gray-900">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
+            Join hundreds of companies that have already revolutionized their operations with our cutting-edge technology solutions.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link to="/contact">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 flex items-center gap-2">
+                Start Your Project
+                <ArrowRight className="w-5 h-5" />
+              </button>
+            </Link>
+            <Link to="/contact">
+              <button className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg text-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300 flex items-center gap-2">
+                <CheckCircle className="w-5 h-5" />
+                Free Consultation
+              </button>
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
