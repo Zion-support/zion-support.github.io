@@ -3,13 +3,13 @@ import { Helmet } from 'react-helmet-async';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
-const AIAutonomousSystemsPlatform: React.FC = () => {
+const AIBusinessIntelligencePro: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Autonomous Systems Platform - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI autonomous systems platform providing intelligent automation, decision-making, and operational optimization across enterprise systems." />
-        <meta name="keywords" content="AI autonomous systems, intelligent automation, decision making, operational optimization, enterprise AI" />
+        <title>AI Business Intelligence Pro - Zion Tech Group</title>
+        <meta name="description" content="Professional AI business intelligence platform providing advanced analytics, data visualization, and strategic insights for business professionals." />
+        <meta name="keywords" content="AI business intelligence, professional BI, advanced analytics, data visualization, strategic insights, business analytics" />
       </Helmet>
       
       <Header />
@@ -18,62 +18,62 @@ const AIAutonomousSystemsPlatform: React.FC = () => {
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-5xl font-bold text-gray-900 mb-8 text-center">
-              AI Autonomous Systems Platform
+              AI Business Intelligence Pro
             </h1>
             
             <div className="bg-white rounded-2xl shadow-xl p-8 mb-12">
               <h2 className="text-3xl font-semibold text-gray-800 mb-6">
-                Intelligent Systems Revolution
+                Professional Intelligence Platform
               </h2>
               
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Transform your enterprise operations with our comprehensive AI Autonomous Systems Platform. 
-                Leverage advanced artificial intelligence to create intelligent, self-optimizing systems 
-                that revolutionize decision-making, automation, and operational efficiency across all 
-                business functions.
+                Transform your business insights with our AI Business Intelligence Pro platform. 
+                Designed for business professionals, this platform provides advanced analytics, 
+                data visualization, and strategic insights that drive informed decision-making 
+                and business growth.
               </p>
               
               <div className="grid md:grid-cols-2 gap-8 mb-8">
                 <div className="space-y-4">
-                  <h3 className="text-xl font-semibold text-gray-800">Platform Capabilities</h3>
+                  <h3 className="text-xl font-semibold text-gray-800">Pro Capabilities</h3>
                   <ul className="space-y-3 text-gray-600">
                     <li className="flex items-center">
                       <span className="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
-                      Autonomous decision-making
+                      Advanced data analytics
                     </li>
                     <li className="flex items-center">
                       <span className="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
-                      Intelligent process optimization
+                      Interactive dashboards
                     </li>
                     <li className="flex items-center">
                       <span className="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
-                      Predictive analytics
+                      Predictive modeling
                     </li>
                     <li className="flex items-center">
                       <span className="w-2 h-2 bg-indigo-500 rounded-full mr-3"></span>
-                      Cross-system integration
+                      Custom reporting
                     </li>
                   </ul>
                 </div>
                 
                 <div className="space-y-4">
-                  <h3 className="text-xl font-semibold text-gray-800">Enterprise Benefits</h3>
+                  <h3 className="text-xl font-semibold text-gray-800">Business Benefits</h3>
                   <ul className="space-y-3 text-gray-600">
                     <li className="flex items-center">
                       <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                      Up to 70% operational efficiency gains
+                      Data-driven decisions
                     </li>
                     <li className="flex items-center">
                       <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                      Intelligent resource allocation
+                      Improved efficiency
                     </li>
                     <li className="flex items-center">
                       <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                      Enhanced decision accuracy
+                      Competitive insights
                     </li>
                     <li className="flex items-center">
                       <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                      Scalable autonomous operations
+                      Strategic planning
                     </li>
                   </ul>
                 </div>
@@ -82,13 +82,13 @@ const AIAutonomousSystemsPlatform: React.FC = () => {
             
             <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white text-center">
               <h3 className="text-2xl font-bold mb-4">
-                Transform Your Enterprise Operations
+                Experience Pro Intelligence
               </h3>
               <p className="text-lg mb-6 opacity-90">
-                Experience the future of autonomous business systems
+                Transform your business with AI-powered insights
               </p>
               <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Get Started
+                Get Pro Access
               </button>
             </div>
           </div>
@@ -100,4 +100,4 @@ const AIAutonomousSystemsPlatform: React.FC = () => {
   );
 };
 
-export default AIAutonomousSystemsPlatform;
+export default AIBusinessIntelligencePro;
