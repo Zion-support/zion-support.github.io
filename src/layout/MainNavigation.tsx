@@ -89,6 +89,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       key: 'services',
       href: '/services',
 =======
@@ -115,6 +116,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: '/equipment',
       name: 'Equipment',
       matches: (path: string) => path.startsWith('/equipment')
+=======
+      key: 'services',
+      href: '/services',
+      matches: (path: string) => path.startsWith('/services') || path.startsWith('/ai-services') || path.startsWith('/it-services') || path.startsWith('/digital-marketing') || path.startsWith('/business-solutions')
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
     },
     {
       key: 'categories',

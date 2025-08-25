@@ -696,6 +696,7 @@ export function Contact() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: Phone,
 <<<<<<< HEAD
       title: 'Phone',
@@ -767,6 +768,12 @@ export function Contact() {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com"
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-ae1c
+=======
+      name: "Zion Tech Group Headquarters",
+      address: "364 E Main St STE 1008, Middletown, DE 19709",
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
     }
   ];
 
@@ -4497,14 +4504,22 @@ const Contact = () => {
               
               <div className="mt-8 bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden">
                 <iframe 
+<<<<<<< HEAD
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.678901234567!2d-75.7166667!3d39.4500000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c7c8c8c8c8c8c8%3A0x8c8c8c8c8c8c8c8c!2s364%20E%20Main%20St%2C%20Middletown%2C%20DE%2019709!5e0!3m2!1sen!2sus!4v1651234567890!5m2!1sen!2sus" 
+=======
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345.678901234567!2d-75.7167!3d39.4496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c7a8b8b8b8b8b8%3A0x8b8b8b8b8b8b8b8b!2s364%20E%20Main%20St%2C%20Middletown%2C%20DE%2019709!5e0!3m2!1sen!2sus!4v1234567890!5m2!1sen!2sus" 
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
                   width="100%" 
                   height="300" 
                   style={{ border: 0 }} 
                   allowFullScreen={true} 
                   loading="lazy" 
                   referrerPolicy="no-referrer-when-downgrade"
+<<<<<<< HEAD
                   title="Zion Office Location - Middletown, DE"
+=======
+                  title="Zion Tech Group Office Location"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
                 ></iframe>
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-ae1c
               </div>
@@ -5069,10 +5084,13 @@ export default Contact;
                 asChild
               >
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <a href="tel:+13024640950">
                   <Phone className="mr-2 h-5 w-5" />
                   Call Now
 =======
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
                 <a href="mailto:kleber@ziontechgroup.com">
                   <Mail className="mr-2 h-5 w-5" />
                   Email Support

@@ -157,6 +157,7 @@ export function Footer() {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <footer className="bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.05),transparent_50%)]"></div>
@@ -203,6 +204,14 @@ export function Footer() {
                   <span className="text-sm">{contactInfo.address}</span>
                 </div>
               </div>
+=======
+    <footer className="bg-zion-blue-dark border-t border-zion-blue-light pt-12 pb-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          <div>
+            <div className="mb-4">
+              <span className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">ZION</span>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
             </div>
 
             {/* Footer Sections */}
@@ -320,15 +329,35 @@ export function Footer() {
 
           {/* Marketplace */}
           <div>
+<<<<<<< HEAD
             <h3 className="text-white font-semibold mb-6 text-lg">Marketplace</h3>
             <ul className="space-y-3">
+=======
+            <h3 className="text-white font-semibold mb-4 text-lg">Services</h3>
+            <ul className="space-y-2">
+              <li><Link to="/ai-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Services</Link></li>
+              <li><Link to="/it-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">IT Services</Link></li>
+              <li><Link to="/digital-marketing" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Digital Marketing</Link></li>
+              <li><Link to="/business-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Business Solutions</Link></li>
+              <li><Link to="/it-onsite-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Onsite Services</Link></li>
+              <li><Link to="/request-quote" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Request Quote</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-white font-semibold mb-4 text-lg">Marketplace</h3>
+            <ul className="space-y-2">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
               <li><Link to="/marketplace" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Products</Link></li>
-              <li><Link to="/services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Services</Link></li>
               <li><Link to="/talent" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Talent</Link></li>
               <li><Link to="/equipment" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Equipment</Link></li>
               <li><Link to="/categories" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Categories</Link></li>
               <li><Link to="/green-it" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Green IT</Link></li>
+<<<<<<< HEAD
               <li><Link to="/ai-matcher" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Matcher</Link></li>
+=======
+              <li><Link to="/zion-hire-ai" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Zion Hire AI</Link></li>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
             </ul>
           </div>
 

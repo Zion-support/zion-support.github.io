@@ -19,10 +19,17 @@ import {
   Code,
   Building,
   Clock,
+<<<<<<< HEAD
   PenTool,
   Link as LinkIcon,
   Shield,
   BarChart3
+=======
+  Brain,
+  Server,
+  TrendingUp,
+  CheckCircle
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
 } from "lucide-react";
 
 =======
@@ -89,9 +96,44 @@ const features = [
 export function FeatureCTAs() {
   const features = [
     {
+      title: "AI Services & Solutions",
+      description: "Comprehensive AI services from strategy to implementation, including custom model development and AI consulting.",
+      icon: <Brain className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />,
+      link: "/ai-services",
+      badge: "New",
+      details: "Transform your business with cutting-edge AI solutions including machine learning, computer vision, NLP, and strategic AI consulting."
+    },
+    {
+      title: "IT Services & Infrastructure",
+      description: "Complete IT solutions including cloud management, cybersecurity, DevOps, and infrastructure modernization.",
+      icon: <Server className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />,
+      link: "/it-services",
+      badge: "Popular",
+      details: "From cloud migration to cybersecurity, our IT experts help you build robust, scalable, and secure technology infrastructure."
+    },
+    {
+      title: "Digital Marketing Services",
+      description: "Full-service digital marketing including SEO, PPC, social media, content marketing, and analytics.",
+      icon: <TrendingUp className="h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700" />,
+      link: "/digital-marketing",
+      badge: "Featured",
+      details: "Drive growth with data-driven marketing strategies, conversion optimization, and comprehensive digital marketing solutions."
+    },
+    {
+      title: "Business Solutions & Consulting",
+      description: "Strategic business consulting, process optimization, and digital transformation services.",
+      icon: <CheckCircle className="h-10 w-10 p-2 rounded-md bg-green-100 text-green-700" />,
+      link: "/business-solutions",
+      details: "Our business consultants help you optimize operations, implement automation, and achieve sustainable growth through strategic planning."
+    },
+    {
       title: "AI Talent Matching",
       description: "Our AI-powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.",
+<<<<<<< HEAD
       icon: <Search className="h-12 w-12 p-3 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 text-white shadow-lg" />,
+=======
+      icon: <Search className="h-10 w-10 p-2 rounded-md bg-indigo-100 text-indigo-700" />,
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
       link: "/marketplace",
       badge: "Popular",
       details: "Leveraging advanced machine learning, our matching system analyzes over 100+ data points to create perfect connections between talents and opportunities.",
@@ -100,12 +142,17 @@ export function FeatureCTAs() {
     {
       title: "Talent Directory",
       description: "Browse our extensive database of verified AI and tech specialists, filtered by expertise and availability.",
+<<<<<<< HEAD
       icon: <Users className="h-12 w-12 p-3 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 text-white shadow-lg" />,
+=======
+      icon: <Users className="h-10 w-10 p-2 rounded-md bg-pink-100 text-pink-700" />,
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
       link: "/talent",
       details: "Every talent in our directory undergoes a rigorous verification process to ensure quality, authenticity, and reliability.",
       gradient: "from-purple-500/20 to-purple-600/20"
     },
     {
+<<<<<<< HEAD
       title: "Services Marketplace",
       description: "Discover professional tech and AI services for your business needs, from development to consulting.",
       icon: <Zap className="h-12 w-12 p-3 rounded-2xl bg-gradient-to-br from-cyan-500 to-cyan-600 text-white shadow-lg" />,
@@ -115,6 +162,8 @@ export function FeatureCTAs() {
       gradient: "from-cyan-500/20 to-cyan-600/20"
     },
     {
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
       title: "Equipment Catalog",
       description: "Find specialized hardware and tech equipment for AI development and research.",
       icon: <Settings className="h-12 w-12 p-3 rounded-2xl bg-gradient-to-br from-amber-500 to-amber-600 text-white shadow-lg" />,
@@ -131,6 +180,7 @@ export function FeatureCTAs() {
       gradient: "from-emerald-500/20 to-emerald-600/20"
     },
     {
+<<<<<<< HEAD
       title: "Mobile Experience",
       description: "Take Zion with you on the go with our mobile app for iOS and Android devices.",
       icon: <Smartphone className="h-12 w-12 p-3 rounded-2xl bg-gradient-to-br from-indigo-500 to-indigo-600 text-white shadow-lg" />,
@@ -143,11 +193,17 @@ export function FeatureCTAs() {
       title: "Enterprise Solutions",
       description: "Custom-branded hiring portal, dedicated talent pool, and powerful admin controls for your organization.",
       icon: <Building className="h-12 w-12 p-3 rounded-2xl bg-gradient-to-br from-pink-500 to-pink-600 text-white shadow-lg" />,
+=======
+      title: "Enterprise Solutions",
+      description: "Custom-branded hiring portal, dedicated talent pool, and powerful admin controls for your organization.",
+      icon: <Building className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" />,
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
       link: "/enterprise",
       details: "Scale your talent acquisition with white-labeled solutions, analytics dashboards, and dedicated account managers.",
       gradient: "from-pink-500/20 to-pink-600/20"
     },
     {
+<<<<<<< HEAD
       title: "Developer Tools",
       description: "Access our API documentation, SDKs, and integration guides to build on top of the Zion platform.",
       icon: <Code className="h-12 w-12 p-3 rounded-2xl bg-gradient-to-br from-gray-500 to-gray-600 text-white shadow-lg" />,
@@ -172,6 +228,8 @@ export function FeatureCTAs() {
       gradient: "from-red-500/20 to-red-600/20"
     },
     {
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
       title: "Zion Hire AI",
       description: "AI-powered recruiting assistant to streamline your hiring process and find better matches.",
       icon: <Clock className="h-12 w-12 p-3 rounded-2xl bg-gradient-to-br from-violet-500 to-violet-600 text-white shadow-lg" />,
