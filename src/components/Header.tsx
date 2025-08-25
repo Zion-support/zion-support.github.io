@@ -298,70 +298,83 @@ export function Header() {
                 )}
 
                 {/* Services Dropdown */}
-                {item.hasDropdown && item.label === 'Services' && activeDropdown === 'Services' && (
-                  <div className="absolute top-full left-0 mt-2 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-xl shadow-2xl shadow-black/50 p-6">
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-                      {serviceCategories.map((category) => (
-                        <div key={category.title} className="space-y-3">
-                          <div className="flex items-center space-x-2">
-                            <div className={`p-2 bg-gradient-to-r ${category.color} rounded-lg`}>
-                              <category.icon className="w-5 h-5 text-white" />
+                {item.label === 'Services' && activeDropdown === 'Services' && (
+                  <div className="absolute top-full left-0 mt-2 w-96 bg-black/95 backdrop-blur-md border border-gray-800 rounded-xl shadow-2xl p-6 z-50">
+                    <div className="grid grid-cols-1 gap-6">
+                      {serviceCategories.map((category, idx) => (
+                        <div key={idx} className="group">
+                          <div className="flex items-center space-x-3 mb-3">
+                            <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center`}>
+                              <category.icon className="w-4 h-4 text-white" />
                             </div>
-                            <h3 className="font-semibold text-white text-sm">{category.title}</h3>
+                            <h3 className="text-white font-semibold text-sm">{category.title}</h3>
                           </div>
-                          <p className="text-xs text-gray-400 leading-relaxed">{category.description}</p>
+                          <p className="text-gray-400 text-xs mb-3">{category.description}</p>
                           <div className="space-y-2">
-                            {category.services.slice(0, 4).map((service) => (
+                            {category.services.map((service, serviceIdx) => (
                               <Link
-                                key={service.name}
+                                key={serviceIdx}
                                 to={service.path}
-                                className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors duration-200 hover:bg-gray-800/50 rounded px-2 py-1"
+                                className="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
                               >
-                                {service.name}
+                                <service.icon className="w-4 h-4 text-gray-400 group-hover:text-cyan-400" />
+                                <span className="text-gray-300 text-sm group-hover:text-white">{service.name}</span>
+                                <span className="text-gray-600 text-xs">{service.description}</span>
                               </Link>
                             ))}
                           </div>
                         </div>
                       ))}
                     </div>
-                    <div className="mt-6 pt-4 border-t border-gray-700/50 text-center">
+                    <div className="mt-6 pt-4 border-t border-gray-800">
                       <Link
                         to="/services"
-                        className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200 text-sm font-medium"
+                        className="flex items-center justify-center space-x-2 w-full py-2 px-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
                       >
-                        View All Services
-                        <ArrowRight className="w-4 h-4 ml-1" />
+                        <span>View All Services</span>
+                        <ArrowRight className="w-4 h-4" />
                       </Link>
                     </div>
                   </div>
                 )}
 
                 {/* Solutions Dropdown */}
-                {item.hasDropdown && item.label === 'Solutions' && activeDropdown === 'Solutions' && (
-                  <div className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-xl shadow-2xl shadow-black/50 p-6">
-                    <div className="space-y-4">
-                      {solutionCategories.map((category) => (
-                        <div key={category.title} className="space-y-3">
-                          <div className="flex items-center space-x-2">
-                            <div className={`p-2 bg-gradient-to-r ${category.color} rounded-lg`}>
-                              <category.icon className="w-5 h-5 text-white" />
+                {item.label === 'Solutions' && activeDropdown === 'Solutions' && (
+                  <div className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-md border border-gray-800 rounded-xl shadow-2xl p-6 z-50">
+                    <div className="space-y-6">
+                      {solutionCategories.map((category, idx) => (
+                        <div key={idx} className="group">
+                          <div className="flex items-center space-x-3 mb-3">
+                            <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center`}>
+                              <category.icon className="w-4 h-4 text-white" />
                             </div>
-                            <h3 className="font-semibold text-white text-sm">{category.title}</h3>
+                            <h3 className="text-white font-semibold text-sm">{category.title}</h3>
                           </div>
-                          <p className="text-xs text-gray-400 leading-relaxed">{category.description}</p>
+                          <p className="text-gray-400 text-xs mb-3">{category.description}</p>
                           <div className="space-y-2">
-                            {category.solutions.map((solution) => (
+                            {category.solutions.map((solution, solutionIdx) => (
                               <Link
-                                key={solution.name}
+                                key={solutionIdx}
                                 to={solution.path}
-                                className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors duration-200 hover:bg-gray-800/50 rounded px-2 py-1"
+                                className="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
                               >
-                                {solution.name}
+                                <solution.icon className="w-4 h-4 text-gray-400 group-hover:text-cyan-400" />
+                                <span className="text-gray-300 text-sm group-hover:text-white">{solution.name}</span>
+                                <span className="text-gray-600 text-xs">{solution.description}</span>
                               </Link>
                             ))}
                           </div>
                         </div>
                       ))}
+                    </div>
+                    <div className="mt-6 pt-4 border-t border-gray-800">
+                      <Link
+                        to="/solutions/enterprise"
+                        className="flex items-center justify-center space-x-2 w-full py-2 px-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+                      >
+                        <span>Explore Solutions</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
                     </div>
                   </div>
                 )}
@@ -369,142 +382,64 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Search Bar */}
+          {/* Search and Contact */}
           <div className="hidden lg:flex items-center space-x-4">
+            {/* Search */}
             <form onSubmit={handleSearch} className="relative">
               <input
                 type="text"
                 placeholder="Search services..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-64 px-4 py-2 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 backdrop-blur-sm"
+                className="w-64 px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
               <button
                 type="submit"
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 p-1 text-gray-400 hover:text-cyan-400 transition-colors duration-200"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors duration-200"
               >
-                <Search className="w-4 h-4" />
+                <Search className="w-5 h-5" />
               </button>
             </form>
-          </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center space-x-4">
+            {/* Contact Button */}
             <Link
               to="/contact"
-              className="px-6 py-2 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
+              className="flex items-center space-x-2 px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
             >
-              Get Started
+              <span>Get Started</span>
+              <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200"
-            aria-label="Toggle mobile menu"
+            onClick={() => setIsSidebarOpen(true)}
+            className="lg:hidden p-2 text-gray-400 hover:text-white transition-colors duration-200"
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            <Menu className="w-6 h-6" />
           </button>
         </div>
+      </div>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="lg:hidden bg-gray-900/95 backdrop-blur-md border-t border-gray-700/50">
-            <div className="px-4 py-6 space-y-4">
-              {/* Mobile Search */}
-              <form onSubmit={handleSearch} className="relative">
-                <input
-                  type="text"
-                  placeholder="Search services..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full px-4 py-2 bg-gray-800/50 border border-gray-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
-                />
-                <button
-                  type="submit"
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 p-1 text-gray-400 hover:text-cyan-400 transition-colors duration-200"
-                >
-                  <Search className="w-4 h-4" />
-                </button>
-              </form>
-
-              {/* Mobile Navigation Items */}
-              {navigationItems.map((item) => (
-                <div key={item.path}>
-                  {item.hasDropdown ? (
-                    <div>
-                      <button
-                        onClick={() => handleDropdownToggle(item.label)}
-                        className="flex items-center justify-between w-full px-4 py-2 text-left text-gray-300 hover:text-white transition-colors duration-200"
-                      >
-                        <span className="flex items-center space-x-2">
-                          <span>{item.icon}</span>
-                          <span>{item.label}</span>
-                        </span>
-                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                          activeDropdown === item.label ? 'rotate-180' : ''
-                        }`} />
-                      </button>
-                      
-                      {activeDropdown === item.label && (
-                        <div className="ml-4 mt-2 space-y-2">
-                          {item.label === 'Services' && serviceCategories.map((category) => (
-                            <div key={category.title} className="space-y-2">
-                              <div className="text-sm font-medium text-cyan-400">{category.title}</div>
-                              {category.services.slice(0, 3).map((service) => (
-                                <Link
-                                  key={service.name}
-                                  to={service.path}
-                                  className="block px-4 py-1 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200"
-                                >
-                                  {service.name}
-                                </Link>
-                              ))}
-                            </div>
-                          ))}
-                          
-                          {item.label === 'Solutions' && solutionCategories.map((category) => (
-                            <div key={category.title} className="space-y-2">
-                              <div className="text-sm font-medium text-cyan-400">{category.title}</div>
-                              {category.solutions.map((solution) => (
-                                <Link
-                                  key={solution.name}
-                                  to={solution.path}
-                                  className="block px-4 py-1 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200"
-                                >
-                                  {solution.name}
-                                </Link>
-                              ))}
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  ) : (
-                    <Link
-                      to={item.path}
-                      className="flex items-center space-x-2 px-4 py-2 text-gray-300 hover:text-white transition-colors duration-200"
-                    >
-                      <span>{item.icon}</span>
-                      <span>{item.label}</span>
-                    </Link>
-                  )}
-                </div>
-              ))}
-
-              {/* Mobile CTA */}
-              <div className="pt-4 border-t border-gray-700/50">
-                <Link
-                  to="/contact"
-                  className="block w-full px-4 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-medium rounded-lg text-center transition-all duration-300 transform hover:scale-105"
-                >
-                  Get Started Today
-                </Link>
-              </div>
-            </div>
-          </div>
-        )}
+      {/* Mobile Search */}
+      <div className="lg:hidden border-t border-gray-800/50 bg-black/90 backdrop-blur-md">
+        <div className="max-w-7xl mx-auto px-4 py-3">
+          <form onSubmit={handleSearch} className="relative">
+            <input
+              type="text"
+              placeholder="Search services..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+            />
+            <button
+              type="submit"
+              className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors duration-200"
+            >
+              <Search className="w-5 h-5" />
+            </button>
+          </form>
+        </div>
       </div>
 
       {/* Sidebar */}
