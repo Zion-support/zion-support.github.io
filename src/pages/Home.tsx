@@ -73,22 +73,22 @@ const Home: React.FC = () => {
       features: ["Machine Learning", "Predictive Analytics", "Process Automation", "Real-time Insights"]
     },
     {
+      title: "Innovative Micro SAAS Services",
+      subtitle: "Cutting-edge software solutions for the digital age",
+      description: "Discover our portfolio of innovative micro SAAS services, from AI-powered analytics to quantum computing solutions. Built with the latest technologies and best practices.",
+      image: "/images/hero-saas.jpg",
+      cta: "View Services",
+      path: "/comprehensive-services-showcase",
+      features: ["AI Analytics", "Quantum Computing", "Blockchain Solutions", "Edge Computing"]
+    },
+    {
       title: "Comprehensive IT Services",
       subtitle: "End-to-end technology solutions for modern businesses",
       description: "From infrastructure management to digital transformation, we provide the expertise you need to succeed in today's competitive landscape.",
       image: "/images/hero-it-services.jpg",
-      cta: "View Our Services",
+      cta: "Learn More",
       path: "/services",
       features: ["Cloud Infrastructure", "Cybersecurity", "DevOps Automation", "24/7 Support"]
-    },
-    {
-      title: "Micro-SaaS Solutions",
-      subtitle: "Scalable software solutions for growing businesses",
-      description: "Custom SaaS applications designed to streamline operations and boost productivity. Built with modern technologies and best practices.",
-      image: "/images/hero-saas.jpg",
-      cta: "Learn More",
-      path: "/services/micro-saas-solutions",
-      features: ["Custom Development", "Scalable Architecture", "API Integration", "User Management"]
     }
   ];
 
