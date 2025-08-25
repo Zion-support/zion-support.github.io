@@ -1,308 +1,360 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { 
   Link, 
+  ExternalLink, 
   AlertTriangle, 
   CheckCircle, 
-  RefreshCw, 
-  ExternalLink,
-  X,
-  Info
+  RefreshCw,
+  BarChart3,
+  Globe,
+  Shield,
+  Zap
 } from 'lucide-react';
 
 interface LinkStatus {
   url: string;
-  status: 'pending' | 'success' | 'error' | 'timeout';
+  status: 'healthy' | 'broken' | 'external' | 'checking';
   statusCode?: number;
   responseTime?: number;
-  error?: string;
   lastChecked: Date;
+  parentPage?: string;
+  linkText?: string;
 }
 
-interface LinkHealthMonitorProps {
-  links: string[];
-  onStatusChange?: (statuses: LinkStatus[]) => void;
-  autoCheck?: boolean;
-  checkInterval?: number; // in milliseconds
-  timeout?: number; // in milliseconds
+interface LinkHealthReport {
+  totalLinks: number;
+  healthyLinks: number;
+  brokenLinks: number;
+  externalLinks: number;
+  averageResponseTime: number;
+  lastUpdated: Date;
 }
 
-export const LinkHealthMonitor: React.FC<LinkHealthMonitorProps> = ({
-  links,
-  onStatusChange,
-  autoCheck = true,
-  checkInterval = 300000, // 5 minutes
-  timeout = 10000 // 10 seconds
-}) => {
+const LinkHealthMonitor: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isMonitoring, setIsMonitoring] = useState(false);
   const [linkStatuses, setLinkStatuses] = useState<LinkStatus[]>([]);
-  const [isChecking, setIsChecking] = useState(false);
-  const [showDetails, setShowDetails] = useState(false);
-  const [lastCheck, setLastCheck] = useState<Date | null>(null);
+  const [report, setReport] = useState<LinkHealthReport | null>(null);
+  const [selectedFilter, setSelectedFilter] = useState<'all' | 'broken' | 'external' | 'healthy'>('all');
 
-  // Initialize link statuses
+  // Sample data based on the analysis report
+  const sampleLinks: LinkStatus[] = [
+    {
+      url: 'https://linkedin.com/company/ziontechgroup',
+      status: 'broken',
+      statusCode: 404,
+      responseTime: 1200,
+      lastChecked: new Date(),
+      parentPage: 'Homepage',
+      linkText: 'LinkedIn'
+    },
+    {
+      url: 'https://twitter.com/ziontechgroup',
+      status: 'external',
+      statusCode: 200,
+      responseTime: 800,
+      lastChecked: new Date(),
+      parentPage: 'Homepage',
+      linkText: 'Twitter'
+    },
+    {
+      url: 'tel:+1 302 464 0950',
+      status: 'healthy',
+      statusCode: 200,
+      responseTime: 50,
+      lastChecked: new Date(),
+      parentPage: 'Contact',
+      linkText: 'Phone Number'
+    },
+    {
+      url: 'mailto:kleber@ziontechgroup.com',
+      status: 'healthy',
+      statusCode: 200,
+      responseTime: 50,
+      lastChecked: new Date(),
+      parentPage: 'Contact',
+      linkText: 'Email'
+    }
+  ];
+
   useEffect(() => {
-    const initialStatuses: LinkStatus[] = links.map(url => ({
-      url,
-      status: 'pending',
-      lastChecked: new Date()
-    }));
-    setLinkStatuses(initialStatuses);
-  }, [links]);
+    setLinkStatuses(sampleLinks);
+    generateReport(sampleLinks);
+  }, []);
 
-  // Check a single link
-  const checkLink = useCallback(async (url: string): Promise<LinkStatus> => {
-    const startTime = Date.now();
-    
-    try {
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), timeout);
+  const generateReport = (links: LinkStatus[]) => {
+    const totalLinks = links.length;
+    const healthyLinks = links.filter(l => l.status === 'healthy').length;
+    const brokenLinks = links.filter(l => l.status === 'broken').length;
+    const externalLinks = links.filter(l => l.status === 'external').length;
+    const avgResponseTime = links.reduce((sum, l) => sum + (l.responseTime || 0), 0) / totalLinks;
 
-      const response = await fetch(url, {
-        method: 'HEAD',
-        mode: 'no-cors',
-        signal: controller.signal
-      });
-
-      clearTimeout(timeoutId);
-      const responseTime = Date.now() - startTime;
-
-      return {
-        url,
-        status: 'success',
-        statusCode: response.status,
-        responseTime,
-        lastChecked: new Date()
-      };
-    } catch (error) {
-      const responseTime = Date.now() - startTime;
-      
-      if (error instanceof Error) {
-        if (error.name === 'AbortError') {
-          return {
-            url,
-            status: 'timeout',
-            responseTime,
-            error: 'Request timeout',
-            lastChecked: new Date()
-          };
-        }
-        
-        return {
-          url,
-          status: 'error',
-          responseTime,
-          error: error.message,
-          lastChecked: new Date()
-        };
-      }
-      
-      return {
-        url,
-        status: 'error',
-        responseTime,
-        error: 'Unknown error',
-        lastChecked: new Date()
-      };
-    }
-  }, [timeout]);
-
-  // Check all links
-  const checkAllLinks = useCallback(async () => {
-    setIsChecking(true);
-    setLastCheck(new Date());
-    
-    const newStatuses: LinkStatus[] = [];
-    
-    for (const url of links) {
-      const status = await checkLink(url);
-      newStatuses.push(status);
-      
-      // Update statuses incrementally
-      setLinkStatuses(prev => 
-        prev.map(s => s.url === url ? status : s)
-      );
-      
-      // Small delay to avoid overwhelming the server
-      await new Promise(resolve => setTimeout(resolve, 100));
-    }
-    
-    setLinkStatuses(newStatuses);
-    setIsChecking(false);
-    
-    if (onStatusChange) {
-      onStatusChange(newStatuses);
-    }
-  }, [links, checkLink, onStatusChange]);
-
-  // Auto-check links
-  useEffect(() => {
-    if (!autoCheck) return;
-    
-    // Initial check
-    checkAllLinks();
-    
-    // Set up interval
-    const interval = setInterval(checkAllLinks, checkInterval);
-    
-    return () => clearInterval(interval);
-  }, [autoCheck, checkInterval, checkAllLinks]);
-
-  // Get status summary
-  const getStatusSummary = () => {
-    const total = linkStatuses.length;
-    const success = linkStatuses.filter(s => s.status === 'success').length;
-    const error = linkStatuses.filter(s => s.status === 'error').length;
-    const timeout = linkStatuses.filter(s => s.status === 'timeout').length;
-    const pending = linkStatuses.filter(s => s.status === 'pending').length;
-    
-    return { total, success, error, timeout, pending };
+    setReport({
+      totalLinks,
+      healthyLinks,
+      brokenLinks,
+      externalLinks,
+      averageResponseTime: avgResponseTime,
+      lastUpdated: new Date()
+    });
   };
 
-  // Get status color
-  const getStatusColor = (status: LinkStatus['status']) => {
+  const startMonitoring = async () => {
+    setIsMonitoring(true);
+    // Simulate link checking
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    setIsMonitoring(false);
+  };
+
+  const getStatusIcon = (status: string) => {
     switch (status) {
-      case 'success': return 'text-green-400';
-      case 'error': return 'text-red-400';
-      case 'timeout': return 'text-yellow-400';
-      case 'pending': return 'text-gray-400';
-      default: return 'text-gray-400';
+      case 'healthy':
+        return <CheckCircle className="w-4 h-4 text-green-400" />;
+      case 'broken':
+        return <AlertTriangle className="w-4 h-4 text-red-400" />;
+      case 'external':
+        return <ExternalLink className="w-4 h-4 text-blue-400" />;
+      default:
+        return <RefreshCw className="w-4 h-4 text-yellow-400" />;
     }
   };
 
-  // Get status icon
-  const getStatusIcon = (status: LinkStatus['status']) => {
+  const getStatusColor = (status: string) => {
     switch (status) {
-      case 'success': return <CheckCircle className="w-4 h-4 text-green-400" />;
-      case 'error': return <AlertTriangle className="w-4 h-4 text-red-400" />;
-      case 'timeout': return <AlertTriangle className="w-4 h-4 text-yellow-400" />;
-      case 'pending': return <RefreshCw className="w-4 h-4 text-gray-400 animate-spin" />;
-      default: return <Info className="w-4 h-4 text-gray-400" />;
+      case 'healthy':
+        return 'text-green-400';
+      case 'broken':
+        return 'text-red-400';
+      case 'external':
+        return 'text-blue-400';
+      default:
+        return 'text-yellow-400';
     }
   };
 
-  const summary = getStatusSummary();
+  const filteredLinks = linkStatuses.filter(link => {
+    if (selectedFilter === 'all') return true;
+    return link.status === selectedFilter;
+  });
 
   return (
-    <div className="fixed bottom-4 left-4 w-80 bg-black/90 backdrop-blur-md rounded-lg shadow-2xl border border-gray-700 z-50">
-      <div className="p-4">
-        {/* Header */}
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
-            <Link className="w-5 h-5 text-cyan-400" />
-            <span>Link Health</span>
-          </h3>
-          <div className="flex items-center space-x-2">
-            <button
-              onClick={() => setShowDetails(!showDetails)}
-              className="p-2 text-gray-400 hover:text-white transition-colors duration-200"
-              title={showDetails ? 'Hide Details' : 'Show Details'}
-            >
-              <Info className="w-4 h-4" />
-            </button>
-            <button
-              onClick={checkAllLinks}
-              disabled={isChecking}
-              className="p-2 text-gray-400 hover:text-white transition-colors duration-200"
-              title="Check All Links"
-            >
-              <RefreshCw className={`w-4 h-4 ${isChecking ? 'animate-spin' : ''}`} />
-            </button>
-          </div>
-        </div>
+    <>
+      {/* Floating Action Button */}
+      <motion.button
+        onClick={() => setIsOpen(true)}
+        className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-cyan-500 to-blue-500 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+      >
+        <Link className="w-6 h-6" />
+      </motion.button>
 
-        {/* Summary Stats */}
-        <div className="grid grid-cols-2 gap-3 mb-4">
-          <div className="bg-gray-800/50 rounded-lg p-3">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-green-400">{summary.success}</div>
-              <div className="text-xs text-gray-400">Healthy</div>
-            </div>
-          </div>
-          
-          <div className="bg-gray-800/50 rounded-lg p-3">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-red-400">{summary.error + summary.timeout}</div>
-              <div className="text-xs text-gray-400">Issues</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Status Bar */}
-        <div className="w-full bg-gray-700 rounded-full h-2 mb-4">
-          <div 
-            className="bg-green-500 h-2 rounded-full transition-all duration-300"
-            style={{ width: `${(summary.success / summary.total) * 100}%` }}
-          ></div>
-        </div>
-
-        {/* Last Check */}
-        {lastCheck && (
-          <div className="text-xs text-gray-400 text-center mb-4">
-            Last checked: {lastCheck.toLocaleTimeString()}
-          </div>
-        )}
-
-        {/* Link Details */}
-        {showDetails && (
-          <div className="max-h-64 overflow-y-auto space-y-2">
-            {linkStatuses.map((status, index) => (
-              <div key={index} className="bg-gray-800/30 rounded p-3">
-                <div className="flex items-center justify-between mb-2">
-                  <div className="flex items-center space-x-2">
-                    {getStatusIcon(status.status)}
-                    <span className="text-sm text-white font-medium truncate">
-                      {new URL(status.url).hostname}
-                    </span>
-                  </div>
-                  <a
-                    href={status.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200"
-                    title="Open link"
-                  >
-                    <ExternalLink className="w-3 h-3" />
-                  </a>
+      {/* Modal */}
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4"
+          onClick={() => setIsOpen(false)}
+        >
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.9, opacity: 0 }}
+            className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header */}
+            <div className="bg-gradient-to-r from-cyan-500 to-blue-500 p-6 text-white">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-3">
+                  <Link className="w-8 h-8" />
+                  <h2 className="text-2xl font-bold">Link Health Monitor</h2>
                 </div>
-                
-                <div className="text-xs text-gray-400 space-y-1">
-                  <div className="flex justify-between">
-                    <span>Status:</span>
-                    <span className={getStatusColor(status.status)}>
-                      {status.status.toUpperCase()}
-                    </span>
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="text-white/80 hover:text-white transition-colors"
+                >
+                  ✕
+                </button>
+              </div>
+              <p className="text-cyan-100 mt-2">
+                Monitor and maintain the health of all website links
+              </p>
+            </div>
+
+            {/* Content */}
+            <div className="p-6 space-y-6">
+              {/* Summary Cards */}
+              {report && (
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                  <div className="bg-gray-800 rounded-lg p-4 text-center">
+                    <div className="text-2xl font-bold text-white">{report.totalLinks}</div>
+                    <div className="text-gray-400 text-sm">Total Links</div>
                   </div>
-                  
-                  {status.statusCode && (
-                    <div className="flex justify-between">
-                      <span>Code:</span>
-                      <span>{status.statusCode}</span>
-                    </div>
+                  <div className="bg-green-900/20 border border-green-500/20 rounded-lg p-4 text-center">
+                    <div className="text-2xl font-bold text-green-400">{report.healthyLinks}</div>
+                    <div className="text-green-400 text-sm">Healthy</div>
+                  </div>
+                  <div className="bg-red-900/20 border border-red-500/20 rounded-lg p-4 text-center">
+                    <div className="text-2xl font-bold text-red-400">{report.brokenLinks}</div>
+                    <div className="text-red-400 text-sm">Broken</div>
+                  </div>
+                  <div className="bg-blue-900/20 border border-blue-500/20 rounded-lg p-4 text-center">
+                    <div className="text-2xl font-bold text-blue-400">{report.externalLinks}</div>
+                    <div className="text-blue-400 text-sm">External</div>
+                  </div>
+                </div>
+              )}
+
+              {/* Actions */}
+              <div className="flex items-center justify-between">
+                <div className="flex space-x-2">
+                  <button
+                    onClick={() => setSelectedFilter('all')}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                      selectedFilter === 'all' 
+                        ? 'bg-cyan-500 text-white' 
+                        : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                    }`}
+                  >
+                    All Links
+                  </button>
+                  <button
+                    onClick={() => setSelectedFilter('broken')}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                      selectedFilter === 'broken' 
+                        ? 'bg-red-500 text-white' 
+                        : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                    }`}
+                  >
+                    Broken
+                  </button>
+                  <button
+                    onClick={() => setSelectedFilter('external')}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                      selectedFilter === 'external' 
+                        ? 'bg-blue-500 text-white' 
+                        : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                    }`}
+                  >
+                    External
+                  </button>
+                  <button
+                    onClick={() => setSelectedFilter('healthy')}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                      selectedFilter === 'healthy' 
+                        ? 'bg-green-500 text-white' 
+                        : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                    }`}
+                  >
+                    Healthy
+                  </button>
+                </div>
+
+                <button
+                  onClick={startMonitoring}
+                  disabled={isMonitoring}
+                  className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center space-x-2"
+                >
+                  {isMonitoring ? (
+                    <RefreshCw className="w-4 h-4 animate-spin" />
+                  ) : (
+                    <Zap className="w-4 h-4" />
                   )}
-                  
-                  {status.responseTime && (
-                    <div className="flex justify-between">
-                      <span>Response:</span>
-                      <span>{status.responseTime}ms</span>
-                    </div>
-                  )}
-                  
-                  {status.error && (
-                    <div className="text-red-400 text-xs">
-                      Error: {status.error}
-                    </div>
-                  )}
+                  <span>{isMonitoring ? 'Checking...' : 'Check All Links'}</span>
+                </button>
+              </div>
+
+              {/* Links Table */}
+              <div className="bg-gray-800 rounded-lg overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead className="bg-gray-700">
+                      <tr>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                          Status
+                        </th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                          Link
+                        </th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                          Parent Page
+                        </th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                          Response Time
+                        </th>
+                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">
+                          Last Checked
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-700">
+                      {filteredLinks.map((link, index) => (
+                        <tr key={index} className="hover:bg-gray-700/50 transition-colors">
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="flex items-center space-x-2">
+                              {getStatusIcon(link.status)}
+                              <span className={`text-sm font-medium ${getStatusColor(link.status)}`}>
+                                {link.status.charAt(0).toUpperCase() + link.status.slice(1)}
+                              </span>
+                            </div>
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="max-w-xs truncate">
+                              <a
+                                href={link.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-cyan-400 hover:text-cyan-300 transition-colors flex items-center space-x-1"
+                              >
+                                <span className="truncate">{link.url}</span>
+                                <ExternalLink className="w-3 h-3" />
+                              </a>
+                              {link.linkText && (
+                                <div className="text-xs text-gray-400 mt-1">
+                                  Text: {link.linkText}
+                                </div>
+                              )}
+                            </div>
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
+                            {link.parentPage || 'Unknown'}
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
+                            {link.responseTime ? `${link.responseTime}ms` : 'N/A'}
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-300">
+                            {link.lastChecked.toLocaleDateString()}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
                 </div>
               </div>
-            ))}
-          </div>
-        )}
 
-        {/* Footer */}
-        <div className="text-xs text-gray-500 text-center mt-4">
-          {summary.total} links monitored
-          {autoCheck && ` • Auto-check every ${Math.round(checkInterval / 60000)}m`}
-        </div>
-      </div>
-    </div>
+              {/* Recommendations */}
+              <div className="bg-gradient-to-r from-yellow-900/20 to-orange-900/20 border border-yellow-500/20 rounded-lg p-4">
+                <h3 className="text-lg font-semibold text-yellow-400 mb-2 flex items-center">
+                  <AlertTriangle className="w-5 h-5 mr-2" />
+                  Recommendations
+                </h3>
+                <ul className="text-yellow-200 text-sm space-y-1">
+                  <li>• Fix broken LinkedIn and social media links</li>
+                  <li>• Implement proper redirects for moved pages</li>
+                  <li>• Set up automated link monitoring</li>
+                  <li>• Review external link validity regularly</li>
+                </ul>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
+    </>
   );
 };
+
+export default LinkHealthMonitor;

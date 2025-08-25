@@ -36,25 +36,27 @@ import { EMERGING_TECH_SERVICES } from '../data/emergingTechServices';
 
 interface Service {
   id: string;
-  title: string;
+  title?: string;
+  name?: string;
   description: string;
   category: string;
   subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
+  price: number | { monthly?: number; yearly?: number; oneTime?: number; currency: string; pricingModel: string };
+  currency?: string;
+  pricingModel?: string;
   features: string[];
   benefits: string[];
-  useCases: string[];
+  useCases?: string[];
   targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
+  tags?: string[];
+  estimatedDelivery?: string;
+  supportLevel?: string;
   marketPrice: string;
   contactInfo: {
     phone: string;
     email: string;
     website: string;
+    address?: string;
   };
   technology?: string[];
   integrations?: string[];
@@ -63,6 +65,17 @@ interface Service {
   competitors?: string[];
   marketTrend?: string;
   innovationLevel?: string;
+  userLimit?: string;
+  demoUrl?: string;
+  documentationUrl?: string;
+  freeTrial?: boolean;
+  freeTrialDays?: number;
+  rating?: number;
+  reviewCount?: number;
+  launchDate?: string;
+  status?: string;
+  innovationScore?: number;
+  competitiveAdvantage?: string;
 }
 
 const InnovativeMicroSaasServices: React.FC = () => {
@@ -80,7 +93,7 @@ const InnovativeMicroSaasServices: React.FC = () => {
   
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const matchesSearch = (service.title || service.name || '').toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
     return matchesCategory && matchesSearch;
@@ -111,11 +124,21 @@ const InnovativeMicroSaasServices: React.FC = () => {
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
 
-  const formatPrice = (price: number, currency: string) => {
-    if (price >= 1000) {
-      return `${currency}${(price / 1000).toFixed(1)}k`;
+  const formatPrice = (price: number | { monthly?: number; yearly?: number; oneTime?: number; currency: string; pricingModel: string }, currency?: string) => {
+    if (typeof price === 'object') {
+      const monthlyPrice = price.monthly || price.yearly ? (price.yearly || 0) / 12 : price.oneTime || 0;
+      const priceCurrency = price.currency;
+      if (monthlyPrice >= 1000) {
+        return `${priceCurrency}${(monthlyPrice / 1000).toFixed(1)}k`;
+      }
+      return `${priceCurrency}${monthlyPrice}`;
+    } else {
+      const priceCurrency = currency || '$';
+      if (price >= 1000) {
+        return `${priceCurrency}${(price / 1000).toFixed(1)}k`;
+      }
+      return `${priceCurrency}${price}`;
     }
-    return `${currency}${price}`;
   };
 
   const getSupportLevelColor = (level: string) => {
@@ -239,7 +262,7 @@ const InnovativeMicroSaasServices: React.FC = () => {
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
+                                              <h3 className="text-xl font-bold text-white mb-2">{service.title || service.name}</h3>
                       <p className="text-gray-400 text-sm mb-3">{service.description}</p>
                     </div>
                     <button
@@ -259,13 +282,13 @@ const InnovativeMicroSaasServices: React.FC = () => {
                       <div className="text-2xl font-bold text-cyan-400">
                         {formatPrice(service.price, service.currency)}
                       </div>
-                      <div className="text-gray-400 text-sm">per {service.pricingModel}</div>
+                                              <div className="text-gray-400 text-sm">per {typeof service.price === 'object' ? service.price.pricingModel : service.pricingModel}</div>
                     </div>
                   </div>
 
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {service.tags.slice(0, 3).map((tag, index) => (
+                                            {service.tags && service.tags.slice(0, 3).map((tag, index) => (
                       <span
                         key={index}
                         className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded"
@@ -273,7 +296,7 @@ const InnovativeMicroSaasServices: React.FC = () => {
                         {tag}
                       </span>
                     ))}
-                    {service.tags.length > 3 && (
+                    {service.tags && service.tags.length > 3 && (
                       <span className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded">
                         +{service.tags.length - 3} more
                       </span>
@@ -283,8 +306,8 @@ const InnovativeMicroSaasServices: React.FC = () => {
                   {/* Support Level */}
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-sm text-gray-400">Support Level:</span>
-                    <span className={`px-2 py-1 text-xs text-white rounded ${getSupportLevelColor(service.supportLevel)}`}>
-                      {service.supportLevel}
+                    <span className={`px-2 py-1 text-xs text-white rounded ${getSupportLevelColor(service.supportLevel || 'standard')}`}>
+                      {service.supportLevel || 'Standard'}
                     </span>
                   </div>
 
@@ -292,7 +315,7 @@ const InnovativeMicroSaasServices: React.FC = () => {
                   <div className="grid grid-cols-2 gap-4 text-sm">
                     <div className="flex items-center text-gray-400">
                       <Clock size={16} className="mr-2" />
-                      {service.estimatedDelivery}
+                      {service.estimatedDelivery || '2-4 weeks'}
                     </div>
                     <div className="flex items-center text-gray-400">
                       <Users size={16} className="mr-2" />
@@ -374,7 +397,7 @@ const InnovativeMicroSaasServices: React.FC = () => {
                       <div className="pt-4 border-t border-gray-700">
                         <div className="flex flex-col sm:flex-row gap-3">
                           <a
-                            href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title}`}
+                            href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title || service.name}`}
                             className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-3 rounded-lg text-center font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center"
                           >
                             <Mail size={20} className="mr-2" />
