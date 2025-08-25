@@ -12,13 +12,11 @@ import { AICodeGenerator } from './components/AICodeGenerator';
 import { EnterpriseDashboard } from './components/EnterpriseDashboard';
 import { SecurityComplianceDashboard } from './components/SecurityComplianceDashboard';
 import { MachineLearningDashboard } from './components/MachineLearningDashboard';
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import { LinkHealthMonitor } from './components/LinkHealthMonitor';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
+import { ErrorBoundary } from './components/ErrorBoundary';
 
 // Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
@@ -35,20 +33,10 @@ const CloudDevOps = lazy(() => import('./pages/CloudDevOps'));
 const EnterpriseSolutionsPage = lazy(() => import('./pages/EnterpriseSolutions'));
 const DigitalTransformation = lazy(() => import('./pages/DigitalTransformation'));
 
-// Missing pages from analysis
-const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/QuantumNeuralNetworkPlatform'));
-const AutonomousBusinessOperationsPlatform = lazy(() => import('./pages/AutonomousBusinessOperationsPlatform'));
-const AIPoweredITAssetManagement = lazy(() => import('./pages/AIPoweredITAssetManagement'));
-const SOC2ComplianceAutomation = lazy(() => import('./pages/SOC2ComplianceAutomation'));
-const AIAutonomousResearchAssistant = lazy(() => import('./pages/AIAutonomousResearchAssistant'));
-const AIAutonomousBusinessManager = lazy(() => import('./pages/AIAutonomousBusinessManager'));
-const AIAutonomousResearch = lazy(() => import('./pages/AIAutonomousResearch'));
-const AIAutonomousSystemsPlatform = lazy(() => import('./pages/AIAutonomousSystemsPlatform'));
-const AIAutonomousCodeReview = lazy(() => import('./pages/AIAutonomousCodeReview'));
-const AIBusinessIntelligenceSuite = lazy(() => import('./pages/AIBusinessIntelligenceSuite'));
-const FiveGEnterpriseSolutions = lazy(() => import('./pages/5GEnterpriseSolutions'));
-const CaseStudies = lazy(() => import('./pages/CaseStudies'));
-const HelpCenter = lazy(() => import('./pages/HelpCenter'));
+// Advanced AI and IT Services
+const AdvancedAIServices = lazy(() => import('./pages/services/AdvancedAIServices'));
+const SpecializedITServices = lazy(() => import('./pages/services/SpecializedITServices'));
+const InnovativeMicroSAAS = lazy(() => import('./pages/services/InnovativeMicroSAAS'));
 
 // Our enhanced service pages
 const About = lazy(() => import('./pages/About'));
@@ -69,23 +57,10 @@ const MicroSAASSolutions = lazy(() => import('./pages/services/MicroSAASSolution
 const IndustrySolutions = lazy(() => import('./pages/services/IndustrySolutions'));
 const InnovativeNewServices = lazy(() => import('./pages/services/InnovativeNewServices'));
 const SpecializedITInfrastructure = lazy(() => import('./pages/services/SpecializedITInfrastructure'));
-const InnovativeMicroSaasServices = lazy(() => import('./pages/InnovativeMicroSaasServices'));
-const ComprehensiveInnovativeServices = lazy(() => import('./pages/ComprehensiveInnovativeServices'));
 
 // Solutions pages
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
 const HealthcareSolutions = lazy(() => import('./pages/solutions/Healthcare'));
-
-// New missing pages
-const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/QuantumNeuralNetworkPlatform'));
-const AutonomousBusinessOperationsPlatform = lazy(() => import('./pages/AutonomousBusinessOperationsPlatform'));
-const AIPoweredITAssetManagement = lazy(() => import('./pages/AIPoweredITAssetManagement'));
-const AdvancedResearchAutomation = lazy(() => import('./pages/AdvancedResearchAutomation'));
-const AffiliateAttributionHub = lazy(() => import('./pages/AffiliateAttributionHub'));
-const AgenticRAGHelpdesk = lazy(() => import('./pages/AgenticRAGHelpdesk'));
-const AdvancedCybersecuritySuite = lazy(() => import('./pages/AdvancedCybersecuritySuite'));
-const AccessibilityAuditor = lazy(() => import('./pages/AccessibilityAuditor'));
-const FiveGEnterpriseNetwork = lazy(() => import('./pages/5GEnterpriseNetwork'));
 
 // Loading Component
 const LoadingSpinner = () => (
@@ -105,7 +80,7 @@ const App = () => {
   useScrollToTop();
 
   return (
-    <EnhancedErrorBoundary enableReporting={true}>
+    <ErrorBoundary>
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
@@ -134,20 +109,10 @@ const App = () => {
                     <Route path="/enterprise-solutions" element={<EnterpriseSolutionsPage />} />
                     <Route path="/digital-transformation" element={<DigitalTransformation />} />
                     
-                    {/* Missing pages from analysis */}
-                    <Route path="/quantum-neural-network-platform" element={<QuantumNeuralNetworkPlatform />} />
-                    <Route path="/autonomous-business-operations-platform" element={<AutonomousBusinessOperationsPlatform />} />
-                    <Route path="/ai-powered-it-asset-management" element={<AIPoweredITAssetManagement />} />
-                    <Route path="/soc2-compliance-automation" element={<SOC2ComplianceAutomation />} />
-                    <Route path="/ai-autonomous-research-assistant" element={<AIAutonomousResearchAssistant />} />
-                    <Route path="/ai-autonomous-business-manager" element={<AIAutonomousBusinessManager />} />
-                    <Route path="/ai-autonomous-research" element={<AIAutonomousResearch />} />
-                    <Route path="/ai-autonomous-systems-platform" element={<AIAutonomousSystemsPlatform />} />
-                    <Route path="/ai-autonomous-code-review" element={<AIAutonomousCodeReview />} />
-                    <Route path="/ai-business-intelligence-suite" element={<AIBusinessIntelligenceSuite />} />
-                    <Route path="/5g-enterprise-solutions" element={<FiveGEnterpriseSolutions />} />
-                    <Route path="/case-studies" element={<CaseStudies />} />
-                    <Route path="/help" element={<HelpCenter />} />
+                    {/* Advanced AI and IT Services Routes */}
+                    <Route path="/services/advanced-ai-services" element={<AdvancedAIServices />} />
+                    <Route path="/services/specialized-it-services" element={<SpecializedITServices />} />
+                    <Route path="/services/innovative-micro-saas" element={<InnovativeMicroSAAS />} />
                     
                     {/* Our enhanced service routes */}
                     <Route path="/about" element={<About />} />
@@ -168,23 +133,10 @@ const App = () => {
                     <Route path="/services/industry-solutions" element={<IndustrySolutions />} />
                     <Route path="/services/innovative-new-services" element={<InnovativeNewServices />} />
                     <Route path="/services/specialized-it-infrastructure" element={<SpecializedITInfrastructure />} />
-                    <Route path="/innovative-micro-saas-services" element={<InnovativeMicroSaasServices />} />
-                    <Route path="/comprehensive-innovative-services" element={<ComprehensiveInnovativeServices />} />
                     
                     {/* Solutions Routes */}
                     <Route path="/services/enterprise" element={<EnterpriseSolutions />} />
                     <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
-                    
-                    {/* New missing page routes */}
-                    <Route path="/quantum-neural-network-platform" element={<QuantumNeuralNetworkPlatform />} />
-                    <Route path="/autonomous-business-operations-platform" element={<AutonomousBusinessOperationsPlatform />} />
-                    <Route path="/ai-powered-it-asset-management" element={<AIPoweredITAssetManagement />} />
-                    <Route path="/advanced-research-automation" element={<AdvancedResearchAutomation />} />
-                    <Route path="/affiliate-attribution-hub" element={<AffiliateAttributionHub />} />
-                    <Route path="/agentic-rag-helpdesk" element={<AgenticRAGHelpdesk />} />
-                    <Route path="/advanced-cybersecurity-suite" element={<AdvancedCybersecuritySuite />} />
-                    <Route path="/accessibility-auditor" element={<AccessibilityAuditor />} />
-                    <Route path="/5g-enterprise-network" element={<FiveGEnterpriseNetwork />} />
                   </Routes>
                 </Suspense>
               </main>
@@ -249,30 +201,11 @@ const App = () => {
                   </div>
                 </>
               )}
-              
-              {/* Performance Optimizer - Always Available */}
-              <PerformanceOptimizer showMetrics={import.meta.env.DEV} />
-              
-              {/* Link Health Monitor - Development Mode */}
-              {import.meta.env.DEV && (
-                <LinkHealthMonitor
-                  links={[
-                    'https://ziontechgroup.com',
-                    'https://www.linkedin.com/company/ziontechgroup',
-                    'https://twitter.com/ziontechgroup',
-                    'https://github.com/ziontechgroup',
-                    'https://www.youtube.com/@ziontechgroup'
-                  ]}
-                  autoCheck={true}
-                  checkInterval={600000} // 10 minutes
-                  timeout={5000} // 5 seconds
-                />
-              )}
             </div>
           </Router>
         </WhitelabelProvider>
       </ThemeProvider>
-    </EnhancedErrorBoundary>
+    </ErrorBoundary>
   );
 };
 
