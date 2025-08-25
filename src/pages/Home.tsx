@@ -558,6 +558,6 @@ const Home: React.FC = () => {
       </Suspense>
     </div>
   );
-}
+};
 
 export default Home;

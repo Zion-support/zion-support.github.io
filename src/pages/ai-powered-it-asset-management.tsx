@@ -1,10 +1,104 @@
 import React from 'react';
+<<<<<<< HEAD
 import { SEOHead } from '../components/SEOHead';
 import { Link } from 'react-router-dom';
 import { Database, Brain, Zap, Shield, Network, ArrowRight, Star, Rocket, Target, Users, BarChart3, Clock, Cpu, HardDrive, Server } from 'lucide-react';
+=======
+import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
+import { 
+  Server, 
+  Shield, 
+  TrendingUp, 
+  Zap, 
+  Database, 
+  BarChart3,
+  Settings,
+  Workflow,
+  Target,
+  Rocket,
+  Monitor,
+  Network
+} from 'lucide-react';
 
-export default function AIPoweredITAssetManagement() {
+const AIPoweredITAssetManagement: React.FC = () => {
+  const features = [
+    {
+      icon: Server,
+      title: "Intelligent Asset Discovery",
+      description: "Automated discovery and classification of IT assets across your infrastructure"
+    },
+    {
+      icon: Shield,
+      title: "Security Monitoring",
+      description: "Real-time security threat detection and vulnerability assessment"
+    },
+    {
+      icon: TrendingUp,
+      title: "Performance Analytics",
+      description: "Advanced analytics for asset performance optimization and capacity planning"
+    },
+    {
+      icon: Zap,
+      title: "Automated Maintenance",
+      description: "Predictive maintenance scheduling and automated remediation"
+    },
+    {
+      icon: Database,
+      title: "Centralized Management",
+      description: "Single pane of glass for all IT asset management operations"
+    },
+    {
+      icon: BarChart3,
+      title: "Predictive Insights",
+      description: "AI-driven forecasting for asset lifecycle and replacement planning"
+    }
+  ];
+
+  const capabilities = [
+    {
+      title: "Asset Lifecycle Management",
+      description: "Complete visibility into asset lifecycle from procurement to retirement",
+      features: ["Procurement Tracking", "Deployment Management", "Retirement Planning"]
+    },
+    {
+      title: "Cost Optimization",
+      description: "Reduce IT costs through intelligent asset utilization and optimization",
+      features: ["Usage Analytics", "Cost Allocation", "ROI Tracking"]
+    },
+    {
+      title: "Compliance Management",
+      description: "Ensure regulatory compliance with automated audit trails and reporting",
+      features: ["Audit Logs", "Compliance Reports", "Policy Enforcement"]
+    },
+    {
+      title: "Integration Hub",
+      description: "Seamless integration with existing IT infrastructure and tools",
+      features: ["API Integration", "Third-party Tools", "Custom Workflows"]
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: TrendingUp,
+      title: "30% Cost Reduction",
+      description: "Optimize asset utilization and reduce unnecessary expenditures"
+    },
+    {
+      icon: Target,
+      title: "Improved Efficiency",
+      description: "Streamline asset management processes and reduce manual work"
+    },
+    {
+      icon: Rocket,
+      title: "Better Decision Making",
+      description: "Data-driven insights for strategic IT planning and investment"
+    }
+  ];
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3133
+
   return (
+<<<<<<< HEAD
     <>
       <SEOHead
         title="AI-Powered IT Asset Management | Zion Tech Group"
@@ -129,9 +223,93 @@ export default function AIPoweredITAssetManagement() {
                 </p>
               </div>
             </div>
-          </div>
-        </section>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
+      <Helmet>
+        <title>AI-Powered IT Asset Management - Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered IT asset management platform for comprehensive infrastructure monitoring, optimization, and security." />
+        <meta name="keywords" content="IT asset management, AI infrastructure, IT monitoring, asset optimization, Zion Tech Group" />
+      </Helmet>
 
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-20">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-blue-600/20"></div>
+        <div className="relative container mx-auto px-4 text-center">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-5xl md:text-7xl font-bold text-white mb-6"
+          >
+            AI-Powered IT Asset
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
+              Management
+            </span>
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"
+          >
+            Transform your IT infrastructure management with AI-powered insights. 
+            Monitor, optimize, and secure all your IT assets from a single intelligent platform.
+          </motion.p>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+          >
+            <button className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+              Start Free Trial
+            </button>
+            <button className="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
+              Schedule Demo
+            </button>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-black/20">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Platform Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Comprehensive IT asset management powered by artificial intelligence
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
+            ))}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3133
+          </div>
+        </div>
+      </section>
+
+<<<<<<< HEAD
         {/* Asset Types Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-900/20 to-emerald-900/20">
           <div className="max-w-7xl mx-auto">
@@ -199,9 +377,51 @@ export default function AIPoweredITAssetManagement() {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+=======
+      {/* Capabilities Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Core Capabilities
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Everything you need to manage your IT infrastructure effectively
+            </p>
+          </motion.div>
 
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {capabilities.map((capability, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                className="bg-gradient-to-r from-green-600/10 to-blue-600/10 rounded-xl p-8 border border-green-500/20"
+              >
+                <h3 className="text-2xl font-semibold text-white mb-4">{capability.title}</h3>
+                <p className="text-gray-300 text-lg mb-6">{capability.description}</p>
+                <ul className="space-y-2">
+                  {capability.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-300">
+                      <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3133
+          </div>
+        </div>
+      </section>
+
+<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -247,9 +467,46 @@ export default function AIPoweredITAssetManagement() {
                 <p className="text-gray-300">Dramatic improvement in asset utilization</p>
               </div>
             </div>
-          </div>
-        </section>
+=======
+      {/* Benefits Section */}
+      <section className="py-20 bg-gradient-to-r from-green-600/20 to-blue-600/20">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Business Benefits
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Transform your IT operations and achieve measurable results
+            </p>
+          </motion.div>
 
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-semibold text-white mb-3">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
+              </motion.div>
+            ))}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3133
+          </div>
+        </div>
+      </section>
+
+<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -274,10 +531,76 @@ export default function AIPoweredITAssetManagement() {
               >
                 Schedule a Demo
               </Link>
-            </div>
+=======
+      {/* Technology Stack Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Technology Stack
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Built with cutting-edge technologies for maximum performance and reliability
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
+              { icon: Monitor, name: "Real-time Monitoring" },
+              { icon: Network, name: "Network Discovery" },
+              { icon: Database, name: "Data Analytics" },
+              { icon: Shield, name: "Security Framework" }
+            ].map((tech, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-green-500/30">
+                  <tech.icon className="w-10 h-10 text-green-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white">{tech.name}</h3>
+              </motion.div>
+            ))}
           </div>
-        </section>
-      </div>
-    </>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-green-600/20 to-blue-600/20">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your IT Management?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Join leading organizations using AI to optimize their IT infrastructure
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-green-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300">
+                Get Started Now
+              </button>
+              <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-3133
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
-}
+};
+
+export default AIPoweredITAssetManagement;
