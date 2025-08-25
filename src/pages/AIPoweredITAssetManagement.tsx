@@ -1,245 +1,241 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Server, Shield, BarChart3, Zap, Users, Globe, Database, Settings } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive } from 'lucide-react';
 
 const AIPoweredITAssetManagement: React.FC = () => {
   const features = [
     {
-      icon: Server,
-      title: "Intelligent Asset Discovery",
-      description: "Automated discovery and mapping of all IT assets across your infrastructure."
+      icon: Monitor,
+      title: 'Real-time Asset Monitoring',
+      description: 'Continuous monitoring of all IT assets with AI-powered anomaly detection and predictive maintenance.'
     },
     {
       icon: Shield,
-      title: "Security Monitoring",
-      description: "Real-time security threat detection and vulnerability assessment for all assets."
+      title: 'Intelligent Security',
+      description: 'AI-driven threat detection and automated security response for all managed IT assets.'
     },
     {
-      icon: BarChart3,
-      title: "Performance Analytics",
-      description: "Advanced analytics and reporting on asset performance, utilization, and health."
+      icon: TrendingUp,
+      title: 'Performance Analytics',
+      description: 'Advanced analytics and reporting for asset performance optimization and capacity planning.'
     },
     {
-      icon: Zap,
-      title: "Predictive Maintenance",
-      description: "AI-powered predictive maintenance to prevent downtime and optimize asset lifecycle."
+      icon: Database,
+      title: 'Centralized Management',
+      description: 'Single platform for managing all IT assets across your entire infrastructure.'
     },
     {
-      icon: Users,
-      title: "User Access Management",
-      description: "Comprehensive user access control and permission management across all assets."
+      icon: Network,
+      title: 'Network Optimization',
+      description: 'AI-powered network performance optimization and bandwidth management.'
     },
     {
-      icon: Globe,
-      title: "Multi-Cloud Support",
-      description: "Unified management of assets across on-premises, cloud, and hybrid environments."
-    }
-  ];
-
-  const assetTypes = [
-    {
-      title: "Hardware Assets",
-      description: "Servers, workstations, networking equipment, and peripheral devices"
-    },
-    {
-      title: "Software Assets",
-      description: "Applications, operating systems, licenses, and development tools"
-    },
-    {
-      title: "Cloud Resources",
-      description: "Virtual machines, storage, databases, and cloud services"
-    },
-    {
-      title: "Network Infrastructure",
-      description: "Switches, routers, firewalls, and network security devices"
-    },
-    {
-      title: "Data Assets",
-      description: "Databases, file systems, backups, and data warehouses"
-    },
-    {
-      title: "Security Assets",
-      description: "Security tools, certificates, keys, and compliance systems"
+      icon: Cpu,
+      title: 'Resource Optimization',
+      description: 'Intelligent resource allocation and workload balancing across your IT infrastructure.'
     }
   ];
 
   const benefits = [
+    'Reduced IT costs by 30-40%',
+    'Improved asset utilization',
+    'Predictive maintenance',
+    'Enhanced security posture',
+    'Automated compliance',
+    'Real-time visibility'
+  ];
+
+  const assetTypes = [
     {
-      metric: "100%",
-      label: "Asset Visibility",
-      description: "Complete visibility into all IT assets across your organization"
+      title: 'Hardware Assets',
+      description: 'Servers, workstations, networking equipment, and mobile devices with comprehensive lifecycle management.'
     },
     {
-      metric: "60%",
-      label: "Cost Reduction",
-      description: "Significant cost savings through optimized asset utilization"
+      title: 'Software Assets',
+      description: 'License management, software deployment, and compliance tracking across your organization.'
     },
     {
-      metric: "90%",
-      label: "Security Improvement",
-      description: "Enhanced security posture and threat detection capabilities"
+      title: 'Cloud Resources',
+      description: 'Multi-cloud resource monitoring, cost optimization, and performance management.'
     },
     {
-      metric: "24/7",
-      label: "Monitoring",
-      description: "Continuous monitoring and alerting for all critical assets"
+      title: 'Network Infrastructure',
+      description: 'Network devices, bandwidth monitoring, and connectivity optimization.'
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 quantum-particles"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/50 rounded-full text-cyan-400 text-sm font-medium mb-6">
-              <Server className="w-4 h-4 mr-2" />
-              AI-Powered IT Management
-            </div>
-            <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">
+      <section className="pt-32 pb-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-600 bg-clip-text text-transparent">
               AI-Powered IT Asset Management
             </h1>
-            <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Revolutionize your IT infrastructure management with intelligent asset tracking, security monitoring, and predictive maintenance powered by artificial intelligence.
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Transform your IT infrastructure management with AI-powered asset monitoring, optimization, 
+              and security. Gain complete visibility and control over your technology investments.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30"
+              <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30">
+                Start Free Trial
+              </button>
+              <button className="border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
+                Schedule Demo
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Platform Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI-powered platform provides comprehensive IT asset management with intelligent automation, 
+              security, and optimization capabilities.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all duration-300 hover:transform hover:scale-105"
               >
-                Get Started
-              </Link>
-              <button className="px-8 py-4 border border-cyan-400/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">
-                Request Demo
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                  <feature.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 bg-gray-900/50">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Business Benefits
+            </h2>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-2xl font-semibold mb-6 text-blue-400">Key Advantages</h3>
+              <ul className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <motion.li
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="flex items-center space-x-3"
+                  >
+                    <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                    <span className="text-gray-300">{benefit}</span>
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="bg-gray-800/50 rounded-xl p-8 border border-gray-700">
+              <h3 className="text-2xl font-semibold mb-6 text-blue-400">Cost Calculator</h3>
+              <p className="text-gray-300 mb-6">
+                Calculate your potential savings and ROI with our AI-powered asset management platform.
+              </p>
+              <button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30 flex items-center justify-center space-x-2">
+                <span>Calculate Savings</span>
+                <ArrowRight className="w-5 h-5" />
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your IT Asset Management
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience unprecedented visibility, control, and optimization of your IT infrastructure with AI-powered asset management.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className="text-center p-6 bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-cyan-500/30"
-              >
-                <div className="text-4xl font-bold text-cyan-400 mb-2">
-                  {benefit.metric}
-                </div>
-                <div className="text-lg font-semibold text-white mb-2">
-                  {benefit.label}
-                </div>
-                <p className="text-gray-300 text-sm">
-                  {benefit.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black/50 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered platform provides comprehensive IT asset management capabilities designed for modern enterprises.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <div
-                  key={index}
-                  className="p-6 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-4">
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300">
-                    {feature.description}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* Asset Types Section */}
-      <section className="py-20 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Comprehensive Asset Coverage
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Manage all types of IT assets from a single, intelligent platform with unified visibility and control.
+              Manage all types of IT assets from a single, intelligent platform.
             </p>
-          </div>
-          
+          </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {assetTypes.map((assetType, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="p-8 bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-gray-800/50 rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-all duration-300"
               >
-                <h3 className="text-2xl font-semibold text-cyan-400 mb-4">
-                  {assetType.title}
-                </h3>
-                <p className="text-gray-300 text-lg">
-                  {assetType.description}
-                </p>
-              </div>
+                <h3 className="text-2xl font-semibold mb-4 text-blue-400">{assetType.title}</h3>
+                <p className="text-gray-300 text-lg">{assetType.description}</p>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 text-center">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Optimize Your IT Assets?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join leading organizations that trust our AI-powered platform for comprehensive IT asset management.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105"
-            >
-              Start Free Trial
-            </Link>
-            <Link
-              to="/pricing"
-              className="px-8 py-4 border border-cyan-400/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300"
-            >
-              View Pricing
-            </Link>
-          </div>
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-4xl text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Ready to Optimize Your IT Assets?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Transform your IT infrastructure management with AI-powered intelligence and automation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30">
+                Contact Sales
+              </button>
+              <button className="border border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
+                Download Whitepaper
+              </button>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
