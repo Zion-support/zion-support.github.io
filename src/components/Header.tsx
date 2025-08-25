@@ -1,40 +1,13 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import Sidebar from './Sidebar';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Search, 
-  Phone, 
-  Mail, 
-  MapPin,
-  Brain,
-  Users,
-  Target,
-  Shield,
-  Zap,
-  Building,
-  Cpu,
-  Globe,
-  Rocket,
-  Star,
-  ArrowRight,
-  Sparkles,
-  Atom,
-  Network,
-  Code,
-  Database,
-  Lock,
-  Cloud,
-  BarChart3
-} from 'lucide-react';
+import { Menu, X, Brain, Users, BarChart3, Code, Palette, Target, Shield, Heart, Database, Search, Building, Cpu, Globe, Rocket, Eye, DollarSign, ShoppingCart, Clock, Cloud, Network, ChevronDown } from 'lucide-react';
+import { ThemeToggle } from './ThemeToggle';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
   const location = useLocation();
 
   useEffect(() => {
@@ -46,223 +19,236 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navigationItems = [
+  useEffect(() => {
+    // Close mobile menu when route changes
+    setIsMenuOpen(false);
+    setActiveDropdown(null);
+  }, [location]);
+
+  const navigation = [
     { 
-      path: '/', 
-      label: 'Home', 
-      icon: '🏠',
-      description: 'Welcome to Zion Tech Group'
+      name: 'Home', 
+      href: '/', 
+      current: location.pathname === '/',
+      type: 'link'
     },
     { 
-      path: '/services', 
-      label: 'Services', 
-      icon: '🤖',
-      description: 'Explore our comprehensive service offerings',
-      hasDropdown: true
+      name: 'Services', 
+      href: '/services', 
+      current: location.pathname === '/services',
+      type: 'dropdown',
+      dropdownItems: [
+        { name: 'AI & Autonomous Systems', href: '/services/ai-autonomous-systems' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity' },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
+        { name: 'Quantum Technology', href: '/services/quantum-technology' },
+        { name: 'Micro SAAS Solutions', href: '/services/micro-saas-solutions' },
+        { name: 'Industry Solutions', href: '/services/industry-solutions' },
+        { name: 'Advanced Cybersecurity Suite', href: '/advanced-cybersecurity-suite' },
+        { name: 'Accessibility Auditor', href: '/accessibility-auditor' },
+        { name: 'Affiliate Attribution Hub', href: '/affiliate-attribution-hub' }
+      ]
     },
     { 
-      path: '/ai-solutions', 
-      label: 'AI Solutions', 
-      icon: '🧠',
-      description: 'Cutting-edge artificial intelligence solutions',
-      hasDropdown: true
+      name: 'AI Solutions', 
+      href: '/ai-solutions', 
+      current: location.pathname === '/ai-solutions',
+      type: 'dropdown',
+      dropdownItems: [
+        { name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager' },
+        { name: 'AI Autonomous Research Assistant', href: '/ai-autonomous-research-assistant' },
+        { name: 'AI Autonomous Decision Engine', href: '/ai-autonomous-decision-engine' },
+        { name: 'AI Autonomous Code Review', href: '/ai-autonomous-code-review' },
+        { name: 'AI Autonomous Creative Director', href: '/ai-autonomous-creative-director' },
+        { name: 'AI Autonomous Data', href: '/ai-autonomous-data' },
+        { name: 'AI Autonomous Research', href: '/ai-autonomous-research' },
+        { name: 'AI Autonomous Systems Platform', href: '/ai-autonomous-systems-platform' },
+        { name: 'AI Autonomous DevOps', href: '/ai-autonomous-devops' },
+        { name: 'AI Autonomous Education Professor', href: '/ai-autonomous-education-professor' },
+        { name: 'AI Autonomous Healthcare Physician', href: '/ai-autonomous-healthcare-physician' },
+        { name: 'AI Autonomous Learning System', href: '/ai-autonomous-learning-system' },
+        { name: 'AI Autonomous Legal Counsel', href: '/ai-autonomous-legal-counsel' },
+        { name: 'AI Autonomous Logistics', href: '/ai-autonomous-logistics' },
+        { name: 'AI Autonomous Manufacturing', href: '/ai-autonomous-manufacturing' },
+        { name: 'AI Autonomous Robotics', href: '/ai-autonomous-robotics' },
+        { name: 'AI Autonomous Scientific Researcher', href: '/ai-autonomous-scientific-researcher' },
+        { name: 'AI Autonomous Security', href: '/ai-autonomous-security' },
+        { name: 'AI Autonomous Testing', href: '/ai-autonomous-testing' },
+        { name: 'AI Autonomous Vehicle Platform', href: '/ai-autonomous-vehicle-platform' },
+        { name: 'AI Autonomous Vehicles', href: '/ai-autonomous-vehicles' },
+        { name: 'AI Autonomous Venture Capitalist', href: '/ai-autonomous-venture-capitalist' },
+        { name: 'AI Biomedical Research', href: '/ai-biomedical-research' },
+        { name: 'AI Biotech Drug Discovery', href: '/ai-biotech-drug-discovery' },
+        { name: 'AI Blockchain Analytics', href: '/ai-blockchain-analytics' },
+        { name: 'AI Blockchain Governance', href: '/ai-blockchain-governance' },
+        { name: 'AI Brain Computer Interface', href: '/ai-brain-computer-interface' },
+        { name: 'AI Brain Interface', href: '/ai-brain-interface' },
+        { name: 'AI Brand Personality Generator', href: '/ai-brand-personality-generator' },
+        { name: 'AI Business Intelligence Elite', href: '/ai-business-intelligence-elite' },
+        { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' },
+        { name: 'AI Business Intelligence Suite', href: '/ai-business-intelligence-suite' },
+        { name: 'AI Business Intelligence', href: '/ai-business-intelligence' },
+        { name: 'AI Climate Prediction Engine', href: '/ai-climate-prediction-engine' },
+        { name: 'AI Climate Prediction Platform', href: '/ai-climate-prediction-platform' },
+        { name: 'AI Climate Prediction', href: '/ai-climate-prediction' },
+        { name: 'AI Code Generation Enterprise', href: '/ai-code-generation-enterprise' },
+        { name: 'AI Code Review Copilot', href: '/ai-code-review-copilot' },
+        { name: 'AI Code Review', href: '/ai-code-review' },
+        { name: 'AI Compliance Automation', href: '/ai-compliance-automation' },
+        { name: 'AI Computer Vision Platform', href: '/ai-computer-vision-platform' },
+        { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution' },
+        { name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-platform' },
+        { name: 'AI Consciousness Simulation Platform', href: '/ai-consciousness-simulation-platform' },
+        { name: 'AI Consciousness Simulation', href: '/ai-consciousness-simulation' },
+        { name: 'AI Consciousness Simulator', href: '/ai-consciousness-simulator' },
+        { name: 'AI Content Creation Revolution', href: '/ai-content-creation-revolution' },
+        { name: 'AI Content Creation', href: '/ai-content-creation' },
+        { name: 'AI Content Factory', href: '/ai-content-factory' },
+        { name: 'AI Content Generation Automation', href: '/ai-content-generation-automation' },
+        { name: 'AI Content Generation Pro', href: '/ai-content-generation-pro' },
+        { name: 'AI Content Generator', href: '/ai-content-generator' },
+        { name: 'AI Content Marketing Automation', href: '/ai-content-marketing-automation' },
+        { name: 'AI Content Personalization Engine', href: '/ai-content-personalization-engine' },
+        { name: 'AI Creativity Studio', href: '/ai-creativity-studio' },
+        { name: 'AI Market Research', href: '/ai-market-research' },
+        { name: 'AI Powered Enterprise Security', href: '/ai-powered-enterprise-security' },
+        { name: 'AI Workflow Automation', href: '/ai-workflow-automation' }
+      ]
     },
     { 
-      path: '/solutions/enterprise', 
-      label: 'Solutions', 
-      icon: '💼',
-      description: 'Industry-specific solutions',
-      hasDropdown: true
+      name: 'Solutions', 
+      href: '/solutions/enterprise', 
+      current: location.pathname.startsWith('/solutions'),
+      type: 'dropdown',
+      dropdownItems: [
+        { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+        { name: 'Healthcare Solutions', href: '/solutions/healthcare' },
+        { name: 'Financial Solutions', href: '/solutions/financial' },
+        { name: 'Manufacturing Solutions', href: '/solutions/manufacturing' },
+        { name: 'Retail Solutions', href: '/solutions/retail' },
+        { name: 'Government Solutions', href: '/solutions/government' },
+        { name: '5G Enterprise Solutions', href: '/5g-enterprise-solutions' },
+        { name: 'Quantum Neural Network Platform', href: '/quantum-neural-network-platform' },
+        { name: 'Autonomous Business Operations Platform', href: '/autonomous-business-operations-platform' },
+        { name: 'AI Powered IT Asset Management', href: '/ai-powered-it-asset-management' },
+        { name: 'SOC2 Compliance Automation', href: '/soc2-compliance-automation' }
+      ]
     },
     { 
-      path: '/pricing', 
-      label: 'Pricing', 
-      icon: '💰',
-      description: 'Transparent pricing plans'
+      name: 'Company', 
+      href: '/about', 
+      current: location.pathname.startsWith('/about') || location.pathname.startsWith('/team') || location.pathname.startsWith('/mission'),
+      type: 'dropdown',
+      dropdownItems: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Mission', href: '/mission' },
+        { name: 'Team', href: '/team' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'Testimonials', href: '/testimonials' },
+        { name: 'News', href: '/news' },
+        { name: 'Blog', href: '/blog' }
+      ]
     },
     { 
-      path: '/about', 
-      label: 'About', 
-      icon: 'ℹ️',
-      description: 'Learn about our company'
+      name: 'Resources', 
+      href: '/resources', 
+      current: location.pathname.startsWith('/resources') || location.pathname.startsWith('/docs') || location.pathname.startsWith('/help'),
+      type: 'dropdown',
+      dropdownItems: [
+        { name: 'Documentation', href: '/docs' },
+        { name: 'Help Center', href: '/help' },
+        { name: 'Support', href: '/support' },
+        { name: 'FAQ', href: '/faq' },
+        { name: 'Webinars', href: '/webinars' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Events', href: '/events' },
+        { name: 'Marketplace', href: '/marketplace' },
+        { name: 'Community', href: '/community' }
+      ]
     },
     { 
-      path: '/careers', 
-      label: 'Careers', 
-      icon: '🚀',
-      description: 'Join our team'
+      name: 'Contact', 
+      href: '/contact', 
+      current: location.pathname === '/contact',
+      type: 'link'
     },
-    { 
-      path: '/blog', 
-      label: 'Blog', 
-      icon: '📝',
-      description: 'Latest insights and news'
-    },
-    { 
-      path: '/contact', 
-      label: 'Contact', 
-      icon: '📞',
-      description: 'Get in touch with us'
-    }
   ];
 
-  const serviceCategories = [
-    {
-      title: 'AI & Machine Learning',
-      icon: Brain,
-      description: 'Intelligent solutions powered by artificial intelligence',
-      services: [
-        { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', description: 'Advanced autonomous AI systems' },
-        { name: 'Quantum Machine Learning', path: '/quantum-machine-learning-platform', description: 'Quantum-powered ML solutions' },
-        { name: 'AI Content Generation', path: '/ai-powered-content-generator', description: 'AI-powered content creation' },
-        { name: 'Predictive Analytics', path: '/ai-powered-predictive-maintenance', description: 'Predictive maintenance systems' }
-      ]
-    },
-    {
-      title: 'Cybersecurity',
-      icon: Shield,
-      description: 'Advanced security solutions for modern threats',
-      services: [
-        { name: 'Quantum Encryption', path: '/quantum-encryption-platform', description: 'Quantum-safe encryption' },
-        { name: 'Autonomous Response', path: '/cybersecurity-autonomous-response', description: 'AI-powered threat response' },
-        { name: 'Threat Intelligence', path: '/cybersecurity-threat-intelligence', description: 'Advanced threat detection' }
-      ]
-    },
-    {
-      title: 'Cloud & DevOps',
-      icon: Cloud,
-      description: 'Scalable cloud infrastructure and automation',
-      services: [
-        { name: 'Autonomous DevOps', path: '/autonomous-devops-orchestrator', description: 'AI-powered DevOps automation' },
-        { name: 'Edge Computing', path: '/edge-computing-orchestrator', description: 'Edge computing orchestration' },
-        { name: 'Digital Twins', path: '/digital-twin-platform', description: 'Digital twin management' }
-      ]
-    },
-    {
-      title: 'Emerging Technology',
-      icon: Atom,
-      description: 'Cutting-edge technology solutions',
-      services: [
-        { name: 'Metaverse Platform', path: '/metaverse-development-platform', description: '3D virtual world creation' },
-        { name: 'Quantum Internet', path: '/quantum-internet-protocol', description: 'Quantum communication network' },
-        { name: 'Neuromorphic Computing', path: '/neuromorphic-computing-platform', description: 'Brain-like computing' }
-      ]
-    },
-    {
-      title: 'Business Solutions',
-      icon: Building,
-      description: 'Enterprise-grade business solutions',
-      services: [
-        { name: 'Financial Advisory', path: '/autonomous-financial-advisor', description: 'AI-powered financial advice' },
-        { name: 'HR Automation', path: '/ai-powered-hr-automation', description: 'Intelligent HR management' },
-        { name: 'Legal Assistant', path: '/ai-powered-legal-assistant', description: 'AI legal research tools' },
-        { name: 'Customer Support', path: '/ai-powered-customer-support', description: 'Automated customer service' }
-      ]
-    }
-  ];
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  const toggleDropdown = (category: string) => {
-    setActiveDropdown(activeDropdown === category ? null : category);
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      // Navigate to search results or services page
+      window.location.href = `/services?search=${encodeURIComponent(searchQuery.trim())}`;
+    }
   };
 
-  const closeDropdowns = () => {
-    setActiveDropdown(null);
+  const toggleDropdown = (name: string) => {
+    setActiveDropdown(activeDropdown === name ? null : name);
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'futuristic-nav shadow-lg' 
-        : 'bg-transparent'
+    <header className={`bg-background/80 backdrop-blur-md border-b border-border sticky top-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'shadow-lg' : ''
     }`}>
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-quantum-gradient opacity-30"></div>
-      <div className="absolute inset-0 cyber-mesh"></div>
-      
-      {/* Matrix Rain Effect */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(15)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute text-cyan-400 text-xs matrix-rain"
-            style={{
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 20}s`,
-              animationDuration: `${20 + Math.random() * 10}s`
-            }}
-          >
-            {Math.random() > 0.5 ? '1' : '0'}
-          </div>
-        ))}
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
-            <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-xl flex items-center justify-center quantum-float">
-                <Sparkles className="w-8 h-8 text-white" />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity"></div>
+          <Link to="/" className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-br from-zion-blue to-zion-purple rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">Z</span>
             </div>
-            <div className="hidden sm:block">
-              <h1 className="text-2xl font-bold text-white neon-text">
-                Zion Tech Group
-              </h1>
-              <p className="text-xs text-cyan-400">Revolutionary Technology Solutions</p>
-            </div>
+            <span className="text-xl font-bold text-gradient">Zion Tech Group</span>
           </Link>
+
+          {/* Search Bar */}
+          <div className="hidden md:flex flex-1 max-w-md mx-8">
+            <form onSubmit={handleSearch} className="relative w-full">
+              <input
+                type="text"
+                placeholder="Search services..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full px-4 py-2 pl-10 pr-4 text-sm bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+              />
+              <Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
+            </form>
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-1">
-            {navigationItems.map((item) => (
-              <div key={item.path} className="relative">
-                {item.hasDropdown ? (
-                  <div className="relative">
+            {navigation.map((item) => (
+              <div key={item.name} className="relative">
+                {item.type === 'dropdown' ? (
+                  <div>
                     <button
-                      onClick={() => toggleDropdown(item.label)}
-                      onMouseEnter={() => setActiveDropdown(item.label)}
-                      onMouseLeave={closeDropdowns}
-                      className="futuristic-nav-link flex items-center space-x-1 px-4 py-2 rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
+                      onClick={() => toggleDropdown(item.name)}
+                      className={`px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center space-x-1 ${
+                        item.current
+                          ? 'text-zion-cyan bg-zion-cyan/10'
+                          : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                      }`}
                     >
-                      <span>{item.icon}</span>
-                      <span>{item.label}</span>
-                      <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
-                        activeDropdown === item.label ? 'rotate-180' : ''
-                      }`} />
+                      <span>{item.name}</span>
+                      <ChevronDown className="w-4 h-4" />
                     </button>
                     
-                    {activeDropdown === item.label && (
-                      <div 
-                        className="absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-xl border border-cyan-500/30 rounded-xl shadow-2xl overflow-hidden"
-                        onMouseEnter={() => setActiveDropdown(item.label)}
-                        onMouseLeave={closeDropdowns}
-                      >
+                    {/* Dropdown Menu */}
+                    {activeDropdown === item.name && (
+                      <div className="absolute top-full left-0 mt-1 w-80 bg-background border border-border rounded-lg shadow-lg z-50">
                         <div className="p-4">
-                          <h3 className="text-lg font-semibold text-white mb-3 flex items-center space-x-2">
-                            <span className="text-2xl">{item.icon}</span>
-                            <span>{item.label}</span>
-                          </h3>
-                          <p className="text-gray-300 text-sm mb-4">{item.description}</p>
-                          
-                          <div className="space-y-2">
-                            {serviceCategories.find(cat => cat.title === item.label)?.services?.map((service) => (
+                          <div className="grid grid-cols-1 gap-2">
+                            {item.dropdownItems?.map((dropdownItem) => (
                               <Link
-                                key={service.path}
-                                to={service.path}
-                                className="block p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 group"
-                                onClick={closeDropdowns}
+                                key={dropdownItem.name}
+                                to={dropdownItem.href}
+                                className="px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                                onClick={() => setActiveDropdown(null)}
                               >
-                                <div className="flex items-center justify-between">
-                                  <div>
-                                    <h4 className="text-white font-medium group-hover:text-cyan-400 transition-colors">
-                                      {service.name}
-                                    </h4>
-                                    <p className="text-gray-400 text-sm">{service.description}</p>
-                                  </div>
-                                  <ArrowRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors" />
-                                </div>
+                                {dropdownItem.name}
                               </Link>
                             ))}
                           </div>
@@ -272,74 +258,115 @@ export function Header() {
                   </div>
                 ) : (
                   <Link
-                    to={item.path}
-                    className="futuristic-nav-link flex items-center space-x-1 px-4 py-2 rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
+                    to={item.href}
+                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                      item.current
+                        ? 'text-zion-cyan bg-zion-cyan/10'
+                        : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                    }`}
                   >
-                    <span>{item.icon}</span>
-                    <span>{item.label}</span>
+                    {item.name}
                   </Link>
                 )}
               </div>
             ))}
           </nav>
 
-          {/* Contact Info */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <div className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors">
-              <Phone className="w-4 h-4" />
-              <span className="text-sm">+1 302 464 0950</span>
-            </div>
+          {/* Right side - Theme Toggle and CTA */}
+          <div className="hidden md:flex items-center space-x-4">
+            <ThemeToggle />
             <Link
               to="/contact"
-              className="futuristic-button text-sm"
+              className="bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white px-4 py-2 rounded-md font-medium transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/30"
             >
               Get Started
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile menu button */}
           <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 rounded-lg text-white hover:bg-cyan-500/20 transition-colors"
+            onClick={toggleMenu}
+            className="md:hidden p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-muted"
+            aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border-t border-cyan-500/30">
-            <div className="px-4 py-6 space-y-4">
-              {navigationItems.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  className="block p-3 rounded-lg text-white hover:bg-cyan-500/10 transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <div className="flex items-center space-x-3">
-                    <span className="text-xl">{item.icon}</span>
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-background/95 backdrop-blur-md border-t border-border">
+              {/* Mobile Search */}
+              <div className="px-3 py-2">
+                <form onSubmit={handleSearch} className="relative">
+                  <input
+                    type="text"
+                    placeholder="Search services..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full px-4 py-2 pl-10 pr-4 text-sm bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                  />
+                  <Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
+                </form>
+              </div>
+              
+              {navigation.map((item) => (
+                <div key={item.name}>
+                  {item.type === 'dropdown' ? (
                     <div>
-                      <div className="font-medium">{item.label}</div>
-                      <div className="text-sm text-gray-400">{item.description}</div>
+                      <button
+                        onClick={() => toggleDropdown(item.name)}
+                        className={`w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors flex items-center justify-between ${
+                          item.current
+                            ? 'text-zion-cyan bg-zion-cyan/10'
+                            : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                        }`}
+                      >
+                        <span>{item.name}</span>
+                        <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === item.name ? 'rotate-180' : ''}`} />
+                      </button>
+                      
+                      {/* Mobile Dropdown */}
+                      {activeDropdown === item.name && (
+                        <div className="ml-4 mt-2 space-y-1">
+                          {item.dropdownItems?.map((dropdownItem) => (
+                            <Link
+                              key={dropdownItem.name}
+                              to={dropdownItem.href}
+                              className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                              onClick={() => {
+                                setIsMenuOpen(false);
+                                setActiveDropdown(null);
+                              }}
+                            >
+                              {dropdownItem.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
                     </div>
-                  </div>
-                </Link>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                        item.current
+                          ? 'text-zion-cyan bg-zion-cyan/10'
+                          : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                      }`}
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
               ))}
               
-              {/* Mobile Contact Info */}
-              <div className="pt-4 border-t border-cyan-500/30">
-                <div className="flex items-center space-x-2 text-cyan-400 mb-3">
-                  <Phone className="w-4 h-4" />
-                  <span className="text-sm">+1 302 464 0950</span>
-                </div>
-                <div className="flex items-center space-x-2 text-cyan-400 mb-4">
-                  <Mail className="w-4 h-4" />
-                  <span className="text-sm">kleber@ziontechgroup.com</span>
-                </div>
+              <div className="pt-4 flex items-center justify-between">
+                <ThemeToggle />
                 <Link
                   to="/contact"
-                  className="futuristic-button w-full text-center"
+                  className="bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white px-4 py-2 rounded-md font-medium transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/30"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Get Started
@@ -349,9 +376,6 @@ export function Header() {
           </div>
         )}
       </div>
-
-      {/* Sidebar */}
-      <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
     </header>
   );
 }

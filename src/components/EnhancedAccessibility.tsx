@@ -1,450 +1,617 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Eye, 
   EyeOff, 
-  Type, 
-  Contrast, 
   Volume2, 
   VolumeX, 
-  MousePointer, 
-  Keyboard,
+  Settings, 
+  X, 
+  Plus, 
+  Minus, 
+  RotateCcw,
   Sun,
   Moon,
   Monitor,
-  Settings,
-  X,
-  Plus,
-  Minus,
-  RotateCcw
+  Keyboard,
+  Headphones,
+  Accessibility,
+  Highlighter,
+  Type,
+  Palette,
+  Navigation,
+  MousePointer,
+  Mic,
+  MicOff
 } from 'lucide-react';
 
 interface AccessibilitySettings {
   highContrast: boolean;
   fontSize: number;
+  colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
   reducedMotion: boolean;
+  soundEffects: boolean;
+  autoPlayMedia: boolean;
+  voiceCommands: boolean;
   screenReader: boolean;
   keyboardNavigation: boolean;
   focusIndicator: boolean;
-  colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
   theme: 'light' | 'dark' | 'auto';
 }
 
-const EnhancedAccessibility: React.FC<{ position?: 'top-right' | 'bottom-right' | 'top-left' | 'bottom-left' }> = ({ 
-  position = 'bottom-right' 
-}) => {
+const EnhancedAccessibility: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState<'general' | 'visual' | 'audio' | 'navigation'>('general');
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     fontSize: 100,
+    colorBlindness: 'none',
     reducedMotion: false,
+    soundEffects: true,
+    autoPlayMedia: false,
+    voiceCommands: false,
     screenReader: false,
     keyboardNavigation: false,
     focusIndicator: true,
-    colorBlindness: 'none',
     theme: 'auto'
   });
+  const [accessibilityScore, setAccessibilityScore] = useState(85);
+  const [isListening, setIsListening] = useState(false);
 
-  // Apply accessibility settings to document
-  const applySettings = useCallback((newSettings: AccessibilitySettings) => {
+  // Apply accessibility settings to the document
+  useEffect(() => {
     const root = document.documentElement;
     
     // High contrast
-    if (newSettings.highContrast) {
-      root.classList.add('high-contrast');
-      root.style.setProperty('--contrast-filter', 'contrast(1.5) brightness(1.2)');
+    if (settings.highContrast) {
+      root.style.setProperty('--accent-color', '#ffffff');
+      root.style.setProperty('--text-color', '#000000');
+      root.style.setProperty('--bg-color', '#ffffff');
+      root.style.setProperty('--border-color', '#000000');
     } else {
-      root.classList.remove('high-contrast');
-      root.style.removeProperty('--contrast-filter');
+      root.style.removeProperty('--accent-color');
+      root.style.removeProperty('--text-color');
+      root.style.removeProperty('--bg-color');
+      root.style.removeProperty('--border-color');
     }
-    
+
     // Font size
-    root.style.setProperty('--font-size-multiplier', `${newSettings.fontSize / 100}`);
-    
-    // Reduced motion
-    if (newSettings.reducedMotion) {
-      root.classList.add('reduced-motion');
-      root.style.setProperty('--animation-duration', '0.01ms');
-    } else {
-      root.classList.remove('reduced-motion');
-      root.style.removeProperty('--animation-duration');
-    }
-    
+    root.style.fontSize = `${settings.fontSize}%`;
+
     // Color blindness
-    if (newSettings.colorBlindness !== 'none') {
+    if (settings.colorBlindness !== 'none') {
       const filters = {
         protanopia: 'url(#protanopia)',
         deuteranopia: 'url(#deuteranopia)',
         tritanopia: 'url(#tritanopia)'
       };
-      root.style.setProperty('--color-filter', filters[newSettings.colorBlindness]);
+      root.style.filter = filters[settings.colorBlindness];
     } else {
-      root.style.removeProperty('--color-filter');
+      root.style.filter = 'none';
     }
-    
-    // Focus indicator
-    if (newSettings.focusIndicator) {
-      root.classList.add('show-focus');
+
+    // Reduced motion
+    if (settings.reducedMotion) {
+      root.style.setProperty('--motion-reduce', '1');
     } else {
-      root.classList.remove('show-focus');
+      root.style.removeProperty('--motion-reduce');
     }
-    
+
     // Theme
-    if (newSettings.theme === 'light') {
+    if (settings.theme === 'light') {
       root.classList.remove('dark');
       root.classList.add('light');
-    } else if (newSettings.theme === 'dark') {
+    } else if (settings.theme === 'dark') {
       root.classList.remove('light');
       root.classList.add('dark');
     } else {
       root.classList.remove('light', 'dark');
     }
-    
-    // Save to localStorage
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
-  }, []);
 
-  // Load settings from localStorage
-  useEffect(() => {
-    const saved = localStorage.getItem('accessibility-settings');
-    if (saved) {
-      try {
-        const savedSettings = JSON.parse(saved);
-        setSettings(savedSettings);
-        applySettings(savedSettings);
-      } catch (error) {
-        console.warn('Failed to load accessibility settings:', error);
-      }
+    // Focus indicator
+    if (settings.focusIndicator) {
+      root.style.setProperty('--focus-visible', '2px solid #10B981');
+    } else {
+      root.style.setProperty('--focus-visible', 'none');
     }
-  }, [applySettings]);
 
-  // Update settings
-  const updateSetting = useCallback((key: keyof AccessibilitySettings, value: any) => {
-    const newSettings = { ...settings, [key]: value };
-    setSettings(newSettings);
-    applySettings(newSettings);
-  }, [settings, applySettings]);
+    // Calculate accessibility score
+    calculateAccessibilityScore();
+  }, [settings]);
 
-  // Reset to defaults
-  const resetSettings = useCallback(() => {
-    const defaultSettings: AccessibilitySettings = {
-      highContrast: false,
-      fontSize: 100,
-      reducedMotion: false,
-      screenReader: false,
-      keyboardNavigation: false,
-      focusIndicator: true,
-      colorBlindness: 'none',
-      theme: 'auto'
-    };
-    setSettings(defaultSettings);
-    applySettings(defaultSettings);
-  }, [applySettings]);
-
-  // Increase/decrease font size
-  const adjustFontSize = useCallback((direction: 'increase' | 'decrease') => {
-    const newSize = direction === 'increase' 
-      ? Math.min(settings.fontSize + 10, 200)
-      : Math.max(settings.fontSize - 10, 80);
-    updateSetting('fontSize', newSize);
-  }, [settings.fontSize, updateSetting]);
-
-  // Toggle high contrast
-  const toggleHighContrast = useCallback(() => {
-    updateSetting('highContrast', !settings.highContrast);
-  }, [settings.highContrast, updateSetting]);
-
-  // Toggle reduced motion
-  const toggleReducedMotion = useCallback(() => {
-    updateSetting('reducedMotion', !settings.reducedMotion);
-  }, [settings.reducedMotion, updateSetting]);
-
-  // Toggle screen reader mode
-  const toggleScreenReader = useCallback(() => {
-    updateSetting('screenReader', !settings.screenReader);
-  }, [settings.screenReader, updateSetting]);
-
-  // Toggle keyboard navigation
-  const toggleKeyboardNavigation = useCallback(() => {
-    updateSetting('keyboardNavigation', !settings.keyboardNavigation);
-  }, [settings.keyboardNavigation, updateSetting]);
-
-  // Toggle focus indicator
-  const toggleFocusIndicator = useCallback(() => {
-    updateSetting('focusIndicator', !settings.focusIndicator);
-  }, [settings.focusIndicator, updateSetting]);
-
-  // Handle keyboard shortcuts
+  // Keyboard shortcuts
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Ctrl/Cmd + Shift + A to open accessibility panel
-      if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
-        event.preventDefault();
-        setIsOpen(!isOpen);
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.altKey) {
+        switch (e.key.toLowerCase()) {
+          case 'a':
+            e.preventDefault();
+            setIsOpen(!isOpen);
+            break;
+          case 'h':
+            e.preventDefault();
+            setSettings(prev => ({ ...prev, highContrast: !prev.highContrast }));
+            break;
+          case 'f':
+            e.preventDefault();
+            setSettings(prev => ({ ...prev, focusIndicator: !prev.focusIndicator }));
+            break;
+          case 'r':
+            e.preventDefault();
+            resetSettings();
+            break;
+          case 't':
+            e.preventDefault();
+            setSettings(prev => ({ 
+              ...prev, 
+              theme: prev.theme === 'light' ? 'dark' : prev.theme === 'dark' ? 'auto' : 'light' 
+            }));
+            break;
+          case 's':
+            e.preventDefault();
+            setSettings(prev => ({ ...prev, screenReader: !prev.screenReader }));
+            break;
+          case 'k':
+            e.preventDefault();
+            showKeyboardShortcuts();
+            break;
+        }
       }
       
-      // Ctrl/Cmd + Plus to increase font size
-      if ((event.ctrlKey || event.metaKey) && event.key === '=') {
-        event.preventDefault();
-        adjustFontSize('increase');
-      }
-      
-      // Ctrl/Cmd + Minus to decrease font size
-      if ((event.ctrlKey || event.metaKey) && event.key === '-') {
-        event.preventDefault();
-        adjustFontSize('decrease');
-      }
-      
-      // Ctrl/Cmd + 0 to reset font size
-      if ((event.ctrlKey || event.metaKey) && event.key === '0') {
-        event.preventDefault();
-        updateSetting('fontSize', 100);
+      if (e.key === 'Escape' && isOpen) {
+        setIsOpen(false);
       }
     };
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen, adjustFontSize, updateSetting]);
+  }, [isOpen]);
 
-  // Position classes
-  const getPositionClasses = () => {
-    switch (position) {
-      case 'top-right':
-        return 'top-6 right-6';
-      case 'top-left':
-        return 'top-6 left-6';
-      case 'bottom-left':
-        return 'bottom-6 left-6';
-      default:
-        return 'bottom-6 right-6';
+  // Voice commands
+  useEffect(() => {
+    if (settings.voiceCommands && isListening) {
+      startVoiceRecognition();
+    }
+  }, [settings.voiceCommands, isListening]);
+
+  const calculateAccessibilityScore = useCallback(() => {
+    let score = 100;
+    
+    if (!settings.highContrast) score -= 5;
+    if (settings.fontSize < 100) score -= 3;
+    if (settings.colorBlindness !== 'none') score += 5; // Bonus for color blindness support
+    if (settings.reducedMotion) score += 3; // Bonus for motion sensitivity support
+    if (!settings.soundEffects) score -= 2;
+    if (settings.autoPlayMedia) score -= 5;
+    if (settings.voiceCommands) score += 5; // Bonus for voice control
+    if (settings.screenReader) score += 5; // Bonus for screen reader support
+    if (settings.keyboardNavigation) score += 5; // Bonus for keyboard navigation
+    if (!settings.focusIndicator) score -= 5;
+    
+    setAccessibilityScore(Math.max(0, Math.min(100, score)));
+  }, [settings]);
+
+  const startVoiceRecognition = () => {
+    if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+      const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+      const recognition = new SpeechRecognition();
+      
+      recognition.continuous = false;
+      recognition.interimResults = false;
+      recognition.lang = 'en-US';
+      
+      recognition.onresult = (event: any) => {
+        const transcript = event.results[0][0].transcript.toLowerCase();
+        handleVoiceCommand(transcript);
+      };
+      
+      recognition.onerror = (event: any) => {
+        console.error('Speech recognition error:', event.error);
+        setIsListening(false);
+      };
+      
+      recognition.onend = () => {
+        setIsListening(false);
+      };
+      
+      recognition.start();
+    } else {
+      alert('Speech recognition not supported in this browser');
+      setIsListening(false);
+    }
+  };
+
+  const handleVoiceCommand = (command: string) => {
+    if (command.includes('open accessibility') || command.includes('open panel')) {
+      setIsOpen(true);
+    } else if (command.includes('close accessibility') || command.includes('close panel')) {
+      setIsOpen(false);
+    } else if (command.includes('high contrast')) {
+      setSettings(prev => ({ ...prev, highContrast: !prev.highContrast }));
+    } else if (command.includes('normal contrast')) {
+      setSettings(prev => ({ ...prev, highContrast: false }));
+    } else if (command.includes('increase font') || command.includes('bigger font')) {
+      setSettings(prev => ({ ...prev, fontSize: Math.min(200, prev.fontSize + 10) }));
+    } else if (command.includes('decrease font') || command.includes('smaller font')) {
+      setSettings(prev => ({ ...prev, fontSize: Math.max(50, prev.fontSize - 10) }));
+    } else if (command.includes('reset font')) {
+      setSettings(prev => ({ ...prev, fontSize: 100 }));
+    } else if (command.includes('dark theme')) {
+      setSettings(prev => ({ ...prev, theme: 'dark' }));
+    } else if (command.includes('light theme')) {
+      setSettings(prev => ({ ...prev, theme: 'light' }));
+    } else if (command.includes('auto theme')) {
+      setSettings(prev => ({ ...prev, theme: 'auto' }));
+    }
+  };
+
+  const resetSettings = () => {
+    setSettings({
+      highContrast: false,
+      fontSize: 100,
+      colorBlindness: 'none',
+      reducedMotion: false,
+      soundEffects: true,
+      autoPlayMedia: false,
+      voiceCommands: false,
+      screenReader: false,
+      keyboardNavigation: false,
+      focusIndicator: true,
+      theme: 'auto'
+    });
+  };
+
+  const showKeyboardShortcuts = () => {
+    alert(`
+Keyboard Shortcuts:
+Alt + A: Toggle accessibility panel
+Alt + H: Toggle high contrast
+Alt + F: Toggle focus indicator
+Alt + R: Reset all settings
+Alt + T: Toggle theme
+Alt + S: Toggle screen reader mode
+Alt + K: Show keyboard shortcuts
+Escape: Close panels
+    `);
+  };
+
+  const toggleVoiceCommands = () => {
+    if (settings.voiceCommands) {
+      setIsListening(!isListening);
+    } else {
+      setSettings(prev => ({ ...prev, voiceCommands: true }));
+      setIsListening(true);
     }
   };
 
   return (
     <>
-      {/* Accessibility Button */}
-      <button
+      {/* Accessibility Toggle Button */}
+      <motion.button
+        className="fixed bottom-6 right-6 z-50 bg-green-600 hover:bg-green-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-green-300"
         onClick={() => setIsOpen(!isOpen)}
-        className={`fixed ${getPositionClasses()} z-50 p-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-4 focus:ring-cyan-300 focus:ring-opacity-50`}
-        aria-label="Accessibility Settings"
-        aria-expanded={isOpen}
-        title="Accessibility Settings (Ctrl+Shift+A)"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        aria-label="Open accessibility settings"
+        title="Accessibility Settings (Alt + A)"
       >
-        <Settings className="w-6 h-6" />
-      </button>
+        <Accessibility className="w-6 h-6" />
+      </motion.button>
 
       {/* Accessibility Panel */}
-      {isOpen && (
-        <div className={`fixed ${getPositionClasses()} z-50 w-80 bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700`}>
-          {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
-            <h3 className="font-semibold text-gray-900 dark:text-white">Accessibility Settings</h3>
-            <button
-              onClick={() => setIsOpen(false)}
-              className="p-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded transition-colors"
-              aria-label="Close accessibility panel"
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className="fixed inset-0 z-40 bg-black bg-opacity-50 flex items-center justify-center p-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setIsOpen(false)}
+          >
+            <motion.div
+              className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden"
+              initial={{ scale: 0.9, y: 20 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.9, y: 20 }}
+              onClick={(e) => e.stopPropagation()}
             >
-              <X className="w-4 h-4 text-gray-500" />
-            </button>
-          </div>
-
-          {/* Content */}
-          <div className="p-4 space-y-4 max-h-96 overflow-y-auto">
-            {/* Font Size Control */}
-            <div className="space-y-2">
-              <label className="flex items-center text-sm font-medium text-gray-700 dark:text-gray-300">
-                <Type className="w-4 h-4 mr-2" />
-                Font Size: {settings.fontSize}%
-              </label>
-              <div className="flex items-center space-x-2">
-                <button
-                  onClick={() => adjustFontSize('decrease')}
-                  className="p-2 bg-gray-100 dark:bg-gray-800 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-                  aria-label="Decrease font size"
-                >
-                  <Minus className="w-4 h-4" />
-                </button>
-                <div className="flex-1 h-2 bg-gray-200 dark:bg-gray-700 rounded-full">
-                  <div 
-                    className="h-full bg-cyan-500 rounded-full transition-all duration-300"
-                    style={{ width: `${((settings.fontSize - 80) / 120) * 100}%` }}
-                  />
+              {/* Header */}
+              <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white p-6">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <Accessibility className="w-8 h-8" />
+                    <div>
+                      <h2 className="text-2xl font-bold">Accessibility Settings</h2>
+                      <p className="text-green-100">Customize your experience</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <div className="text-center">
+                      <div className="text-3xl font-bold">{accessibilityScore}</div>
+                      <div className="text-sm text-green-100">Accessibility Score</div>
+                    </div>
+                    <button
+                      onClick={() => setIsOpen(false)}
+                      className="text-white hover:text-green-200 transition-colors"
+                      aria-label="Close accessibility panel"
+                    >
+                      <X className="w-6 h-6" />
+                    </button>
+                  </div>
                 </div>
-                <button
-                  onClick={() => adjustFontSize('increase')}
-                  className="p-2 bg-gray-100 dark:bg-gray-800 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-                  aria-label="Increase font size"
-                >
-                  <Plus className="w-4 h-4" />
-                </button>
-                <button
-                  onClick={() => updateSetting('fontSize', 100)}
-                  className="p-2 bg-gray-100 dark:bg-gray-800 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-                  aria-label="Reset font size"
-                  title="Reset (Ctrl+0)"
-                >
-                  <RotateCcw className="w-4 h-4" />
-                </button>
               </div>
-            </div>
 
-            {/* High Contrast Toggle */}
-            <div className="flex items-center justify-between">
-              <label className="flex items-center text-sm font-medium text-gray-700 dark:text-gray-300">
-                <Contrast className="w-4 h-4 mr-2" />
-                High Contrast
-              </label>
-              <button
-                onClick={toggleHighContrast}
-                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                  settings.highContrast ? 'bg-cyan-600' : 'bg-gray-200 dark:bg-gray-700'
-                }`}
-                aria-label="Toggle high contrast"
-                role="switch"
-                aria-checked={settings.highContrast}
-              >
-                <span
-                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                    settings.highContrast ? 'translate-x-6' : 'translate-x-1'
-                  }`}
-                />
-              </button>
-            </div>
-
-            {/* Reduced Motion Toggle */}
-            <div className="flex items-center justify-between">
-              <label className="flex items-center text-sm font-medium text-gray-700 dark:text-gray-300">
-                <Eye className="w-4 h-4 mr-2" />
-                Reduced Motion
-              </label>
-              <button
-                onClick={toggleReducedMotion}
-                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                  settings.reducedMotion ? 'bg-cyan-600' : 'bg-gray-200 dark:bg-gray-700'
-                }`}
-                aria-label="Toggle reduced motion"
-                role="switch"
-                aria-checked={settings.reducedMotion}
-              >
-                <span
-                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                    settings.reducedMotion ? 'translate-x-6' : 'translate-x-1'
-                  }`}
-                />
-              </button>
-            </div>
-
-            {/* Focus Indicator Toggle */}
-            <div className="flex items-center justify-between">
-              <label className="flex items-center text-sm font-medium text-gray-700 dark:text-gray-300">
-                <MousePointer className="w-4 h-4 mr-2" />
-                Focus Indicator
-              </label>
-              <button
-                onClick={toggleFocusIndicator}
-                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                  settings.focusIndicator ? 'bg-cyan-600' : 'bg-gray-200 dark:bg-gray-700'
-                }`}
-                aria-label="Toggle focus indicator"
-                role="switch"
-                aria-checked={settings.focusIndicator}
-              >
-                <span
-                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                    settings.focusIndicator ? 'translate-x-6' : 'translate-x-1'
-                  }`}
-                />
-              </button>
-            </div>
-
-            {/* Keyboard Navigation Toggle */}
-            <div className="flex items-center justify-between">
-              <label className="flex items-center text-sm font-medium text-gray-700 dark:text-gray-300">
-                <Keyboard className="w-4 h-4 mr-2" />
-                Keyboard Navigation
-              </label>
-              <button
-                onClick={toggleKeyboardNavigation}
-                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                  settings.keyboardNavigation ? 'bg-cyan-600' : 'bg-gray-200 dark:bg-gray-700'
-                }`}
-                aria-label="Toggle keyboard navigation"
-                role="switch"
-                aria-checked={settings.keyboardNavigation}
-              >
-                <span
-                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                    settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-1'
-                  }`}
-                />
-              </button>
-            </div>
-
-            {/* Color Blindness Support */}
-            <div className="space-y-2">
-              <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                Color Blindness Support
-              </label>
-              <select
-                value={settings.colorBlindness}
-                onChange={(e) => updateSetting('colorBlindness', e.target.value)}
-                className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
-              >
-                <option value="none">None</option>
-                <option value="protanopia">Protanopia (Red-Blind)</option>
-                <option value="deuteranopia">Deuteranopia (Green-Blind)</option>
-                <option value="tritanopia">Tritanopia (Blue-Blind)</option>
-              </select>
-            </div>
-
-            {/* Theme Selection */}
-            <div className="space-y-2">
-              <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                Theme
-              </label>
-              <div className="flex space-x-2">
-                {(['light', 'dark', 'auto'] as const).map((theme) => (
+              {/* Tab Navigation */}
+              <div className="flex border-b border-gray-200 dark:border-gray-700">
+                {[
+                  { id: 'general', label: 'General', icon: Settings },
+                  { id: 'visual', label: 'Visual', icon: Eye },
+                  { id: 'audio', label: 'Audio', icon: Volume2 },
+                  { id: 'navigation', label: 'Navigation', icon: Navigation }
+                ].map((tab) => (
                   <button
-                    key={theme}
-                    onClick={() => updateSetting('theme', theme)}
-                    className={`p-2 rounded-md transition-colors ${
-                      settings.theme === theme
-                        ? 'bg-cyan-500 text-white'
-                        : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+                    key={tab.id}
+                    onClick={() => setActiveTab(tab.id as any)}
+                    className={`flex items-center gap-2 px-6 py-4 font-medium transition-colors ${
+                      activeTab === tab.id
+                        ? 'text-green-600 border-b-2 border-green-600'
+                        : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'
                     }`}
-                    aria-label={`Select ${theme} theme`}
                   >
-                    {theme === 'light' && <Sun className="w-4 h-4" />}
-                    {theme === 'dark' && <Moon className="w-4 h-4" />}
-                    {theme === 'auto' && <Monitor className="w-4 h-4" />}
+                    <tab.icon className="w-5 h-5" />
+                    {tab.label}
                   </button>
                 ))}
               </div>
-            </div>
 
-            {/* Reset Button */}
-            <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
-              <button
-                onClick={resetSettings}
-                className="w-full p-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-              >
-                Reset to Defaults
-              </button>
-            </div>
+              {/* Tab Content */}
+              <div className="p-6 max-h-[60vh] overflow-y-auto">
+                {/* General Tab */}
+                {activeTab === 'general' && (
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="text-lg font-semibold mb-4">Theme & Display</h3>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                          <label className="block text-sm font-medium mb-2">Theme</label>
+                          <select
+                            value={settings.theme}
+                            onChange={(e) => setSettings(prev => ({ ...prev, theme: e.target.value as any }))}
+                            className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                          >
+                            <option value="auto">Auto (System)</option>
+                            <option value="light">Light</option>
+                            <option value="dark">Dark</option>
+                          </select>
+                        </div>
+                        <div>
+                          <label className="block text-sm font-medium mb-2">Font Size</label>
+                          <div className="flex items-center gap-3">
+                            <button
+                              onClick={() => setSettings(prev => ({ ...prev, fontSize: Math.max(50, prev.fontSize - 10) }))}
+                              className="p-2 bg-gray-100 dark:bg-gray-600 rounded hover:bg-gray-200 dark:hover:bg-gray-500"
+                            >
+                              <Minus className="w-4 h-4" />
+                            </button>
+                            <span className="min-w-[4rem] text-center font-medium">{settings.fontSize}%</span>
+                            <button
+                              onClick={() => setSettings(prev => ({ ...prev, fontSize: Math.min(200, prev.fontSize + 10) }))}
+                              className="p-2 bg-gray-100 dark:bg-gray-600 rounded hover:bg-gray-200 dark:hover:bg-gray-500"
+                            >
+                              <Plus className="w-4 h-4" />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
-            {/* Keyboard Shortcuts Help */}
-            <div className="pt-2 text-xs text-gray-500 dark:text-gray-400 space-y-1">
-              <div><strong>Keyboard Shortcuts:</strong></div>
-              <div>Ctrl+Shift+A: Open/Close Panel</div>
-              <div>Ctrl+Plus: Increase Font Size</div>
-              <div>Ctrl+Minus: Decrease Font Size</div>
-              <div>Ctrl+0: Reset Font Size</div>
-            </div>
-          </div>
-        </div>
-      )}
+                    <div>
+                      <h3 className="text-lg font-semibold mb-4">Quick Actions</h3>
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                        <button
+                          onClick={() => setSettings(prev => ({ ...prev, highContrast: !prev.highContrast }))}
+                          className={`p-3 rounded-lg border transition-colors ${
+                            settings.highContrast
+                              ? 'bg-green-100 border-green-500 text-green-700'
+                              : 'bg-gray-100 dark:bg-gray-600 border-gray-300 dark:border-gray-500'
+                          }`}
+                        >
+                          <Highlighter className="w-6 h-6 mx-auto mb-2" />
+                          High Contrast
+                        </button>
+                        <button
+                          onClick={() => setSettings(prev => ({ ...prev, reducedMotion: !prev.reducedMotion }))}
+                          className={`p-3 rounded-lg border transition-colors ${
+                            settings.reducedMotion
+                              ? 'bg-green-100 border-green-500 text-green-700'
+                              : 'bg-gray-100 dark:bg-gray-600 border-gray-300 dark:border-gray-500'
+                          }`}
+                        >
+                          <MousePointer className="w-6 h-6 mx-auto mb-2" />
+                          Reduced Motion
+                        </button>
+                        <button
+                          onClick={() => setSettings(prev => ({ ...prev, focusIndicator: !prev.focusIndicator }))}
+                          className={`p-3 rounded-lg border transition-colors ${
+                            settings.focusIndicator
+                              ? 'bg-green-100 border-green-500 text-green-700'
+                              : 'bg-gray-100 dark:bg-gray-600 border-gray-300 dark:border-gray-500'
+                          }`}
+                        >
+                          <Keyboard className="w-6 h-6 mx-auto mb-2" />
+                          Focus Indicator
+                        </button>
+                        <button
+                          onClick={resetSettings}
+                          className="p-3 rounded-lg border border-gray-300 dark:border-gray-500 bg-gray-100 dark:bg-gray-600 hover:bg-gray-200 dark:hover:bg-gray-500 transition-colors"
+                        >
+                          <RotateCcw className="w-6 h-6 mx-auto mb-2" />
+                          Reset All
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                )}
 
-      {/* SVG Filters for Color Blindness */}
-      <svg style={{ position: 'absolute', width: 0, height: 0 }} aria-hidden="true">
+                {/* Visual Tab */}
+                {activeTab === 'visual' && (
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="text-lg font-semibold mb-4">Visual Enhancements</h3>
+                      <div className="space-y-4">
+                        <label className="flex items-center gap-3">
+                          <input
+                            type="checkbox"
+                            checked={settings.highContrast}
+                            onChange={(e) => setSettings(prev => ({ ...prev, highContrast: e.target.checked }))}
+                            className="w-5 h-5 text-green-600 rounded focus:ring-green-500"
+                          />
+                          <span>High Contrast Mode</span>
+                        </label>
+                        
+                        <div>
+                          <label className="block text-sm font-medium mb-2">Color Blindness Support</label>
+                          <select
+                            value={settings.colorBlindness}
+                            onChange={(e) => setSettings(prev => ({ ...prev, colorBlindness: e.target.value as any }))}
+                            className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                          >
+                            <option value="none">No Color Blindness</option>
+                            <option value="protanopia">Protanopia (Red-Blind)</option>
+                            <option value="deuteranopia">Deuteranopia (Green-Blind)</option>
+                            <option value="tritanopia">Tritanopia (Blue-Blind)</option>
+                          </select>
+                        </div>
+
+                        <label className="flex items-center gap-3">
+                          <input
+                            type="checkbox"
+                            checked={settings.reducedMotion}
+                            onChange={(e) => setSettings(prev => ({ ...prev, reducedMotion: e.target.checked }))}
+                            className="w-5 h-5 text-green-600 rounded focus:ring-green-500"
+                          />
+                          <span>Reduced Motion</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Audio Tab */}
+                {activeTab === 'audio' && (
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="text-lg font-semibold mb-4">Audio Controls</h3>
+                      <div className="space-y-4">
+                        <label className="flex items-center gap-3">
+                          <input
+                            type="checkbox"
+                            checked={settings.soundEffects}
+                            onChange={(e) => setSettings(prev => ({ ...prev, soundEffects: e.target.checked }))}
+                            className="w-5 h-5 text-green-600 rounded focus:ring-green-500"
+                          />
+                          <span>Sound Effects</span>
+                        </label>
+                        
+                        <label className="flex items-center gap-3">
+                          <input
+                            type="checkbox"
+                            checked={settings.autoPlayMedia}
+                            onChange={(e) => setSettings(prev => ({ ...prev, autoPlayMedia: e.target.checked }))}
+                            className="w-5 h-5 text-green-600 rounded focus:ring-green-500"
+                          />
+                          <span>Auto-play Media</span>
+                        </label>
+
+                        <div>
+                          <label className="block text-sm font-medium mb-2">Voice Commands</label>
+                          <div className="flex items-center gap-3">
+                            <button
+                              onClick={toggleVoiceCommands}
+                              className={`px-4 py-2 rounded-lg border transition-colors ${
+                                isListening
+                                  ? 'bg-red-100 border-red-500 text-red-700'
+                                  : settings.voiceCommands
+                                  ? 'bg-green-100 border-green-500 text-green-700'
+                                  : 'bg-gray-100 dark:bg-gray-600 border-gray-300 dark:border-gray-500'
+                              }`}
+                            >
+                              {isListening ? <MicOff className="w-5 h-5" /> : <Mic className="w-5 h-5" />}
+                              {isListening ? 'Listening...' : settings.voiceCommands ? 'Voice Active' : 'Enable Voice'}
+                            </button>
+                            {isListening && (
+                              <div className="text-sm text-gray-600 dark:text-gray-400">
+                                Try saying: "open accessibility", "high contrast", "increase font"
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Navigation Tab */}
+                {activeTab === 'navigation' && (
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="text-lg font-semibold mb-4">Navigation Support</h3>
+                      <div className="space-y-4">
+                        <label className="flex items-center gap-3">
+                          <input
+                            type="checkbox"
+                            checked={settings.screenReader}
+                            onChange={(e) => setSettings(prev => ({ ...prev, screenReader: e.target.checked }))}
+                            className="w-5 h-5 text-green-600 rounded focus:ring-green-500"
+                          />
+                          <span>Screen Reader Mode</span>
+                        </label>
+                        
+                        <label className="flex items-center gap-3">
+                          <input
+                            type="checkbox"
+                            checked={settings.keyboardNavigation}
+                            onChange={(e) => setSettings(prev => ({ ...prev, keyboardNavigation: e.target.checked }))}
+                            className="w-5 h-5 text-green-600 rounded focus:ring-green-500"
+                          />
+                          <span>Enhanced Keyboard Navigation</span>
+                        </label>
+
+                        <label className="flex items-center gap-3">
+                          <input
+                            type="checkbox"
+                            checked={settings.focusIndicator}
+                            onChange={(e) => setSettings(prev => ({ ...prev, focusIndicator: e.target.checked }))}
+                            className="w-5 h-5 text-green-600 rounded focus:ring-green-500"
+                          />
+                          <span>Focus Indicator</span>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h3 className="text-lg font-semibold mb-4">Keyboard Shortcuts</h3>
+                      <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                          <div><kbd className="px-2 py-1 bg-gray-200 dark:bg-gray-600 rounded">Alt + A</kbd> Toggle panel</div>
+                          <div><kbd className="px-2 py-1 bg-gray-200 dark:bg-gray-600 rounded">Alt + H</kbd> High contrast</div>
+                          <div><kbd className="px-2 py-1 bg-gray-200 dark:bg-gray-600 rounded">Alt + F</kbd> Focus indicator</div>
+                          <div><kbd className="px-2 py-1 bg-gray-200 dark:bg-gray-600 rounded">Alt + R</kbd> Reset settings</div>
+                          <div><kbd className="px-2 py-1 bg-gray-200 dark:bg-gray-600 rounded">Alt + T</kbd> Toggle theme</div>
+                          <div><kbd className="px-2 py-1 bg-gray-200 dark:bg-gray-600 rounded">Escape</kbd> Close panels</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Color Blindness Filters */}
+      <svg style={{ position: 'absolute', left: '-9999px', width: '0', height: '0' }}>
         <defs>
           <filter id="protanopia">
             <feColorMatrix type="matrix" values="0.567, 0.433, 0, 0, 0 0.558, 0.442, 0, 0, 0 0, 0.242, 0.758, 0, 0 0, 0, 0, 1, 0"/>

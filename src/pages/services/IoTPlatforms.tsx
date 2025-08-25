@@ -1,176 +1,179 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Shield, 
+  Network, 
   Brain, 
-  FileText, 
+  Cpu, 
   Zap, 
   BarChart3, 
   Clock, 
   CheckCircle, 
   ArrowRight,
   Star,
-  Scale,
-  Gavel,
-  Search,
-  BookOpen,
+  Shield,
   Users,
   TrendingUp,
-  Lock,
-  Eye,
   Database,
-  Network,
+  Globe,
   Calendar,
   DollarSign,
-  Target
+  Target,
+  Building,
+  Eye,
+  Code,
+  Wifi,
+  Smartphone,
+  Cloud,
+  Activity,
+  ShoppingCart
 } from 'lucide-react';
 
-const AILegalTech: React.FC = () => {
+const IoTPlatforms: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Document Analysis",
-      description: "Advanced natural language processing that analyzes legal documents, contracts, and case files with human-like understanding.",
-      benefits: ["Contract review automation", "Risk assessment", "Compliance checking"]
+      title: "AI-Powered IoT Analytics",
+      description: "Advanced machine learning algorithms that analyze IoT data streams for predictive insights and automation.",
+      benefits: ["Real-time analytics", "Predictive maintenance", "Automated responses"]
     },
     {
-      icon: Search,
-      title: "Intelligent Legal Research",
-      description: "AI-driven research tools that find relevant case law, statutes, and precedents in seconds, not hours.",
-      benefits: ["Case law discovery", "Precedent analysis", "Research automation"]
+      icon: Network,
+      title: "Edge Computing Solutions",
+      description: "Distributed computing infrastructure that processes data closer to IoT devices for faster response times.",
+      benefits: ["Low latency", "Bandwidth optimization", "Offline operation"]
     },
     {
       icon: BarChart3,
-      title: "Predictive Analytics",
-      description: "Machine learning models that forecast case outcomes, settlement probabilities, and litigation risks.",
-      benefits: ["Case outcome prediction", "Risk assessment", "Strategic planning"]
+      title: "IoT Data Management",
+      description: "Comprehensive data collection, storage, and analysis platform for IoT ecosystems.",
+      benefits: ["Data aggregation", "Storage optimization", "Real-time processing"]
     },
     {
       icon: Zap,
-      title: "Automated Workflows",
-      description: "Streamlined legal processes that automate routine tasks and ensure consistency across all legal operations.",
-      benefits: ["Document generation", "Process automation", "Quality control"]
+      title: "Device Management",
+      description: "Centralized platform for managing, monitoring, and updating IoT devices at scale.",
+      benefits: ["Remote monitoring", "Firmware updates", "Device provisioning"]
     }
   ];
 
   const services = [
     {
-      title: "Contract Management",
-      description: "AI-powered contract analysis, review, and management for improved efficiency and risk mitigation.",
-      icon: FileText,
-      features: ["Contract review", "Risk assessment", "Compliance checking", "Automated generation"]
+      title: "IoT Platform Development",
+      description: "Custom IoT platforms tailored to your specific industry and use case requirements.",
+      icon: Code,
+      features: ["Platform architecture", "API development", "Device integration", "Scalability"]
     },
     {
-      title: "Legal Research",
-      description: "Intelligent research tools that accelerate case preparation and improve legal strategy development.",
-      icon: Search,
-      features: ["Case law research", "Precedent analysis", "Statute interpretation", "Research automation"]
+      title: "Edge Computing",
+      description: "Edge computing solutions that bring processing power closer to IoT devices.",
+      icon: Cpu,
+      features: ["Edge nodes", "Local processing", "Data filtering", "Offline capabilities"]
     },
     {
-      title: "Litigation Support",
-      description: "Comprehensive support for litigation processes with AI-powered analytics and document management.",
-      icon: Gavel,
-      features: ["Document review", "Evidence analysis", "Case strategy", "Outcome prediction"]
+      title: "IoT Analytics",
+      description: "Advanced analytics and machine learning for IoT data insights and automation.",
+      icon: BarChart3,
+      features: ["Real-time analytics", "Predictive modeling", "Anomaly detection", "Automation"]
     },
     {
-      title: "Compliance Management",
-      description: "Automated compliance monitoring and reporting to ensure regulatory adherence across all legal operations.",
-      icon: Shield,
-      features: ["Regulatory monitoring", "Compliance reporting", "Risk assessment", "Audit support"]
+      title: "Device Management",
+      description: "Comprehensive IoT device management and monitoring solutions.",
+      icon: Network,
+      features: ["Device provisioning", "Remote monitoring", "Firmware updates", "Security"]
     }
   ];
 
   const benefits = [
     {
-      title: "Reduce Review Time",
-      value: "80%",
-      description: "Faster document analysis and contract review processes"
+      title: "Real-time Insights",
+      value: "24/7",
+      description: "Continuous monitoring and real-time data analysis"
     },
     {
-      title: "Improve Accuracy",
-      value: "95%",
-      description: "Higher accuracy in legal research and document analysis"
+      title: "Cost Reduction",
+      value: "35%",
+      description: "Lower operational costs through predictive maintenance"
     },
     {
-      title: "Lower Costs",
-      value: "60%",
-      description: "Reduced legal research and document review costs"
+      title: "Efficiency Boost",
+      value: "50%",
+      description: "Improved operational efficiency and automation"
     },
     {
-      title: "Increase Efficiency",
-      value: "3x",
-      description: "Faster case preparation and legal strategy development"
+      title: "Scalability",
+      value: "10x",
+      description: "Easy scaling from hundreds to millions of devices"
     }
   ];
 
   const useCases = [
     {
-      title: "Law Firms",
-      description: "Streamline operations, improve client service, and increase profitability with AI-powered legal tools.",
-      icon: Users,
-      features: ["Case management", "Client communication", "Billing optimization", "Resource allocation"]
-    },
-    {
-      title: "Corporate Legal",
-      description: "Manage corporate legal operations efficiently with automated compliance and contract management.",
+      title: "Smart Manufacturing",
+      description: "IoT solutions for industrial automation, predictive maintenance, and quality control.",
       icon: Building,
-      features: ["Contract lifecycle", "Compliance monitoring", "Risk management", "Policy enforcement"]
+      features: ["Predictive maintenance", "Quality monitoring", "Production optimization", "Safety systems"]
     },
     {
-      title: "Government Agencies",
-      description: "Improve public service delivery with efficient legal research and document processing capabilities.",
-      icon: Shield,
-      features: ["Policy research", "Regulatory analysis", "Public records", "Compliance reporting"]
+      title: "Smart Cities",
+      description: "Urban IoT solutions for traffic management, utilities, and public services.",
+      icon: Globe,
+      features: ["Traffic monitoring", "Utility management", "Environmental monitoring", "Public safety"]
     },
     {
-      title: "Legal Tech Startups",
-      description: "Leverage AI capabilities to build innovative legal technology solutions and services.",
-      icon: Rocket,
-      features: ["Product development", "API integration", "Custom solutions", "Scalability"]
+      title: "Healthcare IoT",
+      description: "Medical device monitoring and patient care automation solutions.",
+      icon: Activity,
+      features: ["Patient monitoring", "Medical device management", "Remote care", "Data analytics"]
+    },
+    {
+      title: "Retail IoT",
+      description: "Customer experience and inventory management solutions for retail environments.",
+      icon: ShoppingCart,
+      features: ["Customer analytics", "Inventory tracking", "Smart shelves", "Loss prevention"]
     }
   ];
 
   const pricing = [
     {
-      name: "Professional",
+      name: "Starter",
       price: "$499",
       period: "/month",
-      description: "Perfect for individual lawyers and small law firms",
+      description: "Perfect for small IoT projects and proof of concepts",
       features: [
-        "AI document analysis (up to 100 documents/month)",
-        "Basic legal research tools",
-        "Contract review automation",
-        "Standard reporting",
-        "Email support"
+        "Basic IoT platform",
+        "Up to 1,000 devices",
+        "Standard analytics",
+        "Email support",
+        "Basic security"
       ],
       popular: false
     },
     {
-      name: "Firm",
-      price: "$999",
+      name: "Professional",
+      price: "$1,299",
       period: "/month",
-      description: "Ideal for growing law firms and legal departments",
+      description: "Ideal for growing IoT deployments and businesses",
       features: [
-        "Unlimited document analysis",
-        "Advanced legal research",
-        "Predictive analytics",
-        "Workflow automation",
+        "Advanced IoT platform",
+        "Up to 100,000 devices",
+        "AI-powered analytics",
+        "Edge computing",
         "Priority support",
-        "Custom integrations"
+        "Advanced security"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$2,999",
       period: "/month",
-      description: "Comprehensive solution for large legal organizations",
+      description: "Comprehensive solution for large-scale IoT deployments",
       features: [
-        "Custom AI models",
-        "Full platform integration",
-        "Advanced analytics & reporting",
+        "Custom IoT platform",
+        "Unlimited devices",
+        "Full AI suite",
+        "Custom integrations",
         "Dedicated account manager",
-        "Custom training & onboarding",
         "24/7 phone support"
       ],
       popular: false
@@ -184,16 +187,16 @@ const AILegalTech: React.FC = () => {
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6">
-              <Shield className="w-4 h-4 mr-2" />
-              AI-Powered Legal Technology
+              <Network className="w-4 h-4 mr-2" />
+              IoT & Edge Computing Platforms
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Transform Legal Practice with
-              <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent"> AI Intelligence</span>
+              Connect Everything with
+              <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent"> IoT Intelligence</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Revolutionize your legal practice with AI-powered tools that automate research, analyze documents, 
-              and provide intelligent insights. Work smarter, not harder, with cutting-edge legal technology.
+              Transform your business with cutting-edge IoT platforms and edge computing solutions. 
+              Connect devices, collect data, and gain real-time insights that drive innovation and efficiency.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -215,20 +218,20 @@ const AILegalTech: React.FC = () => {
           {/* Key Metrics */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-16">
             <div className="text-center">
-              <div className="text-3xl font-bold text-green-400 mb-2">80%</div>
-              <div className="text-gray-400">Faster Review Time</div>
+              <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
+              <div className="text-gray-400">Real-time Monitoring</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-emerald-400 mb-2">95%</div>
-              <div className="text-gray-400">Improved Accuracy</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-400 mb-2">60%</div>
+              <div className="text-3xl font-bold text-emerald-400 mb-2">35%</div>
               <div className="text-gray-400">Cost Reduction</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">3x</div>
+              <div className="text-3xl font-bold text-blue-400 mb-2">50%</div>
               <div className="text-gray-400">Efficiency Boost</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-purple-400 mb-2">10x</div>
+              <div className="text-gray-400">Scalability</div>
             </div>
           </div>
         </div>
@@ -239,11 +242,11 @@ const AILegalTech: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              AI-Powered Features That Revolutionize Legal Practice
+              IoT Features That Drive Innovation
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI legal technology platform combines cutting-edge artificial intelligence with deep legal expertise 
-              to deliver exceptional results for legal professionals.
+              Our IoT platform combines cutting-edge technology with proven scalability to deliver 
+              exceptional results for connected device ecosystems.
             </p>
           </div>
           
@@ -276,10 +279,10 @@ const AILegalTech: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Legal Technology Solutions
+              Comprehensive IoT Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              From contract management to litigation support, our AI platform covers every aspect of modern legal practice.
+              From platform development to edge computing, our IoT services cover every aspect of connected device ecosystems.
             </p>
           </div>
           
@@ -309,10 +312,10 @@ const AILegalTech: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Designed for Every Legal Organization
+              IoT for Every Industry
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI legal technology solutions are tailored to meet the unique needs of different types of legal organizations.
+              Our IoT solutions are designed to transform industries and create new business opportunities.
             </p>
           </div>
           
@@ -345,7 +348,7 @@ const AILegalTech: React.FC = () => {
               Measurable Results
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              See the real impact of AI-powered legal technology on your practice's efficiency and profitability.
+              See the real impact of IoT technology on your business operations and bottom line.
             </p>
           </div>
           
@@ -369,7 +372,7 @@ const AILegalTech: React.FC = () => {
               Choose Your Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Flexible pricing options designed to scale with your legal practice's needs and growth.
+              Flexible pricing options designed to scale with your IoT project's needs and growth.
             </p>
           </div>
           
@@ -427,11 +430,11 @@ const AILegalTech: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-500/10 to-emerald-500/10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Legal Practice?
+            Ready to Connect Everything?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join forward-thinking legal professionals who have already revolutionized their practice with AI. 
-            Start working smarter today with intelligent legal technology.
+            Join forward-thinking companies that have already transformed their business with IoT technology. 
+            Start building tomorrow's connected world today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -454,4 +457,4 @@ const AILegalTech: React.FC = () => {
   );
 };
 
-export default AILegalTech;
+export default IoTPlatforms;
