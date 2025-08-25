@@ -4,11 +4,16 @@ import { Helmet } from 'react-helmet-async';
 interface SEOProps {
   title: string;
   description: string;
-  keywords?: string;
+  keywords?: string[] | string;
   canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
+  image?: string;
+  url?: string;
+  type?: 'website' | 'article' | 'product' | 'service';
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  section?: string;
+  tags?: string[];
   structuredData?: object;
   noindex?: boolean;
   nofollow?: boolean;
@@ -17,7 +22,7 @@ interface SEOProps {
 export const SEO: React.FC<SEOProps> = ({
   title,
   description,
-  keywords,
+  keywords = [],
   canonical,
   ogImage = '/images/zion-og-image.jpg',
   ogType = 'website',
@@ -80,7 +85,6 @@ export const SEO: React.FC<SEOProps> = ({
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content={siteName} />
-      <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content={twitterCard} />
@@ -145,4 +149,6 @@ export const SEO: React.FC<SEOProps> = ({
     </Helmet>
   );
 };
+
+export default SEO;
 
