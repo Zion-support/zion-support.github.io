@@ -1,451 +1,395 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Users, 
-  MessageCircle, 
-  Calendar, 
-  Award, 
-  TrendingUp, 
-  BookOpen,
-  Video,
-  Globe,
-  Heart,
-  Share2,
-  ThumbsUp,
-  Eye,
-  Clock,
-  MapPin,
-  Tag,
-  Cloud
-} from 'lucide-react';
+import React from 'react';
+import { Users, MessageCircle, Calendar, BookOpen, Award, TrendingUp, Globe, Building, Brain, Shield, Zap, Rocket, Star, Heart, Share2, Plus, Search, Filter, Grid, List, Clock, MapPin } from 'lucide-react';
 
-const CommunityPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('forums');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const categories = [
-    { id: 'all', name: 'All Categories', icon: Globe, color: 'from-zion-purple to-zion-cyan' },
-    { id: 'ai', name: 'AI & Machine Learning', icon: TrendingUp, color: 'from-blue-500 to-cyan-500' },
-    { id: 'quantum', name: 'Quantum Computing', icon: Globe, color: 'from-purple-500 to-pink-500' },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Award, color: 'from-red-500 to-orange-500' },
-    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, color: 'from-green-500 to-blue-500' },
-    { id: 'general', name: 'General Discussion', icon: Users, color: 'from-gray-500 to-gray-700' }
+export default function CommunityPage() {
+  const communityStats = [
+    { label: "Active Members", value: "12,847", icon: Users, color: "text-cyan-400" },
+    { label: "Discussions", value: "45,293", icon: MessageCircle, color: "text-purple-400" },
+    { label: "Events", value: "1,247", icon: Calendar, color: "text-green-400" },
+    { label: "Resources", value: "8,956", icon: BookOpen, color: "text-yellow-400" }
   ];
 
-  const forumTopics = [
+  const featuredDiscussions = [
     {
       id: 1,
-      title: 'Best practices for implementing AI in enterprise environments',
-      author: 'Sarah Chen',
-      category: 'ai',
-      replies: 24,
-      views: 156,
-      likes: 18,
-      lastActivity: '2 hours ago',
-      tags: ['AI', 'Enterprise', 'Best Practices']
+      title: "Best practices for implementing AI in enterprise environments",
+      author: "Sarah Chen",
+      authorRole: "AI Solutions Architect",
+      company: "TechCorp Inc.",
+      replies: 47,
+      views: 1234,
+      lastActivity: "2 hours ago",
+      tags: ["AI", "Enterprise", "Best Practices"],
+      featured: true,
+      category: "AI & Technology"
     },
     {
       id: 2,
-      title: 'Quantum computing applications in financial modeling',
-      author: 'Dr. Michael Rodriguez',
-      category: 'quantum',
-      replies: 31,
-      views: 203,
-      likes: 25,
-      lastActivity: '5 hours ago',
-      tags: ['Quantum', 'Finance', 'Modeling']
+      title: "Quantum computing applications in cybersecurity",
+      author: "Dr. Michael Rodriguez",
+      authorRole: "Quantum Security Researcher",
+      company: "QuantumSec Labs",
+      replies: 32,
+      views: 987,
+      lastActivity: "5 hours ago",
+      tags: ["Quantum Computing", "Cybersecurity", "Research"],
+      featured: true,
+      category: "Emerging Tech"
     },
     {
       id: 3,
-      title: 'Zero-trust security architecture implementation guide',
-      author: 'Alex Thompson',
-      category: 'cybersecurity',
-      replies: 19,
-      views: 128,
-      likes: 22,
-      lastActivity: '1 day ago',
-      tags: ['Security', 'Zero-Trust', 'Architecture']
-    },
-    {
-      id: 4,
-      title: 'Kubernetes deployment strategies for microservices',
-      author: 'Maria Garcia',
-      category: 'cloud',
-      replies: 42,
-      views: 287,
-      likes: 35,
-      lastActivity: '3 days ago',
-      tags: ['Kubernetes', 'Microservices', 'DevOps']
-    },
-    {
-      id: 5,
-      title: 'Building autonomous business systems with AI',
-      author: 'David Kim',
-      category: 'ai',
+      title: "SOC2 compliance automation strategies",
+      author: "Jennifer Park",
+      authorRole: "Compliance Manager",
+      company: "SecureFlow Systems",
       replies: 28,
-      views: 189,
-      likes: 21,
-      lastActivity: '4 days ago',
-      tags: ['AI', 'Autonomous', 'Business Systems']
+      views: 756,
+      lastActivity: "1 day ago",
+      tags: ["SOC2", "Compliance", "Automation"],
+      featured: false,
+      category: "Cybersecurity"
     }
   ];
 
   const upcomingEvents = [
     {
       id: 1,
-      title: 'AI Innovation Summit 2024',
-      date: 'December 15, 2024',
-      time: '9:00 AM - 5:00 PM',
-      location: 'San Francisco, CA',
-      type: 'Conference',
-      attendees: 250,
-      category: 'ai'
+      title: "AI in Healthcare: Challenges and Opportunities",
+      date: "2025-02-15",
+      time: "14:00 UTC",
+      type: "Webinar",
+      speakers: ["Dr. Emily Watson", "Prof. David Kim"],
+      attendees: 234,
+      category: "AI & Technology"
     },
     {
       id: 2,
-      title: 'Quantum Computing Workshop',
-      date: 'December 20, 2024',
-      time: '2:00 PM - 6:00 PM',
-      location: 'Virtual Event',
-      type: 'Workshop',
-      attendees: 75,
-      category: 'quantum'
+      title: "Quantum Computing Workshop",
+      date: "2025-02-20",
+      time: "10:00 UTC",
+      type: "Workshop",
+      speakers: ["Dr. Sarah Johnson"],
+      attendees: 89,
+      category: "Emerging Tech"
     },
     {
       id: 3,
-      title: 'Cybersecurity Best Practices Meetup',
-      date: 'January 10, 2025',
-      time: '6:00 PM - 8:00 PM',
-      location: 'New York, NY',
-      type: 'Meetup',
-      attendees: 45,
-      category: 'cybersecurity'
+      title: "Cybersecurity Summit 2025",
+      date: "2025-03-01",
+      time: "09:00 UTC",
+      type: "Conference",
+      speakers: ["Multiple Industry Experts"],
+      attendees: 567,
+      category: "Cybersecurity"
     }
   ];
 
-  const resources = [
-    {
-      id: 1,
-      title: 'AI Implementation Guide',
-      type: 'Guide',
-      author: 'Zion Tech Team',
-      downloads: 1247,
-      rating: 4.8,
-      category: 'ai'
-    },
-    {
-      id: 2,
-      title: 'Quantum Algorithms for Beginners',
-      type: 'Tutorial',
-      author: 'Dr. Elena Petrova',
-      downloads: 892,
-      rating: 4.9,
-      category: 'quantum'
-    },
-    {
-      id: 3,
-      title: 'Enterprise Security Framework',
-      type: 'Framework',
-      author: 'Security Team',
-      downloads: 1563,
-      rating: 4.7,
-      category: 'cybersecurity'
-    }
+  const communityCategories = [
+    { name: "AI & Technology", icon: Brain, count: 1250, color: "text-cyan-400" },
+    { name: "Cybersecurity", icon: Shield, count: 890, color: "text-red-400" },
+    { name: "Infrastructure", icon: Zap, count: 567, color: "text-blue-400" },
+    { name: "Emerging Tech", icon: Rocket, count: 423, color: "text-purple-400" },
+    { name: "Industry Solutions", icon: Building, count: 678, color: "text-green-400" },
+    { name: "General Discussion", icon: Users, count: 234, color: "text-yellow-400" }
   ];
 
-  const filteredTopics = forumTopics.filter(topic => 
-    selectedCategory === 'all' || topic.category === selectedCategory
-  );
+  const topContributors = [
+    { name: "Sarah Chen", role: "AI Solutions Architect", contributions: 156, avatar: "/api/placeholder/60/60" },
+    { name: "Dr. Michael Rodriguez", role: "Quantum Researcher", contributions: 134, avatar: "/api/placeholder/60/60" },
+    { name: "Jennifer Park", role: "Compliance Expert", contributions: 98, avatar: "/api/placeholder/60/60" },
+    { name: "Alex Thompson", role: "Cybersecurity Specialist", contributions: 87, avatar: "/api/placeholder/60/60" },
+    { name: "Maria Garcia", role: "Infrastructure Engineer", contributions: 76, avatar: "/api/placeholder/60/60" }
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Join Our <span className="text-gradient">Community</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed">
-              Connect with fellow innovators, share knowledge, and stay ahead of the curve 
-              in AI, quantum computing, and emerging technologies.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button
-                onClick={() => setActiveTab('forums')}
-                className="bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/30 transform hover:scale-105"
-              >
-                Join Discussion
-              </button>
-              <Link
-                to="/events"
-                className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
-              >
-                View Events
-              </Link>
+      <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto text-center">
+          <div className="flex justify-center mb-6">
+            <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center">
+              <Users className="w-10 h-10 text-white" />
             </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Navigation Tabs */}
-      <section className="py-8">
-        <div className="container mx-auto px-4">
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            Zion Tech Community
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Connect with technology professionals, share knowledge, and stay updated with the latest 
+            trends in AI, cybersecurity, quantum computing, and emerging technologies.
+          </p>
           <div className="flex flex-wrap justify-center gap-4">
-            {[
-              { id: 'forums', name: 'Forums', icon: MessageCircle },
-              { id: 'events', name: 'Events', icon: Calendar },
-              { id: 'resources', name: 'Resources', icon: BookOpen }
-            ].map(tab => {
-              const Icon = tab.icon;
-              return (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                    activeTab === tab.id
-                      ? 'bg-gradient-to-r from-zion-purple to-zion-cyan text-white shadow-lg'
-                      : 'bg-zion-slate/20 text-zion-slate-light hover:bg-zion-slate/30 hover:text-white'
-                  }`}
-                >
-                  <Icon className="w-5 h-5" />
-                  {tab.name}
-                </button>
-              );
-            })}
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-200">
+              Join Community
+            </button>
+            <button className="border border-cyan-500 text-cyan-400 px-6 py-3 rounded-lg font-medium hover:bg-cyan-500 hover:text-white transition-all duration-200">
+              Start Discussion
+            </button>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Content Sections */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          {/* Forums Tab */}
-          {activeTab === 'forums' && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              {/* Category Filter */}
-              <div className="mb-8">
-                <div className="flex flex-wrap gap-3">
-                  {categories.map(category => {
-                    const Icon = category.icon;
-                    return (
-                      <button
-                        key={category.id}
-                        onClick={() => setSelectedCategory(category.id)}
-                        className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                          selectedCategory === category.id
-                            ? 'bg-gradient-to-r from-zion-purple to-zion-cyan text-white'
-                            : 'bg-zion-slate/20 text-zion-slate-light hover:bg-zion-slate/30'
-                        }`}
-                      >
-                        <Icon className="w-4 h-4" />
-                        {category.name}
-                      </button>
-                    );
-                  })}
+      {/* Community Stats */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          {communityStats.map((stat, index) => (
+            <div key={index} className="bg-black/30 backdrop-blur-sm rounded-xl p-6 border border-gray-800 text-center">
+              <div className={`w-16 h-16 bg-gray-800/50 rounded-xl flex items-center justify-center mx-auto mb-4`}>
+                <stat.icon className={`w-8 h-8 ${stat.color}`} />
+              </div>
+              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+              <div className="text-gray-400">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Search and Filter */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+        <div className="bg-black/30 backdrop-blur-sm rounded-xl p-6 border border-gray-800">
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="flex-1 relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search discussions, events, or members..."
+                className="w-full pl-10 pr-4 py-3 bg-black/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500"
+              />
+            </div>
+            <select className="px-4 py-3 bg-black/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-cyan-500">
+              <option value="">All Categories</option>
+              {communityCategories.map((category) => (
+                <option key={category.name} value={category.name}>{category.name}</option>
+              ))}
+            </select>
+            <button className="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors duration-200">
+              <Filter className="w-5 h-5 inline mr-2" />
+              Filter
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Featured Discussions */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <div className="flex items-center justify-between mb-8">
+          <h2 className="text-3xl font-bold text-white">Featured Discussions</h2>
+          <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200">
+            View All Discussions
+          </button>
+        </div>
+        
+        <div className="space-y-6">
+          {featuredDiscussions.map((discussion) => (
+            <div key={discussion.id} className="bg-black/30 backdrop-blur-sm rounded-xl p-6 border border-gray-800 hover:border-cyan-500/50 transition-all duration-200">
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                    discussion.category === 'AI & Technology' ? 'bg-cyan-500/20 text-cyan-400' :
+                    discussion.category === 'Emerging Tech' ? 'bg-purple-500/20 text-purple-400' :
+                    discussion.category === 'Cybersecurity' ? 'bg-red-500/20 text-red-400' :
+                    'bg-blue-500/20 text-blue-400'
+                  }`}>
+                    {discussion.category}
+                  </span>
+                  {discussion.featured && <span className="bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded text-xs">Featured</span>}
+                </div>
+                <span className="text-gray-400 text-sm">{discussion.lastActivity}</span>
+              </div>
+              
+              <h3 className="text-xl font-bold text-white mb-3">{discussion.title}</h3>
+              
+              <div className="flex items-center gap-4 mb-4 text-sm text-gray-400">
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 bg-gray-700 rounded-full"></div>
+                  <span className="text-white">{discussion.author}</span>
+                  <span className="text-gray-500">•</span>
+                  <span>{discussion.authorRole}</span>
+                  <span className="text-gray-500">•</span>
+                  <span>{discussion.company}</span>
                 </div>
               </div>
-
-              {/* Forum Topics */}
-              <div className="space-y-4">
-                {filteredTopics.map((topic, index) => (
-                  <motion.div
-                    key={topic.id}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-zion-slate/20 rounded-xl p-6 backdrop-blur-sm border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
-                  >
-                    <div className="flex flex-col lg:flex-row gap-6">
-                      {/* Main Content */}
-                      <div className="flex-1">
-                        <div className="flex items-center gap-3 mb-3">
-                          <span className={`px-3 py-1 bg-gradient-to-r ${categories.find(c => c.id === topic.category)?.color} text-white text-xs rounded-full font-medium`}>
-                            {categories.find(c => c.id === topic.category)?.name}
-                          </span>
-                          <span className="text-zion-slate-light text-sm">by {topic.author}</span>
-                        </div>
-                        <h3 className="text-xl font-semibold text-white mb-3 hover:text-zion-cyan transition-colors cursor-pointer">
-                          {topic.title}
-                        </h3>
-                        <div className="flex flex-wrap gap-2 mb-4">
-                          {topic.tags.map((tag, idx) => (
-                            <span
-                              key={idx}
-                              className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded border border-zion-cyan/30"
-                            >
-                              #{tag}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* Stats */}
-                      <div className="flex lg:flex-col gap-4 lg:gap-2 text-sm">
-                        <div className="flex items-center gap-2 text-zion-slate-light">
-                          <MessageCircle className="w-4 h-4" />
-                          <span>{topic.replies}</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-zion-slate-light">
-                          <Eye className="w-4 h-4" />
-                          <span>{topic.views}</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-zion-slate-light">
-                          <ThumbsUp className="w-4 h-4" />
-                          <span>{topic.likes}</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-zion-slate-light">
-                          <Clock className="w-4 h-4" />
-                          <span>{topic.lastActivity}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
+              
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-6 text-sm text-gray-400">
+                  <span className="flex items-center gap-1">
+                    <MessageCircle className="w-4 h-4" />
+                    {discussion.replies} replies
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <TrendingUp className="w-4 h-4" />
+                    {discussion.views} views
+                  </span>
+                </div>
+                
+                <div className="flex items-center gap-2">
+                  {discussion.tags.map((tag, index) => (
+                    <span key={index} className="bg-gray-800/50 text-gray-300 px-2 py-1 rounded text-xs">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
-
-              {/* Start New Discussion */}
-              <div className="mt-12 text-center">
-                <button className="bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/30 transform hover:scale-105">
-                  Start New Discussion
-                </button>
-              </div>
-            </motion.div>
-          )}
-
-          {/* Events Tab */}
-          {activeTab === 'events' && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {upcomingEvents.map((event, index) => (
-                  <motion.div
-                    key={event.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-zion-slate/20 rounded-xl p-6 backdrop-blur-sm border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
-                  >
-                    <div className="mb-4">
-                      <span className={`px-3 py-1 bg-gradient-to-r ${categories.find(c => c.id === event.category)?.color} text-white text-xs rounded-full font-medium`}>
-                        {event.type}
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-4">{event.title}</h3>
-                    <div className="space-y-3 text-sm text-zion-slate-light">
-                      <div className="flex items-center gap-2">
-                        <Calendar className="w-4 h-4 text-zion-cyan" />
-                        <span>{event.date}</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <Clock className="w-4 h-4 text-zion-cyan" />
-                        <span>{event.time}</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <MapPin className="w-4 h-4 text-zion-cyan" />
-                        <span>{event.location}</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <Users className="w-4 h-4 text-zion-cyan" />
-                        <span>{event.attendees} attendees</span>
-                      </div>
-                    </div>
-                    <button className="w-full mt-6 bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white py-3 rounded-lg font-medium transition-all duration-300">
-                      Register Now
-                    </button>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          )}
-
-          {/* Resources Tab */}
-          {activeTab === 'resources' && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {resources.map((resource, index) => (
-                  <motion.div
-                    key={resource.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-zion-slate/20 rounded-xl p-6 backdrop-blur-sm border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
-                  >
-                    <div className="mb-4">
-                      <span className={`px-3 py-1 bg-gradient-to-r ${categories.find(c => c.id === resource.category)?.color} text-white text-xs rounded-full font-medium`}>
-                        {resource.type}
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">{resource.title}</h3>
-                    <p className="text-zion-slate-light text-sm mb-4">by {resource.author}</p>
-                    <div className="flex items-center justify-between text-sm mb-4">
-                      <span className="text-zion-slate-light">{resource.downloads} downloads</span>
-                      <div className="flex items-center gap-1">
-                        <span className="text-yellow-400">★</span>
-                        <span className="text-white">{resource.rating}</span>
-                      </div>
-                    </div>
-                    <button className="w-full bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white py-3 rounded-lg font-medium transition-all duration-300">
-                      Download
-                    </button>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          )}
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-zion-slate/20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Connect?
-            </h2>
-            <p className="text-xl text-zion-slate-light mb-8">
-              Join thousands of professionals who are already part of our growing community. 
-              Share knowledge, learn from experts, and build meaningful connections.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/30 transform hover:scale-105">
-                Join Community
-              </button>
-              <Link
-                to="/contact"
-                className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
-              >
-                Contact Us
-              </Link>
             </div>
-          </motion.div>
+          ))}
         </div>
-      </section>
+      </div>
+
+      {/* Upcoming Events */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <div className="flex items-center justify-between mb-8">
+          <h2 className="text-3xl font-bold text-white">Upcoming Events</h2>
+          <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200">
+            View All Events
+          </button>
+        </div>
+        
+        <div className="grid md:grid-cols-3 gap-6">
+          {upcomingEvents.map((event) => (
+            <div key={event.id} className="bg-black/30 backdrop-blur-sm rounded-xl p-6 border border-gray-800 hover:border-cyan-500/50 transition-all duration-200">
+              <div className="flex items-center justify-between mb-4">
+                <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                  event.category === 'AI & Technology' ? 'bg-cyan-500/20 text-cyan-400' :
+                  event.category === 'Emerging Tech' ? 'bg-purple-500/20 text-purple-400' :
+                  'bg-red-500/20 text-red-400'
+                }`}>
+                  {event.category}
+                </span>
+                <span className="text-gray-400 text-sm">{event.type}</span>
+              </div>
+              
+              <h3 className="text-lg font-bold text-white mb-3">{event.title}</h3>
+              
+              <div className="space-y-2 mb-4 text-sm text-gray-400">
+                <div className="flex items-center gap-2">
+                  <Calendar className="w-4 h-4" />
+                  <span>{new Date(event.date).toLocaleDateString()}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Clock className="w-4 h-4" />
+                  <span>{event.time}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Users className="w-4 h-4" />
+                  <span>{event.attendees} attending</span>
+                </div>
+              </div>
+              
+              <div className="mb-4">
+                <p className="text-sm text-gray-400 mb-2">Speakers:</p>
+                <div className="flex flex-wrap gap-2">
+                  {event.speakers.map((speaker, index) => (
+                    <span key={index} className="bg-gray-800/50 text-gray-300 px-2 py-1 rounded text-xs">
+                      {speaker}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              
+              <button className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-2 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-200">
+                Register Now
+              </button>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Community Categories and Top Contributors */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Categories */}
+          <div>
+            <h2 className="text-3xl font-bold mb-8 text-white">Community Categories</h2>
+            <div className="space-y-4">
+              {communityCategories.map((category) => (
+                <div key={category.name} className="bg-black/30 backdrop-blur-sm rounded-xl p-4 border border-gray-800 hover:border-cyan-500/50 transition-all duration-200 cursor-pointer group">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-4">
+                      <div className={`w-12 h-12 bg-gray-800/50 rounded-xl flex items-center justify-center group-hover:bg-cyan-500/20 transition-all duration-200`}>
+                        <category.icon className={`w-6 h-6 ${category.color}`} />
+                      </div>
+                      <div>
+                        <h3 className="text-white font-semibold">{category.name}</h3>
+                        <p className="text-gray-400 text-sm">{category.count} members</p>
+                      </div>
+                    </div>
+                    <button className="text-cyan-400 hover:text-cyan-300 transition-colors duration-200">
+                      Join
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* Top Contributors */}
+          <div>
+            <h2 className="text-3xl font-bold mb-8 text-white">Top Contributors</h2>
+            <div className="space-y-4">
+              {topContributors.map((contributor, index) => (
+                <div key={contributor.name} className="bg-black/30 backdrop-blur-sm rounded-xl p-4 border border-gray-800">
+                  <div className="flex items-center gap-4">
+                    <div className="relative">
+                      <div className="w-12 h-12 bg-gray-700 rounded-full"></div>
+                      {index < 3 && (
+                        <div className="absolute -top-1 -right-1 w-6 h-6 bg-yellow-500 rounded-full flex items-center justify-center">
+                          <Award className="w-3 h-3 text-white" />
+                        </div>
+                      )}
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-white font-semibold">{contributor.name}</h3>
+                      <p className="text-gray-400 text-sm">{contributor.role}</p>
+                    </div>
+                    <div className="text-right">
+                      <div className="text-cyan-400 font-bold">{contributor.contributions}</div>
+                      <div className="text-gray-400 text-sm">contributions</div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Call to Action */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl p-12 border border-cyan-500/20 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Join Our Community?</h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Connect with like-minded professionals, share your expertise, and stay ahead of the curve 
+            with the latest technology trends and insights.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-200">
+              Join Now
+            </button>
+            <button className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg font-medium hover:bg-cyan-500 hover:text-white transition-all duration-200">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Community Guidelines */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-800 text-center">
+          <h2 className="text-2xl font-bold mb-6 text-white">Community Guidelines</h2>
+          <p className="text-gray-300 mb-8">
+            We're committed to maintaining a respectful, inclusive, and professional community. 
+            All members are expected to follow our community guidelines and contribute positively.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-200">
+              Read Guidelines
+            </button>
+            <button className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg font-medium hover:bg-cyan-500 hover:text-white transition-all duration-200">
+              Report Issue
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
-};
-
-export default CommunityPage;
+}
