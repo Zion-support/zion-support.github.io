@@ -21,7 +21,8 @@ import { Toaster as SonnerToaster } from "./components/ui/sonner";
 import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
 import EnhancedSEO from './components/EnhancedSEO';
 import EnhancedAccessibility from './components/EnhancedAccessibility';
-import PerformanceMonitor from './components/PerformanceMonitor';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { ScrollToTop } from './components/ScrollToTop';
 
 // Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
@@ -45,10 +46,6 @@ const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAut
 const AIWorkflowAutomation = lazy(() => import('./pages/services/AIWorkflowAutomation'));
 const BlockchainEnterpriseSolutions = lazy(() => import('./pages/services/BlockchainEnterpriseSolutions'));
 const IoTDataAnalytics = lazy(() => import('./pages/services/IoTDataAnalytics'));
-const InnovativeServicesShowcase = lazy(() => import('./pages/InnovativeServicesShowcase'));
-
-// Enhanced innovative services page
-const EnhancedInnovativeServices = lazy(() => import('./pages/EnhancedInnovativeServices'));
 
 // Missing pages from analysis
 const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/QuantumNeuralNetworkPlatform'));
@@ -67,7 +64,6 @@ const Contact = lazy(() => import('./pages/Contact'));
 const Mission = lazy(() => import('./pages/Mission'));
 const Team = lazy(() => import('./pages/Team'));
 const Pricing = lazy(() => import('./pages/Pricing'));
-const ComprehensivePricing = lazy(() => import('./pages/ComprehensivePricing'));
 const Careers = lazy(() => import('./pages/Careers'));
 const Partners = lazy(() => import('./pages/Partners'));
 const Blog = lazy(() => import('./pages/Blog'));
@@ -86,6 +82,8 @@ const SpecializedITInfrastructure = lazy(() => import('./pages/services/Speciali
 const InnovativeMicroSaasServices = lazy(() => import('./pages/InnovativeMicroSaasServices'));
 const ComprehensiveInnovativeServices = lazy(() => import('./pages/ComprehensiveInnovativeServices'));
 const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveServicesOverview'));
+const ComprehensiveServicesShowcase = lazy(() => import('./pages/ComprehensiveServicesShowcase'));
+const InnovativeServicesMarketing = lazy(() => import('./pages/InnovativeServicesMarketing'));
 
 // Solutions pages
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
@@ -209,7 +207,6 @@ const App: React.FC = () => {
                       <Route path="/mission" element={<Mission />} />
                       <Route path="/team" element={<Team />} />
                       <Route path="/pricing" element={<Pricing />} />
-                      <Route path="/comprehensive-pricing" element={<ComprehensivePricing />} />
                       <Route path="/careers" element={<Careers />} />
                       <Route path="/partners" element={<Partners />} />
                       <Route path="/blog" element={<Blog />} />
@@ -230,13 +227,13 @@ const App: React.FC = () => {
                       <Route path="/innovative-micro-saas-services" element={<InnovativeMicroSaasServices />} />
                       <Route path="/comprehensive-innovative-services" element={<ComprehensiveInnovativeServices />} />
                       <Route path="/comprehensive-services-overview" element={<ComprehensiveServicesOverview />} />
-                      <Route path="/enhanced-innovative-services" element={<EnhancedInnovativeServices />} />
+                      <Route path="/services-showcase" element={<ComprehensiveServicesShowcase />} />
+                      <Route path="/innovative-services-marketing" element={<InnovativeServicesMarketing />} />
                       
                       {/* New innovative service routes */}
                       <Route path="/ai-workflow-automation" element={<AIWorkflowAutomation />} />
                       <Route path="/blockchain-enterprise-solutions" element={<BlockchainEnterpriseSolutions />} />
                       <Route path="/iot-data-analytics" element={<IoTDataAnalytics />} />
-                      <Route path="/innovative-services-showcase" element={<InnovativeServicesShowcase />} />
                       
                       {/* Solutions Routes */}
                       <Route path="/services/enterprise" element={<EnterpriseSolutions />} />
@@ -324,6 +321,9 @@ const App: React.FC = () => {
                 {/* AI Chatbot - Always Available */}
                 <AIChatbot />
                 
+                {/* Scroll to Top Button */}
+                <ScrollToTop />
+                
                 {/* Collaborative Text Editor - Development Mode */}
                 {import.meta.env.DEV && (
                   <div className="fixed bottom-24 left-6 z-40 w-96">
@@ -382,6 +382,6 @@ const App: React.FC = () => {
       </ThemeProvider>
     </EnhancedErrorBoundary>
   );
-};
+}
 
 export default App;
