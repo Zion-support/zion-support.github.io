@@ -59,6 +59,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     {
       key: 'home',
       href: '/',
+<<<<<<< HEAD
       name: 'Home',
       matches: (path: string) => path === '/'
     },
@@ -217,21 +218,40 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 =======
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-da9e
+=======
+      matches: (path: string) => path === '/'
+    },
+    {
+      key: 'marketplace',
+      href: '/marketplace',
+      matches: (path: string) => path.startsWith('/marketplace')
+    },
+    {
+      key: 'categories',
+      href: '/categories',
+      matches: (path: string) => path.startsWith('/categories')
+    },
+    {
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
       key: 'talent',
       href: '/talent',
       matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard')
     },
     {
+<<<<<<< HEAD
       key: 'services',
       href: '/services',
       matches: (path: string) => path.startsWith('/services')
     },
     {
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
       key: 'equipment',
       href: '/equipment',
       matches: (path: string) => path.startsWith('/equipment')
     },
     {
+<<<<<<< HEAD
       key: 'blog',
       href: '/blog',
       matches: (path: string) => path.startsWith('/blog')
@@ -326,6 +346,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: '/about',
       matches: (path: string) => path.startsWith('/about') || path.startsWith('/careers') || path.startsWith('/partners')
 >>>>>>> origin/cursor/website-audit-and-enhancement-ab27
+=======
+      key: 'community',
+      href: '/community',
+      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
     }
   ];
 
@@ -411,6 +436,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-da9e
       <ul className="flex items-center gap-1">
         {links.map((link) => (
+<<<<<<< HEAD
           <li key={link.name} className="relative">
             {link.hasDropdown ? (
               <div className="relative">
@@ -484,6 +510,20 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 {link.name}
               </Link>
             )}
+=======
+          <li key={link.name}>
+            <Link
+              to={link.href}
+              className={cn(
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
+                link.matches(location.pathname)
+                  ? "bg-zion-purple/20 text-zion-cyan"
+                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+              )}
+            >
+              {link.name}
+            </Link>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
           </li>
         ))}
         
@@ -613,7 +653,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               <MessageSquare className="w-4 h-4 mr-1" />
               {t('nav.messages')}
               {unreadCount > 0 && (
+<<<<<<< HEAD
                 <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center animate-pulse">
+=======
+                <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
                   {unreadCount}
                 </span>
               )}

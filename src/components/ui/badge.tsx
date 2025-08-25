@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
@@ -44,11 +45,22 @@ const Badge: React.FC<BadgeProps> = ({
     destructive: 'border-transparent bg-destructive text-destructive-foreground',
     outline: 'text-foreground'
 =======
+=======
+import React from 'react';
+
+interface BadgeProps {
+  children: React.ReactNode;
+  variant?: 'default' | 'secondary' | 'outline';
+  className?: string;
+}
+
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
 export const Badge: React.FC<BadgeProps> = ({ 
   children, 
   variant = 'default', 
   className = '' 
 }) => {
+<<<<<<< HEAD
   const baseClasses = 'inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium';
   
   const variantClasses = {
@@ -158,3 +170,21 @@ export { Badge };
 =======
 };
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
+=======
+  const baseClasses = 'inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2';
+  
+  const variantClasses = {
+    default: 'bg-zion-cyan text-white',
+    secondary: 'bg-zion-blue-light text-zion-cyan',
+    outline: 'border border-zion-cyan text-zion-cyan'
+  };
+  
+  const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;
+  
+  return (
+    <span className={classes}>
+      {children}
+    </span>
+  );
+};
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b

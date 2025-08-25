@@ -260,6 +260,7 @@ const specialServices = [
 <<<<<<< HEAD
     title: "Comprehensive Services",
     link: "/comprehensive-services"
+<<<<<<< HEAD
 =======
     title: "Services Overview",
     link: "/services-overview"
@@ -701,6 +702,8 @@ const advancedCategories = [
     link: "/zion-hire-ai",
     description: "Custom AI solutions and platforms"
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-da9e
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
   }
 ];
 
@@ -1162,6 +1165,7 @@ export function CategoriesSection({ showTitle = true, className = "" }: Categori
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-da9e
               </Link>
             ))}
+<<<<<<< HEAD
             <Link 
 <<<<<<< HEAD
               to="/services-pricing"
@@ -1176,6 +1180,8 @@ export function CategoriesSection({ showTitle = true, className = "" }: Categori
               View All Services
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-936f
             </Link>
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
           </div>
         </div>
         

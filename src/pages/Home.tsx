@@ -202,6 +202,7 @@ const Home: React.FC = () => {
 =======
 import React from 'react';
 import { CategoriesSection } from "@/components/CategoriesSection";
+<<<<<<< HEAD
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { NewsletterSection } from "@/components/NewsletterSection";
@@ -406,6 +407,9 @@ import { TestimonialCarousel } from "@/components/TestimonialCarousel";
 =======
 import { ComprehensiveServicesShowcase } from "@/components/home/ComprehensiveServicesShowcase";
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-8a54
+=======
+import { ServicesShowcase } from "@/components/home/ServicesShowcase";
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
 
 export default function Home() {
   const features = [
@@ -490,6 +494,7 @@ export default function Home() {
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen bg-background" id="main-content">
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-2857
@@ -905,6 +910,11 @@ export default function Home() {
 =======
       <FloatingCTA />
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-fb01
+=======
+    <div className="min-h-screen bg-background" id="main-content">
+      <CategoriesSection />
+      <ServicesShowcase />
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
     </div>
   );
 };

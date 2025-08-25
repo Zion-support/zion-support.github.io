@@ -6,6 +6,7 @@ import { ArrowUp } from 'lucide-react';
 =======
 import { FooterNewsletter } from "@/components/FooterNewsletter";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin } from "lucide-react";
 =======
 import { Twitter, Linkedin, Facebook, Instagram, Github, Phone, Mail, MapPin, Sparkles, Zap, Shield, Brain, Code, Database, BarChart3, Link as LinkIcon, UserCheck } from "lucide-react";
@@ -14,6 +15,9 @@ import Workflow from "lucide-react/dist/esm/icons/workflow";
 =======
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
 >>>>>>> origin/cursor/website-audit-and-enhancement-b7ac
+=======
+import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
 import { Link } from "react-router-dom";
 >>>>>>> origin/cursor/website-audit-and-enhancement-ba38
 
@@ -170,6 +174,7 @@ export function Footer() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <footer className="bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.05),transparent_50%)]"></div>
@@ -251,6 +256,10 @@ export function Footer() {
 
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-eb69
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+=======
+    <footer className="bg-zion-blue-dark border-t border-zion-blue-light pt-12 pb-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-73d5
 =======
@@ -262,6 +271,7 @@ export function Footer() {
           <div>
             <div className="mb-4">
               <span className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">ZION</span>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-7053
             </div>
 
@@ -363,9 +373,15 @@ export function Footer() {
             
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-da9e
             {/* Social Links */}
+=======
+            </div>
+            <p className="text-zion-slate-light mb-4 max-w-xs">
+              The world's first free marketplace dedicated to high-tech and artificial intelligence.
+            </p>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
             <div className="flex space-x-4">
               <a
-                href="https://twitter.com/ziontechgroup"
+                href="https://twitter.com/lovable_dev"
                 target="_blank"
                 rel="noopener noreferrer"
 <<<<<<< HEAD
@@ -380,10 +396,14 @@ export function Footer() {
               </a>
               <a
 <<<<<<< HEAD
+<<<<<<< HEAD
                 href="https://www.linkedin.com/company/zion-tech-group"
 =======
                 href="https://www.linkedin.com/company/ziontechgroup"
 >>>>>>> origin/cursor/website-audit-and-enhancement-b7ac
+=======
+                href="https://www.linkedin.com/company/zion-marketplace"
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
                 target="_blank"
                 rel="noopener noreferrer"
 <<<<<<< HEAD
@@ -397,7 +417,7 @@ export function Footer() {
                 <Linkedin className="h-5 w-5" />
               </a>
               <a
-                href="https://www.facebook.com/ziontechgroup"
+                href="https://www.facebook.com/zionmarketplace"
                 target="_blank"
                 rel="noopener noreferrer"
 <<<<<<< HEAD
@@ -411,7 +431,7 @@ export function Footer() {
                 <Facebook className="h-5 w-5" />
               </a>
               <a
-                href="https://instagram.com/ziontechgroup"
+                href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
 <<<<<<< HEAD
@@ -425,7 +445,7 @@ export function Footer() {
                 <Instagram className="h-5 w-5" />
               </a>
               <a
-                href="https://github.com/ziontechgroup"
+                href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
 <<<<<<< HEAD
@@ -442,7 +462,10 @@ export function Footer() {
           </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
           {/* Marketplace */}
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
           <div>
 <<<<<<< HEAD
             <h3 className="text-white font-semibold mb-6 text-lg">Marketplace</h3>
@@ -480,17 +503,21 @@ export function Footer() {
 <<<<<<< HEAD
 =======
               <li><Link to="/services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Services</Link></li>
+<<<<<<< HEAD
               <li><Link to="/micro-saas-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Micro SAAS</Link></li>
 <<<<<<< HEAD
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-73d5
 =======
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-eb69
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
               <li><Link to="/talent" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Talent</Link></li>
               <li><Link to="/equipment" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Equipment</Link></li>
               <li><Link to="/categories" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Categories</Link></li>
 <<<<<<< HEAD
 <<<<<<< HEAD
               <li><Link to="/green-it" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Green IT</Link></li>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -518,10 +545,11 @@ export function Footer() {
 =======
               <li><Link to="/green-it" className="text-zion-cyan hover:text-zion-purple transition-colors">Green IT</Link></li>
 >>>>>>> origin/cursor/website-audit-and-enhancement-ab27
+=======
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
             </ul>
           </div>
 
-          {/* Company */}
           <div>
             <h3 className="text-white font-semibold mb-6 text-lg">Company</h3>
             <ul className="space-y-3">
@@ -551,8 +579,8 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Support & Resources */}
           <div>
+<<<<<<< HEAD
             <h3 className="text-white font-semibold mb-6 text-lg">Support</h3>
             <ul className="space-y-3">
               <li><Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Contact</Link></li>
@@ -579,6 +607,13 @@ export function Footer() {
               <li><Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Contact</Link></li>
 >>>>>>> origin/cursor/website-audit-and-enhancement-b7ac
             </ul>
+=======
+            <h3 className="text-white font-semibold mb-4 text-lg">Subscribe to our newsletter</h3>
+            <p className="text-zion-slate-light mb-4">
+              Stay updated with the latest news on tech, AI, and marketplace opportunities.
+            </p>
+            <FooterNewsletter />
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
           </div>
         </div>
 
