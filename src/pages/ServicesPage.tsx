@@ -292,6 +292,7 @@ export default function ServicesPage() {
     : allServices.filter(service => service.category === activeCategory);
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -310,6 +311,30 @@ export default function ServicesPage() {
               className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
             >
               Get Started
+=======
+    <>
+      <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+          <h2 className="text-white text-lg font-medium">Featured Services</h2>
+          <div className="flex flex-wrap gap-2">
+            <Link to="/expanded-services">
+              <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
+                <Globe className="h-4 w-4 mr-2" />
+                View All Services
+              </Button>
+            </Link>
+            <Link to="/services-pricing">
+              <Button variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">
+                <Globe className="h-4 w-4 mr-2" />
+                View Pricing
+              </Button>
+            </Link>
+            <Link to="/it-onsite-services">
+              <Button variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10">
+                <Globe className="h-4 w-4 mr-2" />
+                Global IT Onsite Services
+              </Button>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-4e39
             </Link>
             <Link
               to="/pricing"
