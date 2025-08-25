@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Brain, Users, BarChart3, Code, Palette, Target, Shield, Heart, Database, Search, Building, Cpu, Globe, Rocket, Eye, DollarSign, ShoppingCart, Clock, Cloud, Network, ChevronDown } from 'lucide-react';
@@ -493,3 +494,7 @@ export function Header() {
 }
 
 export default Header;
+=======
+export { Header } from './header/Header';
+export type { HeaderProps } from './header/Header';
+>>>>>>> b0a80a7d62a0e2782286e7d0863429eb2e0add28

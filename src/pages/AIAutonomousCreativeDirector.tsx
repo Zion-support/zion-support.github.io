@@ -1,295 +1,112 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Palette, 
-  Zap, 
-  Target, 
-  BarChart3, 
-  Users, 
-  Shield, 
-  Clock,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  TrendingUp,
-  Cpu,
-  Database,
-  Network,
-  Code,
-  Lock,
-  Eye,
-  Heart,
-  Rocket,
-  Globe,
-  Lightbulb,
-  Image,
-  Video,
-  Music,
-  PenTool
-} from 'lucide-react';
+import { SEOHead } from '../components/SEOHead';
 
-export default function AIAutonomousCreativeDirector() {
-  const features = [
-    {
-      icon: Brain,
-      title: "AI Creative Intelligence",
-      description: "Advanced AI algorithms that understand creative concepts and generate innovative ideas"
-    },
-    {
-      icon: Palette,
-      title: "Multi-Media Creation",
-      description: "Generate content across all media types: images, videos, audio, and text"
-    },
-    {
-      icon: Zap,
-      title: "Instant Content Generation",
-      description: "Create high-quality creative content in seconds, not hours"
-    },
-    {
-      icon: Target,
-      title: "Brand Consistency",
-      description: "Maintain consistent brand voice and visual identity across all content"
-    },
-    {
-      icon: Users,
-      title: "Collaborative Workflow",
-      description: "Seamless integration with human creative teams and feedback loops"
-    },
-    {
-      icon: BarChart3,
-      title: "Performance Analytics",
-      description: "Track content performance and optimize creative strategies"
-    }
-  ];
-
-  const benefits = [
-    "24/7 creative content generation",
-    "Reduced production costs",
-    "Faster time to market",
-    "Consistent brand messaging",
-    "Scalable creative operations",
-    "Data-driven creative decisions"
-  ];
-
-  const useCases = [
-    {
-      title: "Marketing Campaigns",
-      description: "Automated creation of marketing materials, ads, and promotional content"
-    },
-    {
-      title: "Social Media Content",
-      description: "Daily social media posts, stories, and engaging content generation"
-    },
-    {
-      title: "Brand Identity",
-      description: "Consistent visual identity and brand messaging across all platforms"
-    },
-    {
-      title: "Content Marketing",
-      description: "Blog posts, articles, and educational content creation"
-    }
-  ];
-
-  const mediaTypes = [
-    {
-      title: "Visual Content",
-      icon: Image,
-      description: "Images, graphics, and visual designs"
-    },
-    {
-      title: "Video Content",
-      icon: Video,
-      description: "Video clips, animations, and motion graphics"
-    },
-    {
-      title: "Audio Content",
-      icon: Music,
-      description: "Podcasts, music, and sound effects"
-    },
-    {
-      title: "Written Content",
-      icon: PenTool,
-      description: "Copy, scripts, and written materials"
-    }
-  ];
-
+const AIAutonomousCreativeDirector: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="mb-8">
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <Brain className="w-20 h-20 text-cyan-400" />
-              <Palette className="w-16 h-16 text-purple-400" />
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+    <>
+      <SEOHead
+        title="AI Autonomous Creative Director | Zion Tech Group"
+        description="Revolutionary AI autonomous creative director. Intelligent design automation, creative strategy, and artistic direction powered by artificial intelligence."
+        keywords="AI autonomous creative director, creative automation, AI design, creative strategy, artistic direction, design automation"
+        canonicalUrl="https://ziontechgroup.com/ai-autonomous-creative-director"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               AI Autonomous Creative Director
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Revolutionize your creative process with an AI that never sleeps. Generate stunning content, 
-              maintain brand consistency, and scale your creative operations 24/7.
-            </p>
-          </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
-            >
-              Get Started
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link
-              to="/demo"
-              className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold py-3 px-8 rounded-lg transition-all duration-300 flex items-center gap-2"
-            >
-              Watch Demo
-              <Eye className="w-5 h-5" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-              Creative AI Features
-            </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced AI capabilities that transform how you create and manage creative content.
+              Unleash unlimited creativity with our AI Autonomous Creative Director. 
+              Intelligent design automation, creative strategy, and artistic direction reimagined.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105"
-              >
-                <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Media Types Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-              Multi-Media Content Creation
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Generate content across all media types with consistent quality and brand voice.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {mediaTypes.map((mediaType, index) => (
-              <div
-                key={index}
-                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 text-center hover:border-cyan-400 transition-all duration-300"
-              >
-                <mediaType.icon className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-3 text-white">{mediaType.title}</h3>
-                <p className="text-gray-300">{mediaType.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-              Why Choose AI Creative Director?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your creative process with intelligent automation and AI-powered insights.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              {benefits.slice(0, 3).map((benefit, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>
-                </div>
-              ))}
+          <div className="grid md:grid-cols-2 gap-12 mb-16">
+            <div className="space-y-6">
+              <h2 className="text-3xl font-bold text-white mb-4">
+                Creative Intelligence Unleashed
+              </h2>
+              <p className="text-gray-300 text-lg">
+                Our AI Autonomous Creative Director represents the future of creative work, 
+                combining artistic vision with intelligent automation to deliver stunning results.
+              </p>
+              <p className="text-gray-300 text-lg">
+                From brand strategy to visual design, our creative AI operates autonomously 
+                while maintaining the human touch that makes art truly meaningful.
+              </p>
             </div>
-            <div className="space-y-4">
-              {benefits.slice(3).map((benefit, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                  <span className="text-gray-300">{benefit}</span>
-                </div>
-              ))}
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold text-white mb-4">Creative Capabilities</h3>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-indigo-400 rounded-full mr-3"></span>
+                  Brand Strategy Development
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
+                  Visual Design Creation
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-pink-400 rounded-full mr-3"></span>
+                  Creative Campaign Planning
+                </li>
+                <li className="flex items-center">
+                  <span className="w-2 h-2 bg-violet-400 rounded-full mr-3"></span>
+                  Artistic Direction
+                </li>
+              </ul>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-              Perfect For Every Creative Need
+          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-16">
+            <h2 className="text-3xl font-bold text-white mb-6 text-center">
+              Creative Excellence
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From startups to enterprises, our AI scales with your creative requirements.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-              <div
-                key={index}
-                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300"
-              >
-                <h3 className="text-xl font-semibold mb-3 text-white">{useCase.title}</h3>
-                <p className="text-gray-300">{useCase.description}</p>
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-indigo-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Brand Strategy</h3>
+                <p className="text-gray-400">Intelligent brand development</p>
               </div>
-            ))}
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Visual Design</h3>
+                <p className="text-gray-400">Automated design creation</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-pink-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-pink-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">Campaign Planning</h3>
+                <p className="text-gray-400">Strategic creative campaigns</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/50 to-blue-900/50">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-            Ready to Transform Your Creative Process?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Join the future of creative content generation with AI-powered automation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-            >
-              Start Free Trial
-            </Link>
-            <Link
-              to="/pricing"
-              className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold py-3 px-8 rounded-lg transition-all duration-300"
-            >
-              View Pricing
-            </Link>
+          <div className="text-center">
+            <button className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105">
+              Start Creating
+            </button>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </>
   );
-}
+};
+
+export default AIAutonomousCreativeDirector;

@@ -1,6 +1,4 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Star, Clock, MapPin, Users, TrendingUp, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 interface ServiceCardProps {
@@ -47,14 +45,14 @@ export function EnhancedServiceCard({ service, onViewDetails, onRequestQuote }: 
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
+        ease: "easeOut" as const
       }
     },
     hover: {
       y: -8,
       transition: {
         duration: 0.3,
-        ease: "easeOut"
+        ease: "easeOut" as const
       }
     }
   };

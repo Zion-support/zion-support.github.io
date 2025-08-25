@@ -1,240 +1,209 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ChartBarIcon,
   CogIcon,
+  ExclamationTriangleIcon,
+  CheckCircleIcon,
+  InformationCircleIcon,
   XMarkIcon,
   ArrowUpIcon,
-  CheckCircleIcon,
-  ExclamationTriangleIcon,
-  InformationCircleIcon,
-  WrenchScrewdriverIcon,
-  RocketLaunchIcon,
+  ArrowDownIcon,
+  MinusIcon,
   EyeIcon,
+  ClockIcon,
   GlobeAltIcon,
-  DocumentTextIcon,
-  LinkIcon,
-  AdjustmentsHorizontalIcon
+  DevicePhoneMobileIcon,
+  ComputerDesktopIcon
 } from '@heroicons/react/24/outline';
 
-interface ImprovementMetrics {
-  accessibility: number;
-  contentQuality: number;
-  linkHealth: number;
-  performance: number;
-  seo: number;
-  overall: number;
+interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
+  timeToInteractive: number;
 }
 
-interface ImprovementAction {
-  id: string;
-  title: string;
-  description: string;
-  priority: 'low' | 'medium' | 'high' | 'critical';
-  category: 'accessibility' | 'content' | 'links' | 'performance' | 'seo';
-  status: 'pending' | 'in-progress' | 'completed' | 'failed';
-  impact: number;
-  estimatedTime: string;
-  automated: boolean;
+interface SEOAnalysis {
+  score: number;
+  issues: string[];
+  suggestions: string[];
+  metaTags: {
+    title: boolean;
+    description: boolean;
+    keywords: boolean;
+    canonical: boolean;
+    ogTags: boolean;
+    twitterTags: boolean;
+  };
+}
+
+interface AccessibilityReport {
+  score: number;
+  issues: string[];
+  wcagCompliance: 'A' | 'AA' | 'AAA' | 'Non-Compliant';
+  criticalIssues: number;
+  warnings: number;
 }
 
 interface WebsiteImprovementDashboardProps {
   className?: string;
-  showMetrics?: boolean;
-  autoRefresh?: boolean;
+  showOnLoad?: boolean;
 }
 
-export const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = ({
+const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = ({
   className = '',
-  showMetrics = true,
-  autoRefresh = true
+  showOnLoad = false
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState<'overview' | 'metrics' | 'actions' | 'tools' | 'reports'>('overview');
-  const [metrics, setMetrics] = useState<ImprovementMetrics>({
-    accessibility: 85,
-    contentQuality: 72,
-    linkHealth: 68,
-    performance: 78,
-    seo: 75,
-    overall: 76
+  const [isOpen, setIsOpen] = useState(showOnLoad);
+  const [activeTab, setActiveTab] = useState<'overview' | 'performance' | 'seo' | 'accessibility' | 'recommendations'>('overview');
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    firstContentfulPaint: 0,
+    largestContentfulPaint: 0,
+    cumulativeLayoutShift: 0,
+    firstInputDelay: 0,
+    timeToInteractive: 0
   });
-  
-  const [actions, setActions] = useState<ImprovementAction[]>([
-    {
-      id: 'fix-broken-links',
-      title: 'Fix Broken Links',
-      description: 'Resolve 278 broken internal and external links',
-      priority: 'critical',
-      category: 'links',
-      status: 'pending',
-      impact: 25,
-      estimatedTime: '2-3 hours',
-      automated: true
-    },
-    {
-      id: 'improve-content',
-      title: 'Enhance Content Quality',
-      description: 'Improve content structure and readability',
-      priority: 'high',
-      category: 'content',
-      status: 'pending',
-      impact: 20,
-      estimatedTime: '4-6 hours',
-      automated: false
-    },
-    {
-      id: 'accessibility-audit',
-      title: 'Accessibility Audit',
-      description: 'Ensure WCAG compliance and improve accessibility',
-      priority: 'high',
-      category: 'accessibility',
-      status: 'pending',
-      impact: 18,
-      estimatedTime: '3-4 hours',
-      automated: true
-    },
-    {
-      id: 'seo-optimization',
-      title: 'SEO Optimization',
-      description: 'Improve meta tags, structured data, and content optimization',
-      priority: 'medium',
-      category: 'seo',
-      status: 'pending',
-      impact: 15,
-      estimatedTime: '2-3 hours',
-      automated: true
-    },
-    {
-      id: 'performance-optimization',
-      title: 'Performance Optimization',
-      description: 'Optimize loading speed and Core Web Vitals',
-      priority: 'medium',
-      category: 'performance',
-      status: 'pending',
-      impact: 12,
-      estimatedTime: '3-4 hours',
-      automated: true
+  const [seoAnalysis, setSeoAnalysis] = useState<SEOAnalysis>({
+    score: 0,
+    issues: [],
+    suggestions: [],
+    metaTags: {
+      title: false,
+      description: false,
+      keywords: false,
+      canonical: false,
+      ogTags: false,
+      twitterTags: false
     }
-  ]);
+  });
+  const [accessibilityReport, setAccessibilityReport] = useState<AccessibilityReport>({
+    score: 0,
+    issues: [],
+    wcagCompliance: 'Non-Compliant',
+    criticalIssues: 0,
+    warnings: 0
+  });
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
 
-  const [isRefreshing, setIsRefreshing] = useState(false);
-
-  // Refresh metrics
-  const refreshMetrics = async () => {
-    setIsRefreshing(true);
+  // Analyze website performance
+  const analyzePerformance = useCallback(async () => {
+    setIsAnalyzing(true);
     
-    // Simulate metrics refresh
+    // Simulate performance analysis
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    // Mock performance data (in a real app, you'd use Web Vitals API)
+    const mockMetrics: PerformanceMetrics = {
+      loadTime: Math.random() * 3000 + 1000, // 1-4 seconds
+      firstContentfulPaint: Math.random() * 2000 + 500, // 0.5-2.5 seconds
+      largestContentfulPaint: Math.random() * 3000 + 1000, // 1-4 seconds
+      cumulativeLayoutShift: Math.random() * 0.1, // 0-0.1
+      firstInputDelay: Math.random() * 100 + 50, // 50-150ms
+      timeToInteractive: Math.random() * 4000 + 2000 // 2-6 seconds
+    };
+    
+    setMetrics(mockMetrics);
+    setIsAnalyzing(false);
+  }, []);
+
+  // Analyze SEO
+  const analyzeSEO = useCallback(async () => {
+    setIsAnalyzing(true);
+    
     await new Promise(resolve => setTimeout(resolve, 1500));
     
-    // Update metrics with some variation
-    setMetrics(prev => ({
-      accessibility: Math.max(0, Math.min(100, prev.accessibility + (Math.random() - 0.5) * 10)),
-      contentQuality: Math.max(0, Math.min(100, prev.contentQuality + (Math.random() - 0.5) * 8)),
-      linkHealth: Math.max(0, Math.min(100, prev.linkHealth + (Math.random() - 0.5) * 12)),
-      performance: Math.max(0, Math.min(100, prev.performance + (Math.random() - 0.5) * 6)),
-      seo: Math.max(0, Math.min(100, prev.seo + (Math.random() - 0.5) * 8)),
-      overall: 0
-    }));
+    // Mock SEO analysis
+    const mockSEO: SEOAnalysis = {
+      score: Math.floor(Math.random() * 40) + 60, // 60-100
+      issues: [
+        'Missing meta description on some pages',
+        'Some images lack alt text',
+        'Heading structure could be improved'
+      ],
+      suggestions: [
+        'Add structured data markup',
+        'Optimize page titles for better CTR',
+        'Improve internal linking structure'
+      ],
+      metaTags: {
+        title: true,
+        description: Math.random() > 0.3,
+        keywords: Math.random() > 0.5,
+        canonical: true,
+        ogTags: Math.random() > 0.2,
+        twitterTags: Math.random() > 0.4
+      }
+    };
+    
+    setSeoAnalysis(mockSEO);
+    setIsAnalyzing(false);
+  }, []);
 
-    // Recalculate overall score
-    setTimeout(() => {
-      setMetrics(prev => ({
-        ...prev,
-        overall: Math.round((prev.accessibility + prev.contentQuality + prev.linkHealth + prev.performance + prev.seo) / 5)
-      }));
-    }, 100);
+  // Analyze accessibility
+  const analyzeAccessibility = useCallback(async () => {
+    setIsAnalyzing(true);
+    
+    await new Promise(resolve => setTimeout(resolve, 1800));
+    
+    // Mock accessibility analysis
+    const mockAccessibility: AccessibilityReport = {
+      score: Math.floor(Math.random() * 30) + 70, // 70-100
+      issues: [
+        'Some form controls lack proper labels',
+        'Color contrast could be improved',
+        'Keyboard navigation needs enhancement'
+      ],
+      wcagCompliance: Math.random() > 0.7 ? 'AA' : Math.random() > 0.4 ? 'A' : 'Non-Compliant',
+      criticalIssues: Math.floor(Math.random() * 3),
+      warnings: Math.floor(Math.random() * 5) + 1
+    };
+    
+    setAccessibilityReport(mockAccessibility);
+    setIsAnalyzing(false);
+  }, []);
 
-    setIsRefreshing(false);
+  // Run comprehensive analysis
+  const runFullAnalysis = useCallback(async () => {
+    await Promise.all([
+      analyzePerformance(),
+      analyzeSEO(),
+      analyzeAccessibility()
+    ]);
+  }, [analyzePerformance, analyzeSEO, analyzeAccessibility]);
+
+  // Get performance grade
+  const getPerformanceGrade = (metric: number, thresholds: { good: number; needsImprovement: number }) => {
+    if (metric <= thresholds.good) return { grade: 'A', color: 'text-green-600', bgColor: 'bg-green-100' };
+    if (metric <= thresholds.needsImprovement) return { grade: 'B', color: 'text-yellow-600', bgColor: 'bg-yellow-100' };
+    return { grade: 'C', color: 'text-red-600', bgColor: 'bg-red-100' };
   };
 
-  // Execute improvement action
-  const executeAction = async (actionId: string) => {
-    setActions(prev => prev.map(action => 
-      action.id === actionId 
-        ? { ...action, status: 'in-progress' }
-        : action
-    ));
-
-    // Simulate action execution
-    await new Promise(resolve => setTimeout(resolve, 2000 + Math.random() * 3000));
-
-    setActions(prev => prev.map(action => 
-      action.id === actionId 
-        ? { ...action, status: 'completed' }
-        : action
-    ));
-
-    // Refresh metrics after action completion
-    setTimeout(refreshMetrics, 500);
+  // Get trend indicator
+  const getTrendIndicator = (value: number, previousValue: number) => {
+    if (value < previousValue) return { icon: ArrowUpIcon, color: 'text-green-600', text: 'Improving' };
+    if (value > previousValue) return { icon: ArrowDownIcon, color: 'text-red-600', text: 'Declining' };
+    return { icon: MinusIcon, color: 'text-gray-600', text: 'Stable' };
   };
 
-  // Auto-refresh metrics
   useEffect(() => {
-    if (autoRefresh) {
-      const interval = setInterval(refreshMetrics, 30000); // Refresh every 30 seconds
-      return () => clearInterval(interval);
+    if (showOnLoad) {
+      runFullAnalysis();
     }
-  }, [autoRefresh]);
-
-  // Get priority color
-  const getPriorityColor = (priority: string) => {
-    switch (priority) {
-      case 'critical': return 'text-red-600 bg-red-100 dark:bg-red-900/30';
-      case 'high': return 'text-orange-600 bg-orange-100 dark:bg-orange-900/30';
-      case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';
-      case 'low': return 'text-blue-600 bg-blue-100 dark:bg-blue-900/30';
-      default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30';
-    }
-  };
-
-  // Get status color
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'completed': return 'text-green-600 bg-green-100 dark:bg-green-900/30';
-      case 'in-progress': return 'text-blue-600 bg-blue-100 dark:bg-blue-900/30';
-      case 'failed': return 'text-red-600 bg-red-100 dark:bg-red-900/30';
-      default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30';
-    }
-  };
-
-  // Get category icon
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'accessibility': return <AdjustmentsHorizontalIcon className="w-4 h-4" />;
-      case 'content': return <DocumentTextIcon className="w-4 h-4" />;
-      case 'links': return <LinkIcon className="w-4 h-4" />;
-      case 'performance': return <RocketLaunchIcon className="w-4 h-4" />;
-      case 'seo': return <GlobeAltIcon className="w-4 h-4" />;
-      default: return <CogIcon className="w-4 h-4" />;
-    }
-  };
-
-  // Get score color
-  const getScoreColor = (score: number) => {
-    if (score >= 80) return 'text-green-600';
-    if (score >= 60) return 'text-yellow-600';
-    return 'text-red-600';
-  };
-
-  // Get score background color
-  const getScoreBgColor = (score: number) => {
-    if (score >= 80) return 'bg-green-100 dark:bg-green-900/20';
-    if (score >= 60) return 'bg-yellow-100 dark:bg-yellow-900/20';
-    return 'bg-red-100 dark:bg-red-900/20';
-  };
+  }, [showOnLoad, runFullAnalysis]);
 
   return (
     <>
       {/* Dashboard Toggle Button */}
       <motion.button
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
+        onClick={() => setIsOpen(!isOpen)}
+        className={`fixed top-4 left-4 z-50 p-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full shadow-lg transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-indigo-300 ${className}`}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        onClick={() => setIsOpen(!isOpen)}
-        className={`fixed bottom-44 right-4 z-50 w-14 h-14 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${className}`}
-        aria-label="Website Improvement Dashboard"
+        aria-label="Website improvement dashboard"
         aria-expanded={isOpen}
       >
         <ChartBarIcon className="w-6 h-6" />
@@ -244,371 +213,389 @@ export const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardPr
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.8, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.8, y: 20 }}
-            className="fixed bottom-44 right-4 z-40 w-[28rem] bg-white dark:bg-gray-900 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700"
+            initial={{ opacity: 0, x: -400 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -400 }}
+            className="fixed top-4 left-20 z-40 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 max-h-[90vh] overflow-hidden"
           >
             {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
-              <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
-                Website Improvement Dashboard
-              </h2>
+            <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700 bg-gradient-to-r from-indigo-500 to-purple-600 text-white">
+              <div className="flex items-center gap-2">
+                <ChartBarIcon className="w-6 h-6" />
+                <h2 className="text-lg font-semibold">
+                  Website Improvement Dashboard
+                </h2>
+              </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+                className="text-white/80 hover:text-white transition-colors"
+                aria-label="Close dashboard"
               >
                 <XMarkIcon className="w-5 h-5" />
               </button>
             </div>
 
             {/* Tabs */}
-            <div className="flex border-b border-gray-200 dark:border-gray-700">
-              {['overview', 'metrics', 'actions', 'tools', 'reports'].map((tab) => (
+            <div className="flex border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">
+              {[
+                { id: 'overview', label: 'Overview', icon: ChartBarIcon },
+                { id: 'performance', label: 'Performance', icon: CogIcon },
+                { id: 'seo', label: 'SEO', icon: GlobeAltIcon },
+                { id: 'accessibility', label: 'Accessibility', icon: EyeIcon },
+                { id: 'recommendations', label: 'Actions', icon: InformationCircleIcon }
+              ].map(tab => (
                 <button
-                  key={tab}
-                  onClick={() => setActiveTab(tab as any)}
-                  className={`flex-1 px-4 py-2 text-sm font-medium transition-colors ${
-                    activeTab === tab
-                      ? 'text-indigo-600 border-b-2 border-indigo-600'
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id as any)}
+                  className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 text-xs font-medium transition-colors ${
+                    activeTab === tab.id
+                      ? 'text-indigo-600 bg-white dark:bg-gray-900 border-b-2 border-indigo-600'
                       : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'
                   }`}
                 >
-                  {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                  <tab.icon className="w-4 h-4" />
+                  {tab.label}
                 </button>
               ))}
             </div>
 
             {/* Content */}
-            <div className="p-4 max-h-96 overflow-y-auto">
-              {/* Overview Tab */}
+            <div className="p-4 overflow-y-auto max-h-[calc(90vh-120px)]">
               {activeTab === 'overview' && (
                 <div className="space-y-4">
-                  {/* Overall Score */}
-                  <div className={`p-6 rounded-lg ${getScoreBgColor(metrics.overall)}`}>
-                    <div className="text-center">
-                      <div className={`text-4xl font-bold ${getScoreColor(metrics.overall)}`}>
-                        {metrics.overall}/100
-                      </div>
-                      <div className="text-lg text-gray-600 dark:text-gray-400 mt-1">
-                        Overall Website Score
-                      </div>
-                      <div className="text-sm text-gray-500 dark:text-gray-400 mt-2">
-                        Based on accessibility, content, links, performance, and SEO
-                      </div>
-                    </div>
-                  </div>
-
                   {/* Quick Stats */}
                   <div className="grid grid-cols-2 gap-3">
-                    <div className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-center">
+                    <div className="bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg">
                       <div className="text-2xl font-bold text-blue-600">
-                        {actions.filter(a => a.status === 'completed').length}
+                        {Math.round(metrics.loadTime / 1000)}s
                       </div>
-                      <div className="text-sm text-blue-600 dark:text-blue-400">
-                        Completed
-                      </div>
+                      <div className="text-xs text-blue-600">Load Time</div>
                     </div>
-                    
-                    <div className="p-3 bg-orange-50 dark:bg-orange-900/20 rounded-lg text-center">
+                    <div className="bg-green-50 dark:bg-green-900/20 p-3 rounded-lg">
+                      <div className="text-2xl font-bold text-green-600">
+                        {seoAnalysis.score}
+                      </div>
+                      <div className="text-xs text-green-600">SEO Score</div>
+                    </div>
+                    <div className="bg-purple-50 dark:bg-purple-900/20 p-3 rounded-lg">
+                      <div className="text-2xl font-bold text-purple-600">
+                        {accessibilityReport.score}
+                      </div>
+                      <div className="text-xs text-purple-600">Accessibility</div>
+                    </div>
+                    <div className="bg-orange-50 dark:bg-orange-900/20 p-3 rounded-lg">
                       <div className="text-2xl font-bold text-orange-600">
-                        {actions.filter(a => a.status === 'pending').length}
+                        {accessibilityReport.wcagCompliance}
                       </div>
-                      <div className="text-sm text-orange-600 dark:text-orange-400">
-                        Pending
-                      </div>
+                      <div className="text-xs text-orange-600">WCAG Level</div>
                     </div>
                   </div>
 
-                  {/* Priority Actions */}
+                  {/* Action Button */}
+                  <button
+                    onClick={runFullAnalysis}
+                    disabled={isAnalyzing}
+                    className="w-full bg-indigo-600 hover:bg-indigo-700 disabled:bg-gray-400 text-white py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
+                  >
+                    {isAnalyzing ? (
+                      <>
+                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                        Analyzing...
+                      </>
+                    ) : (
+                      <>
+                        <ChartBarIcon className="w-4 h-4" />
+                        Run Full Analysis
+                      </>
+                    )}
+                  </button>
+
+                  {/* Recent Activity */}
                   <div>
-                    <h3 className="font-medium text-gray-900 dark:text-white mb-3">
-                      Priority Actions
+                    <h3 className="text-sm font-medium text-gray-900 dark:text-white mb-3">
+                      Recent Activity
                     </h3>
-                    <div className="space-y-2">
-                      {actions
-                        .filter(action => action.priority === 'critical' || action.priority === 'high')
-                        .slice(0, 3)
-                        .map(action => (
-                          <div
-                            key={action.id}
-                            className="p-3 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700"
-                          >
-                            <div className="flex items-center justify-between">
-                              <div>
-                                <h4 className="font-medium text-gray-900 dark:text-white text-sm">
-                                  {action.title}
-                                </h4>
-                                <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
-                                  {action.description}
-                                </p>
-                              </div>
-                              <span className={`text-xs px-2 py-1 rounded ${getPriorityColor(action.priority)}`}>
-                                {action.priority.charAt(0).toUpperCase() + action.priority.slice(1)}
-                              </span>
+                    <div className="space-y-2 text-xs text-gray-600 dark:text-gray-400">
+                      <div className="flex items-center gap-2">
+                        <CheckCircleIcon className="w-3 h-3 text-green-500" />
+                        Performance analysis completed
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <ExclamationTriangleIcon className="w-3 h-3 text-yellow-500" />
+                        SEO issues detected
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <InformationCircleIcon className="w-3 h-3 text-blue-500" />
+                        Accessibility scan in progress
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {activeTab === 'performance' && (
+                <div className="space-y-4">
+                  <h3 className="text-sm font-medium text-gray-900 dark:text-white">
+                    Performance Metrics
+                  </h3>
+                  
+                  {/* Core Web Vitals */}
+                  <div className="space-y-3">
+                    {[
+                      {
+                        label: 'Load Time',
+                        value: metrics.loadTime,
+                        unit: 'ms',
+                        thresholds: { good: 2000, needsImprovement: 4000 }
+                      },
+                      {
+                        label: 'First Contentful Paint',
+                        value: metrics.firstContentfulPaint,
+                        unit: 'ms',
+                        thresholds: { good: 1000, needsImprovement: 2000 }
+                      },
+                      {
+                        label: 'Largest Contentful Paint',
+                        value: metrics.largestContentfulPaint,
+                        unit: 'ms',
+                        thresholds: { good: 2000, needsImprovement: 4000 }
+                      },
+                      {
+                        label: 'Cumulative Layout Shift',
+                        value: metrics.cumulativeLayoutShift,
+                        unit: '',
+                        thresholds: { good: 0.1, needsImprovement: 0.25 }
+                      },
+                      {
+                        label: 'First Input Delay',
+                        value: metrics.firstInputDelay,
+                        unit: 'ms',
+                        thresholds: { good: 100, needsImprovement: 300 }
+                      }
+                    ].map((metric, index) => {
+                      const grade = getPerformanceGrade(metric.value, metric.thresholds);
+                      return (
+                        <div key={index} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                          <div>
+                            <div className="text-sm font-medium text-gray-900 dark:text-white">
+                              {metric.label}
                             </div>
+                            <div className="text-xs text-gray-500 dark:text-gray-400">
+                              {Math.round(metric.value)} {metric.unit}
+                            </div>
+                          </div>
+                          <div className={`px-2 py-1 rounded text-xs font-medium ${grade.bgColor} ${grade.color}`}>
+                            {grade.grade}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {activeTab === 'seo' && (
+                <div className="space-y-4">
+                  <h3 className="text-sm font-medium text-gray-900 dark:text-white">
+                    SEO Analysis
+                  </h3>
+                  
+                  {/* SEO Score */}
+                  <div className="text-center p-4 bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-lg">
+                    <div className="text-3xl font-bold text-green-600">
+                      {seoAnalysis.score}/100
+                    </div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400">
+                      SEO Score
+                    </div>
+                  </div>
+                  
+                  {/* Meta Tags Status */}
+                  <div>
+                    <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      Meta Tags Status
+                    </h4>
+                    <div className="space-y-2">
+                      {Object.entries(seoAnalysis.metaTags).map(([tag, present]) => (
+                        <div key={tag} className="flex items-center justify-between">
+                          <span className="text-xs text-gray-600 dark:text-gray-400 capitalize">
+                            {tag.replace(/([A-Z])/g, ' $1').trim()}
+                          </span>
+                          {present ? (
+                            <CheckCircleIcon className="w-4 h-4 text-green-500" />
+                          ) : (
+                            <ExclamationTriangleIcon className="w-4 h-4 text-red-500" />
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {/* Issues */}
+                  {seoAnalysis.issues.length > 0 && (
+                    <div>
+                      <h4 className="text-sm font-medium text-red-600 mb-2">
+                        Issues Found
+                      </h4>
+                      <div className="space-y-2">
+                        {seoAnalysis.issues.map((issue, index) => (
+                          <div key={index} className="text-xs text-red-600 bg-red-50 dark:bg-red-900/20 p-2 rounded">
+                            {issue}
                           </div>
                         ))}
-                    </div>
-                  </div>
-
-                  {/* Refresh Button */}
-                  <button
-                    onClick={refreshMetrics}
-                    disabled={isRefreshing}
-                    className="w-full bg-indigo-600 hover:bg-indigo-700 disabled:bg-gray-400 text-white px-4 py-2 rounded-lg transition-colors"
-                  >
-                    {isRefreshing ? 'Refreshing...' : 'Refresh Metrics'}
-                  </button>
-                </div>
-              )}
-
-              {/* Metrics Tab */}
-              {activeTab === 'metrics' && (
-                <div className="space-y-4">
-                  {/* Individual Metrics */}
-                  {Object.entries(metrics).map(([key, value]) => (
-                    key !== 'overall' && (
-                      <div key={key} className={`p-4 rounded-lg ${getScoreBgColor(value)}`}>
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-3">
-                            <div className="w-10 h-10 bg-white dark:bg-gray-800 rounded-lg flex items-center justify-center">
-                              {key === 'accessibility' && <AdjustmentsHorizontalIcon className="w-5 h-5 text-blue-600" />}
-                              {key === 'contentQuality' && <DocumentTextIcon className="w-5 h-5 text-purple-600" />}
-                              {key === 'linkHealth' && <LinkIcon className="w-5 h-5 text-orange-600" />}
-                              {key === 'performance' && <RocketLaunchIcon className="w-5 h-5 text-green-600" />}
-                              {key === 'seo' && <GlobeAltIcon className="w-5 h-5 text-indigo-600" />}
-                            </div>
-                            <div>
-                              <h3 className="font-medium text-gray-900 dark:text-white capitalize">
-                                {key.replace(/([A-Z])/g, ' $1').trim()}
-                              </h3>
-                              <p className="text-sm text-gray-600 dark:text-gray-400">
-                                {value >= 80 ? 'Excellent' : value >= 60 ? 'Good' : 'Needs Improvement'}
-                              </p>
-                            </div>
-                          </div>
-                          <div className={`text-3xl font-bold ${getScoreColor(value)}`}>
-                            {value}
-                          </div>
-                        </div>
-                        
-                        {/* Progress Bar */}
-                        <div className="mt-3 w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                          <div 
-                            className={`h-2 rounded-full transition-all duration-500 ${
-                              value >= 80 ? 'bg-green-500' : value >= 60 ? 'bg-yellow-500' : 'bg-red-500'
-                            }`}
-                            style={{ width: `${value}%` }}
-                          />
-                        </div>
-                      </div>
-                    )
-                  ))}
-
-                  {/* Improvement Suggestions */}
-                  <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-                    <h3 className="font-medium text-blue-900 dark:text-blue-100 mb-2">
-                      Improvement Suggestions
-                    </h3>
-                    <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
-                      {metrics.accessibility < 80 && (
-                        <li>• Run accessibility audit and fix WCAG compliance issues</li>
-                      )}
-                      {metrics.contentQuality < 80 && (
-                        <li>• Enhance content structure and readability</li>
-                      )}
-                      {metrics.linkHealth < 80 && (
-                        <li>• Fix broken links and improve internal linking</li>
-                      )}
-                      {metrics.performance < 80 && (
-                        <li>• Optimize loading speed and Core Web Vitals</li>
-                      )}
-                      {metrics.seo < 80 && (
-                        <li>• Improve meta tags and content optimization</li>
-                      )}
-                    </ul>
-                  </div>
-                </div>
-              )}
-
-              {/* Actions Tab */}
-              {activeTab === 'actions' && (
-                <div className="space-y-4">
-                  {actions.map(action => (
-                    <div
-                      key={action.id}
-                      className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:border-indigo-300 dark:hover:border-indigo-600 transition-colors"
-                    >
-                      <div className="flex items-start justify-between">
-                        <div className="flex items-start gap-3 flex-1">
-                          <div className="w-8 h-8 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center">
-                            {getCategoryIcon(action.category)}
-                          </div>
-                          
-                          <div className="flex-1">
-                            <h3 className="font-medium text-gray-900 dark:text-white">
-                              {action.title}
-                            </h3>
-                            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                              {action.description}
-                            </p>
-                            
-                            <div className="flex items-center gap-2 mt-2">
-                              <span className={`text-xs px-2 py-1 rounded ${getPriorityColor(action.priority)}`}>
-                                {action.priority.charAt(0).toUpperCase() + action.priority.slice(1)}
-                              </span>
-                              <span className={`text-xs px-2 py-1 rounded ${getStatusColor(action.status)}`}>
-                                {action.status.replace('-', ' ').charAt(0).toUpperCase() + action.status.replace('-', ' ').slice(1)}
-                              </span>
-                              <span className="text-xs px-2 py-1 rounded bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300">
-                                +{action.impact} Impact
-                              </span>
-                              {action.automated && (
-                                <span className="text-xs px-2 py-1 rounded bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300">
-                                  Automated
-                                </span>
-                              )}
-                            </div>
-                            
-                            <div className="text-xs text-gray-500 dark:text-gray-400 mt-2">
-                              Estimated time: {action.estimatedTime}
-                            </div>
-                          </div>
-                        </div>
-                        
-                        {action.status === 'pending' && (
-                          <button
-                            onClick={() => executeAction(action.id)}
-                            className="px-3 py-1 bg-indigo-600 hover:bg-indigo-700 text-white text-xs rounded-lg transition-colors"
-                          >
-                            Execute
-                          </button>
-                        )}
-                        
-                        {action.status === 'completed' && (
-                          <CheckCircleIcon className="w-6 h-6 text-green-600" />
-                        )}
-                        
-                        {action.status === 'in-progress' && (
-                          <div className="w-6 h-6 border-2 border-indigo-600 border-t-transparent rounded-full animate-spin" />
-                        )}
                       </div>
                     </div>
-                  ))}
+                  )}
+                  
+                  {/* Suggestions */}
+                  {seoAnalysis.suggestions.length > 0 && (
+                    <div>
+                      <h4 className="text-sm font-medium text-blue-600 mb-2">
+                        Suggestions
+                      </h4>
+                      <div className="space-y-2">
+                        {seoAnalysis.suggestions.map((suggestion, index) => (
+                          <div key={index} className="text-xs text-blue-600 bg-blue-50 dark:bg-blue-900/20 p-2 rounded">
+                            {suggestion}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
               )}
 
-              {/* Tools Tab */}
-              {activeTab === 'tools' && (
+              {activeTab === 'accessibility' && (
                 <div className="space-y-4">
-                  <div className="text-center text-gray-500 dark:text-gray-400">
-                    <WrenchScrewdriverIcon className="w-12 h-12 mx-auto mb-3 text-indigo-500" />
-                    <p>Available improvement tools</p>
+                  <h3 className="text-sm font-medium text-gray-900 dark:text-white">
+                    Accessibility Report
+                  </h3>
+                  
+                  {/* Accessibility Score */}
+                  <div className="text-center p-4 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-lg">
+                    <div className="text-3xl font-bold text-purple-600">
+                      {accessibilityReport.score}/100
+                    </div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400">
+                      Accessibility Score
+                    </div>
+                    <div className="text-xs text-purple-600 mt-1">
+                      WCAG {accessibilityReport.wcagCompliance} Compliance
+                    </div>
                   </div>
-
+                  
+                  {/* Issues Summary */}
                   <div className="grid grid-cols-2 gap-3">
-                    <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg text-center">
-                      <AdjustmentsHorizontalIcon className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                      <h3 className="font-medium text-blue-900 dark:text-blue-100 text-sm">
-                        Accessibility
-                      </h3>
-                      <p className="text-xs text-blue-800 dark:text-blue-200 mt-1">
-                        WCAG compliance checker
-                      </p>
+                    <div className="bg-red-50 dark:bg-red-900/20 p-3 rounded-lg text-center">
+                      <div className="text-xl font-bold text-red-600">
+                        {accessibilityReport.criticalIssues}
+                      </div>
+                      <div className="text-xs text-red-600">Critical Issues</div>
                     </div>
-
-                    <div className="p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg text-center">
-                      <DocumentTextIcon className="w-8 h-8 text-purple-600 mx-auto mb-2" />
-                      <h3 className="font-medium text-purple-900 dark:text-purple-100 text-sm">
-                        Content Quality
-                      </h3>
-                      <p className="text-xs text-purple-800 dark:text-purple-200 mt-1">
-                        Content analysis tool
-                      </p>
-                    </div>
-
-                    <div className="p-4 bg-orange-50 dark:bg-orange-900/20 rounded-lg text-center">
-                      <LinkIcon className="w-8 h-8 text-orange-600 mx-auto mb-2" />
-                      <h3 className="font-medium text-orange-900 dark:text-orange-100 text-sm">
-                        Link Health
-                      </h3>
-                      <p className="text-xs text-orange-800 dark:text-orange-200 mt-1">
-                        Broken link checker
-                      </p>
-                    </div>
-
-                    <div className="p-4 bg-green-50 dark:bg-green-900/20 rounded-lg text-center">
-                      <RocketLaunchIcon className="w-8 h-8 text-green-600 mx-auto mb-2" />
-                      <h3 className="font-medium text-green-900 dark:text-green-100 text-sm">
-                        Performance
-                      </h3>
-                      <p className="text-xs text-green-800 dark:text-green-200 mt-1">
-                        Speed optimization
-                      </p>
+                    <div className="bg-yellow-50 dark:bg-yellow-900/20 p-3 rounded-lg text-center">
+                      <div className="text-xl font-bold text-yellow-600">
+                        {accessibilityReport.warnings}
+                      </div>
+                      <div className="text-xs text-yellow-600">Warnings</div>
                     </div>
                   </div>
-
-                  <div className="text-center text-sm text-gray-500 dark:text-gray-400">
-                    <p>These tools are available as floating buttons on the right side of the page</p>
-                  </div>
+                  
+                  {/* Issues List */}
+                  {accessibilityReport.issues.length > 0 && (
+                    <div>
+                      <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                        Issues Found
+                      </h4>
+                      <div className="space-y-2">
+                        {accessibilityReport.issues.map((issue, index) => (
+                          <div key={index} className="text-xs text-gray-600 bg-gray-50 dark:bg-gray-800 p-2 rounded">
+                            {issue}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
               )}
 
-              {/* Reports Tab */}
-              {activeTab === 'reports' && (
+              {activeTab === 'recommendations' && (
                 <div className="space-y-4">
-                  <div className="text-center text-gray-500 dark:text-gray-400">
-                    <ChartBarIcon className="w-12 h-12 mx-auto mb-3 text-indigo-500" />
-                    <p>Generate and export improvement reports</p>
-                  </div>
-
+                  <h3 className="text-sm font-medium text-gray-900 dark:text-white">
+                    Actionable Recommendations
+                  </h3>
+                  
+                  {/* Priority Actions */}
                   <div className="space-y-3">
-                    <button className="w-full p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg text-left hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors">
-                      <div className="flex items-center gap-3">
-                        <DocumentTextIcon className="w-5 h-5 text-blue-600" />
-                        <div>
-                          <h3 className="font-medium text-blue-900 dark:text-blue-100 text-sm">
-                            Comprehensive Website Report
-                          </h3>
-                          <p className="text-xs text-blue-800 dark:text-blue-200">
-                            Full analysis with all metrics and recommendations
-                          </p>
+                    {[
+                      {
+                        priority: 'High',
+                        title: 'Fix Critical Accessibility Issues',
+                        description: 'Address WCAG compliance violations',
+                        impact: 'High',
+                        effort: 'Medium'
+                      },
+                      {
+                        priority: 'High',
+                        title: 'Optimize Core Web Vitals',
+                        description: 'Improve page load performance',
+                        impact: 'High',
+                        effort: 'High'
+                      },
+                      {
+                        priority: 'Medium',
+                        title: 'Enhance SEO Meta Tags',
+                        description: 'Add missing meta descriptions and titles',
+                        impact: 'Medium',
+                        effort: 'Low'
+                      },
+                      {
+                        priority: 'Medium',
+                        title: 'Improve Image Optimization',
+                        description: 'Add alt text and compress images',
+                        impact: 'Medium',
+                        effort: 'Low'
+                      }
+                    ].map((action, index) => (
+                      <div key={index} className="p-3 border border-gray-200 dark:border-gray-700 rounded-lg">
+                        <div className="flex items-start justify-between mb-2">
+                          <span className={`text-xs px-2 py-1 rounded font-medium ${
+                            action.priority === 'High' 
+                              ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300'
+                              : 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300'
+                          }`}>
+                            {action.priority}
+                          </span>
+                          <div className="text-right text-xs">
+                            <div className="text-gray-500 dark:text-gray-400">Impact: {action.impact}</div>
+                            <div className="text-gray-500 dark:text-gray-400">Effort: {action.effort}</div>
+                          </div>
                         </div>
+                        <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-1">
+                          {action.title}
+                        </h4>
+                        <p className="text-xs text-gray-600 dark:text-gray-400">
+                          {action.description}
+                        </p>
                       </div>
-                    </button>
-
-                    <button className="w-full p-3 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-700 rounded-lg text-left hover:bg-green-100 dark:hover:bg-green-900/30 transition-colors">
-                      <div className="flex items-center gap-3">
-                        <CheckCircleIcon className="w-5 h-5 text-green-600" />
-                        <div>
-                          <h3 className="font-medium text-green-900 dark:text-green-100 text-sm">
-                            Progress Report
-                          </h3>
-                          <p className="text-xs text-green-800 dark:text-green-200">
-                            Track improvements over time
-                          </p>
-                        </div>
-                      </div>
-                    </button>
-
-                    <button className="w-full p-3 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-700 rounded-lg text-left hover:bg-purple-100 dark:hover:bg-purple-900/30 transition-colors">
-                      <div className="flex items-center gap-3">
-                        <ExclamationTriangleIcon className="w-5 h-5 text-purple-600" />
-                        <div>
-                          <h3 className="font-medium text-purple-900 dark:text-purple-100 text-sm">
-                            Issues Summary
-                          </h3>
-                          <p className="text-xs text-purple-800 dark:text-purple-200">
-                            Prioritized list of problems to fix
-                          </p>
-                        </div>
-                      </div>
-                    </button>
+                    ))}
                   </div>
-
-                  <div className="text-center text-sm text-gray-500 dark:text-gray-400">
-                    <p>Reports can be exported in JSON, PDF, or CSV format</p>
+                  
+                  {/* Quick Actions */}
+                  <div>
+                    <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      Quick Actions
+                    </h4>
+                    <div className="space-y-2">
+                      <button className="w-full text-left text-xs bg-blue-50 hover:bg-blue-100 dark:bg-blue-900/20 dark:hover:bg-blue-900/30 text-blue-700 dark:text-blue-300 p-2 rounded transition-colors">
+                        Generate SEO Report
+                      </button>
+                      <button className="w-full text-left text-xs bg-green-50 hover:bg-green-100 dark:bg-green-900/20 dark:hover:bg-green-900/30 text-green-700 dark:text-green-300 p-2 rounded transition-colors">
+                        Export Accessibility Data
+                      </button>
+                      <button className="w-full text-left text-xs bg-purple-50 hover:bg-purple-100 dark:bg-purple-900/20 dark:hover:bg-purple-900/30 text-purple-700 dark:text-purple-300 p-2 rounded transition-colors">
+                        Schedule Performance Monitoring
+                      </button>
+                    </div>
                   </div>
                 </div>
               )}

@@ -1,6 +1,12 @@
+<<<<<<< HEAD:automation/backups/file-sync/2025-08-25T15-27-04-843Z/src/components.disabled/layout/Layout.tsx.disabled
 import React, { useState, useEffect } from 'react';
 import { Header } from '../components/header/Header';
 import { Footer } from '../components/Footer';
+=======
+import React, { useState } from 'react';
+import { Header } from '../components/Header';
+import Footer from '../components/Footer';
+>>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802:src/layout/Layout.tsx
 import { Helmet } from 'react-helmet-async';
 
 interface LayoutProps {

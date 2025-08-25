@@ -10,12 +10,11 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import { jsx as _jsx } from "react/jsx-runtime";
-import * as React from "react";
-import * as SeparatorPrimitive from "@radix-ui/react-separator";
-import { cn } from "@/lib/utils";
+import React from 'react';
+import { cn } from '@/lib/utils';
 const Separator = React.forwardRef((_a, ref) => {
-    var { className, orientation = "horizontal", decorative = true } = _a, props = __rest(_a, ["className", "orientation", "decorative"]);
-    return (_jsx(SeparatorPrimitive.Root, Object.assign({ ref: ref, decorative: decorative, orientation: orientation, className: cn("shrink-0 bg-border", orientation === "horizontal" ? "h-[1px] w-full" : "h-full w-[1px]", className) }, props)));
+    var { className, orientation = 'horizontal' } = _a, props = __rest(_a, ["className", "orientation"]);
+    return (_jsx("div", Object.assign({ ref: ref, className: cn('shrink-0 bg-border', orientation === 'horizontal' ? 'h-[1px] w-full' : 'h-full w-[1px]', className) }, props)));
 });
-Separator.displayName = SeparatorPrimitive.Root.displayName;
+Separator.displayName = 'Separator';
 export { Separator };
