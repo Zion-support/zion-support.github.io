@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react'
 
 interface Toast {
