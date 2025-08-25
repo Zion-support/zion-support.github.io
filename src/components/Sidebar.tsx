@@ -63,6 +63,14 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         { name: 'Contact Support', path: '/support', icon: Phone },
         { name: 'Status Page', path: '/status', icon: Globe }
       ]
+    },
+    {
+      title: 'Accessibility',
+      items: [
+        { name: 'Accessibility Auditor', path: '/accessibility-auditor', icon: Shield },
+        { name: 'WCAG Compliance', path: '/accessibility-auditor', icon: Shield },
+        { name: 'Mobile Accessibility', path: '/accessibility-auditor', icon: Shield }
+      ]
     }
   ];
 

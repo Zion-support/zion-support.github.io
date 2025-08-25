@@ -74,6 +74,16 @@ export function Footer() {
         { label: "Documentation", path: "/docs" },
         { label: "Support Center", path: "/support" }
       ]
+    },
+    {
+      title: "Accessibility",
+      links: [
+        { label: "Accessibility Auditor", path: "/accessibility-auditor" },
+        { label: "WCAG Compliance", path: "/accessibility-auditor" },
+        { label: "Section 508 Testing", path: "/accessibility-auditor" },
+        { label: "Mobile Accessibility", path: "/accessibility-auditor" },
+        { label: "Document Accessibility", path: "/accessibility-auditor" }
+      ]
     }
   ];
 
