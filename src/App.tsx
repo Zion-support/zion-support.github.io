@@ -73,6 +73,11 @@ const SpecializedITInfrastructure = lazy(() => import('./pages/services/Speciali
 const InnovativeMicroSaasServices = lazy(() => import('./pages/InnovativeMicroSaasServices'));
 const ComprehensiveInnovativeServices = lazy(() => import('./pages/ComprehensiveInnovativeServices'));
 
+// New Innovative Services
+const AIWorkflowAutomation = lazy(() => import('./pages/services/AIWorkflowAutomation'));
+const AICustomerExperiencePlatform = lazy(() => import('./pages/services/AICustomerExperiencePlatform'));
+const BlockchainSupplyChainTransparency = lazy(() => import('./pages/services/BlockchainSupplyChainTransparency'));
+
 // Solutions pages
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
 const HealthcareSolutions = lazy(() => import('./pages/solutions/Healthcare'));
@@ -170,6 +175,11 @@ const App = () => {
                       <Route path="/services/specialized-it-infrastructure" element={<SpecializedITInfrastructure />} />
                       <Route path="/innovative-micro-saas-services" element={<InnovativeMicroSaasServices />} />
                       <Route path="/comprehensive-innovative-services" element={<ComprehensiveInnovativeServices />} />
+                      
+                      {/* New Innovative Service Routes */}
+                      <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
+                      <Route path="/services/ai-customer-experience-platform" element={<AICustomerExperiencePlatform />} />
+                      <Route path="/services/blockchain-supply-chain-transparency" element={<BlockchainSupplyChainTransparency />} />
                       
                       {/* Solutions Routes */}
                       <Route path="/services/enterprise" element={<EnterpriseSolutions />} />
