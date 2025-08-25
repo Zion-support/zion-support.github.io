@@ -5,7 +5,7 @@ import { Check, Sparkles, Users, Building, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function FeatureHighlights() {
-  const highlightsData = [
+  const highlights = [
     {
       title: "For Talent Seekers",
       icon: <Users className="w-6 h-6" />,
