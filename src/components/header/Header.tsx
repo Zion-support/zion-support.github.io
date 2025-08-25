@@ -616,6 +616,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/95 backdrop-blur-md shadow-lg shadow-zion-purple/10"
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-da9e
 =======
@@ -1005,11 +1006,15 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
         <form onSubmit={handleSubmit} className="hidden md:block w-80 mx-4">
 =======
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/95 backdrop-blur-md shadow-lg"
+=======
+      className="sticky top-0 z-50 w-full border-b border-zion-purple/30 bg-zion-blue-dark/95 backdrop-blur-xl shadow-2xl shadow-zion-purple/10"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-099c
       style={headerStyle}
     >
-      <div className="container flex h-16 items-center px-4 sm:px-6">
+      <div className="container flex h-20 items-center px-4 sm:px-6">
         <Logo customLogo={customLogo} customColor={effectiveTheme?.primaryColor} />
 
+<<<<<<< HEAD
         {/* Desktop Navigation */}
         <nav className="ml-6 flex-1 hidden lg:flex">
           <ul className="flex space-x-8">
@@ -1066,6 +1071,13 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
         {/* Search Bar */}
         <form onSubmit={handleSubmit} className="hidden md:block w-64 mx-4">
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+=======
+        <div className="ml-8 flex-1">
+          <MainNavigation />
+        </div>
+        
+        <form onSubmit={handleSubmit} className="hidden lg:block w-72 mx-6">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-099c
           <EnhancedSearchInput
             value={query}
             onChange={setQuery}
@@ -1079,8 +1091,12 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-445a
         </form>
 
+<<<<<<< HEAD
         {/* Desktop Actions */}
         <div className="flex items-center gap-3 hidden md:flex">
+=======
+        <div className="flex items-center gap-4">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-099c
           <LanguageSelector />
           {!hideLogin && <UserMenu />}
           
@@ -1476,6 +1492,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
         </div>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
       </div>
+<<<<<<< HEAD
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
@@ -2062,6 +2079,11 @@ export function Header({ hideLogin = false, customLogo, customTheme }: HeaderPro
         </div>
       )}
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-2f34
+=======
+      
+      {/* Animated bottom border */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zion-purple to-transparent opacity-60"></div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-099c
     </header>
 =======
     </>

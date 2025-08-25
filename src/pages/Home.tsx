@@ -214,6 +214,7 @@ import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { HomePageSEO } from "@/components/SEO";
 import { HeroSection } from "@/components/HeroSection";
 =======
@@ -228,11 +229,16 @@ import { EnhancedHeroSection } from "@/components/home/EnhancedHeroSection";
 import { SEO } from "@/components/SEO";
 import { EnhancedHeroSection } from "@/components/home/EnhancedHeroSection";
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d816
+=======
+import { SEO } from "@/components/SEO";
+import { EnhancedHeroSection } from "@/components/home/EnhancedHeroSection";
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-099c
 import { QuickAccess } from "@/components/home/QuickAccess";
 import { FeatureCTAs } from "@/components/home/FeatureCTAs";
 import { FeatureHighlights } from "@/components/home/FeatureHighlights";
 import { MicroSaasShowcase } from "@/components/home/MicroSaasShowcase";
 import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -543,6 +549,9 @@ import { EnhancedServicesShowcase } from "@/components/home/EnhancedServicesShow
 =======
 import { ServicesShowcase } from "@/components/ServicesShowcase";
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-f15c
+=======
+import { EnhancedServicesShowcase } from "@/components/home/EnhancedServicesShowcase";
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-099c
 
 export default function Home() {
   const features = [
@@ -660,6 +669,7 @@ export default function Home() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         title="Zion - The Tech & AI Marketplace" 
         description="Discover top AI and tech talent, services, and equipment in one place."
         keywords="AI, technology, marketplace, services, talent"
@@ -691,6 +701,12 @@ export default function Home() {
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-445a
 =======
 >>>>>>> origin/cursor/website-audit-and-enhancement-8717
+=======
+        title="Zion Tech Group - Premier Tech & AI Marketplace" 
+        description="Discover cutting-edge AI services, enterprise IT solutions, and innovative SaaS platforms. Connect with top talent and transform your business with next-generation technology."
+        keywords="AI services, IT solutions, SaaS platforms, technology marketplace, enterprise solutions, AI consulting, cloud services, cybersecurity, digital transformation"
+        canonical="https://ziontechgroup.com/"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-099c
       />
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-73d5
 
@@ -722,6 +738,7 @@ export default function Home() {
       <ITServiceRequestHero />
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8eef
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -971,6 +988,9 @@ export default function Home() {
 =======
       <EnhancedHeroSection />
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d816
+=======
+      <EnhancedHeroSection />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-099c
       
       <QuickAccess />
       
@@ -988,6 +1008,7 @@ export default function Home() {
       
       <FeatureHighlights />
       
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1036,6 +1057,9 @@ export default function Home() {
 =======
       <ServicesShowcase />
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-f15c
+=======
+      <EnhancedServicesShowcase />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-099c
       
       <CategoriesSection />
       <ServicesShowcase />

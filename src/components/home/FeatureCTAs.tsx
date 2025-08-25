@@ -888,11 +888,20 @@ export function FeatureCTAs() {
       details: "Every talent in our directory undergoes a rigorous verification process to ensure quality, authenticity, and reliability."
     },
     {
+<<<<<<< HEAD
       title: "Services Marketplace",
       description: "Discover professional tech and AI services for your business needs, from development to consulting.",
       icon: <Code className="h-10 w-10 p-2 rounded-md bg-orange-100 text-orange-700" />,
       link: "/services",
       details: "From on-demand IT support to specialized AI development, our marketplace offers verified services with transparent pricing and reviews."
+=======
+      title: "Premium Services",
+      description: "Discover our comprehensive suite of AI-powered solutions, enterprise IT services, and innovative SaaS platforms.",
+      icon: <Zap className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />,
+      link: "/enhanced-services",
+      badge: "New",
+      details: "From AI content generation to cybersecurity assessment, our premium services drive innovation and accelerate business growth."
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-099c
     },
     {
       title: "Equipment Catalog",

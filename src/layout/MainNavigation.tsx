@@ -672,8 +672,13 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     },
     {
       key: 'services',
+<<<<<<< HEAD
       href: '/services',
       matches: (path: string) => path.startsWith('/services') || path.startsWith('/ai-services') || path.startsWith('/it-services') || path.startsWith('/digital-marketing') || path.startsWith('/business-solutions')
+=======
+      href: '/enhanced-services',
+      matches: (path: string) => path.startsWith('/services') || path.startsWith('/enhanced-services')
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-099c
     },
     {
       key: 'categories',
@@ -928,14 +933,15 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 =======
   
   return (
-    <nav className={cn("navbar ml-6 hidden md:flex", className)}>
-      <ul className="flex items-center gap-1">
+    <nav className={cn("navbar hidden lg:flex", className)}>
+      <ul className="flex items-center gap-2">
         {links.map((link) => (
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
           <li key={link.name}>
             <Link
               to={link.href}
               className={cn(
+<<<<<<< HEAD
 <<<<<<< HEAD
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-all duration-300 hover:scale-105",
                 link.matches(location.pathname)
@@ -947,9 +953,19 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   ? "bg-zion-purple/20 text-zion-cyan"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+=======
+                "inline-flex h-12 items-center justify-center rounded-xl px-6 text-sm font-medium transition-all duration-300 relative group",
+                link.matches(location.pathname)
+                  ? "bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 text-zion-cyan border border-zion-purple/30 shadow-lg shadow-zion-purple/20"
+                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan hover:scale-105"
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-099c
               )}
             >
               {link.name}
+              {link.matches(location.pathname) && (
+                <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-8 h-1 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full"></div>
+              )}
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-zion-purple/5 to-zion-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Link>
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-6b7b
@@ -1129,15 +1145,16 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             <Link
               to="/messages"
               className={cn(
-                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative",
+                "inline-flex h-12 items-center justify-center rounded-xl px-6 text-sm font-medium transition-all duration-300 relative group",
                 location.pathname === "/messages" || location.pathname === "/inbox"
-                  ? "bg-zion-purple/20 text-zion-cyan"
-                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                  ? "bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 text-zion-cyan border border-zion-purple/30 shadow-lg shadow-zion-purple/20"
+                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan hover:scale-105"
               )}
             >
-              <MessageSquare className="w-4 h-4 mr-1" />
+              <MessageSquare className="w-4 h-4 mr-2" />
               {t('nav.messages')}
               {unreadCount > 0 && (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                 <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center animate-pulse">
@@ -1147,9 +1164,13 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 =======
                 <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
 >>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-f9d2
+=======
+                <span className="absolute -top-1 -right-1 bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs rounded-full h-6 w-6 flex items-center justify-center animate-pulse">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-099c
                   {unreadCount}
                 </span>
               )}
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-zion-purple/5 to-zion-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Link>
           </li>
         )}
