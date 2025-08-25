@@ -36,7 +36,8 @@ import {
   Globe2,
   BarChart,
   ShieldCheck,
-  Zap as ZapIcon
+  Zap as ZapIcon,
+  Atom
 } from 'lucide-react';
 import { SEOHead } from '../components/SEOHead';
 
@@ -79,22 +80,22 @@ const Home: React.FC = () => {
       features: ["Machine Learning", "Predictive Analytics", "Process Automation", "Real-time Insights"]
     },
     {
-      title: "Comprehensive IT Services",
-      subtitle: "End-to-end technology solutions for modern businesses",
-      description: "From infrastructure management to digital transformation, we provide the expertise you need to succeed in today's competitive landscape.",
-      image: "/images/hero-it-services.jpg",
-      cta: "View Our Services",
-      path: "/services",
-      features: ["Cloud Infrastructure", "Cybersecurity", "DevOps Automation", "24/7 Support"]
+      title: "Quantum Computing & Emerging Tech",
+      subtitle: "Next-generation technology solutions for the future",
+      description: "Access cutting-edge quantum computing, neuromorphic computing, 6G networks, and space technology solutions that give you a competitive advantage in innovation.",
+      image: "/images/hero-quantum.jpg",
+      cta: "Discover Emerging Tech",
+      path: "/emerging-tech",
+      features: ["Quantum Computing", "Neuromorphic AI", "6G Networks", "Space Technology"]
     },
     {
-      title: "Micro-SaaS Solutions",
-      subtitle: "Scalable software solutions for growing businesses",
-      description: "Custom SaaS applications designed to streamline operations and boost productivity. Built with modern technologies and best practices.",
-      image: "/images/hero-saas.jpg",
+      title: "Autonomous Business Operations",
+      subtitle: "Revolutionary AI-powered business automation",
+      description: "Enable fully autonomous business operations through AI agents, automated decision-making, and intelligent process orchestration for 24/7 efficiency.",
+      image: "/images/hero-autonomous.jpg",
       cta: "Learn More",
-      path: "/services/micro-saas-solutions",
-      features: ["Custom Development", "Scalable Architecture", "API Integration", "User Management"]
+      path: "/autonomous-business-operations-platform",
+      features: ["AI Business Agents", "Autonomous Decision Making", "Process Orchestration", "24/7 Operations"]
     }
   ];
 
@@ -636,6 +637,164 @@ const Home: React.FC = () => {
               className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-all duration-300"
             >
               Explore Services
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Innovative Services Showcase */}
+      <section className="py-20 bg-gradient-to-br from-zion-purple/10 via-zion-blue-dark/20 to-zion-cyan/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Cutting-Edge Innovation
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Discover our revolutionary technology solutions that are shaping the future of business
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Quantum Computing */}
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-violet-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
+                  <Atom className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white">Quantum Computing</h3>
+                  <p className="text-gray-400 text-sm">Next-generation computing</p>
+                </div>
+              </div>
+              <p className="text-gray-300 mb-4">
+                Access quantum algorithms and simulations that solve complex problems 1000x faster than classical computing.
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="text-cyan-400 font-semibold">From $599/month</span>
+                <Link to="/quantum-computing-platform" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  Learn More →
+                </Link>
+              </div>
+            </div>
+
+            {/* Autonomous Operations */}
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mr-4">
+                  <Zap className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white">Autonomous Operations</h3>
+                  <p className="text-gray-400 text-sm">AI-powered automation</p>
+                </div>
+              </div>
+              <p className="text-gray-300 mb-4">
+                Enable fully autonomous business operations with AI agents and intelligent process orchestration.
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="text-cyan-400 font-semibold">From $499/month</span>
+                <Link to="/autonomous-business-operations" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  Learn More →
+                </Link>
+              </div>
+            </div>
+
+            {/* Edge AI Platform */}
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mr-4">
+                  <Cpu className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white">Edge AI Platform</h3>
+                  <p className="text-gray-400 text-sm">Real-time AI processing</p>
+                </div>
+              </div>
+              <p className="text-gray-300 mb-4">
+                Bring AI processing closer to data sources with ultra-low latency edge computing solutions.
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="text-cyan-400 font-semibold">From $199/month</span>
+                <Link to="/edge-ai-platform" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  Learn More →
+                </Link>
+              </div>
+            </div>
+
+            {/* Blockchain & DeFi */}
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mr-4">
+                  <Network className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white">Blockchain & DeFi</h3>
+                  <p className="text-gray-400 text-sm">Decentralized finance</p>
+                </div>
+              </div>
+              <p className="text-gray-300 mb-4">
+                Enterprise blockchain solutions with DeFi capabilities for secure, transparent financial transactions.
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="text-cyan-400 font-semibold">From $399/month</span>
+                <Link to="/blockchain-defi-platform" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  Learn More →
+                </Link>
+              </div>
+            </div>
+
+            {/* Neuromorphic Computing */}
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-600 rounded-lg flex items-center justify-center mr-4">
+                  <Brain className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white">Neuromorphic Computing</h3>
+                  <p className="text-gray-400 text-sm">Brain-inspired AI</p>
+                </div>
+              </div>
+              <p className="text-gray-300 mb-4">
+                Revolutionary computing that mimics the human brain for ultra-efficient AI processing and real-time learning.
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="text-cyan-400 font-semibold">From $8,000/month</span>
+                <Link to="/neuromorphic-computing-platform" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  Learn More →
+                </Link>
+              </div>
+            </div>
+
+            {/* 6G Networks */}
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mr-4">
+                  <Globe className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white">6G Network Infrastructure</h3>
+                  <p className="text-gray-400 text-sm">Next-gen connectivity</p>
+                </div>
+              </div>
+              <p className="text-gray-300 mb-4">
+                Terabit speeds and ultra-low latency for holographic communications and autonomous systems.
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="text-cyan-400 font-semibold">From $12,000/month</span>
+                <Link to="/6g-network-infrastructure" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  Learn More →
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              to="/innovative-services-showcase"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
+            >
+              View All Innovative Services
+              <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>
         </div>
