@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
@@ -12,11 +12,16 @@ import { AICodeGenerator } from './components/AICodeGenerator';
 import { EnterpriseDashboard } from './components/EnterpriseDashboard';
 import { SecurityComplianceDashboard } from './components/SecurityComplianceDashboard';
 import { MachineLearningDashboard } from './components/MachineLearningDashboard';
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import { LinkHealthMonitor } from './components/LinkHealthMonitor';
 import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import { ErrorBoundary } from './components/ErrorBoundary';
+import { EnhancedErrorBoundary } from './components/EnhancedErrorBoundary';
+import { EnhancedSEO } from './components/EnhancedSEO';
+import { EnhancedAccessibility } from './components/EnhancedAccessibility';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
 
 // Enhanced lazy loading with preloading hints
 const Home = lazy(() => import('./pages/Home'));
@@ -27,13 +32,24 @@ const AIMatcherPage = lazy(() => import('./pages/AIMatcher'));
 const TalentDirectory = lazy(() => import('./pages/TalentDirectory'));
 const TalentsPage = lazy(() => import('./pages/TalentsPage'));
 const EmergingTech = lazy(() => import('./pages/EmergingTech'));
-// Newly added service pages
+
+// Service pages
 const AIServices = lazy(() => import('./pages/AIServices'));
 const CloudDevOps = lazy(() => import('./pages/CloudDevOps'));
 const EnterpriseSolutionsPage = lazy(() => import('./pages/EnterpriseSolutions'));
 const DigitalTransformation = lazy(() => import('./pages/DigitalTransformation'));
 
-// Our enhanced service pages
+// Missing pages from analysis
+const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/QuantumNeuralNetworkPlatform'));
+const AutonomousBusinessOperationsPlatform = lazy(() => import('./pages/AutonomousBusinessOperationsPlatform'));
+const AIPoweredITAssetManagement = lazy(() => import('./pages/AIPoweredITAssetManagement'));
+const SOC2ComplianceAutomation = lazy(() => import('./pages/SOC2ComplianceAutomation'));
+const AIAutonomousResearchAssistant = lazy(() => import('./pages/AIAutonomousResearchAssistant'));
+const FiveGEnterpriseSolutions = lazy(() => import('./pages/5GEnterpriseSolutions'));
+const CaseStudies = lazy(() => import('./pages/CaseStudies'));
+const HelpCenter = lazy(() => import('./pages/HelpCenter'));
+
+// Company information pages
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Mission = lazy(() => import('./pages/Mission'));
@@ -43,6 +59,8 @@ const Careers = lazy(() => import('./pages/Careers'));
 const Partners = lazy(() => import('./pages/Partners'));
 const Blog = lazy(() => import('./pages/Blog'));
 const News = lazy(() => import('./pages/News'));
+
+// Service detail pages
 const ServicesOverview = lazy(() => import('./pages/services/ServicesOverview'));
 const AIAutonomousSystems = lazy(() => import('./pages/services/AIAutonomousSystems'));
 const QuantumTechnology = lazy(() => import('./pages/services/QuantumTechnology'));
@@ -50,6 +68,11 @@ const Cybersecurity = lazy(() => import('./pages/services/Cybersecurity'));
 const ITInfrastructure = lazy(() => import('./pages/services/ITInfrastructure'));
 const MicroSAASSolutions = lazy(() => import('./pages/services/MicroSAASSolutions'));
 const IndustrySolutions = lazy(() => import('./pages/services/IndustrySolutions'));
+const InnovativeNewServices = lazy(() => import('./pages/services/InnovativeNewServices'));
+const SpecializedITInfrastructure = lazy(() => import('./pages/services/SpecializedITInfrastructure'));
+const InnovativeMicroSaasServices = lazy(() => import('./pages/InnovativeMicroSaasServices'));
+const ComprehensiveInnovativeServices = lazy(() => import('./pages/ComprehensiveInnovativeServices'));
+const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveServicesOverview'));
 
 // Solutions pages
 const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
@@ -59,13 +82,11 @@ const HealthcareSolutions = lazy(() => import('./pages/solutions/Healthcare'));
 const Privacy = lazy(() => import('./pages/Privacy'));
 const Terms = lazy(() => import('./pages/Terms'));
 const Cookies = lazy(() => import('./pages/Cookies'));
-const CaseStudies = lazy(() => import('./pages/CaseStudies'));
 const FAQ = lazy(() => import('./pages/FAQ'));
 const Events = lazy(() => import('./pages/Events'));
 const Webinars = lazy(() => import('./pages/Webinars'));
 const WhitePapers = lazy(() => import('./pages/WhitePapers'));
 const Testimonials = lazy(() => import('./pages/Testimonials'));
-const HelpCenter = lazy(() => import('./pages/HelpCenter'));
 const Support = lazy(() => import('./pages/HelpCenter'));
 const Docs = lazy(() => import('./pages/HelpCenter'));
 const Marketplace = lazy(() => import('./pages/Marketplace'));
@@ -120,6 +141,7 @@ const AIContentCreation = lazy(() => import('./pages/services/AIContentCreation'
 const AIContentFactory = lazy(() => import('./pages/services/AIContentFactory'));
 const AIContentGenerationAutomation = lazy(() => import('./pages/services/AIContentGenerationAutomation'));
 const AIContentGenerationPro = lazy(() => import('./pages/services/AIContentGenerationPro'));
+const AIConsciousnessEvolution = lazy(() => import('./pages/services/AIConsciousnessEvolution'));
 
 // Loading Component
 const LoadingSpinner = () => (
@@ -136,10 +158,15 @@ const LoadingSpinner = () => (
 );
 
 const App = () => {
+  const [isPerformanceOptimized, setIsPerformanceOptimized] = useState(false);
+  const [isLinkHealthMonitored, setIsLinkHealthMonitored] = useState(false);
   useScrollToTop();
 
   return (
-    <ErrorBoundary>
+    <EnhancedErrorBoundary>
+      <EnhancedSEO />
+      <EnhancedAccessibility />
+      <PerformanceMonitor />
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
@@ -162,6 +189,7 @@ const App = () => {
                     <Route path="/comprehensive-services" element={<Services />} />
                     <Route path="/services-comparison" element={<Services />} />
                     <Route path="/it-onsite-services" element={<Services />} />
+                    
                     {/* Newly added explicit service routes */}
                     <Route path="/ai-services" element={<AIServices />} />
                     <Route path="/cloud-devops" element={<CloudDevOps />} />
@@ -255,6 +283,7 @@ const App = () => {
                     <Route path="/ai-content-factory" element={<AIContentFactory />} />
                     <Route path="/ai-content-generation-automation" element={<AIContentGenerationAutomation />} />
                     <Route path="/ai-content-generation-pro" element={<AIContentGenerationPro />} />
+                    <Route path="/ai-consciousness-evolution" element={<AIConsciousnessEvolution />} />
 
                     {/* Additional AI service routes */}
                     <Route path="/ai-autonomous-business-manager-2029" element={<AIAutonomousBusinessManager />} />
@@ -267,9 +296,9 @@ const App = () => {
                     <Route path="/ai-consciousness-evolution-2029" element={<AIConsciousnessEvolution />} />
 
                     {/* Quantum and other technology routes */}
-                    <Route path="/quantum-neural-network-platform" element={<QuantumTechnology />} />
-                    <Route path="/autonomous-business-operations-platform" element={<AIAutonomousBusinessPlatform />} />
-                    <Route path="/ai-powered-it-asset-management" element={<ITInfrastructure />} />
+                    <Route path="/quantum-neural-network-platform" element={<QuantumNeuralNetworkPlatform />} />
+                    <Route path="/autonomous-business-operations-platform" element={<AutonomousBusinessOperationsPlatform />} />
+                    <Route path="/ai-powered-it-asset-management" element={<AIPoweredITAssetManagement />} />
                     <Route path="/quantum-cloud-infrastructure" element={<QuantumTechnology />} />
                     <Route path="/quantum-financial-trading" element={<QuantumTechnology />} />
                     <Route path="/quantum-services" element={<QuantumTechnology />} />
@@ -347,7 +376,7 @@ const App = () => {
           </Router>
         </WhitelabelProvider>
       </ThemeProvider>
-    </ErrorBoundary>
+    </EnhancedErrorBoundary>
   );
 };
 

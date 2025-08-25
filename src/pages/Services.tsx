@@ -183,43 +183,80 @@ export function Services() {
           ))}
         </motion.div>
 
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-center"
-        >
-          <div className="bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20 border border-zion-cyan/30 rounded-2xl p-12 backdrop-blur-md">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Let's discuss how our technology solutions can accelerate your growth and 
-              give you a competitive edge in the market.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  {/* Innovative Services CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-center mb-16"
+          >
+            <div className="bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-purple/20 border border-zion-purple/30 rounded-2xl p-12 backdrop-blur-md">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Explore Our Innovative Micro SAAS Services
+              </h2>
+              <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+                Discover cutting-edge AI-powered, quantum-ready, and blockchain-enabled solutions that are revolutionizing industries worldwide.
+              </p>
               <Link
-                to="/request-quote"
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center group hover:scale-105"
+                to="/innovative-micro-saas-services"
+                className="inline-flex px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-cyan text-white rounded-xl text-lg font-semibold hover:shadow-xl hover:shadow-zion-purple/25 transition-all duration-300 items-center gap-2 group hover:scale-105"
               >
-                Get Free Consultation
+                View Innovative Services
                 <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </Link>
-              <a
-                href="tel:+13024640950"
-                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-xl text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2 justify-center group hover:scale-105"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                Call Sales Team
-              </a>
+              <div className="mt-6">
+                <Link
+                  to="/comprehensive-services-overview"
+                  className="inline-flex px-6 py-3 border-2 border-zion-cyan text-zion-cyan rounded-lg text-base font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 items-center gap-2 group hover:scale-105"
+                >
+                  View All Services Overview
+                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+
+          {/* CTA Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-center"
+          >
+            <div className="bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20 border border-zion-cyan/30 rounded-2xl p-12 backdrop-blur-md">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+                Let's discuss how our technology solutions can accelerate your growth and 
+                give you a competitive edge in the market.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/request-quote"
+                  className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl text-lg font-semibold hover:shadow-xl hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center gap-2 justify-center group hover:scale-105"
+                >
+                  Get Free Consultation
+                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+                <a
+                  href="tel:+13024640950"
+                  className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-xl text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2 justify-center group hover:scale-105"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  Call Sales Team
+                </a>
+              </div>
+            </div>
+          </motion.div>
 
         {/* Footer Section */}
         <div className="bg-zion-slate-dark py-12 border-t border-zion-blue-light">

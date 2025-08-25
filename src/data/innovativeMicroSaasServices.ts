@@ -6,551 +6,998 @@ export interface InnovativeMicroSaasService {
   subcategory: string;
   price: number;
   currency: string;
-  pricingModel: 'one-time' | 'monthly' | 'yearly' | 'per-user' | 'per-project' | 'usage-based' | 'freemium';
+  pricingModel: string;
   features: string[];
   benefits: string[];
   useCases: string[];
   targetAudience: string[];
   tags: string[];
   estimatedDelivery: string;
-  supportLevel: 'basic' | 'standard' | 'premium' | 'enterprise';
+  supportLevel: string;
   marketPrice: string;
   contactInfo: {
     phone: string;
     email: string;
     website: string;
   };
-  aiScore?: number;
-  rating?: number;
-  reviewCount?: number;
-  featured?: boolean;
-  location?: string;
-  availability?: string;
+  websiteUrl: string;
   demoUrl?: string;
   documentationUrl?: string;
-  technology?: string[];
-  integrations?: string[];
-  compliance?: string[];
-  scalability?: string;
-  deployment?: string;
-  roi?: string;
-  timeToValue?: string;
 }
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
-  // Quantum Computing Solutions
+  // AI-Powered Business Intelligence Services
   {
-    id: "quantum-optimization-platform",
-    title: "Quantum Optimization Platform",
-    description: "Revolutionary quantum computing platform for solving complex optimization problems in logistics, finance, and research. Leverages quantum algorithms for exponential speed improvements.",
-    category: "Quantum Computing",
-    subcategory: "Optimization",
-    price: 2499,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Quantum annealing algorithms",
-      "Hybrid quantum-classical computing",
-      "Real-time optimization dashboard",
-      "API access for developers",
-      "Custom algorithm development",
-      "Performance analytics",
-      "Multi-cloud quantum access",
-      "Enterprise security compliance"
-    ],
-    benefits: [
-      "1000x faster optimization than classical methods",
-      "Reduces operational costs by 40-60%",
-      "Handles problems with millions of variables",
-      "Future-proof quantum-ready architecture",
-      "Scalable to enterprise workloads"
-    ],
-    useCases: [
-      "Supply chain optimization",
-      "Portfolio optimization",
-      "Route planning and logistics",
-      "Resource allocation",
-      "Machine learning training",
-      "Drug discovery simulations"
-    ],
-    targetAudience: [
-      "Financial institutions",
-      "Logistics companies",
-      "Research institutions",
-      "Manufacturing firms",
-      "Healthcare organizations"
-    ],
-    tags: ["quantum", "optimization", "AI", "machine learning", "enterprise"],
-    estimatedDelivery: "4-6 weeks",
-    supportLevel: "premium",
-    marketPrice: "$5,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/quantum-optimization"
-    },
-    aiScore: 95,
-    rating: 4.9,
-    reviewCount: 127,
-    featured: true,
-    technology: ["Quantum Annealing", "Qiskit", "Python", "AWS Braket"],
-    integrations: ["AWS", "Azure", "Google Cloud", "IBM Quantum"],
-    compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA"],
-    scalability: "Unlimited",
-    deployment: "Cloud-native, Hybrid",
-    roi: "300-500% within 12 months",
-    timeToValue: "2-4 weeks"
-  },
-
-  // AI Cybersecurity
-  {
-    id: "ai-cybersecurity-sentinel",
-    title: "AI Cybersecurity Sentinel",
-    description: "Next-generation AI-powered cybersecurity platform that provides real-time threat detection, automated response, and predictive security analytics using advanced machine learning algorithms.",
-    category: "Cybersecurity",
-    subcategory: "AI-Powered Security",
+    id: "ai-powered-business-intelligence-suite",
+    title: "AI-Powered Business Intelligence Suite",
+    description: "Comprehensive BI platform that transforms raw data into actionable insights using advanced AI algorithms and predictive analytics.",
+    category: "AI & Business Intelligence",
+    subcategory: "Data Analytics",
     price: 899,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Real-time threat detection",
-      "AI-powered behavioral analysis",
-      "Automated incident response",
-      "Predictive threat intelligence",
-      "Zero-day vulnerability detection",
-      "Compliance reporting",
-      "24/7 security monitoring",
-      "Custom security policies"
+      "Real-time data visualization",
+      "AI-powered predictive analytics",
+      "Custom dashboard builder",
+      "Data integration connectors",
+      "Automated reporting",
+      "Mobile-responsive design",
+      "Role-based access control",
+      "API for custom integrations"
     ],
     benefits: [
-      "99.9% threat detection accuracy",
-      "Reduces false positives by 80%",
-      "Automated response in under 30 seconds",
-      "Predicts threats before they occur",
-      "Compliance automation"
+      "Improve decision-making by 40%",
+      "Reduce reporting time by 70%",
+      "Identify hidden business opportunities",
+      "Real-time performance monitoring",
+      "Scalable data infrastructure"
+    ],
+    useCases: [
+      "Executive dashboards",
+      "Sales performance tracking",
+      "Operational efficiency analysis",
+      "Financial reporting",
+      "Customer behavior insights"
+    ],
+    targetAudience: [
+      "Business analysts",
+      "Executives",
+      "Data scientists",
+      "Operations managers",
+      "Department heads"
+    ],
+    tags: ["AI", "Business Intelligence", "Analytics", "Predictive Analytics", "Data Visualization"],
+    estimatedDelivery: "2-3 weeks",
+    supportLevel: "premium",
+    marketPrice: "$899 - $2,999/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/ai-business-intelligence"
+  },
+  
+  // Advanced Cybersecurity Services
+  {
+    id: "advanced-cybersecurity-threat-hunting",
+    title: "Advanced Cybersecurity Threat Hunting Platform",
+    description: "Proactive cybersecurity platform that uses AI and machine learning to hunt for threats before they become incidents.",
+    category: "Cybersecurity",
+    subcategory: "Threat Hunting",
+    price: 2500,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI-powered threat detection",
+      "Behavioral analysis",
+      "Threat intelligence feeds",
+      "Automated incident response",
+      "Forensic analysis tools",
+      "Compliance reporting",
+      "24/7 monitoring",
+      "Custom playbooks"
+    ],
+    benefits: [
+      "Reduce security incidents by 85%",
+      "Faster threat response time",
+      "Proactive threat prevention",
+      "Compliance automation",
+      "Cost-effective security"
     ],
     useCases: [
       "Enterprise security operations",
-      "Financial services security",
-      "Healthcare data protection",
-      "Government cybersecurity",
-      "Critical infrastructure protection"
-    ],
-    targetAudience: [
-      "Large enterprises",
       "Financial institutions",
       "Healthcare organizations",
       "Government agencies",
       "Critical infrastructure"
     ],
-    tags: ["AI", "cybersecurity", "threat detection", "automation", "compliance"],
-    estimatedDelivery: "2-3 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$1,500/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ai-cybersecurity"
-    },
-    aiScore: 98,
-    rating: 4.8,
-    reviewCount: 89,
-    featured: true,
-    technology: ["TensorFlow", "PyTorch", "Python", "Kubernetes"],
-    integrations: ["SIEM", "EDR", "Firewall", "Identity Management"],
-    compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
-    scalability: "Unlimited",
-    deployment: "Cloud, On-premise, Hybrid",
-    roi: "400-600% within 12 months",
-    timeToValue: "1-2 weeks"
-  },
-
-  // Autonomous DevOps
-  {
-    id: "autonomous-devops-platform",
-    title: "Autonomous DevOps Platform",
-    description: "Self-healing DevOps platform that automatically detects, diagnoses, and resolves infrastructure and deployment issues using AI and machine learning.",
-    category: "DevOps",
-    subcategory: "Automation",
-    price: 1299,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Self-healing infrastructure",
-      "Automated deployment pipelines",
-      "Intelligent monitoring and alerting",
-      "Performance optimization",
-      "Cost optimization",
-      "Security scanning",
-      "Compliance automation",
-      "Multi-cloud management"
-    ],
-    benefits: [
-      "Reduces downtime by 99.9%",
-      "Automates 80% of DevOps tasks",
-      "Reduces infrastructure costs by 30%",
-      "Faster deployment cycles",
-      "Improved security posture"
-    ],
-    useCases: [
-      "Continuous deployment",
-      "Infrastructure management",
-      "Performance monitoring",
-      "Cost optimization",
-      "Security compliance"
-    ],
     targetAudience: [
-      "Technology companies",
-      "E-commerce platforms",
-      "Financial services",
-      "Healthcare organizations",
-      "Government agencies"
+      "CISOs",
+      "Security analysts",
+      "SOC teams",
+      "IT managers",
+      "Compliance officers"
     ],
-    tags: ["DevOps", "automation", "AI", "infrastructure", "monitoring"],
+    tags: ["Cybersecurity", "Threat Hunting", "AI", "Incident Response", "Compliance"],
     estimatedDelivery: "3-4 weeks",
-    supportLevel: "premium",
-    marketPrice: "$2,000/month",
+    supportLevel: "enterprise",
+    marketPrice: "$2,500 - $8,000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/autonomous-devops"
+      website: "https://ziontechgroup.com"
     },
-    aiScore: 92,
-    rating: 4.7,
-    reviewCount: 156,
-    featured: true,
-    technology: ["Kubernetes", "Docker", "Terraform", "Python", "Go"],
-    integrations: ["AWS", "Azure", "GCP", "GitHub", "GitLab", "Jenkins"],
-    compliance: ["SOC 2", "ISO 27001", "PCI DSS"],
-    scalability: "Unlimited",
-    deployment: "Cloud-native",
-    roi: "250-400% within 12 months",
-    timeToValue: "2-3 weeks"
+    websiteUrl: "https://ziontechgroup.com/cybersecurity-threat-hunting"
   },
 
-  // Blockchain Supply Chain
+  // Quantum Computing Services
   {
-    id: "blockchain-supply-chain-platform",
-    title: "Blockchain Supply Chain Platform",
-    description: "Transparent and immutable supply chain management platform using blockchain technology for end-to-end traceability, compliance, and efficiency.",
-    category: "Blockchain",
-    subcategory: "Supply Chain",
-    price: 799,
+    id: "quantum-computing-optimization-platform",
+    title: "Quantum Computing Optimization Platform",
+    description: "Enterprise-grade quantum computing platform for solving complex optimization problems in logistics, finance, and research.",
+    category: "Quantum Computing",
+    subcategory: "Optimization",
+    price: 5000,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "End-to-end traceability",
-      "Smart contract automation",
-      "Real-time tracking",
-      "Compliance reporting",
-      "Supplier verification",
-      "Quality assurance",
-      "Sustainability tracking",
-      "API integration"
+      "Quantum algorithm library",
+      "Hybrid quantum-classical computing",
+      "Performance benchmarking",
+      "Cloud-based access",
+      "Real-time collaboration",
+      "API for developers",
+      "Custom algorithm development",
+      "Training and support"
     ],
     benefits: [
-      "100% supply chain transparency",
-      "Reduces fraud by 95%",
-      "Improves compliance efficiency",
-      "Real-time visibility",
-      "Automated contract execution"
+      "Solve previously impossible problems",
+      "Exponential speed improvements",
+      "Future-proof technology",
+      "Competitive advantage",
+      "Research capabilities"
     ],
     useCases: [
-      "Food safety tracking",
-      "Pharmaceutical supply chain",
-      "Luxury goods authentication",
-      "Sustainable sourcing",
-      "Regulatory compliance"
+      "Logistics optimization",
+      "Financial modeling",
+      "Drug discovery",
+      "Climate modeling",
+      "Cryptography research"
     ],
     targetAudience: [
-      "Manufacturing companies",
-      "Retail chains",
-      "Food producers",
+      "Research institutions",
       "Pharmaceutical companies",
-      "Luxury brands"
+      "Financial services",
+      "Technology firms",
+      "Academic researchers"
     ],
-    tags: ["blockchain", "supply chain", "traceability", "compliance", "automation"],
-    estimatedDelivery: "4-5 weeks",
-    supportLevel: "standard",
-    marketPrice: "$1,200/month",
+    tags: ["Quantum Computing", "Optimization", "Research", "Advanced Computing", "AI"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$5,000 - $20,000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/blockchain-supply-chain"
+      website: "https://ziontechgroup.com"
     },
-    aiScore: 88,
-    rating: 4.6,
-    reviewCount: 73,
-    featured: false,
-    technology: ["Ethereum", "Hyperledger", "Solidity", "Node.js"],
-    integrations: ["ERP", "WMS", "CRM", "Accounting Systems"],
-    compliance: ["ISO 22000", "HACCP", "FDA", "EU regulations"],
-    scalability: "Enterprise",
-    deployment: "Cloud, Hybrid",
-    roi: "200-350% within 12 months",
-    timeToValue: "3-4 weeks"
+    websiteUrl: "https://ziontechgroup.com/quantum-computing"
   },
 
-  // IoT Edge Computing
+  // Blockchain & Web3 Services
+  {
+    id: "blockchain-enterprise-solutions",
+    title: "Blockchain Enterprise Solutions Platform",
+    description: "Comprehensive blockchain platform for enterprises to build, deploy, and manage decentralized applications with enterprise-grade security.",
+    category: "Blockchain & Web3",
+    subcategory: "Enterprise Solutions",
+    price: 3000,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Multi-chain support",
+      "Smart contract development",
+      "Enterprise security features",
+      "Compliance tools",
+      "Integration APIs",
+      "Performance monitoring",
+      "Scalability solutions",
+      "Training and support"
+    ],
+    benefits: [
+      "Enhanced transparency and trust",
+      "Reduced operational costs",
+      "Improved efficiency",
+      "Regulatory compliance",
+      "Future-proof technology"
+    ],
+    useCases: [
+      "Supply chain tracking",
+      "Digital identity management",
+      "Asset tokenization",
+      "Voting systems",
+      "Financial services"
+    ],
+    targetAudience: [
+      "Enterprise companies",
+      "Financial institutions",
+      "Government agencies",
+      "Healthcare organizations",
+      "Manufacturing companies"
+    ],
+    tags: ["Blockchain", "Web3", "Enterprise", "Smart Contracts", "DeFi"],
+    estimatedDelivery: "4-5 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,000 - $12,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/blockchain-enterprise"
+  },
+
+  // IoT & Edge Computing Services
   {
     id: "iot-edge-computing-platform",
     title: "IoT Edge Computing Platform",
-    description: "Intelligent edge computing platform for IoT devices that processes data locally for real-time decision making, reducing latency and bandwidth costs.",
-    category: "IoT",
+    description: "Advanced IoT platform with edge computing capabilities for real-time data processing and intelligent device management.",
+    category: "Internet of Things",
     subcategory: "Edge Computing",
-    price: 599,
+    price: 1800,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Local data processing",
-      "Real-time analytics",
-      "Edge AI inference",
+      "Edge computing nodes",
+      "Real-time data processing",
       "Device management",
+      "Predictive analytics",
       "Security protocols",
-      "Scalable architecture",
-      "Cloud synchronization",
-      "Custom algorithms"
+      "Scalable infrastructure",
+      "Integration APIs",
+      "Mobile applications"
     ],
     benefits: [
-      "Reduces latency by 90%",
-      "Lowers bandwidth costs by 70%",
-      "Improves data privacy",
-      "Enables offline operation",
-      "Real-time decision making"
+      "Reduce latency by 90%",
+      "Lower bandwidth costs",
+      "Improved reliability",
+      "Real-time insights",
+      "Scalable IoT solutions"
     ],
     useCases: [
       "Smart cities",
       "Industrial IoT",
-      "Autonomous vehicles",
-      "Smart agriculture",
-      "Healthcare monitoring"
+      "Healthcare monitoring",
+      "Energy management",
+      "Transportation systems"
     ],
     targetAudience: [
-      "Smart city initiatives",
-      "Manufacturing companies",
-      "Automotive industry",
-      "Agricultural companies",
-      "Healthcare providers"
+      "IoT engineers",
+      "System integrators",
+      "Operations managers",
+      "Technology consultants",
+      "Enterprise IT teams"
     ],
-    tags: ["IoT", "edge computing", "AI", "real-time", "automation"],
+    tags: ["IoT", "Edge Computing", "Real-time", "Device Management", "Analytics"],
     estimatedDelivery: "3-4 weeks",
-    supportLevel: "standard",
-    marketPrice: "$800/month",
+    supportLevel: "premium",
+    marketPrice: "$1,800 - $6,000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/iot-edge-computing"
+      website: "https://ziontechgroup.com"
     },
-    aiScore: 90,
-    rating: 4.7,
-    reviewCount: 94,
-    featured: false,
-    technology: ["TensorFlow Lite", "Docker", "Kubernetes", "Python"],
-    integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT"],
-    compliance: ["ISO 27001", "GDPR", "Industry-specific standards"],
-    scalability: "Unlimited",
-    deployment: "Edge, Cloud, Hybrid",
-    roi: "180-300% within 12 months",
-    timeToValue: "2-3 weeks"
+    websiteUrl: "https://ziontechgroup.com/iot-edge-computing"
   },
 
-  // AI Marketing Automation
+  // AI-Powered Marketing Services
   {
-    id: "ai-marketing-automation-suite",
-    title: "AI Marketing Automation Suite",
-    description: "Intelligent marketing automation platform that uses AI to personalize campaigns, optimize customer journeys, and maximize ROI through predictive analytics.",
-    category: "Marketing",
-    subcategory: "Automation",
-    price: 699,
+    id: "ai-powered-marketing-automation",
+    title: "AI-Powered Marketing Automation Suite",
+    description: "Intelligent marketing platform that automates campaigns, personalizes content, and optimizes customer engagement using AI.",
+    category: "AI & Marketing",
+    subcategory: "Marketing Automation",
+    price: 599,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "AI-powered personalization",
-      "Predictive customer analytics",
-      "Automated campaign optimization",
-      "Multi-channel marketing",
+      "AI content generation",
+      "Personalized campaigns",
+      "Customer segmentation",
       "A/B testing automation",
-      "Customer journey mapping",
-      "ROI optimization",
-      "Real-time reporting"
+      "Performance analytics",
+      "Multi-channel integration",
+      "Predictive analytics",
+      "ROI optimization"
     ],
     benefits: [
-      "Increases conversion rates by 40%",
-      "Reduces marketing costs by 30%",
-      "Improves customer lifetime value",
-      "Automates repetitive tasks",
-      "Data-driven decision making"
+      "Increase conversion rates by 50%",
+      "Reduce marketing costs by 30%",
+      "Improve customer engagement",
+      "Automated optimization",
+      "Data-driven decisions"
     ],
     useCases: [
-      "Email marketing campaigns",
-      "Social media advertising",
-      "Content personalization",
-      "Customer segmentation",
-      "Lead nurturing"
+      "E-commerce marketing",
+      "B2B lead generation",
+      "Content marketing",
+      "Social media campaigns",
+      "Email marketing"
     ],
     targetAudience: [
+      "Marketing managers",
+      "Digital marketers",
+      "Business owners",
       "Marketing agencies",
-      "E-commerce companies",
-      "B2B companies",
-      "SaaS companies",
-      "Retail brands"
+      "Growth hackers"
     ],
-    tags: ["AI", "marketing", "automation", "personalization", "analytics"],
+    tags: ["AI", "Marketing Automation", "Personalization", "Analytics", "ROI"],
     estimatedDelivery: "2-3 weeks",
-    supportLevel: "standard",
-    marketPrice: "$1,000/month",
+    supportLevel: "premium",
+    marketPrice: "$599 - $1,999/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ai-marketing-automation"
+      website: "https://ziontechgroup.com"
     },
-    aiScore: 93,
-    rating: 4.8,
-    reviewCount: 201,
-    featured: true,
-    technology: ["TensorFlow", "Python", "React", "Node.js"],
-    integrations: ["Salesforce", "HubSpot", "Mailchimp", "Facebook Ads", "Google Ads"],
-    compliance: ["GDPR", "CCPA", "SOC 2"],
-    scalability: "Unlimited",
-    deployment: "Cloud-native",
-    roi: "300-500% within 12 months",
-    timeToValue: "1-2 weeks"
+    websiteUrl: "https://ziontechgroup.com/ai-marketing-automation"
   },
 
-  // VR Training & Simulation
+  // Advanced Data Analytics Services
   {
-    id: "vr-training-simulation-platform",
-    title: "VR Training & Simulation Platform",
-    description: "Immersive virtual reality platform for employee training, skill development, and simulation-based learning across various industries.",
-    category: "Virtual Reality",
-    subcategory: "Training",
-    price: 1499,
+    id: "advanced-data-analytics-platform",
+    title: "Advanced Data Analytics Platform",
+    description: "Comprehensive data analytics platform with machine learning capabilities for deep insights and predictive modeling.",
+    category: "Data & Analytics",
+    subcategory: "Advanced Analytics",
+    price: 1200,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Immersive VR experiences",
-      "Custom training scenarios",
-      "Progress tracking",
-      "Multi-user collaboration",
-      "Real-time feedback",
-      "Assessment tools",
-      "Content management",
+      "Machine learning models",
+      "Predictive analytics",
+      "Data visualization",
+      "Statistical analysis",
+      "Data integration",
+      "Custom algorithms",
+      "Real-time processing",
+      "Collaborative workspace"
+    ],
+    benefits: [
+      "Uncover hidden patterns",
+      "Improve forecasting accuracy",
+      "Better resource allocation",
+      "Competitive insights",
+      "Data-driven decisions"
+    ],
+    useCases: [
+      "Business forecasting",
+      "Risk assessment",
+      "Customer analytics",
+      "Operational optimization",
+      "Research and development"
+    ],
+    targetAudience: [
+      "Data scientists",
+      "Business analysts",
+      "Research teams",
+      "Operations managers",
+      "Executive leadership"
+    ],
+    tags: ["Data Analytics", "Machine Learning", "Predictive Analytics", "Statistics", "Visualization"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,200 - $4,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/advanced-data-analytics"
+  },
+
+  // Cloud Infrastructure Services
+  {
+    id: "cloud-infrastructure-automation",
+    title: "Cloud Infrastructure Automation Platform",
+    description: "Intelligent cloud infrastructure platform that automates deployment, scaling, and management across multiple cloud providers.",
+    category: "Cloud Computing",
+    subcategory: "Infrastructure Automation",
+    price: 1500,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Multi-cloud management",
+      "Infrastructure as code",
+      "Automated scaling",
+      "Cost optimization",
+      "Security compliance",
+      "Monitoring and alerting",
+      "Disaster recovery",
+      "Performance optimization"
+    ],
+    benefits: [
+      "Reduce deployment time by 80%",
+      "Lower infrastructure costs by 40%",
+      "Improved reliability",
+      "Automated compliance",
+      "Better resource utilization"
+    ],
+    useCases: [
+      "Application deployment",
+      "Microservices architecture",
+      "DevOps automation",
+      "Disaster recovery",
+      "Performance optimization"
+    ],
+    targetAudience: [
+      "DevOps engineers",
+      "Cloud architects",
+      "System administrators",
+      "IT managers",
+      "Development teams"
+    ],
+    tags: ["Cloud Computing", "Infrastructure", "Automation", "DevOps", "Multi-cloud"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,500 - $5,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/cloud-infrastructure-automation"
+  },
+
+  // AI-Powered Customer Experience Services
+  {
+    id: "ai-powered-customer-experience",
+    title: "AI-Powered Customer Experience Platform",
+    description: "Intelligent customer experience platform that personalizes interactions, predicts needs, and optimizes customer journeys.",
+    category: "AI & Customer Experience",
+    subcategory: "Customer Journey Optimization",
+    price: 799,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Customer journey mapping",
+      "AI-powered personalization",
+      "Predictive analytics",
+      "Omnichannel integration",
+      "Sentiment analysis",
+      "A/B testing",
+      "Performance metrics",
+      "Integration APIs"
+    ],
+    benefits: [
+      "Increase customer satisfaction by 45%",
+      "Improve conversion rates",
+      "Reduce customer churn",
+      "Personalized experiences",
+      "Data-driven optimization"
+    ],
+    useCases: [
+      "E-commerce platforms",
+      "SaaS companies",
+      "Financial services",
+      "Healthcare providers",
+      "Retail businesses"
+    ],
+    targetAudience: [
+      "Customer experience managers",
+      "Marketing directors",
+      "Product managers",
+      "Business owners",
+      "Customer success teams"
+    ],
+    tags: ["AI", "Customer Experience", "Personalization", "Journey Optimization", "Analytics"],
+    estimatedDelivery: "2-3 weeks",
+    supportLevel: "premium",
+    marketPrice: "$799 - $2,499/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/ai-customer-experience"
+  },
+
+  // Digital Transformation Services
+  {
+    id: "digital-transformation-consulting",
+    title: "Digital Transformation Consulting Platform",
+    description: "Comprehensive digital transformation platform that guides organizations through their digital journey with AI-powered insights and tools.",
+    category: "Digital Transformation",
+    subcategory: "Consulting & Strategy",
+    price: 2500,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Digital maturity assessment",
+      "Transformation roadmap",
+      "Change management tools",
+      "Technology evaluation",
+      "ROI analysis",
+      "Implementation guidance",
+      "Training programs",
+      "Ongoing support"
+    ],
+    benefits: [
+      "Accelerate digital transformation",
+      "Reduce implementation risks",
+      "Improve ROI",
+      "Competitive advantage",
+      "Future-ready organization"
+    ],
+    useCases: [
+      "Enterprise transformation",
+      "Process digitization",
+      "Technology modernization",
+      "Cultural change",
+      "Innovation initiatives"
+    ],
+    targetAudience: [
+      "C-level executives",
+      "Transformation leaders",
+      "IT directors",
+      "Change managers",
+      "Business consultants"
+    ],
+    tags: ["Digital Transformation", "Consulting", "Strategy", "Change Management", "Innovation"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$2,500 - $10,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/digital-transformation-consulting"
+  },
+
+  // AI-Powered Supply Chain Services
+  {
+    id: "ai-powered-supply-chain-optimization",
+    title: "AI-Powered Supply Chain Optimization Platform",
+    description: "Intelligent supply chain platform that optimizes logistics, reduces costs, and improves efficiency using AI and machine learning.",
+    category: "AI & Supply Chain",
+    subcategory: "Logistics Optimization",
+    price: 1800,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Demand forecasting",
+      "Inventory optimization",
+      "Route optimization",
+      "Supplier management",
+      "Risk assessment",
+      "Cost optimization",
+      "Real-time tracking",
       "Analytics dashboard"
     ],
     benefits: [
-      "Improves learning retention by 80%",
-      "Reduces training costs by 60%",
-      "Eliminates safety risks",
-      "Scalable training programs",
-      "Measurable learning outcomes"
+      "Reduce supply chain costs by 25%",
+      "Improve delivery times",
+      "Better inventory management",
+      "Risk mitigation",
+      "Operational efficiency"
     ],
     useCases: [
-      "Employee onboarding",
-      "Safety training",
-      "Skill development",
-      "Compliance training",
-      "Product demonstrations"
+      "Manufacturing companies",
+      "Retail businesses",
+      "Logistics providers",
+      "E-commerce platforms",
+      "Distribution companies"
     ],
     targetAudience: [
-      "Manufacturing companies",
-      "Healthcare organizations",
-      "Construction companies",
-      "Educational institutions",
-      "Government agencies"
+      "Supply chain managers",
+      "Operations directors",
+      "Logistics coordinators",
+      "Procurement teams",
+      "Business owners"
     ],
-    tags: ["VR", "training", "simulation", "education", "immersive"],
-    estimatedDelivery: "6-8 weeks",
+    tags: ["AI", "Supply Chain", "Logistics", "Optimization", "Risk Management"],
+    estimatedDelivery: "3-4 weeks",
     supportLevel: "premium",
-    marketPrice: "$2,500/month",
+    marketPrice: "$1,800 - $6,000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/vr-training-simulation"
+      website: "https://ziontechgroup.com"
     },
-    aiScore: 87,
-    rating: 4.6,
-    reviewCount: 67,
-    featured: false,
-    technology: ["Unity", "Unreal Engine", "WebXR", "Three.js"],
-    integrations: ["LMS", "HR systems", "Analytics platforms"],
-    compliance: ["ISO 9001", "Industry-specific standards"],
-    scalability: "Enterprise",
-    deployment: "Cloud, On-premise",
-    roi: "200-400% within 12 months",
-    timeToValue: "4-6 weeks"
+    websiteUrl: "https://ziontechgroup.com/ai-supply-chain-optimization"
   },
 
-  // Autonomous Data Center
+  // Advanced Healthcare AI Services
   {
-    id: "autonomous-data-center-management",
-    title: "Autonomous Data Center Management",
-    description: "AI-powered data center management platform that automatically optimizes performance, energy efficiency, and resource allocation for maximum uptime and cost savings.",
-    category: "Infrastructure",
-    subcategory: "Data Center",
-    price: 1999,
+    id: "advanced-healthcare-ai-platform",
+    title: "Advanced Healthcare AI Platform",
+    description: "Comprehensive healthcare AI platform for diagnosis, treatment planning, and patient care optimization.",
+    category: "AI & Healthcare",
+    subcategory: "Clinical Decision Support",
+    price: 3500,
     currency: "$",
     pricingModel: "monthly",
     features: [
-      "Autonomous performance optimization",
-      "Energy efficiency management",
-      "Predictive maintenance",
-      "Resource allocation",
-      "Capacity planning",
-      "Security monitoring",
-      "Compliance automation",
-      "Real-time analytics"
+      "AI-powered diagnosis",
+      "Treatment recommendations",
+      "Patient outcome prediction",
+      "Clinical decision support",
+      "Population health analytics",
+      "Compliance monitoring",
+      "Integration capabilities",
+      "Training and support"
     ],
     benefits: [
-      "Reduces energy costs by 40%",
-      "Improves uptime to 99.99%",
-      "Automates 90% of operations",
-      "Predicts failures before they occur",
-      "Optimizes resource utilization"
+      "Improve diagnostic accuracy by 30%",
+      "Reduce treatment errors",
+      "Better patient outcomes",
+      "Operational efficiency",
+      "Cost savings"
     ],
     useCases: [
-      "Enterprise data centers",
-      "Cloud infrastructure",
-      "Colocation facilities",
-      "Edge computing nodes",
-      "Hybrid cloud environments"
+      "Hospitals and clinics",
+      "Diagnostic imaging",
+      "Patient monitoring",
+      "Drug discovery",
+      "Clinical research"
     ],
     targetAudience: [
-      "Large enterprises",
-      "Cloud providers",
-      "Data center operators",
-      "Financial institutions",
-      "Healthcare organizations"
+      "Healthcare administrators",
+      "Clinical teams",
+      "Medical researchers",
+      "Pharmaceutical companies",
+      "Health insurance providers"
     ],
-    tags: ["AI", "data center", "automation", "energy efficiency", "monitoring"],
-    estimatedDelivery: "5-6 weeks",
+    tags: ["AI", "Healthcare", "Clinical Decision Support", "Diagnosis", "Patient Care"],
+    estimatedDelivery: "4-6 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$3,000/month",
+    marketPrice: "$3,500 - $15,000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/autonomous-data-center"
+      website: "https://ziontechgroup.com"
     },
-    aiScore: 96,
-    rating: 4.9,
-    reviewCount: 134,
-    featured: true,
-    technology: ["TensorFlow", "Kubernetes", "Python", "Prometheus"],
-    integrations: ["VMware", "OpenStack", "AWS", "Azure", "GCP"],
-    compliance: ["SOC 2", "ISO 27001", "Uptime Institute"],
-    scalability: "Unlimited",
-    deployment: "On-premise, Hybrid",
-    roi: "400-700% within 12 months",
-    timeToValue: "3-4 weeks"
+    websiteUrl: "https://ziontechgroup.com/healthcare-ai-platform"
+  },
+
+  // Financial Technology Services
+  {
+    id: "fintech-ai-platform",
+    title: "FinTech AI Platform",
+    description: "Advanced financial technology platform that uses AI for fraud detection, risk assessment, and financial analytics.",
+    category: "AI & Financial Technology",
+    subcategory: "Risk Management",
+    price: 2800,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI fraud detection",
+      "Risk assessment models",
+      "Credit scoring",
+      "Investment recommendations",
+      "Regulatory compliance",
+      "Real-time monitoring",
+      "Analytics dashboard",
+      "API integration"
+    ],
+    benefits: [
+      "Reduce fraud losses by 80%",
+      "Improve risk assessment",
+      "Better investment decisions",
+      "Compliance automation",
+      "Cost savings"
+    ],
+    useCases: [
+      "Banks and credit unions",
+      "Investment firms",
+      "Insurance companies",
+      "Payment processors",
+      "Lending platforms"
+    ],
+    targetAudience: [
+      "Risk managers",
+      "Financial analysts",
+      "Compliance officers",
+      "Investment advisors",
+      "Financial executives"
+    ],
+    tags: ["AI", "FinTech", "Risk Management", "Fraud Detection", "Financial Analytics"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$2,800 - $10,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/fintech-ai-platform"
+  },
+
+  // AI-Powered Education Services
+  {
+    id: "ai-powered-education-platform",
+    title: "AI-Powered Education Platform",
+    description: "Intelligent education platform that personalizes learning experiences and provides adaptive content for students.",
+    category: "AI & Education",
+    subcategory: "Personalized Learning",
+    price: 450,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Personalized learning paths",
+      "Adaptive content delivery",
+      "Student progress tracking",
+      "Performance analytics",
+      "Content creation tools",
+      "Assessment automation",
+      "Mobile applications",
+      "Integration capabilities"
+    ],
+    benefits: [
+      "Improve learning outcomes by 35%",
+      "Personalized education",
+      "Better student engagement",
+      "Reduced administrative workload",
+      "Scalable learning solutions"
+    ],
+    useCases: [
+      "K-12 education",
+      "Higher education",
+      "Corporate training",
+      "Online learning",
+      "Skill development"
+    ],
+    targetAudience: [
+      "Educational institutions",
+      "Corporate trainers",
+      "Online educators",
+      "Learning management teams",
+      "Educational consultants"
+    ],
+    tags: ["AI", "Education", "Personalized Learning", "Adaptive Content", "Learning Analytics"],
+    estimatedDelivery: "2-3 weeks",
+    supportLevel: "standard",
+    marketPrice: "$450 - $1,500/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/ai-education-platform"
+  },
+
+  // AI-Powered Legal Services
+  {
+    id: "ai-powered-legal-research",
+    title: "AI-Powered Legal Research Platform",
+    description: "Intelligent legal research platform that uses AI to analyze cases, identify precedents, and streamline legal workflows.",
+    category: "AI & Legal Services",
+    subcategory: "Legal Research",
+    price: 1200,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI case analysis",
+      "Precedent identification",
+      "Legal document review",
+      "Research automation",
+      "Compliance checking",
+      "Workflow optimization",
+      "Analytics dashboard",
+      "Integration capabilities"
+    ],
+    benefits: [
+      "Reduce research time by 70%",
+      "Improve case outcomes",
+      "Better precedent identification",
+      "Cost-effective research",
+      "Workflow efficiency"
+    ],
+    useCases: [
+      "Law firms",
+      "Corporate legal departments",
+      "Legal researchers",
+      "Compliance teams",
+      "Judicial systems"
+    ],
+    targetAudience: [
+      "Legal professionals",
+      "Law firm managers",
+      "Legal researchers",
+      "Compliance officers",
+      "Legal consultants"
+    ],
+    tags: ["AI", "Legal Services", "Legal Research", "Case Analysis", "Workflow Automation"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,200 - $4,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/ai-legal-research"
+  },
+
+  // AI-Powered Real Estate Services
+  {
+    id: "ai-powered-real-estate-analytics",
+    title: "AI-Powered Real Estate Analytics Platform",
+    description: "Intelligent real estate platform that provides market insights, property valuations, and investment recommendations using AI.",
+    category: "AI & Real Estate",
+    subcategory: "Market Analytics",
+    price: 899,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Market trend analysis",
+      "Property valuation models",
+      "Investment recommendations",
+      "Risk assessment",
+      "Market forecasting",
+      "Comparative analysis",
+      "Data visualization",
+      "Mobile applications"
+    ],
+    benefits: [
+      "Improve investment decisions",
+      "Better market insights",
+      "Accurate valuations",
+      "Risk mitigation",
+      "Competitive advantage"
+    ],
+    useCases: [
+      "Real estate investors",
+      "Property developers",
+      "Real estate agents",
+      "Financial institutions",
+      "Property management companies"
+    ],
+    targetAudience: [
+      "Real estate investors",
+      "Property developers",
+      "Real estate professionals",
+      "Financial advisors",
+      "Property managers"
+    ],
+    tags: ["AI", "Real Estate", "Market Analytics", "Property Valuation", "Investment Analysis"],
+    estimatedDelivery: "2-3 weeks",
+    supportLevel: "premium",
+    marketPrice: "$899 - $2,999/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/ai-real-estate-analytics"
+  },
+
+  // AI-Powered Manufacturing Services
+  {
+    id: "ai-powered-manufacturing-optimization",
+    title: "AI-Powered Manufacturing Optimization Platform",
+    description: "Intelligent manufacturing platform that optimizes production processes, reduces waste, and improves quality using AI.",
+    category: "AI & Manufacturing",
+    subcategory: "Process Optimization",
+    price: 2200,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Production optimization",
+      "Quality control automation",
+      "Predictive maintenance",
+      "Inventory management",
+      "Supply chain optimization",
+      "Performance analytics",
+      "Real-time monitoring",
+      "Integration capabilities"
+    ],
+    benefits: [
+      "Increase production efficiency by 30%",
+      "Reduce waste by 25%",
+      "Improve product quality",
+      "Lower operational costs",
+      "Better resource utilization"
+    ],
+    useCases: [
+      "Manufacturing plants",
+      "Production facilities",
+      "Quality control departments",
+      "Operations management",
+      "Supply chain optimization"
+    ],
+    targetAudience: [
+      "Manufacturing managers",
+      "Operations directors",
+      "Quality managers",
+      "Production supervisors",
+      "Plant managers"
+    ],
+    tags: ["AI", "Manufacturing", "Process Optimization", "Quality Control", "Predictive Maintenance"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "premium",
+    marketPrice: "$2,200 - $8,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/ai-manufacturing-optimization"
+  },
+
+  // AI-Powered Energy Management Services
+  {
+    id: "ai-powered-energy-management",
+    title: "AI-Powered Energy Management Platform",
+    description: "Intelligent energy management platform that optimizes consumption, reduces costs, and improves sustainability using AI.",
+    category: "AI & Energy Management",
+    subcategory: "Consumption Optimization",
+    price: 1500,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Energy consumption optimization",
+      "Demand forecasting",
+      "Renewable energy integration",
+      "Cost optimization",
+      "Sustainability tracking",
+      "Real-time monitoring",
+      "Analytics dashboard",
+      "Integration capabilities"
+    ],
+    benefits: [
+      "Reduce energy costs by 25%",
+      "Improve sustainability",
+      "Better resource utilization",
+      "Compliance automation",
+      "Operational efficiency"
+    ],
+    useCases: [
+      "Commercial buildings",
+      "Industrial facilities",
+      "Data centers",
+      "Smart cities",
+      "Energy utilities"
+    ],
+    targetAudience: [
+      "Facility managers",
+      "Energy managers",
+      "Sustainability officers",
+      "Operations directors",
+      "Building owners"
+    ],
+    tags: ["AI", "Energy Management", "Consumption Optimization", "Sustainability", "Cost Reduction"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,500 - $5,000/month",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/ai-energy-management"
   }
 ];
 
 export const INNOVATIVE_SERVICE_CATEGORIES = [
-  "Quantum Computing",
+  "AI & Business Intelligence",
   "Cybersecurity",
-  "DevOps",
-  "Blockchain",
-  "IoT",
-  "Marketing",
-  "Virtual Reality",
-  "Infrastructure"
+  "Quantum Computing",
+  "Blockchain & Web3",
+  "Internet of Things",
+  "AI & Marketing",
+  "Data & Analytics",
+  "Cloud Computing",
+  "AI & Customer Experience",
+  "Digital Transformation",
+  "AI & Supply Chain",
+  "AI & Healthcare",
+  "AI & Financial Technology",
+  "AI & Education",
+  "AI & Legal Services",
+  "AI & Real Estate",
+  "AI & Manufacturing",
+  "AI & Energy Management"
 ];
