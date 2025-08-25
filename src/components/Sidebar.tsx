@@ -246,6 +246,7 @@ export default function Sidebar() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Brain },
         { name: 'AI Autonomous Business Platform', path: '/ai-autonomous-business-platform', icon: Brain },
         { name: 'AI Autonomous Systems Platform', path: '/ai-autonomous-systems-platform', icon: Brain },
@@ -328,6 +329,10 @@ export default function Sidebar() {
         { name: 'Emerging Technology', path: '/emerging-tech', icon: Globe }
 >>>>>>> origin/cursor/website-audit-and-enhancement-4b12
 =======
+=======
+        { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager', icon: Briefcase },
+        { name: 'AI Autonomous Business Platform', path: '/ai-autonomous-business-platform', icon: Briefcase },
+>>>>>>> origin/cursor/website-audit-and-enhancement-eaa9
         { name: 'AI & Machine Learning', path: '/services?category=AI%20%26%20Machine%20Learning', icon: Briefcase },
 <<<<<<< HEAD
 <<<<<<< HEAD

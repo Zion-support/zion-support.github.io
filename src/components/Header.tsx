@@ -26,33 +26,15 @@ export function Header() {
     },
     { 
       path: '/services', 
-      label: 'Services', 
+      label: 'AI Services', 
       icon: '🤖',
-      description: 'Explore our comprehensive services'
+      description: 'Explore our AI service offerings'
     },
     { 
-      path: '/ai-services', 
-      label: 'AI Solutions', 
-      icon: '🧠',
-      description: 'AI and machine learning services'
-    },
-    { 
-      path: '/ai-autonomous-business-manager', 
-      label: 'AI Business Manager', 
-      icon: '🧠',
-      description: 'AI Autonomous Business Management'
-    },
-    { 
-      path: '/quantum-neural-network-platform', 
-      label: 'Quantum AI', 
-      icon: '⚛️',
-      description: 'Quantum Neural Network Platform'
-    },
-    { 
-      path: '/autonomous-business-operations-platform', 
-      label: 'Operations Platform', 
-      icon: '⚙️',
-      description: 'Autonomous Business Operations'
+      path: '/ai-autonomous-business-platform', 
+      label: 'AI Platform', 
+      icon: '🚀',
+      description: 'Autonomous Business Platform'
     },
     { 
       path: '/solutions/enterprise', 
@@ -73,6 +55,18 @@ export function Header() {
       description: 'Learn about our company'
     },
     { 
+      path: '/careers', 
+      label: 'Careers', 
+      icon: '🚀',
+      description: 'Join our team'
+    },
+    { 
+      path: '/blog', 
+      label: 'Blog', 
+      icon: '📝',
+      description: 'Latest insights and news'
+    },
+    { 
       path: '/contact', 
       label: 'Contact', 
       icon: '📞',
@@ -84,11 +78,12 @@ export function Header() {
     {
       title: 'AI & Machine Learning',
       services: [
-        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence' },
-        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation' },
-        { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment' },
-        { name: 'AI Legal Tech', path: '/services/ai-legal-tech' },
-        { name: 'AI Healthcare Solutions', path: '/services/ai-healthcare-solutions' }
+        { name: 'AI Autonomous Business Manager', path: '/ai-autonomous-business-manager' },
+        { name: 'AI Autonomous Business Platform', path: '/ai-autonomous-business-platform' },
+        { name: 'AI Business Intelligence', path: '/services#ai-bi' },
+        { name: 'AI Marketing Automation', path: '/services#ai-marketing' },
+        { name: 'AI HR & Recruitment', path: '/services#ai-hr' },
+        { name: 'AI Legal Tech', path: '/services#ai-legal' }
       ]
     },
     {
@@ -191,23 +186,6 @@ export function Header() {
                   </div>
                 </div>
               ))}
-              
-              {/* Sitemap Link */}
-              <div className="relative group">
-                <Link
-                  to="/sitemap"
-                  className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 flex items-center space-x-2 group-hover:bg-cyan-500/20 group-hover:border-cyan-400/50 text-gray-300 hover:text-white border border-transparent"
-                >
-                  <span className="text-lg">🗺️</span>
-                  <span>Sitemap</span>
-                </Link>
-                
-                {/* Enhanced Tooltip */}
-                <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-black/90 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap z-50">
-                  Complete site navigation
-                  <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black/90"></div>
-                </div>
-              </div>
             </nav>
 
             {/* CTA Buttons */}
@@ -277,21 +255,6 @@ export function Header() {
                     </div>
                   </Link>
                 ))}
-                
-                {/* Sitemap Link in Mobile Menu */}
-                <Link
-                  to="/sitemap"
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block px-3 py-2 rounded-lg text-base font-medium transition-all duration-300 text-gray-300 hover:text-white hover:bg-gray-800/50"
-                >
-                  <div className="flex items-center space-x-3">
-                    <span className="text-xl">🗺️</span>
-                    <div>
-                      <div className="font-medium">Sitemap</div>
-                      <div className="text-xs text-gray-400">Complete site navigation</div>
-                    </div>
-                  </div>
-                </Link>
                 
                 {/* Mobile CTA Buttons */}
                 <div className="pt-4 space-y-2">
