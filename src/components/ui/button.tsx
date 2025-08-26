@@ -21,3 +21,12 @@ export function Button({ children, variant = 'default', size = 'md', asChild = f
       {children}
     </button>);
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+// Re-export from Button.tsx for backward compatibility
+export { Button, buttonVariants } from './Button';
+export type { ButtonProps } from './Button';
+=======
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
+>>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144

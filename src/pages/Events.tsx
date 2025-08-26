@@ -1,5 +1,131 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+const Events: React.FC = () => {
+  const upcomingEvents = [
+    {
+      id: 1,
+      title: "AI in Enterprise: 2025 Trends & Strategies",
+      type: "Webinar",
+      date: "2025-01-15",
+      time: "2:00 PM EST",
+      duration: "60 minutes",
+      description: "Join our AI experts as they discuss the latest trends in enterprise AI adoption, implementation strategies, and ROI measurement.",
+      speakers: ["Dr. Sarah Chen", "Marcus Rodriguez"],
+      category: "AI & Machine Learning",
+      registrationUrl: "#",
+      isFree: true,
+      maxAttendees: 500
+    },
+    {
+      id: 2,
+      title: "Cybersecurity Summit 2025",
+      type: "Conference",
+      date: "2025-02-20",
+      time: "9:00 AM EST",
+      duration: "Full Day",
+      description: "A comprehensive one-day conference covering the latest cybersecurity threats, defense strategies, and compliance requirements.",
+      speakers: ["Alex Thompson", "Dr. Emily Watson", "David Kim"],
+      category: "Cybersecurity",
+      registrationUrl: "#",
+      isFree: false,
+      price: "$299",
+      maxAttendees: 200
+    },
+    {
+      id: 3,
+      title: "Cloud Migration Best Practices",
+      type: "Workshop",
+      date: "2025-01-28",
+      time: "1:00 PM EST",
+      duration: "3 hours",
+      description: "Hands-on workshop covering cloud migration strategies, cost optimization, and security best practices.",
+      speakers: ["David Kim", "Lisa Thompson"],
+      category: "Cloud & Infrastructure",
+      registrationUrl: "#",
+      isFree: false,
+      price: "$149",
+      maxAttendees: 50
+    },
+    {
+      id: 4,
+      title: "Digital Transformation Roadmap",
+      type: "Webinar",
+      date: "2025-02-05",
+      time: "3:00 PM EST",
+      duration: "90 minutes",
+      description: "Learn how to create and execute a successful digital transformation strategy for your organization.",
+      speakers: ["Lisa Thompson", "Dr. Sarah Chen"],
+      category: "Digital Transformation",
+      registrationUrl: "#",
+      isFree: true,
+      maxAttendees: 300
+    }
+  ];
+
+  const pastEvents = [
+    {
+      id: 5,
+      title: "AI Ethics & Responsible Development",
+      type: "Panel Discussion",
+      date: "2024-12-10",
+      description: "Expert panel discussion on ethical AI development, bias mitigation, and responsible AI deployment.",
+      speakers: ["Dr. Emily Watson", "Dr. James Wilson"],
+      category: "AI Ethics",
+      recordingUrl: "#"
+    },
+    {
+      id: 6,
+      title: "Quantum Computing Workshop",
+      type: "Workshop",
+      date: "2024-11-25",
+      description: "Introduction to quantum computing principles and their applications in AI and cryptography.",
+      speakers: ["Dr. James Wilson", "Marcus Rodriguez"],
+      category: "Quantum Computing",
+      recordingUrl: "#"
+    }
+  ];
+
+  const eventCategories = [
+    { name: "AI & Machine Learning", count: 8, color: "from-purple-500 to-pink-500" },
+    { name: "Cybersecurity", count: 6, color: "from-red-500 to-orange-500" },
+    { name: "Cloud & Infrastructure", count: 5, color: "from-blue-500 to-cyan-500" },
+    { name: "Digital Transformation", count: 4, color: "from-green-500 to-emerald-500" },
+    { name: "Quantum Computing", count: 3, color: "from-indigo-500 to-purple-500" }
+  ];
+
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
+
+  const getEventTypeColor = (type: string) => {
+    switch (type) {
+      case 'Webinar':
+        return 'bg-blue-100 text-blue-800';
+      case 'Conference':
+        return 'bg-purple-100 text-purple-800';
+      case 'Workshop':
+        return 'bg-green-100 text-green-800';
+      case 'Panel Discussion':
+        return 'bg-orange-100 text-orange-800';
+      default:
+        return 'bg-gray-100 text-gray-800';
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+=======
+>>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
 const Events = () => {
     const upcomingEvents = [
         {
@@ -114,6 +240,10 @@ const Events = () => {
         }
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
+>>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
       {/* Hero Section */}
       <section className="pt-24 pb-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

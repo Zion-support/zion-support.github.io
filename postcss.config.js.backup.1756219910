@@ -1,3 +1,4 @@
+<<<<<<< HEAD:postcss.config.js.backup.1756219910
 module.exports = {
   plugins: {
 <<<<<<< HEAD
@@ -9,3 +10,11 @@ module.exports = {
   },
 }
 
+=======
+export default {
+	plugins: {
+		"tailwindcss": {},
+		autoprefixer: {},
+	},
+};
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a:postcss.config.js

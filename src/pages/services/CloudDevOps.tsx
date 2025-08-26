@@ -1,6 +1,103 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+
+const CloudDevOps: React.FC = () => {
+  const features = [
+    {
+      icon: Cloud,
+      title: "Cloud Migration",
+      description: "Seamless migration to cloud platforms with minimal downtime",
+      features: ["AWS Migration", "Azure Migration", "Google Cloud Migration", "Multi-cloud Strategy"],
+      icon: "☁️"
+    },
+    {
+      title: "DevOps Automation",
+      description: "Streamline development and operations with automated pipelines",
+      features: ["CI/CD Pipelines", "Infrastructure as Code", "Automated Testing", "Deployment Automation"],
+      icon: "⚡"
+    },
+    {
+      title: "Container Orchestration",
+      description: "Manage and scale containerized applications efficiently",
+      features: ["Kubernetes", "Docker", "Service Mesh", "Microservices Architecture"],
+      icon: "📦"
+import { Link } from 'react-router-dom';
+import { Cloud, Zap, Database, Server, GitBranch, Cpu, Globe, Shield } from 'lucide-react';
+
+const CloudDevOps: React.FC = () => {
+  const cloudServices = [
+    {
+      icon: Cloud,
+      title: "Cloud Migration",
+      description: "Seamless migration to cloud platforms with minimal downtime and maximum efficiency.",
+      features: ["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"]
+    },
+    {
+      icon: Server,
+      title: "Infrastructure as Code",
+      description: "Automated infrastructure provisioning and management using modern DevOps practices.",
+      features: ["Terraform", "AWS CloudFormation", "Azure ARM", "Kubernetes"]
+      description: "Automated infrastructure provisioning and management using modern DevOps practices.",
+      features: ["Terraform", "AWS CloudFormation", "Azure ARM", "Kubernetes"]
+    },
+    {
+      icon: GitBranch,
+      title: "CI/CD Pipelines",
+      description: "Version-controlled infrastructure management and deployment",
+      features: ["Terraform", "CloudFormation", "Ansible", "Infrastructure Automation"],
+      description: "Version-controlled infrastructure management and deployment",
+      features: ["Terraform", "CloudFormation", "Ansible", "Infrastructure Automation"],
+      description: "Seamless migration to cloud platforms with minimal downtime",
+      features: ["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"],
+      icon: "☁️"
+    },
+    {
+      title: "DevOps Implementation",
+      description: "Streamline development and operations with modern DevOps practices",
+      features: ["CI/CD Pipelines", "Infrastructure as Code", "Automated Testing", "Monitoring & Logging"],
+      icon: "🔄"
+    },
+    {
+      title: "Container Orchestration",
+      description: "Manage containerized applications at scale with Kubernetes",
+      features: ["Cluster Management", "Service Discovery", "Load Balancing", "Auto-scaling"],
+      icon: "📦"
+    },
+    {
+      title: "Infrastructure Management",
+      description: "Automate and manage cloud infrastructure efficiently",
+      features: ["Terraform/CloudFormation", "Cost Optimization", "Security Hardening", "Backup & Recovery"],
+      icon: "🏗️"
+    }
+  ];
+
+  const cloudPlatforms = [
+    { name: "AWS", features: ["EC2", "S3", "Lambda", "RDS", "CloudFormation"] },
+    { name: "Azure", features: ["Virtual Machines", "Blob Storage", "Functions", "SQL Database", "ARM Templates"] },
+    { name: "Google Cloud", features: ["Compute Engine", "Cloud Storage", "Cloud Functions", "Cloud SQL", "Deployment Manager"] }
+  ];
+
+  const devOpsTools = [
+    { category: "CI/CD", tools: ["Jenkins", "GitLab CI", "GitHub Actions", "CircleCI", "ArgoCD"] },
+    { category: "Infrastructure", tools: ["Terraform", "Ansible", "Puppet", "Chef", "CloudFormation"] },
+    { category: "Monitoring", tools: ["Prometheus", "Grafana", "ELK Stack", "Datadog", "New Relic"] },
+    { category: "Security", tools: ["Vault", "AWS IAM", "Azure AD", "Google IAM", "Prisma Cloud"] }
+  ];
+
+  return (
+    <>
+=======
+>>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
 const CloudDevOps = () => {
     const features = [
         {
@@ -77,6 +174,10 @@ const CloudDevOps = () => {
                     { category: "Security", tools: ["Vault", "AWS IAM", "Azure AD", "Google IAM", "Prisma Cloud"] }
                 ];
                 return (<>
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
+>>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
       <Helmet>
         <title>Cloud & DevOps — Zion Tech Group | Cloud Migration & DevOps Services</title>
         <meta name="description" content="Transform your infrastructure with Zion Tech Group's cloud migration and DevOps services. AWS, Azure, GCP expertise with modern DevOps practices."/>
@@ -194,7 +295,16 @@ const CloudDevOps = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{platform.name}</h3>
                 <p className="text-gray-300">{platform.description}</p>
+<<<<<<< HEAD
               </div>))}
+=======
+<<<<<<< HEAD
+              </div>
+            ))}
+=======
+              </div>))}
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
+>>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
           </div>
         </div>
       </section>
@@ -496,12 +606,23 @@ const CloudDevOps = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    </div>
+  );
+=======
+>>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
     </>);
                 div >
                 ;
             }
         }
     ];
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
+>>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
 };
 ;
 ;

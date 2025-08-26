@@ -4,9 +4,331 @@ import { Building, Brain, ArrowRight, Star, Rocket, Cpu, Database } from 'lucide
 import { Link } from 'react-router-dom';
 import { Network } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
+<<<<<<< HEAD
 import { Target, CheckCircle, Lightbulb, Code, Cloud } from 'lucide-react';
 import { Clock, Workflow, BarChart } from 'lucide-react';
 const AutonomousBusinessOperationsPlatform = () => {
+=======
+<<<<<<< HEAD
+import { motion } from 'framer-motion';
+import { Bot, TrendingUp, Zap, Shield, Users, Globe, BarChart3, Settings } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Building, Zap, Brain, Users, Shield, TrendingUp, ArrowRight, Star, Rocket, Globe, Cpu, Database } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Bot, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, Cpu, Database, Network } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
+import { Helmet } from 'react-helmet-async';
+import { 
+  Building, 
+  Zap, 
+  Target, 
+  Shield, 
+  Rocket, 
+  Globe,
+  BarChart3,
+  Users,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Lightbulb,
+  Code,
+  Database,
+  Network,
+  Cloud,
+  Lock,
+  Eye,
+  Sparkles,
+  TrendingUp,
+  Settings,
+  Cpu,
+  Brain
+} from 'lucide-react';
+import { 
+  Brain, 
+  Cpu, 
+  Zap, 
+  Target, 
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+  TrendingUp,
+  Award,
+  Globe,
+  Shield,
+  Cloud,
+  Lock,
+  Database,
+  Network,
+  Code,
+  BarChart3,
+  Lightbulb,
+  Rocket,
+  Clock,
+  Phone,
+  Mail,
+  MapPin,
+  Sparkles,
+  Eye,
+  Heart,
+  Settings,
+  Workflow,
+  BarChart,
+  PieChart
+} from 'lucide-react';
+import SEOHead from '../components/SEOHead';
+import { Bot, Zap, TrendingUp, Shield, Users, ArrowRight, Cpu, Target } from 'lucide-react';
+
+import { Bot, Zap, TrendingUp, Shield, Users, ArrowRight, Cpu, Target } from 'lucide-react';
+
+import { Link } from 'react-router-dom';
+import { 
+  Bot, 
+  Zap, 
+  Cpu, 
+  Database, 
+  BarChart3, 
+  Globe, 
+  Network, 
+  Shield,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+  Clock,
+  Award,
+  Lightbulb,
+  Target,
+  Settings,
+  Workflow
+} from 'lucide-react';
+
+const AutonomousBusinessOperationsPlatform = () => {
+  const features = [
+    {
+      icon: Bot,
+      title: "Autonomous Operations",
+      description: "AI-powered systems that operate independently and make intelligent decisions"
+    },
+    {
+      icon: Zap,
+      title: "Real-time Processing",
+      description: "Instant processing and decision-making for critical business operations"
+  const features = [
+    {
+      icon: Bot,
+      title: "AI Autonomous Systems",
+      description: "Self-managing AI systems that operate independently and make intelligent decisions."
+    },
+    {
+      icon: Zap,
+      title: "Real-time Optimization",
+      description: "Continuous monitoring and optimization of business processes for maximum efficiency."
+    },
+    {
+      icon: Shield,
+      title: "Intelligent Security",
+      description: "Advanced threat detection and automated security responses powered by AI."
+    },
+    {
+      icon: Cpu,
+      title: "Intelligent Automation",
+      description: "Smart automation that learns and adapts to business needs"
+    },
+    {
+      icon: Database,
+      title: "Data Integration",
+      description: "Seamless integration across all business systems and data sources"
+    },
+    {
+      icon: BarChart3,
+      title: "Predictive Analytics",
+  const features = [
+    {
+      title: "Intelligent Process Automation",
+      description: "AI-powered automation that learns and adapts to your business processes",
+      icon: Workflow,
+      benefits: ["Smart workflows", "Adaptive learning", "Process optimization"]
+    },
+    {
+      title: "Real-time Analytics Dashboard",
+      description: "Comprehensive business intelligence with live data visualization",
+      icon: BarChart,
+      benefits: ["Live insights", "Custom dashboards", "Predictive analytics"]
+    },
+    {
+      title: "Autonomous Decision Engine",
+      description: "AI-driven decision making for operational efficiency",
+      icon: Brain,
+      benefits: ["Data-driven decisions", "Risk assessment", "Performance optimization"]
+    },
+    {
+      title: "Enterprise Security & Compliance",
+      description: "Bank-grade security with automated compliance monitoring",
+      icon: Shield,
+  const features = [
+    {
+      icon: Building,
+      title: "Autonomous Business Management",
+      description: "AI-powered systems that manage business operations independently, making decisions and executing tasks without human intervention."
+    },
+    {
+      icon: Zap,
+      title: "Real-time Process Automation",
+      description: "Continuous monitoring and automation of business processes with instant response to changing conditions and requirements."
+    },
+    {
+      icon: Target,
+      title: "Intelligent Decision Making",
+      description: "Advanced algorithms that analyze data, predict outcomes, and make optimal business decisions based on multiple factors."
+    },
+    {
+      icon: Shield,
+      title: "Risk Management & Compliance",
+      description: "Automated risk assessment, compliance monitoring, and regulatory adherence with built-in safety protocols."
+    },
+    {
+      icon: Rocket,
+      title: "Scalable Operations",
+      description: "Flexible architecture that grows with your business, handling increased complexity and volume automatically."
+    },
+    {
+      icon: Globe,
+      title: "Multi-Platform Integration",
+      description: "Seamless integration with existing business systems, CRMs, ERPs, and third-party applications."
+    }
+  ];
+
+  const useCases = [
+    {
+      icon: BarChart3,
+      title: "Financial Operations",
+      description: "Automated accounting, expense management, budget optimization, and financial reporting with AI-driven insights."
+    },
+    {
+      icon: Users,
+      title: "Human Resources",
+      description: "Intelligent recruitment, performance management, training optimization, and employee engagement automation."
+    },
+    {
+      icon: Code,
+      title: "IT Operations",
+      description: "Automated system monitoring, incident response, capacity planning, and infrastructure optimization."
+    },
+    {
+      icon: Database,
+      title: "Data Management",
+      description: "Intelligent data processing, analytics automation, report generation, and business intelligence optimization."
+    },
+    {
+      icon: Network,
+      title: "Supply Chain",
+      description: "Automated inventory management, demand forecasting, supplier optimization, and logistics coordination."
+    },
+    {
+      icon: Cloud,
+      title: "Customer Service",
+import { motion } from 'framer-motion';
+import { Bot, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, Cpu, Network } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Bot, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, Cpu, Network } from 'lucide-react';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { 
+  Bot, 
+  Zap, 
+  Settings, 
+  TrendingUp, 
+  Shield, 
+  Users, 
+  BarChart3, 
+  Clock,
+  CheckCircle,
+  ArrowRight,
+  Play,
+  Download,
+  BookOpen,
+  MessageSquare,
+  Workflow,
+  Target,
+  Cpu,
+  Database
+} from 'lucide-react';
+
+const AutonomousBusinessOperationsPlatform: React.FC = () => {
+  const features = [
+    {
+      icon: Bot,
+      title: 'Intelligent Automation',
+      description: 'AI-powered automation that learns from your business processes and continuously improves efficiency.'
+    },
+    {
+      icon: Workflow,
+      title: 'Process Orchestration',
+      description: 'Seamlessly orchestrate complex business workflows across multiple systems and departments.'
+    },
+    {
+      icon: Zap,
+      title: 'Real-time Optimization',
+      description: 'Dynamic optimization of business operations based on real-time data and market conditions.'
+    },
+    {
+      icon: Shield,
+      title: 'Secure Operations',
+      description: 'Enterprise-grade security with role-based access control and audit trails for all operations.'
+    }
+  ];
+
+  const useCases = [
+    {
+      title: 'Supply Chain Management',
+      description: 'Automated inventory management, demand forecasting, and supplier coordination.',
+      icon: Workflow
+    },
+    {
+      title: 'Customer Service',
+      description: 'Intelligent chatbots, ticket routing, and automated customer support workflows.',
+      icon: Users
+    },
+    {
+      title: 'Financial Operations',
+      description: 'Automated invoicing, expense management, and financial reporting.',
+      icon: BarChart3
+    },
+    {
+      title: 'HR & Recruitment',
+      description: 'Automated candidate screening, onboarding processes, and performance management.',
+      icon: Users
+    }
+  ];
+
+  const benefits = [
+    'Reduce operational costs by up to 40%',
+    'Improve process efficiency by 60%',
+    'Eliminate manual errors and delays',
+    '24/7 automated operations',
+    'Scalable infrastructure for growth',
+    'Real-time monitoring and analytics'
+  ];
+
+  const industries = [
+    'Manufacturing',
+    'Healthcare',
+    'Finance',
+    'Retail',
+    'Logistics',
+    'Technology',
+    'Energy',
+    'Education'
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+=======
+import { Target, CheckCircle, Lightbulb, Code, Cloud } from 'lucide-react';
+import { Clock, Workflow, BarChart } from 'lucide-react';
+const AutonomousBusinessOperationsPlatform = () => {
+>>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
     const features = [
         {
             icon: Bot,
@@ -218,6 +540,10 @@ const AutonomousBusinessOperationsPlatform = () => {
                                             'Education'
                                         ];
                                         return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
+>>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -250,7 +576,22 @@ const AutonomousBusinessOperationsPlatform = () => {
           </div>
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
+<<<<<<< HEAD
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center mb-16">
+=======
+<<<<<<< HEAD
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+=======
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-center mb-16">
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
+>>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Platform Features
             </h2>
@@ -261,9 +602,24 @@ const AutonomousBusinessOperationsPlatform = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
             {features.map((feature, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}/>
                                                 ,
                                                     <section className="py-16 px-4 sm:px-6 lg:px-8">
+=======
+<<<<<<< HEAD
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+=======
+            {features.map((feature, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}/>
+                                                ,
+                                                    <section className="py-16 px-4 sm:px-6 lg:px-8">
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
+>>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -282,7 +638,17 @@ const AutonomousBusinessOperationsPlatform = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
+<<<<<<< HEAD
               </div>))}
+=======
+<<<<<<< HEAD
+              </div>
+            ))}
+            ))}
+=======
+              </div>))}
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
+>>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500 transition-all duration-300 hover:transform hover:scale-105"
               >
@@ -293,7 +659,15 @@ const AutonomousBusinessOperationsPlatform = () => {
                 <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
+<<<<<<< HEAD
 export default function AutonomousBusinessOperationsPlatform() {}
+=======
+<<<<<<< HEAD
+export default function AutonomousBusinessOperationsPlatform() {
+=======
+export default function AutonomousBusinessOperationsPlatform() {}
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
+>>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-blue to-zion-purple">
       {/* Hero Section */}
@@ -328,7 +702,16 @@ export default function AutonomousBusinessOperationsPlatform() {}
             {capabilities.map((capability, index) => (<div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700">
                 <h3 className="text-2xl font-semibold text-white mb-4">{capability.title}</h3>
                 <p className="text-gray-300 text-lg">{capability.description}</p>
+<<<<<<< HEAD
               </div>))}
+=======
+<<<<<<< HEAD
+              </div>
+            ))}
+=======
+              </div>))}
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
+>>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
       {/* Benefits Section */}
       <section className="py-16 px-4 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
@@ -819,7 +1202,16 @@ export default function AutonomousBusinessOperationsPlatform() {}
                                                             "QuickBooks", "Shopify", "WooCommerce", "Magento", "AWS", "Azure"
                                                         ].map((tool, index) => (<div key={index} className="bg-gray-800/50 rounded-lg p-4 text-center border border-gray-700/50 hover:border-green-500/50 transition-colors duration-200">
                 <div className="text-gray-300 font-medium">{tool}</div>
+<<<<<<< HEAD
               </div>))}
+=======
+<<<<<<< HEAD
+              </div>
+            ))}
+=======
+              </div>))}
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
+>>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
       {/* Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-green-900/50">
         <div className="max-w-7xl mx-auto">
@@ -880,7 +1272,16 @@ export default function AutonomousBusinessOperationsPlatform() {}
                   <Users className="w-6 h-6 text-white"/>
                 </div>
                 <h3 className="text-lg font-semibold text-white">{industry}</h3>
+<<<<<<< HEAD
               </div>))}
+=======
+<<<<<<< HEAD
+              </div>
+            ))}
+=======
+              </div>))}
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
+>>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
           </div>
         </div>
       </section>
@@ -967,6 +1368,13 @@ export default function AutonomousBusinessOperationsPlatform() {}
               Contact Sales
             </button>
           </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+          </div>
+=======
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
+>>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Automate Your Business?
             </h2>
@@ -998,6 +1406,13 @@ export default function AutonomousBusinessOperationsPlatform() {}
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        </div>
+=======
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
+>>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg text-white font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-200 transform hover:scale-105"
               >
                 <span>Schedule a Demo</span>
@@ -1013,6 +1428,14 @@ export default function AutonomousBusinessOperationsPlatform() {}
     </>
       </section>
     </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      </section>
+    </div>
+=======
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
+>>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
         {/* CTA Section */}
         <section className="py-20 relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -1169,11 +1592,29 @@ export default function AutonomousBusinessOperationsPlatform() {}
     </>
   );
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  );
+}
+=======
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
+>>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
               className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
             >
               Get Started Free
             </Link>
+<<<<<<< HEAD
             <Link to="/pricing" className="px-8 py-4 border border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-200"/>
+=======
+<<<<<<< HEAD
+            <Link
+              to="/pricing"
+              className="px-8 py-4 border border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-200"
+=======
+            <Link to="/pricing" className="px-8 py-4 border border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-200"/>
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
+>>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -1189,9 +1630,25 @@ export default function AutonomousBusinessOperationsPlatform() {}
               Get Free Consultation
               <ArrowRight className="ml-2 w-5 h-5"/>
             </Link>
+<<<<<<< HEAD
+            <Link to="/pricing" className="inline-flex items-center px-8 py-4 border border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-semibold rounded-lg transition-all duration-200">
+=======
+<<<<<<< HEAD
+            <Link
+              to="/pricing"
+              className="inline-flex items-center px-8 py-4 border border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-semibold rounded-lg transition-all duration-200"
+            >
+              View Pricing Plans
+            </Link>
+            >
+>>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
+              View Pricing Plans
+            </Link>
+=======
             <Link to="/pricing" className="inline-flex items-center px-8 py-4 border border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-semibold rounded-lg transition-all duration-200">
               View Pricing Plans
             </Link>
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
   const testimonials = [
     {name}: "Operations Director",
       role: "Chief Operations Officer",

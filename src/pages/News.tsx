@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
@@ -109,13 +110,66 @@ export default function News() {
       article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       article.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
       article.content.toLowerCase().includes(searchQuery.toLowerCase());
+=======
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { 
+    Calendar,
+    User,
+    Tag,
+    ArrowRight,
+    Search,
+    Filter,
+    Clock,
+    Eye,
+    ExternalLink,
+    TrendingUp,
+    Award,
+    Globe
+} from 'lucide-react';
+
+export default function News() {
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState('All');
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
     
-    return matchesCategory && matchesYear && matchesSearch;
-  });
+    const categories = [
+        'All',
+        'Company News',
+        'Product Updates',
+        'Industry Insights',
+        'Awards & Recognition',
+        'Partnerships',
+        'Research & Development',
+        'Market Trends'
+    ];
+    
+    const sources = [
+        'All Sources',
+        'Company Press Releases',
+        'Industry Reports',
+        'Technology News',
+        'Research Papers',
+        'Partner Updates',
+        'Customer Success Stories'
+    ];
+    
+    const timeframes = [
+        'All Time',
+        'Last 24 Hours',
+        'Last Week',
+        'Last Month',
+        'Last 3 Months',
+        'Last Year'
+    ];
 
-  const featuredNews = filteredNews.filter(article => article.featured);
-  const regularNews = filteredNews.filter(article => !article.featured);
+    const fadeInUp = {
+        initial: { opacity: 0, y: 60 },
+        animate: { opacity: 1, y: 0 },
+        transition: { duration: 0.6 }
+    };
 
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
@@ -862,56 +916,26 @@ export default function News() {
         {/* Featured Article */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+=======
+    return (
+        <div className="min-h-screen bg-zion-blue-dark text-white">
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
             <motion.div 
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
+                className="container mx-auto px-4 py-20"
+                initial="initial"
+                animate="animate"
+                variants={fadeInUp}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Featured Story</h2>
-            </motion.div>
-            
-            {newsArticles.filter(article => article.featured).map((article) => (
-              <motion.div
-                key={article.id}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:bg-white/15"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-              >
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                  <div>
-                    <div className="flex items-center space-x-4 mb-4">
-                      <span className="px-4 py-2 bg-blue-600 text-white text-sm rounded-full">
-                        {article.category}
-                      </span>
-                      <span className="text-gray-400 text-sm">{formatDate(article.date)}</span>
-                      <span className="text-gray-400 text-sm">{article.readTime}</span>
-                    </div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
-                      {article.title}
-                    </h3>
-                    <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                      {article.excerpt}
+                <div className="text-center mb-16">
+                    <h1 className="text-5xl md:text-6xl font-bold mb-6">
+                        Latest News & Updates
+                    </h1>
+                    <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+                        Stay informed about the latest developments in technology, AI, and Zion Tech Group
                     </p>
-                    <button className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
-                      Read Full Article
-                      <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                      </svg>
-                    </button>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-8xl mb-4">{article.image}</div>
-                  </div>
                 </div>
-              </motion.div>
-            ))}
-          </div>
-        </section>
 
+<<<<<<< HEAD
         {/* Category Filter */}
         <section className="py-8 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -987,25 +1011,37 @@ export default function News() {
                         <Calendar className="w-4 h-4 text-green-400" />
                         <span>{new Date(featuredArticle.date).toLocaleDateString()}</span>
                       </div>
+=======
+                {/* Search and Filters */}
+                <div className="mb-12">
+                    <div className="flex flex-col md:flex-row gap-4 mb-6">
+                        <div className="flex-1 relative">
+                            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+                            <input
+                                type="text"
+                                placeholder="Search news..."
+                                value={searchTerm}
+                                onChange={(e) => setSearchTerm(e.target.value)}
+                                className="w-full pl-10 pr-4 py-3 bg-zion-blue-light border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                            />
+                        </div>
+                        
+                        <select
+                            value={selectedCategory}
+                            onChange={(e) => setSelectedCategory(e.target.value)}
+                            className="px-4 py-3 bg-zion-blue-light border border-zion-blue-light rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                        >
+                            {categories.map((category) => (
+                                <option key={category} value={category}>
+                                    {category}
+                                </option>
+                            ))}
+                        </select>
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
                     </div>
-                    
-                    <button className="px-6 py-3 bg-gradient-to-r from-green-500 to-teal-500 text-white font-semibold rounded-lg hover:from-green-400 hover:to-teal-400 transition-all duration-300 transform hover:scale-105">
-                      Read Full Article
-                    </button>
-                  </div>
                 </div>
-                
-                <div className="relative">
-                  <div className="w-full h-64 bg-gradient-to-br from-green-500/20 to-teal-500/20 rounded-xl border border-green-400/30 flex items-center justify-center">
-                    <Newspaper className="w-16 h-16 text-green-400" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
 
+<<<<<<< HEAD
       {/* Categories Filter */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/20">
         <div className="max-w-7xl mx-auto">
@@ -1492,49 +1528,26 @@ export default News;
                     <span
                       key={index}
                       className="px-2 py-1 bg-gray-700 text-gray-300 text-xs rounded"
+=======
+                {/* News Content Placeholder */}
+                <div className="text-center py-20">
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: 0.2 }}
+                        className="text-zion-slate-light"
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
                     >
-                      {tag}
-                    </span>
-                  ))}
+                        <Globe className="w-16 h-16 mx-auto mb-4 text-zion-cyan" />
+                        <h3 className="text-xl font-semibold mb-2">News Coming Soon</h3>
+                        <p>We're preparing exciting news and updates. Check back soon!</p>
+                    </motion.div>
                 </div>
-                
-                <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center group">
-                  Read Article
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
-                </button>
-              </div>
-            </article>
-          ))}
+            </motion.div>
         </div>
-      </div>
-
-      {/* Press Room CTA */}
-      <div className="bg-gradient-to-r from-gray-800 to-gray-900 border-t border-gray-700">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Press & Media Inquiries
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Journalists and media representatives can access our press kit, 
-              high-resolution images, and contact our media relations team.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"
-              >
-                Contact Media Relations
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <button className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-medium rounded-lg transition-all duration-200">
-                Download Press Kit
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+    );
 }
+<<<<<<< HEAD
 export default News;
+=======
+>>>>>>> cursor/expand-services-and-deploy-updates-ea0a
