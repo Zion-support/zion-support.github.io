@@ -11,12 +11,54 @@ export default function HomePage() {
         <meta property="og:description" content="Leading-edge technology solutions and autonomous innovation systems." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-        <main className="container mx-auto px-6 py-12">
-          <section className="text-center mb-16">
-            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-              Zion Tech Group
+
+      {/* Futuristic animated background */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+        {/* Gradient Nebula Blobs */}
+        <div className="absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float" />
+        <div className="absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow" />
+        <div className="absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-violet-400/10 blur-2xl animate-float-fast" />
+        {/* Subtle animated grid */}
+        <div className="absolute inset-0 opacity-[0.08] [background:radial-gradient(circle_at_center,rgba(255,255,255,0.35)_0,rgba(255,255,255,0)_60%),linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.12)_1px,transparent_1px)] bg-[size:100%_100%,3rem_3rem,3rem_3rem] animate-grid" />
+        {/* Star field */}
+        <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]">
+          <div className="twinkle-field absolute inset-0" />
+        </div>
+        {/* Orbital lines */}
+        <div className="orbital">
+          <div className="ring slow h-[48rem] w-[48rem]" />
+          <div className="ring fast h-[36rem] w-[36rem]" />
+          <div className="ring h-[28rem] w-[28rem]" />
+        </div>
+        {/* Scanline overlay */}
+        <div className="scanlines" />
+      </div>
+
+      {/* Header */}
+      <header className="relative z-10">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
+          <div className="text-2xl font-bold tracking-wide">
+            <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon">Zion</span>
+          </div>
+          <div className="hidden gap-6 md:flex">
+            <Link href="/services"><a className="text-white/80 hover:text-white">Services</a></Link>
+            <Link href="/products"><a className="text-white/80 hover:text-white">Products</a></Link>
+            <Link href="/automation"><a className="text-white/80 hover:text-white">Automations</a></Link>
+            <Link href="/contact"><a className="text-white/80 hover:text-white">Contact</a></Link>
+          </div>
+        </nav>
+      </header>
+
+      {/* Hero */}
+      <main className="relative z-10">
+        <section className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24">
+          <div className="text-center">
+            <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs text-white/70 backdrop-blur-md">
+              <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
+              Autonomous cloud systems are live and improving the app in real time
+            </div>
+            <h1 className="mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl">
+              <span className="gradient-text">Autonomous Cloud Automations</span>
             </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
               Autonomous innovation hub delivering cutting-edge technology solutions and intelligent automation systems.

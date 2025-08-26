@@ -1276,7 +1276,38 @@ h3 {
   backdrop-filter: blur(8px);
 }
 
-/* Futuristic extras */
-.neon-ring { box-shadow: 0 0 0 1px rgba(34,211,238,.25), 0 0 28px rgba(34,211,238,.25) inset; }
-.drop-shadow-neon-strong { filter: drop-shadow(0 0 18px rgba(34,211,238,.45)) drop-shadow(0 0 28px rgba(168,85,247,.35)); }
-.marquee__track { min-width: 200%; }
+/* New futuristic effects */
+@keyframes orbit-rotate { to { transform: rotate(360deg) } }
+@keyframes scanline { 0% { transform: translateY(-100%) } 100% { transform: translateY(100%) } }
+
+.orbital {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.orbital > .ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 9999px;
+  border: 1px dashed rgba(255,255,255,0.12);
+  animation: orbit-rotate 24s linear infinite;
+}
+.orbital > .ring.slow { animation-duration: 36s }
+.orbital > .ring.fast { animation-duration: 14s }
+
+.scanlines {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.04),
+    rgba(255,255,255,0.04) 2px,
+    transparent 2px,
+    transparent 6px
+  );
+  mix-blend-mode: overlay;
+  opacity: 0.18;
+  animation: scanline 8s linear infinite;
+}
