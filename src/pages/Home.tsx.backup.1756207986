@@ -31,6 +31,19 @@ export default function Home() {
 
       <HeroSection />
       
+<<<<<<< HEAD
+      <QuickAccess />
+      
+      <FeatureCTAs />
+      
+      <FeatureHighlights />
+      
+      <CategoriesSection />
+      <BenefitsSection />
+      <HowItWorksSection />
+      <FeaturedListingsSection />
+      <NewsletterSection />
+=======
       {/* Service Categories Overview */}
       <motion.section 
         className="py-20 bg-white/5 backdrop-blur-sm"
@@ -295,6 +308,7 @@ export default function Home() {
           </motion.div>
         </div>
       </motion.section>
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-0230
     </div>
   );
 }
