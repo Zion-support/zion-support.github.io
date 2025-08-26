@@ -549,7 +549,10 @@ const Careers: React.FC = () => {
         title="Careers at Zion - Join Our Team"
         description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform."
         keywords="Zion careers, AI jobs, tech careers, remote work, startup jobs"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-39b5
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-35e5
         canonical="https://ziontechgroup.com/careers"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">

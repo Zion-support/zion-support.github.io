@@ -41,11 +41,13 @@ const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
 const ContactPage = React.lazy(() => import('./pages/Contact'));
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
-
-// New Micro SAAS Service Pages
-const AIContentGenerator = React.lazy(() => import('./pages/AIContentGenerator'));
-const CybersecuritySuite = React.lazy(() => import('./pages/CybersecuritySuite'));
-const CloudCostOptimizer = React.lazy(() => import('./pages/CloudCostOptimizer'));
+const About = React.lazy(() => import('./pages/About'));
+const Careers = React.lazy(() => import('./pages/Careers'));
+const GreenIT = React.lazy(() => import('./pages/GreenIT'));
+const Privacy = React.lazy(() => import('./pages/Privacy'));
+const Terms = React.lazy(() => import('./pages/Terms'));
+const Sitemap = React.lazy(() => import('./pages/Sitemap'));
+const FAQ = React.lazy(() => import('./pages/FAQ'));
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -70,10 +72,13 @@ const baseRoutes = [
   { path: '/request-quote', element: <RequestQuotePage /> },
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
-  // New Micro SAAS Service Routes
-  { path: '/ai-content-generator', element: <AIContentGenerator /> },
-  { path: '/cybersecurity-suite', element: <CybersecuritySuite /> },
-  { path: '/cloud-optimizer', element: <CloudCostOptimizer /> },
+  { path: '/about', element: <About /> },
+  { path: '/careers', element: <Careers /> },
+  { path: '/green-it', element: <GreenIT /> },
+  { path: '/privacy', element: <Privacy /> },
+  { path: '/terms', element: <Terms /> },
+  { path: '/sitemap', element: <Sitemap /> },
+  { path: '/faq', element: <FAQ /> },
 ];
 
 const App = () => {

@@ -1092,7 +1092,10 @@ const Terms: React.FC = () => {
 =======
         title="Terms of Service"
         description="The terms and conditions for using the Zion platform."
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-39b5
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-35e5
         canonical="https://ziontechgroup.com/terms"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">

@@ -56,7 +56,10 @@ export default function GreenIT() {
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware, Zion Tech Group"
 =======
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
+<<<<<<< HEAD
 >>>>>>> origin/cursor/website-audit-and-enhancement-39b5
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-35e5
         canonical="https://ziontechgroup.com/green-it"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
