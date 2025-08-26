@@ -6,13 +6,8 @@ import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { NewsletterSection } from "@/components/NewsletterSection";
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 import { StatsSection } from "@/components/StatsSection";
-import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { SEO } from "@/components/SEO";
-import { HeroSection } from "@/components/HeroSection";
-import { QuickAccess } from "@/components/home/QuickAccess";
-import { FeatureCTAs } from "@/components/home/FeatureCTAs";
-import { FeatureHighlights } from "@/components/home/FeatureHighlights";
-import { ITServiceRequestHero } from "@/components/home/ITServiceRequestHero";
+import { ITServiceRequestHero } from "@/components/ITServiceRequestHero";
 
 export default function Home() {
   return (
@@ -26,17 +21,7 @@ export default function Home() {
 
       <ITServiceRequestHero />
 
-      <HeroSection />
-      
-      <QuickAccess />
-      
-      <FeatureCTAs />
-      
-      <FeatureHighlights />
-      
       <StatsSection />
-      
-      <TestimonialsSection />
       
       <CategoriesSection />
       <BenefitsSection />

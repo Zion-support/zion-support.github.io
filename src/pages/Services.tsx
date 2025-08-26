@@ -328,6 +328,9 @@ const Services: React.FC = () => {
             >
               View Complete Services Portfolio →
             </Link>
+            <p className="text-sm text-gray-400 mt-2">
+              Discover our advanced innovative services including AI, quantum computing, blockchain, and specialized industry solutions
+            </p>
           </div>
           <div className="text-sm text-gray-400">
             <p>Email: kleber@ziontechgroup.com</p>
