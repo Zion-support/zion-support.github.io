@@ -60,7 +60,7 @@ const specialServices = [
   },
   {
     title: "All Services",
-    link: "/all-services"
+    link: "/comprehensive-services"
   }
 ];
 

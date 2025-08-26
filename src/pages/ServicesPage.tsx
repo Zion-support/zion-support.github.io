@@ -6,9 +6,9 @@ import { TrustedBySection } from "@/components/TrustedBySection";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import { Globe, Sparkles, ArrowRight } from "lucide-react";
+import { Globe, ArrowRight, TrendingUp } from "lucide-react";
 import { useEffect, useState } from "react";
-import { ENHANCED_SERVICES } from "@/data/enhancedServices";
+import { EXPANDED_SERVICES } from "@/data/expandedServices";
 
 // Enhanced service listings with real micro SAAS solutions
 const SERVICE_LISTINGS: ProductListing[] = [
@@ -201,7 +201,7 @@ const SERVICE_FILTERS = [
 ];
 
 export default function ServicesPage() {
-  const [listings, setListings] = useState<ProductListing[]>([...SERVICE_LISTINGS, ...MICRO_SAAS_SERVICES]);
+  const [listings, setListings] = useState<ProductListing[]>([...SERVICE_LISTINGS, ...EXPANDED_SERVICES]);
 
   useEffect(() => {
     async function load() {
@@ -264,6 +264,18 @@ export default function ServicesPage() {
             <Link to="/pricing">
               <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
                 View Pricing Guide
+              </Button>
+            </Link>
+            <Link to="/comprehensive-services">
+              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+                <ArrowRight className="h-4 w-4 mr-2" />
+                View All Services
+              </Button>
+            </Link>
+            <Link to="/pricing-guide">
+              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+                <TrendingUp className="h-4 w-4 mr-2" />
+                Pricing Guide
               </Button>
             </Link>
             <Link to="/request-quote">
