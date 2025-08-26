@@ -2,6 +2,10 @@ import type { AppProps } from 'next/app';
 import '../styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
+<<<<<<< HEAD
+	return <Component {...pageProps} />;
+}
+=======
 	const renderedRef = useRef(false);
 	return (
 		<SEOContext.Provider value={{ renderedRef }}>
@@ -16,3 +20,4 @@ export default function App({ Component, pageProps }: AppProps) {
 		</SEOContext.Provider>
 	);
 }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-80f7
