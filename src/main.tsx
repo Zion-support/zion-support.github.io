@@ -98,10 +98,28 @@ window.addEventListener('error', (e) => {
   displayFatalError(e.message);
 });
 
-window.addEventListener('unhandledrejection', (e) => {
-  const message = (e.reason && e.reason.message) || 'Unhandled promise rejection';
-  console.error('Unhandled rejection:', e.reason);
-  displayFatalError(message);
-});
-
-registerServiceWorker();
+// Render the app with proper provider structure
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <WhitelabelProvider>
+          <Router>
+            <AuthProvider>
+              <NotificationProvider>
+                <AnalyticsProvider>
+                  <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+                    <AppLayout>
+                      <App />
+                    </AppLayout>
+                    <LanguageDetectionPopup />
+                  </LanguageProvider>
+                </AnalyticsProvider>
+              </NotificationProvider>
+            </AuthProvider>
+          </Router>
+        </WhitelabelProvider>
+      </QueryClientProvider>
+    </HelmetProvider>
+  </React.StrictMode>,
+);
