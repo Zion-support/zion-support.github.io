@@ -6,6 +6,20 @@ import Skeleton from '@/components/ui/skeleton';
 import axios from 'axios';
 import { useAuth } from '@/hooks/useAuth';
 import { CartItem as CartItemComponent } from '@/components/cart/CartItem';
+import GuestCheckoutModal from '@/components/cart/GuestCheckoutModal';
+// CartItemType is already imported via RootState from cartSlice which uses CartItem from @/types/cart
+// import { CartItem as CartItemType } from '@/types/cart';
+// safeStorage is no longer needed here for reading
+// import { safeStorage } from '@/utils/safeStorage';
+import { getStripe } from '@/utils/getStripe';
+import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
+import { ShoppingCart, User, CreditCard, ArrowRight, Package, Shield } from 'lucide-react';
+import { useWishlist } from '@/hooks/useWishlist';
+import ProductCard from '@/components/ProductCard';
+import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 
 export default function CartPage() {
   const navigate = useNavigate();
@@ -81,7 +95,19 @@ export default function CartPage() {
   };
 
   const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
-  const total = subtotal - discount;
+  const tax = subtotal * 0.08; // 8% tax estimate
+  
+  // Only add shipping for physical items
+  const hasPhysicalItems = items.some(item => 
+    !item.type || item.type === 'physical' // Default to physical if type not specified
+  );
+  const shipping = hasPhysicalItems && subtotal <= 100 ? 15 : 0;
+  const total = subtotal + tax + shipping;
+  const { items: saved } = useWishlist();
+  const savedMap = MARKETPLACE_LISTINGS.reduce<Record<string, any>>((acc, p) => {
+    acc[p.id] = p;
+    return acc;
+  }, {});
 
   if (cartLoading) {
     return (
@@ -100,10 +126,24 @@ export default function CartPage() {
           alt="Empty cart"
           className="mx-auto mb-4 w-48 h-36"
         />
-        <p>{t('cart.empty')}</p>
-        <Button asChild className="mt-4">
-          <Link href="/marketplace">Browse Marketplace</Link>
-        </Button>
+
+        {saved.length > 0 && (
+          <div className="mt-12">
+            <h2 className="text-2xl font-bold text-white mb-4">Saved for Later</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {saved.map(id => {
+                const p = savedMap[id];
+                return p ? (
+                  <ProductCard
+                    key={id}
+                    product={{ ...p, price: p.price || 0, description: p.description || '' }}
+                    onBuy={() => router.push('/checkout')}
+                  />
+                ) : null;
+              })}
+            </div>
+          </div>
+        )}
       </div>
     );
   }
