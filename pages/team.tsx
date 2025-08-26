@@ -279,7 +279,7 @@ export default function TeamPage() {
                   <div className={`w-16 h-16 mx-auto mb-4 bg-gradient-to-r ${dept.color} rounded-xl flex items-center justify-center`}>
                     <dept.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3 text-center">{dept.name}</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-white text-center">{dept.name}</h3>
                   <p className="text-white/70 text-center mb-4">{dept.description}</p>
                   <div className="text-center">
                     <div className="text-2xl font-bold text-cyan-400">{dept.members}</div>

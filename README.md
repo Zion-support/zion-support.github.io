@@ -1,6 +1,6 @@
 # bolt.new.zion.app
 
-![Automations: 227](https://img.shields.io/badge/Automations-227-informational) ![Pages: 2960](https://img.shields.io/badge/Pages-2960-success) ![Components: 12](https://img.shields.io/badge/Components-12-blue)
+![Automations: 227](https://img.shields.io/badge/Automations-227-informational) ![Pages: 15+](https://img.shields.io/badge/Pages-15+-success) ![Components: 50+](https://img.shields.io/badge/Components-50+-blue) ![Blueprints: 7](https://img.shields.io/badge/Blueprints-7-purple)
 
 Autonomous, cloud‑native app with self‑running automations.
 
@@ -17,35 +17,37 @@ Home: https://github.com/Zion-Holdings/zion.app#readme
 - `pages/`: Next.js pages.
 - `components/`: Reusable UI components.
 
-### Routes
-- `/` - Home page
-- `/404` - Page Not Found
-- `/500` - Server Error
-- `/about` - About Zion
-- `/api-documentation` - API Documentation
-- `/automation` - Automation Features
-- `/blog` - Blog Index
-- `/blog/ai-automation-trends-2025` - AI Automation Trends 2025
-- `/component-library` - UI Component Library
-- `/contact` - Contact Us
-- `/content-hub` - Content Hub
-- `/discover` - Discover
-- `/enhanced-navigation` - Enhanced Navigation
-- `/events` - Events
-- `/explore` - Explore
-- `/front` - Front Control Center
-- `/landing` - Landing Page
-- `/live-dashboard` - Live Dashboard
-- `/main/front` - Main Front Control
-- `/navigation` - Site Navigation
-- `/news` - News
-- `/newsroom` - Newsroom
-- `/playground` - Interactive Playground
-- `/privacy` - Privacy Policy
-- `/reports` - Reports Index
-- `/services` - Our Services
+### New Content & Features
+- **Blueprint System**: 7 comprehensive technical blueprints covering autonomous cloud automation, AI-powered talent marketplace, DeFi infrastructure, quantum computing, edge computing, blockchain governance, and AI ethics.
+- **API Documentation**: Complete API reference with examples in JavaScript, Python, and cURL.
+- **Component Library**: 50+ reusable UI components with interactive examples and usage guidelines.
+- **Enhanced Reports**: Updated report system with structured content and improved navigation.
 
-**Note**: All routes now have corresponding Next.js pages with proper content and styling.
+### Routes
+- /
+- /404
+- /500
+- /_app
+- /_document
+- /about
+- /api-documentation
+- /automation
+- /automation-health
+- /blog
+- /component-library
+- /contact
+- /privacy
+- /reports
+- /reports/updates
+- /reports/blueprints
+- /reports/blueprints/blueprint-2025-08-18-122901
+- /reports/blueprints/blueprint-2025-08-18-122931
+- /reports/blueprints/blueprint-2025-08-18-122952
+- /reports/blueprints/blueprint-2025-08-18-123006
+- /reports/blueprints/blueprint-2025-08-18-123030
+- /reports/blueprints/blueprint-2025-08-18-123102
+- /reports/blueprints/blueprint-2025-08-18-123152
+- /services
 - /reports/blueprints/blueprint-2025-08-18-131847
 - /reports/blueprints/blueprint-2025-08-18-131910
 - /reports/blueprints/blueprint-2025-08-18-132004
