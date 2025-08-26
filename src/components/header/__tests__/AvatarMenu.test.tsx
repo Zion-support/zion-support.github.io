@@ -20,18 +20,35 @@ const mockedUseAuth = useAuth as jest.MockedFunction<typeof useAuth>;
 describe('UserProfileDropdown', () => {
   const mockLogout = jest.fn();
 
+  const createAuthContextValue = (
+    overrides: Partial<AuthContextType> = {}
+  ): AuthContextType => ({
+    user: { id: '1', displayName: 'Test User' },
+    isAuthenticated: true,
+    isLoading: false,
+    login: jest.fn(),
+    signup: jest.fn(),
+    logout: mockLogout,
+    resetPassword: jest.fn(),
+    updateProfile: jest.fn(),
+    loginWithGoogle: jest.fn(),
+    loginWithFacebook: jest.fn(),
+    loginWithTwitter: jest.fn(),
+    loginWithWeb3: jest.fn(),
+    ...overrides,
+  });
+
   afterEach(() => {
     mockLogout.mockClear();
     // Clear all mocks if necessary, e.g., (useNavigate as jest.Mock).mockClear();
   });
 
   it('renders the avatar icon when user is logged in', () => {
-    mockedUseAuth.mockReturnValue({
-      user: { id: '1', displayName: 'Test User', email: 'test@example.com' },
-      logout: mockLogout,
-      isLoading: false,
-      // Add other properties returned by your useAuth hook if needed
-    } as any);
+    mockedUseAuth.mockReturnValue(
+      createAuthContextValue({
+        user: { id: '1', displayName: 'Test User', email: 'test@example.com' }
+      })
+    );
     render(<UserProfileDropdown />);
     expect(screen.getByLabelText('User profile')).toBeInTheDocument();
   });
@@ -47,22 +64,22 @@ describe('UserProfileDropdown', () => {
     // Let's re-evaluate this specific test's utility for *this* component.
     // For now, we'll assume the component is always rendered by its parent when appropriate.
     // A more direct test of non-rendering would be in Header.test.tsx.
-    mockedUseAuth.mockReturnValue({
-      user: { id: '1', displayName: 'Test User' }, // Keep it rendered for dropdown tests
-      logout: mockLogout,
-      isLoading: false,
-    } as any);
+    mockedUseAuth.mockReturnValue(
+      createAuthContextValue({
+        user: { id: '1', displayName: 'Test User' }
+      })
+    );
     render(<UserProfileDropdown />);
     expect(screen.getByLabelText('User profile')).toBeInTheDocument(); // It will render its button
   });
 
 
   it('clicking the avatar toggles the dropdown visibility', () => {
-    mockedUseAuth.mockReturnValue({
-      user: { id: '1', displayName: 'Test User' },
-      logout: mockLogout,
-      isLoading: false,
-    } as any);
+    mockedUseAuth.mockReturnValue(
+      createAuthContextValue({
+        user: { id: '1', displayName: 'Test User' }
+      })
+    );
     render(<UserProfileDropdown />);
     const avatarButton = screen.getByLabelText('User profile');
 
@@ -82,11 +99,11 @@ describe('UserProfileDropdown', () => {
   });
 
   it('dropdown contains Profile, Orders, Wallet, and Logout items when open', () => {
-    mockedUseAuth.mockReturnValue({
-      user: { id: '1', displayName: 'Test User' },
-      logout: mockLogout,
-      isLoading: false,
-    } as any);
+    mockedUseAuth.mockReturnValue(
+      createAuthContextValue({
+        user: { id: '1', displayName: 'Test User' }
+      })
+    );
     render(<UserProfileDropdown />);
     const avatarButton = screen.getByLabelText('User profile');
     fireEvent.click(avatarButton); // Open dropdown
@@ -107,11 +124,11 @@ describe('UserProfileDropdown', () => {
   });
 
   it('clicking Logout button calls the logout function from useAuth', () => {
-    mockedUseAuth.mockReturnValue({
-      user: { id: '1', displayName: 'Test User' },
-      logout: mockLogout,
-      isLoading: false,
-    } as any);
+    mockedUseAuth.mockReturnValue(
+      createAuthContextValue({
+        user: { id: '1', displayName: 'Test User' }
+      })
+    );
     render(<UserProfileDropdown />);
     const avatarButton = screen.getByLabelText('User profile');
     fireEvent.click(avatarButton); // Open dropdown
@@ -123,11 +140,11 @@ describe('UserProfileDropdown', () => {
   });
 
   it('closes dropdown when clicking outside', () => {
-    mockedUseAuth.mockReturnValue({
-      user: { id: '1', displayName: 'Test User' },
-      logout: mockLogout,
-      isLoading: false,
-    } as any);
+    mockedUseAuth.mockReturnValue(
+      createAuthContextValue({
+        user: { id: '1', displayName: 'Test User' }
+      })
+    );
     render(
       <div>
         <div data-testid="outside-element">Outside</div>
