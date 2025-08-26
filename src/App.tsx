@@ -51,27 +51,6 @@ import MoreProductsPage from './pages/MoreProductsPage';
 import Sitemap from './pages/Sitemap';
 import PartnersPage from './pages/Partners';
 import Login from './pages/Login';
-import Signup from './pages/Signup';
-import SignUp from './pages/SignUp';
-import ITOnsiteServicesPage from './pages/ITOnsiteServicesPage';
-import OpenAppRedirect from './pages/OpenAppRedirect';
-import ContactPage from './pages/Contact';
-import ZionHireAI from './pages/ZionHireAI';
-import RequestQuotePage from './pages/RequestQuote';
-
-const baseRoutes = [
-  { path: '/', element: <Home /> },
-  { path: '/match', element: <AIMatcherPage /> },
-  { path: '/login', element: <Login /> },
-  { path: '/register', element: <Signup /> },
-  { path: '/signup', element: <SignUp /> },
-  { path: '/talent', element: <TalentDirectory /> },
-  { path: '/talents', element: <TalentsPage /> },
-  { path: '/services', element: <ServicesPage /> },
-  { path: '/enhanced-services', element: <EnhancedServicesShowcase /> },
-  { path: '/ai-services', element: <AIServicesPage /> },
-  { path: '/cybersecurity-services', element: <CybersecurityServicesPage /> },
-=======
   { path: '/micro-saas-services', element: <MicroSaasServices /> },
   { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
   { path: '/categories', element: <Categories /> },
@@ -119,6 +98,7 @@ const LoadingSpinner = () => (
     </div>
   </div>
 );
+=======
 
 const App = () => {
   // Ensure each navigation starts at the top of the page
