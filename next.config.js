@@ -9,7 +9,7 @@ const nextConfig = {
 		unoptimized: true
 	},
 	typescript: {
-		ignoreBuildErrors: true,
+		ignoreBuildErrors: true
 	},
 	eslint: {
 		ignoreDuringBuilds: true
@@ -32,4 +32,4 @@ const nextConfig = {
 	}
 };
 
-export default nextConfig;
+module.exports = nextConfig;

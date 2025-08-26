@@ -9,7 +9,7 @@ import {
   CheckCircle, ChevronRight, ExternalLink, Play, Pause, Volume2, VolumeX
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-import { advancedAIAutomationServices2026 } from '../data/2026-advanced-ai-automation-services';
+import { advancedAIautomationServices as advancedAIAutomationServices2026 } from '../data/2025-advanced-ai-automation-services';
 import { advancedCybersecurityServices2026 } from '../data/2026-advanced-cybersecurity-services';
 import { advancedFintechServices2026 } from '../data/2026-advanced-fintech-services';
 import { advancedHealthcareBiotechServices2026 } from '../data/2026-advanced-healthcare-biotech-services';

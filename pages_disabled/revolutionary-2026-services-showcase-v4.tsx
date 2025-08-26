@@ -8,10 +8,9 @@ import {
   Microscope, Phone, Mail, MapPin, Eye, Heart, Target, Award
 } from 'lucide-react';
 import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
-import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
-import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4';
+import { emergingTech2028Services as emergingTech2026ServicesV4 } from '../data/2028-emerging-tech-services';
 import { innovative2026AIServicesV4 } from '../data/innovative-2026-ai-services-v4';
-import UltraQuantumHolographicBackgroundV4 from '../components/ui/UltraQuantumHolographicBackgroundV4';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
 
 export default function Revolutionary2026ServicesShowcaseV4() {
@@ -32,7 +31,6 @@ export default function Revolutionary2026ServicesShowcaseV4() {
   const allServices = [
     ...innovative2026MicroSaasServicesV4,
     ...emergingTech2026ServicesV4,
-    ...enterpriseIT2026ServicesV4,
     ...innovative2026AIServicesV4
   ];
 
@@ -203,7 +201,7 @@ export default function Revolutionary2026ServicesShowcaseV4() {
   };
 
   return (
-    <>
+    <UltraAdvancedFuturisticBackground>
       <Head>
         <title>Revolutionary 2026 Services Showcase V4 - Zion Tech Group</title>
         <meta name="description" content="Discover the most innovative and cutting-edge services of 2026. From AI consciousness simulation to quantum internet gateways, explore the future of technology." />
@@ -215,20 +213,6 @@ export default function Revolutionary2026ServicesShowcaseV4() {
         <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2026-services-showcase-v4" />
       </Head>
 
-      <UltraQuantumHolographicBackgroundV4 
-        intensity="extreme"
-        colorScheme="holographic"
-        particleCount={300}
-        animationSpeed={2}
-        enableHolographic={true}
-        enableQuantumEffects={true}
-        enableNeuralNetwork={true}
-        enableCosmicWaves={true}
-        enableFloatingElements={true}
-        enableMatrixRain={true}
-        enableEnergyFields={true}
-        enableTimeWarp={true}
-      />
       <UltraAdvancedNavigation2026 />
 
       <main className="min-h-screen relative z-10">
@@ -571,6 +555,6 @@ export default function Revolutionary2026ServicesShowcaseV4() {
           </div>
         </section>
       </main>
-    </>
+    </UltraAdvancedFuturisticBackground>
   );
 }
