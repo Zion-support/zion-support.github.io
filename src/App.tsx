@@ -7,13 +7,9 @@ import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster } from "./components/ui/toaster";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
-<<<<<<< HEAD
-import InstallPrompt from "./components/InstallPrompt";
-=======
 import { ErrorBoundary } from "./components/ErrorBoundary";
 import { PerformanceOptimizer } from "./components/PerformanceOptimizer";
 import { AccessibilityEnhancer } from "./components/AccessibilityEnhancer";
->>>>>>> bb65c1ef0a972fd1f54d0f8109dacb32dae32437
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -27,7 +23,6 @@ import {
   CommunityRoutes,
   DeveloperRoutes
 } from './routes';
-<<<<<<< HEAD
 import Home from './pages/Home';
 import AIMatcherPage from './pages/AIMatcher';
 import TalentDirectory from './pages/TalentDirectory';
@@ -52,6 +47,10 @@ import OpenAppRedirect from './pages/OpenAppRedirect';
 import ContactPage from './pages/Contact';
 import ZionHireAI from './pages/ZionHireAI';
 import RequestQuotePage from './pages/RequestQuote';
+
+// Lazy imports for new pages
+const UltimateServicesShowcase2026 = lazy(() => import('./pages/UltimateServicesShowcase2026'));
+const ComprehensivePricing2026 = lazy(() => import('./pages/ComprehensivePricing2026'));
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -84,118 +83,12 @@ const baseRoutes = [
   { path: '/blog/:slug', element: <BlogPost /> },
   { path: '/wishlist', element: <WishlistPage /> },
   { path: '/checkout', element: <CheckoutPage /> },
-];
-
-// Service pages
-const AIServices = lazy(() => import('./pages/AIServices'));
-const CloudDevOps = lazy(() => import('./pages/CloudDevOps'));
-const EnterpriseSolutionsPage = lazy(() => import('./pages/EnterpriseSolutions'));
-const DigitalTransformation = lazy(() => import('./pages/DigitalTransformation'));
-const AIBusinessIntelligence = lazy(() => import('./pages/services/AIBusinessIntelligence'));
-const AIMarketingAutomation = lazy(() => import('./pages/services/AIMarketingAutomation'));
-
-// New innovative service pages
-const AIWorkflowAutomation = lazy(() => import('./pages/services/AIWorkflowAutomation'));
-const BlockchainEnterpriseSolutions = lazy(() => import('./pages/services/BlockchainEnterpriseSolutions'));
-const IoTDataAnalytics = lazy(() => import('./pages/services/IoTDataAnalytics'));
-
-// Missing pages from analysis
-const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/QuantumNeuralNetworkPlatform'));
-const AutonomousBusinessOperationsPlatform = lazy(() => import('./pages/AutonomousBusinessOperationsPlatform'));
-const AIPoweredITAssetManagement = lazy(() => import('./pages/AIPoweredITAssetManagement'));
-const SOC2ComplianceAutomation = lazy(() => import('./pages/SOC2ComplianceAutomation'));
-const AIAutonomousResearchAssistant = lazy(() => import('./pages/AIAutonomousResearchAssistant'));
-const FiveGEnterpriseSolutions = lazy(() => import('./pages/5GEnterpriseSolutions'));
-const CaseStudies = lazy(() => import('./pages/CaseStudies'));
-const HelpCenter = lazy(() => import('./pages/HelpCenter'));
-const NewServices = lazy(() => import('./pages/NewServices'));
-const InnovativeNewServices2025 = lazy(() => import('./pages/InnovativeNewServices2025'));
-
-// Company information pages
-const About = lazy(() => import('./pages/About'));
-const Contact = lazy(() => import('./pages/Contact'));
-const Mission = lazy(() => import('./pages/Mission'));
-const Team = lazy(() => import('./pages/Team'));
-const Pricing = lazy(() => import('./pages/Pricing'));
-const Careers = lazy(() => import('./pages/Careers'));
-const Partners = lazy(() => import('./pages/Partners'));
-const Blog = lazy(() => import('./pages/Blog'));
-const News = lazy(() => import('./pages/News'));
-
-// Service detail pages
-const ServicesOverview = lazy(() => import('./pages/services/ServicesOverview'));
-const AIAutonomousSystems = lazy(() => import('./pages/services/AIAutonomousSystems'));
-const QuantumTechnology = lazy(() => import('./pages/services/QuantumTechnology'));
-const Cybersecurity = lazy(() => import('./pages/services/Cybersecurity'));
-const ITInfrastructure = lazy(() => import('./pages/services/ITInfrastructure'));
-const MicroSAASSolutions = lazy(() => import('./pages/services/MicroSAASSolutions'));
-const IndustrySolutions = lazy(() => import('./pages/services/IndustrySolutions'));
-const InnovativeNewServices = lazy(() => import('./pages/services/InnovativeNewServices'));
-const SpecializedITInfrastructure = lazy(() => import('./pages/services/SpecializedITInfrastructure'));
-const InnovativeMicroSaasServices = lazy(() => import('./pages/InnovativeMicroSaasServices'));
-const ComprehensiveInnovativeServices = lazy(() => import('./pages/ComprehensiveInnovativeServices'));
-const ComprehensiveServicesOverview = lazy(() => import('./pages/ComprehensiveServicesOverview'));
-
-// Solutions pages
-const EnterpriseSolutions = lazy(() => import('./pages/solutions/Enterprise'));
-const HealthcareSolutions = lazy(() => import('./pages/solutions/Healthcare'));
-
-// Other pages from existing structure
-const Login = React.lazy(() => import('./pages/Login'));
-const Signup = React.lazy(() => import('./pages/Signup'));
-=======
-
-// Lazy load components with better error boundaries
-const Home = React.lazy(() => import('./pages/Home'));
-const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
-const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
-const TalentsPage = React.lazy(() => import('./pages/TalentsPage'));
->>>>>>> bb65c1ef0a972fd1f54d0f8109dacb32dae32437
-const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
-const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage'));
-const EquipmentDetail = React.lazy(() => import('./pages/EquipmentDetail'));
-const Analytics = React.lazy(() => import('./pages/Analytics'));
-const MobileLaunchPage = React.lazy(() => import('./pages/MobileLaunchPage'));
-const CommunityPage = React.lazy(() => import('./pages/CommunityPage'));
-const Categories = React.lazy(() => import('./pages/Categories'));
-const Blog = React.lazy(() => import('./pages/Blog'));
-const BlogPost = React.lazy(() => import('./pages/BlogPost'));
-const PartnersPage = React.lazy(() => import('./pages/Partners'));
-const Login = React.lazy(() => import('./pages/Login'));
-const Signup = React.lazy(() => import('./pages/Signup'));
-const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage'));
-const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
-const ContactPage = React.lazy(() => import('./pages/Contact'));
-const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
-const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
-const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServicesPage'));
-
-const baseRoutes = [
-  { path: '/', element: <Home /> },
-  { path: '/match', element: <AIMatcherPage /> },
-  { path: '/login', element: <Login /> },
-  { path: '/signup', element: <Signup /> },
-  { path: '/talent', element: <TalentDirectory /> },
-  { path: '/talents', element: <TalentsPage /> },
-  { path: '/services', element: <ServicesPage /> },
-  { path: '/comprehensive-services', element: <ComprehensiveServicesPage /> },
-  { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
-  { path: '/categories', element: <Categories /> },
-  { path: '/equipment', element: <EquipmentPage /> },
-  { path: '/equipment/:id', element: <EquipmentDetail /> },
-  { path: '/analytics', element: <Analytics /> },
-  { path: '/mobile-launch', element: <MobileLaunchPage /> },
-  { path: '/open-app', element: <OpenAppRedirect /> },
-  { path: '/community', element: <CommunityPage /> },
-  { path: '/contact', element: <ContactPage /> },
-  { path: '/partners', element: <PartnersPage /> },
-  { path: '/zion-hire-ai', element: <ZionHireAI /> },
-  { path: '/hire-ai', element: <ZionHireAI /> },
-  { path: '/request-quote', element: <RequestQuotePage /> },
-  { path: '/comprehensive-services', element: <ComprehensiveServices /> },
-  { path: '/pricing-guide', element: <PricingGuide /> },
-  { path: '/blog', element: <Blog /> },
-  { path: '/blog/:slug', element: <BlogPost /> },
+  
+  // New 2026 service routes
+  { path: '/ultimate-services-showcase-2026', element: <UltimateServicesShowcase2026 /> },
+  { path: '/ultimate-services-2026', element: <UltimateServicesShowcase2026 /> },
+  { path: '/comprehensive-pricing-2026', element: <ComprehensivePricing2026 /> },
+  { path: '/pricing-2026', element: <ComprehensivePricing2026 /> },
 ];
 
 // Enhanced loading component with skeleton
