@@ -243,7 +243,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-white font-semibold">Email</h3>
-                    <p className="text-zion-slate-light">hello@ziontechgroup.com</p>
+                    <p className="text-zion-slate-light">kleber@ziontechgroup.com</p>
                     <p className="text-zion-slate-light text-sm">We'll respond within 24 hours</p>
                   </div>
                 </div>
@@ -254,7 +254,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-white font-semibold">Phone</h3>
-                    <p className="text-zion-slate-light">+1 (555) 123-4567</p>
+                    <p className="text-zion-slate-light">+1 302 464 0950</p>
                     <p className="text-zion-slate-light text-sm">Mon-Fri 9AM-6PM EST</p>
                   </div>
                 </div>
@@ -265,7 +265,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="text-white font-semibold">Location</h3>
-                    <p className="text-zion-slate-light">Global • Remote First</p>
+                    <p className="text-zion-slate-light">364 E Main St STE 1008, Middletown DE 19709</p>
                     <p className="text-zion-slate-light text-sm">Serving clients worldwide</p>
                   </div>
                 </div>
