@@ -1,30 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-export const Form = ({ children, ...props }: any) => {
-  return <form {...props}>{children}</form>;
-};
-
-export const FormField = ({ children, ...props }: any) => {
-  return <div {...props}>{children}</div>;
-};
-
-export const FormItem = ({ children, ...props }: any) => {
-  return <div {...props}>{children}</div>;
-};
-
-export const FormLabel = ({ children, ...props }: any) => {
-  return <label {...props}>{children}</label>;
-};
-
-export const FormControl = ({ children, ...props }: any) => {
-  return <div {...props}>{children}</div>;
-};
-
-export const FormMessage = ({ children, ...props }: any) => {
-  return <div {...props}>{children}</div>;
-};
-=======
 interface FormProps {
   children: React.ReactNode;
   onSubmit?: (e: React.FormEvent) => void;
@@ -100,4 +75,3 @@ export function FormMessage({ children, className = '' }: FormMessageProps) {
     </p>
   );
 }
->>>>>>> 56229ef9d959dca80d78e89ba2b28c0e10af1144
