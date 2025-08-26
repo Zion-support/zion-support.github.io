@@ -27,7 +27,7 @@ import { BetaBanner } from '@/components/BetaBanner';
 import { InstallPrompt } from '@/components/InstallPrompt';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import { AppLayout } from '@/layout/AppLayout';
-import ProductionErrorBoundary from '@/components/ProductionErrorBoundary';
+// import ProductionErrorBoundary from '@/components/ProductionErrorBoundary';
 import dynamic from 'next/dynamic';
 import { PerformanceMonitor } from '@/components/ui/performance-monitor';
 import { BundleAnalyzer } from '@/components/ui/bundle-analyzer';
@@ -268,19 +268,17 @@ function MyApp({ Component, pageProps }: AppProps) {
   }
 
   return (
-    <ProductionErrorBoundary>
+    <>
       <QueryClientProvider client={queryClient}> {/* Added QueryClientProvider */}
-        <ProviderWrapper>
-        <Head>
-          <title>Zion App - AI Marketplace & DAO Platform</title>
+                  <Head>
+<title>Zion App - AI Marketplace & DAO Platform</title>
         <meta name="description" content="Zion App - The ultimate AI marketplace and DAO platform for the future of work" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={`${inter.variable} ${poppins.variable}`}>
-        <ProductionErrorBoundary>
-          <RootErrorBoundary>
-            <HydrationErrorBoundary>
+        <RootErrorBoundary>
+          <HydrationErrorBoundary>
               <React.Suspense
                 fallback={
                   <div className="flex items-center justify-center min-h-screen">
@@ -340,8 +338,8 @@ function MyApp({ Component, pageProps }: AppProps) {
               </React.Suspense>
             </HydrationErrorBoundary>
           </RootErrorBoundary>
-        </ProductionErrorBoundary>
       </div>
+        </QueryClientProvider>
     </>
   );
 }

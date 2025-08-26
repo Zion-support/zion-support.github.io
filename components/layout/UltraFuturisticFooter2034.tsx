@@ -9,7 +9,7 @@ import {
   Rocket, Target, Microscope
 } from 'lucide-react';
 
-const UltraFuturisticFooter2034: React.FC = () => {
+export default function UltraFuturisticFooter2034() {
   const currentYear = new Date().getFullYear();
 
   const serviceCategories = [

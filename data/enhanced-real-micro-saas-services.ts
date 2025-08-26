@@ -6481,8 +6481,8 @@ export const serviceCategories = [
   }
 ];
 
-// Service categories
-export const serviceCategories = [
+// Service categories (names list)
+export const serviceCategoryNames = [
   'All',
   'AI & Machine Learning',
   'Cloud & Infrastructure',

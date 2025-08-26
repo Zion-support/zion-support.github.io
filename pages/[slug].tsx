@@ -28,6 +28,77 @@ import { augmentedRealServices2025 } from '../data/2025-augmented-real-services'
 
 import { innovativeRealMicroSaasServices2025 as servicesData } from '../data/2025-innovative-real-micro-saas-services';
 
+// Node modules will be required inside getStaticPaths to avoid client bundling
+
+type Service = typeof servicesData[number];
+
+function getAllServices(): Service[] {
+  return servicesData;
+}
+
+function toSlug(value: string): string {
+  return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
+
+function extractSlugFromLink(link: string): string | null {
+  try {
+    const url = new URL(link);
+    const path = url.pathname.replace(/^\/+|\/+$/g, '');
+    if (!path) return null;
+    const parts = path.split('/');
+    return parts[parts.length - 1] || null;
+  } catch {
+    return null;
+  }
+}
+
+export async function getStaticPaths() {
+  const services = getAllServices();
+  const slugs = new Set<string>();
+
+  for (const s of services) {
+    if (s.link) {
+      const fromLink = extractSlugFromLink(s.link);
+      if (fromLink) {
+        slugs.add(fromLink);
+        continue;
+      }
+    }
+    if (s.id) slugs.add(toSlug(s.id));
+    else if (s.name) slugs.add(toSlug(s.name));
+  }
+
+  // Exclude any slugs that already have explicit pages under /pages
+  const fs = require('fs');
+  const path = require('path');
+  const pagesDir = path.join(process.cwd(), 'pages');
+  const entries = fs.readdirSync(pagesDir, { withFileTypes: true });
+  const existing = new Set<string>();
+  for (const entry of entries) {
+    // skip internals and folders we don't want to shadow
+    if (entry.name.startsWith('_')) continue;
+    if (['api', 'reports', 'services'].includes(entry.name)) continue;
+    if (entry.isDirectory()) {
+      existing.add(entry.name);
+      continue;
+    }
+    if (entry.isFile()) {
+      const m = entry.name.match(/^(.*)\.(tsx|ts|jsx|js)$/);
+      if (m) {
+        const base = m[1];
+        if (!['index', '[slug]'].includes(base)) existing.add(base);
+      }
+    }
+  }
+
+  const filtered = Array.from(slugs).filter((slug) => !existing.has(slug));
+
+  return {
+    paths: filtered.map((slug) => ({ params: { slug } })),
+    fallback: false
+  };
+}
+
   const service = useMemo(() => {
     if (!slug) return undefined;
     const all: any[] = ([] as any[])
@@ -55,17 +126,17 @@ import { innovativeRealMicroSaasServices2025 as servicesData } from '../data/202
         realEnterpriseServices2025 as any,
         augmentedRealServices2025 as any
       );
-    const byLink = all.find(s => {
+    const byLink = all.find((s) => {
       try {
         const url = new URL(s.link);
         return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '');
       } catch {
         return false;
       }
-    }
-    if (s.id) slugs.add(toSlug(s.id));
-    else if (s.name) slugs.add(toSlug(s.name));
-  }
+    });
+    if (byLink) return byLink;
+    return undefined;
+  }, [slug]);
 
   // Exclude any slugs that already have explicit pages under /pages
   const fs = require('fs');

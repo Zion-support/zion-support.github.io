@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   X, ChevronRight, Home, Star, Users, 
@@ -323,7 +322,7 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
     };
   }, [isOpen]);
 
-  const isActive = (href: string) => router.pathname === href;
+  const isActive = (_href: string) => false;
 
   return (
     <>
