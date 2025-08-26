@@ -1,183 +1,295 @@
+import React from 'react';
+import { cn } from '@/lib/utils';
 
-import { motion } from 'framer-motion';
+interface SkeletonProps {
+  className?: string;
+  width?: string | number;
+  height?: string | number;
+  rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full';
+  animated?: boolean;
+}
 
-// Base skeleton component with animation
-const SkeletonBase: React.FC<{ className?: string; delay?: number }> = ({ 
-  className = "", 
-  delay = 0 
-}) => (
-  <motion.div
-    className={`bg-gray-700/50 rounded animate-pulse ${className}`}
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ delay, duration: 0.5 }}
-  />
-);
+export function Skeleton({ 
+  className, 
+  width, 
+  height, 
+  rounded = 'md',
+  animated = true 
+}: SkeletonProps) {
+  const roundedClasses = {
+    none: '',
+    sm: 'rounded-sm',
+    md: 'rounded-md',
+    lg: 'rounded-lg',
+    full: 'rounded-full'
+  };
 
-// Hero section skeleton
-export const HeroSkeleton: React.FC = () => (
-  <div className="py-20 px-4 overflow-hidden">
-    <div className="max-w-7xl mx-auto text-center">
-      {/* Title skeleton */}
-      <div className="mb-6">
-        <SkeletonBase className="h-16 w-3/4 mx-auto mb-4" />
-        <SkeletonBase className="h-16 w-2/3 mx-auto" />
-      </div>
+  return (
+    <div
+      className={cn(
+        'bg-muted',
+        roundedClasses[rounded],
+        animated && 'animate-pulse',
+        className
+      )}
+      style={{
+        width: width,
+        height: height,
+      }}
+    />
+  );
+}
+
+interface CardSkeletonProps {
+  className?: string;
+  showImage?: boolean;
+  showTitle?: boolean;
+  showDescription?: boolean;
+  showActions?: boolean;
+  lines?: number;
+}
+
+export function CardSkeleton({
+  className,
+  showImage = true,
+  showTitle = true,
+  showDescription = true,
+  showActions = true,
+  lines = 2
+}: CardSkeletonProps) {
+  return (
+    <div className={cn('space-y-4', className)}>
+      {showImage && (
+        <Skeleton className="w-full h-48 rounded-lg" />
+      )}
       
-      {/* Description skeleton */}
-      <SkeletonBase className="h-8 w-4/5 mx-auto mb-8" />
-      
-      {/* Buttons skeleton */}
-      <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-        <SkeletonBase className="h-14 w-48 mx-auto sm:mx-0" />
-        <SkeletonBase className="h-14 w-48 mx-auto sm:mx-0" />
-      </div>
-      
-      {/* Stats skeleton */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
-        {[...Array(4)].map((_, i) => (
-          <div key={i} className="text-center">
-            <SkeletonBase className="w-16 h-16 mx-auto mb-4 rounded-full" delay={i * 0.1} />
-            <SkeletonBase className="h-8 w-20 mx-auto mb-2" delay={i * 0.1 + 0.1} />
-            <SkeletonBase className="h-6 w-24 mx-auto" delay={i * 0.1 + 0.2} />
+      <div className="space-y-3">
+        {showTitle && (
+          <Skeleton className="h-6 w-3/4" />
+        )}
+        
+        {showDescription && (
+          <div className="space-y-2">
+            {Array.from({ length: lines }).map((_, i) => (
+              <Skeleton 
+                key={i} 
+                className={cn(
+                  "h-4",
+                  i === lines - 1 ? "w-2/3" : "w-full"
+                )} 
+              />
+            ))}
           </div>
-        ))}
-      </div>
-    </div>
-  </div>
-);
-
-// Services section skeleton
-export const ServicesSkeleton: React.FC = () => (
-  <div className="py-20 px-4">
-    <div className="max-w-7xl mx-auto">
-      {/* Section title */}
-      <div className="text-center mb-16">
-        <SkeletonBase className="h-12 w-96 mx-auto mb-6" />
-        <SkeletonBase className="h-6 w-2/3 mx-auto" />
-      </div>
-      
-      {/* Services grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {[...Array(6)].map((_, i) => (
-          <div key={i} className="p-6 bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl border border-gray-700/50">
-            <SkeletonBase className="w-16 h-16 mx-auto mb-4 rounded-full" delay={i * 0.1} />
-            <SkeletonBase className="h-6 w-3/4 mx-auto mb-3" delay={i * 0.1 + 0.1} />
-            <SkeletonBase className="h-4 w-full" delay={i * 0.1 + 0.2} />
+        )}
+        
+        {showActions && (
+          <div className="flex gap-2 pt-2">
+            <Skeleton className="h-10 w-24" />
+            <Skeleton className="h-10 w-20" />
           </div>
-        ))}
+        )}
       </div>
     </div>
-  </div>
-);
+  );
+}
 
-// Technologies section skeleton
-export const TechnologiesSkeleton: React.FC = () => (
-  <div className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
-    <div className="max-w-7xl mx-auto">
-      {/* Section title */}
-      <div className="text-center mb-16">
-        <SkeletonBase className="h-12 w-80 mx-auto mb-6" />
-        <SkeletonBase className="h-6 w-1/2 mx-auto" />
-      </div>
-      
-      {/* Technologies grid */}
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-        {[...Array(12)].map((_, i) => (
-          <div key={i} className="text-center">
-            <SkeletonBase className="w-16 h-16 mx-auto mb-3 rounded-xl" delay={i * 0.05} />
-            <SkeletonBase className="h-4 w-20 mx-auto" delay={i * 0.05 + 0.1} />
-          </div>
-        ))}
-      </div>
-    </div>
-  </div>
-);
+interface ListSkeletonProps {
+  className?: string;
+  items?: number;
+  showAvatar?: boolean;
+  showTitle?: boolean;
+  showSubtitle?: boolean;
+  showDescription?: boolean;
+}
 
-// CTA section skeleton
-export const CTASkeleton: React.FC = () => (
-  <div className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
-    <div className="max-w-4xl mx-auto text-center">
-      <SkeletonBase className="h-12 w-96 mx-auto mb-6" />
-      <SkeletonBase className="h-6 w-2/3 mx-auto mb-8" />
-      <SkeletonBase className="h-14 w-64 mx-auto" />
-    </div>
-  </div>
-);
-
-// Footer skeleton
-export const FooterSkeleton: React.FC = () => (
-  <footer className="bg-black py-16 px-4">
-    <div className="max-w-7xl mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-        {[...Array(4)].map((_, i) => (
-          <div key={i}>
-            <SkeletonBase className="h-6 w-32 mb-4" delay={i * 0.1} />
-            <div className="space-y-2">
-              {[...Array(4)].map((_, j) => (
-                <SkeletonBase key={j} className="h-4 w-24" delay={i * 0.1 + j * 0.05} />
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-      
-      <div className="border-t border-gray-800 mt-12 pt-8">
-        <SkeletonBase className="h-4 w-64 mx-auto" />
-      </div>
-    </div>
-  </footer>
-);
-
-// Page skeleton wrapper
-export const PageSkeleton: React.FC = () => (
-  <div className="min-h-screen">
-    <HeroSkeleton />
-    <ServicesSkeleton />
-    <TechnologiesSkeleton />
-    <CTASkeleton />
-    <FooterSkeleton />
-  </div>
-);
-
-// Card skeleton for general use
-export const CardSkeleton: React.FC<{ className?: string }> = ({ className = "" }) => (
-  <div className={`p-6 bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl border border-gray-700/50 ${className}`}>
-    <SkeletonBase className="w-16 h-16 mx-auto mb-4 rounded-full" />
-    <SkeletonBase className="h-6 w-3/4 mx-auto mb-3" />
-    <SkeletonBase className="h-4 w-full mb-2" />
-    <SkeletonBase className="h-4 w-2/3" />
-  </div>
-);
-
-// Table skeleton
-export const TableSkeleton: React.FC = () => (
-  <div className="overflow-hidden rounded-xl border border-gray-700/50">
-    <div className="bg-gray-800/50 px-6 py-4">
-      <SkeletonBase className="h-6 w-48" />
-    </div>
-    <div className="divide-y divide-gray-700/50">
-      {[...Array(5)].map((_, i) => (
-        <div key={i} className="px-6 py-4">
-          <div className="flex items-center justify-between">
-            <SkeletonBase className="h-5 w-32" delay={i * 0.1} />
-            <SkeletonBase className="h-5 w-24" delay={i * 0.1 + 0.1} />
+export function ListSkeleton({
+  className,
+  items = 3,
+  showAvatar = true,
+  showTitle = true,
+  showSubtitle = true,
+  showDescription = true
+}: ListSkeletonProps) {
+  return (
+    <div className={cn('space-y-4', className)}>
+      {Array.from({ length: items }).map((_, i) => (
+        <div key={i} className="flex gap-4 items-start">
+          {showAvatar && (
+            <Skeleton className="w-12 h-12 rounded-full flex-shrink-0" />
+          )}
+          
+          <div className="flex-1 space-y-2">
+            {showTitle && (
+              <Skeleton className="h-5 w-3/4" />
+            )}
+            
+            {showSubtitle && (
+              <Skeleton className="h-4 w-1/2" />
+            )}
+            
+            {showDescription && (
+              <div className="space-y-1">
+                <Skeleton className="h-4 w-full" />
+                <Skeleton className="h-4 w-2/3" />
+              </div>
+            )}
           </div>
         </div>
       ))}
     </div>
-  </div>
-);
+  );
+}
 
-// Form skeleton
-export const FormSkeleton: React.FC = () => (
-  <div className="space-y-6">
-    {[...Array(4)].map((_, i) => (
-      <div key={i}>
-        <SkeletonBase className="h-4 w-24 mb-2" delay={i * 0.1} />
-        <SkeletonBase className="h-12 w-full rounded-lg" delay={i * 0.1 + 0.1} />
+interface TableSkeletonProps {
+  className?: string;
+  rows?: number;
+  columns?: number;
+  showHeader?: boolean;
+}
+
+export function TableSkeleton({
+  className,
+  rows = 5,
+  columns = 4,
+  showHeader = true
+}: TableSkeletonProps) {
+  return (
+    <div className={cn('space-y-3', className)}>
+      {showHeader && (
+        <div className="flex gap-4 pb-2 border-b border-border">
+          {Array.from({ length: columns }).map((_, i) => (
+            <Skeleton key={i} className="h-5 flex-1" />
+          ))}
+        </div>
+      )}
+      
+      <div className="space-y-3">
+        {Array.from({ length: rows }).map((_, rowIndex) => (
+          <div key={rowIndex} className="flex gap-4">
+            {Array.from({ length: columns }).map((_, colIndex) => (
+              <Skeleton 
+                key={colIndex} 
+                className={cn(
+                  "h-4",
+                  colIndex === 0 ? "w-1/3" : "flex-1"
+                )} 
+              />
+            ))}
+          </div>
+        ))}
       </div>
-    ))}
-    <SkeletonBase className="h-12 w-32 rounded-lg" />
-  </div>
-);
+    </div>
+  );
+}
+
+interface GridSkeletonProps {
+  className?: string;
+  items?: number;
+  columns?: number;
+  gap?: number;
+  showImage?: boolean;
+  showTitle?: boolean;
+  showDescription?: boolean;
+}
+
+export function GridSkeleton({
+  className,
+  items = 6,
+  columns = 3,
+  gap = 4,
+  showImage = true,
+  showTitle = true,
+  showDescription = true
+}: GridSkeletonProps) {
+  return (
+    <div 
+      className={cn('grid gap-4', className)}
+      style={{
+        gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`,
+        gap: `${gap * 0.25}rem`
+      }}
+    >
+      {Array.from({ length: items }).map((_, i) => (
+        <CardSkeleton
+          key={i}
+          showImage={showImage}
+          showTitle={showTitle}
+          showDescription={showDescription}
+          showActions={false}
+          lines={2}
+        />
+      ))}
+    </div>
+  );
+}
+
+interface HeroSkeletonProps {
+  className?: string;
+  showImage?: boolean;
+  showTitle?: boolean;
+  showDescription?: boolean;
+  showActions?: boolean;
+}
+
+export function HeroSkeleton({
+  className,
+  showImage = true,
+  showTitle = true,
+  showDescription = true,
+  showActions = true
+}: HeroSkeletonProps) {
+  return (
+    <div className={cn('flex flex-col lg:flex-row gap-8 items-center', className)}>
+      {showImage && (
+        <div className="lg:w-1/2">
+          <Skeleton className="w-full h-96 rounded-2xl" />
+        </div>
+      )}
+      
+      <div className="lg:w-1/2 space-y-6">
+        {showTitle && (
+          <div className="space-y-3">
+            <Skeleton className="h-12 w-full" />
+            <Skeleton className="h-8 w-3/4" />
+          </div>
+        )}
+        
+        {showDescription && (
+          <div className="space-y-2">
+            <Skeleton className="h-5 w-full" />
+            <Skeleton className="h-5 w-full" />
+            <Skeleton className="h-5 w-2/3" />
+          </div>
+        )}
+        
+        {showActions && (
+          <div className="flex flex-col sm:flex-row gap-3 pt-4">
+            <Skeleton className="h-12 w-32" />
+            <Skeleton className="h-12 w-28" />
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// Shimmer effect component
+export function Shimmer({ className }: { className?: string }) {
+  return (
+    <div className={cn('relative overflow-hidden', className)}>
+      <div className="absolute inset-0 -translate-x-full animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+    </div>
+  );
+}
+
+// Custom shimmer animation
+export const shimmerAnimation = `
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+`;
