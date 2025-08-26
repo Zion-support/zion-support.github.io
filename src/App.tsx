@@ -18,6 +18,11 @@ const Privacy = React.lazy(() => import('./pages/Privacy'));
 const Terms = React.lazy(() => import('./pages/Terms'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
+const Services = React.lazy(() => import('./pages/Services'));
+const MicroSAASMain = React.lazy(() => import('./pages/MicroSAASMain'));
+const ITServicesMain = React.lazy(() => import('./pages/ITServicesMain'));
+const AIAnalytics = React.lazy(() => import('./pages/services/AIAnalytics'));
+const Cybersecurity = React.lazy(() => import('./pages/services/Cybersecurity'));
 
 // Enhanced loading component with skeleton
 const LoadingFallback = () => (
@@ -52,6 +57,11 @@ function App() {
               <Route path="/green-it" element={<GreenIT />} />
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/micro-saas" element={<MicroSAASMain />} />
+              <Route path="/it-services" element={<ITServicesMain />} />
+              <Route path="/services/ai-analytics" element={<AIAnalytics />} />
+              <Route path="/services/cybersecurity" element={<Cybersecurity />} />
             </Routes>
           </Suspense>
         </main>
