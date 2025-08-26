@@ -41,29 +41,23 @@ function Footer() {
     {
       title: 'Services',
       links: [
-        { label: "AI Solutions", path: "/services/ai" },
-        { label: "Cloud & DevOps", path: "/services/cloud" },
-        { label: "Cybersecurity", path: "/services/cybersecurity" },
-        { label: "Quantum Computing", path: "/quantum-technology" },
-        { label: "Blockchain & Web3", path: "/services/blockchain" },
-        { label: "IoT Services", path: "/iot-services" },
-        { label: "Micro SAAS", path: "/micro-saas" },
-        { label: "Space Technology", path: "/space-tech" },
-        { label: "Green IT", path: "/green-it" },
-        { label: "Manufacturing", path: "/manufacturing-solutions" },
-        { label: "Financial Solutions", path: "/financial-solutions" }
+        { label: "AI Solutions", path: "/services#ai" },
+        { label: "Cloud & DevOps", path: "/services#cloud" },
+        { label: "Cybersecurity", path: "/services#cybersecurity" },
+        { label: "Quantum Computing", path: "/services#quantum" },
+        { label: "Blockchain & Web3", path: "/services#blockchain" },
+        { label: "Micro SAAS", path: "/micro-saas" }
       ]
     },
     {
       title: 'Company',
       links: [
         { label: "About Us", path: "/about" },
-        { label: "Our Team", path: "/team" },
-        { label: "Leadership", path: "/leadership" },
+        { label: "Our Team", path: "/about#team" },
         { label: "Careers", path: "/careers" },
         { label: "News & Updates", path: "/news" },
         { label: "Case Studies", path: "/case-studies" },
-        { label: "Partners", path: "/partners" }
+        { label: "Partners", path: "/about#partners" }
       ]
     },
     {

@@ -3,296 +3,385 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const Careers: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedLocation, setSelectedLocation] = useState('All');
 
   const jobCategories = [
-    { id: 'all', name: 'All Positions', count: 12 },
-    { id: 'engineering', name: 'Engineering', count: 6 },
-    { id: 'ai', name: 'AI & ML', count: 4 },
-    { id: 'business', name: 'Business', count: 2 }
+    'All',
+    'Engineering',
+    'AI & Machine Learning',
+    'Cybersecurity',
+    'Cloud & DevOps',
+    'Product Management',
+    'Sales & Marketing',
+    'Operations',
+    'Research & Development'
+  ];
+
+  const locations = [
+    'All',
+    'Remote',
+    'New York',
+    'San Francisco',
+    'London',
+    'Singapore',
+    'Toronto'
   ];
 
   const jobListings = [
     {
       id: 1,
       title: 'Senior AI Engineer',
-      category: 'ai',
-      location: 'Wilmington, DE / Remote',
+      category: 'AI & Machine Learning',
+      location: 'Remote',
       type: 'Full-time',
       experience: '5+ years',
-      description: 'Lead development of cutting-edge AI solutions and machine learning platforms.',
-      skills: ['Python', 'TensorFlow', 'PyTorch', 'MLOps', 'Cloud Computing'],
-      isNew: true
+      description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
+      requirements: [
+        'Advanced degree in Computer Science, AI, or related field',
+        'Expertise in Python, TensorFlow, PyTorch',
+        'Experience with large language models and NLP',
+        'Strong background in machine learning algorithms'
+      ],
+      benefits: [
+        'Competitive salary with equity',
+        'Flexible remote work',
+        'Professional development budget',
+        'Health, dental, and vision insurance'
+      ]
     },
     {
       id: 2,
-      title: 'Quantum Computing Researcher',
-      category: 'ai',
-      location: 'Remote',
+      title: 'Cybersecurity Specialist',
+      category: 'Cybersecurity',
+      location: 'New York',
       type: 'Full-time',
       experience: '3+ years',
-      description: 'Research and develop quantum algorithms for AI applications.',
-      skills: ['Quantum Computing', 'Python', 'Qiskit', 'Linear Algebra', 'Quantum Algorithms'],
-      isNew: true
+      description: 'Protect our systems and clients from emerging cyber threats.',
+      requirements: [
+        'Bachelor\'s degree in Cybersecurity or related field',
+        'Certifications: CISSP, CEH, or similar',
+        'Experience with SIEM tools and threat hunting',
+        'Knowledge of compliance frameworks (SOC2, ISO27001)'
+      ],
+      benefits: [
+        'Competitive salary',
+        'Hybrid work model',
+        'Security conference attendance',
+        'Comprehensive benefits package'
+      ]
     },
     {
       id: 3,
-      title: 'DevOps Engineer',
-      category: 'engineering',
-      location: 'Wilmington, DE / Remote',
+      title: 'Cloud Solutions Architect',
+      category: 'Cloud & DevOps',
+      location: 'San Francisco',
       type: 'Full-time',
-      experience: '3+ years',
-      description: 'Build and maintain cloud infrastructure and CI/CD pipelines.',
-      skills: ['AWS', 'Docker', 'Kubernetes', 'Terraform', 'Jenkins'],
-      isNew: false
+      experience: '7+ years',
+      description: 'Design and implement scalable cloud infrastructure solutions.',
+      requirements: [
+        'Expert knowledge of AWS, Azure, and GCP',
+        'Experience with Kubernetes and Docker',
+        'Infrastructure as Code (Terraform, CloudFormation)',
+        'Strong understanding of microservices architecture'
+      ],
+      benefits: [
+        'Competitive salary with equity',
+        'On-site work with flexible hours',
+        'Cloud certification reimbursement',
+        'Modern office in downtown SF'
+      ]
     },
     {
       id: 4,
-      title: 'Frontend Developer',
-      category: 'engineering',
+      title: 'Product Manager - AI Platform',
+      category: 'Product Management',
       location: 'Remote',
       type: 'Full-time',
-      experience: '2+ years',
-      description: 'Create modern, responsive web applications using React and TypeScript.',
-      skills: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js', 'GraphQL'],
-      isNew: false
+      experience: '4+ years',
+      description: 'Drive the product strategy and roadmap for our AI platform.',
+      requirements: [
+        'Bachelor\'s degree in Business, Engineering, or related field',
+        'Experience in AI/ML product management',
+        'Strong analytical and strategic thinking',
+        'Excellent communication and stakeholder management'
+      ],
+      benefits: [
+        'Competitive salary with equity',
+        'Remote-first culture',
+        'Product management training',
+        'Flexible PTO policy'
+      ]
     },
     {
       id: 5,
-      title: 'AI Product Manager',
-      category: 'business',
-      location: 'Wilmington, DE / Remote',
+      title: 'Quantum Computing Researcher',
+      category: 'Research & Development',
+      location: 'London',
       type: 'Full-time',
-      experience: '4+ years',
-      description: 'Lead product strategy for AI-powered solutions and platforms.',
-      skills: ['Product Management', 'AI/ML', 'Agile', 'Data Analysis', 'User Research'],
-      isNew: false
+      experience: 'PhD + 2 years',
+      description: 'Advance the frontier of quantum computing research.',
+      requirements: [
+        'PhD in Physics, Computer Science, or related field',
+        'Research experience in quantum algorithms',
+        'Publications in top-tier journals',
+        'Experience with quantum programming languages'
+      ],
+      benefits: [
+        'Competitive academic-level salary',
+        'Research budget and resources',
+        'Conference and publication support',
+        'Collaboration with leading institutions'
+      ]
     },
     {
       id: 6,
-      title: 'Cybersecurity Specialist',
-      category: 'engineering',
-      location: 'Wilmington, DE',
+      title: 'DevOps Engineer',
+      category: 'Cloud & DevOps',
+      location: 'Toronto',
       type: 'Full-time',
       experience: '3+ years',
-      description: 'Implement and maintain security measures for enterprise systems.',
-      skills: ['Cybersecurity', 'Network Security', 'Compliance', 'Penetration Testing', 'SIEM'],
-      isNew: false
+      description: 'Build and maintain our CI/CD pipelines and infrastructure.',
+      requirements: [
+        'Experience with Jenkins, GitLab CI, or similar',
+        'Knowledge of Linux administration',
+        'Experience with monitoring tools (Prometheus, Grafana)',
+        'Scripting skills (Python, Bash)'
+      ],
+      benefits: [
+        'Competitive salary',
+        'Hybrid work model',
+        'Professional development opportunities',
+        'Health and wellness benefits'
+      ]
     }
   ];
 
-  const benefits = [
-    {
-      icon: '🏠',
-      title: 'Remote-First Culture',
-      description: 'Work from anywhere with flexible schedules'
-    },
-    {
-      icon: '💻',
-      title: 'Latest Technology',
-      description: 'Access to cutting-edge tools and platforms'
-    },
-    {
-      icon: '📚',
-      title: 'Learning & Development',
-      description: 'Continuous learning opportunities and certifications'
-    },
-    {
-      icon: '🏥',
-      title: 'Health & Wellness',
-      description: 'Comprehensive health, dental, and vision coverage'
-    },
-    {
-      icon: '💰',
-      title: 'Competitive Compensation',
-      description: 'Attractive salary packages with equity options'
-    },
-    {
-      icon: '🎯',
-      title: 'Impact & Growth',
-      description: 'Work on projects that shape the future of technology'
-    }
-  ];
-
-  const filteredJobs = selectedCategory === 'all' 
-    ? jobListings 
-    : jobListings.filter(job => job.category === selectedCategory);
+  const filteredJobs = jobListings.filter(job => {
+    const categoryMatch = selectedCategory === 'All' || job.category === selectedCategory;
+    const locationMatch = selectedLocation === 'All' || job.location === selectedLocation;
+    return categoryMatch && locationMatch;
+  });
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-bold mb-6"
-          >
-            Join Our Mission
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl md:text-2xl text-blue-200 max-w-3xl mx-auto mb-8"
-          >
-            Help us build the future of technology. We're looking for passionate innovators, 
-            problem-solvers, and visionaries to join our team.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
-            <Link
-              to="#open-positions"
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <motion.div 
+          className="max-w-7xl mx-auto text-center"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h1 className="text-5xl md:text-7xl font-bold mb-8">
+            Join Our
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 block">
+              Team
+            </span>
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">
+            Build the future of technology with us. We're looking for passionate innovators, 
+            problem solvers, and visionaries to join our mission.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="#open-positions"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
             >
               View Open Positions
-            </Link>
-            <Link
-              to="/contact"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300"
+              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </a>
+            <a
+              href="#culture"
+              className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 hover:border-white/50 transition-all duration-300 transform hover:scale-105"
             >
-              Contact Us
-            </Link>
-          </motion.div>
-        </div>
+              Learn About Our Culture
+            </a>
+          </div>
+        </motion.div>
       </section>
 
-      {/* Company Culture */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+      {/* Culture Section */}
+      <section id="culture" className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Work at Zion Tech Group?
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              We're building more than just technology – we're building a future where AI and 
-              human intelligence work together to solve the world's greatest challenges.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We're building more than just technology - we're building a future where innovation 
+              serves humanity and creates lasting positive impact.
             </p>
-          </div>
-          
+          </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+            {[
+              {
+                icon: '🚀',
+                title: 'Innovation First',
+                description: 'Work on cutting-edge technologies that are shaping the future of industries.'
+              },
+              {
+                icon: '🌍',
+                title: 'Global Impact',
+                description: 'Your work will reach millions of users and transform businesses worldwide.'
+              },
+              {
+                icon: '🤝',
+                title: 'Collaborative Culture',
+                description: 'Join a team of brilliant minds who support and challenge each other.'
+              },
+              {
+                icon: '📈',
+                title: 'Growth & Learning',
+                description: 'Continuous learning opportunities and career advancement paths.'
+              },
+              {
+                icon: '⚖️',
+                title: 'Work-Life Balance',
+                description: 'Flexible schedules and policies that respect your personal time.'
+              },
+              {
+                icon: '🏆',
+                title: 'Recognition',
+                description: 'Your contributions are valued and celebrated at every level.'
+              }
+            ].map((value, index) => (
               <motion.div
-                key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
+                key={value.title}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-slate-50 p-8 rounded-xl text-center hover:shadow-lg transition-all duration-300"
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 text-center"
               >
-                <div className="text-4xl mb-4">{benefit.icon}</div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                  {benefit.title}
-                </h3>
-                <p className="text-slate-600">{benefit.description}</p>
+                <div className="text-6xl mb-6">{value.icon}</div>
+                <h3 className="text-2xl font-bold text-white mb-4">{value.title}</h3>
+                <p className="text-gray-300 leading-relaxed">{value.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Open Positions */}
-      <section id="open-positions" className="py-20 bg-slate-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+      {/* Job Filters */}
+      <section id="open-positions" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Open Positions
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Find your perfect role and join our innovative team
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Find the perfect role that matches your skills and passion
             </p>
-          </div>
+          </motion.div>
 
-          {/* Category Filter */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {jobCategories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                  selectedCategory === category.id
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-white text-slate-700 hover:bg-slate-100'
-                }`}
+          {/* Filters */}
+          <motion.div 
+            className="flex flex-col sm:flex-row gap-6 justify-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <div>
+              <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-blue-400"
               >
-                {category.name} ({category.count})
-              </button>
-            ))}
-          </div>
+                {jobCategories.map(category => (
+                  <option key={category} value={category}>{category}</option>
+                ))}
+              </select>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-300 mb-2">Location</label>
+              <select
+                value={selectedLocation}
+                onChange={(e) => setSelectedLocation(e.target.value)}
+                className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-blue-400"
+              >
+                {locations.map(location => (
+                  <option key={location} value={location}>{location}</option>
+                ))}
+              </select>
+            </div>
+          </motion.div>
 
           {/* Job Listings */}
           <div className="space-y-6">
             {filteredJobs.map((job, index) => (
               <motion.div
                 key={job.id}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-200"
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300"
               >
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-3">
-                      <h3 className="text-2xl font-semibold text-slate-900">
-                        {job.title}
-                      </h3>
-                      {job.isNew && (
-                        <span className="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">
-                          New
-                        </span>
-                      )}
-                    </div>
-                    
-                    <div className="flex flex-wrap gap-4 text-sm text-slate-600 mb-4">
-                      <span className="flex items-center gap-2">
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314-11.314z" />
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
+                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-2">{job.title}</h3>
+                    <div className="flex flex-wrap gap-3 mb-4">
+                      <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium">
+                        {job.category}
+                      </span>
+                      <span className="px-3 py-1 bg-green-500/20 text-green-400 rounded-full text-sm font-medium">
                         {job.location}
                       </span>
-                      <span className="flex items-center gap-2">
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V4a2 2 0 00-2-2H8a2 2 0 00-2-2v2" />
-                        </svg>
+                      <span className="px-3 py-1 bg-purple-500/20 text-purple-400 rounded-full text-sm font-medium">
                         {job.type}
                       </span>
-                      <span className="flex items-center gap-2">
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
+                      <span className="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm font-medium">
                         {job.experience}
                       </span>
                     </div>
-                    
-                    <p className="text-slate-700 mb-4">{job.description}</p>
-                    
-                    <div className="flex flex-wrap gap-2">
-                      {job.skills.map((skill) => (
-                        <span
-                          key={skill}
-                          className="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full"
-                        >
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
                   </div>
-                  
-                  <div className="lg:text-right">
-                    <Link
-                      to={`/careers/apply/${job.id}`}
-                      className="inline-block bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-                    >
-                      Apply Now
-                    </Link>
+                  <button className="lg:ml-6 px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
+                    Apply Now
+                  </button>
+                </div>
+                
+                <p className="text-gray-300 mb-6 leading-relaxed">{job.description}</p>
+                
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-4">Requirements</h4>
+                    <ul className="space-y-2">
+                      {job.requirements.map((req, idx) => (
+                        <li key={idx} className="flex items-start">
+                          <div className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                          <span className="text-gray-300 text-sm">{req}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-4">Benefits</h4>
+                    <ul className="space-y-2">
+                      {job.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-start">
+                          <div className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                          <span className="text-gray-300 text-sm">{benefit}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               </motion.div>
@@ -300,95 +389,62 @@ const Careers: React.FC = () => {
           </div>
 
           {filteredJobs.length === 0 && (
-            <div className="text-center py-12">
-              <p className="text-slate-600 text-lg">No positions available in this category at the moment.</p>
-              <p className="text-slate-500 mt-2">Check back later or contact us for future opportunities.</p>
-            </div>
+            <motion.div 
+              className="text-center py-12"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+            >
+              <p className="text-xl text-gray-300">No positions match your current filters.</p>
+              <button
+                onClick={() => {
+                  setSelectedCategory('All');
+                  setSelectedLocation('All');
+                }}
+                className="mt-4 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              >
+                Clear Filters
+              </button>
+            </motion.div>
           )}
         </div>
       </section>
 
-      {/* Application Process */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-              How to Apply
-            </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Our simple and transparent application process
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                step: '01',
-                title: 'Submit Application',
-                description: 'Fill out our online application form with your details and resume.',
-                icon: '📝'
-              },
-              {
-                step: '02',
-                title: 'Initial Review',
-                description: 'Our team reviews your application and reaches out within 48 hours.',
-                icon: '👀'
-              },
-              {
-                step: '03',
-                title: 'Interview Process',
-                description: 'Complete technical assessments and team interviews.',
-                icon: '🤝'
-              }
-            ].map((step, index) => (
-              <motion.div
-                key={step.step}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6">
-                  {step.step}
-                </div>
-                <div className="text-4xl mb-4">{step.icon}</div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                  {step.title}
-                </h3>
-                <p className="text-slate-600">{step.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Join Our Team?
+      <motion.section 
+        className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+            Don't See the Right Fit?
           </h2>
-          <p className="text-xl text-blue-200 mb-8 max-w-3xl mx-auto">
-            Don't see a position that fits? We're always looking for talented individuals. 
-            Send us your resume and let's discuss how you can contribute to our mission.
+          <p className="text-xl text-gray-300 mb-10 leading-relaxed">
+            We're always looking for talented individuals. Send us your resume and we'll 
+            keep you in mind for future opportunities.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <a
+              href="/contact"
+              className="inline-flex items-center px-10 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg"
             >
-              Contact Us
-            </Link>
-            <Link
-              to="/about"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300"
+              Send Resume
+              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+              </svg>
+            </a>
+            <a
+              href="/about"
+              className="inline-flex items-center px-10 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 hover:border-white/50 transition-all duration-300 transform hover:scale-105"
             >
               Learn More About Us
-            </Link>
+            </a>
           </div>
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 };
