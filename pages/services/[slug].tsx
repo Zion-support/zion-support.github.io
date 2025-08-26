@@ -1,9 +1,34 @@
 import React from 'react';
-import type { GetStaticPaths, GetStaticProps } from 'next';
-import { SERVICES } from '@/data/servicesData';
-import { slugify } from '@/lib/slugify';
-import Custom404 from '../404';
-import type { ProductListing } from '@/types/listings';
+import Head from 'next/head';
+import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
+import Button from '../../components/ui/Button';
+import Card from '../../components/ui/Card';
+import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
+import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
+import { extraServices } from '../../data/extra-services';
+import { additionalEnhancedServices } from '../../data/additional-real-services';
+import { newlyAddedServices } from '../../data/newly-added-services';
+import { curatedMarketServices } from '../../data/curated-market-services';
+import { new2025Services } from '../../data/new-2025-services';
+import { marketValidatedServices } from '../../data/market-validated-services';
+import { moreRealServices2025 } from '../../data/more-real-services-2025';
+import { verified2025Additions } from '../../data/verified-2025-additions';
+import { realServicesQ12025 } from '../../data/real-services-q1-2025';
+import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
+import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2';
+import { realQ4Services2025, } from '../../data/real-2025-q4-additions';
+import { real2025Q4Additions } from '../../data/real-2025-q4-additions';
+import { real2026Q1Additions } from '../../data/real-2026-q1-additions';
+import { real2026Q3Additions } from '../../data/real-2026-q3-additions';
+import { real2026Q4Additions } from '../../data/real-2026-q4-additions';
+import { real2026Q4NewServices } from '../../data/real-2026-q4-new-services';
+import { real2027Q1Additions } from '../../data/real-2027-q1-additions';
+import { real2027Q2Additions } from '../../data/real-2027-q2-additions';
+import { real2027Q3Additions } from '../../data/real-2027-q3-additions';
+import { real2027Q4Additions } from '../../data/real-2027-q4-additions';
+import { innovativeMicroSaasServices2025 } from '../../src/data/innovativeMicroSaasServices2025';
+import { enhancedMicroSaasServices2025 } from '../../src/data/enhancedMicroSaasServices2025';
+import { ultimateInnovativeServices2026 } from '../../data/2026-ultimate-innovative-services';
 
 type Service = typeof enhancedRealMicroSaasServices[number];
 
@@ -26,21 +51,24 @@ function getAllServices(): Service[] {
 		.concat(realServicesQ12025 as unknown as Service[])
 		.concat(realEnterpriseServices2025 as unknown as Service[])
 		.concat(verifiedRealServices2025Batch2 as unknown as Service[])
-		.concat(realMarketAugmentations2025 as unknown as Service[])
-		.concat(augmentedRealServices2025 as unknown as Service[]);
+		.concat(realQ4Services2025 as unknown as Service[])
+		.concat(real2025Q4Additions as unknown as Service[])
+		.concat(real2026Q1Additions as unknown as Service[])
+		.concat(real2026Q3Additions as unknown as Service[])
+		.concat(real2026Q4Additions as unknown as Service[])
+		.concat(real2026Q4NewServices as unknown as Service[])
+		.concat(real2027Q1Additions as unknown as Service[])
+		.concat(real2027Q2Additions as unknown as Service[])
+		.concat(real2027Q3Additions as unknown as Service[])
+		.concat(real2027Q4Additions as unknown as Service[])
+		.concat(innovativeMicroSaasServices2025 as Service[])
+		.concat(enhancedMicroSaasServices2025 as Service[]);
 }
 
-const ServicePage: React.FC<ServiceProps> = ({ service }) => {
-  if (!service) {
-    return <Custom404 />;
-  }
-  return (
-    <main className="prose dark:prose-invert max-w-3xl mx-auto py-8">
-      <h1>{service.title}</h1>
-      <p>{service.description}</p>
-    </main>
-  );
-};
+function toSlug(value: string | undefined | null): string {
+	if (!value || typeof value !== 'string') return '';
+	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = SERVICES.map((service) => ({

@@ -33,7 +33,7 @@
     "framer-motion": "^6.5.1",
     "fs": "^0.0.1-security",
     "fs-extra": "^11.3.1",
-    "glob": "^10.4.5",
+    "glob": "^10.3.10",
     "https": "^1.0.0",
     "import-fresh": "^3.3.1",
     "js-yaml": "^4.1.0",
@@ -44,20 +44,12 @@
     "openai": "^5.11.0",
     "path": "^0.12.7",
     "postcss": "^8.4.32",
-    "react": "^18.2.0",
-    "react-day-picker": "^8.10.0",
-    "react-dom": "^18.2.0",
-    "react-helmet-async": "^2.0.4",
-    "react-hook-form": "^7.50.1",
-    "react-hot-toast": "^2.4.1",
-    "react-i18next": "^14.0.1",
-    "react-markdown": "^9.0.0",
-    "react-router-dom": "^6.22.0",
-    "recharts": "^2.12.0",
-    "sonner": "^1.4.0",
+    "react": "18.2.0",
+    "react-datepicker": "^8.4.0",
+    "react-dom": "18.2.0",
     "tailwind-merge": "^2.2.1",
-    "vaul": "^0.9.0",
-    "zod": "^3.22.4"
+    "clsx": "^2.1.0",
+    "uuid": "^11.1.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.41.2",
@@ -83,6 +75,20 @@
     "typescript": "^5.2.2",
     "vite": "^5.0.8",
     "vitest": "^1.4.0",
-    "@vitest/coverage-v8": "^1.6.1"
+    "jest-axe": "^9.0.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "overrides": {
+    "@humanwhocodes/object-schema": "@eslint/object-schema@1.0.0",
+    "glob": "^10.3.10",
+    "rimraf": "^5.0.5"
+  },
+  "resolutions": {
+    "glob": "^10.3.10",
+    "rimraf": "^5.0.5",
+    "@humanwhocodes/object-schema": "@eslint/object-schema@1.0.0"
   }
 }

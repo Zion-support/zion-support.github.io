@@ -1,27 +1,43 @@
-import React, { Suspense } from 'react';
+import React from 'react';
+import { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import SiteHeader from './pages/basic/SiteHeader';
-import SiteFooter from './pages/basic/SiteFooter';
+import { ThemeProvider } from "./components/ThemeProvider";
+import { useScrollToTop } from "./hooks";
+import { WhitelabelProvider } from "./context/WhitelabelContext";
+import { Toaster } from "./components/ui/toaster";
+import { Toaster as SonnerToaster } from "./components/ui/sonner";
+import {
+  AuthRoutes,
+  DashboardRoutes,
+  MarketplaceRoutes,
+  TalentRoutes,
+  AdminRoutes,
+  MobileAppRoutes,
+  ContentRoutes,
+  ErrorRoutes,
+  EnterpriseRoutes,
+  CommunityRoutes,
+  DeveloperRoutes
+} from './routes';
+const Home = React.lazy(() => import('./pages/Home'));
+const About = React.lazy(() => import('./pages/About'));
+const Careers = React.lazy(() => import('./pages/Careers'));
+const News = React.lazy(() => import('./pages/News'));
+const Press = React.lazy(() => import('./pages/Press'));
+const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
+const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
+const Privacy = React.lazy(() => import('./pages/Privacy'));
+const Terms = React.lazy(() => import('./pages/Terms'));
 
-const Home = React.lazy(() => import('./pages/basic/HomeSimple'));
-const About = React.lazy(() => import('./pages/basic/AboutPage'));
-const Contact = React.lazy(() => import('./pages/basic/ContactSimple'));
-const Careers = React.lazy(() => import('./pages/basic/CareersSimple'));
-const Solutions = React.lazy(() => import('./pages/basic/SolutionsSimple'));
-const ResearchDevelopment = React.lazy(() => import('./pages/basic/ResearchDevelopment'));
-const CaseStudies = React.lazy(() => import('./pages/basic/CaseStudiesSimple'));
-const News = React.lazy(() => import('./pages/basic/NewsSimple'));
-const Events = React.lazy(() => import('./pages/basic/EventsSimple'));
-const ServicesIndex = React.lazy(() => import('./pages/basic/ServicesIndex'));
-const ServicesAI = React.lazy(() => import('./pages/basic/ServicesAI'));
-const ServicesCloud = React.lazy(() => import('./pages/basic/ServicesCloud'));
-const ServicesCybersecurity = React.lazy(() => import('./pages/basic/ServicesCybersecurity'));
-const ServicesInfrastructure = React.lazy(() => import('./pages/basic/ServicesInfrastructure'));
-const ServicesTransformation = React.lazy(() => import('./pages/basic/ServicesTransformation'));
-const ServicesConsulting = React.lazy(() => import('./pages/basic/ServicesConsulting'));
-const Privacy = React.lazy(() => import('./pages/basic/PrivacySimple'));
-const Terms = React.lazy(() => import('./pages/basic/TermsSimple'));
+// Enhanced lazy loading with preloading hints from incoming branch
+const Services = lazy(() => import('./pages/Services'));
+const AISolutions = lazy(() => import('./pages/AISolutions'));
+const ServicesShowcase = lazy(() => import('./pages/ServicesShowcase'));
+const AIMatcherPage = lazy(() => import('./pages/AIMatcher'));
+const TalentDirectory = lazy(() => import('./pages/TalentDirectory'));
+const TalentsPage = lazy(() => import('./pages/TalentsPage'));
+const EmergingTech = lazy(() => import('./pages/EmergingTech'));
 
 // New pages from incoming branch
 const MicroSaasServicesPage = lazy(() => import('./pages/MicroSaasServices'));
@@ -47,10 +63,6 @@ const IoTDataAnalytics = lazy(() => import('./pages/services/IoTDataAnalytics'))
 // Next-Generation Innovative Services 2025
 const NextGenInnovativeServices2025 = lazy(() => import('./pages/NextGenInnovativeServices2025'));
 const InnovativeServicesShowcase = lazy(() => import('./pages/InnovativeServicesShowcase'));
-
-// Innovative Services 2026
-const InnovativeServicesShowcase2026 = lazy(() => import('./pages/InnovativeServicesShowcase2026'));
-const ComprehensivePricing2026 = lazy(() => import('./pages/ComprehensivePricing2026'));
 
 // Ultimate Innovative Services 2026
 const UltimateServicesShowcase2026 = lazy(() => import('./pages/UltimateServicesShowcase2026'));
@@ -126,9 +138,19 @@ const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
 const ContactPage = React.lazy(() => import('./pages/Contact'));
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
+<<<<<<< HEAD
+const AboutPage = React.lazy(() => import('./pages/About'));
+const CareersPage = React.lazy(() => import('./pages/Careers'));
+const PrivacyPage = React.lazy(() => import('./pages/Privacy'));
+const TermsPage = React.lazy(() => import('./pages/Terms'));
+const GreenITPage = React.lazy(() => import('./pages/GreenIT'));
+const HelpCenterPage = React.lazy(() => import('./pages/HelpCenterPage'));
+const CookiesPage = React.lazy(() => import('./pages/Cookies'));
+=======
 const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServicesPage'));
 const ServicesPricing = React.lazy(() => import('./pages/ServicesPricing'));
 const ServicesComparison = React.lazy(() => import('./pages/ServicesComparison'));
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-9117
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -194,10 +216,6 @@ const baseRoutes = [
   { path: '/innovative-services-showcase-2025', element: <InnovativeServicesShowcase2025 /> },
   { path: '/services-showcase-2025', element: <InnovativeServicesShowcase2025 /> },
   
-  // Innovative Services 2026
-  { path: '/innovative-services-showcase-2026', element: <InnovativeServicesShowcase2026 /> },
-  { path: '/innovative-services-2026', element: <InnovativeServicesShowcase2026 /> },
-  
   // Ultimate Innovative Services 2026
   { path: '/ultimate-services-showcase-2026', element: <UltimateServicesShowcase2026 /> },
   { path: '/ultimate-services-2026', element: <UltimateServicesShowcase2026 /> },
@@ -225,9 +243,13 @@ const baseRoutes = [
   { path: '/zion-hire-ai', element: <ZionHireAI /> },
   { path: '/hire-ai', element: <ZionHireAI /> },
   { path: '/request-quote', element: <RequestQuotePage /> },
+<<<<<<< HEAD
+  { path: '/micro-saas-services', element: <MicroSaasServicesPage /> },
+=======
   { path: '/comprehensive-services', element: <ComprehensiveServicesPage /> },
   { path: '/services-pricing', element: <ServicesPricing /> },
   { path: '/services-comparison', element: <ServicesComparison /> },
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-9117
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
   { path: '/about', element: <AboutPage /> },

@@ -1,10 +1,33 @@
+import React from 'react';
+import Link from 'next/link';
+import { 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Server, 
+  Zap, 
+  Globe, 
+  Cpu, 
+  Database,
+  Network,
+  Lock,
+  Code,
+  Rocket,
+  Users
+} from 'lucide-react';
 
+import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
+import { TrustedBySection } from "@/components/TrustedBySection";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
+import { Globe, Shield, Brain, Cloud, Lock, Zap, Users, BarChart3, FileImage, Code, Shield as ShieldIcon, Server, TrendingUp, MessageCircle, Video, FileText, Heart } from "lucide-react";
+=======
 import { Globe, Shield, Brain, Cloud, Lock, Zap, Users, BarChart3, FileImage, Code, Shield as ShieldIcon, Server, TrendingUp, MessageCircle, Video, FileText, Heart, ExternalLink, Star, Clock, Database, Smartphone, Blockchain, Cpu, Phone, Mail, MapPin } from "lucide-react";
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-9117
 import { useEffect, useState } from "react";
-import { SEO } from "@/components/SEO";
+import { EXPANDED_SERVICES } from "@/data/expandedServices";
 
 // Enhanced service listings with new micro SAAS services
 const SERVICE_LISTINGS: ProductListing[] = [
@@ -1005,8 +1028,9 @@ export default function ServicesPage() {
               </Button>
             </Link>
             <Link to="/contact">
-              <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
-                Request a Quote
+              <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 backdrop-blur-sm">
+                <MessageCircle className="h-4 w-4 mr-2" />
+                Contact Sales
               </Button>
             </Link>
           </div>
