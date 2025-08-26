@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Brain, TrendingUp, Zap, BarChart3, CheckCircle, ArrowRight, Play } from 'lucide-react';
-import SEO from '../SEO';
+import SEOHead from '../../components/SEOHead';
 const features = [
     {
         title: "AI-Powered Computer Vision Platform",
@@ -39,7 +39,7 @@ const benefits = [
 ];
 export default function AIComputerVisionPlatform() {
     return (<div className="min-h-screen bg-background relative overflow-hidden">
-      <SEO title="Computer Vision Platform - Zion Tech Group" description="AI-powered computer vision platform solution that transforms your operations with intelligent automation and real-time insights." keywords="AI computer vision platform, automation, intelligent systems, business optimization" canonical="https://ziontechgroup.com/aicomputervisionplatform/"/>
+      <SEOHead title="Computer Vision Platform - Zion Tech Group" description="AI-powered computer vision platform solution that transforms your operations with intelligent automation and real-time insights." keywords="AI computer vision platform, automation, intelligent systems, business optimization" url="https://ziontechgroup.com/aicomputervisionplatform/"/>
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">

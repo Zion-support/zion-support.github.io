@@ -1,8 +1,7 @@
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import SEOHead from "../components/SEOHead";
+import { Button } from "../components/ui/button";
+import { Card, CardContent } from "../components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs";
 export default function Careers() {
     // Sample job listings
     const jobs = {
@@ -110,11 +109,11 @@ export default function Careers() {
         }
     ];
     return (<>
-      <SEO title="Careers at Zion - Join Our Team" description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform." keywords="Zion careers, AI jobs, tech careers, remote work, startup jobs" canonical="https://ziontechgroup.com/careers"/>
+      <SEOHead title="Careers at Zion - Join Our Team" description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform." keywords="Zion careers, AI jobs, tech careers, remote work, startup jobs" url="https://ziontechgroup.com/careers"/>
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <GradientHeading>Join Our Team</GradientHeading>
+            <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">Join Our Team</h1>
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
               Help us build the future of AI and technology
             </p>

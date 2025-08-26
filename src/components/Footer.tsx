@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Heart, Mail, Phone, MapPin, Globe, ArrowUp } from 'lucide-react';
+import { Heart, Mail, Phone, MapPin, Globe, ArrowUp, Zap, Brain, Shield, Cloud, Cpu, Network } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -15,17 +16,41 @@ export const Footer: React.FC = () => {
 
   const footerSections = [
     {
-      title: "Services",
+      title: "AI & Innovation",
+      icon: Brain,
       links: [
-        { label: "AI Solutions", path: "/services/ai" },
-        { label: "Cloud & DevOps", path: "/services/cloud" },
-        { label: "Cybersecurity", path: "/services/cybersecurity" },
-        { label: "IT Infrastructure", path: "/services/infrastructure" },
-        { label: "Digital Transformation", path: "/services/transformation" }
+        { label: "AI Solutions", path: "/ai-services" },
+        { label: "Autonomous Systems", path: "/services/ai-autonomous-business" },
+        { label: "Machine Learning", path: "/services/ai-business-intelligence" },
+        { label: "Computer Vision", path: "/services/ai-computer-vision" },
+        { label: "AI Research", path: "/services/ai-autonomous-research" }
+      ]
+    },
+    {
+      title: "Technology Services",
+      icon: Cpu,
+      links: [
+        { label: "Cybersecurity", path: "/cybersecurity" },
+        { label: "Cloud & DevOps", path: "/cloud-devops" },
+        { label: "Quantum Computing", path: "/quantum-computing" },
+        { label: "IoT Services", path: "/iot-services" },
+        { label: "Blockchain", path: "/blockchain-services" }
+      ]
+    },
+    {
+      title: "Business Solutions",
+      icon: Shield,
+      links: [
+        { label: "Digital Transformation", path: "/digital-transformation" },
+        { label: "Enterprise IT", path: "/enterprise-it" },
+        { label: "Business Solutions", path: "/business-solutions" },
+        { label: "Consulting", path: "/services/consulting" },
+        { label: "Infrastructure", path: "/services/infrastructure" }
       ]
     },
     {
       title: "Company",
+      icon: Globe,
       links: [
         { label: "About Us", path: "/about" },
         { label: "Our Team", path: "/about" },
@@ -37,6 +62,7 @@ export const Footer: React.FC = () => {
     },
     {
       title: "Resources",
+      icon: Cloud,
       links: [
         { label: "Blog", path: "/blog" },
         { label: "Documentation", path: "/docs" },
@@ -49,12 +75,12 @@ export const Footer: React.FC = () => {
     },
     {
       title: "Support",
+      icon: Network,
       links: [
         { label: "Contact Us", path: "/contact" },
         { label: "Help Center", path: "/help" },
         { label: "Support Portal", path: "/support" },
         { label: "FAQ", path: "/faq" },
-        { label: "Consulting", path: "/services/consulting" },
         { label: "Request Quote", path: "/contact" }
       ]
     }
@@ -72,114 +98,191 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="bg-slate-900 text-white">
+    <footer className="bg-slate-900 text-white relative overflow-hidden">
+      {/* Futuristic background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Grid pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,212,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(0,212,255,0.05)_1px,transparent_1px)] bg-[size:100px_100px]"></div>
+        
+        {/* Gradient orbs */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-cyan-500/5 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-purple-500/5 to-transparent rounded-full blur-3xl"></div>
+      </div>
+
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="mb-6">
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Zion Tech Group
-              </h3>
-              <p className="text-slate-300 mt-4 max-w-md">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="mb-8"
+            >
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-600 rounded-lg flex items-center justify-center">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                  Zion Tech Group
+                </h3>
+              </div>
+              <p className="text-slate-300 mt-4 max-w-md leading-relaxed">
                 Pioneering the future with AI-powered solutions, quantum technology, and innovative IT services. 
-                Transform your business with cutting-edge technology.
+                Transform your business with cutting-edge technology that drives innovation and growth.
               </p>
-            </div>
+            </motion.div>
             
             {/* Contact Info */}
-            <div className="space-y-3">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="space-y-4"
+            >
               {contactInfo.map((contact, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <contact.icon className="h-5 w-5 text-cyan-400" />
+                <motion.div 
+                  key={index} 
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="flex items-center space-x-3 group"
+                >
+                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center group-hover:from-cyan-500/30 group-hover:to-blue-500/30 transition-all duration-200">
+                    <contact.icon className="h-4 w-4 text-cyan-400" />
+                  </div>
                   <div>
                     <span className="text-slate-400 text-sm">{contact.label}: </span>
                     <a 
                       href={contact.href} 
-                      className="text-slate-300 hover:text-cyan-400 transition-colors duration-200"
+                      className="text-slate-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
                     >
                       {contact.value}
                     </a>
                   </div>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
 
           {/* Footer Sections */}
           {footerSections.map((section, index) => (
-            <div key={index}>
-              <h4 className="text-lg font-semibold text-white mb-4">{section.title}</h4>
+            <motion.div 
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-center space-x-2 mb-4">
+                <div className="w-6 h-6 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center">
+                  <section.icon className="h-3 w-3 text-cyan-400" />
+                </div>
+                <h4 className="text-lg font-semibold text-white">{section.title}</h4>
+              </div>
               <ul className="space-y-2">
                 {section.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
                     <Link 
                       to={link.path}
-                      className="text-slate-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                      className="text-slate-300 hover:text-cyan-400 transition-colors duration-200 text-sm hover:translate-x-1 inline-block transform transition-transform duration-200"
                     >
                       {link.label}
                     </Link>
                   </li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Social Links */}
-        <div className="mt-12 pt-8 border-t border-slate-700">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="mt-16 pt-8 border-t border-slate-700/50"
+        >
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex space-x-4 mb-4 md:mb-0">
+            <div className="flex space-x-4 mb-6 md:mb-0">
               {socialLinks.map((social, index) => (
-                <a
+                <motion.a
                   key={index}
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`p-3 rounded-lg bg-slate-800 hover:bg-slate-700 transition-all duration-200 ${social.color}`}
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  className={`p-3 rounded-xl bg-slate-800/50 hover:bg-slate-700/50 transition-all duration-300 ${social.color} border border-slate-700/30 hover:border-cyan-500/30`}
                   aria-label={social.name}
                 >
                   <span className="text-xl">{social.icon}</span>
-                </a>
+                </motion.a>
               ))}
             </div>
             
-            <button
+            <motion.button
               onClick={scrollToTop}
-              className="p-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-cyan-400 transition-all duration-200"
+              whileHover={{ scale: 1.1, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              className="p-3 rounded-xl bg-slate-800/50 hover:bg-slate-700/50 text-slate-300 hover:text-cyan-400 transition-all duration-300 border border-slate-700/30 hover:border-cyan-500/30"
               aria-label="Scroll to top"
             >
               <ArrowUp className="h-5 w-5" />
-            </button>
+            </motion.button>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-slate-700">
+      <div className="border-t border-slate-700/50 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-slate-400 text-sm text-center md:text-left">
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="text-slate-400 text-sm text-center md:text-left"
+            >
               © {currentYear} Zion Tech Group. All rights reserved.
-            </div>
-            <div className="flex items-center space-x-4 mt-4 md:mt-0">
-              <Link to="/privacy" className="text-slate-400 hover:text-cyan-400 text-sm transition-colors duration-200">
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="flex items-center space-x-6 mt-4 md:mt-0"
+            >
+              <Link to="/privacy" className="text-slate-400 hover:text-cyan-400 text-sm transition-colors duration-200 hover:underline">
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="text-slate-400 hover:text-cyan-400 text-sm transition-colors duration-200">
+              <Link to="/terms" className="text-slate-400 hover:text-cyan-400 text-sm transition-colors duration-200 hover:underline">
                 Terms of Service
               </Link>
-              <Link to="/sitemap" className="text-slate-400 hover:text-cyan-400 text-sm transition-colors duration-200">
+              <Link to="/sitemap" className="text-slate-400 hover:text-cyan-400 text-sm transition-colors duration-200 hover:underline">
                 Sitemap
               </Link>
-            </div>
+            </motion.div>
           </div>
-          <div className="text-center mt-4">
-            <p className="text-slate-500 text-xs">
-              Made with <Heart className="inline h-3 w-3 text-red-500" /> by Zion Tech Group
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-center mt-6"
+          >
+            <p className="text-slate-500 text-xs flex items-center justify-center space-x-2">
+              <span>Made with</span>
+              <Heart className="inline h-3 w-3 text-red-500 animate-pulse" />
+              <span>by Zion Tech Group</span>
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </footer>
