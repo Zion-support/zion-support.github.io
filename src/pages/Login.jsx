@@ -1,91 +1,50 @@
 import { useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
-import { useAuth } from '@/hooks/useAuth';
-import { safeStorage } from '@/utils/safeStorage';
-import { LoginContent } from '@/components/auth/login/LoginContent';
 import { ErrorBoundary } from 'react-error-boundary';
 import { LoginErrorFallback } from '@/components/auth/login/LoginErrorFallback';
 import { useCart } from '@/context/CartContext';
-
 import { toast } from '@/hooks/use-toast';
 import { useDispatch } from 'react-redux';
 import { setLoggedIn } from '@/store/authSlice';
 
 export default function Login() {
-  const navigate = useNavigate();
-  const location = useLocation();
+  const dispatch = useDispatch();
+  const { clearCart } = useCart();
 
   useEffect(() => {
-    // This effect handles token processing (e.g., from magic link)
-    // It runs when component mounts or location.search changes
-    const params = new URLSearchParams(location.search);
-    const token = params.get('token');
+    const urlParams = new URLSearchParams(window.location.search);
+    const token = urlParams.get('token');
+
     if (token) {
       // Store token in localStorage for now
       localStorage.setItem('zion_token', token);
       // Clear token from URL to prevent re-processing and clean up history
-      navigate(location.pathname, { replace: true });
+      window.history.replaceState({}, document.title, window.location.pathname);
+      
+      // Set logged in state
+      dispatch(setLoggedIn({ token }));
+      
+      // Clear cart on login
+      clearCart();
+      
+      // Show success message
+      toast({
+        title: "Login Successful",
+        description: "Welcome to Zion Tech Group!",
+      });
+      
+      // Redirect to home page
+      window.location.href = '/';
     }
-  }, [location.search, location.pathname, navigate]);
+  }, [dispatch, clearCart]);
 
-  // Simple login form for now
   return (
-    <div className="min-h-screen bg-zion-slate-dark flex items-center justify-center">
-      <div className="max-w-md w-full space-y-8 p-8">
+    <ErrorBoundary FallbackComponent={LoginErrorFallback}>
+      <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-white">Sign In</h2>
-          <p className="mt-2 text-zion-slate-light">
-            Welcome back to Zion Tech Group
-          </p>
-        </div>
-        
-        <div className="bg-zion-slate-light/10 p-6 rounded-lg">
-          <form className="space-y-6">
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-white">
-                Email address
-              </label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                className="mt-1 block w-full px-3 py-2 bg-zion-slate-light/20 border border-zion-cyan/20 rounded-md text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                placeholder="Enter your email"
-              />
-            </div>
-            
-            <div>
-              <label htmlFor="password" className="block text-sm font-medium text-white">
-                Password
-              </label>
-              <input
-                id="password"
-                name="password"
-                type="password"
-                required
-                className="mt-1 block w-full px-3 py-2 bg-zion-slate-light/20 border border-zion-cyan/20 rounded-md text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                placeholder="Enter your password"
-              />
-            </div>
-            
-            <div>
-              <button
-                type="submit"
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-zion-cyan"
-              >
-                Sign in
-              </button>
-            </div>
-          </form>
-          
-          <div className="mt-6 text-center">
-            <a href="/contact" className="text-zion-cyan hover:text-zion-cyan-light text-sm">
-              Need help? Contact support
-            </a>
-          </div>
+          <h1 className="text-2xl font-bold mb-4">Login</h1>
+          <p className="text-gray-600">Processing login...</p>
         </div>
       </div>
-    </div>
+    </ErrorBoundary>
   );
 }
