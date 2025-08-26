@@ -1,0 +1,1 @@
+export default function AISolutions(){return (<main style={{padding:20,fontFamily:'sans-serif'}}><h1>AI Solutions</h1><p>Explore our portfolio of AI-powered solutions and platforms.</p></main>);}

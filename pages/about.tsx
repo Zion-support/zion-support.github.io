@@ -1,0 +1,1 @@
+export default function About(){return (<main style={{padding:20,fontFamily:'sans-serif'}}><h1>About Zion Tech Group</h1><p>We build AI, cloud, and cybersecurity solutions that drive business outcomes.</p></main>);}
