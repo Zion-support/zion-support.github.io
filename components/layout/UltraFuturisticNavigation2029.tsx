@@ -52,10 +52,10 @@ const serviceCategories = [
     color: 'from-blue-600 to-cyan-600',
     description: 'Space mining, biotech, and autonomous systems',
     services: [
-      { name: 'Space Mining Autonomous Platform', href: '/space-mining-autonomous-platform-2029', description: 'Autonomous asteroid and space mining', price: '$49,999/month' },
-      { name: 'Biotech AI Research Platform', href: '/biotech-ai-research-platform-2029', description: 'AI-powered drug discovery and research', price: '$32,999/month' },
-      { name: 'Metaverse AI Development Platform', href: '/metaverse-ai-development-platform-2029', description: 'AI-powered virtual world creation', price: '$16,999/month' },
-      { name: 'Autonomous Vehicle AI Platform', href: '/autonomous-vehicle-ai-platform-2029', description: 'Advanced self-driving AI systems', price: '$28,999/month' }
+      { name: 'Space Resource Mining', href: '/space-resource-mining-platform', description: 'Automated asteroid mining', price: '$45,999/month' },
+      { name: 'Metaverse Digital Reality Platform', href: '/metaverse-ai-development-platform', description: 'Immersive virtual worlds', price: '$8,999/month' },
+      { name: 'AI Predictive Health Analytics', href: '/services/ai-predictive-health-analytics-2029', description: 'Predictive health outcomes', price: '$7,999/month' },
+      { name: 'AI Autonomous Business Manager', href: '/services/ai-autonomous-business-manager-2029', description: 'Fully autonomous business operations', price: '$12,999/month' }
     ]
   },
   {
@@ -88,10 +88,10 @@ const serviceCategories = [
     color: 'from-pink-600 to-rose-600',
     description: 'Cutting-edge research and innovation',
     services: [
-      { name: 'AI Research Collaboration Platform', href: '/ai-research-collaboration-2029', description: 'Global AI research network', price: '$34,999/month' },
-      { name: 'Quantum Research Laboratory', href: '/quantum-research-laboratory-2029', description: 'Virtual quantum research environment', price: '$44,999/month' },
-      { name: 'Biotech Innovation Hub', href: '/biotech-innovation-hub-2029', description: 'AI-powered biotech research', price: '$39,999/month' },
-      { name: 'Space Technology Research Platform', href: '/space-technology-research-2029', description: 'Advanced space research tools', price: '$54,999/month' }
+      { name: 'Advanced Research Automation', href: '/research-development', description: 'Automated research workflows', price: '$4,999/month' },
+      { name: 'Quantum Research Platform', href: '/quantum-services', description: 'Quantum computing research', price: '$8,999/month' },
+      { name: 'AI Research Assistant', href: '/ai-autonomous-research-assistant', description: 'Intelligent research support', price: '$2,999/month' },
+      { name: 'Biotech Research Suite', href: '/biotech-ai-research-platform', description: 'Comprehensive biotech tools', price: '$6,999/month' }
     ]
   }
 ];

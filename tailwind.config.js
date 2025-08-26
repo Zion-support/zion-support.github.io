@@ -44,17 +44,6 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
         // Zion brand colors
-<<<<<<< HEAD
-        'zion-cyan': '#22ddd2',
-        'zion-blue': '#2e73ea',
-        'zion-purple': '#8c15e9',
-        'zion-blue-dark': '#172d67',
-      },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-=======
         'zion-blue-dark': '#172d67',
         'zion-blue': '#1e3a8a',
         'zion-blue-light': '#2e73ea',
@@ -189,7 +178,6 @@ module.exports = {
       minHeight: {
         'screen-75': '75vh',
         'screen-90': '90vh',
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
       },
     },
   },

@@ -33,5 +33,5 @@
     "composite": true,
     "noEmit": true
   },
-  "include": ["src", "types"]
+  "include": ["src", "pages"]
 }

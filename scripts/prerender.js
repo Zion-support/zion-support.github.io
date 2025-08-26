@@ -1,5 +1,5 @@
 import { readFileSync, writeFileSync } from 'fs';
-import path, { resolve } from 'path';
+import { resolve } from 'path';
 import { build } from 'esbuild';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
@@ -11,17 +11,6 @@ async function prerender() {
     platform: 'node',
     format: 'esm',
     write: false,
-    plugins: [
-      {
-        name: 'alias',
-        setup(build) {
-          build.onResolve({ filter: /^@\// }, (args) => {
-            const file = args.path.replace(/^@\//, '');
-            return { path: path.resolve('src', file) };
-          });
-        },
-      },
-    ],
   });
 
   const text = result.outputFiles[0].text;

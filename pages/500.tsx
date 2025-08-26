@@ -1,49 +1,29 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
+import SEO from '../components/SEO';
 
-export default function Custom500() {
-  return (
-    <>
-      <Head>
-        <title>500 - Server Error | Zion</title>
-        <meta name="description" content="Something went wrong on our end. Please try again." />
-      </Head>
-      
-      <div className="min-h-screen bg-gradient-to-br from-red-900 via-orange-900 to-red-800 flex items-center justify-center px-4">
-        <div className="text-center text-white">
-          <div className="mb-8">
-            <h1 className="text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400 mb-4">
-              500
-            </h1>
-            <h2 className="text-3xl font-semibold mb-4">Server Error</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-md mx-auto">
-              Something went wrong on our end. We're working to fix it.
-            </p>
-          </div>
-          
-          <div className="space-y-4">
-            <button 
-              onClick={() => window.location.reload()}
-              className="inline-block bg-gradient-to-r from-red-500 to-orange-600 hover:from-red-600 hover:to-orange-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 mr-4"
-            >
-              Try Again
-            </button>
-            
-            <Link 
-              href="/"
-              className="inline-block bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-            >
-              Go Home
-            </Link>
-            
-            <div className="text-sm text-gray-400 mt-6">
-              <p>If the problem persists, please contact our support team.</p>
-              <Link href="/contact" className="text-red-400 hover:text-red-300 transition-colors">Contact Support</Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+export default function ServerErrorPage() {
+	return (
+		<>
+			<SEO title="Server Error | Zion Tech Group" description="Something went wrong. Please try again later." noindex nofollow />
+			<section className="min-h-[70vh] flex items-center justify-center bg-gradient-to-b from-black to-gray-900">
+				<div className="container mx-auto px-4 text-center">
+					<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent mb-4">
+						500 – Server Error
+					</h1>
+					<p className="text-gray-300 max-w-2xl mx-auto mb-8">
+						An unexpected error occurred. If the problem persists, contact our team and we’ll help right away.
+					</p>
+					<div className="flex flex-col sm:flex-row gap-4 justify-center">
+						<Link href="/" className="px-6 py-3 rounded-xl font-semibold bg-gradient-to-r from-cyan-500 to-blue-600 text-white">
+							Go to Homepage
+						</Link>
+						<a href="mailto:kleber@ziontechgroup.com" className="px-6 py-3 rounded-xl font-semibold border border-gray-600 text-gray-200">
+							Contact Support
+						</a>
+					</div>
+				</div>
+			</section>
+		</>
+	);
 }

@@ -118,10 +118,47 @@ const companyLinks = [
   { name: 'Resources', href: '/resources' }
 ];
 
-export default function UltraAdvancedNavigation() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [isScrolled, setIsScrolled] = useState(false);
+	const navigationItems: Array<{ name: string; href: string; icon?: React.ComponentType<any>; description?: string }>
+		= [
+			{ name: 'Home', href: '/' },
+			{ name: 'AI', href: '/ai-services', icon: Brain, description: 'AI & ML services' },
+			{ name: 'Quantum', href: '/quantum-cloud-infrastructure', icon: Atom, description: 'Quantum & space' },
+			{ name: 'Enterprise IT', href: '/it-services', icon: Building2, description: 'Cloud, DevOps, Security' },
+			{ name: 'Micro SaaS', href: '/micro-saas', icon: Monitor, description: 'Micro SaaS products' },
+			{ name: 'Services', href: '/services', icon: Monitor, description: 'Directory of services' },
+			{ name: 'Advertising', href: '/services-advertising', icon: DollarSign, description: 'Benefits & pricing references' },
+			{ name: 'Market Pricing', href: '/market-pricing', icon: DollarSign, description: 'Vendor references' },
+			{ name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Transparent, market-aligned pricing' },
+			{ name: 'Contact', href: '/contact' }
+		];
+	return (
+		<nav
+			className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+				isScrolled ? 'bg-black/90 backdrop-blur-xl border-b border-gray-800/50' : 'bg-transparent'
+			}`}
+			aria-label="Primary"
+		>
+			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div className="flex justify-between items-center h-20">
+					{/* Logo */}
+					<motion.div
+						initial="hidden"
+						animate="visible"
+						variants={navContainerVariants}
+						className="flex items-center"
+					>
+						<Link href="/" className="flex items-center space-x-3 group">
+							<div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+								<Zap className="w-6 h-6 text-white" />
+							</div>
+							<div className="hidden sm:block">
+								<div className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+									Zion Tech Group
+								</div>
+								<div className="text-xs text-gray-400">AI • Quantum • IT</div>
+							</div>
+						</Link>
+					</motion.div>
 
   useEffect(() => {
     const handleScroll = () => {

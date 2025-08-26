@@ -1,3 +1,4 @@
+=======
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
@@ -26,6 +27,7 @@ interface MainSidebarProps {
 
 export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
   const location = useLocation();
+=======
 
   const navigationItems = [
     {
@@ -59,6 +61,7 @@ export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
     {
       title: 'Resources',
       items: [
+=======
         { name: 'Help Center', href: '/help', icon: HelpCircle },
         { name: 'Developer Portal', href: '/developers', icon: Code },
         { name: 'API Docs', href: '/api-docs', icon: Code },

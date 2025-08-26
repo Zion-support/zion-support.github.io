@@ -4,6 +4,28 @@ export interface Listing {
   description: string;
   price: number;
   currency: string;
+  tags: string[];
+  author: {
+    name: string;
+    id: string;
+    avatarUrl?: string;
+    email?: string; // Added optional email property
+  };
+  images: string[];
+  videoUrl?: string;
+  modelUrl?: string;
+  createdAt: string;
+  rating?: number;
+  reviewCount?: number;
+  featured?: boolean;
+  aiScore?: number; // Added aiScore as optional property
+  location?: string; // Adding location property to fix TypeScript errors
+  availability?: string; // Adding availability property to fix TypeScript errors
+}
+
+export interface ListingItem {
+  id: string;
+  title: string;
   category: string;
   tags: string[];
   images: string[];

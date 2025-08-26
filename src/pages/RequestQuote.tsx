@@ -1,31 +1,5 @@
 
 import React from 'react';
-<<<<<<< HEAD
-import { AppHeader } from '@/layout/AppHeader';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import { QuoteRequestForm } from "@/components/QuoteRequestForm";
-import { SEO } from "@/components/SEO";
-<<<<<<< HEAD
-import { GradientHeading } from "@/components/GradientHeading";
-
-export default function RequestQuote() {
-  return (
-<<<<<<< HEAD
-    <>
-      <SEO
-        title="Request a Quote - Zion Tech Group"
-        description="Get a customized quote for your AI and tech project needs. Our experts will provide you with detailed pricing and solutions."
-        keywords="request quote, AI project quote, tech services quote, custom pricing, project estimation"
-        canonical="https://ziontechgroup.com/request-quote"
-      />
-      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <GradientHeading>Request a Quote</GradientHeading>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Get a customized quote for your AI and tech project needs
-=======
     <div className="min-h-screen bg-background">
       <SEO 
         title="Request Quote - Zion Tech Group" 
@@ -44,7 +18,6 @@ export default function RequestQuote() {
             </h1>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Tell us about your project and we'll connect you with the perfect talent and services for your needs
->>>>>>> origin/cursor/website-audit-and-enhancement-b91b
             </p>
           </div>
           
@@ -52,11 +25,6 @@ export default function RequestQuote() {
             <QuoteRequestForm />
           </div>
         </div>
-<<<<<<< HEAD
-      </div>
-    </>
-=======
-=======
 import { SEO } from "@/components/SEO";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -288,13 +256,10 @@ export default function RequestQuote() {
             </div>
           </div>
         </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-aa85
       </main>
       
       <Footer />
     </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-b91b
-=======
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
@@ -327,6 +292,5 @@ export default function RequestQuote() {
       </main>
       <Footer />
     </>
->>>>>>> origin/cursor/website-audit-and-enhancement-24ce
   );
 }

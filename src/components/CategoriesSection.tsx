@@ -1,12 +1,7 @@
 
 import { GradientHeading } from "./GradientHeading";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
-=======
 import { Briefcase, HardDrive, Lightbulb, Users, Brain } from "lucide-react";
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ac34
 
 const categories = [
   {
@@ -17,24 +12,16 @@ const categories = [
     color: "from-purple-500 to-indigo-600",
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    title: "AI & Micro SAAS",
-    description: "Cutting-edge AI services and affordable software solutions",
-=======
     title: "Micro SAAS",
     description: "Innovative AI-powered business solutions and automation tools",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-32be
     icon: <Lightbulb className="w-10 h-10" />,
     link: "/micro-saas-services",
     color: "from-emerald-500 to-green-600",
-=======
     title: "AI Solutions",
     description: "Cutting-edge AI and machine learning services",
     icon: <Brain className="w-10 h-10" />,
     link: "/comprehensive-services",
     color: "from-pink-500 to-rose-600",
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ac34
   },
   {
     title: "Talents",
@@ -62,19 +49,12 @@ const specialServices = [
     link: "/it-onsite-services"
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    title: "View All Services",
-    link: "/comprehensive-services"
-=======
     title: "Advanced AI & IT Services",
     link: "/advanced-services"
   },
   {
     title: "Services Comparison",
     link: "/services-comparison"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e41a
-=======
     title: "AI Development",
     link: "/comprehensive-services"
   },
@@ -85,7 +65,6 @@ const specialServices = [
   {
     title: "Cybersecurity",
     link: "/comprehensive-services"
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ac34
   }
 ];
 
