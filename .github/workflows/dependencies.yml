@@ -371,13 +371,10 @@ jobs:
       - name: Build project
         run: npm run build
       
-      - name: Run tests (warnings only)
+      - name: Run tests
         run: |
-          echo "Running linting (warnings only)..."
-          npm run lint || echo "Linting completed with warnings"
-          echo "Running type checking (warnings only)..."
-          npm run type-check || echo "Type checking completed with warnings"
-        continue-on-error: true
+          npm run lint
+          npm run type-check
       
       - name: Create Pull Request
         if: success()
@@ -391,8 +388,7 @@ jobs:
             
             - Updated npm packages to latest versions
             - Ran security audit
-            - Verified build success
-            - Linting and type-checking completed with warnings
+            - Verified build and tests pass
           branch: automation/dependency-updates
           delete-branch: true
           labels: |
