@@ -1,33 +1,8 @@
 User-agent: *
 Allow: /
 
-<<<<<<< HEAD
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
-=======
-# Sitemap location
-Sitemap: https://ziontechgroup.com/sitemap.xml
-Sitemap: https://ziontechgroup.com/sitemap
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-ac60
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-45a9
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-374e
-=======
->>>>>>> origin/cursor/website-audit-and-enhancement-d85a
-
-# Allow all crawlers
-Allow: /about
-Allow: /services
-Allow: /contact
-Allow: /blog
-Allow: /careers
-Allow: /faq
-Allow: /privacy
-Allow: /terms
 
 # Disallow admin and private areas
 Disallow: /admin/
@@ -36,5 +11,13 @@ Disallow: /api/
 Disallow: /_next/
 Disallow: /static/
 
-# Crawl delay (optional)
+# Allow important pages
+Allow: /
+Allow: /about
+Allow: /services
+Allow: /contact
+Allow: /blog
+Allow: /careers
+
+# Crawl delay for respectful crawling
 Crawl-delay: 1
