@@ -43,29 +43,29 @@ const sidebarNavigation: NavItem[] = [
     { label: 'System Integration', href: '/services', icon: Network }
   ]},
   { label: 'Company', icon: Building, href: '#', children: [
-    { label: 'About Us', href: '/', icon: Building },
-    { label: 'Our Team', href: '/', icon: Users },
-    { label: 'Careers', href: '/', icon: Target },
-    { label: 'Partners', href: '/', icon: Users2 }
+    { label: 'About Us', href: '/about', icon: Building },
+    { label: 'Our Team', href: '/about', icon: Users },
+    { label: 'Careers', href: '/careers', icon: Target },
+    { label: 'Partners', href: '/partners', icon: Users2 }
   ]},
   { label: 'Resources', icon: BookOpen, href: '#', children: [
-    { label: 'Blog', href: '/', icon: FileText },
-    { label: 'Case Studies', href: '/', icon: BarChart3 },
-    { label: 'White Papers', href: '/', icon: FileText },
-    { label: 'Webinars', href: '/', icon: Video },
-    { label: 'Documentation', href: '/', icon: HelpCircle }
+    { label: 'Blog', href: '/blog', icon: FileText },
+    { label: 'Case Studies', href: '/resources', icon: BarChart3 },
+    { label: 'White Papers', href: '/resources', icon: FileText },
+    { label: 'Webinars', href: '/webinars', icon: Video },
+    { label: 'Documentation', href: '/docs', icon: HelpCircle }
   ]},
   { label: 'Support', icon: HelpCircle, href: '#', children: [
-    { label: 'Help Center', href: '/', icon: HelpCircle },
+    { label: 'FAQ', href: '/faq', icon: HelpCircle },
     { label: 'Contact Support', href: '/contact', icon: MessageSquare },
-    { label: 'Training', href: '/', icon: GraduationCap },
-    { label: 'Status Page', href: '/', icon: Activity }
+    { label: 'Training', href: '/resources', icon: GraduationCap },
+    { label: 'Sitemap', href: '/sitemap', icon: Activity }
   ]},
   { label: 'Legal', icon: Shield, href: '#', children: [
     { label: 'Privacy Policy', href: '/privacy', icon: Shield },
     { label: 'Terms of Service', href: '/terms', icon: FileText },
-    { label: 'Cookie Policy', href: '/', icon: Cookie },
-    { label: 'GDPR Compliance', href: '/', icon: Lock }
+    { label: 'Cookie Policy', href: '/privacy', icon: Cookie },
+    { label: 'GDPR Compliance', href: '/privacy', icon: Lock }
   ]}
 ];
 
@@ -361,8 +361,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <li><a href="/contact" className="text-slate-400 hover:text-white transition-colors flex items-center"><Phone className="w-4 h-4 mr-2" />Contact</a></li>
                 <li><a href="/privacy" className="text-slate-400 hover:text-white transition-colors flex items-center"><Shield className="w-4 h-4 mr-2" />Privacy</a></li>
                 <li><a href="/terms" className="text-slate-400 hover:text-white transition-colors flex items-center"><FileText className="w-4 h-4 mr-2" />Terms</a></li>
-                <li><a href="/" className="text-slate-400 hover:text-white transition-colors flex items-center"><Building className="w-4 h-4 mr-2" />About</a></li>
-                <li><a href="/" className="text-slate-400 hover:text-white transition-colors flex items-center"><Users className="w-4 h-4 mr-2" />Careers</a></li>
+                <li><a href="/about" className="text-slate-400 hover:text-white transition-colors flex items-center"><Building className="w-4 h-4 mr-2" />About</a></li>
+                <li><a href="/careers" className="text-slate-400 hover:text-white transition-colors flex items-center"><Users className="w-4 h-4 mr-2" />Careers</a></li>
               </ul>
             </div>
           </div>
