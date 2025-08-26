@@ -13,7 +13,7 @@ import { WhitelabelProvider } from '@/context/WhitelabelContext';
 import { AppLayout } from '@/layout/AppLayout';
 import { Provider as ReduxProvider } from 'react-redux';
 import { store } from '@/store';
-import { AuthProvider } from './context/auth/AuthProvider';
+// import { AuthProvider } from './context/auth/AuthProvider';
 import { NotificationProvider } from './components/ui/notification';
 
 const queryClient = new QueryClient({
@@ -33,7 +33,7 @@ root.render(
 				<ReduxProvider store={store}>
 					<WhitelabelProvider>
 						<Router>
-							<AuthProvider>
+							{/* <AuthProvider> */}
 								<NotificationProvider>
 									<LanguageProvider authState={{ isAuthenticated: false, user: null }}>
 										<AppLayout>
@@ -41,7 +41,7 @@ root.render(
 										</AppLayout>
 									</LanguageProvider>
 								</NotificationProvider>
-							</AuthProvider>
+							{/* </AuthProvider> */}
 						</Router>
 					</WhitelabelProvider>
 				</ReduxProvider>
