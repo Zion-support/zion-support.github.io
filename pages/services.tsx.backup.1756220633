@@ -25,6 +25,19 @@ import { aiFuturisticServices } from '../data/ai-futuristic-services';
 						</ul>
 					</section>
 
+<<<<<<< HEAD
+// Import existing service data
+import { realMicroSaasServices } from '../data/real-micro-saas-services';
+import { innovativeAIServices } from '../data/innovative-ai-services';
+import { enterpriseITServices } from '../data/enterprise-it-services';
+import { emergingTechServices } from '../data/emerging-tech-services';
+import { newRealServices } from '../data/new-real-services';
+import { realOperationalServices } from '../data/real-operational-services';
+import { marketReadyServices } from '../data/market-ready-services';
+import { marketValidatedServices } from '../data/market-validated-services';
+import { industryRealServices } from '../data/industry-real-services';
+import { newSaasItAiServices2025 } from '../data/new-saas-it-ai-services-2025';
+=======
   // Combine all services
   const allServices = [
     ...enhancedRealMicroSaasServices,
@@ -34,6 +47,7 @@ import { aiFuturisticServices } from '../data/ai-futuristic-services';
     ...emergingTechServices,
     ...aiFuturisticServices
   ];
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9c80
 
   const allServices = useMemo(() => {
     return enhancedRealMicroSaasServices
