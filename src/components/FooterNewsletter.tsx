@@ -1,47 +1,15 @@
 import React, { useState } from 'react';
-export function FooterNewsletter() {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Here you would typically send the email to your newsletter service
-    setIsSubscribed(true);
-    setEmail('');
-  };
-  if (isSubscribed) {
-    return (
-      <div className="text-green-400 text-sm">
-        Thank you for subscribing!
-      </div>
-    );
-  }
-  return (
-    <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2">
-      <input
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Enter your email"
-        className="flex-1 px-3 py-2 bg-zion-slate-dark border border-zion-slate rounded-md text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-        required
-      />
-      <button
-        type="submit"
-        className="px-4 py-2 bg-zion-cyan text-zion-slate-dark font-medium rounded-md hover:bg-zion-cyan-light transition-colors"
-      >
-        Subscribe
-      </button>
-    </form>
-  );
-}
 import { Mail, Send, CheckCircle } from 'lucide-react';
+
 export const FooterNewsletter: React.FC = () => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email.trim()) return;
+    
     setIsSubmitting(true);
     try {
       // Simulate API call
@@ -56,6 +24,7 @@ export const FooterNewsletter: React.FC = () => {
       setIsSubmitting(false);
     }
   };
+
   return (
     <div className="bg-gradient-to-r from-zion-cyan/10 to-blue-500/10 border border-zion-cyan/20 rounded-xl p-6">
       <div className="text-center">
@@ -70,6 +39,7 @@ export const FooterNewsletter: React.FC = () => {
         <p className="text-gray-300 mb-6 max-w-md mx-auto">
           Get the latest insights on AI technology, cybersecurity trends, and IT solutions delivered to your inbox.
         </p>
+        
         {isSubmitted ? (
           <div className="flex items-center justify-center gap-2 text-green-400">
             <CheckCircle className="w-5 h-5" />
@@ -104,6 +74,7 @@ export const FooterNewsletter: React.FC = () => {
             </button>
           </form>
         )}
+        
         <p className="text-xs text-gray-400 mt-4">
           We respect your privacy. Unsubscribe at any time.
         </p>
@@ -111,4 +82,3 @@ export const FooterNewsletter: React.FC = () => {
     </div>
   );
 };
-=======
