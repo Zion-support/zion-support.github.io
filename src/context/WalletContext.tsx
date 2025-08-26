@@ -153,10 +153,9 @@ export const WalletProvider: React.FC<{ children: ReactNode }> = ({ children }) 
         try {
           const provider = appKit.getWalletProvider?.() as
             | (ethers.Eip1193Provider & {
-                on?: (event: string, listener: (...args: any[]) => void) => void;
                 removeListener?: (
-                  event: string,
-                  listener: (...args: any[]) => void,
+                  eventName: string,
+                  listener: (...args: any[]) => void
                 ) => void;
               })
             | undefined;

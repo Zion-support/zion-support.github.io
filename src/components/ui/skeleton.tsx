@@ -1,16 +1,9 @@
-// src/components/ui/skeleton.tsx
-import * as React from "react"
+import * as React from "react";
+import { cn } from "@/lib/utils";
 
-import { cn } from "@/lib/utils"
+export interface SkeletonProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-/**
- * A basic skeleton loader component.
- *
- * This mirrors the API of the `Skeleton` component from shadcn/ui so that
- * other components in the codebase can customize the size via the
- * `className` prop.
- */
-const Skeleton = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+const Skeleton = React.forwardRef<HTMLDivElement, SkeletonProps>(
   ({ className, ...props }, ref) => (
     <div
       ref={ref}
@@ -18,7 +11,7 @@ const Skeleton = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivEl
       {...props}
     />
   )
-)
-Skeleton.displayName = "Skeleton"
+);
+Skeleton.displayName = "Skeleton";
 
-export default Skeleton
+export default Skeleton;

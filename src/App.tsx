@@ -1,217 +1,61 @@
-import React, { Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
-import { ThemeProvider } from "./components/ThemeProvider";
-import { useScrollToTop } from "./hooks";
-import { WhitelabelProvider } from "./context/WhitelabelContext";
-import { Toaster } from "./components/ui/toaster";
-import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import { AppLayout } from "@/layout/AppLayout";
-import {
-  AuthRoutes,
-  DashboardRoutes,
-  MarketplaceRoutes,
-  TalentRoutes,
-  AdminRoutes,
-  MobileAppRoutes,
-  ContentRoutes,
-  ErrorRoutes,
-  EnterpriseRoutes,
-  CommunityRoutes,
-  DeveloperRoutes
-} from './routes';
+import { ServicesOverview } from './components/ServicesOverview';
 
-// Lazy loaded components
-const ComprehensiveServicesPage = React.lazy(() => import('./pages/ComprehensiveServicesPage'));
-const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage'));
-const CybersecurityServicesPage = React.lazy(() => import('./pages/CybersecurityServicesPage'));
-const EnhancedServicesShowcase = React.lazy(() => import('./pages/EnhancedServicesShowcase'));
-const ComprehensiveContact = React.lazy(() => import('./pages/ComprehensiveContact'));
-const FAQPage = React.lazy(() => import('./pages/FAQ'));
-const MicroSaasServices = React.lazy(() => import('./pages/MicroSaasServices'));
-const WishlistPage = React.lazy(() => import('./pages/Wishlist'));
-const CartPage = React.lazy(() => import('./pages/Cart'));
-const Checkout = React.lazy(() => import('./pages/Checkout'));
-const InnovativeServicesShowcase = React.lazy(() => import('./pages/InnovativeServicesShowcase'));
+const Landing: React.FC = () => {
+	return (
+		<div className="min-h-screen bg-gray-50 text-gray-900">
+			<header className="bg-white shadow">
+				<div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 flex items-center justify-between">
+					<h1 className="text-2xl font-bold text-zion-cyan">Zion Tech Group</h1>
+					<nav className="space-x-4 text-sm">
+						<Link to="/" className="hover:text-zion-cyan">Home</Link>
+						<Link to="/services" className="hover:text-zion-cyan">Services</Link>
+						<a className="hover:text-zion-cyan" href="https://ziontechgroup.com" rel="noopener noreferrer">Website</a>
+					</nav>
+				</div>
+			</header>
+			<main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+				<section className="mb-10">
+					<h2 className="text-3xl font-semibold mb-3">AI, Micro-SaaS, and IT Solutions</h2>
+					<p className="text-gray-600">Productized services with clear pricing, fast delivery, and measurable ROI. Enterprise-grade execution for startups to Fortune 500.</p>
+					<div className="mt-6">
+						<Link to="/services" className="inline-block rounded bg-cyan-600 px-5 py-2 text-white hover:bg-cyan-700">Explore Services</Link>
+					</div>
+				</section>
+				<section>
+					<ServicesOverview />
+				</section>
+				<section className="mt-12 border-t pt-8">
+					<h3 className="text-xl font-semibold mb-2">Contact</h3>
+					<p className="text-gray-700">Mobile: <a href="tel:+13024640950" className="text-cyan-700 hover:underline">+1 302 464 0950</a></p>
+					<p className="text-gray-700">E-mail: <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-700 hover:underline">kleber@ziontechgroup.com</a></p>
+					<p className="text-gray-700">Address: 364 E Main St STE 1008 Middletown DE 19709</p>
+				</section>
+			</main>
+		</div>
+	);
+};
 
-// New AI Service pages
-const AIAutonomousBusinessManager = lazy(() => import('./pages/ai-services/AIAutonomousBusinessManager'));
-const AIAutonomousBusinessPlatform = lazy(() => import('./pages/ai-services/AIAutonomousBusinessPlatform'));
-const AIAutonomousCodeReview = lazy(() => import('./pages/ai-services/AIAutonomousCodeReview'));
+const ServicesPage: React.FC = () => {
+	return (
+		<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+			<h2 className="text-3xl font-semibold mb-6">Our Services</h2>
+			<ServicesOverview />
+		</div>
+	);
+};
 
-// Direct imports
-import Home from './pages/Home';
-import AIMatcherPage from './pages/AIMatcher';
-import TalentDirectory from './pages/TalentDirectory';
-import TalentsPage from './pages/TalentsPage';
-import MoreTalentsPage from './pages/MoreTalentsPage';
-import ServicesPage from './pages/ServicesPage';
-import EquipmentPage from './pages/EquipmentPage';
-import EquipmentDetail from './pages/EquipmentDetail';
-import Analytics from './pages/Analytics';
-import MobileLaunchPage from './pages/MobileLaunchPage';
-import CommunityPage from './pages/CommunityPage';
-import Categories from './pages/Categories';
-import Blog from './pages/Blog';
-import BlogPost from './pages/BlogPost';
-import NewProductsPage from './pages/NewProductsPage';
-import MoreProductsPage from './pages/MoreProductsPage';
-import Sitemap from './pages/Sitemap';
-import PartnersPage from './pages/Partners';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import SignUp from './pages/SignUp';
-import ITOnsiteServicesPage from './pages/ITOnsiteServicesPage';
-import OpenAppRedirect from './pages/OpenAppRedirect';
-import ContactPage from './pages/Contact';
-import ZionHireAI from './pages/ZionHireAI';
-import RequestQuotePage from './pages/RequestQuote';
-
-const baseRoutes = [
-  { path: '/', element: <Home /> },
-  { path: '/home', element: <Home /> },
-  { path: '/about', element: <About /> },
-  { path: '/careers', element: <Careers /> },
-  { path: '/news', element: <News /> },
-  { path: '/press', element: <Press /> },
-  { path: '/case-studies', element: <CaseStudies /> },
-  { path: '/white-papers', element: <WhitePapers /> },
-  { path: '/privacy', element: <Privacy /> },
-  { path: '/terms', element: <Terms /> },
-  
-  // Additional missing pages
-  { path: '/partners', element: <Partners /> },
-  { path: '/docs', element: <Documentation /> },
-  { path: '/cookies', element: <Cookies /> },
-  { path: '/sitemap', element: <Sitemap /> },
-  { path: '/help', element: <HelpCenter /> },
-  { path: '/training', element: <Training /> },
-  { path: '/webinars', element: <Webinars /> },
-  { path: '/events', element: <Events /> },
-  { path: '/support', element: <Support /> },
-  { path: '/faq', element: <FAQ /> },
-  { path: '/green-it', element: <GreenIT /> },
-  { path: '/financial-solutions', element: <FinancialSolutions /> },
-  { path: '/mobile', element: <Mobile /> },
-  { path: '/quantum-technology', element: <QuantumTechnology /> },
-  { path: '/space-tech', element: <SpaceTech /> },
-  
-  // New routes from incoming branch
-  { path: '/services', element: <Services /> },
-  { path: '/ai-solutions', element: <AISolutions /> },
-  { path: '/services-showcase', element: <ServicesShowcase /> },
-  { path: '/innovative-services-showcase', element: <InnovativeServicesShowcase /> },
-  { path: '/micro-saas-services', element: <MicroSaasServicesPage /> },
-  { path: '/pricing', element: <PricingPage /> },
-  { path: '/emerging-tech', element: <EmergingTech /> },
-  
-  // New missing page routes
-  { path: '/quantum-neural-network-platform', element: <QuantumNeuralNetworkPlatform /> },
-  { path: '/autonomous-business-operations-platform', element: <AutonomousBusinessOperationsPlatform /> },
-  { path: '/ai-powered-it-asset-management', element: <AIPoweredITAssetManagement /> },
-  { path: '/soc2-compliance-automation', element: <SOC2ComplianceAutomation /> },
-  { path: '/ai-autonomous-research-assistant', element: <AIAutonomousResearchAssistant /> },
-  { path: '/5g-enterprise-solutions', element: <FiveGEnterpriseSolutions /> },
-  
-  // Service routes
-  { path: '/services/ai', element: <AIServices /> },
-  { path: '/services/cloud', element: <CloudServices /> },
-  { path: '/services/cybersecurity', element: <CybersecurityServices /> },
-  { path: '/services/infrastructure', element: <InfrastructureServices /> },
-  { path: '/services/transformation', element: <DigitalTransformation /> },
-  { path: '/services/consulting', element: <ConsultingServices /> },
-  { path: '/services/quantum-ai', element: <QuantumAIServices /> },
-  
-  // Additional service routes
-  { path: '/innovative-services-2025', element: <InnovativeServices2025 /> },
-  { path: '/advanced-services-2025', element: <AdvancedServices2025 /> },
-  { path: '/advanced-services-showcase-2025', element: <AdvancedServicesShowcase2025 /> },
-  { path: '/comprehensive-pricing-2025', element: <ComprehensivePricing2025 /> },
-  { path: '/comprehensive-services-showcase-2025', element: <ComprehensiveServicesShowcase2025 /> },
-  { path: '/innovative-services-showcase-2025', element: <InnovativeServicesShowcase2025 /> },
-  { path: '/services-showcase-2025', element: <InnovativeServicesShowcase2025 /> },
-  
-  // Innovative Services 2026
-  { path: '/innovative-services-showcase-2026', element: <InnovativeServicesShowcase2026 /> },
-  { path: '/innovative-services-2026', element: <InnovativeServicesShowcase2026 /> },
-  
-  // Ultimate Innovative Services 2026
-  { path: '/ultimate-services-showcase-2026', element: <UltimateServicesShowcase2026 /> },
-  { path: '/ultimate-services-2026', element: <UltimateServicesShowcase2026 /> },
-  { path: '/comprehensive-pricing-2026', element: <ComprehensivePricing2026 /> },
-  { path: '/pricing-2026', element: <ComprehensivePricing2026 /> },
-  
-  // Other routes
-  { path: '/match', element: <AIMatcherPage /> },
-  { path: '/login', element: <Login /> },
-  { path: '/signup', element: <Signup /> },
-  { path: '/talent', element: <TalentDirectory /> },
-  { path: '/talents', element: <TalentsPage /> },
-  { path: '/services', element: <ServicesPage /> },
-  { path: '/enhanced-services', element: <EnhancedServicesShowcase /> },
-  { path: '/ai-services', element: <AIServicesPage /> },
-  { path: '/cybersecurity-services', element: <CybersecurityServicesPage /> },
-  { path: '/comprehensive-services', element: <ComprehensiveServicesPage /> },
-  { path: '/innovative-services-2025', element: <InnovativeServicesShowcase /> },
-  { path: '/micro-saas-services', element: <MicroSaasServices /> },
-  { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
-  { path: '/categories', element: <Categories /> },
-  { path: '/equipment', element: <EquipmentPage /> },
-  { path: '/equipment/:id', element: <EquipmentDetail /> },
-  { path: '/analytics', element: <Analytics /> },
-  { path: '/mobile-launch', element: <MobileLaunchPage /> },
-  { path: '/open-app', element: <OpenAppRedirect /> },
-  { path: '/community', element: <CommunityPage /> },
-  { path: '/contact', element: <ContactPage /> },
-  { path: '/partners', element: <PartnersPage /> },
-  { path: '/zion-hire-ai', element: <ZionHireAI /> },
-  { path: '/hire-ai', element: <ZionHireAI /> },
-  { path: '/request-quote', element: <RequestQuotePage /> },
-  { path: '/blog', element: <Blog /> },
-  { path: '/blog/:slug', element: <BlogPost /> },
-  { path: '/faq', element: <FAQPage /> },
-  { path: '/wishlist', element: <WishlistPage /> },
-  { path: '/cart', element: <CartPage /> },
-  { path: '/checkout', element: <Checkout /> },
-  // AI Service routes
-  { path: '/ai-autonomous-business-manager', element: <AIAutonomousBusinessManager /> },
-  { path: '/ai-autonomous-business-platform', element: <AIAutonomousBusinessPlatform /> },
-  { path: '/ai-autonomous-code-review', element: <AIAutonomousCodeReview /> },
-];
-
-const App = () => {
-  // Ensure each navigation starts at the top of the page
-  useScrollToTop();
-  return (
-    <WhitelabelProvider>
-      <ThemeProvider>
-        <Suspense fallback={<LoadingSpinner />}>
-          <ErrorBoundary>
-            <Routes>
-              <Route element={<AppLayout />}>
-                {baseRoutes.map(({ path, element }) => (
-                  <Route key={path} path={path} element={element} />
-                ))}
-                <Route path="/auth/*" element={<AuthRoutes />} />
-                <Route path="/dashboard/*" element={<DashboardRoutes />} />
-                <Route path="/marketplace/*" element={<MarketplaceRoutes />} />
-                <Route path="/talent/*" element={<TalentRoutes />} />
-                <Route path="/admin/*" element={<AdminRoutes />} />
-                <Route path="/mobile/*" element={<MobileAppRoutes />} />
-                <Route path="/content/*" element={<ContentRoutes />} />
-                <Route path="/enterprise/*" element={<EnterpriseRoutes />} />
-                <Route path="/community/*" element={<CommunityRoutes />} />
-                <Route path="/developers/*" element={<DeveloperRoutes />} />
-                <Route path="*" element={<ErrorRoutes />} />
-              </Route>
-            </Routes>
-          </ErrorBoundary>
-        </Suspense>
-        <Toaster />
-        <SonnerToaster position="top-right" />
-      </ThemeProvider>
-    </WhitelabelProvider>
-  );
+const App: React.FC = () => {
+	return (
+		<Router>
+			<Routes>
+				<Route path="/" element={<Landing />} />
+				<Route path="/services" element={<ServicesPage />} />
+			</Routes>
+		</Router>
+	);
 };
 
 export default App;

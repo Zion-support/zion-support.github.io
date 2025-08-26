@@ -9,6 +9,11 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src')
     }
   },
+  build: {
+    rollupOptions: {
+      external: ['lucide-react']
+    }
+  },
   server: {
     port: 3000,
     host: true,
@@ -22,5 +27,9 @@ export default defineConfig({
     port: 4173,
     host: true,
     open: true,
-  }
+  },
+  define: {
+    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
+    __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
+  },
 })

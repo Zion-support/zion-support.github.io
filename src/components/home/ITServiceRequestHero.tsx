@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import { OptimizedImage as Image } from "@/components/ui/OptimizedImage";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
-import { Clock, Globe, Shield, Zap, MapPin, CheckCircle } from "lucide-react";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 export function ITServiceRequestHero() {
   const [location, setLocation] = useState("");

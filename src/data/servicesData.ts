@@ -217,4 +217,118 @@ export const SERVICES: ProductListing[] = [
     rating: 4.5,
     reviewCount: 36,
   },
+  {
+    id: "service-10",
+    title: "AI-Powered FinOps Optimization",
+    description:
+      "Continuous cloud cost optimization using ML-driven anomaly detection, rightsizing, and commitment planning across AWS, Azure, and GCP.",
+    category: "Cloud",
+    price: 4000,
+    currency: "$",
+    tags: ["FinOps", "Cloud", "Cost Optimization"],
+    author: { name: "Zion Tech Group", id: "ziontech" },
+    images: [
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=500"
+    ],
+    createdAt: "2025-08-26T00:00:00.000Z",
+    aiScore: 96,
+    rating: 4.9,
+    reviewCount: 41,
+    link: "https://ziontechgroup.com/finops-optimization"
+  },
+  {
+    id: "service-11",
+    title: "Autonomous SOC-as-a-Service",
+    description:
+      "Managed detection and response with LLM-assisted triage, auto-containment playbooks, and 24/7 monitoring.",
+    category: "Security",
+    price: 6500,
+    currency: "$",
+    tags: ["MDR", "SIEM", "LLM"],
+    author: { name: "Zion Tech Group", id: "ziontech" },
+    images: [
+      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=500"
+    ],
+    createdAt: "2025-08-26T00:00:00.000Z",
+    aiScore: 94,
+    rating: 4.8,
+    reviewCount: 33,
+    link: "https://ziontechgroup.com/autonomous-soc"
+  },
+  {
+    id: "service-12",
+    title: "Retail AI: Demand Forecasting & Dynamic Pricing",
+    description:
+      "Time-series forecasting, price elasticity modeling, and promo optimization for omnichannel retailers.",
+    category: "Analytics",
+    price: 7200,
+    currency: "$",
+    tags: ["Retail", "Forecasting", "Pricing"],
+    author: { name: "Zion Tech Group", id: "ziontech" },
+    images: [
+      "https://images.unsplash.com/photo-1506617420156-8e4536971650?auto=format&fit=crop&w=800&h=500"
+    ],
+    createdAt: "2025-08-26T00:00:00.000Z",
+    aiScore: 93,
+    rating: 4.7,
+    reviewCount: 27,
+    link: "https://ziontechgroup.com/retail-ai-forecasting"
+  },
+  {
+    id: "service-13",
+    title: "Healthcare Interoperability & FHIR APIs",
+    description:
+      "HIPAA-ready FHIR API enablement, EHR integrations, and secure patient data exchange.",
+    category: "IT Services",
+    price: 12000,
+    currency: "$",
+    tags: ["FHIR", "EHR", "HIPAA"],
+    author: { name: "Zion Tech Group", id: "ziontech" },
+    images: [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&h=500"
+    ],
+    createdAt: "2025-08-26T00:00:00.000Z",
+    aiScore: 91,
+    rating: 4.8,
+    reviewCount: 19,
+    link: "https://ziontechgroup.com/healthcare-fhir-apis"
+  },
+  {
+    id: "service-14",
+    title: "GenAI Knowledge Assistant for Enterprises",
+    description:
+      "Secure RAG assistant over Confluence, Google Drive, and SharePoint with role-aware answers and audit trails.",
+    category: "AI",
+    price: 9000,
+    currency: "$",
+    tags: ["RAG", "GenAI", "Enterprise"],
+    author: { name: "Zion Tech Group", id: "ziontech" },
+    images: [
+      "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&h=500"
+    ],
+    createdAt: "2025-08-26T00:00:00.000Z",
+    aiScore: 97,
+    rating: 4.9,
+    reviewCount: 52,
+    link: "https://ziontechgroup.com/genai-knowledge-assistant"
+  },
+  {
+    id: "service-15",
+    title: "IoT Edge Computer Vision QA",
+    description:
+      "On-device defect detection with model distillation, MLOps, and real-time alerts for manufacturing lines.",
+    category: "IoT",
+    price: 14000,
+    currency: "$",
+    tags: ["Edge AI", "Computer Vision", "MLOps"],
+    author: { name: "Zion Tech Group", id: "ziontech" },
+    images: [
+      "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=800&h=500"
+    ],
+    createdAt: "2025-08-26T00:00:00.000Z",
+    aiScore: 92,
+    rating: 4.7,
+    reviewCount: 21,
+    link: "https://ziontechgroup.com/iot-vision-qa"
+  }
 ];
