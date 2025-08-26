@@ -5,7 +5,7 @@ import type { AppProps } from 'next/app';
 import { AuthProvider } from '@/context/auth/AuthProvider';
 import { Provider as ReduxProvider } from 'react-redux';
 import { store } from '@/store';
-import { checkEssentialEnvVars } from '../src/utils/validateEnv';
+import ProductionErrorBoundary from '@/components/ProductionErrorBoundary';
 
 import { I18nextProvider } from 'react-i18next';
 import i18n from '@/i18n';
@@ -261,21 +261,21 @@ function MyApp({ Component, pageProps }: AppProps) {
   }
 
   return (
-    <QueryClientProvider client={queryClient}> {/* Added QueryClientProvider */}
-      <ProviderWrapper>
-        <GlobalErrorBoundary>
-          <Head>
-            <title>Zion App - AI Marketplace & DAO Platform</title>
-            <meta name="description" content="Zion App - The ultimate AI marketplace and DAO platform for the future of work" />
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <link rel="icon" href="/favicon.ico" />
-          </Head>
-          <div>
-            <Component {...pageProps} />
-          </div>
-        </GlobalErrorBoundary>
-      </ProviderWrapper>
-    </QueryClientProvider>
+    <ProductionErrorBoundary>
+      <QueryClientProvider client={queryClient}> {/* Added QueryClientProvider */}
+        <ProviderWrapper>
+        <Head>
+          <title>Zion App - AI Marketplace & DAO Platform</title>
+        <meta name="description" content="Zion App - The ultimate AI marketplace and DAO platform for the future of work" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+             <div>
+         <Component {...pageProps} />
+       </div>
+        </ProviderWrapper>
+      </QueryClientProvider>
+    </ProductionErrorBoundary>
   );
 }
 
