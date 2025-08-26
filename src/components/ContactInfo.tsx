@@ -224,7 +224,7 @@ export function ContactInfo() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/request-quote">
-                <Button size="lg" className="bg-white text-zion-purple hover:bg-zion-slate-light px-8 py-3">
+                <Button size="lg" className="bg-white text-zion-purple hover:bg-zion-purple px-8 py-3">
                   Get Free Consultation
                 </Button>
               </Link>

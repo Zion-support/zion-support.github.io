@@ -145,6 +145,12 @@ const GDPR = React.lazy(() => import('./pages/GDPR'));
 const API = React.lazy(() => import('./pages/API'));
 const Status = React.lazy(() => import('./pages/Status'));
 
+<<<<<<< HEAD:src/App.tsx.cleanup-backup.1756215011
+=======
+// duplicate removed: const Accessibility = React.lazy(() => import('./pages/Accessibility'));
+const APIDocs = React.lazy(() => import('./pages/APIDocs'));
+
+>>>>>>> cursor/website-audit-and-enhancement-7e39:src/App.tsx
 const baseRoutes = [
   { path: '/', element: <Home /> },
   { path: '/about', element: <About /> },

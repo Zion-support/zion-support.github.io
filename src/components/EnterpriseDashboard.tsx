@@ -390,7 +390,7 @@ export const EnterpriseDashboard: React.FC = () => {
 
       {/* Main Content */}
       <div className="p-6">
-        <AnimatePresence mode="wait">
+        <AnimatePresence>
           {activeTab === 'overview' && (
             <motion.div
               key="overview"

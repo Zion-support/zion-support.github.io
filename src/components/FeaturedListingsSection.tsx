@@ -124,7 +124,7 @@ const categories = [
 ];
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export function FeaturedListingsSection() {
   const featuredServices = [
@@ -241,7 +241,7 @@ export function FeaturedListingsSection() {
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-2xl font-bold text-gray-900">{service.price}</span>
                   <Link
-                    to={service.link}
+                    href={service.link}
                     className="text-blue-600 hover:text-blue-700 font-medium text-sm group-hover:underline"
                   >
                     Learn More →
@@ -251,7 +251,7 @@ export function FeaturedListingsSection() {
               
               <div className="px-6 pb-6">
                 <Link
-                  to={service.link}
+                  href={service.link}
                   className="w-full bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300 text-center block group-hover:shadow-lg"
                 >
                   Get Started
@@ -263,7 +263,7 @@ export function FeaturedListingsSection() {
         
         <div className="text-center mt-12">
           <Link
-            to="/services"
+            href="/services"
             className="inline-flex items-center px-8 py-3 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors duration-300"
           >
             View All Services

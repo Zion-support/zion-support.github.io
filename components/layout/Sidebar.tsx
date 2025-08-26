@@ -15,7 +15,7 @@ const Sidebar: React.FC = () => {
 							<Link href="/services" className="text-gray-700 hover:text-indigo-600">Services</Link>
 						</li>
 						<li>
-							<Link href="/products" className="text-gray-700 hover:text-indigo-600">Products</Link>
+							<Link href="/case-studies" className="text-gray-700 hover:text-indigo-600">Case Studies</Link>
 						</li>
 						<li>
 							<Link href="/blog" className="text-gray-700 hover:text-indigo-600">Blog</Link>
@@ -26,13 +26,13 @@ const Sidebar: React.FC = () => {
 					<h3 className="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-2">Solutions</h3>
 					<ul className="space-y-2">
 						<li>
-							<Link href="/category/cloud-architecture-chat" className="text-gray-700 hover:text-indigo-600">Cloud Architecture</Link>
+							<Link href="/services#devops" className="text-gray-700 hover:text-indigo-600">Cloud & DevOps</Link>
 						</li>
 						<li>
-							<Link href="/category/cybersecurity-chat" className="text-gray-700 hover:text-indigo-600">Cybersecurity</Link>
+							<Link href="/services#data" className="text-gray-700 hover:text-indigo-600">Data Engineering</Link>
 						</li>
 						<li>
-							<Link href="/category/ai-consulting-chat" className="text-gray-700 hover:text-indigo-600">AI Consulting</Link>
+							<Link href="/services#ai-services" className="text-gray-700 hover:text-indigo-600">Applied AI</Link>
 						</li>
 					</ul>
 				</div>
@@ -44,9 +44,6 @@ const Sidebar: React.FC = () => {
 						</li>
 						<li>
 							<Link href="/contact" className="text-gray-700 hover:text-indigo-600">Contact</Link>
-						</li>
-						<li>
-							<Link href="/talent" className="text-gray-700 hover:text-indigo-600">Talent</Link>
 						</li>
 						<li>
 							<Link href="/privacy" className="text-gray-700 hover:text-indigo-600">Privacy Policy</Link>

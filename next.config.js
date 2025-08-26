@@ -3,14 +3,17 @@ const nextConfig = {
 	reactStrictMode: true,
 	trailingSlash: true,
 	output: 'export',
+	assetPrefix: process.env.NEXT_PUBLIC_ASSET_PREFIX || '',
 	images: {
 		unoptimized: true,
+		domains: ["localhost"]
+	},
+	pageExtensions: ['page.tsx','page.ts','page.jsx','page.js'],
+	typescript: {
+		ignoreBuildErrors: process.env.SKIP_TYPE_CHECK === 'true' || true
 	},
 	eslint: {
-		ignoreDuringBuilds: true,
-	},
-	typescript: {
-		ignoreBuildErrors: true,
+		ignoreDuringBuilds: true
 	},
 	async redirects() {
 		return [
@@ -21,22 +24,12 @@ const nextConfig = {
 			{ source: '/intelligent-content-automation-platform', destination: '/services/intelligent-content-automation-platform', permanent: true },
 			{ source: '/intelligent-hr-analytics-platform', destination: '/services/intelligent-hr-analytics-platform', permanent: true },
 			{ source: '/smart-crm-intelligence-suite', destination: '/services/smart-crm-intelligence-suite', permanent: true },
-			{ source: '/affiliate-attribution-suite', destination: '/services/affiliate-attribution-suite', permanent: true },
-			// Additional fixes
-			{ source: '/ai-content-marketing-automation', destination: '/ai-content-generator', permanent: true },
-			{ source: '/ai-consciousness-evolution', destination: '/ai-consciousness-evolution-2029', permanent: true },
-			{ source: '/ai-autonomous-ecosystem', destination: '/ai-autonomous-ecosystem-manager', permanent: true },
-			{ source: '/ai-ethics-governance', destination: '/services/ai-ethics-governance', permanent: true },
-			{ source: '/autonomous-it-operations', destination: '/autonomous-it-operations-center', permanent: true },
-			{ source: '/autonomous-vehicle-ai', destination: '/autonomous-vehicle-ai-platform', permanent: true },
-			{ source: '/blockchain-enterprise-platform', destination: '/blockchain-infrastructure-platform', permanent: true },
-			{ source: '/quantum-networking', destination: '/quantum-services', permanent: true },
-			{ source: '/quantum-data-center', destination: '/quantum-services', permanent: true },
-			{ source: '/quantum-encryption-gateway', destination: '/quantum-internet-security-platform', permanent: true },
-			{ source: '/quantum-threat-detection', destination: '/quantum-cybersecurity', permanent: true },
-			{ source: '/quantum-identity-verification', destination: '/quantum-cybersecurity', permanent: true },
+			{ source: '/affiliate-attribution-suite', destination: '/services/affiliate-attribution-suite', permanent: true }
 		];
-	},
+	}
 };
 
-export default nextConfig;
+// Note: headers, redirects, and rewrites don't work with output: 'export'
+// These are handled by Netlify via _headers and _redirects files
+
+module.exports = nextConfig;

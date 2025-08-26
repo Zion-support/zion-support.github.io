@@ -1,0 +1,110 @@
+[build]
+<<<<<<< HEAD
+=======
+  # Use `npm ci` for deterministic installs, Next.js plugin expects .next
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e367
+  command = "npm ci && npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+  NODE_OPTIONS = "--max_old_space_size=4096"
+  NPM_FLAGS = "--prefer-offline"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+<<<<<<< HEAD
+
+# Security and performance headers
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    X-DNS-Prefetch-Control = "on"
+
+# Redirects to preserve old URLs
+[[redirects]]
+  from = "/ai-customer-success-platform"
+  to = "/services/ai-customer-success-platform"
+  status = 301
+
+[[redirects]]
+  from = "/ai-sales-intelligence-platform"
+  to = "/services/ai-sales-intelligence-platform"
+  status = 301
+
+[[redirects]]
+  from = "/ai-financial-planning-platform"
+  to = "/services/ai-financial-planning-platform"
+  status = 301
+
+[[redirects]]
+  from = "/ai-powered-decision-engine"
+  to = "/services/ai-powered-decision-engine"
+  status = 301
+
+[[redirects]]
+  from = "/intelligent-content-automation-platform"
+  to = "/services/intelligent-content-automation-platform"
+  status = 301
+
+[[redirects]]
+  from = "/intelligent-hr-analytics-platform"
+  to = "/services/intelligent-hr-analytics-platform"
+  status = 301
+
+[[redirects]]
+  from = "/smart-crm-intelligence-suite"
+  to = "/services/smart-crm-intelligence-suite"
+  status = 301
+
+[[redirects]]
+  from = "/affiliate-attribution-suite"
+  to = "/services/affiliate-attribution-suite"
+=======
+
+# Optional: a few redirects that were present
+[[redirects]]
+  from = "/ai-autonomous-ecosystem"
+  to = "/ai-autonomous-ecosystem-manager"
+  status = 301
+
+[[redirects]]
+  from = "/autonomous-it-operations"
+  to = "/autonomous-it-operations-center"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-internet-security"
+  to = "/quantum-internet-security-platform"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-materials-discovery"
+  to = "/quantum-materials-discovery-platform"
+  status = 301
+
+[[redirects]]
+  from = "/autonomous-vehicle-ai"
+  to = "/autonomous-vehicle-ai-platform"
+  status = 301
+
+[[redirects]]
+  from = "/ai-content-marketing-automation"
+  to = "/ai-content-generator"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-e367
+  status = 301

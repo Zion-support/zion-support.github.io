@@ -12,7 +12,10 @@
     "moduleResolution": "bundler",
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "strict": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve",
+    "strict": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
@@ -23,43 +26,28 @@
       ]
     },
     "allowSyntheticDefaultImports": true,
+    "allowJs": true,
     "incremental": true,
     "plugins": [
       {
         "name": "next"
       }
     ],
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
-    "strictNullChecks": false,
-    "exactOptionalPropertyTypes": false,
-    "noImplicitOverride": false,
-    "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": false,
-    "allowJs": true,
-    "noEmit": true,
-    "isolatedModules": true,
-    "jsx": "preserve"
+    "strictNullChecks": true
   },
   "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
+    "src",
+    "pages",
+    "components",
+    "data",
+    "types",
     ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
-    ".next",
-    "out",
-    "dist",
-    "build",
-    "automation",
-    "scripts",
-    "fix_*.js",
-    "fix_*.cjs",
-    "*.fix.js",
-    "*.fix.cjs"
+    ".next/**",
+    "dist/**",
+    "temp_components/**",
+    "zion-os/**"
   ]
 }

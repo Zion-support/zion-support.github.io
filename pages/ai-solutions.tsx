@@ -10,6 +10,9 @@ export default function AISolutions(){return (
       <li><a href="/services" style={{textDecoration:'underline'}}>AI Marketing Content Studio</a> — on-brand content at scale with SEO and approvals.</li>
       <li><a href="/services" style={{textDecoration:'underline'}}>Agentic Sales Engineer</a> — technical answers, diagrams, and demo scaffolds 24/7.</li>
       <li><a href="/services" style={{textDecoration:'underline'}}>AI Governance & Risk Suite</a> — policies, evals, monitoring, and audit reporting.</li>
+      <li><a href="/services" style={{textDecoration:'underline'}}>AI Code Migration Assistant</a> — framework/SDK upgrades with tests and CI gates.</li>
+      <li><a href="/services" style={{textDecoration:'underline'}}>Voice Bot for Collections</a> — compliant payment arrangements with human-like voice.</li>
+      <li><a href="/services" style={{textDecoration:'underline'}}>AI Fraud Triad Detector</a> — behavior, network, and content signals with explainability.</li>
     </ul>
   </section>
 
@@ -26,6 +29,7 @@ export default function AISolutions(){return (
   <section style={{marginTop:24}}>
     <h2 style={{fontSize:22}}>Typical pricing</h2>
     <p style={{color:'#374151'}}>Implementation from $5,000–$25,000 one-time, managed run from $499–$4,999/month depending on scope and seats. We price competitively based on outcomes.</p>
+    <p style={{color:'#374151',marginTop:6}}>Average market prices: Micro SaaS $99–$999/month, AI Services $499–$4,999/month, Enterprise IT $2,000–$15,000/month.</p>
   </section>
 
   <section style={{marginTop:24,background:'#F9FAFB',padding:16,borderRadius:8}}>

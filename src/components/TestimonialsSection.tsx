@@ -74,6 +74,56 @@ export const TestimonialsSection: React.FC = () => {
             Discover how Zion Tech Group has transformed businesses across industries 
             with our cutting-edge technology solutions.
           </p>
+        </motion.div>
+
+        <div className="relative">
+          <AnimatePresence>
+            <motion.div
+              key={currentIndex}
+              initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -100 }}
+              transition={{ duration: 0.5 }}
+              className="max-w-4xl mx-auto"
+            >
+              <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 md:p-12 border border-white/20">
+                <div className="text-center">
+                  <div className="text-6xl mb-6">{testimonials[currentIndex].avatar}</div>
+                  <div className="flex justify-center mb-4">
+                    {renderStars(testimonials[currentIndex].rating)}
+                  </div>
+                  <blockquote className="text-lg md:text-xl text-gray-200 mb-6 italic leading-relaxed">
+                    "{testimonials[currentIndex].content}"
+                  </blockquote>
+                  <div className="text-center">
+                    <div className="font-semibold text-white text-lg">
+                      {testimonials[currentIndex].name}
+                    </div>
+                    <div className="text-gray-400">
+                      {testimonials[currentIndex].position} at {testimonials[currentIndex].company}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Navigation Buttons */}
+          <button
+            onClick={prevTestimonial}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-8 p-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300"
+            aria-label="Previous testimonial"
+          >
+            <ChevronLeftIcon className="w-6 h-6 text-white" />
+          </button>
+
+          <button
+            onClick={nextTestimonial}
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-8 p-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300"
+            aria-label="Next testimonial"
+          >
+            <ChevronRightIcon className="w-6 h-6 text-white" />
+          </button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

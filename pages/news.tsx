@@ -1,8 +1,16 @@
-export default function News(){
+import Head from 'next/head'
+
+export default function News() {
 	return (
-		<main className="mx-auto min-h-screen max-w-3xl px-6 py-12">
-			<h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">News</h1>
-			<p className="mt-3 text-gray-700">Company updates, press, and announcements will appear here.</p>
-		</main>
+		<>
+			<Head>
+				<title>News | Zion Tech Group</title>
+				<meta name="description" content="Company news and announcements." />
+			</Head>
+			<section className="py-10">
+				<h1 className="text-3xl font-bold mb-3">News</h1>
+				<p className="text-gray-700">Latest updates and announcements will appear here.</p>
+			</section>
+		</>
 	)
 }
