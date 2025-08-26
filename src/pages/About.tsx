@@ -30,24 +30,9 @@ import {
   CheckCircle
 } from 'lucide-react';
 
-const About = () => {
-  const stats = [
-  Rocket, 
-  Shield, 
-  Brain, 
-  Globe, 
-  Award, 
-  TrendingUp,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Zap,
-  Heart,
-  Lightbulb,
-  Clock
-} from 'lucide-react';
-=======
 import React from 'react';
+=======
+import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -243,27 +228,6 @@ const About: React.FC = () => {
   return (
     <>
       <SEO 
-  const team = [
-    {
-      name: "Dr. Sarah Chen",
-      role: "Chief Executive Officer",
-      description: "Former AI researcher with 15+ years in technology leadership"
-    },
-    {
-      name: "Michael Rodriguez",
-      role: "Chief Technology Officer",
-      description: "Expert in emerging technologies and system architecture"
-    },
-    {
-      name: "Dr. James Kim",
-      role: "Chief Innovation Officer",
-      description: "Leading research in quantum computing and AI"
-    },
-    {
-      name: "Lisa Thompson",
-      role: "Chief Operations Officer",
-      description: "Specialist in scaling technology operations globally"
-=======
       description: 'We measure our success by your success, building long-term partnerships based on results.'
     },
     {
@@ -304,6 +268,13 @@ const About = () => {
     <div className="min-h-screen bg-gradient-to-br from-zinc-50 to-zinc-100">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-cyan text-white py-20">
+=======
+        title="About Zion - The Future of AI & Tech Marketplace" 
+        description="Learn about Zion's mission to create the first free marketplace dedicated to high-tech and artificial intelligence." 
+        keywords="about Zion, AI marketplace, tech platform, mission, vision, team"
+        canonical="https://app.ziontechgroup.com/about"
+      />
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">

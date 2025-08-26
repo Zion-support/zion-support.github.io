@@ -17,7 +17,6 @@ import React, { useState } from 'react';
   const [isSubmitted, setIsSubmitted] = useState(false);
 =======
 import { useState } from "react";
-import { Header } from "@/components/header/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";

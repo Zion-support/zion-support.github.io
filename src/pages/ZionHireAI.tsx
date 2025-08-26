@@ -1,4 +1,13 @@
 
+import React from "react";
+import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
+import { useWhitelabel } from "@/context/WhitelabelContext";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe } from "lucide-react";
+import { useAuth } from "@/hooks/useAuth";
+import { Link } from "react-router-dom";
 
   return (
     <>
@@ -8,7 +17,7 @@
         keywords="AI hiring, AI recruiting, talent acquisition, AI assistant, Zion Hire AI"
         canonical="https://ziontechgroup.com/zion-hire-ai"
       />
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark">
+      <main className="flex-1">
         {/* Hero Section */}
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
