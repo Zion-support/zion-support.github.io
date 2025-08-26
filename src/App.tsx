@@ -1,71 +1,5 @@
 import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Header } from './components/Header';
-import Footer from './components/Footer';
-import Sidebar from './components/Sidebar';
-import { AccessibilityControls } from './components/AccessibilityControls';
-// Note: These dashboard components may need to be created or have different exports
-// import { PerformanceDashboard } from './components/PerformanceDashboard';
-// import { AnalyticsDashboard } from './components/AnalyticsDashboard';
-import { AIChatbot } from './components/AIChatbot';
-import { CollaborativeTextEditor } from './components/CollaborativeTextEditor';
-import { AICodeGenerator } from './components/AICodeGenerator';
-import { EnterpriseDashboard } from './components/EnterpriseDashboard';
-import { SecurityComplianceDashboard } from './components/SecurityComplianceDashboard';
-// import { MachineLearningDashboard } from './components/MachineLearningDashboard';
-// import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import { LinkHealthMonitor } from './components/LinkHealthMonitor';
-import { ThemeProvider } from "./components/ThemeProvider";
-import { useScrollToTop } from "./hooks";
-import { WhitelabelProvider } from "./context/WhitelabelContext";
-import { Toaster } from "./components/ui/toaster";
-import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import Home from './pages/Home';
-import AIMatcherPage from './pages/AIMatcher';
-import TalentDirectory from './pages/TalentDirectory';
-import TalentsPage from './pages/TalentsPage';
-import MoreTalentsPage from './pages/MoreTalentsPage';
-import ServicesPage from './pages/ServicesPage';
-import EquipmentPage from './pages/EquipmentPage';
-import EquipmentDetail from './pages/EquipmentDetail';
-import Analytics from './pages/Analytics';
-import MobileLaunchPage from './pages/MobileLaunchPage';
-import CommunityPage from './pages/CommunityPage';
-import Categories from './pages/Categories';
-import Blog from './pages/Blog';
-import BlogPost from './pages/BlogPost';
-import NewProductsPage from './pages/NewProductsPage';
-import MoreProductsPage from './pages/MoreProductsPage';
-import Sitemap from './pages/Sitemap';
-import PartnersPage from './pages/Partners';
-import Help from './pages/Help';
-import Login from './pages/Login';
-const Home = React.lazy(() => import('./pages/Home'));
-const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher'));
-const TalentDirectory = React.lazy(() => import('./pages/TalentDirectory'));
-const TalentsPage = React.lazy(() => import('./pages/TalentsPage'));
-const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
-const EquipmentPage = React.lazy(() => import('./pages/EquipmentPage'));
-const Analytics = React.lazy(() => import('./pages/Analytics'));
-const MobileLaunchPage = React.lazy(() => import('./pages/MobileLaunchPage'));
-const CommunityPage = React.lazy(() => import('./pages/CommunityPage'));
-const Categories = React.lazy(() => import('./pages/Categories'));
-const Login = React.lazy(() => import('./pages/Login'));
-const Signup = React.lazy(() => import('./pages/Signup'));
-const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage'));
-const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
-const ThemeTest = React.lazy(() => import('./pages/ThemeTest'));
-const ContactPage = React.lazy(() => import('./pages/Contact'));
-import Signup from './pages/Signup';
-import SimpleSignup from './pages/SimpleSignup';
-import ITOnsiteServicesPage from './pages/ITOnsiteServicesPage';
-import OpenAppRedirect from './pages/OpenAppRedirect';
-import ContactPage from './pages/Contact';
-import ZionHireAI from './pages/ZionHireAI';
-import RequestQuotePage from './pages/RequestQuote';
-import Checkout from './pages/Checkout';
-import PrivacyPage from './pages/PrivacyPage';
-=======
 import Rewards from './pages/Rewards';
 import { SupportChatbot } from './components/SupportChatbot';
 import PrivateRoute from './components/PrivateRoute';
@@ -90,6 +24,13 @@ import { ContentQualityEnhancer } from './components/ContentQualityEnhancer';
 import { BrokenLinkFixer } from './components/BrokenLinkFixer';
 import { WebsiteImprovementDashboard } from './components/WebsiteImprovementDashboard';
 import { SiteHealthDashboard } from './components/SiteHealthDashboard';
+=======
+import { HelmetProvider } from 'react-helmet-async';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import LoadingSpinner from './components/ui/LoadingSpinner';
+import ErrorBoundary from './components/ErrorBoundary';
+import ScrollToTop from './components/ScrollToTop';
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -176,33 +117,6 @@ const App = () => {
   useScrollToTop();
   
   return (
-    <ErrorBoundary>
-      <WhitelabelProvider>
-        <ThemeProvider defaultTheme="dark">
-          <Suspense fallback={<PageLoader text="Loading Zion Tech Group..." />}>
-            <Routes>
-              {baseRoutes.map(({ path, element }) => (
-                <Route key={path} path={path} element={element} />
-              ))}
-              <Route path="/auth/*" element={<AuthRoutes />} />
-              <Route path="/dashboard/*" element={<DashboardRoutes />} />
-              <Route path="/marketplace/*" element={<MarketplaceRoutes />} />
-              <Route path="/talent/*" element={<TalentRoutes />} />
-              <Route path="/admin/*" element={<AdminRoutes />} />
-              <Route path="/mobile/*" element={<MobileAppRoutes />} />
-              <Route path="/content/*" element={<ContentRoutes />} />
-              <Route path="/enterprise/*" element={<EnterpriseRoutes />} />
-              <Route path="/community/*" element={<CommunityRoutes />} />
-              <Route path="/developers/*" element={<DeveloperRoutes />} />
-              <Route path="*" element={<ErrorRoutes />} />
-            </Routes>
-          </Suspense>
-          <Toaster />
-          <SonnerToaster position="top-right" />
-        </ThemeProvider>
-      </WhitelabelProvider>
-    </ErrorBoundary>
-=======
     <EnhancedErrorBoundary>
       <EnhancedAccessibility />
       <PerformanceMonitor />
@@ -470,6 +384,42 @@ const App = () => {
         </WhitelabelProvider>
       </ThemeProvider>
     </EnhancedErrorBoundary>
+=======
+    <HelmetProvider>
+      <ErrorBoundary>
+        <Router>
+          <div className="App min-h-screen flex flex-col">
+            <Header />
+            <main className="flex-1 pt-16"> {/* Add padding-top to account for fixed header */}
+              <Suspense fallback={<LoadingSpinner />}>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/services" element={<Services />} />
+                  <Route path="/blog" element={<Blog />} />
+                  <Route path="/careers" element={<Careers />} />
+                  <Route path="/privacy" element={<Privacy />} />
+                  <Route path="/terms" element={<Terms />} />
+                  
+                  {/* Service detail routes */}
+                  <Route path="/services/ai" element={<AISolutions />} />
+                  <Route path="/services/cloud" element={<CloudDevOps />} />
+                  <Route path="/services/cybersecurity" element={<Cybersecurity />} />
+                  <Route path="/services/infrastructure" element={<ITInfrastructure />} />
+                  <Route path="/services/transformation" element={<DigitalTransformation />} />
+                  <Route path="/services/consulting" element={<Consulting />} />
+                  
+                  <Route path="*" element={<NotFound />} />
+                </Routes>
+              </Suspense>
+            </main>
+            <Footer />
+            <ScrollToTop />
+          </div>
+        </Router>
+      </ErrorBoundary>
+    </HelmetProvider>
   );
 };
 

@@ -22,18 +22,29 @@ import { Twitter, Linkedin, Facebook, Instagram, Github, Mail, Phone, MapPin, Ex
 import { Link } from "react-router-dom";
 =======
 import { Link } from 'react-router-dom';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Linkedin, 
-  Twitter, 
-  Github, 
-  Youtube, 
-  Facebook, 
-  Instagram,
-        { label: "Digital Transformation", path: "/digital-transformation" },
-        { label: "Micro SAAS Solutions", path: "/services/micro-saas-solutions" }
+import { motion } from 'framer-motion';
+
+const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+
+  const socialLinks = [
+    { name: "LinkedIn", url: "https://linkedin.com/company/ziontechgroup", icon: "💼", color: "hover:bg-blue-600/20" },
+    { name: "Twitter", url: "https://twitter.com/ziontechgroup", icon: "🐦", color: "hover:bg-sky-500/20" },
+    { name: "GitHub", url: "https://github.com/ziontechgroup", icon: "💻", color: "hover:bg-gray-600/20" },
+    { name: "YouTube", url: "https://youtube.com/@ziontechgroup", icon: "📺", color: "hover:bg-red-600/20" },
+    { name: "Discord", url: "https://discord.gg/ziontechgroup", icon: "🎮", color: "hover:bg-indigo-600/20" }
+  ];
+
+  const footerSections = [
+    {
+      title: "Services",
+      links: [
+        { label: "AI Solutions", path: "/services" },
+        { label: "Cloud & DevOps", path: "/services" },
+        { label: "Cybersecurity", path: "/services" },
+        { label: "Quantum Computing", path: "/services" },
+        { label: "Blockchain & Web3", path: "/services" },
+        { label: "Micro SAAS", path: "/micro-saas" }
       ]
     },
     {
@@ -65,40 +76,6 @@ import {
     }
   ];
 
-  // Fixed social media links with proper URLs
-  const socialLinks = [
-    { 
-      name: 'LinkedIn', 
-      url: 'https://www.linkedin.com/company/ziontechgroup', 
-      icon: Linkedin,
-      fallback: 'https://linkedin.com'
-    },
-    { 
-      name: 'Twitter', 
-      url: 'https://twitter.com/ziontechgroup', 
-      icon: Twitter,
-      fallback: 'https://twitter.com'
-    },
-    { 
-      name: 'GitHub', 
-      url: 'https://github.com/ziontechgroup', 
-      icon: Github,
-      fallback: 'https://github.com'
-    },
-    { 
-      name: 'YouTube', 
-        { label: "About Us", href: "/about" },
-        { label: "Blog & Insights", href: "/blog" },
-        { label: "Partners", href: "/partners" },
-        { label: "Careers", href: "/careers" },
-        { label: "Contact", href: "/contact" },
-        { label: "Sitemap", href: "/sitemap" },
-      ]
-    }
-  ];
-
-  const contactInfo = {
-=======
     <footer className="bg-zion-blue-dark border-t border-zion-blue-light pt-12 pb-8">
 =======
   Github,
@@ -221,6 +198,56 @@ export function Footer() {
           <div className="lg:col-span-2">
             <div className="mb-6">
               <span className="text-3xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">ZION</span>
+=======
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+
+  return (
+    <motion.footer 
+      className="bg-slate-900 text-white"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
+      {/* Main Footer Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {/* Company Info */}
+          <motion.div className="lg:col-span-2" variants={itemVariants}>
+            <div className="flex items-center mb-6">
+              <motion.div 
+                className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-3"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                transition={{ duration: 0.3 }}
+              >
+                <span className="text-white font-bold text-xl">Z</span>
+              </motion.div>
+              <span className="text-2xl font-bold">Zion Tech Group</span>
             </div>
     <footer className="bg-zion-blue-dark border-t border-zion-blue-light pt-16 pb-8">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -587,12 +614,6 @@ export function Footer() {
 
             {/* Social Links */}
             <div className="flex space-x-4">
-              <a
-                href="https://twitter.com/ziontechgroup"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-purple/10 rounded-lg"
-=======
                 className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 rounded-full hover:bg-zion-purple/20"
 =======
                 className="text-zion-slate-light hover:text-zion-cyan transition-all duration-300 hover:scale-110 hover-glow"
@@ -1385,26 +1406,50 @@ function Footer() {
                     <Link 
                       to={link.href} 
                       className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm flex items-center gap-2 group"
+=======
+              {socialLinks.map((social, index) => (
+                <motion.a
+                  key={social.name}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-lg ${social.color} hover:scale-110 transition-all duration-300`}
+                  aria-label={`Follow us on ${social.name}`}
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                >
+                  {social.icon}
+                </motion.a>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Footer Sections */}
+          {footerSections.map((section, sectionIndex) => (
+            <motion.div key={section.title} variants={itemVariants}>
+              <h3 className="text-lg font-semibold text-white mb-4">{section.title}</h3>
+              <ul className="space-y-2">
+                {section.links.map((link, linkIndex) => (
+                  <motion.li
+                    key={link.label}
+                    whileHover={{ x: 5 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Link
+                      to={link.path}
+                      className="text-gray-400 hover:text-blue-400 transition-colors duration-300 text-sm"
                     >
                       <ArrowRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                       {link.label}
                     </Link>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           ))}
-        </div>
-
-        {/* Newsletter Section */}
-        <div className="border-t border-zion-purple/20 pt-8 pb-8">
-          <div className="text-center max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-3">
-              Stay Updated with Zion Tech
-            </h3>
-            <p className="text-zion-slate-light mb-6">
-              Get the latest insights on AI, technology trends, and marketplace opportunities delivered to your inbox.
-=======
             <h3 className="text-white font-semibold mb-4 text-lg">Resources</h3>
             <ul className="space-y-3">
               <li><Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Help Center</Link></li>
@@ -2026,6 +2071,58 @@ function Footer() {
                 Privacy Policy
               </Link>
               <Link to="/terms" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">
+=======
+        </motion.div>
+
+        {/* Newsletter Signup */}
+        <motion.div 
+          className="mt-12 pt-8 border-t border-white/20"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+        >
+          <div className="max-w-md">
+            <h3 className="text-lg font-semibold text-white mb-3">Stay Updated</h3>
+            <p className="text-gray-400 text-sm mb-4">
+              Get the latest insights on AI, quantum computing, and emerging technologies.
+            </p>
+            <div className="flex gap-2">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+              <motion.button
+                className="px-6 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Subscribe
+              </motion.button>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Bottom Footer */}
+      <motion.div 
+        className="border-t border-white/10 py-6"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.5 }}
+        viewport={{ once: true }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="text-gray-400 text-sm">
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </div>
+            <div className="flex space-x-6 text-sm">
+              <Link to="/privacy" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+                Privacy Policy
+              </Link>
+              <Link to="/terms" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
                 Terms of Service
 =======
             <p className="text-foreground/80 text-sm">
@@ -2038,13 +2135,10 @@ function Footer() {
               >
                 {t('footer.bottom.privacy_policy')}
               </Link>
-              <Link
-                href="/terms"
-                className="text-foreground/80 hover:text-primary text-sm transition-colors"
-              >
-                {t('footer.bottom.terms_of_service')}
+              <Link to="/cookies" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+                Cookie Policy
               </Link>
-              <Link to="/sitemap" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">
+              <Link to="/sitemap" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
                 Sitemap
               </Link>
               <a 
@@ -2063,49 +2157,6 @@ function Footer() {
             </div>
           </div>
         </div>
-
-        {/* Quick Contact CTA */}
-        <div className="border-t border-zion-purple/20 pt-8 pb-8">
-          <div className="bg-gradient-to-r from-zion-purple/20 to-zion-blue/20 rounded-2xl p-6 text-center">
-            <h4 className="text-xl font-semibold text-white mb-3">
-              Ready to Transform Your Business?
-            </h4>
-            <p className="text-zion-slate-light mb-4 max-w-2xl mx-auto">
-              Get in touch with our team to discuss your AI and technology needs. 
-              We're here to help you leverage the power of artificial intelligence and cutting-edge technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <a
-                href={`mailto:${contactInfo.email}`}
-                className="inline-flex items-center gap-2 bg-zion-cyan hover:bg-zion-cyan-light text-zion-slate-dark px-6 py-3 rounded-lg font-medium transition-colors"
-              >
-                <Mail className="h-4 w-4" />
-                Send Message
-              </a>
-              <a
-                href={`tel:${contactInfo.phone.replace(/\s+/g, '')}`}
-                className="inline-flex items-center gap-2 border border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 px-6 py-3 rounded-lg font-medium transition-colors"
-              >
-                <Phone className="h-4 w-4" />
-                Call Now
-              </a>
-            </div>
-            <div className="flex space-x-6">
-              <Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">
-                Terms of Service
-              </Link>
-              <Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">
-                Support
-              </Link>
-            </div>
-
-            {/* Social Links */}
-            <div className="flex items-center space-x-4">
-              {socialLinks.map((link) => (
-=======
       url: 'https://youtube.com/@ziontechgroup', 
       icon: Youtube,
       fallback: 'https://youtube.com'
@@ -2244,6 +2295,9 @@ function Footer() {
         </motion.button>
       </div>
     </footer>
+=======
+      </motion.div>
+    </motion.footer>
   );
 }
 
