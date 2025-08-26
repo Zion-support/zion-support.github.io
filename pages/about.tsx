@@ -1,319 +1,282 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function AboutPage() {
-  const teamMembers = [
-    {
-      name: 'Dr. Sarah Chen',
-      role: 'Chief Executive Officer',
-      bio: 'Former AI researcher at Stanford, leading Zion\'s mission to democratize autonomous automation.',
-      image: '👩‍💼',
-      expertise: ['AI Strategy', 'Business Development', 'Research Leadership']
-    },
-    {
-      name: 'Marcus Rodriguez',
-      role: 'Chief Technology Officer',
-      bio: 'Cloud architecture expert with 15+ years building scalable systems at Google and AWS.',
-      image: '👨‍💻',
-      expertise: ['Cloud Architecture', 'DevOps', 'System Design']
-    },
-    {
-      name: 'Dr. Emily Watson',
-      role: 'Head of AI Research',
-      bio: 'PhD in Machine Learning from MIT, specializing in autonomous systems and neural networks.',
-      image: '👩‍🔬',
-      expertise: ['Machine Learning', 'Neural Networks', 'Research']
-    },
-    {
-      name: 'Alex Kim',
-      role: 'VP of Product',
-      bio: 'Product leader with experience at Slack and Notion, focused on user experience and automation.',
-      image: '👨‍💼',
-      expertise: ['Product Strategy', 'UX Design', 'Automation']
-    },
-    {
-      name: 'Priya Patel',
-      role: 'Head of Engineering',
-      bio: 'Full-stack engineering leader with expertise in building robust, scalable applications.',
-      image: '👩‍💻',
-      expertise: ['Full-Stack Development', 'Team Leadership', 'Architecture']
-    },
-    {
-      name: 'David Thompson',
-      role: 'Chief Security Officer',
-      bio: 'Cybersecurity expert with background in government and enterprise security systems.',
-      image: '👨‍🔒',
-      expertise: ['Cybersecurity', 'Compliance', 'Risk Management']
-    }
-  ];
-
-  const milestones = [
-    {
-      year: '2020',
-      title: 'Company Founded',
-      description: 'Zion Technologies was founded with a vision to democratize autonomous automation.'
-    },
-    {
-      year: '2021',
-      title: 'First AI Model',
-      description: 'Developed our first autonomous content generation model with 95% accuracy.'
-    },
-    {
-      year: '2022',
-      title: 'Cloud Platform Launch',
-      description: 'Launched Zion Cloud, our autonomous automation platform for businesses.'
-    },
-    {
-      year: '2023',
-      title: 'Enterprise Adoption',
-      description: 'Reached 100+ enterprise customers and $10M in annual recurring revenue.'
-    },
-    {
-      year: '2024',
-      title: 'Global Expansion',
-      description: 'Expanded to 25+ countries with localized automation solutions.'
-    },
-    {
-      year: '2025',
-      title: 'AI Breakthrough',
-      description: 'Achieved 99.9% automation success rate across all customer deployments.'
-    }
-  ];
-
-  const values = [
-    {
-      icon: '🚀',
-      title: 'Innovation First',
-      description: 'We push the boundaries of what\'s possible with AI and automation.'
-    },
-    {
-      icon: '🤝',
-      title: 'Customer Success',
-      description: 'Our success is measured by the success of our customers and their automation goals.'
-    },
-    {
-      icon: '🔒',
-      title: 'Security & Trust',
-      description: 'We prioritize the security and privacy of our customers\' data above all else.'
-    },
-    {
-      icon: '🌍',
-      title: 'Global Impact',
-      description: 'We believe automation should be accessible to businesses of all sizes worldwide.'
-    },
-    {
-      icon: '📚',
-      title: 'Continuous Learning',
-      description: 'Our team is constantly learning and evolving with the latest AI advancements.'
-    },
-    {
-      icon: '⚡',
-      title: 'Speed & Efficiency',
-      description: 'We move fast and help our customers do the same through intelligent automation.'
-    }
-  ];
-
   return (
     <>
       <Head>
-        <title>About Zion | Our Story & Mission</title>
-        <meta name="description" content="Learn about Zion's mission to democratize autonomous automation, our team of experts, and our journey to transform business operations worldwide." />
+        <title>About Zion Tech Group | Autonomous Innovation Hub</title>
+        <meta name="description" content="Learn about Zion Tech Group's mission, vision, and autonomous innovation systems that are revolutionizing technology." />
+        <meta property="og:title" content="About Zion Tech Group | Autonomous Innovation Hub" />
+        <meta property="og:description" content="Learn about Zion Tech Group's mission, vision, and autonomous innovation systems that are revolutionizing technology." />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              About Zion
-            </h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Transforming businesses worldwide through intelligent, autonomous automation
-            </p>
-          </div>
-        </div>
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+        <main className="container mx-auto px-6 py-12">
+          <div className="max-w-6xl mx-auto">
+            <Link href="/" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 mb-8 transition-colors">
+              ← Back to Home
+            </Link>
+            
+            <article className="prose prose-invert prose-lg max-w-none">
+              <header className="text-center mb-16">
+                <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+                  About Zion Tech Group
+                </h1>
+                <p className="text-xl text-white/80 max-w-3xl mx-auto">
+                  Pioneering the future of autonomous technology and intelligent automation systems
+                </p>
+              </header>
 
-        {/* Mission Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Our Mission
-            </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              At Zion, we believe that every business deserves access to the power of autonomous automation. 
-              Our mission is to democratize AI-driven automation, making it accessible, affordable, and 
-              effective for organizations of all sizes across every industry.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
-              <div className="text-5xl mb-4">🎯</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Democratize Automation</h3>
-              <p className="text-gray-600">
-                Making advanced AI automation accessible to businesses of all sizes, not just enterprise giants.
-              </p>
-            </div>
-            
-            <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
-              <div className="text-5xl mb-4">🚀</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Accelerate Growth</h3>
-              <p className="text-gray-600">
-                Helping businesses scale faster and more efficiently through intelligent automation.
-              </p>
-            </div>
-            
-            <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
-              <div className="text-5xl mb-4">🌍</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Global Impact</h3>
-              <p className="text-gray-600">
-                Creating positive change across industries and geographies through automation innovation.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Story Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="bg-white rounded-2xl shadow-xl p-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">Our Story</h2>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  Zion was born from a simple observation: while large enterprises were rapidly adopting 
-                  AI and automation, smaller businesses were being left behind due to cost, complexity, 
-                  and lack of expertise.
-                </p>
-                <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                  Our founders, coming from leading tech companies and research institutions, saw an 
-                  opportunity to level the playing field. They envisioned a world where any business 
-                  could harness the power of autonomous automation to compete and thrive.
-                </p>
-                <p className="text-lg text-gray-600 leading-relaxed">
-                  Today, Zion serves thousands of businesses worldwide, from startups to Fortune 500 
-                  companies, helping them automate operations, generate content, and scale efficiently 
-                  through our intelligent platform.
-                </p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Key Achievements</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                    <span className="text-gray-700">500+ enterprise customers worldwide</span>
+              <section className="mb-16">
+                <h2 className="text-3xl font-bold text-cyan-300 mb-6">Our Mission</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="bg-white/10 rounded-lg p-6 border border-cyan-400/30">
+                    <h3 className="text-xl font-semibold text-cyan-300 mb-3">Innovation First</h3>
+                    <p className="text-white/80">
+                      We believe in pushing the boundaries of what's possible through cutting-edge technology
+                      and autonomous systems that work tirelessly to improve and evolve.
+                    </p>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                    <span className="text-gray-700">99.9% automation success rate</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                    <span className="text-gray-700">$50M+ in customer savings generated</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
-                    <span className="text-gray-700">25+ countries served</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                    <span className="text-gray-700">24/7 autonomous operation</span>
+                  <div className="bg-white/10 rounded-lg p-6 border border-fuchsia-400/30">
+                    <h3 className="text-xl font-semibold text-fuchsia-300 mb-3">Autonomous Excellence</h3>
+                    <p className="text-white/80">
+                      Our systems operate independently, continuously learning and adapting to deliver
+                      exceptional results without human intervention.
+                    </p>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
+              </section>
 
-        {/* Values Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Our Values</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {values.map((value, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-xl p-8 text-center">
-                <div className="text-4xl mb-4">{value.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{value.title}</h3>
-                <p className="text-gray-600">{value.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Team Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Meet Our Team</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-xl p-8 text-center">
-                <div className="text-6xl mb-4">{member.image}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
-                <p className="text-blue-600 font-semibold mb-4">{member.role}</p>
-                <p className="text-gray-600 mb-4">{member.bio}</p>
-                <div className="flex flex-wrap gap-2 justify-center">
-                  {member.expertise.map((skill, skillIndex) => (
-                    <span key={skillIndex} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Timeline Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Our Journey</h2>
-          
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-blue-200"></div>
-            
-            <div className="space-y-12">
-              {milestones.map((milestone, index) => (
-                <div key={index} className={`relative flex items-center ${
-                  index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
-                }`}>
-                  {/* Timeline dot */}
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg"></div>
-                  
-                  {/* Content */}
-                  <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                    <div className="bg-white rounded-2xl shadow-xl p-6">
-                      <div className="text-2xl font-bold text-blue-600 mb-2">{milestone.year}</div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">{milestone.title}</h3>
-                      <p className="text-gray-600">{milestone.description}</p>
+              <section className="mb-16">
+                <h2 className="text-3xl font-bold text-cyan-300 mb-6">What We Do</h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="bg-gradient-to-br from-cyan-400/10 to-blue-400/10 rounded-lg p-6 border border-cyan-400/30">
+                    <h3 className="text-xl font-semibold text-cyan-300 mb-3">Autonomous Automation</h3>
+                    <p className="text-white/80 mb-4">
+                      We develop and deploy intelligent automation systems that handle complex tasks
+                      with precision and efficiency.
+                    </p>
+                    <div className="text-sm text-cyan-300">
+                      <span className="font-semibold">227+</span> Active Workflows
+                    </div>
+                  </div>
+                  <div className="bg-gradient-to-br from-fuchsia-400/10 to-purple-400/10 rounded-lg p-6 border border-fuchsia-400/30">
+                    <h3 className="text-xl font-semibold text-fuchsia-300 mb-3">Content Generation</h3>
+                    <p className="text-white/80 mb-4">
+                      Our AI-powered systems create intelligent, contextually relevant content
+                      across multiple domains and industries.
+                    </p>
+                    <div className="text-sm text-fuchsia-300">
+                      <span className="font-semibold">2,960+</span> Pages Generated
+                    </div>
+                  </div>
+                  <div className="bg-gradient-to-br from-green-400/10 to-emerald-400/10 rounded-lg p-6 border border-green-400/30">
+                    <h3 className="text-xl font-semibold text-green-300 mb-3">System Redundancy</h3>
+                    <p className="text-white/80 mb-4">
+                      We implement comprehensive redundancy systems ensuring 99.99% uptime
+                      and continuous operation.
+                    </p>
+                    <div className="text-sm text-green-300">
+                      <span className="font-semibold">99.99%</span> Uptime
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>
+              </section>
 
-        {/* CTA Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-700 rounded-2xl shadow-xl p-8 text-white text-center">
-            <h2 className="text-3xl font-bold mb-6">
-              Join Us on This Journey
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Whether you're a customer, partner, or potential team member, we'd love to connect 
-              and explore how we can work together to shape the future of automation.
-            </p>
-            <div className="space-x-4">
-              <button className="bg-white text-blue-600 hover:bg-blue-50 font-semibold py-3 px-8 rounded-lg transition-colors">
-                Get Started Today
-              </button>
-              <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors">
-                Join Our Team
-              </button>
-            </div>
+              <section className="mb-16">
+                <h2 className="text-3xl font-bold text-cyan-300 mb-6">Our Technology Stack</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="bg-white/10 rounded-lg p-6 border border-white/20">
+                    <h3 className="text-xl font-semibold mb-4">Frontend Technologies</h3>
+                    <div className="grid grid-cols-2 gap-3">
+                      <div className="flex items-center gap-2">
+                        <span className="text-green-400">✓</span>
+                        <span>Next.js 14</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-green-400">✓</span>
+                        <span>React 18</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-green-400">✓</span>
+                        <span>TypeScript</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-green-400">✓</span>
+                        <span>Tailwind CSS</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-white/10 rounded-lg p-6 border border-white/20">
+                    <h3 className="text-xl font-semibold mb-4">Backend & Infrastructure</h3>
+                    <div className="grid grid-cols-2 gap-3">
+                      <div className="flex items-center gap-2">
+                        <span className="text-green-400">✓</span>
+                        <span>Node.js</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-green-400">✓</span>
+                        <span>PM2</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-green-400">✓</span>
+                        <span>GitHub Actions</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-green-400">✓</span>
+                        <span>Netlify</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section className="mb-16">
+                <h2 className="text-3xl font-bold text-cyan-300 mb-6">Our Achievements</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  <div className="text-center bg-white/10 rounded-lg p-6 border border-white/20">
+                    <div className="text-3xl font-bold text-cyan-400 mb-2">227</div>
+                    <div className="text-white/80">Automation Workflows</div>
+                  </div>
+                  <div className="text-center bg-white/10 rounded-lg p-6 border border-white/20">
+                    <div className="text-3xl font-bold text-fuchsia-400 mb-2">2,960+</div>
+                    <div className="text-white/80">Content Pages</div>
+                  </div>
+                  <div className="text-center bg-white/10 rounded-lg p-6 border border-white/20">
+                    <div className="text-3xl font-bold text-green-400 mb-2">99.99%</div>
+                    <div className="text-white/80">System Uptime</div>
+                  </div>
+                  <div className="text-center bg-white/10 rounded-lg p-6 border border-white/20">
+                    <div className="text-3xl font-bold text-blue-400 mb-2">24/7</div>
+                    <div className="text-white/80">Operation</div>
+                  </div>
+                </div>
+              </section>
+
+              <section className="mb-16">
+                <h2 className="text-3xl font-bold text-cyan-300 mb-6">Core Values</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  <div className="bg-white/10 rounded-lg p-6 border border-white/20 text-center">
+                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-semibold mb-3 text-cyan-300">Innovation First</h3>
+                    <p className="text-white/80">
+                      We constantly push the boundaries of what's possible, exploring new technologies and approaches to solve complex challenges.
+                    </p>
+                  </div>
+
+                  <div className="bg-white/10 rounded-lg p-6 border border-white/20 text-center">
+                    <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-semibold mb-3 text-green-300">Reliability & Trust</h3>
+                    <p className="text-white/80">
+                      We build systems that our clients can depend on, maintaining the highest standards of quality and security.
+                    </p>
+                  </div>
+
+                  <div className="bg-white/10 rounded-lg p-6 border border-white/20 text-center">
+                    <div className="w-16 h-16 bg-gradient-to-br from-fuchsia-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-semibold mb-3 text-fuchsia-300">Collaboration</h3>
+                    <p className="text-white/80">
+                      We believe in the power of partnership, working closely with clients and partners to achieve shared success.
+                    </p>
+                  </div>
+
+                  <div className="bg-white/10 rounded-lg p-6 border border-white/20 text-center">
+                    <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-semibold mb-3 text-blue-300">Continuous Improvement</h3>
+                    <p className="text-white/80">
+                      Our systems never stop learning and improving, reflecting our commitment to ongoing innovation and excellence.
+                    </p>
+                  </div>
+
+                  <div className="bg-white/10 rounded-lg p-6 border border-white/20 text-center">
+                    <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-semibold mb-3 text-yellow-300">Security & Ethics</h3>
+                    <p className="text-white/80">
+                      We prioritize security and ethical considerations in all our developments, ensuring responsible AI and automation.
+                    </p>
+                  </div>
+
+                  <div className="bg-white/10 rounded-lg p-6 border border-white/20 text-center">
+                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9m0-9c0-4.97 4.03-9 9-9s9 4.03 9 9-4.03 9-9 9" />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-semibold mb-3 text-purple-300">Global Impact</h3>
+                    <p className="text-white/80">
+                      We're committed to creating technology that makes a positive difference worldwide, solving real-world problems.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              <section className="mb-16">
+                <h2 className="text-3xl font-bold text-cyan-300 mb-6">Our Story</h2>
+                <div className="bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10">
+                  <div className="prose prose-invert max-w-none">
+                    <p className="text-lg text-white/80 leading-relaxed mb-6">
+                      Founded with a vision to transform how technology systems operate, Zion Tech Group emerged from the recognition that traditional approaches to system management and automation were reaching their limits. We saw an opportunity to create something revolutionary – systems that could think, learn, and improve themselves.
+                    </p>
+                    <p className="text-lg text-white/80 leading-relaxed mb-6">
+                      Our journey began with a simple yet ambitious goal: to build automation systems that didn't just follow predefined rules, but could understand context, predict problems, and implement solutions autonomously. This led to the development of our first autonomous agents, which quickly demonstrated the potential for truly intelligent automation.
+                    </p>
+                    <p className="text-lg text-white/80 leading-relaxed">
+                      Today, we operate one of the most advanced autonomous technology ecosystems in the world, with over 227 active automation workflows, 2,960+ generated content pages, and a system that continuously evolves and improves itself. Our success is measured not just in the technology we've built, but in the problems we've solved and the efficiency we've unlocked for our clients and partners.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              <section className="mb-16">
+                <h2 className="text-3xl font-bold text-cyan-300 mb-6">Get Involved</h2>
+                <div className="bg-gradient-to-r from-cyan-400/10 to-fuchsia-400/10 rounded-lg p-8 border border-cyan-400/30 text-center">
+                  <h3 className="text-2xl font-semibold text-cyan-300 mb-4">Join Our Innovation Journey</h3>
+                  <p className="text-white/80 mb-6 max-w-2xl mx-auto">
+                    Whether you're interested in our autonomous systems, want to explore our content,
+                    or have questions about our technology, we'd love to hear from you.
+                  </p>
+                  <div className="flex flex-wrap justify-center gap-4">
+                    <Link href="/contact" className="px-6 py-3 bg-cyan-400 hover:bg-cyan-300 text-black font-semibold rounded-lg transition-colors">
+                      Contact Us
+                    </Link>
+                    <Link href="/automation" className="px-6 py-3 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold rounded-lg transition-colors">
+                      Explore Automation
+                    </Link>
+                  </div>
+                </div>
+              </section>
+
+              <footer className="border-t border-white/20 pt-8 text-center">
+                <p className="text-white/60">
+                  Zion Tech Group — Pioneering autonomous innovation since 2025
+                </p>
+              </footer>
+            </article>
           </div>
-        </div>
+        </main>
       </div>
     </>
   );

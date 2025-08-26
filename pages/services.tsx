@@ -1,433 +1,275 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function ServicesPage() {
-  const services = [
-    {
-      icon: '🤖',
-      title: 'AI Content Generation',
-      description: 'Automated content creation for blogs, social media, marketing materials, and more.',
-      features: [
-        'Blog post generation',
-        'Social media content',
-        'Marketing copy',
-        'Product descriptions',
-        'SEO-optimized content',
-        'Multi-language support'
-      ],
-      pricing: 'Starting at $99/month',
-      cta: 'Start Generating'
-    },
-    {
-      icon: '☁️',
-      title: 'Cloud Automation',
-      description: 'Intelligent automation of cloud infrastructure, deployment, and scaling operations.',
-      features: [
-        'Infrastructure as Code',
-        'Auto-scaling',
-        'Cost optimization',
-        'Security automation',
-        'Disaster recovery',
-        'Performance monitoring'
-      ],
-      pricing: 'Starting at $199/month',
-      cta: 'Automate Cloud'
-    },
-    {
-      icon: '🔄',
-      title: 'DevOps Automation',
-      description: 'Streamline your development workflow with intelligent CI/CD and deployment automation.',
-      features: [
-        'Automated testing',
-        'Continuous deployment',
-        'Code quality checks',
-        'Security scanning',
-        'Performance testing',
-        'Rollback automation'
-      ],
-      pricing: 'Starting at $149/month',
-      cta: 'Optimize DevOps'
-    },
-    {
-      icon: '📊',
-      title: 'Business Process Automation',
-      description: 'Automate repetitive business tasks and workflows to increase efficiency.',
-      features: [
-        'Data entry automation',
-        'Report generation',
-        'Email automation',
-        'Document processing',
-        'Customer support',
-        'Invoice processing'
-      ],
-      pricing: 'Starting at $79/month',
-      cta: 'Automate Processes'
-    },
-    {
-      icon: '🔒',
-      title: 'Security Automation',
-      description: 'Proactive security monitoring and automated threat response systems.',
-      features: [
-        'Threat detection',
-        'Automated response',
-        'Vulnerability scanning',
-        'Compliance monitoring',
-        'Incident management',
-        'Security reporting'
-      ],
-      pricing: 'Starting at $299/month',
-      cta: 'Secure Systems'
-    },
-    {
-      icon: '📈',
-      title: 'Analytics & Reporting',
-      description: 'Automated data collection, analysis, and intelligent reporting insights.',
-      features: [
-        'Data aggregation',
-        'Real-time analytics',
-        'Custom dashboards',
-        'Predictive insights',
-        'Automated alerts',
-        'Report scheduling'
-      ],
-      pricing: 'Starting at $129/month',
-      cta: 'Get Insights'
-    }
-  ];
-
-  const industries = [
-    {
-      name: 'E-commerce',
-      icon: '🛒',
-      description: 'Automate inventory management, customer service, and marketing campaigns.'
-    },
-    {
-      name: 'Healthcare',
-      icon: '🏥',
-      description: 'Streamline patient care, administrative tasks, and medical record management.'
-    },
-    {
-      name: 'Finance',
-      icon: '💰',
-      description: 'Automate compliance, risk assessment, and customer onboarding processes.'
-    },
-    {
-      name: 'Manufacturing',
-      icon: '🏭',
-      description: 'Optimize production lines, quality control, and supply chain management.'
-    },
-    {
-      name: 'Education',
-      icon: '🎓',
-      description: 'Automate grading, content creation, and student engagement tracking.'
-    },
-    {
-      name: 'Real Estate',
-      icon: '🏠',
-      description: 'Streamline property management, lead generation, and client communication.'
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: '⚡',
-      title: 'Increased Efficiency',
-      description: 'Reduce manual work by up to 80% and focus on high-value tasks.'
-    },
-    {
-      icon: '💰',
-      title: 'Cost Savings',
-      description: 'Cut operational costs by 30-50% through intelligent automation.'
-    },
-    {
-      icon: '📈',
-      title: 'Scalability',
-      description: 'Scale operations without proportional increases in headcount.'
-    },
-    {
-      icon: '🎯',
-      title: 'Accuracy',
-      description: 'Eliminate human errors and ensure consistent quality output.'
-    },
-    {
-      icon: '🕒',
-      title: '24/7 Operation',
-      description: 'Your automation systems work around the clock without breaks.'
-    },
-    {
-      icon: '🔍',
-      title: 'Better Insights',
-      description: 'Gain deeper understanding of your operations through automated analytics.'
-    }
-  ];
-
   return (
     <>
       <Head>
-        <title>Services | Zion - Automation Solutions</title>
-        <meta name="description" content="Discover Zion's comprehensive automation services including AI content generation, cloud automation, DevOps optimization, and business process automation." />
+        <title>Services | Zion Tech Group - Autonomous Innovation Solutions</title>
+        <meta name="description" content="Discover Zion Tech Group's comprehensive range of autonomous technology services including AI automation, system optimization, and intelligent infrastructure solutions." />
+        <meta property="og:title" content="Services | Zion Tech Group - Autonomous Innovation Solutions" />
+        <meta property="og:description" content="Discover Zion Tech Group's comprehensive range of autonomous technology services including AI automation, system optimization, and intelligent infrastructure solutions." />
+        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       
-      <div className="min-h-screen bg-gray-50">
-        {/* Header */}
-        <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Our Services
-            </h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Comprehensive automation solutions to transform your business operations
-            </p>
-          </div>
-        </div>
+      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+        <main className="container mx-auto px-6 py-12">
+          <div className="max-w-6xl mx-auto">
+            <Link href="/" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 mb-8 transition-colors">
+              ← Back to Home
+            </Link>
+            
+            <header className="text-center mb-16">
+              <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
+                Our Services
+              </h1>
+              <p className="text-xl text-white/80 max-w-3xl mx-auto">
+                Comprehensive autonomous technology solutions designed to transform your business and drive innovation
+              </p>
+            </header>
 
-        {/* Services Overview */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              What We Offer
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From AI-powered content creation to complex business process automation, 
-              we provide end-to-end solutions that drive real results.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                <div className="text-5xl mb-6">{service.icon}</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                <p className="text-gray-600 mb-6">{service.description}</p>
-                
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-600">
-                        <span className="text-green-500 mr-2">✓</span>
-                        {feature}
-                      </li>
-                    ))}
+            <section className="mb-16">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 border border-white/20">
+                  <div className="text-4xl mb-4">🤖</div>
+                  <h3 className="text-2xl font-bold mb-4 text-cyan-400">AI Development</h3>
+                  <p className="text-white/70 mb-6">
+                    Custom AI solutions including machine learning models, natural language processing, and computer vision systems.
+                  </p>
+                  <ul className="space-y-2 text-sm text-white/60">
+                    <li>• Machine Learning Models</li>
+                    <li>• Natural Language Processing</li>
+                    <li>• Computer Vision</li>
+                    <li>• Predictive Analytics</li>
                   </ul>
                 </div>
-                
-                <div className="border-t border-gray-200 pt-4">
-                  <p className="text-lg font-semibold text-blue-600 mb-4">{service.pricing}</p>
-                  <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
-                    {service.cta}
-                  </button>
+
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 border border-white/20">
+                  <div className="text-4xl mb-4">⚡</div>
+                  <h3 className="text-2xl font-bold mb-4 text-fuchsia-400">Automation Systems</h3>
+                  <p className="text-white/70 mb-6">
+                    End-to-end automation solutions that streamline operations and improve efficiency across your organization.
+                  </p>
+                  <ul className="space-y-2 text-sm text-white/60">
+                    <li>• Process Automation</li>
+                    <li>• Workflow Optimization</li>
+                    <li>• Robotic Process Automation</li>
+                    <li>• Smart Workflows</li>
+                  </ul>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 border border-white/20">
+                  <div className="text-4xl mb-4">☁️</div>
+                  <h3 className="text-2xl font-bold mb-4 text-green-400">Cloud Infrastructure</h3>
+                  <p className="text-white/70 mb-6">
+                    Scalable cloud solutions with automated deployment, monitoring, and optimization for peak performance.
+                  </p>
+                  <ul className="space-y-2 text-sm text-white/60">
+                    <li>• Cloud Migration</li>
+                    <li>• Auto-scaling</li>
+                    <li>• Performance Optimization</li>
+                    <li>• Security Hardening</li>
+                  </ul>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 border border-white/20">
+                  <div className="text-4xl mb-4">🔧</div>
+                  <h3 className="text-2xl font-bold mb-4 text-blue-400">DevOps & CI/CD</h3>
+                  <p className="text-white/70 mb-6">
+                    Streamlined development and deployment pipelines with automated testing, building, and deployment processes.
+                  </p>
+                  <ul className="space-y-2 text-sm text-white/60">
+                    <li>• CI/CD Pipeline Setup</li>
+                    <li>• Automated Testing</li>
+                    <li>• Infrastructure as Code</li>
+                    <li>• Monitoring & Alerting</li>
+                  </ul>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 border border-white/20">
+                  <div className="text-4xl mb-4">📊</div>
+                  <h3 className="text-2xl font-bold mb-4 text-purple-400">Data Analytics</h3>
+                  <p className="text-white/70 mb-6">
+                    Advanced analytics and business intelligence solutions that turn your data into actionable insights.
+                  </p>
+                  <ul className="space-y-2 text-sm text-white/60">
+                    <li>• Data Visualization</li>
+                    <li>• Predictive Analytics</li>
+                    <li>• Business Intelligence</li>
+                    <li>• Real-time Dashboards</li>
+                  </ul>
+                </div>
+
+                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 border border-white/20">
+                  <div className="text-4xl mb-4">🛡️</div>
+                  <h3 className="text-2xl font-bold mb-4 text-yellow-400">Security & Compliance</h3>
+                  <p className="text-white/70 mb-6">
+                    Comprehensive security solutions ensuring your systems are protected and compliant with industry standards.
+                  </p>
+                  <ul className="space-y-2 text-sm text-white/60">
+                    <li>• Security Audits</li>
+                    <li>• Compliance Management</li>
+                    <li>• Threat Detection</li>
+                    <li>• Incident Response</li>
+                  </ul>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
+            </section>
 
-        {/* Industry Solutions */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="bg-white rounded-2xl shadow-xl p-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-              Industry-Specific Solutions
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {industries.map((industry, index) => (
-                <div key={index} className="text-center p-6 rounded-xl hover:bg-gray-50 transition-colors">
-                  <div className="text-4xl mb-4">{industry.icon}</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{industry.name}</h3>
-                  <p className="text-gray-600">{industry.description}</p>
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold text-center mb-12 text-white/90">Specialized Solutions</h2>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div className="bg-gradient-to-br from-cyan-400/10 to-blue-400/10 rounded-2xl p-8 border border-cyan-400/30">
+                  <h3 className="text-2xl font-bold mb-6 text-cyan-300">Autonomous Content Generation</h3>
+                  <p className="text-white/80 mb-6">
+                    Our AI-powered systems create intelligent, contextually relevant content across multiple domains, 
+                    ensuring your business always has fresh, engaging material that resonates with your audience.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div className="flex items-center gap-2">
+                      <span className="text-cyan-400">✓</span>
+                      <span>Blog Posts</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-cyan-400">✓</span>
+                      <span>Technical Docs</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-cyan-400">✓</span>
+                      <span>Marketing Copy</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-cyan-400">✓</span>
+                      <span>Social Media</span>
+                    </div>
+                  </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        </div>
 
-        {/* Benefits Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-              Why Choose Zion Automation?
-            </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-xl p-8 text-center">
-                <div className="text-4xl mb-4">{benefit.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.description}</p>
+                <div className="bg-gradient-to-br from-fuchsia-400/10 to-purple-400/10 rounded-2xl p-8 border border-fuchsia-400/30">
+                  <h3 className="text-2xl font-bold mb-6 text-fuchsia-300">System Redundancy & Reliability</h3>
+                  <p className="text-white/80 mb-6">
+                    We implement comprehensive redundancy systems ensuring 99.99% uptime and continuous operation, 
+                    giving you peace of mind that your critical systems will always be available.
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div className="flex items-center gap-2">
+                      <span className="text-fuchsia-400">✓</span>
+                      <span>Failover Systems</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-fuchsia-400">✓</span>
+                      <span>Load Balancing</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-fuchsia-400">✓</span>
+                      <span>Backup Solutions</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-fuchsia-400">✓</span>
+                      <span>Monitoring</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-            ))}
-          </div>
-        </div>
+            </section>
 
-        {/* Implementation Process */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="bg-white rounded-2xl shadow-xl p-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-              How We Implement
-            </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-blue-600">1</span>
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold text-center mb-12 text-white/90">Why Choose Zion Tech Group?</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center bg-white/10 rounded-lg p-6 border border-white/20">
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-cyan-300">Proven Track Record</h3>
+                  <p className="text-white/80">
+                    With 227+ active automation workflows and 2,960+ generated content pages, we've demonstrated our ability to deliver results at scale.
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Discovery</h3>
-                <p className="text-gray-600">
-                  We analyze your current processes and identify automation opportunities.
+
+                <div className="text-center bg-white/10 rounded-lg p-6 border border-white/20">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-green-300">99.99% Uptime</h3>
+                  <p className="text-white/80">
+                    Our redundant systems ensure your business operations continue uninterrupted, even during maintenance or unexpected issues.
+                  </p>
+                </div>
+
+                <div className="text-center bg-white/10 rounded-lg p-6 border border-white/20">
+                  <div className="w-16 h-16 bg-gradient-to-br from-fuchsia-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-fuchsia-300">Innovation First</h3>
+                  <p className="text-white/80">
+                    We stay at the cutting edge of technology, continuously innovating and improving our solutions to meet evolving business needs.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold text-center mb-12 text-white/90">Our Process</h2>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div className="text-center bg-white/10 rounded-lg p-6 border border-white/20">
+                  <div className="w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold">1</div>
+                  <h3 className="text-lg font-semibold mb-3 text-cyan-300">Discovery</h3>
+                  <p className="text-white/80 text-sm">
+                    We analyze your current systems and identify opportunities for automation and improvement.
+                  </p>
+                </div>
+
+                <div className="text-center bg-white/10 rounded-lg p-6 border border-white/20">
+                  <div className="w-12 h-12 bg-fuchsia-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold">2</div>
+                  <h3 className="text-lg font-semibold mb-3 text-fuchsia-300">Design</h3>
+                  <p className="text-white/80 text-sm">
+                    We create a comprehensive solution architecture tailored to your specific needs and requirements.
+                  </p>
+                </div>
+
+                <div className="text-center bg-white/10 rounded-lg p-6 border border-white/20">
+                  <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold">3</div>
+                  <h3 className="text-lg font-semibold mb-3 text-green-300">Development</h3>
+                  <p className="text-white/80 text-sm">
+                    Our team builds and deploys the solution with rigorous testing and quality assurance.
+                  </p>
+                </div>
+
+                <div className="text-center bg-white/10 rounded-lg p-6 border border-white/20">
+                  <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold">4</div>
+                  <h3 className="text-lg font-semibold mb-3 text-blue-300">Optimization</h3>
+                  <p className="text-white/80 text-sm">
+                    We continuously monitor and optimize the system for peak performance and efficiency.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section className="text-center">
+              <div className="bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 backdrop-blur-xl rounded-2xl p-12 border border-cyan-400/30">
+                <h2 className="text-3xl font-bold mb-6 text-white/90">Ready to Get Started?</h2>
+                <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+                  Let's discuss how our autonomous technology solutions can transform your business operations and drive innovation.
                 </p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-purple-600">2</span>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <Link href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105">
+                    Get a Quote
+                  </Link>
+                  <Link href="/about" className="border border-white/30 hover:border-cyan-400/50 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 backdrop-blur-xl">
+                    Learn More
+                  </Link>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Strategy</h3>
-                <p className="text-gray-600">
-                  We design a customized automation strategy tailored to your needs.
-                </p>
               </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-green-600">3</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Implementation</h3>
-                <p className="text-gray-600">
-                  Our team builds and deploys your automation solutions.
-                </p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-orange-600">4</span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Optimization</h3>
-                <p className="text-gray-600">
-                  We continuously monitor and improve your automation systems.
-                </p>
-              </div>
-            </div>
+            </section>
           </div>
-        </div>
-
-        {/* Pricing Tiers */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-            Flexible Pricing Plans
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-gray-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Starter</h3>
-              <div className="text-4xl font-bold text-blue-600 mb-6">$99<span className="text-lg text-gray-500">/month</span></div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center text-gray-600">
-                  <span className="text-green-500 mr-2">✓</span>
-                  Up to 3 automation workflows
-                </li>
-                <li className="flex items-center text-gray-600">
-                  <span className="text-green-500 mr-2">✓</span>
-                  Basic AI content generation
-                </li>
-                <li className="flex items-center text-gray-600">
-                  <span className="text-green-500 mr-2">✓</span>
-                  Email support
-                </li>
-                <li className="flex items-center text-gray-600">
-                  <span className="text-green-500 mr-2">✓</span>
-                  Standard integrations
-                </li>
-              </ul>
-              <button className="w-full bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
-                Get Started
-              </button>
-            </div>
-            
-            <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-blue-500 relative">
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                Most Popular
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Professional</h3>
-              <div className="text-4xl font-bold text-blue-600 mb-6">$299<span className="text-lg text-gray-500">/month</span></div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center text-gray-600">
-                  <span className="text-green-500 mr-2">✓</span>
-                  Up to 15 automation workflows
-                </li>
-                <li className="flex items-center text-gray-600">
-                  <span className="text-green-500 mr-2">✓</span>
-                  Advanced AI content generation
-                </li>
-                <li className="flex items-center text-gray-600">
-                  <span className="text-green-500 mr-2">✓</span>
-                  Priority support
-                </li>
-                <li className="flex items-center text-gray-600">
-                  <span className="text-green-500 mr-2">✓</span>
-                  Custom integrations
-                </li>
-                <li className="flex items-center text-gray-600">
-                  <span className="text-green-500 mr-2">✓</span>
-                  Analytics dashboard
-                </li>
-              </ul>
-              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
-                Start Free Trial
-              </button>
-            </div>
-            
-            <div className="bg-white rounded-2xl shadow-xl p-8 border-2 border-gray-200">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
-              <div className="text-4xl font-bold text-blue-600 mb-6">Custom</div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center text-gray-600">
-                  <span className="text-green-500 mr-2">✓</span>
-                  Unlimited automation workflows
-                </li>
-                <li className="flex items-center text-gray-600">
-                  <span className="text-green-500 mr-2">✓</span>
-                  Custom AI models
-                </li>
-                <li className="flex items-center text-gray-600">
-                  <span className="text-green-500 mr-2">✓</span>
-                  Dedicated support team
-                </li>
-                <li className="flex items-center text-gray-600">
-                  <span className="text-green-500 mr-2">✓</span>
-                  White-label solutions
-                </li>
-                <li className="flex items-center text-gray-600">
-                  <span className="text-green-500 mr-2">✓</span>
-                  SLA guarantees
-                </li>
-              </ul>
-              <button className="w-full bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
-                Contact Sales
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="bg-gradient-to-r from-blue-600 to-purple-700 rounded-2xl shadow-xl p-8 text-white text-center">
-            <h2 className="text-3xl font-bold mb-6">
-              Ready to Automate Your Business?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses already using Zion to streamline operations, 
-              reduce costs, and scale efficiently.
-            </p>
-            <div className="space-x-4">
-              <button className="bg-white text-blue-600 hover:bg-blue-50 font-semibold py-3 px-8 rounded-lg transition-colors">
-                Start Free Trial
-              </button>
-              <button className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors">
-                Schedule Demo
-              </button>
-            </div>
-          </div>
-        </div>
+        </main>
       </div>
     </>
   );
