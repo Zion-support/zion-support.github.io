@@ -1,0 +1,1 @@
+export default function AIContentGenerator(){return (<main style={{padding:20,fontFamily:'sans-serif'}}><h1>AI Content Generator</h1><p>Create high-quality marketing content with AI assistance.</p></main>);}

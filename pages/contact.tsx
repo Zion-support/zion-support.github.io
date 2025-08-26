@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import React from 'react'
 
 export default function Contact() {
 	const title = 'Contact — Zion Tech Group'
@@ -6,10 +6,6 @@ export default function Contact() {
 
 	return (
 		<>
-			<Head>
-				<title>{title}</title>
-				<meta name="description" content={description} />
-			</Head>
 			<main className="mx-auto min-h-screen max-w-3xl px-6 py-12">
 				<h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">Contact</h1>
 				<p className="mt-3 text-gray-700">We typically respond within one business day.</p>

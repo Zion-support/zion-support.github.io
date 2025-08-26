@@ -1,4 +1,4 @@
-import Head from 'next/head'
+import React from 'react'
 
 export default function Services() {
 	const title = 'Services — Zion Tech Group'
@@ -6,10 +6,6 @@ export default function Services() {
 
 	return (
 		<>
-			<Head>
-				<title>{title}</title>
-				<meta name="description" content={description} />
-			</Head>
 			<main className="mx-auto min-h-screen max-w-5xl px-6 py-12">
 				<h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">Services</h1>
 				<p className="mt-3 max-w-2xl text-gray-700">From strategy to production, we deliver outcomes fast.</p>

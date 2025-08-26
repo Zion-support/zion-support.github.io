@@ -101,7 +101,7 @@ const EnhancedHero: React.FC = () => {
       {/* Hero Content */}
       <div className="relative z-10 flex items-center justify-center h-full px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-6xl mx-auto">
-          <AnimatePresence mode="wait">
+          <AnimatePresence>
             <motion.div
               key={currentSlide}
               initial={{ opacity: 0, y: 20 }}
