@@ -11,7 +11,34 @@ const Header: React.FC = () => {
     { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Threat Protection' },
     { name: 'IT Infrastructure', href: '/services/infrastructure', description: 'Network & System Management' },
     { name: 'Digital Transformation', href: '/services/transformation', description: 'Business Process Optimization' },
-    { name: 'Consulting', href: '/services/consulting', description: 'Technology Strategy & Advisory' }
+    { name: 'Consulting', href: '/services/consulting', description: 'Technology Strategy & Advisory' },
+    { name: 'Quantum Computing', href: '/quantum-technology', description: 'Quantum Solutions & Platforms' },
+    { name: 'Blockchain & Web3', href: '/services/blockchain', description: 'Distributed Ledger Technology' },
+    { name: 'IoT Services', href: '/iot-services', description: 'Internet of Things Solutions' },
+    { name: 'Micro SAAS', href: '/micro-saas', description: 'Software as a Service Solutions' },
+    { name: 'Space Technology', href: '/space-tech', description: 'Aerospace & Satellite Solutions' },
+    { name: 'Green IT', href: '/green-it', description: 'Sustainable Technology Solutions' },
+    { name: 'Manufacturing', href: '/manufacturing-solutions', description: 'Industry 4.0 & Smart Factory' },
+    { name: 'Financial Solutions', href: '/financial-solutions', description: 'FinTech & Banking Technology' }
+  ];
+
+  const companyLinks = [
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Leadership', href: '/leadership' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'Case Studies', href: '/case-studies' }
+  ];
+
+  const resourcesLinks = [
+    { name: 'Blog', href: '/blog' },
+    { name: 'News', href: '/news' },
+    { name: 'Events', href: '/events' },
+    { name: 'Webinars', href: '/webinars' },
+    { name: 'White Papers', href: '/white-papers' },
+    { name: 'Research & Development', href: '/research-development' },
+    { name: 'Tutorials', href: '/tutorials' }
   ];
 
   return (
@@ -52,7 +79,7 @@ const Header: React.FC = () => {
                 <div
                   onMouseEnter={() => setIsServicesOpen(true)}
                   onMouseLeave={() => setIsServicesOpen(false)}
-                  className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg rounded-xl border border-white/20 shadow-2xl"
+                  className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-lg rounded-xl border border-white/20 shadow-2xl"
                 >
                   <div className="p-4">
                     <div className="grid grid-cols-1 gap-2">
@@ -88,25 +115,66 @@ const Header: React.FC = () => {
                 </div>
               )}
             </div>
+
+            {/* Company Dropdown */}
+            <div className="relative group">
+              <button className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center">
+                Company
+                <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              
+              <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-lg rounded-xl border border-white/20 shadow-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none group-hover:pointer-events-auto">
+                <div className="p-4">
+                  <div className="space-y-2">
+                    {companyLinks.map((link) => (
+                      <Link
+                        key={link.name}
+                        to={link.href}
+                        className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200"
+                      >
+                        {link.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Resources Dropdown */}
+            <div className="relative group">
+              <button className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center">
+                Resources
+                <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              
+              <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-lg rounded-xl border border-white/20 shadow-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none group-hover:pointer-events-auto">
+                <div className="p-4">
+                  <div className="space-y-2">
+                    {resourcesLinks.map((link) => (
+                      <Link
+                        key={link.name}
+                        to={link.href}
+                        className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200"
+                      >
+                        {link.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
             
             <Link
-              to="/about"
+              to="/pricing"
               className="text-gray-300 hover:text-white transition-colors duration-300"
             >
-              About
+              Pricing
             </Link>
-            <Link
-              to="/blog"
-              className="text-gray-300 hover:text-white transition-colors duration-300"
-            >
-              Blog
-            </Link>
-            <Link
-              to="/careers"
-              className="text-gray-300 hover:text-white transition-colors duration-300"
-            >
-              Careers
-            </Link>
+            
             <Link
               to="/contact"
               className="text-gray-300 hover:text-white transition-colors duration-300"
@@ -175,28 +243,49 @@ const Header: React.FC = () => {
                   </Link>
                 </div>
               </div>
+
+              {/* Mobile Company Section */}
+              <div className="px-3 py-2">
+                <div className="text-sm font-medium text-gray-400 mb-2">Company</div>
+                <div className="space-y-1 ml-4">
+                  {companyLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      to={link.href}
+                      className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Mobile Resources Section */}
+              <div className="px-3 py-2">
+                <div className="text-sm font-medium text-gray-400 mb-2">Resources</div>
+                <div className="space-y-1 ml-4">
+                  {resourcesLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      to={link.href}
+                      className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {link.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
               
               <Link
-                to="/about"
+                to="/pricing"
                 className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
                 onClick={() => setIsMenuOpen(false)}
               >
-                About
+                Pricing
               </Link>
-              <Link
-                to="/blog"
-                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Blog
-              </Link>
-              <Link
-                to="/careers"
-                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Careers
-              </Link>
+              
               <Link
                 to="/contact"
                 className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"

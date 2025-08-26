@@ -1,325 +1,366 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Users, Award, Globe, Lightbulb, Target, Heart, Shield, Rocket, Brain, Code, Palette, Database, Network, Zap, Star, Linkedin, Twitter, Mail } from 'lucide-react';
+import { 
+  Users, 
+  Award, 
+  Globe, 
+  Target, 
+  Zap,
+  ArrowRight,
+  Linkedin,
+  Mail,
+  MapPin,
+  Calendar
+} from 'lucide-react';
 
-export default function Leadership() {
+const Leadership: React.FC = () => {
   const leadershipTeam = [
     {
-      name: 'Kleber Santos',
-      title: 'Founder & CEO',
-      department: 'Executive Leadership',
-      bio: 'Visionary leader with over 15 years of experience in AI, quantum computing, and enterprise technology. Founded Zion Tech Group with the mission to democratize cutting-edge technology for businesses worldwide.',
-      expertise: ['AI & Machine Learning', 'Quantum Computing', 'Strategic Leadership', 'Enterprise Solutions'],
-      achievements: ['Led 50+ enterprise transformations', 'Pioneered quantum AI solutions', 'Named Top 40 Under 40 Tech Leaders'],
-      image: '/images/leadership/kleber-santos.jpg',
-      linkedin: 'https://www.linkedin.com/in/kleber-santos',
-      twitter: 'https://twitter.com/klebersantos',
-      email: 'kleber@ziontechgroup.com',
-      icon: Brain
+      name: "Dr. Sarah Chen",
+      role: "Chief Executive Officer",
+      image: "/leadership/sarah-chen.jpg",
+      bio: "Dr. Sarah Chen is a visionary leader with over 15 years of experience in technology innovation and business transformation. She has led multiple successful startups and has been instrumental in bringing AI and quantum computing solutions to market.",
+      experience: "15+ years in technology leadership",
+      education: "Ph.D. in Computer Science, Stanford University",
+      expertise: ["Strategic Leadership", "AI Strategy", "Business Development", "Innovation Management"],
+      achievements: [
+        "Led company to 300% growth in 3 years",
+        "Named Top 50 Women in Tech by Forbes",
+        "Published 25+ research papers",
+        "Advisor to 3 successful tech startups"
+      ],
+      linkedin: "https://linkedin.com/in/sarah-chen",
+      email: "sarah.chen@ziontechgroup.com",
+      location: "San Francisco, CA"
     },
     {
-      name: 'Dr. Sarah Chen',
-      title: 'Chief Technology Officer',
-      department: 'Technology & Innovation',
-      bio: 'Former Google AI researcher with a PhD in Computer Science from MIT. Expert in large language models, autonomous systems, and AI ethics. Leads our R&D initiatives and technology strategy.',
-      expertise: ['AI Research', 'Machine Learning', 'Ethical AI', 'Product Strategy'],
-      achievements: ['Published 25+ research papers', 'Led AI teams at Google', 'MIT Technology Review Innovator'],
-      image: '/images/leadership/sarah-chen.jpg',
-      linkedin: 'https://www.linkedin.com/in/sarah-chen',
-      twitter: 'https://twitter.com/sarahchen',
-      email: 'sarah@ziontechgroup.com',
-      icon: Code
+      name: "Michael Rodriguez",
+      role: "Chief Technology Officer",
+      image: "/leadership/michael-rodriguez.jpg",
+      bio: "Michael Rodriguez is a technology expert with deep expertise in AI, cloud architecture, and emerging technologies. He has architected solutions for Fortune 500 companies and is passionate about using technology to solve complex business challenges.",
+      experience: "18+ years in technology architecture",
+      education: "M.S. in Computer Science, MIT",
+      expertise: ["AI/ML", "Cloud Architecture", "Technology Strategy", "System Design"],
+      achievements: [
+        "Architected solutions for 50+ enterprise clients",
+        "Led cloud migration projects worth $100M+",
+        "Named Top 100 Technology Leaders",
+        "Speaker at major tech conferences"
+      ],
+      linkedin: "https://linkedin.com/in/michael-rodriguez",
+      email: "michael.rodriguez@ziontechgroup.com",
+      location: "Austin, TX"
     },
     {
-      name: 'Michael Rodriguez',
-      title: 'Chief Security Officer',
-      department: 'Security & Compliance',
-      bio: 'Cybersecurity expert with 20+ years protecting Fortune 500 companies. Former CISO at major financial institutions. Specializes in zero-trust architecture and compliance automation.',
-      expertise: ['Cybersecurity', 'Compliance', 'Risk Management', 'Incident Response'],
-      achievements: ['CISSP, CISM, CISA certified', 'Led 100+ security audits', 'Cybersecurity Leader of the Year'],
-      image: '/images/leadership/michael-rodriguez.jpg',
-      linkedin: 'https://www.linkedin.com/in/michael-rodriguez',
-      twitter: 'https://twitter.com/mrodriguez',
-      email: 'michael@ziontechgroup.com',
-      icon: Shield
+      name: "Dr. Emily Watson",
+      role: "Chief Research Officer",
+      image: "/leadership/emily-watson.jpg",
+      bio: "Dr. Emily Watson is a leading researcher in quantum computing, AI consciousness, and advanced algorithms. She has published over 100 research papers and holds multiple patents in quantum computing applications.",
+      experience: "20+ years in research and development",
+      education: "Ph.D. in Quantum Physics, Caltech",
+      expertise: ["Quantum Computing", "AI Research", "Algorithm Development", "Research Strategy"],
+      achievements: [
+        "Published 100+ research papers",
+        "Holds 15 patents in quantum computing",
+        "Led $50M research initiatives",
+        "Fellow of the American Physical Society"
+      ],
+      linkedin: "https://linkedin.com/in/emily-watson",
+      email: "emily.watson@ziontechgroup.com",
+      location: "Boston, MA"
     },
     {
-      name: 'Dr. Elena Petrova',
-      title: 'Chief Research Officer',
-      department: 'Research & Development',
-      bio: 'Quantum physicist with breakthrough research in quantum neural networks. Former researcher at IBM Quantum and CERN. Leading our quantum computing initiatives and scientific breakthroughs.',
-      expertise: ['Quantum Computing', 'Quantum AI', 'Physics Research', 'Innovation'],
-      achievements: ['PhD from Caltech', 'Published in Nature', 'Quantum Innovation Award'],
-      image: '/images/leadership/elena-petrova.jpg',
-      linkedin: 'https://www.linkedin.com/in/elena-petrova',
-      twitter: 'https://twitter.com/elenapetrova',
-      email: 'elena@ziontechgroup.com',
-      icon: Rocket
+      name: "David Kim",
+      role: "Chief Security Officer",
+      image: "/leadership/david-kim.jpg",
+      bio: "David Kim is a cybersecurity expert with extensive experience in threat detection and security architecture. He has helped organizations build robust security frameworks and maintain compliance with industry standards.",
+      experience: "16+ years in cybersecurity",
+      education: "M.S. in Information Security, Carnegie Mellon",
+      expertise: ["Cybersecurity", "Threat Intelligence", "Security Architecture", "Compliance"],
+      achievements: [
+        "Secured 100+ enterprise organizations",
+        "Zero security breaches in 10 years",
+        "Expert witness in cybersecurity cases",
+        "Author of 3 cybersecurity books"
+      ],
+      linkedin: "https://linkedin.com/in/david-kim",
+      email: "david.kim@ziontechgroup.com",
+      location: "Washington, DC"
     },
     {
-      name: 'David Kim',
-      title: 'Chief Product Officer',
-      department: 'Product & Design',
-      bio: 'Product visionary with experience at Apple and Tesla. Expert in user experience design and product strategy. Leads our product development and customer experience initiatives.',
-      expertise: ['Product Strategy', 'UX Design', 'Customer Experience', 'Innovation'],
-      achievements: ['Led 10+ successful product launches', 'Apple Design Award winner', 'Product Leader of the Year'],
-      image: '/images/leadership/david-kim.jpg',
-      linkedin: 'https://www.linkedin.com/in/david-kim',
-      twitter: 'https://twitter.com/davidkim',
-      email: 'david@ziontechgroup.com',
-      icon: Palette
+      name: "Lisa Thompson",
+      role: "VP of Engineering",
+      image: "/leadership/lisa-thompson.jpg",
+      bio: "Lisa Thompson is an engineering leader focused on building scalable solutions and developing high-performing teams. She has led engineering organizations of 100+ developers and delivered complex projects on time and budget.",
+      experience: "14+ years in software engineering",
+      education: "B.S. in Computer Science, UC Berkeley",
+      expertise: ["Software Engineering", "Team Leadership", "System Architecture", "Agile Development"],
+      achievements: [
+        "Led teams of 100+ engineers",
+        "Delivered 50+ major projects",
+        "Reduced deployment time by 80%",
+        "Mentored 25+ engineering leaders"
+      ],
+      linkedin: "https://linkedin.com/in/lisa-thompson",
+      email: "lisa.thompson@ziontechgroup.com",
+      location: "Seattle, WA"
     },
     {
-      name: 'Maria Garcia',
-      title: 'Chief Operations Officer',
-      department: 'Operations & Delivery',
-      bio: 'Operations expert with experience scaling technology companies from startup to enterprise. Former VP of Operations at Microsoft. Ensures seamless service delivery and operational excellence.',
-      expertise: ['Operations Management', 'Service Delivery', 'Process Optimization', 'Team Leadership'],
-      achievements: ['Scaled operations to 1000+ employees', '99.9% service uptime', 'Operations Excellence Award'],
-      image: '/images/leadership/maria-garcia.jpg',
-      linkedin: 'https://www.linkedin.com/in/maria-garcia',
-      twitter: 'https://twitter.com/mariagarcia',
-      email: 'maria@ziontechgroup.com',
-      icon: Database
+      name: "James Wilson",
+      role: "VP of Business Development",
+      image: "/leadership/james-wilson.jpg",
+      bio: "James Wilson is a business strategist with expertise in partnerships and market expansion. He has helped companies enter new markets and build strategic relationships that drive growth and innovation.",
+      experience: "12+ years in business development",
+      education: "MBA, Harvard Business School",
+      expertise: ["Business Strategy", "Partnerships", "Market Analysis", "Growth Strategy"],
+      achievements: [
+        "Generated $200M+ in new business",
+        "Established 50+ strategic partnerships",
+        "Expanded to 15 new markets",
+        "Led 3 successful market entries"
+      ],
+      linkedin: "https://linkedin.com/in/james-wilson",
+      email: "james.wilson@ziontechgroup.com",
+      location: "New York, NY"
     }
   ];
 
-  const values = [
+  const companyValues = [
     {
-      icon: Lightbulb,
-      title: 'Innovation First',
-      description: 'We constantly push boundaries and embrace cutting-edge technologies to solve complex problems.',
-      color: 'from-blue-500 to-cyan-500'
+      title: "Innovation First",
+      description: "We push the boundaries of what's possible, constantly exploring new technologies and approaches.",
+      icon: Zap
     },
     {
-      icon: Target,
-      title: 'Excellence',
-      description: 'We strive for excellence in everything we do, from code quality to customer service.',
-      color: 'from-green-500 to-emerald-500'
+      title: "Excellence in Everything",
+      description: "We maintain the highest standards in our work, from code quality to client relationships.",
+      icon: Award
     },
     {
-      icon: Heart,
-      title: 'People Matter',
-      description: 'Our team is our greatest asset, and we invest in their growth and well-being.',
-      color: 'from-pink-500 to-rose-500'
+      title: "Collaborative Culture",
+      description: "We believe in the power of teamwork and diverse perspectives to solve complex challenges.",
+      icon: Users
     },
     {
-      icon: Shield,
-      title: 'Integrity',
-      description: 'We operate with honesty, transparency, and ethical business practices.',
-      color: 'from-purple-500 to-indigo-500'
-    },
-    {
-      icon: Globe,
-      title: 'Global Impact',
-      description: 'We build solutions that help businesses worldwide transform and grow.',
-      color: 'from-orange-500 to-red-500'
-    },
-    {
-      icon: Zap,
-      title: 'Agility',
-      description: 'We adapt quickly to changing market conditions and customer needs.',
-      color: 'from-yellow-500 to-orange-500'
+      title: "Client Success",
+      description: "Our success is measured by the success of our clients and the impact we create together.",
+      icon: Target
     }
   ];
 
-  const stats = [
-    { label: 'Years of Combined Experience', value: '150+', icon: Award },
-    { label: 'Enterprise Clients Served', value: '500+', icon: Users },
-    { label: 'Countries Reached', value: '25+', icon: Globe },
-    { label: 'Innovation Awards', value: '15+', icon: Star }
-  ];
+  const vision = {
+    title: "Our Vision",
+    description: "To be the leading force in technological innovation, transforming businesses and society through cutting-edge AI, quantum computing, and sustainable technology solutions.",
+    goals: [
+      "Advance AI consciousness and autonomous systems",
+      "Democratize quantum computing access",
+      "Create sustainable technology solutions",
+      "Build the most trusted technology partner network"
+    ]
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-      <div className="container mx-auto px-4 py-20">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Meet Our <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Leadership</span>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            Leadership Team
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Our leadership team brings together decades of experience from the world's leading technology companies, research institutions, and innovative startups.
+          <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
+            Meet the visionary leaders who guide our company's mission and drive 
+            innovation in technology and business transformation.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/team"
+              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              Meet Our Team
+            </Link>
+            <Link
+              to="/about"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300"
+            >
+              About Our Company
+            </Link>
+          </div>
         </div>
+      </section>
 
-        {/* Leadership Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          {stats.map((stat, index) => {
-            const Icon = stat.icon;
-            return (
-              <div key={index} className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Icon className="w-6 h-6 text-white" />
+      {/* Vision Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+              {vision.title}
+            </h2>
+            <p className="text-xl text-slate-600 max-w-4xl mx-auto mb-12">
+              {vision.description}
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {vision.goals.map((goal, index) => (
+                <div key={index} className="flex items-start">
+                  <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mr-4 mt-1">
+                    <span className="text-white text-sm font-bold">{index + 1}</span>
+                  </div>
+                  <p className="text-slate-700">{goal}</p>
                 </div>
-                <div className="text-2xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-300 text-sm">{stat.label}</div>
-              </div>
-            );
-          })}
+              ))}
+            </div>
+          </div>
         </div>
+      </section>
 
-        {/* Leadership Team */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Executive Leadership Team
-          </h2>
-          <div className="grid lg:grid-cols-2 gap-8">
-            {leadershipTeam.map((leader, index) => {
-              const Icon = leader.icon;
-              return (
-                <div key={index} className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-10 h-10 text-white" />
+      {/* Leadership Team */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+              Executive Leadership
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Our leadership team brings together decades of experience in technology, 
+              business, and innovation.
+            </p>
+          </div>
+          
+          <div className="space-y-16">
+            {leadershipTeam.map((leader, index) => (
+              <div key={index} className={`bg-white rounded-2xl shadow-lg p-8 border border-slate-100 ${
+                index % 2 === 0 ? '' : 'md:flex-row-reverse'
+              }`}>
+                <div className="grid md:grid-cols-3 gap-8 items-start">
+                  <div className="text-center md:text-left">
+                    <div className="w-48 h-48 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto md:mx-0 mb-6">
+                      <Users className="w-24 h-24 text-white" />
                     </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-white mb-2">{leader.name}</h3>
-                      <div className="text-lg font-semibold text-blue-400 mb-1">{leader.title}</div>
-                      <div className="text-sm text-gray-400 mb-3">{leader.department}</div>
-                      <div className="flex gap-3">
-                        <a
-                          href={leader.linkedin}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
-                          aria-label={`${leader.name} LinkedIn`}
-                        >
-                          <Linkedin className="w-4 h-4 text-blue-400" />
-                        </a>
-                        <a
-                          href={leader.twitter}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
-                          aria-label={`${leader.name} Twitter`}
-                        >
-                          <Twitter className="w-4 h-4 text-blue-400" />
-                        </a>
-                        <a
-                          href={`mailto:${leader.email}`}
-                          className="p-2 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
-                          aria-label={`Email ${leader.name}`}
-                        >
-                          <Mail className="w-4 h-4 text-blue-400" />
-                        </a>
+                    <h3 className="text-2xl font-bold text-slate-900 mb-2">{leader.name}</h3>
+                    <p className="text-lg text-blue-600 font-semibold mb-2">{leader.role}</p>
+                    <div className="flex items-center justify-center md:justify-start text-sm text-slate-500 mb-4">
+                      <MapPin className="w-4 h-4 mr-1" />
+                      {leader.location}
+                    </div>
+                    <div className="flex justify-center md:justify-start space-x-4">
+                      <a
+                        href={leader.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 bg-blue-600 text-white rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors duration-200"
+                      >
+                        <Linkedin className="w-5 h-5" />
+                      </a>
+                      <a
+                        href={`mailto:${leader.email}`}
+                        className="w-10 h-10 bg-slate-600 text-white rounded-lg flex items-center justify-center hover:bg-slate-700 transition-colors duration-200"
+                      >
+                        <Mail className="w-5 h-5" />
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div className="md:col-span-2">
+                    <p className="text-slate-600 mb-6 leading-relaxed">
+                      {leader.bio}
+                    </p>
+                    
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <h4 className="text-lg font-semibold text-slate-900 mb-3">Experience</h4>
+                        <p className="text-slate-600 text-sm mb-4">{leader.experience}</p>
+                        
+                        <h4 className="text-lg font-semibold text-slate-900 mb-3">Education</h4>
+                        <p className="text-slate-600 text-sm">{leader.education}</p>
+                      </div>
+                      
+                      <div>
+                        <h4 className="text-lg font-semibold text-slate-900 mb-3">Expertise</h4>
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          {leader.expertise.map((skill, skillIndex) => (
+                            <span key={skillIndex} className="px-3 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+                        
+                        <h4 className="text-lg font-semibold text-slate-900 mb-3">Key Achievements</h4>
+                        <ul className="space-y-1">
+                          {leader.achievements.map((achievement, achievementIndex) => (
+                            <li key={achievementIndex} className="flex items-center text-sm text-slate-600">
+                              <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+                              {achievement}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
                     </div>
                   </div>
-                  
-                  <p className="text-gray-300 text-sm leading-relaxed mb-6">{leader.bio}</p>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-white mb-3">Areas of Expertise:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {leader.expertise.map((skill, idx) => (
-                        <span key={idx} className="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full">
-                          {skill}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <h4 className="text-sm font-semibold text-white mb-3">Key Achievements:</h4>
-                    <ul className="space-y-2">
-                      {leader.achievements.map((achievement, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-sm text-gray-300">
-                          <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
-                          <span>{achievement}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Company Values */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Our Leadership Values
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {values.map((value, index) => {
-              const Icon = value.icon;
-              return (
-                <div key={index} className="p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <div className={`w-12 h-12 bg-gradient-to-br ${value.color} rounded-xl flex items-center justify-center mb-4`}>
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-3">{value.title}</h3>
-                  <p className="text-gray-300 text-sm leading-relaxed">{value.description}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Leadership Philosophy */}
-        <div className="mb-16">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <h2 className="text-3xl font-bold text-white text-center mb-8">
-                Our Leadership Philosophy
-              </h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-4">Servant Leadership</h3>
-                  <p className="text-gray-300 text-sm leading-relaxed mb-4">
-                    We believe in leading by serving. Our leaders prioritize the growth and well-being of their teams, 
-                    creating an environment where everyone can thrive and reach their full potential.
-                  </p>
-                  <p className="text-gray-300 text-sm leading-relaxed">
-                    This approach has enabled us to build high-performing teams that consistently deliver exceptional results 
-                    for our clients while maintaining a positive and collaborative culture.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-4">Innovation Through Collaboration</h3>
-                  <p className="text-gray-300 text-sm leading-relaxed mb-4">
-                    We foster a culture of open collaboration where diverse perspectives drive innovation. 
-                    Our leaders encourage creative thinking and provide the resources needed to turn ideas into reality.
-                  </p>
-                  <p className="text-gray-300 text-sm leading-relaxed">
-                    By combining expertise from different domains, we create breakthrough solutions that address 
-                    complex challenges in ways that wouldn't be possible working in isolation.
-                  </p>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
+      </section>
 
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Work with Our Team?
-            </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Our leadership team is committed to delivering exceptional results and building long-term partnerships. 
-              Let's discuss how we can help transform your business.
+      {/* Company Values */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-slate-900 mb-4">
+              Our Values
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              The principles that guide our decisions, shape our culture, and drive our success.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
-              >
-                Get Started Today
-              </Link>
-              <Link
-                to="/about"
-                className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
-              >
-                Learn More About Us
-              </Link>
-            </div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {companyValues.map((value, index) => (
+              <div key={index} className="text-center">
+                <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <value.icon className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">
+                  {value.title}
+                </h3>
+                <p className="text-slate-600">
+                  {value.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-900 to-blue-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold mb-6">
+            Join Our Mission
+          </h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            Be part of a team that's shaping the future of technology and 
+            transforming businesses around the world.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/careers"
+              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              Join Our Team
+            </Link>
+            <Link
+              to="/contact"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300"
+            >
+              Get in Touch
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
-}
+};
+
+export default Leadership;
