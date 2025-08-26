@@ -3,7 +3,6 @@ const isProd = process.env.NODE_ENV === 'production'
 const assetPrefix = process.env.ASSET_PREFIX || (isProd ? undefined : undefined)
 
 const nextConfig = {
-<<<<<<< HEAD
 	reactStrictMode: true,
 	trailingSlash: true,
 	output: 'export',
@@ -34,14 +33,3 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
-=======
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-}
-
-module.exports = nextConfig
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-97bc
