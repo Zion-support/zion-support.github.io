@@ -30,9 +30,8 @@ import {
   CheckCircle
 } from 'lucide-react';
 
-import React from 'react';
-=======
 import { Footer } from "@/components/Footer";
+=======
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import Link from "next/link";
@@ -261,6 +260,7 @@ const About = () => {
         keywords="about Zion, AI marketplace, tech platform, mission, vision, team"
         canonical="https://app.ziontechgroup.com/about"
       />
+      
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -1058,30 +1058,6 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Values Section */}
-      <section className="py-20 bg-zion-blue-light/5">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-6">
-              Our{' '}
-              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                Values
-              </span>
-            </h2>
-            <p className="text-lg text-zion-slate-light max-w-2xl mx-auto">
-              The principles that guide everything we do, from client relationships to technology development.
-            </p>
-          </motion.div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
 =======
 =======
       title: 'Innovation First',
@@ -2108,5 +2084,9 @@ const About = () => {
         </div>
       </div>
     </div>
+=======
+      </main>
+      
+    </>
   );
 }

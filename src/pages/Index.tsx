@@ -1,5 +1,4 @@
 
-import { Footer } from "@/components/Footer";
 import { TrustedBySection } from "@/components/TrustedBySection";
 import { TestimonialCarousel } from "@/components/TestimonialCarousel";
 import { FloatingCTA } from "@/components/FloatingCTA";
@@ -81,6 +80,7 @@ export default function Index() {
         keywords={t("home.seo_keywords")}
         canonical="https://app.ziontechgroup.com/"
       />
+      
       <HeroSection />
       
       {/* Quick Access Tools Section */}
@@ -134,7 +134,7 @@ export default function Index() {
       
       <WaitlistSection />
       <FloatingCTA />
-      <Footer />
+      
     </div>
   );
 }

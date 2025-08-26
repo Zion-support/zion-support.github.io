@@ -4,7 +4,6 @@ import { useRouter } from 'next/router';
 import { format } from "date-fns";
 import { useAuth } from "@/hooks/useAuth";
 import { useProjects } from "@/hooks/useProjects";
-import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Project, ProjectStatus } from "@/types/projects";
@@ -242,6 +241,7 @@ function ProjectDetailsContent() {
         title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} 
         description="View and manage your project details and collaboration."
       />
+      
       <main className="container mx-auto px-4 py-8">
         <div className="mb-6">
           <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2">
@@ -673,7 +673,7 @@ function ProjectDetailsContent() {
           </div>
         </div>
       </main>
-      <Footer />
+      
     </>
   );
 }

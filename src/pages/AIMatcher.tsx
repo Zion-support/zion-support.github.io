@@ -40,6 +40,7 @@ export default function AIMatcherPage() {
   
   return (
     <>
+      
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -74,6 +75,7 @@ export default function AIMatcherPage() {
           </div>
         </div>
       </div>
+      
     </>
   );
 }

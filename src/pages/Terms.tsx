@@ -1,9 +1,9 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
 
 const Terms: React.FC = () => {
   return (
-    <>
+    
       <SEO
         title="Terms of Service"
         description="The terms and conditions for using the Zion platform."
@@ -232,7 +232,7 @@ const Terms: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    
   );
 };
 

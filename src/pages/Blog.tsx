@@ -10,8 +10,7 @@ import {
 import { ArrowRight, Calendar, Clock, User, Tag, Search, Filter, TrendingUp, Brain, Atom, Shield, Cloud, Rocket, Lightbulb, Globe, Database, Code, Target, Zap, Star, BookOpen, MessageSquare, Heart, Share2 } from 'lucide-react';
 =======
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import { useDebounce } from "@/hooks/useDebounce";
+import { Link } from "react-router-dom";
 import { GradientHeading } from "@/components/GradientHeading";
 import { SEO } from "@/components/SEO";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
@@ -746,6 +745,7 @@ export default function Blog() {
         keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT"
         canonical="https://ziontechgroup.com/blog"
       />
+      
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -2035,10 +2035,6 @@ export default function Blog() {
           </h2>
           <p className="text-xl text-gray-400 mb-8">
       </div>
-
-      {/* Newsletter Signup */}
-            <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg text-white font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200">
-=======
               placeholder="Enter your email address"
               className="flex-1 px-4 py-3 bg-zion-slate border border-zion-cyan/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"
             />
@@ -2112,6 +2108,9 @@ export default function Blog() {
   );
       </div>
     </div>
+=======
+      
+    </>
   );
 }
 

@@ -60,9 +60,11 @@ export default function BlogPost() {
   
   if (!post) {
     return (
-      <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
-        <div className="animate-pulse">Loading article...</div>
-      </div>
+      
+        <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
+          <div className="animate-pulse">Loading article...</div>
+        </div>
+      
     );
   }
 
@@ -97,10 +99,10 @@ export default function BlogPost() {
   };
   
   return (
-    <>
-      <SEO
-        title={post.title}
-        description={post.excerpt}
+    
+      <SEO 
+        title={post.title} 
+        description={post.excerpt} 
         keywords={post.tags.join(", ")}
         ogImage={post.featuredImage}
         canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
@@ -307,6 +309,6 @@ export default function BlogPost() {
           </div>
         </div>
       </div>
-    </>
+    
   );
 }

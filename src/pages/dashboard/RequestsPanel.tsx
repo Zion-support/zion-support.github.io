@@ -1,6 +1,5 @@
 
 import React, { useState } from "react";
-import { Footer } from "@/components/Footer";
 import { useTalentQuotes } from "@/hooks/useTalentQuotes";
 import { useAuth } from "@/hooks/useAuth";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -49,6 +48,7 @@ export default function RequestsPanel() {
   return (
     <ProtectedRoute>
       <div>
+        
         <div className="min-h-screen bg-zion-blue px-4 py-8">
           <div className="container mx-auto">
             <RequestsHeader
@@ -101,7 +101,7 @@ export default function RequestsPanel() {
           }}
         />
         
-        <Footer />
+        
       </div>
     </ProtectedRoute>
   );

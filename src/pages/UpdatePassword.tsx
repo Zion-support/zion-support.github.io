@@ -132,6 +132,7 @@ export default function UpdatePassword() {
 
   return (
     <>
+      
       <div className="flex min-h-screen bg-zion-blue">
         <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:px-20 xl:px-24">
           <div className="mx-auto w-full max-w-sm lg:w-96">
@@ -255,6 +256,7 @@ export default function UpdatePassword() {
           </div>
         </div>
       </div>
+      
     </>
   );
 }

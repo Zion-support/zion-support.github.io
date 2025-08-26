@@ -1,6 +1,6 @@
 
 import { useParams, Link } from "react-router-dom";
-import { Footer } from "@/components/Footer";
+import { Header } from "@/components/header/Header";
 import { GradientHeading } from "@/components/GradientHeading";
 import { ProductListingCard } from "@/components/ProductListingCard";
 import { useState, useEffect, useRef } from "react";
@@ -211,6 +211,7 @@ export default function CategoryDetail() {
 
   return (
     <>
+      
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto px-4 py-12">
           <div className="mb-4">
@@ -250,7 +251,7 @@ export default function CategoryDetail() {
           )}
         </div>
       </div>
-      <Footer />
+      
     </>
   );
 }

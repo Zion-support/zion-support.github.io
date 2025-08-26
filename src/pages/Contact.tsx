@@ -17,7 +17,6 @@ import React, { useState } from 'react';
   const [isSubmitted, setIsSubmitted] = useState(false);
 =======
 import { useState } from "react";
-import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/Button";
@@ -29,7 +28,6 @@ import { apiClient } from "@/utils/apiClient";
 import z from "zod";
 import { ChatAssistant } from "@/components/ChatAssistant/ChatAssistant";
 import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
-=======
 import { 
   Mail, 
   Phone, 
@@ -44,6 +42,7 @@ import {
   CheckCircle,
   AlertCircle
 } from 'lucide-react';
+=======
 
 export default function Contact() {
 import React, { useState } from 'react';
@@ -485,145 +484,17 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-blue-900 text-white">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
-        <div className="relative z-10 max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-            Get in Touch
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Ready to transform your business with cutting-edge technology? Let's discuss how we can help 
-            you achieve your digital transformation goals.
-          </p>
-        </div>
-      </section>
-
-      {/* Contact Information */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {contactInfo.map((info, index) => (
-              <div key={index} className="text-center p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300">
-                <div className="flex justify-center mb-4">
-                  <info.icon className="h-12 w-12 text-blue-400" />
-                </div>
-                <h3 className="text-xl font-semibold mb-4 text-white">{info.title}</h3>
-                <div className="space-y-2">
-                  {info.details.map((detail, idx) => (
-                    <p key={idx} className="text-gray-300 text-sm">{detail}</p>
-                  ))}
-                </div>
-                {info.action !== '#' && (
-                  <a
-                    href={info.action}
-                    className="inline-block mt-4 text-blue-400 hover:text-blue-300 transition-colors duration-300"
-                  >
-                    Contact Now →
-                  </a>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Form & Office Locations */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16">
-            {/* Contact Form */}
-            <div>
-              <h2 className="text-3xl font-bold mb-8 text-white">Send Us a Message</h2>
-              
-              {isSubmitted ? (
-                <div className="bg-green-500/20 border border-green-500/30 rounded-xl p-8 text-center">
-                  <CheckCircle className="h-16 w-16 text-green-400 mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold text-green-400 mb-2">Message Sent!</h3>
-                  <p className="text-green-300">
-                    Thank you for reaching out. We'll get back to you within 24 hours.
-                  </p>
-                </motion.div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-white font-medium mb-2">
-                        Full Name *
-                      </label>
-                      <Input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                        className="bg-zion-slate-dark/50 border-zion-blue-light/30 text-white placeholder-zion-slate-light focus:border-zion-cyan"
-                        placeholder="Enter your full name"
-                      />
-                    </div>
-                    
-                    <div>
-                      <label className="block text-white font-medium mb-2">
-                        Email Address *
-                      </label>
-                      <Input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        className="bg-zion-slate-dark/50 border-zion-blue-light/30 text-white placeholder-zion-slate-light focus:border-zion-cyan"
-                        placeholder="Enter your email"
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-white font-medium mb-2">
-                        Company Name
-                      </label>
-                      <Input
-                        type="text"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleInputChange}
-                        className="bg-zion-slate-dark/50 border-zion-blue-light/30 text-white placeholder-zion-slate-light focus:border-zion-cyan"
-                        placeholder="Enter your company name"
-                      />
-                    </div>
-                    
-                    <div>
-                      <label className="block text-white font-medium mb-2">
-                        Phone Number
-                      </label>
-                      <Input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        className="bg-zion-slate-dark/50 border-zion-blue-light/30 text-white placeholder-zion-slate-light focus:border-zion-cyan"
-                        placeholder="Enter your phone number"
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Contact Form */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
 =======
-      {/* Contact Form */}
-      <section className="py-20 bg-white">
+    
+      <SEO 
+        title="Contact Zion - Get in Touch" 
+        description="Have questions or want to learn more? Contact the Zion team about our AI and tech marketplace platform." 
+        keywords="contact Zion, AI marketplace support, tech platform contact"
+        canonical="https://app.ziontechgroup.com/contact"
+      />
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
@@ -2798,9 +2669,22 @@ export default Contact;
           </div>
         </section>
       </main>
-      
-      <Footer />
-    </>
+
+      {/* Chat Assistant Modal */}
+      {isChatOpen && (
+        <ChatAssistant
+          isOpen={isChatOpen}
+          onClose={() => setIsChatOpen(false)}
+          recipient={{
+            id: 'ai-assistant',
+            name: 'AI Assistant',
+            avatarUrl: 'https://placehold.co/64x64?text=AI',
+            role: 'Support Bot'
+          }}
+          onSendMessage={handleSendMessage}
+        />
+      )}
+    
   );
 }
 =======

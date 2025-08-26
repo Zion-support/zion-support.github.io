@@ -1,7 +1,6 @@
 
 import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
-import { SERVICES } from "@/data/servicesData";
 import { TrustedBySection } from "@/components/TrustedBySection";
 import { ServicesOverview } from "@/components/services/ServicesOverview";
 import { Button } from "@/components/ui/button";
@@ -1008,10 +1007,6 @@ export default function ServicesPage() {
   const [listings] = useState<ProductListing[]>(SERVICE_LISTINGS);
 
   return (
-    <>
-            <Link to="/services-overview">
-              <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-=======
             <Link to="/micro-saas-services">
 =======
             <Link to="/comprehensive-services">
@@ -1019,6 +1014,13 @@ export default function ServicesPage() {
             <Link to="/enhanced-services">
 =======
             <Link to="/enhanced-services">
+=======
+    
+      <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+          <h2 className="text-white text-lg font-medium">Featured Services</h2>
+          <div className="flex flex-wrap gap-2">
+            <Link to="/it-onsite-services">
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                 <Globe className="h-4 w-4 mr-2" />
                 Enhanced Services Showcase
@@ -2239,14 +2241,13 @@ export default function ServicesPage() {
       </section>
 
       <TrustedBySection />
-
-export default ServicesPage;
-=======
     <div className="min-h-screen bg-gray-50 flex items-center justify-center">
       <div className="text-center">
         <h1 className="text-2xl font-bold mb-4">Redirecting...</h1>
         <p className="text-gray-600">Taking you to our comprehensive services page.</p>
       </div>
     </div>
+=======
+    
   );
 }

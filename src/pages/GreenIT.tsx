@@ -1,5 +1,9 @@
-import React from 'react';
-import SEO from '../SEO';
+
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Leaf, Server, Cloud } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function GreenIT() {
   return (
@@ -561,7 +565,9 @@ export default function GreenIT() {
   ];
 
   return (
-        title="Green IT Solutions - Sustainable Technology"
+    
+      <SEO 
+        title="Green IT Solutions - Sustainable Technology" 
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance." 
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
         canonical="https://ziontechgroup.com/marketplace/category/green-it"
@@ -802,6 +808,6 @@ export default function GreenIT() {
           </div>
         </div>
       </main>
-    </>
+    
   );
 }

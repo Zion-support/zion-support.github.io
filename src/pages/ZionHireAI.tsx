@@ -1,6 +1,5 @@
 
 import React from "react";
-import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { useWhitelabel } from "@/context/WhitelabelContext";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -17,6 +16,7 @@ import { Link } from "react-router-dom";
         keywords="AI hiring, AI recruiting, talent acquisition, AI assistant, Zion Hire AI"
         canonical="https://ziontechgroup.com/zion-hire-ai"
       />
+      
       <main className="flex-1">
         {/* Hero Section */}
         <div className="container mx-auto px-4 py-16">
@@ -148,7 +148,7 @@ export default function ZionHireAI() {
           </div>
         </div>
       </main>
-      <Footer />
+      
     </>
   );
 }

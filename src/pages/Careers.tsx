@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/Button";
-import { Card, CardContent } from "@/components/ui/Card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/Tabs";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function Careers() {
   const [activeDepartment, setActiveDepartment] = useState('all');
@@ -1758,39 +1758,15 @@ const Careers = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-zion-blue-dark text-white">
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">
-            Join Our Mission
-          </h1>
-          <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-            Help us shape the future of technology. We're building the next generation of AI, 
-            quantum computing, and cybersecurity solutions that will transform the world.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="#open-positions">
-              <button className="bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan/90 hover:to-zion-purple/90 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105">
-                View Open Positions
-              </button>
-            </Link>
-            <Link to="/contact">
-              <button className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300">
-                Contact Us
-              </button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Company Culture */}
-      <section className="py-20 bg-zion-blue-dark">
-=======
     <>
       <SEO
         title="Careers at Zion - Join Our Team"
         description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform."
+=======
+    
+      <SEO 
+        title="Careers at Zion - Join Our Team" 
+        description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform." 
         keywords="Zion careers, AI jobs, tech careers, remote work, startup jobs"
         canonical="https://ziontechgroup.com/careers"
       />
@@ -3219,11 +3195,6 @@ const Careers = () => {
             </Button>
           </div>
         </div>
-      </section>
-    </div>
-  );
-}
-=======
 export default Careers;
 =======
 export default Careers;
@@ -3287,5 +3258,8 @@ export default Careers;
         </div>
       </section>
     </div>
+=======
+      </main>
+    
   );
 }

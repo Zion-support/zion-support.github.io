@@ -1,8 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-
-import { Footer } from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -36,12 +34,13 @@ export default function JobDetails() {
   if (error || !job) {
     return (
       <>
+        
         <div className="container mx-auto px-4 py-16 text-center">
           <h1 className="text-2xl font-bold mb-4">Job Not Found</h1>
           <p className="mb-8">The job you're looking for doesn't exist or has been removed.</p>
           <Button onClick={() => navigate('/jobs')}>View All Jobs</Button>
         </div>
-        <Footer />
+        
       </>
     );
   }
@@ -79,6 +78,7 @@ export default function JobDetails() {
         title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
         description={job.description.substring(0, 160)}
       />
+      
       <main className="container mx-auto px-4 py-8">
         <div className="mb-6">
           <Button 
@@ -176,7 +176,7 @@ export default function JobDetails() {
           </div>
         </div>
       </main>
-      <Footer />
+      
       
       {/* Job application modal */}
       {job && (
