@@ -9,6 +9,15 @@ import { ShoppingCart, Star, Truck, Shield, RotateCcw } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 import { EQUIPMENT_DETAILS } from "@/data/equipmentDetails";
+
+export const SAMPLE_EQUIPMENT = {
+    id: "sample-1",
+    name: "Sample Equipment",
+    description: "This is a sample equipment item for testing purposes.",
+    price: 999.99,
+    category: "Sample Category"
+};
+
 export default function EquipmentDetail() {
     const { equipmentId } = useParams();
     const navigate = useNavigate();

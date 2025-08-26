@@ -26,3 +26,9 @@ export const isAuthError = (error: any) => {
          error?.response?.status === 401 ||
          error?.response?.status === 403;
 };
+
+export const showApiError = (error: any, fallbackMessage: string = 'An error occurred') => {
+  const message = handleApiError(error, fallbackMessage);
+  console.error('API Error:', { error, message });
+  return message;
+};
