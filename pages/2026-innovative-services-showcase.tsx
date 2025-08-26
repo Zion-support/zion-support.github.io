@@ -11,11 +11,11 @@ import {
   BarChart3, Settings, Wrench, ShieldCheck
 } from 'lucide-react';
 
-// Import all the 2026 innovative services
-import { innovativeMicroSaasServices2026 } from '../data/2026-innovative-micro-saas-services';
-import { innovativeAIServices2026 } from '../data/2026-innovative-ai-services';
-import { innovativeITServices2026 } from '../data/2026-innovative-it-services';
-import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
+// Import closest available 2026 datasets
+import { innovative2026MicroSaasServicesV2 as innovativeMicroSaasServices2026 } from '../data/innovative-2026-micro-saas-v2';
+import { innovative2026AIServices } from '../data/innovative-2026-ai-services';
+import { emergingTech2026ServicesV2 as emergingTechServices2026 } from '../data/emerging-tech-2026-services-v2';
+import { specializedIndustrySolutions2026 as innovativeITServices2026 } from '../data/2026-specialized-industry-solutions';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',

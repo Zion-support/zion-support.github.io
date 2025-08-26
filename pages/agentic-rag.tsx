@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import UltraFuturisticMatrixBackground from '../components/ui/UltraQuantumHolographicBackgroundV4';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 
 import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
 
@@ -19,7 +19,7 @@ export default function AgenticRAGPage() {
 	];
 
 	return (
-		<UltraFuturisticMatrixBackground>
+		<UltraAdvancedFuturisticBackground>
 			<Head>
 				<title>Agentic RAG Platform | Zion Tech Group</title>
 				<meta name="description" content="High-accuracy retrieval augmented generation with ingestion, indexing, reranking, and evaluation built-in." />
@@ -32,7 +32,7 @@ export default function AgenticRAGPage() {
 					<p className="text-xl text-gray-300">Ingest everything. Retrieve precisely. Answer confidently with sources and chain-of-thought.</p>
 					<div className="mt-6 flex justify-center gap-3">
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl w-4 h-4 mr-2"><Rocket />Request a Demo</a>
-						                                        <a href="/resources" className="border-gray-600 text-gray-200 border px-6 py-3 rounded-xl">Explore Docs</a>
+						<a href="/resources" className="border-gray-600 text-gray-200 border px-6 py-3 rounded-xl">Explore Docs</a>
 					</div>
 				</div>
 
@@ -79,6 +79,6 @@ export default function AgenticRAGPage() {
 					</div>
 				</div>
 			</div>
-		</UltraFuturisticMatrixBackground>
+		</UltraAdvancedFuturisticBackground>
 	);
 }

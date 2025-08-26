@@ -7,7 +7,6 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import EnhancedNavigation2026 from '../components/layout/EnhancedNavigation2026';
 import { innovative2026MicroSaasV2Services } from '../data/innovative-2026-micro-saas-v2';
 import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2';
-import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2';
 
 export default function Innovations2026Showcase() {
   const contactInfo = {
@@ -19,8 +18,7 @@ export default function Innovations2026Showcase() {
 
   const allNewServices = [
     ...innovative2026MicroSaasV2Services,
-    ...emergingTech2026ServicesV2,
-    ...enterpriseIT2026ServicesV2
+    ...emergingTech2026ServicesV2
   ];
 
   const categories = [
