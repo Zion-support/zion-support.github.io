@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
@@ -38,7 +37,6 @@ export function LoadingPulse({ className }) {
             repeat: Infinity,
             ease: 'easeInOut'
         } }));
-=======
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { motion } from 'framer-motion';
@@ -88,5 +86,5 @@ export function ButtonLoader({ size = 'sm', className }) {
       <LoadingSpinner size={size} color="white"/>
       <span className="ml-2">Loading...</span>
     </div>);
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
 }

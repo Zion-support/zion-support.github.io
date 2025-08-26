@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Head from 'next/head';
 import { 
   Shield, 
@@ -102,8 +100,6 @@ const Cybersecurity: React.FC = () => {
                 View Solutions
               </a>
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 =======
       title: "Threat Detection & Response",
       description: "Advanced threat detection and rapid incident response capabilities",
@@ -338,16 +334,11 @@ const Cybersecurity: React.FC = () => {
               >
                 View All Services
               </Link>
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Services Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -446,8 +437,6 @@ const Cybersecurity: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-red-400 mr-3 mt-1 flex-shrink-0" />
                     <p className="text-gray-300">{benefit}</p>
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         {/* Security Features */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -507,10 +496,7 @@ const Cybersecurity: React.FC = () => {
                         </li>
                       ))}
                     </ul>
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                   </div>
                 </div>
               ))}
@@ -518,13 +504,7 @@ const Cybersecurity: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* CTA Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         {/* Security Benefits */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -573,17 +553,14 @@ const Cybersecurity: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+        {/* CTA Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Secure Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-<<<<<<< HEAD
-<<<<<<< HEAD
               Let's discuss how comprehensive cybersecurity can protect your organization 
               and give you peace of mind.
             </p>
@@ -602,8 +579,6 @@ const Cybersecurity: React.FC = () => {
               </a>
             </div>
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               Let's discuss how our cybersecurity solutions can protect your digital assets
             </p>
             <Link
@@ -612,19 +587,12 @@ const Cybersecurity: React.FC = () => {
             >
               Get Security Consultation
             </Link>
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </div>
         </section>
       </div>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 =======
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -652,10 +620,7 @@ const Cybersecurity: React.FC = () => {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   );
 };
 

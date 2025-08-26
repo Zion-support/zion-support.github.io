@@ -35,7 +35,7 @@ export function EnterpriseHero() {
                 <img loading="lazy" src="/placeholder.svg" alt="Enterprise Dashboard" className="rounded max-w-full max-h-full object-cover"/>
               </div>
             </div>
-            <div className="absolute -bottom-4 -right-4 bg-card p-4 rounded-lg shadow-lg border border-border">
+            <div className="absolute -bottom-4 -right-4 bg-card p-4 rounded-lg shadow-lg border border-gray-200">
               <p className="text-sm font-medium">Custom branding & white labeling</p>
             </div>
           </div>

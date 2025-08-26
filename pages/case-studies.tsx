@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Navigation from '../components/layout/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 
 const CaseStudies: NextPage = () => {
   const [selectedIndustry, setSelectedIndustry] = useState('All');
@@ -194,7 +193,6 @@ const CaseStudies: NextPage = () => {
 
   const featuredCaseStudies = caseStudies.filter(study => study.featured);
 
-<<<<<<< HEAD
 =======
 
 const CaseStudies: NextPage = () => {
@@ -385,7 +383,6 @@ const CaseStudies: NextPage = () => {
 
   const featuredCaseStudies = caseStudies.filter(study => study.featured);
 
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <Head>
@@ -634,9 +631,6 @@ const CaseStudies: NextPage = () => {
   );
 };
 
-<<<<<<< HEAD
-export default CaseStudies;
-=======
 export default function CaseStudiesPage() {
 	return (
 		<>
@@ -654,7 +648,7 @@ export default function CaseStudiesPage() {
 		</>
 	);
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
 export default CaseStudies;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
+export default CaseStudies;

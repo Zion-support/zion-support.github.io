@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Star, Eye, Heart, ArrowRight, Clock, Users, TrendingUp, Award, Filter, Search, MapPin, Calendar } from 'lucide-react';
@@ -127,7 +124,6 @@ const categories = [
   "All", "Web Development", "Mobile Development", "Cloud & DevOps", "AI & Machine Learning", "IoT Solutions", "Data Analytics"
 ];
 
-<<<<<<< HEAD
 export function FeaturedListingsSection() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [hoveredListing, setHoveredListing] = useState<number | null>(null);
@@ -145,7 +141,6 @@ export function FeaturedListingsSection() {
         staggerChildren: 0.15,
         delayChildren: 0.1
       }
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -183,7 +178,6 @@ export function FeaturedListingsSection() {
       image: '🔒',
       link: '/services/cybersecurity',
       features: ['Security Audits', 'Threat Detection', 'Incident Response']
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
 export function FeaturedListingsSection() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -202,7 +196,7 @@ export function FeaturedListingsSection() {
         staggerChildren: 0.15,
         delayChildren: 0.1
       }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
     }
   ];
 
@@ -215,7 +209,6 @@ export function FeaturedListingsSection() {
   };
 
   return (
-<<<<<<< HEAD
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Enhanced background pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -439,8 +432,6 @@ export function FeaturedListingsSection() {
                       </motion.div>
                     )}
                   </AnimatePresence>
-<<<<<<< HEAD
-=======
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
@@ -498,9 +489,8 @@ export function FeaturedListingsSection() {
                   >
                     Learn More →
                   </Link>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
                 </div>
               </div>
               
@@ -516,7 +506,6 @@ export function FeaturedListingsSection() {
           ))}
         </div>
         
-<<<<<<< HEAD
         {/* Enhanced bottom CTA */}
         <motion.div 
           className="text-center"
@@ -537,8 +526,6 @@ export function FeaturedListingsSection() {
             </div>
           </div>
         </motion.div>
-<<<<<<< HEAD
-=======
         <div className="text-center mt-12">
           <Link
             to="/services"
@@ -550,9 +537,8 @@ export function FeaturedListingsSection() {
             </svg>
           </Link>
         </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
       </div>
     </section>
   );

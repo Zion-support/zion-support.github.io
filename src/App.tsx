@@ -1,19 +1,14 @@
-<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react';
-=======
-import React, { Suspense } from 'react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './layout/AppHeader';
 import { Footer } from './components/Footer';
 import { ChatAssistant } from './components/ChatAssistant';
-<<<<<<< HEAD
 
 // Lazy load pages
 const Home = React.lazy(() => import('./pages/Home'));
 const About = React.lazy(() => import('./pages/About'));
 const Careers = React.lazy(() => import('./pages/Careers'));
-const News = React.lazy(() => import('./pages/News'));
+const News = React.lazy(() => import('./pages/News').then(module => ({ default: (module as any).default || module })));
 const Press = React.lazy(() => import('./pages/Press'));
 const CaseStudies = React.lazy(() => import('./pages/CaseStudies'));
 const WhitePapers = React.lazy(() => import('./pages/WhitePapers'));
@@ -259,31 +254,6 @@ const LoadingFallback = () => (
   </div>
 );
 
-=======
-
-// Lazy load pages
-const Home = React.lazy(() => import('./pages/Home'));
-const About = React.lazy(() => import('./pages/About'));
-const Contact = React.lazy(() => import('./pages/Contact'));
-const Blog = React.lazy(() => import('./pages/Blog'));
-const BlogPost = React.lazy(() => import('./pages/BlogPost'));
-const PartnersPage = React.lazy(() => import('./pages/Partners'));
-const Login = React.lazy(() => import('./pages/Login'));
-const FAQ = React.lazy(() => import('./pages/FAQ'));
-const Careers = React.lazy(() => import('./pages/Careers'));
-const Privacy = React.lazy(() => import('./pages/Privacy'));
-const Terms = React.lazy(() => import('./pages/Terms'));
-const Sitemap = React.lazy(() => import('./pages/Sitemap'));
-const GreenIT = React.lazy(() => import('./pages/GreenIT'));
-
-// Loading component
-const LoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-zion-cyan"></div>
-  </div>
-);
-
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 function App() {
   return (
     <Router>
@@ -306,13 +276,10 @@ function App() {
               <Route path="/green-it" element={<GreenIT />} />
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
-<<<<<<< HEAD
               <Route path="/accessibility" element={<Accessibility />} />
               <Route path="/gdpr" element={<GDPR />} />
               <Route path="/api" element={<API />} />
               <Route path="/status" element={<Status />} />
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </Routes>
           </Suspense>
         </main>

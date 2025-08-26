@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -14,7 +13,6 @@ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
 export default function ProfileDetail() {
     var _a, _b;
-=======
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
@@ -28,7 +26,7 @@ import { HireNowCTA } from "@/components/profile/HireNowCTA";
 export default function ProfileDetail() {
     // useParams is typed as `any` in this environment due to missing type
     // definitions, so avoid passing a type argument to prevent TS2347.
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
     const { profileId } = useParams();
     const [profileData, setProfileData] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
@@ -71,7 +69,6 @@ export default function ProfileDetail() {
         fetchProfile();
     }, [profileId]);
     if (isLoading) {
-<<<<<<< HEAD
         return (_jsx("div", { className: "min-h-screen flex items-center justify-center", children: _jsx("p", { children: "Loading profile..." }) }));
     }
     if (error) {
@@ -86,7 +83,6 @@ export default function ProfileDetail() {
                                         professional_title: (profileData === null || profileData === void 0 ? void 0 : profileData.professional_title) || '',
                                         hourly_rate: (profileData === null || profileData === void 0 ? void 0 : profileData.hourly_rate) || 0
                                     } }), _jsxs("div", { className: "bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6", children: [_jsx("h3", { className: "text-xl font-bold mb-4", children: "Contact" }), _jsxs("div", { className: "flex flex-col space-y-3", children: [profileData.email && (_jsxs("div", { className: "flex items-center gap-2 text-zion-slate-light", children: [_jsx(Mail, { className: "h-4 w-4" }), _jsx("a", { href: `mailto:${profileData.email}`, className: "hover:text-zion-cyan", children: profileData.email })] })), profileData.phone && (_jsxs("div", { className: "flex items-center gap-2 text-zion-slate-light", children: [_jsx(Phone, { className: "h-4 w-4" }), _jsx("span", { children: profileData.phone })] })), profileData.website && (_jsxs("div", { className: "flex items-center gap-2 text-zion-slate-light", children: [_jsx(Globe, { className: "h-4 w-4" }), _jsx("a", { href: profileData.website, target: "_blank", rel: "noopener noreferrer", className: "hover:text-zion-cyan", children: "Website" })] }))] })] }), _jsxs("div", { className: "bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6", children: [_jsx("h3", { className: "text-xl font-bold mb-4", children: "Social" }), _jsxs("div", { className: "flex flex-col space-y-3", children: [profileData.github_url && (_jsxs("a", { href: profileData.github_url, target: "_blank", rel: "noopener noreferrer", className: "flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan", children: [_jsx(Github, { className: "h-4 w-4" }), "GitHub"] })), profileData.twitter_url && (_jsxs("a", { href: profileData.twitter_url, target: "_blank", rel: "noopener noreferrer", className: "flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan", children: [_jsx(Twitter, { className: "h-4 w-4" }), "Twitter"] })), profileData.linkedin_url && (_jsxs("a", { href: profileData.linkedin_url, target: "_blank", rel: "noopener noreferrer", className: "flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan", children: [_jsx(Linkedin, { className: "h-4 w-4" }), "LinkedIn"] }))] })] })] })] }) }), _jsx(Footer, {})] }));
-=======
         return (<div className="min-h-screen flex items-center justify-center">
         <p>Loading profile...</p>
       </div>);
@@ -247,5 +243,5 @@ export default function ProfileDetail() {
       </div>
       
     </>);
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
 }

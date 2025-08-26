@@ -156,7 +156,7 @@ export function TableSkeleton({
   return (
     <div className={cn('space-y-3', className)}>
       {showHeader && (
-        <div className="flex gap-4 pb-2 border-b border-border">
+        <div className="flex gap-4 pb-2 border-b border-gray-200">
           {Array.from({ length: columns }).map((_, i) => (
             <Skeleton key={i} className="h-5 flex-1" />
           ))}

@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React from 'react';
 
 interface ButtonProps {
@@ -58,11 +55,8 @@ export function Button({
     </button>
   );
 }
-<<<<<<< HEAD
-=======
 // Re-export from Button.tsx for backward compatibility
 export { Button, buttonVariants } from './Button';
 export type { ButtonProps } from './Button';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======

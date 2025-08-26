@@ -1,12 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
 import Link from 'next/link';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
+import { Link } from 'react-router-dom';
 import { 
   Award, 
   Users, 
@@ -84,7 +80,7 @@ export function AboutSection() {
             </p>
 
             <Link
-              href="/about"
+              to="/about"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-neon-lg hover:scale-105 transition-all duration-300 transform"
             >
               Learn Our Story
@@ -158,7 +154,7 @@ export function AboutSection() {
 
           <div className="text-center">
             <Link
-              href="/expertise"
+              to="/expertise"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-neon-lg hover:scale-105 transition-all duration-300 transform"
             >
               Explore Our Expertise
@@ -177,7 +173,7 @@ export function AboutSection() {
             decades of combined experience in technology and business transformation.
           </p>
           <Link
-            href="/team"
+            to="/team"
             className="inline-flex items-center gap-2 px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
           >
             Meet the Team

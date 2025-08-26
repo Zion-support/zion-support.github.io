@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -256,6 +255,3 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
-=======
-export {};
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

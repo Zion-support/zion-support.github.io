@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
@@ -43,7 +42,6 @@ export function SectionLoader() {
 }
 export function CardLoader() {
     return (_jsx("div", { className: "p-8 flex items-center justify-center", children: _jsx(LoadingSpinner, { size: "md", text: "Loading..." }) }));
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
@@ -86,5 +84,5 @@ export function InlineLoader({ size = 'sm', variant = 'default' }) {
       <LoadingSpinner size={size} variant={variant} className="mr-2"/>
       <span className="text-sm text-gray-600">Loading...</span>
     </div>);
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
 }

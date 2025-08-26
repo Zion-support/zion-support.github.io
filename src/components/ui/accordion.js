@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var __rest = (this && this.__rest) || function (s, e) {
     var t = {};
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
@@ -36,7 +35,6 @@ const AccordionContent = React.forwardRef((_a, ref) => {
     return (_jsx("div", Object.assign({ ref: ref, className: cn('overflow-hidden text-sm transition-all', isOpen ? 'max-h-96 pb-4' : 'max-h-0', className) }, props, { children: children })));
 });
 AccordionContent.displayName = 'AccordionContent';
-=======
 "use client";
 import * as React from "react";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
@@ -56,5 +54,5 @@ const AccordionContent = React.forwardRef(({ className, children, ...props }, re
     <div className={cn("pb-4 pt-0", className)}>{children}</div>
   </AccordionPrimitive.Content>));
 AccordionContent.displayName = AccordionPrimitive.Content.displayName;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };

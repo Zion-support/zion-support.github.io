@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { CommunityDiscussion } from "@/components/CommunityDiscussion";
@@ -30,18 +29,14 @@ export default function Dashboard() {
       });
     }
   };
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
 
 const Dashboard: React.FC = () => {
   return (
     <>
-<<<<<<< HEAD
       
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto px-4 py-8">
@@ -242,7 +237,6 @@ const Dashboard: React.FC = () => {
         </div>
       </div>
       
-=======
       <Helmet>
         <title>Dashboard - Zion Tech Group</title>
         <meta name="description" content="Access your Zion Tech Group dashboard. Monitor projects, manage services, and track your technology solutions." />
@@ -264,7 +258,7 @@ const Dashboard: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
     </>
   );
 };

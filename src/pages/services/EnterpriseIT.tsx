@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Head from 'next/head';
 import { Building2, Shield, Database, Cloud, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
@@ -31,86 +29,10 @@ export default function EnterpriseIT() {
       title: "Data Management",
       description: "Enterprise data strategy and management solutions",
       features: ["Data Governance", "Business Intelligence", "Analytics Platforms", "Data Integration"]
-=======
-<<<<<<< HEAD
-import { Building, Server, Database, Shield, Users, Globe, Zap, Cpu, Network, Lock, Target, TrendingUp } from 'lucide-react';
-
-const EnterpriseIT: React.FC = () => {
-  const enterpriseServices = [
-    {
-      icon: Building,
-      title: "Enterprise Architecture",
-      description: "Design and implement scalable, secure, and efficient IT infrastructure that supports business growth",
-      features: ["System design & planning", "Technology roadmaps", "Integration strategies", "Performance optimization"]
-    },
-    {
-      icon: Server,
-      title: "Infrastructure Management",
-      description: "Comprehensive management of servers, networks, and data centers with 24/7 monitoring and support",
-      features: ["Server administration", "Network management", "Data center operations", "Backup & disaster recovery"]
-    },
-    {
-      icon: Database,
-      title: "Data Management",
-      description: "Enterprise-grade data solutions including databases, warehouses, and business intelligence platforms",
-      features: ["Database design", "Data warehousing", "ETL processes", "Business intelligence"]
-    },
-    {
-      icon: Shield,
-      title: "Enterprise Security",
-      description: "Multi-layered security solutions to protect enterprise assets, data, and user access",
-      features: ["Identity management", "Access control", "Threat detection", "Compliance management"]
-    },
-    {
-      icon: Users,
-      title: "User Management",
-      description: "Comprehensive user lifecycle management with role-based access control and single sign-on",
-      features: ["Active Directory", "LDAP integration", "SSO solutions", "User provisioning"]
-    },
-    {
-      icon: Globe,
-      title: "Cloud Migration",
-      description: "Strategic cloud adoption and migration services for hybrid and multi-cloud environments",
-      features: ["Cloud strategy", "Migration planning", "Hybrid solutions", "Cost optimization"]
-    }
-  ];
-
-  const technologies = [
-    {
-      name: "Microsoft",
-      description: "Windows Server, Active Directory, SQL Server, Azure",
-      icon: "MS"
-    },
-    {
-      name: "VMware",
-      description: "Virtualization, cloud management, networking",
-      icon: "VM"
-    },
-    {
-      name: "Cisco",
-      description: "Networking, security, collaboration solutions",
-      icon: "CS"
-    },
-    {
-      name: "Oracle",
-      description: "Database, middleware, cloud infrastructure",
-      icon: "OR"
-    },
-    {
-      name: "AWS",
-      description: "Cloud computing, storage, analytics",
-      icon: "AW"
-    },
-    {
-      name: "Azure",
-      description: "Microsoft cloud platform and services",
-      icon: "AZ"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
     }
   ];
 
   const benefits = [
-<<<<<<< HEAD
     "Reduced IT costs and improved efficiency",
     "Enhanced security and compliance",
     "Scalable and flexible infrastructure",
@@ -146,7 +68,6 @@ const EnterpriseIT: React.FC = () => {
             <a href="#services" className="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold rounded-lg transition-all duration-300">
               Learn More
             </a>
-=======
     "Improved operational efficiency and productivity",
     "Enhanced security and compliance",
     "Scalable infrastructure for business growth",
@@ -220,12 +141,11 @@ const EnterpriseIT: React.FC = () => {
                 Get Started
               </a>
             </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Services Section */}
       <section id="services" className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -239,7 +159,6 @@ const EnterpriseIT: React.FC = () => {
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3" />
-=======
       {/* Enterprise Services Grid */}
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -268,7 +187,7 @@ const EnterpriseIT: React.FC = () => {
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="text-sm text-gray-400 flex items-start">
                       <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
                       {feature}
                     </li>
                   ))}
@@ -279,7 +198,6 @@ const EnterpriseIT: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 bg-gray-800/30">
         <div className="max-w-6xl mx-auto">
@@ -291,7 +209,6 @@ const EnterpriseIT: React.FC = () => {
                   <CheckCircle className="w-8 h-8 text-white" />
                 </div>
                 <p className="text-gray-300">{benefit}</p>
-=======
       {/* Technology Partners */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -316,14 +233,13 @@ const EnterpriseIT: React.FC = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>
                 <p className="text-sm text-gray-300">{tech.description}</p>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
               </div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Contact Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -347,7 +263,6 @@ const EnterpriseIT: React.FC = () => {
             Contact Us Today
             <ArrowRight className="w-5 h-5 ml-2" />
           </a>
-=======
       {/* Industry Solutions */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -488,7 +403,6 @@ const EnterpriseIT: React.FC = () => {
           </div>
 =======
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { Link } from 'react-router-dom';
 import { CogIcon } from '@heroicons/react/24/outline';
 
@@ -514,29 +428,17 @@ const $service: React.FC = () => {
           >
             Contact Us for More Information
           </Link>
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-56af
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         </div>
       </section>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
+};
+
+export default $service;
+=======
+};
+
+export default $service;
+=======
 }
-=======
-};
-
-<<<<<<< HEAD
-export default EnterpriseIT;
-=======
-export default $service;
->>>>>>> origin/cursor/website-audit-and-enhancement-56af
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-};
-
-export default $service;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

@@ -93,14 +93,10 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
     trainingData: "Proprietary + Public Datasets"
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   // AI-Powered Predictive Healthcare Analytics
 =======
   // AI-Powered Drug Discovery Platform
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   {
     id: "ai-drug-discovery-platform",
     title: "AI-Powered Drug Discovery Platform",
@@ -161,14 +157,10 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
     trainingData: "Proprietary Pharmaceutical Data"
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   // Autonomous Financial Trading AI
 =======
   // AI-Powered Financial Trading Platform
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   {
     id: "ai-financial-trading-platform",
     title: "AI-Powered Financial Trading Platform",
@@ -229,14 +221,10 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
     trainingData: "Market Data + Historical Trading Data"
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   // AI-Powered Supply Chain Optimization
 =======
   // AI-Powered Climate Prediction Engine
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   {
     id: "ai-climate-prediction-engine",
     title: "AI-Powered Climate Prediction Engine",
@@ -358,14 +346,10 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
     trainingData: "Legal Documents + Case Law"
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   // AI-Powered Educational Personalization
 =======
   // AI-Powered Creative Design Platform
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   {
     id: "ai-creative-design-platform",
     title: "AI-Powered Creative Design Platform",

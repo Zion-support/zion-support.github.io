@@ -1,8 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 =======
 import { 
   Building, 
@@ -18,7 +15,6 @@ import {
   Star,
   TrendingUp,
   Zap
-=======
 import { Helmet } from 'react-helmet-async';
 import { 
   Handshake, 
@@ -29,13 +25,12 @@ import {
   Building,
   CheckCircle,
   Star
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
 } from 'lucide-react';
 
 const Partners: React.FC = () => {
   const partnershipTypes = [
     {
-<<<<<<< HEAD
       title: "Technology Partners",
       description: "Leading technology companies providing infrastructure and platforms",
       icon: Cpu,
@@ -161,12 +156,9 @@ const Partners: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
-=======
       icon: Building,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
       title: 'Technology Partners',
       description: 'Strategic partnerships with leading technology companies to deliver comprehensive solutions.',
       benefits: [
@@ -231,7 +223,6 @@ const Partners: React.FC = () => {
       description: 'Partnership for Google Cloud Platform solutions and AI services.'
     },
     {
-<<<<<<< HEAD
       step: '4',
       title: 'Launch',
       description: 'Begin partnership activities and initiatives'
@@ -312,7 +303,6 @@ const Partners: React.FC = () => {
       metrics: ["30% Patient Outcome Improvement", "15 Healthcare Systems", "5 Joint Products"],
       partner: "Johnson & Johnson",
       category: "Industry"
-=======
       name: 'Cisco',
       logo: 'C',
       category: 'Network Partner',
@@ -320,35 +310,11 @@ const Partners: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
-  const partnerBenefits = [
-    {
-      icon: TrendingUp,
-      title: 'Revenue Growth',
-      description: 'Access new markets and revenue streams through our partnership network.'
-    },
-    {
-      icon: Star,
-      title: 'Brand Recognition',
-      description: 'Leverage our established brand and market presence in the technology sector.'
-    },
-    {
-      icon: CheckCircle,
-      title: 'Quality Assurance',
-      description: 'Benefit from our proven methodologies and quality standards.'
-    },
-    {
-      icon: Users,
-      title: 'Expert Support',
-      description: 'Access to our team of technology experts and consultants.'
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+  return (
     }
   ];
 
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -452,7 +418,6 @@ const Partners: React.FC = () => {
                       ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400'
                       : 'bg-gray-800/50 border-gray-700/50 text-gray-300 hover:border-cyan-500/30'
                   }`}
-=======
     <>
       <Helmet>
         <title>Partners - Zion Tech Group</title>
@@ -474,7 +439,7 @@ const Partners: React.FC = () => {
                 <a 
                   href="#partnerships" 
                   className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-300"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
                 >
                   Explore Partnerships
                 </a>
@@ -489,10 +454,7 @@ const Partners: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       {partnerCategories.map((category, categoryIndex) => (
         <div key={categoryIndex} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
           <div className="text-center mb-12">
@@ -619,7 +581,6 @@ const Partners: React.FC = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">Strategic Partners</h2>
               <p className="text-gray-300">Our key alliance partners driving innovation and growth</p>
-=======
         {/* Partnership Types */}
         <section id="partnerships" className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -628,7 +589,7 @@ const Partners: React.FC = () => {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 We offer various partnership models to suit different business needs and objectives.
               </p>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -662,10 +623,7 @@ const Partners: React.FC = () => {
                 We're proud to work with leading technology companies and organizations worldwide.
               </p>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 =======
               className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-medium rounded-lg transition-all duration-200 transform hover:scale-105"
             >
@@ -675,7 +633,6 @@ const Partners: React.FC = () => {
             <button className="inline-flex items-center justify-center px-8 py-4 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-medium rounded-lg transition-all duration-200">
               Download Partner Kit
             </button>
-=======
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {currentPartners.map((partner, index) => (
@@ -689,7 +646,7 @@ const Partners: React.FC = () => {
                 </div>
               ))}
             </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
           </div>
         </section>
 
@@ -799,7 +756,6 @@ const Partners: React.FC = () => {
       </div>
     </>
   );
-<<<<<<< HEAD
 }
 =======
 import { SEO } from "@/components/SEO";
@@ -850,8 +806,7 @@ export default function Partners() {
     </div>
   );
 }
-=======
 };
 
 export default Partners;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======

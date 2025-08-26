@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Head from 'next/head';
 import { 
   Cloud, 
@@ -38,40 +36,23 @@ const CloudDevOps: React.FC = () => {
       description: "Comprehensive monitoring and logging solutions",
       icon: "📊",
       features: ["Real-time Monitoring", "Log Aggregation", "Alerting Systems", "Performance Metrics"]
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { SEO } from '@/components/SEO';
-import { motion } from 'framer-motion';
-import { Cloud, Server, GitBranch, Shield, Zap, TrendingUp, Users, Globe } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 =======
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/website-audit-and-enhancement-98df
-=======
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
 =======
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
 const CloudDevOps: React.FC = () => {
   const features = [
     {
       icon: Cloud,
       title: "Cloud Migration",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      description: "Seamless migration to cloud infrastructure with zero downtime"
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       description: "Seamless migration to cloud platforms with minimal downtime",
       features: ["AWS Migration", "Azure Migration", "Google Cloud Migration", "Multi-cloud Strategy"],
       icon: "☁️"
@@ -87,11 +68,7 @@ const CloudDevOps: React.FC = () => {
       description: "Manage and scale containerized applications efficiently",
       features: ["Kubernetes", "Docker", "Service Mesh", "Microservices Architecture"],
       icon: "📦"
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-98df
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { Link } from 'react-router-dom';
 import { Cloud, Zap, Database, Server, GitBranch, Cpu, Globe, Shield } from 'lucide-react';
 
@@ -102,55 +79,25 @@ const CloudDevOps: React.FC = () => {
       title: "Cloud Migration",
       description: "Seamless migration to cloud platforms with minimal downtime and maximum efficiency.",
       features: ["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"]
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-438b
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     },
     {
       icon: Server,
       title: "Infrastructure as Code",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      description: "Automated infrastructure management and deployment"
+      description: "Automated infrastructure provisioning and management using modern DevOps practices.",
+      features: ["Terraform", "AWS CloudFormation", "Azure ARM", "Kubernetes"]
 =======
       description: "Automated infrastructure provisioning and management using modern DevOps practices.",
       features: ["Terraform", "AWS CloudFormation", "Azure ARM", "Kubernetes"]
->>>>>>> origin/cursor/website-audit-and-enhancement-438b
-=======
-      description: "Automated infrastructure provisioning and management using modern DevOps practices.",
-      features: ["Terraform", "AWS CloudFormation", "Azure ARM", "Kubernetes"]
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     },
     {
       icon: GitBranch,
       title: "CI/CD Pipelines",
-<<<<<<< HEAD
-<<<<<<< HEAD
-      description: "Streamlined development and deployment workflows"
-    },
-    {
-      icon: Shield,
-      title: "DevSecOps",
-      description: "Security integrated into every stage of development"
-    }
-  ];
-
-  const benefits = [
-    "Faster deployment cycles by 60%",
-    "Reduced infrastructure costs by 30%",
-    "Improved system reliability and uptime",
-    "Enhanced team collaboration and productivity",
-    "Scalable solutions that grow with your business"
-=======
       description: "Version-controlled infrastructure management and deployment",
       features: ["Terraform", "CloudFormation", "Ansible", "Infrastructure Automation"],
 =======
 =======
       description: "Version-controlled infrastructure management and deployment",
       features: ["Terraform", "CloudFormation", "Ansible", "Infrastructure Automation"],
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       description: "Seamless migration to cloud platforms with minimal downtime",
       features: ["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"],
       icon: "☁️"
@@ -171,40 +118,14 @@ const CloudDevOps: React.FC = () => {
       title: "Infrastructure Management",
       description: "Automate and manage cloud infrastructure efficiently",
       features: ["Terraform/CloudFormation", "Cost Optimization", "Security Hardening", "Backup & Recovery"],
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
       icon: "🏗️"
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
-      icon: "🏗️"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     }
   ];
 
   const cloudPlatforms = [
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
-    { name: "Amazon Web Services", icon: "🔶", description: "Enterprise-grade cloud solutions" },
-    { name: "Microsoft Azure", icon: "🔷", description: "Hybrid cloud and enterprise integration" },
-    { name: "Google Cloud Platform", icon: "🔸", description: "AI-first cloud infrastructure" },
-    { name: "Multi-Cloud", icon: "🌈", description: "Best-of-breed cloud strategy" }
->>>>>>> origin/cursor/website-audit-and-enhancement-98df
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
-      <SEO 
-        title="Cloud & DevOps - Zion Tech Group"
-        description="Streamline your development and operations with modern cloud infrastructure and DevOps practices."
-        keywords="cloud services, DevOps, infrastructure as code, CI/CD, cloud migration"
-        canonical="https://ziontechgroup.com/services/cloud"
-      />
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     { name: "AWS", features: ["EC2", "S3", "Lambda", "RDS", "CloudFormation"] },
     { name: "Azure", features: ["Virtual Machines", "Blob Storage", "Functions", "SQL Database", "ARM Templates"] },
     { name: "Google Cloud", features: ["Compute Engine", "Cloud Storage", "Cloud Functions", "Cloud SQL", "Deployment Manager"] }
@@ -217,8 +138,6 @@ const CloudDevOps: React.FC = () => {
     { category: "Security", tools: ["Vault", "AWS IAM", "Azure AD", "Google IAM", "Prisma Cloud"] }
   ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   const benefits = [
     "Faster deployment cycles and reduced time to market",
     "Improved system reliability and uptime",
@@ -378,8 +297,6 @@ const CloudDevOps: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-blue-400 mr-3 mt-1 flex-shrink-0" />
                     <p className="text-gray-300">{benefit}</p>
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   return (
     <>
       <Helmet>
@@ -390,76 +307,8 @@ const CloudDevOps: React.FC = () => {
         <meta property="og:url" content="https://ziontechgroup.com/services/cloud-devops" />
         <link rel="canonical" href="https://ziontechgroup.com/services/cloud-devops" />
       </Helmet>
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
-
-<<<<<<< HEAD
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-green-900 via-green-800 to-emerald-900 text-white py-20">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative container mx-auto px-4 text-center">
-          <motion.h1 
-            className="text-5xl md:text-6xl font-bold mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            Cloud & DevOps
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
-              {" "}Excellence
-            </span>
-          </motion.h1>
-          <motion.p 
-            className="text-xl md:text-2xl text-green-100 max-w-4xl mx-auto leading-relaxed mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Accelerate your development cycles, improve reliability, and scale your infrastructure 
-            with our comprehensive cloud and DevOps solutions.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <button className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105">
-              Start Your DevOps Journey
-            </button>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our DevOps Capabilities</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              End-to-end DevOps solutions designed to transform your development and operations
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                className="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-green-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
-              </motion.div>
-=======
 =======
 
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       description: "Automated build, test, and deployment pipelines for faster, more reliable releases.",
       features: ["Jenkins", "GitHub Actions", "GitLab CI", "Azure DevOps"]
     },
@@ -588,47 +437,13 @@ const CloudDevOps: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{platform.name}</h3>
                 <p className="text-gray-300">{platform.description}</p>
               </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-438b
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             ))}
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our DevOps Solutions?</h2>
-              <p className="text-xl text-gray-600">
-                Experience the benefits of modern DevOps practices with our expert team
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              {benefits.map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  className="flex items-center p-4 bg-white rounded-lg shadow-sm"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                    <TrendingUp className="w-4 h-4 text-green-600" />
-                  </div>
-                  <span className="text-lg text-gray-700">{benefit}</span>
-                </motion.div>
-              ))}
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -684,33 +499,13 @@ const CloudDevOps: React.FC = () => {
                   and best practices.
                 </p>
               </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-438b
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Operations?</h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let's discuss how DevOps can streamline your development process and improve your infrastructure.
-          </p>
-          <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-            Schedule a Consultation
-          </button>
-        </div>
-      </section>
-    </div>
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -774,10 +569,7 @@ const CloudDevOps: React.FC = () => {
                         </li>
                       ))}
                     </ul>
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
                   </div>
                 </div>
               ))}
@@ -785,13 +577,7 @@ const CloudDevOps: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* CTA Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         {/* Cloud Platforms */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -961,17 +747,14 @@ const CloudDevOps: React.FC = () => {
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+        {/* CTA Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Infrastructure?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-<<<<<<< HEAD
-<<<<<<< HEAD
               Let's discuss how cloud and DevOps can accelerate your development 
               and improve your system reliability.
             </p>
@@ -990,8 +773,6 @@ const CloudDevOps: React.FC = () => {
               </a>
             </div>
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               Let's discuss how cloud migration and DevOps can accelerate your business
             </p>
             <Link
@@ -1000,24 +781,13 @@ const CloudDevOps: React.FC = () => {
             >
               Start Your Cloud Journey
             </Link>
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
           </div>
         </section>
       </div>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-98df
-=======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-bb5a
 =======
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -1044,11 +814,7 @@ const CloudDevOps: React.FC = () => {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-438b
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   );
 };
 

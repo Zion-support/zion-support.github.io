@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { jsx as _jsx } from "react/jsx-runtime";
 import { createContext, useContext, useState } from 'react';
 const WhitelabelContext = createContext(undefined);
@@ -25,7 +24,6 @@ export function useWhitelabel() {
     }
     return context;
 }
-=======
 import React, { createContext, useContext } from 'react';
 const defaultConfig = {
     companyName: 'Zion Tech Group',
@@ -48,4 +46,4 @@ export const WhitelabelProvider = ({ children, config = {} }) => {
       {children}
     </WhitelabelContext.Provider>);
 };
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======

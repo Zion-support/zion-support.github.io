@@ -1,55 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 =======
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from '../data/ultimateMicroSaasServices2025';
-import { INNOVATIVE_ENTERPRISE_SOLUTIONS_2025 } from '../data/innovativeEnterpriseSolutions2025';
-import { EMERGING_TECHNOLOGY_SOLUTIONS_2025 } from '../data/emergingTechnologySolutions2025';
-
-interface Service {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
-  contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-  };
-  websiteUrl?: string;
-  technology?: string[];
-  integrations?: string[];
-  compliance?: string[];
-  roi?: string;
-  competitors?: string[];
-  demoUrl?: string;
-  caseStudies?: string[];
-  marketTrend?: string;
-  industryFocus?: string[];
-  scalability?: string;
-  customizationLevel?: string;
-  innovationLevel?: string;
-  serviceLevel?: string;
-}
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0542
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 
 const UltimatePricing2025: React.FC = () => {
   const pricingTiers = [

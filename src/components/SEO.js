@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { Helmet } from 'react-helmet-async';
 export function SEO({ title, description, keywords, canonical, image = '/images/zion-og-image.jpg', type = 'website', author = 'Zion Tech Group', publishedTime, modifiedTime, section, tags = [], structuredData }) {
@@ -62,7 +61,6 @@ export function SEO({ title, description, keywords, canonical, image = '/images/
                         }
                     ]
                 }) }))] }));
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 export function SEO({ title, description, keywords, image, canonical, ogImage, url }) {
@@ -97,5 +95,5 @@ export function SEO({ title, description, keywords, image, canonical, ogImage, u
       <meta name="author" content={siteName}/>
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </Helmet>);
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
 }

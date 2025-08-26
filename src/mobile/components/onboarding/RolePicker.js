@@ -14,9 +14,14 @@ export function RolePicker({ onSelect }) {
       <p className="text-muted-foreground">{t('onboarding.subtitle')}</p>
 
       <div className="space-y-3 mt-6">
-        <Card className={`cursor-pointer transition-all ${selectedRole === 'talent'
-            ? "border-primary bg-primary/5"
-            : "border-border hover:border-primary/40"}`} onClick={() => handleSelect('talent')}>
+        <Card 
+          className={`cursor-pointer transition-all ${
+            selectedRole === 'talent' 
+              ? "border-primary bg-primary/5" 
+              : "border-gray-200 hover:border-primary/40"
+          }`}
+          onClick={() => handleSelect('talent')}
+        >
           <CardContent className="p-5">
             <div className="flex items-center">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
@@ -31,9 +36,14 @@ export function RolePicker({ onSelect }) {
           </CardContent>
         </Card>
 
-        <Card className={`cursor-pointer transition-all ${selectedRole === 'client'
-            ? "border-primary bg-primary/5"
-            : "border-border hover:border-primary/40"}`} onClick={() => handleSelect('client')}>
+        <Card 
+          className={`cursor-pointer transition-all ${
+            selectedRole === 'client' 
+              ? "border-primary bg-primary/5" 
+              : "border-gray-200 hover:border-primary/40"
+          }`}
+          onClick={() => handleSelect('client')}
+        >
           <CardContent className="p-5">
             <div className="flex items-center">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">

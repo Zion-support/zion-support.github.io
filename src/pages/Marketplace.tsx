@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React, { useState, useEffect, useMemo } from "react";
 import { Button } from "@/components/ui/button";
@@ -260,7 +259,6 @@ export default function Marketplace() {
     
   );
 }
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -293,4 +291,4 @@ const Marketplace: React.FC = () => {
 };
 
 export default Marketplace;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======

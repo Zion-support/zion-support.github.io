@@ -1,20 +1,16 @@
-<<<<<<< HEAD
-import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { GradientHeading } from "@/components/GradientHeading";
 import { SEO } from "@/components/SEO";
-<<<<<<< HEAD
-import { Card, CardContent, CardFooter } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
-import { Input } from "@/components/ui/Input";
-=======
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
+import { Card, CardContent, CardFooter } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
+import { Input } from "@/components/ui/Input";
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
 import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost";
 import { BLOG_POSTS } from "@/data/blog-posts";
@@ -49,7 +45,6 @@ export default function Blog() {
     });
     // Get featured posts
     const featuredPosts = posts.filter(post => post.isFeatured);
-<<<<<<< HEAD
     return (_jsxs(_Fragment, { children: [_jsx(SEO, { title: "Blog - AI & Tech Insights", description: "Stay updated with the latest trends in AI technology, marketplace strategies, and IT services. Expert articles on innovation, sustainability, and digital transformation.", keywords: "AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT", canonical: "https://ziontechgroup.com/blog" }), _jsx("div", { className: "min-h-screen bg-zion-blue pt-12 pb-20 px-4", children: _jsxs("div", { className: "container mx-auto", children: [_jsxs("div", { className: "text-center mb-12", children: [_jsx(GradientHeading, { children: "AI & Tech Insights" }), _jsx("p", { className: "mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto", children: "Expert perspectives on artificial intelligence, tech innovation, and digital transformation" })] }), featuredPosts.length > 0 && (_jsxs("div", { className: "mb-16", children: [_jsx("h2", { className: "text-2xl font-bold text-white mb-6", children: "Featured Article" }), _jsxs("div", { className: "grid grid-cols-1 lg:grid-cols-2 gap-8", children: [_jsx("div", { className: "aspect-video overflow-hidden rounded-lg", children: _jsx("img", { src: featuredPosts[0].featuredImage, alt: featuredPosts[0].title, className: "object-cover w-full h-full hover:scale-105 transition-transform duration-300", onError: (e) => {
                                                     const target = e.currentTarget;
                                                     target.src = "/images/blog-placeholder.svg";
@@ -66,7 +61,6 @@ export default function Blog() {
                                         setSearchQuery("");
                                         setSelectedCategory("All Categories");
                                     }, className: "border-zion-purple text-zion-purple hover:bg-zion-purple/10", children: "Clear all filters" })] }))] }) })] }));
-=======
     return (<>
       <SEO title="Blog - AI & Tech Insights" description="Stay updated with the latest trends in AI technology, marketplace strategies, and IT services. Expert articles on innovation, sustainability, and digital transformation." keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT" canonical="https://ziontechgroup.com/blog"/>
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
@@ -193,5 +187,5 @@ export default function Blog() {
         </div>
       </div>
     </>);
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
 }
