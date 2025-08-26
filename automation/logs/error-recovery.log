@@ -4720,3 +4720,6 @@ No metrics available
 [2025-08-26T12:42:14.598Z] Analyzing link: https://wikipedia.org
 [2025-08-26T12:42:14.645Z] Analysis complete for https://wikipedia.org: poor (403)
 [2025-08-26T12:42:15.646Z] Queue processing complete
+[2025-08-26T12:42:44.331Z] CRITICAL MEMORY ALERT: Memory usage critical: 99.27% - Memory pressure detected
+[2025-08-26T12:42:44.331Z] ALERT [CRITICAL] Memory usage critical: 99.27%
+[2025-08-26T12:42:44.331Z] metrics rss=30.26 MB heapUsed=4.26 MB cpuLoad=12.21 memUsage=99.27%

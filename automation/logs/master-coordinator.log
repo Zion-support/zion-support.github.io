@@ -1319,3 +1319,7 @@
 [2025-08-26T12:42:09.652Z] autonomous-manager started successfully
 [2025-08-26T12:42:13.025Z] link-health-scheduler started successfully
 [2025-08-26T12:42:17.856Z] enhanced-autonomous healthy - uptime: 9733s
+[2025-08-26T12:42:32.820Z] performance-monitor exited: code=0, signal=null
+[2025-08-26T12:42:32.820Z] Auto-restarting performance-monitor (attempt 1)
+[2025-08-26T12:42:40.823Z] performance-monitor started successfully
+[2025-08-26T12:42:47.854Z] enhanced-autonomous healthy - uptime: 9763s

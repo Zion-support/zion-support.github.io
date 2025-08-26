@@ -3056,3 +3056,18 @@ Alerts:
 [2025-08-26T12:41:44.067Z] metrics rss=30.55 MB heapUsed=4.38 MB cpuLoad=8.71 memUsage=94.74%
 [2025-08-26T12:42:14.234Z] Starting Real-Time Performance Monitor
 [2025-08-26T12:42:14.329Z] Starting real-time performance monitoring
+[2025-08-26T12:42:19.904Z] Starting Real-Time Performance Monitor
+[2025-08-26T12:42:19.918Z] [real-time-performance-monitor] [2025-08-26T12:42:19.904Z] Starting Real-Time Performance Monitor
+[2025-08-26T12:42:19.918Z] Starting real-time performance monitoring
+[2025-08-26T12:42:19.918Z] [real-time-performance-monitor] [2025-08-26T12:42:19.918Z] Starting real-time performance monitoring
+[2025-08-26T12:42:37.913Z] Starting Real-Time Performance Monitor
+[2025-08-26T12:42:37.919Z] Starting real-time performance monitoring
+[2025-08-26T12:42:44.331Z] CRITICAL MEMORY ALERT: Memory usage critical: 99.27% - Memory pressure detected
+[2025-08-26T12:42:44.331Z] ALERT [CRITICAL] Memory usage critical: 99.27%
+[2025-08-26T12:42:44.331Z] metrics rss=30.26 MB heapUsed=4.26 MB cpuLoad=12.21 memUsage=99.27%
+[2025-08-26T12:42:49.921Z] CRITICAL MEMORY ALERT: Memory usage critical: 95.93% - Memory pressure detected
+[2025-08-26T12:42:49.921Z] ALERT [CRITICAL] Memory usage critical: 95.93%
+[2025-08-26T12:42:49.921Z] [real-time-performance-monitor] [2025-08-26T12:42:49.921Z] CRITICAL MEMORY ALERT: Memory usage critical: 95.93% - Memory pressure detected
+[2025-08-26T12:42:49.921Z] metrics rss=30.63 MB heapUsed=4.29 MB cpuLoad=11.79 memUsage=95.93%
+[2025-08-26T12:42:49.922Z] [real-time-performance-monitor] [2025-08-26T12:42:49.921Z] ALERT [CRITICAL] Memory usage critical: 95.93%
+[2025-08-26T12:42:49.922Z] [real-time-performance-monitor] [2025-08-26T12:42:49.921Z] metrics rss=30.63 MB heapUsed=4.29 MB cpuLoad=11.79 memUsage=95.93%

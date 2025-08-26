@@ -2798,3 +2798,9 @@
 [2025-08-26T12:42:12.358Z] Starting Link Health Scheduler
 [2025-08-26T12:42:12.538Z] Starting Link Health Scheduler
 [2025-08-26T12:42:12.543Z] Scheduled 4 links for health checks
+[2025-08-26T12:42:20.503Z] Starting Link Health Scheduler
+[2025-08-26T12:42:20.569Z] [link-health-scheduler] [2025-08-26T12:42:20.503Z] Starting Link Health Scheduler
+[2025-08-26T12:42:20.569Z] Starting Link Health Scheduler
+[2025-08-26T12:42:20.574Z] Scheduled 4 links for health checks
+[2025-08-26T12:42:20.576Z] [link-health-scheduler] [2025-08-26T12:42:20.569Z] Starting Link Health Scheduler
+[2025-08-26T12:42:20.577Z] [link-health-scheduler] [2025-08-26T12:42:20.574Z] Scheduled 4 links for health checks
