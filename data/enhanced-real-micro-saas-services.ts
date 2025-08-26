@@ -5725,8 +5725,8 @@ export const injectedAdditionalServices: EnhancedRealMicroSaasService[] = [
   }
 ];
 
-// Service categories
-export const serviceCategories = [
+// Service categories (detailed)
+export const serviceCategoriesDetailed = [
   {
     name: 'Quantum Computing',
     description: 'Revolutionary quantum computing solutions',
@@ -7125,8 +7125,8 @@ export const serviceCategories = [
   }
 ];
 
-// Service categories (names list)
-export const serviceCategoryNames = [
+// Service categories (labels)
+export const serviceCategoryLabels = [
   'All',
   'AI & Machine Learning',
   'Cloud & Infrastructure',

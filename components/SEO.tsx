@@ -12,7 +12,7 @@ interface SEOProps {
   noIndex?: boolean;
   noindex?: boolean;
   nofollow?: boolean;
-  jsonLd?: any;
+  jsonLd?: unknown;
 }
 
 const DEFAULTS = {
@@ -51,12 +51,6 @@ export default function SEO({ title, description, canonical, ogImage, image, noI
 		return u.endsWith('/') ? u : `${u}/`;
 	}
 	const canonicalUrl = withTrailingSlash(canonical ? toAbsoluteUrl(canonical) : normalizedCanonical);
-
-	// Mark SEO rendered synchronously to avoid duplicate default + page-level SEO
-	const seoCtx = useSEOContext();
-	if (seoCtx && !seoCtx.renderedRef.current) {
-		seoCtx.renderedRef.current = true;
-	}
 
 	// Default JSON-LD if none provided
 	const defaultJsonLd = [
