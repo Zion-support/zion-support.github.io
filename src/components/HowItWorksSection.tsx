@@ -118,6 +118,7 @@ export default function HowItWorksSection() {
       }
     }
   };
+<<<<<<< HEAD
 
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -127,6 +128,8 @@ export default function HowItWorksSection() {
       transition: { duration: 0.6, ease: "easeOut" }
     }
   };
+=======
+>>>>>>> main
 
   const statsVariants = {
     hidden: { opacity: 0, scale: 0.8 },

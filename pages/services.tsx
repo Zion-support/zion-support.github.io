@@ -1,218 +1,280 @@
-import Head from 'next/head'
-import { AppLayout } from '../src/layout/AppLayout'
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code } from 'lucide-react'
+import PageTransition from '../src/components/PageTransition'
 
 export default function Services() {
 	const title = 'Services — Zion Tech Group'
 	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.'
 
 	return (
-		<AppLayout>
-			<Head>
-				<title>{title}</title>
-				<meta name="description" content={description} />
-				<link rel="canonical" href="https://ziontechgroup.com/services"/>
-				<meta property="og:title" content="Services - Zion Tech Group"/>
-				<meta property="og:description" content="End-to-end technology solutions: Micro SaaS, IT services, and applied AI."/>
-				<meta property="og:type" content="website"/>
-				<meta property="og:url" content="https://ziontechgroup.com/services"/>
-				<meta property="og:image" content="/assets/og-default.jpg"/>
-			</Head>
-			<div className="mx-auto min-h-screen max-w-6xl px-6 py-12">
-				<div className="text-center mb-12">
-					<h1 className="text-4xl font-bold text-white mb-4">Our Services</h1>
-					<p className="text-xl text-gray-300 max-w-3xl mx-auto">We deliver end-to-end technology solutions: micro SaaS products, IT consulting, and applied AI—tailored for startups, SMBs, and enterprises.</p>
-				</div>
-
-				<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 mb-16">
-					<div className="bg-gray-900 rounded-lg p-6 border border-gray-700 text-center">
-						<div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-							<svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-							</svg>
-						</div>
-						<h2 className="text-xl font-semibold text-white mb-3">AI Autonomous Systems</h2>
-						<ul className="text-gray-300 space-y-2">
-							<li>Sales/CS multi-agent copilots</li>
-							<li>RAG and workflow orchestration</li>
-							<li>Observability and guardrails</li>
-						</ul>
-					</div>
-
-					<div className="bg-gray-900 rounded-lg p-6 border border-gray-700 text-center">
-						<div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-							<svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-							</svg>
-						</div>
-						<h2 className="text-xl font-semibold text-white mb-3">Cloud Platforms</h2>
-						<ul className="text-gray-300 space-y-2">
-							<li>Serverless and Kubernetes</li>
-							<li>Data pipelines and ML ops</li>
-							<li>FinOps and SRE practices</li>
-						</ul>
-					</div>
-
-					<div className="bg-gray-900 rounded-lg p-6 border border-gray-700 text-center">
-						<div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
-							<svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-							</svg>
-						</div>
-						<h2 className="text-xl font-semibold text-white mb-3">Cybersecurity</h2>
-						<ul className="text-gray-300 space-y-2">
-							<li>Zero-trust frameworks</li>
-							<li>Compliance and threat modeling</li>
-							<li>Incident response playbooks</li>
-						</ul>
-					</div>
-
-					<div className="bg-gray-900 rounded-lg p-6 border border-gray-700 text-center">
-						<div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-							<svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-							</svg>
-						</div>
-						<h2 className="text-xl font-semibold text-white mb-3">Micro SaaS</h2>
-						<ul className="text-gray-300 space-y-2">
-							<li>Rapid product delivery</li>
-							<li>Billing, auth, and analytics</li>
-							<li>Growth experiments</li>
-						</ul>
+		<PageTransition>
+			{/* Hero Section */}
+			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="mx-auto max-w-2xl text-center">
+						<h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+							Our Services
+						</h1>
+						<p className="mt-6 text-lg leading-8 text-gray-600">
+							From strategy to production, we deliver outcomes fast. Our comprehensive suite of services covers everything you need to transform your business.
+						</p>
 					</div>
 				</div>
+			</section>
 
-				<div className="text-center mb-16">
-					<a href="/contact" 
-					   className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-200">
-						Get in Touch
-						<svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-						</svg>
-					</a>
-				</div>
-
-				{/* Service Categories */}
-				<div className="grid gap-12">
-					<section className="bg-gray-900 rounded-lg p-8 border border-gray-700">
-						<h2 className="text-3xl font-bold text-white mb-6 text-center">AI & Machine Learning</h2>
-						<div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-							<div className="bg-gray-800 rounded-lg p-6">
-								<h3 className="text-xl font-semibold text-white mb-3">AI Consulting</h3>
-								<p className="text-gray-300 mb-4">Strategic AI implementation and optimization for your business needs.</p>
-								<a href="/services/ai" className="text-blue-400 hover:text-blue-300">Learn more →</a>
+			{/* Services Grid */}
+			<section className="py-24 sm:py-32">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="grid gap-8 lg:grid-cols-2">
+						{/* AI Autonomous Systems */}
+						<div id="ai" className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300">
+							<div className="flex items-center gap-x-3">
+								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600">
+									<Brain className="h-6 w-6 text-white" />
+								</div>
+								<h2 className="text-xl font-semibold text-gray-900">AI Autonomous Systems</h2>
 							</div>
-							<div className="bg-gray-800 rounded-lg p-6">
-								<h3 className="text-xl font-semibold text-white mb-3">Machine Learning</h3>
-								<p className="text-gray-300 mb-4">Custom ML models and data science solutions.</p>
-								<a href="/services/ai" className="text-blue-400 hover:text-blue-300">Learn more →</a>
-							</div>
-							<div className="bg-gray-800 rounded-lg p-6">
-								<h3 className="text-xl font-semibold text-white mb-3">AI Integration</h3>
-								<p className="text-gray-300 mb-4">Seamless AI integration with existing systems.</p>
-								<a href="/services/ai" className="text-blue-400 hover:text-blue-300">Learn more →</a>
-							</div>
-						</div>
-					</section>
-
-					<section className="bg-gray-900 rounded-lg p-8 border border-gray-700">
-						<h2 className="text-3xl font-bold text-white mb-6 text-center">Cloud & Infrastructure</h2>
-						<div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-							<div className="bg-gray-800 rounded-lg p-6">
-								<h3 className="text-xl font-semibold text-white mb-3">Cloud Migration</h3>
-								<p className="text-gray-300 mb-4">Smooth transition to cloud infrastructure.</p>
-								<a href="/services/cloud" className="text-blue-400 hover:text-blue-300">Learn more →</a>
-							</div>
-							<div className="bg-gray-800 rounded-lg p-6">
-								<h3 className="text-xl font-semibold text-white mb-3">DevOps</h3>
-								<p className="text-gray-300 mb-4">Automated deployment and infrastructure management.</p>
-								<a href="/services/infrastructure" className="text-blue-400 hover:text-blue-300">Learn more →</a>
-							</div>
-							<div className="bg-gray-800 rounded-lg p-6">
-								<h3 className="text-xl font-semibold text-white mb-3">Kubernetes</h3>
-								<p className="text-gray-300 mb-4">Container orchestration and management.</p>
-								<a href="/services/infrastructure" className="text-blue-400 hover:text-blue-300">Learn more →</a>
-							</div>
-						</div>
-					</section>
-
-					<section className="bg-gray-900 rounded-lg p-8 border border-gray-700">
-						<h2 className="text-3xl font-bold text-white mb-6 text-center">Cybersecurity</h2>
-						<div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-							<div className="bg-gray-800 rounded-lg p-6">
-								<h3 className="text-xl font-semibold text-white mb-3">Security Audit</h3>
-								<p className="text-gray-300 mb-4">Comprehensive security assessment and recommendations.</p>
-								<a href="/services/cybersecurity" className="text-blue-400 hover:text-blue-300">Learn more →</a>
-							</div>
-							<div className="bg-gray-800 rounded-lg p-6">
-								<h3 className="text-xl font-semibold text-white mb-3">Compliance</h3>
-								<p className="text-gray-300 mb-4">GDPR, HIPAA, SOC 2, and industry compliance.</p>
-								<a href="/services/cybersecurity" className="text-blue-400 hover:text-blue-300">Learn more →</a>
-							</div>
-							<div className="bg-gray-800 rounded-lg p-6">
-								<h3 className="text-xl font-semibold text-white mb-3">Incident Response</h3>
-								<p className="text-gray-300 mb-4">24/7 security monitoring and response.</p>
-								<a href="/services/cybersecurity" className="text-blue-400 hover:text-blue-300">Learn more →</a>
-							</div>
-						</div>
-					</section>
-				</div>
-
-				{/* Why Choose Us */}
-				<section className="mt-16 bg-gray-900 rounded-lg p-8 border border-gray-700">
-					<h2 className="text-3xl font-bold text-white mb-6 text-center">Why Choose Zion Tech Group</h2>
-					<div className="grid gap-6 md:grid-cols-2">
-						<div>
-							<ul className="text-gray-300 space-y-3">
-								<li className="flex items-center">
-									<svg className="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-									</svg>
-									Real, battle-tested implementations (no mockups)
+							<p className="mt-4 text-gray-600">
+								Transform your operations with intelligent automation and AI-powered decision making.
+							</p>
+							<ul className="mt-6 space-y-3">
+								<li className="flex items-center gap-x-3">
+									<Zap className="h-4 w-4 text-blue-600" />
+									<span className="text-sm text-gray-700">Sales/CS multi-agent copilots</span>
 								</li>
-								<li className="flex items-center">
-									<svg className="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-									</svg>
-									Transparent pricing and fast onboarding
+								<li className="flex items-center gap-x-3">
+									<Database className="h-4 w-4 text-blue-600" />
+									<span className="text-sm text-gray-700">RAG and workflow orchestration</span>
 								</li>
-								<li className="flex items-center">
-									<svg className="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-									</svg>
-									Enterprise-grade security and compliance
+								<li className="flex items-center gap-x-3">
+									<BarChart3 className="h-4 w-4 text-blue-600" />
+									<span className="text-sm text-gray-700">Observability and guardrails</span>
 								</li>
-								<li className="flex items-center">
-									<svg className="w-5 h-5 text-green-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-									</svg>
-									ROI-focused delivery and measurable outcomes
+								<li className="flex items-center gap-x-3">
+									<Users className="h-4 w-4 text-blue-600" />
+									<span className="text-sm text-gray-700">Intelligent process automation</span>
 								</li>
 							</ul>
+							<div className="mt-8">
+								<Link
+									to="/contact"
+									className="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors"
+								>
+									Get started with AI
+									<ArrowRight className="ml-2 h-4 w-4" />
+								</Link>
+							</div>
 						</div>
-						<div className="bg-gray-800 rounded-lg p-6">
-							<h3 className="text-xl font-semibold text-white mb-4">Pricing Overview</h3>
-							<p className="text-gray-300 mb-4">Average market prices (monthly):</p>
-							<ul className="text-gray-300 space-y-2">
-								<li>• Micro SaaS: $99–$999</li>
-								<li>• AI Services: $499–$4,999</li>
-								<li>• Enterprise IT: $2,000–$15,000</li>
+
+						{/* Cloud Platforms */}
+						<div id="cloud" className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300">
+							<div className="flex items-center gap-x-3">
+								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-600">
+									<Cloud className="h-6 w-6 text-white" />
+								</div>
+								<h2 className="text-xl font-semibold text-gray-900">Cloud Platforms</h2>
+							</div>
+							<p className="mt-4 text-gray-600">
+								Build scalable, resilient cloud infrastructure that grows with your business.
+							</p>
+							<ul className="mt-6 space-y-3">
+								<li className="flex items-center gap-x-3">
+									<Server className="h-4 w-4 text-green-600" />
+									<span className="text-sm text-gray-700">Serverless and Kubernetes</span>
+								</li>
+								<li className="flex items-center gap-x-3">
+									<Database className="h-4 w-4 text-green-600" />
+									<span className="text-sm text-gray-700">Data pipelines and ML ops</span>
+								</li>
+								<li className="flex items-center gap-x-3">
+									<BarChart3 className="h-4 w-4 text-green-600" />
+									<span className="text-sm text-gray-700">FinOps and SRE practices</span>
+								</li>
+								<li className="flex items-center gap-x-3">
+									<Globe className="h-4 w-4 text-green-600" />
+									<span className="text-sm text-gray-700">Multi-cloud architecture</span>
+								</li>
 							</ul>
-							<p className="text-gray-300 mt-4">We price competitively based on scope and deliver measurable ROI.</p>
+							<div className="mt-8">
+								<Link
+									to="/contact"
+									className="inline-flex items-center text-sm font-semibold text-green-600 hover:text-green-500 transition-colors"
+								>
+									Build your cloud platform
+									<ArrowRight className="ml-2 h-4 w-4" />
+								</Link>
+							</div>
+						</div>
+
+						{/* Cybersecurity */}
+						<div id="cybersecurity" className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300">
+							<div className="flex items-center gap-x-3">
+								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-600">
+									<Shield className="h-6 w-6 text-white" />
+								</div>
+								<h2 className="text-xl font-semibold text-gray-900">Cybersecurity</h2>
+							</div>
+							<p className="mt-4 text-gray-600">
+								Protect your business with enterprise-grade security frameworks and compliance.
+							</p>
+							<ul className="mt-6 space-y-3">
+								<li className="flex items-center gap-x-3">
+									<Lock className="h-4 w-4 text-red-600" />
+									<span className="text-sm text-gray-700">Zero-trust frameworks</span>
+								</li>
+								<li className="flex items-center gap-x-3">
+									<Shield className="h-4 w-4 text-red-600" />
+									<span className="text-sm text-gray-700">Compliance and threat modeling</span>
+								</li>
+								<li className="flex items-center gap-x-3">
+									<Zap className="h-4 w-4 text-red-600" />
+									<span className="text-sm text-gray-700">Incident response playbooks</span>
+								</li>
+								<li className="flex items-center gap-x-3">
+									<BarChart3 className="h-4 w-4 text-red-600" />
+									<span className="text-sm text-gray-700">Security monitoring & analytics</span>
+								</li>
+							</ul>
+							<div className="mt-8">
+								<Link
+									to="/contact"
+									className="inline-flex items-center text-sm font-semibold text-red-600 hover:text-red-500 transition-colors"
+								>
+									Secure your business
+									<ArrowRight className="ml-2 h-4 w-4" />
+								</Link>
+							</div>
+						</div>
+
+						{/* Micro SaaS */}
+						<div id="saas" className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300">
+							<div className="flex items-center gap-x-3">
+								<div className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-600">
+									<Code className="h-6 w-6 text-white" />
+								</div>
+								<h2 className="text-xl font-semibold text-gray-900">Micro SaaS</h2>
+							</div>
+							<p className="mt-4 text-gray-600">
+								Rapidly build and deploy SaaS products with proven infrastructure patterns.
+							</p>
+							<ul className="mt-6 space-y-3">
+								<li className="flex items-center gap-x-3">
+									<Zap className="h-4 w-4 text-purple-600" />
+									<span className="text-sm text-gray-700">Rapid product delivery</span>
+								</li>
+								<li className="flex items-center gap-x-3">
+									<Database className="h-4 w-4 text-purple-600" />
+									<span className="text-sm text-gray-700">Billing, auth, and analytics</span>
+								</li>
+								<li className="flex items-center gap-x-3">
+									<BarChart3 className="h-4 w-4 text-purple-600" />
+									<span className="text-sm text-gray-700">Growth experiments</span>
+								</li>
+								<li className="flex items-center gap-x-3">
+									<Users className="h-4 w-4 text-purple-600" />
+									<span className="text-sm text-gray-700">User onboarding & retention</span>
+								</li>
+							</ul>
+							<div className="mt-8">
+								<Link
+									to="/contact"
+									className="inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-500 transition-colors"
+								>
+									Build your SaaS
+									<ArrowRight className="ml-2 h-4 w-4" />
+								</Link>
+							</div>
 						</div>
 					</div>
-					
-					<div className="mt-8 text-center">
-						<div className="flex flex-col sm:flex-row gap-4 justify-center">
-							<a href="/pricing" className="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white rounded-lg transition-colors duration-200">
-								See Pricing Guidance
-							</a>
-							<a href="/request-quote" className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200">
-								Request Custom Quote
-							</a>
+				</div>
+			</section>
+
+			{/* Process Section */}
+			<section className="bg-white py-24 sm:py-32">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="mx-auto max-w-2xl lg:text-center">
+						<h2 className="text-base font-semibold leading-7 text-blue-600">Our Process</h2>
+						<p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+							How we deliver results
+						</p>
+						<p className="mt-6 text-lg leading-8 text-gray-600">
+							We follow a proven methodology that ensures successful delivery and measurable outcomes.
+						</p>
+					</div>
+					<div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+						<dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-4">
+							<div className="flex flex-col">
+								<dt className="text-lg font-semibold leading-7 text-gray-900">
+									<span className="mr-2 text-2xl font-bold text-blue-600">1</span>
+									Discovery
+								</dt>
+								<dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+									<p className="flex-auto">
+										We analyze your current state, understand your goals, and design a roadmap for success.
+									</p>
+								</dd>
+							</div>
+							<div className="flex flex-col">
+								<dt className="text-lg font-semibold leading-7 text-gray-900">
+									<span className="mr-2 text-2xl font-bold text-blue-600">2</span>
+									Design
+								</dt>
+								<dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+									<p className="flex-auto">
+										We architect solutions that align with your business objectives and technical requirements.
+									</p>
+								</dd>
+							</div>
+							<div className="flex flex-col">
+								<dt className="text-lg font-semibold leading-7 text-gray-900">
+									<span className="mr-2 text-2xl font-bold text-blue-600">3</span>
+									Develop
+								</dt>
+								<dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+									<p className="flex-auto">
+										We build and test your solution using industry best practices and modern technologies.
+									</p>
+								</dd>
+							</div>
+							<div className="flex flex-col">
+								<dt className="text-lg font-semibold leading-7 text-gray-900">
+									<span className="mr-2 text-2xl font-bold text-blue-600">4</span>
+									Deploy
+								</dt>
+								<dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+									<p className="flex-auto">
+										We launch your solution and provide ongoing support to ensure continued success.
+									</p>
+								</dd>
+							</div>
+						</dl>
+					</div>
+				</div>
+			</section>
+
+			{/* CTA Section */}
+			<section className="bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm:py-32">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="mx-auto max-w-2xl text-center">
+						<h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+							Ready to get started?
+						</h2>
+						<p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">
+							Let's discuss your project and how we can help you achieve your goals.
+						</p>
+						<div className="mt-10 flex items-center justify-center gap-x-6">
+							<Link
+								to="/contact"
+								className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-colors"
+							>
+								Get in touch
+								<ArrowRight className="ml-2 h-4 w-4 inline" />
+							</Link>
 						</div>
 					</div>
-				</section>
-			</div>
-		</AppLayout>
+				</div>
+			</section>
+		</PageTransition>
 	)
 }
