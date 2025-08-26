@@ -54,29 +54,12 @@ export default function EquipmentDetail() {
 
   const handleBuyNow = async () => {
     if (!isAuthenticated) {
-      if (equipmentId) {
-        sessionStorage.setItem('intendedProduct', equipmentId);
-      }
-      navigate('/login?next=/checkout');
+      navigate(`/login?next=/checkout/${id}`);
       return;
     }
 
-    setIsAdding(true);
-    try {
-      const response = await fetch('/checkout/create-session', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ productId: equipmentId }),
-      });
-      const { url } = await response.json();
-      if (url) {
-        window.location.href = url as string;
-      }
-    } catch (err) {
-      toast({ title: 'Payment error', description: 'Could not start checkout.' });
-    } finally {
-      setIsAdding(false);
-    }
+    dispatch(addItem({ id, title: equipment.name, price: equipment.price }));
+    navigate(`/checkout/${id}`);
   };
 
   return (
