@@ -14,10 +14,10 @@ export default defineConfig({
   },
   build: {
     target: 'esnext',
-    minify: 'terser',
+    minify: 'esbuild',
     sourcemap: false,
     rollupOptions: {
-      input: path.resolve(__dirname, 'public/index.html'),
+      input: path.resolve(__dirname, 'index.html'),
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom'],
@@ -45,7 +45,7 @@ export default defineConfig({
             '@radix-ui/react-tooltip',
           ],
           'animation-vendor': ['framer-motion'],
-          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
+          'form-vendor': ['react-hook-form'],
           'utils-vendor': ['clsx', 'tailwind-merge', 'class-variance-authority'],
           'icons-vendor': ['lucide-react'],
           'charts-vendor': ['recharts'],
@@ -62,14 +62,6 @@ export default defineConfig({
         },
       },
       external: [],
-    },
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
-      },
-      mangle: { safari10: true },
     },
     chunkSizeWarningLimit: 1000,
     outDir: 'dist',
