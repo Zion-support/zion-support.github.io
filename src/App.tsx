@@ -64,6 +64,10 @@ const IoTDataAnalytics = lazy(() => import('./pages/services/IoTDataAnalytics'))
 const NextGenInnovativeServices2025 = lazy(() => import('./pages/NextGenInnovativeServices2025'));
 const InnovativeServicesShowcase = lazy(() => import('./pages/InnovativeServicesShowcase'));
 
+// Innovative Services 2026
+const InnovativeServicesShowcase2026 = lazy(() => import('./pages/InnovativeServicesShowcase2026'));
+const ComprehensivePricing2026 = lazy(() => import('./pages/ComprehensivePricing2026'));
+
 // Ultimate Innovative Services 2026
 const UltimateServicesShowcase2026 = lazy(() => import('./pages/UltimateServicesShowcase2026'));
 const ComprehensivePricing2026 = lazy(() => import('./pages/ComprehensivePricing2026'));
@@ -205,6 +209,10 @@ const baseRoutes = [
   { path: '/comprehensive-services-showcase-2025', element: <ComprehensiveServicesShowcase2025 /> },
   { path: '/innovative-services-showcase-2025', element: <InnovativeServicesShowcase2025 /> },
   { path: '/services-showcase-2025', element: <InnovativeServicesShowcase2025 /> },
+  
+  // Innovative Services 2026
+  { path: '/innovative-services-showcase-2026', element: <InnovativeServicesShowcase2026 /> },
+  { path: '/innovative-services-2026', element: <InnovativeServicesShowcase2026 /> },
   
   // Ultimate Innovative Services 2026
   { path: '/ultimate-services-showcase-2026', element: <UltimateServicesShowcase2026 /> },
