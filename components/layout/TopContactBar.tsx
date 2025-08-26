@@ -151,5 +151,3 @@ export default function TopContactBar() {
     </div>
   );
 };
-
-export default TopContactBar;

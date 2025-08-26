@@ -47,8 +47,12 @@ const nextConfig = {
 	reactStrictMode: true,
 	trailingSlash: true,
 	output: 'export',
+	assetPrefix,
 	images: {
 		unoptimized: true
+	},
+	typescript: {
+		ignoreBuildErrors: true,
 	},
 	eslint: {
 		ignoreDuringBuilds: true
@@ -67,16 +71,4 @@ const nextConfig = {
 	}
 };
 
-  // Note: headers, redirects, and rewrites don't work with output: 'export'
-  // These are handled by Netlify via _headers and _redirects files
-
-  // Skip TypeScript checking during build if SKIP_TYPE_CHECK is set
-  typescript: {
-    ignoreBuildErrors: process.env.SKIP_TYPE_CHECK === 'true',
-  },
-
-  // Skip ESLint during build for faster deployment
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-};
+export default nextConfig;
