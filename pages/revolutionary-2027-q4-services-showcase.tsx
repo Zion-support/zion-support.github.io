@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
+import { motion } from 'framer-motion';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+// import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import Card from '../components/ui/Card';
+import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin } from 'lucide-react';
 import { real2027Q4Additions } from '../data/real-2027-q4-additions';
 
 export default function Revolutionary2027Q4Showcase() {
@@ -29,7 +31,7 @@ export default function Revolutionary2027Q4Showcase() {
 
 				<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
 					{real2027Q4Additions.map((svc) => (
-						<Card key={svc.id} className="bg-neutral-900/50 border border-neutral-800">
+						<div key={svc.id} className="bg-neutral-900/50 border border-neutral-800 rounded-lg p-6">
 							<div className="flex items-center justify-between mb-2">
 								<div className="text-2xl" aria-hidden>{svc.icon}</div>
 								<span className="text-xs px-2 py-1 rounded-full bg-neutral-800 text-neutral-300">{svc.category}</span>
@@ -54,7 +56,7 @@ export default function Revolutionary2027Q4Showcase() {
 							<div className="text-xs text-neutral-400">
 								<span>Tech: {svc.technology.join(', ')}</span>
 							</div>
-						</Card>
+						</div>
 					))}
 				</div>
 

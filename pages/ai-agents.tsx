@@ -1,6 +1,6 @@
 import NextHead from 'next/head';
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
-import Card from '../components/ui/Card';
+// import Card from '../components/ui/Card';
 import UIButton from '../components/ui/Button';
 import { ArrowRight, Check as CheckIcon } from 'lucide-react';
 import { innovativeAIServices } from '../data/innovative-ai-services';
@@ -28,7 +28,7 @@ export default function AIAgentsStudioPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {agentServices.map((svc) => (
-              <Card key={svc.id} className="p-6 bg-gray-900/50 border border-gray-700/60 hover:border-cyan-500/40 transition-colors">
+              <div key={svc.id} className="p-6 bg-gray-900/50 border border-gray-700/60 hover:border-cyan-500/40 transition-colors rounded-lg">
                 <div className="text-2xl font-semibold text-white mb-1">{svc.name}</div>
                 <div className="text-gray-400 text-sm mb-4">{svc.tagline}</div>
                 <div className="text-cyan-300 text-xl font-bold mb-3">{svc.price}<span className="text-gray-400 text-base">{svc.period}</span></div>
@@ -38,10 +38,10 @@ export default function AIAgentsStudioPage() {
                   ))}
                 </ul>
                 <div className="flex gap-3">
-                  <UIButton href={svc.link} className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Learn More<ArrowRight className="w-4 h-4 ml-2" /></UIButton>
-                  <UIButton href="/contact" variant="outline" className="flex-1 border-gray-600 text-gray-200">Talk to Expert</UIButton>
+                  <UIButton href="/contact" className="flex-1 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Talk to Sales</UIButton>
+                  <UIButton href="/services-advertising" variant="outline" className="flex-1 border border-gray-600 text-gray-200">Learn More</UIButton>
                 </div>
-              </Card>
+              </div>
             ))}
           </div>
         </div>

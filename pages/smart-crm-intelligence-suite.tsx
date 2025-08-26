@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import Card from '../components/ui/Card';
+// import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Check, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 
@@ -37,40 +37,36 @@ export default function SmartCrmIntelligenceSuitePage() {
 
 				<div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
 					<div className="lg:col-span-2 space-y-6">
-						<Card className="p-6 bg-black/40 border border-gray-700/50">
+						<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg">
 							<h2 className="text-white text-xl font-semibold mb-3">Overview</h2>
 							<p className="text-gray-300 leading-relaxed">Unify CRM activity, emails, meetings, and intent data to produce AI-driven scores, alerts, and playbooks. SDRs and AEs get prioritized tasks; managers get accurate forecasts and risk heatmaps.</p>
-						</Card>
+						</div>
 
-						<Card className="p-6 bg-black/40 border border-gray-700/50">
+						<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg">
 							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
 							<ul className="space-y-2 text-gray-300">
 								{features.map((f) => (
 									<li key={f} className="flex items-start gap-2"><Check className="w-4 h-4 mt-0.5 text-emerald-400" /><span>{f}</span></li>
 								))}
 							</ul>
-						</Card>
+						</div>
 					</div>
 
 					<div className="space-y-6">
-						<Card className="p-6 bg-black/40 border border-gray-700/50">
+						<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg">
 							<div className="text-sm text-gray-400 mb-1">Pricing</div>
 							<div className="text-3xl font-bold text-white">$299<span className="text-base font-medium text-gray-400">/month</span></div>
 							<div className="text-sm text-gray-400 mt-2">Trial: 14 days • Setup: 1–2 days • Integrations: Salesforce, HubSpot, Pipedrive</div>
 							<div className="mt-6 flex gap-3">
 								<Button href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</Button>
-								<Button href="/market-pricing" variant="outline" className="flex-1 border border-gray-600 text-gray-200"><ExternalLink className="w-4 h-4 mr-2" /> Market Pricing</Button>
+								<Button href="https://ziontechgroup.com/smart-crm-intelligence-suite" variant="outline" className="flex-1 border border-gray-600 text-gray-200"><ExternalLink className="w-4 h-4 mr-2" /> Learn More</Button>
 							</div>
-						</Card>
-
-						<Card className="p-6 bg-black/40 border border-gray-700/50">
-							<h3 className="text-white font-semibold mb-3">Contact</h3>
-							<div className="space-y-3 text-sm">
-								<div className="flex items-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /><a href="tel:+13024640950" className="hover:underline">{contact.mobile}</a></div>
-								<div className="flex items-center gap-2 text-purple-400"><Mail className="w-4 h-4" /><a href="mailto:kleber@ziontechgroup.com" className="hover:underline">{contact.email}</a></div>
-								<div className="flex items-center gap-2 text-green-400"><MapPin className="w-4 h-4" /><span className="text-xs">{contact.address}</span></div>
+							<div className="mt-6 space-y-3 text-sm">
+								<div className="flex items-center gap-2 text-cyan-400 w-4 h-4"><Phone /><span>{contact.mobile}</span></div>
+								<div className="flex items-center gap-2 text-purple-400 w-4 h-4"><Mail /><span>{contact.email}</span></div>
+								<div className="flex items-center gap-2 text-green-400 w-4 h-4 text-xs"><MapPin /><span>{contact.address}</span></div>
 							</div>
-						</Card>
+						</div>
 					</div>
 				</div>
 			</div>

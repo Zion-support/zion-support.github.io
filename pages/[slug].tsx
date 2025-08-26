@@ -1,7 +1,7 @@
 import NextHead from 'next/head';
 import UltraFuturisticBackgroundComponent from '../components/ui/UltraFuturisticBackground';
 import UIButton from '../components/ui/Button';
-import UICard from '../components/ui/Card';
+// import UICard from '../components/ui/Card';
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 
 import { innovativeRealMicroSaasServices2025 as servicesData } from '../data/2025-innovative-real-micro-saas-services';
@@ -171,12 +171,12 @@ export default function ServiceDetailTopLevelPage({ service }: { service: Servic
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
           <div className="lg:col-span-2 space-y-6">
-            <UICard className="p-6 bg-black/40 border border-gray-700/50">
+            <div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg">
               <h2 className="text-white text-xl font-semibold mb-3">Overview</h2>
               <p className="text-gray-300 leading-relaxed">{service.description}</p>
-            </UICard>
+            </div>
 
-            <UICard className="p-6 bg-black/40 border border-gray-700/50">
+            <div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg">
               <h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
               <ul className="space-y-2 text-gray-300">
                 {(service.features || []).slice(0, 12).map((f: string) => (
@@ -186,9 +186,9 @@ export default function ServiceDetailTopLevelPage({ service }: { service: Servic
                   </li>
                 ))}
               </ul>
-            </UICard>
+            </div>
 
-            <UICard className="p-6 bg-black/40 border border-gray-700/50">
+            <div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg">
               <h3 className="text-white text-lg font-semibold mb-4">Use Cases & Integrations</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-300">
                 <div>
@@ -208,11 +208,11 @@ export default function ServiceDetailTopLevelPage({ service }: { service: Servic
                   </div>
                 </div>
               </div>
-            </UICard>
+            </div>
           </div>
 
           <div className="space-y-6">
-            <UICard className="p-6 bg-black/40 border border-gray-700/50">
+            <div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg">
               <div className="text-sm text-gray-400 mb-1">Pricing</div>
               <div className="text-3xl font-bold text-white">{service.price}<span className="text-base font-medium text-gray-400">{service.period}</span></div>
               <div className="text-sm text-gray-400 mt-2">Trial: {service.trialDays || 14} days • Setup: {service.setupTime || 'Fast'} • Competitors: {(service.competitors || []).slice(0,3).join(', ')}</div>
@@ -222,18 +222,18 @@ export default function ServiceDetailTopLevelPage({ service }: { service: Servic
                   <UIButton href={service.link} variant="outline" className="flex-1 border border-gray-600 text-gray-200"><ExternalLink className="w-4 h-4 mr-2" /> Learn More</UIButton>
                 ) : null}
               </div>
-            </UICard>
+            </div>
 
-            <UICard className="p-6 bg-black/40 border border-gray-700/50">
+            <div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg">
               <h3 className="text-white font-semibold mb-3">Contact</h3>
               <div className="space-y-3 text-sm">
                 <div className="flex items-center gap-2 text-cyan-400 w-4 h-4 hover:underline"><Phone /><a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`} >{contactInfo.mobile}</a></div>
                 <div className="flex items-center gap-2 text-purple-400 w-4 h-4 hover:underline"><Mail /><a href={`mailto:${contactInfo.email}`} >{contactInfo.email}</a></div>
                 <div className="flex items-center gap-2 text-green-400 w-4 h-4 text-xs hover:underline"><MapPin /><a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" >{contactInfo.address}</a></div>
               </div>
-            </UICard>
+            </div>
 
-            <UICard className="p-6 bg-black/40 border border-gray-700/50">
+            <div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg">
               <h3 className="text-white font-semibold mb-3">Market & ROI</h3>
               <div className="space-y-3 text-sm text-gray-300">
                 {service.marketPosition && <p className="leading-relaxed"><span className="text-gray-400">Position:</span> {service.marketPosition}</p>}
@@ -243,7 +243,7 @@ export default function ServiceDetailTopLevelPage({ service }: { service: Servic
                 ) : null}
                 <a href="/market-pricing" className="inline-block mt-2 text-cyan-300 hover:text-cyan-200">See average market prices →</a>
               </div>
-            </UICard>
+            </div>
           </div>
         </div>
       </div>
