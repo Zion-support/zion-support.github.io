@@ -1,28 +1,25 @@
-import React from 'react';
-import { Route } from 'react-router-dom';
-import Blog from '@/pages/Blog';
-import BlogPost from '@/pages/BlogPost';
 
-import { Route, Routes } from "react-router-dom";
+import { Fragment } from "react";
+import { Route, Routes, Navigate } from "react-router-dom";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
-import PrivacyPolicy from "@/legal/PrivacyPolicy";
+import Privacy from "@/pages/Privacy";
 import Blog from "@/pages/Blog";
 import BlogPost from "@/pages/BlogPost";
 import GreenIT from "@/pages/GreenIT";
 import Careers from "@/pages/Careers";
 import FAQ from "@/pages/FAQ";
+import Enterprise from "@/pages/Enterprise";
 import SearchPage from "@/pages/SearchPage";
 import { SitemapPage } from "@/components/SitemapPage";
 import Sitemap from "@/pages/Sitemap";
 import Terms from "@/pages/Terms";
-import HelpCenter from "@/pages/HelpCenter";
 import Cookies from "@/pages/Cookies";
+import HelpCenterPage from "@/pages/HelpCenterPage";
 import AccountSettings from "@/pages/AccountSettings";
 import ProjectRoom from "@/pages/ProjectRoom";
 import VideoCall from "@/pages/VideoCall";
-import CreateProfile from "@/pages/CreateProfile";
 
 const ContentRoutes = () => {
   return (
@@ -32,14 +29,13 @@ const ContentRoutes = () => {
       <Route path="/home" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="/privacy" element={<PrivacyPolicy />} />
+      <Route path="/privacy" element={<Privacy />} />
+      <Route path="/cookies" element={<Cookies />} />
       
       {/* Help Center Routes */}
-      <Route path="/help" element={<HelpCenter />} />
-      <Route path="/support" element={<HelpCenter />} />
-      
-      {/* Cookie Policy */}
-      <Route path="/cookies" element={<Cookies />} />
+      <Route path="/help" element={<HelpCenterPage />} />
+      <Route path="/support" element={<HelpCenterPage />} />
+      <Route path="/faq" element={<FAQ />} />
       
       {/* Blog Routes */}
       <Route path="/blog" element={<Blog />} />
@@ -54,14 +50,11 @@ const ContentRoutes = () => {
       {/* Careers Route */}
       <Route path="/careers" element={<Careers />} />
 
-      {/* FAQ Route */}
-      <Route path="/faq" element={<FAQ />} />
+      {/* Enterprise Route */}
+      <Route path="/enterprise" element={<Enterprise />} />
 
       {/* Legal Pages */}
       <Route path="/terms" element={<Terms />} />
-      
-      {/* FAQ Page */}
-      <Route path="/faq" element={<FAQ />} />
 
       {/* Account Settings */}
       <Route path="/settings/account" element={<AccountSettings />} />
@@ -75,9 +68,14 @@ const ContentRoutes = () => {
       {/* Global Search Route */}
       <Route path="/search" element={<SearchPage />} />
       
+      {/* API Documentation Redirect */}
+      <Route path="/api-docs" element={<Navigate to="/developers/docs" replace />} />
+      
       {/* Sitemap Pages */}
       <Route path="/sitemap" element={<Sitemap />} />
       <Route path="/sitemap-page" element={<SitemapPage />} />
     </Routes>
   );
-}
+};
+
+export default ContentRoutes;

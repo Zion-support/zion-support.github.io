@@ -16,8 +16,18 @@ import { verified2025Additions } from '../../data/verified-2025-additions';
 import { realServicesQ12025 } from '../../data/real-services-q1-2025';
 import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
 import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2';
-import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
-import { augmentedRealServices2025 } from '../../data/2025-augmented-real-services';
+// import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
+// import { added2026Q2Services } from '../../data/added-2026-q2-services';
+import { real2026Q1Additions } from '../../data/real-2026-q1-additions';
+// import { realMarketServicesExtended } from '../../data/real-market-services-extended';
+// import { real2026Additions } from '../../data/real-2026-additions';
+import { real2026Q3Additions } from '../../data/real-2026-q3-additions';
+import { real2026Q4Additions } from '../../data/real-2026-q4-additions';
+import { real2026Q4NewServices } from '../../data/real-2026-q4-new-services';
+import { real2027Q1Additions } from '../../data/real-2027-q1-additions';
+import { real2027Q2Additions } from '../../data/real-2027-q2-additions';
+import { real2027Q3Additions } from '../../data/real-2027-q3-additions';
+import { real2027Q4Additions } from '../../data/real-2027-q4-additions';
 
 type Service = typeof enhancedRealMicroSaasServices[number];
 
@@ -40,8 +50,25 @@ function getAllServices(): Service[] {
 		.concat(realServicesQ12025 as unknown as Service[])
 		.concat(realEnterpriseServices2025 as unknown as Service[])
 		.concat(verifiedRealServices2025Batch2 as unknown as Service[])
-		.concat(realMarketAugmentations2025 as unknown as Service[])
-		.concat(augmentedRealServices2025 as unknown as Service[]);
+		// .concat(realMarketAugmentations2025 as unknown as Service[])
+		// .concat(additionalLiveServices2025 as unknown as Service[])
+		// .concat(real2025Q2Additions as unknown as Service[])
+		// .concat(augmentedServicesBatch3 as unknown as Service[])
+		// .concat(realServicesQ22025 as unknown as Service[])
+		// .concat(realServicesQ32025 as unknown as Service[])
+		.concat(realQ4Services2025 as unknown as Service[])
+		.concat(real2025Q4Additions as unknown as Service[])
+		// .concat(realMarketServicesExtended as unknown as Service[])
+		// .concat(real2026Additions as unknown as Service[])
+		.concat(real2026Q1Additions as unknown as Service[])
+		// .concat(added2026Q2Services as unknown as Service[])
+		.concat(real2026Q3Additions as unknown as Service[])
+		.concat(real2026Q4Additions as unknown as Service[])
+		.concat(real2026Q4NewServices as unknown as Service[])
+		.concat(real2027Q1Additions as unknown as Service[])
+		.concat(real2027Q2Additions as unknown as Service[])
+		.concat(real2027Q3Additions as unknown as Service[])
+		.concat(real2027Q4Additions as unknown as Service[]);
 }
 
 function toSlug(value: string): string {
