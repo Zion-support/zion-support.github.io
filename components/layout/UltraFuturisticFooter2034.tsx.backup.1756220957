@@ -61,6 +61,22 @@ const serviceCategories = [
     ]
   },
   {
+<<<<<<< HEAD
+    title: '🌌 Space & Metaverse Tech',
+    icon: RocketIcon,
+    color: 'from-teal-500 to-emerald-600',
+    services: [
+      { name: 'AI Autonomous Decision Engine', href: '/ai-autonomous-decision-engine' },
+      { name: 'Quantum CRM Suite', href: '/quantum-crm-suite' },
+      { name: 'AI Content Factory Pro', href: '/ai-content-factory-pro' },
+      { name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer' },
+      { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence' },
+      { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics' },
+      { name: 'AI Sustainability Platform', href: '/ai-sustainability-platform' },
+      { name: 'AI Education Platform', href: '/ai-education-platform' },
+      { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform' },
+      { name: 'AI Creativity Studio', href: '/ai-creativity-studio' }
+=======
     title: 'Micro SAAS',
     links: [
       { name: 'AI Customer Success', href: '/ai-customer-success-platform' },
@@ -127,6 +143,7 @@ const serviceCategories = [
       { name: 'Training & Certification', href: '/training' },
       { name: 'Community Forum', href: '/community' },
       { name: 'Developer Resources', href: '/developer-resources' }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e2d5
     ]
   }
 ];

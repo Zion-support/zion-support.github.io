@@ -1811,6 +1811,17 @@ body::before {
   }
 }
 
+<<<<<<< HEAD
+/* Enhanced Print Styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .btn-futuristic {
+    border-width: 3px;
+  }
+=======
 /* Futuristic animation utilities */
 .neon-pulse {
   animation: neonPulse 2s ease-in-out infinite;
@@ -1867,6 +1878,7 @@ body::before {
 *:focus {
   outline: 2px solid rgb(var(--accent-cyan));
   outline-offset: 2px;
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e2d5
 }
 
 /* New Futuristic Animations */
