@@ -2,30 +2,19 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-const Home = dynamic(() => import('@/pages/Home'));
-import type { GetStaticProps } from 'next';
-import * as Sentry from '@sentry/nextjs';
-import { ErrorBanner } from '@/components/talent/ErrorBanner';
-
-const UltraAdvancedServicesShowcase2025 = dynamic(() => import('../components/sections/UltraAdvancedServicesShowcase2025'), {
-  ssr: false,
-  loading: () => (
-    <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
-      <div className="container mx-auto px-4 text-center">
-        <div className="inline-flex items-center space-x-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 text-sm mb-6">
-          <Sparkles className="w-4 h-4 text-cyan-400" />
-          <span className="text-gray-300">Loading services…</span>
-        </div>
-      </div>
-    </section>
-  )
-});
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+const HomePage: React.FC = () => {
+  return (
+    <ErrorBoundary>
+      <SEOOptimizer />
+      <AnalyticsTracker />
+      <PerformanceOptimizer />
+      <AccessibilityEnhancer />
+      <MobileOptimizer showDebugInfo={false}>
+        <Homepage2025 />
+        <PerformanceMonitor showUI={true} />
+      </MobileOptimizer>
+    </ErrorBoundary>
+  );
 };
 
 const whyChooseUs = [
