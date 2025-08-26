@@ -3,8 +3,6 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { Inter } from 'next/font/google'
 import '../src/index.css'
-import EnhancedNavigation2025 from '../components/layout/EnhancedNavigation2025'
-import EnhancedFooter from '../components/layout/EnhancedFooter'
 
 const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-sans' })
 
@@ -57,11 +55,9 @@ export default function App({ Component, pageProps }: AppProps) {
 				<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
 			</Head>
 			<div className="min-h-screen flex flex-col bg-black text-white">
-				<EnhancedNavigation2025 />
 				<main className="flex-1">
 					<Component {...pageProps} />
 				</main>
-				<EnhancedFooter />
 			</div>
 		</div>
 	)
