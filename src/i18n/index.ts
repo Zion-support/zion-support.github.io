@@ -39,10 +39,9 @@ if (!i18n) {
       escapeValue: false, // React already escapes by default
     },
     detection: {
-      order: ['cookie', 'localStorage', 'navigator'],
-      lookupCookie: 'zion_language',
-      lookupLocalStorage: 'zion_language',
-      caches: ['cookie']
+      // Avoid using localStorage directly to prevent cross-context errors
+      order: ['navigator'],
+      caches: []
     },
   })
   .catch(error => {

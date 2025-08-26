@@ -31,7 +31,6 @@ export default defineConfig({
       output: {
         inlineDynamicImports: false,
       },
-      // Bundle axios with the app to avoid missing module errors
     },
   },
   resolve: {
