@@ -9,6 +9,15 @@ export default function Services(){return (<main style={{padding:20,fontFamily:'
 <h1 style={{marginBottom:10}}>Services</h1>
 <p style={{color:'#374151'}}>We deliver end-to-end technology solutions: micro SaaS products, IT consulting, and applied AI—tailored for startups, SMBs, and enterprises.</p>
 
+<<<<<<< HEAD
+export default function Services() {
+	const title = 'Services — Zion Tech Group'
+	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.'
+
+	const microSaaS = innovativeRealMicroSaasServices2025.slice(0, 12).concat(addedMicroSaaS2025)
+	const itServices = advancedITServices.slice(0, 12).concat(addedITServices2025)
+	const aiServices = innovativeAIServices.slice(0, 12).concat(addedAIServices2025)
+=======
 // Import our new service data
 // import { enterpriseITSolutions } from '../data/2034-enterprise-it-solutions';
 // import { innovativeMicroSaasSolutions } from '../data/2034-innovative-micro-saas-solutions';
@@ -28,6 +37,7 @@ import { newRealServices } from '../data/new-real-services';
 import { realMarketServices } from '../data/real-market-services';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { realAdditions2025Q3 } from '../data/2025-q3-real-additions';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-77a4
 
 // Import new 2024 real market services
 import { realMarketServices } from '../data/2024-real-market-services';
@@ -49,6 +59,9 @@ import { enterpriseITServices } from '../data/enterprise-it-services';
 						</ul>
 					</section>
 
+<<<<<<< HEAD
+const serviceCategories = [
+=======
 // Helper function to get service description
 const getServiceDescription = (service: any) => {
   if (service.description) return service.description;
@@ -69,6 +82,7 @@ const allServices = [
 ];
 
 const categories = [
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-77a4
   {
     id: 'ai-services',
     title: '🧠 Revolutionary AI Services',
