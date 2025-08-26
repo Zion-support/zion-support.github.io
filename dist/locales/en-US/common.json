@@ -20,6 +20,7 @@
   },
   "nav": {
     "home": "Home",
+<<<<<<< HEAD
     "services": "Services",
     "marketplace": "Marketplace",
 <<<<<<< HEAD:dist/locales/en-US/common.json
@@ -30,6 +31,12 @@
     "categories": "Categories",
     "services": "Services",
     "micro-saas": "Micro SAAS",
+=======
+    "marketplace": "Marketplace",
+    "services": "Services",
+    "categories": "Categories",
+    "micro-saas": "Micro SAAS",
+>>>>>>> chore/services-expansion-and-merge-fixes
     "talent": "Talent",
     "equipment": "Equipment",
     "community": "Community",
@@ -38,6 +45,7 @@
     "messages": "Messages",
     "post_job": "Post Job",
     "analytics": "Analytics",
+<<<<<<< HEAD
 <<<<<<< HEAD:dist/locales/en-US/common.json
     "faq": "FAQ",
     "help": "Help Center"
@@ -49,6 +57,20 @@
     "contact": "Contact"
 >>>>>>> origin/cursor/website-audit-and-enhancement-b91b:src/i18n/locales/en/translation.json
   },
+=======
+    "about": "About Us",
+    "careers": "Careers",
+    "partners": "Partners",
+    "contact": "Contact",
+    "products": "Products",
+    "green-it": "Green IT",
+    "help": "Help Center",
+    "developers": "Developer Portal",
+    "api-docs": "API Documentation",
+    "sitemap": "Sitemap",
+    "faq": "FAQ"
+  }
+>>>>>>> chore/services-expansion-and-merge-fixes
   "auth": {
     "login": "Login",
     "signup": "Sign Up",
@@ -58,7 +80,13 @@
     "forgot_password": "Forgot Password?",
     "remember_me": "Remember Me",
     "login_success": "Logged in successfully",
-    "logout_success": "Logged out successfully"
+    "logout_success": "Logged out successfully",
+    "errors": {
+      "user_not_found": "No account found with that email.",
+      "wrong_password": "Incorrect password. Please try again.",
+      "account_locked": "Your account is locked. Please contact support.",
+      "generic": "Login failed. Please try again."
+    }
   },
   "home": {
     "hero_title": "The Future of Tech & AI Marketplace",
