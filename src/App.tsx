@@ -19,6 +19,8 @@ const Terms = React.lazy(() => import('./pages/Terms'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
 const Services = React.lazy(() => import('./pages/Services'));
+const AdvancedServices = React.lazy(() => import('./pages/AdvancedServices'));
+const AllServices = React.lazy(() => import('./pages/AllServices'));
 const Pricing = React.lazy(() => import('./pages/Pricing'));
 const Team = React.lazy(() => import('./pages/Team'));
 
@@ -56,6 +58,8 @@ function App() {
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/advanced-services" element={<AdvancedServices />} />
+              <Route path="/all-services" element={<AllServices />} />
               <Route path="/pricing" element={<Pricing />} />
               <Route path="/team" element={<Team />} />
             </Routes>

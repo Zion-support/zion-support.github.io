@@ -20,6 +20,16 @@ export default function Services() {
 						<p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
 							Real, ready-to-deploy offerings across Micro SaaS, AI, Cybersecurity, Data, and Cloud.
 						</p>
+						<div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+							<Link to="/advanced-services" className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium py-3 px-6 rounded-lg border border-cyan-400/40 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-200">
+								<span>Explore Advanced Innovative Services 2025</span>
+								<ExternalLink className="w-4 h-4"/>
+							</Link>
+							<Link to="/all-services" className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-medium py-3 px-6 rounded-lg border border-purple-400/40 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-200">
+								<span>View Complete Services Portfolio</span>
+								<ExternalLink className="w-4 h-4"/>
+							</Link>
+						</div>
 					</div>
 
 					<div className="grid grid-cols-1 gap-12">
