@@ -36,6 +36,6 @@
     "noUncheckedIndexedAccess": false
   },
   "include": ["src"],
-  "exclude": ["src/components.disabled", "src/components.disabled/**/*"],
+  "exclude": ["src/components.disabled", "src/components.disabled/**/*", "src/pages.disabled", "src/pages.disabled/**/*"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

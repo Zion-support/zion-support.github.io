@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Heart } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -16,12 +17,12 @@ const Footer: React.FC = () => {
     {
       title: "Services",
       links: [
-        { label: "AI Solutions", path: "/services" },
-        { label: "Cloud & DevOps", path: "/services" },
-        { label: "Cybersecurity", path: "/services" },
-        { label: "Quantum Computing", path: "/services" },
-        { label: "Blockchain & Web3", path: "/services" },
-        { label: "Micro SAAS", path: "/micro-saas" }
+        { label: "AI Solutions", path: "/services/ai" },
+        { label: "Cloud & DevOps", path: "/services/cloud" },
+        { label: "Cybersecurity", path: "/services/cybersecurity" },
+        { label: "IT Infrastructure", path: "/services/infrastructure" },
+        { label: "Digital Transformation", path: "/services/transformation" },
+        { label: "Micro SAAS", path: "/services-showcase" }
       ]
     },
     {
@@ -30,7 +31,7 @@ const Footer: React.FC = () => {
         { label: "About Us", path: "/about" },
         { label: "Our Team", path: "/about" },
         { label: "Careers", path: "/careers" },
-        { label: "News & Updates", path: "/blog" },
+        { label: "News & Updates", path: "/news" },
         { label: "Case Studies", path: "/case-studies" },
         { label: "Partners", path: "/partners" }
       ]
@@ -42,8 +43,9 @@ const Footer: React.FC = () => {
         { label: "Documentation", path: "/docs" },
         { label: "White Papers", path: "/white-papers" },
         { label: "Webinars", path: "/webinars" },
-        { label: "Research", path: "/research" },
-        { label: "Events", path: "/events" }
+        { label: "Research", path: "/research-development" },
+        { label: "Events", path: "/events" },
+        { label: "Training", path: "/training" }
       ]
     },
     {
@@ -52,12 +54,13 @@ const Footer: React.FC = () => {
         { label: "Contact Us", path: "/contact" },
         { label: "Help Center", path: "/help" },
         { label: "Support Portal", path: "/support" },
-        { label: "Training", path: "/training" },
-        { label: "Consulting", path: "/consulting" },
-        { label: "Request Quote", path: "/request-quote" }
+        { label: "FAQ", path: "/faq" },
+        { label: "Consulting", path: "/services/consulting" },
+        { label: "Request Quote", path: "/contact" }
       ]
     }
   ];
+
 
   return (
     <footer className="bg-slate-900 text-white">
@@ -140,41 +143,26 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Bottom Footer */}
-      <div className="border-t border-white/10 bg-slate-800">
+      <div className="border-t border-white/10 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-gray-300 text-sm">
-              © {currentYear} Zion Tech Group. All rights reserved.
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="flex items-center space-x-2 text-gray-400 text-sm mb-4 md:mb-0">
+              <span>© {currentYear} Zion Tech Group. All rights reserved.</span>
+              <span>•</span>
+              <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+              <span>•</span>
+              <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+              <span>•</span>
+              <Link to="/cookies" className="hover:text-white transition-colors">Cookie Policy</Link>
             </div>
-            
-            <div className="flex flex-wrap justify-center md:justify-end space-x-6 text-sm text-gray-300">
-              <Link to="/privacy" className="hover:text-blue-400 transition-colors duration-300">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="hover:text-blue-400 transition-colors duration-300">
-                Terms of Service
-              </Link>
-              <Link to="/cookies" className="hover:text-blue-400 transition-colors duration-300">
-                Cookie Policy
-              </Link>
-              <Link to="/sitemap" className="hover:text-blue-400 transition-colors duration-300">
-                Sitemap
-              </Link>
+            <div className="flex items-center space-x-2 text-gray-400 text-sm">
+              <span>Made with</span>
+              <Heart className="w-4 h-4 text-red-400" />
+              <span>for the future of technology</span>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Back to Top Button */}
-      <button
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 flex items-center justify-center"
-        aria-label="Back to top"
-      >
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-        </svg>
-      </button>
     </footer>
   );
 };

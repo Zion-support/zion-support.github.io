@@ -1,9 +1,9 @@
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { DollarSign, MessageSquare } from 'lucide-react';
 import React, { useState } from 'react';
-import { Button } from '@/components/ui/Button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { Input } from '@/components/ui/Input';
-import { Textarea } from '@/components/ui/Textarea';
-import { Mail, Calendar, DollarSign, MessageSquare } from 'lucide-react';
 
 interface HireNowCTAProps {
   talentName: string;
@@ -83,13 +83,11 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }: HireNowCTAProps) 
                 Project Description
               </label>
               <Textarea
-                id="projectDescription"
                 name="projectDescription"
                 value={formData.projectDescription}
                 onChange={handleChange}
                 placeholder="Describe your project requirements..."
                 className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"
-                required
               />
             </div>
 
@@ -130,7 +128,6 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }: HireNowCTAProps) 
                 Additional Message
               </label>
               <Textarea
-                id="message"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}

@@ -1,36 +1,36 @@
 [
   {
-    "timestamp": "2025-08-25T15:31:20.900Z",
+    "timestamp": "2025-08-26T03:35:17.789Z",
     "system": {
       "platform": "darwin",
       "arch": "x64",
       "nodeVersion": "v22.16.0",
-      "uptime": 7210,
+      "uptime": 2220,
       "hostname": "MacBook-Pro-de-Kleber.local"
     },
     "cpu": {
       "loadAverage": [
-        85.6748046875,
-        54.64892578125,
-        56.0439453125
+        51.5751953125,
+        24.328125,
+        16.49951171875
       ],
       "usage": {
-        "user": 106067,
-        "system": 24218,
-        "total": 130285
+        "user": 100164,
+        "system": 21821,
+        "total": 121985
       },
       "cores": 12
     },
     "memory": {
       "total": 34359738368,
-      "free": 2543316992,
-      "used": 31816421376,
-      "usagePercent": 92.5979733467102,
+      "free": 5495152640,
+      "used": 28864585728,
+      "usagePercent": 84.00700092315674,
       "process": {
-        "rss": 32071680,
+        "rss": 32026624,
         "heapTotal": 5574656,
-        "heapUsed": 4505072,
-        "external": 1562874,
+        "heapUsed": 4483880,
+        "external": 1561738,
         "arrayBuffers": 10555
       }
     },
@@ -48,38 +48,33 @@
           "family": "IPv6",
           "mac": "ac:de:48:00:11:22"
         },
-        "ap1": {
-          "address": "fe80::3cad:8aff:feb5:55e2",
-          "family": "IPv6",
-          "mac": "3e:ad:8a:b5:55:e2"
-        },
         "en0": {
           "address": "192.168.68.56",
           "family": "IPv4",
           "mac": "be:77:45:94:99:b6"
         },
         "awdl0": {
-          "address": "fe80::9:eeff:fe1e:d160",
+          "address": "fe80::98e6:53ff:fe4a:35b5",
           "family": "IPv6",
-          "mac": "02:09:ee:1e:d1:60"
+          "mac": "9a:e6:53:4a:35:b5"
         },
         "llw0": {
-          "address": "fe80::9:eeff:fe1e:d160",
+          "address": "fe80::98e6:53ff:fe4a:35b5",
           "family": "IPv6",
-          "mac": "02:09:ee:1e:d1:60"
+          "mac": "9a:e6:53:4a:35:b5"
         },
         "utun0": {
-          "address": "fe80::4130:759:787a:f94b",
+          "address": "fe80::ac04:62c6:dad4:557a",
           "family": "IPv6",
           "mac": "00:00:00:00:00:00"
         },
         "utun1": {
-          "address": "fe80::beab:c752:6923:3fe7",
+          "address": "fe80::34ef:ed3:ccc5:d271",
           "family": "IPv6",
           "mac": "00:00:00:00:00:00"
         },
         "utun2": {
-          "address": "fe80::8ccd:c78b:1315:c2f3",
+          "address": "fe80::7c8e:cd98:c751:3a32",
           "family": "IPv6",
           "mac": "00:00:00:00:00:00"
         },
@@ -93,52 +88,52 @@
       "bandwidth": "unknown"
     },
     "process": {
-      "pid": 15832,
-      "uptime": 30.060953936,
+      "pid": 36441,
+      "uptime": 30.090163006,
       "memory": {
-        "rss": 32071680,
+        "rss": 32026624,
         "heapTotal": 5574656,
-        "heapUsed": 4505072,
-        "external": 1562874,
+        "heapUsed": 4483880,
+        "external": 1561738,
         "arrayBuffers": 10555
       },
       "cpu": {
-        "user": 106067,
-        "system": 24218
+        "user": 100164,
+        "system": 21821
       }
     }
   },
   {
-    "timestamp": "2025-08-25T15:31:50.901Z",
+    "timestamp": "2025-08-26T03:35:47.790Z",
     "system": {
       "platform": "darwin",
       "arch": "x64",
       "nodeVersion": "v22.16.0",
-      "uptime": 7240,
+      "uptime": 2250,
       "hostname": "MacBook-Pro-de-Kleber.local"
     },
     "cpu": {
       "loadAverage": [
-        80.83984375,
-        56.904296875,
-        56.83984375
+        44.517578125,
+        25.623046875,
+        17.26416015625
       ],
       "usage": {
-        "user": 109399,
-        "system": 26542,
-        "total": 135941
+        "user": 104614,
+        "system": 23541,
+        "total": 128155
       },
       "cores": 12
     },
     "memory": {
       "total": 34359738368,
-      "free": 2675257344,
-      "used": 31684481024,
-      "usagePercent": 92.21397638320923,
+      "free": 9104625664,
+      "used": 25255112704,
+      "usagePercent": 73.50205183029175,
       "process": {
-        "rss": 32350208,
+        "rss": 32440320,
         "heapTotal": 5574656,
-        "heapUsed": 4579040,
+        "heapUsed": 4646352,
         "external": 1562914,
         "arrayBuffers": 10555
       }
@@ -157,38 +152,33 @@
           "family": "IPv6",
           "mac": "ac:de:48:00:11:22"
         },
-        "ap1": {
-          "address": "fe80::3cad:8aff:feb5:55e2",
-          "family": "IPv6",
-          "mac": "3e:ad:8a:b5:55:e2"
-        },
         "en0": {
           "address": "192.168.68.56",
           "family": "IPv4",
           "mac": "be:77:45:94:99:b6"
         },
         "awdl0": {
-          "address": "fe80::9:eeff:fe1e:d160",
+          "address": "fe80::98e6:53ff:fe4a:35b5",
           "family": "IPv6",
-          "mac": "02:09:ee:1e:d1:60"
+          "mac": "9a:e6:53:4a:35:b5"
         },
         "llw0": {
-          "address": "fe80::9:eeff:fe1e:d160",
+          "address": "fe80::98e6:53ff:fe4a:35b5",
           "family": "IPv6",
-          "mac": "02:09:ee:1e:d1:60"
+          "mac": "9a:e6:53:4a:35:b5"
         },
         "utun0": {
-          "address": "fe80::4130:759:787a:f94b",
+          "address": "fe80::ac04:62c6:dad4:557a",
           "family": "IPv6",
           "mac": "00:00:00:00:00:00"
         },
         "utun1": {
-          "address": "fe80::beab:c752:6923:3fe7",
+          "address": "fe80::34ef:ed3:ccc5:d271",
           "family": "IPv6",
           "mac": "00:00:00:00:00:00"
         },
         "utun2": {
-          "address": "fe80::8ccd:c78b:1315:c2f3",
+          "address": "fe80::7c8e:cd98:c751:3a32",
           "family": "IPv6",
           "mac": "00:00:00:00:00:00"
         },
@@ -202,18 +192,18 @@
       "bandwidth": "unknown"
     },
     "process": {
-      "pid": 15832,
-      "uptime": 60.059851946,
+      "pid": 36441,
+      "uptime": 60.087316843,
       "memory": {
-        "rss": 32350208,
+        "rss": 32440320,
         "heapTotal": 5574656,
-        "heapUsed": 4579040,
+        "heapUsed": 4646352,
         "external": 1562914,
         "arrayBuffers": 10555
       },
       "cpu": {
-        "user": 109399,
-        "system": 26542
+        "user": 104614,
+        "system": 23541
       }
     }
   }

@@ -1500,3 +1500,374 @@ fatal: could not read Username for 'https://github.com': Device not configured
 [2025-08-25T15:32:01.642Z] Checking for remote updates...
 [2025-08-25T15:32:04.123Z] Up to date with remote
 [2025-08-25T15:32:04.125Z] Staging all changes...
+[2025-08-26T03:30:14.068Z] Auto-pull failed: Command failed: git pull origin main
+From https://github.com/Zion-Holdings/zion.app
+ * branch                    main       -> FETCH_HEAD
+error: Your local changes to the following files would be overwritten by merge:
+  automation/data/analyzed-links.json automation/data/autonomous-state.json automation/data/performance-metrics.json automation/logs/HEALTH.runtime.log automation/logs/SYSTEM.runtime.log automation/logs/autonomous-manager-coordinated.log automation/logs/autonomous-system-manager.runtime.log automation/logs/code-quality.log automation/logs/continuous-improvement.log automation/logs/cron.log automation/logs/error-recovery.log automation/logs/git-pull-rebase.log automation/logs/git-status.log automation/logs/git-sync.log automation/logs/health-check.log automation/logs/infinite-improvement.log automation/logs/link-health-scheduler-coordinated.log automation/logs/link-health-scheduler.runtime.log automation/logs/master-coordinator.log automation/logs/ml-link-intelligence-coordinated.log automation/logs/ml-link-intelligence.runtime.log automation/logs/performance-monitor-coordinated.log automation/logs/real-time-performance-monitor.runtime.log automation/logs/run-automation.log src/components/ChatAssistant/ChatInput.tsx src/components/profile/HireNowCTA.tsx src/components/ui/Button.js src/components/ui/Card.js src/components/ui/Input.js src/components/ui/Textarea.js src/components/ui/Textarea.tsx src/components/ui/textarea.tsx src/pages/ForgotPassword.tsx
+<stdin>:3788: trailing whitespace.
+    [7m86[0m 
+<stdin>:3790: trailing whitespace.
+    [7m92[0m 
+<stdin>:3792: trailing whitespace.
+    [7m59[0m 
+<stdin>:3794: trailing whitespace.
+    [7m87[0m 
+<stdin>:3796: trailing whitespace.
+    [7m116[0m 
+warning: squelched 19 whitespace errors
+warning: 24 lines add whitespace errors.
+error: Your local changes to the following files would be overwritten by merge:
+	automation/data/analyzed-links.json
+	automation/logs/SYSTEM.runtime.log
+	automation/logs/autonomous-system-manager.runtime.log
+	automation/logs/error-recovery.log
+	automation/logs/link-health-scheduler.runtime.log
+	automation/logs/master-coordinator.log
+	automation/logs/ml-link-intelligence.runtime.log
+Please commit your changes or stash them before you merge.
+Aborting
+Index was not unstashed.
+Merge with strategy ort failed.
+
+[2025-08-26T03:30:14.070Z] Checking for merge conflicts...
+[2025-08-26T03:30:14.437Z] Attempting auto-push...
+[2025-08-26T03:30:15.126Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T03:30:15.127Z] Advanced git sync process completed
+[2025-08-26T03:32:00.785Z] Starting advanced git sync process...
+[2025-08-26T03:32:00.790Z] Checking git status...
+[2025-08-26T03:32:01.065Z] Changes detected: 122 files modified
+[2025-08-26T03:32:01.066Z] Checking for remote updates...
+[2025-08-26T03:32:02.900Z] Behind remote by 58 commits
+[2025-08-26T03:32:02.904Z] Staging all changes...
+[2025-08-26T03:32:03.294Z] Attempting auto-commit...
+[2025-08-26T03:32:09.489Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T03:32:03.380Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/App.tsx(159,1): error TS1185: Merge conflict marker encountered.
+src/App.tsx(191,1): error TS1185: Merge conflict marker encountered.
+src/App.tsx(212,1): error TS1185: Merge conflict marker encountered.
+src/pages/About.tsx(3,1): error TS1185: Merge conflict marker encountered.
+src/pages/About.tsx(253,29): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/About.tsx(254,3): error TS1109: Expression expected.
+src/pages/About.tsx(265,10): error TS17008: JSX element 'section' has no corresponding closing tag.
+src/pages/About.tsx(273,1): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/About.tsx(273,2): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/About.tsx(273,3): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/About.tsx(273,4): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/About.tsx(273,5): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/About.tsx(273,6): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/About.tsx(273,7): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/About.tsx(276,9): error TS17015: Expected corresponding closing tag for JSX fragment.
+src/pages/About.tsx(276,9): error TS1005: '</' expected.
+src/pages/About.tsx(276,16): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?
+src/pages/About.tsx(278,1): error TS1185: Merge conflict marker encountered.
+src/pages/About.tsx(303,5): error TS1128: Declaration or statement expected.
+src/pages/About.tsx(304,1): error TS1185: Merge conflict marker encountered.
+src/pages/About.tsx(468,1): error TS1185: Merge conflict marker encountered.
+src/pages/About.tsx(469,3): error TS1109: Expression expected.
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T03:32:09.491Z] Attempting auto-pull...
+[2025-08-26T03:32:09.555Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T03:32:09.556Z] Checking for merge conflicts...
+[2025-08-26T03:32:09.678Z] Attempting auto-push...
+[2025-08-26T03:32:10.422Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T03:32:10.423Z] Advanced git sync process completed
+[2025-08-26T03:32:17.319Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T03:30:04.345Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+🏗️ Running build check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 build
+> tsc && vite build
+
+src/components/ChatAssistant/ChatInput.tsx(2,24): error TS1149: File name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Button.tsx' differs from already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/button.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/home/FeatureCTAs.tsx'
+    Imported via '@/components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/Accessibility.tsx'
+    Imported via '@/components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/AccessibilityEnhancer.tsx'
+    Imported via './ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/AdvancedAnalyticsDashboard.tsx'
+    Imported via './ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/AdvancedServiceComparison.tsx'
+    Imported via './ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/AdvancedServiceInnovationHub.tsx'
+    Imported via './ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/AdvancedServicePortfolioDashboard.tsx'
+    Imported via './ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/AdvancedServiceRecommendation.tsx'
+    Imported via "@/components/ui/button" from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ContactInfo.tsx'
+    Imported via './ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/EnhancedServicesShowcase.tsx'
+    Imported via '@/components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ErrorPage.tsx'
+    Imported via './ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/MainNavigation.tsx'
+    Imported via './ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/NotFound.tsx'
+    Imported via './ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ServiceShowcase.tsx'
+    Imported via "@/components/ui/Button" from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ChatAssistant/ChatInput.tsx'
+    Imported via "@/components/ui/button" from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/header/MobileMenu.tsx'
+    Imported via '../ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/home/EnhancedServicesOverview.tsx'
+    Imported via '@/components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/home/MicroSaasServicesSection.tsx'
+    Imported via '@/components/ui/Button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Imported via './button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/3d-card-gallery.tsx'
+    Imported via './button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/accessibility-menu.tsx'
+    Imported via './button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/accessibility.tsx'
+    Imported via './button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/ai-chat-assistant.tsx'
+    Imported via './button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/ai-search.tsx'
+    Imported via './button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/analytics-dashboard.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+    Imported via './button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/interactive-timeline.tsx'
+    Imported via './button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/notification.tsx'
+    Imported via './button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/performance-monitor.tsx'
+    Imported via "@/components/ui/button" from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/BlockchainServicesPage.tsx'
+    Imported via '@/components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/BusinessSolutionsPage.tsx'
+    Imported via '../components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/ComprehensivePricing.tsx'
+    Imported via '@/components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/DeveloperPortal.tsx'
+    Imported via '@/components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/DigitalMarketingServicesPage.tsx'
+    Imported via '@/components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/EnhancedServicesShowcase.tsx'
+    Imported via '@/components/ui/Button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/ForgotPassword.tsx'
+    Imported via "@/components/ui/button" from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/IoTServicesPage.tsx'
+    Imported via "@/components/ui/button" from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/MicroSAASServicesPage.tsx'
+    Imported via '../components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/ServiceComparison.tsx'
+    Imported via '../components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/ServiceInnovationHub.tsx'
+    Imported via '../components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/ServicePortfolioDashboard.tsx'
+    Imported via '../components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/ServiceRecommendations.tsx'
+src/components/profile/HireNowCTA.tsx(2,24): error TS1149: File name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Button.tsx' differs from already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/button.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/home/FeatureCTAs.tsx'
+    Imported via '@/components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/Accessibility.tsx'
+    Imported via '@/components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/AccessibilityEnhancer.tsx'
+    Imported via './ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/AdvancedAnalyticsDashboard.tsx'
+    Imported via './ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/AdvancedServiceComparison.tsx'
+    Imported via './ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/AdvancedServiceInnovationHub.tsx'
+    Imported via './ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/AdvancedServicePortfolioDashboard.tsx'
+    Imported via './ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/AdvancedServiceRecommendation.tsx'
+    Imported via "@/components/ui/button" from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ContactInfo.tsx'
+    Imported via './ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/EnhancedServicesShowcase.tsx'
+    Imported via '@/components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ErrorPage.tsx'
+    Imported via './ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/MainNavigation.tsx'
+    Imported via './ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/NotFound.tsx'
+    Imported via './ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ServiceShowcase.tsx'
+    Imported via "@/components/ui/Button" from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ChatAssistant/ChatInput.tsx'
+    Imported via "@/components/ui/button" from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/header/MobileMenu.tsx'
+    Imported via '../ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/home/EnhancedServicesOverview.tsx'
+    Imported via '@/components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/home/MicroSaasServicesSection.tsx'
+    Imported via '@/components/ui/Button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Imported via './button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/3d-card-gallery.tsx'
+    Imported via './button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/accessibility-menu.tsx'
+    Imported via './button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/accessibility.tsx'
+    Imported via './button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/ai-chat-assistant.tsx'
+    Imported via './button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/ai-search.tsx'
+    Imported via './button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/analytics-dashboard.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+    Imported via './button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/interactive-timeline.tsx'
+    Imported via './button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/notification.tsx'
+    Imported via './button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/performance-monitor.tsx'
+    Imported via "@/components/ui/button" from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/BlockchainServicesPage.tsx'
+    Imported via '@/components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/BusinessSolutionsPage.tsx'
+    Imported via '../components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/ComprehensivePricing.tsx'
+    Imported via '@/components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/DeveloperPortal.tsx'
+    Imported via '@/components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/DigitalMarketingServicesPage.tsx'
+    Imported via '@/components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/EnhancedServicesShowcase.tsx'
+    Imported via '@/components/ui/Button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/ForgotPassword.tsx'
+    Imported via "@/components/ui/button" from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/IoTServicesPage.tsx'
+    Imported via "@/components/ui/button" from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/MicroSAASServicesPage.tsx'
+    Imported via '../components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/ServiceComparison.tsx'
+    Imported via '../components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/ServiceInnovationHub.tsx'
+    Imported via '../components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/ServicePortfolioDashboard.tsx'
+    Imported via '../components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/ServiceRecommendations.tsx'
+src/components/profile/HireNowCTA.tsx(3,58): error TS1149: File name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Card.tsx' differs from already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/card.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/card' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/home/FeatureCTAs.tsx'
+    Imported via '@/components/ui/card' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/home/FeatureHighlights.tsx'
+    Imported via './ui/card' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/AdvancedAnalyticsDashboard.tsx'
+    Imported via './ui/card' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/AdvancedServiceComparison.tsx'
+    Imported via './ui/card' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/AdvancedServiceInnovationHub.tsx'
+    Imported via './ui/card' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/AdvancedServicePortfolioDashboard.tsx'
+    Imported via './ui/card' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/AdvancedServiceRecommendation.tsx'
+    Imported via '@/components/ui/card' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/BlogSection.tsx'
+    Imported via "@/components/ui/card" from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ContactInfo.tsx'
+    Imported via './ui/card' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/EnhancedServicesShowcase.tsx'
+    Imported via '@/components/ui/card' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/FeaturesGuideSection.tsx'
+    Imported via './ui/card' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ServiceCard.tsx'
+    Imported via './ui/card' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ServiceShowcase.tsx'
+    Imported via '../ui/card' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/home/EnhancedServicesOverview.tsx'
+    Imported via '@/components/ui/card' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/home/MicroSaasServicesSection.tsx'
+    Imported via '@/components/ui/card' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/home/ServicesShowcase.tsx'
+    Imported via '@/components/ui/Card' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+    Imported via "@/components/ui/card" from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/BlockchainServicesPage.tsx'
+    Imported via '@/components/ui/card' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/BusinessSolutionsPage.tsx'
+    Imported via '../components/ui/card' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/ComprehensivePricing.tsx'
+    Imported via '@/components/ui/card' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/Cookies.tsx'
+    Imported via '@/components/ui/card' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/DeveloperPortal.tsx'
+    Imported via '@/components/ui/card' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/DigitalMarketingServicesPage.tsx'
+    Imported via '@/components/ui/card' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/EnhancedServicesShowcase.tsx'
+    Imported via "@/components/ui/card" from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/FAQ.tsx'
+    Imported via '@/components/ui/card' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/HelpCenter.tsx'
+    Imported via "@/components/ui/card" from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/IoTServicesPage.tsx'
+    Imported via "@/components/ui/card" from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/MicroSAASServicesPage.tsx'
+    Imported via '../components/ui/card' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/ServiceComparison.tsx'
+    Imported via '../components/ui/card' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/ServiceInnovationHub.tsx'
+    Imported via '../components/ui/card' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/ServicePortfolioDashboard.tsx'
+    Imported via '../components/ui/card' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/ServiceRecommendations.tsx'
+src/components/profile/HireNowCTA.tsx(4,23): error TS1149: File name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Input.tsx' differs from already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/input.tsx' only in casing.
+  The file is in the program because:
+    Imported via './ui/input' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/AdvancedServiceComparison.tsx'
+    Imported via './ui/input' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/AdvancedServiceInnovationHub.tsx'
+    Imported via './ui/input' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/AdvancedServicePortfolioDashboard.tsx'
+    Imported via './ui/input' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/AdvancedServiceRecommendation.tsx'
+    Imported via './ui/input' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/MainNavigation.tsx'
+    Imported via '@/components/ui/Input' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+    Imported via '@/components/ui/Input' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/ForgotPassword.tsx'
+src/components/profile/HireNowCTA.tsx(102,19): error TS2322: Type '{ id: string; name: string; value: string; onChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void; placeholder: string; className: string; required: true; }' is not assignable to type 'IntrinsicAttributes & InputProps'.
+  Property 'id' does not exist on type 'IntrinsicAttributes & InputProps'.
+src/components/profile/HireNowCTA.tsx(117,19): error TS2322: Type '{ id: string; name: string; type: string; value: string; onChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void; className: string; required: true; }' is not assignable to type 'IntrinsicAttributes & InputProps'.
+  Property 'id' does not exist on type 'IntrinsicAttributes & InputProps'.
+src/pages/ForgotPassword.tsx(5,24): error TS1149: File name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Button.tsx' differs from already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/button.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/home/FeatureCTAs.tsx'
+    Imported via '@/components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/Accessibility.tsx'
+    Imported via '@/components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/AccessibilityEnhancer.tsx'
+    Imported via './ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/AdvancedAnalyticsDashboard.tsx'
+    Imported via './ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/AdvancedServiceComparison.tsx'
+    Imported via './ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/AdvancedServiceInnovationHub.tsx'
+    Imported via './ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/AdvancedServicePortfolioDashboard.tsx'
+    Imported via './ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/AdvancedServiceRecommendation.tsx'
+    Imported via "@/components/ui/button" from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ContactInfo.tsx'
+    Imported via './ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/EnhancedServicesShowcase.tsx'
+    Imported via '@/components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ErrorPage.tsx'
+    Imported via './ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/MainNavigation.tsx'
+    Imported via './ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/NotFound.tsx'
+    Imported via './ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ServiceShowcase.tsx'
+    Imported via "@/components/ui/Button" from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ChatAssistant/ChatInput.tsx'
+    Imported via "@/components/ui/button" from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/header/MobileMenu.tsx'
+    Imported via '../ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/home/EnhancedServicesOverview.tsx'
+    Imported via '@/components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/home/MicroSaasServicesSection.tsx'
+    Imported via '@/components/ui/Button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Imported via './button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/3d-card-gallery.tsx'
+    Imported via './button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/accessibility-menu.tsx'
+    Imported via './button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/accessibility.tsx'
+    Imported via './button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/ai-chat-assistant.tsx'
+    Imported via './button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/ai-search.tsx'
+    Imported via './button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/analytics-dashboard.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+    Imported via './button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/interactive-timeline.tsx'
+    Imported via './button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/notification.tsx'
+    Imported via './button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/performance-monitor.tsx'
+    Imported via "@/components/ui/button" from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/BlockchainServicesPage.tsx'
+    Imported via '@/components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/BusinessSolutionsPage.tsx'
+    Imported via '../components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/ComprehensivePricing.tsx'
+    Imported via '@/components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/DeveloperPortal.tsx'
+    Imported via '@/components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/DigitalMarketingServicesPage.tsx'
+    Imported via '@/components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/EnhancedServicesShowcase.tsx'
+    Imported via '@/components/ui/Button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/ForgotPassword.tsx'
+    Imported via "@/components/ui/button" from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/IoTServicesPage.tsx'
+    Imported via "@/components/ui/button" from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/MicroSAASServicesPage.tsx'
+    Imported via '../components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/ServiceComparison.tsx'
+    Imported via '../components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/ServiceInnovationHub.tsx'
+    Imported via '../components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/ServicePortfolioDashboard.tsx'
+    Imported via '../components/ui/button' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/ServiceRecommendations.tsx'
+src/pages/ForgotPassword.tsx(6,23): error TS1149: File name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Input.tsx' differs from already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/input.tsx' only in casing.
+  The file is in the program because:
+    Imported via './ui/input' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/AdvancedServiceComparison.tsx'
+    Imported via './ui/input' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/AdvancedServiceInnovationHub.tsx'
+    Imported via './ui/input' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/AdvancedServicePortfolioDashboard.tsx'
+    Imported via './ui/input' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/AdvancedServiceRecommendation.tsx'
+    Imported via './ui/input' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/MainNavigation.tsx'
+    Imported via '@/components/ui/Input' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+    Imported via '@/components/ui/Input' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/pages/ForgotPassword.tsx'
+src/pages/ForgotPassword.tsx(98,19): error TS2322: Type '{ id: string; type: string; value: string; onChange: (e: ChangeEvent<HTMLInputElement>) => void; placeholder: string; className: string; required: true; }' is not assignable to type 'IntrinsicAttributes & InputProps'.
+  Property 'id' does not exist on type 'IntrinsicAttributes & InputProps'.
+❌ Build failed. Please fix the issues before committing.
+
+[2025-08-26T03:32:17.341Z] Attempting auto-pull...
+[2025-08-26T03:32:17.460Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T03:32:17.461Z] Checking for merge conflicts...
+[2025-08-26T03:32:17.625Z] Attempting auto-push...
+[2025-08-26T03:32:18.075Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T03:32:18.075Z] Advanced git sync process completed
+[2025-08-26T03:34:00.393Z] Starting advanced git sync process...
+[2025-08-26T03:34:00.396Z] Checking git status...
+[2025-08-26T03:34:01.111Z] Changes detected: 124 files modified
+[2025-08-26T03:34:01.112Z] Checking for remote updates...
+[2025-08-26T03:34:03.562Z] Behind remote by 59 commits
+[2025-08-26T03:34:03.563Z] Staging all changes...
+[2025-08-26T03:34:04.376Z] Attempting auto-commit...
+[2025-08-26T03:35:33.650Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T03:34:04.516Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+src/components/profile/HireNowCTA.tsx(100,19): error TS2322: Type '{ id: string; name: string; value: string; onChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void; placeholder: string; className: string; required: true; }' is not assignable to type 'IntrinsicAttributes & InputProps'.
+  Property 'id' does not exist on type 'IntrinsicAttributes & InputProps'.
+src/components/profile/HireNowCTA.tsx(115,19): error TS2322: Type '{ id: string; name: string; type: string; value: string; onChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void; className: string; required: true; }' is not assignable to type 'IntrinsicAttributes & InputProps'.
+  Property 'id' does not exist on type 'IntrinsicAttributes & InputProps'.
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T03:35:33.651Z] Attempting auto-pull...
+[2025-08-26T03:35:33.710Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T03:35:33.711Z] Checking for merge conflicts...
+[2025-08-26T03:35:33.822Z] Attempting auto-push...
+[2025-08-26T03:35:34.275Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T03:35:34.276Z] Advanced git sync process completed
+[2025-08-26T03:36:00.372Z] Starting advanced git sync process...
+[2025-08-26T03:36:00.375Z] Checking git status...
+[2025-08-26T03:36:00.546Z] Changes detected: 129 files modified
+[2025-08-26T03:36:00.546Z] Checking for remote updates...
+[2025-08-26T03:36:02.148Z] Behind remote by 59 commits
+[2025-08-26T03:36:02.148Z] Staging all changes...
