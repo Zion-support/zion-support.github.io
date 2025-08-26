@@ -2,215 +2,215 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-const Landing: React.FC = () => {
+export default function LandingPage() {
   const features = [
     {
-      icon: '🤖',
-      title: 'Autonomous Automation',
-      description: 'Self-running systems that operate 24/7 without human intervention'
+      title: "Autonomous Cloud Management",
+      description: "Self-managing infrastructure that scales, optimizes, and maintains itself",
+      icon: "☁️",
+      benefits: ["Auto-scaling", "Cost optimization", "24/7 monitoring"]
     },
     {
-      icon: '☁️',
-      title: 'Cloud-Native',
-      description: 'Built for the cloud with scalability and resilience at its core'
+      title: "AI Content Generation",
+      description: "Intelligent content creation that learns and improves over time",
+      icon: "✍️",
+      benefits: ["SEO optimization", "Brand consistency", "Multi-language support"]
     },
     {
-      icon: '🔒',
-      title: 'Enterprise Security',
-      description: 'Bank-grade security with comprehensive threat detection'
+      title: "Self-Healing DevOps",
+      description: "Pipelines that detect and fix issues automatically",
+      icon: "🔄",
+      benefits: ["Error detection", "Auto-fixing", "Deployment optimization"]
     },
     {
-      icon: '⚡',
-      title: 'Lightning Fast',
-      description: 'Optimized for maximum performance and user experience'
+      title: "Intelligent Security",
+      description: "Proactive threat detection and automated response systems",
+      icon: "🔒",
+      benefits: ["Real-time monitoring", "Auto-response", "Vulnerability scanning"]
     }
-  ];
-
-  const stats = [
-    { number: '227', label: 'Active Automations' },
-    { number: '99.9%', label: 'Uptime Guarantee' },
-    { number: '2,960+', label: 'Generated Pages' },
-    { number: '24/7', label: 'Continuous Operation' }
   ];
 
   const testimonials = [
     {
-      quote: "bolt.new.zion.app has revolutionized our automation workflow. The autonomous systems work flawlessly around the clock.",
-      author: "Sarah Chen",
-      role: "CTO, TechCorp"
+      name: "Sarah Chen",
+      role: "CTO, TechCorp",
+      company: "TechCorp",
+      content: "Zion's autonomous systems have transformed our cloud operations. We've seen a 40% reduction in manual intervention and 99.9% uptime.",
+      avatar: "👩‍💼"
     },
     {
-      quote: "The platform's reliability and performance have exceeded our expectations. It's truly a game-changer for modern development.",
-      author: "Mike Rodriguez",
-      role: "Lead DevOps Engineer"
+      name: "Michael Rodriguez",
+      role: "DevOps Lead",
+      company: "InnovateSoft",
+      content: "The self-healing pipelines are incredible. Issues that used to take hours to resolve now fix themselves in minutes.",
+      avatar: "👨‍💻"
+    },
+    {
+      name: "Emily Watson",
+      role: "Marketing Director",
+      company: "GrowthCo",
+      content: "AI content generation has increased our content output by 300% while maintaining quality and brand consistency.",
+      avatar: "👩‍💼"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+    <>
       <Head>
-        <title>Landing - bolt.new.zion.app</title>
-        <meta name="description" content="Experience the future of autonomous automation with bolt.new.zion.app" />
-        <meta name="keywords" content="landing, automation, autonomous, cloud-native, bolt.new.zion.app" />
+        <title>Zion - Autonomous Cloud Automation Platform</title>
+        <meta name="description" content="Experience the future of automation with Zion's autonomous cloud systems that run themselves, learn from experience, and continuously improve." />
       </Head>
-
-      {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-        <div className="relative container mx-auto px-4 py-20">
-          <div className="text-center text-white">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-              The Future of Automation
+      
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+        {/* Hero Section */}
+        <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+              The Future of
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-purple-200">
+                Automation
+              </span>
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
-              Experience autonomous, cloud-native automation that runs 24/7, 
-              continuously optimizing and evolving your technology infrastructure.
+            <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto mb-8">
+              Zion's autonomous cloud systems run themselves, learn from experience, and continuously improve without human intervention.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/automation" 
-                className="px-8 py-4 bg-blue-600 text-white rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors"
+                href="/playground"
+                className="bg-white text-blue-600 hover:bg-blue-50 font-bold py-4 px-8 rounded-lg text-lg transition-colors"
               >
-                Get Started
+                Try It Live
               </Link>
               <Link 
-                href="/playground" 
-                className="px-8 py-4 border-2 border-white text-white rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors"
+                href="/contact"
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 font-bold py-4 px-8 rounded-lg text-lg transition-colors"
               >
-                Try Demo
+                Get Started
               </Link>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Stats Section */}
-      <div className="py-20 bg-white/5 backdrop-blur-sm">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center text-white">
-                <div className="text-4xl md:text-5xl font-bold text-blue-300 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-blue-100 text-lg">
-                  {stat.label}
-                </div>
+        {/* Stats Section */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-10">
+          <div className="bg-white rounded-2xl shadow-xl p-8">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-blue-600 mb-2">227</div>
+                <div className="text-gray-600">Active Automations</div>
               </div>
-            ))}
+              <div className="text-center">
+                <div className="text-4xl font-bold text-purple-600 mb-2">99.9%</div>
+                <div className="text-gray-600">Uptime</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-green-600 mb-2">24/7</div>
+                <div className="text-gray-600">Operation</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-orange-600 mb-2">500+</div>
+                <div className="text-gray-600">Happy Customers</div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Features Section */}
-      <div className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center text-white mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Why Choose bolt.new.zion.app?
-            </h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Our platform combines cutting-edge technology with proven reliability 
-              to deliver automation that never sleeps.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Features Section */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Why Choose Zion?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="text-center text-white p-6 rounded-lg bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all">
-                <div className="text-5xl mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-                <p className="text-blue-100">{feature.description}</p>
+              <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+                <div className="text-6xl mb-4">{feature.icon}</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+                <p className="text-gray-600 mb-6">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-gray-700">
+                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
         </div>
-      </div>
 
-      {/* CTA Section */}
-      <div className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
-        <div className="container mx-auto px-4 text-center text-white">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Ready to Transform Your Workflow?
+        {/* How It Works */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="bg-white rounded-2xl shadow-xl p-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">How Zion Works</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🚀</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Deploy</h3>
+                <p className="text-gray-600">Set up your autonomous systems with simple configuration</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🤖</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Automate</h3>
+                <p className="text-gray-600">Watch as systems manage themselves intelligently</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">📈</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Optimize</h3>
+                <p className="text-gray-600">Continuous improvement through machine learning</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Testimonials */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">What Our Customers Say</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6">
+                <div className="text-center mb-4">
+                  <div className="text-4xl mb-2">{testimonial.avatar}</div>
+                  <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
+                  <p className="text-sm text-gray-600">{testimonial.role}</p>
+                  <p className="text-sm text-blue-600">{testimonial.company}</p>
+                </div>
+                <p className="text-gray-600 italic">"{testimonial.content}"</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Ready to Experience True Automation?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Join thousands of developers and organizations who have already 
-            embraced the future of autonomous automation.
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Join hundreds of companies already transforming their operations with autonomous systems.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="space-x-4">
             <Link 
-              href="/contact" 
-              className="px-8 py-4 bg-blue-600 text-white rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors"
+              href="/playground"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors"
+            >
+              Try Demo
+            </Link>
+            <Link 
+              href="/contact"
+              className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-3 px-8 rounded-lg transition-colors"
             >
               Contact Sales
             </Link>
-            <Link 
-              href="/discover" 
-              className="px-8 py-4 border-2 border-white text-white rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors"
-            >
-              Learn More
-            </Link>
           </div>
         </div>
       </div>
-
-      {/* Testimonials Section */}
-      <div className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center text-white mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              What Our Users Say
-            </h2>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-8 text-white">
-                <div className="text-2xl text-blue-200 mb-4">"</div>
-                <p className="text-lg text-blue-100 mb-6">
-                  {testimonial.quote}
-                </p>
-                <div>
-                  <div className="font-semibold text-white">{testimonial.author}</div>
-                  <div className="text-blue-200">{testimonial.role}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Final CTA */}
-      <div className="py-20 bg-gradient-to-r from-blue-600/30 to-purple-600/30">
-        <div className="container mx-auto px-4 text-center text-white">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Start Your Automation Journey Today
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Experience the power of autonomous automation and transform 
-            your development workflow forever.
-          </p>
-          <Link 
-            href="/" 
-            className="inline-block px-8 py-4 bg-blue-600 text-white rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Explore Platform
-          </Link>
-        </div>
-      </div>
-
-      {/* Navigation */}
-      <div className="py-8 border-t border-white/20">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <Link href="/" className="text-blue-300 hover:text-white transition-colors underline">
-              ← Back to Home
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
+    </>
   );
-};
-
-export default Landing;
+}

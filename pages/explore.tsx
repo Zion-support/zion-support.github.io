@@ -1,245 +1,179 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-const Explore: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('all');
-
-  const exploreCategories = [
-    { id: 'all', name: 'All Topics', icon: '🔍' },
-    { id: 'ai', name: 'AI & Machine Learning', icon: '🤖' },
-    { id: 'automation', name: 'Automation', icon: '⚙️' },
-    { id: 'cloud', name: 'Cloud & DevOps', icon: '☁️' },
-    { id: 'security', name: 'Security', icon: '🔒' },
-    { id: 'performance', name: 'Performance', icon: '⚡' }
-  ];
-
-  const exploreTopics = [
+export default function ExplorePage() {
+  const explorationCategories = [
     {
-      id: 1,
-      title: 'AI-Powered Development Workflows',
-      category: 'ai',
-      description: 'Discover how artificial intelligence is revolutionizing software development processes.',
-      difficulty: 'Intermediate',
-      timeToRead: '8 min',
-      tags: ['AI', 'workflows', 'development'],
-      featured: true
+      title: "AI Automation",
+      description: "Discover how artificial intelligence is revolutionizing automation across industries",
+      icon: "🤖",
+      features: ["Machine Learning", "Neural Networks", "Predictive Analytics"],
+      link: "/explore/ai-automation"
     },
     {
-      id: 2,
-      title: 'Building Resilient Automation Systems',
-      category: 'automation',
-      description: 'Learn the principles of creating automation systems that can handle failures gracefully.',
-      difficulty: 'Advanced',
-      timeToRead: '12 min',
-      tags: ['automation', 'resilience', 'systems'],
-      featured: false
+      title: "Cloud Computing",
+      description: "Explore the latest in cloud infrastructure and autonomous management",
+      icon: "☁️",
+      features: ["Auto-scaling", "Load Balancing", "Cost Optimization"],
+      link: "/explore/cloud-computing"
     },
     {
-      id: 3,
-      title: 'Cloud-Native Architecture Patterns',
-      category: 'cloud',
-      description: 'Explore modern cloud architecture patterns for scalable and maintainable applications.',
-      difficulty: 'Intermediate',
-      timeToRead: '10 min',
-      tags: ['cloud', 'architecture', 'patterns'],
-      featured: true
+      title: "DevOps & CI/CD",
+      description: "Learn about autonomous development and deployment pipelines",
+      icon: "🔄",
+      features: ["Auto-deployment", "Testing", "Monitoring"],
+      link: "/explore/devops"
     },
     {
-      id: 4,
-      title: 'Zero-Trust Security Implementation',
-      category: 'security',
-      description: 'Implement comprehensive security measures with zero-trust principles.',
-      difficulty: 'Advanced',
-      timeToRead: '15 min',
-      tags: ['security', 'zero-trust', 'implementation'],
-      featured: false
-    },
-    {
-      id: 5,
-      title: 'Performance Optimization Strategies',
-      category: 'performance',
-      description: 'Master techniques for optimizing application performance and user experience.',
-      difficulty: 'Intermediate',
-      timeToRead: '9 min',
-      tags: ['performance', 'optimization', 'UX'],
-      featured: false
-    },
-    {
-      id: 6,
-      title: 'Machine Learning in Production',
-      category: 'ai',
-      description: 'Best practices for deploying and maintaining machine learning models in production.',
-      difficulty: 'Advanced',
-      timeToRead: '14 min',
-      tags: ['ML', 'production', 'deployment'],
-      featured: false
+      title: "Content Generation",
+      description: "See how AI creates and optimizes content automatically",
+      icon: "✍️",
+      features: ["SEO Optimization", "Brand Consistency", "Multi-language"],
+      link: "/explore/content-generation"
     }
   ];
 
-  const filteredTopics = activeCategory === 'all' 
-    ? exploreTopics 
-    : exploreTopics.filter(topic => topic.category === activeCategory);
-
-  const difficultyColors = {
-    'Beginner': 'bg-green-100 text-green-800',
-    'Intermediate': 'bg-yellow-100 text-yellow-800',
-    'Advanced': 'bg-red-100 text-red-800'
-  };
+  const trendingTopics = [
+    "Autonomous Systems",
+    "AI Ethics",
+    "Edge Computing",
+    "Quantum Computing",
+    "Blockchain Automation",
+    "IoT Integration"
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-50 to-cyan-50">
+    <>
       <Head>
-        <title>Explore - bolt.new.zion.app</title>
-        <meta name="description" content="Explore cutting-edge topics in AI, automation, cloud computing, and more" />
-        <meta name="keywords" content="explore, AI, automation, cloud, security, performance, bolt.new.zion.app" />
+        <title>Explore | Zion - Discover AI & Automation</title>
+        <meta name="description" content="Explore the latest trends and technologies in AI automation, cloud computing, and autonomous systems." />
       </Head>
-
-      <div className="container mx-auto px-4 py-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Explore & Learn
+      
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+        {/* Hero Section */}
+        <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Explore Zion
             </h1>
-            <p className="text-xl text-gray-600">
-              Dive deep into cutting-edge topics and discover new possibilities in technology
+            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+              Discover the cutting-edge technologies and innovations shaping the future of autonomous automation
             </p>
-            <div className="mt-4">
-              <Link href="/" className="text-blue-600 hover:text-blue-800 underline">
-                ← Back to Home
+          </div>
+        </div>
+
+        {/* Search Bar */}
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-10">
+          <div className="bg-white rounded-xl shadow-lg p-6">
+            <div className="flex items-center space-x-4">
+              <input
+                type="text"
+                placeholder="Search for topics, technologies, or concepts..."
+                className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+              <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors">
+                Search
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Exploration Categories */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Explore by Category</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {explorationCategories.map((category, index) => (
+              <Link 
+                key={index}
+                href={category.link}
+                className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              >
+                <div className="text-6xl mb-4">{category.icon}</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">{category.title}</h3>
+                <p className="text-gray-600 mb-6">{category.description}</p>
+                <ul className="space-y-2 mb-6">
+                  {category.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-700">
+                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <span className="text-blue-600 hover:text-blue-800 font-semibold">
+                  Explore {category.title} →
+                </span>
               </Link>
-            </div>
+            ))}
           </div>
+        </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6">Featured Topics</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              {exploreTopics.filter(topic => topic.featured).map((topic) => (
-                <div key={topic.id} className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">
-                      Featured
-                    </span>
-                    <span className={`px-2 py-1 text-xs font-medium rounded-full ${difficultyColors[topic.difficulty as keyof typeof difficultyColors]}`}>
-                      {topic.difficulty}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-3">{topic.title}</h3>
-                  <p className="text-gray-600 mb-4">{topic.description}</p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {topic.tags.map((tag) => (
-                      <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-500">{topic.timeToRead}</span>
-                    <button className="text-blue-600 hover:text-blue-800 font-medium">
-                      Explore Topic →
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-            <div className="flex flex-wrap gap-2 mb-6">
-              {exploreCategories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setActiveCategory(category.id)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                    activeCategory === category.id
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
+        {/* Trending Topics */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Trending Topics</h2>
+          <div className="bg-white rounded-2xl shadow-xl p-8">
+            <div className="flex flex-wrap gap-3 justify-center">
+              {trendingTopics.map((topic, index) => (
+                <span
+                  key={index}
+                  className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-200 transition-colors cursor-pointer"
                 >
-                  <span className="mr-2">{category.icon}</span>
-                  {category.name}
-                </button>
-              ))}
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredTopics.map((topic) => (
-                <div key={topic.id} className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className={`px-2 py-1 text-xs font-medium rounded-full ${difficultyColors[topic.difficulty as keyof typeof difficultyColors]}`}>
-                      {topic.difficulty}
-                    </span>
-                    <span className="text-sm text-gray-500">{topic.timeToRead}</span>
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-3">{topic.title}</h3>
-                  <p className="text-gray-600 mb-4">{topic.description}</p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {topic.tags.slice(0, 3).map((tag) => (
-                      <span key={tag} className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-500 capitalize">{topic.category}</span>
-                    <button className="text-blue-600 hover:text-blue-800 font-medium">
-                      Explore Topic →
-                    </button>
-                  </div>
-                </div>
+                  {topic}
+                </span>
               ))}
             </div>
           </div>
+        </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6">Learning Paths</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-lg font-medium text-gray-700 mb-3">Beginner Path</h3>
-                <p className="text-gray-600 mb-4">
-                  Start your journey with foundational concepts and gradually build up to advanced topics.
-                </p>
-                <div className="space-y-2 text-sm text-gray-600">
-                  <div className="flex items-center gap-2">
-                    <span className="text-green-500">✓</span>
-                    <span>Introduction to Automation</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-green-500">✓</span>
-                    <span>Basic AI Concepts</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-green-500">✓</span>
-                    <span>Cloud Fundamentals</span>
-                  </div>
+        {/* Interactive Elements */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Learning Path */}
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Learning Path</h3>
+              <p className="text-gray-600 mb-6">
+                Start your journey into autonomous automation with our curated learning paths.
+              </p>
+              <div className="space-y-3">
+                <div className="flex items-center text-sm text-gray-600">
+                  <span className="w-6 h-6 bg-green-500 text-white rounded-full flex items-center justify-center text-xs font-bold mr-3">1</span>
+                  Fundamentals of AI
+                </div>
+                <div className="flex items-center text-sm text-gray-600">
+                  <span className="w-6 h-6 bg-blue-500 text-white rounded-full flex items-center justify-center text-xs font-bold mr-3">2</span>
+                  Cloud Infrastructure
+                </div>
+                <div className="flex items-center text-sm text-gray-600">
+                  <span className="w-6 h-6 bg-gray-300 text-gray-600 rounded-full flex items-center justify-center text-xs font-bold mr-3">3</span>
+                  Autonomous Systems
                 </div>
               </div>
-              <div>
-                <h3 className="text-lg font-medium text-gray-700 mb-3">Advanced Path</h3>
-                <p className="text-gray-600 mb-4">
-                  Deep dive into complex topics and cutting-edge technologies for experienced developers.
-                </p>
-                <div className="space-y-2 text-sm text-gray-600">
-                  <div className="flex items-center gap-2">
-                    <span className="text-blue-500">→</span>
-                    <span>Advanced ML Deployment</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-blue-500">→</span>
-                    <span>Zero-Trust Security</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-blue-500">→</span>
-                    <span>Performance Optimization</span>
-                  </div>
-                </div>
+              <button className="mt-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors">
+                Start Learning
+              </button>
+            </div>
+
+            {/* Interactive Demo */}
+            <div className="bg-white rounded-xl shadow-lg p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Try It Live</h3>
+              <p className="text-gray-600 mb-6">
+                Experience autonomous automation in action with our interactive demos.
+              </p>
+              <div className="space-y-3">
+                <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+                  AI Content Generator
+                </button>
+                <button className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+                  Cloud Auto-scaling
+                </button>
+                <button className="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+                  DevOps Pipeline
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
-};
-
-export default Explore;
+}

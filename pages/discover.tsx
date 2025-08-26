@@ -1,192 +1,204 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-const Discover: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('features');
-
-  const features = [
+export default function DiscoverPage() {
+  const discoveryTopics = [
     {
-      icon: '🤖',
-      title: 'Autonomous Automation',
-      description: 'Self-running systems that operate 24/7 without human intervention',
-      benefits: ['Zero downtime', 'Continuous optimization', 'Self-healing capabilities']
+      title: "Autonomous Cloud Systems",
+      description: "Learn how self-managing cloud infrastructure is revolutionizing the industry",
+      icon: "☁️",
+      difficulty: "Intermediate",
+      duration: "45 min",
+      topics: ["Auto-scaling", "Load Balancing", "Cost Optimization"]
     },
     {
-      icon: '☁️',
-      title: 'Cloud-Native Architecture',
-      description: 'Built for the cloud with scalability and resilience at its core',
-      benefits: ['Auto-scaling', 'Global distribution', 'Fault tolerance']
+      title: "AI-Powered Content Creation",
+      description: "Discover how artificial intelligence generates and optimizes content automatically",
+      icon: "✍️",
+      difficulty: "Beginner",
+      duration: "30 min",
+      topics: ["SEO Optimization", "Brand Consistency", "Multi-language"]
     },
     {
-      icon: '🔒',
-      title: 'Enterprise Security',
-      description: 'Bank-grade security with comprehensive threat detection and prevention',
-      benefits: ['SOC 2 compliance', 'Real-time monitoring', 'Automated threat response']
+      title: "Intelligent DevOps",
+      description: "Explore self-healing CI/CD pipelines and automated deployment strategies",
+      icon: "🔄",
+      difficulty: "Advanced",
+      duration: "60 min",
+      topics: ["Auto-deployment", "Testing", "Monitoring"]
     },
     {
-      icon: '📊',
-      title: 'Advanced Analytics',
-      description: 'Deep insights into system performance and user behavior',
-      benefits: ['Real-time metrics', 'Predictive analytics', 'Custom dashboards']
+      title: "Machine Learning Automation",
+      description: "Understand how ML models automate complex decision-making processes",
+      icon: "🤖",
+      difficulty: "Advanced",
+      duration: "90 min",
+      topics: ["Model Training", "Inference", "Auto-tuning"]
     }
   ];
 
-  const technologies = [
-    { name: 'Next.js', description: 'React framework for production', category: 'Frontend' },
-    { name: 'TypeScript', description: 'Typed JavaScript for better development', category: 'Language' },
-    { name: 'Tailwind CSS', description: 'Utility-first CSS framework', category: 'Styling' },
-    { name: 'PM2', description: 'Process manager for Node.js applications', category: 'Runtime' },
-    { name: 'GitHub Actions', description: 'CI/CD automation platform', category: 'DevOps' },
-    { name: 'Docker', description: 'Containerization platform', category: 'Infrastructure' }
-  ];
-
-  const tabs = [
-    { id: 'features', label: 'Features', icon: '⭐' },
-    { id: 'tech', label: 'Technology Stack', icon: '⚡' },
-    { id: 'architecture', label: 'Architecture', icon: '🏗️' }
+  const featuredResources = [
+    {
+      title: "Zion Automation Guide",
+      type: "PDF Guide",
+      description: "Comprehensive guide to setting up autonomous automation systems",
+      downloadCount: "2.5k"
+    },
+    {
+      title: "AI Automation Webinar",
+      type: "Video",
+      description: "Live demonstration of Zion's autonomous systems in action",
+      downloadCount: "1.8k"
+    },
+    {
+      title: "Cloud Architecture Templates",
+      type: "Templates",
+      description: "Ready-to-use cloud infrastructure templates for automation",
+      downloadCount: "3.2k"
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50">
+    <>
       <Head>
-        <title>Discover - bolt.new.zion.app</title>
-        <meta name="description" content="Discover the powerful features, technology stack, and architecture of bolt.new.zion.app" />
-        <meta name="keywords" content="discover, features, technology, architecture, bolt.new.zion.app" />
+        <title>Discover | Zion - Learn AI & Automation</title>
+        <meta name="description" content="Discover the latest insights, tutorials, and resources on AI automation and autonomous systems." />
       </Head>
-
-      <div className="container mx-auto px-4 py-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Discover bolt.new.zion.app
+      
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+        {/* Hero Section */}
+        <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Discover Zion
             </h1>
-            <p className="text-xl text-gray-600">
-              Explore the cutting-edge features, technologies, and architecture that power our autonomous platform
+            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+              Uncover insights, tutorials, and resources that will transform your understanding of autonomous automation
             </p>
-            <div className="mt-4">
-              <Link href="/" className="text-blue-600 hover:text-blue-800 underline">
-                ← Back to Home
-              </Link>
-            </div>
           </div>
+        </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-            <div className="flex flex-wrap gap-2 mb-6">
-              {tabs.map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                    activeTab === tab.id
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
-                >
-                  <span className="mr-2">{tab.icon}</span>
-                  {tab.label}
-                </button>
-              ))}
-            </div>
-
-            {activeTab === 'features' && (
-              <div className="grid md:grid-cols-2 gap-8">
-                {features.map((feature, index) => (
-                  <div key={index} className="border border-gray-200 rounded-lg p-6">
-                    <div className="text-4xl mb-4">{feature.icon}</div>
-                    <h3 className="text-xl font-semibold text-gray-800 mb-3">{feature.title}</h3>
-                    <p className="text-gray-600 mb-4">{feature.description}</p>
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center gap-2">
-                          <span className="text-green-500">✓</span>
-                          <span className="text-gray-700">{benefit}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            )}
-
-            {activeTab === 'tech' && (
-              <div>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {technologies.map((tech, index) => (
-                    <div key={index} className="border border-gray-200 rounded-lg p-6">
-                      <div className="flex items-center justify-between mb-3">
-                        <h3 className="text-lg font-semibold text-gray-800">{tech.name}</h3>
-                        <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">
-                          {tech.category}
-                        </span>
-                      </div>
-                      <p className="text-gray-600">{tech.description}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {activeTab === 'architecture' && (
-              <div className="space-y-8">
-                <div className="text-center">
-                  <h3 className="text-2xl font-semibold text-gray-800 mb-6">System Architecture Overview</h3>
-                  <div className="bg-gray-100 rounded-lg p-8">
-                    <div className="text-6xl mb-4">🏗️</div>
-                    <p className="text-gray-600 text-lg">
-                      Our architecture follows a microservices pattern with comprehensive redundancy systems
-                    </p>
-                  </div>
+        {/* Discovery Topics */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">What Would You Like to Discover?</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {discoveryTopics.map((topic, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+                <div className="text-6xl mb-4">{topic.icon}</div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">{topic.title}</h3>
+                <p className="text-gray-600 mb-4">{topic.description}</p>
+                
+                <div className="flex items-center gap-4 mb-4 text-sm">
+                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full">
+                    {topic.difficulty}
+                  </span>
+                  <span className="text-gray-500">⏱️ {topic.duration}</span>
                 </div>
                 
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div className="text-center">
-                    <div className="text-3xl mb-3">🔄</div>
-                    <h4 className="text-lg font-medium text-gray-800 mb-2">Redundancy Layer</h4>
-                    <p className="text-gray-600">Multiple instances ensure 99.9% uptime</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl mb-3">🔍</div>
-                    <h4 className="text-lg font-medium text-gray-800 mb-2">Monitoring Layer</h4>
-                    <p className="text-gray-600">Real-time health checks and alerts</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl mb-3">⚡</div>
-                    <h4 className="text-lg font-medium text-gray-800 mb-2">Performance Layer</h4>
-                    <p className="text-gray-600">Optimized for speed and efficiency</p>
-                  </div>
+                <div className="mb-6">
+                  <h4 className="font-semibold text-gray-900 mb-2">Key Topics:</h4>
+                  <ul className="space-y-1">
+                    {topic.topics.map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-center text-gray-600 text-sm">
+                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
+                
+                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                  Start Learning
+                </button>
               </div>
-            )}
+            ))}
           </div>
+        </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6">Ready to Explore More?</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-lg font-medium text-gray-700 mb-3">Interactive Demo</h3>
-                <p className="text-gray-600 mb-4">
-                  Experience our platform in action with a hands-on demonstration.
-                </p>
-                <Link href="/automation" className="inline-block px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                  Try Demo
-                </Link>
+        {/* Featured Resources */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Featured Resources</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {featuredResources.map((resource, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="inline-block bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">
+                    {resource.type}
+                  </span>
+                  <span className="text-sm text-gray-500">📥 {resource.downloadCount}</span>
+                </div>
+                
+                <h3 className="text-lg font-bold text-gray-900 mb-2">{resource.title}</h3>
+                <p className="text-gray-600 text-sm mb-4">{resource.description}</p>
+                
+                <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors">
+                  Download
+                </button>
               </div>
-              <div>
-                <h3 className="text-lg font-medium text-gray-700 mb-3">Technical Deep Dive</h3>
-                <p className="text-gray-600 mb-4">
-                  Dive deeper into our technical implementation and best practices.
-                </p>
-                <Link href="/api-documentation" className="inline-block px-6 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
-                  View API Docs
-                </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Learning Paths */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Learning Paths</h2>
+          <div className="bg-white rounded-2xl shadow-xl p-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🚀</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Beginner</h3>
+                <p className="text-gray-600 text-sm mb-4">Start your journey into autonomous automation</p>
+                <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors">
+                  Get Started
+                </button>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">⚡</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Intermediate</h3>
+                <p className="text-gray-600 text-sm mb-4">Deepen your knowledge and skills</p>
+                <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors">
+                  Continue
+                </button>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🏆</span>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Advanced</h3>
+                <p className="text-gray-600 text-sm mb-4">Master advanced concepts and techniques</p>
+                <button className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors">
+                  Master
+                </button>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  );
-};
 
-export default Discover;
+        {/* Call to Action */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Ready to Start Discovering?
+          </h2>
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Join thousands of professionals who are already transforming their operations with autonomous automation.
+          </p>
+          <div className="space-x-4">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+              Start Learning
+            </button>
+            <button className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-3 px-8 rounded-lg transition-colors">
+              Browse Resources
+            </button>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

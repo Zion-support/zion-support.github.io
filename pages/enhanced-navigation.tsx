@@ -2,223 +2,310 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-const EnhancedNavigation: React.FC = () => {
-  const [activeSection, setActiveSection] = useState('overview');
+export default function EnhancedNavigationPage() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const navigationFeatures = [
+  const navigationSections = [
     {
-      icon: '🧭',
-      title: 'Smart Routing',
-      description: 'Intelligent navigation that adapts to user behavior and preferences',
-      benefits: ['Context-aware suggestions', 'Personalized shortcuts', 'Learning algorithms']
+      id: 'core',
+      title: "Core Systems",
+      icon: "⚙️",
+      description: "Essential automation and management tools",
+      color: "blue",
+      items: [
+        { name: "Automation Hub", path: "/automation", description: "Manage autonomous systems", tags: ["automation", "management"] },
+        { name: "Live Dashboard", path: "/live-dashboard", description: "Real-time monitoring", tags: ["monitoring", "real-time"] },
+        { name: "System Reports", path: "/reports", description: "Analytics and insights", tags: ["analytics", "reports"] },
+        { name: "Control Center", path: "/front", description: "Main system control", tags: ["control", "dashboard"] }
+      ]
     },
     {
-      icon: '🔍',
-      title: 'Advanced Search',
-      description: 'Powerful search capabilities with filters, autocomplete, and suggestions',
-      benefits: ['Real-time results', 'Fuzzy matching', 'Search history']
+      id: 'content',
+      title: "Content & Resources",
+      icon: "📚",
+      description: "Knowledge base and learning materials",
+      color: "green",
+      items: [
+        { name: "Blog", path: "/blog", description: "Latest insights and updates", tags: ["blog", "news", "insights"] },
+        { name: "Content Hub", path: "/content-hub", description: "Tutorials and resources", tags: ["tutorials", "resources", "learning"] },
+        { name: "Events", path: "/events", description: "Workshops and conferences", tags: ["events", "workshops", "conferences"] },
+        { name: "Newsroom", path: "/newsroom", description: "Press releases and media", tags: ["press", "media", "announcements"] }
+      ]
     },
     {
-      icon: '📱',
-      title: 'Mobile-First Design',
-      description: 'Optimized navigation for all device sizes and orientations',
-      benefits: ['Touch-friendly', 'Responsive layouts', 'Gesture support']
+      id: 'interactive',
+      title: "Interactive Tools",
+      icon: "🎮",
+      description: "Hands-on experience and testing",
+      color: "purple",
+      items: [
+        { name: "Playground", path: "/playground", description: "Try AI automation live", tags: ["demo", "testing", "interactive"] },
+        { name: "Component Library", path: "/component-library", description: "UI components and design", tags: ["ui", "components", "design"] },
+        { name: "Explore", path: "/explore", description: "Discover technologies", tags: ["explore", "discover", "technologies"] },
+        { name: "Discover", path: "/discover", description: "Learning paths and resources", tags: ["learning", "paths", "education"] }
+      ]
     },
     {
-      icon: '♿',
-      title: 'Accessibility Features',
-      description: 'Comprehensive accessibility support for all users',
-      benefits: ['Keyboard navigation', 'Screen reader support', 'High contrast modes']
+      id: 'company',
+      title: "Company & Support",
+      icon: "🏢",
+      description: "About Zion and getting help",
+      color: "orange",
+      items: [
+        { name: "About", path: "/about", description: "Company information", tags: ["company", "about", "info"] },
+        { name: "Services", path: "/services", description: "What we offer", tags: ["services", "offerings", "solutions"] },
+        { name: "Contact", path: "/contact", description: "Get in touch", tags: ["contact", "support", "help"] },
+        { name: "Privacy", path: "/privacy", description: "Privacy policy", tags: ["privacy", "policy", "legal"] }
+      ]
     }
   ];
 
-  const navigationComponents = [
-    { name: 'Main Navigation', description: 'Primary site navigation with dropdown menus', status: 'Active' },
-    { name: 'Breadcrumbs', description: 'Hierarchical navigation showing current location', status: 'Active' },
-    { name: 'Sidebar Navigation', description: 'Secondary navigation for content sections', status: 'Active' },
-    { name: 'Footer Navigation', description: 'Bottom navigation with links and information', status: 'Active' },
-    { name: 'Mobile Menu', description: 'Collapsible navigation for mobile devices', status: 'Active' },
-    { name: 'Search Bar', description: 'Global search functionality with suggestions', status: 'Active' }
-  ];
+  const allItems = navigationSections.flatMap(section => 
+    section.items.map(item => ({ ...item, section: section.title, sectionColor: section.color }))
+  );
 
-  const sections = [
-    { id: 'overview', label: 'Overview', icon: '📋' },
-    { id: 'features', label: 'Features', icon: '⭐' },
-    { id: 'components', label: 'Components', icon: '🧩' },
-    { id: 'implementation', label: 'Implementation', icon: '⚙️' }
+  const filteredItems = allItems.filter(item => {
+    const matchesSearch = searchQuery === '' || 
+      item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    
+    const matchesCategory = selectedCategory === 'all' || 
+      navigationSections.find(s => s.id === selectedCategory)?.items.includes(item);
+    
+    return matchesSearch && matchesCategory;
+  });
+
+  const quickActions = [
+    { name: "Home", path: "/", icon: "🏠", color: "blue" },
+    { name: "Landing", path: "/landing", icon: "🚀", color: "green" },
+    { name: "Main Front", path: "/main/front", icon: "⚙️", color: "purple" },
+    { name: "Front", path: "/front", icon: "🎛️", color: "orange" }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50">
+    <>
       <Head>
-        <title>Enhanced Navigation - bolt.new.zion.app</title>
-        <meta name="description" content="Advanced navigation system with smart routing, search, and accessibility features" />
-        <meta name="keywords" content="navigation, routing, search, accessibility, bolt.new.zion.app" />
+        <title>Enhanced Navigation | Zion - Advanced Site Navigation</title>
+        <meta name="description" content="Advanced navigation system for Zion's autonomous automation platform with search, filtering, and intelligent routing." />
       </Head>
-
-      <div className="container mx-auto px-4 py-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Enhanced Navigation System
+      
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
+        {/* Hero Section */}
+        <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Enhanced Navigation
             </h1>
-            <p className="text-xl text-gray-600">
-              Experience intuitive, accessible, and intelligent navigation designed for modern web applications
+            <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
+              Advanced navigation system with intelligent search, filtering, and smart routing
             </p>
-            <div className="mt-4">
-              <Link href="/" className="text-blue-600 hover:text-blue-800 underline">
-                ← Back to Home
-              </Link>
+          </div>
+        </div>
+
+        {/* Search and Filter Bar */}
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-10">
+          <div className="bg-white rounded-xl shadow-lg p-6">
+            <div className="flex flex-col lg:flex-row gap-4">
+              <div className="flex-1">
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search for pages, features, or content..."
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              >
+                <option value="all">All Categories</option>
+                {navigationSections.map(section => (
+                  <option key={section.id} value={section.id}>{section.title}</option>
+                ))}
+              </select>
             </div>
           </div>
+        </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-            <div className="flex flex-wrap gap-2 mb-6">
-              {sections.map((section) => (
-                <button
-                  key={section.id}
-                  onClick={() => setActiveSection(section.id)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                    activeSection === section.id
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
+        {/* Quick Actions */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Quick Access</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {quickActions.map((action, index) => (
+              <Link 
+                key={index}
+                href={action.path}
+                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-center"
+              >
+                <div className="text-4xl mb-4">{action.icon}</div>
+                <h3 className="text-lg font-bold text-gray-900">{action.name}</h3>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Search Results */}
+        {searchQuery && (
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              Search Results for "{searchQuery}" ({filteredItems.length} found)
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredItems.map((item, index) => (
+                <Link 
+                  key={index}
+                  href={item.path}
+                  className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300"
                 >
-                  <span className="mr-2">{section.icon}</span>
-                  {section.label}
-                </button>
+                  <div className="flex items-center justify-between mb-3">
+                    <span className={`inline-block bg-${item.sectionColor}-100 text-${item.sectionColor}-800 text-xs font-semibold px-3 py-1 rounded-full`}>
+                      {item.section}
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{item.name}</h3>
+                  <p className="text-gray-600 text-sm mb-3">{item.description}</p>
+                  <div className="flex flex-wrap gap-1">
+                    {item.tags.slice(0, 3).map((tag, tagIndex) => (
+                      <span key={tagIndex} className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </Link>
               ))}
             </div>
+          </div>
+        )}
 
-            {activeSection === 'overview' && (
-              <div className="space-y-8">
-                <div className="text-center">
-                  <div className="text-6xl mb-4">🧭</div>
-                  <h3 className="text-2xl font-semibold text-gray-800 mb-4">Navigation Philosophy</h3>
-                  <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-                    Our enhanced navigation system is built on the principle that users should never feel lost. 
-                    Every interaction is designed to guide users efficiently to their destination while providing 
-                    context and discoverability.
-                  </p>
+        {/* Navigation Categories */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Navigation by Category</h2>
+          <div className="space-y-12">
+            {navigationSections.map((section, index) => (
+              <div key={index} className="bg-white rounded-2xl shadow-xl p-8">
+                <div className="mb-6">
+                  <div className="flex items-center space-x-3 mb-3">
+                    <div className="text-3xl">{section.icon}</div>
+                    <h3 className="text-2xl font-bold text-gray-900">{section.title}</h3>
+                  </div>
+                  <p className="text-gray-600">{section.description}</p>
                 </div>
                 
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div className="text-center">
-                    <div className="text-3xl mb-3">🎯</div>
-                    <h4 className="text-lg font-medium text-gray-800 mb-2">User-Centric</h4>
-                    <p className="text-gray-600">Designed around user needs and behaviors</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl mb-3">🚀</div>
-                    <h4 className="text-lg font-medium text-gray-800 mb-2">Performance</h4>
-                    <p className="text-gray-600">Lightning-fast navigation with minimal latency</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl mb-3">🔧</div>
-                    <h4 className="text-lg font-medium text-gray-800 mb-2">Flexible</h4>
-                    <p className="text-gray-600">Adaptable to different content structures</p>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            {activeSection === 'features' && (
-              <div className="grid md:grid-cols-2 gap-8">
-                {navigationFeatures.map((feature, index) => (
-                  <div key={index} className="border border-gray-200 rounded-lg p-6">
-                    <div className="text-4xl mb-4">{feature.icon}</div>
-                    <h3 className="text-xl font-semibold text-gray-800 mb-3">{feature.title}</h3>
-                    <p className="text-gray-600 mb-4">{feature.description}</p>
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center gap-2">
-                          <span className="text-green-500">✓</span>
-                          <span className="text-gray-700">{benefit}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            )}
-
-            {activeSection === 'components' && (
-              <div>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {navigationComponents.map((component, index) => (
-                    <div key={index} className="border border-gray-200 rounded-lg p-6">
-                      <div className="flex items-center justify-between mb-3">
-                        <h3 className="text-lg font-semibold text-gray-800">{component.name}</h3>
-                        <span className="px-2 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">
-                          {component.status}
-                        </span>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {section.items.map((item, itemIndex) => (
+                    <Link 
+                      key={itemIndex}
+                      href={item.path}
+                      className="block p-4 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors border border-gray-200 hover:border-blue-300"
+                    >
+                      <h4 className="font-semibold text-gray-900 mb-1">{item.name}</h4>
+                      <p className="text-sm text-gray-600 mb-3">{item.description}</p>
+                      <div className="flex flex-wrap gap-1 mb-2">
+                        {item.tags.slice(0, 3).map((tag, tagIndex) => (
+                          <span key={tagIndex} className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded">
+                            {tag}
+                          </span>
+                        ))}
                       </div>
-                      <p className="text-gray-600">{component.description}</p>
-                    </div>
+                      <div className="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                        Visit →
+                      </div>
+                    </Link>
                   ))}
                 </div>
               </div>
-            )}
-
-            {activeSection === 'implementation' && (
-              <div className="space-y-8">
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-4">Technical Implementation</h3>
-                  <div className="bg-gray-100 rounded-lg p-6">
-                    <h4 className="font-medium text-gray-800 mb-2">Key Technologies:</h4>
-                    <ul className="space-y-2 text-gray-600">
-                      <li>• Next.js App Router for efficient routing</li>
-                      <li>• React Context for state management</li>
-                      <li>• Tailwind CSS for responsive design</li>
-                      <li>• Framer Motion for smooth animations</li>
-                    </ul>
-                  </div>
-                </div>
-                
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-4">Performance Features</h3>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="border border-gray-200 rounded-lg p-4">
-                      <h4 className="font-medium text-gray-800 mb-2">Code Splitting</h4>
-                      <p className="text-gray-600">Automatic route-based code splitting for optimal performance</p>
-                    </div>
-                    <div className="border border-gray-200 rounded-lg p-4">
-                      <h4 className="font-medium text-gray-800 mb-2">Prefetching</h4>
-                      <p className="text-gray-600">Intelligent prefetching of likely navigation targets</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            )}
+            ))}
           </div>
+        </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6">Experience Enhanced Navigation</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-lg font-medium text-gray-700 mb-3">Live Demo</h3>
-                <p className="text-gray-600 mb-4">
-                  Try out our enhanced navigation system with interactive examples.
+        {/* Smart Recommendations */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-700 rounded-2xl shadow-xl p-8 text-white">
+            <h2 className="text-3xl font-bold mb-6 text-center">Smart Recommendations</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <div className="text-4xl mb-4">🎯</div>
+                <h3 className="text-xl font-bold mb-2">Personalized</h3>
+                <p className="text-blue-100 text-sm">
+                  Navigation adapts to your usage patterns and preferences
                 </p>
-                <Link href="/" className="inline-block px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                  Explore Site
-                </Link>
               </div>
-              <div>
-                <h3 className="text-lg font-medium text-gray-700 mb-3">Component Library</h3>
-                <p className="text-gray-600 mb-4">
-                  View all available navigation components and their implementations.
+              
+              <div className="text-center">
+                <div className="text-4xl mb-4">⚡</div>
+                <h3 className="text-xl font-bold mb-2">Fast Access</h3>
+                <p className="text-blue-100 text-sm">
+                  Quick access to frequently used features and pages
                 </p>
-                <Link href="/component-library" className="inline-block px-6 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors">
-                  View Components
-                </Link>
+              </div>
+              
+              <div className="text-center">
+                <div className="text-4xl mb-4">🧠</div>
+                <h3 className="text-xl font-bold mb-2">Intelligent</h3>
+                <p className="text-blue-100 text-sm">
+                  AI-powered suggestions based on context and behavior
+                </p>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  );
-};
 
-export default EnhancedNavigation;
+        {/* Advanced Features */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Advanced Navigation Features</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-xl shadow-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Smart Search</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>• Full-text search across all content</li>
+                <li>• Tag-based filtering and categorization</li>
+                <li>• Fuzzy matching for typos and variations</li>
+                <li>• Search history and suggestions</li>
+              </ul>
+            </div>
+            
+            <div className="bg-white rounded-xl shadow-lg p-6">
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Intelligent Routing</h3>
+              <ul className="space-y-2 text-gray-600">
+                <li>• Context-aware navigation suggestions</li>
+                <li>• Breadcrumb navigation with shortcuts</li>
+                <li>• Related page recommendations</li>
+                <li>• Usage analytics and optimization</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Help Section */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              Need Help with Navigation?
+            </h2>
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+              Our enhanced navigation system is designed to be intuitive, but we're here to help if you need assistance.
+            </p>
+            <div className="space-x-4">
+              <Link 
+                href="/contact"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors"
+              >
+                Contact Support
+              </Link>
+              <Link 
+                href="/content-hub"
+                className="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-3 px-8 rounded-lg transition-colors"
+              >
+                View Documentation
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

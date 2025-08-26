@@ -2,201 +2,255 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
-const MainFront: React.FC = () => {
-  const mainFeatures = [
+export default function MainFrontPage() {
+  const systemOverview = [
     {
-      icon: '🏗️',
-      title: 'Main Development Hub',
-      description: 'Centralized development environment with all tools and resources'
+      name: "Content Generation",
+      status: "Active",
+      progress: 85,
+      color: "green",
+      description: "AI-powered content creation running smoothly"
     },
     {
-      icon: '🔧',
-      title: 'Integrated Tooling',
-      description: 'Seamlessly integrated development tools and automation systems'
+      name: "Cloud Management",
+      status: "Active",
+      progress: 100,
+      color: "blue",
+      description: "Autonomous cloud infrastructure management"
     },
     {
-      icon: '📊',
-      title: 'Project Management',
-      description: 'Comprehensive project tracking and development analytics'
+      name: "Security Monitoring",
+      status: "Active",
+      progress: 100,
+      color: "purple",
+      description: "24/7 threat detection and response"
     },
     {
-      icon: '🚀',
-      title: 'Deployment Pipeline',
-      description: 'Automated deployment and continuous integration workflows'
+      name: "Performance Optimization",
+      status: "Idle",
+      progress: 0,
+      color: "gray",
+      description: "Standby mode, ready to activate"
     }
   ];
 
-  const developmentTools = [
-    { name: 'Code Editor', status: 'Active', description: 'Advanced code editing with AI assistance' },
-    { name: 'Version Control', status: 'Active', description: 'Git integration with automated workflows' },
-    { name: 'Testing Suite', status: 'Active', description: 'Comprehensive testing and quality assurance' },
-    { name: 'Build System', status: 'Active', description: 'Automated build and compilation processes' }
-  ];
-
-  const projectStats = [
-    { metric: 'Active Projects', value: '45', trend: 'up' },
-    { metric: 'Team Members', value: '12', trend: 'stable' },
-    { metric: 'Deployments', value: '156', trend: 'up' },
-    { metric: 'Success Rate', value: '99.8%', trend: 'stable' }
+  const quickStats = [
+    { label: "Total Automations", value: "227", change: "+12", trend: "up" },
+    { label: "System Uptime", value: "99.9%", change: "+0.1%", trend: "up" },
+    { label: "Response Time", value: "45ms", change: "-5ms", trend: "down" },
+    { label: "Error Rate", value: "0.02%", change: "-0.01%", trend: "down" }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50">
+    <>
       <Head>
-        <title>Main Front - bolt.new.zion.app</title>
-        <meta name="description" content="Main development hub and project management center" />
-        <meta name="keywords" content="main, development, hub, project management, bolt.new.zion.app" />
+        <title>Main Front | Zion - System Overview</title>
+        <meta name="description" content="Main control center for Zion's autonomous systems and operations." />
       </Head>
-
-      <div className="container mx-auto px-4 py-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              Main Development Hub
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Welcome to the central command center for all your development projects. 
-              Manage, build, and deploy with unprecedented efficiency.
-            </p>
-            <div className="mt-8">
-              <Link href="/" className="text-blue-600 hover:text-blue-800 underline">
-                ← Back to Home
-              </Link>
+      
+      <div className="min-h-screen bg-gray-50">
+        {/* Header */}
+        <div className="bg-white border-b border-gray-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div className="flex items-center justify-between">
+              <div>
+                <h1 className="text-3xl font-bold text-gray-900">Zion Main Control</h1>
+                <p className="text-gray-600">Primary system overview and management</p>
+              </div>
+              <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-2">
+                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="text-sm text-gray-500">All Systems Operational</span>
+                </div>
+                <span className="text-sm text-gray-500">
+                  {new Date().toLocaleDateString()} {new Date().toLocaleTimeString()}
+                </span>
+              </div>
             </div>
           </div>
+        </div>
 
-          {/* Main Features */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {mainFeatures.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="text-5xl mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+        {/* Quick Stats */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {quickStats.map((stat, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6">
+                <div className="flex items-center justify-between mb-2">
+                  <h3 className="text-gray-400 text-sm">{stat.label}</h3>
+                  <span className={`text-sm ${
+                    stat.trend === 'up' ? 'text-green-400' : 'text-red-400'
+                  }`}>
+                    {stat.change}
+                  </span>
+                </div>
+                <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
+                <div className="mt-2">
+                  <div className="w-full h-1 bg-gray-200 rounded-full overflow-hidden">
+                    <div 
+                      className={`h-full bg-blue-500 rounded-full transition-all duration-300`}
+                      style={{ width: `${Math.random() * 100}%` }}
+                    ></div>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
+        </div>
 
-          {/* Project Statistics */}
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-16">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
-              Project Overview
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {projectStats.map((stat, index) => (
-                <div key={index} className="text-center p-6 border border-gray-200 rounded-lg">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">{stat.value}</div>
-                  <div className="text-gray-600 mb-2">{stat.metric}</div>
-                  <div className={`text-sm ${
-                    stat.trend === 'up' ? 'text-green-500' : 
-                    stat.trend === 'down' ? 'text-red-500' : 'text-gray-500'
+        {/* System Overview */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">System Overview</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {systemOverview.map((system, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-lg font-bold text-gray-900">{system.name}</h3>
+                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                    system.status === 'Active' 
+                      ? 'bg-green-100 text-green-800' 
+                      : 'bg-gray-100 text-gray-800'
                   }`}>
-                    {stat.trend === 'up' ? '↗ Trending Up' : 
-                     stat.trend === 'down' ? '↘ Trending Down' : '→ Stable'}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Development Tools */}
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-16">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
-              Development Tools
-            </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {developmentTools.map((tool, index) => (
-                <div key={index} className="flex items-center justify-between p-6 border border-gray-200 rounded-lg">
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-800">{tool.name}</h3>
-                    <p className="text-gray-600">{tool.description}</p>
-                  </div>
-                  <span className="px-3 py-1 bg-green-100 text-green-800 text-sm font-medium rounded-full">
-                    {tool.status}
+                    {system.status}
                   </span>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Quick Actions */}
-          <div className="bg-white rounded-lg shadow-lg p-8 mb-16">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
-              Quick Actions
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <Link 
-                href="/playground" 
-                className="bg-blue-600 text-white p-6 rounded-lg text-center hover:bg-blue-700 transition-colors"
-              >
-                <div className="text-4xl mb-3">🎮</div>
-                <h3 className="text-lg font-semibold">Start Development</h3>
-                <p className="text-blue-100 text-sm mt-2">Begin coding in our playground</p>
-              </Link>
-              <Link 
-                href="/live-dashboard" 
-                className="bg-green-600 text-white p-6 rounded-lg text-center hover:bg-green-700 transition-colors"
-              >
-                <div className="text-4xl mb-3">📊</div>
-                <h3 className="text-lg font-semibold">View Dashboard</h3>
-                <p className="text-green-100 text-sm mt-2">Monitor system status</p>
-              </Link>
-              <Link 
-                href="/automation" 
-                className="bg-purple-600 text-white p-6 rounded-lg text-center hover:bg-purple-700 transition-colors"
-              >
-                <div className="text-4xl mb-3">⚙️</div>
-                <h3 className="text-lg font-semibold">Manage Automation</h3>
-                <p className="text-purple-100 text-sm mt-2">Configure workflows</p>
-              </Link>
-            </div>
-          </div>
-
-          {/* Project Management */}
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
-              Project Management
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">Active Projects</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                    <span className="font-medium">E-commerce Platform</span>
-                    <span className="text-sm text-green-600">In Progress</span>
+                
+                <p className="text-gray-600 text-sm mb-4">{system.description}</p>
+                
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-24 bg-gray-200 rounded-full h-2">
+                      <div 
+                        className={`bg-${system.color}-500 h-2 rounded-full transition-all duration-300`}
+                        style={{ width: `${system.progress}%` }}
+                      ></div>
+                    </div>
+                    <span className="text-sm text-gray-500">{system.progress}%</span>
                   </div>
-                  <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                    <span className="font-medium">Mobile App</span>
-                    <span className="text-sm text-blue-600">Planning</span>
-                  </div>
-                  <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                    <span className="font-medium">API Gateway</span>
-                    <span className="text-sm text-purple-600">Testing</span>
+                  
+                  <button className="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                    Manage →
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Quick Actions */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Quick Actions</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Link 
+              href="/live-dashboard"
+              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-center"
+            >
+              <div className="text-4xl mb-4">📊</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Live Dashboard</h3>
+              <p className="text-gray-600 text-sm">Real-time system monitoring</p>
+            </Link>
+            
+            <Link 
+              href="/automation"
+              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-center"
+            >
+              <div className="text-4xl mb-4">🤖</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Automation Hub</h3>
+              <p className="text-gray-600 text-sm">Manage autonomous systems</p>
+            </Link>
+            
+            <Link 
+              href="/reports"
+              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-center"
+            >
+              <div className="text-4xl mb-4">📈</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Reports</h3>
+              <p className="text-gray-600 text-sm">Analytics and insights</p>
+            </Link>
+            
+            <Link 
+              href="/playground"
+              className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-center"
+            >
+              <div className="text-4xl mb-4">🎮</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Playground</h3>
+              <p className="text-gray-600 text-sm">Test and experiment</p>
+            </Link>
+          </div>
+        </div>
+
+        {/* System Health */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="bg-white rounded-xl shadow-lg p-6">
+            <h3 className="text-xl font-bold text-gray-900 mb-6">System Health Overview</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-green-600 mb-2">Excellent</div>
+                <div className="text-sm text-gray-600">Overall Health Score</div>
+                <div className="mt-4">
+                  <div className="w-full h-2 bg-gray-200 rounded-full">
+                    <div className="w-4/5 h-2 bg-green-500 rounded-full"></div>
                   </div>
                 </div>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-4">Team Activity</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
-                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                    <span className="text-sm text-gray-600">Sarah committed to main branch</span>
+              
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-600 mb-2">24/7</div>
+                <div className="text-sm text-gray-600">Continuous Operation</div>
+                <div className="mt-4">
+                  <div className="w-full h-2 bg-gray-200 rounded-full">
+                    <div className="w-full h-2 bg-blue-500 rounded-full"></div>
                   </div>
-                  <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
-                    <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                    <span className="text-sm text-gray-600">Mike deployed to staging</span>
-                  </div>
-                  <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-lg">
-                    <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-                    <span className="text-sm text-gray-600">Alex ran performance tests</span>
+                </div>
+              </div>
+              
+              <div className="text-center">
+                <div className="text-3xl font-bold text-purple-600 mb-2">99.9%</div>
+                <div className="text-sm text-gray-600">Reliability</div>
+                <div className="mt-4">
+                  <div className="w-full h-2 bg-gray-200 rounded-full">
+                    <div className="w-5/6 h-2 bg-purple-500 rounded-full"></div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  );
-};
 
-export default MainFront;
+        {/* Navigation Links */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="bg-white rounded-xl shadow-lg p-6">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Navigation</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-2">Core Systems</h4>
+                <ul className="space-y-1 text-sm">
+                  <li><Link href="/automation" className="text-blue-600 hover:text-blue-800">Automation</Link></li>
+                  <li><Link href="/reports" className="text-blue-600 hover:text-blue-800">Reports</Link></li>
+                  <li><Link href="/live-dashboard" className="text-blue-600 hover:text-blue-800">Dashboard</Link></li>
+                </ul>
+              </div>
+              
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-2">Content & Resources</h4>
+                <ul className="space-y-1 text-sm">
+                  <li><Link href="/blog" className="text-blue-600 hover:text-blue-800">Blog</Link></li>
+                  <li><Link href="/content-hub" className="text-blue-600 hover:text-blue-800">Content Hub</Link></li>
+                  <li><Link href="/events" className="text-blue-600 hover:text-blue-800">Events</Link></li>
+                </ul>
+              </div>
+              
+              <div>
+                <h4 className="font-semibold text-gray-900 mb-2">Support</h4>
+                <ul className="space-y-1 text-sm">
+                  <li><Link href="/contact" className="text-blue-600 hover:text-blue-800">Contact</Link></li>
+                  <li><Link href="/playground" className="text-blue-600 hover:text-blue-800">Playground</Link></li>
+                  <li><Link href="/about" className="text-blue-600 hover:text-blue-800">About</Link></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
