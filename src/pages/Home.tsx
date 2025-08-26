@@ -1,8 +1,8 @@
-<<<<<<< HEAD
-
-const Home: React.FC = () => {
-  return (
-=======
+import React, { Suspense, useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { UltimateServicesShowcase2027 } from "@/components/UltimateServicesShowcase2027";
+import { FuturisticAnimatedBackground } from "@/components/FuturisticAnimatedBackground";
 
 import React, { Suspense, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -191,6 +191,5 @@ export default function Home() {
       {/* Contact Information */}
       <ContactInfo />
     </>
->>>>>>> 8acf49b1dc41545217fe885b1b9a65c675989e84
   );
 }

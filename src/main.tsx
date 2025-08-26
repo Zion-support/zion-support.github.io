@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.tsx';
@@ -19,4 +17,3 @@ root.render(
 		</ErrorBoundary>
 	</React.StrictMode>
 );
->>>>>>> 8acf49b1dc41545217fe885b1b9a65c675989e84
