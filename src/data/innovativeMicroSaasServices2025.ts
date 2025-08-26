@@ -1,377 +1,470 @@
-export interface ServiceContact {
-  phone: string;
-  email: string;
-  website: string;
-  address: string;
-}
-
-export interface MicroSaasService {
-  id: number;
-  name: string;
-  category: string;
-  pricing: string;
+export interface InnovativeMicroSaasService {
+  id: string;
+  title: string;
   description: string;
+  category: string;
+  subcategory: string;
   price: number;
+  currency: string;
   pricingModel: string;
-  userLimit: string;
   features: string[];
   benefits: string[];
+  useCases: string[];
   targetAudience: string[];
   tags: string[];
-  contactInfo: ServiceContact;
+  estimatedDelivery: string;
+  supportLevel: string;
   marketPrice: string;
-  competitors: string[];
-  roi: string;
-  setupTime: string;
-  integrations: string[];
-  freeTier: boolean;
-  trialPeriod: string;
+  trialPeriod?: string;
+  setupFee?: number;
+  contactInfo: {
+    phone: string;
+    email: string;
+    website: string;
+    address: string;
+  };
 }
 
-// Innovative Micro SAAS Services for 2025
-export const innovativeMicroSaasServices2025: MicroSaasService[] = [
+export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] = [
+  // Business Intelligence & Analytics
   {
-    id: 1,
-    name: "AI CodeGuard Pro",
-    category: "Cybersecurity",
-    pricing: "Freemium",
-    description: "AI-powered code security scanner that detects vulnerabilities, malware, and compliance issues in real-time",
-    price: 79,
-    pricingModel: "monthly",
-    userLimit: "Up to 50 developers",
-    features: [
-      "AI vulnerability detection",
-      "Real-time code scanning",
-      "Compliance monitoring",
-      "Threat intelligence",
-      "Automated fixes",
-      "Security reporting",
-      "Git integration",
-      "CI/CD pipeline security"
-    ],
-    benefits: [
-      "90% faster vulnerability detection",
-      "Reduced security risks",
-      "Compliance automation",
-      "Cost savings on security audits",
-      "Developer productivity",
-      "Zero false positives"
-    ],
-    targetAudience: ["Development teams", "DevOps engineers", "Security professionals", "Startups"],
-    tags: ["Cybersecurity", "AI", "Code Security", "DevOps", "Compliance"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ai-codeguard-pro",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$79-199/month",
-    competitors: ["Snyk", "SonarQube", "Veracode"],
-    roi: "500% within 2 months",
-    setupTime: "10 minutes",
-    integrations: ["GitHub", "GitLab", "Bitbucket", "Jenkins", "CircleCI"],
-    freeTier: true,
-    trialPeriod: "21 days"
-  },
-  {
-    id: 2,
-    name: "QuantumData Analytics",
-    category: "Data Analytics",
-    pricing: "Freemium",
-    description: "Quantum-inspired data analytics platform for processing massive datasets with unprecedented speed and accuracy",
+    id: "ai-social-media-scheduler",
+    title: "AI-Powered Social Media Scheduling Suite",
+    description: "Intelligent social media management platform that uses AI to optimize posting times, generate engaging content, and analyze audience behavior across all major platforms.",
+    category: "Marketing Automation",
+    subcategory: "Social Media",
     price: 149,
+    currency: "$",
     pricingModel: "monthly",
-    userLimit: "Unlimited users",
     features: [
-      "Quantum-inspired algorithms",
-      "Real-time data processing",
-      "Predictive analytics",
-      "Machine learning models",
-      "Data visualization",
-      "API integrations",
-      "Custom dashboards",
-      "Automated insights"
+      "AI content generation",
+      "Optimal posting time prediction",
+      "Multi-platform management",
+      "Audience sentiment analysis",
+      "Automated hashtag suggestions",
+      "Performance analytics",
+      "Competitor analysis",
+      "Brand voice consistency"
     ],
     benefits: [
-      "10x faster data processing",
-      "99.9% accuracy",
-      "Real-time insights",
-      "Scalable architecture",
-      "Cost-effective analytics",
-      "Competitive advantage"
+      "Increase engagement by 300%",
+      "Save 15 hours per week",
+      "Consistent brand presence",
+      "Data-driven content strategy",
+      "Automated growth optimization",
+      "Professional content quality"
     ],
-    targetAudience: ["Data scientists", "Business analysts", "Enterprises", "Research institutions"],
-    tags: ["Data Analytics", "Quantum Computing", "AI", "Machine Learning", "Big Data"],
+    useCases: [
+      "Small business marketing",
+      "Digital marketing agencies",
+      "Content creators",
+      "E-commerce brands",
+      "Personal branding",
+      "Startup marketing"
+    ],
+    targetAudience: [
+      "Small to medium businesses",
+      "Digital marketers",
+      "Content creators",
+      "Social media managers",
+      "Marketing agencies"
+    ],
+    tags: ["Social Media", "AI", "Marketing", "Automation", "Content"],
+    estimatedDelivery: "24-48 hours",
+    supportLevel: "Business Hours Support",
+    marketPrice: "Starting from $149/month",
+    trialPeriod: "14 days free",
+    setupFee: 0,
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/quantumdata-analytics",
+      website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$149-399/month",
-    competitors: ["Tableau", "Power BI", "Looker"],
-    roi: "400% within 3 months",
-    setupTime: "1 hour",
-    integrations: ["Snowflake", "BigQuery", "Redshift", "Python", "R"],
-    freeTier: true,
-    trialPeriod: "30 days"
+    }
   },
   {
-    id: 3,
-    name: "BlockchainTrust Manager",
-    category: "Blockchain",
-    pricing: "Freemium",
-    description: "Enterprise blockchain solution for secure digital identity, smart contracts, and decentralized applications",
+    id: "smart-inventory-optimizer",
+    title: "Smart Inventory Optimization System",
+    description: "AI-driven inventory management solution that predicts demand, optimizes stock levels, and automates reordering to minimize costs while preventing stockouts.",
+    category: "Supply Chain",
+    subcategory: "Inventory Management",
+    price: 299,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Demand forecasting AI",
+      "Automated reorder points",
+      "Multi-location management",
+      "Supplier performance tracking",
+      "Cost optimization algorithms",
+      "Real-time inventory tracking",
+      "Purchase order automation",
+      "Seasonal trend analysis"
+    ],
+    benefits: [
+      "Reduce inventory costs by 25%",
+      "Eliminate stockouts by 95%",
+      "Automate 80% of ordering decisions",
+      "Improve cash flow",
+      "Reduce waste and obsolescence",
+      "Enhanced supplier relationships"
+    ],
+    useCases: [
+      "Retail businesses",
+      "E-commerce stores",
+      "Manufacturing companies",
+      "Wholesale distribution",
+      "Restaurant chains",
+      "Healthcare facilities"
+    ],
+    targetAudience: [
+      "Retail managers",
+      "Supply chain professionals",
+      "Small manufacturers",
+      "E-commerce businesses",
+      "Restaurant operators"
+    ],
+    tags: ["Inventory", "AI", "Supply Chain", "Optimization", "Automation"],
+    estimatedDelivery: "3-5 business days",
+    supportLevel: "24/7 Support",
+    marketPrice: "Starting from $299/month",
+    trialPeriod: "30 days free",
+    setupFee: 199,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    id: "customer-behavior-predictor",
+    title: "Customer Behavior Prediction Engine",
+    description: "Advanced analytics platform that predicts customer behavior, identifies churn risks, and recommends personalized actions to improve retention and revenue.",
+    category: "Customer Analytics",
+    subcategory: "Predictive Analytics",
+    price: 399,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Churn prediction modeling",
+      "Customer lifetime value calculation",
+      "Behavioral pattern analysis",
+      "Personalized recommendations",
+      "Risk scoring algorithms",
+      "Segmentation automation",
+      "Real-time alerts",
+      "A/B testing integration"
+    ],
+    benefits: [
+      "Reduce churn by 40%",
+      "Increase customer lifetime value by 30%",
+      "Improve retention rates",
+      "Personalized customer experiences",
+      "Data-driven marketing decisions",
+      "Proactive customer management"
+    ],
+    useCases: [
+      "Subscription businesses",
+      "E-commerce platforms",
+      "SaaS companies",
+      "Financial services",
+      "Telecommunications",
+      "Retail chains"
+    ],
+    targetAudience: [
+      "Customer success managers",
+      "Marketing directors",
+      "Data analysts",
+      "Product managers",
+      "Growth teams"
+    ],
+    tags: ["Customer Analytics", "Prediction", "Churn", "Retention", "AI"],
+    estimatedDelivery: "5-7 business days",
+    supportLevel: "Priority Support",
+    marketPrice: "Starting from $399/month",
+    trialPeriod: "21 days free",
+    setupFee: 299,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    id: "automated-content-compliance",
+    title: "Automated Content Compliance Checker",
+    description: "AI-powered compliance platform that automatically reviews content for legal, regulatory, and brand guidelines across multiple industries and jurisdictions.",
+    category: "Compliance",
+    subcategory: "Content Review",
+    price: 249,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Multi-jurisdiction compliance",
+      "Real-time content scanning",
+      "Regulatory database updates",
+      "Risk assessment scoring",
+      "Automated flagging system",
+      "Compliance reporting",
+      "Integration APIs",
+      "Custom rule creation"
+    ],
+    benefits: [
+      "99.5% compliance accuracy",
+      "Reduce legal risks",
+      "Save 20+ hours per week",
+      "Automated documentation",
+      "Faster content approval",
+      "Consistent brand standards"
+    ],
+    useCases: [
+      "Financial services",
+      "Healthcare marketing",
+      "Pharmaceutical companies",
+      "Legal firms",
+      "Insurance companies",
+      "Educational institutions"
+    ],
+    targetAudience: [
+      "Compliance officers",
+      "Legal teams",
+      "Marketing departments",
+      "Content creators",
+      "Regulatory affairs"
+    ],
+    tags: ["Compliance", "Legal", "Content", "Automation", "Risk Management"],
+    estimatedDelivery: "2-3 business days",
+    supportLevel: "Business Hours Support",
+    marketPrice: "Starting from $249/month",
+    trialPeriod: "14 days free",
+    setupFee: 149,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    id: "smart-meeting-optimizer",
+    title: "Smart Meeting Optimization Platform",
+    description: "AI-driven meeting management system that optimizes scheduling, reduces unnecessary meetings, and improves meeting effectiveness through intelligent insights.",
+    category: "Productivity",
+    subcategory: "Meeting Management",
     price: 199,
+    currency: "$",
     pricingModel: "monthly",
-    userLimit: "Up to 100 users",
     features: [
-      "Digital identity management",
-      "Smart contract deployment",
-      "Blockchain analytics",
-      "Multi-chain support",
-      "Compliance tools",
-      "API gateway",
-      "Wallet integration",
-      "Audit trails"
+      "Meeting effectiveness scoring",
+      "Optimal scheduling algorithms",
+      "Agenda optimization",
+      "Participant analysis",
+      "Time cost calculation",
+      "Meeting-free zones",
+      "Action item tracking",
+      "ROI measurement"
     ],
     benefits: [
+      "Reduce meeting time by 35%",
+      "Improve productivity",
+      "Save $50K+ annually per team",
+      "Better meeting outcomes",
+      "Enhanced team satisfaction",
+      "Data-driven scheduling"
+    ],
+    useCases: [
+      "Remote teams",
+      "Corporate offices",
+      "Project management",
+      "Consulting firms",
+      "Technology companies",
+      "Healthcare organizations"
+    ],
+    targetAudience: [
+      "Team leaders",
+      "Project managers",
+      "HR departments",
+      "Executive assistants",
+      "Operations managers"
+    ],
+    tags: ["Productivity", "Meetings", "Optimization", "Team Management"],
+    estimatedDelivery: "1-2 business days",
+    supportLevel: "Standard Support",
+    marketPrice: "Starting from $199/month",
+    trialPeriod: "7 days free",
+    setupFee: 0,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+  {
+    id: "ai-powered-code-reviewer",
+    title: "AI-Powered Code Review Assistant",
+    description: "Intelligent code review platform that uses advanced AI to detect bugs, security vulnerabilities, code smells, and suggest optimizations before deployment.",
+    category: "Development Tools",
+    subcategory: "Code Quality",
+    price: 349,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Automated bug detection",
+      "Security vulnerability scanning",
+      "Code quality metrics",
+      "Performance optimization suggestions",
+      "Best practices enforcement",
+      "Multi-language support",
+      "CI/CD integration",
+      "Technical debt analysis"
+    ],
+    benefits: [
+      "Reduce bugs by 70%",
+      "Improve code quality",
+      "Faster development cycles",
       "Enhanced security",
-      "Transparent transactions",
-      "Reduced fraud",
-      "Automated compliance",
-      "Cost savings",
-      "Trust building"
+      "Consistent coding standards",
+      "Reduced technical debt"
     ],
-    targetAudience: ["Financial institutions", "Healthcare providers", "Supply chain companies", "Government agencies"],
-    tags: ["Blockchain", "Digital Identity", "Smart Contracts", "Security", "Compliance"],
+    useCases: [
+      "Software development teams",
+      "DevOps pipelines",
+      "Open source projects",
+      "Code auditing",
+      "Quality assurance",
+      "Security reviews"
+    ],
+    targetAudience: [
+      "Software developers",
+      "DevOps engineers",
+      "Technical leads",
+      "Quality assurance teams",
+      "Security professionals"
+    ],
+    tags: ["Development", "Code Review", "AI", "Quality", "Security"],
+    estimatedDelivery: "2-4 business days",
+    supportLevel: "Developer Support",
+    marketPrice: "Starting from $349/month",
+    trialPeriod: "14 days free",
+    setupFee: 99,
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/blockchain-trust-manager",
+      website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$199-599/month",
-    competitors: ["Hyperledger", "Ethereum Enterprise", "Corda"],
-    roi: "600% within 6 months",
-    setupTime: "2 hours",
-    integrations: ["Ethereum", "Polygon", "Solana", "AWS", "Azure"],
-    freeTier: true,
-    trialPeriod: "14 days"
+    }
   },
   {
-    id: 4,
-    name: "IoT Edge Intelligence",
-    category: "IoT",
-    pricing: "Freemium",
-    description: "Edge computing platform for IoT devices with real-time analytics, AI inference, and predictive maintenance",
-    price: 89,
+    id: "dynamic-pricing-optimizer",
+    title: "Dynamic Pricing Optimization Engine",
+    description: "Advanced pricing intelligence platform that uses AI to optimize prices in real-time based on market conditions, competitor analysis, and demand patterns.",
+    category: "E-commerce",
+    subcategory: "Pricing Strategy",
+    price: 449,
+    currency: "$",
     pricingModel: "monthly",
-    userLimit: "Up to 1000 devices",
     features: [
-      "Edge AI processing",
-      "Real-time analytics",
-      "Predictive maintenance",
-      "Device management",
-      "Data synchronization",
-      "Security protocols",
-      "Scalable architecture",
-      "Cloud integration"
+      "Real-time price optimization",
+      "Competitor price monitoring",
+      "Demand elasticity analysis",
+      "Market trend prediction",
+      "A/B price testing",
+      "Revenue impact modeling",
+      "Multi-channel synchronization",
+      "Profit margin protection"
     ],
     benefits: [
-      "Reduced latency",
-      "Lower bandwidth costs",
-      "Real-time insights",
-      "Predictive capabilities",
-      "Scalable deployment",
-      "Cost optimization"
+      "Increase revenue by 15-25%",
+      "Optimize profit margins",
+      "Stay competitive",
+      "Automated pricing decisions",
+      "Market responsiveness",
+      "Risk mitigation"
     ],
-    targetAudience: ["Manufacturing", "Smart cities", "Healthcare", "Agriculture"],
-    tags: ["IoT", "Edge Computing", "AI", "Predictive Analytics", "Device Management"],
+    useCases: [
+      "E-commerce stores",
+      "Online marketplaces",
+      "Retail chains",
+      "SaaS companies",
+      "Service providers",
+      "Digital products"
+    ],
+    targetAudience: [
+      "E-commerce managers",
+      "Pricing analysts",
+      "Revenue managers",
+      "Business owners",
+      "Product managers"
+    ],
+    tags: ["Pricing", "E-commerce", "Optimization", "AI", "Revenue"],
+    estimatedDelivery: "3-5 business days",
+    supportLevel: "Premium Support",
+    marketPrice: "Starting from $449/month",
+    trialPeriod: "30 days free",
+    setupFee: 399,
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/iot-edge-intelligence",
+      website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$89-299/month",
-    competitors: ["AWS IoT", "Azure IoT", "Google Cloud IoT"],
-    roi: "350% within 4 months",
-    setupTime: "45 minutes",
-    integrations: ["MQTT", "CoAP", "HTTP", "AWS", "Azure", "Google Cloud"],
-    freeTier: true,
-    trialPeriod: "21 days"
+    }
   },
   {
-    id: 5,
-    name: "AR/VR Experience Studio",
-    category: "Immersive Technology",
-    pricing: "Freemium",
-    description: "Complete AR/VR development platform for creating immersive experiences, training simulations, and virtual events",
-    price: 129,
-    pricingModel: "monthly",
-    userLimit: "Up to 25 developers",
-    features: [
-      "3D modeling tools",
-      "AR/VR templates",
-      "Interactive elements",
-      "Analytics dashboard",
-      "Multi-platform support",
-      "Collaboration tools",
-      "Asset library",
-      "Performance optimization"
-    ],
-    benefits: [
-      "Faster development",
-      "Cost-effective creation",
-      "Cross-platform compatibility",
-      "Enhanced user engagement",
-      "Training efficiency",
-      "Innovative marketing"
-    ],
-    targetAudience: ["Game developers", "Training companies", "Marketing agencies", "Educational institutions"],
-    tags: ["AR/VR", "3D Modeling", "Immersive Technology", "Training", "Entertainment"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/ar-vr-experience-studio",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$129-399/month",
-    competitors: ["Unity", "Unreal Engine", "Vuforia"],
-    roi: "450% within 5 months",
-    setupTime: "1 hour",
-    integrations: ["Unity", "Unreal Engine", "Oculus", "HTC Vive", "Magic Leap"],
-    freeTier: true,
-    trialPeriod: "30 days"
-  },
-  {
-    id: 6,
-    name: "GreenTech Monitor",
-    category: "Sustainability",
-    pricing: "Freemium",
-    description: "AI-powered sustainability monitoring platform for tracking carbon footprint, energy efficiency, and ESG compliance",
-    price: 69,
-    pricingModel: "monthly",
-    userLimit: "Up to 100 locations",
-    features: [
-      "Carbon footprint tracking",
-      "Energy consumption monitoring",
-      "ESG reporting",
-      "Sustainability scoring",
-      "Goal setting",
-      "Progress tracking",
-      "Compliance alerts",
-      "Stakeholder reporting"
-    ],
-    benefits: [
-      "Regulatory compliance",
-      "Cost savings",
-      "Brand reputation",
-      "Investor confidence",
-      "Operational efficiency",
-      "Sustainability leadership"
-    ],
-    targetAudience: ["Corporations", "Manufacturing", "Real estate", "Government"],
-    tags: ["Sustainability", "ESG", "Carbon Tracking", "Energy Efficiency", "Compliance"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/greentech-monitor",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$69-199/month",
-    competitors: ["Watershed", "Normative", "Persefoni"],
-    roi: "300% within 3 months",
-    setupTime: "30 minutes",
-    integrations: ["Utility APIs", "IoT sensors", "ERP systems", "Accounting software"],
-    freeTier: true,
-    trialPeriod: "14 days"
-  },
-  {
-    id: 7,
-    name: "FinTech Compliance Hub",
-    category: "Financial Technology",
-    pricing: "Freemium",
-    description: "Comprehensive compliance platform for fintech companies with automated regulatory reporting and risk management",
+    id: "smart-expense-categorizer",
+    title: "Smart Expense Categorization System",
+    description: "AI-powered expense management platform that automatically categorizes, validates, and processes business expenses with advanced fraud detection and policy compliance.",
+    category: "Finance",
+    subcategory: "Expense Management",
     price: 179,
+    currency: "$",
     pricingModel: "monthly",
-    userLimit: "Up to 50 users",
     features: [
-      "Regulatory compliance",
-      "Risk assessment",
-      "Automated reporting",
-      "Audit trails",
-      "KYC/AML tools",
-      "Fraud detection",
-      "Compliance alerts",
-      "Regulatory updates"
+      "Automatic expense categorization",
+      "Receipt OCR technology",
+      "Policy compliance checking",
+      "Fraud detection algorithms",
+      "Multi-currency support",
+      "Real-time approval workflows",
+      "Tax optimization",
+      "Integration with accounting systems"
     ],
     benefits: [
-      "Regulatory compliance",
-      "Reduced fines",
-      "Operational efficiency",
-      "Risk mitigation",
-      "Audit readiness",
-      "Competitive advantage"
+      "Reduce processing time by 80%",
+      "Improve accuracy to 99%",
+      "Eliminate expense fraud",
+      "Streamlined reimbursements",
+      "Real-time visibility",
+      "Tax compliance assurance"
     ],
-    targetAudience: ["Fintech startups", "Banks", "Payment processors", "Cryptocurrency exchanges"],
-    tags: ["Fintech", "Compliance", "Regulatory", "Risk Management", "KYC/AML"],
+    useCases: [
+      "Corporate expense management",
+      "Travel and entertainment",
+      "Freelancer expense tracking",
+      "Small business accounting",
+      "Project cost management",
+      "Tax preparation"
+    ],
+    targetAudience: [
+      "Finance teams",
+      "Business travelers",
+      "Small business owners",
+      "Accounting professionals",
+      "Project managers"
+    ],
+    tags: ["Finance", "Expenses", "Automation", "OCR", "Compliance"],
+    estimatedDelivery: "1-3 business days",
+    supportLevel: "Standard Support",
+    marketPrice: "Starting from $179/month",
+    trialPeriod: "14 days free",
+    setupFee: 99,
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/fintech-compliance-hub",
+      website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$179-499/month",
-    competitors: ["ComplyAdvantage", "Jumio", "Onfido"],
-    roi: "500% within 4 months",
-    setupTime: "2 hours",
-    integrations: ["Banking APIs", "Identity verification", "Regulatory databases", "Reporting systems"],
-    freeTier: true,
-    trialPeriod: "21 days"
-  },
-  {
-    id: 8,
-    name: "HealthTech AI Platform",
-    category: "Healthcare Technology",
-    pricing: "Freemium",
-    description: "AI-powered healthcare platform for patient monitoring, diagnosis assistance, and predictive health analytics",
-    price: 159,
-    pricingModel: "monthly",
-    userLimit: "Up to 100 healthcare providers",
-    features: [
-      "Patient monitoring",
-      "Diagnosis assistance",
-      "Predictive analytics",
-      "Health records management",
-      "Telemedicine tools",
-      "Medication tracking",
-      "Wellness recommendations",
-      "Emergency alerts"
-    ],
-    benefits: [
-      "Improved patient outcomes",
-      "Reduced healthcare costs",
-      "Early disease detection",
-      "Better care coordination",
-      "Operational efficiency",
-      "Patient satisfaction"
-    ],
-    targetAudience: ["Hospitals", "Clinics", "Telemedicine providers", "Health insurers"],
-    tags: ["Healthcare", "AI", "Telemedicine", "Patient Care", "Predictive Analytics"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/healthtech-ai-platform",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$159-449/month",
-    competitors: ["Epic", "Cerner", "Athenahealth"],
-    roi: "400% within 6 months",
-    setupTime: "3 hours",
-    integrations: ["EHR systems", "Medical devices", "Insurance APIs", "Pharmacy systems"],
-    freeTier: true,
-    trialPeriod: "30 days"
+    }
   }
 ];
