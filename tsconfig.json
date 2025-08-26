@@ -9,45 +9,29 @@
     "paths": {
       "@/*": ["./src/*"],
       "@/pages/*": ["./src/pages/*"],
+      "@/components/*": ["./src/components/*"],
+      "@/api/*": ["./src/api/*"],
+      "@/types/*": ["./src/types/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/hooks/*": ["./src/hooks/*"],
+      "@/context/*": ["./src/context/*"],
+      "@/services/*": ["./src/services/*"],
       "axios": ["./src/lib/axios.ts"],
       "notistack": ["./src/stubs/notistack.ts"],
       "@sentry/browser": ["./src/stubs/sentry.ts"]
     },
-    "typeRoots": ["./src/types"],
-
-    /* Bundler mode */
+    "typeRoots": ["./node_modules/@types", "./types"],
+    "types": ["node"],
     "moduleResolution": "node",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "strict": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
-    "baseUrl": ".",
-    "paths": {
-<<<<<<< HEAD
-      "@/*": ["./src/*"],
-      "@/pages/*": ["./src/pages/*", "./pages/*"],
-      "@/components/*": ["./src/components/*"],
-      "@/api/*": ["./src/api/*"],
-      "@/types/*": ["./src/types/*", "./types/*"],
-      "@/utils/*": ["./src/utils/*"],
-      "@/hooks/*": ["./src/hooks/*"],
-      "@/context/*": ["./src/context/*"],
-      "@/services/*": ["./src/services/*"],
-      "react-router-dom": ["./src/stubs/react-router-dom.tsx"],
-      "react-router": ["./src/stubs/react-router-dom.tsx"],
-      "next-cloudinary": ["./types/next-cloudinary.d.ts"],
-      "types/*": ["./types/*"]
-=======
-      "@/*": [
-        "./src/*"
-      ]
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-43b7
-    },
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
@@ -60,42 +44,17 @@
     "noPropertyAccessFromIndexSignature": false,
     "noUncheckedIndexedAccess": false,
     "allowJs": true,
-    "incremental": true,
-<<<<<<< HEAD
-    "typeRoots": ["./node_modules/@types", "./types"],
-    "types": ["node"],
-    "plugins": [ { "name": "next" } ]
+    "incremental": true
   },
   "include": [
     "src/main.tsx",
     "src/App.tsx",
     "src/index.css",
-    "src/components/ServicesOverview.tsx",
-    "src/components/ui/button.tsx",
-    "src/data/servicesData.ts"
-  ],
-  "references": [{ "path": "./tsconfig.node.json" }]
-=======
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
-  },
-  "include": [
-    "src",
-    ".next/types/**/*.ts"
+    "vite-env.d.ts"
   ],
   "exclude": [
-    "src/components.disabled",
-    "src/components.disabled/**/*",
-    "src/pages.disabled",
-    "src/pages.disabled/**/*"
+    "src/**",
+    "node_modules"
   ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ]
->>>>>>> origin/main
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
