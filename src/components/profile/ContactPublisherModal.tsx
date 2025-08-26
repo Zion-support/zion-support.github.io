@@ -17,10 +17,9 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
-import { Mail, PaperPlane } from 'lucide-react';
-import api from '@/services/apiClient';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { Send, Mail } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 
 interface ContactPublisherModalProps {

@@ -121,11 +121,12 @@ export default function EditPostPage() {
   };
 
   return (
-    
-      <SEO 
+    <AppLayout>
+      <SEO
         title="Edit Post | Community Forum | Zion AI Marketplace"
         description="Edit your discussion post in the Zion AI Marketplace community forum."
         keywords="community, forum, discussion, edit post"
+        canonical={`https://app.ziontechgroup.com/community/edit/${postId}`}
       />
       
       <div className="container py-8">

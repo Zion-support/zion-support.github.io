@@ -55,14 +55,20 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }: Pro
   const productTitle = product.title;
 
   const addToCart = () => {
-    dispatch(
-      addItem({
-        id: product.id,
-        title: productTitle,
-        price: product.price ?? 0,
-        image: imageUrl || undefined,
-      })
-    );
+    if (typeof product.stock === 'number' && product.stock <= 0) {
+      toast({ title: 'Out of stock', description: `${productTitle} is out of stock` });
+      return;
+    }
+
+    dispatch(addItem({ id: product.id, title: productTitle, price: product.price ?? 0 }));
+    toast({
+      title: 'Added to cart',
+      description: `${productTitle} has been added to your cart`,
+      action: {
+        label: 'View Cart',
+        onClick: () => router.push('/cart'),
+      },
+    });
   };
 
   const imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images[0] : null;
@@ -82,6 +88,15 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }: Pro
   const isTablet = useMediaQuery('(max-width: 1200px)');
 
   const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
+
+  const handleBuyNow = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (!isAuthenticated) {
+      router.push('/login?next=/checkout');
+      return;
+    }
+    onBuy?.();
+  };
 
   return (
     <div className="relative border rounded-lg bg-card p-4" data-testid="product-card">
@@ -125,23 +140,27 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }: Pro
         </p>
       )}
       <div className="mt-2 flex gap-2">
-        <Button size="sm" className="flex-1" onClick={addToCart}>
-          Add to Cart
+        <Button
+          size="sm"
+          className="flex-1"
+          onClick={addToCart}
+          disabled={typeof product.stock === 'number' && product.stock <= 0}
+        >
+          {typeof product.stock === 'number' && product.stock <= 0
+            ? 'Out of Stock'
+            : 'Add to Cart'}
         </Button>
         {onBuy && (
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    onBuy();
-                  }}
+                  onClick={handleBuyNow}
                   size="sm"
                   variant="outline"
                   className="flex-1"
                   data-testid="buy-now-button"
-                  disabled={!isAuthenticated || buyDisabled}
+                  disabled={buyDisabled}
                 >
                   Buy Now
                 </Button>

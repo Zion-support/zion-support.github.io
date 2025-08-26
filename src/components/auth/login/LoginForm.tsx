@@ -8,7 +8,7 @@ import { LogIn, User, Eye, EyeOff } from "lucide-react";
 
 import { useAuth } from "@/hooks/useAuth";
 import { toast } from "@/hooks/use-toast";
-import { loginUser } from "@/services/authService";
+import { auth } from "@/services/auth";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -20,8 +20,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Link, useNavigate } from "react-router-dom";
-import { LoadingOverlay } from "@/components/LoadingOverlay";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 
 // Form validation schema
 const loginSchema = z.object({
@@ -32,8 +31,9 @@ const loginSchema = z.object({
 type LoginFormValues = z.infer<typeof loginSchema>;
 
 export function LoginForm() {
-  const { login, isLoading } = useAuth();
+  const { isLoading, login } = useAuth();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const [showPassword, setShowPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   
@@ -45,16 +45,16 @@ export function LoginForm() {
     },
   });
 
-  const onSubmit = async (data: LoginFormValues) => {
+  const handleLogin = async (data: LoginFormValues) => {
     if (isSubmitting) return;
 
     try {
       setIsSubmitting(true);
-      const { error } = await login(data.email, data.password);
-      if (error) {
-        form.setError("root", { message: error });
-      } else {
-        navigate("/");
+      const res = await auth.login(data.email, data.password);
+      if (res.status === 200) {
+        navigate('/dashboard');
+      } else if (res.status >= 400 && res.status < 500) {
+        toast.error(res.data?.error || 'Invalid credentials');
       }
     } finally {
       setIsSubmitting(false);
@@ -64,7 +64,7 @@ export function LoginForm() {
   return (
     <Form {...form}>
       <form
-        onSubmit={form.handleSubmit(onSubmit)}
+        onSubmit={form.handleSubmit(handleLogin)}
         className="space-y-6"
         autoComplete="off" // Disable browser autofill
       >

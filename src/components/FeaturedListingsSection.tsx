@@ -123,33 +123,71 @@ const categories = [
   "All", "Web Development", "Mobile Development", "Cloud & DevOps", "AI & Machine Learning", "IoT Solutions", "Data Analytics"
 ];
 
-export function FeaturedListingsSection() {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [hoveredListing, setHoveredListing] = useState<number | null>(null);
-  const [showFilters, setShowFilters] = useState(false);
+import { ProductListingCard } from "@/components/ProductListingCard";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { cn } from "@/lib/utils";
 
-  const filteredListings = selectedCategory === "All" 
-    ? featuredListings 
-    : featuredListings.filter(listing => listing.category === selectedCategory);
+interface FeaturedListingsSectionProps
+  extends React.HTMLAttributes<HTMLElement> {
+  showTitle?: boolean;
+}
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.1
-      }
+export function FeaturedListingsSection({ showTitle = true, className, ...props }: FeaturedListingsSectionProps) {
+  const featuredListings = [
+    {
+      title: 'AI-Powered Business Intelligence',
+      description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
+      category: 'AI Solutions',
+      rating: 4.9,
+      reviews: 127,
+      price: 'From $2,500',
+      image: '🤖',
+      link: '/services/ai',
+      features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards']
+    },
+    {
+      title: 'Cloud Migration & Optimization',
+      description: 'Seamlessly migrate to the cloud with our proven methodology and expert guidance.',
+      category: 'Cloud & DevOps',
+      rating: 4.8,
+      reviews: 89,
+      price: 'From $5,000',
+      image: '☁️',
+      link: '/services/cloud',
+      features: ['Zero-downtime Migration', 'Cost Optimization', 'Security Compliance']
+    },
+    {
+      title: 'Cybersecurity Assessment & Implementation',
+      description: 'Comprehensive security evaluation and implementation for enterprise-level protection.',
+      category: 'Cybersecurity',
+      rating: 4.9,
+      reviews: 156,
+      price: 'From $3,500',
+      image: '🔒',
+      link: '/services/cybersecurity',
+      features: ['Security Audits', 'Threat Detection', 'Incident Response']
     }
   ];
 
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
-      <span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
-        ★
-      </span>
-    ));
-  };
+  return (
+    <section
+      id="featured"
+      className={cn("py-12 px-4 bg-background", className)}
+      {...props}
+    >
+      <div className="container mx-auto">
+        {showTitle && (
+          <div className="text-center mb-12">
+            <GradientHeading className="text-3xl md:text-4xl font-bold mb-4">
+              Featured Listings
+            </GradientHeading>
+            <p className="text-foreground/80 max-w-3xl mx-auto">
+              Discover our handpicked selection of top AI products and services
+            </p>
+          </div>
+        )}
 
   return (
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">

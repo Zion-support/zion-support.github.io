@@ -1,8 +1,21 @@
 
-import React from 'react';
-import { Zap, Brain, Shield, Cloud, Database, Users, ArrowRight } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { cn } from "@/lib/utils";
+import { 
+  CpuChipIcon, 
+  CloudIcon, 
+  ShieldCheckIcon, 
+  CubeIcon,
+  CubeTransparentIcon,
+  RocketLaunchIcon
+} from '@heroicons/react/24/outline';
 
-export const QuickAccess: React.FC = () => {
+export interface QuickAccessProps extends React.HTMLAttributes<HTMLElement> {}
+
+export function QuickAccess({ className, style, ...props }: QuickAccessProps) {
+  const { t } = useTranslation();
   const quickLinks = [
     {
       title: "AI Solutions",
@@ -49,10 +62,14 @@ export const QuickAccess: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 bg-slate-800/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+    <section
+      className={cn("py-12 bg-zion-blue-dark", className)}
+      style={style}
+      {...props}
+    >
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent mb-2">
             Quick Access
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">

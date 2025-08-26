@@ -278,7 +278,7 @@ export default function ForumPostPage() {
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h:mm a");
   
   return (
-    <>
+    <AppLayout>
       <SEO
         title={`${post.title} | Community Forum | Zion AI Marketplace`}
         description={post.content.substring(0, 160)}

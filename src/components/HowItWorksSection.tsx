@@ -1,162 +1,45 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Users, FileText, Rocket, CheckCircle, ArrowRight, Clock, Target, TrendingUp, Award, Zap, Shield } from 'lucide-react';
+
+import { GradientHeading } from "./GradientHeading";
+import { Check, Handshake, Search, Send } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const steps = [
   {
-    icon: <Search className="w-8 h-8" />,
-    title: "Discover",
-    description: "Browse our comprehensive catalog of services, talent, and solutions",
-    color: "from-zion-cyan to-zion-cyan-dark",
-    bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20",
-    details: [
-      "AI-powered search and filtering",
-      "Curated service categories",
-      "Expert talent matching",
-      "Real-time availability"
-    ],
-    duration: "1-2 hours",
-    success: "95% match rate"
+    title: "Post",
+    description: "Publish your service, job, or equipment in minutes with our AI-powered form.",
+    icon: Send,
   },
   {
-    icon: <Users className="w-8 h-8" />,
-    title: "Connect",
-    description: "Get matched with the perfect team or service for your project",
-    color: "from-zion-purple to-zion-purple-dark",
-    bgColor: "from-zion-purple/20 to-zion-purple-dark/20",
-    details: [
-      "Smart matching algorithm",
-      "Profile verification",
-      "Portfolio review",
-      "Direct communication"
-    ],
-    duration: "2-4 hours",
-    success: "98% satisfaction"
+    title: "Match",
+    description: "Our AI automatically matches your needs with the perfect providers or opportunities.",
+    icon: Search,
   },
   {
-    icon: <FileText className="w-8 h-8" />,
-    title: "Plan",
-    description: "Collaborate on project requirements, timeline, and deliverables",
-    color: "from-zion-blue to-zion-blue-dark",
-    bgColor: "from-zion-blue/20 to-zion-blue-dark/20",
-    details: [
-      "Interactive project planning",
-      "Timeline optimization",
-      "Resource allocation",
-      "Risk assessment"
-    ],
-    duration: "4-8 hours",
-    success: "90% on-time delivery"
+    title: "Hire/Buy",
+    description: "Connect directly with matched providers and complete your transaction securely.",
+    icon: Handshake,
   },
   {
-    icon: <Rocket className="w-8 h-8" />,
-    title: "Execute",
-    description: "Watch your vision come to life with our expert execution",
-    color: "from-zion-cyan-light to-zion-cyan",
-    bgColor: "from-zion-cyan-light/20 to-zion-cyan/20",
-    details: [
-      "Agile development process",
-      "Regular progress updates",
-      "Quality assurance",
-      "Performance monitoring"
-    ],
-    duration: "1-4 weeks",
-    success: "99% quality score"
+    title: "Done",
+    description: "Enjoy hassle-free delivery and support for your technology solutions.",
+    icon: Check,
   },
-  {
-    icon: <CheckCircle className="w-8 h-8" />,
-    title: "Deliver",
-    description: "Receive your completed project with ongoing support and maintenance",
-    color: "from-zion-purple-light to-zion-purple",
-    bgColor: "from-zion-purple-light/20 to-zion-purple/20",
-    details: [
-      "Comprehensive testing",
-      "Documentation delivery",
-      "Training and handover",
-      "Post-launch support"
-    ],
-    duration: "Ongoing",
-    success: "100% client retention"
-  }
 ];
 
-const stats = [
-  { icon: <Clock className="w-6 h-6" />, value: "3x Faster", label: "Project Delivery" },
-  { icon: <Target className="w-6 h-6" />, value: "99.9%", label: "Success Rate" },
-  { icon: <TrendingUp className="w-6 h-6" />, value: "50%", label: "Cost Reduction" },
-  { icon: <Award className="w-6 h-6" />, value: "1000+", label: "Projects Completed" }
-];
+export interface HowItWorksSectionProps extends React.HTMLAttributes<HTMLElement> {}
 
-export function HowItWorksSection() {
-  const [hoveredStep, setHoveredStep] = useState<number | null>(null);
-  const [activeStep, setActiveStep] = useState<number>(0);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1
-      }
-    }
-  ];
-
-  const statsVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
-      }
-    }
-  };
-
+export function HowItWorksSection({ className, style, ...props }: HowItWorksSectionProps) {
   return (
-    <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
-      {/* Enhanced background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 50% 50%, currentColor 1px, transparent 1px)`,
-          backgroundSize: '40px 40px'
-        }} />
-      </div>
-
-      {/* Floating decorative elements */}
-      <div className="absolute inset-0">
-        <motion.div 
-          className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30"
-          animate={{ rotate: 360 }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        />
-        <motion.div 
-          className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30"
-          animate={{ rotate: -360 }}
-          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-        />
-        <motion.div 
-          className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20"
-          animate={{ scale: [1, 1.2, 1] }}
-          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-        />
-      </div>
-      
-      <div className="container mx-auto px-4 relative z-10">
-        <motion.div 
-          className="text-center mb-20"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            How It <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Works</span>
-          </h2>
-          <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
-            Our streamlined process ensures your project success from concept to completion. 
-            Experience the Zion difference with our proven methodology.
+    <section
+      className={cn("py-20 bg-zion-blue", className)}
+      style={style}
+      {...props}
+    >
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <GradientHeading>How It Works</GradientHeading>
+          <p className="text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto">
+            A simple four-step process to connect technology providers with clients
           </p>
         </motion.div>
 

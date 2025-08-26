@@ -157,6 +157,61 @@ npm run dev  # Use the same package manager you specified in setup.sh
 
 **Edit a file directly in GitHub**
 
-## Notes
-- Default model is `gpt-4o-mini`. You can set `OPENAI_MODEL` to any GPT-4 family model available to your key.
-- For enterprise usage, add authentication and stronger rate limiting.
+## Multichain Governance
+
+The `token/multichain` directory provides Solidity contracts for deploying ZION$ across multiple chains. The LayerZero-based bridge wrapper allows deploying on zkSync while mirroring DAO votes to Starknet. Run the Hardhat script in `token/multichain/deploy` to deploy and record addresses.
+
+## Codex Automation
+
+This repository includes an optional workflow for automatically fixing lint errors using OpenAI Codex.
+
+- **codex-pipeline.yaml** – Defines an `openai-operator` pipeline that lints the `app/` directory, extracts failing code, sends it to Codex for a patch and then runs tests.
+- **scripts/codexApiFixer.js** – Simple script that sends a single file to Codex and writes the fixed version.
+- **scripts/codexWebhookServer.js** – Express server exposing `/webhook/trigger-fix` to launch the pipeline from external error reports.
+
+Start the webhook server with:
+
+```bash
+node scripts/codexWebhookServer.js
+```
+
+Some Cypress tests rely on environment variables. Create a `cypress.env.json`
+file in the project root with values for variables like `TEST_USER_EMAIL` and
+`TEST_USER_PASSWORD` before running the end-to-end tests. An example file:
+
+```json
+{
+  "TEST_USER_DISPLAY_NAME": "Test User",
+  "TEST_USER_EMAIL": "test@example.com",
+  "TEST_USER_PASSWORD": "Password123",
+  "TEST_USER_NAME": "Test User",
+  "EXISTING_USER_EMAIL": "existing@test.com",
+  "EXISTING_USER_PASSWORD": "password123",
+  "STRIPE_TEST_CARD": "4242424242424242"
+}
+```
+
+## How it Works
+
+
+## API Endpoints
+
+### Health Check
+
+*   **URL:** `/api/health`
+*   **Method:** `GET`
+*   **Description:** Provides a health check for the application. It returns the current status and the deployed commit hash.
+*   **Success Response:**
+    *   **Code:** 200
+    *   **Content:** `{ "status": "ok", "version": "<commit-hash>" }`
+*   **Usage:** This endpoint is used by Netlify during the pre-deploy phase. If the endpoint does not return a 200 OK status with the expected JSON response, the deployment is halted to prevent a broken version from going live.
+
+### Node Server Health Check
+
+*   **URL:** `/health`
+*   **Method:** `GET`
+*   **Description:** Returns the app version, uptime, and database connectivity status.
+*   **Success Response:**
+    *   **Code:** 200
+    *   **Content:** `{ "version": "<package-version>", "uptime": 123.45, "db": "up" }`
+*   **Usage:** Used for Kubernetes liveness and readiness probes. See `docs/KubernetesProbes.md`.

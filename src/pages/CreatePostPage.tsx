@@ -51,11 +51,12 @@ export default function CreatePostPage() {
   };
 
   return (
-    
-      <SEO 
+    <AppLayout>
+      <SEO
         title="Create New Post | Community Forum | Zion AI Marketplace"
         description="Create a new discussion post in the Zion AI Marketplace community forum."
         keywords="community, forum, discussion, create post, new thread"
+        canonical="https://app.ziontechgroup.com/community/create"
       />
       
       <div className="container py-8">

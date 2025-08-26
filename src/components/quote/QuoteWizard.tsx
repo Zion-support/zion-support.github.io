@@ -1,17 +1,17 @@
-import { useState, useMemo, useEffect } from 'react';
-import { useQuoteWizard, ServiceItem } from '@/hooks/useQuoteWizard';
-import { useDelayedError } from '@/hooks/useDelayedError';
+import { useState } from 'react';
+import type { WizardStep } from '@/context/RequestQuoteWizard';
+import { useQuery } from '@tanstack/react-query';
+import { Loader2 } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
-import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
-import Skeleton from '@/components/ui/skeleton';
-import { useToast } from '@/hooks/use-toast';
+import { useRequestQuoteWizard } from '@/context';
+import { fetchServices, ServiceItem } from '@/api/services';
 
-const WIZARD_STEPS = [1, 2, 3];
+const WIZARD_STEPS: WizardStep[] = ['Services', 'Details', 'Success'];
 
-function StepIndicator({ step }: { step: number }) {
-  const progress = (step / WIZARD_STEPS.length) * 100;
+function StepIndicator({ step }: { step: WizardStep }) {
+  const index = WIZARD_STEPS.indexOf(step);
   return (
     <div className="space-y-1">
       <div data-testid="step-indicator" className="text-sm text-muted-foreground">
@@ -24,92 +24,22 @@ function StepIndicator({ step }: { step: number }) {
   );
 }
 
-interface QuoteWizardProps {
-  category: 'services' | 'talent' | 'equipment';
-}
-
-export function QuoteWizard({ category }: QuoteWizardProps) {
-  const [step, setStep] = useState(1);
-  const [selectedItemId, setSelectedItemId] = useState<string | null>(null);
+export function QuoteWizard() {
+  const { step, selectService, submitQuote } = useRequestQuoteWizard();
+  const [selectedItem, setSelectedItem] = useState<string | null>(null);
   const [message, setMessage] = useState('');
-  const [selectionError, setSelectionError] = useState('');
-  const { data, error, mutate, isLoading } = useQuoteWizard(category);
-  const delayedError = useDelayedError(error);
-  const { toast } = useToast();
+  const {
+    data = [],
+    isPending,
+    error,
+  } = useQuery<ServiceItem[]>({
+    queryKey: ['services'],
+    queryFn: () => fetchServices(),
+    retry: 2,
+  });
 
-  useEffect(() => {
-    if (delayedError) {
-      toast({
-        title: 'Unable to load services',
-        variant: 'destructive'
-      });
-    }
-  }, [delayedError, toast]);
-
-  // Use isLoading from SWR for a more direct loading state
-  const loading = isLoading;
-
-  const selectedItem = useMemo(() => {
-    if (!data || !selectedItemId) return null;
-    return data.find(item => item.id === selectedItemId);
-  }, [data, selectedItemId]);
-
-  const handleSelect = (id: string) => {
-    setSelectedItemId(id);
-    setStep(2);
-  };
-
-  const handleContinue = () => {
-    if (!selectedItemId) {
-      setSelectionError(
-        `Please choose a ${
-          category === 'services'
-            ? 'service'
-            : category === 'talent'
-            ? 'talent'
-            : 'item'
-        } to continue.`
-      );
-      return;
-    }
-
-    setSelectionError('');
-    setStep(2);
-  };
-
-  const handleSubmit = async () => {
-    if (!selectedItemId) return;
-
-    let endpoint = '/api/quotes';
-    const payload: Record<string, any> = { user_message: message };
-
-    switch (category) {
-      case 'services':
-        endpoint = '/api/services/quotes';
-        payload.service_id = selectedItemId;
-        break;
-      case 'talent':
-        endpoint = '/api/talent/quotes';
-        payload.talent_id = selectedItemId;
-        break;
-      case 'equipment':
-        endpoint = '/api/equipment/quotes';
-        payload.item_id = selectedItemId;
-        break;
-      default:
-        payload.item_id = selectedItemId;
-        payload.category = category;
-    }
-
-    await fetch(endpoint, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    });
-    setStep(3);
-  };
-
-  if (step === 1) {
+  if (step === 'Services') {
+    const loading = isPending;
 
     return (
       <div className="space-y-6">

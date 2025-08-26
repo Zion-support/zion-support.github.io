@@ -1,7 +1,9 @@
 import React from 'react';
-import type { GetStaticPaths, GetStaticProps } from 'next';
-import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';
-import type { ProductListing } from '@/types/listings';
+import type { GetServerSideProps } from 'next';
+import Head from 'next/head';
+import NextHead from '@/components/NextHead';
+import ProductReviews from '@/components/ProductReviews';
+import type { Product } from '@/types/product';
 
 interface ListingProps {
   listing: ProductListing | null;

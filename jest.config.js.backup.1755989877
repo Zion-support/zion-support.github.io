@@ -1,23 +1,27 @@
-module.exports = {
-  preset: 'ts-jest',
+export default {
+  // Use the ESM preset so ts-jest can handle "type": "module"
+  preset: 'ts-jest/presets/default-esm',
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/tests/jest.setup.ts'],
   moduleNameMapper: {
+    '^@/pages/(.*)$': '<rootDir>/pages/$1',
     '^@/(.*)$': '<rootDir>/src/$1',
-<<<<<<< HEAD
-  },
-  roots: ['<rootDir>/tests'],
-=======
     '^@/pages/(.*)$': '<rootDir>/src/pages/$1',
     '^vitest$': '<rootDir>/tests/vitest-mock.ts',
   },
-  roots: ['<rootDir>/tests', '<rootDir>/__tests__'],
->>>>>>> origin/75rlpk-codex/fix-modulenamemapper-configuration-for-tests
+  roots: ['<rootDir>/__tests__'],
+  // Tell ts-jest to compile files to ES modules
+  globals: {
+    'ts-jest': {
+      useESM: true,
+    },
+  },
   coverageThreshold: {
     global: {
       lines: 80,
       functions: 80,
     },
   },
+  extensionsToTreatAsEsm: ['.ts', '.tsx'],
 };
 

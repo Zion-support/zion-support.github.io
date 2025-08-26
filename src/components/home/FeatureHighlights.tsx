@@ -1,62 +1,63 @@
 
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
-  Globe, 
-  Shield, 
-  Zap, 
-  Users, 
-  TrendingUp,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Award,
-  Zap as ZapIcon
-} from 'lucide-react';
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Check } from "lucide-react";
+import { cn } from "@/lib/utils";
 
-const highlights = [
-  {
-    icon: Brain,
-    title: 'AI-Powered Intelligence',
-    description: 'Advanced machine learning algorithms that continuously learn and adapt to provide smarter solutions.',
-    features: ['Predictive Analytics', 'Smart Recommendations', 'Automated Workflows'],
-    color: 'from-zion-purple to-zion-purple-dark',
-    bgColor: 'bg-zion-purple/10',
-    borderColor: 'border-zion-purple/20'
-  },
-  {
-    icon: Globe,
-    title: 'Global Network',
-    description: 'Connect with professionals and businesses from over 150 countries worldwide.',
-    features: ['Multi-language Support', 'Local Expertise', '24/7 Availability'],
-    color: 'from-zion-cyan to-zion-cyan-dark',
-    bgColor: 'bg-zion-cyan/10',
-    borderColor: 'border-zion-cyan/20'
-  },
-  {
-    icon: Shield,
-    title: 'Enterprise Security',
-    description: 'Bank-grade security with SOC 2 compliance and end-to-end encryption.',
-    features: ['Data Protection', 'Access Control', 'Audit Trails'],
-    color: 'from-zion-blue to-zion-blue-dark',
-    bgColor: 'bg-zion-blue/10',
-    borderColor: 'border-zion-blue/20'
-  }
-];
+export interface FeatureHighlightsProps extends React.HTMLAttributes<HTMLElement> {}
 
-const achievements = [
-  { icon: Award, number: '50+', label: 'Industry Awards', color: 'text-yellow-400' },
-  { icon: Users, number: '1M+', label: 'Active Users', color: 'text-zion-cyan' },
-  { icon: TrendingUp, number: '300%', label: 'Growth Rate', color: 'text-green-400' },
-  { icon: Star, number: '4.9/5', label: 'User Rating', color: 'text-zion-purple' }
-];
+export function FeatureHighlights({ className, style, ...props }: FeatureHighlightsProps) {
+  const highlightsData = [
+    {
+      id: 1,
+      title: "Quantum AI Integration",
+      description: "Combining quantum computing with artificial intelligence for unprecedented processing power and insights",
+      icon: CpuChipIcon,
+      stats: "1000x faster",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      id: 2,
+      title: "Edge Computing Network",
+      description: "Global edge computing infrastructure delivering ultra-low latency and high availability worldwide",
+      icon: CloudIcon,
+      stats: "99.99% uptime",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      id: 3,
+      title: "Zero-Trust Security",
+      description: "Advanced cybersecurity framework with AI-powered threat detection and automated response systems",
+      icon: ShieldCheckIcon,
+      stats: "100% secure",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      id: 4,
+      title: "Blockchain Innovation",
+      description: "Next-generation blockchain solutions with quantum-resistant cryptography and smart contract automation",
+      icon: CubeIcon,
+      stats: "1M+ TPS",
+      color: "from-indigo-500 to-purple-500"
+    },
+    {
+      id: 5,
+      title: "Predictive Analytics",
+      description: "Machine learning-powered analytics that predict trends and optimize business decisions in real-time",
+      icon: ChartBarIcon,
+      stats: "95% accuracy",
+      color: "from-orange-500 to-red-500"
+    },
+    {
+      id: 6,
+      title: "Autonomous Systems",
+      description: "Self-optimizing infrastructure that automatically scales, heals, and adapts to changing demands",
+      icon: RocketLaunchIcon,
+      stats: "24/7 operation",
+      color: "from-yellow-500 to-orange-500"
+    }
+  ];
 
-const technologies = [
-  'Machine Learning', 'Blockchain', 'Cloud Computing', 'IoT', 'Cybersecurity', 'Data Analytics'
-];
-
-export function FeatureHighlights() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -100,30 +101,16 @@ export function FeatureHighlights() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-zion-slate-dark to-zion-slate relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 right-20 w-96 h-96 bg-zion-purple rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-zion-cyan rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10">
-        {/* Header */}
-        <motion.div 
-          className="text-center mb-20"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Why Industry Leaders
-            <span className="block bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
-              Choose Zion Tech Group
-            </span>
-          </h2>
-          <p className="text-xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
-            Discover the cutting-edge features and capabilities that make us the preferred choice for forward-thinking organizations
+    <section
+      className={cn("py-16 bg-zion-blue", className)}
+      style={style}
+      {...props}
+    >
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-white mb-3">Tailored Solutions for Everyone</h2>
+          <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
+            Whatever your role in the tech ecosystem, Zion offers specialized features to help you succeed
           </p>
         </motion.div>
 

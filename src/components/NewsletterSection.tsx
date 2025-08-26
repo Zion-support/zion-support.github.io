@@ -1,55 +1,34 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, Send, CheckCircle, Bell, Zap, Shield, Users, TrendingUp, X, Gift, Star, Award } from 'lucide-react';
 
-const benefits = [
-  {
-    icon: <Bell className="w-6 h-6" />,
-    title: "Early Access",
-    description: "Be the first to know about new features and services"
-  },
-  {
-    icon: <Zap className="w-6 h-6" />,
-    title: "Exclusive Offers",
-    description: "Special discounts and promotions for subscribers only"
-  },
-  {
-    icon: <Shield className="w-6 h-6" />,
-    title: "Tech Insights",
-    description: "Latest industry trends and technology updates"
-  },
-  {
-    icon: <Users className="w-6 h-6" />,
-    title: "Community",
-    description: "Join our network of tech professionals and innovators"
+import { GradientHeading } from "@/components/GradientHeading";
+import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
+import { cn } from "@/lib/utils";
+
+export interface NewsletterSectionProps extends React.HTMLAttributes<HTMLElement> {}
+
+export function NewsletterSection({ className, style, ...props }: NewsletterSectionProps) {
+  return (
+    <section
+      className={cn("py-20 bg-zion-blue-dark", className)}
+      id="newsletter"
+      style={style}
+      {...props}
+    >
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <GradientHeading>Stay Informed</GradientHeading>
+          <p className="mt-4 text-zion-slate-light text-xl mb-8">
+            Subscribe to our newsletter for the latest updates on Zion's services, Google trending tech news, and marketplace opportunities.
+          </p>
+          <button
+            onClick={() => setIsSubscribed(false)}
+            className="px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors duration-300"
+          >
+            Subscribe Another Email
+          </button>
+        </div>
+      </section>
+    );
   }
-];
-
-const stats = [
-  { value: "50K+", label: "Subscribers" },
-  { value: "95%", label: "Satisfaction" },
-  { value: "24/7", label: "Support" },
-  { value: "100%", label: "Free" }
-];
-
-export function NewsletterSection() {
-  const [email, setEmail] = useState('');
-  const [isSubscribed, setIsSubscribed] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [showBenefits, setShowBenefits] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Here you would typically send the email to your newsletter service
-    console.log('Newsletter subscription:', email);
-    setIsSubscribed(true);
-    setEmail('');
-  };
-
-  const handleUnsubscribe = () => {
-    setIsSubscribed(false);
-    setEmail('');
-  };
 
   return (
     <section className="py-20 bg-gradient-to-br from-zion-purple via-zion-purple-dark to-zion-slate-dark relative overflow-hidden">
