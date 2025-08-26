@@ -1,17 +1,19 @@
-import { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from '@/store/hooks';
-import { addToWishlist, loadWishlistFromDB, removeFromWishlist } from '@/store/wishlistSlice';
-import { useAuth } from '@/hooks/useAuth';
+import { useFavorites } from '@/hooks/useFavorites';
+import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';
+import { TALENT_PROFILES } from '@/data/talentData';
+import { ProductListingCard } from '@/components/ProductListingCard';
+import { TalentCard } from '@/components/talent/TalentCard';
 import { Button } from '@/components/ui/button';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { toast } from 'sonner';
+import { useAuth } from '@/hooks/useAuth';
+import { useNavigate } from 'react-router-dom';
+import { useCart } from '@/context/CartContext';
 
 export default function Wishlist() {
   const dispatch = useAppDispatch();
   const items = useAppSelector((s) => s.wishlist.items);
   const { user } = useAuth();
   const navigate = useNavigate();
-  const location = useLocation();
+  const { dispatch } = useCart();
 
   useEffect(() => {
     if (!user) {
@@ -21,8 +23,19 @@ export default function Wishlist() {
     dispatch(loadWishlistFromDB(user.id!));
   }, [user, dispatch, navigate, location]);
 
-  const handleRemove = (id: string) => {
-    dispatch(removeFromWishlist({ id }));
+  const addToCart = async (item: { id: string; title?: string; price?: number }) => {
+    const res = await fetch('/api/cart/add', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        id: item.id,
+        name: item.title || 'Item',
+        price: item.price || 0,
+        quantity: 1,
+      }),
+    });
+    const items = await res.json();
+    dispatch({ type: 'SET_ITEMS', payload: items });
   };
 
   const pathForItem = (item: { id: string; type: string }) => {

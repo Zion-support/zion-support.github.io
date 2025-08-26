@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '@/hooks/useAuth';
+import { toast } from '@/hooks/use-toast';
+import { useCart } from '@/context/CartContext';
 
 interface CartItem {
   id: string;
@@ -8,22 +12,42 @@ interface CartItem {
   quantity: number;
 }
 
-export default function Cart() {
-  const [items, setItems] = useState<CartItem[]>([]);
+export default function CartPage() {
+  const navigate = useNavigate();
+  const { user } = useAuth();
+  const { items, dispatch } = useCart();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const stored = localStorage.getItem('cart');
-    if (stored) {
-      try {
-        const parsed = JSON.parse(stored) as CartItem[];
-        setItems(parsed);
-      } catch {
-        // ignore
-      }
+    if (!items.length) {
+      setLoading(true);
+      fetch('/api/cart')
+        .then(r => r.json())
+        .then(data => dispatch({ type: 'SET_ITEMS', payload: data }))
+        .finally(() => setLoading(false));
     }
-  }, []);
+  }, [items.length, dispatch]);
 
-  const total = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
+  const updateQuantity = (id: string, qty: number) => {
+    const updated = items.map(i =>
+      i.id === id ? { ...i, quantity: qty } : i
+    );
+    dispatch({ type: 'SET_ITEMS', payload: updated });
+  };
+
+  const removeItem = (id: string) => {
+    dispatch({ type: 'SET_ITEMS', payload: items.filter(i => i.id !== id) });
+  };
+
+  const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
+
+  if (items.length === 0) {
+    return (
+      <div className="container py-10 text-center">
+        <p>Your cart is empty.</p>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen p-6">
