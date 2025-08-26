@@ -1,18 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useForm } from 'react-hook-form';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { safeStorage } from '@/utils/safeStorage';
+import { getCartKey } from '@/utils/cartUtils';
+import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
 import { getStripe } from '@/utils/getStripe';
-import {
-  Form,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,
-} from '@/components/ui/form';
+import { apiClient } from '@/utils/apiClient';
 
 interface CartItem {
   id: string;
@@ -31,8 +27,7 @@ interface CheckoutForm {
 
 export default function CheckoutPage() {
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
-  const sku = searchParams.get('sku');
+  const { t } = useTranslation();
   const [items, setItems] = useState<CartItem[]>([]);
   const form = useForm<CheckoutForm>({
     defaultValues: { name: '', email: '', address: '', city: '', country: '' },
@@ -44,7 +39,7 @@ export default function CheckoutPage() {
       return;
     }
 
-    const stored = safeStorage.getItem('cart');
+    const stored = safeStorage.getItem(getCartKey(user?.id));
     if (stored) {
       try {
         setItems(JSON.parse(stored) as CartItem[]);
@@ -58,7 +53,7 @@ export default function CheckoutPage() {
 
   const onSubmit = async (data: CheckoutForm) => {
     try {
-      const res = await fetch('/api/create-payment-intent', {
+      const response = await apiClient('/api/checkout_sessions', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ amount: subtotal }),
@@ -74,7 +69,18 @@ export default function CheckoutPage() {
           },
         });
         if (payment.error) throw payment.error;
-        safeStorage.removeItem('cart');
+        if (user?.id) {
+          try {
+            await fetch('/api/points/add', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ userId: user.id, amount: subtotal, orderId: result.id }),
+            });
+          } catch (e) {
+            console.error('Failed to add points', e);
+          }
+        }
+        safeStorage.removeItem(getCartKey(user?.id));
         navigate(`/orders/${result.id}`);
       }
     } catch (err) {
@@ -83,67 +89,37 @@ export default function CheckoutPage() {
   };
 
   return (
-    <div className="container max-w-2xl py-10">
-      <h1 className="text-3xl font-bold mb-6">Checkout</h1>
-      <div className="grid gap-6">
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-            <FormField name="name" control={form.control} render={({ field }) => (
-              <FormItem>
-                <FormLabel>Name</FormLabel>
-                <FormControl>
-                  <Input {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-            <FormField name="email" control={form.control} render={({ field }) => (
-              <FormItem>
-                <FormLabel>Email</FormLabel>
-                <FormControl>
-                  <Input type="email" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-            <FormField name="address" control={form.control} render={({ field }) => (
-              <FormItem>
-                <FormLabel>Address</FormLabel>
-                <FormControl>
-                  <Input {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-            <FormField name="city" control={form.control} render={({ field }) => (
-              <FormItem>
-                <FormLabel>City</FormLabel>
-                <FormControl>
-                  <Input {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-            <FormField name="country" control={form.control} render={({ field }) => (
-              <FormItem>
-                <FormLabel>Country</FormLabel>
-                <FormControl>
-                  <Input {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )} />
-            <div className="border-t pt-4">
-              <div className="flex justify-between font-semibold mb-4">
-                <span>Subtotal</span>
-                <span>${subtotal.toFixed(2)}</span>
-              </div>
-              <Button className="w-full" type="submit">
-                Pay with Stripe (test)
-              </Button>
-            </div>
-          </form>
-        </Form>
+    <div className="max-w-2xl mx-auto p-6">
+      <h1 className="text-2xl font-bold mb-6">Checkout</h1>
+      <CheckoutProgress currentStep={0} className="mb-6" />
+
+      {/* Order Summary */}
+      <div className="bg-gray-50 p-4 rounded-md mb-6">
+        <h2 className="font-semibold mb-3">Order Summary</h2>
+        {items.map(item => (
+          <div key={item.id} className="flex justify-between items-center py-2">
+            <span>{item.name} (x{item.quantity})</span>
+            <span>${(item.price * item.quantity).toFixed(2)}</span>
+          </div>
+        ))}
+        <div className="border-t pt-2 mt-2">
+          <div className="flex justify-between text-sm text-gray-600 mb-1">
+            <span>Subtotal:</span>
+            <span>${subtotal.toFixed(2)}</span>
+          </div>
+          <div className="flex justify-between text-sm text-gray-600 mb-1">
+            <span>Tax (8%):</span>
+            <span>${tax.toFixed(2)}</span>
+          </div>
+          <div className="flex justify-between text-sm text-gray-600 mb-2">
+            <span>Shipping:</span>
+            <span>{shipping === 0 ? 'Free' : `$${shipping.toFixed(2)}`}</span>
+          </div>
+          <div className="flex justify-between font-bold text-lg">
+            <span>Total:</span>
+            <span>${total.toFixed(2)}</span>
+          </div>
+        </div>
       </div>
     </div>
   );

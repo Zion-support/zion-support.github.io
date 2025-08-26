@@ -1,22 +1,20 @@
 import React from 'react';
-import Head from 'next/head';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
-import { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin } from 'lucide-react';
+import SEO from '../components/SEO';
+
+const ext = (url: string) => (
+	<a className="text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">{url.replace('https://', '')}</a>
+);
 
 export default function ServicesAdvertisingPage() {
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
-			<SEO title="Services Advertising | Zion Tech Group" description="Features, benefits, and market references for Zion Tech Group services" canonical="https://ziontechgroup.com/services-advertising/" />
-			<div className="max-w-6xl mx-auto space-y-10">
-				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Services Advertising</h1>
-=======
 			<Head>
 				<title>Services Advertising | Zion Tech Group</title>
 				<meta name="description" content="Features, benefits, and market references for Zion Tech Group services" />
 				<link rel="canonical" href="https://ziontechgroup.com/services-advertising" />
 			</Head>
+=======
+			<SEO title="Services Advertising | Zion Tech Group" description="Features, benefits, and market references for Zion Tech Group services" canonical="https://ziontechgroup.com/services-advertising/" />
 			<div className="max-w-6xl mx-auto space-y-10">
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Services Advertising</h1>
 
@@ -200,7 +198,6 @@ export default function ServicesAdvertisingPage() {
 						<li>References: {ext('https://www.typeform.com/pricing/')}, {ext('https://www.surveymonkey.com/pricing/')}</li>
 					</ul>
 				</section>
->>>>>>> bb65c1ef0a972fd1f54d0f8109dacb32dae32437
 
 				{/* Quick contact */}
 				<div className="flex flex-col md:flex-row items-center gap-4 p-4 rounded-xl bg-black/30 border border-gray-800">
@@ -223,23 +220,6 @@ export default function ServicesAdvertisingPage() {
 					</ul>
 				</section>
 
-<<<<<<< HEAD
-				<section className="space-y-6">
-					<h2 className="text-2xl font-semibold text-white">Vector Search Starter</h2>
-					<p className="text-slate-300">Production RAG starter with Pinecone/Weaviate/Elastic, eval harness, and observability.</p>
-					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical SMB budget: $50–$1,000/mo</li>
-						<li>References: {ext('https://www.pinecone.io/pricing/')}, {ext('https://weaviate.io/pricing')}, {ext('https://www.elastic.co/pricing')}</li>
-					</ul>
-				</section>
-
-				<section id="managed-postgres-ha" className="space-y-6">
-					<h2 className="text-2xl font-semibold text-white">Managed Postgres HA</h2>
-					<p className="text-slate-300">SRE-backed high availability Postgres with PITR backups, failover, and tuning.</p>
-					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical SMB budget: $1,200–$5,000/mo</li>
-						<li>References: {ext('https://cloud.google.com/sql/pricing')}, {ext('https://aws.amazon.com/rds/postgresql/pricing/')}</li>
-=======
 				<section id="smb-website-analytics" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">SMB Website Analytics</h2>
 					<p className="text-slate-300">Privacy-first dashboards with goals, funnels, and UTM insights.</p>
@@ -255,7 +235,6 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $30–$70/agent/mo</li>
 						<li>References: {ext('https://www.zendesk.com/pricing/')}, {ext('https://www.freshworks.com/freshdesk/pricing/')}</li>
->>>>>>> bb65c1ef0a972fd1f54d0f8109dacb32dae32437
 					</ul>
 				</section>
 
@@ -306,28 +285,11 @@ export default function ServicesAdvertisingPage() {
 				</section>
 
 				<section className="space-y-6">
-<<<<<<< HEAD
-					<h2 className="text-2xl font-semibold text-white">Affiliate Attribution & Payouts Hub</h2>
-					<p className="text-slate-300">Cross-device attribution with first-party identity stitching and automated payouts.</p>
-					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical SMB budget: $100–$300/mo</li>
-						<li>References: {ext('https://stripe.com/pricing')}, {ext('https://pay.google.com/about/business/')}, {ext('https://partnerstack.com/')}</li>
-					</ul>
-				</section>
-				
-				<section className="space-y-6">
-					<h2 className="text-2xl font-semibold text-white">API Security Scanner</h2>
-					<p className="text-slate-300">Continuously discover APIs and detect OWASP API Top 10 risks with CI gating.</p>
-					<ul className="list-disc list-inside text-slate-300 space-y-1">
-						<li>Typical SMB budget: $100–$2,000/mo</li>
-						<li>References: {ext('https://www.cloudflare.com/plans/')}, {ext('https://www.fastly.com/pricing')}</li>
-=======
 					<h2 className="text-2xl font-semibold text-white">Data Quality & ETL Monitor</h2>
 					<p className="text-slate-300">Freshness SLAs, schema drift detection, and anomaly alerts for your warehouse and lakes.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $100–$500/mo</li>
 						<li>References: {ext('https://www.montecarlodata.com/')}, {ext('https://www.bigeye.com/')}, {ext('https://soda.io/')}</li>
->>>>>>> bb65c1ef0a972fd1f54d0f8109dacb32dae32437
 					</ul>
 				</section>
 

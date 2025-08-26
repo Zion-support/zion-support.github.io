@@ -229,7 +229,7 @@ const sidebarSections = [
     color: 'text-pink-400',
     items: [
       { name: 'About Us', href: '/about' },
-      { name: 'Leadership Team', href: '/leadership' },
+      { name: 'Leadership Team', href: '/about' },
       { name: 'Careers', href: '/careers' },
       { name: 'News & Press', href: '/news' },
       { name: 'Partners', href: '/partners' },

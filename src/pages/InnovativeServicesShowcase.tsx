@@ -33,32 +33,35 @@ import {
   Cube,
   Sparkles
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { INNOVATIVE_SERVICES_2025, INNOVATIVE_SERVICE_CATEGORIES_2025, INNOVATIVE_SERVICE_SUBCATEGORIES_2025 } from '@/data/innovativeNewServices2025';
+import SEOHead from '../components/SEOHead';
 
-export default function InnovativeServicesShowcase() {
+// Import all service data
+import { ADVANCED_AI_SERVICES } from '../data/advancedAIServices';
+import { INNOVATIVE_IT_INFRASTRUCTURE_SERVICES } from '../data/innovativeITInfrastructure';
+import { IOT_EDGE_COMPUTING_SERVICES } from '../data/iotEdgeComputingServices';
+import { INNOVATIVE_MICRO_SAAS_SERVICES } from '../data/innovativeMicroSaasServices';
+
+const InnovativeServicesShowcase: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedSubcategory, setSelectedSubcategory] = useState<string>('all');
   const [priceRange, setPriceRange] = useState<string>('all');
 
-  const filteredServices = useMemo(() => {
-    return INNOVATIVE_SERVICES_2025.filter(service => {
-      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-      const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
-      
-      const matchesPrice = priceRange === 'all' || 
-        (priceRange === 'low' && service.price < 10000) ||
-        (priceRange === 'medium' && service.price >= 10000 && service.price < 25000) ||
-        (priceRange === 'high' && service.price >= 25000);
-      
-      return matchesSearch && matchesCategory && matchesSubcategory && matchesPrice;
-    });
-  }, [searchTerm, selectedCategory, selectedSubcategory, priceRange]);
+  // SEO configuration
+  const seoConfig = {
+    title: "Innovative Services 2025 - Zion Tech Group",
+    description: "Discover cutting-edge AI, IT infrastructure, and micro SaaS services designed to transform your business. Explore our innovative technology solutions.",
+    keywords: "AI services, IT infrastructure, micro SaaS, innovative technology, business solutions",
+    url: "https://ziontechgroup.com/innovative-services"
+  };
+
+  // Combine all services
+  const allServices = [
+    ...ADVANCED_AI_SERVICES,
+    ...INNOVATIVE_IT_INFRASTRUCTURE_SERVICES,
+    ...IOT_EDGE_COMPUTING_SERVICES,
+    ...INNOVATIVE_MICRO_SAAS_SERVICES
+  ];
 
   const getSubcategoriesForCategory = (category: string) => {
     if (category === 'all') return [];
@@ -95,72 +98,32 @@ export default function InnovativeServicesShowcase() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
-      <SEO 
-        title="Innovative Services 2025 - Zion Tech Group" 
-        description="Discover cutting-edge AI, quantum computing, blockchain, and emerging technology solutions. Transform your business with our innovative micro SAAS services and IT solutions."
-        keywords="AI services, quantum computing, blockchain, Web3, IoT, cybersecurity, metaverse, green tech, digital twin, innovative technology solutions"
-        canonical="https://ziontechgroup.com/innovative-services-2025"
-      />
-
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 md:py-32 bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-purple-dark">
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-2 h-2 rounded-full bg-zion-purple-light opacity-40 animate-pulse"></div>
-          <div className="absolute top-1/3 right-1/3 w-3 h-3 rounded-full bg-zion-cyan opacity-30 animate-pulse"></div>
-          <div className="absolute bottom-1/4 left-1/2 w-2 h-2 rounded-full bg-zion-purple opacity-40 animate-pulse"></div>
-        </div>
-        
-        <div className="container relative z-10 px-4 mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            Innovative Services 2025
-          </h1>
-          <p className="text-xl md:text-2xl text-zion-slate-light mb-10 max-w-4xl mx-auto">
-            Experience the future of technology with our cutting-edge AI, quantum computing, blockchain, and emerging tech solutions. 
-            Transform your business with intelligent, innovative, and diversified micro SAAS services.
-          </p>
-          
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-              <div className="text-2xl font-bold text-zion-cyan">8+</div>
-              <div className="text-sm text-zion-cyan-light">Technology Categories</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-              <div className="text-2xl font-bold text-zion-purple">Global</div>
-              <div className="text-sm text-zion-cyan-light">Deployment</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center">
-              <div className="text-2xl font-bold text-zion-cyan">24/7</div>
-              <div className="text-sm text-zion-cyan-light">Expert Support</div>
-            </div>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="bg-zion-purple hover:bg-zion-purple-dark text-white">
-              <Link to="/contact">Get Started Today</Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-zion-blue">
-              <Link to="/request-quote">Request Custom Quote</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Information Banner */}
-      <section className="bg-zion-slate-dark py-8">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-center md:text-left">
-            <div className="flex items-center gap-3">
-              <Phone className="h-5 w-5 text-zion-cyan" />
-              <span className="text-white">+1 302 464 0950</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <Mail className="h-5 w-5 text-zion-cyan" />
-              <span className="text-white">kleber@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <Globe className="h-5 w-5 text-zion-cyan" />
-              <span className="text-white">https://ziontechgroup.com</span>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+      <SEOHead config={seoConfig} />
+      
+      {/* Header Section */}
+      <div className="bg-white shadow-sm border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              Innovative Services Showcase
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover our cutting-edge micro SAAS services, IT solutions, and AI-powered platforms designed to transform your business operations and drive innovation.
+            </p>
+            <div className="mt-6 flex justify-center space-x-4">
+              <div className="flex items-center text-gray-600">
+                <Users className="w-5 h-5 mr-2" />
+                <span>{allServices.length}+ Services</span>
+              </div>
+              <div className="flex items-center text-gray-600">
+                <Award className="w-5 h-5 mr-2" />
+                <span>Enterprise Grade</span>
+              </div>
+              <div className="flex items-center text-gray-600">
+                <Globe className="w-5 h-5 mr-2" />
+                <span>Global Support</span>
+              </div>
             </div>
           </div>
         </div>

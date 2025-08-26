@@ -1,13 +1,10 @@
 /* TEAM */
-Developer: Zion Tech Group Engineering
+Developer: Zion Tech Group
 Contact: kleber@ziontechgroup.com
-Twitter: @ziontechgroup
+Twitter: https://twitter.com/ziontechgroup
+LinkedIn: https://linkedin.com/company/ziontechgroup
 
 /* SITE */
-Standards: HTML5, CSS3, ES2023, Accessibility WCAG 2.1 AA
-Components: Next.js 15, React 19, Tailwind CSS 4
-Analytics: Plausible Analytics (privacy-first)
+Standards: HTML5, CSS3, ECMAScript
+Components: Next.js, React, Tailwind CSS
 Hosting: Netlify
-
-/* THANKS */
-Thanks to our customers and community.

@@ -187,4 +187,10 @@ export default function ServicesShowcase2026V4() {
       </div>
     </UltraFuturisticBackground2026>
   );
+
+export async function getServerSideProps() {
+  return {
+    props: {}
+  };
+}
 }

@@ -159,10 +159,39 @@ const navigationItems: NavigationItem[] = [
       { name: 'Community', href: '/community', description: 'Forum and updates' },
       { name: 'Services Advertising', href: '/services-advertising', description: 'Features, benefits and market pricing links' }
     ]
+  },
+  {
+    name: 'Company',
+    href: '/about',
+    icon: <Users className="w-5 h-5" />,
+    description: 'About the company and policies',
+    children: [
+      { name: 'About Us', href: '/about', description: 'Mission and vision' },
+      { name: 'Careers', href: '/careers', description: 'Join our team' },
+      { name: 'News', href: '/news', description: 'Company updates' },
+      { name: 'Partners', href: '/partners', description: 'Ecosystem partners' },
+      { name: 'Investors', href: '/investors', description: 'Investor information' },
+      { name: 'Contact', href: '/contact', description: 'Get in touch' },
+      { name: 'Privacy Policy', href: '/privacy', description: 'User privacy' },
+      { name: 'Terms of Service', href: '/terms', description: 'Legal terms' },
+    ]
   }
 ];
 
-const UltraFuturisticNavigation2035: React.FC<{ onMenuClick: () => void }> = ({ onMenuClick }) => {
+const quickActions = [
+  { name: 'Get Started', href: '/contact', icon: <ArrowRight className="w-4 h-4" />, primary: true },
+  { name: 'Get a Quote', href: '/quote', icon: <DollarSign className="w-4 h-4" /> },
+  { name: 'Book Demo', href: '/contact', icon: <Video className="w-4 h-4" /> },
+  { name: 'Live Chat', href: '/contact', icon: <MessageCircle className="w-4 h-4" /> },
+  { name: 'View Pricing', href: '/pricing', icon: <DollarSign className="w-4 h-4" /> },
+  { name: 'Market Pricing', href: '/market-pricing', icon: <BarChart3 className="w-4 h-4" /> },
+  { name: 'Documentation', href: '/docs', icon: <BookOpen className="w-4 h-4" /> },
+  { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> }
+];
+
+const UltraFuturisticNavigation2035: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');

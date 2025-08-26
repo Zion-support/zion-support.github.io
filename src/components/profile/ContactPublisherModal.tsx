@@ -17,9 +17,10 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { Send, Mail } from 'lucide-react';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
+import { Mail, PaperPlane } from 'lucide-react';
+import api from '@/services/apiClient';
 import { toast } from '@/hooks/use-toast';
 
 interface ContactPublisherModalProps {
@@ -27,6 +28,7 @@ interface ContactPublisherModalProps {
   onClose: () => void;
   publisherName: string;
   publisherEmail?: string;
+  productId?: string;
 }
 
 type FormValues = {
@@ -59,23 +61,18 @@ export function ContactPublisherModal({
     defaultValues: { subject: '', message: '' },
   });
 
-  const onSubmit = async (values: FormValues) => {
+  const handleSend = async () => {
+    const values = form.getValues();
     setIsSubmitting(true);
     try {
-      const res = await fetch('/api/messages', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(values),
+      await api.post('/messages', {
+        productId,
+        subject: values.subject,
+        body: values.message,
       });
-
-      if (res.status === 201) {
-        toast.success('Message sent');
-        form.reset();
-        onClose();
-      } else {
-        const data = await res.json().catch(() => ({}));
-        toast.error(data.error || 'Failed to send message');
-      }
+      toast.success('Message sent!');
+      form.reset();
+      onClose();
     } catch (err: any) {
       toast.error(err?.message || 'Failed to send message');
     } finally {
@@ -101,7 +98,7 @@ export function ContactPublisherModal({
           </div>
         )}
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+          <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
             <FormField
               control={form.control}
               name="subject"
@@ -137,11 +134,12 @@ export function ContactPublisherModal({
               )}
             />
             <Button
-              type="submit"
-              className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
+              variant="primary"
+              onClick={handleSend}
+              className="w-full"
               disabled={!form.formState.isValid || isSubmitting}
             >
-              <Send className="mr-2 h-4 w-4" />
+              <PaperPlane className="mr-1" />
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </Button>
           </form>

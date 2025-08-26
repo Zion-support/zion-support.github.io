@@ -1,69 +1,34 @@
 import React from 'react';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 interface SEOProps {
   title?: string;
   description?: string;
   canonical?: string;
-  url?: string;
+  ogImage?: string;
 }
 
 const DEFAULTS = {
   title: 'Zion Tech Group - Revolutionary Technology Solutions | AI, Quantum Computing, Micro SAAS',
   description:
     "Transform your business with Zion Tech Group's revolutionary AI, quantum computing, and micro SAAS solutions. Leading-edge technology for unprecedented growth.",
-  url: 'https://ziontechgroup.com'
+  url: 'https://ziontechgroup.com',
+  image: 'https://ziontechgroup.com/og-image.svg'
 };
 
-export default function SEO({ title, description, canonical, url }: SEOProps) {
+export default function SEO({ title, description, canonical, ogImage }: SEOProps) {
+  const router = useRouter();
+
   const pageTitle = title || DEFAULTS.title;
   const pageDescription = description || DEFAULTS.description;
-  const canonicalUrl = canonical;
-  const pageUrl = url || canonicalUrl || DEFAULTS.url;
 
-  const organizationJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Zion Tech Group',
-    url: 'https://ziontechgroup.com',
-    sameAs: [
-      'https://twitter.com/ziontechgroup',
-      'https://linkedin.com/company/ziontechgroup',
-      'https://facebook.com/ziontechgroup',
-      'https://instagram.com/ziontechgroup',
-      'https://youtube.com/@ziontechgroup',
-      'https://github.com/Zion-Holdings'
-    ],
-    contactPoint: [
-      {
-        '@type': 'ContactPoint',
-        telephone: '+13024640950',
-        email: 'kleber@ziontechgroup.com',
-        contactType: 'customer service',
-        areaServed: 'US',
-        availableLanguage: ['English']
-      }
-    ],
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '364 E Main St STE 1008',
-      addressLocality: 'Middletown',
-      addressRegion: 'DE',
-      postalCode: '19709',
-      addressCountry: 'US'
-    }
-  } as const;
-
-  const webSiteJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: 'Zion Tech Group',
-    url: 'https://ziontechgroup.com',
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: 'https://ziontechgroup.com/services?search={search_term_string}',
-      'query-input': 'required name=search_term_string'
-    }
-  } as const;
+  // Derive canonical from router when not explicitly provided
+  const asPath = router?.asPath || '/';
+  const pathWithoutQueryOrHash = asPath.split('#')[0].split('?')[0];
+  const normalizedPath = pathWithoutQueryOrHash.endsWith('/') ? pathWithoutQueryOrHash : `${pathWithoutQueryOrHash}/`;
+  const derivedCanonical = `${DEFAULTS.url}${normalizedPath === '/' ? '' : normalizedPath}`;
+  const canonicalUrl = canonical || derivedCanonical;
 
   return (
     <Head>
@@ -71,19 +36,18 @@ export default function SEO({ title, description, canonical, url }: SEOProps) {
       <meta name="description" content={pageDescription} />
       <meta name="robots" content="index,follow" />
       {canonicalUrl ? <link rel="canonical" href={canonicalUrl} /> : null}
+      <link rel="alternate" hrefLang="en" href={canonicalUrl} />
       <meta property="og:title" content={pageTitle} />
       <meta property="og:description" content={pageDescription} />
       <meta property="og:url" content={pageUrl} />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
-      
-      {/* Twitter Card Meta Tags */}
+      {ogImage ? <meta property="og:image" content={ogImage} /> : null}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={pageTitle} />
       <meta name="twitter:description" content={pageDescription} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteJsonLd) }} />
+      {ogImage ? <meta name="twitter:image" content={ogImage} /> : null}
     </Head>
   );
 };
@@ -133,7 +97,10 @@ export default function SEO({ title, description, canonical, ogImage, image, noI
 			"logo": `${baseUrl.replace(/\/$/, '')}/favicon.svg`,
 			"sameAs": [
 				"https://www.linkedin.com/company/zion-tech-group",
-				"https://x.com/ziontechgroup"
+				"https://github.com/Zion-Holdings",
+				"https://www.instagram.com/ziontechgroup",
+				"https://www.youtube.com/@ziontechgroup",
+				"https://twitter.com/ziontechgroup"
 			]
 		},
 		{

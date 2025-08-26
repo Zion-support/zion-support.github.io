@@ -3,43 +3,64 @@ import UltraFuturisticBackgroundComponent from '../components/ui/UltraFuturistic
 import UIButton from '../components/ui/Button';
 import UICard from '../components/ui/Card';
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { extraServices } from '../data/extra-services';
+import { additionalEnhancedServices } from '../data/additional-real-services';
+import { innovativeAIServices } from '../data/innovative-ai-services';
+import { quantumSpaceServices } from '../data/quantum-space-services';
+import { enterpriseITServices } from '../data/enterprise-it-services';
+import { newRealServices } from '../data/new-real-services';
+import { marketReadyServices } from '../data/market-ready-services';
+import { nextGenerationAIServices } from '../data/next-generation-ai-services';
+import { emergingTechnologyServices } from '../data/emerging-technology-services';
+import { comprehensiveITSolutions } from '../data/comprehensive-it-solutions';
+import { marketValidatedServices } from '../data/market-validated-services';
+import { newRealInnovations } from '../data/new-real-innovations';
+import { realMarketServices } from '../data/real-market-services';
+import { new2025Services } from '../data/new-2025-services';
+import { curatedMarketServices } from '../data/curated-market-services';
+import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
+import { nextGenAIServices } from '../data/next-gen-ai-services';
+import { industryRealServices } from '../data/industry-real-services';
+import { professionalServices } from '../data/professional-services';
+import { realEnterpriseServices2025 } from '../data/real-enterprise-services-2025';
+import { augmentedRealServices2025 } from '../data/2025-augmented-real-services';
 
 import { innovativeRealMicroSaasServices2025 as servicesData } from '../data/2025-innovative-real-micro-saas-services';
 
-// Node modules will be required inside getStaticPaths to avoid client bundling
-
-type Service = typeof servicesData[number];
-
-function getAllServices(): Service[] {
-  return servicesData;
-}
-
-function toSlug(value: string): string {
-  return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-}
-
-function extractSlugFromLink(link: string): string | null {
-  try {
-    const url = new URL(link);
-    const path = url.pathname.replace(/^\/+|\/+$/g, '');
-    if (!path) return null;
-    const parts = path.split('/');
-    return parts[parts.length - 1] || null;
-  } catch {
-    return null;
-  }
-}
-
-export async function getStaticPaths() {
-  const services = getAllServices();
-  const slugs = new Set<string>();
-
-  for (const s of services) {
-    if (s.link) {
-      const fromLink = extractSlugFromLink(s.link);
-      if (fromLink) {
-        slugs.add(fromLink);
-        continue;
+  const service = useMemo(() => {
+    if (!slug) return undefined;
+    const all: any[] = ([] as any[])
+      .concat(
+        enhancedRealMicroSaasServices as any,
+        extraServices as any,
+        additionalEnhancedServices as any,
+        innovativeAIServices as any,
+        quantumSpaceServices as any,
+        enterpriseITServices as any,
+        newRealServices as any,
+        marketReadyServices as any,
+        realMarketServices as any,
+        new2025Services as any,
+        newRealInnovations as any,
+        emergingTechnologyServices as any,
+        comprehensiveITSolutions as any,
+        marketValidatedServices as any,
+        curatedMarketServices as any,
+        cuttingEdgeITServices as any,
+        nextGenerationAIServices as any,
+        nextGenAIServices as any,
+        industryRealServices as any,
+        professionalServices as any,
+        realEnterpriseServices2025 as any,
+        augmentedRealServices2025 as any
+      );
+    const byLink = all.find(s => {
+      try {
+        const url = new URL(s.link);
+        return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '');
+      } catch {
+        return false;
       }
     }
     if (s.id) slugs.add(toSlug(s.id));
@@ -121,7 +142,7 @@ export default function ServiceDetailTopLevelPage({ service }: { service: Servic
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">
             {service.name}
           </h1>
-                      <p className="text-gray-300 text-lg max-w-3xl mx-auto">{service.tagline || service.description}</p>
+          <p className="text-gray-300 text-lg max-w-3xl mx-auto">{service.tagline || service.description}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
@@ -205,3 +226,113 @@ export default function ServiceDetailTopLevelPage({ service }: { service: Servic
     </UltraFuturisticBackgroundComponent>
   );
 }
+
+// Static export support: generate root-level pages for service slugs
+type Svc = typeof enhancedRealMicroSaasServices[number];
+
+function collectAllServices(): Svc[] {
+  return enhancedRealMicroSaasServices
+    .concat(
+      extraServices as Svc[],
+      additionalEnhancedServices as Svc[],
+      innovativeAIServices as Svc[],
+      quantumSpaceServices as Svc[],
+      enterpriseITServices as Svc[],
+      newRealServices as Svc[],
+      marketReadyServices as Svc[],
+      realMarketServices as Svc[],
+      new2025Services as Svc[],
+      newRealInnovations as Svc[],
+      emergingTechnologyServices as Svc[],
+      comprehensiveITSolutions as Svc[],
+      marketValidatedServices as Svc[],
+      augmentedRealServices2025 as Svc[]
+    );
+}
+
+function normalizeSlug(value: string): string {
+  return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
+
+function extractRootSlugFromLink(link?: string): string | null {
+  if (!link) return null;
+  try {
+    const url = new URL(link);
+    const p = url.pathname.replace(/^\/+|\/+$/g, '');
+    if (p && !p.includes('/')) return p;
+    return null;
+  } catch {
+    return null;
+  }
+}
+
+function getExistingRootPageSlugs(): Set<string> {
+  const pagesDir = path.join(process.cwd(), 'pages');
+  const entries = fs.readdirSync(pagesDir, { withFileTypes: true });
+  const slugs = new Set<string>();
+  for (const entry of entries) {
+    if (entry.isFile()) {
+      const m = entry.name.match(/^(?!_|\[).+\.(tsx|ts|jsx|js)$/);
+      if (m) {
+        const base = entry.name.replace(/\.(tsx|ts|jsx|js)$/, '');
+        if (base !== 'index' && base !== '404' && base !== '500') {
+          slugs.add(base);
+        }
+      }
+    }
+  }
+  return slugs;
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const services = collectAllServices();
+  const candidateSlugs = new Set<string>();
+
+  // Exclude any slugs that already have an explicit top-level page or folder under /pages
+  const pagesDir = path.join(process.cwd(), 'pages');
+  const existingRoutes = new Set<string>();
+  const entries = fs.readdirSync(pagesDir, { withFileTypes: true });
+  for (const entry of entries) {
+    // Skip private and special files
+    if (entry.name.startsWith('_')) continue;
+    if (entry.name === 'api') continue;
+    if (entry.name === 'reports') continue;
+    if (entry.name === 'services') continue;
+    if (entry.name === '[slug].tsx' || entry.name === 'index.tsx') continue;
+
+    if (entry.isDirectory()) {
+      existingRoutes.add(entry.name);
+      continue;
+    }
+    if (entry.isFile()) {
+      const match = entry.name.match(/^(.*)\.(tsx|ts|js|jsx)$/);
+      if (match) {
+        existingRoutes.add(match[1]);
+      }
+    }
+  }
+
+  for (const s of services) {
+    const fromLink = extractRootSlugFromLink((s as any).link);
+    if (fromLink) {
+      candidateSlugs.add(fromLink);
+    } else if (s.id) {
+      candidateSlugs.add(normalizeSlug(s.id));
+    } else if (s.name) {
+      candidateSlugs.add(normalizeSlug(s.name));
+    }
+  }
+
+  const existingRootPages = getExistingRootPageSlugs();
+  const filtered = Array.from(candidateSlugs).filter((slug) => !existingRootPages.has(slug));
+
+  return {
+    paths: filtered.map((slug) => ({ params: { slug } })),
+    fallback: true
+  };
+};
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  // No dynamic fetching needed; the component resolves the service client-side.
+  return { props: {} };
+};
