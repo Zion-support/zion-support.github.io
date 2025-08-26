@@ -1,142 +1,138 @@
-export default function Services(){return (<main style={{padding:20,fontFamily:'sans-serif',lineHeight:1.6,maxWidth:1000,margin:'0 auto'}}>
-<h1 style={{marginBottom:10}}>Services</h1>
-<p style={{color:'#374151'}}>We deliver end-to-end technology solutions: micro SaaS products, IT consulting, and applied AI—tailored for startups, SMBs, and enterprises.</p>
+import Head from 'next/head'
+import React from 'react'
+import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services'
+import { advancedITServices } from '../data/advanced-it-services'
+import { innovativeAIServices } from '../data/innovative-ai-services'
+import { addedMicroSaaS2025 } from '../data/2025-added-micro-saas'
+import { addedITServices2025 } from '../data/2025-added-it-services'
+import { addedAIServices2025 } from '../data/2025-added-ai-services'
 
-<nav style={{margin:'16px 0'}}>
-  <a href="#micro-saas" style={{marginRight:16,color:'#2563eb'}}>Micro SaaS</a>
-  <a href="#it-services" style={{marginRight:16,color:'#2563eb'}}>IT Services</a>
-  <a href="#ai-services" style={{marginRight:16,color:'#2563eb'}}>AI Services</a>
-  <a href="/contact" style={{color:'#2563eb'}}>Contact</a>
-</nav>
+export default function Services() {
+	const title = 'Services — Zion Tech Group'
+	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.'
 
-<section id="micro-saas" style={{marginTop:24}}>
-  <h2>Micro SaaS Solutions</h2>
-  <p>Ready-to-deploy niche SaaS products with rapid onboarding, transparent pricing, and optional white-labeling.</p>
+	const microSaaS = innovativeRealMicroSaasServices2025.slice(0, 12).concat(addedMicroSaaS2025)
+	const itServices = advancedITServices.slice(0, 12).concat(addedITServices2025)
+	const aiServices = innovativeAIServices.slice(0, 12).concat(addedAIServices2025)
 
-  <h3>1) AI Website Auditor</h3>
-  <ul>
-    <li>Features: SEO crawl, Core Web Vitals, accessibility scan, content gap analysis, PDF report.</li>
-    <li>Benefits: Improve rankings, fix UX issues faster, prioritize high-impact actions.</li>
-    <li>Typical pricing: $49/mo Starter, $149/mo Pro, $499/mo Agency.</li>
-    <li>Learn more: <a href="https://ziontechgroup.com/services#ai-website-auditor" target="_blank" rel="noopener" style={{color:'#2563eb'}}>ziontechgroup.com/services#ai-website-auditor</a></li>
-  </ul>
+	return (
+		<>
+			<Head>
+				<title>{title}</title>
+				<meta name="description" content={description} />
+			</Head>
+			<main className="mx-auto min-h-screen max-w-5xl px-6 py-12">
+				<h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">Services</h1>
+				<p className="mt-3 max-w-2xl text-gray-700">From strategy to production, we deliver outcomes fast.</p>
 
-  <h3>2) Reviews & Reputation Engine</h3>
-  <ul>
-    <li>Features: Automated review requests, AI response drafts, sentiment alerts, widget embeds.</li>
-    <li>Benefits: Boost local SEO, win trust, recover detractors quickly.</li>
-    <li>Typical pricing: $39/mo Local, $129/mo Multi-location, $399/mo Franchise.</li>
-    <li>Learn more: <a href="https://ziontechgroup.com/services#reputation" target="_blank" rel="noopener" style={{color:'#2563eb'}}>ziontechgroup.com/services#reputation</a></li>
-  </ul>
+				<div className="mt-10 grid gap-6 sm:grid-cols-2">
+					<section className="rounded-lg border p-6">
+						<h2 className="text-xl font-medium">AI Autonomous Systems</h2>
+						<ul className="mt-2 list-disc pl-5 text-gray-700">
+							<li>Sales/CS multi-agent copilots</li>
+							<li>RAG and workflow orchestration</li>
+							<li>Observability and guardrails</li>
+						</ul>
+					</section>
 
-  <h3>3) Social Content Co‑Pilot</h3>
-  <ul>
-    <li>Features: Calendar planning, AI post ideation, asset templates, auto-publish, analytics.</li>
-    <li>Benefits: 5× faster content production, consistent brand voice, measurable growth.</li>
-    <li>Typical pricing: $59/mo Solo, $179/mo Team, $599/mo Agency.</li>
-    <li>Learn more: <a href="https://ziontechgroup.com/services#social-copilot" target="_blank" rel="noopener" style={{color:'#2563eb'}}>ziontechgroup.com/services#social-copilot</a></li>
-  </ul>
+					<section className="rounded-lg border p-6">
+						<h2 className="text-xl font-medium">Cloud Platforms</h2>
+						<ul className="mt-2 list-disc pl-5 text-gray-700">
+							<li>Serverless and Kubernetes</li>
+							<li>Data pipelines and ML ops</li>
+							<li>FinOps and SRE practices</li>
+						</ul>
+					</section>
 
-  <h3>4) Lead Capture Microsites</h3>
-  <ul>
-    <li>Features: High‑converting landing pages, A/B testing, form integrations, CRM handoff.</li>
-    <li>Benefits: Higher conversion rates, faster campaign launch, clean attribution.</li>
-    <li>Typical pricing: $999 setup + $29/mo hosting & updates.</li>
-    <li>Learn more: <a href="https://ziontechgroup.com/services#microsites" target="_blank" rel="noopener" style={{color:'#2563eb'}}>ziontechgroup.com/services#microsites</a></li>
-  </ul>
+					<section className="rounded-lg border p-6">
+						<h2 className="text-xl font-medium">Cybersecurity</h2>
+						<ul className="mt-2 list-disc pl-5 text-gray-700">
+							<li>Zero-trust frameworks</li>
+							<li>Compliance and threat modeling</li>
+							<li>Incident response playbooks</li>
+						</ul>
+					</section>
 
-  <h3>5) Customer Portal Starter</h3>
-  <ul>
-    <li>Features: Auth, billing, ticketing, knowledge base, status page, theming.</li>
-    <li>Benefits: Reduce support load, improve retention, professional experience.</li>
-    <li>Typical pricing: $2,500 setup + $99/mo.</li>
-    <li>Learn more: <a href="https://ziontechgroup.com/services#customer-portal" target="_blank" rel="noopener" style={{color:'#2563eb'}}>ziontechgroup.com/services#customer-portal</a></li>
-  </ul>
-</section>
+					<section className="rounded-lg border p-6">
+						<h2 className="text-xl font-medium">Micro SaaS</h2>
+						<ul className="mt-2 list-disc pl-5 text-gray-700">
+							<li>Rapid product delivery</li>
+							<li>Billing, auth, and analytics</li>
+							<li>Growth experiments</li>
+						</ul>
+					</section>
+				</div>
 
-<section id="it-services" style={{marginTop:32}}>
-  <h2>IT Services & Consulting</h2>
-  <p>Pragmatic engineering with measurable outcomes. Flexible engagement models: fixed‑price, T&M, or retainer.</p>
+				<div className="mt-10">
+					<a className="rounded bg-blue-600 px-5 py-2.5 text-white hover:bg-blue-700" href="/contact">
+						Get in touch
+					</a>
+				</div>
 
-  <h3>Cloud & DevOps</h3>
-  <ul>
-    <li>Capabilities: AWS/GCP/Azure architecture, IaC (Terraform), CI/CD, observability, cost optimization.</li>
-    <li>Engagements: Audits from $2,000; implementations from $6,000; retainers from $2,500/mo.</li>
-    <li>Details: <a href="https://ziontechgroup.com/services#devops" target="_blank" rel="noopener" style={{color:'#2563eb'}}>ziontechgroup.com/services#devops</a></li>
-  </ul>
+				{/* Expanded Catalog Sections */}
+				<section className="mt-16">
+					<h2 className="text-2xl font-semibold">Featured Micro SaaS</h2>
+					<div className="mt-6 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+						{microSaaS.map((item) => (
+							<article key={item.id} className="rounded-lg border p-4">
+								<div className="text-lg font-semibold">{item.icon} {item.name}</div>
+								<p className="mt-1 text-sm text-gray-600">{item.tagline}</p>
+								<div className="mt-2 text-sm"><span className="font-semibold">{item.price}</span> <span className="text-gray-500">{item.period}</span></div>
+								<ul className="mt-2 list-disc pl-5 text-sm text-gray-700">
+									{item.features.slice(0,3).map((f, idx) => (<li key={idx}>{f}</li>))}
+								</ul>
+								<a href={item.link} className="mt-3 inline-block text-blue-600 underline">Learn more</a>
+							</article>
+						))}
+					</div>
+				</section>
 
-  <h3>Full‑Stack Product Development</h3>
-  <ul>
-    <li>Capabilities: Next.js, Node.js, TypeScript, Postgres/Supabase, REST/GraphQL, Stripe.</li>
-    <li>Engagements: MVPs from $12,000; feature sprints from $4,000; CTO advisory from $1,500/mo.</li>
-    <li>Details: <a href="https://ziontechgroup.com/services#product" target="_blank" rel="noopener" style={{color:'#2563eb'}}>ziontechgroup.com/services#product</a></li>
-  </ul>
+				<section className="mt-16">
+					<h2 className="text-2xl font-semibold">Advanced IT Services</h2>
+					<div className="mt-6 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+						{itServices.map((item) => (
+							<article key={item.id} className="rounded-lg border p-4">
+								<div className="text-lg font-semibold">{item.icon} {item.name}</div>
+								<p className="mt-1 text-sm text-gray-600">{item.tagline}</p>
+								<div className="mt-2 text-sm"><span className="font-semibold">{item.price}</span> <span className="text-gray-500">{item.period}</span></div>
+								<ul className="mt-2 list-disc pl-5 text-sm text-gray-700">
+									{item.features.slice(0,3).map((f, idx) => (<li key={idx}>{f}</li>))}
+								</ul>
+								<a href={item.link} className="mt-3 inline-block text-blue-600 underline">Learn more</a>
+							</article>
+						))}
+					</div>
+				</section>
 
-  <h3>Site Reliability Engineering</h3>
-  <ul>
-    <li>Capabilities: SLIs/SLOs, incident response, runbooks, performance tuning, capacity planning.</li>
-    <li>Engagements: Readiness assessment from $3,000; SRE enablement from $7,500.</li>
-    <li>Details: <a href="https://ziontechgroup.com/services#sre" target="_blank" rel="noopener" style={{color:'#2563eb'}}>ziontechgroup.com/services#sre</a></li>
-  </ul>
+				<section className="mt-16">
+					<h2 className="text-2xl font-semibold">Innovative AI Services</h2>
+					<div className="mt-6 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+						{aiServices.map((item) => (
+							<article key={item.id} className="rounded-lg border p-4">
+								<div className="text-lg font-semibold">{item.icon} {item.name}</div>
+								<p className="mt-1 text-sm text-gray-600">{item.tagline}</p>
+								<div className="mt-2 text-sm"><span className="font-semibold">{item.price}</span> <span className="text-gray-500">{item.period}</span></div>
+								<ul className="mt-2 list-disc pl-5 text-sm text-gray-700">
+									{item.features.slice(0,3).map((f, idx) => (<li key={idx}>{f}</li>))}
+								</ul>
+								<a href={item.link} className="mt-3 inline-block text-blue-600 underline">Learn more</a>
+							</article>
+						))}
+					</div>
+				</section>
 
-  <h3>Data Engineering</h3>
-  <ul>
-    <li>Capabilities: ETL/ELT, dbt, warehousing, BI dashboards, quality and lineage.</li>
-    <li>Engagements: Quickstart from $5,000; monthly ops from $2,000/mo.</li>
-    <li>Details: <a href="https://ziontechgroup.com/services#data" target="_blank" rel="noopener" style={{color:'#2563eb'}}>ziontechgroup.com/services#data</a></li>
-  </ul>
-</section>
-
-<section id="ai-services" style={{marginTop:32}}>
-  <h2>Applied AI Services</h2>
-  <p>From strategy to production: we build practical, compliant AI systems that drive ROI.</p>
-
-  <h3>AI Strategy & Readiness</h3>
-  <ul>
-    <li>Outcomes: Use‑case discovery, data audit, model selection, cost & risk analysis, roadmap.</li>
-    <li>Typical pricing: Workshops from $2,500; readiness program from $8,000.</li>
-    <li>Details: <a href="https://ziontechgroup.com/services#ai-strategy" target="_blank" rel="noopener" style={{color:'#2563eb'}}>ziontechgroup.com/services#ai-strategy</a></li>
-  </ul>
-
-  <h3>Custom AI Assistants & Agents</h3>
-  <ul>
-    <li>Use cases: Support copilots, sales research, operations automation, knowledge assistants.</li>
-    <li>Stack: OpenAI, Anthropic, Retrieval, function calling, guardrails, analytics.</li>
-    <li>Typical pricing: Pilots from $7,500; production from $20,000.</li>
-    <li>Details: <a href="https://ziontechgroup.com/services#ai-assistants" target="_blank" rel="noopener" style={{color:'#2563eb'}}>ziontechgroup.com/services#ai-assistants</a></li>
-  </ul>
-
-  <h3>RAG & Knowledge Systems</h3>
-  <ul>
-    <li>Capabilities: Document pipelines, vector search, evaluation harnesses, privacy controls.</li>
-    <li>Typical pricing: POC from $6,000; scale‑up from $15,000.</li>
-    <li>Details: <a href="https://ziontechgroup.com/services#rag" target="_blank" rel="noopener" style={{color:'#2563eb'}}>ziontechgroup.com/services#rag</a></li>
-  </ul>
-
-  <h3>Vision & Document AI</h3>
-  <ul>
-    <li>Capabilities: OCR, forms extraction, quality control, image moderation, multi‑modal UX.</li>
-    <li>Typical pricing: POC from $5,000; production from $18,000.</li>
-    <li>Details: <a href="https://ziontechgroup.com/services#vision" target="_blank" rel="noopener" style={{color:'#2563eb'}}>ziontechgroup.com/services#vision</a></li>
-  </ul>
-
-  <h3>MLOps & Evaluation</h3>
-  <ul>
-    <li>Capabilities: Offline/online evals, cost/perf tracking, rollout strategies, guardrails.</li>
-    <li>Typical pricing: Assessment from $4,000; platform setup from $12,000.</li>
-    <li>Details: <a href="https://ziontechgroup.com/services#mlops" target="_blank" rel="noopener" style={{color:'#2563eb'}}>ziontechgroup.com/services#mlops</a></li>
-  </ul>
-</section>
-
-<section style={{marginTop:32, padding:'16px 20px', background:'#f9fafb', border:'1px solid #e5e7eb', borderRadius:8}}>
-  <h2>How to Engage</h2>
-  <ol>
-    <li>Schedule a discovery call to define outcomes.</li>
-    <li>Receive a proposal with timeline, milestones, and pricing.</li>
-    <li>Kick off with a short inception workshop to de‑risk delivery.</li>
-  </ol>
-  <p>
-    Ready to start? <a href="/contact" style={{color:'#2563eb'}}>Contact us</a> or call <a href="tel:+13024640950" style={{color:'#2563eb'}}>+1 302 464 0950</a>.
-  </p>
-</section>
-</main>);}
+				<section className="mt-16 rounded-lg border bg-gray-50 p-6">
+					<h2 className="text-xl font-medium">Why Zion Tech Group</h2>
+					<ul className="mt-2 list-disc pl-5 text-gray-700">
+						<li>Real, battle-tested implementations (no mockups)</li>
+						<li>Transparent pricing and fast onboarding</li>
+						<li>Enterprise-grade security and compliance</li>
+						<li>ROI-focused delivery and measurable outcomes</li>
+					</ul>
+					<p className="mt-3 text-sm text-gray-700">Average market prices (monthly): Micro SaaS $99–$999, AI Services $499–$4,999, Enterprise IT $2,000–$15,000. We price competitively based on scope.</p>
+					<p className="mt-1 text-sm text-gray-700">Call <a className="text-blue-600 underline" href="tel:+13024640950">+1 302 464 0950</a>, email <a className="text-blue-600 underline" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>, or visit <a className="text-blue-600 underline" href="https://ziontechgroup.com">ziontechgroup.com</a>.</p>
+				</section>
+			</main>
+		</>
+	)
+}
