@@ -1,0 +1,67 @@
+name: Deployment Check
+
+on:
+  workflow_run:
+    workflows: ["CI"]
+    types:
+      - completed
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  deployment-validation:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Validate build output
+        run: |
+          if [ ! -d dist ]; then
+            echo "❌ Build failed: dist folder not found"
+            exit 1
+          fi
+          
+          echo "✅ Build output validation passed"
+          echo "📁 Build contents:"
+          ls -la dist/
+          
+          # Check for critical files
+          if [ -f dist/index.html ]; then
+            echo "✅ index.html found"
+          else
+            echo "❌ index.html missing"
+            exit 1
+          fi
+
+      - name: Check bundle size
+        run: |
+          echo "📊 Bundle size analysis:"
+          du -sh dist/
+          
+          # Alert if bundle is too large (adjust threshold as needed)
+          BUNDLE_SIZE=$(du -s dist/ | cut -f1)
+          if [ "$BUNDLE_SIZE" -gt 50000 ]; then
+            echo "⚠️  Bundle size ($BUNDLE_SIZE KB) is larger than expected"
+          else
+            echo "✅ Bundle size ($BUNDLE_SIZE KB) is within acceptable range"
+          fi
+
+      - name: Security audit
+        run: npm run security:scan
+        continue-on-error: true

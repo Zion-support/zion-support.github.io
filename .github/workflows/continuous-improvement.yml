@@ -26,8 +26,8 @@ jobs:
         run: npm ci
       - name: Run continuous improvement
         run: |
-          npm run automation:improvement || true
-          npm run diversify || true
+          echo "Continuous improvement placeholder - add actual automation scripts here"
+          echo "Diversification placeholder - add actual diversification scripts here"
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v6

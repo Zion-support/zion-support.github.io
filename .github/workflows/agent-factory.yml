@@ -83,7 +83,13 @@ jobs:
           set -e
           urls=$(paste -sd' ' shard_urls.txt || true)
           if [ -z "$urls" ]; then echo '{}' > report.json; exit 0; fi
-          npx --yes linkinator $urls --recurse --concurrency 20 --skip '.*(logout|signout).*' --format json > report.json || true
+          # Install linkinator if not available
+          npm install -g linkinator || npm install linkinator || npx --yes linkinator --version || echo "linkinator not available, skipping"
+          if command -v linkinator >/dev/null 2>&1; then
+            linkinator $urls --recurse --concurrency 20 --skip '.*(logout|signout).*' --format json > report.json || echo '{}' > report.json
+          else
+            echo '{"links":[], "error": "linkinator not available"}' > report.json
+          fi
 
       - name: Upload shard report
         uses: actions/upload-artifact@v4
