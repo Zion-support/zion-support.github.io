@@ -1,23 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from "react-router-dom";
-import { 
-  ArrowRightIcon,
-  PlayIcon,
-  StarIcon,
-  ShieldCheckIcon,
-  CloudIcon,
-  UsersIcon,
-  CodeBracketIcon
-} from '@heroicons/react/24/outline';
+import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
+import { ArrowRight, Sparkles, Zap, Star } from "lucide-react";
 
 export function HeroSection() {
+  const { t } = useTranslation();
+  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
+        staggerChildren: 0.2,
+        delayChildren: 0.1
       }
     }
   };
@@ -28,127 +25,152 @@ export function HeroSection() {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.8
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const floatingVariants = {
+    animate: {
+      y: [-10, 10, -10],
+      transition: {
+        duration: 3,
+        repeat: Infinity,
+        ease: "easeInOut"
       }
     }
   };
 
   return (
-    <section className="relative py-20 md:py-32 min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900/30 to-slate-900 opacity-90" />
+    <section className="relative overflow-hidden py-20 md:py-32 min-h-screen flex items-center">
+      {/* Enhanced background gradient effect */}
+      <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple opacity-90"></div>
       
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-20 h-20 bg-blue-500/20 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-cyan-500/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-purple-500/15 rounded-full blur-lg animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-blue-500/15 rounded-full blur-lg animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-      </div>
+      {/* Animated floating particles with better positioning */}
+      <motion.div 
+        className="absolute inset-0"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.div 
+          className="absolute top-1/4 left-1/4 w-3 h-3 rounded-full bg-zion-purple-light opacity-60"
+          variants={floatingVariants}
+          animate="animate"
+        />
+        <motion.div 
+          className="absolute top-1/3 right-1/3 w-4 h-4 rounded-full bg-zion-cyan opacity-50"
+          variants={floatingVariants}
+          animate="animate"
+          style={{ animationDelay: "1s" }}
+        />
+        <motion.div 
+          className="absolute bottom-1/4 left-1/2 w-2 h-2 rounded-full bg-zion-purple opacity-60"
+          variants={floatingVariants}
+          animate="animate"
+          style={{ animationDelay: "2s" }}
+        />
+        <motion.div 
+          className="absolute top-1/2 right-1/4 w-5 h-5 rounded-full bg-zion-cyan-light opacity-30"
+          variants={floatingVariants}
+          animate="animate"
+          style={{ animationDelay: "0.5s" }}
+        />
+      </motion.div>
       
-      {/* Content */}
-      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Floating tech icons */}
+      <motion.div 
+        className="absolute top-20 right-20 opacity-20"
+        animate={{ rotate: 360 }}
+        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+      >
+        <Sparkles className="w-16 h-16 text-zion-cyan" />
+      </motion.div>
+      
+      <motion.div 
+        className="absolute bottom-20 left-20 opacity-20"
+        animate={{ rotate: -360 }}
+        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+      >
+        <Zap className="w-12 h-12 text-zion-purple" />
+      </motion.div>
+      
+      <div className="container relative z-10 px-4 mx-auto text-center">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="max-w-5xl mx-auto"
         >
-          {/* Badge */}
-          <motion.div
-            variants={itemVariants}
-            className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full text-blue-400 text-sm font-medium mb-8"
-          >
-            <StarIcon className="w-4 h-4" />
-            Trusted by 500+ Companies Worldwide
+          <motion.div variants={itemVariants}>
+            <GradientHeading className="mb-6 text-5xl md:text-7xl font-bold leading-tight">
+              {t('home.hero_title')}
+            </GradientHeading>
           </motion.div>
-          
-          {/* Main Heading */}
-          <motion.h1
+
+          <motion.div variants={itemVariants}>
+            <p className="text-xl md:text-2xl text-zion-slate-light mb-10 max-w-4xl mx-auto leading-relaxed">
+              {t('home.hero_subtitle')}
+            </p>
+          </motion.div>
+
+          {/* Feature highlights */}
+          <motion.div 
             variants={itemVariants}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight"
+            className="flex flex-wrap justify-center gap-6 mb-12"
           >
-            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent animate-pulse">
-              Transform
-            </span>
-            <br />
-            <span className="text-white">Your Business</span>
-            <br />
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              with AI
-            </span>
-          </motion.h1>
-          
-          {/* Subtitle */}
-          <motion.p
-            variants={itemVariants}
-            className="text-xl md:text-2xl lg:text-3xl text-slate-300 mb-10 leading-relaxed max-w-4xl mx-auto"
-          >
-            Empowering enterprises with cutting-edge artificial intelligence solutions, 
-            quantum computing, and innovative technology services that drive real results.
-          </motion.p>
-          
-          {/* CTA Buttons */}
-          <motion.div
-            variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
-          >
-            <Link
-              to="/services"
-              className="group bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-10 py-5 rounded-xl font-semibold text-xl transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 hover:scale-105 flex items-center gap-3"
+            <div className="flex items-center gap-2 text-zion-cyan">
+              <Star className="w-5 h-5" />
+              <span className="text-sm font-medium">AI-Powered Matching</span>
+            </div>
+            <div className="flex items-center gap-2 text-zion-purple-light">
+              <Sparkles className="w-5 h-5" />
+              <span className="text-sm font-medium">Global Talent Network</span>
+            </div>
+            <div className="flex items-center gap-2 text-zion-cyan-light">
+              <Zap className="w-5 h-5" />
+              <span className="text-sm font-medium">Instant Connections</span>
+            </div>
+          </motion.div>
+
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row justify-center gap-4">
+            <Button
+              className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 px-8 group transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+              size="lg"
+              asChild
             >
-              Explore Services
-              <ArrowRightIcon className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
-            </Link>
+              <Link
+                to="/signup"
+                role="button"
+                aria-label={t('auth.signup')}
+                tabIndex={0}
+                data-testid="hero-signup-btn"
+                className="flex items-center gap-2"
+              >
+                {t('auth.signup')}
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </Button>
             <Link
-              to="/contact"
-              className="group border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-10 py-5 rounded-xl font-semibold text-xl transition-all duration-300 hover:scale-105 flex items-center gap-3"
+              id="browse-marketplace"
+              to="/marketplace"
+              className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-8 rounded-md inline-flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
             >
-              Get Started
-              <ArrowRightIcon className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
+              {t('home.browse_marketplace')}
+              <ArrowRight className="w-5 h-5" />
             </Link>
           </motion.div>
 
-          {/* Video Demo Button */}
-          <motion.div
+          {/* Trust indicators */}
+          <motion.div 
             variants={itemVariants}
-            className="mb-16"
+            className="mt-16 pt-8 border-t border-zion-blue-light/20"
           >
-            <button className="inline-flex items-center gap-3 text-slate-300 hover:text-white transition-colors duration-300 group">
-              <div className="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 group-hover:border-cyan-400/50 group-hover:bg-cyan-400/20 transition-all duration-300">
-                <PlayIcon className="w-8 h-8 text-white ml-1" />
-              </div>
-              <div className="text-left">
-                <div className="text-sm text-slate-300 group-hover:text-cyan-400 transition-colors duration-300">
-                  Watch Demo
-                </div>
-                <div className="text-xs text-slate-300">
-                  2 min overview
-                </div>
-              </div>
-            </button>
-          </motion.div>
-          
-          {/* Stats */}
-          <motion.div
-            variants={itemVariants}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto"
-          >
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2 group-hover:text-blue-300 transition-colors duration-300">500+</div>
-              <div className="text-slate-300 text-sm">Projects Delivered</div>
-            </div>
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors duration-300">50+</div>
-              <div className="text-slate-300 text-sm">Enterprise Clients</div>
-            </div>
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2 group-hover:text-blue-300 transition-colors duration-300">99.9%</div>
-              <div className="text-slate-300 text-sm">Uptime SLA</div>
-            </div>
-            <div className="text-center group">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors duration-300">24/7</div>
-              <div className="text-slate-300 text-sm">Support</div>
+            <p className="text-zion-slate-light text-sm mb-4">Trusted by leading tech companies</p>
+            <div className="flex justify-center items-center gap-8 opacity-60">
+              <div className="w-16 h-8 bg-zion-blue-light rounded opacity-50"></div>
+              <div className="w-16 h-8 bg-zion-purple-light rounded opacity-50"></div>
+              <div className="w-16 h-8 bg-zion-cyan rounded opacity-50"></div>
             </div>
           </motion.div>
         </motion.div>

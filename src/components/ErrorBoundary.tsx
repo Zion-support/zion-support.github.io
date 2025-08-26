@@ -1,81 +1,105 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React, { useState, useEffect, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-import { Button } from '../ui/button';
+import { Link } from 'react-router-dom';
 
 interface Props {
   children: ReactNode;
+  fallback?: ReactNode;
 }
 
-interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
-}
+export function ErrorBoundary({ children, fallback }: Props) {
+  const [hasError, setHasError] = useState(false);
+  const [error, setError] = useState<Error | null>(null);
+  const [errorInfo, setErrorInfo] = useState<any>(null);
 
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  }
+  useEffect(() => {
+    const handleError = (error: Error, errorInfo: any) => {
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
+      setHasError(true);
+      setError(error);
+      setErrorInfo(errorInfo);
+    };
 
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-    this.setState({
-      error,
-      errorInfo
+    // Add global error handler
+    window.addEventListener('error', (event) => {
+      handleError(event.error, event);
     });
-  }
 
-  render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 text-white flex items-center justify-center px-4">
-          <div className="max-w-2xl mx-auto text-center">
-            <div className="mb-8">
-              <svg className="mx-auto h-24 w-24 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-              </svg>
-            </div>
-            <h1 className="text-4xl font-bold mb-4">Oops! Something went wrong</h1>
-            <p className="text-xl text-gray-300 mb-8">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
-            </p>
-            <div className="space-y-4">
-              <button
-                onClick={() => window.location.reload()}
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-              >
-                Refresh Page
-              </button>
-              <button
-                onClick={() => window.history.back()}
-                className="block w-full sm:w-auto sm:inline-flex sm:items-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
-              >
-                Go Back
-              </button>
-            </div>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-8 text-left">
-                <summary className="cursor-pointer text-blue-400 hover:text-blue-300">
-                  Error Details (Development)
-                </summary>
-                <pre className="mt-4 p-4 bg-black/20 rounded-lg overflow-auto text-sm">
-                  {this.state.error.toString()}
-                  {this.state.errorInfo?.componentStack}
-                </pre>
-              </details>
-            )}
-          </div>
-        </div>
-      );
+    window.addEventListener('unhandledrejection', (event) => {
+      handleError(new Error(event.reason), event);
+    });
+
+    return () => {
+      window.removeEventListener('error', (event) => {
+        handleError(event.error, event);
+      });
+      window.removeEventListener('unhandledrejection', (event) => {
+        handleError(new Error(event.reason), event);
+      });
+    };
+  }, []);
+
+  if (hasError) {
+    if (fallback) {
+      return <>{fallback}</>;
     }
 
-    return this.props.children;
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple flex items-center justify-center p-4">
+        <div className="max-w-md w-full bg-zion-slate-dark/80 backdrop-blur-sm border border-zion-blue-light/20 rounded-2xl p-8 text-center">
+          <div className="w-20 h-20 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center">
+            <AlertTriangle className="w-10 h-10 text-red-400" />
+          </div>
+          
+          <h1 className="text-2xl font-bold text-white mb-4">
+            Oops! Something went wrong
+          </h1>
+          
+          <p className="text-zion-slate-light mb-6">
+            We encountered an unexpected error. Please try refreshing the page or return to the home page.
+          </p>
+
+          {process.env.NODE_ENV === 'development' && error && (
+            <details className="text-left mb-6 p-4 bg-zion-slate-dark/50 rounded-lg border border-zion-blue-light/20">
+              <summary className="text-zion-cyan cursor-pointer mb-2 font-medium">
+                Error Details (Development)
+              </summary>
+              <pre className="text-xs text-zion-slate-light overflow-auto">
+                {error.toString()}
+                {errorInfo?.componentStack}
+              </pre>
+            </details>
+          )}
+
+          <div className="flex flex-col sm:flex-row gap-3">
+            <button
+              onClick={() => window.location.reload()}
+              className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-zion-purple hover:bg-zion-purple-dark text-white rounded-lg transition-colors"
+            >
+              <RefreshCw className="w-4 h-4" />
+              Refresh Page
+            </button>
+            
+            <Link
+              to="/"
+              className="flex-1 flex items-center justify-center gap-2 px-4 py-3 border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark rounded-lg transition-colors"
+            >
+              <Home className="w-4 h-4" />
+              Go Home
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
   }
+
+  return <>{children}</>;
 }
 
-export default ErrorBoundary;
+// Hook for functional components to use error boundaries
+export function useErrorHandler() {
+  return (error: Error, errorInfo?: any) => {
+    console.error('Error caught by useErrorHandler:', error, errorInfo);
+    // You can add error reporting logic here
+  };
+}

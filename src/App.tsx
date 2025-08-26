@@ -7,6 +7,9 @@ import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster } from "./components/ui/toaster";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
+import { ErrorBoundary } from "./components/ErrorBoundary";
+import { PageLoadingFallback } from "./components/ui/LoadingFallback";
+import { ScrollToTop } from "./components/ScrollToTop";
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -73,38 +76,33 @@ const baseRoutes = [
 ];
 
   return (
-    <HelmetProvider>
-      <Router>
-        <div className="App">
-          <SEO />
-          <Header />
-          <main>
+    <ErrorBoundary>
+      <WhitelabelProvider>
+        <ThemeProvider defaultTheme="dark">
+          <Suspense fallback={<PageLoadingFallback />}>
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/faq" element={<FAQ />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/blog" element={<Blog />} />
-              <Route path="/careers" element={<Careers />} />
-              <Route path="/privacy" element={<Privacy />} />
-              <Route path="/terms" element={<Terms />} />
-              
-              {/* Service Routes */}
-              <Route path="/services/ai" element={<AISolutions />} />
-              <Route path="/services/cloud" element={<CloudDevOps />} />
-              <Route path="/services/cybersecurity" element={<Cybersecurity />} />
-              <Route path="/services/infrastructure" element={<Infrastructure />} />
-              <Route path="/services/transformation" element={<DigitalTransformation />} />
-              <Route path="/services/consulting" element={<Consulting />} />
-              
-              <Route path="*" element={<NotFound />} />
+              {baseRoutes.map(({ path, element }) => (
+                <Route key={path} path={path} element={element} />
+              ))}
+              <Route path="/auth/*" element={<AuthRoutes />} />
+              <Route path="/dashboard/*" element={<DashboardRoutes />} />
+              <Route path="/marketplace/*" element={<MarketplaceRoutes />} />
+              <Route path="/talent/*" element={<TalentRoutes />} />
+              <Route path="/admin/*" element={<AdminRoutes />} />
+              <Route path="/mobile/*" element={<MobileAppRoutes />} />
+              <Route path="/content/*" element={<ContentRoutes />} />
+              <Route path="/enterprise/*" element={<EnterpriseRoutes />} />
+              <Route path="/community/*" element={<CommunityRoutes />} />
+              <Route path="/developers/*" element={<DeveloperRoutes />} />
+              <Route path="*" element={<ErrorRoutes />} />
             </Routes>
-          </main>
-          <Footer />
-        </div>
-      </Router>
-    </HelmetProvider>
+          </Suspense>
+          <ScrollToTop />
+          <Toaster />
+          <SonnerToaster position="top-right" />
+        </ThemeProvider>
+      </WhitelabelProvider>
+    </ErrorBoundary>
   );
 }
 

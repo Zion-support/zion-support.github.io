@@ -445,10 +445,14 @@
       "eslint --fix"
     ]
   },
-  "description": "![Automations: 227](https://img.shields.io/badge/Automations-227-informational) ![Pages: 15+](https://img.shields.io/badge/Pages-15+-success) ![Components: 50+](https://img.shields.io/badge/Components-50+-blue) ![Blueprints: 7](https://img.shields.io/badge/Blueprints-7-purple)",
-  "main": ".eslintrc.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module"
+  "overrides": {
+    "@humanwhocodes/object-schema": "@eslint/object-schema@1.0.0",
+    "glob": "^10.3.10",
+    "rimraf": "^5.0.5"
+  },
+  "resolutions": {
+    "glob": "^10.4.5",
+    "rimraf": "^5.0.5",
+    "@humanwhocodes/object-schema": "@eslint/object-schema@1.0.0"
+  }
 }
