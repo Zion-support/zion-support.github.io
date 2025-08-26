@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Search, User, Bell, ChevronDown } from 'lucide-react';
+import { ThemeToggle } from '../components/ThemeToggle';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -127,6 +128,9 @@ export function AppHeader() {
 
           {/* Right side actions */}
           <div className="ml-6 flex items-center space-x-4">
+            {/* Theme Toggle */}
+            <ThemeToggle />
+            
             {/* Notifications */}
             <button className="p-2 text-slate-400 hover:text-cyan-400 transition-colors">
               <Bell className="h-5 w-5" />

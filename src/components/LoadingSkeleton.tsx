@@ -3,95 +3,49 @@ import { cn } from '@/lib/utils';
 
 interface SkeletonProps {
   className?: string;
-  width?: string | number;
-  height?: string | number;
-  rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full';
-  animated?: boolean;
-}
-
-export function Skeleton({ 
-  className, 
-  width, 
-  height, 
-  rounded = 'md',
-  animated = true 
-}: SkeletonProps) {
-  const roundedClasses = {
-    none: '',
-    sm: 'rounded-sm',
-    md: 'rounded-md',
-    lg: 'rounded-lg',
-    full: 'rounded-full'
-  };
-
-  return (
-    <div
-      className={cn(
-        'bg-muted',
-        roundedClasses[rounded],
-        animated && 'animate-pulse',
-        className
-      )}
-      style={{
-        width: width,
-        height: height,
-      }}
-    />
-  );
-}
-
-interface CardSkeletonProps {
-  className?: string;
-  showImage?: boolean;
-  showTitle?: boolean;
-  showDescription?: boolean;
-  showActions?: boolean;
   lines?: number;
 }
 
-export function CardSkeleton({
-  className,
-  showImage = true,
-  showTitle = true,
-  showDescription = true,
-  showActions = true,
-  lines = 2
-}: CardSkeletonProps) {
+export const Skeleton: React.FC<SkeletonProps> = ({ className = '', lines = 1 }) => {
   return (
-    <div className={cn('space-y-4', className)}>
-      {showImage && (
-        <Skeleton className="w-full h-48 rounded-lg" />
-      )}
-      
-      <div className="space-y-3">
-        {showTitle && (
-          <Skeleton className="h-6 w-3/4" />
-        )}
-        
-        {showDescription && (
-          <div className="space-y-2">
-            {Array.from({ length: lines }).map((_, i) => (
-              <Skeleton 
-                key={i} 
-                className={cn(
-                  "h-4",
-                  i === lines - 1 ? "w-2/3" : "w-full"
-                )} 
-              />
-            ))}
-          </div>
-        )}
-        
-        {showActions && (
-          <div className="flex gap-2 pt-2">
-            <Skeleton className="h-10 w-24" />
-            <Skeleton className="h-10 w-20" />
-          </div>
-        )}
-      </div>
+    <div className={`animate-pulse ${className}`}>
+      {Array.from({ length: lines }).map((_, index) => (
+        <div
+          key={index}
+          className="h-4 bg-slate-700/50 rounded mb-2 last:mb-0"
+          style={{
+            width: `${Math.random() * 40 + 60}%`
+          }}
+        />
+      ))}
     </div>
   );
-}
+};
+
+export const CardSkeleton: React.FC = () => (
+  <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 animate-pulse">
+    <div className="w-16 h-16 bg-slate-700/50 rounded-full mb-4" />
+    <div className="h-6 bg-slate-700/50 rounded mb-3" />
+    <div className="space-y-2 mb-4">
+      <div className="h-4 bg-slate-700/50 rounded" />
+      <div className="h-4 bg-slate-700/50 rounded w-3/4" />
+    </div>
+    <div className="h-4 bg-slate-700/50 rounded w-1/2" />
+  </div>
+);
+
+export const HeroSkeleton: React.FC = () => (
+  <div className="py-20 animate-pulse">
+    <div className="max-w-4xl mx-auto px-4 text-center">
+      <div className="h-16 bg-slate-700/50 rounded mb-6" />
+      <div className="h-8 bg-slate-700/50 rounded mb-8 w-3/4 mx-auto" />
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="h-12 bg-slate-700/50 rounded-lg w-48" />
+        <div className="h-12 bg-slate-700/50 rounded-lg w-32" />
+      </div>
+    </div>
+  </div>
+);
 
 interface ListSkeletonProps {
   className?: string;

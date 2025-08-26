@@ -15,6 +15,7 @@ import {
   Cloud,
   Lock
 } from 'lucide-react';
+import { Breadcrumbs } from '../components/Breadcrumbs';
 
 export default function Home() {
   const stats = [
@@ -126,6 +127,11 @@ export default function Home() {
 
   return (
     <div className="min-h-screen">
+      {/* Breadcrumbs */}
+      <div className="container mx-auto px-4 pt-24">
+        <Breadcrumbs />
+      </div>
+      
       {/* Enhanced Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
         {/* Background Elements */}

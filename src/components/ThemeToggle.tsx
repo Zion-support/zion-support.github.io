@@ -1,44 +1,42 @@
-import React, { useState, useEffect } from 'react'
-import { Sun, Moon } from 'lucide-react'
+import React, { useState, useEffect } from 'react';
+import { Sun, Moon } from 'lucide-react';
 
-export default function ThemeToggle() {
-  const [isDark, setIsDark] = useState(false)
+export const ThemeToggle: React.FC = () => {
+  const [isDark, setIsDark] = useState(true);
 
   useEffect(() => {
-    // Check for saved theme preference or default to light mode
-    const savedTheme = localStorage.getItem('zion-theme')
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-      setIsDark(true)
-      document.documentElement.classList.add('dark')
+    const savedTheme = localStorage.getItem('zion-theme');
+    if (savedTheme) {
+      setIsDark(savedTheme === 'dark');
     }
-  }, [])
+  }, []);
 
   const toggleTheme = () => {
-    const newTheme = !isDark
-    setIsDark(newTheme)
+    const newTheme = !isDark;
+    setIsDark(newTheme);
+    localStorage.setItem('zion-theme', newTheme ? 'dark' : 'light');
     
+    // Apply theme to document
     if (newTheme) {
-      document.documentElement.classList.add('dark')
-      localStorage.setItem('zion-theme', 'dark')
+      document.documentElement.classList.add('dark');
+      document.documentElement.classList.remove('light');
     } else {
-      document.documentElement.classList.remove('dark')
-      localStorage.setItem('zion-theme', 'light')
+      document.documentElement.classList.add('light');
+      document.documentElement.classList.remove('dark');
     }
-  }
+  };
 
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+      className="p-2 rounded-lg bg-slate-800/50 hover:bg-slate-700/50 text-slate-400 hover:text-cyan-400 transition-all duration-200 border border-slate-700/50 hover:border-cyan-500/50"
+      aria-label={`Switch to ${isDark ? 'light' : 'dark'} theme`}
     >
       {isDark ? (
-        <Sun className="w-5 h-5 text-yellow-500" />
+        <Sun className="w-5 h-5" />
       ) : (
-        <Moon className="w-5 h-5 text-gray-600" />
+        <Moon className="w-5 h-5" />
       )}
     </button>
-  )
-}
+  );
+};

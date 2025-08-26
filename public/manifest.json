@@ -1,33 +1,33 @@
 {
-  "name": "Zion Tech Group - AI Marketplace",
-  "short_name": "Zion",
-  "description": "The world's first free marketplace dedicated to high-tech and artificial intelligence",
+  "name": "Zion Tech Group",
+  "short_name": "Zion Tech",
+  "description": "Pioneering the future with AI-powered solutions, quantum technology, and innovative IT services",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#172d67",
-  "theme_color": "#2e73ea",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en",
-  "categories": ["business", "productivity", "utilities"],
+  "categories": ["business", "productivity", "technology"],
   "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
     {
       "src": "/images/zion-logo-192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
       "src": "/images/zion-logo-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/images/zion-logo-180.png",
-      "sizes": "180x180",
-      "type": "image/png",
-      "purpose": "apple touch"
+      "purpose": "any"
     }
   ],
   "screenshots": [
@@ -35,34 +35,20 @@
       "src": "/images/screenshot-desktop.png",
       "sizes": "1280x720",
       "type": "image/png",
-      "form_factor": "wide",
-      "label": "Zion Tech Group Desktop View"
+      "form_factor": "wide"
     },
     {
       "src": "/images/screenshot-mobile.png",
       "sizes": "390x844",
       "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Zion Tech Group Mobile View"
+      "form_factor": "narrow"
     }
   ],
   "shortcuts": [
     {
-      "name": "AI Talent Matching",
-      "short_name": "AI Match",
-      "description": "Find AI talent or jobs",
-      "url": "/match",
-      "icons": [
-        {
-          "src": "/images/ai-match-icon.png",
-          "sizes": "96x96"
-        }
-      ]
-    },
-    {
       "name": "Services",
       "short_name": "Services",
-      "description": "Browse tech services",
+      "description": "View our technology services",
       "url": "/services",
       "icons": [
         {
@@ -72,31 +58,18 @@
       ]
     },
     {
-      "name": "Talent Directory",
-      "short_name": "Talent",
-      "description": "Find tech professionals",
-      "url": "/talent",
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Get in touch with us",
+      "url": "/contact",
       "icons": [
         {
-          "src": "/images/talent-icon.png",
+          "src": "/images/contact-icon.png",
           "sizes": "96x96"
         }
       ]
     }
   ],
   "related_applications": [],
-  "prefer_related_applications": false,
-  "edge_side_panel": {
-    "preferred_width": 400
-  },
-  "launch_handler": {
-    "client_mode": "navigate-existing"
-  },
-  "handle_links": "preferred",
-  "protocol_handlers": [
-    {
-      "protocol": "web+zion",
-      "url": "/%s"
-    }
-  ]
+  "prefer_related_applications": false
 }
