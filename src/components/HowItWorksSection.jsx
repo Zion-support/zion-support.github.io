@@ -216,7 +216,7 @@ export function HowItWorksSection() {
                 </p>
               </div>))}
           </div>
-        </></div>
+        </div>
         
         {/* Enhanced bottom CTA */}
         <motion.div className="text-center mt-20" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
@@ -259,8 +259,6 @@ export function HowItWorksSection() {
             <p className="text-zion-slate-light text-sm">24/7 support from our team</p>
           </div>
         </motion.div>
-      </div>);
-    section >
-    ;
-    ;
+      </div>
+    </section>
 }

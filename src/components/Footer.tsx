@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Heart, Mail, Phone, MapPin, Globe, ArrowUp } from 'lucide-react';
 import { motion, Variants } from 'framer-motion';
 
