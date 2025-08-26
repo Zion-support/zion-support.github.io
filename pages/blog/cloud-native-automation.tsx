@@ -25,7 +25,7 @@ export default function CloudNativeAutomation() {
             <article className="prose prose-invert prose-lg max-w-none">
               <header className="mb-12 text-center">
                 <div className="flex items-center gap-3 justify-center mb-4">
-                  <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full border border-blue-400/30">
+                  <span className="px-3 py-1 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30">
                     Infrastructure
                   </span>
                   <span className="text-white/60 text-sm">January 12, 2025</span>
@@ -37,7 +37,7 @@ export default function CloudNativeAutomation() {
                 </h1>
                 <p className="text-xl text-white/80 max-w-3xl mx-auto">
                   A deep dive into our cloud-native approach to building scalable, reliable automation systems 
-                  that can handle the demands of modern enterprise environments.
+                  that can handle the demands of modern business operations.
                 </p>
               </header>
               
@@ -45,14 +45,14 @@ export default function CloudNativeAutomation() {
                 <h2 className="text-2xl font-semibold mb-6 text-cyan-400">The Foundation: Microservices Architecture</h2>
                 <p className="text-white/90 mb-4">
                   At the heart of our cloud-native automation infrastructure lies a robust microservices architecture. 
-                  Each automation component operates as an independent service, communicating through well-defined APIs 
-                  and message queues.
+                  This approach allows us to build systems that are not only scalable but also resilient and maintainable.
                 </p>
                 <p className="text-white/90 mb-4">
-                  This approach provides several key benefits:
+                  Each automation service operates independently, communicating through well-defined APIs. This design 
+                  provides several key benefits:
                 </p>
                 <ul className="space-y-2 text-white/80 mb-6">
-                  <li>• Independent scaling of different automation components</li>
+                  <li>• Independent scaling of individual services based on demand</li>
                   <li>• Fault isolation - if one service fails, others continue operating</li>
                   <li>• Technology flexibility - each service can use the best tool for its specific purpose</li>
                   <li>• Easier maintenance and updates without system-wide downtime</li>
@@ -63,121 +63,98 @@ export default function CloudNativeAutomation() {
                 <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Containerization and Orchestration</h2>
                 <p className="text-white/90 mb-4">
                   We leverage Docker containers and Kubernetes orchestration to ensure our automation systems 
-                  are portable, scalable, and manageable across different cloud environments.
-                </p>
-                <p className="text-white/90 mb-4">
-                  Our containerization strategy includes:
+                  can run consistently across any environment. This containerized approach provides:
                 </p>
                 <ul className="space-y-2 text-white/80 mb-6">
-                  <li>• Lightweight containers optimized for automation workloads</li>
-                  <li>• Multi-stage builds to minimize image sizes</li>
-                  <li>• Health checks and readiness probes for reliable deployment</li>
-                  <li>• Resource limits and requests for optimal cluster utilization</li>
+                  <li>• Consistent runtime environments from development to production</li>
+                  <li>• Efficient resource utilization through container orchestration</li>
+                  <li>• Seamless scaling up or down based on workload demands</li>
+                  <li>• Easy deployment and rollback capabilities</li>
+                </ul>
+                <p className="text-white/90 mb-4">
+                  Our Kubernetes clusters automatically handle load balancing, service discovery, and failover, 
+                  ensuring high availability even during peak usage periods.
+                </p>
+              </section>
+              
+              <section className="mb-12">
+                <h2 className="text-2xl font-semibold mb-6 text-green-400">Infrastructure as Code</h2>
+                <p className="text-white/90 mb-4">
+                  We treat infrastructure configuration as code, using tools like Terraform and CloudFormation 
+                  to define and manage our cloud resources. This approach provides:
+                </p>
+                <ul className="space-y-2 text-white/80 mb-6">
+                  <li>• Version-controlled infrastructure changes</li>
+                  <li>• Reproducible environments across different regions</li>
+                  <li>• Automated disaster recovery and backup procedures</li>
+                  <li>• Reduced human error in infrastructure management</li>
                 </ul>
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-green-400">Auto-scaling and Load Balancing</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-blue-400">Monitoring and Observability</h2>
                 <p className="text-white/90 mb-4">
-                  One of the most powerful features of our cloud-native infrastructure is its ability to 
-                  automatically scale based on demand. Our automation systems can handle traffic spikes 
-                  gracefully by scaling out additional instances when needed.
-                </p>
-                <p className="text-white/90 mb-4">
-                  Key scaling features include:
+                  Comprehensive monitoring is crucial for maintaining reliable automation systems. We implement 
+                  a multi-layered monitoring approach that includes:
                 </p>
                 <ul className="space-y-2 text-white/80 mb-6">
-                  <li>• Horizontal Pod Autoscaler (HPA) for automatic scaling based on CPU/memory usage</li>
-                  <li>• Cluster Autoscaler for adding/removing nodes as needed</li>
-                  <li>• Intelligent load balancing across multiple automation instances</li>
-                  <li>• Predictive scaling based on historical usage patterns</li>
+                  <li>• Real-time metrics collection and alerting</li>
+                  <li>• Distributed tracing for complex workflow analysis</li>
+                  <li>• Centralized logging with advanced search and filtering</li>
+                  <li>• Performance dashboards for system health monitoring</li>
+                </ul>
+                <p className="text-white/90 mb-4">
+                  This observability stack allows us to proactively identify and resolve issues before they 
+                  impact business operations.
+                </p>
+              </section>
+              
+              <section className="mb-12">
+                <h2 className="text-2xl font-semibold mb-6 text-purple-400">Security and Compliance</h2>
+                <p className="text-white/90 mb-4">
+                  Security is built into every layer of our cloud-native infrastructure. We implement:
+                </p>
+                <ul className="space-y-2 text-white/80 mb-6">
+                  <li>• Zero-trust security model with identity-based access controls</li>
+                  <li>• Encryption at rest and in transit for all sensitive data</li>
+                  <li>• Regular security audits and vulnerability assessments</li>
+                  <li>• Compliance with industry standards (SOC 2, ISO 27001, etc.)</li>
                 </ul>
               </section>
               
               <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-blue-400">Observability and Monitoring</h2>
-                <p className="text-white/90 mb-4">
-                  Comprehensive monitoring and observability are crucial for maintaining reliable automation systems. 
-                  We implement a multi-layered approach that provides visibility into every aspect of our infrastructure.
-                </p>
-                <p className="text-white/90 mb-4">
-                  Our monitoring stack includes:
-                </p>
-                <ul className="space-y-2 text-white/80 mb-6">
-                  <li>• Prometheus for metrics collection and alerting</li>
-                  <li>• Grafana for visualization and dashboards</li>
-                  <li>• Jaeger for distributed tracing</li>
-                  <li>• ELK stack for centralized logging</li>
-                  <li>• Custom automation-specific metrics and alerts</li>
-                </ul>
-              </section>
-              
-              <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-yellow-400">Security and Compliance</h2>
-                <p className="text-white/90 mb-4">
-                  Security is built into every layer of our cloud-native automation infrastructure. 
-                  We implement defense-in-depth strategies to protect against various threats.
-                </p>
-                <p className="text-white/90 mb-4">
-                  Security measures include:
-                </p>
-                <ul className="space-y-2 text-white/80 mb-6">
-                  <li>• Network policies and service mesh for traffic control</li>
-                  <li>• Secrets management with HashiCorp Vault</li>
-                  <li>• RBAC and least-privilege access controls</li>
-                  <li>• Regular security audits and vulnerability scanning</li>
-                  <li>• Compliance with SOC 2, ISO 27001, and other standards</li>
-                </ul>
-              </section>
-              
-              <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-purple-400">Disaster Recovery and High Availability</h2>
-                <p className="text-white/90 mb-4">
-                  Our automation infrastructure is designed for 99.9%+ uptime with comprehensive disaster recovery capabilities. 
-                  We implement multi-region deployments and automated failover mechanisms.
-                </p>
-                <p className="text-white/90 mb-4">
-                  High availability features include:
-                </p>
-                <ul className="space-y-2 text-white/80 mb-6">
-                  <li>• Multi-zone deployments across different availability zones</li>
-                  <li>• Automated backup and recovery procedures</li>
-                  <li>• Cross-region replication for critical data</li>
-                  <li>• Automated failover with minimal downtime</li>
-                  <li>• Regular disaster recovery testing and validation</li>
-                </ul>
-              </section>
-              
-              <section className="mb-12">
-                <h2 className="text-2xl font-semibold mb-6 text-cyan-400">Looking Forward</h2>
+                <h2 className="text-2xl font-semibold mb-6 text-yellow-400">Looking Forward</h2>
                 <p className="text-white/90 mb-4">
                   As we continue to evolve our cloud-native automation infrastructure, we're exploring 
-                  emerging technologies like serverless computing, edge computing, and AI-powered 
-                  infrastructure optimization.
+                  emerging technologies like:
                 </p>
+                <ul className="space-y-2 text-white/80 mb-6">
+                  <li>• Serverless computing for event-driven automation</li>
+                  <li>• Edge computing for low-latency processing</li>
+                  <li>• AI-powered infrastructure optimization</li>
+                  <li>• Multi-cloud strategies for enhanced reliability</li>
+                </ul>
                 <p className="text-white/90 mb-4">
-                  The future of automation infrastructure lies in intelligent, self-healing systems 
-                  that can adapt to changing requirements and optimize themselves for performance, 
-                  cost, and reliability.
+                  Our commitment to cloud-native principles ensures that our automation systems remain 
+                  at the cutting edge of technology while delivering reliable, scalable solutions for our clients.
                 </p>
               </section>
               
-              <div className="mt-12 p-6 bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-xl border border-cyan-500/20">
+              <div className="mt-12 p-6 bg-white/10 rounded-xl border border-white/20">
                 <h3 className="text-xl font-semibold mb-4 text-cyan-400">Ready to Transform Your Infrastructure?</h3>
                 <p className="text-white/80 mb-4">
-                  Discover how our cloud-native automation solutions can revolutionize your organization's 
-                  infrastructure and operational efficiency.
+                  Discover how our cloud-native automation solutions can revolutionize your business operations.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-wrap gap-4">
                   <Link 
                     href="/contact" 
-                    className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 text-center"
+                    className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
                   >
-                    Get Started Today
+                    Get Started
                   </Link>
                   <Link 
                     href="/case-studies" 
-                    className="border border-cyan-400/50 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all duration-300 text-center"
+                    className="px-6 py-3 border border-white/20 text-white rounded-lg font-semibold hover:border-cyan-400/50 hover:text-cyan-400 transition-all duration-300"
                   >
                     View Case Studies
                   </Link>

@@ -3,230 +3,310 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 export default function CaseStudiesPage() {
+  const caseStudies = [
+    {
+      id: 'ai-automation-manufacturing',
+      title: 'AI-Powered Manufacturing Automation',
+      company: 'Global Manufacturing Corp',
+      industry: 'Manufacturing',
+      results: '40% increase in production efficiency, 60% reduction in downtime',
+      description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.',
+      challenge: 'Global Manufacturing Corp faced significant production inefficiencies and frequent equipment downtime, resulting in missed deadlines and increased operational costs.',
+      solution: 'We deployed an integrated AI automation system that included predictive maintenance, real-time quality control, and autonomous production line optimization.',
+      impact: [
+        '40% increase in overall production efficiency',
+        '60% reduction in unplanned downtime',
+        '25% improvement in product quality',
+        '30% reduction in operational costs',
+        '99.5% system uptime achieved'
+      ],
+      technologies: ['Machine Learning', 'IoT Sensors', 'Predictive Analytics', 'Computer Vision', 'Robotic Process Automation'],
+      duration: '6 months',
+      team: '8 engineers + 3 AI specialists'
+    },
+    {
+      id: 'content-generation-scale',
+      title: 'Scaling Content Generation 10x',
+      company: 'Digital Marketing Agency',
+      industry: 'Marketing',
+      results: '10x increase in content output, 85% improvement in engagement',
+      description: 'Transforming content creation through autonomous AI systems.',
+      challenge: 'A growing digital marketing agency struggled to meet the increasing demand for high-quality, personalized content across multiple channels and languages.',
+      solution: 'We developed an autonomous content generation system that could create, optimize, and distribute content while maintaining brand voice and quality standards.',
+      impact: [
+        '10x increase in content production capacity',
+        '85% improvement in audience engagement',
+        '70% reduction in content creation time',
+        'Support for 15+ languages',
+        '24/7 content generation capability'
+      ],
+      technologies: ['Natural Language Processing', 'Content Optimization', 'Multi-language Support', 'Brand Voice Training', 'Automated Distribution'],
+      duration: '4 months',
+      team: '6 engineers + 2 content strategists'
+    },
+    {
+      id: 'cloud-infrastructure-optimization',
+      title: 'Cloud Infrastructure Optimization',
+      company: 'E-commerce Platform',
+      industry: 'Technology',
+      results: '50% reduction in cloud costs, 99.9% uptime achieved',
+      description: 'Building self-healing, auto-scaling cloud infrastructure.',
+      challenge: 'A rapidly growing e-commerce platform experienced skyrocketing cloud costs and frequent performance issues during peak traffic periods.',
+      solution: 'We implemented a comprehensive cloud optimization strategy including auto-scaling, load balancing, and intelligent resource management.',
+      impact: [
+        '50% reduction in cloud infrastructure costs',
+        '99.9% uptime achieved',
+        '3x improvement in peak traffic handling',
+        'Automated scaling based on demand',
+        'Real-time performance monitoring'
+      ],
+      technologies: ['Kubernetes', 'Docker', 'Terraform', 'Prometheus', 'Grafana', 'Auto-scaling'],
+      duration: '5 months',
+      team: '10 DevOps engineers + 2 cloud architects'
+    },
+    {
+      id: 'financial-automation-system',
+      title: 'Intelligent Financial Automation',
+      company: 'Regional Bank',
+      industry: 'Finance',
+      results: '90% automation of routine tasks, 70% faster processing',
+      description: 'Implementing AI-driven financial processing and compliance automation.',
+      challenge: 'A regional bank struggled with manual financial processing, compliance reporting, and fraud detection, leading to delays and increased risk.',
+      solution: 'We developed an intelligent financial automation system that handled routine transactions, compliance checks, and fraud detection automatically.',
+      impact: [
+        '90% automation of routine financial tasks',
+        '70% faster transaction processing',
+        '99.9% accuracy in fraud detection',
+        'Real-time compliance monitoring',
+        'Significant reduction in operational risk'
+      ],
+      technologies: ['Machine Learning', 'Blockchain', 'RegTech', 'Natural Language Processing', 'Real-time Analytics'],
+      duration: '8 months',
+      team: '12 engineers + 4 financial experts + 2 compliance specialists'
+    },
+    {
+      id: 'healthcare-ai-diagnostics',
+      title: 'AI-Powered Healthcare Diagnostics',
+      company: 'Regional Hospital Network',
+      industry: 'Healthcare',
+      results: '95% diagnostic accuracy, 40% faster diagnosis',
+      description: 'Revolutionizing patient care through AI-powered diagnostic assistance.',
+      challenge: 'A regional hospital network faced challenges with diagnostic accuracy, long wait times, and the need to handle increasing patient volumes.',
+      solution: 'We implemented an AI diagnostic assistance system that could analyze medical images, patient data, and symptoms to provide accurate preliminary diagnoses.',
+      impact: [
+        '95% diagnostic accuracy achieved',
+        '40% faster diagnosis and treatment planning',
+        '30% reduction in diagnostic errors',
+        'Improved patient outcomes',
+        'Enhanced doctor productivity'
+      ],
+      technologies: ['Computer Vision', 'Deep Learning', 'Medical Imaging AI', 'Natural Language Processing', 'Predictive Analytics'],
+      duration: '12 months',
+      team: '15 engineers + 8 medical professionals + 3 AI researchers'
+    },
+    {
+      id: 'supply-chain-optimization',
+      title: 'Supply Chain Intelligence Platform',
+      company: 'Global Retail Chain',
+      industry: 'Retail',
+      results: '35% reduction in supply chain costs, 99% on-time delivery',
+      description: 'Building an intelligent supply chain that predicts demand and optimizes logistics.',
+      challenge: 'A global retail chain struggled with supply chain inefficiencies, stockouts, and delayed deliveries affecting customer satisfaction.',
+      solution: 'We developed an intelligent supply chain platform that used AI to predict demand, optimize inventory, and streamline logistics operations.',
+      impact: [
+        '35% reduction in supply chain costs',
+        '99% on-time delivery rate',
+        '50% reduction in stockouts',
+        'Real-time inventory optimization',
+        'Predictive demand forecasting'
+      ],
+      technologies: ['Predictive Analytics', 'Machine Learning', 'IoT Sensors', 'Blockchain', 'Real-time Tracking'],
+      duration: '10 months',
+      team: '14 engineers + 5 supply chain experts + 2 data scientists'
+    }
+  ];
+
+  const industries = ['All', 'Manufacturing', 'Marketing', 'Technology', 'Finance', 'Healthcare', 'Retail'];
+
   return (
     <>
       <Head>
-        <title>Case Studies | Zion Tech Group - Success Stories</title>
-        <meta name="description" content="Explore real-world success stories and case studies showcasing how Zion Tech Group's autonomous technology solutions have transformed businesses." />
-        <meta property="og:title" content="Case Studies | Zion Tech Group - Success Stories" />
-        <meta property="og:description" content="Explore real-world success stories and case studies showcasing how Zion Tech Group's autonomous technology solutions have transformed businesses." />
+        <title>Case Studies | Zion Tech Group - AI & Automation Success Stories</title>
+        <meta name="description" content="Explore real-world success stories of AI automation implementation across various industries." />
+        <meta property="og:title" content="Case Studies | Zion Tech Group" />
+        <meta property="og:description" content="Real-world success stories of AI automation implementation." />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
-          <div className="max-w-6xl mx-auto">
-            <Link href="/" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 mb-8 transition-colors">
-              ← Back to Home
-            </Link>
+          <div className="max-w-7xl mx-auto">
+            <nav className="mb-8">
+              <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                ← Back to Home
+              </Link>
+            </nav>
             
             <header className="text-center mb-16">
               <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-                Case Studies
+                Success Stories
               </h1>
               <p className="text-xl text-white/80 max-w-3xl mx-auto">
-                Real-world success stories showcasing how our autonomous technology solutions have transformed businesses
+                Real-world examples of how our AI automation solutions have transformed businesses 
+                across industries and delivered measurable results.
               </p>
             </header>
 
+            {/* Featured Case Study */}
             <section className="mb-16">
-              <h2 className="text-3xl font-bold text-center mb-12 text-white/90">Featured Success Stories</h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div className="bg-gradient-to-br from-cyan-400/10 to-blue-400/10 rounded-2xl p-8 border border-cyan-400/30">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-16 h-16 bg-cyan-500 rounded-xl flex items-center justify-center">
-                      <span className="text-white font-bold text-xl">E</span>
+              <h2 className="text-2xl font-bold mb-8 text-center text-white">Featured Success Story</h2>
+              <div className="bg-gradient-to-br from-white/15 to-white/5 rounded-2xl p-8 border border-white/20">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div>
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
+                        Manufacturing
+                      </span>
+                      <span className="text-white/60 text-sm">Featured Case Study</span>
                     </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-cyan-300">E-Commerce Platform</h3>
-                      <p className="text-white/60">Retail Technology</p>
+                    <h3 className="text-3xl font-bold mb-4 text-white">AI-Powered Manufacturing Automation</h3>
+                    <p className="text-cyan-400 font-semibold mb-3">Global Manufacturing Corp</p>
+                    <p className="text-white/80 mb-6">
+                      How we implemented autonomous AI systems to revolutionize manufacturing processes, 
+                      achieving 40% increase in production efficiency and 60% reduction in downtime.
+                    </p>
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center gap-3">
+                        <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+                        <span className="text-white/80 text-sm">40% increase in production efficiency</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+                        <span className="text-white/80 text-sm">60% reduction in downtime</span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+                        <span className="text-white/80 text-sm">99.5% system uptime achieved</span>
+                      </div>
                     </div>
+                    <Link 
+                      href="#ai-automation-manufacturing"
+                      className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+                    >
+                      Read Full Case Study
+                      <span aria-hidden>→</span>
+                    </Link>
                   </div>
-                  <p className="text-white/80 mb-6">
-                    A major e-commerce platform was struggling with content management and customer engagement. 
-                    Our autonomous content generation system created 500+ product descriptions, blog posts, and 
-                    marketing materials in just 30 days.
-                  </p>
-                  <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-cyan-400">500+</div>
-                      <div className="text-sm text-white/60">Content Pieces</div>
+                  <div className="bg-white/10 rounded-xl p-6 border border-white/20">
+                    <h4 className="text-lg font-semibold text-cyan-400 mb-4">Key Technologies Used</h4>
+                    <div className="grid grid-cols-2 gap-3">
+                      <span className="px-3 py-2 bg-cyan-400/20 text-cyan-400 text-sm rounded-lg border border-cyan-400/30 text-center">
+                        Machine Learning
+                      </span>
+                      <span className="px-3 py-2 bg-cyan-400/20 text-cyan-400 text-sm rounded-lg border border-cyan-400/30 text-center">
+                        IoT Sensors
+                      </span>
+                      <span className="px-3 py-2 bg-cyan-400/20 text-cyan-400 text-sm rounded-lg border border-cyan-400/30 text-center">
+                        Predictive Analytics
+                      </span>
+                      <span className="px-3 py-2 bg-cyan-400/20 text-cyan-400 text-sm rounded-lg border border-cyan-400/30 text-center">
+                        Computer Vision
+                      </span>
                     </div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-cyan-400">40%</div>
-                      <div className="text-sm text-white/60">Traffic Increase</div>
+                    <div className="mt-6 p-4 bg-white/5 rounded-lg">
+                      <p className="text-white/80 text-sm">
+                        <strong>Project Duration:</strong> 6 months<br/>
+                        <strong>Team Size:</strong> 8 engineers + 3 AI specialists
+                      </p>
                     </div>
-                  </div>
-                  <div className="bg-white/10 rounded-lg p-4">
-                    <h4 className="font-semibold text-cyan-300 mb-2">Key Results:</h4>
-                    <ul className="text-sm text-white/80 space-y-1">
-                      <li>• 40% increase in organic traffic</li>
-                      <li>• 25% improvement in conversion rates</li>
-                      <li>• 60% reduction in content creation time</li>
-                      <li>• 99.9% content accuracy rate</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-br from-fuchsia-400/10 to-purple-400/10 rounded-2xl p-8 border border-fuchsia-400/30">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-16 h-16 bg-fuchsia-500 rounded-xl flex items-center justify-center">
-                      <span className="text-white font-bold text-xl">F</span>
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-fuchsia-300">Financial Services</h3>
-                      <p className="text-white/60">Banking & Finance</p>
-                    </div>
-                  </div>
-                  <p className="text-white/80 mb-6">
-                    A financial services company needed to automate their compliance reporting and risk assessment processes. 
-                    Our autonomous systems now handle 95% of routine compliance tasks, reducing manual work by 80%.
-                  </p>
-                  <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-fuchsia-400">95%</div>
-                      <div className="text-sm text-white/60">Tasks Automated</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-fuchsia-400">80%</div>
-                      <div className="text-sm text-white/60">Time Saved</div>
-                    </div>
-                  </div>
-                  <div className="bg-white/10 rounded-lg p-4">
-                    <h4 className="font-semibold text-fuchsia-300 mb-2">Key Results:</h4>
-                    <ul className="text-sm text-white/80 space-y-1">
-                      <li>• 95% automation of compliance tasks</li>
-                      <li>• 80% reduction in manual processing time</li>
-                      <li>• 100% compliance accuracy rate</li>
-                      <li>• 24/7 automated monitoring</li>
-                    </ul>
                   </div>
                 </div>
               </div>
             </section>
-
-            <section className="mb-16">
-              <h2 className="text-3xl font-bold text-center mb-12 text-white/90">Industry Solutions</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="bg-white/10 rounded-lg p-6 border border-white/20">
-                  <div className="w-16 h-16 bg-green-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                    </svg>
+            
+            {/* All Case Studies */}
+            <section>
+              <h2 className="text-3xl font-bold mb-8 text-center text-white">All Success Stories</h2>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {caseStudies.map((study) => (
+                  <div key={study.id} id={study.id} className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:border-cyan-400/30 transition-all duration-300">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
+                        {study.industry}
+                      </span>
+                      <span className="text-white/60 text-sm">{study.duration}</span>
+                    </div>
+                    <h3 className="text-2xl font-bold mb-3 text-white">{study.title}</h3>
+                    <p className="text-cyan-400 font-semibold mb-3">{study.company}</p>
+                    <p className="text-white/80 mb-4">{study.description}</p>
+                    
+                    <div className="bg-white/5 rounded-lg p-4 mb-4">
+                      <h4 className="font-semibold text-green-400 mb-2">Challenge</h4>
+                      <p className="text-white/70 text-sm">{study.challenge}</p>
+                    </div>
+                    
+                    <div className="bg-white/5 rounded-lg p-4 mb-4">
+                      <h4 className="font-semibold text-blue-400 mb-2">Solution</h4>
+                      <p className="text-white/70 text-sm">{study.solution}</p>
+                    </div>
+                    
+                    <div className="bg-white/5 rounded-lg p-4 mb-4">
+                      <h4 className="font-semibold text-green-400 mb-2">Impact</h4>
+                      <ul className="space-y-1">
+                        {study.impact.map((result, index) => (
+                          <li key={index} className="text-white/70 text-sm flex items-center gap-2">
+                            <span className="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
+                            {result}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <div className="mb-4">
+                      <h4 className="font-semibold text-purple-400 mb-2">Technologies</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {study.technologies.map((tech, index) => (
+                          <span key={index} className="px-2 py-1 bg-purple-400/20 text-purple-400 text-xs rounded border border-purple-400/30">
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <div className="text-center">
+                      <Link 
+                        href={`/case-studies/${study.id}`}
+                        className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+                      >
+                        Read Full Case Study
+                        <span aria-hidden>→</span>
+                      </Link>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-green-300 text-center">Healthcare</h3>
-                  <p className="text-white/80 text-center mb-4">
-                    Automated patient data processing and medical record management systems
-                  </p>
-                  <div className="text-sm text-green-300 text-center">
-                    <span className="font-semibold">99.99%</span> Accuracy Rate
-                  </div>
-                </div>
-
-                <div className="bg-white/10 rounded-lg p-6 border border-white/20">
-                  <div className="w-16 h-16 bg-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-blue-300 text-center">Manufacturing</h3>
-                  <p className="text-white/80 text-center mb-4">
-                    Predictive maintenance and quality control automation systems
-                  </p>
-                  <div className="text-sm text-blue-300 text-center">
-                    <span className="font-semibold">30%</span> Cost Reduction
-                  </div>
-                </div>
-
-                <div className="bg-white/10 rounded-lg p-6 border border-white/20">
-                  <div className="w-16 h-16 bg-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-semibold mb-3 text-purple-300 text-center">Education</h3>
-                  <p className="text-white/80 text-center mb-4">
-                    AI-powered content generation and personalized learning systems
-                  </p>
-                  <div className="text-sm text-purple-300 text-center">
-                    <span className="font-semibold">50%</span> Learning Improvement
-                  </div>
-                </div>
+                ))}
               </div>
             </section>
-
-            <section className="mb-16">
-              <h2 className="text-3xl font-bold text-center mb-12 text-white/90">Client Testimonials</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="bg-white/10 rounded-lg p-6 border border-white/20">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold">J</span>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-cyan-300">John Smith</h4>
-                      <p className="text-sm text-white/60">CTO, TechCorp</p>
-                    </div>
-                  </div>
-                  <p className="text-white/80 italic">
-                    "Zion Tech Group's autonomous systems have revolutionized our operations. 
-                    We've seen a 40% increase in efficiency and our team can now focus on strategic initiatives 
-                    instead of routine tasks."
-                  </p>
-                </div>
-
-                <div className="bg-white/10 rounded-lg p-6 border border-white/20">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 bg-fuchsia-500 rounded-full flex items-center justify-center">
-                      <span className="text-white font-bold">S</span>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-fuchsia-300">Sarah Johnson</h4>
-                      <p className="text-sm text-white/60">VP Operations, InnovateCo</p>
-                    </div>
-                  </div>
-                  <p className="text-white/80 italic">
-                    "The content generation system has been a game-changer. We're producing 10x more content 
-                    with better quality and SEO performance. It's like having an entire content team working 24/7."
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            <section className="mb-16">
-              <h2 className="text-3xl font-bold text-center mb-12 text-white/90">Success Metrics</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div className="text-center bg-white/10 rounded-lg p-6 border border-white/20">
-                  <div className="text-4xl font-bold text-cyan-400 mb-2">500+</div>
-                  <div className="text-white/80">Projects Completed</div>
-                </div>
-                <div className="text-center bg-white/10 rounded-lg p-6 border border-white/20">
-                  <div className="text-4xl font-bold text-fuchsia-400 mb-2">99.9%</div>
-                  <div className="text-white/80">Client Satisfaction</div>
-                </div>
-                <div className="text-center bg-white/10 rounded-lg p-6 border border-white/20">
-                  <div className="text-4xl font-bold text-green-400 mb-2">40%</div>
-                  <div className="text-white/80">Average Efficiency Gain</div>
-                </div>
-                <div className="text-center bg-white/10 rounded-lg p-6 border border-white/20">
-                  <div className="text-4xl font-bold text-blue-400 mb-2">24/7</div>
-                  <div className="text-white/80">System Operation</div>
-                </div>
-              </div>
-            </section>
-
-            <section className="text-center">
-              <div className="bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 backdrop-blur-xl rounded-2xl p-12 border border-cyan-400/30">
-                <h2 className="text-3xl font-bold mb-6 text-white/90">Ready to Join Our Success Stories?</h2>
-                <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-                  Let's discuss how our autonomous technology solutions can transform your business and create your own success story.
+            
+            {/* Call to Action */}
+            <section className="mt-20 text-center">
+              <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
+                <h2 className="text-2xl font-bold mb-4 text-white">Ready to Create Your Success Story?</h2>
+                <p className="text-white/80 mb-6 max-w-2xl mx-auto">
+                  Let's discuss how our AI automation solutions can transform your business 
+                  and deliver measurable results like the success stories above.
                 </p>
-                <div className="flex flex-wrap justify-center gap-4">
-                  <Link href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105">
+                <div className="flex flex-wrap gap-4 justify-center">
+                  <Link 
+                    href="/contact" 
+                    className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
+                  >
                     Start Your Project
                   </Link>
-                  <Link href="/services" className="border border-white/30 hover:border-cyan-400/50 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 backdrop-blur-xl">
-                    Explore Services
+                  <Link 
+                    href="/services" 
+                    className="px-8 py-4 border border-white/20 text-white rounded-lg font-semibold hover:border-cyan-400/50 hover:text-cyan-400 transition-all duration-300"
+                  >
+                    Explore Our Services
                   </Link>
                 </div>
               </div>
