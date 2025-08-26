@@ -32,6 +32,16 @@ const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/Comprehen
 const EnhancedInnovativeServicesShowcase2027 = React.lazy(() => import('./pages/EnhancedInnovativeServicesShowcase2027'));
 const ComprehensiveServicesOverview = React.lazy(() => import('./pages/ComprehensiveServicesOverview'));
 const ComprehensivePricingGuide2027New = React.lazy(() => import('./pages/ComprehensivePricingGuide2027'));
+
+// Service pages
+const ServicesPage = React.lazy(() => import('./pages/services'));
+const AIAnalyticsPage = React.lazy(() => import('./pages/services/ai-analytics'));
+const CybersecurityPage = React.lazy(() => import('./pages/services/cybersecurity'));
+const CloudDevOpsPage = React.lazy(() => import('./pages/services/cloud-devops'));
+
+// Additional pages
+const SolutionsPage = React.lazy(() => import('./pages/solutions'));
+
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
   <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -107,6 +117,15 @@ function App() {
               {/* Marketplace Routes */}
               <Route path="/marketplace" element={<GreenIT />} />
               <Route path="/marketplace/:service" element={<GreenIT />} />
+              
+              {/* Service routes */}
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/services/ai-analytics" element={<AIAnalyticsPage />} />
+              <Route path="/services/cybersecurity" element={<CybersecurityPage />} />
+              <Route path="/services/cloud-devops" element={<CloudDevOpsPage />} />
+              
+              {/* Additional routes */}
+              <Route path="/solutions" element={<SolutionsPage />} />
             </Routes>
           </Suspense>
         </main>
