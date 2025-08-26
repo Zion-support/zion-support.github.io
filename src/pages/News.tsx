@@ -1,4 +1,6 @@
+import React from 'react';
 import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
 import { SEO } from '../components/SEO';
 
 const News: React.FC = () => {
@@ -55,7 +57,6 @@ export default function News() {
     'Last Month',
     'Last 3 Months',
     'Last Year'
-=======
   const [selectedYear, setSelectedYear] = useState('all');
 
   const categories = [
@@ -73,133 +74,17 @@ export default function News() {
     { id: '2024', name: '2024', count: 28 },
     { id: '2023', name: '2023', count: 16 }
   ];
+  const staggerContainer = {
+    animate: {
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
 
   const newsArticles = [
     {
       id: 1,
-      title: "Zion Tech Group Launches Revolutionary Quantum Neural Network Platform",
-      excerpt: "The company introduces a breakthrough quantum computing solution that combines neural networks with quantum processing for unprecedented computational power.",
-      content: "Zion Tech Group today announced the launch of its revolutionary Quantum Neural Network Platform, marking a significant milestone in the convergence of quantum computing and artificial intelligence. This breakthrough technology represents a paradigm shift in computational capabilities, enabling organizations to solve complex problems that were previously impossible with classical computing methods...",
-      author: "Zion Tech Group Press",
-      publishDate: "2025-01-20",
-      readTime: "5 min read",
-      category: "technology",
-      tags: ["quantum-computing", "ai", "innovation", "breakthrough"],
-      featured: true,
-      image: "/news/quantum-neural-network.jpg",
-      views: 15420,
-      shares: 892
-    },
-    {
-      id: 2,
-      title: "Zion Tech Group Named 'AI Company of the Year' at Tech Excellence Awards",
-      excerpt: "The company receives prestigious recognition for its contributions to artificial intelligence and autonomous systems innovation.",
-      content: "Zion Tech Group has been honored with the 'AI Company of the Year' award at the prestigious Tech Excellence Awards 2025. This recognition celebrates the company's groundbreaking work in artificial intelligence, autonomous systems, and quantum technology solutions that are transforming industries worldwide...",
-      author: "Zion Tech Group Press",
-      publishDate: "2025-01-18",
-      readTime: "4 min read",
-      category: "awards",
-      tags: ["awards", "recognition", "ai", "excellence"],
-      featured: true,
-      image: "/news/tech-excellence-award.jpg",
-      views: 12850,
-      shares: 756
-    },
-    {
-      id: 3,
-      title: "Strategic Partnership with Global Healthcare Consortium Announced",
-      excerpt: "Zion Tech Group partners with leading healthcare organizations to deploy AI-powered diagnostic and treatment optimization systems.",
-      content: "Zion Tech Group has announced a strategic partnership with the Global Healthcare Consortium, a coalition of leading healthcare organizations worldwide. This collaboration will focus on deploying advanced AI-powered diagnostic systems, treatment optimization platforms, and predictive healthcare analytics to improve patient outcomes globally...",
-      author: "Zion Tech Group Press",
-      publishDate: "2025-01-15",
-      readTime: "6 min read",
-      category: "partnerships",
-      tags: ["healthcare", "partnership", "ai", "diagnostics"],
-      featured: false,
-      image: "/news/healthcare-partnership.jpg",
-      views: 9870,
-      shares: 543
-    },
-    {
-      id: 4,
-      title: "New AI Autonomous Research Assistant Surpasses Human Performance Benchmarks",
-      excerpt: "Zion Tech Group's latest AI research tool demonstrates superior capabilities in scientific literature analysis and research synthesis.",
-      content: "Zion Tech Group has announced that its new AI Autonomous Research Assistant has achieved breakthrough performance, surpassing human benchmarks in scientific literature analysis, research synthesis, and hypothesis generation. This advanced AI system represents a significant leap forward in research automation and knowledge discovery...",
-      author: "Dr. Sarah Chen",
-      publishDate: "2025-01-12",
-      readTime: "7 min read",
-      category: "technology",
-      tags: ["ai-research", "automation", "scientific-discovery", "innovation"],
-      featured: false,
-      image: "/news/ai-research-assistant.jpg",
-      views: 11230,
-      shares: 678
-    },
-    {
-      id: 5,
-      title: "Zion Tech Group Expands Global Operations with New European Headquarters",
-      excerpt: "The company establishes a new European headquarters in Amsterdam to better serve European clients and expand its international presence.",
-      content: "Zion Tech Group has announced the expansion of its global operations with the establishment of a new European headquarters in Amsterdam, Netherlands. This strategic expansion will enable the company to better serve its growing European client base and strengthen its position in the European technology market...",
-      author: "Zion Tech Group Press",
-      publishDate: "2025-01-10",
-      readTime: "5 min read",
-      category: "company",
-      tags: ["expansion", "europe", "global-operations", "amsterdam"],
-      featured: false,
-      image: "/news/european-hq.jpg",
-      views: 8760,
-      shares: 432
-    },
-    {
-      id: 6,
-      title: "Breakthrough in SOC2 Compliance Automation Technology",
-      excerpt: "Zion Tech Group introduces automated compliance monitoring system that reduces audit time by 90%.",
-      content: "Zion Tech Group has achieved a major breakthrough in compliance automation with the introduction of its new SOC2 Compliance Automation Technology. This innovative system streamlines the compliance process, reducing audit preparation time by 90% while maintaining the highest standards of security and compliance...",
-      author: "Alex Thompson",
-      publishDate: "2025-01-08",
-      readTime: "6 min read",
-      category: "technology",
-      tags: ["compliance", "automation", "soc2", "security"],
-      featured: false,
-      image: "/news/soc2-automation.jpg",
-      views: 9450,
-      shares: 521
-    },
-    {
-      id: 7,
-      title: "Zion Tech Group Named to Fortune 500 Fastest-Growing Companies List",
-      excerpt: "The company ranks #47 on Fortune's list of fastest-growing companies, recognizing its rapid expansion and innovation.",
-      content: "Zion Tech Group has been named to Fortune magazine's prestigious list of the 500 fastest-growing companies in America. Ranking #47 on the list, this recognition highlights the company's exceptional growth trajectory, innovative technology solutions, and strong market position in the rapidly evolving AI and quantum technology sectors...",
-      author: "Zion Tech Group Press",
-      publishDate: "2025-01-05",
-      readTime: "4 min read",
-      category: "awards",
-      tags: ["fortune-500", "growth", "recognition", "success"],
-      featured: false,
-      image: "/news/fortune-500.jpg",
-      views: 13420,
-      shares: 789
-    },
-    {
-      id: 8,
-      title: "New 5G Enterprise Solutions Division Launched",
-      excerpt: "Zion Tech Group establishes dedicated division for next-generation 5G enterprise networking and infrastructure solutions.",
-      content: "Zion Tech Group has announced the launch of its new 5G Enterprise Solutions Division, dedicated to providing cutting-edge 5G networking and infrastructure solutions for enterprise clients. This new division will focus on delivering high-speed, low-latency connectivity solutions that enable the next generation of enterprise applications...",
-      author: "Jennifer Lee",
-      publishDate: "2025-01-03",
-      readTime: "5 min read",
-      category: "company",
-      tags: ["5g", "networking", "enterprise", "infrastructure"],
-      featured: false,
-      image: "/news/5g-solutions.jpg",
-      views: 7890,
-      shares: 445
-    }
-  ];
-
-  const filteredNews = newsArticles.filter(article => {
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white">
-=======
   const categories = [
     "All News",
     "Product Launch",
@@ -235,7 +120,6 @@ export default function News() {
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-=======
 import { motion } from 'framer-motion';
 import { 
   Search, 
@@ -304,7 +188,6 @@ const News = () => {
       image: "/api/placeholder/600/400",
       views: "12.8k",
       type: "announcement",
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -318,7 +201,6 @@ export default function News() {
       date: '2024-08-25',
       readTime: '5 min read',
       image: '🚀',
-=======
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { Link } from 'react-router-dom';
@@ -548,7 +430,6 @@ export default function News() {
           </div>
         </div>
       </section>
-=======
       {/* Press Contact CTA */}
       <section className="pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
@@ -570,7 +451,6 @@ export default function News() {
               </button>
               <button className="px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300">
                 Media Kit
-=======
       {/* Recent News Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -713,7 +593,6 @@ export default function News() {
           </motion.div>
         </div>
       </section>
-=======
       title: 'AI-Powered Business Intelligence Suite Update',
       excerpt: 'Enhanced analytics capabilities with real-time insights and predictive modeling.',
       category: 'Product Update',
@@ -780,6 +659,125 @@ export default function News() {
     'Awards'
   ];
 
+      title: "Zion Tech Group Launches Revolutionary AI-Powered Business Intelligence Platform",
+      excerpt: "Our latest AI platform transforms how businesses analyze data and make decisions, featuring advanced machine learning algorithms and real-time analytics.",
+      category: "Product Launch",
+      date: "2025-01-15",
+      readTime: "5 min read",
+      image: "🤖",
+      featured: true
+    },
+    {
+      id: 2,
+      title: "Zion Tech Group Named Top 10 AI Companies to Watch in 2025",
+      excerpt: "Industry recognition for our innovative approach to artificial intelligence and machine learning solutions that are reshaping enterprise technology.",
+      category: "Company News",
+      date: "2025-01-10",
+      readTime: "3 min read",
+      image: "🏆",
+      featured: false
+    },
+    {
+      id: 3,
+      title: "New Partnership with Global Cloud Provider Expands Our Reach",
+      excerpt: "Strategic partnership announcement that will enable us to deliver enhanced cloud solutions to clients worldwide with improved scalability and performance.",
+      category: "Partnerships",
+      date: "2025-01-08",
+      readTime: "4 min read",
+      image: "🤝",
+      featured: false
+    },
+    {
+      id: 4,
+      title: "Cybersecurity Innovation: Zero-Trust Architecture Implementation Guide",
+      excerpt: "Comprehensive guide on implementing zero-trust security architecture for modern enterprises, based on our successful client implementations.",
+      category: "Technical Insights",
+      date: "2025-01-05",
+      readTime: "8 min read",
+      image: "🔒",
+      featured: false
+    },
+    {
+      id: 5,
+      title: "Digital Transformation Success Story: Manufacturing Industry Case Study",
+      excerpt: "How we helped a leading manufacturer achieve 40% efficiency improvement through digital transformation and IoT integration.",
+      category: "Case Studies",
+      date: "2025-01-02",
+      readTime: "6 min read",
+      image: "🏭",
+      featured: false
+    },
+    {
+      id: 6,
+      title: "The Future of Quantum Computing in Enterprise Applications",
+      excerpt: "Exploring the potential of quantum computing and how businesses can prepare for this revolutionary technology shift.",
+      category: "Industry Insights",
+      date: "2024-12-28",
+      readTime: "7 min read",
+      image: "⚛️",
+      featured: false
+    }
+  ];
+
+  const pressReleases = [
+    {
+      title: "Zion Tech Group Secures $25M Series B Funding Round",
+      date: "2024-12-20",
+      summary: "Funding will accelerate product development and expand market presence in North America and Europe."
+    },
+    {
+      title: "New Executive Appointments Strengthen Leadership Team",
+      date: "2024-12-15",
+      summary: "Industry veterans join to drive innovation and strategic growth initiatives."
+    },
+    {
+      title: "Zion Tech Group Achieves SOC 2 Type II Compliance",
+      date: "2024-12-10",
+      summary: "Security certification demonstrates commitment to protecting client data and maintaining highest security standards."
+    }
+  ];
+
+  const categories = [
+    "All News",
+    "Product Launch",
+    "Company News", 
+    "Partnerships",
+    "Technical Insights",
+    "Case Studies",
+    "Industry Insights"
+  ];
+
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
+
+  return (
+    <>
+      <SEO 
+        title="News & Press - Zion Tech Group"
+        description="Stay updated with the latest news, product launches, company updates, and industry insights from Zion Tech Group."
+        keywords="news, press releases, company updates, AI news, technology news, Zion Tech Group"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl"></div>
+          </div>
+          
+          <motion.div 
+            className="max-w-7xl mx-auto text-center relative z-10"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header Section */}
@@ -798,7 +796,6 @@ export default function News() {
             <button className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg font-medium hover:bg-cyan-400/20 transition-all duration-300">
               RSS Feed
             </button>
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
       {/* Hero Section */}
@@ -838,17 +835,110 @@ export default function News() {
                     selectedCategory === category
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
                       : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
+            <motion.h1 
+              className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Latest
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+                {" "}News & Updates
+              </span>
+            </motion.h1>
+            
+            <motion.p 
+              className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              Stay informed about our latest innovations, company milestones, industry insights, 
+              and the future of technology that we're helping to shape.
+            </motion.p>
+          </motion.div>
+        </section>
+
+        {/* Featured Article */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div 
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Featured Story</h2>
+            </motion.div>
+            
+            {newsArticles.filter(article => article.featured).map((article) => (
+              <motion.div
+                key={article.id}
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:bg-white/15"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+              >
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                  <div>
+                    <div className="flex items-center space-x-4 mb-4">
+                      <span className="px-4 py-2 bg-blue-600 text-white text-sm rounded-full">
+                        {article.category}
+                      </span>
+                      <span className="text-gray-400 text-sm">{formatDate(article.date)}</span>
+                      <span className="text-gray-400 text-sm">{article.readTime}</span>
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
+                      {article.title}
+                    </h3>
+                    <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                      {article.excerpt}
+                    </p>
+                    <button className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
+                      Read Full Article
+                      <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-8xl mb-4">{article.image}</div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
+        {/* Category Filter */}
+        <section className="py-8 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <motion.div 
+              className="flex flex-wrap justify-center gap-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              {categories.map((category, index) => (
+                <button
+                  key={index}
+                  className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                    index === 0 
+                      ? 'bg-blue-600 text-white' 
+                      : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
                   }`}
                 >
                   {category}
                 </button>
               ))}
-            </div>
+            </motion.div>
           </div>
-        </div>
-      </div>
+        </section>
 
-      {featuredArticle && (
+        {/* News Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div 
@@ -1156,7 +1246,6 @@ export default function News() {
 };
 
 export default News;
-=======
       title: 'Zion Tech Group Named Top AI Company by Tech Innovation Awards',
       excerpt: 'Recognition for our groundbreaking work in autonomous AI systems and machine learning solutions that are transforming industries worldwide.',
       date: '2025-01-10',
@@ -1350,7 +1439,6 @@ export default News;
               />
               <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-r-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 font-medium">
                 Subscribe
-=======
       {/* Regular News */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <h2 className="text-3xl font-bold text-white mb-8 text-center">
@@ -1449,3 +1537,4 @@ export default News;
     </div>
   );
 }
+export default News;

@@ -840,6 +840,12 @@ const AIPoweredITAssetManagement: React.FC = () => {
               );
             })}
           </div>
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Comprehensive Asset Coverage
+            </h2>
           
           {/* Asset Types */}
           <div className="mb-16">
@@ -1286,6 +1292,9 @@ const AIPoweredITAssetManagement: React.FC = () => {
       {/* Asset Types Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
+      {/* Asset Types Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1573,6 +1582,94 @@ const AIPoweredITAssetManagement: React.FC = () => {
               </div>
             ))}
           </div>
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-4xl text-center">
+      <section className="py-20">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/50 to-purple-900/50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your IT Asset Management?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join organizations that have revolutionized their IT asset management with AI-powered 
+            automation. Our expert team is ready to help you implement intelligent asset solutions.
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Optimize Your IT Assets?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join the AI-powered asset management revolution and transform your IT operations.
+      <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold mb-6">Ready to Optimize Your IT Assets?</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Get complete visibility and control over your IT infrastructure. Start your 
+            AI-powered asset management journey today.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Optimize Your IT Assets?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+            Join leading organizations that have transformed their IT asset management 
+            with AI-powered insights and automation.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105"
+            >
+              Schedule Demo
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </Link>
+            <Link
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
+            >
+              Schedule a Demo
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+            <Link
+              to="/services/it-infrastructure"
+              className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-500 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
+            >
+              Explore IT Services
+            </Link>
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-r from-indigo-500/10 to-purple-600/10 rounded-2xl p-12 text-center border border-indigo-500/20">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your IT Asset Management?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Experience the future of IT infrastructure management with AI-powered automation, 
+              predictive analytics, and intelligent optimization.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg text-white font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
+              >
+                Schedule a Demo
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/pricing"
+                className="inline-flex items-center px-8 py-4 border border-indigo-500 text-indigo-400 rounded-lg font-semibold hover:bg-indigo-500 hover:text-white transition-all duration-200"
+              >
+                View Pricing
+              </Link>
           
           {/* CTA Section */}
           <div className="text-center">
@@ -1596,6 +1693,7 @@ const AIPoweredITAssetManagement: React.FC = () => {
                   View All Services
                 </Link>
               </div>
+            </div>
             </div>
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">

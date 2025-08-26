@@ -64,11 +64,16 @@ export default function EquipmentDetail() {
 
     setIsAdding(true);
     try {
+      const response = await fetch('/api/checkout_sessions', {
       const response = await fetch('/checkout/create-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ productId: equipmentId }),
       });
+      const { sessionId } = await response.json();
+      const stripe = await getStripe();
+      if (stripe && sessionId) {
+        await stripe.redirectToCheckout({ sessionId });
       const { url } = await response.json();
       if (url) {
         window.location.href = url as string;

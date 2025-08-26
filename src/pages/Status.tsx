@@ -60,7 +60,6 @@ const Status: React.FC = () => {
       uptime: '99.94%',
       responseTime: '150ms',
       lastChecked: '1 minute ago'
-=======
 import { 
   CheckCircle, 
   AlertTriangle, 

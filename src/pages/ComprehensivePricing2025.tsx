@@ -386,6 +386,8 @@ const ComprehensivePricing2025: React.FC = () => {
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Let's discuss how our services can help transform your business and drive competitive advantage
+          <p className="text-xl text-gray-300 mb-8">
+            Let's discuss how our services can help transform your business and drive competitive advantage
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -419,6 +421,9 @@ const ComprehensivePricing2025: React.FC = () => {
             <a
               href="mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry 2025"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+            <a
+              href="mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry 2025"
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
             >
               <Phone className="w-5 h-5 inline mr-2" />
               Call +1 302 464 0950
@@ -428,6 +433,8 @@ const ComprehensivePricing2025: React.FC = () => {
               whileTap={{ scale: 0.95 }}
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-green-900 transition-all duration-300"
             >
+              Schedule Consultation
+            </a>
               Schedule Consultation
             </a>
           </div>

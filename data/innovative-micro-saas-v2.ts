@@ -1,42 +1,21 @@
-export interface InnovativeMicroSaasV2 {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
+export type InnovativeMicroSaasV2 = {
+	id: string;
+	title: string;
+	description: string;
+	category: string;
+	price: string;
+	rating: number;
+	reviews: number;
+};
 
-export const innovativeMicroSaasV2Services = [] as any[];
+export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
+	{
+		id: 'ai-business-intelligence-pro',
+		title: 'AI Business Intelligence Pro',
+		description: 'Transform data into insights with AI dashboards and reporting.',
+		category: 'AI',
+		price: '$299/month',
+		rating: 4.8,
+		reviews: 42,
+	},
+];

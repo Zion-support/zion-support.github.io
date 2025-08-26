@@ -1,3 +1,4 @@
+import React from 'react';
 
 import React from 'react';
 import { Zap, Brain, Shield, Cloud, Database, Users, ArrowRight } from 'lucide-react';
@@ -97,4 +98,5 @@ export const QuickAccess: React.FC = () => {
       </div>
     </section>
   );
+};
 }

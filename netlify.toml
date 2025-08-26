@@ -1,68 +1,69 @@
 [build]
-  # Use `npm ci` for deterministic installs
-  # Generate Prisma client before building to ensure models are up to date
-  command = "npm run build:netlify:prepare"
-  # Netlify UI sets `publish` to `out` which causes the Next.js plugin to fail
-  # because no exported directory exists. Explicitly publish the `.next`
-  # directory so the plugin can run correctly.
-  publish = ".next"
-  # Increase build timeout for 176+ pages
-  command_timeout = "30m"
+  # Use `npm ci` for deterministic installs, Vite builds to dist folder
+  command = "npm ci && npm run build"
+  publish = "dist"
 
 [build.environment]
-[[plugins]]
-  package = "netlify-plugin-cloudinary"
-
+  NODE_VERSION = "20"
   NODE_OPTIONS = "--max_old_space_size=4096"
   NPM_FLAGS = "--prefer-offline"
-  NODE_VERSION = "20"
-  NEXT_PUBLIC_SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY" # Replace with your actual Supabase key
-  NEXT_PUBLIC_REOWN_PROJECT_ID = "VALID_PROJECT_ID_PLACEHOLDER" # IMPORTANT: Replace with your actual Reown AppKit Project ID
-  EXAMPLE_API_URL = "https://jsonplaceholder.typicode.com/todos/1"
-  # Sentry DSNs are intentionally exposed in client bundles. Exclude them from
-  # Netlify's secrets scanning to prevent false positives during deploys.
-  SECRETS_SCAN_OMIT_KEYS = "SENTRY_DSN,NEXT_PUBLIC_SENTRY_DSN"
 
-[functions.environment]
-  SENTRY_LOG_LEVEL = "debug"
-=======
-# Static redirects for exported site
+# Remove Next.js plugin since this is a Vite project
+# [[plugins]]
+#   package = "@netlify/plugin-nextjs"
+
+# Optional: a few redirects that were present
 [[redirects]]
-  from = "/ai-customer-success-platform"
-  to = "/services/ai-customer-success-platform/"
+  from = "/ai-autonomous-ecosystem"
+  to = "/ai-autonomous-ecosystem-manager"
   status = 301
 
 [[redirects]]
-  from = "/ai-sales-intelligence-platform"
-  to = "/services/ai-sales-intelligence-platform/"
+  from = "/autonomous-it-operations"
+  to = "/autonomous-it-operations-center"
   status = 301
 
 [[redirects]]
-  from = "/ai-financial-planning-platform"
-  to = "/services/ai-financial-planning-platform/"
+  from = "/quantum-internet-security"
+  to = "/quantum-internet-security-platform"
   status = 301
 
 [[redirects]]
-  from = "/ai-powered-decision-engine"
-  to = "/services/ai-powered-decision-engine/"
+  from = "/quantum-materials-discovery"
+  to = "/quantum-materials-discovery-platform"
   status = 301
 
 [[redirects]]
-  from = "/intelligent-content-automation-platform"
-  to = "/services/intelligent-content-automation-platform/"
+  from = "/autonomous-vehicle-ai"
+  to = "/autonomous-vehicle-ai-platform"
   status = 301
 
 [[redirects]]
-  from = "/intelligent-hr-analytics-platform"
-  to = "/services/intelligent-hr-analytics-platform/"
+  from = "/ai-content-marketing-automation"
+  to = "/ai-content-generator"
   status = 301
 
 [[redirects]]
-  from = "/smart-crm-intelligence-suite"
-  to = "/services/smart-crm-intelligence-suite/"
+  from = "/ai-customer-success-automation"
+  to = "/ai-customer-success-platform"
   status = 301
 
 [[redirects]]
-  from = "/affiliate-attribution-suite"
-  to = "/services/affiliate-attribution-suite/"
+  from = "/ai-content-marketing-automation"
+  to = "/intelligent-content-automation-platform"
+  status = 301
+
+[[redirects]]
+  from = "/autonomous-it-operations"
+  to = "/autonomous-it-operations-center"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-internet-security"
+  to = "/quantum-internet-security-platform"
+  status = 301
+
+[[redirects]]
+  from = "/browser-automation-cloud/"
+  to = "/browser-automation-cloud"
   status = 301

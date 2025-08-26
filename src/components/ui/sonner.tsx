@@ -1,5 +1,4 @@
-import React from 'react';
-import { Toaster as Sonner } from "sonner"
+"use client";
 
 import { useTheme } from "../ThemeProvider";
 import { Toaster as Sonner } from "sonner";

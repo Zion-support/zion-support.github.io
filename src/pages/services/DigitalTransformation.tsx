@@ -29,16 +29,22 @@ const DigitalTransformation: React.FC = () => {
       description: "Streamline operations and improve efficiency through digital workflows",
       features: ["Process Mapping", "Automation", "Performance Metrics", "Continuous Improvement"],
       icon: "⚡"
+      features: ["Process Mapping", "Automation", "Performance Metrics", "Continuous Improvement"],
+      icon: "⚡"
     },
     {
       title: "Customer Experience Enhancement",
       description: "Create seamless digital experiences that delight your customers",
       features: ["User Journey Mapping", "Digital Touchpoints", "Personalization", "Feedback Systems"],
       icon: "🎯"
+      features: ["User Journey Mapping", "Digital Touchpoints", "Personalization", "Feedback Systems"],
+      icon: "🎯"
     },
     {
       title: "Data & Analytics Strategy",
       description: "Leverage data insights to drive informed business decisions",
+      features: ["Data Collection", "Analytics Platforms", "Business Intelligence", "Predictive Modeling"],
+      icon: "📊"
       features: ["Data Collection", "Analytics Platforms", "Business Intelligence", "Predictive Modeling"],
       icon: "📊"
     },
@@ -273,6 +279,9 @@ const DigitalTransformation: React.FC = () => {
       </section>
     </div>
   );
+};
+
+export default DigitalTransformation;
 };
 
 export default DigitalTransformation;

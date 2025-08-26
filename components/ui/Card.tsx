@@ -1,14 +1,14 @@
 import React from 'react';
 
-interface UICardProps {
-	className?: string;
-	children: React.ReactNode;
+interface CardProps {
+  children: React.ReactNode;
+  className?: string;
 }
 
-export default function UICard({ className = '', children }: UICardProps) {
-	return (
-		<div className={`rounded-lg border border-gray-700 bg-black/40 ${className}`}>
-			{children}
-		</div>
-	);
+export default function Card({ children, className = '' }: CardProps) {
+  return (
+    <div className={`bg-gray-900 rounded-lg p-6 border border-gray-700 ${className}`}>
+      {children}
+    </div>
+  );
 }

@@ -74,6 +74,16 @@ export default function BlogPost() {
         keywords={post.tags.join(", ")}
         ogImage={post.featuredImage}
         canonical={`https://ziontechgroup.com/blog/${post.slug}`}
+      <SEO 
+        title={post.title}
+        description={post.excerpt}
+        keywords={post.tags?.join(', ') || ''}
+        image={post.featuredImage}
+        canonical={`${window.location.origin}/blog/${slug}`}
+        type="article"
+        author={post.author?.name || 'Zion Tech Group'}
+        publishedTime={post.publishedDate}
+        tags={post.tags}
       />
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
         <div className="container mx-auto">

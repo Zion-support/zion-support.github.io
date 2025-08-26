@@ -5,6 +5,13 @@ import { Building, Zap, Brain, Users, Shield, TrendingUp, ArrowRight, Star, Rock
 import { Link } from 'react-router-dom';
 import { Bot, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, Cpu, Database, Network } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
+import { motion } from 'framer-motion';
+import { Bot, TrendingUp, Zap, Shield, Users, Globe, BarChart3, Settings } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Building, Zap, Brain, Users, Shield, TrendingUp, ArrowRight, Star, Rocket, Globe, Cpu, Database } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Bot, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, Cpu, Database, Network } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 import { Helmet } from 'react-helmet-async';
 import { 
   Building, 
@@ -65,6 +72,8 @@ import {
   PieChart
 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
+import { Bot, Zap, TrendingUp, Shield, Users, ArrowRight, Cpu, Target } from 'lucide-react';
+
 import { Bot, Zap, TrendingUp, Shield, Users, ArrowRight, Cpu, Target } from 'lucide-react';
 
 import { Link } from 'react-router-dom';
@@ -216,6 +225,8 @@ const AutonomousBusinessOperationsPlatform = () => {
       title: "Customer Service",
 import { motion } from 'framer-motion';
 import { Bot, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, Cpu, Network } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Bot, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, Cpu, Network } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
@@ -343,6 +354,8 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
           </div>
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-6xl">
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -388,6 +401,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
+            ))}
             ))}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500 transition-all duration-300 hover:transform hover:scale-105"
@@ -1114,6 +1128,7 @@ export default function AutonomousBusinessOperationsPlatform() {
               Contact Sales
             </button>
           </div>
+          </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Automate Your Business?
             </h2>
@@ -1145,6 +1160,7 @@ export default function AutonomousBusinessOperationsPlatform() {
             </div>
           </motion.div>
         </div>
+        </div>
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg text-white font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-200 transform hover:scale-105"
               >
                 <span>Schedule a Demo</span>
@@ -1161,6 +1177,8 @@ export default function AutonomousBusinessOperationsPlatform() {
         </section>
       </div>
     </>
+      </section>
+    </div>
       </section>
     </div>
         {/* CTA Section */}
@@ -1341,6 +1359,8 @@ export default function AutonomousBusinessOperationsPlatform() {
     </>
   );
 }
+  );
+}
               className="px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
             >
               Get Started Free
@@ -1369,6 +1389,9 @@ export default function AutonomousBusinessOperationsPlatform() {
             <Link
               to="/pricing"
               className="inline-flex items-center px-8 py-4 border border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-semibold rounded-lg transition-all duration-200"
+            >
+              View Pricing Plans
+            </Link>
             >
               View Pricing Plans
             </Link>

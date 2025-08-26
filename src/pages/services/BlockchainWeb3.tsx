@@ -366,3 +366,6 @@ const BlockchainWeb3: React.FC = () => {
 };
 
 export default BlockchainWeb3;
+};
+
+export default BlockchainWeb3;

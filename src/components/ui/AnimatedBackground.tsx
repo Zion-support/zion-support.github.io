@@ -120,13 +120,9 @@ export function AnimatedBackground({ className = '', variant = 'grid' }: Animate
         ctx.beginPath();
         for (let x = 0; x < canvas.width; x++) {
           const y = canvas.height / 2 + 
-                   amplitude * Math.sin(frequency * x + time + layer) +
-                   layer * 30;
-          if (x === 0) {
-            ctx.moveTo(x, y);
-          } else {
-            ctx.lineTo(x, y);
-          }
+            amplitude * Math.sin(x * frequency + time + layer) +
+            layer * 20;
+          ctx.lineTo(x, y);
         }
         ctx.stroke();
       }
@@ -143,11 +139,7 @@ export function AnimatedBackground({ className = '', variant = 'grid' }: Animate
       for (let i = 0; i < columns; i++) {
         const x = i * fontSize;
         const y = (Math.sin(time + i) * 0.5 + 0.5) * canvas.height;
-        
-        const char = String.fromCharCode(
-          Math.floor(Math.random() * 26) + 65
-        );
-        
+        const char = String.fromCharCode(0x30A0 + Math.random() * 96);
         ctx.fillText(char, x, y);
       }
     };
@@ -225,7 +217,7 @@ export function FloatingParticles({ count = 20, className = '' }: {
       {Array.from({ length: count }).map((_, i) => (
         <div
           key={i}
-          className="absolute w-1 h-1 bg-zion-cyan rounded-full animate-pulse"
+          className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-pulse"
           style={{
             left: `${Math.random() * 100}%`,
             top: `${Math.random() * 100}%`,
@@ -253,7 +245,7 @@ export function GradientBorder({ children, className = '', borderWidth = '2px' }
         borderRadius: 'inherit',
       }}
     >
-      <div className="bg-zion-blue-dark rounded-[inherit] h-full w-full">
+      <div className="bg-slate-800 rounded-[inherit] h-full w-full">
         {children}
       </div>
     </div>

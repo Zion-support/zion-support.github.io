@@ -3,51 +3,26 @@ export interface InnovativeITService2024 {
   name: string;
   tagline: string;
   price: string;
-  period: string;
-  description: string;
+  variant: string;
   features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
   rating: number;
-  reviews: number;
+  customers: string;
 }
 
-const contact = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
-
 export const innovativeITServices2024: InnovativeITService2024[] = [
-  // Autonomous DevOps Platform
   {
+<<<<<<< HEAD
+    id: 'cloud-automation-2024',
+    name: 'Cloud Automation Platform 2024',
+    tagline: 'Automate your cloud infrastructure',
+    price: '$199',
+    variant: 'cloud',
+    features: ['Infrastructure automation', 'Cost optimization', 'Security compliance'],
+    rating: 4.7,
+    customers: '300+'
+<<<<<<< HEAD
+=======
+=======
     id: 'autonomous-devops-platform',
     name: 'Autonomous DevOps Platform',
     tagline: 'Self-healing infrastructure with zero downtime',
@@ -97,10 +72,22 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     customers: 950,
     rating: 4.8,
     reviews: 520
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   },
 
   // Zero Trust Network Architecture
   {
+<<<<<<< HEAD
+    id: 'api-gateway-2024',
+    name: 'API Gateway 2024',
+    tagline: 'Manage and secure your APIs',
+    price: '$149',
+    variant: 'api',
+    features: ['API management', 'Rate limiting', 'Authentication'],
+    rating: 4.6,
+    customers: '400+'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
     id: 'zero-trust-network-architecture',
     name: 'Zero Trust Network Architecture',
     tagline: 'Never trust, always verify - secure by design',
@@ -468,5 +455,6 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
     customers: 720,
     rating: 4.8,
     reviews: 410
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   }
 ];

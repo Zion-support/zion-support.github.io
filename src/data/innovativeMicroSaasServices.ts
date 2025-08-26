@@ -4,6 +4,12 @@
   price: number;
   currency: string;
   pricingModel: string;
+  price: number;
+  currency: string;
+  pricingModel: 'one-time' | 'monthly' | 'yearly' | 'per-user' | 'per-project' | 'usage-based' | 'freemium';
+  price: number;
+  currency: string;
+  pricingModel: string;
   features: string[];
   benefits: string[];
   useCases: string[];
@@ -12,11 +18,14 @@
   estimatedDelivery: string;
   supportLevel: 'basic' | 'standard' | 'premium' | 'enterprise';
   supportLevel: string;
+  supportLevel: 'basic' | 'standard' | 'premium' | 'enterprise';
+  supportLevel: string;
   marketPrice: string;
   contactInfo: {
     phone: string;
     email: string;
     website: string;
+  };
   };
 import { ProductListing } from "@/types/listings";
 
@@ -52,11 +61,15 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
   competitors: string[];
   category: 'AI & Automation' | 'Business Intelligence' | 'Digital Marketing' | 'Productivity' | 'Security & Compliance' | 'Development Tools' | 'Analytics' | 'Collaboration' | 'Finance & HR' | 'Industry Specific';
   subcategory: string;
+  competitors: string[];
+  category: 'AI & Automation' | 'Business Intelligence' | 'Digital Marketing' | 'Productivity' | 'Security & Compliance' | 'Development Tools' | 'Analytics' | 'Collaboration' | 'Finance & HR' | 'Industry Specific';
+  subcategory: string;
   price: {
     starter: number;
     professional: number;
     enterprise: number;
     currency: string;
+    billingCycle: 'monthly' | 'yearly';
     billingCycle: 'monthly' | 'yearly';
   };
   features: string[];
@@ -863,6 +876,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
+    }
     }
     id: 'zion-ai-business-intelligence',
     title: 'Zion AI Business Intelligence Platform',
@@ -1695,6 +1709,8 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
   {
     id: "digital-twin-platform",
     title: "Digital Twin Platform",
+    description: "Comprehensive digital twin platform for creating virtual replicas of physical assets, processes, and systems with real-time monitoring and predictive analytics.",
+    category: "Digital Twin & Simulation",
     description: "Comprehensive digital twin platform for creating virtual replicas of physical assets, processes, and systems with real-time monitoring and predictive analytics.",
     category: "Digital Twin & Simulation",
     subcategory: "Asset Management",
@@ -2553,6 +2569,8 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
       "Hospitals and clinics",
       "Radiology departments",
       "Primary care practices",
+      "Emergency rooms",
+      "Telemedicine platforms"
       "Emergency rooms",
       "Telemedicine platforms"
     ],
@@ -3583,6 +3601,9 @@ export const NEW_INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = 
     }
   }
 ];
+    }
+  }
+];
     id: 'zion-ai-support-automation',
     title: 'Zion AI Support Automation',
     description: 'Intelligent customer support automation platform that uses AI to handle customer inquiries, route tickets, and provide instant solutions while maintaining human touch.',
@@ -4371,6 +4392,7 @@ export default INNOVATIVE_MICRO_SAAS_SERVICES;
     demoUrl: "https://demo.ziontechgroup.com/ai-content"
   }
 ];
+};
 };
 
   // AI-Powered Energy Management

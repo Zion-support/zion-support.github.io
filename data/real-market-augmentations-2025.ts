@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+export const realMarketAugmentations2025 = [
+  {
+<<<<<<< HEAD
+=======
 export interface RealMarketAugmentation2025 {
   id: string;
 <<<<<<< HEAD
@@ -40,6 +46,7 @@ export interface RealMarketAugmentation2025 {
 export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
   {
 <<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     id: "ai-market-intelligence-platform",
     title: "AI Market Intelligence Platform",
     description: "Advanced market intelligence platform that uses AI to analyze market trends, competitor activities, and customer behavior to provide actionable insights.",
@@ -162,4 +169,27 @@ export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
     features: ['Market analysis', 'Strategy development', 'Implementation support']
 >>>>>>> origin/main
   }
+<<<<<<< HEAD
 ];
+=======
+export interface RealMarketAugmentation2025 {
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  features: string[];
+}
+
+export const realMarketAugmentations2025: RealMarketAugmentation2025[] = [
+  {
+    id: 'market-augmentation-1',
+    name: 'Market Augmentation Service 1',
+    tagline: 'Enhance your market presence',
+    price: '$299',
+    features: ['Market analysis', 'Strategy development', 'Implementation support']
+  }
+];
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+];
+>>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

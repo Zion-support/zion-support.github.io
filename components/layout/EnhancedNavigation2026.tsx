@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { 
   Menu, X, ChevronDown, Rocket, Phone, Mail, MapPin,
@@ -86,8 +87,8 @@ const serviceCategories = [
 
 const companyLinks = [
   { name: 'About Us', href: '/about' },
-  { name: '2026 Services', href: '/2026-services-showcase' },
-  { name: '2026 Innovations', href: '/2026-innovations-showcase' },
+  { name: '2026 Services', href: '/2026-revolutionary-services-showcase' },
+  { name: '2026 Pricing', href: '/revolutionary-2026-pricing' },
   { name: 'News & Updates', href: '/news' },
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Blog & Resources', href: '/blog' },
@@ -95,10 +96,11 @@ const companyLinks = [
   { name: 'Contact', href: '/contact' }
 ];
 
-export default function EnhancedNavigation2026() {
+const EnhancedNavigation2026 = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -109,274 +111,275 @@ export default function EnhancedNavigation2026() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navigationItems = [
-    {
-      name: 'Services',
-      href: '/services',
-      dropdown: [
-        { name: 'AI Services', href: '/ai-services', icon: '🤖' },
-        { name: 'IT Solutions', href: '/it-services', icon: '💻' },
-        { name: 'Micro SAAS', href: '/micro-saas', icon: '🚀' },
-        { name: 'Quantum Tech', href: '/quantum-services', icon: '⚛️' },
-        { name: 'Cybersecurity', href: '/cybersecurity', icon: '🛡️' }
-      ]
-    },
-    {
-      name: 'Solutions',
-      href: '/solutions',
-      dropdown: [
-        { name: 'Enterprise', href: '/enterprise-solutions', icon: '🏢' },
-        { name: 'Startups', href: '/startup-solutions', icon: '🚀' },
-        { name: 'Healthcare', href: '/healthcare-solutions', icon: '🏥' },
-        { name: 'Finance', href: '/finance-solutions', icon: '💰' },
-        { name: 'Education', href: '/education-solutions', icon: '🎓' }
-      ]
-    },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Resources', href: '/resources' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' }
-  ];
+  const toggleDropdown = (category: string) => {
+    setActiveDropdown(activeDropdown === category ? null : category);
+  };
 
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
+  const closeDropdown = () => {
+    setActiveDropdown(null);
   };
 
   return (
-    <>
-      {/* Enhanced Navigation Bar */}
-      <motion.nav
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled 
-            ? 'bg-slate-900/95 backdrop-blur-xl border-b border-slate-700/50 shadow-2xl' 
-            : 'bg-transparent'
-        }`}
-      >
+    <motion.nav
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-black/80 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10' 
+          : 'bg-transparent'
+      }`}
+    >
+      {/* Top Contact Bar */}
+      <div className="bg-gradient-to-r from-cyan-900/90 via-purple-900/90 to-pink-900/90 border-b border-cyan-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
-            {/* Logo */}
+          <div className="flex items-center justify-between py-2 text-sm">
+            <div className="flex items-center space-x-6 text-cyan-300">
+              <div className="flex items-center space-x-2">
+                <Phone className="w-4 h-4" />
+                <span>{contactInfo.mobile}</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Mail className="w-4 h-4" />
+                <span>{contactInfo.email}</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <MapPin className="w-4 h-4" />
+                <span>{contactInfo.address}</span>
+              </div>
+            </div>
+            <div className="flex items-center space-x-4">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="flex items-center space-x-2 text-cyan-300 hover:text-cyan-200 transition-colors"
+              >
+                <SparklesIcon className="w-4 h-4" />
+                <span className="font-semibold">2026 Revolutionary Services</span>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Navigation */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="flex items-center space-x-3"
+          >
+            <div className="relative">
+              <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/25">
+                <Rocket className="w-7 h-7 text-white" />
+              </div>
+              <div className="absolute -inset-1 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-xl blur opacity-25"></div>
+            </div>
+            <div>
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Zion Tech Group
+              </h1>
+              <p className="text-xs text-cyan-300 font-medium">Revolutionary 2026</p>
+            </div>
+          </motion.div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-8">
+            {/* Service Categories */}
+            {serviceCategories.map((category) => (
+              <div key={category.title} className="relative group">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  onClick={() => toggleDropdown(category.title)}
+                  className="flex items-center space-x-2 px-4 py-2 rounded-lg text-white hover:text-cyan-300 transition-colors duration-200 group-hover:bg-white/10"
+                >
+                  <category.icon className="w-5 h-5" />
+                  <span className="font-medium">{category.title}</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                    activeDropdown === category.title ? 'rotate-180' : ''
+                  }`} />
+                </motion.button>
+
+                {/* Dropdown Menu */}
+                <AnimatePresence>
+                  {activeDropdown === category.title && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-cyan-500/20 rounded-xl shadow-2xl shadow-cyan-500/20 overflow-hidden"
+                    >
+                      <div className="p-4">
+                        <h3 className="text-lg font-semibold text-white mb-3 flex items-center space-x-2">
+                          <category.icon className="w-5 h-5" />
+                          <span>{category.title}</span>
+                        </h3>
+                        <div className="space-y-3">
+                          {category.services.map((service) => (
+                            <motion.div
+                              key={service.name}
+                              whileHover={{ scale: 1.02, x: 5 }}
+                              className="p-3 rounded-lg hover:bg-white/5 transition-colors duration-200 cursor-pointer"
+                            >
+                              <Link href={service.href} onClick={closeDropdown}>
+                                <div className="flex items-start justify-between">
+                                  <div className="flex-1">
+                                    <h4 className="text-white font-medium text-sm">{service.name}</h4>
+                                    <p className="text-gray-400 text-xs mt-1">{service.description}</p>
+                                  </div>
+                                  <div className="text-right">
+                                    <span className="text-cyan-400 font-semibold text-sm">{service.price}</span>
+                                  </div>
+                                </div>
+                              </Link>
+                            </motion.div>
+                          ))}
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
+
+            {/* Company Links */}
+            {companyLinks.map((link) => (
+              <motion.div
+                key={link.name}
+                whileHover={{ scale: 1.05 }}
+              >
+                <Link
+                  href={link.href}
+                  className="text-white hover:text-cyan-300 transition-colors duration-200 font-medium"
+                >
+                  {link.name}
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Right Side Actions */}
+          <div className="hidden lg:flex items-center space-x-4">
+            {/* Search */}
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="flex items-center space-x-3"
+              className="relative"
             >
-              <Link href="/" className="flex items-center space-x-3 group">
-                <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-white text-xl font-bold">Z</span>
-                </div>
-                <div className="hidden sm:block">
-                  <div className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
-                    Zion Tech Group
-                  </div>
-                  <div className="text-xs text-slate-400">Innovation 2026</div>
-                </div>
-              </Link>
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+              <input
+                type="text"
+                placeholder="Search services..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-64 pl-10 pr-4 py-2 bg-white/10 border border-cyan-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-transparent"
+              />
             </motion.div>
 
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
-              {navigationItems.map((item) => (
-                <div key={item.name} className="relative group">
-                  {item.dropdown ? (
-                    <div
-                      onMouseEnter={() => setActiveDropdown(item.name)}
-                      onMouseLeave={() => setActiveDropdown(null)}
-                      className="relative"
-                    >
-                      <button className="flex items-center space-x-1 text-slate-300 hover:text-white transition-colors duration-200 py-2">
-                        <span>{item.name}</span>
-                        <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
-                      </button>
-                      
-                      <AnimatePresence>
-                        {activeDropdown === item.name && (
-                          <motion.div
-                            initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                            animate={{ opacity: 1, y: 0, scale: 1 }}
-                            exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                            transition={{ duration: 0.2 }}
-                            className="absolute top-full left-0 mt-2 w-64 bg-slate-900/95 backdrop-blur-xl border border-slate-700/50 rounded-xl shadow-2xl overflow-hidden"
-                          >
-                            <div className="p-2">
-                              {item.dropdown.map((dropdownItem) => (
-                                <Link
-                                  key={dropdownItem.name}
-                                  href={dropdownItem.href}
-                                  className="flex items-center space-x-3 px-4 py-3 text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-all duration-200 group/item"
-                                >
-                                  <span className="text-lg">{dropdownItem.icon}</span>
-                                  <span className="group-hover/item:text-cyan-400 transition-colors">
-                                    {dropdownItem.name}
-                                  </span>
-                                </Link>
-                              ))}
-                            </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  ) : (
-                    <Link
-                      href={item.href}
-                      className="text-slate-300 hover:text-white transition-colors duration-200 py-2 relative group"
-                    >
-                      {item.name}
-                      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-purple-600 transition-all duration-300 group-hover:w-full"></span>
-                    </Link>
-                  )}
-                </div>
-              ))}
-            </div>
+            {/* Contact Button */}
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-200"
+            >
+              Get Started
+            </motion.button>
+          </div>
 
-            {/* CTA Buttons */}
-            <div className="hidden lg:flex items-center space-x-4">
+          {/* Mobile Menu Button */}
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden p-2 rounded-lg text-white hover:bg-white/10 transition-colors duration-200"
+          >
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </motion.button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20"
+          >
+            <div className="px-4 py-6 space-y-6">
+              {/* Mobile Search */}
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                <input
+                  type="text"
+                  placeholder="Search services..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-white/10 border border-cyan-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-transparent"
+                />
+              </div>
+
+              {/* Mobile Service Categories */}
+              <div className="space-y-4">
+                {serviceCategories.map((category) => (
+                  <div key={category.title} className="border-b border-cyan-500/20 pb-4">
+                    <h3 className="text-lg font-semibold text-white mb-3 flex items-center space-x-2">
+                      <category.icon className="w-5 h-5" />
+                      <span>{category.title}</span>
+                    </h3>
+                    <div className="space-y-2 ml-6">
+                      {category.services.slice(0, 2).map((service) => (
+                        <Link
+                          key={service.name}
+                          href={service.href}
+                          onClick={() => setIsOpen(false)}
+                          className="block text-gray-300 hover:text-cyan-300 transition-colors duration-200"
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Mobile Company Links */}
+              <div className="space-y-3">
+                {companyLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className="block text-white hover:text-cyan-300 transition-colors duration-200 font-medium"
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
+
+              {/* Mobile Contact Button */}
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-4 py-2 text-slate-300 hover:text-white transition-colors duration-200"
-              >
-                <Search className="w-5 h-5" />
-              </motion.button>
-              
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-6 py-2.5 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg shadow-lg shadow-cyan-500/25"
               >
                 Get Started
               </motion.button>
             </div>
-
-            {/* Mobile menu button */}
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 text-slate-300 hover:text-white transition-colors duration-200"
-            >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </motion.button>
-          </div>
-        </div>
-      </motion.nav>
-
-      {/* Mobile Navigation Overlay */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-40 lg:hidden"
-          >
-            {/* Backdrop */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-              onClick={() => setIsOpen(false)}
-            />
-            
-            {/* Mobile menu */}
-            <motion.div
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              className="absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-slate-900/95 backdrop-blur-xl border-l border-slate-700/50 shadow-2xl"
-            >
-              <div className="p-6">
-                {/* Mobile menu header */}
-                <div className="flex items-center justify-between mb-8">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center">
-                      <span className="text-white text-xl font-bold">Z</span>
-                    </div>
-                    <div>
-                      <div className="text-xl font-bold text-white">Zion Tech Group</div>
-                      <div className="text-xs text-slate-400">Innovation 2026</div>
-                    </div>
-                  </div>
-                  <button
-                    onClick={() => setIsOpen(false)}
-                    className="p-2 text-slate-400 hover:text-white transition-colors"
-                  >
-                    <X className="w-6 h-6" />
-                  </button>
-                </div>
-
-                {/* Mobile navigation items */}
-                <div className="space-y-2">
-                  {navigationItems.map((item) => (
-                    <div key={item.name}>
-                      {item.dropdown ? (
-                        <div className="space-y-1">
-                          <div className="px-3 py-2 text-slate-400 text-sm font-medium uppercase tracking-wider">
-                            {item.name}
-                          </div>
-                          {item.dropdown.map((dropdownItem) => (
-                            <Link
-                              key={dropdownItem.name}
-                              href={dropdownItem.href}
-                              onClick={() => setIsOpen(false)}
-                              className="flex items-center space-x-3 px-6 py-3 text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-all duration-200"
-                            >
-                              <span className="text-lg">{dropdownItem.icon}</span>
-                              <span>{dropdownItem.name}</span>
-                            </Link>
-                          ))}
-                        </div>
-                      ) : (
-                        <Link
-                          href={item.href}
-                          onClick={() => setIsOpen(false)}
-                          className="block px-3 py-2 text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-all duration-200"
-                        >
-                          {item.name}
-                        </Link>
-                      )}
-                    </div>
-                  ))}
-                </div>
-
-                {/* Mobile CTA */}
-                <div className="mt-8 pt-6 border-t border-slate-700/50">
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white rounded-lg font-medium transition-all duration-300 shadow-lg"
-                  >
-                    Get Started
-                  </motion.button>
-                </div>
-
-                {/* Contact info */}
-                <div className="mt-6 pt-6 border-t border-slate-700/50 space-y-3">
-                  <div className="flex items-center space-x-3 text-slate-400 text-sm">
-                    <Phone className="w-4 h-4" />
-                    <span>{contactInfo.mobile}</span>
-                  </div>
-                  <div className="flex items-center space-x-3 text-slate-400 text-sm">
-                    <Mail className="w-4 h-4" />
-                    <span>{contactInfo.email}</span>
-                  </div>
-                  <div className="flex items-start space-x-3 text-slate-400 text-sm">
-                    <MapPin className="w-4 h-4 mt-0.5" />
-                    <span>{contactInfo.address}</span>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* Spacer for fixed navigation */}
-      <div className="h-20" />
-    </>
+      {/* Click outside to close dropdown */}
+      {activeDropdown && (
+        <div
+          className="fixed inset-0 z-40"
+          onClick={closeDropdown}
+        />
+      )}
+    </motion.nav>
   );
-}
+};
+
+export default EnhancedNavigation2026;

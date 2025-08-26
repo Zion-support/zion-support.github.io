@@ -6,31 +6,24 @@ import { MessageSquare, ChevronDown, Users, Briefcase, Settings, BarChart3 } fro
 import { MessageSquare, ChevronDown, Brain, Shield, Cloud, Zap } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState, useRef, useEffect } from "react";
-=======
 import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-=======
 import { MessageSquare, ChevronDown, Users, Settings, HelpCircle, FileText } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState, useRef, useEffect } from "react";
-=======
 import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState, useEffect, useRef } from "react";
-=======
 import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-=======
 import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-=======
 import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-=======
 import { useTranslation } from "react-i18next";
 import {
   DropdownMenu,
@@ -60,7 +53,13 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const { t } = useTranslation();
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-=======
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -75,25 +74,20 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   }, []);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
-=======
-=======
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-=======
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-=======
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-=======
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   const baseLinks: NavigationLink[] = [
     {
       key: 'home',
       href: '/',
+      matches: (path: string) => path.startsWith('/services') || path.startsWith('/it-onsite-services') || path.startsWith('/green-it')
       key: 'about',
       href: '/about',
       matches: (path: string) => path.startsWith('/about')
-=======
       key: 'about',
       href: '/about',
       matches: (path: string) => path === '/about'
@@ -102,7 +96,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'services',
       href: '/services',
       matches: (path: string) => path.startsWith('/services')
-=======
       key: 'services',
       href: '/services',
       matches: (path: string) => path.startsWith('/services')
@@ -131,8 +124,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'services',
       href: '/services',
       matches: (path: string) => path.startsWith('/services') || path.startsWith('/it-onsite-services')
-=======
-=======
       name: 'Home',
       matches: (path: string) => path === '/'
     },
@@ -153,11 +144,9 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'services',
       href: '/services',
       matches: (path: string) => path.startsWith('/services')
-=======
       key: 'services',
       href: '/services',
       matches: (path: string) => path.startsWith('/services')
-=======
       key: 'services',
       href: '/services',
       matches: (path: string) => path.startsWith('/services') || path.startsWith('/it-onsite-services')
@@ -166,8 +155,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'micro-saas',
       href: '/micro-saas-services',
       matches: (path: string) => path.startsWith('/micro-saas-services')
-=======
-=======
       matches: (path: string) => path === '/'
     },
     {
@@ -181,17 +168,17 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith('/services')
     },
     {
+      key: 'categories',
+      href: '/categories',
+      matches: (path: string) => path.startsWith('/categories')
       key: 'services',
       href: '/services',
       matches: (path: string) => path.startsWith('/services')
-=======
       key: 'services',
       href: '/services',
       matches: (path: string) => path.startsWith('/services')
-=======
       matches: (path: string) => path.startsWith('/marketplace'),
       name: t('nav.marketplace')
-=======
       name: 'Marketplace',
       matches: (path: string) => path.startsWith('/marketplace'),
       dropdown: [
@@ -200,11 +187,9 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         { href: '/equipment', label: 'Equipment' },
         { href: '/green-it', label: 'Green IT' }
       ]
-=======
       key: 'services',
       href: '/services',
       matches: (path: string) => path.startsWith('/services')
-=======
       name: 'Marketplace',
       matches: (path: string) => path.startsWith('/marketplace'),
       dropdown: [
@@ -215,9 +200,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       ]
     },
     {
-=======
-=======
-=======
       key: 'talent',
       href: '/talent',
       key: 'ai-hiring',
@@ -228,6 +210,10 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 
   const moreLinks = [
     {
+      key: 'categories',
+      href: '/categories',
+      icon: <FileText className="w-4 h-4" />,
+      description: 'Browse service categories'
       matches: (path: string) => path.startsWith('/equipment'),
       name: t('nav.equipment')
     },
@@ -235,7 +221,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'partners',
       href: '/partners',
       matches: (path: string) => path.startsWith('/partners')
-=======
       name: 'Talent',
       matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard'),
       dropdown: [
@@ -248,7 +233,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'enterprise',
       href: '/enterprise',
       matches: (path: string) => path.startsWith('/enterprise')
-=======
       name: 'Talent',
       matches: (path: string) => path.startsWith('/talent') && !path.includes('/talent-dashboard'),
       dropdown: [
@@ -256,7 +240,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         { href: '/talents', name: 'Talent Directory' },
         { href: '/hire-ai', name: 'Hire AI' }
       ]
-=======
       key: 'equipment',
       href: '/equipment',
       matches: (path: string) => path.startsWith('/equipment')
@@ -264,30 +247,32 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     {
       key: 'community',
       href: '/community',
+      key: 'pricing',
+      href: '/pricing',
+      matches: (path: string) => path === '/pricing'
       key: 'about',
       href: '/about',
       matches: (path: string) => path === '/about'
-=======
       key: 'company',
       href: '/about',
       matches: (path: string) => path.startsWith('/about') || path.startsWith('/careers') || path.startsWith('/partners') || path.startsWith('/contact')
-=======
       matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum'),
       name: t('nav.community')
-=======
       key: 'about',
       href: '/about',
       matches: (path: string) => path === '/about'
-=======
+      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
       matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
     },
     {
       key: 'blog',
       href: '/blog',
+      key: 'blog',
+      href: '/blog',
+      matches: (path: string) => path.startsWith('/blog')
       key: 'contact',
       href: '/contact',
       matches: (path: string) => path === '/contact'
-=======
       icon: <Users className="w-4 h-4" />,
       description: 'Join our community'
     },
@@ -302,7 +287,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: '/faq',
       icon: <HelpCircle className="w-4 h-4" />,
       description: 'Frequently asked questions'
-=======
       name: 'Community',
       matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum'),
       dropdown: [
@@ -317,8 +301,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'blog',
       href: '/blog',
       matches: (path: string) => path.startsWith('/blog')
-=======
-=======
       matches: (path: string) => path.startsWith('/blog')
     }
   ];
@@ -376,7 +358,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         { name: 'Enterprise Solutions', href: '/enterprise' }
       ]
     }
-=======
   const serviceLinks = [
     { key: 'ai-analytics', href: '/ai-analytics-dashboard', name: 'AI Analytics' },
     { key: 'ai-content', href: '/ai-content-generator', name: 'AI Content Generator' },
@@ -386,7 +367,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   ];
 
   let links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) }));
-=======
       matches: (path: string) => path.startsWith('/blog'),
       name: t('nav.blog')
     }
@@ -407,14 +387,12 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
-=======
       name: 'About',
       matches: (path: string) => path.startsWith('/about') || path === '/careers' || path === '/contact'
     }
   ];
 
   let links = baseLinks;
-=======
       name: 'Community',
       matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum'),
       dropdown: [
@@ -484,7 +462,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   
   return (
     <nav className={cn("navbar ml-6 hidden lg:flex", className)}>
-=======
   const toggleDropdown = (key: string) => {
     setActiveDropdown(activeDropdown === key ? null : key);
   };
@@ -494,8 +471,27 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   return (
     <nav className={cn("navbar ml-6 hidden lg:flex", className)} ref={dropdownRef}>
       <ul className="flex items-center gap-1">
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-all duration-300 relative overflow-hidden group",
+                link.matches(location.pathname)
+                  ? "bg-gradient-to-r from-zion-purple/30 to-zion-cyan/30 text-zion-cyan shadow-lg shadow-zion-purple/20"
+                  : "text-white hover:text-zion-cyan"
+              )}
+            >
+              {/* Hover background effect */}
+              <div className={cn(
+                "absolute inset-0 bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md",
+                link.matches(location.pathname) && "opacity-100"
+              )} />
+              
+              {/* Glowing border effect */}
+              <div className={cn(
+                "absolute inset-0 rounded-md border border-transparent group-hover:border-zion-purple/30 transition-all duration-300",
+                link.matches(location.pathname) && "border-zion-cyan/50"
+              )} />
+              
+              <span className="relative z-10">{link.name}</span>
+            </Link>
           <li key={link.key} className="relative" onMouseLeave={handleDropdownClose}>
-=======
           <li key={link.name} className="relative">
             {link.dropdown ? (
               <div className="relative">
@@ -576,7 +572,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             </li>
           );
         })}
-=======
 
         {/* Service Dropdowns */}
         {serviceDropdowns.map((dropdown) => (
@@ -617,7 +612,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 </div>
               </div>
             )}
-=======
           </li>
         ))}
         
@@ -897,7 +891,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               </div>
             </div>
           )}
-=======
         {links.map((link) => (
           <li key={link.name}>
             <Link
@@ -994,12 +987,17 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 location.pathname === "/messages" || location.pathname === "/inbox"
                   ? "bg-zion-purple/20 text-zion-cyan"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-all duration-300 relative",
+                location.pathname === "/messages" || location.pathname === "/inbox"
+                  ? "bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 shadow-lg shadow-zion-purple/20"
+                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan hover:border hover:border-zion-purple/20"
               )}
               onClick={closeDropdown}
             >
               <MessageSquare className="w-4 h-4 mr-1" />
               Messages
               {unreadCount > 0 && (
+                <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center animate-pulse">
                 <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                   {unreadCount}
                 </span>

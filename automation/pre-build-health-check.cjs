@@ -1,29 +1,17 @@
 #!/usr/bin/env node
-
-// Minimal pre-build health check stub to satisfy prebuild step
-// Exits successfully after basic environment checks.
+// Minimal pre-build health check to ensure required directories exist
+const fs = require('fs');
+const path = require('path');
 
 try {
-	const fs = require('fs');
-	const path = require('path');
-
-	// Ensure required directories exist
-	const requiredDirs = [
-		'.next',
-		'automation/logs'
-	];
-	requiredDirs.forEach((dir) => {
-		try {
-			fs.mkdirSync(path.resolve(process.cwd(), dir), { recursive: true });
-		} catch (_) {}
+	const required = ['public', 'pages', 'components', 'data'];
+	required.forEach((dir) => {
+		const p = path.join(process.cwd(), dir);
+		if (!fs.existsSync(p)) fs.mkdirSync(p, { recursive: true });
 	});
-
-	// Log basic env info
-	const nodeVersion = process.version;
-	process.stdout.write(`[pre-build-health-check] Node: ${nodeVersion}\n`);
-	process.stdout.write('[pre-build-health-check] OK\n');
+	console.log('[health-check] OK');
 	process.exit(0);
-} catch (error) {
-	process.stderr.write(`[pre-build-health-check] Warning: ${error?.message || error}\n`);
-	process.exit(0); // Do not block builds on health-check
+} catch (err) {
+	console.warn('[health-check] Non-fatal warning:', err && err.message);
+	process.exit(0);
 }

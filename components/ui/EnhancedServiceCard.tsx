@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Star, Users, TrendingUp, Clock, Shield } from 'lucide-react';
+import { Star, ExternalLink, ArrowRight, TrendingUp, Users, Clock, Shield, Zap } from 'lucide-react';
 
 interface EnhancedServiceCardProps {
   service: {
@@ -43,186 +43,214 @@ interface EnhancedServiceCardProps {
     rating: number;
     reviews: number;
   };
-  index: number;
 }
 
-const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service, index }) => {
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
+const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({ service }) => {
+  const cardVariants = {
+    hidden: { opacity: 0, y: 20, scale: 0.95 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut" as const
+      }
+    },
+    hover: {
+      y: -8,
+      scale: 1.02,
+      transition: {
+        duration: 0.3,
+        ease: "easeOut" as const
+      }
+    }
+  };
+
+  const iconVariants = {
+    hidden: { rotate: -180, scale: 0 },
+    visible: { 
+      rotate: 0, 
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "backOut" as const
+      }
+    },
+    hover: {
+      rotate: 360,
+      scale: 1.1,
+      transition: {
+        duration: 0.6,
+        ease: "easeInOut" as const
+      }
+    }
   };
 
   return (
     <motion.div
-      className="group relative bg-black/40 backdrop-blur-xl border border-purple-500/20 rounded-2xl overflow-hidden hover:border-purple-500/40 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      whileHover={{ y: -5, scale: 1.02 }}
+      className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl"
+      variants={cardVariants}
+      initial="hidden"
+      whileInView="visible"
+      whileHover="hover"
+      viewport={{ once: true }}
     >
-      {/* Gradient Background */}
-      <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-5 group-hover:opacity-10 transition-opacity duration-300`} />
+      {/* Background Glow */}
+      <div 
+        className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
+        style={{
+          background: `linear-gradient(135deg, ${service.color.replace('from-', '').replace('to-', '').split(' ').map(c => `var(--tw-${c.split('-')[0]}-${c.split('-')[1]})`).join(', ')})`
+        }}
+      />
       
       {/* Popular Badge */}
       {service.popular && (
         <div className="absolute top-4 right-4 z-10">
-          <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold flex items-center space-x-1">
+          <motion.div
+            className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1"
+            initial={{ scale: 0, rotate: -180 }}
+            animate={{ scale: 1, rotate: 0 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+          >
             <Star className="w-3 h-3 fill-current" />
-            <span>Popular</span>
-          </div>
+            POPULAR
+          </motion.div>
         </div>
       )}
 
       {/* Card Content */}
-      <div className="relative z-10 p-6">
+      <div className="relative p-6">
         {/* Header */}
         <div className="flex items-start justify-between mb-4">
-          <div className="flex items-center space-x-3">
-            <div className={`text-3xl ${service.textColor}`}>
-              {service.icon}
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
-                {service.name}
-              </h3>
-              <p className="text-sm text-gray-400">{service.tagline}</p>
-            </div>
+          <motion.div
+            className={`text-4xl ${service.textColor}`}
+            variants={iconVariants}
+            initial="hidden"
+            animate="visible"
+            whileHover="hover"
+          >
+            {service.icon}
+          </motion.div>
+          
+          <div className="text-right">
+            <div className="text-2xl font-bold text-white">{service.price}</div>
+            <div className="text-sm text-gray-400">{service.period}</div>
           </div>
         </div>
 
-        {/* Price */}
-        <div className="mb-4">
-          <div className="flex items-baseline space-x-2">
-            <span className="text-3xl font-bold text-white">{service.price}</span>
-            <span className="text-gray-400">{service.period}</span>
-          </div>
-          <p className="text-sm text-gray-400 mt-1">
-            {service.trialDays} day free trial • {service.setupTime} setup
-          </p>
-        </div>
+        {/* Title & Tagline */}
+        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
+          {service.name}
+        </h3>
+        <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+          {service.tagline}
+        </p>
 
         {/* Description */}
-        <p className="text-gray-300 mb-6 leading-relaxed">
+        <p className="text-gray-400 text-sm mb-6 leading-relaxed line-clamp-3">
           {service.description}
         </p>
 
-        {/* Key Features */}
+        {/* Key Metrics */}
+        <div className="grid grid-cols-2 gap-4 mb-6">
+          <div className="text-center p-3 bg-white/5 rounded-lg border border-white/10">
+            <div className="text-cyan-400 text-lg font-bold">{service.customers}+</div>
+            <div className="text-xs text-gray-400">Customers</div>
+          </div>
+          <div className="text-center p-3 bg-white/5 rounded-lg border border-white/10">
+            <div className="text-purple-400 text-lg font-bold">{service.rating}</div>
+            <div className="text-xs text-gray-400">Rating</div>
+          </div>
+        </div>
+
+        {/* Features Preview */}
         <div className="mb-6">
-          <h4 className="text-sm font-semibold text-white mb-3 flex items-center space-x-2">
-            <Shield className="w-4 h-4 text-cyan-400" />
-            <span>Key Features</span>
+          <h4 className="text-sm font-semibold text-white mb-3 flex items-center gap-2">
+            <Zap className="w-4 h-4 text-yellow-400" />
+            Key Features
           </h4>
-          <div className="grid grid-cols-1 gap-2">
-            {service.features.slice(0, 5).map((feature, idx) => (
-              <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
+          <div className="space-y-2">
+            {service.features.slice(0, 3).map((feature, index) => (
+              <motion.div
+                key={index}
+                className="flex items-center gap-2 text-sm text-gray-300"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.1 * index }}
+              >
                 <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full" />
-                <span>{feature}</span>
-              </div>
+                {feature}
+              </motion.div>
             ))}
-            {service.features.length > 5 && (
+            {service.features.length > 3 && (
               <div className="text-xs text-gray-500 mt-2">
-                +{service.features.length - 5} more features
+                +{service.features.length - 3} more features
               </div>
             )}
           </div>
         </div>
 
-        {/* Market Data */}
-        <div className="mb-6 p-4 bg-gradient-to-r from-purple-900/20 to-blue-900/20 rounded-xl border border-purple-500/20">
-          <div className="grid grid-cols-2 gap-4 text-sm">
-            <div>
-              <div className="text-gray-400">Market Size</div>
-              <div className="text-white font-semibold">{service.marketSize}</div>
-            </div>
-            <div>
-              <div className="text-gray-400">Growth Rate</div>
-              <div className="text-white font-semibold">{service.growthRate}</div>
-            </div>
-            <div>
-              <div className="text-gray-400">ROI</div>
-              <div className="text-white font-semibold">{service.roi}</div>
-            </div>
-            <div>
-              <div className="text-gray-400">Customers</div>
-              <div className="text-white font-semibold">{service.customers.toLocaleString()}</div>
-            </div>
+        {/* Market Info */}
+        <div className="mb-6 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-lg border border-white/10">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-xs font-semibold text-white">Market Size</span>
+            <span className="text-xs text-cyan-400">{service.marketSize}</span>
+          </div>
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-xs font-semibold text-white">Growth Rate</span>
+            <span className="text-xs text-green-400">{service.growthRate}</span>
+          </div>
+          <div className="flex items-center justify-between">
+            <span className="text-xs font-semibold text-white">ROI</span>
+            <span className="text-xs text-yellow-400">{service.roi}</span>
           </div>
         </div>
 
-        {/* Stats Row */}
+        {/* Trial & Setup Info */}
         <div className="flex items-center justify-between mb-6 text-sm">
-          <div className="flex items-center space-x-2 text-gray-400">
-            <Users className="w-4 h-4" />
-            <span>{service.customers.toLocaleString()}+ users</span>
+          <div className="flex items-center gap-2 text-gray-400">
+            <Clock className="w-4 h-4" />
+            {service.trialDays} day trial
           </div>
-          <div className="flex items-center space-x-2 text-gray-400">
-            <Star className="w-4 h-4 text-yellow-400 fill-current" />
-            <span>{service.rating}/5 ({service.reviews})</span>
-          </div>
-          <div className="flex items-center space-x-2 text-gray-400">
-            <TrendingUp className="w-4 h-4 text-green-400" />
-            <span>{service.growthRate}</span>
-          </div>
-        </div>
-
-        {/* Contact Information */}
-        <div className="mb-6 p-4 bg-gradient-to-r from-gray-900/50 to-black/50 rounded-xl border border-gray-700/30">
-          <h4 className="text-sm font-semibold text-white mb-3 flex items-center space-x-2">
-            <Clock className="w-4 h-4 text-purple-400" />
-            <span>Contact Information</span>
-          </h4>
-          <div className="space-y-2 text-xs text-gray-400">
-            <div className="flex items-center space-x-2">
-              <span className="text-cyan-400">📱</span>
-              <span>{contactInfo.mobile}</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <span className="text-purple-400">✉️</span>
-              <span>{contactInfo.email}</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <span className="text-pink-400">📍</span>
-              <span>{contactInfo.address}</span>
-            </div>
+          <div className="flex items-center gap-2 text-gray-400">
+            <Shield className="w-4 h-4" />
+            {service.setupTime}
           </div>
         </div>
 
         {/* Action Buttons */}
-        <div className="flex space-x-3">
+        <div className="flex gap-3">
           <motion.a
             href={service.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-xl font-semibold text-center hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 flex items-center justify-center space-x-2 group-hover:shadow-lg group-hover:shadow-purple-500/25"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+            className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            <span>Learn More</span>
             <ExternalLink className="w-4 h-4" />
+            Learn More
           </motion.a>
           
           <motion.a
-            href={`/contact?service=${service.id}`}
-            className="px-6 py-3 border border-purple-500/30 text-purple-400 rounded-xl font-semibold hover:bg-purple-500/20 hover:border-purple-500/50 transition-all duration-200"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+            href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`}
+            className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-lg transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            Contact
+            <ArrowRight className="w-4 h-4" />
           </motion.a>
         </div>
 
-        {/* Category Badge */}
-        <div className="mt-4 flex justify-center">
-          <span className="inline-block px-3 py-1 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 text-purple-300 rounded-full text-xs font-medium border border-purple-500/30">
-            {service.category}
-          </span>
+        {/* Contact Info */}
+        <div className="mt-4 pt-4 border-t border-white/10">
+          <div className="text-xs text-gray-500 text-center">
+            Contact: {service.contactInfo.email}
+          </div>
         </div>
       </div>
 
-      {/* Hover Effect Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+      {/* Hover Effect Border */}
+      <div className="absolute inset-0 rounded-2xl border-2 border-transparent bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
     </motion.div>
   );
 };

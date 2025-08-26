@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { 
   Award, 
   Users, 
@@ -77,7 +77,7 @@ export function AboutSection() {
             </p>
 
             <Link
-              to="/about"
+              href="/about"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-neon-lg hover:scale-105 transition-all duration-300 transform"
             >
               Learn Our Story
@@ -151,7 +151,7 @@ export function AboutSection() {
 
           <div className="text-center">
             <Link
-              to="/expertise"
+              href="/expertise"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-neon-lg hover:scale-105 transition-all duration-300 transform"
             >
               Explore Our Expertise
@@ -170,7 +170,7 @@ export function AboutSection() {
             decades of combined experience in technology and business transformation.
           </p>
           <Link
-            to="/team"
+            href="/team"
             className="inline-flex items-center gap-2 px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
           >
             Meet the Team

@@ -1,309 +1,267 @@
-import { ServiceVariant } from '../types/service-variants';
-
-export interface CuttingEdgeMicroSaasService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
-}
-
-export const cuttingEdgeMicroSaas2025: CuttingEdgeMicroSaasService[] = [
-  // AI-Powered Customer Success Platform
+export const cuttingEdgeMicroSaasServices2025 = [
   {
-    id: 'ai-customer-success-platform',
-    name: 'AI Customer Success Platform',
-    tagline: 'Intelligent customer success automation with predictive churn prevention',
-    price: '$799',
-    period: '/month',
-    description: 'Advanced customer success platform using AI to predict customer behavior, automate engagement, and prevent churn through intelligent insights and proactive interventions.',
+    id: 'customer-success-ai-pro',
+    name: 'Customer Success AI Pro',
+    description: 'Intelligent customer success platform that uses AI to predict customer churn, optimize engagement strategies, and maximize customer lifetime value through predictive analytics.',
     features: [
-      'AI-powered churn prediction',
-      'Automated customer engagement',
+      'AI-powered churn prediction with 92% accuracy',
+      'Personalized engagement recommendations',
+      'Customer health scoring and monitoring',
+      'Automated success playbook creation',
+      'Real-time customer sentiment analysis',
       'Predictive analytics dashboard',
-      'Customer health scoring',
-      'Automated onboarding workflows',
-      'Real-time sentiment analysis',
-      'Success metric tracking',
-      'Integration with CRM systems',
-      'Custom automation rules',
-      'Performance analytics and reporting'
+      'Integration with CRM and support tools',
+      'Automated customer onboarding workflows',
+      'Performance metrics and reporting',
+      'Custom AI model training'
     ],
-    popular: true,
-    icon: '🎯',
-    color: 'from-blue-600 to-cyan-600',
-    textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-customer-success',
-    marketPosition: 'Competes with Gainsight ($500/user/month), Totango ($500/user/month). Our advantage: AI automation reduces manual work by 70% and improves retention rates.',
-    targetAudience: 'SaaS companies, B2B businesses, Customer success teams, Account managers, Growth teams',
-    trialDays: 21,
-    setupTime: '1-2 weeks',
-    category: 'Customer Success & Retention',
-    realService: true,
-    technology: ['Python, TensorFlow, React, PostgreSQL, Redis, Docker, AWS'],
-    integrations: ['Salesforce, HubSpot, Pipedrive, Intercom, Zendesk, Slack'],
-    useCases: ['Customer onboarding, Churn prevention, Success planning, Account expansion, Customer health monitoring'],
-    roi: 'Companies report 400% ROI through improved retention and reduced churn.',
-    competitors: ['Gainsight, Totango, ClientSuccess, ChurnZero'],
-    marketSize: '$1.2B customer success market',
-    growthRate: '35% annual growth',
-    variant: 'ai-customer-success-enterprise',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+    pricing: {
+      starter: { 
+        price: 199, 
+        period: 'month', 
+        features: ['Up to 1,000 customers', 'Basic AI features', 'Email support'] 
+      },
+      professional: { 
+        price: 499, 
+        period: 'month', 
+        features: ['Up to 10,000 customers', 'Advanced AI features', 'Priority support', 'Custom workflows'] 
+      },
+      enterprise: { 
+        price: 1299, 
+        period: 'month', 
+        features: ['Unlimited customers', 'Full AI platform', 'Dedicated specialists', '24/7 support'] 
+      }
     },
-    realImplementation: true,
-    implementationDetails: 'AI-powered customer success platform with predictive analytics, automated workflows, and comprehensive customer health monitoring.',
-    launchDate: '2025-01-15',
-    customers: 52,
-    rating: 4.8,
-    reviews: 31
+    category: 'Customer Success',
+    tags: ['Customer Success', 'AI', 'Churn Prediction', 'Engagement', 'Analytics'],
+    website: 'https://ziontechgroup.com/customer-success-ai-pro',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com'
+    },
+    marketSize: '$11.8B',
+    targetAudience: 'SaaS companies, subscription businesses, customer success teams, growth companies',
+    competitiveAdvantage: 'AI-powered churn prediction, personalized engagement, predictive analytics',
+    useCases: [
+      'Customer churn prevention',
+      'Engagement strategy optimization',
+      'Customer health monitoring',
+      'Success playbook automation',
+      'Customer lifetime value optimization'
+    ],
+    integrations: ['Salesforce', 'HubSpot', 'Intercom', 'Zendesk', 'Slack', 'Microsoft Teams'],
+    compliance: ['GDPR', 'CCPA', 'SOC2', 'Data Privacy Standards']
   },
-
-  // AI-Powered Supply Chain Optimization
   {
-    id: 'ai-supply-chain-optimization',
-    name: 'AI Supply Chain Optimization Platform',
-    tagline: 'Intelligent supply chain management with predictive analytics and automation',
-    price: '$1,299',
-    period: '/month',
-    description: 'Comprehensive supply chain platform using AI to optimize inventory, predict demand, and automate procurement processes for maximum efficiency and cost savings.',
+    id: 'quantum-supply-chain-optimizer',
+    name: 'Quantum Supply Chain Optimizer',
+    description: 'Advanced supply chain optimization platform that leverages quantum computing principles to solve complex logistics problems, reduce costs, and improve efficiency across global supply networks.',
     features: [
-      'AI-powered demand forecasting',
-      'Inventory optimization algorithms',
-      'Automated procurement workflows',
-      'Supplier performance analytics',
+      'Quantum-enhanced route optimization',
       'Real-time supply chain monitoring',
-      'Cost optimization recommendations',
+      'Predictive demand forecasting',
+      'Inventory optimization algorithms',
+      'Supplier performance analytics',
       'Risk assessment and mitigation',
-      'Integration with ERP systems',
-      'Custom optimization rules',
-      'Performance analytics dashboard'
+      'Cost optimization modeling',
+      'Sustainability impact analysis',
+      'Multi-modal transportation planning',
+      'Real-time collaboration tools'
     ],
-    popular: true,
-    icon: '📦',
-    color: 'from-green-600 to-emerald-600',
-    textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/ai-supply-chain',
-    marketPosition: 'Competes with SAP Ariba ($50,000+/year), Oracle Procurement ($40,000+/year). Our advantage: AI optimization with 50% lower costs and better performance.',
-    targetAudience: 'Manufacturing companies, Retail chains, E-commerce businesses, Logistics companies, Distribution centers',
-    trialDays: 30,
-    setupTime: '2-4 weeks',
-    category: 'Supply Chain & Logistics',
-    realService: true,
-    technology: ['Python, TensorFlow, PyTorch, React, PostgreSQL, Redis, Docker, AWS'],
-    integrations: ['SAP, Oracle, Microsoft Dynamics, NetSuite, QuickBooks, Shopify'],
-    useCases: ['Demand forecasting, Inventory management, Procurement automation, Supplier management, Cost optimization'],
-    roi: 'Companies report 500% ROI through reduced inventory costs and improved efficiency.',
-    competitors: ['SAP Ariba, Oracle Procurement, Coupa, Jaggaer'],
-    marketSize: '$15.8B supply chain management market',
-    growthRate: '18% annual growth',
-    variant: 'ai-supply-chain-enterprise',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+    pricing: {
+      starter: { 
+        price: 299, 
+        period: 'month', 
+        features: ['Basic optimization features', 'Standard analytics', 'Email support'] 
+      },
+      professional: { 
+        price: 799, 
+        period: 'month', 
+        features: ['Advanced optimization', 'Quantum algorithms', 'Priority support', 'Custom modeling'] 
+      },
+      enterprise: { 
+        price: 1999, 
+        period: 'month', 
+        features: ['Full quantum platform', 'Custom algorithms', 'Dedicated specialists', '24/7 support'] 
+      }
     },
-    realImplementation: true,
-    implementationDetails: 'AI-powered supply chain platform with predictive analytics, automated workflows, and comprehensive optimization capabilities.',
-    launchDate: '2025-01-20',
-    customers: 28,
-    rating: 4.7,
-    reviews: 19
-  },
-
-  // AI-Powered Financial Planning Platform
-  {
-    id: 'ai-financial-planning-platform',
-    name: 'AI Financial Planning Platform',
-    tagline: 'Intelligent financial planning with AI-powered insights and automated optimization',
-    price: '$599',
-    period: '/month',
-    description: 'Advanced financial planning platform using AI to analyze spending patterns, optimize budgets, and provide personalized financial recommendations for individuals and businesses.',
-    features: [
-      'AI-powered spending analysis',
-      'Automated budget optimization',
-      'Investment portfolio recommendations',
-      'Financial goal tracking',
-      'Real-time expense monitoring',
-      'Tax optimization suggestions',
-      'Risk assessment and management',
-      'Integration with banking systems',
-      'Custom financial rules',
-      'Performance analytics dashboard'
+    category: 'Supply Chain',
+    tags: ['Supply Chain', 'Quantum Computing', 'Logistics', 'Optimization', 'Analytics'],
+    website: 'https://ziontechgroup.com/quantum-supply-chain-optimizer',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com'
+    },
+    marketSize: '$15.4B',
+    targetAudience: 'Manufacturing companies, logistics providers, retail chains, e-commerce companies, distribution networks',
+    competitiveAdvantage: 'Quantum-enhanced optimization, real-time monitoring, predictive analytics',
+    useCases: [
+      'Route optimization and planning',
+      'Inventory management optimization',
+      'Supplier selection and management',
+      'Cost reduction and efficiency improvement',
+      'Risk management and mitigation'
     ],
-    popular: true,
-    icon: '💰',
-    color: 'from-yellow-600 to-orange-600',
-    textColor: 'text-yellow-400',
-    link: 'https://ziontechgroup.com/ai-financial-planning',
-    marketPosition: 'Competes with Mint (Free), YNAB ($84/year), Personal Capital (Free). Our advantage: AI-powered insights with comprehensive business and personal finance management.',
-    targetAudience: 'Individuals, Small businesses, Financial advisors, Accounting firms, Financial planning companies',
-    trialDays: 30,
-    setupTime: '1 week',
-    category: 'Financial Technology & Planning',
-    realService: true,
-    technology: ['Python, TensorFlow, React, PostgreSQL, Redis, Docker, AWS'],
-    integrations: ['Plaid, Yodlee, QuickBooks, Xero, Stripe, PayPal, Banking APIs'],
-    useCases: ['Personal finance management, Business financial planning, Investment optimization, Tax planning, Budget management'],
-    roi: 'Users report 300% ROI through improved financial decisions and automated optimization.',
-    competitors: ['Mint, YNAB, Personal Capital, Quicken'],
-    marketSize: '$4.2B personal finance management market',
-    growthRate: '12% annual growth',
-    variant: 'ai-financial-planning-enterprise',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
-    },
-    realImplementation: true,
-    implementationDetails: 'AI-powered financial planning platform with automated analysis, optimization algorithms, and comprehensive financial management capabilities.',
-    launchDate: '2025-01-25',
-    customers: 89,
-    rating: 4.6,
-    reviews: 45
+    integrations: ['ERP Systems', 'WMS Platforms', 'TMS Solutions', 'E-commerce Platforms', 'Analytics Tools'],
+    compliance: ['Supply Chain Standards', 'Logistics Regulations', 'Data Privacy Laws']
   },
-
-  // AI-Powered HR Analytics Platform
   {
-    id: 'ai-hr-analytics-platform',
-    name: 'AI HR Analytics Platform',
-    tagline: 'Intelligent HR analytics with AI-powered insights and predictive workforce planning',
-    price: '$899',
-    period: '/month',
-    description: 'Comprehensive HR analytics platform using AI to analyze employee data, predict turnover, and optimize workforce planning for improved organizational performance.',
+    id: 'blockid-verify-pro',
+    name: 'BlockID Verify Pro',
+    description: 'Revolutionary identity verification platform that combines blockchain technology with advanced biometric authentication to provide secure, tamper-proof digital identity verification.',
     features: [
-      'AI-powered employee analytics',
-      'Predictive turnover modeling',
-      'Workforce planning optimization',
-      'Performance analytics dashboard',
-      'Recruitment optimization',
+      'Blockchain-based identity verification',
+      'Multi-factor biometric authentication',
+      'Real-time identity validation',
+      'Fraud detection and prevention',
+      'Compliance with global regulations',
+      'API integration capabilities',
+      'Custom verification workflows',
+      'Audit trail and reporting',
+      'Mobile and web applications',
+      'White-label solutions'
+    ],
+    pricing: {
+      starter: { 
+        price: 149, 
+        period: 'month', 
+        features: ['Up to 1,000 verifications', 'Basic verification features', 'Email support'] 
+      },
+      professional: { 
+        price: 399, 
+        period: 'month', 
+        features: ['Up to 10,000 verifications', 'Advanced verification features', 'Priority support', 'Custom workflows'] 
+      },
+      enterprise: { 
+        price: 999, 
+        period: 'month', 
+        features: ['Unlimited verifications', 'Full verification platform', 'Dedicated specialists', '24/7 support'] 
+      }
+    },
+    category: 'Identity Verification',
+    tags: ['Identity Verification', 'Blockchain', 'Biometrics', 'Security', 'Compliance'],
+    website: 'https://ziontechgroup.com/blockid-verify-pro',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com'
+    },
+    marketSize: '$13.7B',
+    targetAudience: 'Financial institutions, healthcare organizations, government agencies, e-commerce companies, fintech startups',
+    competitiveAdvantage: 'Blockchain-based verification, biometric authentication, global compliance',
+    useCases: [
+      'Customer onboarding and verification',
+      'Employee identity verification',
+      'Government ID verification',
+      'Healthcare patient verification',
+      'Financial services compliance'
+    ],
+    integrations: ['CRM Systems', 'Banking Platforms', 'Healthcare Systems', 'E-commerce Platforms', 'Government APIs'],
+    compliance: ['KYC/AML', 'GDPR', 'CCPA', 'SOC2', 'Global Identity Standards']
+  },
+  {
+    id: 'hr-analytics-ai-suite',
+    name: 'HR Analytics AI Suite',
+    description: 'Comprehensive HR analytics platform that uses artificial intelligence to provide insights into employee performance, engagement, retention, and organizational effectiveness.',
+    features: [
+      'AI-powered performance analytics',
       'Employee engagement monitoring',
+      'Predictive turnover analysis',
+      'Recruitment optimization algorithms',
+      'Workforce planning and forecasting',
       'Diversity and inclusion analytics',
-      'Integration with HRIS systems',
-      'Custom analytics rules',
-      'Real-time reporting and alerts'
+      'Real-time performance dashboards',
+      'Custom reporting and analytics',
+      'Integration with HR systems',
+      'Predictive modeling capabilities'
     ],
-    popular: true,
-    icon: '👥',
-    color: 'from-purple-600 to-pink-600',
-    textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/ai-hr-analytics',
-    marketPosition: 'Competes with Visier ($50,000+/year), Tableau ($70/month). Our advantage: AI-powered insights with 60% lower costs and specialized HR analytics.',
-    targetAudience: 'HR departments, Recruiting agencies, Consulting firms, Large organizations, HR technology companies',
-    trialDays: 30,
-    setupTime: '2-3 weeks',
-    category: 'Human Resources & Analytics',
-    realService: true,
-    technology: ['Python, TensorFlow, PyTorch, React, PostgreSQL, Redis, Docker, AWS'],
-    integrations: ['Workday, BambooHR, ADP, Paychex, Greenhouse, Lever, BambooHR'],
-    useCases: ['Employee analytics, Turnover prediction, Workforce planning, Recruitment optimization, Performance management'],
-    roi: 'Organizations report 450% ROI through improved retention and workforce optimization.',
-    competitors: ['Visier, Tableau, Power BI, Looker'],
-    marketSize: '$2.1B HR analytics market',
-    growthRate: '22% annual growth',
-    variant: 'ai-hr-analytics-enterprise',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+    pricing: {
+      starter: { 
+        price: 249, 
+        period: 'month', 
+        features: ['Up to 500 employees', 'Basic analytics features', 'Email support'] 
+      },
+      professional: { 
+        price: 649, 
+        period: 'month', 
+        features: ['Up to 5,000 employees', 'Advanced analytics features', 'Priority support', 'Custom reporting'] 
+      },
+      enterprise: { 
+        price: 1699, 
+        period: 'month', 
+        features: ['Unlimited employees', 'Full analytics platform', 'Dedicated specialists', '24/7 support'] 
+      }
     },
-    realImplementation: true,
-    implementationDetails: 'AI-powered HR analytics platform with predictive modeling, comprehensive workforce insights, and automated analytics workflows.',
-    launchDate: '2025-01-30',
-    customers: 35,
-    rating: 4.8,
-    reviews: 22
+    category: 'HR Analytics',
+    tags: ['HR Analytics', 'AI', 'Performance Management', 'Employee Engagement', 'Predictive Analytics'],
+    website: 'https://ziontechgroup.com/hr-analytics-ai-suite',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com'
+    },
+    marketSize: '$9.8B',
+    targetAudience: 'HR departments, enterprises, consulting firms, recruitment agencies, talent management companies',
+    competitiveAdvantage: 'AI-powered HR analytics, predictive modeling, comprehensive insights',
+    useCases: [
+      'Employee performance analysis',
+      'Talent retention optimization',
+      'Recruitment process improvement',
+      'Workforce planning and forecasting',
+      'Organizational effectiveness analysis'
+    ],
+    integrations: ['Workday', 'BambooHR', 'ADP', 'SuccessFactors', 'Slack', 'Microsoft Teams'],
+    compliance: ['HR Data Privacy', 'Employment Laws', 'Data Protection Regulations']
   },
-
-  // AI-Powered Sales Intelligence Platform
   {
-    id: 'ai-sales-intelligence-platform',
-    name: 'AI Sales Intelligence Platform',
-    tagline: 'Intelligent sales automation with AI-powered lead scoring and predictive analytics',
-    price: '$699',
-    period: '/month',
-    description: 'Advanced sales intelligence platform using AI to score leads, predict sales outcomes, and automate sales processes for improved conversion rates and revenue growth.',
+    id: 'quantum-risk-financial-manager',
+    name: 'Quantum Risk Financial Manager',
+    description: 'Advanced financial risk management platform that leverages quantum computing to provide real-time risk assessment, portfolio optimization, and financial modeling for complex investment strategies.',
     features: [
-      'AI-powered lead scoring',
-      'Predictive sales analytics',
-      'Automated sales workflows',
-      'Customer behavior analysis',
-      'Real-time sales monitoring',
-      'Pipeline optimization',
-      'Revenue forecasting',
-      'Integration with CRM systems',
-      'Custom automation rules',
-      'Performance analytics dashboard'
+      'Quantum-enhanced risk modeling',
+      'Real-time portfolio optimization',
+      'Advanced financial analytics',
+      'Risk assessment and monitoring',
+      'Portfolio stress testing',
+      'Regulatory compliance reporting',
+      'Custom risk models',
+      'Real-time market data integration',
+      'Performance attribution analysis',
+      'Comprehensive risk reporting'
     ],
-    popular: true,
-    icon: '📈',
-    color: 'from-red-600 to-pink-600',
-    textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/ai-sales-intelligence',
-    marketPosition: 'Competes with HubSpot Sales Hub ($45/month), Salesforce Sales Cloud ($25/user/month). Our advantage: AI-powered insights with 40% better conversion rates.',
-    targetAudience: 'Sales teams, B2B companies, Sales training companies, Consulting firms, Sales technology companies',
-    trialDays: 21,
-    setupTime: '1-2 weeks',
-    category: 'Sales Intelligence & Automation',
-    realService: true,
-    technology: ['Python, TensorFlow, React, PostgreSQL, Redis, Docker, AWS'],
-    integrations: ['Salesforce, HubSpot, Pipedrive, Zoho CRM, Microsoft Dynamics, Slack'],
-    useCases: ['Lead scoring, Sales forecasting, Pipeline management, Customer analysis, Sales automation'],
-    roi: 'Sales teams report 500% ROI through improved conversion rates and automated processes.',
-    competitors: ['HubSpot Sales Hub, Salesforce Sales Cloud, Pipedrive, Zoho CRM'],
-    marketSize: '$3.8B sales intelligence market',
-    growthRate: '28% annual growth',
-    variant: 'ai-sales-intelligence-enterprise',
-    contactInfo: {
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+    pricing: {
+      starter: { 
+        price: 399, 
+        period: 'month', 
+        features: ['Basic risk management', 'Standard analytics', 'Email support'] 
+      },
+      professional: { 
+        price: 999, 
+        period: 'month', 
+        features: ['Advanced risk management', 'Quantum algorithms', 'Priority support', 'Custom models'] 
+      },
+      enterprise: { 
+        price: 2499, 
+        period: 'month', 
+        features: ['Full risk management platform', 'Custom algorithms', 'Dedicated specialists', '24/7 support'] 
+      }
     },
-    realImplementation: true,
-    implementationDetails: 'AI-powered sales intelligence platform with predictive analytics, automated workflows, and comprehensive sales optimization capabilities.',
-    launchDate: '2025-02-05',
-    customers: 67,
-    rating: 4.7,
-    reviews: 38
+    category: 'Financial Risk Management',
+    tags: ['Risk Management', 'Quantum Computing', 'Financial Analytics', 'Portfolio Optimization', 'Compliance'],
+    website: 'https://ziontechgroup.com/quantum-risk-financial-manager',
+    contact: {
+      phone: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com'
+    },
+    marketSize: '$28.9B',
+    targetAudience: 'Investment firms, banks, hedge funds, asset management companies, financial institutions',
+    competitiveAdvantage: 'Quantum-enhanced risk modeling, real-time optimization, advanced analytics',
+    useCases: [
+      'Portfolio risk assessment',
+      'Investment strategy optimization',
+      'Regulatory compliance reporting',
+      'Risk model development',
+      'Performance analysis and attribution'
+    ],
+    integrations: ['Bloomberg Terminal', 'Reuters Eikon', 'Trading Platforms', 'Risk Management Systems', 'Financial Data Providers'],
+    compliance: ['Basel III', 'Solvency II', 'Dodd-Frank', 'Financial Regulations', 'Risk Management Standards']
   }
 ];

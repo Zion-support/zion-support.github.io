@@ -4,65 +4,59 @@ import { motion } from 'framer-motion';
 import { 
   Mail, Phone, MapPin, Globe, 
   Twitter, Linkedin, Github, 
-  ArrowUp, Heart, Zap
+  ArrowUp, Heart, Zap, Facebook
 } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-  const services = [
-    { name: 'AI & Machine Learning', href: '/services?category=AI%20%26%20Machine%20Learning' },
-    { name: 'Blockchain & Web3', href: '/services?category=Blockchain%20%26%20Web3' },
-    { name: 'Metaverse & VR/AR', href: '/services?category=Metaverse%20%26%20VR%2FAR' },
-    { name: 'IoT & Smart Cities', href: '/services?category=IoT%20%26%20Smart%20Cities' },
-    { name: 'Quantum Computing', href: '/services?category=Quantum%20Computing' },
-    { name: 'Robotics & Automation', href: '/services?category=Robotics%20%26%20Automation' },
-    { name: 'Analytics & Business Intelligence', href: '/services?category=Analytics%20%26%20Business%20Intelligence' },
-    { name: 'Cloud & Infrastructure', href: '/services?category=Cloud%20%26%20Infrastructure' },
-    { name: 'View All Services', href: '/services' }
-  ];
-
-  const solutions = [
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Cloud Platform', href: '/cloud-platform' },
-    { name: 'AI Assistant', href: '/ai-assistant' },
-    { name: 'Analytics', href: '/analytics' },
-    { name: 'Automation', href: '/automation' },
-    { name: 'Micro SaaS', href: '/micro-saas' },
-    { name: 'Resources', href: '/resources' },
-    { name: 'Support', href: '/support' }
-  ];
-
-  const company = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Get Quote', href: '/quote' },
-    { name: 'Book Demo', href: '/demo' },
-    { name: 'Live Chat', href: '/chat' },
-    { name: 'Privacy', href: '/privacy' },
-    { name: 'Terms', href: '/terms' },
-    { name: 'Cookies', href: '/cookies' }
-  ];
-
-  const resources = [
-    { name: 'Documentation', href: '/docs' },
-    { name: 'Resources', href: '/resources' },
-    { name: 'Support Center', href: '/support' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'About', href: '/about' }
+  const footerSections = [
+    {
+      title: 'Services',
+      links: [
+        { name: 'AI & Machine Learning', href: '/services?category=ai' },
+        { name: 'Quantum Computing', href: '/services?category=quantum' },
+        { name: 'Enterprise IT', href: '/services?category=enterprise' },
+        { name: 'Micro SaaS', href: '/services?category=micro-saas' },
+        { name: 'Next-Gen Solutions', href: '/services?category=next-gen' }
+      ]
+    },
+    {
+      title: 'Company',
+      links: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'News', href: '/news' },
+        { name: 'Contact', href: '/contact' }
+      ]
+    },
+    {
+      title: 'Resources',
+      links: [
+        { name: 'Documentation', href: '/docs' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'Support', href: '/support' },
+        { name: 'API Reference', href: '/api' },
+        { name: 'Status', href: '/status' }
+      ]
+    },
+    {
+      title: 'Legal',
+      links: [
+        { name: 'Privacy Policy', href: '/privacy' },
+        { name: 'Terms of Service', href: '/terms' },
+        { name: 'Cookie Policy', href: '/cookies' },
+        { name: 'Security', href: '/security' },
+        { name: 'Compliance', href: '/compliance' }
+      ]
+    }
   ];
 
   const socialLinks = [
-    { name: 'X', href: 'https://x.com/ziontechgroup', icon: Twitter },
-    { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: Linkedin },
-    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
-    { name: 'YouTube', href: 'https://www.youtube.com/@ziontechgroup', icon: Youtube }
+    { name: 'LinkedIn', href: '/social/linkedin/', icon: <Linkedin className="w-5 h-5" /> },
+    { name: 'Facebook', href: '/social/facebook/', icon: <Facebook className="w-5 h-5" /> },
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5" /> },
   ];
 
   const scrollToTop = () => {

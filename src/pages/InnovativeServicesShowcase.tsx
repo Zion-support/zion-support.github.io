@@ -343,6 +343,15 @@ const InnovativeServicesShowcase: React.FC = () => {
             <p className="text-sm">
               <MapPin className="w-4 h-4 inline mr-2" />
               364 E Main St STE 1008, Middletown DE 19709
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-zion-blue-dark mb-6">
+              Cutting-Edge Technology Solutions
+            </h2>
+            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
+              Discover our comprehensive portfolio of innovative services designed to future-proof your business 
+              and drive digital transformation across all industries.
             </p>
           </div>
 

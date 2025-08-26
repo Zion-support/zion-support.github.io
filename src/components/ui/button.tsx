@@ -54,3 +54,10 @@ export function Button({
     </button>
   );
 }
+// Export buttonVariants for backward compatibility
+export const buttonVariants = {
+  default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',
+  outline: 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark focus:ring-zion-cyan',
+  ghost: 'text-zion-slate hover:bg-zion-slate-light focus:ring-zion-slate',
+  link: 'text-zion-cyan hover:underline focus:ring-zion-cyan'
+};

@@ -76,20 +76,17 @@ const config: Config = {
           light: "#451582",
           dark: "#000000",
         },
-        "zion-green": {
-          DEFAULT: "#10b981",
-          light: "#34d399",
-          dark: "#059669",
+        "zion-neon": {
+          DEFAULT: "#22ddd2",
+          light: "#7aeae4",
+          dark: "#14847e",
+          glow: "#22ddd2",
         },
-        "zion-pink": {
-          DEFAULT: "#ec4899",
-          light: "#f472b6",
-          dark: "#be185d",
-        },
-        "zion-amber": {
-          DEFAULT: "#f59e0b",
-          light: "#fbbf24",
-          dark: "#d97706",
+        "zion-purple": {
+          DEFAULT: "#8c15e9",
+          light: "#b971f2",
+          dark: "#530c8b",
+          neon: "#b971f2",
         },
       },
       borderRadius: {
@@ -110,53 +107,43 @@ const config: Config = {
           to: { height: "0" },
         },
         "fade-in": {
-          "0%": { opacity: "0", transform: "translateY(10px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
+          from: { opacity: "0" },
+          to: { opacity: "1" },
         },
-        "slide-in-left": {
-          "0%": { opacity: "0", transform: "translateX(-20px)" },
-          "100%": { opacity: "1", transform: "translateX(0)" },
+        "fade-out": {
+          from: { opacity: "1" },
+          to: { opacity: "0" },
         },
-        "slide-in-right": {
-          "0%": { opacity: "0", transform: "translateX(20px)" },
-          "100%": { opacity: "1", transform: "translateX(0)" },
+        "slide-in-from-top": {
+          from: { transform: "translateY(-100%)" },
+          to: { transform: "translateY(0)" },
         },
-        "float": {
-          "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-10px)" },
+        "slide-in-from-bottom": {
+          from: { transform: "translateY(100%)" },
+          to: { transform: "translateY(0)" },
         },
-        "glow": {
-          "0%, 100%": { boxShadow: "0 0 5px currentColor" },
-          "50%": { boxShadow: "0 0 20px currentColor, 0 0 30px currentColor" },
+        "slide-in-from-left": {
+          from: { transform: "translateX(-100%)" },
+          to: { transform: "translateX(0)" },
+        },
+        "slide-in-from-right": {
+          from: { transform: "translateX(100%)" },
+          to: { transform: "translateX(0)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-in": "fade-in 0.5s ease-out",
-        "slide-in-left": "slide-in-left 0.5s ease-out",
-        "slide-in-right": "slide-in-right 0.5s ease-out",
-        "float": "float 3s ease-in-out infinite",
-        "glow": "glow 2s ease-in-out infinite",
+        "fade-in": "fade-in 0.3s ease-out",
+        "fade-out": "fade-out 0.3s ease-out",
+        "slide-in-from-top": "slide-in-from-top 0.3s ease-out",
+        "slide-in-from-bottom": "slide-in-from-bottom 0.3s ease-out",
+        "slide-in-from-left": "slide-in-from-left 0.3s ease-out",
+        "slide-in-from-right": "slide-in-from-right 0.3s ease-out",
       },
     },
   },
-  plugins: [
-    animatePlugin,
-    plugin(function({ addUtilities }) {
-      const newUtilities = {
-        '.rtl': {
-          direction: 'rtl',
-          textAlign: 'right',
-        },
-        '.ltr': {
-          direction: 'ltr',
-          textAlign: 'left',
-        },
-      };
-      addUtilities(newUtilities);
-    }),
-  ],
+  plugins: [animatePlugin],
 };
 
 export default config;

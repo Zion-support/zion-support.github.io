@@ -9,6 +9,8 @@ import React from 'react';
       description: "Develop long-term technology strategy aligned with business objectives",
       features: ["Technology Roadmap", "Investment Planning", "Risk Assessment", "Success Metrics"],
       icon: "📋"
+      features: ["Technology Roadmap", "Investment Planning", "Risk Assessment", "Success Metrics"],
+      icon: "📋"
     },
     {
       title: "Vendor Selection",
@@ -19,7 +21,6 @@ import React from 'react';
     {
       icon: Target,
       title: "Project Management",
-=======
       description: "Professional project management for successful technology implementations",
       features: ["Project Planning", "Team Coordination", "Timeline Management", "Quality Assurance"],
       icon: "📊"
@@ -39,7 +40,6 @@ import React from 'react';
     { area: "Security & Compliance", solutions: ["Security assessment", "Compliance audit", "Risk management", "Security strategy"] },
     { area: "Cloud Strategy", solutions: ["Cloud assessment", "Migration planning", "Cost optimization", "Multi-cloud strategy"] }
   ];
-=======
 import Link from 'next/link';
 
   return (

@@ -13,7 +13,7 @@ import {
   Settings,
   X
 } from 'lucide-react';
-import { Button } from '../ui/button';
+import { Button } from '@/components/ui/button';
 
 // Accessibility Context
 interface AccessibilityContextType {
@@ -193,8 +193,7 @@ export const AccessibilityPanel: React.FC = () => {
                   Accessibility Settings
                 </h2>
                 <Button
-                  variant="ghost"
-                  size="sm"
+
                   onClick={() => setIsOpen(false)}
                   className="text-zion-slate-light hover:text-white"
                 >
@@ -211,8 +210,7 @@ export const AccessibilityPanel: React.FC = () => {
                     <p className="text-sm text-zion-slate-light">Increase contrast for better visibility</p>
                   </div>
                   <Button
-                    variant={highContrast ? "default" : "outline"}
-                    size="sm"
+
                     onClick={toggleHighContrast}
                     className={highContrast ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}
                   >
@@ -227,8 +225,7 @@ export const AccessibilityPanel: React.FC = () => {
                     <p className="text-sm text-zion-slate-light">Minimize animations and transitions</p>
                   </div>
                   <Button
-                    variant={reducedMotion ? "default" : "outline"}
-                    size="sm"
+
                     onClick={toggleReducedMotion}
                     className={reducedMotion ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}
                   >
@@ -243,8 +240,7 @@ export const AccessibilityPanel: React.FC = () => {
                     {(['small', 'medium', 'large'] as const).map((size) => (
                       <Button
                         key={size}
-                        variant={fontSize === size ? "default" : "outline"}
-                        size="sm"
+
                         onClick={() => setFontSize(size)}
                         className={fontSize === size ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}
                       >
@@ -261,8 +257,7 @@ export const AccessibilityPanel: React.FC = () => {
                     {(['none', 'protanopia', 'deuteranopia', 'tritanopia'] as const).map((mode) => (
                       <Button
                         key={mode}
-                        variant={colorBlindMode === mode ? "default" : "outline"}
-                        size="sm"
+
                         onClick={() => setColorBlindMode(mode)}
                         className={colorBlindMode === mode ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}
                       >

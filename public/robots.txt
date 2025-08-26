@@ -1,35 +1,40 @@
 User-agent: *
 Allow: /
 
+<<<<<<< HEAD
+# Sitemap
+Sitemap: https://ziontechgroup.com/sitemap.xml
+=======
 # Sitemap location
 Sitemap: https://ziontechgroup.com/sitemap.xml
 Sitemap: https://ziontechgroup.com/sitemap
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/website-audit-and-enhancement-ac60
 =======
+>>>>>>> origin/cursor/website-audit-and-enhancement-45a9
 =======
+>>>>>>> origin/cursor/website-audit-and-enhancement-374e
+=======
+>>>>>>> origin/cursor/website-audit-and-enhancement-d85a
 
-# Sitemap
-Sitemap: https://ziontechgroup.com/sitemap.xml
+# Allow all crawlers
+Allow: /about
+Allow: /services
+Allow: /contact
+Allow: /blog
+Allow: /careers
+Allow: /faq
+Allow: /privacy
+Allow: /terms
 
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /temp_components/
+Disallow: /static/
 
-# Allow important pages
-Allow: /
-Allow: /about
-Allow: /contact
-Allow: /portfolio
-Allow: /pricing-2025
-Allow: /comprehensive-2025-services-showcase
-Allow: /whitepapers
-Allow: /quantum-neural-network-platform
-Allow: /autonomous-business-operations-platform
-Allow: /ai-powered-it-asset-management
-
-# Crawl delay
-=======
-# Crawl-delay
+# Crawl delay (optional)
 Crawl-delay: 1
