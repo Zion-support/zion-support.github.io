@@ -68,6 +68,11 @@ class ProductionLogger {
     }
     return fn();
   }
+
+  // Log error to production (alias for error method)
+  logErrorToProduction(message, error = null) {
+    this.error(message, error);
+  }
 }
 
 // Create singleton instance
@@ -82,3 +87,4 @@ export const warn = (message, data) => productionLogger.warn(message, data);
 export const info = (message, data) => productionLogger.info(message, data);
 export const track = (eventName, parameters) => productionLogger.track(eventName, parameters);
 export const measure = (name, fn) => productionLogger.measure(name, fn);
+export const logErrorToProduction = (message, error) => productionLogger.logErrorToProduction(message, error);
