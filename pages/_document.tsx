@@ -21,7 +21,8 @@ export default class MyDocument extends Document {
 					<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 					<link rel="apple-touch-icon" href="/favicon.svg" />
 					<link rel="manifest" href="/site.webmanifest" />
-					<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+					{/* Removed global canonical to prevent duplicates; set per-page via SEO component */}
+					<meta name="viewport" content="width=device-width, initial-scale=1" />
 				</Head>
 				<body>
 					<Main />
