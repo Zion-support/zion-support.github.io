@@ -39,13 +39,8 @@
   SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,SENTRY_DSN"
   
 
-# Skip Husky for CI builds
-[build.processing]
-  skip_processing = false
-
-[build.processing.css]
-  bundle = true
-  minify = true
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
 
 [build.processing.js]
   bundle = true
