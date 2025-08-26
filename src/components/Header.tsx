@@ -57,6 +57,26 @@ const Header: React.FC = () => {
               Services
             </Link>
             <Link
+              to="/services-showcase"
+              className={`transition-colors duration-300 ${
+                isActive('/services-showcase') 
+                  ? 'text-blue-400 font-semibold' 
+                  : 'text-gray-300 hover:text-white'
+              }`}
+            >
+              Micro SAAS
+            </Link>
+            <Link
+              to="/pricing"
+              className={`transition-colors duration-300 ${
+                isActive('/pricing') 
+                  ? 'text-blue-400 font-semibold' 
+                  : 'text-gray-300 hover:text-white'
+              }`}
+            >
+              Pricing
+            </Link>
+            <Link
               to="/about"
               className={`transition-colors duration-300 ${
                 isActive('/about') 
@@ -143,6 +163,28 @@ const Header: React.FC = () => {
               onClick={closeMenu}
             >
               Services
+            </Link>
+            <Link
+              to="/services-showcase"
+              className={`block px-3 py-2 rounded-md transition-all duration-200 ${
+                isActive('/services-showcase')
+                  ? 'text-blue-400 bg-blue-600/20 font-semibold'
+                  : 'text-gray-300 hover:text-white hover:bg-gray-700'
+              }`}
+              onClick={closeMenu}
+            >
+              Micro SAAS
+            </Link>
+            <Link
+              to="/pricing"
+              className={`block px-3 py-2 rounded-md transition-all duration-200 ${
+                isActive('/pricing')
+                  ? 'text-blue-400 bg-blue-600/20 font-semibold'
+                  : 'text-gray-300 hover:text-white hover:bg-gray-700'
+              }`}
+              onClick={closeMenu}
+            >
+              Pricing
             </Link>
             <Link
               to="/about"

@@ -205,6 +205,12 @@ const Home: React.FC = () => {
               >
                 View All Services
               </Link>
+              <Link
+                to="/services-showcase"
+                className="inline-flex items-center px-8 py-3 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
+              >
+                Explore Micro SAAS Solutions
+              </Link>
             </div>
           </div>
         </section>
