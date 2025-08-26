@@ -43,8 +43,28 @@ const specialServices = [
         link: "/it-onsite-services"
     },
     {
-        title: "Micro SAAS Services",
-        link: "/micro-saas-services"
+        title: "All Services",
+        link: "/all-services"
+    },
+    {
+        title: "Expanded Services",
+        link: "/expanded-services"
+    },
+    {
+        title: "Service Comparison",
+        link: "/service-comparison"
+    },
+    {
+        title: "Cost Calculator",
+        link: "/service-calculator"
+    },
+    {
+        title: "Service Analytics",
+        link: "/service-analytics"
+    },
+    {
+        title: "Service Marketplace",
+        link: "/service-marketplace"
     }
 ];
 export function CategoriesSection({ showTitle = true }) {

@@ -1,11 +1,37 @@
-import { useContext } from 'react';
-import { AuthContext } from '@/context/auth/AuthContext';
-import type { AuthContextType } from '@/types/auth';
+import { useState, useEffect } from 'react';
 
-export const useAuth = (): AuthContextType => {
-  const context = useContext(AuthContext);
-  if (context === undefined) {
-    throw new Error('useAuth must be used within an AuthProvider');
-  }
-  return context as AuthContextType;
+interface User {
+  id: string;
+  email: string;
+  name: string;
+}
+
+export const useAuth = () => {
+  const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate auth check
+    setLoading(false);
+  }, []);
+
+  const login = async (email: string, password: string) => {
+    // Simulate login
+    setUser({
+      id: '1',
+      email,
+      name: 'User'
+    });
+  };
+
+  const logout = () => {
+    setUser(null);
+  };
+
+  return {
+    user,
+    loading,
+    login,
+    logout
+  };
 };

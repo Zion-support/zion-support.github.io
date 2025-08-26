@@ -78,13 +78,15 @@ import { SupportChatbot } from './components/SupportChatbot';
 import PrivateRoute from './components/PrivateRoute';
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
-import RecommendationsPage from './pages/Recommendations';
-import withAuth from './components/withAuth';
-
-const RecommendationsProtected = withAuth(RecommendationsPage);
-=======
 const CartPage = React.lazy(() => import('./pages/Cart'));
 const OrderSuccess = React.lazy(() => import('./pages/OrderSuccess'));
+=======
+const ExpandedServicesPage = React.lazy(() => import('./pages/ExpandedServicesPage'));
+const ServiceComparisonPage = React.lazy(() => import('./pages/ServiceComparisonPage'));
+const ServiceCalculatorPage = React.lazy(() => import('./pages/ServiceCalculatorPage'));
+const AllServicesOverviewPage = React.lazy(() => import('./pages/AllServicesOverviewPage'));
+const ServiceAnalyticsDashboard = React.lazy(() => import('./pages/ServiceAnalyticsDashboard'));
+const ServiceMarketplace = React.lazy(() => import('./pages/ServiceMarketplace'));
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -95,6 +97,12 @@ const baseRoutes = [
   { path: '/talent', element: <TalentDirectory /> },
   { path: '/talents', element: <TalentsPage /> },
   { path: '/services', element: <ServicesPage /> },
+  { path: '/expanded-services', element: <ExpandedServicesPage /> },
+  { path: '/all-services', element: <AllServicesOverviewPage /> },
+  { path: '/service-comparison', element: <ServiceComparisonPage /> },
+  { path: '/service-calculator', element: <ServiceCalculatorPage /> },
+  { path: '/service-analytics', element: <ServiceAnalyticsDashboard /> },
+  { path: '/service-marketplace', element: <ServiceMarketplace /> },
   { path: '/it-onsite-services', element: <ITOnsiteServicesPage /> },
   { path: '/it-onsite-services/:country', element: <ITOnsiteServicesPage /> },
   { path: '/categories', element: <Categories /> },

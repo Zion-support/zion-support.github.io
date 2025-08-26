@@ -1,33 +1,22 @@
-import { cn } from '@/lib/utils';
+import React from 'react';
 
 interface CheckboxProps {
-  checked: boolean;
-  onCheckedChange?: (checked: boolean) => void;
-  onChange?: () => void;
+  checked?: boolean;
+  onChange?: (checked: boolean) => void;
   className?: string;
-  disabled?: boolean;
 }
 
-export function Checkbox({ checked, onCheckedChange, onChange, className = '', disabled = false }: CheckboxProps) {
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (onCheckedChange) {
-      onCheckedChange(e.target.checked);
-    }
-    if (onChange) {
-      onChange();
-    }
-  };
-
+export const Checkbox: React.FC<CheckboxProps> = ({ 
+  checked = false, 
+  onChange, 
+  className = "" 
+}) => {
   return (
     <input
       type="checkbox"
       checked={checked}
-      onChange={handleChange}
-      disabled={disabled}
-      className={cn(
-        'h-4 w-4 rounded border-zion-blue-light bg-zion-blue-dark text-zion-cyan focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2',
-        className
-      )}
+      onChange={(e) => onChange?.(e.target.checked)}
+      className={`w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-blue-light rounded focus:ring-zion-cyan focus:ring-2 ${className}`}
     />
   );
-}
+};

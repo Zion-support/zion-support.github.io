@@ -1,53 +1,45 @@
 import React, { createContext, useContext, ReactNode } from 'react';
 
-interface WhitelabelConfig {
-  companyName: string;
-  logo: string;
-  primaryColor: string;
-  secondaryColor: string;
-  domain: string;
+interface WhitelabelContextType {
   isWhitelabel: boolean;
-  contactInfo: {
-    phone: string;
-    email: string;
-    address: string;
-  };
+  brandName: string;
+  brandLogo: string;
+  primaryColor: string;
 }
 
-const defaultConfig: WhitelabelConfig = {
-  companyName: 'Zion Tech Group',
-  logo: '/logo.svg',
-  primaryColor: '#1e40af',
-  secondaryColor: '#7c3aed',
-  domain: 'https://ziontechgroup.com',
+const defaultWhitelabelContext: WhitelabelContextType = {
   isWhitelabel: false,
-  contactInfo: {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-  }
+  brandName: 'Zion Tech Group',
+  brandLogo: '/logo.png',
+  primaryColor: '#3B82F6'
 };
 
-const WhitelabelContext = createContext<WhitelabelConfig>(defaultConfig);
+const WhitelabelContext = createContext<WhitelabelContextType>(defaultWhitelabelContext);
 
-// Explicitly type the return value so consumers get accurate typings when
-// destructuring properties from the hook result.
-export const useWhitelabel = (): WhitelabelContextType =>
-  useContext(WhitelabelContext);
+export const useWhitelabel = () => {
+  const context = useContext(WhitelabelContext);
+  if (!context) {
+    throw new Error('useWhitelabel must be used within a WhitelabelProvider');
+  }
+  return context;
+};
 
 interface WhitelabelProviderProps {
   children: ReactNode;
-  config?: Partial<WhitelabelConfig>;
+  value?: Partial<WhitelabelContextType>;
 }
 
 export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({ 
   children, 
-  config = {} 
+  value = {} 
 }) => {
-  const mergedConfig = { ...defaultConfig, ...config };
+  const contextValue = {
+    ...defaultWhitelabelContext,
+    ...value
+  };
 
   return (
-    <WhitelabelContext.Provider value={mergedConfig}>
+    <WhitelabelContext.Provider value={contextValue}>
       {children}
     </WhitelabelContext.Provider>
   );

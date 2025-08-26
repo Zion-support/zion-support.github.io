@@ -136,53 +136,16 @@ const categories = [
     features: ["Threat Detection", "Penetration Testing", "Compliance", "Incident Response"]
   },
   {
-    title: "Cloud & DevOps",
-    description: "Scalable cloud infrastructure and automation",
-    icon: <Globe className="w-10 h-10" />,
-    link: "/expanded-services",
-    color: "from-blue-500 to-cyan-600",
-    features: ["AWS/Azure", "Docker", "Kubernetes", "CI/CD"]
+    title: "Cost Calculator",
+    link: "/service-calculator"
   },
   {
-    title: "Data Analytics",
-    description: "Big data processing and business intelligence",
-    icon: <Database className="w-10 h-10" />,
-    link: "/expanded-services",
-    color: "from-emerald-500 to-green-600",
-    features: ["Big Data", "Business Intelligence", "Data Visualization", "Predictive Models"]
-  },
-];
-
-const specialServices = [
-  {
-    title: "Comprehensive Services",
-    link: "/enhanced-services",
-    icon: <Briefcase className="w-4 h-4" />
+    title: "Service Analytics",
+    link: "/service-analytics"
   },
   {
-    title: "Services Pricing",
-    link: "/services-pricing",
-    icon: <TrendingUp className="w-4 h-4" />
-  },
-  {
-    title: "AI Services",
-    link: "/ai-services",
-    icon: <Brain className="w-4 h-4" />
-  },
-  {
-    title: "Cybersecurity",
-    link: "/cybersecurity-services",
-    icon: <Shield className="w-4 h-4" />
-  },
-  {
-    title: "Cloud Solutions",
-    link: "/expanded-services",
-    icon: <Globe className="w-4 h-4" />
-  },
-  {
-    title: "Advanced Technology",
-    link: "/expanded-services",
-    icon: <Zap className="w-4 h-4" />
+    title: "Service Marketplace",
+    link: "/service-marketplace"
   }
 ];
 

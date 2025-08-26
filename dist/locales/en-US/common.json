@@ -21,19 +21,14 @@
   "nav": {
     "home": "Home",
     "marketplace": "Marketplace",
-    "micro-saas": "Micro SAAS",
     "categories": "Categories",
-    "services": "Services",
-    "micro-saas": "Micro SAAS",
     "talent": "Talent",
     "equipment": "Equipment",
     "community": "Community",
     "dashboard": "Dashboard",
     "messages": "Messages",
     "post_job": "Post Job",
-    "analytics": "Analytics",
-    "faq": "FAQ",
-    "help": "Help Center"
+    "analytics": "Analytics"
   },
   "auth": {
     "login": "Login",
