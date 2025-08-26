@@ -33,6 +33,7 @@ import { realServicesQ42025 } from '../../data/real-services-q4-2025';
 =======
 import { realQ4Services2025, } from '../../data/real-2025-q4-additions';
 import { real2025Q4Additions } from '../../data/real-2025-q4-additions';
+<<<<<<< HEAD
 import { realMarketServicesExtended } from '../../data/real-market-services-extended';
 import { real2026Additions } from '../../data/real-2026-additions';
 import { real2026Q1Additions } from '../../data/real-2026-q1-additions';
@@ -63,6 +64,9 @@ import { real2029ServiceAdditions } from '../../data/real-2029-service-additions
 =======
 import { newRealServices2025 } from '../../data/new-real-services-2025';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-cb67
+=======
+import { real2025Q4AdditionsBatch2 } from '../../data/real-2025-q4-additions-batch2';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d80e
 
 export default function ServiceSlugPage(props: { params?: { slug?: string } }) {
 	const slug = props?.params?.slug || 'service';
@@ -110,6 +114,7 @@ function getAllServices(): Service[] {
 =======
 		.concat(realQ4Services2025 as unknown as Service[])
 		.concat(real2025Q4Additions as unknown as Service[])
+<<<<<<< HEAD
 		.concat(realMarketServicesExtended as unknown as Service[])
 		.concat(real2026Q1Additions as unknown as Service[])
 <<<<<<< HEAD
@@ -145,6 +150,9 @@ function getAllServices(): Service[] {
 =======
 		.concat(newRealServices2025 as unknown as Service[]);
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-cb67
+=======
+		.concat(real2025Q4AdditionsBatch2 as unknown as Service[]);
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d80e
 }
 
 function toSlug(value: string): string {

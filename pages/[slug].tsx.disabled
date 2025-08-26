@@ -31,7 +31,14 @@ export default function ServiceFallbackPage() {
         industryRealServices as any,
         professionalServices as any,
         realEnterpriseServices2025 as any,
+<<<<<<< HEAD:pages/[slug].tsx.disabled
         realImplementationServices2025 as any
+=======
+        augmentedServicesBatch3 as any,
+        real2025Q3Additions as any,
+        realQ4Services2025 as any,
+        require('../data/real-2025-q4-additions-batch2').real2025Q4AdditionsBatch2 as any
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d80e:pages/[slug].tsx
       );
     const byLink = all.find(s => {
       try {

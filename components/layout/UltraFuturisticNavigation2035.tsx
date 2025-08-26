@@ -294,6 +294,7 @@ const navigationItems: NavigationItem[] = [
     badge: 'New',
     children: [
 <<<<<<< HEAD
+<<<<<<< HEAD
       { name: 'AI & Data', href: '/services#ai', description: 'AI, data, ML services' },
 <<<<<<< HEAD
       { name: 'Developer Tools', href: '/services#developer-tools', description: 'Dev productivity & tooling' },
@@ -318,6 +319,13 @@ const navigationItems: NavigationItem[] = [
       { name: 'SEO Automation Suite', href: '/seo-automation-suite', description: 'Technical SEO automation' },
       { name: 'IT Asset Discovery Agent', href: '/it-asset-discovery-agent', description: 'Agentless discovery' },
       { name: 'Managed Postgres HA', href: '/managed-postgres-ha', description: 'HA Postgres ops' }
+=======
+      { name: 'AI & Data', href: '/services?filter=ai-consciousness', description: 'AI, data, ML services' },
+      { name: 'Enterprise IT', href: '/services?filter=enterprise-it', description: 'Infra, security, platforms' },
+      { name: 'Quantum & Emerging', href: '/services?filter=quantum-emerging', description: 'Quantum, space, frontier' },
+      { name: 'Micro SAAS', href: '/services?filter=micro-saas', description: 'Business accelerators' },
+      { name: 'Creative & Media', href: '/services?filter=creative-media', description: 'Content, media, design' }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d80e
     ]
   },
   {
@@ -365,10 +373,14 @@ const navigationItems: NavigationItem[] = [
       { name: 'AI HR Analytics', href: '/ai-hr-analytics-platform', description: 'Transform HR with AI insights' },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2025', description: 'Emotional intelligence and self-awareness' },
 =======
       { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029', description: 'Emotional intelligence and self-awareness' },
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-ce67
+=======
+      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-2029', description: 'Emotional intelligence and self-awareness' },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d80e
       { name: 'AI Quantum Neural Network', href: '/ai-quantum-neural-network', description: 'Hybrid AI-Quantum computing platform' },
       { name: 'AI Autonomous Business Operations', href: '/ai-autonomous-business-operations', description: 'Fully autonomous business management' },
 =======
