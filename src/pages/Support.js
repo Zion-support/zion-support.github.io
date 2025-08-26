@@ -87,9 +87,7 @@ export default function Support() {
             icon: '📚',
             response: 'Always available',
             link: '/docs'
-        }
-    ];
-    const supportChannels = [
+        },
         {
             title: 'Getting Started Guide',
             description: 'Step-by-step guide to implementing our solutions',

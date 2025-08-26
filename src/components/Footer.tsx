@@ -23,7 +23,12 @@ import {
   Building,
   Award,
   Clock,
-  CheckCircle
+  CheckCircle,
+  Target,
+  ShoppingCart,
+  Server,
+  Smartphone,
+  Palette
 } from 'lucide-react';
 
 const footerNavigation = {
@@ -37,7 +42,9 @@ const footerNavigation = {
       { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Rocket },
       { name: 'Blockchain', href: '/services/blockchain', icon: Code },
       { name: 'Digital Twin', href: '/services/digital-twin', icon: Building },
-      { name: 'Sustainability', href: '/services/sustainability', icon: Heart }
+      { name: 'Sustainability', href: '/services/sustainability', icon: Heart },
+      { name: '5G Solutions', href: '/5g-enterprise-solutions', icon: Server },
+      { name: 'Mobile Development', href: '/services/mobile-development', icon: Smartphone }
     ],
   },
   microSaas: {
@@ -53,16 +60,30 @@ const footerNavigation = {
       { name: 'HR Platform', href: '/micro-saas/hr-platform' }
     ],
   },
+  solutions: {
+    title: 'Solutions',
+    items: [
+      { name: 'Enterprise Solutions', href: '/enterprise' },
+      { name: 'Startup Solutions', href: '/startup-solutions' },
+      { name: 'Healthcare Tech', href: '/solutions/healthcare' },
+      { name: 'Financial Services', href: '/solutions/financial' },
+      { name: 'Manufacturing', href: '/solutions/manufacturing' },
+      { name: 'Retail & E-commerce', href: '/solutions/retail' },
+      { name: 'Education Technology', href: '/solutions/education' },
+      { name: 'Government & Public Sector', href: '/solutions/government' }
+    ],
+  },
   marketplace: {
     title: 'Marketplace',
     items: [
-      { name: 'Products', href: '/marketplace' },
+      { name: 'Products', href: '/marketplace/products' },
       { name: 'Services', href: '/services' },
-      { name: 'Talent', href: '/talent' },
-      { name: 'Equipment', href: '/equipment' },
+      { name: 'Talent', href: '/marketplace/talent' },
+      { name: 'Equipment', href: '/marketplace/equipment' },
       { name: 'Categories', href: '/categories' },
       { name: 'Green IT', href: '/green-it' },
       { name: 'IT Onsite Services', href: '/it-onsite-services' },
+      { name: 'AI Tools', href: '/marketplace/ai-tools' }
     ],
   },
   company: {
@@ -75,6 +96,8 @@ const footerNavigation = {
       { name: 'Contact', href: '/contact' },
       { name: 'FAQ', href: '/faq' },
       { name: 'Sitemap', href: '/sitemap' },
+      { name: 'Leadership', href: '/leadership' },
+      { name: 'Press', href: '/press' }
     ],
   },
   support: {
@@ -86,6 +109,9 @@ const footerNavigation = {
       { name: 'Privacy Policy', href: '/privacy' },
       { name: 'Security', href: '/security' },
       { name: 'System Status', href: '/status' },
+      { name: 'Documentation', href: '/docs' },
+      { name: 'Training', href: '/training' },
+      { name: 'Community', href: '/community' }
     ],
   },
 };
@@ -122,7 +148,7 @@ export function Footer() {
 
       <div className="container-responsive relative z-10">
         {/* Main footer content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 mb-12">
           {/* Company info */}
           <div className="lg:col-span-2">
             <motion.div 
@@ -216,8 +242,9 @@ export function Footer() {
               <h4 className="text-lg font-semibold text-white flex items-center gap-2">
                 {section.title === 'Services' && <Zap className="w-5 h-5 text-zion-cyan" />}
                 {section.title === 'Micro SAAS' && <Code className="w-5 h-5 text-zion-purple" />}
-                {section.title === 'Marketplace' && <Building className="w-5 h-5 text-zion-blue" />}
-                {section.title === 'Company' && <Users className="w-5 h-5 text-zion-cyan" />}
+                {section.title === 'Solutions' && <Target className="w-5 h-5 text-zion-blue" />}
+                {section.title === 'Marketplace' && <ShoppingCart className="w-5 h-5 text-zion-blue" />}
+                {section.title === 'Company' && <Building className="w-5 h-5 text-zion-cyan" />}
                 {section.title === 'Support & Resources' && <Award className="w-5 h-5 text-zion-purple" />}
                 {section.title}
               </h4>
@@ -262,6 +289,10 @@ export function Footer() {
             <span className="text-zion-slate-light">•</span>
             <Link to="/cookies" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
               Cookies
+            </Link>
+            <span className="text-zion-slate-light">•</span>
+            <Link to="/accessibility" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
+              Accessibility
             </Link>
           </div>
         </motion.div>

@@ -27,7 +27,14 @@ import {
   Video,
   FileText,
   Heart,
-  PanelLeft
+  PanelLeft,
+  Building,
+  ShoppingCart,
+  Settings,
+  Target,
+  Palette,
+  Smartphone,
+  Server
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 
@@ -78,12 +85,14 @@ export function AppHeader() {
         { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Rocket },
         { name: 'Blockchain', href: '/services/blockchain', icon: Lock },
         { name: 'Digital Twin', href: '/services/digital-twin', icon: Globe },
-        { name: 'Sustainability', href: '/services/sustainability', icon: Heart }
+        { name: 'Sustainability', href: '/services/sustainability', icon: Heart },
+        { name: '5G Solutions', href: '/services/5g-solutions', icon: Network },
+        { name: 'Mobile Development', href: '/services/mobile-development', icon: Smartphone }
       ]
     },
     {
       name: 'Micro SAAS',
-      href: '/micro-saas',
+      href: '/micro-saas-services',
       icon: Code,
       dropdown: [
         { name: 'AI Business Intelligence', href: '/micro-saas/ai-business-intelligence' },
@@ -99,14 +108,27 @@ export function AppHeader() {
     {
       name: 'IT Services',
       href: '/it-services',
-      icon: Network,
+      icon: Server,
       dropdown: [
         { name: 'Infrastructure', href: '/it-services/infrastructure' },
         { name: 'Digital Transformation', href: '/it-services/digital-transformation' },
         { name: 'Consulting', href: '/it-services/consulting' },
         { name: 'Onsite Support', href: '/it-services/onsite-support' },
-        { name: 'Green IT', href: '/it-services/green-it' },
-        { name: '5G Solutions', href: '/it-services/5g-solutions' }
+        { name: 'Green IT', href: '/green-it' },
+        { name: '5G Solutions', href: '/5g-enterprise-solutions' }
+      ]
+    },
+    {
+      name: 'Solutions',
+      href: '/solutions',
+      icon: Target,
+      dropdown: [
+        { name: 'Enterprise Solutions', href: '/enterprise' },
+        { name: 'Startup Solutions', href: '/startup-solutions' },
+        { name: 'Healthcare Tech', href: '/solutions/healthcare' },
+        { name: 'Financial Services', href: '/solutions/financial' },
+        { name: 'Manufacturing', href: '/solutions/manufacturing' },
+        { name: 'Retail & E-commerce', href: '/solutions/retail' }
       ]
     },
     {
@@ -117,20 +139,24 @@ export function AppHeader() {
         { name: 'Products', href: '/marketplace/products' },
         { name: 'Talent', href: '/marketplace/talent' },
         { name: 'Equipment', href: '/marketplace/equipment' },
-        { name: 'Services', href: '/marketplace/services' }
+        { name: 'Services', href: '/marketplace/services' },
+        { name: 'AI Tools', href: '/marketplace/ai-tools' },
+        { name: 'Software', href: '/marketplace/software' }
       ]
     },
     {
       name: 'Company',
       href: '/about',
-      icon: Users,
+      icon: Building,
       dropdown: [
         { name: 'About Us', href: '/about' },
         { name: 'Team', href: '/team' },
         { name: 'Careers', href: '/careers' },
         { name: 'Partners', href: '/partners' },
         { name: 'Blog', href: '/blog' },
-        { name: 'Contact', href: '/contact' }
+        { name: 'Contact', href: '/contact' },
+        { name: 'Leadership', href: '/leadership' },
+        { name: 'Press', href: '/press' }
       ]
     }
   ];
@@ -392,16 +418,3 @@ export function AppHeader() {
     </>
   );
 }
-
-// Missing icon component
-const ShoppingCart = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m6 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
-  </svg>
-);
-
-const Server = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
-  </svg>
-);
