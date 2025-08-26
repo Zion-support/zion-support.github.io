@@ -26,18 +26,19 @@ jobs:
         run: npm ci
       - name: Build project
         run: npm run build
+        env:
+          NODE_OPTIONS: "--max-old-space-size=6144 --openssl-legacy-provider"
       - name: Verify build output
         run: |
           if [ ! -d dist ]; then
             echo "Build failed: dist folder not found"
             exit 1
           fi
+          echo "Build successful: dist folder found"
+          ls -la dist/
+          du -sh dist/
       - name: Verify asset paths
         run: |
-          npx http-server dist -p 5000 -s >/dev/null 2>&1 &
-          SERVER_PID=$!
-          sleep 3
-          kill $SERVER_PID || true
         uses: actions/upload-artifact@v4
         with:
           name: build

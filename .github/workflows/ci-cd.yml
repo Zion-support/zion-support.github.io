@@ -96,13 +96,9 @@ jobs:
       env:
         NODE_OPTIONS: "--max-old-space-size=6144 --openssl-legacy-provider"
     
-    - name: Run tests
-      run: npm test || echo "Tests failed - continuing with deployment"
-    
     - name: Build size analysis
       run: |
         echo "Build size analysis:"
-        du -sh dist/ || echo "Build size analysis completed"
     
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4

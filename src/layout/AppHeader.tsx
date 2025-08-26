@@ -10,20 +10,8 @@ export function AppHeader() {
     }
   };
 
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
               </button>
             </form>
 
-
-            {/* Mobile menu button */}
-            <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              )}
-            </button>
-          </div>
-        </div>
   );
 }
