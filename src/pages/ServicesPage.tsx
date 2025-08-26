@@ -1,241 +1,184 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Server, 
-  Zap, 
-  Globe, 
-  Cpu, 
-  Database,
-  Network,
-  Lock,
-  Code,
-  Rocket,
-  Users
-} from 'lucide-react';
+import React, { useEffect, useState } from "react";
+import { DynamicListingPage } from "@/components/DynamicListingPage";
+import { ProductListing } from "@/types/listings";
+import { SERVICES } from "@/data/servicesData";
+import { TrustedBySection } from "@/components/TrustedBySection";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { Globe } from "lucide-react";
+import apiClient from "@/services/apiClient";
+import { toast } from "@/hooks/use-toast";
+import retry from "@/utils/retry";
 
-const ServicesPage: React.FC = () => {
-  const services = [
+function getRandomItem<T>(arr: T[]): T {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+function generateRandomService(idNum: number): ProductListing {
+  const templates = [
     {
-      icon: Brain,
-      title: 'AI & Machine Learning',
-      description: 'Cutting-edge artificial intelligence solutions including machine learning models, natural language processing, and predictive analytics.',
-      features: ['Custom AI Models', 'ML Pipeline Development', 'Predictive Analytics', 'Computer Vision'],
-      link: '/services/ai',
-      color: 'from-blue-500 to-cyan-500'
+      title: "Digital Transformation Strategy",
+      category: "Strategy",
+      min: 6000,
+      max: 14000,
+      tags: ["Transformation", "Strategy", "Business"],
     },
-    {
-      icon: Cloud,
-      title: 'Cloud & DevOps',
-      description: 'Scalable cloud infrastructure, automated deployment pipelines, and comprehensive DevOps solutions.',
-      features: ['Cloud Migration', 'CI/CD Pipelines', 'Infrastructure as Code', 'Cloud Security'],
-      link: '/services/cloud',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Advanced security solutions protecting your digital assets from evolving cyber threats.',
-      features: ['Threat Detection', 'Security Audits', 'Incident Response', 'Compliance'],
-      link: '/services/cybersecurity',
-      color: 'from-red-500 to-orange-500'
-    },
-    {
-      icon: Server,
-      title: 'IT Infrastructure',
-      description: 'Robust and scalable infrastructure solutions designed for modern business needs.',
-      features: ['Network Design', 'Server Management', 'Storage Solutions', 'Backup & Recovery'],
-      link: '/services/infrastructure',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: Zap,
-      title: 'Digital Transformation',
-      description: 'End-to-end digital transformation services to modernize your business operations.',
-      features: ['Process Automation', 'Legacy Modernization', 'Digital Strategy', 'Change Management'],
-      link: '/services/transformation',
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      icon: Cpu,
-      title: 'Quantum Computing',
-      description: 'Next-generation quantum computing solutions for complex computational challenges.',
-      features: ['Quantum Algorithms', 'Quantum Software', 'Research & Development', 'Consulting'],
-      link: '/services/quantum',
-      color: 'from-indigo-500 to-purple-500'
+  ];
+
+  const authors = [
+    "Global AI Experts",
+    "InnovateTech",
+    "SecureFuture",
+    "CloudOps Partners",
+    "DataVisor",
+    "NexGen Solutions",
+  ];
+
+  const images = [
+    "https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&h=500",
+    "https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500",
+    "https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500",
+    "https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500",
+  ];
+
+  const template = getRandomItem(templates);
+  const author = getRandomItem(authors);
+  const price = Math.round(
+    Math.random() * (template.max - template.min) + template.min
+  );
+
+  return {
+    id: `auto-service-${idNum}`,
+    title: template.title,
+    description: `Professional ${template.title.toLowerCase()} with industry-standard practices and tailored solutions for your business.`,
+    category: template.category,
+    price,
+    currency: "$",
+    tags: template.tags,
+    author: { name: author, id: author.toLowerCase().replace(/\s+/g, "-") },
+    images: [getRandomItem(images)],
+    createdAt: new Date().toISOString(),
+    aiScore: Math.floor(90 + Math.random() * 10),
+    rating: parseFloat((4 + Math.random()).toFixed(1)),
+    reviewCount: Math.floor(50 + Math.random() * 150),
+  };
+}
+
+// Filter options specific to services
+const SERVICE_FILTERS = [
+  { label: 'Development', value: 'development' },
+  { label: 'Management', value: 'management' },
+  { label: 'Security', value: 'security' },
+  { label: 'Analytics', value: 'analytics' },
+  { label: 'Consulting', value: 'consulting' },
+  { label: 'Strategy', value: 'strategy' },
+];
+
+export default function ServicesPage() {
+  const [listings, setListings] = useState<ProductListing[]>(SERVICES);
+
+  useEffect(() => {
+    async function load() {
+      try {
+        // apiClient prefixes the path with "/api", so this hits "/api/services"
+        const res = await retry(() => apiClient.get('/services'));
+        setListings(res.data as ProductListing[]);
+      } catch (err) {
+        console.error('Failed to fetch services', err);
+        toast.error('Failed to load services. Showing sample data.');
+        setListings(SERVICES);
+      }
     }
-  ];
 
-  const additionalServices = [
-    {
-      icon: Database,
-      title: 'Data Analytics',
-      description: 'Transform raw data into actionable insights with advanced analytics and visualization.',
-      link: '/services/data-analytics'
-    },
-    {
-      icon: Network,
-      title: 'Blockchain & Web3',
-      description: 'Decentralized solutions and blockchain technology for the future of digital business.',
-      link: '/services/blockchain'
-    },
-    {
-      icon: Lock,
-      title: 'Compliance & Governance',
-      description: 'Ensure your business meets regulatory requirements with our compliance solutions.',
-      link: '/services/compliance'
-    },
-    {
-      icon: Code,
-      title: 'Custom Development',
-      description: 'Tailored software solutions designed specifically for your business requirements.',
-      link: '/services/custom-development'
-    }
-  ];
-
-  const industries = [
-    'Healthcare',
-    'Finance',
-    'Manufacturing',
-    'Retail',
-    'Education',
-    'Government',
-    'Energy',
-    'Transportation'
-  ];
+    load();
+  }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Services</span>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent">
+            Our Services
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Comprehensive technology solutions designed to drive innovation, enhance efficiency, and secure your digital future.
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Comprehensive technology solutions designed to transform your business and drive innovation across all industries.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
             >
-              Get Started
+              Get Started Today
             </Link>
             <Link
-              to="/comprehensive-pricing-2025"
-              className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+              to="/case-studies"
+              className="border-2 border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
             >
-              View Pricing
+              View Our Work
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Core Services */}
+      {/* Services Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-white text-center mb-16">Core Services</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-slate-700/50 rounded-xl p-6 hover:bg-slate-700/70 transition-all duration-300 hover:scale-105">
-                <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6`}>
-                  <service.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                <p className="text-gray-300 mb-6">{service.description}</p>
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  to={service.link}
-                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors font-medium"
-                >
-                  Learn More
-                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
+            <div className="p-8 rounded-xl bg-slate-800/50 hover:bg-slate-800/70 transition-all duration-300 border border-slate-700/50">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6">
+                <Globe className="w-8 h-8 text-white" />
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Additional Services */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-white text-center mb-16">Additional Services</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {additionalServices.map((service, index) => (
-              <div key={index} className="text-center p-6 rounded-xl bg-slate-700/50 hover:bg-slate-700/70 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <service.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 text-sm mb-4">{service.description}</p>
-                <Link
-                  to={service.link}
-                  className="text-blue-400 hover:text-blue-300 transition-colors text-sm font-medium"
-                >
-                  Learn More →
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Industries We Serve */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-white text-center mb-16">Industries We Serve</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {industries.map((industry, index) => (
-              <div key={index} className="text-center p-6 rounded-xl bg-slate-700/50 hover:bg-slate-700/70 transition-all duration-300">
-                <h3 className="text-lg font-semibold text-white">{industry}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-white text-center mb-16">Why Choose Zion Tech Group?</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Rocket className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Innovation First</h3>
-              <p className="text-gray-300">We stay ahead of technology trends, ensuring your solutions are future-proof and cutting-edge.</p>
+              <h3 className="text-2xl font-semibold text-white mb-4">AI & Machine Learning</h3>
+              <p className="text-gray-300 mb-6">
+                Cutting-edge artificial intelligence solutions including machine learning models, natural language processing, and predictive analytics.
+              </p>
+              <Link
+                to="/services/ai"
+                className="text-blue-400 hover:text-blue-300 transition-colors font-medium"
+              >
+                Learn More →
+              </Link>
             </div>
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-white" />
+
+            <div className="p-8 rounded-xl bg-slate-800/50 hover:bg-slate-800/70 transition-all duration-300 border border-slate-700/50">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6">
+                <Globe className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Proven Expertise</h3>
-              <p className="text-gray-300">15+ years of experience delivering successful technology solutions across industries.</p>
+              <h3 className="text-2xl font-semibold text-white mb-4">Cloud & DevOps</h3>
+              <p className="text-gray-300 mb-6">
+                Scalable cloud infrastructure, automated deployment pipelines, and comprehensive DevOps solutions.
+              </p>
+              <Link
+                to="/services/cloud"
+                className="text-purple-400 hover:text-purple-300 transition-colors font-medium"
+              >
+                Learn More →
+              </Link>
             </div>
-            <div className="text-center p-6">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-white" />
+
+            <div className="p-8 rounded-xl bg-slate-800/50 hover:bg-slate-800/70 transition-all duration-300 border border-slate-700/50">
+              <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg flex items-center justify-center mb-6">
+                <Globe className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Dedicated Support</h3>
-              <p className="text-gray-300">24/7 support and maintenance to ensure your systems run smoothly and efficiently.</p>
+              <h3 className="text-2xl font-semibold text-white mb-4">Cybersecurity</h3>
+              <p className="text-gray-300 mb-6">
+                Advanced security solutions protecting your digital assets from evolving cyber threats.
+              </p>
+              <Link
+                to="/services/cybersecurity"
+                className="text-red-400 hover:text-red-300 transition-colors font-medium"
+              >
+                Learn More →
+              </Link>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Trusted By Section */}
+      <TrustedBySection />
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -262,6 +205,4 @@ const ServicesPage: React.FC = () => {
       </section>
     </div>
   );
-};
-
-export default ServicesPage;
+}
