@@ -12,7 +12,7 @@ import {
   Cloud, 
   Database, 
   Cpu, 
-  Blockchain, 
+  Link, 
   Smartphone, 
   Building2, 
   FlaskConical,
@@ -67,7 +67,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index, viewMode }) =
       case 'IoT & Edge Computing':
         return <Cpu className="w-6 h-6" />;
       case 'Blockchain & Web3':
-        return <Blockchain className="w-6 h-6" />;
+        return <Link className="w-6 h-6" />;
       case 'Mobile & Web Development':
         return <Smartphone className="w-6 h-6" />;
       case 'Enterprise Software':
