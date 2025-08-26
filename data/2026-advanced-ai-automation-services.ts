@@ -329,3 +329,6 @@ export const getAIAutomationServicesByPriceRange = (minPrice: number, maxPrice: 
     return price >= minPrice && (maxPrice === Infinity || price <= maxPrice);
   });
 };
+
+// Export with 2026 naming for compatibility
+export const advancedAIAutomationServices2026 = advancedAIAutomationServices;

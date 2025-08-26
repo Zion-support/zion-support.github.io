@@ -48,6 +48,8 @@ const Home: NextPage = () => {
               </a>
             </div>
           </section>
+        </main>
+      </div>
 
       <AnimatedBackground className="pointer-events-none" />
 

@@ -75,6 +75,10 @@ const AIFinancialTrading = lazy(() => import('./pages/services/AIFinancialTradin
 const AISupplyChainOptimization = lazy(() => import('./pages/services/AISupplyChainOptimization'));
 const AICustomerServiceAutomation = lazy(() => import('./pages/services/AICustomerServiceAutomation'));
 
+// Enhanced Zion Tech Group Services 2025
+const EnhancedZionTechServices2025 = lazy(() => import('./pages/EnhancedZionTechServices2025'));
+const ComprehensiveZionTechPricing2025 = lazy(() => import('./pages/ComprehensiveZionTechPricing2025'));
+
 // Missing pages from analysis
 const QuantumNeuralNetworkPlatform = lazy(() => import('./pages/QuantumNeuralNetworkPlatform'));
 const AutonomousBusinessOperationsPlatform = lazy(() => import('./pages/AutonomousBusinessOperationsPlatform'));
@@ -215,6 +219,12 @@ const baseRoutes = [
   { path: '/ultimate-services-2026', element: <UltimateServicesShowcase2026 /> },
   { path: '/comprehensive-pricing-2026', element: <ComprehensivePricing2026 /> },
   { path: '/pricing-2026', element: <ComprehensivePricing2026 /> },
+  
+  // Enhanced Zion Tech Group Services 2025
+  { path: '/enhanced-zion-tech-services-2025', element: <EnhancedZionTechServices2025 /> },
+  { path: '/zion-tech-services', element: <EnhancedZionTechServices2025 /> },
+  { path: '/zion-tech-pricing-2025', element: <ComprehensiveZionTechPricing2025 /> },
+  { path: '/pricing', element: <ComprehensiveZionTechPricing2025 /> },
   
   // Other routes
   { path: '/match', element: <AIMatcherPage /> },

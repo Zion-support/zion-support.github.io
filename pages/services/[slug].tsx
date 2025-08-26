@@ -5,7 +5,6 @@ import Button from '../../components/ui/Button';
 import Card from '../../components/ui/Card';
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
-<<<<<<< HEAD
 import { extraServices } from '../../data/extra-services';
 import { additionalEnhancedServices } from '../../data/additional-real-services';
 import { newlyAddedServices } from '../../data/newly-added-services';
@@ -17,18 +16,9 @@ import { verified2025Additions } from '../../data/verified-2025-additions';
 import { realServicesQ12025 } from '../../data/real-services-q1-2025';
 import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
 import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2';
-// import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
-// import { additionalLiveServices2025 } from '../../data/additional-live-services-2025';
-// import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
-// import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3';
-// import { realServicesQ22025 } from '../../data/real-services-q2-2025';
-// import { realServicesQ32025 } from '../../data/real-services-q3-2025';
-import { realQ4Services2025, } from '../../data/real-2025-q4-additions';
+import { realQ4Services2025 } from '../../data/real-2025-q4-additions';
 import { real2025Q4Additions } from '../../data/real-2025-q4-additions';
-// import { realMarketServicesExtended } from '../../data/real-market-services-extended';
-// import { real2026Additions } from '../../data/real-2026-additions';
 import { real2026Q1Additions } from '../../data/real-2026-q1-additions';
-// import { added2026Q2Services } from '../../data/added-2026-q2-services';
 import { real2026Q3Additions } from '../../data/real-2026-q3-additions';
 import { real2026Q4Additions } from '../../data/real-2026-q4-additions';
 import { real2026Q4NewServices } from '../../data/real-2026-q4-new-services';
@@ -36,10 +26,8 @@ import { real2027Q1Additions } from '../../data/real-2027-q1-additions';
 import { real2027Q2Additions } from '../../data/real-2027-q2-additions';
 import { real2027Q3Additions } from '../../data/real-2027-q3-additions';
 import { real2027Q4Additions } from '../../data/real-2027-q4-additions';
-=======
 import { innovativeMicroSaasServices2025 } from '../../src/data/innovativeMicroSaasServices2025';
 import { enhancedMicroSaasServices2025 } from '../../src/data/enhancedMicroSaasServices2025';
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-a8d7
 
 type Service = typeof ultimateInnovativeServices2026[number];
 
@@ -52,7 +40,6 @@ const contactInfo = {
 
 function getAllServices(): Service[] {
 	return enhancedRealMicroSaasServices
-<<<<<<< HEAD
 		.concat(extraServices as Service[], additionalEnhancedServices as Service[])
 		.concat(newlyAddedServices as unknown as Service[])
 		.concat(curatedMarketServices as Service[])
@@ -63,32 +50,24 @@ function getAllServices(): Service[] {
 		.concat(realServicesQ12025 as unknown as Service[])
 		.concat(realEnterpriseServices2025 as unknown as Service[])
 		.concat(verifiedRealServices2025Batch2 as unknown as Service[])
-		// .concat(realMarketAugmentations2025 as unknown as Service[])
-		// .concat(additionalLiveServices2025 as unknown as Service[])
-		// .concat(real2025Q2Additions as unknown as Service[])
-		// .concat(augmentedServicesBatch3 as unknown as Service[])
-		// .concat(realServicesQ22025 as unknown as Service[])
-		// .concat(realServicesQ32025 as unknown as Service[])
 		.concat(realQ4Services2025 as unknown as Service[])
 		.concat(real2025Q4Additions as unknown as Service[])
-		// .concat(realMarketServicesExtended as unknown as Service[])
-		// .concat(real2026Additions as unknown as Service[])
 		.concat(real2026Q1Additions as unknown as Service[])
-		// .concat(added2026Q2Services as unknown as Service[])
 		.concat(real2026Q3Additions as unknown as Service[])
 		.concat(real2026Q4Additions as unknown as Service[])
 		.concat(real2026Q4NewServices as unknown as Service[])
 		.concat(real2027Q1Additions as unknown as Service[])
 		.concat(real2027Q2Additions as unknown as Service[])
 		.concat(real2027Q3Additions as unknown as Service[])
-		.concat(real2027Q4Additions as unknown as Service[]);
-=======
+		.concat(real2027Q4Additions as unknown as Service[])
 		.concat(innovativeMicroSaasServices2025 as Service[])
 		.concat(enhancedMicroSaasServices2025 as Service[]);
->>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-a8d7
 }
 
-function toSlug(value: string): string {
+function toSlug(value: any): string {
+	if (typeof value !== 'string') {
+		return '';
+	}
 	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
 
@@ -117,8 +96,8 @@ export async function getStaticPaths() {
 			continue;
 		}
 		// Fall back to normalized id or name to provide a stable URL under /services/*
-		if (s.id) slugs.add(toSlug(s.id));
-		else if (s.name) slugs.add(toSlug(s.name));
+		if (s.id && toSlug(s.id)) slugs.add(toSlug(s.id));
+		else if (s.name && toSlug(s.name)) slugs.add(toSlug(s.name));
 	}
 
 	return {
@@ -138,7 +117,11 @@ export async function getStaticPaths() {
 	});
 
 	if (!service) {
-		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug);
+		service = services.find((s) => {
+			const idSlug = s.id ? toSlug(s.id) : '';
+			const nameSlug = s.name ? toSlug(s.name) : '';
+			return idSlug === incomingSlug || nameSlug === incomingSlug;
+		});
 	}
 
 	if (!service) {
@@ -156,7 +139,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 			<Head>
 				<title>{service.name} | Zion Tech Group</title>
 				<meta name="description" content={service.tagline || service.description} />
-				<link rel="canonical" href={service.link || `https://ziontechgroup.com/services/${(service.id || service.name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`} />
+				<link rel="canonical" href={service.link || `https://ziontechgroup.com/services/${toSlug(service.id || service.name || '')}`} />
 				<script
 					type="application/ld+json"
 					dangerouslySetInnerHTML={{
@@ -174,7 +157,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 								},
 								offers: {
 									"@type": "Offer",
-									price: (service.price || '').replace(/[^0-9.]/g, ''),
+									price: typeof service.price === 'string' ? service.price.replace(/[^0-9.]/g, '') : String(service.price || ''),
 									priceCurrency: "USD",
 									availability: "https://schema.org/InStock"
 								}
