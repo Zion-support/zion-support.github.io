@@ -29,7 +29,9 @@ import {
   Phone,
   Mail,
   MapPin,
-  Globe as GlobeIcon
+  Globe as GlobeIcon,
+  ShoppingCart,
+  Building
 } from 'lucide-react';
 import { SEO } from "@/components/SEO";
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
@@ -43,6 +45,7 @@ export default function ServicesPage() {
   const categories = [
     { id: 'all', name: 'All Services', icon: Zap, color: 'from-zion-cyan to-zion-blue' },
     { id: 'ai-analytics', name: 'AI & Analytics', icon: Brain, color: 'from-zion-cyan to-zion-purple' },
+    { id: 'ai-finance', name: 'AI Finance', icon: DollarSign, color: 'from-zion-green to-zion-cyan' },
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-zion-purple to-zion-red' },
     { id: 'quantum-computing', name: 'Quantum Computing', icon: Rocket, color: 'from-zion-blue to-zion-cyan' },
     { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-zion-purple to-zion-blue' },
@@ -50,7 +53,13 @@ export default function ServicesPage() {
     { id: 'content-creation', name: 'Content Creation', icon: Code, color: 'from-zion-orange to-zion-purple' },
     { id: 'hr-talent', name: 'HR & Talent', icon: Users, color: 'from-zion-pink to-zion-purple' },
     { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-zion-green to-zion-blue' },
-    { id: 'digital-twin', name: 'Digital Twin', icon: Server, color: 'from-zion-blue to-zion-purple' }
+    { id: 'digital-twin', name: 'Digital Twin', icon: Server, color: 'from-zion-blue to-zion-purple' },
+    { id: 'education-technology', name: 'Education Tech', icon: BookOpen, color: 'from-zion-blue to-zion-green' },
+    { id: 'real-estate-technology', name: 'Real Estate Tech', icon: Building, color: 'from-zion-orange to-zion-blue' },
+    { id: 'manufacturing-technology', name: 'Manufacturing Tech', icon: Cpu, color: 'from-zion-purple to-zion-orange' },
+    { id: 'energy-technology', name: 'Energy Tech', icon: Zap, color: 'from-zion-yellow to-zion-green' },
+    { id: 'retail-technology', name: 'Retail Tech', icon: ShoppingCart, color: 'from-zion-pink to-zion-orange' },
+    { id: 'media-technology', name: 'Media Tech', icon: Play, color: 'from-zion-purple to-zion-pink' }
   ];
 
   const priceRanges = [
@@ -175,7 +184,7 @@ export default function ServicesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                <div className="text-3xl font-bold text-zion-purple mb-2">10+</div>
+                <div className="text-3xl font-bold text-zion-purple mb-2">16+</div>
                 <div className="text-zion-slate-light">Technology Categories</div>
               </motion.div>
               <motion.div 
