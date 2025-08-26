@@ -1,4 +1,62 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { SEO } from '@/components/SEO';
+import { 
+  Building, 
+  Shield, 
+  Users, 
+  Globe, 
+  Lock, 
+  TrendingUp,
+  Server,
+  Database,
+  Network,
+  Cloud,
+  Zap,
+  BarChart3
+} from 'lucide-react';
+
+const EnterpriseIT = () => {
+  const enterpriseServices = [
+    {
+      title: "Infrastructure Design",
+      description: "Scalable and resilient IT infrastructure architecture",
+      icon: Server,
+      features: ["Network design", "Server architecture", "Storage solutions", "Virtualization"]
+    },
+    {
+      title: "Security & Compliance",
+      description: "Enterprise-grade security and regulatory compliance",
+      icon: Shield,
+      features: ["Security audits", "Compliance frameworks", "Threat protection", "Data encryption"]
+    },
+    {
+      title: "Cloud Migration",
+      description: "Seamless cloud transformation and optimization",
+      icon: Cloud,
+      features: ["Migration planning", "Cloud strategy", "Cost optimization", "Performance tuning"]
+    },
+    {
+      title: "Data Management",
+      description: "Comprehensive data governance and analytics",
+      icon: Database,
+      features: ["Data strategy", "Analytics platforms", "Business intelligence", "Data governance"]
+    },
+    {
+      title: "Network Solutions",
+      description: "High-performance networking infrastructure",
+      icon: Network,
+      features: ["Network design", "Security", "Monitoring", "Optimization"]
+    },
+    {
+      title: "24/7 Support",
+      description: "Round-the-clock IT support and monitoring",
+      icon: Zap,
+      features: ["Help desk", "Monitoring", "Proactive maintenance", "Emergency response"]
+    }
+  ];
+
+  const benefits = [
     "Improved operational efficiency and productivity",
     "Enhanced security and compliance",
     "Scalable infrastructure for business growth",
@@ -42,6 +100,13 @@ import React from 'react';
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Enterprise IT Solutions - Zion Tech Group"
+        description="Comprehensive enterprise IT services including infrastructure design, security, cloud migration, and 24/7 support."
+        keywords="enterprise IT, infrastructure design, cloud migration, security compliance, data management"
+        canonical="https://ziontechgroup.com/services/enterprise-it"
+      />
+
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -65,12 +130,12 @@ import React from 'react';
               >
                 Explore Services
               </a>
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
               >
                 Get Started
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -98,12 +163,12 @@ import React from 'react';
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-4">{service.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3 text-center">{service.title}</h3>
+                <p className="text-gray-300 mb-4 text-center">{service.description}</p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="text-sm text-gray-400 flex items-start">
-                      <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="text-sm text-gray-400 flex items-center">
+                      <span className="text-cyan-400 mr-2">•</span>
                       {feature}
                     </li>
                   ))}
@@ -114,30 +179,28 @@ import React from 'react';
         </div>
       </section>
 
-      {/* Technology Partners */}
+      {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Technology Partners
+              Why Choose Enterprise IT Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              We work with leading technology vendors to deliver best-in-class 
-              enterprise solutions and support.
+              Transform your business with enterprise-grade IT infrastructure and support
             </p>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {technologies.map((tech, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300"
+                className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold text-white">
-                  {tech.icon}
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-white text-xl">✓</span>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>
-                <p className="text-sm text-gray-300">{tech.description}</p>
+                <p className="text-white font-medium">{benefit}</p>
               </div>
             ))}
           </div>
@@ -152,8 +215,7 @@ import React from 'react';
               Industry-Specific Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Tailored enterprise IT solutions designed for the unique challenges 
-              and compliance requirements of different industries.
+              Tailored IT solutions for your industry's unique requirements
             </p>
           </div>
           
@@ -161,99 +223,15 @@ import React from 'react';
             {industries.map((industry, index) => (
               <div
                 key={index}
-                className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300"
+                className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <industry.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{industry.title}</h3>
-                <p className="text-gray-300">{industry.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3 text-center">{industry.title}</h3>
+                <p className="text-gray-300 text-center">{industry.description}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Why Choose Enterprise IT?
-              </h2>
-              <p className="text-lg text-gray-300 mb-6">
-                Enterprise IT solutions provide the foundation for business success, 
-                enabling organizations to operate efficiently, securely, and at scale.
-              </p>
-              <ul className="space-y-3">
-                {benefits.map((benefit, index) => (
-                  <li key={index} className="flex items-center text-gray-300">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
-                    {benefit}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl p-8 border border-blue-500/30">
-              <div className="text-center">
-                <Cpu className="w-24 h-24 text-blue-400 mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-2">Enterprise Ready</h3>
-                <p className="text-gray-300 mb-6">
-                  Our solutions are built to enterprise standards with 
-                  enterprise-grade security, scalability, and reliability.
-                </p>
-                <div className="text-sm text-gray-400">
-                  <p>• 99.9% uptime guarantee</p>
-                  <p>• 24/7 support and monitoring</p>
-                  <p>• Compliance and security certified</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Implementation Process */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Our Implementation Process
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            A proven methodology for successful enterprise IT implementations 
-            that minimize disruption and maximize value.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
-                1
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Assessment</h3>
-              <p className="text-gray-300">Current state analysis and requirements gathering</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
-                2
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Design</h3>
-              <p className="text-gray-300">Solution architecture and implementation planning</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
-                3
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Implementation</h3>
-              <p className="text-gray-300">Phased deployment with minimal business disruption</p>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
-                4
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Support</h3>
-              <p className="text-gray-300">Ongoing management, monitoring, and optimization</p>
-            </div>
           </div>
         </div>
       </section>
@@ -265,55 +243,27 @@ import React from 'react';
             Ready to Transform Your Enterprise IT?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our enterprise IT solutions can help optimize your operations, 
-            enhance security, and drive business growth.
+            Let our enterprise IT experts help you build a robust, scalable, and secure 
+            technology foundation for your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact"
-              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+            <Link
+              to="/contact"
+              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
             >
-              Start Your Project
-            </a>
-            <a
-              href="/solutions"
+              Get Enterprise Consultation
+            </Link>
+            <Link
+              to="/services"
               className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
             >
-              View Solutions
-            </a>
+              View All Services
+            </Link>
           </div>
-import { Link } from 'react-router-dom';
-import { CogIcon } from '@heroicons/react/24/outline';
-
-const $service: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex justify-center mb-6">
-            <div className="p-3 bg-blue-600/20 rounded-full">
-              <CogIcon className="h-12 w-12 text-blue-400" />
-            </div>
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-            $service
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            This service page is under development. Contact us for more information.
-          </p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
-          >
-            Contact Us for More Information
-          </Link>
         </div>
       </section>
     </div>
   );
 };
 
-export default $service;
-};
-
-export default $service;
+export default EnterpriseIT;
