@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Search, Brain, Users, BarChart3, Code, Palette, Target, Shield, Heart, Database, Building, Cpu, Network, Cloud, Clock, Rocket, Globe, Lock, ArrowRight } from 'lucide-react';
+import { Menu, X, Search, Brain, Users, BarChart3, Code, Palette, Target, Shield, Heart, Database, Building, Cpu, Network, Cloud, Clock, Rocket, Globe, Lock, ArrowRight, ChevronDown } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
 
 export function Header() {
@@ -42,7 +42,17 @@ export function Header() {
         { name: 'Retail', href: '/solutions/retail', description: 'Digital retail transformation' }
       ]
     },
-    { name: 'About', href: '/about' },
+    { 
+      name: 'Company', 
+      href: '/about',
+      dropdown: [
+        { name: 'About Us', href: '/about', description: 'Learn about our mission and values' },
+        { name: 'Our Team', href: '/team', description: 'Meet our expert team' },
+        { name: 'Careers', href: '/careers', description: 'Join our growing team' },
+        { name: 'News', href: '/news', description: 'Latest company updates' },
+        { name: 'Case Studies', href: '/case-studies', description: 'Success stories and results' }
+      ]
+    },
     { name: 'Contact', href: '/contact' }
   ];
 
@@ -51,6 +61,7 @@ export function Header() {
       title: 'AI & Machine Learning',
       icon: Brain,
       description: 'Intelligent solutions powered by artificial intelligence',
+      color: 'from-blue-500 to-cyan-500',
       services: [
         { name: 'AI Autonomous Systems', path: '/services/ai-autonomous-systems', description: 'Advanced autonomous AI systems', icon: Brain },
         { name: 'AI Workflow Automation', path: '/services/ai-workflow-automation', description: 'Intelligent process automation', icon: Brain },
@@ -58,11 +69,6 @@ export function Header() {
         { name: 'AI Predictive Analytics', path: '/services/ai-predictive-analytics', description: 'Future-focused analytics', icon: BarChart3 },
         { name: 'AI Research Assistant', path: '/ai-autonomous-research-assistant', description: 'AI-powered research automation', icon: Brain },
         { name: 'AI Business Manager', path: '/ai-autonomous-business-manager', description: 'Intelligent business management', icon: Brain },
-        { name: 'AI Business Manager 2029', path: '/ai-autonomous-business-manager-2029', description: 'Future-ready business management', icon: Brain },
-        { name: 'AI Business Platform', path: '/ai-autonomous-business-platform', description: 'Comprehensive business platform', icon: Brain },
-        { name: 'AI Business Platform 2026', path: '/ai-autonomous-business-platform-2026', description: 'Next-gen business platform', icon: Brain },
-        { name: 'AI Code Review', path: '/ai-autonomous-code-review', description: 'Intelligent code review automation', icon: Code },
-        { name: 'AI Creative Director', path: '/ai-autonomous-creative-director', description: 'AI-powered creative content generation', icon: Palette },
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', description: 'Advanced analytics and insights', icon: BarChart3 },
         { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', description: 'Smart marketing optimization', icon: Target },
         { name: 'AI HR & Recruitment', path: '/services/ai-hr-recruitment', description: 'Intelligent talent management', icon: Users },
@@ -155,9 +161,7 @@ export function Header() {
                   >
                     <button className="flex items-center space-x-1 text-white hover:text-zion-cyan transition-colors py-2">
                       <span>{item.name}</span>
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
+                      <ChevronDown className="w-4 h-4" />
                     </button>
                     {activeDropdown === item.name && (
                       <div className="absolute top-full left-0 mt-2 w-64 bg-zion-slate-dark border border-zion-blue-light/30 rounded-lg shadow-xl backdrop-blur-md">
@@ -250,9 +254,7 @@ export function Header() {
                         className="flex items-center justify-between w-full text-left text-white hover:text-zion-cyan transition-colors py-2"
                       >
                         <span>{item.name}</span>
-                        <svg className={`w-4 h-4 transition-transform ${activeDropdown === item.name ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                        </svg>
+                        <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === item.name ? 'rotate-180' : ''}`} />
                       </button>
                       {activeDropdown === item.name && (
                         <div className="ml-4 mt-2 space-y-2">

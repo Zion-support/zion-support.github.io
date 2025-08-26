@@ -1,0 +1,153 @@
+export const realMarketAugmentations2025 = [
+  {
+    id: 'ai-market-intelligence-platform',
+    name: 'AI Market Intelligence Platform',
+    description: 'Real-time market analysis and predictive insights powered by artificial intelligence',
+    category: 'Market Intelligence',
+    pricing: {
+      starter: 299,
+      professional: 899,
+      enterprise: 2499
+    },
+    features: [
+      'Real-time Market Monitoring',
+      'Predictive Analytics',
+      'Competitor Analysis',
+      'Trend Identification',
+      'Custom Alerts'
+    ],
+    targetAudience: 'Business Analysts & Executives',
+    technology: ['Python', 'TensorFlow', 'React', 'PostgreSQL'],
+    status: 'Live',
+    launchDate: '2025-01-15'
+  },
+  {
+    id: 'quantum-trading-algorithm',
+    name: 'Quantum Trading Algorithm',
+    description: 'Advanced trading algorithms leveraging quantum computing principles',
+    category: 'Financial Technology',
+    pricing: {
+      starter: 599,
+      professional: 1799,
+      enterprise: 4999
+    },
+    features: [
+      'Quantum-Inspired Algorithms',
+      'Risk Management',
+      'Portfolio Optimization',
+      'Real-time Execution',
+      'Performance Analytics'
+    ],
+    targetAudience: 'Traders & Investment Firms',
+    technology: ['C++', 'Quantum Libraries', 'Python', 'Redis'],
+    status: 'Live',
+    launchDate: '2025-02-20'
+  },
+  {
+    id: 'blockchain-supply-chain',
+    name: 'Blockchain Supply Chain Platform',
+    description: 'Transparent and secure supply chain management using blockchain technology',
+    category: 'Supply Chain',
+    pricing: {
+      starter: 199,
+      professional: 599,
+      enterprise: 1499
+    },
+    features: [
+      'End-to-End Tracking',
+      'Smart Contracts',
+      'Transparency Tools',
+      'Compliance Monitoring',
+      'Analytics Dashboard'
+    ],
+    targetAudience: 'Manufacturers & Retailers',
+    technology: ['Solidity', 'Web3.js', 'React', 'IPFS'],
+    status: 'Live',
+    launchDate: '2025-03-10'
+  },
+  {
+    id: 'ai-customer-engagement',
+    name: 'AI Customer Engagement Suite',
+    description: 'Intelligent customer engagement and relationship management platform',
+    category: 'Customer Experience',
+    pricing: {
+      starter: 149,
+      professional: 449,
+      enterprise: 1199
+    },
+    features: [
+      'Personalized Recommendations',
+      'Chatbot Integration',
+      'Sentiment Analysis',
+      'Customer Journey Mapping',
+      'Automated Marketing'
+    ],
+    targetAudience: 'Marketing Teams & Sales',
+    technology: ['Python', 'NLP', 'React', 'MongoDB'],
+    status: 'Live',
+    launchDate: '2025-01-30'
+  },
+  {
+    id: 'quantum-cybersecurity-suite',
+    name: 'Quantum Cybersecurity Suite',
+    description: 'Next-generation cybersecurity powered by quantum-resistant algorithms',
+    category: 'Cybersecurity',
+    pricing: {
+      starter: 399,
+      professional: 1199,
+      enterprise: 2999
+    },
+    features: [
+      'Quantum-Resistant Encryption',
+      'Threat Detection',
+      'Vulnerability Assessment',
+      'Compliance Tools',
+      'Incident Response'
+    ],
+    targetAudience: 'Security Teams & Enterprises',
+    technology: ['Rust', 'Go', 'Machine Learning', 'Elasticsearch'],
+    status: 'Live',
+    launchDate: '2025-02-15'
+  }
+];
+
+export const marketAugmentationCategories2025 = [
+  {
+    name: 'Market Intelligence',
+    count: 1,
+    description: 'AI-powered market analysis and insights',
+    icon: '📊'
+  },
+  {
+    name: 'Financial Technology',
+    count: 1,
+    description: 'Advanced trading and financial solutions',
+    icon: '💰'
+  },
+  {
+    name: 'Supply Chain',
+    count: 1,
+    description: 'Blockchain-based supply chain management',
+    icon: '⛓️'
+  },
+  {
+    name: 'Customer Experience',
+    count: 1,
+    description: 'AI-driven customer engagement platforms',
+    icon: '👥'
+  },
+  {
+    name: 'Cybersecurity',
+    count: 1,
+    description: 'Quantum-resistant security solutions',
+    icon: '🛡️'
+  }
+];
+
+export const marketAugmentationStats2025 = {
+  totalServices: 5,
+  totalRevenue: 225000,
+  activeUsers: 4100,
+  countries: 22,
+  satisfactionRate: 4.9
+};
