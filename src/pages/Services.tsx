@@ -269,8 +269,6 @@ const Services: React.FC = () => {
               Discover our comprehensive showcase of 30+ innovative micro SAAS services, specialized IT solutions, and cutting-edge AI platforms for 2025
             </p>
           </div>
-            </p>
-          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-slate-800/50 p-6 rounded-xl border border-white/10 text-center">
@@ -309,6 +307,7 @@ const Services: React.FC = () => {
               </p>
             </div>
           </div>
+        </div>
         </section>
 
         {/* Process Section */}
