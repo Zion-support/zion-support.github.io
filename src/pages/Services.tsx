@@ -59,2309 +59,78 @@ import {
 } from 'lucide-react';
 >>>>>>> origin/cursor/website-audit-and-enhancement-8e2b
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { 
-  Search, 
-  Filter, 
-  Star, 
-  Clock, 
-  Users, 
-  Zap, 
-  Shield, 
-  Brain, 
-  Cloud, 
-  Database,
-  Lock,
-  Globe,
-  Cpu,
-  Rocket,
-  Sparkles,
-  ArrowRight,
-  CheckCircle,
-<<<<<<< HEAD
-  TrendingUp,
-  Target,
-  Award,
-  Phone,
-  Mail,
-  MapPin
-=======
-  Clock,
-  TrendingUp,
-<<<<<<< HEAD
-  FileText,
-  MessageCircle,
-  Truck
->>>>>>> origin/cursor/expand-services-and-deploy-updates-50ba
-=======
-  Sparkles,
-  FileText
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0f9b
-} from 'lucide-react';
-=======
-import { Link } from 'react-router-dom';
-import { Brain, Cloud, Shield, Zap, ArrowRight, Search } from 'lucide-react';
->>>>>>> origin/cursor/website-audit-and-enhancement-24bd
-=======
-import { Star, CheckCircle } from 'lucide-react';
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
+import { enhancedMicroSaasServices2025, enhancedITServices2025, enhancedAIServices2025 } from '../data/comprehensiveServices2025';
 
 <<<<<<< HEAD
 const Services: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedSubcategory, setSelectedSubcategory] = useState<string>('all');
+  const [selectedServiceType, setSelectedServiceType] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [sortBy, setSortBy] = useState<string>('name');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const allServices = [
-    ...COMPREHENSIVE_SERVICES,
-    ...INNOVATIVE_MICRO_SAAS_SERVICES,
-    ...ADVANCED_ENTERPRISE_SOLUTIONS,
-    ...SPECIALIZED_IT_SERVICES
-=======
-  const serviceCategories = [
-    {
-      id: 'ai-ml',
-      title: 'AI & Machine Learning',
-      icon: Brain,
-      color: 'from-purple-500 to-pink-500',
-      description: 'Intelligent solutions powered by artificial intelligence',
-      services: [
-        {
-          name: 'AI Financial Advisor Platform',
-          path: '/comprehensive-services-showcase',
-          description: 'Intelligent financial advisory with AI-powered investment recommendations',
-          icon: Brain,
-          features: ['AI investment advice', 'Portfolio optimization', 'Real-time market analysis'],
-          pricing: 'Starting from $299/month'
-        },
-        {
-          name: 'AI Healthcare Diagnostics',
-          path: '/comprehensive-services-showcase',
-          description: 'Advanced medical diagnostic platform using AI',
-          icon: Brain,
-          features: ['Medical image analysis', 'Symptom assessment', 'Treatment recommendations'],
-          pricing: 'Starting from $899/month'
-        },
-        {
-          name: 'AI Legal Research Assistant',
-          path: '/comprehensive-services-showcase',
-          description: 'AI-powered legal research and case analysis',
-          icon: Brain,
-          features: ['Case law analysis', 'Legal document review', 'Precedent identification'],
-          pricing: 'Starting from $199/month'
-        },
-        {
-<<<<<<< HEAD
-          name: 'AI Manufacturing Optimization',
-          path: '/comprehensive-services-showcase',
-          description: 'Intelligent manufacturing process optimization',
-          icon: Brain,
-          features: ['Production optimization', 'Predictive maintenance', 'Quality control'],
-          pricing: 'Starting from $599/month'
-=======
-          name: 'AI Marketing Automation',
-          path: '/services/ai-marketing-automation',
-          description: 'Smart marketing optimization and automation',
-          icon: Target,
-          features: ['Customer segmentation', 'Campaign optimization', 'ROI tracking'],
-          pricing: 'Starting from $2,500/month'
-        },
-        {
-          name: 'AI Legal Document Automation',
-          path: '/services/ai-legal-document-automation',
-          description: 'AI-powered legal document generation and compliance',
-          icon: FileText,
-          features: ['Smart document generation', 'Compliance monitoring', 'Legal research automation'],
-          pricing: 'Starting from $299/month'
-        },
-        {
-          name: 'AI Healthcare Analytics',
-          path: '/services/ai-healthcare-analytics',
-          description: 'AI-powered healthcare diagnostics and patient monitoring',
-          icon: Heart,
-          features: ['Predictive diagnostics', 'Real-time monitoring', 'Population health analytics'],
-          pricing: 'Starting from $799/month'
-        },
-        {
-          name: 'AI Financial Trading',
-          path: '/services/ai-financial-trading',
-          description: 'AI-powered trading algorithms and portfolio optimization',
-          icon: TrendingUp,
-          features: ['AI trading algorithms', 'Risk management', 'High-frequency trading'],
-          pricing: 'Starting from $99/month'
-        },
-        {
-          name: 'AI Supply Chain Optimization',
-          path: '/services/ai-supply-chain-optimization',
-          description: 'AI-powered supply chain management and optimization',
-          icon: Truck,
-          features: ['Demand forecasting', 'Route optimization', 'Inventory management'],
-          pricing: 'Starting from $499/month'
-        },
-        {
-          name: 'AI Customer Service Automation',
-          path: '/services/ai-customer-service-automation',
-          description: 'AI-powered customer support and service automation',
-          icon: MessageCircle,
-          features: ['AI chatbots', 'Multi-channel support', 'Smart routing'],
-          pricing: 'Starting from $199/month'
->>>>>>> origin/cursor/expand-services-and-deploy-updates-50ba
-        }
-      ]
-    },
-    {
-      id: 'quantum',
-      title: 'Quantum Technology',
-      icon: Brain,
-      color: 'from-blue-500 to-cyan-500',
-      description: 'Next-generation quantum computing solutions',
-      services: [
-        {
-          name: 'Quantum Machine Learning Platform',
-          path: '/comprehensive-services-showcase',
-          description: 'Revolutionary platform combining quantum computing with ML',
-          icon: Brain,
-          features: ['Quantum ML algorithms', 'Hybrid workflows', 'Performance benchmarking'],
-          pricing: 'Starting from $2,500/month'
-        },
-        {
-          name: 'Quantum Internet Platform',
-          path: '/comprehensive-services-showcase',
-          description: 'Ultra-secure quantum communications network',
-          icon: Cpu,
-          features: ['Quantum key distribution', 'Unbreakable encryption', 'Quantum networks'],
-          pricing: 'Starting from $4,000/month'
-        }
-      ]
-    },
-    {
-      id: 'emerging-tech',
-      title: 'Emerging Technologies',
-      icon: Rocket,
-      color: 'from-purple-500 to-pink-500',
-      description: 'Cutting-edge technologies of the future',
-      services: [
-        {
-          name: 'Edge AI Computing Platform',
-          path: '/comprehensive-services-showcase',
-          description: 'AI processing at the edge for real-time decisions',
-          icon: Rocket,
-          features: ['Edge AI deployment', 'Low latency processing', 'Privacy-preserving AI'],
-          pricing: 'Starting from $899/month'
-        },
-        {
-          name: 'Neuromorphic Computing',
-          path: '/comprehensive-services-showcase',
-          description: 'Brain-inspired computing for ultra-efficient AI',
-          icon: Rocket,
-          features: ['Spiking neural networks', 'Ultra-low power', 'Cognitive computing'],
-          pricing: 'Starting from $3,500/month'
-        },
-        {
-          name: '6G Network Infrastructure',
-          path: '/comprehensive-services-showcase',
-          description: 'Next-generation 6G network solutions',
-          icon: Rocket,
-          features: ['Terahertz speeds', 'Ultra-low latency', 'AI optimization'],
-          pricing: 'Starting from $5,000/month'
-        }
-      ]
-    },
-    {
-      id: 'cybersecurity',
-      title: 'Cybersecurity',
-      icon: Shield,
-      color: 'from-red-500 to-pink-500',
-      description: 'Comprehensive security and compliance solutions',
-      services: [
-        {
-          name: 'Cybersecurity Services',
-          path: '/services/cybersecurity',
-          description: 'Complete security solutions for your business',
-          icon: Shield,
-          features: ['Threat detection', 'Vulnerability assessment', 'Incident response'],
-          pricing: 'Starting from $3,500/month'
-        },
-        {
-          name: 'SOC2 Compliance Automation',
-          path: '/soc2-compliance-automation',
-          description: 'Automated compliance management and monitoring',
-          icon: Lock,
-          features: ['Automated audits', 'Real-time monitoring', 'Compliance reporting'],
-          pricing: 'Starting from $4,500/month'
-        }
-      ]
-    },
-    {
-      id: 'infrastructure',
-      title: 'Cloud & Infrastructure',
-      icon: Cpu,
-      color: 'from-blue-500 to-indigo-500',
-      description: 'Scalable cloud solutions and infrastructure management',
-      services: [
-        {
-          name: 'Cloud-Native Development Platform',
-          path: '/comprehensive-services-showcase',
-          description: 'Enterprise-grade cloud-native development platform',
-          icon: Cloud,
-          features: ['Kubernetes orchestration', 'Microservices architecture', 'CI/CD pipelines'],
-          pricing: 'Starting from $800/month'
-        },
-        {
-          name: 'AI-Powered IT Operations',
-          path: '/comprehensive-services-showcase',
-          description: 'Intelligent IT operations with AI automation',
-          icon: Network,
-          features: ['AI monitoring', 'Predictive analytics', 'Automated incident response'],
-          pricing: 'Starting from $1,500/month'
-        },
-        {
-          name: 'Enterprise Data Management',
-          path: '/comprehensive-services-showcase',
-          description: 'Comprehensive data governance and management',
-          icon: Network,
-          features: ['Data governance', 'Quality management', 'Compliance monitoring'],
-          pricing: 'Starting from $1,000/month'
-        }
-      ]
-    },
-    {
-      id: 'business',
-      title: 'Business Operations',
-      icon: Building,
-      color: 'from-green-500 to-emerald-500',
-      description: 'Streamlined business process automation',
-      services: [
-        {
-          name: 'AI Retail Intelligence Platform',
-          path: '/comprehensive-services-showcase',
-          description: 'Comprehensive retail analytics and customer intelligence',
-          icon: Building,
-          features: ['Customer behavior analysis', 'Inventory optimization', 'Personalized recommendations'],
-          pricing: 'Starting from $399/month'
-        },
-        {
-          name: 'AI Real Estate Analytics',
-          path: '/comprehensive-services-showcase',
-          description: 'Intelligent real estate market analysis and insights',
-          icon: Database,
-          features: ['Market trend analysis', 'Property value prediction', 'Investment scoring'],
-          pricing: 'Starting from $299/month'
-        }
-      ]
-    },
-    {
-      id: 'industry',
-      title: 'Industry Solutions',
-      icon: Target,
-      color: 'from-orange-500 to-yellow-500',
-      description: 'Tailored solutions for specific industries',
-      services: [
-        {
-          name: 'AI Adaptive Learning Platform',
-          path: '/comprehensive-services-showcase',
-          description: 'Intelligent learning platform with personalized education',
-          icon: Heart,
-          features: ['Personalized learning paths', 'Progress tracking', 'Performance analytics'],
-          pricing: 'Starting from $199/month'
-        },
-        {
-          name: 'AI Logistics Optimization',
-          path: '/comprehensive-services-showcase',
-          description: 'Intelligent logistics and supply chain optimization',
-          icon: DollarSign,
-          features: ['Route optimization', 'Delivery prediction', 'Supply chain analytics'],
-          pricing: 'Starting from $499/month'
-        },
-        {
-          name: 'AI Energy Optimization',
-          path: '/comprehensive-services-showcase',
-          description: 'Intelligent energy management and optimization',
-          icon: Cpu,
-          features: ['Energy consumption analysis', 'Cost optimization', 'Sustainability reporting'],
-          pricing: 'Starting from $399/month'
-        }
-      ]
-    },
-    {
-      id: 'specialized-it',
-      title: 'Specialized IT Services',
-      icon: Shield,
-      color: 'from-indigo-500 to-purple-500',
-      description: 'Advanced IT solutions and specialized services',
-      services: [
-        {
-          name: 'Zero Trust Security Platform',
-          path: '/comprehensive-services-showcase',
-          description: 'Comprehensive zero trust security implementation',
-          icon: Shield,
-          features: ['Continuous verification', 'Least privilege access', 'Micro-segmentation'],
-          pricing: 'Starting from $1,200/month'
-        },
-        {
-          name: 'DevOps Automation Platform',
-          path: '/comprehensive-services-showcase',
-          description: 'Comprehensive DevOps automation and CI/CD',
-          icon: Shield,
-          features: ['CI/CD pipelines', 'Infrastructure as code', 'Automated testing'],
-          pricing: 'Starting from $600/month'
-        },
-        {
-          name: 'Application Performance Management',
-          path: '/comprehensive-services-showcase',
-          description: 'Advanced application performance monitoring',
-          icon: Shield,
-          features: ['Real-time monitoring', 'Performance analytics', 'User experience tracking'],
-          pricing: 'Starting from $900/month'
-        }
-      ]
-    }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-9864
-  ];
-  
-  const categories = ['all', ...SERVICE_CATEGORIES];
-  const subcategories = ['all', ...SERVICE_SUBCATEGORIES];
-  
-  const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
-    return matchesCategory && matchesSubcategory && matchesSearch;
-  });
-
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'price-low':
-        return a.price - b.price;
-      case 'price-high':
-        return b.price - a.price;
-      case 'name':
-        return a.title.localeCompare(b.title);
-      case 'category':
-        return a.category.localeCompare(b.category);
-      default:
-        return 0;
-    }
-=======
-  const filteredServices = COMPREHENSIVE_SERVICES.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())));
-
-    return matchesCategory && matchesSearch;
->>>>>>> origin/cursor/build-and-fix-errors-c9ef
-  });
-
-  const categories = ['all', ...Array.from(new Set(COMPREHENSIVE_SERVICES.map(service => service.category)))];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-<<<<<<< HEAD
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { 
-  Code, 
-  Database, 
-  Cloud, 
-  Brain, 
-  Shield, 
-  Zap,
-  Globe,
-  Smartphone,
-  Cpu,
-  Network,
-  Lock,
-  BarChart3,
-<<<<<<< HEAD
-  Users,
-  Rocket,
-  Target,
-  TrendingUp
-} from 'lucide-react';
-
-<<<<<<< HEAD
-const Services = () => {
-  const serviceCategories = [
-    {
-      icon: Code,
-      title: 'Custom Software Development',
-      description: 'Tailored software solutions designed to meet your specific business needs and challenges.',
-      services: [
-        'Web Applications',
-        'Mobile Apps',
-        'Desktop Software',
-        'API Development',
-        'System Integration',
-        'Legacy System Modernization'
-      ],
-      link: '/services/custom-software'
-    },
-    {
-      icon: Database,
-      title: 'Data Analytics & AI',
-      description: 'Transform your data into actionable insights with advanced analytics and machine learning.',
-      services: [
-        'Business Intelligence',
-        'Predictive Analytics',
-        'Machine Learning Models',
-        'Data Visualization',
-        'Big Data Processing',
-        'AI-Powered Insights'
-      ],
-      link: '/services/data-analytics-ai'
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud & DevOps',
-      description: 'Scalable infrastructure and streamlined development processes for modern applications.',
-      services: [
-        'Cloud Migration',
-        'Infrastructure as Code',
-        'CI/CD Pipelines',
-        'Container Orchestration',
-        'Serverless Architecture',
-        'Cloud Security'
-      ],
-      link: '/services/cloud-devops'
-    },
-    {
-      icon: Brain,
-      title: 'AI & Machine Learning',
-      description: 'Cutting-edge AI solutions that automate processes and enhance decision-making.',
-      services: [
-        'Natural Language Processing',
-        'Computer Vision',
-        'Predictive Modeling',
-        'AI Automation',
-        'Neural Networks',
-        'AI Ethics & Governance'
-      ],
-      link: '/services/ai-machine-learning'
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets and ensure compliance.',
-      services: [
-        'Security Audits',
-        'Penetration Testing',
-        'Incident Response',
-        'Compliance Management',
-        'Security Training',
-        'Threat Intelligence'
-      ],
-      link: '/services/cybersecurity'
-    },
-    {
-      icon: Globe,
-      title: 'Digital Transformation',
-      description: 'End-to-end digital transformation services to modernize your business operations.',
-      services: [
-        'Process Automation',
-        'Digital Strategy',
-        'Change Management',
-        'Technology Assessment',
-        'Digital Maturity Analysis',
-        'Implementation Support'
-      ],
-      link: '/services/digital-transformation'
->>>>>>> origin/cursor/website-audit-and-enhancement-54e3
-    }
-  ];
-
-  const featuredServices = [
-    {
-      icon: Zap,
-      title: 'AI-Powered Business Intelligence',
-      description: 'Advanced analytics platform that provides real-time insights and predictive capabilities.',
-      features: ['Real-time dashboards', 'Predictive analytics', 'Custom reporting', 'Data integration'],
-      cta: 'Learn More',
-      link: '/services/ai-business-intelligence'
-    },
-    {
-      icon: Smartphone,
-      title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile applications that deliver exceptional user experiences.',
-      features: ['iOS & Android', 'Cross-platform', 'UI/UX Design', 'App Store optimization'],
-      cta: 'Get Started',
-      link: '/services/mobile-development'
-    },
-    {
-      icon: Cpu,
-      title: 'Enterprise Solutions',
-      description: 'Scalable enterprise-grade solutions that grow with your business needs.',
-      features: ['High availability', 'Scalable architecture', 'Enterprise security', '24/7 support'],
-      cta: 'Contact Sales',
-      link: '/services/enterprise-solutions'
-=======
-  ArrowRight,
-  CheckCircle,
-  Search,
-  Filter,
-  Star,
-  Award,
-  Clock,
-  TrendingUp
-} from 'lucide-react';
-
-export default function Services() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [isVisible, setIsVisible] = useState(false);
-=======
-import ComprehensiveServicesShowcase from '../components/ComprehensiveServicesShowcase';
->>>>>>> origin/cursor/website-audit-and-enhancement-5c03
-
-  const services = [
-    {
-      icon: <Brain className="w-12 h-12" />,
-      title: "AI & Machine Learning",
-      description: "Custom AI solutions including predictive analytics, natural language processing, and computer vision.",
-      features: ["Machine Learning Models", "Predictive Analytics", "NLP Solutions", "Computer Vision", "AI Consulting"],
-      category: "AI/ML",
-      price: "From $5,000",
-      duration: "4-12 weeks",
-      rating: 4.9,
-      popular: true,
-      tags: ["AI", "Machine Learning", "Analytics", "Automation"]
-    },
-    {
-      icon: <Shield className="w-12 h-12" />,
-      title: "Cybersecurity",
-      description: "Comprehensive security solutions including threat detection, compliance, and risk management.",
-      features: ["Threat Detection", "Compliance & Audit", "Risk Assessment", "Security Monitoring", "Incident Response"],
-      category: "Security",
-      price: "From $3,500",
-      duration: "2-8 weeks",
-      rating: 4.8,
-      popular: false,
-      tags: ["Security", "Compliance", "Risk Management", "Monitoring"]
-    },
-    {
-      icon: <Cloud className="w-12 h-12" />,
-      title: "Cloud & Infrastructure",
-      description: "Cloud migration, infrastructure management, and scalable solutions for modern businesses.",
-      features: ["Cloud Migration", "Infrastructure Management", "Scalable Solutions", "DevOps", "Monitoring"],
-      category: "Cloud",
-      price: "From $4,200",
-      duration: "6-16 weeks",
-      rating: 4.7,
-      popular: false,
-      tags: ["Cloud", "Infrastructure", "DevOps", "Scalability"]
-    },
-    {
-      icon: <Zap className="w-12 h-12" />,
-      title: "Digital Transformation",
-      description: "End-to-end digital transformation services to modernize your business operations.",
-      features: ["Process Automation", "Digital Workflows", "Legacy Modernization", "Change Management", "Training"],
-      category: "Transformation",
-      price: "From $8,000",
-      duration: "8-24 weeks",
-      rating: 4.9,
-      popular: true,
-      tags: ["Transformation", "Automation", "Modernization", "Process"]
-    },
-    {
-      icon: <Users className="w-12 h-12" />,
-      title: "IT Consulting",
-      description: "Strategic IT consulting to align technology with your business objectives.",
-      features: ["Technology Strategy", "Architecture Design", "Implementation Planning", "Performance Optimization", "ROI Analysis"],
-      category: "Consulting",
-      price: "From $2,500",
-      duration: "1-4 weeks",
-      rating: 4.8,
-      popular: false,
-      tags: ["Consulting", "Strategy", "Architecture", "Planning"]
-    },
-    {
-      icon: <Globe className="w-12 h-12" />,
-      title: "Global Solutions",
-      description: "Worldwide technology solutions with local expertise and 24/7 support.",
-      features: ["Global Deployment", "Local Expertise", "24/7 Support", "Multi-language Support", "Compliance"],
-      category: "Global",
-      price: "From $6,000",
-      duration: "12-32 weeks",
-      rating: 4.9,
-      popular: false,
-      tags: ["Global", "Deployment", "Support", "Compliance"]
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-6b26
-    }
-  ];
-
-  const industries = [
-<<<<<<< HEAD
-    'Healthcare',
-    'Finance',
-    'Manufacturing',
-    'Retail',
-    'Education',
-    'Government',
-    'Non-profit',
-    'Technology'
-  ];
-
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
-      case 'AI & Machine Learning': return Brain;
-      case 'Cybersecurity': return Shield;
-      case 'Cloud & Infrastructure': return Cloud;
-      case 'Data & Analytics': return Database;
-      case 'Digital Transformation': return Sparkles;
-      case 'Web & Mobile Development': return Globe;
-      case 'IT Support & Consulting': return Users;
-      case 'Blockchain & Web3': return Lock;
-      case 'Internet of Things': return Cpu;
-      case 'Voice AI': return Brain;
-      case 'Quantum Security': return Shield;
-      case 'Content Creation': return Sparkles;
-      default: return Rocket;
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Users, 
-  Globe, 
-  Database, 
-  Smartphone,
-  BarChart3,
-  Lock,
-  Cpu,
-  Network
-} from 'lucide-react';
-
-const Services = () => {
-  const serviceCategories = [
-    {
-      title: "AI & Machine Learning",
-      icon: <Brain className="w-12 h-12" />,
-      description: "Cutting-edge artificial intelligence solutions that transform your business operations",
-      services: [
-        "Custom AI Models",
-        "Machine Learning Pipelines",
-        "Natural Language Processing",
-        "Computer Vision",
-        "Predictive Analytics",
-        "AI Chatbots & Assistants"
-      ],
-      link: "/ai-services",
-      color: "from-zion-cyan to-zion-blue"
-    },
-    {
-      title: "Micro SAAS Solutions",
-      icon: <Zap className="w-12 h-12" />,
-      description: "Scalable software-as-a-service applications built for modern businesses",
-      services: [
-        "Custom Web Applications",
-        "Mobile App Development",
-        "API Development",
-        "Database Design",
-        "Cloud Integration",
-        "Performance Optimization"
-      ],
-      link: "/micro-saas-services",
-      color: "from-zion-purple to-zion-purple-light"
-    },
-    {
-      title: "Cloud & DevOps",
-      icon: <Cloud className="w-12 h-12" />,
-      description: "Enterprise-grade cloud infrastructure and development operations",
-      services: [
-        "AWS/Azure/GCP Setup",
-        "Container Orchestration",
-        "CI/CD Pipelines",
-        "Infrastructure as Code",
-        "Monitoring & Logging",
-        "Auto-scaling Solutions"
-      ],
-      link: "/cloud-devops-solutions",
-      color: "from-zion-blue to-zion-cyan"
-    },
-    {
-      title: "Cybersecurity",
-      icon: <Shield className="w-12 h-12" />,
-      description: "Comprehensive security solutions to protect your digital assets",
-      services: [
-        "Security Audits",
-        "Penetration Testing",
-        "Compliance Management",
-        "Threat Detection",
-        "Incident Response",
-        "Security Training"
-      ],
-      link: "/advanced-cybersecurity-suite",
-      color: "from-zion-purple-light to-zion-cyan"
-    },
-    {
-      title: "Digital Transformation",
-      icon: <Globe className="w-12 h-12" />,
-      description: "End-to-end digital transformation strategies for modern enterprises",
-      services: [
-        "Process Automation",
-        "Legacy System Modernization",
-        "Data Migration",
-        "Change Management",
-        "Digital Strategy Consulting",
-        "Technology Roadmapping"
-      ],
-      link: "/digital-transformation",
-      color: "from-zion-cyan to-zion-purple"
-    },
-    {
-      title: "Enterprise Solutions",
-      icon: <Users className="w-12 h-12" />,
-      description: "Large-scale enterprise software and infrastructure solutions",
-      services: [
-        "ERP Systems",
-        "CRM Platforms",
-        "Business Intelligence",
-        "Data Warehousing",
-        "Enterprise Integration",
-        "Custom Enterprise Apps"
-      ],
-      link: "/enterprise-solutions",
-      color: "from-zion-blue to-zion-purple-light"
->>>>>>> origin/cursor/website-audit-and-enhancement-e1a1
-    }
-  ];
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const getCategoryColor = (category: string) => {
-    switch (category) {
-      case 'AI & Machine Learning': return 'from-purple-500 to-pink-500';
-      case 'Cybersecurity': return 'from-red-500 to-pink-500';
-      case 'Cloud & Infrastructure': return 'from-blue-500 to-indigo-500';
-      case 'Data & Analytics': return 'from-green-500 to-emerald-500';
-      case 'Digital Transformation': return 'from-orange-500 to-yellow-500';
-      case 'Web & Mobile Development': return 'from-cyan-500 to-blue-500';
-      case 'IT Support & Consulting': return 'from-gray-500 to-slate-500';
-      case 'Blockchain & Web3': return 'from-purple-500 to-violet-500';
-      case 'Internet of Things': return 'from-teal-500 to-cyan-500';
-      case 'Voice AI': return 'from-pink-500 to-rose-500';
-      case 'Quantum Security': return 'from-indigo-500 to-purple-500';
-      case 'Content Creation': return 'from-yellow-500 to-orange-500';
-      default: return 'from-gray-500 to-slate-500';
-=======
-  const emergingTech = [
-=======
-    // Existing Micro SAAS Services
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0542
-    {
-      title: "Quantum Computing",
-      icon: <Cpu className="w-8 h-8" />,
-      description: "Next-generation quantum computing solutions for complex problem-solving"
-    },
-    {
-      title: "Blockchain & Web3",
-      icon: <Network className="w-8 h-8" />,
-      description: "Decentralized applications and blockchain infrastructure development"
-    },
-    {
-      title: "IoT Solutions",
-      icon: <Smartphone className="w-8 h-8" />,
-      description: "Internet of Things platforms and connected device management"
-    },
-    {
-      title: "Edge Computing",
-      icon: <BarChart3 className="w-8 h-8" />,
-      description: "Distributed computing solutions for real-time data processing"
->>>>>>> origin/cursor/website-audit-and-enhancement-e1a1
-=======
-const Services: React.FC = () => {
-  const services = [
-    // Core AI & Technology Services
-    {
-<<<<<<< HEAD
-      title: "AI Business Intelligence Suite",
-      description: "Advanced AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated reporting for data-driven decision making.",
-=======
-      title: "Email Marketing Automation",
-      description: "Intelligent email campaigns with personalization and automation",
-      icon: "📧",
-      features: ["Behavioral triggers", "A/B testing", "Personalization", "Analytics"],
-      path: "/services/email-automation",
-      pricing: "$89 - $399/month",
-      benefits: ["3x higher engagement", "Automated campaigns", "ROI tracking"]
-    },
-    {
-      title: "Project Management AI",
-      description: "AI-powered project planning, resource allocation, and risk management",
-      icon: "📋",
-      features: ["Smart scheduling", "Resource optimization", "Risk prediction", "Progress tracking"],
-      path: "/services/project-ai",
-      pricing: "$129 - $549/month",
-      benefits: ["20% faster delivery", "Resource optimization", "Risk mitigation"]
-    },
-
-    // NEW INNOVATIVE MICRO SAAS SERVICES
-    {
-      title: "AI-Powered HR Assistant",
-      description: "Intelligent HR automation for recruitment, onboarding, and employee management",
-      icon: "👥",
-      features: ["Resume screening", "Interview scheduling", "Employee onboarding", "Performance tracking"],
-      path: "/services/hr-assistant",
-      pricing: "$199 - $799/month",
-      benefits: ["70% faster hiring", "Reduced bias", "Improved retention"]
-    },
-    {
-      title: "Smart Inventory Management",
-      description: "AI-driven inventory optimization and supply chain management",
-      icon: "📦",
-      features: ["Demand forecasting", "Automated reordering", "Supplier management", "Real-time tracking"],
-      path: "/services/inventory-management",
-      pricing: "$149 - $599/month",
-      benefits: ["30% inventory reduction", "Zero stockouts", "Cost optimization"]
-    },
-    {
-      title: "AI Legal Document Analyzer",
-      description: "Automated legal document review and contract analysis",
-      icon: "⚖️",
-      features: ["Contract analysis", "Risk assessment", "Compliance checking", "Legal research"],
-      path: "/services/legal-ai",
-      pricing: "$299 - $1,199/month",
-      benefits: ["90% faster review", "Risk identification", "Compliance assurance"]
-    },
-    {
-      title: "Smart Financial Planning",
-      description: "AI-powered financial planning and investment advisory platform",
-      icon: "💰",
-      features: ["Portfolio optimization", "Risk assessment", "Tax planning", "Goal tracking"],
-      path: "/services/financial-planning",
-      pricing: "$99 - $399/month",
-      benefits: ["Optimized returns", "Risk management", "Tax efficiency"]
-    },
-    {
-      title: "AI Sales Intelligence",
-      description: "Predictive sales analytics and lead scoring automation",
-      icon: "🎯",
-      features: ["Lead scoring", "Sales forecasting", "Pipeline analytics", "Performance insights"],
-      path: "/services/sales-intelligence",
-      pricing: "$179 - $699/month",
-      benefits: ["25% increase in conversions", "Better lead quality", "Sales optimization"]
-    },
-    {
-      title: "Smart Customer Feedback",
-      description: "AI-powered sentiment analysis and customer feedback management",
-      icon: "💬",
-      features: ["Sentiment analysis", "Feedback categorization", "Trend identification", "Action recommendations"],
-      path: "/services/feedback-management",
-      pricing: "$79 - $299/month",
-      benefits: ["Real-time insights", "Improved satisfaction", "Proactive support"]
-    },
-    {
-      title: "AI Marketing Attribution",
-      description: "Multi-channel marketing attribution and ROI optimization",
-      icon: "📈",
-      features: ["Cross-channel tracking", "ROI analysis", "Budget optimization", "Performance insights"],
-      path: "/services/marketing-attribution",
-      pricing: "$199 - $799/month",
-      benefits: ["Accurate ROI tracking", "Budget optimization", "Performance improvement"]
-    },
-    {
-      title: "Smart Vendor Management",
-      description: "AI-powered vendor selection, performance tracking, and relationship management",
-      icon: "🤝",
-      features: ["Vendor scoring", "Performance monitoring", "Contract management", "Cost optimization"],
-      path: "/services/vendor-management",
-      pricing: "$129 - $499/month",
-      benefits: ["Better vendor selection", "Cost reduction", "Performance improvement"]
-    },
-    {
-      title: "AI Compliance Monitor",
-      description: "Automated compliance monitoring and regulatory reporting",
-      icon: "✅",
-      features: ["Regulatory tracking", "Compliance alerts", "Audit preparation", "Risk assessment"],
-      path: "/services/compliance-monitor",
-      pricing: "$249 - $999/month",
-      benefits: ["Compliance assurance", "Risk mitigation", "Audit readiness"]
-    },
-    {
-      title: "Smart Energy Management",
-      description: "AI-powered energy consumption optimization and sustainability tracking",
-      icon: "⚡",
-      features: ["Usage optimization", "Cost analysis", "Sustainability tracking", "Predictive maintenance"],
-      path: "/services/energy-management",
-      pricing: "$179 - $699/month",
-      benefits: ["20% energy savings", "Cost reduction", "Sustainability goals"]
-    },
-
-    // NEW ADVANCED IT SERVICES
-    {
-      title: "Quantum Computing Consulting",
-      description: "Expert guidance on quantum computing implementation and strategy",
-      icon: "⚛️",
-      features: ["Quantum strategy", "Use case identification", "Vendor selection", "Implementation planning"],
-      path: "/services/quantum-consulting",
-      pricing: "$5,000 - $25,000/month",
-      benefits: ["Future-ready strategy", "Competitive advantage", "Innovation leadership"]
-    },
-    {
-      title: "Edge Computing Solutions",
-      description: "Distributed computing infrastructure for IoT and real-time applications",
-      icon: "🌐",
-      features: ["Edge deployment", "Latency optimization", "IoT integration", "Real-time processing"],
-      path: "/services/edge-computing",
-      pricing: "$3,000 - $20,000/month",
-      benefits: ["Ultra-low latency", "Real-time processing", "Cost optimization"]
-    },
-    {
-      title: "5G Network Optimization",
-      description: "5G network design, deployment, and optimization services",
-      icon: "📡",
-      features: ["Network planning", "Performance optimization", "Coverage analysis", "Capacity planning"],
-      path: "/services/5g-optimization",
-      pricing: "$4,000 - $30,000/month",
-      benefits: ["Maximum performance", "Optimal coverage", "Future scalability"]
-    },
-    {
-      title: "Blockchain Infrastructure",
-      description: "Enterprise blockchain development and deployment services",
-      icon: "🔗",
-      features: ["Smart contracts", "DApp development", "Consensus mechanisms", "Security auditing"],
-      path: "/services/blockchain",
-      pricing: "$5,000 - $40,000/month",
-      benefits: ["Transparency", "Security", "Automation"]
-    },
-    {
-      title: "IoT Platform Development",
-      description: "Custom IoT platform development and device management",
-      icon: "🌍",
-      features: ["Device management", "Data collection", "Analytics dashboard", "Security framework"],
-      path: "/services/iot-platform",
-      pricing: "$3,500 - $25,000/month",
-      benefits: ["Connected ecosystem", "Data insights", "Operational efficiency"]
-    },
-    {
-      title: "Zero Trust Architecture",
-      description: "Modern security architecture implementation and management",
-      icon: "🛡️",
-      features: ["Identity verification", "Access control", "Network segmentation", "Continuous monitoring"],
-      path: "/services/zero-trust",
-      pricing: "$4,500 - $35,000/month",
-      benefits: ["Enhanced security", "Compliance", "Risk reduction"]
-    },
-
-    // NEW ADVANCED AI SERVICES
-    {
-      title: "AI Ethics & Governance",
-      description: "AI ethics framework development and governance implementation",
-      icon: "⚖️",
-      features: ["Ethics framework", "Bias detection", "Compliance monitoring", "Audit trails"],
-      path: "/services/ai-ethics",
-      pricing: "$1,500 - $12,000/month",
-      benefits: ["Ethical AI", "Compliance assurance", "Risk mitigation"]
-    },
-    {
-      title: "AI Model Training",
-      description: "Custom AI model development and training services",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0542
-      icon: "🧠",
-      features: ["AI-powered data analysis", "Predictive analytics", "Real-time dashboards", "Natural language queries", "Multi-source integration"],
-      path: "/services/ai-business-intelligence",
-      pricing: "$599 - $2,500/month",
-      benefits: ["70% faster decision-making", "85% improved forecasting accuracy", "Data-driven culture", "Hidden opportunity identification"]
-    },
-    {
-<<<<<<< HEAD
-      title: "AI Customer Experience Platform",
-      description: "Comprehensive AI-powered customer experience platform that personalizes customer interactions, predicts customer needs, and optimizes customer journeys across all touchpoints.",
-      icon: "🎯",
-      features: ["Customer journey mapping", "Real-time personalization", "Predictive behavior analysis", "Omnichannel orchestration", "Sentiment analysis"],
-      path: "/services/ai-customer-experience",
-      pricing: "$449 - $1,800/month",
-      benefits: ["45% customer satisfaction increase", "60% customer retention improvement", "35% service cost reduction", "50% lifetime value boost"]
-    },
-    {
-      title: "AI Supply Chain Optimizer Pro",
-      description: "Advanced AI-powered supply chain optimization platform that predicts demand, optimizes inventory, reduces costs, and improves delivery efficiency through machine learning algorithms.",
-      icon: "🚚",
-      features: ["AI demand forecasting", "Dynamic inventory optimization", "Route optimization", "Supplier performance tracking", "Real-time monitoring"],
-      path: "/services/ai-supply-chain",
-      pricing: "$799 - $3,000/month",
-      benefits: ["30% inventory cost reduction", "40% delivery time improvement", "50% supply chain efficiency", "25% logistics cost reduction"]
-    },
-
-    // Emerging Technology Solutions
-    {
-      title: "Blockchain & Web3 Enterprise Platform",
-      description: "Comprehensive blockchain and Web3 platform that enables enterprises to build decentralized applications, implement smart contracts, and leverage blockchain technology for business transformation.",
-      icon: "⛓️",
-      features: ["Multi-blockchain support", "Smart contract development", "dApp framework", "Enterprise security", "Interoperability"],
-      path: "/services/blockchain-web3",
-      pricing: "$1,299 - $5,000/month",
-      benefits: ["60% transaction cost reduction", "90% transparency improvement", "New business models", "80% fraud reduction"]
-    },
-    {
-      title: "Quantum Computing Solutions Platform",
-      description: "Advanced quantum computing platform that provides quantum algorithms, quantum machine learning, and quantum optimization solutions for complex computational problems.",
-      icon: "⚛️",
-      features: ["Quantum algorithm development", "Quantum ML models", "Optimization algorithms", "Quantum simulation", "Hybrid computing"],
-      path: "/services/quantum-computing",
-      pricing: "$2,499 - $10,000/month",
-      benefits: ["1000x faster problem solving", "Drug discovery breakthroughs", "Logistics optimization", "Financial modeling revolution"]
-    },
-    {
-      title: "Edge Computing & IoT Platform",
-      description: "Comprehensive edge computing and IoT platform that processes data at the edge, reduces latency, improves performance, and enables real-time decision making.",
-      icon: "🌐",
-      features: ["Edge computing infrastructure", "IoT device management", "Real-time processing", "Edge AI/ML", "Low-latency communication"],
-      path: "/services/edge-computing-iot",
-      pricing: "$799 - $3,000/month",
-      benefits: ["90% latency reduction", "80% response time improvement", "70% bandwidth cost reduction", "Real-time decision making"]
-    },
-
-    // IT Infrastructure & Cloud Services
-    {
-      title: "Cloud Infrastructure & Migration Services",
-      description: "Comprehensive cloud infrastructure and migration services that help businesses transition to the cloud, optimize cloud performance, and manage multi-cloud environments.",
-      icon: "☁️",
-      features: ["Cloud strategy planning", "Multi-cloud migration", "Cost optimization", "Performance monitoring", "24/7 management"],
-      path: "/services/cloud-infrastructure",
-      pricing: "$2,499 - $10,000/month",
-      benefits: ["40% infrastructure cost reduction", "300% scalability improvement", "Enhanced disaster recovery", "50% operational efficiency"]
-    },
-    {
-      title: "Cybersecurity & Information Security Services",
-      description: "Advanced cybersecurity and information security services that provide comprehensive protection against cyber threats and ensure compliance with industry regulations.",
-      icon: "🔒",
-      features: ["Security assessment", "Threat detection", "Vulnerability management", "Compliance monitoring", "24/7 security"],
-      path: "/services/cybersecurity",
-      pricing: "$1,899 - $7,500/month",
-      benefits: ["90% security incident reduction", "95% threat detection improvement", "Regulatory compliance", "Enhanced customer trust"]
-    },
-    {
-      title: "DevOps & CI/CD Pipeline Services",
-      description: "Comprehensive DevOps and CI/CD pipeline services that automate software development processes and enable continuous delivery for faster time-to-market.",
-      icon: "⚡",
-      features: ["DevOps strategy", "CI/CD pipeline design", "Infrastructure as Code", "Automated testing", "Performance optimization"],
-      path: "/services/devops-cicd",
-      pricing: "$1,599 - $6,000/month",
-      benefits: ["80% deployment time reduction", "60% code quality improvement", "100% development velocity increase", "40% operational cost reduction"]
-    },
-
-    // Data & Analytics Services
-    {
-      title: "Data Management & Analytics Services",
-      description: "Comprehensive data management and analytics services that help businesses collect, process, analyze, and visualize data for informed decision making.",
-      icon: "📊",
-      features: ["Data strategy", "Data integration", "Quality governance", "Advanced analytics", "Business intelligence"],
-      path: "/services/data-analytics",
-      pricing: "$1,299 - $5,000/month",
-      benefits: ["70% decision-making improvement", "45% operational efficiency", "New business opportunities", "30% operational cost reduction"]
-    },
-    {
-      title: "AI Marketing & Advertising Platform",
-      description: "Advanced AI-powered marketing platform that optimizes campaigns, personalizes content, predicts customer behavior, and automates marketing workflows.",
-      icon: "📈",
-      features: ["Campaign optimization", "Content personalization", "Behavior prediction", "Marketing automation", "ROI tracking"],
-      path: "/services/ai-marketing",
-      pricing: "$549 - $2,000/month",
-      benefits: ["60% marketing ROI increase", "45% customer engagement improvement", "30% marketing cost reduction", "80% task automation"]
-    },
-
-    // Industry-Specific Solutions
-    {
-      title: "AI Healthcare Solutions Suite",
-      description: "Comprehensive AI-powered healthcare platform that provides diagnostic assistance, patient monitoring, medical image analysis, and healthcare workflow optimization.",
-      icon: "🏥",
-      features: ["AI diagnostic assistance", "Medical image analysis", "Patient monitoring", "Workflow optimization", "Compliance features"],
-      path: "/services/ai-healthcare",
-      pricing: "$899 - $4,000/month",
-      benefits: ["30% diagnostic accuracy improvement", "50% medical error reduction", "40% workflow optimization", "35% patient outcome enhancement"]
-    },
-    {
-      title: "AI Education & Learning Platform",
-      description: "Advanced AI-powered education platform that personalizes learning experiences, provides intelligent tutoring, and automates assessment for better learning outcomes.",
-      icon: "🎓",
-      features: ["Personalized learning", "Intelligent tutoring", "Automated assessment", "Content recommendation", "Progress tracking"],
-      path: "/services/ai-education",
-      pricing: "$399 - $1,500/month",
-      benefits: ["40% learning outcome improvement", "30% learning time reduction", "Personalized education", "70% administrative task automation"]
-    },
-    {
-      title: "AI Manufacturing & Industrial IoT",
-      description: "Advanced AI-powered manufacturing platform that optimizes production processes, predicts equipment failures, and enables smart manufacturing through IoT integration.",
-      icon: "🏭",
-      features: ["Production optimization", "Predictive maintenance", "Quality control", "Supply chain optimization", "Energy efficiency"],
-      path: "/services/ai-manufacturing",
-      pricing: "$899 - $3,500/month",
-      benefits: ["35% production efficiency increase", "50% equipment downtime reduction", "40% product quality improvement", "25% energy cost reduction"]
-    },
-
-    // Specialized Technology Services
-    {
-      title: "5G & Advanced Connectivity Platform",
-      description: "Advanced 5G and connectivity platform that provides ultra-fast wireless communication, low-latency networking, and advanced connectivity solutions.",
-      icon: "📡",
-      features: ["5G infrastructure", "Ultra-low latency", "Massive IoT connectivity", "Network slicing", "Edge integration"],
-      path: "/services/5g-connectivity",
-      pricing: "$999 - $4,000/month",
-      benefits: ["100x network speed increase", "90% latency reduction", "Millions of IoT devices", "New use case enablement"]
-    },
-    {
-      title: "AR/VR Enterprise Platform",
-      description: "Comprehensive AR/VR platform that provides immersive experiences, training simulations, virtual collaboration, and AR/VR solutions for enterprise applications.",
-      icon: "🥽",
-      features: ["Content creation tools", "Training simulations", "Virtual collaboration", "3D visualization", "Spatial computing"],
-      path: "/services/ar-vr-platform",
-      pricing: "$899 - $3,500/month",
-      benefits: ["70% training effectiveness improvement", "60% training cost reduction", "Remote collaboration", "80% customer engagement enhancement"]
-    },
-    {
-      title: "Robotics & Automation Platform",
-      description: "Advanced robotics and automation platform that provides intelligent automation, robotic process automation (RPA), and autonomous systems for various industries.",
-      icon: "🤖",
-      features: ["RPA implementation", "Intelligent automation", "Autonomous systems", "Computer vision", "Predictive maintenance"],
-      path: "/services/robotics-automation",
-      pricing: "$1,199 - $5,000/month",
-      benefits: ["50% productivity increase", "40% operational cost reduction", "90% accuracy improvement", "24/7 operation enablement"]
-    },
-
-    // Business Process & Management Services
-    {
-      title: "AI HR & Talent Management Suite",
-      description: "Comprehensive AI-powered HR platform that streamlines recruitment, optimizes employee performance, predicts turnover, and automates HR processes.",
-      icon: "👥",
-      features: ["AI candidate screening", "Predictive turnover analysis", "Performance optimization", "Employee engagement", "HR automation"],
-      path: "/services/ai-hr-talent",
-      pricing: "$499 - $1,800/month",
-      benefits: ["65% hiring time reduction", "50% candidate quality improvement", "40% employee retention increase", "45% HR cost reduction"]
-    },
-    {
-      title: "AI Legal Technology & Compliance",
-      description: "Advanced AI-powered legal technology platform that automates contract analysis, provides legal research assistance, and monitors compliance.",
-      icon: "⚖️",
-      features: ["Contract analysis", "Legal research automation", "Compliance monitoring", "Document generation", "Risk assessment"],
-      path: "/services/ai-legal-technology",
-      pricing: "$749 - $3,000/month",
-      benefits: ["70% legal research time reduction", "80% contract review accuracy", "60% legal task automation", "90% compliance enhancement"]
-    },
-    {
-      title: "AI Real Estate & Property Management",
-      description: "Comprehensive AI-powered real estate platform that optimizes property management, predicts market trends, and automates tenant screening.",
-      icon: "🏢",
-      features: ["Market analysis", "Property valuation", "Tenant screening", "Maintenance prediction", "Investment analysis"],
-      path: "/services/ai-real-estate",
-      pricing: "$399 - $1,500/month",
-      benefits: ["25% property valuation improvement", "30% vacancy rate reduction", "20% rental pricing optimization", "70% task automation"]
-    },
-
-    // Sustainability & Green Technology
-    {
-      title: "Green Technology & Sustainability Platform",
-      description: "Comprehensive green technology and sustainability platform that provides renewable energy solutions, carbon footprint tracking, and environmental monitoring.",
-      icon: "🌱",
-      features: ["Carbon footprint tracking", "Renewable energy optimization", "Environmental monitoring", "Sustainability reporting", "Green supply chain"],
-      path: "/services/green-technology",
-      pricing: "$699 - $2,500/month",
-      benefits: ["40% carbon footprint reduction", "30% energy cost reduction", "Sustainability rating improvement", "Enhanced brand reputation"]
-    },
-
-    // Network & Infrastructure Services
-    {
-      title: "Network Infrastructure & Management Services",
-      description: "Comprehensive network infrastructure and management services that design, implement, and maintain reliable, secure, and high-performance network solutions.",
-      icon: "🌐",
-      features: ["Network design", "Infrastructure implementation", "Security monitoring", "Performance optimization", "24/7 monitoring"],
-      path: "/services/network-infrastructure",
-      pricing: "$999 - $4,000/month",
-      benefits: ["95% network reliability improvement", "80% downtime reduction", "Enhanced security", "35% operational cost reduction"]
-    },
-    {
-      title: "IT Support & Help Desk Services",
-      description: "Comprehensive IT support and help desk services that provide reliable technical assistance, problem resolution, and ongoing support for businesses.",
-      icon: "🛠️",
-      features: ["24/7 technical support", "Help desk ticketing", "Remote support", "Proactive monitoring", "User training"],
-      path: "/services/it-support",
-      pricing: "$799 - $3,000/month",
-      benefits: ["60% productivity improvement", "45% support cost reduction", "Enhanced user satisfaction", "Minimized system downtime"]
-    },
-
-    // Consulting & Strategic Services
-    {
-      title: "IT Consulting & Strategic Planning Services",
-      description: "Strategic IT consulting and planning services that help businesses align technology with business objectives and create roadmaps for digital transformation.",
-      icon: "💡",
-      features: ["Technology strategy", "Digital transformation", "IT investment optimization", "Vendor management", "Risk assessment"],
-      path: "/services/it-consulting",
-      pricing: "$299 - $500/hour",
-      benefits: ["Technology-business alignment", "40% IT investment optimization", "Risk reduction", "Strategic competitive advantages"]
-    },
-    {
-      title: "Software Development & Custom Solutions",
-      description: "Comprehensive software development and custom solution services that create tailored applications and integrate existing systems for specific business needs.",
-      icon: "💻",
-      features: ["Custom development", "System integration", "API development", "Database design", "UI/UX design"],
-      path: "/services/software-development",
-      pricing: "$1,999 - $8,000/month",
-      benefits: ["Tailored business solutions", "50% operational efficiency", "New business capabilities", "70% process automation"]
-    },
-    {
-      title: "IT Project Management & Implementation Services",
-      description: "Professional IT project management and implementation services that ensure successful delivery of technology projects on time and within budget.",
-      icon: "📋",
-      features: ["Project planning", "Resource management", "Risk assessment", "Timeline management", "Quality assurance"],
-      path: "/services/it-project-management",
-      pricing: "$1,499 - $6,000/month",
-      benefits: ["90% project success rate", "70% risk reduction", "On-time delivery", "Stakeholder satisfaction"]
->>>>>>> origin/cursor/expand-services-and-deploy-updates-7bd2
-=======
-      title: "Natural Language Processing",
-      description: "Advanced NLP solutions for text analysis and language understanding",
-      icon: "📝",
-      features: ["Text analysis", "Sentiment analysis", "Language translation", "Custom models"],
-      path: "/services/nlp",
-      pricing: "$2,500 - $20,000/month",
-      benefits: ["Text understanding", "Automated processing", "Insight extraction"]
-    },
-    {
-      title: "Computer Vision Solutions",
-      description: "AI-powered image and video analysis for various industries",
-      icon: "👁️",
-      features: ["Object detection", "Image classification", "Video analysis", "Custom training"],
-      path: "/services/computer-vision",
-      pricing: "$4,000 - $30,000/month",
-      benefits: ["Automated analysis", "Quality control", "Process automation"]
-    },
-    {
-      title: "Predictive Analytics Platform",
-      description: "AI-powered predictive analytics for business forecasting",
-      icon: "🔮",
-      features: ["Data modeling", "Forecasting algorithms", "Visualization tools", "API integration"],
-      path: "/services/predictive-analytics",
-      pricing: "$3,500 - $25,000/month",
-      benefits: ["Data-driven decisions", "Risk mitigation", "Opportunity identification"]
-    },
-    {
-      title: "AI Chatbot Development",
-      description: "Custom AI chatbots for customer service and support",
-      icon: "🤖",
-      features: ["Natural language processing", "Multi-language support", "Integration APIs", "Analytics dashboard"],
-      path: "/services/ai-chatbot",
-      pricing: "$2,000 - $15,000/month",
-      benefits: ["24/7 customer support", "Instant responses", "Cost reduction"]
-    },
-    {
-      title: "AI-Powered Fraud Detection",
-      description: "Advanced fraud detection and prevention using machine learning",
-      icon: "🚨",
-      features: ["Real-time monitoring", "Pattern recognition", "Risk scoring", "Alert system"],
-      path: "/services/fraud-detection",
-      pricing: "$3,000 - $25,000/month",
-      benefits: ["Fraud prevention", "Cost savings", "Risk reduction"]
-    },
-    {
-      title: "AI Supply Chain Optimization",
-      description: "Intelligent supply chain optimization and demand forecasting",
-      icon: "🚚",
-      features: ["Demand forecasting", "Route optimization", "Inventory management", "Supplier analytics"],
-      path: "/services/supply-chain-ai",
-      pricing: "$4,000 - $30,000/month",
-      benefits: ["Cost reduction", "Efficiency improvement", "Risk mitigation"]
-    },
-    {
-      title: "AI-Powered Quality Control",
-      description: "Automated quality control and defect detection systems",
-      icon: "🔍",
-      features: ["Visual inspection", "Defect detection", "Quality metrics", "Process optimization"],
-      path: "/services/quality-control-ai",
-      pricing: "$2,500 - $20,000/month",
-      benefits: ["Quality improvement", "Cost reduction", "Process efficiency"]
-    },
-    {
-      title: "AI Customer Segmentation",
-      description: "Intelligent customer segmentation and personalized marketing",
-      icon: "👥",
-      features: ["Behavioral analysis", "Segmentation models", "Personalization", "Campaign optimization"],
-      path: "/services/customer-segmentation",
-      pricing: "$1,500 - $12,000/month",
-      benefits: ["Better targeting", "Higher conversions", "ROI improvement"]
-    },
-
-    // NEW EMERGING TECHNOLOGY SERVICES
-    {
-      title: "Metaverse Development",
-      description: "Virtual and augmented reality platform development",
-      icon: "🥽",
-      features: ["VR/AR development", "3D modeling", "Interactive experiences", "Platform integration"],
-      path: "/services/metaverse",
-      pricing: "$8,000 - $60,000/month",
-      benefits: ["Innovation leadership", "New revenue streams", "Customer engagement"]
-    },
-    {
-      title: "Web3 Development",
-      description: "Decentralized application development and blockchain integration",
-      icon: "🌐",
-      features: ["DApp development", "Smart contracts", "DeFi solutions", "NFT platforms"],
-      path: "/services/web3",
-      pricing: "$6,000 - $45,000/month",
-      benefits: ["Decentralization", "Innovation", "New business models"]
-    },
-    {
-      title: "AI-Powered Cybersecurity",
-      description: "Next-generation cybersecurity using artificial intelligence",
-      icon: "🤖🔒",
-      features: ["Threat detection", "Behavioral analysis", "Automated response", "Predictive security"],
-      path: "/services/ai-cybersecurity",
-      pricing: "$5,000 - $40,000/month",
-      benefits: ["Proactive protection", "Zero-day prevention", "Automated response"]
-    },
-    {
-      title: "Quantum-Safe Cryptography",
-      description: "Post-quantum cryptography implementation and migration",
-      icon: "🔐",
-      features: ["Algorithm selection", "Implementation", "Testing", "Migration planning"],
-      path: "/services/quantum-crypto",
-      pricing: "$4,000 - $30,000/month",
-      benefits: ["Future security", "Quantum resistance", "Compliance"]
-    },
-    {
-      title: "AI-Powered Healthcare",
-      description: "Healthcare AI solutions for diagnosis and patient care",
-      icon: "🏥",
-      features: ["Medical imaging", "Diagnostic assistance", "Patient monitoring", "Drug discovery"],
-      path: "/services/healthcare-ai",
-      pricing: "$8,000 - $60,000/month",
-      benefits: ["Improved diagnosis", "Better care", "Cost reduction"]
-    },
-    {
-      title: "Green Tech Solutions",
-      description: "Sustainable technology solutions for environmental impact",
-      icon: "🌱",
-      features: ["Carbon tracking", "Energy optimization", "Sustainability reporting", "Green infrastructure"],
-      path: "/services/green-tech",
-      pricing: "$3,000 - $25,000/month",
-      benefits: ["Environmental impact", "Cost savings", "Compliance"]
-    },
-
-    // NEW INNOVATIVE MICRO SAAS SERVICES - 2025
-    {
-      title: "AI-Powered Social Media Management",
-      description: "Intelligent social media automation with content creation and analytics",
-      icon: "📱",
-      features: ["AI content generation", "Automated posting", "Engagement analytics", "Trend prediction", "Multi-platform management"],
-      path: "/services/social-media-ai",
-      pricing: "$149 - $899/month",
-      benefits: ["3x engagement increase", "Time savings", "Better reach", "Automated optimization"]
-    },
-    {
-      title: "Smart Email Marketing Automation",
-      description: "Advanced email marketing with AI-driven personalization and optimization",
-      icon: "📧",
-      features: ["AI personalization", "Behavioral triggers", "A/B testing", "Predictive analytics", "Advanced segmentation"],
-      path: "/services/email-automation-advanced",
-      pricing: "$199 - $1,299/month",
-      benefits: ["40% higher open rates", "Better conversions", "Automated optimization", "ROI tracking"]
-    },
-    {
-      title: "AI-Powered SEO Optimization",
-      description: "Intelligent SEO optimization with automated content and keyword analysis",
-      icon: "🔍",
-      features: ["Keyword research automation", "Content optimization", "Ranking tracking", "Competitor analysis", "Performance reporting"],
-      path: "/services/seo-ai",
-      pricing: "$299 - $1,999/month",
-      benefits: ["50% ranking improvement", "Traffic growth", "Automated optimization", "Comprehensive reporting"]
-    },
-    {
-      title: "Smart Customer Support Automation",
-      description: "AI-powered customer support with intelligent ticket routing and resolution",
-      icon: "🆘",
-      features: ["Intelligent routing", "Automated responses", "Sentiment analysis", "Escalation prediction", "Performance analytics"],
-      path: "/services/support-automation",
-      pricing: "$179 - $799/month",
-      benefits: ["80% faster resolution", "24/7 support", "Customer satisfaction", "Cost reduction"]
-    },
-    {
-      title: "AI-Powered Lead Generation",
-      description: "Intelligent lead generation with predictive scoring and qualification",
-      icon: "🎯",
-      features: ["Predictive lead scoring", "Automated qualification", "Behavioral tracking", "Nurture campaigns", "ROI analytics"],
-      path: "/services/lead-generation-ai",
-      pricing: "$249 - $1,499/month",
-      benefits: ["3x higher conversion rates", "Better lead quality", "Automated nurturing", "Increased revenue"]
-    },
-    {
-      title: "Smart Event Management Platform",
-      description: "AI-powered event management with automated planning and optimization",
-      icon: "🎪",
-      features: ["Automated planning", "Attendee engagement", "Resource optimization", "Real-time analytics", "Post-event insights"],
-      path: "/services/event-management",
-      pricing: "$399 - $2,499/month",
-      benefits: ["Reduced planning time", "Better attendee experience", "Resource optimization", "ROI tracking"]
-    },
-
-    // NEW ADVANCED IT SERVICES - 2025
-    {
-      title: "Zero Trust Security Architecture",
-      description: "Comprehensive zero trust security implementation and management",
-      icon: "🛡️",
-      features: ["Identity verification", "Access control", "Network segmentation", "Continuous monitoring", "Threat detection"],
-      path: "/services/zero-trust",
-      pricing: "$4,500 - $35,000/month",
-      benefits: ["Enhanced security", "Compliance assurance", "Risk reduction", "Operational efficiency"]
-    },
-    {
-      title: "Edge Computing Infrastructure",
-      description: "Distributed edge computing solutions for IoT and real-time applications",
-      icon: "🌐",
-      features: ["Edge deployment", "Latency optimization", "IoT integration", "Real-time processing", "Scalable infrastructure"],
-      path: "/services/edge-computing",
-      pricing: "$3,000 - $25,000/month",
-      benefits: ["Ultra-low latency", "Real-time processing", "Cost optimization", "Scalable performance"]
-    },
-    {
-      title: "5G Network Optimization",
-      description: "5G network design, deployment, and performance optimization",
-      icon: "📡",
-      features: ["Network planning", "Performance optimization", "Coverage analysis", "Capacity planning", "Monitoring"],
-      path: "/services/5g-optimization",
-      pricing: "$4,000 - $30,000/month",
-      benefits: ["Maximum performance", "Optimal coverage", "Future scalability", "Cost efficiency"]
-    },
-    {
-      title: "AI-Powered DevOps Automation",
-      description: "Intelligent DevOps automation with AI-driven optimization",
-      icon: "🚀",
-      features: ["CI/CD automation", "Performance monitoring", "Resource optimization", "Deployment automation", "Incident management"],
-      path: "/services/devops-ai",
-      pricing: "$2,500 - $20,000/month",
-      benefits: ["Faster deployments", "Reduced downtime", "Cost optimization", "Improved reliability"]
-    },
-    {
-      title: "Quantum-Safe Cryptography",
-      description: "Post-quantum cryptography implementation and migration services",
-      icon: "🔐",
-      features: ["Algorithm selection", "Implementation", "Testing", "Migration planning", "Compliance assurance"],
-      path: "/services/quantum-crypto",
-      pricing: "$4,000 - $30,000/month",
-      benefits: ["Future security", "Quantum resistance", "Compliance", "Risk mitigation"]
-    },
-    {
-      title: "Smart Data Center Management",
-      description: "AI-powered data center optimization and management",
-      icon: "🏢",
-      features: ["Energy optimization", "Capacity planning", "Performance monitoring", "Predictive maintenance", "Cost management"],
-      path: "/services/data-center-ai",
-      pricing: "$3,500 - $25,000/month",
-      benefits: ["Energy savings", "Performance optimization", "Cost reduction", "Operational efficiency"]
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0542
-    }
-  ];
-
-  return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="min-h-screen futuristic-bg">
-      {/* Animated Background */}
-      <div className="absolute inset-0 quantum-mesh opacity-20"></div>
-      
-      {/* Matrix Rain Effect */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute text-cyan-500 text-xs animate-matrix-rain opacity-10"
-            style={{
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 15}s`,
-              animationDuration: `${15 + Math.random() * 10}s`
-            }}
-          >
-            {Math.random() > 0.5 ? '1' : '0'}
-          </div>
-        ))}
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        {/* Header Section */}
-=======
-  const services = [
-    {
-      id: 1,
-      name: "AI & Machine Learning",
-      description: "Cutting-edge artificial intelligence solutions for business automation and intelligence",
-      category: "ai",
-      icon: Brain,
-      link: "/ai-services",
-      features: ["Custom AI Development", "Machine Learning Models", "Natural Language Processing", "Computer Vision"]
-    },
-    {
-      id: 2,
-      name: "Cloud & DevOps",
-      description: "Scalable cloud infrastructure and automated deployment solutions",
-      category: "cloud",
-      icon: Cloud,
-      link: "/cloud-devops-solutions",
-      features: ["Cloud Migration", "DevOps Automation", "Kubernetes Management", "Infrastructure as Code"]
-    },
-    {
-      id: 3,
-      name: "Cybersecurity",
-      description: "Advanced security solutions to protect your digital assets",
-      category: "security",
-      icon: Shield,
-      link: "/advanced-services",
-      features: ["Security Audits", "Threat Protection", "Compliance Management", "24/7 Monitoring"]
-    },
-    {
-      id: 4,
-      name: "Digital Transformation",
-      description: "End-to-end business transformation and modernization services",
-      category: "transformation",
-      icon: Zap,
-      link: "/digital-transformation",
-      features: ["Process Automation", "Legacy Modernization", "Change Management", "Strategic Consulting"]
-    },
-    {
-      id: 5,
-      name: "Micro SAAS Services",
-      description: "Specialized software solutions for specific business needs",
-      category: "saas",
-      icon: Zap,
-      link: "/micro-saas-services",
-      features: ["Custom Applications", "API Development", "Database Solutions", "Web Applications"]
-    },
-    {
-      id: 6,
-      name: "Enterprise Solutions",
-      description: "Comprehensive business solutions for large organizations",
-      category: "enterprise",
-      icon: Shield,
-      link: "/enterprise-solutions",
-      features: ["ERP Integration", "Business Intelligence", "Workflow Automation", "Enterprise Architecture"]
-    }
-  ];
-
   const categories = [
-    { id: 'all', name: 'All Services' },
-    { id: 'ai', name: 'AI & ML' },
-    { id: 'cloud', name: 'Cloud & DevOps' },
-    { id: 'security', name: 'Cybersecurity' },
-    { id: 'transformation', name: 'Digital Transformation' },
-    { id: 'saas', name: 'Micro SAAS' },
-    { id: 'enterprise', name: 'Enterprise' }
+    'all',
+    'Productivity',
+    'Finance',
+    'Marketing',
+    'CRM',
+    'Analytics',
+    'Scheduling',
+    'Quantum Computing',
+    'AI Architecture',
+    'Edge Computing',
+    'Privacy AI',
+    'AI Governance',
+    'AI Ecosystem',
+    'Infrastructure',
+    'Cloud Services',
+    'Security',
+    'DevOps',
+    'IoT',
+    'Consulting',
+    'Modernization',
+    'Software Development',
+    'Business Intelligence',
+    'Language AI',
+    'Visual AI',
+    'Process Automation',
+    'Conversational AI',
+    'Predictive Analytics',
+    'Supply Chain',
+    'Customer Experience',
+    'Financial AI',
+    'Healthcare AI',
+    'Marketing AI'
   ];
 
-  const filteredServices = services.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+  // Combine all services with proper typing
+  const allServices = [
+    ...enhancedMicroSaasServices2025.map(service => ({ ...service, serviceType: 'Micro SAAS' as const })),
+    ...enhancedITServices2025.map(service => ({ ...service, serviceType: 'IT Service' as const })),
+    ...enhancedAIServices2025.map(service => ({ ...service, serviceType: 'AI Service' as const }))
+  ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      {/* Hero Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
->>>>>>> origin/cursor/website-audit-and-enhancement-24bd
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-=======
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { COMPREHENSIVE_SERVICES } from '../data/comprehensiveServices';
-import { Search, Filter, Star, Clock, Users, Shield, Zap, Brain, Globe, Code, Database, Cloud, Lock, BarChart3, Rocket, Target, TrendingUp, Award, CheckCircle, ArrowRight } from 'lucide-react';
-
-export function Services() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedPricing, setSelectedPricing] = useState('All');
-
-  const categories = ['All', ...Array.from(new Set(COMPREHENSIVE_SERVICES.map(service => service.category)))];
-  const pricingModels = ['All', ...Array.from(new Set(COMPREHENSIVE_SERVICES.map(service => service.pricingModel)))];
-
-  const filteredServices = useMemo(() => {
-    return COMPREHENSIVE_SERVICES.filter(service => {
-      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-      const matchesPricing = selectedPricing === 'All' || service.pricingModel === selectedPricing;
-      
-      return matchesSearch && matchesCategory && matchesPricing;
-    });
-  }, [searchTerm, selectedCategory, selectedPricing]);
-
-  const getCategoryIcon = (category: string) => {
-    const iconMap: { [key: string]: React.ReactNode } = {
-      'AI & Machine Learning': <Brain className="w-6 h-6" />,
-      'Cybersecurity': <Shield className="w-6 h-6" />,
-      'Cloud Computing': <Cloud className="w-6 h-6" />,
-      'Web Development': <Code className="w-6 h-6" />,
-      'Mobile Development': <Code className="w-6 h-6" />,
-      'Data Analytics': <BarChart3 className="w-6 h-6" />,
-      'DevOps & Automation': <Zap className="w-6 h-6" />,
-      'Blockchain': <Database className="w-6 h-6" />,
-      'IoT Solutions': <Globe className="w-6 h-6" />,
-      'Digital Marketing': <TrendingUp className="w-6 h-6" />,
-      'IT Consulting': <Users className="w-6 h-6" />,
-      'Software Testing': <CheckCircle className="w-6 h-6" />
-    };
-    return iconMap[category] || <Rocket className="w-6 h-6" />;
-  };
-
-  const getPricingDisplay = (service: typeof COMPREHENSIVE_SERVICES[0]) => {
-    switch (service.pricingModel) {
-      case 'one-time':
-        return `${service.currency}${service.price.toLocaleString()}`;
-      case 'monthly':
-        return `${service.currency}${service.price.toLocaleString()}/month`;
-      case 'yearly':
-        return `${service.currency}${service.price.toLocaleString()}/year`;
-      case 'per-user':
-        return `${service.currency}${service.price.toLocaleString()}/user`;
-      case 'per-project':
-        return `${service.currency}${service.price.toLocaleString()}/project`;
-      default:
-        return `${service.currency}${service.price.toLocaleString()}`;
-    }
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light text-white">
-      {/* Animated Background Elements */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/10 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute top-40 right-20 w-96 h-96 bg-zion-purple/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-zion-cyan/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '4s' }}></div>
-      </div>
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        {/* Hero Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text neon-cyan">
-            Our Services
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Discover our comprehensive suite of cutting-edge AI, cybersecurity, and technology solutions 
-            designed to transform your business and drive innovation.
-=======
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
-            Our Services
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Comprehensive AI, IT, and technology solutions to transform your business
->>>>>>> origin/cursor/website-audit-and-enhancement-24bd
-          </p>
-=======
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent animate-neon-pulse">
-            Our Services
-          </h1>
-          <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
-            Discover our comprehensive suite of cutting-edge technology solutions designed to transform your business and drive innovation.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 text-sm">
-            <span className="px-4 py-2 bg-zion-purple/20 border border-zion-purple/30 rounded-full text-zion-cyan">
-              {COMPREHENSIVE_SERVICES.length}+ Services
-            </span>
-            <span className="px-4 py-2 bg-zion-cyan/20 border border-zion-cyan/30 rounded-full text-zion-cyan">
-              AI-Powered Solutions
-            </span>
-            <span className="px-4 py-2 bg-zion-purple/20 border border-zion-purple/30 rounded-full text-zion-cyan">
-              Enterprise Grade
-            </span>
-          </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-631c
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8fef
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
-        </motion.div>
-
-        {/* Search and Filters */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-          className="bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 mb-12"
-        >
-          <h2 className="text-2xl font-bold text-white mb-6 text-center">Search and Filters</h2>
-          
-          {/* New Services 2025 Banner */}
-          <div className="max-w-4xl mx-auto mb-8">
-            <div className="bg-gradient-to-r from-zion-cyan/20 to-blue-500/20 border border-zion-cyan/30 rounded-lg p-6 backdrop-blur-sm">
-              <div className="text-center">
-                <h3 className="text-2xl font-bold text-white mb-3">🚀 New for 2025!</h3>
-                <p className="text-zion-slate-light mb-4">
-                  Explore our latest innovative services including AI-powered solutions, quantum computing, specialized micro-SaaS platforms, and emerging technologies.
-                </p>
-                <a
-                  href="/innovative-services-2025"
-                  className="inline-flex items-center space-x-2 bg-zion-cyan hover:bg-zion-cyan/80 text-black font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
-                >
-                  <span>View All New Services 2025</span>
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                  </svg>
-                </a>
-              </div>
-=======
-=======
-import React, { useState, useMemo } from 'react';
-=======
->>>>>>> origin/cursor/build-project-and-deploy-with-netlify-1c1d
-import { motion } from 'framer-motion';
-import { Search, CheckCircle, ArrowRight, Phone } from 'lucide-react';
-=======
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { Search, Filter, Star, ExternalLink, Zap, Shield, Cloud, Brain, Globe, Lock, Cpu, Database, Network, Code, BarChart3, Users, Smartphone, Server, Key, Eye, Rocket, Target, TrendingUp, Award, Clock, CheckCircle, ArrowRight } from 'lucide-react';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9077
-
-interface Service {
-  id: string;
-  name: string;
-  description: string;
-  category: string;
-  price: string;
-  features: string[];
-  technology: string[];
-  icon: React.ComponentType<any>;
-  popular?: boolean;
-  new?: boolean;
-  marketPrice: string;
-  benefits: string[];
-  useCases: string[];
-  link: string;
-}
-
-const services: Service[] = [
-  // AI & Machine Learning Services
-  {
-    id: 'ai-content-generator',
-    name: 'AI Content Generator Pro',
-    description: 'Advanced AI-powered content creation platform for blogs, social media, and marketing materials with SEO optimization.',
-    category: 'AI & Machine Learning',
-    price: '$299/month',
-    marketPrice: '$500-800/month',
-    features: [
-      'Multi-language content generation',
-      'SEO-optimized writing',
-      'Brand voice customization',
-      'Plagiarism-free content',
-      'Content calendar planning',
-      'Performance analytics'
-    ],
-    technology: ['GPT-4', 'BERT', 'Python', 'React', 'Node.js', 'MongoDB'],
-    icon: Brain,
-    popular: true,
-    benefits: [
-      'Save 80% of content creation time',
-      'Improve SEO rankings by 40%',
-      'Maintain consistent brand voice',
-      'Scale content production 10x'
-    ],
-    useCases: [
-      'Marketing agencies',
-      'E-commerce businesses',
-      'Content creators',
-      'Startups and enterprises'
-    ],
-    link: 'https://ziontechgroup.com/ai-content-generator'
-  },
-  {
-    id: 'ai-customer-support',
-    name: 'AI Customer Support Suite',
-    description: 'Intelligent customer support automation with 24/7 availability, multilingual support, and seamless human handoff.',
-    category: 'AI & Machine Learning',
-    price: '$199/month',
-    marketPrice: '$300-600/month',
-    features: [
-      'Natural language processing',
-      'Multi-language support',
-      'Sentiment analysis',
-      'Ticket routing automation',
-      'Knowledge base integration',
-      'Performance analytics'
-    ],
-    technology: ['NLP', 'Machine Learning', 'Python', 'React', 'WebSocket', 'Redis'],
-    icon: Users,
-    popular: true,
-    benefits: [
-      'Reduce support costs by 60%',
-      'Improve response time by 90%',
-      'Handle 80% of queries automatically',
-      '24/7 customer availability'
-    ],
-    useCases: [
-      'E-commerce platforms',
-      'SaaS companies',
-      'Customer service teams',
-      'Online businesses'
-    ],
-    link: 'https://ziontechgroup.com/ai-customer-support'
-  },
-  {
-    id: 'ai-data-analytics',
-    name: 'AI-Powered Business Intelligence',
-    description: 'Advanced analytics platform that transforms raw data into actionable insights using machine learning algorithms.',
-    category: 'AI & Machine Learning',
-    price: '$499/month',
-    marketPrice: '$800-1500/month',
-    features: [
-      'Predictive analytics',
-      'Real-time dashboards',
-      'Custom reporting',
-      'Data visualization',
-      'Automated insights',
-      'API integrations'
-    ],
-    technology: ['TensorFlow', 'Python', 'React', 'D3.js', 'PostgreSQL', 'Redis'],
-    icon: BarChart3,
-    new: true,
-    benefits: [
-      'Make data-driven decisions faster',
-      'Identify trends before competitors',
-      'Reduce manual reporting by 70%',
-      'Improve forecasting accuracy by 85%'
-    ],
-    useCases: [
-      'Financial institutions',
-      'Retail businesses',
-      'Manufacturing companies',
-      'Healthcare organizations'
-    ],
-    link: 'https://ziontechgroup.com/ai-business-intelligence'
-  },
-
-  // Cybersecurity Services
-  {
-    id: 'threat-detection',
-    name: 'Advanced Threat Detection System',
-    description: 'Real-time cybersecurity monitoring with AI-powered threat detection, automated response, and compliance reporting.',
-    category: 'Cybersecurity',
-    price: '$399/month',
-    marketPrice: '$600-1200/month',
-    features: [
-      'Real-time threat monitoring',
-      'AI-powered detection',
-      'Automated incident response',
-      'Compliance reporting',
-      'Vulnerability assessment',
-      'Security training modules'
-    ],
-    technology: ['Machine Learning', 'Python', 'Elasticsearch', 'Kafka', 'React', 'Docker'],
-    icon: Shield,
-    popular: true,
-    benefits: [
-      'Detect threats 90% faster',
-      'Reduce false positives by 70%',
-      'Meet compliance requirements',
-      'Protect against zero-day attacks'
-    ],
-    useCases: [
-      'Financial services',
-      'Healthcare organizations',
-      'Government agencies',
-      'Enterprise businesses'
-    ],
-    link: 'https://ziontechgroup.com/threat-detection'
-  },
-  {
-    id: 'identity-management',
-    name: 'Zero Trust Identity Management',
-    description: 'Comprehensive identity and access management solution with multi-factor authentication and behavioral analytics.',
-    category: 'Cybersecurity',
-    price: '$299/month',
-    marketPrice: '$400-800/month',
-    features: [
-      'Multi-factor authentication',
-      'Single sign-on (SSO)',
-      'Role-based access control',
-      'Behavioral analytics',
-      'Audit logging',
-      'API security'
-    ],
-    technology: ['OAuth 2.0', 'SAML', 'React', 'Node.js', 'PostgreSQL', 'Redis'],
-    icon: Key,
-    new: true,
-    benefits: [
-      'Reduce security breaches by 80%',
-      'Simplify user access management',
-      'Meet compliance requirements',
-      'Improve user experience'
-    ],
-    useCases: [
-      'Enterprise organizations',
-      'Healthcare providers',
-      'Financial institutions',
-      'Educational institutions'
-    ],
-    link: 'https://ziontechgroup.com/identity-management'
-  },
-
-  // Cloud & DevOps Services
-  {
-    id: 'cloud-automation',
-    name: 'Cloud Infrastructure Automation',
-    description: 'Automated cloud infrastructure management with cost optimization, auto-scaling, and disaster recovery.',
-    category: 'Cloud & DevOps',
-    price: '$599/month',
-    marketPrice: '$800-2000/month',
-    features: [
-      'Infrastructure as Code',
-      'Auto-scaling',
-      'Cost optimization',
-      'Disaster recovery',
-      'Monitoring & alerting',
-      'Security compliance'
-    ],
-    technology: ['Terraform', 'Kubernetes', 'AWS/Azure/GCP', 'Docker', 'Prometheus', 'Grafana'],
-    icon: Cloud,
-    popular: true,
-    benefits: [
-      'Reduce infrastructure costs by 40%',
-      'Deploy 10x faster',
-      'Improve reliability to 99.99%',
-      'Automate compliance checks'
-    ],
-    useCases: [
-      'Startups scaling rapidly',
-      'Enterprise cloud migration',
-      'DevOps teams',
-      'E-commerce platforms'
-    ],
-    link: 'https://ziontechgroup.com/cloud-automation'
-  },
-  {
-    id: 'ci-cd-pipeline',
-    name: 'Enterprise CI/CD Pipeline',
-    description: 'Complete continuous integration and deployment pipeline with automated testing, security scanning, and rollback capabilities.',
-    category: 'Cloud & DevOps',
-    price: '$399/month',
-    marketPrice: '$500-1000/month',
-    features: [
-      'Automated testing',
-      'Security scanning',
-      'Deployment automation',
-      'Rollback capabilities',
-      'Performance monitoring',
-      'Team collaboration tools'
-    ],
-    technology: ['Jenkins', 'GitLab CI', 'Docker', 'Kubernetes', 'SonarQube', 'React'],
-    icon: Rocket,
-    benefits: [
-      'Deploy code 50x faster',
-      'Reduce deployment failures by 90%',
-      'Improve code quality',
-      'Enable team collaboration'
-    ],
-    useCases: [
-      'Software development teams',
-      'DevOps engineers',
-      'Startups and enterprises',
-      'Digital agencies'
-    ],
-    link: 'https://ziontechgroup.com/ci-cd-pipeline'
-  },
-
-  // Blockchain & Web3 Services
-  {
-    id: 'defi-platform',
-    name: 'DeFi Platform Development',
-    description: 'Custom decentralized finance platform development with smart contracts, liquidity pools, and yield farming.',
-    category: 'Blockchain',
-    price: '$2,999/month',
-    marketPrice: '$5000-15000/month',
-    features: [
-      'Smart contract development',
-      'Liquidity pool management',
-      'Yield farming protocols',
-      'Cross-chain bridges',
-      'Security auditing',
-      'User interface'
-    ],
-    technology: ['Solidity', 'Ethereum', 'Polygon', 'Web3.js', 'React', 'Hardhat'],
-    icon: Lock,
-    new: true,
-    benefits: [
-      'Launch DeFi protocols faster',
-      'Ensure smart contract security',
-      'Access to DeFi market',
-      'Innovative financial products'
-    ],
-    useCases: [
-      'Financial startups',
-      'Crypto projects',
-      'Traditional banks',
-      'Investment firms'
-    ],
-    link: 'https://ziontechgroup.com/defi-platform'
-  },
-  {
-    id: 'nft-marketplace',
-    name: 'NFT Marketplace Platform',
-    description: 'Complete NFT marketplace with minting, trading, auctions, and royalty distribution systems.',
-    category: 'Blockchain',
-    price: '$1,999/month',
-    marketPrice: '$3000-8000/month',
-    features: [
-      'NFT minting tools',
-      'Marketplace functionality',
-      'Auction system',
-      'Royalty distribution',
-      'Multi-chain support',
-      'Analytics dashboard'
-    ],
-    technology: ['Solidity', 'IPFS', 'Ethereum', 'Polygon', 'React', 'Node.js'],
-    icon: Globe,
-    benefits: [
-      'Launch NFT marketplace quickly',
-      'Generate revenue from trading fees',
-      'Support multiple blockchains',
-      'Built-in royalty system'
-    ],
-    useCases: [
-      'Art galleries',
-      'Gaming companies',
-      'Content creators',
-      'Brands and celebrities'
-    ],
-    link: 'https://ziontechgroup.com/nft-marketplace'
-  },
-
-  // IoT & Edge Computing
-  {
-    id: 'iot-platform',
-    name: 'Enterprise IoT Management Platform',
-    description: 'Comprehensive IoT platform for device management, data collection, analytics, and automation.',
-    category: 'IoT',
-    price: '$799/month',
-    marketPrice: '$1000-3000/month',
-    features: [
-      'Device management',
-      'Real-time monitoring',
-      'Data analytics',
-      'Automation rules',
-      'Security protocols',
-      'API integrations'
-    ],
-    technology: ['MQTT', 'Node.js', 'React', 'MongoDB', 'Redis', 'Docker'],
-    icon: Smartphone,
-    popular: true,
-    benefits: [
-      'Monitor thousands of devices',
-      'Reduce operational costs by 30%',
-      'Improve efficiency through automation',
-      'Real-time insights and alerts'
-    ],
-    useCases: [
-      'Manufacturing companies',
-      'Smart cities',
-      'Healthcare facilities',
-      'Energy companies'
-    ],
-    link: 'https://ziontechgroup.com/iot-platform'
-  },
-  {
-    id: 'edge-computing',
-    name: 'Edge Computing Solutions',
-    description: 'Edge computing infrastructure for low-latency applications, real-time processing, and distributed computing.',
-    category: 'IoT',
-    price: '$1,299/month',
-    marketPrice: '$2000-5000/month',
-    features: [
-      'Edge node deployment',
-      'Real-time processing',
-      'Load balancing',
-      'Security protocols',
-      'Monitoring tools',
-      'API management'
-    ],
-    technology: ['Kubernetes', 'Docker', 'Python', 'React', 'PostgreSQL', 'Redis'],
-    icon: Server,
-    new: true,
-    benefits: [
-      'Reduce latency by 90%',
-      'Process data closer to source',
-      'Improve application performance',
-      'Reduce bandwidth costs'
-    ],
-    useCases: [
-      'Gaming companies',
-      'Financial trading platforms',
-      'Autonomous vehicles',
-      'Smart manufacturing'
-    ],
-    link: 'https://ziontechgroup.com/edge-computing'
-  },
-
-  // Quantum Computing Services
-  {
-    id: 'quantum-algorithms',
-    name: 'Quantum Algorithm Development',
-    description: 'Custom quantum algorithm development for optimization, cryptography, and machine learning applications.',
-    category: 'Quantum Computing',
-    price: '$3,999/month',
-    marketPrice: '$5000-20000/month',
-    features: [
-      'Custom algorithm development',
-      'Quantum circuit design',
-      'Optimization problems',
-      'Cryptography solutions',
-      'Performance testing',
-      'Documentation & training'
-    ],
-    technology: ['Qiskit', 'Cirq', 'Python', 'Quantum circuits', 'IBM Quantum', 'Google Quantum'],
-    icon: Cpu,
-    new: true,
-    benefits: [
-      'Solve complex problems faster',
-      'Access quantum advantage',
-      'Future-proof your applications',
-      'Competitive edge in research'
-    ],
-    useCases: [
-      'Research institutions',
-      'Pharmaceutical companies',
-      'Financial services',
-      'Government agencies'
-    ],
-    link: 'https://ziontechgroup.com/quantum-algorithms'
-  },
-
-  // Data & Analytics Services
-  {
-    id: 'data-warehouse',
-    name: 'Modern Data Warehouse',
-    description: 'Cloud-native data warehouse with real-time analytics, ETL pipelines, and business intelligence tools.',
-    category: 'Data & Analytics',
-    price: '$899/month',
-    marketPrice: '$1200-3000/month',
-    features: [
-      'Real-time data processing',
-      'ETL pipeline automation',
-      'Business intelligence tools',
-      'Data governance',
-      'Security & compliance',
-      'Scalable architecture'
-    ],
-    technology: ['Snowflake', 'Apache Airflow', 'dbt', 'React', 'Python', 'Docker'],
-    icon: Database,
-    popular: true,
-    benefits: [
-      'Unify all data sources',
-      'Real-time insights',
-      'Scale with business growth',
-      'Reduce data silos'
-    ],
-    useCases: [
-      'E-commerce companies',
-      'Financial services',
-      'Healthcare organizations',
-      'Retail businesses'
-    ],
-    link: 'https://ziontechgroup.com/data-warehouse'
-  }
-];
-
-const categories = [
-  'All', 
-  'AI & Machine Learning', 
-  'Cybersecurity', 
-  'Cloud & DevOps', 
-  'Blockchain', 
-  'IoT', 
-  'Quantum Computing',
-  'Data & Analytics'
-];
-
-const priceRanges = ['all', '0-500', '500-1000', '1000-2000', '2000-4000', '4000+'];
-
-export default function ServicesPage() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [priceRange, setPriceRange] = useState('all');
-  const [sortBy, setSortBy] = useState('name');
-
-  const filteredServices = useMemo(() => {
-    let filtered = services;
-
-    // Filter by category
-    if (selectedCategory !== 'All') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
-    }
-
-    // Filter by search term
-    if (searchTerm) {
-      filtered = filtered.filter(service =>
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.technology.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()))
-      );
-    }
-
-    // Filter by price range
-    if (priceRange !== 'all') {
-      const [min, max] = priceRange.split('-').map(Number);
-      filtered = filtered.filter(service => {
-        const price = parseInt(service.price.replace(/[^0-9]/g, ''));
-        if (max === 0) return price >= min;
-        return price >= min && price <= max;
-      });
-    }
-
-    // Sort services
-    filtered.sort((a, b) => {
+  const filteredServices = allServices
+    .filter(service => 
+      selectedCategory === 'all' || service.category === selectedCategory
+    )
+    .filter(service =>
+      selectedServiceType === 'all' || service.serviceType === selectedServiceType
+    )
+    .filter(service =>
+      service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+    )
+    .sort((a, b) => {
       switch (sortBy) {
         case 'price':
-          const priceA = parseInt(a.price.replace(/[^0-9]/g, ''));
-          const priceB = parseInt(b.price.replace(/[^0-9]/g, ''));
-          return priceA - priceB;
-        case 'popularity':
-          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
-        case 'new':
-          return (b.new ? 1 : 0) - (a.new ? 1 : 0);
+          const aPrice = a.serviceType === 'IT Service' ? a.projectRate : (a as any).price || 0;
+          const bPrice = b.serviceType === 'IT Service' ? b.projectRate : (b as any).price || 0;
+          return aPrice - bPrice;
+        case 'category':
+          return a.category.localeCompare(b.category);
+        case 'name':
         default:
           return a.name.localeCompare(b.name);
       }
@@ -2370,19 +139,41 @@ export default function ServicesPage() {
     return filtered;
   }, [selectedCategory, searchTerm, priceRange, sortBy]);
 
-  const getPriceRangeLabel = (range: string) => {
-    switch (range) {
-      case '0-500': return 'Under $500/month';
-      case '500-1000': return '$500 - $1,000/month';
-      case '1000-2000': return '$1,000 - $2,000/month';
-      case '2000-4000': return '$2,000 - $4,000/month';
-      case '4000+': return 'Over $4,000/month';
-      default: return 'All Prices';
-<<<<<<< HEAD
->>>>>>> origin/cursor/resolve-typescript-merge-conflicts-8802
-=======
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9077
-    }
+  const getCategoryIcon = (category: string) => {
+    const icons: { [key: string]: string } = {
+      'Productivity': '⚡',
+      'Finance': '💰',
+      'Marketing': '📢',
+      'CRM': '👥',
+      'Analytics': '📊',
+      'Scheduling': '📅',
+      'Quantum Computing': '🔮',
+      'AI Architecture': '🧠',
+      'Edge Computing': '🌐',
+      'Privacy AI': '🔒',
+      'AI Governance': '⚖️',
+      'AI Ecosystem': '🌍',
+      'Infrastructure': '🏗️',
+      'Cloud Services': '☁️',
+      'Security': '🛡️',
+      'DevOps': '🔧',
+      'IoT': '📡',
+      'Consulting': '💼',
+      'Modernization': '🔄',
+      'Software Development': '💻',
+      'Business Intelligence': '📈',
+      'Language AI': '🗣️',
+      'Visual AI': '👁️',
+      'Process Automation': '🤖',
+      'Conversational AI': '💬',
+      'Predictive Analytics': '🔮',
+      'Supply Chain': '📦',
+      'Customer Experience': '😊',
+      'Financial AI': '🏦',
+      'Healthcare AI': '🏥',
+      'Marketing AI': '📈'
+    };
+    return icons[category] || '🚀';
   };
 
   return (
@@ -2390,66 +181,31 @@ export default function ServicesPage() {
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-zion-blue-dark/50 to-transparent"></div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Our <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                Services
-              </span>
-            </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Discover our comprehensive range of cutting-edge technology solutions designed to transform your business
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Our
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                {" "}Comprehensive Services
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              Cutting-edge technology solutions designed to transform your business and drive innovation across all industries. 
-              From AI-powered platforms to emerging technologies, we deliver real value with measurable results.
->>>>>>> origin/cursor/expand-services-and-deploy-updates-7bd2
-            </p>
-          </motion.div>
-
-          {/* Enhanced Search Bar */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="max-w-4xl mx-auto mb-8"
-          >
-            <div className="relative">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search for services, technologies, or solutions..."
-                  value={query}
-                  onChange={(e) => setQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-zion-cyan/30 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                />
-                {query && (
-                  <button
-                    onClick={() => setQuery('')}
-                    className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
-                  >
-                    <X className="w-5 h-5" />
-                  </button>
-                )}
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            Comprehensive
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              {" "}Micro SAAS Services
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+            Discover our cutting-edge collection of 60+ innovative micro SAAS, IT, and AI solutions, 
+            from AI-powered productivity tools to revolutionary quantum computing platforms. 
+            Each service is designed to transform your business and drive innovation.
+          </p>
+          
+          {/* Contact Info */}
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 max-w-2xl mx-auto">
+            <h3 className="text-lg font-semibold text-blue-400 mb-4">Contact Information</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+              <div>
+                <p><span className="text-blue-400">Phone:</span> +1 302 464 0950</p>
+                <p><span className="text-blue-400">Email:</span> kleber@ziontechgroup.com</p>
+              </div>
+              <div>
+                <p><span className="text-blue-400">Website:</span> ziontechgroup.com</p>
+                <p><span className="text-blue-400">Address:</span> 364 E Main St STE 1008, Middletown DE 19709</p>
               </div>
 
               {/* Search Suggestions */}
@@ -2548,94 +304,39 @@ import {
   Building2
 } from 'lucide-react';
 
-<<<<<<< HEAD
-const Services = () => {
-  const serviceCategories = [
-    {
-      title: "AI & Machine Learning",
-      icon: <Brain className="w-8 h-8" />,
-      description: "Cutting-edge artificial intelligence and machine learning solutions",
-      services: [
-        "AI-Powered Business Intelligence",
-        "Machine Learning Model Development",
-        "Natural Language Processing",
-        "Computer Vision Solutions",
-        "Predictive Analytics",
-        "AI Chatbots & Virtual Assistants"
-      ],
-      link: "/ai-services"
-    },
-    {
-      title: "Micro SAAS Development",
-      icon: <Zap className="w-8 h-8" />,
-      description: "Scalable software-as-a-service solutions for modern businesses",
-      services: [
-        "Custom SAAS Platform Development",
-        "API Development & Integration",
-        "User Management Systems",
-        "Subscription & Billing Systems",
-        "Multi-tenant Architecture",
-        "SAAS Analytics & Reporting"
-      ],
-      link: "/micro-saas-services"
-    },
-    {
-      title: "Cloud & DevOps",
-      icon: <Cloud className="w-8 h-8" />,
-      description: "Scalable cloud infrastructure and DevOps automation",
-      services: [
-        "Cloud Migration & Strategy",
-        "AWS/Azure/GCP Solutions",
-        "Container Orchestration (Kubernetes)",
-        "CI/CD Pipeline Automation",
-        "Infrastructure as Code",
-        "Cloud Security & Compliance"
-      ],
-      link: "/cloud-devops-solutions"
-    },
-    {
-      title: "Digital Transformation",
-      icon: <Rocket className="w-8 h-8" />,
-      description: "End-to-end digital transformation consulting and implementation",
-      services: [
-        "Digital Strategy Consulting",
-        "Process Automation",
-        "Legacy System Modernization",
-        "Change Management",
-        "Digital Workplace Solutions",
-        "Customer Experience Optimization"
-      ],
-      link: "/digital-transformation"
-    },
-    {
-      title: "Enterprise Solutions",
-      icon: <Building2 className="w-8 h-8" />,
-      description: "Enterprise-grade technology solutions for large organizations",
-      services: [
-        "Enterprise Software Development",
-        "System Integration",
-        "Data Management & Analytics",
-        "Business Process Automation",
-        "Enterprise Security Solutions",
-        "Scalable Architecture Design"
-      ],
-      link: "/enterprise-solutions"
-    },
-    {
-      title: "Cybersecurity",
-      icon: <Shield className="w-8 h-8" />,
-      description: "Comprehensive security solutions to protect your business",
-      services: [
-        "Security Audits & Assessments",
-        "Penetration Testing",
-        "Security Architecture Design",
-        "Compliance Management (SOC2, ISO)",
-        "Incident Response Planning",
-        "Security Training & Awareness"
-      ],
-      link: "/cybersecurity"
-    }
-  ];
+            {/* Service Type Filter */}
+            <div className="flex gap-2 flex-wrap">
+              {['all', 'Micro SAAS', 'IT Service', 'AI Service'].map(type => (
+                <button
+                  key={type}
+                  onClick={() => setSelectedServiceType(type)}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                    selectedServiceType === type
+                      ? 'bg-green-600 text-white'
+                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                  }`}
+                >
+                  {type === 'all' ? 'All Types' : type}
+                </button>
+              ))}
+            </div>
+
+            {/* Category Filter */}
+            <div className="flex gap-2 flex-wrap">
+              {categories.map(category => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                    selectedCategory === category
+                      ? 'bg-blue-600 text-white'
+                      : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                    }`}
+                >
+                  {category === 'all' ? 'All Categories' : category}
+                </button>
+              ))}
+            </div>
 
   const emergingTechServices = [
     {
@@ -3675,8 +1376,8 @@ const Services = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               What We <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">Offer</span>
             </h2>
-            <p className="text-gray-300 max-w-2xl mx-auto">
-              Discover our comprehensive range of technology services designed to meet your business needs
+            <p className="text-gray-300">
+              Showing {filteredServices.length} of {allServices.length} total services
             </p>
           </div>
           
@@ -3687,32 +1388,44 @@ const Services = () => {
                 className={`group bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 animate-fade-in-up`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                {/* Popular Badge */}
-                {service.popular && (
-                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
-                    ⭐ Popular
+                {/* Service Header */}
+                <div className="flex items-start justify-between mb-4">
+                  <div className="text-3xl">{getCategoryIcon(service.category)}</div>
+                  <div className="text-right">
+                    <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                      service.serviceType === 'Micro SAAS' && (service as any).pricing === 'Freemium' ? 'bg-green-500/20 text-green-400' :
+                      service.serviceType === 'Micro SAAS' && (service as any).pricing === 'Professional' ? 'bg-blue-500/20 text-blue-400' :
+                      'bg-purple-500/20 text-purple-400'
+                    }`}>
+                      {service.serviceType === 'Micro SAAS' ? (service as any).pricing : service.serviceType}
+                    </span>
                   </div>
                 )}
                 
                 <div className="text-cyan-400 mb-4 group-hover:scale-110 transition-transform duration-300">
                   {service.icon}
                 </div>
-                
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
-                  {service.title}
-                </h3>
-                
-                <p className="text-gray-400 mb-4 group-hover:text-gray-300 transition-colors duration-300">
-                  {service.description}
-                </p>
-                
-                {/* Service Meta */}
-                <div className="flex items-center justify-between mb-4 text-sm">
-                  <span className="text-cyan-400 font-medium">{service.price}</span>
-                  <span className="text-gray-500 flex items-center">
-                    <Clock className="w-4 h-4 mr-1" />
-                    {service.duration}
-                  </span>
+
+                {/* Service Title and Description */}
+                <h3 className="text-xl font-semibold text-white mb-3">{service.name}</h3>
+                <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
+
+                {/* Pricing */}
+                <div className="mb-4">
+                  <div className="text-2xl font-bold text-blue-400">
+                    {service.serviceType === 'IT Service' 
+                      ? `$${(service as any).hourlyRate}/hour or $${(service as any).projectRate.toLocaleString()} project`
+                      : formatPrice((service as any).price, (service as any).pricingModel)
+                    }
+                  </div>
+                  <div className="text-sm text-gray-400">
+                    Market Price: {service.marketPrice}
+                  </div>
+                  {service.serviceType !== 'Micro SAAS' && (
+                    <div className="text-xs text-gray-500 mt-1">
+                      {service.serviceType}
+                    </div>
+                  )}
                 </div>
                 
                 {/* Rating */}
@@ -3740,7 +1453,70 @@ const Services = () => {
                     ))}
                   </ul>
                 </div>
-                
+
+                {/* Benefits */}
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-green-400 mb-3">Benefits:</h4>
+                  <div className="space-y-1">
+                    {service.benefits.slice(0, 3).map((benefit, idx) => (
+                      <div key={idx} className="flex items-center text-sm text-gray-300">
+                        <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
+                        {benefit}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Additional Info */}
+                <div className="mb-6 space-y-2 text-sm">
+                  {service.serviceType === 'Micro SAAS' ? (
+                    <>
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Setup Time:</span>
+                        <span className="text-white">{(service as any).setupTime}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">ROI:</span>
+                        <span className="text-green-400">{(service as any).roi}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Users:</span>
+                        <span className="text-white">{(service as any).userLimit}</span>
+                      </div>
+                    </>
+                  ) : service.serviceType === 'IT Service' ? (
+                    <>
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Response Time:</span>
+                        <span className="text-white">{(service as any).responseTime}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">SLA:</span>
+                        <span className="text-green-400">{(service as any).sla}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Delivery:</span>
+                        <span className="text-white">{(service as any).deliveryTime}</span>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">AI Score:</span>
+                        <span className="text-green-400">{(service as any).aiScore}/100</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Accuracy:</span>
+                        <span className="text-white">{(service as any).accuracy}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-400">Models:</span>
+                        <span className="text-white">{(service as any).aiModels?.length || 0}</span>
+                      </div>
+                    </>
+                  )}
+                </div>
+
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {service.tags.map((tag, idx) => (
@@ -4918,8 +2694,6 @@ export default Services;
         </div>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       {/* Emerging Technologies */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -5005,55 +2779,6 @@ export default Services;
                 </Link>
               </div>
             </div>
-=======
-=======
-      {/* Comprehensive Services Showcase */}
-      <section className="py-20">
-        <ComprehensiveServicesShowcase />
-      </section>
-
->>>>>>> origin/cursor/website-audit-and-enhancement-5c03
-      {/* Innovative Services 2025 Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-900/50 to-pink-900/50">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD
-            Discover Our Latest Innovations
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Explore our comprehensive portfolio of cutting-edge micro SAAS solutions, AI services, and next-generation technologies for 2025
-=======
-            Ready to Transform Your Business with Cutting-Edge Technology?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our innovative services can help drive your success and give you a competitive advantage
->>>>>>> origin/cursor/expand-services-and-deploy-updates-7bd2
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/innovative-services-showcase-2025"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-            >
-              View Innovative Services 2025
-            </Link>
-<<<<<<< HEAD
-=======
-            <a
-              href="tel:+13024640950"
-              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
-            >
-              Call: +1 302 464 0950
-            </a>
-          </div>
-          <div className="mb-6 flex flex-col sm:flex-row gap-4 justify-center">
->>>>>>> origin/cursor/expand-services-and-deploy-updates-0542
-            <Link
-              to="/comprehensive-pricing-2025"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300"
-            >
-              View Pricing
-            </Link>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-00d5
           </div>
         </div>
       </section>
@@ -5076,16 +2801,17 @@ export default Services;
               to="/about" 
               className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
-              Learn More About Us
-            </Link>
+              Call: +1 302 464 0950
+            </a>
+          </div>
+          <div className="mb-6">
             <Link
-              to="/advanced-services-2025"
-              className="inline-flex items-center px-6 py-2 text-cyan-400 hover:text-cyan-300 border border-cyan-400 rounded-lg transition-all duration-300"
+              to="/enhanced-services"
+              className="inline-flex items-center px-6 py-2 text-blue-400 hover:text-blue-300 border border-blue-400 rounded-lg transition-all duration-300"
             >
-              Advanced Services 2025 →
+              View Complete Services Portfolio →
             </Link>
           </div>
-<<<<<<< HEAD
         </div>
       </section>
     </div>
@@ -5547,46 +3273,13 @@ export default Services;
             >
               Get Free Quote
             </Link>
-=======
-          <div className="text-sm text-gray-400">
-            <p>Email: kleber@ziontechgroup.com</p>
-            <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-            <p className="mt-2 text-blue-300">Visit our website: <a href="https://ziontechgroup.com" className="underline hover:text-blue-200">https://ziontechgroup.com</a></p>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-7bd2
           </div>
-=======
-import { CogIcon } from '@heroicons/react/24/outline';
-
-const $page: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex justify-center mb-6">
-            <div className="p-3 bg-blue-600/20 rounded-full">
-              <CogIcon className="h-12 w-12 text-blue-400" />
-            </div>
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-            $page
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            This page is under development. Contact us for more information.
-          </p>
-          <Link
-            to="/contact"
-            className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
-          >
-            Contact Us for More Information
-          </Link>
->>>>>>> origin/cursor/website-audit-and-enhancement-56af
         </div>
       </section>
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default Services;
 >>>>>>> origin/cursor/website-audit-and-enhancement-f30b
 =======
@@ -5765,6 +3458,3 @@ export default Services;
 =======
 }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-4a81
-=======
-export default $page;
->>>>>>> origin/cursor/website-audit-and-enhancement-56af

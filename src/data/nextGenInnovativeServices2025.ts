@@ -25,6 +25,7 @@ export interface NextGenService {
   scalability: string[];
   estimatedDelivery: string;
   supportLevel: string;
+  innovationScore: number;
 }
 
 // Next-Generation Innovative Services for 2025
@@ -69,7 +70,8 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     compliance: ["ISO 27001", "NIST", "Quantum Security Standards"],
     scalability: ["Quantum Cloud Access", "Distributed Computing", "Scalable Algorithms"],
     estimatedDelivery: "8-12 weeks",
-    supportLevel: "enterprise"
+    supportLevel: "enterprise",
+    innovationScore: 9.5
   },
   {
     id: 2,
@@ -111,7 +113,8 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     compliance: ["GDPR", "COPPA", "Virtual Asset Regulations"],
     scalability: ["Cloud-based Rendering", "CDN Integration", "Multi-platform Support"],
     estimatedDelivery: "6-8 weeks",
-    supportLevel: "premium"
+    supportLevel: "premium",
+    innovationScore: 8.8
   },
   {
     id: 3,
@@ -153,7 +156,8 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     compliance: ["DOT Regulations", "Safety Standards", "Insurance Requirements"],
     scalability: ["Multi-fleet Support", "Geographic Expansion", "Vehicle Type Support"],
     estimatedDelivery: "10-14 weeks",
-    supportLevel: "enterprise"
+    supportLevel: "enterprise",
+    innovationScore: 9.2
   },
   {
     id: 4,
@@ -195,7 +199,8 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     compliance: ["HIPAA", "FDA", "ISO 13485", "SOC2"],
     scalability: ["Multi-site Support", "Patient Volume Scaling", "Geographic Expansion"],
     estimatedDelivery: "8-12 weeks",
-    supportLevel: "enterprise"
+    supportLevel: "enterprise",
+    innovationScore: 9.0
   },
   {
     id: 5,
@@ -237,7 +242,8 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     compliance: ["SEC", "FINRA", "Basel III", "SOX"],
     scalability: ["Multi-strategy Support", "Global Market Access", "High-frequency Trading"],
     estimatedDelivery: "10-14 weeks",
-    supportLevel: "enterprise"
+    supportLevel: "enterprise",
+    innovationScore: 9.3
   },
   {
     id: 6,
@@ -279,7 +285,8 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     compliance: ["GDPR", "SOX", "Industry-specific Regulations"],
     scalability: ["Multi-tenant Architecture", "Document Volume Scaling", "Geographic Distribution"],
     estimatedDelivery: "4-6 weeks",
-    supportLevel: "premium"
+    supportLevel: "premium",
+    innovationScore: 8.5
   },
   {
     id: 7,
@@ -321,7 +328,8 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     compliance: ["ISO 28000", "C-TPAT", "Industry Standards"],
     scalability: ["Multi-location Support", "Supplier Network Scaling", "Geographic Expansion"],
     estimatedDelivery: "6-8 weeks",
-    supportLevel: "premium"
+    supportLevel: "premium",
+    innovationScore: 9.1
   },
   {
     id: 8,
@@ -363,7 +371,180 @@ export const nextGenInnovativeServices2025: NextGenService[] = [
     compliance: ["SOC2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
     scalability: ["Multi-environment Support", "Threat Intelligence Sharing", "Global Threat Detection"],
     estimatedDelivery: "6-8 weeks",
-    supportLevel: "enterprise"
+    supportLevel: "enterprise",
+    innovationScore: 9.4
+  },
+  {
+    id: 9,
+    name: "Brain-Computer Interface Development Platform",
+    category: "Neurotechnology",
+    subcategory: "BCI Solutions",
+    description: "Revolutionary brain-computer interface platform for medical applications, research, and human-computer interaction",
+    pricing: "Enterprise",
+    price: 35000,
+    pricingModel: "monthly",
+    features: [
+      "Neural signal processing",
+      "Real-time brain activity monitoring",
+      "AI-powered pattern recognition",
+      "Medical device integration",
+      "Research tools and analytics",
+      "Safety monitoring systems",
+      "Compliance and validation tools",
+      "Developer SDK and APIs"
+    ],
+    benefits: [
+      "Enable new medical treatments",
+      "Advance neuroscience research",
+      "Improve quality of life",
+      "Create new human-computer interfaces",
+      "Breakthrough technology development",
+      "Competitive research advantage"
+    ],
+    targetAudience: ["Medical research institutions", "Pharmaceutical companies", "Healthcare providers", "Research universities"],
+    tags: ["Neurotechnology", "BCI", "Medical Devices", "AI", "Research", "Neuroscience"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/brain-computer-interface",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$35,000-75,000/month",
+    technologyStack: ["Python", "Signal Processing", "Machine Learning", "Medical Device APIs", "Real-time Systems"],
+    compliance: ["FDA", "CE Mark", "ISO 13485", "Medical Device Regulations"],
+    scalability: ["Multi-device Support", "Research Collaboration", "Global Research Network"],
+    estimatedDelivery: "12-16 weeks",
+    supportLevel: "enterprise",
+    innovationScore: 9.6
+  },
+  {
+    id: 10,
+    name: "Space Technology & Satellite AI Platform",
+    category: "Space Technology",
+    subcategory: "Satellite AI",
+    description: "Advanced AI platform for satellite operations, space data analysis, and orbital management systems",
+    pricing: "Enterprise",
+    price: 28000,
+    pricingModel: "monthly",
+    features: [
+      "Satellite orbit optimization",
+      "AI-powered space data analysis",
+      "Autonomous satellite operations",
+      "Space debris tracking",
+      "Weather prediction systems",
+      "Earth observation analytics",
+      "Satellite constellation management",
+      "Real-time monitoring and control"
+    ],
+    benefits: [
+      "Optimize satellite operations",
+      "Improve space safety",
+      "Enhanced data collection",
+      "Cost-effective space operations",
+      "Advanced space research capabilities",
+      "Competitive space technology advantage"
+    ],
+    targetAudience: ["Space agencies", "Satellite companies", "Research institutions", "Government", "Private space companies"],
+    tags: ["Space Technology", "Satellite AI", "Orbital Mechanics", "Space Data", "AI", "Aerospace"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/space-technology-ai",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$28,000-55,000/month",
+    technologyStack: ["Python", "Orbital Mechanics", "Machine Learning", "Satellite APIs", "Real-time Systems"],
+    compliance: ["ITAR", "Space Regulations", "International Space Law", "Safety Standards"],
+    scalability: ["Multi-satellite Support", "Global Coverage", "Constellation Management"],
+    estimatedDelivery: "14-18 weeks",
+    supportLevel: "enterprise",
+    innovationScore: 9.1
+  },
+  {
+    id: 11,
+    name: "Quantum Internet & Secure Communications",
+    category: "Quantum Technology",
+    subcategory: "Quantum Communications",
+    description: "Next-generation quantum internet infrastructure for ultra-secure, unhackable communications and data transfer",
+    pricing: "Enterprise",
+    price: 45000,
+    pricingModel: "monthly",
+    features: [
+      "Quantum key distribution",
+      "Quantum entanglement networks",
+      "Quantum internet protocols",
+      "Secure quantum channels",
+      "Quantum network management",
+      "Quantum cryptography services",
+      "Quantum-safe communications",
+      "Global quantum network access"
+    ],
+    benefits: [
+      "Unhackable communications",
+      "Quantum-safe security",
+      "Future-proof infrastructure",
+      "Ultra-fast quantum networks",
+      "Competitive security advantage",
+      "Breakthrough technology leadership"
+    ],
+    targetAudience: ["Government agencies", "Financial institutions", "Defense contractors", "Research institutions", "Critical infrastructure"],
+    tags: ["Quantum Internet", "Quantum Communications", "Quantum Cryptography", "Network Security", "Future Technology"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/quantum-internet",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$45,000-90,000/month",
+    technologyStack: ["Quantum Protocols", "Quantum Hardware", "Network Infrastructure", "Security Systems", "Quantum Software"],
+    compliance: ["NIST", "Quantum Security Standards", "Government Security", "International Standards"],
+    scalability: ["Global Network", "Multi-node Support", "Quantum Internet Expansion"],
+    estimatedDelivery: "16-20 weeks",
+    supportLevel: "enterprise",
+    innovationScore: 9.5
+  },
+  {
+    id: 12,
+    name: "Synthetic Biology & Bioengineering Platform",
+    category: "Biotechnology",
+    subcategory: "Synthetic Biology",
+    description: "Revolutionary platform for synthetic biology, genetic engineering, and bio-manufacturing applications",
+    pricing: "Enterprise",
+    price: 32000,
+    pricingModel: "monthly",
+    features: [
+      "DNA synthesis and editing",
+      "Bio-manufacturing automation",
+      "Genetic circuit design",
+      "Protein engineering tools",
+      "Bio-safety monitoring",
+      "Lab automation systems",
+      "Research collaboration tools",
+      "Compliance and validation"
+    ],
+    benefits: [
+      "Accelerate bio-research",
+      "Enable new bio-products",
+      "Improve manufacturing efficiency",
+      "Advance medical treatments",
+      "Sustainable bio-solutions",
+      "Competitive bio-technology advantage"
+    ],
+    targetAudience: ["Biotech companies", "Pharmaceutical companies", "Research institutions", "Agricultural companies", "Medical research"],
+    tags: ["Synthetic Biology", "Bioengineering", "Genetic Engineering", "Biotechnology", "Bio-manufacturing"],
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/synthetic-biology",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$32,000-65,000/month",
+    technologyStack: ["Bioinformatics", "Lab Automation", "Genetic Engineering Tools", "AI", "Cloud Computing"],
+    compliance: ["FDA", "EPA", "Biosafety Regulations", "International Standards"],
+    scalability: ["Multi-lab Support", "Research Collaboration", "Global Bio-network"],
+    estimatedDelivery: "18-24 weeks",
+    supportLevel: "enterprise",
+    innovationScore: 9.2
   }
 ];
 
