@@ -85,7 +85,14 @@
     "react-hot-toast": "^2.4.1",
     "tailwind-merge": "^2.2.1",
     "vaul": "^0.9.0",
-    "zod": "^3.22.4"
+    "zod": "^3.22.4",
+    "yup": "^1.2.0",
+    "firebase": "^9.23.0",
+    "notistack": "^2.0.11",
+    "@sentry/browser": "^7.91.0"
+  },
+  "optionalDependencies": {
+    "@elastic/elasticsearch": "^8.12.0"
   },
   "devDependencies": {
     "@testing-library/cypress": "^8.0.2",

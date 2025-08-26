@@ -7,7 +7,11 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/pages/*": ["./src/pages/*"],
+      "axios": ["./src/lib/axios.ts"],
+      "notistack": ["./src/stubs/notistack.ts"],
+      "@sentry/browser": ["./src/stubs/sentry.ts"]
     },
     "typeRoots": ["./src/types"],
 
