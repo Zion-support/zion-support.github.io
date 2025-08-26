@@ -3,7 +3,7 @@ const nextConfig = {
 	reactStrictMode: true,
 	trailingSlash: true,
 	output: 'export',
-	assetPrefix,
+	assetPrefix: process.env.ASSET_PREFIX || '',
 	images: {
 		// Using unoptimized to support static hosting/CDN without Next Image optimization
 		unoptimized: true
