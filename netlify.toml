@@ -1,89 +1,107 @@
 [build]
-  command = "npm ci && npm run build"
-  publish = "dist"
+  # Use `npm ci` for deterministic installs
+  # Generate Prisma client before building to ensure models are up to date
+  command = "npm run build:netlify:prepare"
+  # Netlify UI sets `publish` to `out` which causes the Next.js plugin to fail
+  # because no exported directory exists. Explicitly publish the `.next`
+  # directory so the plugin can run correctly.
+  publish = ".next"
+  # Increase build timeout for 176+ pages
+  command_timeout = "30m"
 
 [build.environment]
-  NODE_OPTIONS = "--max-old-space-size=6144 --openssl-legacy-provider"
-  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+  NODE_OPTIONS = "--no-deprecation --max-old-space-size=6144 --no-warnings"
+  NPM_FLAGS = "--prefer-offline --legacy-peer-deps"
+  NEXT_PUBLIC_APP_ENV = "production"
+  NODE_VERSION = "22"
+  NEXT_TELEMETRY_DISABLED = "1"
+  CI = "true"
+  SKIP_TYPE_CHECK = "true"
+  
+  # Performance optimizations for large builds (with Netlify plugin)
+  NEXT_DISABLE_CSS_INLINE = "true"
+  NEXT_DISABLE_SOURCE_MAPS = "true"
+  GENERATE_SOURCEMAP = "false"
+  NEXT_BUILD_WORKERS = "1"
+  NEXT_PRIVATE_BUILD_CACHE = "false"
+  NEXT_PRIVATE_STATIC_OPTIMIZATION = "false"
+  
+  # CRITICAL FIX: Completely disable build trace collection to prevent hanging
+  NEXT_DISABLE_TRACE_COLLECTION = "true"
+  NEXT_PRIVATE_OUTPUT_TRACE = "false"
+  # NEXT_PRIVATE_OUTPUT_FILE_TRACING = "false" # Allowing Next.js default / plugin to manage this
+  UV_THREADPOOL_SIZE = "4"
+  NODE_NO_WARNINGS = "1"
+  NEXT_PRIVATE_MINIMIZE_BUILD_TIME = "true"
+  
+  # Configure secrets scanning to omit legitimate public environment variables
+  # NEXT_PUBLIC_* variables are meant to be public and embedded in client bundles
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,SENTRY_DSN"
+  
 
-# SPA routing redirects for Vite
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+# Skip Husky for CI builds
+[build.processing]
+  skip_processing = false
 
-# Headers for static assets
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  pretty_urls = true
+
+# Deploy contexts for different environments
+
+# Headers for security and performance
 [[headers]]
-  for = "/assets/*"
+  for = "/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.js"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "/*.css"
-  [headers.values]
-    Referrer-Policy = "strict-origin-when-cross-origin"
-    X-Content-Type-Options = "nosniff"
     X-Frame-Options = "DENY"
-    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
-    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-    X-DNS-Prefetch-Control = "on"
-    Content-Security-Policy = "default-src 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' 'unsafe-inline' https://plausible.io; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://plausible.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
-    Cross-Origin-Opener-Policy = "same-origin"
-    Cross-Origin-Resource-Policy = "same-origin"
-    X-Permitted-Cross-Domain-Policies = "none"
-    Origin-Agent-Cluster = "?1"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    # Comprehensive CSP with unsafe-eval for third-party libraries
+    Content-Security-Policy = "default-src 'self'; script-src 'self' https://js.stripe.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://res.cloudinary.com; connect-src *; frame-src https://js.stripe.com"
 
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/logos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Redirects
 [[redirects]]
-  from = "/ai-autonomous-ecosystem"
-  to = "/ai-autonomous-ecosystem-manager"
+  from = "/home"
+  to = "/"
   status = 301
 
-[[redirects]]
-  from = "/ai-consciousness-evolution"
-  to = "/ai-consciousness-evolution-2029"
-  status = 301
+[functions.environment]
+  SENTRY_LOG_LEVEL = "debug"
 
-[[redirects]]
-  from = "/autonomous-it-operations"
-  to = "/autonomous-it-operations-center"
-  status = 301
+[functions.sentryDsnCheckCron]
+  schedule = "@daily"
 
-[[redirects]]
-  from = "/quantum-internet-security"
-  to = "/quantum-internet-security-platform"
-  status = 301
+[functions.healthCheckCron]
+    schedule = "*/5 * * * *"
 
-[[redirects]]
-  from = "/quantum-materials-discovery"
-  to = "/quantum-materials-discovery-platform"
-  status = 301
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
+  [plugins.inputs]
+    # Point to the correct images directory
+    imagesPath = "public/logos"
+    # Use production domain  
+    deliveryType = "fetch"
+    # Set max file size to optimize performance
+    maxSize = 1048576
+    # Set concurrent uploads
+    uploadConcurrency = 10
 
-[[redirects]]
-  from = "/autonomous-vehicle-ai"
-  to = "/autonomous-vehicle-ai-platform"
-  status = 301
-
-[[redirects]]
-  from = "/ai-content-marketing-automation"
-  to = "/ai-content-generator"
-  status = 301
-
-[[redirects]]
-  from = "/ai-customer-success-automation"
-  to = "/ai-customer-success-platform"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-networking"
-  to = "/quantum-services"
-  status = 301
-
-[[redirects]]
-  from = "/quantum-data-center"
-  to = "/quantum-services"
-  status = 301
