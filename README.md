@@ -116,12 +116,13 @@ Zion Tech Group is the world's leading marketplace for high-tech and artificial 
 - Documentation
 - 30 days support
 
-### ⭐ Professional Plan - $4,500 (Most Popular)
-- Comprehensive consultation
-- Custom development
-- Testing & deployment
-- 90 days support
-- Training & documentation
+## Product Media
+
+Product listings now support rich media. The `product_listings` table includes new
+`video_url` and `model_url` fields for MP4 videos and GLB 3D models. Upload media
+through the product submission form and view it in the gallery tabs (Images, Video, 3D).
+
+## Troubleshooting
 
 ### 🏢 Enterprise Plan - $12,000
 - Strategic planning
