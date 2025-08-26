@@ -119,22 +119,7 @@ export default defineConfig({
 		}
 	},
 	css: { 
-		devSourcemap: false,
-		// Enhanced CSS processing
-		postcss: {
-			plugins: [
-				require('autoprefixer'),
-				require('cssnano')({
-					preset: ['default', {
-						discardComments: { removeAll: true },
-						normalizeWhitespace: true,
-						colormin: true,
-						minifyFontValues: true,
-						minifySelectors: true
-					}]
-				})
-			]
-		}
+		devSourcemap: false
 	},
 	server: {
 		port: 3000,
