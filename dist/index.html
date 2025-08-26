@@ -1,104 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Zion Tech Group - Leading AI & Technology Solutions. Discover cutting-edge AI solutions, expert talent, and innovative technology services." />
-    <meta name="keywords" content="AI, technology, micro SAAS, IT services, cybersecurity, quantum computing, autonomous systems" />
-    <meta name="author" content="Zion Tech Group" />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ziontechgroup.com/" />
-    <meta property="og:title" content="Zion Tech Group - Leading AI & Technology Solutions" />
-    <meta property="og:description" content="Discover cutting-edge AI solutions, expert talent, and innovative technology services. Transform your business with Zion Tech Group's comprehensive tech ecosystem." />
-    <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://ziontechgroup.com/" />
-    <meta property="twitter:title" content="Zion Tech Group - Leading AI & Technology Solutions" />
-    <meta property="twitter:description" content="Discover cutting-edge AI solutions, expert talent, and innovative technology services. Transform your business with Zion Tech Group's comprehensive tech ecosystem." />
-    <meta property="twitter:image" content="https://ziontechgroup.com/og-image.svg" />
-    
-    <!-- Contact Information -->
-    <meta name="contact" content="+1 302 464 0950" />
-    <meta name="email" content="kleber@ziontechgroup.com" />
-    <meta name="address" content="364 E Main St STE 1008 Middletown DE 19709" />
-    
-    <!-- Preconnect to external domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    <!-- Manifest -->
-    <link rel="manifest" href="/manifest.json" />
-    
-    <title>Zion Tech Group - Leading AI & Technology Solutions</title>
-    
-    <!-- Critical CSS -->
-    <style>
-      /* Loading spinner styles */
-      .loading-spinner {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
-      }
-      
-      .spinner {
-        width: 50px;
-        height: 50px;
-        border: 3px solid #06b6d4;
-        border-top: 3px solid transparent;
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-      }
-      
-      @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
-      
-      /* Fallback styles for when CSS hasn't loaded */
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-          sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        background: #0f172a;
-        color: #ffffff;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="root">
-      <!-- Loading spinner while the app loads -->
-      <div class="loading-spinner">
-        <div class="spinner"></div>
-      </div>
-    </div>
-    
-    <!-- Service Worker Registration -->
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register('/sw.js')
-            .then(function(registration) {
-              console.log('SW registered: ', registration);
-            })
-            .catch(function(registrationError) {
-              console.log('SW registration failed: ', registrationError);
-            });
-        });
-      }
-    </script>
-    
-    <!-- Main application script -->
-    <script type="module" src="/src/main.js"></script>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="/favicon.ico" />
+		<title>Zion Tech Group</title>
+		<script type="module" crossorigin src="/js/index-DGGVd0h-.js"></script>
+		<link rel="modulepreload" crossorigin href="/js/react-vendor-DXKIU56F.js">
+		<link rel="modulepreload" crossorigin href="/js/ui-vendor-Ciskokex.js">
+		<link rel="modulepreload" crossorigin href="/js/icons-vendor-C2GgBtVZ.js">
+		<link rel="stylesheet" crossorigin href="/css/index-C6G_3qQV.css">
+	</head>
+	<body>
+		<div id="root"></div>
+	</body>
 </html>

@@ -1,36 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Zion Tech Group Custom Styles */
-:root {
-  --zion-blue-dark: #0f172a;
-  --zion-blue-light: #1e293b;
-  --zion-slate: #334155;
-  --zion-purple-dark: #581c87;
-  --zion-cyan: #06b6d4;
-  --zion-green: #10b981;
-  --zion-orange: #f59e0b;
-  --zion-red: #ef4444;
-}
-
-@layer base {
-  body {
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
-    font-family: ui-sans-serif, system-ui, sans-serif;
-  }
-}
-
-@layer components {
-  .glass {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  
-  .neon-border {
-    border: 1px solid transparent;
-    background: linear-gradient(45deg, #06b6d4, #581c87) border-box;
-  }
-}
