@@ -5,16 +5,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { getStripe } from '@/utils/getStripe';
-import {
-  Form,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,
-} from '@/components/ui/form';
-import { useFeatureFlags } from '@/context/FeatureFlagContext';
-import CheckoutV2 from './CheckoutV2';
+import { useAuth } from '@/hooks';
 
 interface CartItem {
   id: string;
@@ -33,7 +24,7 @@ interface CheckoutForm {
 
 export default function CheckoutPage() {
   const navigate = useNavigate();
-  const location = useLocation();
+  const { user } = useAuth();
   const [items, setItems] = useState<CartItem[]>([]);
   const form = useForm<CheckoutForm>({ defaultValues: { name: '', email: '', address: '', city: '', country: '' } });
   const { getVariant, track } = useFeatureFlags();
@@ -74,7 +65,10 @@ export default function CheckoutPage() {
       const response = await fetch('/api/stripe/create-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ amount: subtotal }),
+        body: JSON.stringify({
+          productId: product.id,
+          customerEmail: user?.email,
+        }),
       });
       const result = await res.json();
       if (!res.ok) throw new Error(result.error || 'Failed');

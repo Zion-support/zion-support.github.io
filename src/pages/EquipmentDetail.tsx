@@ -61,9 +61,13 @@ export default function EquipmentDetail() {
 
     setIsAdding(true);
     try {
-      const { data } = await axios.post('/api/create-checkout-session', {
-        productId: id,
-        userId: user?.id,
+      const response = await fetch('/api/checkout_sessions', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          productId: id,
+          customerEmail: user?.email,
+        }),
       });
       const stripe = await getStripe();
       if (stripe && data.sessionId) {

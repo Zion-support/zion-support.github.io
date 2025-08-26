@@ -78,12 +78,13 @@ import { SupportChatbot } from './components/SupportChatbot';
 import PrivateRoute from './components/PrivateRoute';
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
-const WishlistPage = React.lazy(() => import('./pages/Wishlist'));
-=======
 import RecommendationsPage from './pages/Recommendations';
 import withAuth from './components/withAuth';
 
 const RecommendationsProtected = withAuth(RecommendationsPage);
+=======
+const CartPage = React.lazy(() => import('./pages/Cart'));
+const OrderSuccess = React.lazy(() => import('./pages/OrderSuccess'));
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -114,15 +115,12 @@ const baseRoutes = [
   { path: '/wishlist', element: <WishlistPage /> },
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
-  { path: '/wishlist', element: <WishlistPage /> },
-  { path: '/cart', element: <PrivateRoute><CartPage /></PrivateRoute> },
-  { path: '/rewards', element: <PrivateRoute><Rewards /></PrivateRoute> },
-  { path: '/checkout', element: <Checkout /> },
-  { path: '/privacy-settings', element: <PrivacySettings /> },
-=======
   { path: '/theme-test', element: <ThemeTest /> },
 =======
   { path: '/profile/privacy', element: <PrivacyPage /> },
+=======
+  { path: '/cart', element: <CartPage /> },
+  { path: '/order/success', element: <OrderSuccess /> },
 ];
 
 // Loading Component
