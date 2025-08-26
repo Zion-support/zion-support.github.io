@@ -1,18 +1,11 @@
 import React from 'react';
-import Head from 'next/head';
+import { useRouter } from 'next/router';
 import dynamic from 'next/dynamic';
-import UltraAdvancedHeroSection2025 from '../components/sections/UltraAdvancedHeroSection2025';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { 
-  ArrowRight, Star, Zap, Brain, Rocket, Shield, 
-  Atom, Cpu, Cloud, Target, Users, Award,
-  CheckCircle, TrendingUp, Globe, Sparkles,
-  Phone, Mail, MapPin, ChevronDown,
-  ArrowUpRight, Lightbulb, Code, Database, Server,
-  Network, Palette, GraduationCap, DollarSign, Heart,
-  DollarSign as Finance, Factory as Manufacturing, Scale as Legal
-} from 'lucide-react';
+
+const Home = dynamic(() => import('@/pages/Home'));
+import type { GetStaticProps } from 'next';
+import * as Sentry from '@sentry/nextjs';
+import { ErrorBanner } from '@/components/talent/ErrorBanner';
 
 const UltraAdvancedServicesShowcase2025 = dynamic(() => import('../components/sections/UltraAdvancedServicesShowcase2025'), {
   ssr: false,

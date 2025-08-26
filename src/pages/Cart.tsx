@@ -79,8 +79,12 @@ export default function CartPage() {
   if (items.length === 0) {
     return (
       <div className="container py-10 text-center">
-        <img src="/placeholder.svg" alt="Empty cart" className="mx-auto mb-4" />
-        <p>Your cart is empty</p>
+        <img loading="lazy"
+          src="/images/empty-cart.svg"
+          alt="Empty cart"
+          className="mx-auto mb-4 w-48 h-36"
+        />
+        <p>{t('cart.empty')}</p>
         <Button asChild className="mt-4">
           <Link href="/marketplace">Browse Marketplace</Link>
         </Button>

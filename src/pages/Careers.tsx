@@ -1834,14 +1834,6 @@ const Careers = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {companyValues.map((value, idx) => (
-              <div key={idx} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <value.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
-=======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header Section */}
       <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
@@ -1925,6 +1917,31 @@ const Careers = () => {
                 </span>
               </button>
             ))}
+=======
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+            <div>
+              <h2 className="text-3xl font-bold text-white mb-6">Why Work at Zion?</h2>
+              <p className="text-zion-slate-light text-lg mb-6">
+                At Zion, we're not just building a marketplace; we're creating a new paradigm for how AI and 
+                technology are accessed, shared, and implemented globally.
+              </p>
+              <p className="text-zion-slate-light text-lg mb-6">
+                Our team is passionate about democratizing access to cutting-edge technology and connecting 
+                talented individuals with meaningful opportunities. We value innovation, collaboration, and 
+                impact in everything we do.
+              </p>
+              <p className="text-zion-slate-light text-lg">
+                If you're excited about shaping the future of AI and technology while working in a dynamic, 
+                remote-first environment with a mission-driven team, we'd love to meet you.
+              </p>
+            </div>
+            <div className="rounded-lg overflow-hidden">
+              <img loading="lazy" 
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&h=600" 
+                alt="Team collaboration" 
+                className="object-cover w-full h-full"
+              />
+            </div>
           </div>
           
           <div className="space-y-6">

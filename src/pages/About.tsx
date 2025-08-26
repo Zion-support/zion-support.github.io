@@ -933,19 +933,6 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
-              <p className="text-lg text-zion-slate-light mb-6">
-              className="btn-primary text-lg px-8 py-4 flex items-center space-x-2"
-            >
-              <span>Get in Touch</span>
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link 
-              to="/careers" 
-              className="btn-secondary text-lg px-8 py-4"
-            >
-              Join Our Team
-            </Link>
-=======
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
@@ -971,6 +958,26 @@ const About = () => {
                 <Rocket className="w-5 h-5 mr-2" />
                 <span>Innovation Leader</span>
               </div>
+=======
+              <p className="text-zion-slate-light text-lg mb-6">
+                At Zion, we're on a mission to democratize access to cutting-edge AI and technology solutions. 
+                We believe that innovation thrives when barriers are removed and connections are made.
+              </p>
+              <p className="text-zion-slate-light text-lg mb-6">
+                Our platform brings together talented AI specialists, innovative companies, and the latest 
+                technological solutions in one seamless ecosystem.
+              </p>
+              <p className="text-zion-slate-light text-lg">
+                By connecting talent with opportunity and innovation with implementation, we're creating 
+                a global community where the future of technology is being built today.
+              </p>
+            </div>
+            <div className="rounded-lg overflow-hidden">
+              <img loading="lazy" 
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&h=600" 
+                alt="Team collaboration" 
+                className="object-cover w-full h-full"
+              />
             </div>
           </div>
         </div>
@@ -996,6 +1003,58 @@ const About = () => {
                 We envision a future where technology serves humanity, enhances productivity, 
                 and creates meaningful impact across industries and communities.
               </p>
+              <p className="text-zion-slate-light text-lg">
+                Our goal is to become the premier destination for AI and tech innovation, fostering 
+                a community that shapes the future of how we live, work, and interact with technology.
+              </p>
+            </div>
+            <div className="rounded-lg overflow-hidden lg:order-first">
+              <img loading="lazy" 
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=600" 
+                alt="Tech innovation" 
+                className="object-cover w-full h-full"
+              />
+            </div>
+          </div>
+          
+          <div className="text-center content-section">
+            <h2 className="text-3xl font-bold text-white mb-8">Our Values</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">
+                <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
+                  <svg className="w-8 h-8 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Innovation</h3>
+                <p className="text-zion-slate-light">
+                  We embrace cutting-edge technologies and creative thinking to push the boundaries of what's possible.
+                </p>
+              </div>
+              
+              <div className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">
+                <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
+                  <svg className="w-8 h-8 text-zion-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Community</h3>
+                <p className="text-zion-slate-light">
+                  We believe in the power of collaboration and fostering an inclusive ecosystem where everyone can thrive.
+                </p>
+              </div>
+              
+              <div className="bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light">
+                <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
+                  <svg className="w-8 h-8 text-zion-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">Trust</h3>
+                <p className="text-zion-slate-light">
+                  We maintain the highest standards of integrity, transparency, and ethical practices in everything we do.
+                </p>
+              </div>
             </div>
           </div>
         </div>

@@ -568,20 +568,43 @@ export default function GreenIT() {
 =======
 =======
       />
-      <Header />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800">
-        <main className="pt-12">
-          <div className="container mx-auto px-4 py-16">
-            {/* Header */}
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Green IT Solutions
-              </h1>
-              <p className="text-xl text-blue-100 max-w-4xl mx-auto">
-                Transform your technology infrastructure with sustainable, energy-efficient solutions. 
-                Our Green IT services help you reduce environmental impact, lower costs, and improve 
-                performance while contributing to a more sustainable future.
-              </p>
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <GradientHeading>Green IT Solutions</GradientHeading>
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
+              Sustainable technology solutions that reduce environmental impact without compromising performance
+            </p>
+          </div>
+          
+          <div className="mb-16">
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <h2 className="text-3xl font-bold text-white mb-6">Sustainable IT for a Better Future</h2>
+                  <p className="text-zion-slate-light text-lg mb-6">
+                    As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. 
+                    Our Green IT solutions help organizations implement sustainable practices in their IT infrastructure 
+                    while maintaining performance and reliability.
+                  </p>
+                  <p className="text-zion-slate-light text-lg mb-6">
+                    From energy-efficient hardware to renewable energy integration, we offer comprehensive solutions 
+                    for reducing your carbon footprint.
+                  </p>
+                  <div className="mt-8">
+                    <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
+                      Explore Green IT Solutions
+                    </Button>
+                  </div>
+                </div>
+                <div className="rounded-lg overflow-hidden">
+                  <img loading="lazy" 
+                    src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600" 
+                    alt="Green IT sustainability" 
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+              </div>
             </div>
 
             {/* Green Solutions */}
