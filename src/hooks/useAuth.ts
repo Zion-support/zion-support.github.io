@@ -16,12 +16,6 @@ interface AuthState {
   isLoading: boolean;
 }
 
-export const useAuth = () => {
-  const [authState, setAuthState] = useState<AuthState>({
-    user: null,
-    isAuthenticated: false,
-    isLoading: true,
-  });
 export function useAuth() {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
@@ -55,20 +49,6 @@ export function useAuth() {
     setUser(mockUser);
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
     return mockUser;
-  const login = async (email: string, _password: string) => {
-    // In a real app, you would make an API call to your backend
-    setAuthState({
-      user: {
-        id: '1',
-        email,
-        name: 'John Doe',
-        role: 'user',
-        userType: 'creator',
-      },
-      isAuthenticated: true,
-      isLoading: false,
-    });
-    localStorage.setItem('authToken', 'dummy-token');
   };
 
   const logout = () => {
@@ -99,5 +79,4 @@ export function useAuth() {
     isAuthenticated: !!user,
     isAdmin: user?.role === 'admin'
   };
-};
 }

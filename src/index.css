@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
+=======
 @layer base {
   :root {
     --background: 0 0% 7%;
@@ -28,3 +30,4 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
 }
+>>>>>>> cursor/analyze-improve-and-deploy-ziontechgroup-app-b3cc

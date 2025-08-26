@@ -1,61 +1,50 @@
 import { useEffect } from 'react';
-import { useRouter } from 'next/router'; // Changed from useNavigate, useLocation
-import { useAuth } from '@/hooks/useAuth';
-import { safeStorage } from '@/utils/safeStorage';
-import { LoginContent } from '@/components/auth/login';
 import { ErrorBoundary } from 'react-error-boundary';
-import LoginErrorFallback from '@/components/auth/login/LoginErrorFallback';
+import { LoginErrorFallback } from '@/components/auth/login/LoginErrorFallback';
 import { useCart } from '@/context/CartContext';
-import { SAMPLE_EQUIPMENT } from './EquipmentDetail';
 import { toast } from '@/hooks/use-toast';
 import { useDispatch } from 'react-redux';
 import { setLoggedIn } from '@/store/authSlice';
 
 export default function Login() {
-  const { isAuthenticated, user, isLoading } = useAuth();
-  const router = useRouter(); // Initialized router
-  // location is now router
-  const { dispatch } = useCart();
-  const reduxDispatch = useDispatch();
+  const dispatch = useDispatch();
+  const { clearCart } = useCart();
 
   useEffect(() => {
-    // This effect handles token processing (e.g., from magic link)
-    // It runs when component mounts or router.asPath (containing query) changes
-    const queryString = router.asPath.split('?')[1] || '';
-    const params = new URLSearchParams(queryString);
-    const token = params.get('token');
+    const urlParams = new URLSearchParams(window.location.search);
+    const token = urlParams.get('token');
+
     if (token) {
-      safeStorage.setItem('zion_token', token);
+      // Store token in localStorage for now
+      localStorage.setItem('zion_token', token);
       // Clear token from URL to prevent re-processing and clean up history
-      // The actual authentication state will update via useAuth's listeners,
-      // which should trigger the other useEffect.
-      router.replace(router.pathname, undefined, { shallow: true }); // Use router.replace with shallow routing
+      window.history.replaceState({}, document.title, window.location.pathname);
+      
+      // Set logged in state
+      dispatch(setLoggedIn({ token }));
+      
+      // Clear cart on login
+      clearCart();
+      
+      // Show success message
+      toast({
+        title: "Login Successful",
+        description: "Welcome to Zion Tech Group!",
+      });
+      
+      // Redirect to home page
+      window.location.href = '/';
     }
-  }, [router.asPath, router.pathname, router]); // Depend on router.asPath
+  }, [dispatch, clearCart]);
 
-  useEffect(() => {
-    if (!isLoading && isAuthenticated) {
-      reduxDispatch(setLoggedIn(true));
-      const next = typeof router.query.next === 'string' ? router.query.next : '/dashboard';
-      router.replace(next);
-    }
-  }, [isAuthenticated, isLoading, router, reduxDispatch]);
-
-  // Render LoginContent if not authenticated and auth is not loading
-  if (!isAuthenticated && !isLoading) {
-    return (
-      <ErrorBoundary FallbackComponent={LoginErrorFallback}>
-        <LoginContent />
-      </ErrorBoundary>
-    );
-  }
-
-  // Optional: Render a loading indicator while isLoading is true
-  if (isLoading) {
-    return <div className="p-4 text-center text-foreground">Loading...</div>; // Or a proper loading spinner component
-  }
-
-  // If authenticated and isLoading is false, the useEffect above should have navigated.
-  // Return null or a minimal layout if needed, though direct navigation is preferred.
-  return null;
+  return (
+    <ErrorBoundary FallbackComponent={LoginErrorFallback}>
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold mb-4">Login</h1>
+          <p className="text-gray-600">Processing login...</p>
+        </div>
+      </div>
+    </ErrorBoundary>
+  );
 }
