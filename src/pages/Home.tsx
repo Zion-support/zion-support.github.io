@@ -3,7 +3,7 @@ import React, { Suspense, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { CategoriesSection } from "@/components/CategoriesSection";
-import { BenefitsSection } from "@/components/BenefitsSection";
+import BenefitsSection from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
 import { NewsletterSection } from "@/components/NewsletterSection";
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
