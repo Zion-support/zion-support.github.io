@@ -39,16 +39,16 @@ export function Footer() {
             {/* Contact info */}
             <div className="space-y-3 mb-6">
               <div className="flex items-center gap-3 text-zion-slate-light">
-                <Mail className="w-4 h-4 text-zion-cyan" />
-                <span className="text-sm">hello@ziontechgroup.com</span>
+                <Mail className="h-4 w-4 text-zion-cyan" />
+                <span>info@ziontechgroup.com</span>
               </div>
               <div className="flex items-center gap-3 text-zion-slate-light">
-                <Phone className="w-4 h-4 text-zion-cyan" />
-                <span className="text-sm">+1 (555) 123-4567</span>
+                <Phone className="h-4 w-4 text-zion-cyan" />
+                <span>+1 (302) 464-0950</span>
               </div>
               <div className="flex items-center gap-3 text-zion-slate-light">
-                <MapPin className="w-4 h-4 text-zion-cyan" />
-                <span className="text-sm">Global • Remote First</span>
+                <MapPin className="h-4 w-4 text-zion-cyan" />
+                <span>Delaware, USA</span>
               </div>
             </div>
           </motion.div>
@@ -118,45 +118,39 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Marketplace */}
+          {/* Services */}
           <div>
-            <h3 className="text-white font-semibold mb-4 text-lg">Marketplace</h3>
-            <ul className="space-y-3">
-              <li><Link to="/marketplace" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Products</Link></li>
-              <li><Link to="/services" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Services</Link></li>
-              <li><Link to="/talent" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Talent</Link></li>
-              <li><Link to="/equipment" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Equipment</Link></li>
-              <li><Link to="/categories" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Categories</Link></li>
-              <li><Link to="/green-it" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Green IT</Link></li>
-              <li><Link to="/it-onsite-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">IT Onsite Services</Link></li>
+            <h3 className="text-white font-semibold mb-4 text-lg">Services</h3>
+            <ul className="space-y-2">
+              <li><Link to="/services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">All Services</Link></li>
+              <li><Link to="/ai-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Solutions</Link></li>
+              <li><Link to="/quantum-technology" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum Technology</Link></li>
+              <li><Link to="/cybersecurity" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cybersecurity</Link></li>
+              <li><Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Contact Us</Link></li>
             </ul>
           </div>
 
           {/* Company */}
           <div>
             <h3 className="text-white font-semibold mb-4 text-lg">Company</h3>
-            <ul className="space-y-3">
-              <li><Link to="/about" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">About Us</Link></li>
-              <li><Link to="/blog" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Blog</Link></li>
-              <li><Link to="/partners" className="text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Partners</Link></li>
-              <li><Link to="/careers" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Careers</Link></li>
-              <li><Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Contact</Link></li>
-              <li><Link to="/faq" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">FAQ</Link></li>
-              <li><Link to="/sitemap" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Sitemap</Link></li>
+            <ul className="space-y-2">
+              <li><Link to="/about" className="text-zion-slate-light hover:text-zion-cyan transition-colors">About Us</Link></li>
+              <li><Link to="/team" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Our Team</Link></li>
+              <li><Link to="/case-studies" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Case Studies</Link></li>
+              <li><Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Contact</Link></li>
+              <li><Link to="/sitemap" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Sitemap</Link></li>
             </ul>
           </div>
 
           {/* Support & Resources */}
           <div>
-            <h3 className="text-white font-semibold mb-4 text-lg">Support & Resources</h3>
-            <ul className="space-y-3 mb-6">
-              <li><Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Help Center</Link></li>
-              <li><Link to="/faq" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">FAQ</Link></li>
-              <li><Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Contact Support</Link></li>
-              <li><Link to="/terms" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Terms of Service</Link></li>
-              <li><Link to="/privacy" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Privacy Policy</Link></li>
-              <li><Link to="/security" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">Security</Link></li>
-              <li><Link to="/status" className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block">System Status</Link></li>
+            <h3 className="text-white font-semibold mb-4 text-lg">Resources</h3>
+            <ul className="space-y-2">
+              <li><Link to="/resources" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Resources</Link></li>
+              <li><Link to="/blog" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Blog & Insights</Link></li>
+              <li><Link to="/reports" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Reports</Link></li>
+              <li><Link to="/docs" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Documentation</Link></li>
+              <li><Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Help Center</Link></li>
             </ul>
           </div>
           

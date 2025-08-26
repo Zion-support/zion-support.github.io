@@ -3053,16 +3053,15 @@ export function Sidebar() {
       icon: Briefcase,
       children: [
         { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
+        { name: 'Cybersecurity', path: '/cybersecurity', icon: Shield },
         { name: 'Quantum Technology', path: '/quantum-technology', icon: Cpu },
         { name: 'Space Technology', path: '/space-tech', icon: Rocket },
-        { name: 'Cybersecurity', path: '/security', icon: Shield },
-        { name: 'Cloud & DevOps', path: '/services/cloud', icon: Cloud },
-        { name: 'IT Infrastructure', path: '/services/infrastructure', icon: Server },
-        { name: 'Digital Transformation', path: '/services/transformation', icon: Zap },
+        { name: 'IT Services', path: '/it-services', icon: Server },
+        { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Cloud },
+        { name: 'Digital Transformation', path: '/digital-transformation', icon: Zap },
         { name: 'Green IT', path: '/green-it', icon: Leaf },
         { name: 'Mobile Solutions', path: '/mobile', icon: Smartphone },
-        { name: 'Financial Solutions', path: '/financial-solutions', icon: DollarSign },
-        { name: 'Micro SaaS Services', path: '/micro-saas-services', icon: Building }
+        { name: 'Financial Solutions', path: '/financial-solutions', icon: DollarSign }
       ]
     },
     {
@@ -3072,9 +3071,8 @@ export function Sidebar() {
       children: [
         { name: 'About Us', path: '/about', icon: Building },
         { name: 'Our Team', path: '/team', icon: Users2 },
-        { name: 'Careers', path: '/careers', icon: Briefcase },
-        { name: 'Partners', path: '/partners', icon: Handshake },
-        { name: 'Press', path: '/press', icon: FileText },
+        { name: 'Case Studies', path: '/case-studies', icon: Target },
+        { name: 'Contact', path: '/contact', icon: MessageSquare },
         { name: 'Research & Development', path: '/research-development', icon: Lightbulb }
       ]
     },
@@ -3084,11 +3082,10 @@ export function Sidebar() {
       icon: FileText,
       children: [
         { name: 'Blog & Insights', path: '/blog', icon: BookOpen },
-        { name: 'Case Studies', path: '/case-studies', icon: Target },
-        { name: 'White Papers', path: '/white-papers', icon: FileSearch },
-        { name: 'Documentation', path: '/documentation', icon: Code },
-        { name: 'API Reference', path: '/api', icon: Code },
-        { name: 'Developer Portal', path: '/developer', icon: Code }
+        { name: 'Reports', path: '/reports', icon: FileSearch },
+        { name: 'Documentation', path: '/docs', icon: Code },
+        { name: 'Help Center', path: '/help', icon: HelpCircle },
+        { name: 'Sitemap', path: '/sitemap', icon: Map }
       ]
     },
     {
@@ -3097,20 +3094,8 @@ export function Sidebar() {
       icon: HelpCircle,
       children: [
         { name: 'Help Center', path: '/help', icon: HelpCircle },
-        { name: 'FAQ', path: '/faq', icon: HelpCircle },
         { name: 'Contact Support', path: '/contact', icon: MessageSquare },
-        { name: 'Status', path: '/status', icon: BarChart3 },
-        { name: 'Request Quote', path: '/request-quote', icon: MessageSquare }
-      ]
-    },
-    {
-      name: 'Enterprise',
-      path: '/enterprise',
-      icon: Building,
-      children: [
-        { name: 'Enterprise Solutions', path: '/solutions', icon: Target },
-        { name: 'Custom Solutions', path: '/solutions', icon: Target },
-        { name: 'Community', path: '/community', icon: Users2 }
+        { name: 'Status', path: '/status', icon: BarChart3 }
       ]
     },
     {
@@ -3211,27 +3196,27 @@ export function Sidebar() {
           <h3 className="text-sm font-semibold text-gray-600 mb-3">Quick Actions</h3>
           <div className="space-y-2">
             <Link
-              to="/request-quote"
+              to="/contact"
               className="flex items-center space-x-3 px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
             >
               <MessageSquare className="h-5 w-5" />
-              <span className="font-medium">Request Quote</span>
+              <span className="font-medium">Contact Us</span>
             </Link>
             
             <Link
-              to="/contact"
+              to="/services"
               className="flex items-center space-x-3 px-4 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
             >
-              <HelpCircle className="h-5 w-5" />
-              <span className="font-medium">Get Help</span>
+              <Briefcase className="h-5 w-5" />
+              <span className="font-medium">View Services</span>
             </Link>
 
             <Link
-              to="/pricing"
+              to="/case-studies"
               className="flex items-center space-x-3 px-4 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
             >
-              <DollarSign className="h-5 w-5" />
-              <span className="font-medium">View Pricing</span>
+              <Target className="h-5 w-5" />
+              <span className="font-medium">Case Studies</span>
             </Link>
           </div>
         </div>

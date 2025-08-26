@@ -2,9 +2,8 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
-  Building, Car, Heart, DollarSign, GraduationCap, 
-  Shield, Factory, Globe, Brain, Atom, Rocket,
-  ArrowRight, CheckCircle, Star, Users, Zap
+  Building2, Factory, Car, Heart, GraduationCap, 
+  Shield, Globe, Zap, Brain, Rocket, Users, BarChart3, Cloud
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
