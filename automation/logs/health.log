@@ -27,3 +27,181 @@ usage: pgrep [-Lfilnoqvx] [-d delim] [-F pidfile] [-G gid]
 [2025-08-25 12:00:27] WARNING: Log file automation/logs/sitemap-keeper.log is stale (age: 4686s)
 [2025-08-25 12:00:27] Health report saved to automation/data/health-report.json
 [2025-08-25 12:00:27] Health check process completed
+[2025-08-26 01:00:01] Starting health check process...
+[2025-08-26 01:00:01] Checking system resources...
+[2025-08-26 01:00:06] CPU usage: 38.65%
+[2025-08-26 01:00:06] Memory usage: 91.00%
+[2025-08-26 01:00:06] Disk usage: 8%
+[2025-08-26 01:00:06] Checking automation services health...
+[2025-08-26 01:00:06] Checking process counts...
+[2025-08-26 01:00:06] Process counts:
+[2025-08-26 01:00:06]   Autonomous System Manager:        1
+[2025-08-26 01:00:06]   ML Link Intelligence:        3
+[2025-08-26 01:00:06]   Link Health Scheduler:        3
+[2025-08-26 01:00:06]   Performance Monitor:        3
+[2025-08-26 01:00:06] WARNING: 38 zombie processes detected!
+[2025-08-26 01:00:06] Checking log file health...
+[2025-08-26 01:00:07] WARNING: Log file automation/logs/ai-trends-cron.log is stale (age: 5497s)
+[2025-08-26 01:00:07] WARNING: Log file automation/logs/ai-trends-research.log is stale (age: 5497s)
+[2025-08-26 01:00:07] WARNING: Log file automation/logs/autonomous-system-manager.log is stale (age: 5497s)
+[2025-08-26 01:00:07] WARNING: Log file automation/logs/backup.log is stale (age: 5497s)
+[2025-08-26 01:00:07] WARNING: Log file automation/logs/config-sync.log is stale (age: 45156s)
+[2025-08-26 01:00:07] WARNING: Log file automation/logs/data-sync.log is stale (age: 45155s)
+[2025-08-26 01:00:07] WARNING: Log file automation/logs/enhanced-automation-orchestrator.runtime.log is stale (age: 22990s)
+[2025-08-26 01:00:07] WARNING: Log file automation/logs/enhanced-git-sync.log is stale (age: 44522s)
+[2025-08-26 01:00:07] WARNING: Log file automation/logs/file-sync.log is stale (age: 45153s)
+[2025-08-26 01:00:08] WARNING: Log file automation/logs/link-health-scheduler.log is stale (age: 5498s)
+[2025-08-26 01:00:08] WARNING: Log file automation/logs/maintenance.log is stale (age: 5498s)
+[2025-08-26 01:00:08] WARNING: Log file automation/logs/ml-link-intelligence.log is stale (age: 5498s)
+[2025-08-26 01:00:08] WARNING: Log file automation/logs/real-time-performance-monitor.log is stale (age: 5498s)
+[2025-08-26 01:00:08] WARNING: Log file automation/logs/sitemap-keeper.log is stale (age: 5497s)
+[2025-08-26 01:00:08] WARNING: Log file automation/logs/sync-launcher.log is stale (age: 44759s)
+[2025-08-26 01:00:08] WARNING: Log file automation/logs/sync-orchestrator.log is stale (age: 45151s)
+[2025-08-26 01:00:08] Health report saved to automation/data/health-report.json
+[2025-08-26 01:00:08] Health check process completed
+[2025-08-26 03:03:06] Starting health check process...
+[2025-08-26 03:03:06] Checking system resources...
+[2025-08-26 03:03:09] CPU usage: 34.87%
+[2025-08-26 03:03:09] Memory usage: 94.00%
+[2025-08-26 03:03:09] Disk usage: 8%
+[2025-08-26 03:03:09] Checking automation services health...
+[2025-08-26 03:03:10] Checking process counts...
+[2025-08-26 03:03:11] Process counts:
+[2025-08-26 03:03:11]   Autonomous System Manager:        1
+[2025-08-26 03:03:11]   ML Link Intelligence:        4
+[2025-08-26 03:03:11]   Link Health Scheduler:        2
+[2025-08-26 03:03:11]   Performance Monitor:        4
+[2025-08-26 03:03:12] WARNING: 36 zombie processes detected!
+[2025-08-26 03:03:12] Checking log file health...
+[2025-08-26 03:03:12] WARNING: Log file automation/logs/ai-trends-cron.log is stale (age: 12882s)
+[2025-08-26 03:03:12] WARNING: Log file automation/logs/ai-trends-research.log is stale (age: 12882s)
+[2025-08-26 03:03:13] WARNING: Log file automation/logs/autonomous-system-manager.log is stale (age: 12883s)
+[2025-08-26 03:03:13] WARNING: Log file automation/logs/backup.log is stale (age: 12883s)
+[2025-08-26 03:03:13] WARNING: Log file automation/logs/build.log is stale (age: 9887s)
+[2025-08-26 03:03:13] WARNING: Log file automation/logs/config-sync.log is stale (age: 52542s)
+[2025-08-26 03:03:13] WARNING: Log file automation/logs/data-sync.log is stale (age: 52541s)
+[2025-08-26 03:03:13] WARNING: Log file automation/logs/dependency.log is stale (age: 9887s)
+[2025-08-26 03:03:14] WARNING: Log file automation/logs/enhanced-automation-orchestrator.runtime.log is stale (age: 30377s)
+[2025-08-26 03:03:14] WARNING: Log file automation/logs/enhanced-autonomous-coordinated.log is stale (age: 9888s)
+[2025-08-26 03:03:14] WARNING: Log file automation/logs/enhanced-git-sync.log is stale (age: 51909s)
+[2025-08-26 03:03:14] WARNING: Log file automation/logs/file-sync.log is stale (age: 52540s)
+[2025-08-26 03:03:15] WARNING: Log file automation/logs/link-health-scheduler.log is stale (age: 12885s)
+[2025-08-26 03:03:15] WARNING: Log file automation/logs/maintenance.log is stale (age: 12885s)
+[2025-08-26 03:03:15] WARNING: Log file automation/logs/ml-link-intelligence.log is stale (age: 12885s)
+[2025-08-26 03:03:15] WARNING: Log file automation/logs/real-time-performance-monitor.log is stale (age: 12885s)
+[2025-08-26 03:03:16] WARNING: Log file automation/logs/security.log is stale (age: 9890s)
+[2025-08-26 03:03:16] WARNING: Log file automation/logs/sitemap-keeper.log is stale (age: 12885s)
+[2025-08-26 03:03:16] WARNING: Log file automation/logs/sync-launcher.log is stale (age: 52147s)
+[2025-08-26 03:03:16] WARNING: Log file automation/logs/sync-orchestrator.log is stale (age: 52539s)
+[2025-08-26 03:03:16] Health report saved to automation/data/health-report.json
+[2025-08-26 03:03:16] Health check process completed
+[2025-08-26 04:04:11] Starting health check process...
+[2025-08-26 04:04:11] Checking system resources...
+[2025-08-26 04:04:31] CPU usage: 44.68%
+[2025-08-26 04:04:31] Memory usage: 98.00%
+[2025-08-26 04:04:31] Disk usage: 8%
+[2025-08-26 04:04:31] Checking automation services health...
+[2025-08-26 04:04:32] Checking process counts...
+[2025-08-26 04:04:33] Process counts:
+[2025-08-26 04:04:33]   Autonomous System Manager:        4
+[2025-08-26 04:04:33]   ML Link Intelligence:        5
+[2025-08-26 04:04:33]   Link Health Scheduler:        4
+[2025-08-26 04:04:33]   Performance Monitor:        5
+[2025-08-26 04:04:35] WARNING: 43 zombie processes detected!
+[2025-08-26 04:04:35] Checking log file health...
+[2025-08-26 04:04:35] WARNING: Log file automation/logs/ai-trends-cron.log is stale (age: 16565s)
+[2025-08-26 04:04:35] WARNING: Log file automation/logs/ai-trends-research.log is stale (age: 16565s)
+[2025-08-26 04:04:35] WARNING: Log file automation/logs/autonomous-system-manager.log is stale (age: 16565s)
+[2025-08-26 04:04:36] WARNING: Log file automation/logs/backup.log is stale (age: 16566s)
+[2025-08-26 04:04:36] WARNING: Log file automation/logs/config-sync.log is stale (age: 56225s)
+[2025-08-26 04:04:36] WARNING: Log file automation/logs/data-sync.log is stale (age: 56224s)
+[2025-08-26 04:04:36] WARNING: Log file automation/logs/enhanced-automation-orchestrator.runtime.log is stale (age: 34059s)
+[2025-08-26 04:04:36] WARNING: Log file automation/logs/enhanced-autonomous-coordinated.log is stale (age: 13570s)
+[2025-08-26 04:04:37] WARNING: Log file automation/logs/enhanced-git-sync.log is stale (age: 55592s)
+[2025-08-26 04:04:37] WARNING: Log file automation/logs/file-sync.log is stale (age: 56223s)
+[2025-08-26 04:04:37] WARNING: Log file automation/logs/link-health-scheduler.log is stale (age: 16567s)
+[2025-08-26 04:04:38] WARNING: Log file automation/logs/log-rotation.log is stale (age: 3692s)
+[2025-08-26 04:04:38] WARNING: Log file automation/logs/maintenance.log is stale (age: 16568s)
+[2025-08-26 04:04:38] WARNING: Log file automation/logs/ml-link-intelligence.log is stale (age: 16568s)
+[2025-08-26 04:04:38] WARNING: Log file automation/logs/real-time-performance-monitor.log is stale (age: 16568s)
+[2025-08-26 04:04:38] WARNING: Log file automation/logs/security.log is stale (age: 13572s)
+[2025-08-26 04:04:39] WARNING: Log file automation/logs/sitemap-keeper.log is stale (age: 16568s)
+[2025-08-26 04:04:39] WARNING: Log file automation/logs/sync-launcher.log is stale (age: 55830s)
+[2025-08-26 04:04:39] WARNING: Log file automation/logs/sync-orchestrator.log is stale (age: 56222s)
+[2025-08-26 04:04:39] Health report saved to automation/data/health-report.json
+[2025-08-26 04:04:39] Health check process completed
+[2025-08-26 05:03:28] Starting health check process...
+[2025-08-26 05:03:28] Checking system resources...
+[2025-08-26 05:03:31] CPU usage: 34.21%
+[2025-08-26 05:03:31] Memory usage: 96.00%
+[2025-08-26 05:03:31] Disk usage: 8%
+[2025-08-26 05:03:31] Checking automation services health...
+[2025-08-26 05:03:31] Checking process counts...
+[2025-08-26 05:03:31] Process counts:
+[2025-08-26 05:03:31]   Autonomous System Manager:        0
+[2025-08-26 05:03:31]   ML Link Intelligence:        2
+[2025-08-26 05:03:31]   Link Health Scheduler:        4
+[2025-08-26 05:03:31]   Performance Monitor:        3
+[2025-08-26 05:03:31] WARNING: 35 zombie processes detected!
+[2025-08-26 05:03:31] Checking log file health...
+[2025-08-26 05:03:31] WARNING: Log file automation/logs/ai-trends-cron.log is stale (age: 20101s)
+[2025-08-26 05:03:31] WARNING: Log file automation/logs/ai-trends-research.log is stale (age: 20101s)
+[2025-08-26 05:03:31] WARNING: Log file automation/logs/autonomous-system-manager.log is stale (age: 20101s)
+[2025-08-26 05:03:32] WARNING: Log file automation/logs/backup.log is stale (age: 20102s)
+[2025-08-26 05:03:32] WARNING: Log file automation/logs/config-sync.log is stale (age: 59761s)
+[2025-08-26 05:03:32] WARNING: Log file automation/logs/data-sync.log is stale (age: 59760s)
+[2025-08-26 05:03:32] WARNING: Log file automation/logs/enhanced-automation-orchestrator.runtime.log is stale (age: 37595s)
+[2025-08-26 05:03:32] WARNING: Log file automation/logs/enhanced-autonomous-coordinated.log is stale (age: 17106s)
+[2025-08-26 05:03:32] WARNING: Log file automation/logs/enhanced-git-sync.log is stale (age: 59127s)
+[2025-08-26 05:03:32] WARNING: Log file automation/logs/file-sync.log is stale (age: 59758s)
+[2025-08-26 05:03:33] WARNING: Log file automation/logs/link-health-scheduler.log is stale (age: 20103s)
+[2025-08-26 05:03:33] WARNING: Log file automation/logs/log-rotation.log is stale (age: 7227s)
+[2025-08-26 05:03:33] WARNING: Log file automation/logs/maintenance.log is stale (age: 20103s)
+[2025-08-26 05:03:33] WARNING: Log file automation/logs/ml-link-intelligence.log is stale (age: 20103s)
+[2025-08-26 05:03:33] WARNING: Log file automation/logs/real-time-performance-monitor.log is stale (age: 20103s)
+[2025-08-26 05:03:34] WARNING: Log file automation/logs/security.log is stale (age: 17108s)
+[2025-08-26 05:03:34] WARNING: Log file automation/logs/sitemap-keeper.log is stale (age: 20103s)
+[2025-08-26 05:03:34] WARNING: Log file automation/logs/sync-launcher.log is stale (age: 59365s)
+[2025-08-26 05:03:34] WARNING: Log file automation/logs/sync-orchestrator.log is stale (age: 59757s)
+[2025-08-26 05:03:34] Health report saved to automation/data/health-report.json
+[2025-08-26 05:03:34] Health check process completed
+[2025-08-26 07:00:00] Starting health check process...
+[2025-08-26 07:00:00] Checking system resources...
+[2025-08-26 07:00:01] CPU usage: 18.95%
+[2025-08-26 07:00:01] Memory usage: 43.00%
+[2025-08-26 07:00:01] Disk usage: 8%
+[2025-08-26 07:00:01] Checking automation services health...
+[2025-08-26 07:00:01] WARNING:        1 services are offline!
+[2025-08-26 07:00:01] Offline service detected: Offline
+[2025-08-26 07:00:01] Triggering error recovery...
+[2025-08-26 07:00:02] Checking process counts...
+[2025-08-26 07:00:02] Process counts:
+[2025-08-26 07:00:02]   Autonomous System Manager:        1
+[2025-08-26 07:00:02]   ML Link Intelligence:        1
+[2025-08-26 07:00:02]   Link Health Scheduler:        1
+[2025-08-26 07:00:02]   Performance Monitor:        1
+[2025-08-26 07:00:02] WARNING: 26 zombie processes detected!
+[2025-08-26 07:00:02] Checking log file health...
+[2025-08-26 07:00:03] WARNING: Log file automation/logs/ai-trends-cron.log is stale (age: 27093s)
+[2025-08-26 07:00:03] WARNING: Log file automation/logs/ai-trends-research.log is stale (age: 27093s)
+[2025-08-26 07:00:03] WARNING: Log file automation/logs/autonomous-system-manager.log is stale (age: 27093s)
+[2025-08-26 07:00:03] WARNING: Log file automation/logs/backup.log is stale (age: 27093s)
+[2025-08-26 07:00:03] WARNING: Log file automation/logs/build.log is stale (age: 8555s)
+[2025-08-26 07:00:03] WARNING: Log file automation/logs/config-sync.log is stale (age: 66752s)
+[2025-08-26 07:00:03] WARNING: Log file automation/logs/data-sync.log is stale (age: 66751s)
+[2025-08-26 07:00:03] WARNING: Log file automation/logs/dependency.log is stale (age: 10526s)
+[2025-08-26 07:00:03] WARNING: Log file automation/logs/enhanced-automation-orchestrator.runtime.log is stale (age: 44586s)
+[2025-08-26 07:00:03] WARNING: Log file automation/logs/enhanced-autonomous-coordinated.log is stale (age: 24097s)
+[2025-08-26 07:00:03] WARNING: Log file automation/logs/enhanced-git-sync.log is stale (age: 66118s)
+[2025-08-26 07:00:03] WARNING: Log file automation/logs/file-sync.log is stale (age: 66749s)
+[2025-08-26 07:00:03] WARNING: Log file automation/logs/link-health-scheduler.log is stale (age: 27093s)
+[2025-08-26 07:00:03] WARNING: Log file automation/logs/log-rotation.log is stale (age: 14217s)
+[2025-08-26 07:00:03] WARNING: Log file automation/logs/maintenance.log is stale (age: 27093s)
+[2025-08-26 07:00:03] WARNING: Log file automation/logs/ml-link-intelligence.log is stale (age: 27093s)
+[2025-08-26 07:00:03] WARNING: Log file automation/logs/real-time-performance-monitor.log is stale (age: 27093s)
+[2025-08-26 07:00:04] WARNING: Log file automation/logs/security.log is stale (age: 24098s)
+[2025-08-26 07:00:04] WARNING: Log file automation/logs/sitemap-keeper.log is stale (age: 27093s)
+[2025-08-26 07:00:04] WARNING: Log file automation/logs/sync-launcher.log is stale (age: 66355s)
+[2025-08-26 07:00:04] WARNING: Log file automation/logs/sync-orchestrator.log is stale (age: 66747s)
+[2025-08-26 07:00:04] Health report saved to automation/data/health-report.json
+[2025-08-26 07:00:04] Health check process completed

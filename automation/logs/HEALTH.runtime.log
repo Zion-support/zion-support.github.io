@@ -103,3 +103,126 @@
 [2025-08-26T03:54:50.289Z] [HEALTH] Health check issues found: Service ml-link-intelligence is enabled but not running
 [2025-08-26T03:55:20.290Z] [HEALTH] All services healthy
 [2025-08-26T03:55:50.291Z] [HEALTH] All services healthy
+[2025-08-26T03:56:20.294Z] [HEALTH] Health check issues found: Service link-health-scheduler is enabled but not running
+[2025-08-26T03:56:50.294Z] [HEALTH] Health check issues found: Service real-time-performance-monitor is enabled but not running
+[2025-08-26T03:57:20.296Z] [HEALTH] All services healthy
+[2025-08-26T03:57:50.297Z] [HEALTH] All services healthy
+[2025-08-26T03:58:20.299Z] [HEALTH] Health check issues found: Service link-health-scheduler is enabled but not running
+[2025-08-26T03:58:50.300Z] [HEALTH] All services healthy
+[2025-08-26T03:59:20.301Z] [HEALTH] Health check issues found: Service ml-link-intelligence is enabled but not running
+[2025-08-26T03:59:50.301Z] [HEALTH] All services healthy
+[2025-08-26T04:00:20.303Z] [HEALTH] Health check issues found: Service link-health-scheduler is enabled but not running
+[2025-08-26T04:00:50.303Z] [HEALTH] All services healthy
+[2025-08-26T04:01:20.304Z] [HEALTH] All services healthy
+[2025-08-26T04:01:50.305Z] [HEALTH] All services healthy
+[2025-08-26T04:02:20.321Z] [HEALTH] Health check issues found: Service link-health-scheduler is enabled but not running, Service real-time-performance-monitor is enabled but not running
+[2025-08-26T04:17:27.893Z] [HEALTH] All services healthy
+[2025-08-26T04:17:57.947Z] [HEALTH] All services healthy
+[2025-08-26T04:19:35.983Z] [HEALTH] All services healthy
+[2025-08-26T04:20:05.984Z] [HEALTH] All services healthy
+[2025-08-26T04:35:24.994Z] [HEALTH] All services healthy
+[2025-08-26T04:35:54.987Z] [HEALTH] All services healthy
+[2025-08-26T04:36:24.987Z] [HEALTH] Health check issues found: Service link-health-scheduler is enabled but not running
+[2025-08-26T04:36:54.985Z] [HEALTH] All services healthy
+[2025-08-26T04:37:24.986Z] [HEALTH] All services healthy
+[2025-08-26T04:37:54.988Z] [HEALTH] All services healthy
+[2025-08-26T04:38:24.989Z] [HEALTH] All services healthy
+[2025-08-26T04:38:54.990Z] [HEALTH] Health check issues found: Service real-time-performance-monitor is enabled but not running
+[2025-08-26T04:39:24.991Z] [HEALTH] All services healthy
+[2025-08-26T04:39:54.992Z] [HEALTH] All services healthy
+[2025-08-26T04:40:24.992Z] [HEALTH] Health check issues found: Service link-health-scheduler is enabled but not running
+[2025-08-26T04:40:54.995Z] [HEALTH] All services healthy
+[2025-08-26T04:41:24.996Z] [HEALTH] All services healthy
+[2025-08-26T04:56:55.963Z] [HEALTH] All services healthy
+[2025-08-26T04:57:25.974Z] [HEALTH] All services healthy
+[2025-08-26T05:12:59.532Z] [HEALTH] All services healthy
+[2025-08-26T05:13:29.538Z] [HEALTH] All services healthy
+[2025-08-26T05:13:59.539Z] [HEALTH] All services healthy
+[2025-08-26T05:14:29.540Z] [HEALTH] All services healthy
+[2025-08-26T05:14:59.540Z] [HEALTH] All services healthy
+[2025-08-26T05:15:29.543Z] [HEALTH] All services healthy
+[2025-08-26T05:15:59.544Z] [HEALTH] All services healthy
+[2025-08-26T05:16:29.547Z] [HEALTH] Health check issues found: Service real-time-performance-monitor is enabled but not running
+[2025-08-26T05:16:59.547Z] [HEALTH] All services healthy
+[2025-08-26T05:17:29.550Z] [HEALTH] All services healthy
+[2025-08-26T05:17:59.550Z] [HEALTH] All services healthy
+[2025-08-26T05:18:29.553Z] [HEALTH] All services healthy
+[2025-08-26T05:18:59.554Z] [HEALTH] All services healthy
+[2025-08-26T05:19:29.555Z] [HEALTH] All services healthy
+[2025-08-26T05:19:59.557Z] [HEALTH] All services healthy
+[2025-08-26T05:20:29.559Z] [HEALTH] All services healthy
+[2025-08-26T05:20:59.560Z] [HEALTH] All services healthy
+[2025-08-26T05:21:29.561Z] [HEALTH] All services healthy
+[2025-08-26T05:21:59.562Z] [HEALTH] All services healthy
+[2025-08-26T05:22:29.565Z] [HEALTH] All services healthy
+[2025-08-26T05:22:59.566Z] [HEALTH] Health check issues found: Service ml-link-intelligence is enabled but not running, Service real-time-performance-monitor is enabled but not running
+[2025-08-26T05:53:03.012Z] [HEALTH] All services healthy
+[2025-08-26T05:53:32.850Z] [HEALTH] All services healthy
+[2025-08-26T06:03:01.426Z] [HEALTH] All services healthy
+[2025-08-26T06:03:31.426Z] [HEALTH] All services healthy
+[2025-08-26T06:04:01.426Z] [HEALTH] All services healthy
+[2025-08-26T06:04:31.426Z] [HEALTH] All services healthy
+[2025-08-26T06:21:09.831Z] [HEALTH] All services healthy
+[2025-08-26T06:21:39.824Z] [HEALTH] Health check issues found: Service ml-link-intelligence is enabled but not running
+[2025-08-26T06:37:26.124Z] [HEALTH] All services healthy
+[2025-08-26T06:37:56.139Z] [HEALTH] All services healthy
+[2025-08-26T06:54:35.370Z] [HEALTH] All services healthy
+[2025-08-26T06:55:05.370Z] [HEALTH] All services healthy
+[2025-08-26T07:04:06.479Z] [HEALTH] All services healthy
+[2025-08-26T07:04:36.480Z] [HEALTH] All services healthy
+[2025-08-26T07:20:19.850Z] [HEALTH] All services healthy
+[2025-08-26T07:20:49.847Z] [HEALTH] All services healthy
+[2025-08-26T07:37:35.583Z] [HEALTH] All services healthy
+[2025-08-26T07:38:05.586Z] [HEALTH] Health check issues found: Service autonomous-system-manager is enabled but not running
+[2025-08-26T07:55:35.625Z] [HEALTH] All services healthy
+[2025-08-26T07:56:05.631Z] [HEALTH] All services healthy
+[2025-08-26T08:03:28.630Z] [HEALTH] All services healthy
+[2025-08-26T08:03:58.630Z] [HEALTH] All services healthy
+[2025-08-26T08:21:30.868Z] [HEALTH] All services healthy
+[2025-08-26T08:22:00.862Z] [HEALTH] All services healthy
+[2025-08-26T08:38:23.593Z] [HEALTH] Health check issues found: Service real-time-performance-monitor is enabled but not running
+[2025-08-26T08:38:53.592Z] [HEALTH] All services healthy
+[2025-08-26T08:56:29.278Z] [HEALTH] All services healthy
+[2025-08-26T08:56:59.281Z] [HEALTH] All services healthy
+[2025-08-26T09:05:05.127Z] [HEALTH] All services healthy
+[2025-08-26T09:05:35.130Z] [HEALTH] All services healthy
+[2025-08-26T09:21:40.802Z] [HEALTH] All services healthy
+[2025-08-26T09:22:10.803Z] [HEALTH] All services healthy
+[2025-08-26T09:33:04.047Z] [HEALTH] All services healthy
+[2025-08-26T09:33:34.044Z] [HEALTH] All services healthy
+[2025-08-26T09:34:04.044Z] [HEALTH] Health check issues found: Service autonomous-system-manager is enabled but not running, Service ml-link-intelligence is enabled but not running
+[2025-08-26T09:34:34.043Z] [HEALTH] Health check issues found: Service real-time-performance-monitor is enabled but not running
+[2025-08-26T09:35:04.040Z] [HEALTH] All services healthy
+[2025-08-26T09:35:34.039Z] [HEALTH] All services healthy
+[2025-08-26T09:36:04.043Z] [HEALTH] Health check issues found: Service autonomous-system-manager is enabled but not running
+[2025-08-26T09:36:34.161Z] [HEALTH] All services healthy
+[2025-08-26T09:37:04.161Z] [HEALTH] All services healthy
+[2025-08-26T09:37:34.163Z] [HEALTH] All services healthy
+[2025-08-26T09:38:04.164Z] [HEALTH] Health check issues found: Service autonomous-system-manager is enabled but not running
+[2025-08-26T09:38:34.180Z] [HEALTH] Health check issues found: Service ml-link-intelligence is enabled but not running
+[2025-08-26T09:41:17.967Z] [HEALTH] All services healthy
+[2025-08-26T09:41:47.972Z] [HEALTH] All services healthy
+[2025-08-26T09:42:17.973Z] [HEALTH] Health check issues found: Service link-health-scheduler is enabled but not running
+[2025-08-26T09:42:47.975Z] [HEALTH] All services healthy
+[2025-08-26T09:43:17.976Z] [HEALTH] All services healthy
+[2025-08-26T09:43:47.978Z] [HEALTH] All services healthy
+[2025-08-26T09:44:17.980Z] [HEALTH] Health check issues found: Service link-health-scheduler is enabled but not running
+[2025-08-26T09:44:47.980Z] [HEALTH] Health check issues found: Service real-time-performance-monitor is enabled but not running
+[2025-08-26T09:45:17.981Z] [HEALTH] All services healthy
+[2025-08-26T09:45:47.983Z] [HEALTH] Health check issues found: Service ml-link-intelligence is enabled but not running
+[2025-08-26T09:46:18.063Z] [HEALTH] All services healthy
+[2025-08-26T10:00:34.263Z] [HEALTH] All services healthy
+[2025-08-26T10:01:04.264Z] [HEALTH] All services healthy
+[2025-08-26T10:01:34.263Z] [HEALTH] All services healthy
+[2025-08-26T10:02:04.261Z] [HEALTH] Health check issues found: Service autonomous-system-manager is enabled but not running
+[2025-08-26T10:02:34.260Z] [HEALTH] All services healthy
+[2025-08-26T10:03:04.259Z] [HEALTH] All services healthy
+[2025-08-26T10:03:34.258Z] [HEALTH] All services healthy
+[2025-08-26T10:04:04.257Z] [HEALTH] Health check issues found: Service autonomous-system-manager is enabled but not running
+[2025-08-26T10:04:34.256Z] [HEALTH] Health check issues found: Service ml-link-intelligence is enabled but not running
+[2025-08-26T10:05:04.255Z] [HEALTH] All services healthy
+[2025-08-26T10:05:34.254Z] [HEALTH] All services healthy
+[2025-08-26T10:06:04.252Z] [HEALTH] Health check issues found: Service autonomous-system-manager is enabled but not running
+[2025-08-26T10:06:34.251Z] [HEALTH] Health check issues found: Service real-time-performance-monitor is enabled but not running
+[2025-08-26T10:07:04.251Z] [HEALTH] All services healthy
+[2025-08-26T10:07:34.250Z] [HEALTH] All services healthy

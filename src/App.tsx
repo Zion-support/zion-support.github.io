@@ -35,7 +35,7 @@ const QuantumTechnology = React.lazy(() => import('./pages/QuantumTechnology'));
 const SpaceTech = React.lazy(() => import('./pages/SpaceTech'));
 
 // Service pages
-const AIServices = React.lazy(() => import('./pages/services/AI'));
+const AIServices = React.lazy(() => import('./pages/services/AIServices'));
 const CloudServices = React.lazy(() => import('./pages/services/Cloud'));
 const CybersecurityServices = React.lazy(() => import('./pages/services/Cybersecurity'));
 const InfrastructureServices = React.lazy(() => import('./pages/services/Infrastructure'));

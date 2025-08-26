@@ -66,3 +66,17 @@ dist/js/ui-vendor-BbEgLA80.js               70.65 kB │ gzip: 24.20 kB
 dist/js/animation-vendor-DaAPcKOt.js       114.85 kB │ gzip: 36.86 kB
 dist/js/react-vendor-DhnqVzzq.js           171.10 kB │ gzip: 56.03 kB
 ✓ built in 25.82s
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 build
+> tsc && vite build
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'

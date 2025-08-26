@@ -268,3 +268,262 @@
 [2025-08-26T03:56:15.979Z] Scheduled check for about at Tue Aug 26 2025 01:56:15 GMT-0300 (Brasilia Standard Time)
 [2025-08-26T03:56:15.980Z] Scheduled check for contact at Tue Aug 26 2025 01:11:15 GMT-0300 (Brasilia Standard Time)
 [2025-08-26T03:56:15.980Z] Scheduled 4 links for health checks
+[2025-08-26T03:57:05.984Z] Status: 4 jobs scheduled, 0 active
+[2025-08-26T03:58:01.081Z] Stopping Link Health Scheduler...
+[2025-08-26T03:58:01.082Z] Stopping Link Health Scheduler
+[2025-08-26T03:58:01.082Z] All scheduled jobs cleared
+[2025-08-26T03:58:11.087Z] Starting Link Health Scheduler
+[2025-08-26T03:58:11.092Z] Starting Link Health Scheduler
+[2025-08-26T03:58:11.092Z] Scheduled check for homepage at Tue Aug 26 2025 01:03:11 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T03:58:11.093Z] Scheduled check for services at Tue Aug 26 2025 01:13:11 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T03:58:11.093Z] Scheduled check for about at Tue Aug 26 2025 01:58:11 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T03:58:11.093Z] Scheduled check for contact at Tue Aug 26 2025 01:13:11 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T03:58:11.093Z] Scheduled 4 links for health checks
+[2025-08-26T03:59:01.100Z] Status: 4 jobs scheduled, 0 active
+[2025-08-26T04:00:01.106Z] Status: 4 jobs scheduled, 0 active
+[2025-08-26T04:00:02.159Z] Stopping Link Health Scheduler...
+[2025-08-26T04:00:02.159Z] Stopping Link Health Scheduler
+[2025-08-26T04:00:02.161Z] All scheduled jobs cleared
+[2025-08-26T04:00:16.203Z] Starting Link Health Scheduler
+[2025-08-26T04:00:16.209Z] Starting Link Health Scheduler
+[2025-08-26T04:00:16.210Z] Scheduled check for homepage at Tue Aug 26 2025 01:05:16 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T04:00:16.210Z] Scheduled check for services at Tue Aug 26 2025 01:15:16 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T04:00:16.210Z] Scheduled check for about at Tue Aug 26 2025 02:00:16 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T04:00:16.210Z] Scheduled check for contact at Tue Aug 26 2025 01:15:16 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T04:00:16.210Z] Scheduled 4 links for health checks
+[2025-08-26T04:01:06.213Z] Status: 4 jobs scheduled, 0 active
+[2025-08-26T04:02:02.042Z] Stopping Link Health Scheduler...
+[2025-08-26T04:02:02.043Z] Stopping Link Health Scheduler
+[2025-08-26T04:02:02.043Z] All scheduled jobs cleared
+[2025-08-26T04:02:11.324Z] Starting Link Health Scheduler
+[2025-08-26T04:02:11.329Z] Starting Link Health Scheduler
+[2025-08-26T04:02:11.330Z] Scheduled check for homepage at Tue Aug 26 2025 01:07:11 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T04:02:11.330Z] Scheduled check for services at Tue Aug 26 2025 01:17:11 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T04:02:11.330Z] Scheduled check for about at Tue Aug 26 2025 02:02:11 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T04:02:11.331Z] Scheduled check for contact at Tue Aug 26 2025 01:17:11 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T04:02:11.331Z] Scheduled 4 links for health checks
+[2025-08-26T04:17:27.885Z] Executing health check for homepage (https://ziontechgroup.com)
+[2025-08-26T04:17:27.893Z] Executing health check for services (https://ziontechgroup.com/services)
+[2025-08-26T04:17:27.893Z] Executing health check for contact (https://ziontechgroup.com/contact)
+[2025-08-26T04:17:29.325Z] Health check completed for homepage: Score 100
+[2025-08-26T04:17:29.325Z] Scheduled check for homepage at Tue Aug 26 2025 01:22:27 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T04:17:29.758Z] Health check completed for contact: Score 100
+[2025-08-26T04:17:29.759Z] Scheduled check for contact at Tue Aug 26 2025 01:32:27 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T04:17:29.911Z] Health check completed for services: Score 90
+[2025-08-26T04:17:29.912Z] Scheduled check for services at Tue Aug 26 2025 01:32:27 GMT-0300 (Brasilia Standard Time)
+[2025-08-26T04:18:03.096Z] Stopping Link Health Scheduler...
+[2025-08-26T04:18:03.097Z] Stopping Link Health Scheduler
+[2025-08-26T04:18:03.098Z] All scheduled jobs cleared
+[2025-08-26T04:18:13.194Z] Starting Link Health Scheduler
+[2025-08-26T04:18:13.207Z] Starting Link Health Scheduler
+[2025-08-26T04:18:13.208Z] Scheduled 4 links for health checks
+[2025-08-26T04:20:00.043Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T04:20:21.186Z] Stopping Link Health Scheduler...
+[2025-08-26T04:20:21.188Z] Stopping Link Health Scheduler
+[2025-08-26T04:20:21.188Z] All scheduled jobs cleared
+[2025-08-26T04:35:32.555Z] Starting Link Health Scheduler
+[2025-08-26T04:35:32.562Z] Starting Link Health Scheduler
+[2025-08-26T04:35:32.562Z] Scheduled 4 links for health checks
+[2025-08-26T04:36:02.562Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T04:36:04.055Z] Stopping Link Health Scheduler...
+[2025-08-26T04:36:04.057Z] Stopping Link Health Scheduler
+[2025-08-26T04:36:04.057Z] All scheduled jobs cleared
+[2025-08-26T04:36:17.973Z] Starting Link Health Scheduler
+[2025-08-26T04:36:17.987Z] Starting Link Health Scheduler
+[2025-08-26T04:36:17.987Z] Scheduled 4 links for health checks
+[2025-08-26T04:37:07.993Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T04:38:03.738Z] Stopping Link Health Scheduler...
+[2025-08-26T04:38:03.739Z] Stopping Link Health Scheduler
+[2025-08-26T04:38:03.740Z] All scheduled jobs cleared
+[2025-08-26T04:38:13.234Z] Starting Link Health Scheduler
+[2025-08-26T04:38:13.246Z] Starting Link Health Scheduler
+[2025-08-26T04:38:13.246Z] Scheduled 4 links for health checks
+[2025-08-26T04:39:03.253Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T04:40:03.265Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T04:40:03.819Z] Stopping Link Health Scheduler...
+[2025-08-26T04:40:03.821Z] Stopping Link Health Scheduler
+[2025-08-26T04:40:03.822Z] All scheduled jobs cleared
+[2025-08-26T04:40:18.536Z] Starting Link Health Scheduler
+[2025-08-26T04:40:18.550Z] Starting Link Health Scheduler
+[2025-08-26T04:40:18.550Z] Scheduled 4 links for health checks
+[2025-08-26T04:41:08.562Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T04:57:09.146Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T05:13:02.716Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T05:14:02.726Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T05:14:03.298Z] Stopping Link Health Scheduler...
+[2025-08-26T05:14:03.299Z] Stopping Link Health Scheduler
+[2025-08-26T05:14:03.301Z] All scheduled jobs cleared
+[2025-08-26T05:14:17.956Z] Starting Link Health Scheduler
+[2025-08-26T05:14:17.968Z] Starting Link Health Scheduler
+[2025-08-26T05:14:17.969Z] Scheduled 4 links for health checks
+[2025-08-26T05:15:07.976Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T05:16:03.588Z] Stopping Link Health Scheduler...
+[2025-08-26T05:16:03.590Z] Stopping Link Health Scheduler
+[2025-08-26T05:16:03.590Z] All scheduled jobs cleared
+[2025-08-26T05:16:13.222Z] Starting Link Health Scheduler
+[2025-08-26T05:16:13.235Z] Starting Link Health Scheduler
+[2025-08-26T05:16:13.235Z] Scheduled 4 links for health checks
+[2025-08-26T05:17:03.246Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T05:18:02.924Z] Stopping Link Health Scheduler...
+[2025-08-26T05:18:02.925Z] Stopping Link Health Scheduler
+[2025-08-26T05:18:02.925Z] All scheduled jobs cleared
+[2025-08-26T05:18:08.607Z] Starting Link Health Scheduler
+[2025-08-26T05:18:08.620Z] Starting Link Health Scheduler
+[2025-08-26T05:18:08.620Z] Scheduled 4 links for health checks
+[2025-08-26T05:18:08.621Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T05:19:08.627Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T05:20:03.544Z] Stopping Link Health Scheduler...
+[2025-08-26T05:20:03.545Z] Stopping Link Health Scheduler
+[2025-08-26T05:20:03.546Z] All scheduled jobs cleared
+[2025-08-26T05:20:13.941Z] Starting Link Health Scheduler
+[2025-08-26T05:20:13.953Z] Starting Link Health Scheduler
+[2025-08-26T05:20:13.953Z] Scheduled 4 links for health checks
+[2025-08-26T05:21:03.961Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T05:22:02.975Z] Stopping Link Health Scheduler...
+[2025-08-26T05:22:02.976Z] Stopping Link Health Scheduler
+[2025-08-26T05:22:02.976Z] All scheduled jobs cleared
+[2025-08-26T05:22:09.212Z] Starting Link Health Scheduler
+[2025-08-26T05:22:09.225Z] Starting Link Health Scheduler
+[2025-08-26T05:22:09.225Z] Scheduled 4 links for health checks
+[2025-08-26T05:22:09.226Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T05:53:07.079Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T06:03:02.953Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T06:03:07.126Z] Stopping Link Health Scheduler...
+[2025-08-26T06:03:07.127Z] Stopping Link Health Scheduler
+[2025-08-26T06:03:07.127Z] All scheduled jobs cleared
+[2025-08-26T06:03:18.341Z] Starting Link Health Scheduler
+[2025-08-26T06:03:18.354Z] Starting Link Health Scheduler
+[2025-08-26T06:03:18.354Z] Scheduled 4 links for health checks
+[2025-08-26T06:04:02.951Z] Stopping Link Health Scheduler...
+[2025-08-26T06:04:02.954Z] Stopping Link Health Scheduler
+[2025-08-26T06:04:02.955Z] All scheduled jobs cleared
+[2025-08-26T06:04:13.608Z] Starting Link Health Scheduler
+[2025-08-26T06:04:13.620Z] Starting Link Health Scheduler
+[2025-08-26T06:04:13.621Z] Scheduled 4 links for health checks
+[2025-08-26T06:21:00.481Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T06:37:07.822Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T06:54:35.437Z] Stopping Link Health Scheduler...
+[2025-08-26T06:54:35.438Z] Stopping Link Health Scheduler
+[2025-08-26T06:54:35.438Z] All scheduled jobs cleared
+[2025-08-26T06:54:50.702Z] Starting Link Health Scheduler
+[2025-08-26T06:54:50.717Z] Starting Link Health Scheduler
+[2025-08-26T06:54:50.718Z] Scheduled 4 links for health checks
+[2025-08-26T06:55:00.723Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T07:04:06.513Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T07:04:14.397Z] Stopping Link Health Scheduler...
+[2025-08-26T07:04:14.398Z] Stopping Link Health Scheduler
+[2025-08-26T07:04:14.399Z] All scheduled jobs cleared
+[2025-08-26T07:04:22.183Z] Starting Link Health Scheduler
+[2025-08-26T07:04:22.253Z] Starting Link Health Scheduler
+[2025-08-26T07:04:22.254Z] Scheduled 4 links for health checks
+[2025-08-26T07:38:02.876Z] Stopping Link Health Scheduler...
+[2025-08-26T07:38:02.877Z] Stopping Link Health Scheduler
+[2025-08-26T07:38:02.877Z] All scheduled jobs cleared
+[2025-08-26T07:38:12.074Z] Starting Link Health Scheduler
+[2025-08-26T07:38:12.085Z] Starting Link Health Scheduler
+[2025-08-26T07:38:12.086Z] Scheduled 4 links for health checks
+[2025-08-26T07:56:05.870Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T08:03:28.718Z] Stopping Link Health Scheduler...
+[2025-08-26T08:03:28.718Z] Stopping Link Health Scheduler
+[2025-08-26T08:03:28.719Z] All scheduled jobs cleared
+[2025-08-26T08:03:40.916Z] Starting Link Health Scheduler
+[2025-08-26T08:03:40.928Z] Starting Link Health Scheduler
+[2025-08-26T08:03:40.928Z] Scheduled 4 links for health checks
+[2025-08-26T08:04:00.930Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T08:04:03.778Z] Stopping Link Health Scheduler...
+[2025-08-26T08:04:03.779Z] Stopping Link Health Scheduler
+[2025-08-26T08:04:03.780Z] All scheduled jobs cleared
+[2025-08-26T08:21:31.152Z] Starting Link Health Scheduler
+[2025-08-26T08:21:31.158Z] Starting Link Health Scheduler
+[2025-08-26T08:21:31.158Z] Scheduled 4 links for health checks
+[2025-08-26T08:22:01.157Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T08:22:03.213Z] Stopping Link Health Scheduler...
+[2025-08-26T08:22:03.214Z] Stopping Link Health Scheduler
+[2025-08-26T08:22:03.215Z] All scheduled jobs cleared
+[2025-08-26T08:22:16.575Z] Starting Link Health Scheduler
+[2025-08-26T08:22:16.586Z] Starting Link Health Scheduler
+[2025-08-26T08:22:16.587Z] Scheduled 4 links for health checks
+[2025-08-26T08:39:04.370Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T08:57:00.064Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T09:05:05.841Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T09:22:01.526Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T09:22:03.311Z] Stopping Link Health Scheduler...
+[2025-08-26T09:22:03.312Z] Stopping Link Health Scheduler
+[2025-08-26T09:22:03.314Z] All scheduled jobs cleared
+[2025-08-26T09:22:16.762Z] Starting Link Health Scheduler
+[2025-08-26T09:22:16.774Z] Starting Link Health Scheduler
+[2025-08-26T09:22:16.776Z] Scheduled 4 links for health checks
+[2025-08-26T09:33:04.979Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T09:34:00.912Z] Stopping Link Health Scheduler...
+[2025-08-26T09:34:00.912Z] Stopping Link Health Scheduler
+[2025-08-26T09:34:00.913Z] All scheduled jobs cleared
+[2025-08-26T09:34:10.056Z] Starting Link Health Scheduler
+[2025-08-26T09:34:10.060Z] Starting Link Health Scheduler
+[2025-08-26T09:34:10.060Z] Scheduled 4 links for health checks
+[2025-08-26T09:35:00.059Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T09:36:00.059Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T09:36:01.301Z] Stopping Link Health Scheduler...
+[2025-08-26T09:36:01.302Z] Stopping Link Health Scheduler
+[2025-08-26T09:36:01.302Z] All scheduled jobs cleared
+[2025-08-26T09:36:15.132Z] Starting Link Health Scheduler
+[2025-08-26T09:36:15.136Z] Starting Link Health Scheduler
+[2025-08-26T09:36:15.136Z] Scheduled 4 links for health checks
+[2025-08-26T09:37:05.263Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T09:38:01.748Z] Stopping Link Health Scheduler...
+[2025-08-26T09:38:01.749Z] Stopping Link Health Scheduler
+[2025-08-26T09:38:01.749Z] All scheduled jobs cleared
+[2025-08-26T09:38:10.380Z] Starting Link Health Scheduler
+[2025-08-26T09:38:10.385Z] Starting Link Health Scheduler
+[2025-08-26T09:38:10.385Z] Scheduled 4 links for health checks
+[2025-08-26T09:41:20.652Z] Stopping Link Health Scheduler...
+[2025-08-26T09:41:20.652Z] Stopping Link Health Scheduler
+[2025-08-26T09:41:20.653Z] All scheduled jobs cleared
+[2025-08-26T09:41:31.450Z] Starting Link Health Scheduler
+[2025-08-26T09:41:31.454Z] Starting Link Health Scheduler
+[2025-08-26T09:41:31.454Z] Scheduled 4 links for health checks
+[2025-08-26T09:42:01.459Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T09:42:01.486Z] Stopping Link Health Scheduler...
+[2025-08-26T09:42:01.487Z] Stopping Link Health Scheduler
+[2025-08-26T09:42:01.487Z] All scheduled jobs cleared
+[2025-08-26T09:42:16.535Z] Starting Link Health Scheduler
+[2025-08-26T09:42:16.539Z] Starting Link Health Scheduler
+[2025-08-26T09:42:16.539Z] Scheduled 4 links for health checks
+[2025-08-26T09:43:06.544Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T09:44:01.814Z] Stopping Link Health Scheduler...
+[2025-08-26T09:44:01.815Z] Stopping Link Health Scheduler
+[2025-08-26T09:44:01.815Z] All scheduled jobs cleared
+[2025-08-26T09:44:11.625Z] Starting Link Health Scheduler
+[2025-08-26T09:44:11.629Z] Starting Link Health Scheduler
+[2025-08-26T09:44:11.629Z] Scheduled 4 links for health checks
+[2025-08-26T09:45:01.633Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T09:46:01.652Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T10:00:14.168Z] Starting Link Health Scheduler
+[2025-08-26T10:00:14.174Z] Starting Link Health Scheduler
+[2025-08-26T10:00:14.174Z] Scheduled 4 links for health checks
+[2025-08-26T10:01:04.177Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T10:02:01.316Z] Stopping Link Health Scheduler...
+[2025-08-26T10:02:01.317Z] Stopping Link Health Scheduler
+[2025-08-26T10:02:01.317Z] All scheduled jobs cleared
+[2025-08-26T10:02:09.248Z] Starting Link Health Scheduler
+[2025-08-26T10:02:09.251Z] Starting Link Health Scheduler
+[2025-08-26T10:02:09.252Z] Scheduled 4 links for health checks
+[2025-08-26T10:02:09.252Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T10:03:09.254Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T10:04:02.884Z] Stopping Link Health Scheduler...
+[2025-08-26T10:04:02.884Z] Stopping Link Health Scheduler
+[2025-08-26T10:04:02.884Z] All scheduled jobs cleared
+[2025-08-26T10:04:14.357Z] Starting Link Health Scheduler
+[2025-08-26T10:04:14.362Z] Starting Link Health Scheduler
+[2025-08-26T10:04:14.363Z] Scheduled 4 links for health checks
+[2025-08-26T10:05:04.366Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T10:06:02.012Z] Stopping Link Health Scheduler...
+[2025-08-26T10:06:02.012Z] Stopping Link Health Scheduler
+[2025-08-26T10:06:02.012Z] All scheduled jobs cleared
+[2025-08-26T10:06:09.462Z] Starting Link Health Scheduler
+[2025-08-26T10:06:09.467Z] Starting Link Health Scheduler
+[2025-08-26T10:06:09.467Z] Scheduled 4 links for health checks
+[2025-08-26T10:06:09.468Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T10:07:09.470Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T10:08:01.978Z] Stopping Link Health Scheduler...
+[2025-08-26T10:08:01.978Z] Stopping Link Health Scheduler
+[2025-08-26T10:08:01.979Z] All scheduled jobs cleared

@@ -2411,3 +2411,1453 @@ fatal: could not read Username for 'https://github.com': Device not configured
 [2025-08-26T03:56:03.233Z] Behind remote by 5 commits
 [2025-08-26T03:56:03.234Z] Staging all changes...
 [2025-08-26T03:56:03.492Z] Attempting auto-commit...
+[2025-08-26T03:57:40.329Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T03:56:03.557Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+🏗️ Running build check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 build
+> tsc && vite build
+
+vite v5.4.19 building for production...
+transforming...
+✓ 45 modules transformed.
+Generated an empty chunk: "utils".
+rendering chunks...
+computing gzip size...
+dist/index.html                       3.80 kB │ gzip:  1.21 kB
+dist/assets/index-Bjmc1bxP.css       10.93 kB │ gzip:  2.97 kB
+dist/assets/utils-l0sNRNKZ.js         0.00 kB │ gzip:  0.02 kB
+dist/assets/charts-CbGEknjW.js        0.03 kB │ gzip:  0.05 kB
+dist/assets/forms-CbGEknjW.js         0.03 kB │ gzip:  0.05 kB
+dist/assets/icons-CbGEknjW.js         0.03 kB │ gzip:  0.05 kB
+dist/assets/animations-hq5NsOOK.js    0.06 kB │ gzip:  0.07 kB
+dist/assets/ui-iWwMWcLP.js            0.92 kB │ gzip:  0.58 kB
+dist/assets/index-7PjGUZA-.js         6.16 kB │ gzip:  2.71 kB
+dist/assets/router-DcJBhAXa.js       30.03 kB │ gzip: 11.24 kB
+dist/assets/vendor-nf7bT_Uh.js      140.87 kB │ gzip: 45.26 kB
+✓ built in 6.50s
+✅ All pre-commit checks passed!
+❌ Invalid commit message format.
+Please use conventional commit format:
+  feat: add new feature
+  fix: resolve bug
+  docs: update documentation
+  style: formatting changes
+  refactor: code refactoring
+  perf: performance improvements
+  test: add tests
+  chore: maintenance tasks
+  ci: CI/CD changes
+  build: build system changes
+  revert: revert previous commit
+
+[2025-08-26T03:57:40.329Z] Attempting auto-pull...
+[2025-08-26T03:57:40.377Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T03:57:40.378Z] Checking for merge conflicts...
+[2025-08-26T03:57:40.591Z] Attempting auto-push...
+[2025-08-26T03:57:40.977Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T03:57:40.977Z] Advanced git sync process completed
+[2025-08-26T03:58:00.172Z] Starting advanced git sync process...
+[2025-08-26T03:58:00.176Z] Checking git status...
+[2025-08-26T03:58:00.368Z] Changes detected: 26 files modified
+[2025-08-26T03:58:00.368Z] Checking for remote updates...
+[2025-08-26T03:58:02.213Z] Behind remote by 6 commits
+[2025-08-26T03:58:02.214Z] Staging all changes...
+[2025-08-26T03:58:02.388Z] Attempting auto-commit...
+[2025-08-26T03:58:47.076Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T03:58:02.461Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T03:58:47.077Z] Attempting auto-pull...
+[2025-08-26T03:58:47.126Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T03:58:47.127Z] Checking for merge conflicts...
+[2025-08-26T03:58:47.208Z] Attempting auto-push...
+[2025-08-26T03:58:47.656Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T03:58:47.657Z] Advanced git sync process completed
+[2025-08-26T04:00:00.836Z] Starting advanced git sync process...
+[2025-08-26T04:00:00.839Z] Checking git status...
+[2025-08-26T04:00:01.135Z] Changes detected: 29 files modified
+[2025-08-26T04:00:01.136Z] Checking for remote updates...
+[2025-08-26T04:00:03.201Z] Behind remote by 6 commits
+[2025-08-26T04:00:03.201Z] Staging all changes...
+[2025-08-26T04:00:03.714Z] Attempting auto-commit...
+[2025-08-26T04:00:52.151Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T04:00:03.797Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T04:00:52.152Z] Attempting auto-pull...
+[2025-08-26T04:00:52.198Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T04:00:52.199Z] Checking for merge conflicts...
+[2025-08-26T04:00:52.327Z] Attempting auto-push...
+[2025-08-26T04:00:52.747Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T04:00:52.747Z] Advanced git sync process completed
+[2025-08-26T04:02:00.941Z] Starting advanced git sync process...
+[2025-08-26T04:02:00.944Z] Checking git status...
+[2025-08-26T04:02:01.151Z] Changes detected: 42 files modified
+[2025-08-26T04:02:01.151Z] Checking for remote updates...
+[2025-08-26T04:02:02.590Z] Behind remote by 6 commits
+[2025-08-26T04:02:02.590Z] Staging all changes...
+[2025-08-26T04:02:02.954Z] Attempting auto-commit...
+[2025-08-26T04:17:46.093Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T04:02:03.014Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T04:17:46.095Z] Attempting auto-pull...
+[2025-08-26T04:17:46.226Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T04:17:46.227Z] Checking for merge conflicts...
+[2025-08-26T04:17:46.486Z] Attempting auto-push...
+[2025-08-26T04:17:47.233Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T04:17:47.234Z] Advanced git sync process completed
+[2025-08-26T04:18:00.510Z] Starting advanced git sync process...
+[2025-08-26T04:18:00.518Z] Checking git status...
+[2025-08-26T04:18:01.011Z] Changes detected: 43 files modified
+[2025-08-26T04:18:01.012Z] Checking for remote updates...
+[2025-08-26T04:18:05.271Z] Behind remote by 12 commits
+[2025-08-26T04:18:05.272Z] Staging all changes...
+[2025-08-26T04:18:06.267Z] Attempting auto-commit...
+[2025-08-26T04:20:17.618Z] Starting advanced git sync process...
+[2025-08-26T04:20:17.627Z] Checking git status...
+[2025-08-26T04:20:18.432Z] Changes detected: 43 files modified
+[2025-08-26T04:20:18.433Z] Checking for remote updates...
+[2025-08-26T04:20:21.974Z] Behind remote by 12 commits
+[2025-08-26T04:20:21.975Z] Staging all changes...
+[2025-08-26T04:20:22.643Z] Attempting auto-commit...
+[2025-08-26T04:35:30.515Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T04:18:06.410Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T04:35:30.515Z] Attempting auto-pull...
+[2025-08-26T04:35:30.575Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T04:35:30.576Z] Checking for merge conflicts...
+[2025-08-26T04:35:30.823Z] Attempting auto-push...
+[2025-08-26T04:35:31.575Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T04:35:31.576Z] Advanced git sync process completed
+[2025-08-26T04:36:01.011Z] Starting advanced git sync process...
+[2025-08-26T04:36:01.019Z] Checking git status...
+[2025-08-26T04:36:01.631Z] Changes detected: 43 files modified
+[2025-08-26T04:36:01.633Z] Checking for remote updates...
+[2025-08-26T04:36:06.079Z] Behind remote by 15 commits
+[2025-08-26T04:36:06.080Z] Staging all changes...
+[2025-08-26T04:36:06.873Z] Attempting auto-commit...
+[2025-08-26T04:37:01.155Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T04:20:22.799Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T04:37:01.157Z] Attempting auto-pull...
+[2025-08-26T04:37:01.291Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T04:37:01.292Z] Checking for merge conflicts...
+[2025-08-26T04:37:01.510Z] Attempting auto-push...
+[2025-08-26T04:37:02.230Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T04:37:02.231Z] Advanced git sync process completed
+[2025-08-26T04:38:00.520Z] Starting advanced git sync process...
+[2025-08-26T04:38:00.529Z] Checking git status...
+[2025-08-26T04:38:01.063Z] Changes detected: 43 files modified
+[2025-08-26T04:38:01.064Z] Checking for remote updates...
+[2025-08-26T04:38:01.933Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T04:36:07.077Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T04:38:01.934Z] Attempting auto-pull...
+[2025-08-26T04:38:02.124Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T04:38:02.125Z] Checking for merge conflicts...
+[2025-08-26T04:38:02.409Z] Attempting auto-push...
+[2025-08-26T04:38:03.312Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T04:38:03.313Z] Advanced git sync process completed
+[2025-08-26T04:38:05.058Z] Behind remote by 15 commits
+[2025-08-26T04:38:05.059Z] Staging all changes...
+[2025-08-26T04:38:05.657Z] Attempting auto-commit...
+[2025-08-26T04:39:53.451Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T04:38:05.804Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T04:39:53.452Z] Attempting auto-pull...
+[2025-08-26T04:39:53.578Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T04:39:53.580Z] Checking for merge conflicts...
+[2025-08-26T04:39:53.779Z] Attempting auto-push...
+[2025-08-26T04:39:54.496Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T04:39:54.497Z] Advanced git sync process completed
+[2025-08-26T04:40:00.811Z] Starting advanced git sync process...
+[2025-08-26T04:40:00.819Z] Checking git status...
+[2025-08-26T04:40:01.498Z] Changes detected: 43 files modified
+[2025-08-26T04:40:01.499Z] Checking for remote updates...
+[2025-08-26T04:40:05.447Z] Behind remote by 16 commits
+[2025-08-26T04:40:05.448Z] Staging all changes...
+[2025-08-26T04:40:06.113Z] Attempting auto-commit...
+[2025-08-26T04:41:50.944Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T04:40:06.289Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T04:41:50.946Z] Attempting auto-pull...
+[2025-08-26T04:41:51.082Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T04:41:51.083Z] Checking for merge conflicts...
+[2025-08-26T04:41:51.291Z] Attempting auto-push...
+[2025-08-26T04:41:51.998Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T04:41:51.999Z] Advanced git sync process completed
+[2025-08-26T05:14:00.829Z] Starting advanced git sync process...
+[2025-08-26T05:14:00.837Z] Checking git status...
+[2025-08-26T05:14:01.299Z] Changes detected: 43 files modified
+[2025-08-26T05:14:01.300Z] Checking for remote updates...
+[2025-08-26T05:14:06.760Z] Behind remote by 31 commits
+[2025-08-26T05:14:06.762Z] Staging all changes...
+[2025-08-26T05:14:07.488Z] Attempting auto-commit...
+[2025-08-26T05:15:57.501Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T05:14:07.703Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T05:15:57.502Z] Attempting auto-pull...
+[2025-08-26T05:15:57.628Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T05:15:57.629Z] Checking for merge conflicts...
+[2025-08-26T05:15:57.832Z] Attempting auto-push...
+[2025-08-26T05:15:58.544Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T05:15:58.545Z] Advanced git sync process completed
+[2025-08-26T05:16:00.852Z] Starting advanced git sync process...
+[2025-08-26T05:16:00.859Z] Checking git status...
+[2025-08-26T05:16:01.358Z] Changes detected: 43 files modified
+[2025-08-26T05:16:01.359Z] Checking for remote updates...
+[2025-08-26T05:16:05.378Z] Behind remote by 36 commits
+[2025-08-26T05:16:05.379Z] Staging all changes...
+[2025-08-26T05:16:06.008Z] Attempting auto-commit...
+[2025-08-26T05:17:56.103Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T05:16:06.201Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T05:17:56.104Z] Attempting auto-pull...
+[2025-08-26T05:17:56.230Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T05:17:56.231Z] Checking for merge conflicts...
+[2025-08-26T05:17:56.435Z] Attempting auto-push...
+[2025-08-26T05:17:57.148Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T05:17:57.149Z] Advanced git sync process completed
+[2025-08-26T05:18:00.489Z] Starting advanced git sync process...
+[2025-08-26T05:18:00.496Z] Checking git status...
+[2025-08-26T05:18:00.940Z] Changes detected: 43 files modified
+[2025-08-26T05:18:00.941Z] Checking for remote updates...
+[2025-08-26T05:18:05.090Z] Behind remote by 39 commits
+[2025-08-26T05:18:05.091Z] Staging all changes...
+[2025-08-26T05:18:05.679Z] Attempting auto-commit...
+[2025-08-26T05:19:54.336Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T05:18:05.822Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T05:19:54.337Z] Attempting auto-pull...
+[2025-08-26T05:19:54.471Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T05:19:54.472Z] Checking for merge conflicts...
+[2025-08-26T05:19:54.720Z] Attempting auto-push...
+[2025-08-26T05:19:55.429Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T05:19:55.430Z] Advanced git sync process completed
+[2025-08-26T05:20:00.722Z] Starting advanced git sync process...
+[2025-08-26T05:20:00.730Z] Checking git status...
+[2025-08-26T05:20:01.380Z] Changes detected: 43 files modified
+[2025-08-26T05:20:01.381Z] Checking for remote updates...
+[2025-08-26T05:20:04.398Z] Behind remote by 39 commits
+[2025-08-26T05:20:04.399Z] Staging all changes...
+[2025-08-26T05:20:05.086Z] Attempting auto-commit...
+[2025-08-26T05:21:54.226Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T05:20:05.254Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T05:21:54.227Z] Attempting auto-pull...
+[2025-08-26T05:21:54.354Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T05:21:54.355Z] Checking for merge conflicts...
+[2025-08-26T05:21:54.560Z] Attempting auto-push...
+[2025-08-26T05:21:55.267Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T05:21:55.267Z] Advanced git sync process completed
+[2025-08-26T05:22:00.544Z] Starting advanced git sync process...
+[2025-08-26T05:22:00.551Z] Checking git status...
+[2025-08-26T05:22:01.012Z] Changes detected: 43 files modified
+[2025-08-26T05:22:01.013Z] Checking for remote updates...
+[2025-08-26T05:22:05.278Z] Behind remote by 39 commits
+[2025-08-26T05:22:05.279Z] Staging all changes...
+[2025-08-26T05:22:06.201Z] Attempting auto-commit...
+[2025-08-26T05:53:23.174Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T05:22:06.378Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T05:53:23.175Z] Attempting auto-pull...
+[2025-08-26T05:53:23.303Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T05:53:23.304Z] Checking for merge conflicts...
+[2025-08-26T05:53:23.520Z] Attempting auto-push...
+[2025-08-26T05:53:24.248Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T05:53:24.249Z] Advanced git sync process completed
+[2025-08-26T06:03:06.192Z] Starting advanced git sync process...
+[2025-08-26T06:03:06.195Z] Checking git status...
+[2025-08-26T06:03:06.403Z] Changes detected: 43 files modified
+[2025-08-26T06:03:06.404Z] Checking for remote updates...
+[2025-08-26T06:03:08.765Z] Behind remote by 150 commits
+[2025-08-26T06:03:08.765Z] Staging all changes...
+[2025-08-26T06:03:09.051Z] Attempting auto-commit...
+[2025-08-26T06:04:00.426Z] Starting advanced git sync process...
+[2025-08-26T06:04:00.434Z] Checking git status...
+[2025-08-26T06:04:00.964Z] Changes detected: 44 files modified
+[2025-08-26T06:04:00.965Z] Checking for remote updates...
+[2025-08-26T06:04:05.612Z] Behind remote by 150 commits
+[2025-08-26T06:04:05.613Z] Staging all changes...
+[2025-08-26T06:04:06.341Z] Attempting auto-commit...
+[2025-08-26T06:21:08.220Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T06:03:09.377Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T06:21:08.220Z] Attempting auto-pull...
+[2025-08-26T06:21:08.255Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T06:21:08.256Z] Checking for merge conflicts...
+[2025-08-26T06:21:08.308Z] Attempting auto-push...
+[2025-08-26T06:21:08.661Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T06:21:08.661Z] Advanced git sync process completed
+[2025-08-26T06:37:09.540Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T06:04:06.487Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T06:37:09.541Z] Attempting auto-pull...
+[2025-08-26T06:37:09.576Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T06:37:09.576Z] Checking for merge conflicts...
+[2025-08-26T06:37:09.643Z] Attempting auto-push...
+[2025-08-26T06:37:10.003Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T06:37:10.003Z] Advanced git sync process completed
+[2025-08-26T06:38:00.447Z] Starting advanced git sync process...
+[2025-08-26T06:38:00.455Z] Checking git status...
+[2025-08-26T06:54:34.830Z] Changes detected: 44 files modified
+[2025-08-26T06:54:34.834Z] Checking for remote updates...
+[2025-08-26T06:54:36.689Z] Behind remote by 151 commits
+[2025-08-26T06:54:36.690Z] Staging all changes...
+[2025-08-26T06:54:36.941Z] Attempting auto-commit...
+[2025-08-26T07:04:10.336Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T06:54:36.982Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T07:04:10.337Z] Attempting auto-pull...
+[2025-08-26T07:04:10.372Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T07:04:10.372Z] Checking for merge conflicts...
+[2025-08-26T07:04:10.424Z] Attempting auto-push...
+[2025-08-26T07:04:10.790Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T07:04:10.791Z] Advanced git sync process completed
+[2025-08-26T07:04:10.926Z] Starting advanced git sync process...
+[2025-08-26T07:04:10.936Z] Checking git status...
+[2025-08-26T07:04:11.154Z] Changes detected: 44 files modified
+[2025-08-26T07:04:11.155Z] Checking for remote updates...
+[2025-08-26T07:04:18.337Z] Behind remote by 151 commits
+[2025-08-26T07:04:18.338Z] Staging all changes...
+[2025-08-26T07:04:20.117Z] Attempting auto-commit...
+[2025-08-26T07:37:30.598Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T07:04:20.381Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T07:37:30.598Z] Attempting auto-pull...
+[2025-08-26T07:37:30.635Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T07:37:30.635Z] Checking for merge conflicts...
+[2025-08-26T07:37:30.716Z] Attempting auto-push...
+[2025-08-26T07:37:31.076Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T07:37:31.076Z] Advanced git sync process completed
+[2025-08-26T07:38:00.349Z] Starting advanced git sync process...
+[2025-08-26T07:38:00.356Z] Checking git status...
+[2025-08-26T07:38:00.866Z] Changes detected: 46 files modified
+[2025-08-26T07:38:00.867Z] Checking for remote updates...
+[2025-08-26T07:38:05.143Z] Behind remote by 152 commits
+[2025-08-26T07:38:05.143Z] Staging all changes...
+[2025-08-26T07:38:06.046Z] Attempting auto-commit...
+[2025-08-26T08:03:27.287Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T07:38:06.196Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T08:03:27.288Z] Attempting auto-pull...
+[2025-08-26T08:03:27.328Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T08:03:27.328Z] Checking for merge conflicts...
+[2025-08-26T08:03:27.380Z] Attempting auto-push...
+[2025-08-26T08:03:27.746Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T08:03:27.746Z] Advanced git sync process completed
+[2025-08-26T08:03:27.847Z] Starting advanced git sync process...
+[2025-08-26T08:03:27.850Z] Checking git status...
+[2025-08-26T08:03:28.050Z] Changes detected: 47 files modified
+[2025-08-26T08:03:28.051Z] Checking for remote updates...
+[2025-08-26T08:03:29.888Z] Behind remote by 152 commits
+[2025-08-26T08:03:29.888Z] Staging all changes...
+[2025-08-26T08:03:30.193Z] Attempting auto-commit...
+[2025-08-26T08:04:01.210Z] Starting advanced git sync process...
+[2025-08-26T08:04:01.218Z] Checking git status...
+[2025-08-26T08:04:01.754Z] Changes detected: 47 files modified
+[2025-08-26T08:04:01.756Z] Checking for remote updates...
+[2025-08-26T08:04:05.161Z] Behind remote by 152 commits
+[2025-08-26T08:04:05.162Z] Staging all changes...
+[2025-08-26T08:04:05.905Z] Attempting auto-commit...
+[2025-08-26T08:22:00.531Z] Starting advanced git sync process...
+[2025-08-26T08:22:00.539Z] Checking git status...
+[2025-08-26T08:22:01.092Z] Changes detected: 47 files modified
+[2025-08-26T08:22:01.093Z] Checking for remote updates...
+[2025-08-26T08:22:05.671Z] Behind remote by 153 commits
+[2025-08-26T08:22:05.672Z] Staging all changes...
+[2025-08-26T08:22:06.248Z] Attempting auto-commit...
+[2025-08-26T08:22:12.864Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T08:03:30.248Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T08:22:12.865Z] Attempting auto-pull...
+[2025-08-26T08:22:12.998Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T08:22:13.000Z] Checking for merge conflicts...
+[2025-08-26T08:22:13.301Z] Attempting auto-push...
+[2025-08-26T08:22:14.136Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T08:22:14.137Z] Advanced git sync process completed
+[2025-08-26T08:38:26.022Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T08:04:06.052Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T08:38:26.022Z] Attempting auto-pull...
+[2025-08-26T08:38:26.057Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T08:38:26.057Z] Checking for merge conflicts...
+[2025-08-26T08:38:26.110Z] Attempting auto-push...
+[2025-08-26T08:38:26.470Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T08:38:26.470Z] Advanced git sync process completed
+[2025-08-26T08:56:20.531Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T08:22:06.404Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T08:56:20.531Z] Attempting auto-pull...
+[2025-08-26T08:56:20.567Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T08:56:20.567Z] Checking for merge conflicts...
+[2025-08-26T08:56:20.619Z] Attempting auto-push...
+[2025-08-26T08:56:20.993Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T08:56:20.993Z] Advanced git sync process completed
+[2025-08-26T09:22:00.857Z] Starting advanced git sync process...
+[2025-08-26T09:22:00.865Z] Checking git status...
+[2025-08-26T09:22:01.362Z] Changes detected: 47 files modified
+[2025-08-26T09:22:01.363Z] Checking for remote updates...
+[2025-08-26T09:22:06.781Z] Behind remote by 154 commits
+[2025-08-26T09:22:06.782Z] Staging all changes...
+[2025-08-26T09:22:07.440Z] Attempting auto-commit...
+[2025-08-26T09:33:31.564Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T09:22:07.613Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T09:33:31.565Z] Attempting auto-pull...
+[2025-08-26T09:33:31.606Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T09:33:31.607Z] Checking for merge conflicts...
+[2025-08-26T09:33:31.671Z] Attempting auto-push...
+[2025-08-26T09:33:32.055Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T09:33:32.055Z] Advanced git sync process completed
+[2025-08-26T09:34:00.139Z] Starting advanced git sync process...
+[2025-08-26T09:34:00.142Z] Checking git status...
+[2025-08-26T09:34:00.303Z] Changes detected: 47 files modified
+[2025-08-26T09:34:00.303Z] Checking for remote updates...
+[2025-08-26T09:34:02.005Z] Behind remote by 154 commits
+[2025-08-26T09:34:02.005Z] Staging all changes...
+[2025-08-26T09:34:02.173Z] Attempting auto-commit...
+[2025-08-26T09:34:36.201Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T09:34:02.219Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T09:34:36.202Z] Attempting auto-pull...
+[2025-08-26T09:34:36.240Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T09:34:36.240Z] Checking for merge conflicts...
+[2025-08-26T09:34:36.295Z] Attempting auto-push...
+[2025-08-26T09:34:36.670Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T09:34:36.671Z] Advanced git sync process completed
+[2025-08-26T09:36:00.538Z] Starting advanced git sync process...
+[2025-08-26T09:36:00.540Z] Checking git status...
+[2025-08-26T09:36:00.692Z] Changes detected: 47 files modified
+[2025-08-26T09:36:00.692Z] Checking for remote updates...
+[2025-08-26T09:36:02.070Z] Behind remote by 154 commits
+[2025-08-26T09:36:02.070Z] Staging all changes...
+[2025-08-26T09:36:02.246Z] Attempting auto-commit...
+[2025-08-26T09:36:35.404Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T09:36:02.291Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T09:36:35.404Z] Attempting auto-pull...
+[2025-08-26T09:36:35.446Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T09:36:35.447Z] Checking for merge conflicts...
+[2025-08-26T09:36:35.509Z] Attempting auto-push...
+[2025-08-26T09:36:35.877Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T09:36:35.878Z] Advanced git sync process completed
+[2025-08-26T09:38:00.968Z] Starting advanced git sync process...
+[2025-08-26T09:38:00.970Z] Checking git status...
+[2025-08-26T09:38:01.130Z] Changes detected: 47 files modified
+[2025-08-26T09:38:01.130Z] Checking for remote updates...
+[2025-08-26T09:38:02.514Z] Behind remote by 154 commits
+[2025-08-26T09:38:02.515Z] Staging all changes...
+[2025-08-26T09:38:02.690Z] Attempting auto-commit...
+[2025-08-26T09:41:19.071Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T09:38:02.737Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T09:41:19.072Z] Attempting auto-pull...
+[2025-08-26T09:41:19.120Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T09:41:19.121Z] Checking for merge conflicts...
+[2025-08-26T09:41:19.196Z] Attempting auto-push...
+[2025-08-26T09:41:19.579Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T09:41:19.580Z] Advanced git sync process completed
+[2025-08-26T09:41:19.675Z] Starting advanced git sync process...
+[2025-08-26T09:41:19.677Z] Checking git status...
+[2025-08-26T09:41:20.087Z] Changes detected: 47 files modified
+[2025-08-26T09:41:20.087Z] Checking for remote updates...
+[2025-08-26T09:41:22.076Z] Behind remote by 155 commits
+[2025-08-26T09:41:22.076Z] Staging all changes...
+[2025-08-26T09:41:22.375Z] Attempting auto-commit...
+[2025-08-26T09:41:56.042Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T09:41:22.428Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T09:41:56.042Z] Attempting auto-pull...
+[2025-08-26T09:41:56.084Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T09:41:56.084Z] Checking for merge conflicts...
+[2025-08-26T09:41:56.149Z] Attempting auto-push...
+[2025-08-26T09:41:56.565Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T09:41:56.565Z] Advanced git sync process completed
+[2025-08-26T09:42:00.723Z] Starting advanced git sync process...
+[2025-08-26T09:42:00.726Z] Checking git status...
+[2025-08-26T09:42:00.887Z] Changes detected: 47 files modified
+[2025-08-26T09:42:00.888Z] Checking for remote updates...
+[2025-08-26T09:42:02.210Z] Behind remote by 155 commits
+[2025-08-26T09:42:02.210Z] Staging all changes...
+[2025-08-26T09:42:02.384Z] Attempting auto-commit...
+[2025-08-26T09:42:35.287Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T09:42:02.430Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T09:42:35.288Z] Attempting auto-pull...
+[2025-08-26T09:42:35.330Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T09:42:35.331Z] Checking for merge conflicts...
+[2025-08-26T09:42:35.396Z] Attempting auto-push...
+[2025-08-26T09:42:35.822Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T09:42:35.822Z] Advanced git sync process completed
+[2025-08-26T09:44:01.050Z] Starting advanced git sync process...
+[2025-08-26T09:44:01.053Z] Checking git status...
+[2025-08-26T09:44:01.217Z] Changes detected: 47 files modified
+[2025-08-26T09:44:01.217Z] Checking for remote updates...
+[2025-08-26T09:44:02.588Z] Behind remote by 155 commits
+[2025-08-26T09:44:02.589Z] Staging all changes...
+[2025-08-26T09:44:02.762Z] Attempting auto-commit...
+[2025-08-26T09:44:36.575Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T09:44:02.808Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T09:44:36.575Z] Attempting auto-pull...
+[2025-08-26T09:44:36.618Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T09:44:36.619Z] Checking for merge conflicts...
+[2025-08-26T09:44:36.683Z] Attempting auto-push...
+[2025-08-26T09:44:37.071Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T09:44:37.071Z] Advanced git sync process completed
+[2025-08-26T09:46:00.176Z] Starting advanced git sync process...
+[2025-08-26T09:46:00.180Z] Checking git status...
+[2025-08-26T09:46:00.415Z] Changes detected: 47 files modified
+[2025-08-26T09:46:00.415Z] Checking for remote updates...
+[2025-08-26T09:46:01.695Z] Behind remote by 155 commits
+[2025-08-26T09:46:01.695Z] Staging all changes...
+[2025-08-26T09:46:01.870Z] Attempting auto-commit...
+[2025-08-26T09:52:01.035Z] Starting advanced git sync process...
+[2025-08-26T09:52:01.046Z] Checking git status...
+[2025-08-26T09:52:01.540Z] Changes detected: 47 files modified
+[2025-08-26T09:52:01.540Z] Checking for remote updates...
+[2025-08-26T09:52:05.135Z] Behind remote by 156 commits
+[2025-08-26T09:52:05.136Z] Staging all changes...
+[2025-08-26T09:52:05.400Z] Attempting auto-commit...
+[2025-08-26T09:52:48.622Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T09:52:05.456Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T09:52:48.623Z] Attempting auto-pull...
+[2025-08-26T09:52:48.678Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T09:52:48.679Z] Checking for merge conflicts...
+[2025-08-26T09:52:48.772Z] Attempting auto-push...
+[2025-08-26T09:52:49.219Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T09:52:49.219Z] Advanced git sync process completed
+[2025-08-26T09:54:00.420Z] Starting advanced git sync process...
+[2025-08-26T09:54:00.422Z] Checking git status...
+[2025-08-26T09:54:00.560Z] Changes detected: 47 files modified
+[2025-08-26T09:54:00.560Z] Checking for remote updates...
+[2025-08-26T09:54:03.078Z] Behind remote by 158 commits
+[2025-08-26T09:54:03.079Z] Staging all changes...
+[2025-08-26T09:54:03.230Z] Attempting auto-commit...
+[2025-08-26T09:54:27.983Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T09:54:03.268Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T09:54:27.983Z] Attempting auto-pull...
+[2025-08-26T09:54:28.017Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T09:54:28.017Z] Checking for merge conflicts...
+[2025-08-26T09:54:28.066Z] Attempting auto-push...
+[2025-08-26T09:54:28.416Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T09:54:28.416Z] Advanced git sync process completed
+[2025-08-26T09:56:00.233Z] Starting advanced git sync process...
+[2025-08-26T09:56:00.235Z] Checking git status...
+[2025-08-26T09:56:00.357Z] Changes detected: 47 files modified
+[2025-08-26T09:56:00.357Z] Checking for remote updates...
+[2025-08-26T09:56:02.724Z] Behind remote by 161 commits
+[2025-08-26T09:56:02.724Z] Staging all changes...
+[2025-08-26T09:56:02.854Z] Attempting auto-commit...
+[2025-08-26T09:56:27.366Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T09:56:02.889Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T09:56:27.366Z] Attempting auto-pull...
+[2025-08-26T09:56:27.401Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T09:56:27.401Z] Checking for merge conflicts...
+[2025-08-26T09:56:27.453Z] Attempting auto-push...
+[2025-08-26T09:56:27.815Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T09:56:27.816Z] Advanced git sync process completed
+[2025-08-26T09:58:01.091Z] Starting advanced git sync process...
+[2025-08-26T09:58:01.093Z] Checking git status...
+[2025-08-26T09:58:01.231Z] Changes detected: 47 files modified
+[2025-08-26T09:58:01.231Z] Checking for remote updates...
+[2025-08-26T09:58:04.047Z] Behind remote by 163 commits
+[2025-08-26T09:58:04.048Z] Staging all changes...
+[2025-08-26T09:58:04.173Z] Attempting auto-commit...
+[2025-08-26T09:58:29.647Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T09:58:04.208Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T09:58:29.648Z] Attempting auto-pull...
+[2025-08-26T09:58:29.687Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T09:58:29.687Z] Checking for merge conflicts...
+[2025-08-26T09:58:29.742Z] Attempting auto-push...
+[2025-08-26T09:58:30.118Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T09:58:30.118Z] Advanced git sync process completed
+[2025-08-26T10:00:00.377Z] Starting advanced git sync process...
+[2025-08-26T10:00:00.382Z] Checking git status...
+[2025-08-26T10:00:00.609Z] Changes detected: 47 files modified
+[2025-08-26T10:00:00.609Z] Checking for remote updates...
+[2025-08-26T10:00:06.699Z] Behind remote by 163 commits
+[2025-08-26T10:00:06.699Z] Staging all changes...
+[2025-08-26T10:00:06.987Z] Attempting auto-commit...
+[2025-08-26T10:00:41.404Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T10:00:07.027Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T10:00:41.404Z] Attempting auto-pull...
+[2025-08-26T10:00:41.450Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T10:00:41.450Z] Checking for merge conflicts...
+[2025-08-26T10:00:41.519Z] Attempting auto-push...
+[2025-08-26T10:00:42.135Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T10:00:42.135Z] Advanced git sync process completed
+[2025-08-26T10:02:00.468Z] Starting advanced git sync process...
+[2025-08-26T10:02:00.477Z] Checking git status...
+[2025-08-26T10:02:00.692Z] Changes detected: 48 files modified
+[2025-08-26T10:02:00.692Z] Checking for remote updates...
+[2025-08-26T10:02:02.359Z] Behind remote by 165 commits
+[2025-08-26T10:02:02.359Z] Staging all changes...
+[2025-08-26T10:02:02.523Z] Attempting auto-commit...
+[2025-08-26T10:02:34.940Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T10:02:02.558Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T10:02:34.940Z] Attempting auto-pull...
+[2025-08-26T10:02:34.989Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T10:02:34.990Z] Checking for merge conflicts...
+[2025-08-26T10:02:35.075Z] Attempting auto-push...
+[2025-08-26T10:02:35.539Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T10:02:35.539Z] Advanced git sync process completed
+[2025-08-26T10:04:00.803Z] Starting advanced git sync process...
+[2025-08-26T10:04:00.807Z] Checking git status...
+[2025-08-26T10:04:01.080Z] Changes detected: 49 files modified
+[2025-08-26T10:04:01.081Z] Checking for remote updates...
+[2025-08-26T10:04:04.053Z] Behind remote by 165 commits
+[2025-08-26T10:04:04.053Z] Staging all changes...
+[2025-08-26T10:04:04.327Z] Attempting auto-commit...
+[2025-08-26T10:04:48.587Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T10:04:04.379Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T10:04:48.588Z] Attempting auto-pull...
+[2025-08-26T10:04:48.643Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T10:04:48.643Z] Checking for merge conflicts...
+[2025-08-26T10:04:48.730Z] Attempting auto-push...
+[2025-08-26T10:04:49.166Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T10:04:49.167Z] Advanced git sync process completed
+[2025-08-26T10:06:01.145Z] Starting advanced git sync process...
+[2025-08-26T10:06:01.147Z] Checking git status...
+[2025-08-26T10:06:01.317Z] Changes detected: 49 files modified
+[2025-08-26T10:06:01.318Z] Checking for remote updates...
+[2025-08-26T10:06:04.131Z] Behind remote by 165 commits
+[2025-08-26T10:06:04.131Z] Staging all changes...
+[2025-08-26T10:06:04.352Z] Attempting auto-commit...
+[2025-08-26T10:06:43.326Z] Auto-commit failed: Command failed: git commit -m "Auto-sync: Automated commit at 2025-08-26T10:06:04.409Z"
+🔍 Running pre-commit checks...
+🔍 Running TypeScript type check...
+npm warn Unknown project config "<<<<<<< HEAD". This will stop working in the next major version of npm.
+npm warn Unknown project config "strict-peer-dependencies". This will stop working in the next major version of npm.
+npm warn Unknown project config "auto-install-peers". This will stop working in the next major version of npm.
+npm warn Unknown project config "react@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config "react-dom@18.2.0". This will stop working in the next major version of npm.
+npm warn Unknown project config ">>>>>>> origin/c9d4c2-codex/implement-wishlist-functionality". This will stop working in the next major version of npm.
+
+> project@0.0.0 type-check
+> tsc --noEmit
+
+src/components/profile/HireNowCTA.tsx(4,26): error TS1261: Already included file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/Textarea.tsx' differs from file name '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/ui/textarea.tsx' only in casing.
+  The file is in the program because:
+    Imported via '@/components/ui/Textarea' from file '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/src/components/profile/HireNowCTA.tsx'
+    Matched by include pattern 'src' in '/Users/klebergarciaalcatrao/Desktop/ZION_APP_AUG_25_25/zion.app/tsconfig.json'
+❌ TypeScript type check failed. Please fix the issues before committing.
+
+[2025-08-26T10:06:43.326Z] Attempting auto-pull...
+[2025-08-26T10:06:43.370Z] Auto-pull failed: Command failed: git pull origin main
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+[2025-08-26T10:06:43.371Z] Checking for merge conflicts...
+[2025-08-26T10:06:43.441Z] Attempting auto-push...
+[2025-08-26T10:06:43.816Z] Auto-push failed: Command failed: git push origin main
+fatal: could not read Username for 'https://github.com': Device not configured
+
+[2025-08-26T10:06:43.817Z] Advanced git sync process completed
+[2025-08-26T10:08:00.935Z] Starting advanced git sync process...
+[2025-08-26T10:08:00.938Z] Checking git status...
+[2025-08-26T10:08:01.148Z] Changes detected: 49 files modified
+[2025-08-26T10:08:01.149Z] Checking for remote updates...
+[2025-08-26T10:08:03.134Z] Behind remote by 165 commits
+[2025-08-26T10:08:03.134Z] Staging all changes...

@@ -5,22 +5,22 @@
       "url": "https://ziontechgroup.com",
       "priority": "critical",
       "category": "core",
-      "lastCheck": null,
-      "nextCheck": null,
-      "status": "pending",
+      "lastCheck": "2025-08-26T04:17:29.146Z",
+      "nextCheck": "2025-08-26T04:22:29.146Z",
+      "status": "scheduled",
       "healthScore": 100,
-      "checkCount": 0
+      "checkCount": 1
     },
     {
       "id": "services",
       "url": "https://ziontechgroup.com/services",
       "priority": "high",
       "category": "core",
-      "lastCheck": null,
-      "nextCheck": null,
-      "status": "pending",
+      "lastCheck": "2025-08-26T04:17:29.173Z",
+      "nextCheck": "2025-08-26T04:32:29.173Z",
+      "status": "scheduled",
       "healthScore": 100,
-      "checkCount": 0
+      "checkCount": 1
     },
     {
       "id": "about",
@@ -28,8 +28,8 @@
       "priority": "medium",
       "category": "content",
       "lastCheck": null,
-      "nextCheck": null,
-      "status": "pending",
+      "nextCheck": "2025-08-26T05:02:12.589Z",
+      "status": "scheduled",
       "healthScore": 100,
       "checkCount": 0
     },
@@ -38,10 +38,11 @@
       "url": "https://ziontechgroup.com/contact",
       "priority": "high",
       "category": "core",
-      "lastCheck": null,
-      "status": "pending",
-      "healthScore": 100,
-      "checkCount": 0
+      "lastCheck": "2025-08-26T04:17:29.174Z",
+      "status": "scheduled",
+      "healthScore": 90,
+      "checkCount": 1,
+      "nextCheck": "2025-08-26T04:32:29.174Z"
     }
   ],
   "lastUpdated": "2025-08-25T14:26:17.951Z",
