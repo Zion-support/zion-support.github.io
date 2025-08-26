@@ -1,106 +1,104 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Signal, 
-  Wifi, 
-  Globe, 
-  Zap, 
-  Shield, 
+  Box, 
+  Eye, 
   Cpu, 
+  Network, 
+  Database, 
+  Zap, 
   CheckCircle,
   ArrowRight,
+  Globe,
+  Server,
+  Smartphone,
+  Cloud,
   BarChart3,
-  Settings,
-  Lock,
-  RefreshCw,
-  TrendingUp,
-  Database
+  TrendingUp
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-const fiveGServices = [
+const digitalTwinFeatures = [
   {
-    icon: Signal,
-    title: '5G Network Design',
-    description: 'Comprehensive 5G network architecture design and planning for enterprise environments.',
-    features: ['Network Planning', 'Coverage Analysis', 'Capacity Planning', 'Performance Optimization']
+    icon: Box,
+    title: '3D Visualization',
+    description: 'High-fidelity 3D models and real-time visualization of physical assets and systems.'
   },
   {
-    icon: Wifi,
-    title: 'Private 5G Networks',
-    description: 'Dedicated 5G networks for enterprise campuses, factories, and critical operations.',
-    features: ['Network Slicing', 'Edge Computing', 'Low Latency', 'High Reliability']
-  },
-  {
-    icon: Globe,
-    title: '5G Integration',
-    description: 'Seamless integration of 5G technology with existing enterprise infrastructure.',
-    features: ['Legacy System Integration', 'API Development', 'Data Migration', 'Testing & Validation']
-  },
-  {
-    icon: Zap,
-    title: 'Edge Computing',
-    description: '5G-enabled edge computing solutions for real-time data processing and analytics.',
-    features: ['Edge Infrastructure', 'Real-time Analytics', 'Data Processing', 'Performance Optimization']
-  },
-  {
-    icon: Shield,
-    title: '5G Security',
-    description: 'Comprehensive security solutions for 5G networks and enterprise applications.',
-    features: ['Network Security', 'Data Protection', 'Identity Management', 'Threat Detection']
+    icon: Eye,
+    title: 'Real-time Monitoring',
+    description: 'Continuous monitoring and data collection from IoT sensors and connected devices.'
   },
   {
     icon: Cpu,
-    title: 'IoT Solutions',
-    description: '5G-powered IoT solutions for enterprise automation and monitoring.',
-    features: ['Device Management', 'Data Collection', 'Analytics', 'Automation']
+    title: 'AI-Powered Analytics',
+    description: 'Machine learning algorithms for predictive maintenance and performance optimization.'
+  },
+  {
+    icon: Network,
+    title: 'IoT Integration',
+    description: 'Seamless integration with existing IoT infrastructure and sensor networks.'
+  },
+  {
+    icon: Database,
+    title: 'Data Management',
+    description: 'Centralized data storage and management for all digital twin information.'
+  },
+  {
+    icon: Zap,
+    title: 'Real-time Updates',
+    description: 'Instant synchronization between physical assets and their digital representations.'
   }
 ];
 
-const useCases = [
+const digitalTwinServices = [
   {
-    industry: 'Manufacturing',
-    solutions: ['Smart Factories', 'Predictive Maintenance', 'Quality Control', 'Supply Chain Optimization']
+    title: 'Digital Twin Development',
+    description: 'Custom digital twin solutions tailored to your specific assets and business requirements.',
+    features: ['3D Modeling', 'IoT Integration', 'Data Analytics', 'Custom Dashboards']
   },
   {
-    industry: 'Healthcare',
-    solutions: ['Telemedicine', 'Remote Monitoring', 'Medical IoT', 'Emergency Response']
+    title: 'Asset Performance Management',
+    description: 'Monitor and optimize asset performance through predictive analytics and real-time insights.',
+    features: ['Performance Tracking', 'Predictive Maintenance', 'Efficiency Optimization', 'Cost Analysis']
   },
   {
-    industry: 'Transportation',
-    solutions: ['Connected Vehicles', 'Traffic Management', 'Fleet Optimization', 'Smart Infrastructure']
+    title: 'Simulation & Testing',
+    description: 'Virtual testing and simulation capabilities for new processes and system changes.',
+    features: ['Process Simulation', 'Scenario Testing', 'Risk Assessment', 'Optimization Modeling']
   },
   {
-    industry: 'Retail',
-    solutions: ['Smart Stores', 'Inventory Management', 'Customer Analytics', 'Supply Chain']
+    title: 'Integration Services',
+    description: 'Seamless integration with existing enterprise systems and IoT infrastructure.',
+    features: ['System Integration', 'API Development', 'Data Migration', 'Custom Connectors']
   }
+];
+
+const industries = [
+  { name: 'Manufacturing', icon: Box, description: 'Production line optimization and predictive maintenance' },
+  { name: 'Energy', icon: Zap, description: 'Grid monitoring and renewable energy optimization' },
+  { name: 'Healthcare', icon: Eye, description: 'Medical device monitoring and patient care optimization' },
+  { name: 'Transportation', icon: Network, description: 'Fleet management and infrastructure monitoring' },
+  { name: 'Smart Cities', icon: Globe, description: 'Urban infrastructure and utility management' },
+  { name: 'Agriculture', icon: TrendingUp, description: 'Crop monitoring and precision farming' }
 ];
 
 const benefits = [
-  'Ultra-fast data transfer speeds (up to 10 Gbps)',
-  'Ultra-low latency for real-time applications',
-  'Massive IoT device connectivity',
-  'Enhanced mobile broadband',
-  'Network slicing for customized services',
-  'Improved energy efficiency and coverage'
+  'Reduce operational costs through predictive maintenance',
+  'Improve asset utilization and performance',
+  'Enable remote monitoring and management',
+  'Support data-driven decision making',
+  'Facilitate rapid prototyping and testing',
+  'Enhance safety and compliance monitoring'
 ];
 
-const technologies = [
-  { name: 'Network Slicing', description: 'Virtual network partitioning for different use cases' },
-  { name: 'Edge Computing', description: 'Distributed computing at network edge' },
-  { name: 'Massive MIMO', description: 'Multiple input, multiple output antenna technology' },
-  { name: 'Beamforming', description: 'Directed signal transmission for optimal coverage' },
-  { name: 'Network Function Virtualization', description: 'Software-based network functions' },
-  { name: 'Software-Defined Networking', description: 'Programmable network infrastructure' }
-];
-
-export default function FiveGEnterpriseSolutions() {
+export default function DigitalTwin() {
   return (
     <>
       <SEO 
-        title="5G Enterprise Solutions | Zion Tech Group"
-        description="Transform your enterprise with 5G technology. Private networks, edge computing, IoT solutions, and network integration for the next generation of business operations."
-        canonical="https://ziontechgroup.com/services/5g-solutions"
+        title="Digital Twin Solutions | Zion Tech Group"
+        description="Transform your physical assets into intelligent digital twins. Real-time monitoring, predictive analytics, and AI-powered insights for optimal performance."
+        canonical="https://ziontechgroup.com/services/digital-twin"
       />
       
       <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -112,15 +110,15 @@ export default function FiveGEnterpriseSolutions() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Signal className="w-12 h-12 text-white" />
+              <div className="w-24 h-24 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Cube className="w-12 h-12 text-white" />
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                5G <span className="bg-gradient-to-r from-blue-500 to-blue-700 bg-clip-text text-transparent">Enterprise Solutions</span>
+                Digital <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Twin</span>
               </h1>
               <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-                Transform your enterprise with next-generation 5G technology. 
-                Private networks, edge computing, and IoT solutions for the future of business.
+                Bridge the gap between physical and digital worlds with our advanced digital twin solutions. 
+                Monitor, analyze, and optimize your assets in real-time with AI-powered insights.
               </p>
               
               <div className="flex flex-wrap justify-center gap-4">
@@ -141,8 +139,8 @@ export default function FiveGEnterpriseSolutions() {
           </div>
         </section>
 
-        {/* Services Section */}
-        <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
+        {/* Features Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -151,44 +149,36 @@ export default function FiveGEnterpriseSolutions() {
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                5G Enterprise Services
+                Digital Twin Capabilities
               </h2>
               <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-                Comprehensive 5G solutions designed to transform enterprise operations 
-                and enable next-generation business capabilities.
+                Our digital twin platform combines cutting-edge technology with industry expertise 
+                to deliver comprehensive asset monitoring and optimization solutions.
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {fiveGServices.map((service, index) => (
+              {digitalTwinFeatures.map((feature, index) => (
                 <motion.div
-                  key={service.title}
+                  key={feature.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-zion-slate-dark/50 border border-blue-500/20 rounded-xl p-6 hover:border-blue-500/40 transition-all duration-300"
+                  className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center mb-4">
-                    <service.icon className="w-8 h-8 text-white" />
+                  <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-4">
+                    <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                  <p className="text-zion-slate-light mb-4">{service.description}</p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center space-x-2">
-                        <CheckCircle className="w-4 h-4 text-blue-500 flex-shrink-0" />
-                        <span className="text-zion-slate-light text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-zion-slate-light">{feature.description}</p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Use Cases Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/30">
+        {/* Services Section */}
+        <section id="services" className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/30">
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -197,29 +187,30 @@ export default function FiveGEnterpriseSolutions() {
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Industry Use Cases
+                Digital Twin Services
               </h2>
               <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-                5G technology is transforming industries across the board, 
-                enabling new capabilities and business models.
+                From initial development to ongoing optimization, we provide comprehensive digital twin 
+                solutions that drive operational excellence and business value.
               </p>
             </motion.div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {useCases.map((useCase, index) => (
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {digitalTwinServices.map((service, index) => (
                 <motion.div
-                  key={index}
+                  key={service.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-zion-slate-dark/50 border border-blue-500/20 rounded-xl p-6 hover:border-blue-500/40 transition-all duration-300"
+                  className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
                 >
-                  <h3 className="text-xl font-semibold text-white mb-4">{useCase.industry}</h3>
+                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                  <p className="text-zion-slate-light mb-4">{service.description}</p>
                   <ul className="space-y-2">
-                    {useCase.solutions.map((solution, idx) => (
-                      <li key={idx} className="text-zion-slate-light flex items-center">
-                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                        {solution}
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center space-x-2">
+                        <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
+                        <span className="text-zion-slate-light text-sm">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -239,11 +230,11 @@ export default function FiveGEnterpriseSolutions() {
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                5G Technology Benefits
+                Business Benefits
               </h2>
               <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-                Experience the transformative benefits of 5G technology 
-                that will revolutionize your enterprise operations.
+                Digital twin technology delivers measurable business value through improved efficiency, 
+                reduced costs, and enhanced decision-making capabilities.
               </p>
             </motion.div>
 
@@ -256,7 +247,7 @@ export default function FiveGEnterpriseSolutions() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="flex items-start space-x-3"
                 >
-                  <CheckCircle className="w-6 h-6 text-blue-500 flex-shrink-0 mt-1" />
+                  <CheckCircle className="w-6 h-6 text-zion-cyan flex-shrink-0 mt-1" />
                   <span className="text-zion-slate-light">{benefit}</span>
                 </motion.div>
               ))}
@@ -264,9 +255,9 @@ export default function FiveGEnterpriseSolutions() {
           </div>
         </section>
 
-        {/* Technologies Section */}
+        {/* Industries Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/30">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -274,25 +265,28 @@ export default function FiveGEnterpriseSolutions() {
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Core 5G Technologies
+                Industry Applications
               </h2>
               <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-                We leverage cutting-edge 5G technologies to deliver 
-                enterprise-grade solutions and performance.
+                Digital twin technology is transforming operations across industries, 
+                providing unprecedented visibility and control over complex systems.
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {technologies.map((tech, index) => (
+              {industries.map((industry, index) => (
                 <motion.div
-                  key={tech.name}
+                  key={industry.name}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-zion-slate-dark/50 border border-blue-500/20 rounded-xl p-6 hover:border-blue-500/40 transition-all duration-300"
+                  className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
                 >
-                  <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>
-                  <p className="text-zion-slate-light text-sm">{tech.description}</p>
+                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4">
+                    <industry.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{industry.name}</h3>
+                  <p className="text-zion-slate-light text-sm">{industry.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -312,7 +306,7 @@ export default function FiveGEnterpriseSolutions() {
                 Implementation Process
               </h2>
               <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-                Our systematic approach ensures successful 5G implementation 
+                Our proven methodology ensures successful digital twin implementation 
                 with minimal disruption to your operations.
               </p>
             </motion.div>
@@ -324,12 +318,12 @@ export default function FiveGEnterpriseSolutions() {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">1</span>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Assess</h3>
+                <h3 className="text-lg font-semibold text-white mb-2">Discovery</h3>
                 <p className="text-zion-slate-light text-sm">
-                  Evaluate current infrastructure and 5G requirements
+                  Understand your assets, processes, and business objectives
                 </p>
               </motion.div>
 
@@ -339,12 +333,12 @@ export default function FiveGEnterpriseSolutions() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">2</span>
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Design</h3>
                 <p className="text-zion-slate-light text-sm">
-                  Create comprehensive 5G network architecture
+                  Create digital twin architecture and data models
                 </p>
               </motion.div>
 
@@ -354,12 +348,12 @@ export default function FiveGEnterpriseSolutions() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">3</span>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Deploy</h3>
+                <h3 className="text-lg font-semibold text-white mb-2">Develop</h3>
                 <p className="text-zion-slate-light text-sm">
-                  Implement 5G infrastructure and applications
+                  Build and integrate digital twin components
                 </p>
               </motion.div>
 
@@ -369,12 +363,12 @@ export default function FiveGEnterpriseSolutions() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white font-bold text-xl">4</span>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Optimize</h3>
+                <h3 className="text-lg font-semibold text-white mb-2">Deploy</h3>
                 <p className="text-zion-slate-light text-sm">
-                  Continuous monitoring and performance optimization
+                  Launch and optimize digital twin operations
                 </p>
               </motion.div>
             </div>
@@ -388,21 +382,21 @@ export default function FiveGEnterpriseSolutions() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="bg-gradient-to-r from-blue-500 to-blue-700 rounded-2xl p-8 md:p-12"
+              className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl p-8 md:p-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready for 5G Transformation?
+                Ready to Build Your Digital Twin?
               </h2>
               <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
-                Take the first step towards next-generation enterprise technology. 
-                Our 5G experts are ready to guide you through your transformation journey.
+                Transform your physical assets into intelligent digital twins and unlock 
+                new levels of operational efficiency and insight.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <a 
                   href="/contact" 
                   className="btn-white px-8 py-3 text-lg font-semibold"
                 >
-                  Start Your Journey
+                  Start Your Project
                 </a>
                 <a 
                   href="/services" 
