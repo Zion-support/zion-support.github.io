@@ -51,6 +51,13 @@ const HeroSection: React.FC = () => {
     { icon: "🛡️", label: "Enterprise Grade", description: "Production ready" }
   ];
 
+  const keyBenefits = [
+    "Transform your business with cutting-edge AI solutions",
+    "Access to 35+ innovative micro-SaaS services",
+    "Enterprise-grade security and compliance",
+    "24/7 expert support and consultation"
+  ];
+
   return (
     <section className="relative overflow-hidden min-h-screen flex items-center justify-center bg-zion-gradient">
       {/* Enhanced Animated Background Elements */}
@@ -85,7 +92,7 @@ const HeroSection: React.FC = () => {
           🚀 AI-Powered Technology Solutions
         </motion.div>
 
-        {/* Enhanced Main Heading */}
+        {/* Enhanced Main Heading with Better SEO Structure */}
         <motion.h1 
           className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight"
           variants={itemVariants}
@@ -97,15 +104,36 @@ const HeroSection: React.FC = () => {
           <span className="text-white">Marketplace</span>
         </motion.h1>
 
-        {/* Enhanced Subtitle */}
+        {/* Enhanced Subtitle with Key Benefits */}
         <motion.p 
-          className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-10 leading-relaxed"
+          className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8 leading-relaxed"
           variants={itemVariants}
         >
           Discover our comprehensive collection of <span className="text-zion-cyan font-semibold">35+ innovative micro SAAS services</span>, 
           from AI-powered productivity tools to revolutionary quantum computing platforms. 
           Transform your business with cutting-edge technology solutions.
         </motion.p>
+
+        {/* Key Benefits List */}
+        <motion.div 
+          className="max-w-4xl mx-auto mb-10"
+          variants={itemVariants}
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+            {keyBenefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                className="flex items-center gap-3 text-zion-slate-light"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <div className="w-2 h-2 bg-zion-cyan rounded-full flex-shrink-0" />
+                <span className="text-lg">{benefit}</span>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
 
         {/* Enhanced CTA Buttons */}
         <motion.div 
@@ -123,15 +151,15 @@ const HeroSection: React.FC = () => {
             </span>
           </Link>
           
-          <a
-            href="mailto:kleber@ziontechgroup.com?subject=Service Inquiry"
+          <Link
+            to="/contact"
             className="btn-secondary text-lg py-4 px-8 hover:scale-105 transition-transform duration-300"
           >
             <span className="flex items-center gap-2">
               <span>💬</span>
-              Contact Us
+              Get Free Consultation
             </span>
-          </a>
+          </Link>
         </motion.div>
 
         {/* Enhanced Trust Metrics */}

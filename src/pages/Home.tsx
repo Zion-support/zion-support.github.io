@@ -118,6 +118,30 @@ const Home: React.FC = () => {
     { label: "Years Experience", value: "10+", icon: "⏰" }
   ];
 
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "CTO, TechCorp Inc.",
+      content: "Zion Tech Group transformed our AI strategy. Their quantum computing solutions gave us a competitive edge.",
+      rating: 5,
+      avatar: "👩‍💼"
+    },
+    {
+      name: "Michael Chen",
+      role: "VP Engineering, DataFlow Systems",
+      content: "The AI automation platform reduced our operational costs by 40% while improving efficiency.",
+      rating: 5,
+      avatar: "👨‍💻"
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "CEO, Innovation Labs",
+      content: "Outstanding support and cutting-edge solutions. Zion Tech Group is our trusted technology partner.",
+      rating: 5,
+      avatar: "👩‍🔬"
+    }
+  ];
+
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -236,9 +260,59 @@ const Home: React.FC = () => {
         </div>
       </motion.section>
 
-      {/* Stats Section */}
+      {/* Testimonials Section */}
       <motion.section 
         className="py-20 bg-white/5 backdrop-blur-sm"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div className="text-center mb-16" variants={itemVariants}>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              What Our <span className="gradient-text">Clients Say</span>
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              Real feedback from businesses that have transformed with our technology solutions
+            </p>
+          </motion.div>
+          
+          <motion.div 
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={testimonial.name}
+                variants={itemVariants}
+                className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 hover:border-zion-cyan/50 transition-all duration-300"
+              >
+                <div className="flex items-center mb-4">
+                  <div className="text-3xl mr-3">{testimonial.avatar}</div>
+                  <div>
+                    <h4 className="text-white font-semibold">{testimonial.name}</h4>
+                    <p className="text-zion-slate-light text-sm">{testimonial.role}</p>
+                  </div>
+                </div>
+                <p className="text-zion-slate-light mb-4">{testimonial.content}</p>
+                <div className="flex text-yellow-400">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <span key={i}>⭐</span>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </motion.section>
+
+      {/* Stats Section */}
+      <motion.section 
+        className="py-20"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
