@@ -2792,3 +2792,9 @@
 [2025-08-26T12:23:08.993Z] Status: 0 jobs scheduled, 0 active
 [2025-08-26T12:23:09.023Z] Status: 0 jobs scheduled, 0 active
 [2025-08-26T12:23:09.024Z] [link-health-scheduler] [2025-08-26T12:23:09.023Z] Status: 0 jobs scheduled, 0 active
+[2025-08-26T12:42:10.114Z] Starting Link Health Scheduler
+[2025-08-26T12:42:10.119Z] Starting Link Health Scheduler
+[2025-08-26T12:42:10.119Z] Scheduled 4 links for health checks
+[2025-08-26T12:42:12.358Z] Starting Link Health Scheduler
+[2025-08-26T12:42:12.538Z] Starting Link Health Scheduler
+[2025-08-26T12:42:12.543Z] Scheduled 4 links for health checks

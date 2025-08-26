@@ -1132,3 +1132,5 @@
 [2025-08-26T12:22:38.572Z] [SYSTEM] Service real-time-performance-monitor started successfully
 [2025-08-26T12:22:41.190Z] [SYSTEM] Starting service: ml-link-intelligence
 [2025-08-26T12:22:41.191Z] [SYSTEM] Service ml-link-intelligence started successfully
+[2025-08-26T12:42:09.400Z] [SYSTEM] Service real-time-performance-monitor exited with code 0, signal null
+[2025-08-26T12:42:09.401Z] [SYSTEM] Restarting real-time-performance-monitor in 10000ms (attempt 1/3)
