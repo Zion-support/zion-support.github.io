@@ -162,7 +162,7 @@ const Cookies: React.FC = () => {
                 </p>
 =======
 import { SEO } from "@/components/SEO";
-import { Header } from "@/components/Header";
+import Header from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export default function Cookies() {

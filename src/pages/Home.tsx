@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
@@ -65,304 +65,119 @@ import {
   PiggyBank,
   Coins,
   Bitcoin,
-  Ethereum,
-  Blockchain,
-  Smartphone,
-  Tablet,
-  Laptop,
-  Desktop,
-  Watch,
-  Camera,
-  Headphones,
-  Speaker,
-  Printer,
-  Scanner,
-  Router,
-  Switch,
-  Hub,
-  Modem,
-  Antenna,
-  Satellite,
-  Telescope,
-  Microscope,
-  Beaker,
-  TestTube,
-  Flask,
-  Burner,
-  Scale,
-  Calculator,
-  Abacus,
-  Ruler,
-  Compass,
-  Protractor,
-  Triangle,
-  Square,
-  Circle,
-  Hexagon,
-  Octagon,
-  Star,
-  Heart,
-  Diamond,
-  Spade,
-  Club,
-  Crown,
-  Trophy,
-  Medal,
-  Ribbon,
-  Badge,
-  Pin,
-  Tag,
-  Label,
-  Sticker,
-  Emoji,
-  Smile,
-  Frown,
-  Wink,
-  Surprise,
-  Angry,
-  Sad,
-  Happy,
-  Laugh,
-  Cry,
-  Sleep,
-  Sick,
-  Dead,
-  Ghost,
-  Alien,
-  Robot,
-  Zombie,
-  Vampire,
-  Werewolf,
-  Dragon,
-  Unicorn,
-  Phoenix,
-  Griffin,
-  Mermaid,
-  Fairy,
-  Elf,
-  Dwarf,
-  Giant,
-  Troll,
-  Goblin,
-  Orc,
-  Demon,
-  Angel,
-  God,
-  Goddess,
-  Spirit,
-  Soul,
-  Mind,
-  Body,
-  Heart,
-  Brain,
-  Eye,
-  Ear,
-  Nose,
-  Mouth,
-  Tongue,
-  Tooth,
-  Hair,
-  Beard,
-  Mustache,
-  Eyebrow,
-  Eyelash,
-  Nail,
-  Finger,
-  Toe,
-  Hand,
-  Foot,
-  Arm,
-  Leg,
-  Knee,
-  Elbow,
-  Shoulder,
-  Hip,
-  Neck,
-  Throat,
-  Chest,
-  Back,
-  Stomach,
-  Waist,
-  Butt,
-  Thigh,
-  Calf,
-  Ankle,
-  Wrist,
-  Palm,
-  Fingertip,
-  Toenail,
-  Heel,
-  Sole,
-  Arch,
-  Ball,
-  Joint,
-  Muscle,
-  Bone,
-  Tendon,
-  Ligament,
-  Cartilage,
-  Skin,
-  Blood,
-  Vein,
-  Artery,
-  Capillary,
-  Heart,
-  Lung,
-  Liver,
-  Kidney,
-  Stomach,
-  Intestine,
-  Brain,
-  SpinalCord,
-  Nerve,
-  Neuron,
-  Synapse,
-  Hormone,
-  Enzyme,
-  Protein,
-  Vitamin,
-  Mineral,
-  Oxygen,
-  Carbon,
-  Hydrogen,
-  Nitrogen,
-  Helium,
-  Neon,
-  Argon,
-  Krypton,
-  Xenon,
-  Radon,
-  Uranium,
-  Plutonium,
-  Thorium,
-  Radium,
-  Polonium,
-  Actinium,
-  Protactinium,
-  Neptunium,
-  Americium,
-  Curium,
-  Berkelium,
-  Californium,
-  Einsteinium,
-  Fermium,
-  Mendelevium,
-  Nobelium,
-  Lawrencium,
-  Rutherfordium,
-  Dubnium,
-  Seaborgium,
-  Bohrium,
-  Hassium,
-  Meitnerium,
-  Darmstadtium,
-  Roentgenium,
-  Copernicium,
-  Nihonium,
-  Flerovium,
-  Moscovium,
-  Livermorium,
-  Tennessine,
-  Oganesson
+  Ethereum
 } from 'lucide-react';
 
-import { SEO } from '../components/SEO';
-import { AIServicesShowcase } from '../components/AIServicesShowcase';
+import EnhancedSEO from '../components/EnhancedSEO';
 import { UltimateServicesShowcase } from '../components/UltimateServicesShowcase';
-import { CategoriesSection } from '../components/CategoriesSection';
 import { TestimonialsSection } from '../components/TestimonialsSection';
 import { ContactSection } from '../components/ContactSection';
-import { Footer } from '../components/Footer';
 
 export default function Home() {
+  const [isVisible, setIsVisible] = useState(false);
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 1000], [0, 200]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 100);
+    return () => clearTimeout(timer);
+  }, []);
+
   const stats = [
     {
-      icon: Users,
-      value: "500+",
-      label: "Global Clients",
-      description: "Serving businesses worldwide"
+      value: '500+',
+      label: 'AI Solutions',
+      description: 'Implemented successfully',
+      icon: Brain
     },
     {
-      icon: Globe,
-      value: "25+",
-      label: "Countries",
-      description: "Global presence"
+      value: '99.9%',
+      label: 'Uptime',
+      description: 'Enterprise-grade reliability',
+      icon: Shield
     },
     {
-      icon: Code,
-      value: "1000+",
-      label: "Projects",
-      description: "Successfully delivered"
+      value: '24/7',
+      label: 'Support',
+      description: 'Round-the-clock assistance',
+      icon: MessageCircle
     },
     {
-      icon: Shield,
-      value: "99.9%",
-      label: "Uptime",
-      description: "Reliable service"
+      value: '50+',
+      label: 'Expert Team',
+      description: 'Certified professionals',
+      icon: Users
     }
   ];
 
   const features = [
     {
+      title: 'AI-Powered Solutions',
+      description: 'Cutting-edge artificial intelligence and machine learning technologies',
       icon: Brain,
-      title: "AI-Powered Solutions",
-      description: "Cutting-edge artificial intelligence and machine learning technologies"
+      color: 'from-blue-600 to-purple-600'
     },
     {
+      title: 'Quantum Computing',
+      description: 'Next-generation quantum algorithms and computational power',
+      icon: Atom,
+      color: 'from-purple-600 to-pink-600'
+    },
+    {
+      title: 'Cybersecurity',
+      description: 'Advanced threat detection and zero-trust security architecture',
       icon: Shield,
-      title: "Enterprise Security",
-      description: "Military-grade cybersecurity and data protection"
+      color: 'from-green-600 to-blue-600'
     },
     {
+      title: 'Cloud Infrastructure',
+      description: 'Scalable and secure cloud-native solutions and DevOps practices',
       icon: Cloud,
-      title: "Cloud Infrastructure",
-      description: "Scalable cloud solutions for modern businesses"
-    },
-    {
-      icon: Zap,
-      title: "Lightning Fast",
-      description: "High-performance solutions with minimal latency"
+      color: 'from-orange-600 to-red-600'
     }
   ];
 
   const services = [
     {
-      icon: Cpu,
-      title: "AI & Autonomous Systems",
-      description: "Revolutionary AI platforms and autonomous business solutions",
-      color: "from-blue-600 to-purple-600",
-      link: "/services"
+      title: 'AI Services',
+      description: 'Machine Learning, Neural Networks, Autonomous Systems',
+      icon: Brain,
+      color: 'from-blue-600 via-purple-600 to-pink-600',
+      link: '/ai-services'
     },
     {
-      icon: Database,
-      title: "IT Infrastructure",
-      description: "Enterprise-grade IT infrastructure and cloud solutions",
-      color: "from-green-600 to-emerald-600",
-      link: "/services"
+      title: 'IT Infrastructure',
+      description: 'Cloud Migration, DevOps, System Architecture',
+      icon: Server,
+      color: 'from-green-600 via-blue-600 to-purple-600',
+      link: '/it-services'
     },
     {
+      title: 'Micro SAAS',
+      description: 'Custom Software, API Development, Digital Products',
       icon: Code,
-      title: "Micro SAAS Solutions",
-      description: "Innovative micro software-as-a-service solutions",
-      color: "from-orange-600 to-red-600",
-      link: "/services"
+      color: 'from-orange-600 via-red-600 to-pink-600',
+      link: '/micro-saas'
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO 
+      <EnhancedSEO 
         title="Zion Tech Group - Revolutionary AI, IT & Micro SAAS Solutions"
         description="Transform your business with Zion Tech Group's cutting-edge AI, IT infrastructure, and innovative micro SAAS solutions. Leading the future of technology."
         keywords="AI solutions, IT infrastructure, micro SAAS, autonomous systems, cloud computing, cybersecurity, Zion Tech Group"
       />
       
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+      {/* Hero Section with Parallax */}
+      <motion.section 
+        className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden"
+        style={{ y }}
+      >
+        <div className="max-w-7xl mx-auto text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
@@ -372,31 +187,47 @@ export default function Home() {
               </span>
               {' '}for the Future
             </h1>
-            <p className="text-xl sm:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
+            <p className="text-xl sm:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto leading-relaxed">
               Transform your business with cutting-edge artificial intelligence, autonomous systems, 
               and enterprise-grade IT infrastructure. Leading the technological revolution.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Explore Our Services
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-slate-dark transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-zion-slate-dark transition-all duration-300 transform hover:scale-105"
               >
                 Get Started Today
               </Link>
             </div>
+
+            {/* Trust Indicators */}
+            <div className="flex flex-wrap justify-center items-center gap-8 text-zion-slate-light">
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-5 w-5 text-green-400" />
+                <span>ISO 27001 Certified</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Shield className="h-5 w-5 text-blue-400" />
+                <span>SOC 2 Compliant</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Award className="h-5 w-5 text-yellow-400" />
+                <span>Award-Winning Solutions</span>
+              </div>
+            </div>
           </motion.div>
         </div>
-      </section>
+      </motion.section>
 
-      {/* Stats Section */}
+      {/* Stats Section with Animation */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -406,9 +237,10 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
+                whileHover={{ scale: 1.05 }}
+                className="text-center group cursor-pointer"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mb-4">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mb-4 group-hover:shadow-lg transition-shadow">
                   <stat.icon className="h-8 w-8 text-white" />
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
@@ -420,7 +252,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Features Section with Hover Effects */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -432,7 +264,7 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Why Choose Zion Tech Group?
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
               We combine cutting-edge technology with proven expertise to deliver 
               solutions that transform businesses and drive innovation.
             </p>
@@ -445,20 +277,21 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10"
+                whileHover={{ y: -5, scale: 1.02 }}
+                className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300 cursor-pointer"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mb-4">
+                <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${feature.color} rounded-full mb-4 mx-auto`}>
                   <feature.icon className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-zion-slate-light">{feature.description}</p>
+                <p className="text-zion-slate-light leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Services Overview */}
+      {/* Services Overview with Interactive Cards */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -470,7 +303,7 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Our Revolutionary Services
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
               Discover our comprehensive range of AI, IT infrastructure, and micro SAAS solutions 
               designed to revolutionize your business operations.
             </p>
@@ -483,15 +316,19 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ y: -10, scale: 1.02 }}
                 className="group"
               >
                 <Link to={service.link}>
-                  <div className={`p-8 bg-gradient-to-br ${service.color} rounded-xl text-white text-center transform transition-all duration-300 group-hover:scale-105`}>
-                    <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-full mb-6">
+                  <div className={`p-8 bg-gradient-to-br ${service.color} rounded-xl text-white text-center transform transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl h-full flex flex-col justify-center`}>
+                    <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-full mb-6 group-hover:bg-white/30 transition-colors">
                       <service.icon className="h-10 w-10" />
                     </div>
                     <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                    <p className="text-lg opacity-90">{service.description}</p>
+                    <p className="text-lg opacity-90 leading-relaxed">{service.description}</p>
+                    <div className="mt-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <ArrowRight className="h-6 w-6 mx-auto" />
+                    </div>
                   </div>
                 </Link>
               </motion.div>
@@ -500,23 +337,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* AI Services Showcase */}
-      <AIServicesShowcase />
-
       {/* Ultimate Services Showcase */}
       <UltimateServicesShowcase />
-
-      {/* Categories Section */}
-      <CategoriesSection />
 
       {/* Testimonials Section */}
       <TestimonialsSection />
 
       {/* Contact Section */}
       <ContactSection />
-
-      {/* Footer */}
-      <Footer />
     </div>
   );
 }

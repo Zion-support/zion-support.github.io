@@ -26,7 +26,7 @@ import React from 'react';
           </div>
         </div>
 import { SEO } from "@/components/SEO";
-import { Header } from "@/components/Header";
+import Header from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { QuoteRequestForm } from "@/components/QuoteRequestForm";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -260,7 +260,7 @@ export default function RequestQuote() {
       
       <Footer />
     </div>
-import { Header } from "@/components/Header";
+import Header from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
 export default function RequestQuote() {

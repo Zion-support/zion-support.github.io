@@ -1,5 +1,5 @@
 import { SEO } from "@/components/SEO";
-import { Header } from "@/components/Header";
+import Header from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import TermsOfService from "@/legal/TermsOfService";
 export default function Terms() {

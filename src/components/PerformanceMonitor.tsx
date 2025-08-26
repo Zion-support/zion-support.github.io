@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import { Activity, Zap, Clock, TrendingUp } from 'lucide-react';
 
 interface PerformanceMetrics {
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
+  fcp: number; // First Contentful Paint
+  lcp: number; // Largest Contentful Paint
+  fid: number; // First Input Delay
+  cls: number; // Cumulative Layout Shift
+  ttfb: number; // Time to First Byte
 }
 
 export const PerformanceMonitor: React.FC = () => {
@@ -15,46 +13,37 @@ export const PerformanceMonitor: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Only show in development or when explicitly enabled
-    if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'production') {
-      setIsVisible(true);
-    }
-
-    // Performance monitoring
-    if ('performance' in window && 'PerformanceObserver' in window) {
-      // First Contentful Paint (FCP)
+    if ('PerformanceObserver' in window) {
+      // Monitor First Contentful Paint
       const fcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        const fcp = entries[entries.length - 1];
+        const fcp = entries.find(entry => entry.name === 'first-contentful-paint');
         if (fcp) {
           setMetrics(prev => ({ ...prev, fcp: fcp.startTime }));
         }
       });
       fcpObserver.observe({ entryTypes: ['paint'] });
 
-      // Largest Contentful Paint (LCP)
+      // Monitor Largest Contentful Paint
       const lcpObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        const lcp = entries[entries.length - 1];
-        if (lcp) {
-          setMetrics(prev => ({ ...prev, lcp: lcp.startTime }));
-        }
+        const lastEntry = entries[entries.length - 1];
+        setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
-      // First Input Delay (FID)
+      // Monitor First Input Delay
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
-        const fid = entries[entries.length - 1];
-        if (fid) {
-          setMetrics(prev => ({ ...prev, fid: fid.processingStart - fid.startTime }));
-        }
+        entries.forEach((entry: any) => {
+          setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+        });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
 
-      // Cumulative Layout Shift (CLS)
-      let clsValue = 0;
+      // Monitor Cumulative Layout Shift
       const clsObserver = new PerformanceObserver((list) => {
+        let clsValue = 0;
         for (const entry of list.getEntries()) {
           if (!entry.hadRecentInput) {
             clsValue += (entry as any).value;
@@ -64,125 +53,111 @@ export const PerformanceMonitor: React.FC = () => {
       });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
 
-      // Time to First Byte (TTFB)
-      const navigationObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const navigation = entries[0] as PerformanceNavigationTiming;
-        if (navigation) {
-          setMetrics(prev => ({ ...prev, ttfb: navigation.responseStart - navigation.requestStart }));
-        }
-      });
-      navigationObserver.observe({ entryTypes: ['navigation'] });
+      // Get Time to First Byte
+      const navigationEntry = performance.getEntriesByType('navigation')[0] as any;
+      if (navigationEntry) {
+        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
+      }
+
+      // Show metrics after 3 seconds
+      setTimeout(() => setIsVisible(true), 3000);
 
       return () => {
         fcpObserver.disconnect();
         lcpObserver.disconnect();
         fidObserver.disconnect();
         clsObserver.disconnect();
-        navigationObserver.disconnect();
       };
     }
   }, []);
 
-  if (!isVisible) return null;
-
-  const getScore = (metric: keyof PerformanceMetrics, value: number): { score: number; color: string; label: string } => {
-    const thresholds: Record<string, { good: number; needsImprovement: number }> = {
-      fcp: { good: 1800, needsImprovement: 3000 },
-      lcp: { good: 2500, needsImprovement: 4000 },
-      fid: { good: 100, needsImprovement: 300 },
-      cls: { good: 0.1, needsImprovement: 0.25 },
-      ttfb: { good: 800, needsImprovement: 1800 }
+  const getScore = (value: number, type: keyof PerformanceMetrics): 'good' | 'needs-improvement' | 'poor' => {
+    const thresholds = {
+      fcp: { good: 1800, poor: 3000 },
+      lcp: { good: 2500, poor: 4000 },
+      fid: { good: 100, poor: 300 },
+      cls: { good: 0.1, poor: 0.25 },
+      ttfb: { good: 800, poor: 1800 }
     };
 
-    const threshold = thresholds[metric];
-    if (!threshold) return { score: 0, color: 'text-gray-400', label: 'Unknown' };
+    if (value <= thresholds[type].good) return 'good';
+    if (value <= thresholds[type].poor) return 'needs-improvement';
+    return 'poor';
+  };
 
-    if (value <= threshold.good) {
-      return { score: 100, color: 'text-green-400', label: 'Good' };
-    } else if (value <= threshold.needsImprovement) {
-      return { score: 50, color: 'text-yellow-400', label: 'Needs Improvement' };
-    } else {
-      return { score: 0, color: 'text-red-400', label: 'Poor' };
+  const getScoreColor = (score: string) => {
+    switch (score) {
+      case 'good': return 'text-green-400';
+      case 'needs-improvement': return 'text-yellow-400';
+      case 'poor': return 'text-red-400';
+      default: return 'text-gray-400';
     }
   };
 
-  const formatMetric = (metric: keyof PerformanceMetrics, value: number): string => {
-    if (metric === 'cls') return value.toFixed(3);
-    if (metric === 'fid') return `${Math.round(value)}ms`;
-    return `${Math.round(value)}ms`;
-  };
-
-  const metricsList = [
-    { key: 'fcp' as keyof PerformanceMetrics, label: 'First Contentful Paint', icon: Activity },
-    { key: 'lcp' as keyof PerformanceMetrics, label: 'Largest Contentful Paint', icon: TrendingUp },
-    { key: 'fid' as keyof PerformanceMetrics, label: 'First Input Delay', icon: Zap },
-    { key: 'cls' as keyof PerformanceMetrics, label: 'Cumulative Layout Shift', icon: Clock },
-    { key: 'ttfb' as keyof PerformanceMetrics, label: 'Time to First Byte', icon: Activity }
-  ];
+  if (!metrics || !isVisible) return null;
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="fixed bottom-4 right-4 z-50 bg-zinc-900/90 backdrop-blur-md border border-zinc-700/50 rounded-lg p-4 max-w-sm shadow-xl"
-    >
-      <div className="flex items-center justify-between mb-3">
-        <h3 className="text-sm font-semibold text-white">Performance Monitor</h3>
-        <div className="text-xs text-zinc-400">
-          {process.env.NODE_ENV === 'development' ? 'DEV' : 'PROD'}
-        </div>
-      </div>
-      
-      <div className="space-y-2">
-        {metricsList.map(({ key, label, icon: Icon }) => {
-          const value = metrics?.[key];
-          if (value === undefined) return null;
-          
-          const { score, color, label: scoreLabel } = getScore(key, value);
-          
-          return (
-            <div key={key} className="flex items-center justify-between text-xs">
-              <div className="flex items-center space-x-2">
-                <Icon className="w-3 h-3 text-zinc-400" />
-                <span className="text-zinc-300">{label}</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <span className={color}>{formatMetric(key, value)}</span>
-                <span className={`text-xs px-1.5 py-0.5 rounded ${color.replace('text-', 'bg-')}/10 border border-current/20`}>
-                  {scoreLabel}
-                </span>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-
-      {metrics && (
-        <div className="mt-3 pt-3 border-t border-zinc-700/50">
-          <div className="flex items-center justify-between text-xs">
-            <span className="text-zinc-400">Overall Score</span>
-            <span className="text-white font-medium">
-              {Math.round(
-                metricsList.reduce((acc, { key }) => {
-                  const { score } = getScore(key, metrics[key] || 0);
-                  return acc + score;
-                }, 0) / metricsList.length
-              )}/100
-            </span>
-          </div>
-        </div>
-      )}
-
-      <div className="mt-3 text-xs text-zinc-500">
-        <button
+    <div className="fixed bottom-4 right-4 bg-zion-slate-dark/90 backdrop-blur-sm border border-zion-slate-light/20 rounded-lg p-4 text-white text-sm z-50 max-w-xs">
+      <div className="flex items-center justify-between mb-2">
+        <h3 className="font-semibold">Performance Metrics</h3>
+        <button 
           onClick={() => setIsVisible(false)}
-          className="text-zinc-400 hover:text-white transition-colors"
+          className="text-zion-slate-light hover:text-white"
         >
-          Hide
+          ×
         </button>
       </div>
-    </motion.div>
+      
+      <div className="space-y-2 text-xs">
+        <div className="flex justify-between">
+          <span>FCP:</span>
+          <span className={getScoreColor(getScore(metrics.fcp, 'fcp'))}>
+            {metrics.fcp.toFixed(0)}ms
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span>LCP:</span>
+          <span className={getScoreColor(getScore(metrics.lcp, 'lcp'))}>
+            {metrics.lcp.toFixed(0)}ms
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span>FID:</span>
+          <span className={getScoreColor(getScore(metrics.fid, 'fid'))}>
+            {metrics.fid.toFixed(0)}ms
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span>CLS:</span>
+          <span className={getScoreColor(getScore(metrics.cls, 'cls'))}>
+            {metrics.cls.toFixed(3)}
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span>TTFB:</span>
+          <span className={getScoreColor(getScore(metrics.ttfb, 'ttfb'))}>
+            {metrics.ttfb.toFixed(0)}ms
+          </span>
+        </div>
+      </div>
+
+      <div className="mt-3 pt-2 border-t border-zion-slate-light/20">
+        <div className="flex justify-between text-xs">
+          <span>Overall:</span>
+          <span className="font-semibold text-zion-cyan">
+            {(() => {
+              const scores = Object.keys(metrics).map(key => 
+                getScore(metrics[key as keyof PerformanceMetrics], key as keyof PerformanceMetrics)
+              );
+              const goodCount = scores.filter(s => s === 'good').length;
+              const total = scores.length;
+              return `${Math.round((goodCount / total) * 100)}%`;
+            })()}
+          </span>
+        </div>
+      </div>
+    </div>
   );
 };
+
+export default PerformanceMonitor;
