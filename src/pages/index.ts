@@ -1,0 +1,12 @@
+export { default as Home } from './Home';
+export { default as About } from './About';
+export { default as Contact } from './Contact';
+export { default as Careers } from './Careers';
+export { default as News } from './News';
+export { default as Events } from './Events';
+export { default as CaseStudies } from './CaseStudies';
+export { default as Services } from './Services';
+export { default as Privacy } from './Privacy';
+export { default as Terms } from './Terms';
+export { default as Search } from './Search';
+export { default as NotFound } from './NotFound';
