@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { ChevronDown, Menu, X } from 'lucide-react';
 
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [solutionsDropdownOpen, setSolutionsDropdownOpen] = useState(false);
+  const [companyDropdownOpen, setCompanyDropdownOpen] = useState(false);
 
   return (
     <header className="bg-black/90 backdrop-blur-md border-b border-zion-cyan/20 fixed top-0 left-0 right-0 z-50">
@@ -25,8 +29,112 @@ export function AppHeader() {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             <Link to="/" className="text-white hover:text-zion-cyan transition-colors duration-300">Home</Link>
-            <Link to="/about" className="text-white hover:text-zion-cyan transition-colors duration-300">About</Link>
-            <Link to="/services" className="text-white hover:text-zion-cyan transition-colors duration-300">Services</Link>
+            
+            {/* Services Dropdown */}
+            <div className="relative group">
+              <button 
+                className="flex items-center text-white hover:text-zion-cyan transition-colors duration-300"
+                onMouseEnter={() => setServicesDropdownOpen(true)}
+                onMouseLeave={() => setServicesDropdownOpen(false)}
+              >
+                Services <ChevronDown className="ml-1 w-4 h-4" />
+              </button>
+              {servicesDropdownOpen && (
+                <div 
+                  className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-md border border-zion-cyan/20 rounded-lg shadow-xl py-4"
+                  onMouseEnter={() => setServicesDropdownOpen(true)}
+                  onMouseLeave={() => setServicesDropdownOpen(false)}
+                >
+                  <div className="grid grid-cols-2 gap-4 px-4">
+                    <div>
+                      <h3 className="text-zion-cyan font-semibold mb-2 text-sm uppercase tracking-wide">Core Services</h3>
+                      <ul className="space-y-2">
+                        <li><Link to="/ai-services" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">AI Services</Link></li>
+                        <li><Link to="/cybersecurity" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Cybersecurity</Link></li>
+                        <li><Link to="/cloud-services" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Cloud Services</Link></li>
+                        <li><Link to="/blockchain-services" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Blockchain</Link></li>
+                        <li><Link to="/quantum-services" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Quantum Computing</Link></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h3 className="text-zion-cyan font-semibold mb-2 text-sm uppercase tracking-wide">Specialized</h3>
+                      <ul className="space-y-2">
+                        <li><Link to="/iot-services" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">IoT Services</Link></li>
+                        <li><Link to="/digital-marketing-services" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Digital Marketing</Link></li>
+                        <li><Link to="/it-onsite-services" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">IT Onsite</Link></li>
+                        <li><Link to="/green-it" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Green IT</Link></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Solutions Dropdown */}
+            <div className="relative group">
+              <button 
+                className="flex items-center text-white hover:text-zion-cyan transition-colors duration-300"
+                onMouseEnter={() => setSolutionsDropdownOpen(true)}
+                onMouseLeave={() => setSolutionsDropdownOpen(false)}
+              >
+                Solutions <ChevronDown className="ml-1 w-4 h-4" />
+              </button>
+              {solutionsDropdownOpen && (
+                <div 
+                  className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-md border border-zion-cyan/20 rounded-lg shadow-xl py-4"
+                  onMouseEnter={() => setSolutionsDropdownOpen(true)}
+                  onMouseLeave={() => setSolutionsDropdownOpen(false)}
+                >
+                  <div className="grid grid-cols-2 gap-4 px-4">
+                    <div>
+                      <h3 className="text-zion-cyan font-semibold mb-2 text-sm uppercase tracking-wide">Industry</h3>
+                      <ul className="space-y-2">
+                        <li><Link to="/enterprise-solutions" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Enterprise</Link></li>
+                        <li><Link to="/healthcare-solutions" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Healthcare</Link></li>
+                        <li><Link to="/government-solutions" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Government</Link></li>
+                        <li><Link to="/retail-solutions" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Retail</Link></li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h3 className="text-zion-cyan font-semibold mb-2 text-sm uppercase tracking-wide">Business</h3>
+                      <ul className="space-y-2">
+                        <li><Link to="/financial-solutions" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Financial</Link></li>
+                        <li><Link to="/manufacturing-solutions" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Manufacturing</Link></li>
+                        <li><Link to="/digital-transformation" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Digital Transformation</Link></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Company Dropdown */}
+            <div className="relative group">
+              <button 
+                className="flex items-center text-white hover:text-zion-cyan transition-colors duration-300"
+                onMouseEnter={() => setCompanyDropdownOpen(true)}
+                onMouseLeave={() => setCompanyDropdownOpen(false)}
+              >
+                Company <ChevronDown className="ml-1 w-4 h-4" />
+              </button>
+              {companyDropdownOpen && (
+                <div 
+                  className="absolute top-full left-0 mt-2 w-64 bg-black/95 backdrop-blur-md border border-zion-cyan/20 rounded-lg shadow-xl py-4"
+                  onMouseEnter={() => setCompanyDropdownOpen(true)}
+                  onMouseLeave={() => setCompanyDropdownOpen(false)}
+                >
+                  <ul className="space-y-2 px-4">
+                    <li><Link to="/about" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">About Us</Link></li>
+                    <li><Link to="/careers" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Careers</Link></li>
+                    <li><Link to="/partners" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Partners</Link></li>
+                    <li><Link to="/blog" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Blog</Link></li>
+                    <li><Link to="/events" className="text-white/80 hover:text-zion-cyan text-sm transition-colors">Events</Link></li>
+                  </ul>
+                </div>
+              )}
+            </div>
+
+            <Link to="/marketplace" className="text-white hover:text-zion-cyan transition-colors duration-300">Marketplace</Link>
             <Link to="/contact" className="text-white hover:text-zion-cyan transition-colors duration-300">Contact</Link>
           </nav>
 
@@ -41,13 +149,7 @@ export function AppHeader() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="lg:hidden p-2 text-white hover:text-zion-cyan transition-colors duration-300"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {mobileMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
+            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
@@ -56,9 +158,34 @@ export function AppHeader() {
           <div className="lg:hidden py-4 border-t border-zion-cyan/20">
             <nav className="flex flex-col space-y-4">
               <Link to="/" className="text-white hover:text-zion-cyan transition-colors duration-300">Home</Link>
+              
+              {/* Mobile Services Section */}
+              <div className="border-l-2 border-zion-cyan/30 pl-4">
+                <h3 className="text-zion-cyan font-semibold mb-2">Services</h3>
+                <div className="space-y-2 ml-4">
+                  <Link to="/ai-services" className="block text-white/80 hover:text-zion-cyan text-sm transition-colors">AI Services</Link>
+                  <Link to="/cybersecurity" className="block text-white/80 hover:text-zion-cyan text-sm transition-colors">Cybersecurity</Link>
+                  <Link to="/cloud-services" className="block text-white/80 hover:text-zion-cyan text-sm transition-colors">Cloud Services</Link>
+                  <Link to="/blockchain-services" className="block text-white/80 hover:text-zion-cyan text-sm transition-colors">Blockchain</Link>
+                  <Link to="/quantum-services" className="block text-white/80 hover:text-zion-cyan text-sm transition-colors">Quantum Computing</Link>
+                </div>
+              </div>
+
+              {/* Mobile Solutions Section */}
+              <div className="border-l-2 border-zion-cyan/30 pl-4">
+                <h3 className="text-zion-cyan font-semibold mb-2">Solutions</h3>
+                <div className="space-y-2 ml-4">
+                  <Link to="/enterprise-solutions" className="block text-white/80 hover:text-zion-cyan text-sm transition-colors">Enterprise</Link>
+                  <Link to="/healthcare-solutions" className="block text-white/80 hover:text-zion-cyan text-sm transition-colors">Healthcare</Link>
+                  <Link to="/government-solutions" className="block text-white/80 hover:text-zion-cyan text-sm transition-colors">Government</Link>
+                  <Link to="/retail-solutions" className="block text-white/80 hover:text-zion-cyan text-sm transition-colors">Retail</Link>
+                </div>
+              </div>
+
+              <Link to="/marketplace" className="text-white hover:text-zion-cyan transition-colors duration-300">Marketplace</Link>
               <Link to="/about" className="text-white hover:text-zion-cyan transition-colors duration-300">About</Link>
-              <Link to="/services" className="text-white hover:text-zion-cyan transition-colors duration-300">Services</Link>
               <Link to="/contact" className="text-white hover:text-zion-cyan transition-colors duration-300">Contact</Link>
+              
               <div className="pt-4 border-t border-zion-cyan/20">
                 <Link to="/login" className="block text-white hover:text-zion-cyan transition-colors duration-300 font-medium mb-2">Login</Link>
                 <Link to="/contact" className="block px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium text-center">Get Started</Link>
