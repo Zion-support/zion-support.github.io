@@ -13,9 +13,6 @@ import {
   Award,
   TrendingUp
 } from 'lucide-react';
-=======
-import Head from 'next/head';
-import Link from 'next/link';
 
 const Press: React.FC = () => {
   const pressReleases = [
