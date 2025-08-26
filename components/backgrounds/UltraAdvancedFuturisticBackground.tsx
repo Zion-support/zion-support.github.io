@@ -37,7 +37,7 @@ export default function UltraAdvancedFuturisticBackground({
     window.addEventListener('resize', resizeCanvas);
 
     // Particle system
-    class Particle {
+    const particles: Array<{
       x: number;
       y: number;
       vx: number;
@@ -85,6 +85,7 @@ export default function UltraAdvancedFuturisticBackground({
           rotationSpeed: (Math.random() - 0.5) * 0.1 * animationSpeed
         });
       }
+    };
 
     // Enhanced animation loop with quantum effects
     const animate = () => {

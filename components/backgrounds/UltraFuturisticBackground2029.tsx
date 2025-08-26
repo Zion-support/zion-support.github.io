@@ -47,27 +47,7 @@ export default function UltraFuturisticBackground2029() {
       maxLife: number;
     }> = [];
 
-    // Initialize particles with enhanced variety
-    const initParticles = () => {
-      particles = [];
-      for (let i = 0; i < 200; i++) {
-        const type = Math.random() > 0.7 ? 'quantum' : Math.random() > 0.5 ? 'neon' : 'hologram';
-        particles.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 0.8,
-          vy: (Math.random() - 0.5) * 0.8,
-          size: Math.random() * 3 + 1,
-          color: type === 'quantum' ? ['#00ffff', '#ff00ff', '#ffff00'][Math.floor(Math.random() * 3)] :
-                 type === 'neon' ? ['#ff0080', '#8000ff', '#00ff80'][Math.floor(Math.random() * 3)] :
-                 ['#ffffff', '#00ffff', '#ff8000'][Math.floor(Math.random() * 3)],
-          opacity: Math.random() * 0.9 + 0.1,
-          type,
-          life: Math.random() * 100,
-          maxLife: 100
-        });
-      }
-    };
+
 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);

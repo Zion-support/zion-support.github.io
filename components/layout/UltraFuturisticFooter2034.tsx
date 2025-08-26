@@ -363,6 +363,4 @@ export default function UltraFuturisticFooter2034() {
       </div>
     </footer>
   );
-};
-
-export default UltraFuturisticFooter2034;
+}
