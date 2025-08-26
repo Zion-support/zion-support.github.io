@@ -63,22 +63,6 @@ const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPa
 const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
 const ThemeTest = React.lazy(() => import('./pages/ThemeTest'));
 const ContactPage = React.lazy(() => import('./pages/Contact'));
-
-const { lazy, Suspense } = React;
-const Home = lazy(() => import('./pages/Home'));
-const AIMatcherPage = lazy(() => import('./pages/AIMatcher'));
-const TalentDirectory = lazy(() => import('./pages/TalentDirectory'));
-const TalentsPage = lazy(() => import('./pages/TalentsPage'));
-const ServicesPage = lazy(() => import('./pages/ServicesPage'));
-const EquipmentPage = lazy(() => import('./pages/EquipmentPage'));
-const Analytics = lazy(() => import('./pages/Analytics'));
-const MobileLaunchPage = lazy(() => import('./pages/MobileLaunchPage'));
-const CommunityPage = lazy(() => import('./pages/CommunityPage'));
-const Categories = lazy(() => import('./pages/Categories'));
-const Login = lazy(() => import('./pages/Login'));
-const Signup = lazy(() => import('./pages/Signup'));
-const ITOnsiteServicesPage = lazy(() => import('./pages/ITOnsiteServicesPage'));
-=======
 import Signup from './pages/Signup';
 import SimpleSignup from './pages/SimpleSignup';
 import ITOnsiteServicesPage from './pages/ITOnsiteServicesPage';
@@ -92,6 +76,10 @@ import PrivacyPage from './pages/PrivacyPage';
 import Rewards from './pages/Rewards';
 import { SupportChatbot } from './components/SupportChatbot';
 import PrivateRoute from './components/PrivateRoute';
+=======
+const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
+const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
+const WishlistPage = React.lazy(() => import('./pages/Wishlist'));
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -118,7 +106,7 @@ const baseRoutes = [
   { path: '/zion-hire-ai', element: <ZionHireAI /> },
   { path: '/hire-ai', element: <ZionHireAI /> },
   { path: '/request-quote', element: <RequestQuotePage /> },
-  { path: '/cart', element: <CartPage /> },
+  { path: '/wishlist', element: <WishlistPage /> },
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
   { path: '/wishlist', element: <WishlistPage /> },
