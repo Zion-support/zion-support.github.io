@@ -42,7 +42,7 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Zion brand colors
+        // Enhanced Zion brand colors
         'zion-blue-dark': '#172d67',
         'zion-blue': '#1e3a8a',
         'zion-blue-light': '#2e73ea',
@@ -152,6 +152,7 @@ module.exports = {
         '80': '80',
         '90': '90',
         '100': '100',
+>>>>>>> origin/main
       },
     },
   },
