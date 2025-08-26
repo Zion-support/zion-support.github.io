@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import FloatingActionButton from './components/FloatingActionButton';
 import EnhancedScrollToTop from './components/EnhancedScrollToTop';
+import { EnhancedLoading } from './components/EnhancedLoading';
 
 // Lazy load pages
 const Home = lazy(() => import('./pages/Home'));
@@ -15,19 +16,25 @@ const AdvancedServices2025 = lazy(() => import('./pages/AdvancedServices2025'));
 const Blog = lazy(() => import('./pages/Blog'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
-// Loading spinner component
+// Enhanced loading spinner component
 const LoadingSpinner = () => (
-  <div className="flex items-center justify-center min-h-screen">
-    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-500"></div>
+  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light flex items-center justify-center">
+    <EnhancedLoading 
+      size="xl" 
+      variant="futuristic" 
+      text="Loading Zion Tech Group"
+      showProgress={true}
+      progress={85}
+    />
   </div>
 );
 
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="App min-h-screen bg-background">
         <Header />
-        <main>
+        <main className="pt-16 lg:pt-20">
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<Home />} />
