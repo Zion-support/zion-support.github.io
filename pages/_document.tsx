@@ -5,12 +5,13 @@ export default class MyDocument extends Document {
 		return (
 			<Html lang="en">
 				<Head>
+					<link rel="preconnect" href="https://plausible.io" crossOrigin="anonymous" />
+					<link rel="dns-prefetch" href="//plausible.io" />
+					<meta name="theme-color" content="#0a0a0a" />
+					<meta name="format-detection" content="telephone=no" />
+					<meta name="color-scheme" content="dark light" />
 					<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 					<link rel="manifest" href="/site.webmanifest" />
-					<meta name="theme-color" content="#000000" />
-					<meta name="color-scheme" content="dark light" />
-					<link rel="preconnect" href="https://plausible.io" />
-					<link rel="dns-prefetch" href="https://plausible.io" />
 				</Head>
 				<body>
 					<Main />
