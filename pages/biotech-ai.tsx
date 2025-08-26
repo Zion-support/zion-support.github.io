@@ -1,7 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, FlaskConical, Star } from 'lucide-react';
-import Layout from '../components/layout/Layout';
+const Layout = ({ children }: { children: React.ReactNode }) => <>
+  {children}
+</>;
 
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 

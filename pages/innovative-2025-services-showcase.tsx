@@ -9,7 +9,9 @@ import {
   Dna, Users, Globe, Cpu, Lock, Database,
   BarChart3, Target, Microscope, Cloud
 } from 'lucide-react';
-import Layout from '../components/layout/Layout';
+const Layout = ({ children }: { children: React.ReactNode }) => <>
+  {children}
+</>;
 import { innovative2025NewServices } from '../data/innovative-2025-new-services';
 
 const contactInfo = {

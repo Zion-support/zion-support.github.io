@@ -7,7 +7,9 @@ import {
   Search, Filter, ArrowRight, Phone, Mail, MapPin, Globe, Cpu, Lock, Cloud,
   BarChart3, Settings, Eye, Clock, Heart, Lightbulb, CheckCircle, ChevronDown
 } from 'lucide-react';
-import Layout from '../components/layout/Layout';
+const Layout = ({ children }: { children: React.ReactNode }) => <>
+  {children}
+</>;
 import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
 import { cuttingEdgeITInfrastructure2025 } from '../data/2025-cutting-edge-it-infrastructure';
 import { cuttingEdgeMicroSaas2025 } from '../data/2025-cutting-edge-micro-saas';

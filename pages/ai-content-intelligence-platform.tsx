@@ -8,7 +8,9 @@ import {
   Clock, DollarSign, Check, ArrowUpRight, Play, BookOpen, Code,
   ShoppingCart
 } from 'lucide-react';
-import Layout from '../components/layout/Layout';
+const Layout = ({ children }: { children: React.ReactNode }) => <>
+  {children}
+</>;
 
 const contactInfo = {
   mobile: '+1 302 464 0950',

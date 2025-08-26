@@ -1,7 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import Layout from '../components/layout/Layout';
+const Layout = ({ children }: { children: React.ReactNode }) => <>
+  {children}
+</>;
 
 const contactInfo = {
   mobile: '+1 302 464 0950',

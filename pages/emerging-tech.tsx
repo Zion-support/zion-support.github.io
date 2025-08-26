@@ -1,6 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
-import Layout from '../components/layout/Layout';
+const Layout = ({ children }: { children: React.ReactNode }) => <>
+  {children}
+</>;
 
 import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react';
 

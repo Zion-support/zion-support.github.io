@@ -1,52 +1,7 @@
 {
   "compilerOptions": {
-<<<<<<< HEAD
-<<<<<<< HEAD
     "target": "ES2020",
-=======
-    "target": "ES2024",
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-    "useDefineForClassFields": true,
-    "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable"
-    ],
-    "module": "ESNext",
-    "skipLibCheck": true,
-    "moduleResolution": "bundler",
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "esModuleInterop": true,
-=======
-    "allowImportingTsExtensions": true,
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-    "esModuleInterop": true,
-    "module": "esnext",
-    "esModuleInterop": true,
-    "moduleResolution": "node",
-    "esModuleInterop": true,
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-    "resolveJsonModule": true,
-    "strict": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    },
-    "allowSyntheticDefaultImports": true,
-=======
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "es6"
-    ],
+    "lib": ["DOM", "DOM.Iterable", "ES2020"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -58,58 +13,10 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+    "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./*"
-      ]
-    },
->>>>>>> origin/cursor/website-audit-and-enhancement-145a
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
-<<<<<<< HEAD
-    "strictNullChecks": false,
-    "exactOptionalPropertyTypes": false,
-    "noImplicitOverride": false,
-    "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": false,
-    "allowJs": true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "incremental": true
-  },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "node_modules",
-    "zion.app/recovered-content/**",
-    "contracts/**",
-    "temp_components/**",
-    "zion_academy/**",
-    "zion-os/**",
-    "automation/**",
-    "typechain-types/**",
-    ".next/**"
-=======
-    "noUnusedLocals": false,
-    "noUnusedParameters": false
-=======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+      "@/*": ["src/*"]
+    }
   },
   "include": [
     "next-env.d.ts",
@@ -118,27 +25,6 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules",
-<<<<<<< HEAD
-    ".next",
-    "out",
-    "dist",
-    "build",
-    "automation",
-    "scripts",
-    "fix_*.js",
-    "fix_*.cjs",
-    "*.fix.js",
-    "*.fix.cjs"
->>>>>>> origin/cursor/website-audit-and-enhancement-145a
-=======
-    "zion.app/recovered-content/**",
-    "contracts/**",
-    "temp_components/**",
-    "zion_academy/**",
-    "zion-os/**",
-    "automation/**",
-    "typechain-types/**"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+    "node_modules"
   ]
 }

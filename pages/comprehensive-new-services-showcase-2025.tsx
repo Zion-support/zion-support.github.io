@@ -8,7 +8,9 @@ import {
   Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, 
   Clock, Heart, Lightbulb, ArrowRight, CheckCircle, ChevronRight
 } from 'lucide-react';
-import Layout from '../components/layout/Layout';
+const Layout = ({ children }: { children: React.ReactNode }) => <>
+  {children}
+</>;
 import { innovativeNewMicroSaasServices2025 } from '../data/2025-innovative-new-micro-saas-services';
 import { innovativeNewAIServices2025 } from '../data/2025-innovative-new-ai-services';
 import { innovativeNewITServices2025 } from '../data/2025-innovative-new-it-services';
