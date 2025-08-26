@@ -1,153 +1,103 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { StarIcon } from '@heroicons/react/24/solid';
+import { Star, Quote } from 'lucide-react';
+
+const testimonials = [
+  {
+    name: "Sarah Johnson",
+    role: "CTO at TechFlow",
+    company: "TechFlow Inc.",
+    content: "Zion has revolutionized how we source tech talent. The AI matching is incredibly accurate and has saved us countless hours.",
+    rating: 5,
+    avatar: "SJ"
+  },
+  {
+    name: "Michael Chen",
+    role: "Lead Developer",
+    company: "InnovateCorp",
+    content: "The quality of services and equipment available on Zion is outstanding. It's become our go-to platform for all tech needs.",
+    rating: 5,
+    avatar: "MC"
+  },
+  {
+    name: "Emily Rodriguez",
+    role: "IT Director",
+    company: "Global Solutions",
+    content: "Zion's marketplace has everything we need in one place. The customer support is exceptional and always available.",
+    rating: 5,
+    avatar: "ER"
+  }
+];
 
 export function TestimonialsSection() {
-  const testimonials = [
-    {
-      id: 1,
-      name: "Sarah Chen",
-      role: "CTO, TechFlow Solutions",
-      company: "TechFlow Solutions",
-      content: "Zion Tech Group transformed our AI infrastructure completely. Their quantum computing solutions reduced our processing time by 80% and opened new possibilities we never thought possible.",
-      rating: 5,
-      avatar: "👩‍💼"
-    },
-    {
-      id: 2,
-      name: "Marcus Rodriguez",
-      role: "VP of Engineering",
-      company: "InnovateCorp",
-      content: "The AI-powered automation platform from Zion has revolutionized our business processes. We've seen a 300% increase in efficiency and significant cost savings.",
-      rating: 5,
-      avatar: "👨‍💻"
-    },
-    {
-      id: 3,
-      name: "Dr. Emily Watson",
-      role: "Research Director",
-      company: "Quantum Research Institute",
-      content: "Working with Zion's quantum neural networks has accelerated our research breakthroughs. Their expertise in cutting-edge technology is unmatched in the industry.",
-      rating: 5,
-      avatar: "👩‍🔬"
-    },
-    {
-      id: 4,
-      name: "James Thompson",
-      role: "CEO",
-      company: "Blockchain Ventures",
-      content: "Zion's blockchain and Web3 solutions helped us build a secure, scalable platform that's now processing millions of transactions daily. Exceptional service and results.",
-      rating: 5,
-      avatar: "👨‍💼"
-    }
-  ];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.6
-      }
-    }
-  };
-
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            What Our Clients Say
+    <section className="py-20 bg-zion-blue-dark">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            What Our Users Say
           </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Discover how leading companies are transforming their businesses with Zion Tech Group's innovative solutions
+          <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
+            Join thousands of satisfied professionals who trust Zion for their technology needs
           </p>
-        </motion.div>
-
-        {/* Testimonials Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-        >
-          {testimonials.map((testimonial) => (
-            <motion.div
-              key={testimonial.id}
-              variants={itemVariants}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105"
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {testimonials.map((testimonial, index) => (
+            <div 
+              key={index}
+              className="bg-zion-blue border border-zion-blue-light rounded-xl p-6 hover:border-zion-purple/50 transition-all duration-300 hover:transform hover:scale-105 group"
             >
+              {/* Quote icon */}
+              <div className="mb-4">
+                <Quote className="w-8 h-8 text-zion-cyan opacity-60" />
+              </div>
+              
               {/* Rating */}
               <div className="flex items-center mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <StarIcon key={i} className="w-5 h-5 text-yellow-400" />
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                 ))}
               </div>
-
+              
               {/* Content */}
-              <blockquote className="text-slate-200 mb-6 text-sm leading-relaxed">
+              <p className="text-zion-slate-light mb-6 leading-relaxed">
                 "{testimonial.content}"
-              </blockquote>
-
+              </p>
+              
               {/* Author */}
               <div className="flex items-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-2xl mr-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center text-white font-semibold text-lg mr-4">
                   {testimonial.avatar}
                 </div>
                 <div>
-                  <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-sm text-slate-400">{testimonial.role}</div>
-                  <div className="text-xs text-slate-500">{testimonial.company}</div>
+                  <div className="text-white font-semibold">{testimonial.name}</div>
+                  <div className="text-zion-slate-light text-sm">{testimonial.role}</div>
+                  <div className="text-zion-cyan text-sm">{testimonial.company}</div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
-
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border border-blue-500/30 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h3>
-            <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
-              Join hundreds of companies already leveraging Zion Tech Group's cutting-edge solutions
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-                Get Started Today
-              </button>
-              <button className="px-8 py-3 border-2 border-blue-500 text-blue-400 font-semibold rounded-xl hover:bg-blue-500 hover:text-white transition-all duration-300">
-                Schedule Demo
-              </button>
+        </div>
+        
+        {/* Trust indicators */}
+        <div className="text-center mt-16">
+          <div className="inline-flex items-center space-x-6 bg-zion-blue/50 backdrop-blur-sm border border-zion-cyan/20 rounded-full px-8 py-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
+              <span className="text-zion-cyan text-sm font-medium">Verified Reviews</span>
+            </div>
+            <div className="w-px h-4 bg-zion-cyan/30"></div>
+            <div className="flex items-center space-x-2">
+              <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
+              <span className="text-zion-cyan text-sm font-medium">Real Users</span>
+            </div>
+            <div className="w-px h-4 bg-zion-cyan/30"></div>
+            <div className="flex items-center space-x-2">
+              <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
+              <span className="text-zion-cyan text-sm font-medium">Recent Feedback</span>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

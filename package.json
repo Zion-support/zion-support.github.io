@@ -460,7 +460,8 @@
     ]
   },
   "overrides": {
-    "glob": "^10.3.10",
+    "@humanwhocodes/object-schema": "@eslint/object-schema@1.0.0",
+    "glob": "^10.4.5",
     "rimraf": "^5.0.5"
   },
   "resolutions": {

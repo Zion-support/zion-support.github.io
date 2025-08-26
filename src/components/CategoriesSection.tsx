@@ -118,42 +118,34 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
           </motion.div>
         )}
         
-        <motion.div 
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {categories.map((category, index) => (
-            <motion.div
-              key={category.title}
-              variants={itemVariants}
-              whileHover={{ 
-                y: -8,
-                transition: { duration: 0.2 }
-              }}
+            <Link 
+              key={category.title} 
+              to={category.link} 
+              className="group block"
+              aria-label={`Explore ${category.title} - ${category.description}`}
             >
-              <Link to={category.link} className="group block h-full">
-                <div className="rounded-xl overflow-hidden h-full border border-zion-blue-light/30 bg-gradient-to-br from-zion-blue-dark/80 to-zion-slate-dark/80 backdrop-blur-sm p-6 transition-all duration-300 hover:border-zion-purple/50 hover:shadow-2xl hover:shadow-zion-purple/20">
-                  <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                    <div className="text-white">
-                      {category.icon}
-                    </div>
-                  </div>
-                  <h3 className="text-white text-xl font-bold mb-3 group-hover:text-zion-cyan transition-colors">
-                    {category.title}
-                  </h3>
-                  <p className="text-zion-slate-light group-hover:text-zion-slate-light/80 transition-colors mb-4">
-                    {category.description}
-                  </p>
-                  <div className="flex items-center text-zion-cyan opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <span className="text-sm font-medium">Learn more</span>
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              <div className="rounded-xl overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-500 hover:border-zion-purple/50 hover:translate-y-[-8px] hover:shadow-2xl hover:shadow-zion-purple/20 group-hover:bg-zion-blue-dark/90">
+                <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-500 shadow-lg`}>
+                  <div className="text-white">
+                    {category.icon}
                   </div>
                 </div>
-              </Link>
-            </motion.div>
+                <h3 className="text-white text-xl font-bold mb-3 group-hover:text-zion-cyan transition-colors duration-300">{category.title}</h3>
+                <p className="text-zion-slate-light group-hover:text-zion-slate-light/80 transition-colors duration-300">{category.description}</p>
+                
+                {/* Hover indicator */}
+                <div className="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="flex items-center text-zion-cyan text-sm font-medium">
+                    <span>Learn more</span>
+                    <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </Link>
           ))}
         </motion.div>
         

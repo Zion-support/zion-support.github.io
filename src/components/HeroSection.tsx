@@ -43,81 +43,41 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative overflow-hidden py-20 md:py-32 min-h-screen flex items-center">
+    <section 
+      className="relative overflow-hidden py-20 md:py-32"
+      aria-labelledby="hero-heading"
+      role="banner"
+    >
       {/* Enhanced background gradient effect */}
-      <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple opacity-90"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light opacity-90"></div>
       
-      {/* Animated floating particles with better positioning */}
-      <motion.div 
-        className="absolute inset-0"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <motion.div 
-          className="absolute top-1/4 left-1/4 w-3 h-3 rounded-full bg-zion-purple-light opacity-60"
-          variants={floatingVariants}
-          animate="animate"
-        />
-        <motion.div 
-          className="absolute top-1/3 right-1/3 w-4 h-4 rounded-full bg-zion-cyan opacity-50"
-          variants={floatingVariants}
-          animate="animate"
-          style={{ animationDelay: "1s" }}
-        />
-        <motion.div 
-          className="absolute bottom-1/4 left-1/2 w-2 h-2 rounded-full bg-zion-purple opacity-60"
-          variants={floatingVariants}
-          animate="animate"
-          style={{ animationDelay: "2s" }}
-        />
-        <motion.div 
-          className="absolute top-1/2 right-1/4 w-5 h-5 rounded-full bg-zion-cyan-light opacity-30"
-          variants={floatingVariants}
-          animate="animate"
-          style={{ animationDelay: "0.5s" }}
-        />
-      </motion.div>
-      
-      {/* Floating tech icons */}
-      <motion.div 
-        className="absolute top-20 right-20 opacity-20"
-        animate={{ rotate: 360 }}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-      >
-        <Sparkles className="w-16 h-16 text-zion-cyan" />
-      </motion.div>
-      
-      <motion.div 
-        className="absolute bottom-20 left-20 opacity-20"
-        animate={{ rotate: -360 }}
-        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-      >
-        <Zap className="w-12 h-12 text-zion-purple" />
-      </motion.div>
+      {/* Enhanced animated floating particles with better performance */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 rounded-full bg-zion-purple-light opacity-40 animate-float-slow"></div>
+        <div className="absolute top-1/3 right-1/3 w-3 h-3 rounded-full bg-zion-cyan opacity-30 animate-float-medium"></div>
+        <div className="absolute bottom-1/4 left-1/2 w-2 h-2 rounded-full bg-zion-purple opacity-40 animate-float-fast"></div>
+        <div className="absolute top-1/2 right-1/4 w-4 h-4 rounded-full bg-zion-cyan-light opacity-20 animate-float-slow"></div>
+        <div className="absolute top-3/4 left-1/3 w-1.5 h-1.5 rounded-full bg-zion-purple-light opacity-50 animate-float-medium"></div>
+        <div className="absolute bottom-1/3 right-1/2 w-2.5 h-2.5 rounded-full bg-zion-cyan opacity-25 animate-float-fast"></div>
+      </div>
       
       <div className="container relative z-10 px-4 mx-auto text-center">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
+        <GradientHeading 
+          id="hero-heading"
+          className="mb-6 text-5xl md:text-7xl font-bold animate-fade-in-up"
         >
-          <motion.div variants={itemVariants}>
-            <GradientHeading className="mb-6 text-5xl md:text-7xl font-bold leading-tight">
-              {t('home.hero_title')}
-            </GradientHeading>
-          </motion.div>
+          {t('home.hero_title')}
+        </GradientHeading>
 
-          <motion.div variants={itemVariants}>
-            <p className="text-xl md:text-2xl text-zion-slate-light mb-10 max-w-4xl mx-auto leading-relaxed">
-              {t('home.hero_subtitle')}
-            </p>
-          </motion.div>
+        <p className="text-xl md:text-2xl text-zion-slate-light mb-10 max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
+          {t('home.hero_subtitle')}
+        </p>
 
-          {/* Feature highlights */}
-          <motion.div 
-            variants={itemVariants}
-            className="flex flex-wrap justify-center gap-6 mb-12"
+        <div className="flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up animation-delay-400">
+          <Button
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-6 px-8 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            size="lg"
+            asChild
           >
             <div className="flex items-center gap-2 text-zion-cyan">
               <Star className="w-5 h-5" />
@@ -159,21 +119,26 @@ export function HeroSection() {
               {t('home.browse_marketplace')}
               <ArrowRight className="w-5 h-5" />
             </Link>
-          </motion.div>
-
-          {/* Trust indicators */}
-          <motion.div 
-            variants={itemVariants}
-            className="mt-16 pt-8 border-t border-zion-blue-light/20"
+          </Button>
+          <Link
+            id="browse-marketplace"
+            to="/marketplace"
+            className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue-dark active:bg-zion-cyan-light text-lg py-6 px-8 rounded-lg inline-flex items-center justify-center transition-all duration-300 hover:shadow-lg transform hover:scale-105"
           >
-            <p className="text-zion-slate-light text-sm mb-4">Trusted by leading tech companies</p>
-            <div className="flex justify-center items-center gap-8 opacity-60">
-              <div className="w-16 h-8 bg-zion-blue-light rounded opacity-50"></div>
-              <div className="w-16 h-8 bg-zion-purple-light rounded opacity-50"></div>
-              <div className="w-16 h-8 bg-zion-cyan rounded opacity-50"></div>
-            </div>
-          </motion.div>
-        </motion.div>
+            {t('home.browse_marketplace')}
+          </Link>
+        </div>
+        
+        {/* Trust indicators */}
+        <div className="mt-16 animate-fade-in-up animation-delay-600">
+          <p className="text-zion-slate-light text-sm mb-4">Trusted by leading companies worldwide</p>
+          <div className="flex justify-center items-center gap-8 opacity-60">
+            <div className="w-16 h-8 bg-zion-slate-light rounded opacity-40"></div>
+            <div className="w-20 h-8 bg-zion-slate-light rounded opacity-40"></div>
+            <div className="w-16 h-8 bg-zion-slate-light rounded opacity-40"></div>
+            <div className="w-18 h-8 bg-zion-slate-light rounded opacity-40"></div>
+          </div>
+        </div>
       </div>
       
       {/* Scroll Indicator */}
