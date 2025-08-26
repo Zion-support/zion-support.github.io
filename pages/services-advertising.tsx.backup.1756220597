@@ -33,6 +33,16 @@ export default function ServicesAdvertisingPage() {
 					</ul>
 				</section>
 
+<<<<<<< HEAD
+				<section className="space-y-6">
+					<h2 className="text-2xl font-semibold text-white">Vector Search Starter</h2>
+					<p className="text-slate-300">Production RAG starter with Pinecone/Weaviate/Elastic, eval harness, and observability.</p>
+					<ul className="list-disc list-inside text-slate-300 space-y-1">
+						<li>Typical SMB budget: $50–$1,000/mo</li>
+						<li>References: {ext('https://www.pinecone.io/pricing/')}, {ext('https://weaviate.io/pricing')}, {ext('https://www.elastic.co/pricing')}</li>
+					</ul>
+				</section>
+=======
   const pricingRefs = [
     {
       title: 'AI Platforms',
@@ -129,6 +139,7 @@ export default function ServicesAdvertisingPage() {
       note: 'Entry CRM $9–$45/user/mo typical.'
     }
   ];
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9479
 
 				<section id="managed-postgres-ha" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Managed Postgres HA</h2>
@@ -286,6 +297,17 @@ export default function ServicesAdvertisingPage() {
 					</ul>
 				</section>
 
+<<<<<<< HEAD
+				<section className="space-y-6">
+					<h2 className="text-2xl font-semibold text-white">GitHub Secrets Scanner Plus</h2>
+					<p className="text-slate-300">High-signal secret detectors with CI blocking, auto-rotation playbooks, and repository quarantine policies.</p>
+					<ul className="list-disc list-inside text-slate-300 space-y-1">
+						<li>Typical SMB budget: $20–$200/mo</li>
+						<li>Learn more: <a className="text-cyan-400 underline" href="/services/github-secrets-scanner-plus">/services/github-secrets-scanner-plus</a></li>
+						<li>References: https://docs.github.com/code-security/secret-scanning, https://github.com/features/security, https://github.com/trufflesecurity/trufflehog</li>
+					</ul>
+				</section>
+=======
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">New Micro SaaS & IT Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -330,6 +352,7 @@ export default function ServicesAdvertisingPage() {
               <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white">Email: kleber@ziontechgroup.com</a>
             </div>
           </section>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9479
 
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">GDPR DSAR Portal Lite</h2>

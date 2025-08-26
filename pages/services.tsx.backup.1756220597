@@ -23,6 +23,27 @@ import { additionalEnhancedServices } from '../data/additional-real-services';
 						</ul>
 					</section>
 
+<<<<<<< HEAD
+  const allServices = [
+    ...innovativeAIServices,
+    ...quantumSpaceServices,
+    ...enterpriseITServices,
+    ...enhancedRealMicroSaasServices,
+    ...innovativeAIServices,
+    ...advancedITServices,
+    ...specializedAIServices,
+    ...extraServices,
+    ...additionalEnhancedServices,
+    ...emergingTechServices,
+    ...nextGenAIServices,
+    ...comprehensiveITServices,
+    ...nextGenerationAIServices,
+    ...emergingTechnologyServices,
+    ...comprehensiveITSolutions,
+    ...newRealServices,
+    ...marketReadyServices
+  ];
+=======
 // Import existing service data
 import { realMicroSaasServices } from '../data/real-micro-saas-services';
 import { innovativeAIServices } from '../data/innovative-ai-services';
@@ -34,6 +55,7 @@ import { marketReadyServices } from '../data/market-ready-services';
 import { marketValidatedServices } from '../data/market-validated-services';
 import { industryRealServices } from '../data/industry-real-services';
 import { newSaasItAiServices2025 } from '../data/new-saas-it-ai-services-2025';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9479
 
   const allServices = useMemo(() => {
     return enhancedRealMicroSaasServices
@@ -66,6 +88,13 @@ import { newSaasItAiServices2025 } from '../data/new-saas-it-ai-services-2025';
       }
     });
 
+<<<<<<< HEAD
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+=======
 // Helper function to get service features
 const getServiceFeatures = (service: any) => {
   if (service.features) return service.features;
@@ -271,6 +300,7 @@ export default function Services() {
       default:
         return <Shield className="w-6 h-6 text-gray-400" />;
     }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-9479
   };
 
   return (
