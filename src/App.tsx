@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Services from './pages/Services';
+import ComprehensiveServicesShowcase from './components/ComprehensiveServicesShowcase';
 import Blog from './pages/Blog';
 import Careers from './pages/Careers';
 import Privacy from './pages/Privacy';
@@ -43,6 +44,7 @@ function App() {
             <Route path="/services/infrastructure" element={<Infrastructure />} />
             <Route path="/services/transformation" element={<DigitalTransformation />} />
             <Route path="/services/consulting" element={<Consulting />} />
+            <Route path="/services/comprehensive" element={<ComprehensiveServicesShowcase />} />
             
             <Route path="*" element={<NotFound />} />
           </Routes>

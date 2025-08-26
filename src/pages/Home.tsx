@@ -49,17 +49,31 @@ const Home: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-blue-400/50 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 text-2xl">
+                ✍️
               </div>
-              <h3 className="text-xl font-semibold text-white mb-4">AI Solutions</h3>
+              <h3 className="text-xl font-semibold text-white mb-4">AI Content Generation</h3>
               <p className="text-gray-300 mb-6">
-                Machine learning, natural language processing, and computer vision solutions to automate and optimize your business processes.
+                Generate high-quality content in seconds with AI-powered writing assistance, SEO optimization, and brand voice customization.
               </p>
               <Link
-                to="/services/ai"
+                to="/services/comprehensive"
+                className="text-purple-400 hover:text-purple-300 font-medium transition-colors duration-300"
+              >
+                Learn More →
+              </Link>
+            </div>
+
+            <div className="bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-blue-400/50 transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center mb-6 text-2xl">
+                🤖
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-4">AI Customer Support</h3>
+              <p className="text-gray-300 mb-6">
+                Automate customer support with AI-powered chatbots, intelligent ticket routing, and sentiment analysis.
+              </p>
+              <Link
+                to="/services/comprehensive"
                 className="text-blue-400 hover:text-blue-300 font-medium transition-colors duration-300"
               >
                 Learn More →
@@ -67,36 +81,16 @@ const Home: React.FC = () => {
             </div>
 
             <div className="bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-blue-400/50 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-                </svg>
+              <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-6 text-2xl">
+                💰
               </div>
-              <h3 className="text-xl font-semibold text-white mb-4">Cloud & DevOps</h3>
+              <h3 className="text-xl font-semibold text-white mb-4">AI Sales Intelligence</h3>
               <p className="text-gray-300 mb-6">
-                Cloud migration, infrastructure automation, and DevOps practices to accelerate your development and deployment cycles.
+                Boost sales performance with AI-driven lead scoring, predictive analytics, and automated sales process optimization.
               </p>
               <Link
-                to="/services/cloud"
-                className="text-green-400 hover:text-green-300 font-medium transition-colors duration-300"
-              >
-                Learn More →
-              </Link>
-            </div>
-
-            <div className="bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-blue-400/50 transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-4">Cybersecurity</h3>
-              <p className="text-gray-300 mb-6">
-                Comprehensive security solutions including threat detection, vulnerability assessment, and compliance frameworks.
-              </p>
-              <Link
-                to="/services/cybersecurity"
-                className="text-red-400 hover:text-red-300 font-medium transition-colors duration-300"
+                to="/services/comprehensive"
+                className="text-yellow-400 hover:text-yellow-300 font-medium transition-colors duration-300"
               >
                 Learn More →
               </Link>
@@ -175,6 +169,129 @@ const Home: React.FC = () => {
             >
               Join Our Team
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* More Services Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Explore Our Full Service Portfolio</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              From quantum computing to autonomous AI development, discover our comprehensive range of innovative technology solutions
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-slate-700/30 p-6 rounded-xl border border-white/10 hover:border-blue-400/50 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-lg flex items-center justify-center mb-4 text-xl">
+                ⚛️
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Quantum Computing</h3>
+              <p className="text-gray-300 text-sm mb-4">
+                Access quantum processing power for complex computational challenges
+              </p>
+              <Link
+                to="/services/comprehensive"
+                className="text-purple-400 hover:text-purple-300 font-medium text-sm transition-colors duration-300"
+              >
+                Learn More →
+              </Link>
+            </div>
+
+            <div className="bg-slate-700/30 p-6 rounded-xl border border-white/10 hover:border-blue-400/50 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 text-xl">
+                🧠
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Autonomous AI</h3>
+              <p className="text-gray-300 text-sm mb-4">
+                Build and deploy AI models with zero coding required
+              </p>
+              <Link
+                to="/services/comprehensive"
+                className="text-blue-400 hover:text-blue-300 font-medium text-sm transition-colors duration-300"
+              >
+                Learn More →
+              </Link>
+            </div>
+
+            <div className="bg-slate-700/30 p-6 rounded-xl border border-white/10 hover:border-blue-400/50 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4 text-xl">
+                🌐
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Edge AI Computing</h3>
+              <p className="text-gray-300 text-sm mb-4">
+                Deploy AI models at the edge for real-time processing
+              </p>
+              <Link
+                to="/services/comprehensive"
+                className="text-green-400 hover:text-green-300 font-medium text-sm transition-colors duration-300"
+              >
+                Learn More →
+              </Link>
+            </div>
+
+            <div className="bg-slate-700/30 p-6 rounded-xl border border-white/10 hover:border-blue-400/50 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center mb-4 text-xl">
+                🔒
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">AI Cybersecurity</h3>
+              <p className="text-gray-300 text-sm mb-4">
+                Protect systems with AI-driven threat detection
+              </p>
+              <Link
+                to="/services/comprehensive"
+                className="text-red-400 hover:text-red-300 font-medium text-sm transition-colors duration-300"
+              >
+                Learn More →
+              </Link>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              to="/services/comprehensive"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg"
+            >
+              View All Services
+              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-8">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-gray-300 mb-10 leading-relaxed">
+            Let's discuss how our innovative technology solutions can transform your business and drive success
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="inline-flex items-center px-10 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg"
+            >
+              Start Your Project
+              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </a>
+            <a
+              href="tel:+13024640950"
+              className="inline-flex items-center px-10 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 hover:border-white/50 transition-all duration-300 transform hover:scale-105"
+            >
+              Call: +1 302 464 0950
+            </a>
+          </div>
+          <div className="mt-8 text-gray-300">
+            <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+            <p>🌐 <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">https://ziontechgroup.com</a></p>
           </div>
         </div>
       </section>
