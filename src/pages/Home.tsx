@@ -26,6 +26,8 @@ import { TechnologyStackSection } from "@/components/TechnologyStackSection";
 import { SecurityComplianceSection } from "@/components/SecurityComplianceSection";
 import { AIServicesShowcase } from "@/components/AIServicesShowcase";
 import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
+import { EnhancedServicesShowcase } from "@/components/EnhancedServicesShowcase";
+import { PricingShowcase } from "@/components/PricingShowcase";
 
 export default function Home() {
   return (
@@ -353,6 +355,8 @@ export default function Home() {
       <NewsletterSection />
       <ITServiceRequestHero />
       <FloatingCTA />
+      <EnhancedServicesShowcase />
+      <PricingShowcase />
     </>
 import { AnimatedBackground, FloatingParticles } from "@/components/ui/AnimatedBackground";
 
@@ -626,6 +630,12 @@ export default function Home() {
 
       {/* Enhanced Categories Section */}
       <CategoriesSection />
+
+      {/* Enhanced Services Showcase */}
+      <EnhancedServicesShowcase />
+
+      {/* Pricing Showcase */}
+      <PricingShowcase />
 
       {/* Enhanced Benefits Section */}
       <BenefitsSection />

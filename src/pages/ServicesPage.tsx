@@ -50,7 +50,16 @@ export default function ServicesPage() {
     { id: 'content-creation', name: 'Content Creation', icon: Code, color: 'from-zion-orange to-zion-purple' },
     { id: 'hr-talent', name: 'HR & Talent', icon: Users, color: 'from-zion-pink to-zion-purple' },
     { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-zion-green to-zion-blue' },
-    { id: 'digital-twin', name: 'Digital Twin', icon: Server, color: 'from-zion-blue to-zion-purple' }
+    { id: 'digital-twin', name: 'Digital Twin', icon: Server, color: 'from-zion-blue to-zion-purple' },
+    { id: 'fintech', name: 'FinTech', icon: DollarSign, color: 'from-zion-green to-zion-cyan' },
+    { id: 'healthcare-ai', name: 'Healthcare AI', icon: Brain, color: 'from-zion-red to-zion-purple' },
+    { id: 'legal-tech', name: 'Legal Tech', icon: Shield, color: 'from-zion-blue to-zion-purple' },
+    { id: 'edtech', name: 'EdTech', icon: BookOpen, color: 'from-zion-orange to-zion-blue' },
+    { id: 'marketing-ai', name: 'Marketing AI', icon: TrendingUp, color: 'from-zion-pink to-zion-cyan' },
+    { id: 'sales-ai', name: 'Sales AI', icon: Users, color: 'from-zion-green to-zion-purple' },
+    { id: 'customer-support-ai', name: 'Customer Support AI', icon: MessageCircle, color: 'from-zion-cyan to-zion-blue' },
+    { id: 'project-management-ai', name: 'Project Management AI', icon: Rocket, color: 'from-zion-purple to-zion-orange' },
+    { id: 'inventory-ai', name: 'Inventory AI', icon: Database, color: 'from-zion-blue to-zion-green' }
   ];
 
   const priceRanges = [
@@ -75,7 +84,8 @@ export default function ServicesPage() {
                          service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     
     const matchesCategory = selectedCategory === 'all' || 
-                           service.category.toLowerCase().includes(selectedCategory.replace('-', ' '));
+                           service.category.toLowerCase().includes(selectedCategory.replace('-', ' ')) ||
+                           service.subcategory.toLowerCase().includes(selectedCategory.replace('-', ' '));
     
     const matchesPrice = selectedPriceRange === 'all' || 
                         (selectedPriceRange === 'budget' && service.price <= 1000) ||
@@ -175,7 +185,7 @@ export default function ServicesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                <div className="text-3xl font-bold text-zion-purple mb-2">10+</div>
+                <div className="text-3xl font-bold text-zion-purple mb-2">{categories.length - 1}+</div>
                 <div className="text-zion-slate-light">Technology Categories</div>
               </motion.div>
               <motion.div 

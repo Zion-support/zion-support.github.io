@@ -158,7 +158,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
       integrations: ["Shopify", "WooCommerce", "Mailchimp", "Intercom", "Zendesk"],
       apiEndpoints: 120,
       uptime: "99.8%",
-      security: ["SOC 2", "GDPR", "PCI DSS", "Data encryption"]
+      security: ["SOC 2", "PCI DSS", "Data encryption"]
     },
     competitors: ["Segment", "Amplitude", "Mixpanel", "Hotjar"],
     marketSize: "$15.7 billion by 2025"
@@ -682,6 +682,591 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] =
     },
     competitors: ["Sphera", "Benchmark ESG", "Wolters Kluwer", "Sustainalytics"],
     marketSize: "$74.8 billion by 2025"
+  },
+
+  // AI-Powered FinTech Platform
+  {
+    id: "ai-fintech-platform",
+    title: "AI-Powered FinTech Platform",
+    description: "Comprehensive financial technology platform that uses AI for fraud detection, risk assessment, automated trading, and personalized financial services.",
+    category: "FinTech",
+    subcategory: "AI Finance",
+    price: 3500,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI fraud detection",
+      "Risk assessment algorithms",
+      "Automated trading systems",
+      "Personalized financial advice",
+      "Credit scoring",
+      "Portfolio optimization",
+      "Regulatory compliance",
+      "Real-time monitoring",
+      "Mobile banking",
+      "API integration"
+    ],
+    benefits: [
+      "Reduce fraud by 95%",
+      "Improve risk assessment accuracy by 80%",
+      "Automate trading decisions",
+      "Personalized financial services",
+      "Regulatory compliance automation"
+    ],
+    useCases: [
+      "Digital banking",
+      "Investment management",
+      "Insurance underwriting",
+      "Peer-to-peer lending",
+      "Cryptocurrency trading"
+    ],
+    targetAudience: [
+      "Banks and credit unions",
+      "Investment firms",
+      "Insurance companies",
+      "FinTech startups",
+      "Financial advisors"
+    ],
+    tags: ["FinTech", "AI", "Banking", "Investment", "Compliance"],
+    estimatedDelivery: "10-16 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$3,500 - $12,000/month",
+    roi: "300-500%",
+    innovationLevel: "Cutting-edge",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
+      integrations: ["Plaid", "Stripe", "Square", "QuickBooks", "Salesforce"],
+      apiEndpoints: 200,
+      uptime: "99.99%",
+      security: ["SOC 2", "PCI DSS", "GDPR", "End-to-end encryption"]
+    },
+    competitors: ["Stripe", "Plaid", "Square", "Robinhood", "Chime"],
+    marketSize: "$158.8 billion by 2025"
+  },
+
+  // AI-Powered Healthcare Platform
+  {
+    id: "ai-healthcare-platform",
+    title: "AI-Powered Healthcare Platform",
+    description: "Comprehensive healthcare platform that uses AI for diagnosis assistance, patient monitoring, drug discovery, and medical research automation.",
+    category: "Healthcare AI",
+    subcategory: "Medical Technology",
+    price: 4500,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI diagnosis assistance",
+      "Patient monitoring systems",
+      "Drug discovery algorithms",
+      "Medical image analysis",
+      "Predictive health analytics",
+      "Electronic health records",
+      "Telemedicine integration",
+      "Clinical trial management",
+      "Compliance monitoring",
+      "Mobile health apps"
+    ],
+    benefits: [
+      "Improve diagnosis accuracy by 90%",
+      "Reduce medical errors by 75%",
+      "Accelerate drug discovery by 60%",
+      "Enhance patient outcomes",
+      "Automate compliance processes"
+    ],
+    useCases: [
+      "Hospitals and clinics",
+      "Pharmaceutical research",
+      "Medical imaging centers",
+      "Telemedicine providers",
+      "Health insurance companies"
+    ],
+    targetAudience: [
+      "Healthcare providers",
+      "Pharmaceutical companies",
+      "Medical device manufacturers",
+      "Health insurers",
+      "Research institutions"
+    ],
+    tags: ["Healthcare", "AI", "Medical Technology", "Drug Discovery", "Telemedicine"],
+    estimatedDelivery: "12-20 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$4,500 - $15,000/month",
+    roi: "250-400%",
+    innovationLevel: "Cutting-edge",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "React", "Node.js", "DICOM"],
+      integrations: ["Epic", "Cerner", "Allscripts", "Practice Fusion", "Zoom"],
+      apiEndpoints: 150,
+      uptime: "99.9%",
+      security: ["HIPAA", "SOC 2", "ISO 27001", "End-to-end encryption"]
+    },
+    competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Amazon Comprehend Medical"],
+    marketSize: "$45.2 billion by 2025"
+  },
+
+  // AI-Powered Legal Tech Platform
+  {
+    id: "ai-legal-tech-platform",
+    title: "AI-Powered Legal Tech Platform",
+    description: "Intelligent legal technology platform that automates legal research, contract analysis, compliance monitoring, and case management.",
+    category: "Legal Tech",
+    subcategory: "Legal Automation",
+    price: 2800,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI legal research",
+      "Contract analysis and review",
+      "Compliance monitoring",
+      "Case management",
+      "Document automation",
+      "Legal analytics",
+      "E-discovery",
+      "Risk assessment",
+      "Regulatory updates",
+      "Client portal"
+    ],
+    benefits: [
+      "Reduce legal research time by 80%",
+      "Improve contract review accuracy by 90%",
+      "Automate compliance monitoring",
+      "Enhance case outcomes",
+      "Reduce legal costs by 40%"
+    ],
+    useCases: [
+      "Law firms",
+      "Corporate legal departments",
+      "Government agencies",
+      "Compliance officers",
+      "Legal consultants"
+    ],
+    targetAudience: [
+      "Attorneys",
+      "Legal professionals",
+      "Compliance officers",
+      "Corporate counsel",
+      "Legal researchers"
+    ],
+    tags: ["Legal Tech", "AI", "Contract Analysis", "Compliance", "Automation"],
+    estimatedDelivery: "8-14 weeks",
+    supportLevel: "premium",
+    marketPrice: "$2,800 - $8,500/month",
+    roi: "200-350%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL"],
+      integrations: ["Clio", "MyCase", "PracticePanther", "Salesforce", "Microsoft Office"],
+      apiEndpoints: 120,
+      uptime: "99.8%",
+      security: ["SOC 2", "GDPR", "Data encryption", "Access control"]
+    },
+    competitors: ["DoNotPay", "LegalZoom", "Rocket Lawyer", "LawVu", "ContractPodAi"],
+    marketSize: "$25.2 billion by 2025"
+  },
+
+  // AI-Powered EdTech Platform
+  {
+    id: "ai-edtech-platform",
+    title: "AI-Powered EdTech Platform",
+    description: "Intelligent educational technology platform that personalizes learning experiences, automates assessment, and provides adaptive curriculum.",
+    category: "EdTech",
+    subcategory: "AI Education",
+    price: 1200,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Personalized learning paths",
+      "AI-powered assessment",
+      "Adaptive curriculum",
+      "Student progress tracking",
+      "Intelligent tutoring",
+      "Content recommendation",
+      "Learning analytics",
+      "Mobile learning",
+      "Virtual classrooms",
+      "Parent portal"
+    ],
+    benefits: [
+      "Improve learning outcomes by 60%",
+      "Reduce teaching workload by 40%",
+      "Personalize education for each student",
+      "Track progress in real-time",
+      "Engage students better"
+    ],
+    useCases: [
+      "K-12 schools",
+      "Higher education",
+      "Corporate training",
+      "Online learning platforms",
+      "Tutoring services"
+    ],
+    targetAudience: [
+      "Educational institutions",
+      "Teachers and instructors",
+      "Corporate trainers",
+      "Online education providers",
+      "Parents and students"
+    ],
+    tags: ["EdTech", "AI", "Education", "Personalization", "Learning Analytics"],
+    estimatedDelivery: "6-10 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,200 - $3,600/month",
+    roi: "180-300%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "React", "Node.js", "MongoDB"],
+      integrations: ["Canvas", "Blackboard", "Moodle", "Google Classroom", "Microsoft Teams"],
+      apiEndpoints: 100,
+      uptime: "99.7%",
+      security: ["FERPA", "COPPA", "SOC 2", "Data encryption"]
+    },
+    competitors: ["Coursera", "Udemy", "Duolingo", "Khan Academy", "Pluralsight"],
+    marketSize: "$89.1 billion by 2025"
+  },
+
+  // AI-Powered Marketing Automation Platform
+  {
+    id: "ai-marketing-automation-platform",
+    title: "AI-Powered Marketing Automation Platform",
+    description: "Intelligent marketing automation platform that uses AI to optimize campaigns, personalize content, and maximize ROI across all marketing channels.",
+    category: "Marketing AI",
+    subcategory: "Marketing Automation",
+    price: 1600,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI campaign optimization",
+      "Content personalization",
+      "Predictive analytics",
+      "Multi-channel automation",
+      "Lead scoring",
+      "Customer segmentation",
+      "A/B testing automation",
+      "ROI tracking",
+      "Social media management",
+      "Email marketing"
+    ],
+    benefits: [
+      "Increase conversion rates by 45%",
+      "Reduce marketing costs by 30%",
+      "Improve customer engagement by 60%",
+      "Automate campaign optimization",
+      "Maximize marketing ROI"
+    ],
+    useCases: [
+      "E-commerce marketing",
+      "B2B marketing",
+      "SaaS marketing",
+      "Retail marketing",
+      "Service business marketing"
+    ],
+    targetAudience: [
+      "Marketing managers",
+      "Digital marketers",
+      "E-commerce businesses",
+      "SaaS companies",
+      "Marketing agencies"
+    ],
+    tags: ["Marketing", "AI", "Automation", "Personalization", "Analytics"],
+    estimatedDelivery: "6-10 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,600 - $4,800/month",
+    roi: "200-350%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
+      integrations: ["HubSpot", "Salesforce", "Mailchimp", "Google Ads", "Facebook Ads"],
+      apiEndpoints: 150,
+      uptime: "99.8%",
+      security: ["SOC 2", "GDPR", "Data encryption", "API security"]
+    },
+    competitors: ["HubSpot", "Marketo", "Pardot", "ActiveCampaign", "ConvertKit"],
+    marketSize: "$25.1 billion by 2025"
+  },
+
+  // AI-Powered Sales Intelligence Platform
+  {
+    id: "ai-sales-intelligence-platform",
+    title: "AI-Powered Sales Intelligence Platform",
+    description: "Intelligent sales platform that uses AI to identify prospects, predict sales outcomes, and automate sales processes for maximum efficiency.",
+    category: "Sales AI",
+    subcategory: "Sales Intelligence",
+    price: 1900,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI prospect identification",
+      "Sales prediction analytics",
+      "Lead scoring automation",
+      "Sales process automation",
+      "Customer behavior analysis",
+      "Pipeline optimization",
+      "Sales coaching",
+      "Performance analytics",
+      "CRM integration",
+      "Mobile sales app"
+    ],
+    benefits: [
+      "Increase sales by 35%",
+      "Reduce sales cycle by 40%",
+      "Improve lead conversion by 50%",
+      "Automate sales processes",
+      "Enhance sales team performance"
+    ],
+    useCases: [
+      "B2B sales",
+      "Enterprise sales",
+      "SaaS sales",
+      "Real estate sales",
+      "Financial services sales"
+    ],
+    targetAudience: [
+      "Sales managers",
+      "Sales representatives",
+      "Business development teams",
+      "Sales operations",
+      "Sales consultants"
+    ],
+    tags: ["Sales", "AI", "Intelligence", "Automation", "Analytics"],
+    estimatedDelivery: "6-10 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,900 - $5,700/month",
+    roi: "250-400%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
+      integrations: ["Salesforce", "HubSpot", "Pipedrive", "Zoho CRM", "Microsoft Dynamics"],
+      apiEndpoints: 120,
+      uptime: "99.8%",
+      security: ["SOC 2", "GDPR", "Data encryption", "Access control"]
+    },
+    competitors: ["Salesforce", "HubSpot", "Pipedrive", "Zoho CRM", "Freshsales"],
+    marketSize: "$31.2 billion by 2025"
+  },
+
+  // AI-Powered Customer Support Platform
+  {
+    id: "ai-customer-support-platform",
+    title: "AI-Powered Customer Support Platform",
+    description: "Intelligent customer support platform that uses AI to provide instant responses, route tickets efficiently, and improve customer satisfaction.",
+    category: "Customer Support AI",
+    subcategory: "Support Automation",
+    price: 1400,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI chatbot support",
+      "Ticket routing automation",
+      "Knowledge base management",
+      "Customer sentiment analysis",
+      "Support ticket prioritization",
+      "Automated responses",
+      "Multi-channel support",
+      "Performance analytics",
+      "Customer feedback collection",
+      "Mobile support app"
+    ],
+    benefits: [
+      "Reduce response time by 80%",
+      "Increase customer satisfaction by 45%",
+      "Reduce support costs by 50%",
+      "Automate routine support tasks",
+      "Improve support team efficiency"
+    ],
+    useCases: [
+      "E-commerce support",
+      "SaaS customer support",
+      "Enterprise support",
+      "Retail customer service",
+      "Technical support"
+    ],
+    targetAudience: [
+      "Customer support managers",
+      "Support representatives",
+      "E-commerce businesses",
+      "SaaS companies",
+      "Customer service teams"
+    ],
+    tags: ["Customer Support", "AI", "Automation", "Chatbot", "Analytics"],
+    estimatedDelivery: "4-8 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,400 - $4,200/month",
+    roi: "180-300%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "NLP", "React", "Node.js", "MongoDB"],
+      integrations: ["Zendesk", "Intercom", "Freshdesk", "Help Scout", "Slack"],
+      apiEndpoints: 100,
+      uptime: "99.7%",
+      security: ["SOC 2", "GDPR", "Data encryption", "API security"]
+    },
+    competitors: ["Zendesk", "Intercom", "Freshdesk", "Help Scout", "Crisp"],
+    marketSize: "$18.2 billion by 2025"
+  },
+
+  // AI-Powered Project Management Platform
+  {
+    id: "ai-project-management-platform",
+    title: "AI-Powered Project Management Platform",
+    description: "Intelligent project management platform that uses AI to optimize resource allocation, predict project outcomes, and automate project workflows.",
+    category: "Project Management AI",
+    subcategory: "Project Optimization",
+    price: 1700,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI resource optimization",
+      "Project outcome prediction",
+      "Risk assessment automation",
+      "Workflow automation",
+      "Team performance analytics",
+      "Project timeline optimization",
+      "Budget forecasting",
+      "Stakeholder communication",
+      "Mobile project app",
+      "Integration APIs"
+    ],
+    benefits: [
+      "Improve project success rate by 40%",
+      "Reduce project delays by 50%",
+      "Optimize resource allocation by 35%",
+      "Automate project workflows",
+      "Enhance team collaboration"
+    ],
+    useCases: [
+      "Software development",
+      "Construction projects",
+      "Marketing campaigns",
+      "Event planning",
+      "Product development"
+    ],
+    targetAudience: [
+      "Project managers",
+      "Team leaders",
+      "Business consultants",
+      "Agencies",
+      "Enterprise teams"
+    ],
+    tags: ["Project Management", "AI", "Automation", "Analytics", "Collaboration"],
+    estimatedDelivery: "6-10 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,700 - $5,100/month",
+    roi: "200-350%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
+      integrations: ["Jira", "Asana", "Monday.com", "Trello", "Microsoft Project"],
+      apiEndpoints: 120,
+      uptime: "99.8%",
+      security: ["SOC 2", "GDPR", "Data encryption", "Access control"]
+    },
+    competitors: ["Asana", "Monday.com", "Trello", "Jira", "Microsoft Project"],
+    marketSize: "$22.8 billion by 2025"
+  },
+
+  // AI-Powered Inventory Management Platform
+  {
+    id: "ai-inventory-management-platform",
+    title: "AI-Powered Inventory Management Platform",
+    description: "Intelligent inventory management platform that uses AI to predict demand, optimize stock levels, and automate inventory operations.",
+    category: "Inventory AI",
+    subcategory: "Inventory Optimization",
+    price: 1300,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "AI demand forecasting",
+      "Stock level optimization",
+      "Automated reordering",
+      "Inventory tracking",
+      "Warehouse management",
+      "Supplier management",
+      "Cost optimization",
+      "Real-time analytics",
+      "Mobile inventory app",
+      "Integration APIs"
+    ],
+    benefits: [
+      "Reduce inventory costs by 25%",
+      "Improve stock accuracy by 95%",
+      "Eliminate stockouts by 80%",
+      "Automate inventory operations",
+      "Optimize warehouse space"
+    ],
+    useCases: [
+      "Retail inventory",
+      "Manufacturing inventory",
+      "E-commerce inventory",
+      "Warehouse management",
+      "Supply chain optimization"
+    ],
+    targetAudience: [
+      "Inventory managers",
+      "Warehouse managers",
+      "Retail businesses",
+      "Manufacturing companies",
+      "E-commerce stores"
+    ],
+    tags: ["Inventory Management", "AI", "Automation", "Supply Chain", "Analytics"],
+    estimatedDelivery: "6-10 weeks",
+    supportLevel: "premium",
+    marketPrice: "$1,300 - $3,900/month",
+    roi: "180-300%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    technicalSpecs: {
+      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
+      integrations: ["Shopify", "WooCommerce", "SAP", "Oracle", "QuickBooks"],
+      apiEndpoints: 100,
+      uptime: "99.7%",
+      security: ["SOC 2", "GDPR", "Data encryption", "API security"]
+    },
+    competitors: ["TradeGecko", "Zoho Inventory", "Fishbowl", "SAP Business One", "Oracle NetSuite"],
+    marketSize: "$19.8 billion by 2025"
   }
 ];
 
@@ -718,6 +1303,94 @@ export const SPECIALIZED_SERVICES = [
     category: "Logistics AI",
     price: 3200,
     marketPrice: "$3,200 - $8,500/month"
+  },
+  {
+    id: "ai-powered-real-estate",
+    title: "AI Real Estate Platform",
+    description: "Intelligent real estate platform for property valuation, market analysis, lead generation, and transaction management.",
+    category: "Real Estate AI",
+    price: 2400,
+    marketPrice: "$2,400 - $6,800/month"
+  },
+  {
+    id: "quantum-cybersecurity",
+    title: "Quantum Cybersecurity Platform",
+    description: "Next-generation cybersecurity platform using quantum-resistant encryption and quantum key distribution for ultimate security.",
+    category: "Quantum Security",
+    price: 6000,
+    marketPrice: "$6,000 - $18,000/month"
+  },
+  {
+    id: "ai-powered-manufacturing",
+    title: "AI Manufacturing Platform",
+    description: "Intelligent manufacturing platform for predictive maintenance, quality control, supply chain optimization, and automation.",
+    category: "Manufacturing AI",
+    price: 3800,
+    marketPrice: "$3,800 - $11,000/month"
+  },
+  {
+    id: "blockchain-identity-platform",
+    title: "Blockchain Identity Platform",
+    description: "Decentralized identity management platform using blockchain for secure, verifiable, and privacy-preserving digital identities.",
+    category: "Blockchain Identity",
+    price: 1800,
+    marketPrice: "$1,800 - $5,400/month"
+  },
+  {
+    id: "ai-powered-energy-management",
+    title: "AI Energy Management Platform",
+    description: "Intelligent energy management platform for grid optimization, renewable energy integration, and demand response automation.",
+    category: "Energy AI",
+    price: 2600,
+    marketPrice: "$2,600 - $7,800/month"
+  },
+  {
+    id: "quantum-drug-discovery",
+    title: "Quantum Drug Discovery Platform",
+    description: "Advanced drug discovery platform using quantum computing for molecular modeling, protein folding, and drug optimization.",
+    category: "Quantum Healthcare",
+    price: 12000,
+    marketPrice: "$12,000 - $35,000/month"
+  },
+  {
+    id: "ai-powered-agriculture",
+    title: "AI Agriculture Platform",
+    description: "Intelligent agriculture platform for precision farming, crop monitoring, yield prediction, and automated irrigation.",
+    category: "Agriculture AI",
+    price: 1600,
+    marketPrice: "$1,600 - $4,800/month"
+  },
+  {
+    id: "blockchain-carbon-trading",
+    title: "Blockchain Carbon Trading Platform",
+    description: "Decentralized carbon credit trading platform using blockchain for transparent, verifiable, and efficient carbon markets.",
+    category: "Blockchain Sustainability",
+    price: 2200,
+    marketPrice: "$2,200 - $6,600/month"
+  },
+  {
+    id: "ai-powered-construction",
+    title: "AI Construction Platform",
+    description: "Intelligent construction platform for project planning, safety monitoring, quality control, and resource optimization.",
+    category: "Construction AI",
+    price: 3000,
+    marketPrice: "$3,000 - $9,000/month"
+  },
+  {
+    id: "quantum-materials-science",
+    title: "Quantum Materials Science Platform",
+    description: "Advanced materials science platform using quantum computing for material discovery, simulation, and optimization.",
+    category: "Quantum Materials",
+    price: 15000,
+    marketPrice: "$15,000 - $45,000/month"
+  },
+  {
+    id: "ai-powered-transportation",
+    title: "AI Transportation Platform",
+    description: "Intelligent transportation platform for traffic optimization, autonomous vehicles, fleet management, and smart city integration.",
+    category: "Transportation AI",
+    price: 2800,
+    marketPrice: "$2,800 - $8,400/month"
   }
 ];
 
