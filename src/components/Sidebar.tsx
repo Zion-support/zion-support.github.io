@@ -88,40 +88,16 @@ export function Sidebar() {
       path: '/services',
       icon: Briefcase,
       children: [
-        { name: 'AI Solutions', path: '/services/ai-solutions', icon: Brain },
-        { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield },
-        { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },
-        { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Server },
-        { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Zap },
-        { name: 'Green IT', path: '/green-it', icon: Leaf },
+        { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
+        { name: 'Cybersecurity', path: '/cybersecurity', icon: Shield },
         { name: 'Quantum Technology', path: '/quantum-technology', icon: Cpu },
-        { name: 'Space Tech', path: '/space-tech', icon: Rocket },
+        { name: 'Space Technology', path: '/space-tech', icon: Rocket },
+        { name: 'IT Services', path: '/it-services', icon: Server },
+        { name: 'Cloud & DevOps', path: '/cloud-devops', icon: Cloud },
+        { name: 'Digital Transformation', path: '/digital-transformation', icon: Zap },
+        { name: 'Green IT', path: '/green-it', icon: Leaf },
         { name: 'Mobile Solutions', path: '/mobile', icon: Smartphone },
-        { name: 'Financial Solutions', path: '/financial-solutions', icon: DollarSign },
-        { name: 'Micro SaaS Services', path: '/micro-saas-services', icon: Building }
-      ]
-    },
-    {
-      name: 'Talent',
-      path: '/talent',
-      icon: Users,
-      children: [
-        { name: 'Browse Talents', path: '/talents', icon: Users2 },
-        { name: 'Talent Directory', path: '/talent-directory', icon: FileSearch },
-        { name: 'AI Matcher', path: '/ai-matcher', icon: Brain },
-        { name: 'Hire Now', path: '/hire-now', icon: Briefcase },
-        { name: 'Post a Job', path: '/post-job', icon: FileText }
-      ]
-    },
-    {
-      name: 'Marketplace',
-      path: '/marketplace',
-      icon: ShoppingCart,
-      children: [
-        { name: 'Equipment', path: '/equipment', icon: Wrench },
-        { name: 'Categories', path: '/categories', icon: Settings },
-        { name: 'Featured', path: '/featured', icon: Star },
-        { name: 'Deals', path: '/deals', icon: Zap }
+        { name: 'Financial Solutions', path: '/financial-solutions', icon: DollarSign }
       ]
     },
     {
@@ -131,9 +107,8 @@ export function Sidebar() {
       children: [
         { name: 'About Us', path: '/about', icon: Building },
         { name: 'Our Team', path: '/team', icon: Users2 },
-        { name: 'Careers', path: '/careers', icon: Briefcase },
-        { name: 'Partners', path: '/partners', icon: Handshake },
-        { name: 'Press', path: '/press', icon: FileText },
+        { name: 'Case Studies', path: '/case-studies', icon: Target },
+        { name: 'Contact', path: '/contact', icon: MessageSquare },
         { name: 'Research & Development', path: '/research-development', icon: Lightbulb }
       ]
     },
@@ -143,13 +118,10 @@ export function Sidebar() {
       icon: FileText,
       children: [
         { name: 'Blog & Insights', path: '/blog', icon: BookOpen },
-        { name: 'Tutorials', path: '/tutorials', icon: Code },
-        { name: 'Webinars', path: '/webinars', icon: Video },
-        { name: 'White Papers', path: '/white-papers', icon: FileSearch },
-        { name: 'Case Studies', path: '/case-studies', icon: Target },
-        { name: 'Documentation', path: '/documentation', icon: Code },
-        { name: 'API Reference', path: '/api', icon: Code },
-        { name: 'Developer Portal', path: '/developer', icon: Code }
+        { name: 'Reports', path: '/reports', icon: FileSearch },
+        { name: 'Documentation', path: '/docs', icon: Code },
+        { name: 'Help Center', path: '/help', icon: HelpCircle },
+        { name: 'Sitemap', path: '/sitemap', icon: Map }
       ]
     },
     {
@@ -157,23 +129,9 @@ export function Sidebar() {
       path: '/support',
       icon: HelpCircle,
       children: [
-        { name: 'Help Center', path: '/help-center', icon: HelpCircle },
-        { name: 'FAQ', path: '/faq', icon: HelpCircle },
+        { name: 'Help Center', path: '/help', icon: HelpCircle },
         { name: 'Contact Support', path: '/contact', icon: MessageSquare },
-        { name: 'Live Chat', path: '/chat', icon: MessageSquare },
-        { name: 'Status', path: '/status', icon: BarChart3 },
-        { name: 'Request Quote', path: '/request-quote', icon: MessageSquare }
-      ]
-    },
-    {
-      name: 'Enterprise',
-      path: '/enterprise',
-      icon: Building,
-      children: [
-        { name: 'Enterprise Solutions', path: '/enterprise', icon: Building },
-        { name: 'Custom Solutions', path: '/solutions', icon: Target },
-        { name: 'Community', path: '/community', icon: Users2 },
-        { name: 'Marketplace', path: '/marketplace', icon: ShoppingCart }
+        { name: 'Status', path: '/status', icon: BarChart3 }
       ]
     },
     {
@@ -184,7 +142,7 @@ export function Sidebar() {
         { name: 'Performance Metrics', path: '/analytics/performance', icon: Activity },
         { name: 'User Analytics', path: '/analytics/users', icon: Users },
         { name: 'Business Intelligence', path: '/analytics/bi', icon: PieChart },
-        { name: 'Reports', path: '/analytics/reports', icon: BarChart }
+        { name: 'Reports', path: '/reports', icon: BarChart }
       ]
     }
   ];
@@ -274,27 +232,27 @@ export function Sidebar() {
           <h3 className="text-sm font-semibold text-gray-600 mb-3">Quick Actions</h3>
           <div className="space-y-2">
             <Link
-              to="/request-quote"
+              to="/contact"
               className="flex items-center space-x-3 px-4 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
             >
               <MessageSquare className="h-5 w-5" />
-              <span className="font-medium">Request Quote</span>
+              <span className="font-medium">Contact Us</span>
             </Link>
             
             <Link
-              to="/contact"
+              to="/services"
               className="flex items-center space-x-3 px-4 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
             >
-              <HelpCircle className="h-5 w-5" />
-              <span className="font-medium">Get Help</span>
+              <Briefcase className="h-5 w-5" />
+              <span className="font-medium">View Services</span>
             </Link>
 
             <Link
-              to="/pricing"
+              to="/case-studies"
               className="flex items-center space-x-3 px-4 py-3 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors"
             >
-              <DollarSign className="h-5 w-5" />
-              <span className="font-medium">View Pricing</span>
+              <Target className="h-5 w-5" />
+              <span className="font-medium">Case Studies</span>
             </Link>
           </div>
         </div>
