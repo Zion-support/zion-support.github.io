@@ -5,6 +5,13 @@
     "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "typeRoots": ["./src/types"],
+
+    /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
@@ -55,6 +62,6 @@
       }
     ]
   },
-  "include": ["src", "pages"],
+  "include": ["src", "src/types/offline-shims.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

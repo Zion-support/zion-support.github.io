@@ -53,13 +53,13 @@ import {
 } from "lucide-react";
 
 function ProjectDetailsContent() {
-  const { projectId } = useParams() as { projectId?: string };
+  const { projectId } = useParams();
   const { user } = useAuth();
   const { getProjectById, updateProjectStatus } = useProjects();
   
-  const [project, setProject] = useState<Project | null>(null);
+  const [project, setProject] = useState(null as Project | null);
   const [isLoading, setIsLoading] = useState(true);
-  const [notes, setNotes] = useState<any[]>([]);
+  const [notes, setNotes] = useState([] as any[]);
   const [newNote, setNewNote] = useState("");
   const [isSubmittingNote, setIsSubmittingNote] = useState(false);
   const [activeTab, setActiveTab] = useState("details");

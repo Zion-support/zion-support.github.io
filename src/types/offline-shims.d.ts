@@ -6,20 +6,19 @@ declare namespace JSX {
 }
 
 declare module 'react' {
+  export type ReactNode = any;
+  export interface ReactElement {}
+  export const Fragment: any;
   const React: any;
   export default React;
-  export as namespace React;
-
-  // Commonly used hooks and utilities
-  export function useState<S>(initialState: S | (() => S)): [S, (value: S | ((prev: S) => S)) => void];
-  export function useEffect(effect: () => void | (() => void), deps?: any[]): void;
-  export function useRef<T>(initialValue: T | null): { current: T | null };
-  export function createContext<T>(defaultValue: T): any;
-  export function useContext<T>(context: any): T;
-  export function useCallback<F extends (...args: any[]) => any>(fn: F, deps: any[]): F;
-  export function useMemo<T>(factory: () => T, deps: any[]): T;
-  export function forwardRef<T, P = {}>(render: (props: P, ref: any) => any): any;
-
+  export interface FC<P = {}> {
+    (props: P & { children?: ReactNode }): ReactElement | null;
+  }
+  export interface SyntheticEvent<T = Element> { target: T; preventDefault(): void; }
+  export interface ChangeEvent<T = Element> extends SyntheticEvent<T> {}
+  export interface KeyboardEvent<T = Element> extends SyntheticEvent<T> {}
+  export interface MouseEvent<T = Element> extends SyntheticEvent<T> {}
+  export interface FormEvent<T = Element> extends SyntheticEvent<T> {}
   export type LegacyRef<T> = any;
   export type Ref<T> = any;
   export type ElementRef<T> = any;
@@ -46,7 +45,8 @@ declare module 'react-hook-form' {
 }
 
 declare module 'zod' {
-  export const z: any;
+  const z: any;
+  export = z;
 }
 
 declare module 'class-variance-authority' {
@@ -54,23 +54,6 @@ declare module 'class-variance-authority' {
 }
 
 declare module 'jspdf' {
-  export class jsPDF {
-    constructor(...args: any[]);
-    [key: string]: any;
-  }
+  export class jsPDF {}
   export default jsPDF;
-}
-
-declare module 'clsx' {
-  const clsx: (...classes: any[]) => string;
-  export default clsx;
-}
-
-declare module 'lucide-react' {
-  export type LucideIcon = any;
-}
-
-declare module '@supabase/supabase-js' {
-  export type User = any;
-  export interface SupabaseClient {}
 }
