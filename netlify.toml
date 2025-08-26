@@ -98,6 +98,16 @@
   to = "/quantum-cybersecurity/"
   status = 301
 
+[[redirects]]
+  from = "/ai-consciousness-evolution"
+  to = "/ai-consciousness-evolution-2029/"
+  status = 301
+
+[[redirects]]
+  from = "/ai-ethics-governance"
+  to = "/services/ai-ethics-governance/"
+  status = 301
+
 # Security and performance headers for static assets
 [[headers]]
   for = "/*"
