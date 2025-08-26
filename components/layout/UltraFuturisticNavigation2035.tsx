@@ -22,12 +22,37 @@ interface NavigationItem {
 
 const navigationItems: NavigationItem[] = [
   {
-    name: 'AI & Consciousness',
-    href: '/ai-services',
-    icon: <Brain className="w-5 h-5" />,
-    description: 'Revolutionary AI consciousness and emotional intelligence',
-    badge: 'New',
-    color: 'from-purple-500 to-pink-500',
+    name: 'Pricing',
+    href: '/pricing',
+    icon: <DollarSign className="w-5 h-5" />,
+    description: 'Plans and average market prices',
+    children: [
+      { name: 'Standard Pricing', href: '/pricing', description: 'Our plans' },
+      { name: 'Market Pricing', href: '/market-pricing', description: 'Compare market averages' }
+    ]
+  },
+  {
+    name: 'Resources',
+    href: '/resources',
+    icon: <BookOpen className="w-5 h-5" />,
+    description: 'Guides, reports and tools',
+    children: [
+      { name: 'Blog', href: '/blog', description: 'Insights and updates' },
+      { name: 'Case Studies', href: '/case-studies', description: 'Proven results' },
+      { name: 'Developer', href: '/developer', description: 'Docs and SDKs' },
+      { name: 'Services Advertising', href: '/services-advertising', description: 'Features, benefits and market pricing links' },
+      { name: 'AI Knowledge Graph Studio', href: '/services/ai-knowledge-graph-studio', description: 'Semantic search & lineage' },
+      { name: 'LLM Guarded API Gateway', href: '/services/llm-guarded-api-gateway', description: 'Safety and policies for LLM apps' },
+      { name: 'Events', href: '/events', description: 'Upcoming events' },
+      { name: 'Webinars', href: '/webinars', description: 'Live and on-demand' }
+    ]
+  },
+  {
+    name: 'Contact',
+    href: '/contact',
+    icon: <Phone className="w-5 h-5" />,
+    description: 'Talk to our team',
+    featured: true,
     children: [
       { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform', description: 'Advanced AI that understands human emotions' },
       { name: 'Quantum AI Fusion', href: '/quantum-ai-fusion-platform', description: 'Quantum-AI hybrid computing' },
