@@ -323,13 +323,13 @@ const Services: React.FC = () => {
           </div>
           <div className="mb-6">
             <Link
-              to="/services-showcase"
+              to="/comprehensive-services-2025"
               className="inline-flex items-center px-6 py-2 text-blue-400 hover:text-blue-300 border border-blue-400 rounded-lg transition-all duration-300"
             >
               View Complete Services Portfolio →
             </Link>
             <p className="text-sm text-gray-400 mt-2">
-              Discover our advanced innovative services including AI, quantum computing, blockchain, and specialized industry solutions
+              Discover our comprehensive showcase of 30+ innovative micro SAAS services, specialized IT solutions, and cutting-edge AI platforms for 2025
             </p>
           </div>
           <div className="text-sm text-gray-400">

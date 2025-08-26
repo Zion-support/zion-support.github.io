@@ -4,9 +4,9 @@ export interface SpecializedITService2025 {
   description: string;
   category: string;
   subcategory: string;
-  price: number;
+  hourlyRate: number;
+  projectRate: number;
   currency: string;
-  pricingModel: string;
   features: string[];
   benefits: string[];
   useCases: string[];
@@ -20,512 +20,581 @@ export interface SpecializedITService2025 {
     email: string;
     website: string;
   };
-  technology: string[];
-  compliance: string[];
-  integrations: string[];
-  apiAccess: boolean;
-  mobileApp: boolean;
-  whiteLabel: boolean;
-  customBranding: boolean;
-  dataRetention: string;
-  uptime: string;
-  securityFeatures: string[];
+  websiteUrl: string;
+  demoUrl?: string;
+  documentationUrl?: string;
+  technologyStack: string[];
+  complianceStandards: string[];
+  integrationCapabilities: string[];
+  roiMetrics: string[];
+  competitiveAdvantages: string[];
 }
 
 export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService2025[] = [
-  // Advanced Cybersecurity Services
+  // Cloud-Native Application Development
   {
-    id: "zero-trust-security-architecture",
-    title: "Zero Trust Security Architecture Implementation",
-    description: "Comprehensive zero trust security framework that implements identity verification, device trust, and continuous monitoring for maximum security posture.",
-    category: "Cybersecurity",
-    subcategory: "Zero Trust Security",
-    price: 8500,
+    id: "cloud-native-app-development-2025",
+    title: "Cloud-Native Application Development Services",
+    description: "Expert cloud-native application development using microservices architecture, containerization, and cloud-native technologies for scalable, resilient applications.",
+    category: "Cloud & Development",
+    subcategory: "Application Development",
+    hourlyRate: 150,
+    projectRate: 25000,
     currency: "$",
-    pricingModel: "monthly",
     features: [
-      "Identity and access management (IAM)",
-      "Multi-factor authentication (MFA)",
-      "Device trust verification",
-      "Continuous monitoring and analytics",
-      "Micro-segmentation",
-      "Privileged access management",
-      "Security policy enforcement",
-      "Threat detection and response"
+      "Microservices architecture design",
+      "Container orchestration with Kubernetes",
+      "Serverless function development",
+      "Cloud-native database design",
+      "API-first development approach",
+      "DevOps pipeline implementation",
+      "Cloud security integration",
+      "Performance optimization",
+      "Scalability planning",
+      "Monitoring and observability"
     ],
     benefits: [
-      "Reduce security breaches by 90%",
-      "Improve compliance posture",
-      "Better visibility into security threats",
-      "Automated security responses",
-      "Scalable security architecture"
+      "Faster time to market",
+      "Improved scalability and performance",
+      "Reduced infrastructure costs",
+      "Enhanced security and compliance",
+      "Better user experience",
+      "Easier maintenance and updates"
     ],
     useCases: [
-      "Financial institutions",
-      "Healthcare organizations",
-      "Government agencies",
-      "Enterprise companies",
+      "E-commerce platforms",
+      "SaaS applications",
+      "Mobile app backends",
+      "Enterprise applications",
+      "IoT platforms",
+      "Data processing applications"
+    ],
+    targetAudience: [
+      "Startups",
+      "Enterprise businesses",
+      "Digital agencies",
+      "Technology companies",
+      "E-commerce businesses",
+      "SaaS companies"
+    ],
+    tags: ["Cloud-Native", "Microservices", "Kubernetes", "DevOps", "API Development"],
+    estimatedDelivery: "8-16 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$150-250/hour, $25,000-100,000/project",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/cloud-native-app-development-2025",
+    technologyStack: ["Kubernetes", "Docker", "AWS/Azure/GCP", "Node.js", "Python", "Go", "React", "Vue.js"],
+    complianceStandards: ["SOC2", "ISO 27001", "GDPR", "HIPAA", "PCI DSS"],
+    integrationCapabilities: ["CI/CD Pipelines", "Cloud Services", "Monitoring Tools", "Security Tools", "Databases"],
+    roiMetrics: ["40% faster development", "60% cost reduction", "99.9% uptime"],
+    competitiveAdvantages: ["Cloud-native expertise", "Microservices architecture", "DevOps automation", "Performance optimization"]
+  },
+
+  // Zero-Trust Network Architecture
+  {
+    id: "zero-trust-network-architecture-2025",
+    title: "Zero-Trust Network Architecture Implementation",
+    description: "Comprehensive zero-trust network architecture design and implementation for enhanced security, compliance, and network visibility.",
+    category: "Cybersecurity & Networking",
+    subcategory: "Network Security",
+    hourlyRate: 175,
+    projectRate: 35000,
+    currency: "$",
+    features: [
+      "Identity and access management",
+      "Network segmentation",
+      "Continuous monitoring",
+      "Threat detection",
+      "Access control policies",
+      "Multi-factor authentication",
+      "Network visibility",
+      "Compliance reporting",
+      "Security automation",
+      "Incident response"
+    ],
+    benefits: [
+      "Enhanced security posture",
+      "Improved compliance",
+      "Better network visibility",
+      "Reduced attack surface",
+      "Automated security responses",
+      "Cost-effective security"
+    ],
+    useCases: [
+      "Enterprise networks",
+      "Healthcare networks",
+      "Financial services",
+      "Government networks",
+      "Educational institutions",
       "Critical infrastructure"
     ],
     targetAudience: [
-      "CISOs",
-      "Security architects",
-      "IT directors",
-      "Compliance officers",
-      "Risk managers"
-    ],
-    tags: ["Cybersecurity", "Zero Trust", "IAM", "Security Architecture", "Compliance"],
-    estimatedDelivery: "8-12 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$8,500 - $25,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technology: ["Okta", "Azure AD", "CrowdStrike", "Palo Alto", "Splunk"],
-    compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
-    integrations: ["Active Directory", "LDAP", "SAML", "OAuth", "RADIUS"],
-    apiAccess: true,
-    mobileApp: true,
-    whiteLabel: true,
-    customBranding: true,
-    dataRetention: "10 years",
-    uptime: "99.99%",
-    securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
-  },
-
-  // Cloud-Native Application Development
-  {
-    id: "cloud-native-app-development",
-    title: "Cloud-Native Application Development Platform",
-    description: "Modern cloud-native application development platform that leverages microservices, containers, and serverless architecture for scalable and resilient applications.",
-    category: "Cloud Development",
-    subcategory: "Cloud-Native Apps",
-    price: 4200,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Microservices architecture design",
-      "Container orchestration (Kubernetes)",
-      "Serverless function development",
-      "API-first design principles",
-      "DevOps automation pipelines",
-      "Cloud-native monitoring",
-      "Auto-scaling capabilities",
-      "Multi-cloud deployment"
-    ],
-    benefits: [
-      "Reduce infrastructure costs by 40%",
-      "Improve application scalability",
-      "Faster time to market",
-      "Better resource utilization",
-      "Enhanced reliability"
-    ],
-    useCases: [
-      "Web applications",
-      "Mobile app backends",
-      "API services",
-      "Data processing pipelines",
-      "IoT applications"
-    ],
-    targetAudience: [
-      "Software development teams",
-      "DevOps engineers",
-      "Cloud architects",
-      "Product managers",
-      "Technology leaders"
-    ],
-    tags: ["Cloud-Native", "Microservices", "Kubernetes", "Serverless", "DevOps"],
-    estimatedDelivery: "6-10 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$4,200 - $15,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technology: ["Docker", "Kubernetes", "AWS Lambda", "Azure Functions", "React", "Node.js"],
-    compliance: ["SOC 2", "ISO 27001", "GDPR"],
-    integrations: ["AWS", "Azure", "GCP", "GitHub", "Jenkins", "Prometheus"],
-    apiAccess: true,
-    mobileApp: true,
-    whiteLabel: true,
-    customBranding: true,
-    dataRetention: "7 years",
-    uptime: "99.99%",
-    securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
-  },
-
-  // Data Engineering and Analytics Platform
-  {
-    id: "data-engineering-analytics-platform",
-    title: "Data Engineering and Analytics Platform",
-    description: "Comprehensive data engineering platform that handles data ingestion, processing, storage, and analytics with real-time capabilities and AI-powered insights.",
-    category: "Data Engineering",
-    subcategory: "Data Analytics",
-    price: 3800,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Real-time data ingestion",
-      "Data pipeline automation",
-      "Data warehouse management",
-      "Advanced analytics dashboard",
-      "Machine learning model deployment",
-      "Data quality monitoring",
-      "ETL/ELT processes",
-      "Business intelligence tools"
-    ],
-    benefits: [
-      "Improve data processing speed by 80%",
-      "Reduce data storage costs by 30%",
-      "Better data quality and accuracy",
-      "Real-time business insights",
-      "Scalable data architecture"
-    ],
-    useCases: [
-      "Business intelligence",
-      "Customer analytics",
-      "Operational reporting",
-      "Predictive analytics",
-      "Data science projects"
-    ],
-    targetAudience: [
-      "Data engineers",
-      "Data scientists",
-      "Business analysts",
-      "IT managers",
-      "Business executives"
-    ],
-    tags: ["Data Engineering", "Analytics", "Big Data", "Machine Learning", "Business Intelligence"],
-    estimatedDelivery: "6-8 weeks",
-    supportLevel: "enterprise",
-    marketPrice: "$3,800 - $12,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technology: ["Apache Kafka", "Apache Spark", "Snowflake", "Tableau", "Python", "SQL"],
-    compliance: ["SOC 2", "GDPR", "HIPAA", "PCI DSS"],
-    integrations: ["Salesforce", "HubSpot", "Google Analytics", "AWS", "Azure"],
-    apiAccess: true,
-    mobileApp: true,
-    whiteLabel: true,
-    customBranding: true,
-    dataRetention: "7 years",
-    uptime: "99.99%",
-    securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
-  },
-
-  // IoT Platform and Management
-  {
-    id: "iot-platform-management",
-    title: "IoT Platform and Device Management",
-    description: "Enterprise IoT platform that manages connected devices, collects sensor data, and provides real-time monitoring and control capabilities for smart environments.",
-    category: "Internet of Things",
-    subcategory: "IoT Management",
-    price: 2800,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Device provisioning and management",
-      "Real-time data collection",
-      "Edge computing capabilities",
-      "Device monitoring and alerts",
-      "Data visualization dashboard",
-      "API management",
-      "Security and encryption",
-      "Scalable infrastructure"
-    ],
-    benefits: [
-      "Reduce operational costs by 25%",
-      "Improve efficiency by 40%",
-      "Real-time monitoring and control",
-      "Predictive maintenance",
-      "Better resource utilization"
-    ],
-    useCases: [
-      "Smart buildings",
-      "Industrial IoT",
-      "Smart cities",
-      "Connected vehicles",
-      "Environmental monitoring"
-    ],
-    targetAudience: [
-      "IoT engineers",
-      "Facility managers",
-      "Operations directors",
-      "Technology managers",
-      "Business owners"
-    ],
-    tags: ["IoT", "Device Management", "Edge Computing", "Real-time Monitoring", "Smart Environments"],
-    estimatedDelivery: "5-7 weeks",
-    supportLevel: "premium",
-    marketPrice: "$2,800 - $8,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technology: ["MQTT", "CoAP", "Node.js", "React", "PostgreSQL", "Redis"],
-    compliance: ["ISO 27001", "GDPR", "SOC 2"],
-    integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "SAP", "Oracle"],
-    apiAccess: true,
-    mobileApp: true,
-    whiteLabel: true,
-    customBranding: true,
-    dataRetention: "5 years",
-    uptime: "99.9%",
-    securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
-  },
-
-  // Blockchain Development and Integration
-  {
-    id: "blockchain-development-integration",
-    title: "Blockchain Development and Integration Services",
-    description: "Comprehensive blockchain development services including smart contract development, DApp creation, and enterprise blockchain integration for various industries.",
-    category: "Blockchain",
-    subcategory: "Development & Integration",
-    price: 5500,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "Smart contract development",
-      "DApp development",
-      "Blockchain integration",
-      "Multi-chain support",
-      "Security auditing",
-      "Performance optimization",
-      "Compliance monitoring",
-      "API development"
-    ],
-    benefits: [
-      "Reduce transaction costs by 60%",
-      "Improve transparency and trust",
-      "Automate business processes",
-      "Enhanced security",
-      "Global accessibility"
-    ],
-    useCases: [
-      "Supply chain tracking",
-      "Digital identity management",
-      "Financial services",
-      "Voting systems",
-      "Asset tokenization"
-    ],
-    targetAudience: [
-      "Blockchain developers",
+      "Large enterprises",
+      "Healthcare organizations",
       "Financial institutions",
-      "Supply chain companies",
       "Government agencies",
-      "Technology startups"
+      "Educational institutions",
+      "Critical infrastructure"
     ],
-    tags: ["Blockchain", "Smart Contracts", "DApps", "DeFi", "Web3"],
-    estimatedDelivery: "8-12 weeks",
+    tags: ["Zero-Trust", "Network Security", "Identity Management", "Access Control", "Compliance"],
+    estimatedDelivery: "12-20 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$5,500 - $18,000/month",
+    marketPrice: "$175-250/hour, $35,000-150,000/project",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technology: ["Solidity", "Web3.js", "React", "Node.js", "PostgreSQL", "IPFS"],
-    compliance: ["GDPR", "SOC 2", "Financial Regulations"],
-    integrations: ["Ethereum", "Polygon", "Solana", "MetaMask", "WalletConnect"],
-    apiAccess: true,
-    mobileApp: true,
-    whiteLabel: true,
-    customBranding: true,
-    dataRetention: "10 years",
-    uptime: "99.9%",
-    securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
+    websiteUrl: "https://ziontechgroup.com/zero-trust-network-architecture-2025",
+    technologyStack: ["Cisco", "Palo Alto", "Fortinet", "Microsoft", "VMware", "Identity Providers"],
+    complianceStandards: ["SOC2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"],
+    integrationCapabilities: ["Active Directory", "LDAP", "SIEM", "Firewalls", "VPN", "Monitoring Tools"],
+    roiMetrics: ["90% security improvement", "100% compliance", "60% incident reduction"],
+    competitiveAdvantages: ["Zero-trust expertise", "Comprehensive security", "Compliance automation", "Proactive defense"]
   },
 
-  // DevOps and CI/CD Automation
+  // Data Center Modernization
   {
-    id: "devops-cicd-automation",
-    title: "DevOps and CI/CD Automation Platform",
-    description: "Comprehensive DevOps platform that automates software development, testing, deployment, and monitoring processes for faster and more reliable software delivery.",
-    category: "DevOps",
-    subcategory: "CI/CD Automation",
-    price: 3200,
+    id: "data-center-modernization-2025",
+    title: "Data Center Modernization & Optimization",
+    description: "Comprehensive data center modernization services including infrastructure upgrades, virtualization, automation, and cloud integration.",
+    category: "Infrastructure & Cloud",
+    subcategory: "Data Center",
+    hourlyRate: 160,
+    projectRate: 40000,
     currency: "$",
-    pricingModel: "monthly",
     features: [
-      "Automated CI/CD pipelines",
-      "Infrastructure as Code (IaC)",
-      "Container orchestration",
-      "Automated testing",
-      "Deployment automation",
-      "Monitoring and alerting",
-      "Security scanning",
-      "Performance optimization"
+      "Infrastructure assessment",
+      "Virtualization implementation",
+      "Storage optimization",
+      "Network modernization",
+      "Power and cooling optimization",
+      "Automation implementation",
+      "Cloud integration",
+      "Disaster recovery planning",
+      "Performance optimization",
+      "Security enhancement"
     ],
     benefits: [
-      "Reduce deployment time by 80%",
-      "Improve code quality",
-      "Faster time to market",
-      "Better collaboration",
-      "Reduced human errors"
+      "Reduced operational costs",
+      "Improved performance",
+      "Enhanced reliability",
+      "Better scalability",
+      "Increased efficiency",
+      "Future-proof infrastructure"
     ],
     useCases: [
-      "Software development",
-      "Web applications",
-      "Mobile apps",
-      "Microservices",
-      "Cloud applications"
+      "Enterprise data centers",
+      "Colocation facilities",
+      "Edge computing sites",
+      "Disaster recovery sites",
+      "Cloud on-ramps",
+      "Hybrid infrastructure"
     ],
     targetAudience: [
-      "DevOps engineers",
-      "Software developers",
-      "System administrators",
-      "IT managers",
-      "Technology leaders"
+      "Large enterprises",
+      "Data center operators",
+      "Technology companies",
+      "Financial institutions",
+      "Healthcare organizations",
+      "Government agencies"
     ],
-    tags: ["DevOps", "CI/CD", "Automation", "Infrastructure as Code", "Containerization"],
-    estimatedDelivery: "4-6 weeks",
-    supportLevel: "premium",
-    marketPrice: "$3,200 - $10,000/month",
+    tags: ["Data Center", "Modernization", "Virtualization", "Automation", "Cloud Integration"],
+    estimatedDelivery: "16-24 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$160-220/hour, $40,000-200,000/project",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technology: ["Jenkins", "GitLab CI", "Docker", "Kubernetes", "Terraform", "Ansible"],
-    compliance: ["SOC 2", "ISO 27001", "GDPR"],
-    integrations: ["GitHub", "GitLab", "AWS", "Azure", "GCP", "Slack"],
-    apiAccess: true,
-    mobileApp: true,
-    whiteLabel: true,
-    customBranding: true,
-    dataRetention: "5 years",
-    uptime: "99.9%",
-    securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
-  },
-
-  // API Management and Integration
-  {
-    id: "api-management-integration",
-    title: "API Management and Integration Platform",
-    description: "Enterprise API management platform that provides API design, development, security, monitoring, and analytics for seamless system integration.",
-    category: "API Management",
-    subcategory: "Integration Platform",
-    price: 1800,
-    currency: "$",
-    pricingModel: "monthly",
-    features: [
-      "API design and development",
-      "API gateway management",
-      "Authentication and authorization",
-      "Rate limiting and throttling",
-      "API monitoring and analytics",
-      "Documentation generation",
-      "Version management",
-      "Integration connectors"
-    ],
-    benefits: [
-      "Reduce integration time by 70%",
-      "Improve API security",
-      "Better developer experience",
-      "Centralized API management",
-      "Enhanced monitoring"
-    ],
-    useCases: [
-      "System integration",
-      "Third-party integrations",
-      "Mobile app backends",
-      "Microservices communication",
-      "Partner integrations"
-    ],
-    targetAudience: [
-      "API developers",
-      "Integration specialists",
-      "System architects",
-      "IT managers",
-      "Business analysts"
-    ],
-    tags: ["API Management", "Integration", "Microservices", "REST", "GraphQL"],
-    estimatedDelivery: "3-4 weeks",
-    supportLevel: "premium",
-    marketPrice: "$1,800 - $6,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
-    },
-    technology: ["Kong", "Apigee", "Swagger", "Node.js", "PostgreSQL", "Redis"],
-    compliance: ["SOC 2", "GDPR", "OAuth 2.0"],
-    integrations: ["Salesforce", "HubSpot", "Stripe", "AWS", "Azure", "GCP"],
-    apiAccess: true,
-    mobileApp: true,
-    whiteLabel: true,
-    customBranding: true,
-    dataRetention: "5 years",
-    uptime: "99.9%",
-    securityFeatures: ["End-to-end encryption", "Multi-factor authentication", "Role-based access control", "Audit logging"]
+    websiteUrl: "https://ziontechgroup.com/data-center-modernization-2025",
+    technologyStack: ["VMware", "Hyper-V", "Cisco", "Dell EMC", "HPE", "Microsoft", "Linux"],
+    complianceStandards: ["SOC2", "ISO 27001", "Uptime Institute", "TIA-942", "LEED"],
+    integrationCapabilities: ["Cloud Platforms", "Monitoring Tools", "Backup Systems", "Security Tools", "Network Equipment"],
+    roiMetrics: ["30% cost reduction", "40% performance improvement", "99.99% uptime"],
+    competitiveAdvantages: ["Comprehensive modernization", "Expert infrastructure", "Performance optimization", "Future-proof design"]
   },
 
   // Digital Transformation Consulting
   {
-    id: "digital-transformation-consulting",
-    title: "Digital Transformation Consulting Services",
-    description: "Comprehensive digital transformation consulting that helps organizations modernize their technology infrastructure, processes, and culture for the digital age.",
-    category: "Digital Transformation",
-    subcategory: "Consulting Services",
-    price: 6500,
+    id: "digital-transformation-consulting-2025",
+    title: "Digital Transformation Strategy & Implementation",
+    description: "Strategic digital transformation consulting services to help organizations modernize operations, enhance customer experience, and drive innovation.",
+    category: "Strategy & Consulting",
+    subcategory: "Digital Transformation",
+    hourlyRate: 200,
+    projectRate: 50000,
     currency: "$",
-    pricingModel: "monthly",
     features: [
-      "Technology assessment",
-      "Digital strategy development",
-      "Process optimization",
+      "Digital maturity assessment",
+      "Strategy development",
+      "Technology roadmap",
       "Change management",
-      "Technology implementation",
-      "Training and education",
-      "Performance monitoring",
+      "Process optimization",
+      "Customer experience design",
+      "Innovation workshops",
+      "Implementation planning",
+      "Performance measurement",
       "Continuous improvement"
     ],
     benefits: [
-      "Improve operational efficiency by 40%",
-      "Reduce technology costs by 30%",
-      "Better customer experience",
-      "Increased competitive advantage",
+      "Improved operational efficiency",
+      "Enhanced customer experience",
+      "Increased innovation",
+      "Better competitive position",
+      "Cost optimization",
       "Future-ready organization"
     ],
     useCases: [
-      "Legacy system modernization",
-      "Process automation",
-      "Customer experience improvement",
-      "Data-driven decision making",
-      "Cloud migration"
+      "Business process transformation",
+      "Customer experience enhancement",
+      "Technology modernization",
+      "Innovation initiatives",
+      "Operational efficiency",
+      "Competitive positioning"
     ],
     targetAudience: [
-      "C-level executives",
-      "IT directors",
-      "Business leaders",
-      "Operations managers",
-      "Change management teams"
+      "Enterprise businesses",
+      "Mid-market companies",
+      "Government agencies",
+      "Healthcare organizations",
+      "Financial institutions",
+      "Manufacturing companies"
     ],
-    tags: ["Digital Transformation", "Consulting", "Change Management", "Technology Strategy", "Process Optimization"],
-    estimatedDelivery: "12-16 weeks",
+    tags: ["Digital Transformation", "Strategy", "Consulting", "Innovation", "Change Management"],
+    estimatedDelivery: "12-24 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$6,500 - $20,000/month",
+    marketPrice: "$200-300/hour, $50,000-500,000/project",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technology: ["Strategy Tools", "Process Mapping", "Change Management", "Technology Assessment"],
-    compliance: ["Industry Standards", "Best Practices", "Regulatory Requirements"],
-    integrations: ["Existing Systems", "New Technologies", "Third-party Services"],
-    apiAccess: true,
-    mobileApp: false,
-    whiteLabel: true,
-    customBranding: true,
-    dataRetention: "10 years",
-    uptime: "N/A",
-    securityFeatures: ["Confidentiality", "Data Protection", "Secure Communication"]
+    websiteUrl: "https://ziontechgroup.com/digital-transformation-consulting-2025",
+    technologyStack: ["Strategy Frameworks", "Process Tools", "Analytics Platforms", "Collaboration Tools", "Project Management"],
+    complianceStandards: ["Industry Best Practices", "Change Management", "Project Management", "Quality Assurance"],
+    integrationCapabilities: ["Business Systems", "Analytics Tools", "Collaboration Platforms", "Project Management", "CRM Systems"],
+    roiMetrics: ["25% efficiency improvement", "30% cost reduction", "40% customer satisfaction"],
+    competitiveAdvantages: ["Strategic expertise", "Proven methodologies", "Industry experience", "End-to-end support"]
+  },
+
+  // IoT Platform Development
+  {
+    id: "iot-platform-development-2025",
+    title: "IoT Platform Development & Integration",
+    description: "Custom IoT platform development services for connected devices, data collection, analytics, and automation across various industries.",
+    category: "IoT & Development",
+    subcategory: "Platform Development",
+    hourlyRate: 140,
+    projectRate: 30000,
+    currency: "$",
+    features: [
+      "IoT device integration",
+      "Data collection and storage",
+      "Real-time analytics",
+      "Device management",
+      "Security implementation",
+      "Scalable architecture",
+      "API development",
+      "Dashboard development",
+      "Alert system",
+      "Automation workflows"
+    ],
+    benefits: [
+      "Operational efficiency",
+      "Real-time insights",
+      "Predictive maintenance",
+      "Cost reduction",
+      "Improved safety",
+      "Data-driven decisions"
+    ],
+    useCases: [
+      "Smart manufacturing",
+      "Connected healthcare",
+      "Smart cities",
+      "Energy management",
+      "Asset tracking",
+      "Environmental monitoring"
+    ],
+    targetAudience: [
+      "Manufacturing companies",
+      "Healthcare providers",
+      "City governments",
+      "Energy companies",
+      "Logistics companies",
+      "Environmental agencies"
+    ],
+    tags: ["IoT", "Platform Development", "Device Integration", "Data Analytics", "Automation"],
+    estimatedDelivery: "12-20 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$140-200/hour, $30,000-150,000/project",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/iot-platform-development-2025",
+    technologyStack: ["Node.js", "Python", "MQTT", "Kafka", "InfluxDB", "Grafana", "Docker", "Kubernetes"],
+    complianceStandards: ["ISO 27001", "SOC2", "GDPR", "Industry-specific Standards"],
+    integrationCapabilities: ["IoT Devices", "Cloud Platforms", "Analytics Tools", "Business Systems", "Mobile Apps"],
+    roiMetrics: ["30% efficiency improvement", "25% cost reduction", "Real-time monitoring"],
+    competitiveAdvantages: ["IoT expertise", "Scalable architecture", "Real-time processing", "Industry solutions"]
+  },
+
+  // Blockchain Solution Development
+  {
+    id: "blockchain-solution-development-2025",
+    title: "Blockchain Solution Development Services",
+    description: "Custom blockchain solutions for supply chain transparency, digital identity, smart contracts, and decentralized applications across industries.",
+    category: "Blockchain & Development",
+    subcategory: "Solution Development",
+    hourlyRate: 180,
+    projectRate: 45000,
+    currency: "$",
+    features: [
+      "Smart contract development",
+      "Blockchain architecture design",
+      "Consensus mechanism implementation",
+      "Wallet integration",
+      "API development",
+      "Security auditing",
+      "Performance optimization",
+      "Interoperability solutions",
+      "Governance frameworks",
+      "Compliance implementation"
+    ],
+    benefits: [
+      "Enhanced transparency",
+      "Improved security",
+      "Reduced costs",
+      "Automated processes",
+      "Trust and immutability",
+      "Innovation opportunities"
+    ],
+    useCases: [
+      "Supply chain tracking",
+      "Digital identity",
+      "Financial services",
+      "Healthcare records",
+      "Voting systems",
+      "Asset tokenization"
+    ],
+    targetAudience: [
+      "Financial institutions",
+      "Supply chain companies",
+      "Healthcare organizations",
+      "Government agencies",
+      "Technology companies",
+      "Startups"
+    ],
+    tags: ["Blockchain", "Smart Contracts", "DeFi", "Supply Chain", "Digital Identity"],
+    estimatedDelivery: "16-24 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$180-250/hour, $45,000-200,000/project",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/blockchain-solution-development-2025",
+    technologyStack: ["Ethereum", "Hyperledger", "Solana", "Polkadot", "Web3", "Solidity", "Rust"],
+    complianceStandards: ["Regulatory Compliance", "Security Standards", "Industry Regulations", "Data Privacy"],
+    integrationCapabilities: ["Enterprise Systems", "Cloud Platforms", "Financial Systems", "Mobile Apps", "Web Applications"],
+    roiMetrics: ["40% cost reduction", "100% transparency", "Automated processes"],
+    competitiveAdvantages: ["Blockchain expertise", "Industry solutions", "Security focus", "Innovation leadership"]
+  },
+
+  // AI Model Development & Deployment
+  {
+    id: "ai-model-development-deployment-2025",
+    title: "AI Model Development & Deployment Services",
+    description: "End-to-end AI model development services including data preparation, model training, deployment, and ongoing optimization for business applications.",
+    category: "AI & Machine Learning",
+    subcategory: "Model Development",
+    hourlyRate: 190,
+    projectRate: 60000,
+    currency: "$",
+    features: [
+      "Data preparation and cleaning",
+      "Feature engineering",
+      "Model development and training",
+      "Model validation and testing",
+      "Deployment and scaling",
+      "Performance monitoring",
+      "Model optimization",
+      "API development",
+      "Integration services",
+      "Ongoing maintenance"
+    ],
+    benefits: [
+      "Automated decision making",
+      "Improved accuracy",
+      "Cost reduction",
+      "Scalable solutions",
+      "Competitive advantage",
+      "Data-driven insights"
+    ],
+    useCases: [
+      "Predictive analytics",
+      "Computer vision",
+      "Natural language processing",
+      "Recommendation systems",
+      "Fraud detection",
+      "Process automation"
+    ],
+    targetAudience: [
+      "Technology companies",
+      "Financial institutions",
+      "Healthcare organizations",
+      "Manufacturing companies",
+      "Retail businesses",
+      "Research institutions"
+    ],
+    tags: ["AI", "Machine Learning", "Model Development", "Deployment", "Optimization"],
+    estimatedDelivery: "20-32 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$190-300/hour, $60,000-500,000/project",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/ai-model-development-deployment-2025",
+    technologyStack: ["TensorFlow", "PyTorch", "Scikit-learn", "AWS SageMaker", "Azure ML", "Google AI Platform"],
+    complianceStandards: ["AI Ethics", "Data Privacy", "Model Governance", "Industry Standards"],
+    integrationCapabilities: ["Business Systems", "Data Sources", "Cloud Platforms", "Mobile Apps", "Web Applications"],
+    roiMetrics: ["80% accuracy improvement", "60% cost reduction", "Automated processes"],
+    competitiveAdvantages: ["AI expertise", "End-to-end services", "Industry experience", "Ongoing optimization"]
+  },
+
+  // Cybersecurity Assessment & Penetration Testing
+  {
+    id: "cybersecurity-assessment-penetration-testing-2025",
+    title: "Cybersecurity Assessment & Penetration Testing",
+    description: "Comprehensive cybersecurity assessments including vulnerability scanning, penetration testing, security audits, and remediation planning.",
+    category: "Cybersecurity",
+    subcategory: "Assessment & Testing",
+    hourlyRate: 165,
+    projectRate: 25000,
+    currency: "$",
+    features: [
+      "Vulnerability assessment",
+      "Penetration testing",
+      "Security architecture review",
+      "Compliance auditing",
+      "Social engineering testing",
+      "Physical security assessment",
+      "Remediation planning",
+      "Security training",
+      "Incident response planning",
+      "Ongoing monitoring"
+    ],
+    benefits: [
+      "Identify security vulnerabilities",
+      "Improve security posture",
+      "Ensure compliance",
+      "Reduce risk exposure",
+      "Enhance incident response",
+      "Protect business assets"
+    ],
+    useCases: [
+      "Security audits",
+      "Compliance assessments",
+      "Risk assessments",
+      "Incident response",
+      "Security training",
+      "Vendor assessments"
+    ],
+    targetAudience: [
+      "All organizations",
+      "Financial institutions",
+      "Healthcare organizations",
+      "Government agencies",
+      "Technology companies",
+      "Educational institutions"
+    ],
+    tags: ["Cybersecurity", "Penetration Testing", "Vulnerability Assessment", "Security Audit", "Compliance"],
+    estimatedDelivery: "4-12 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$165-225/hour, $25,000-100,000/project",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/cybersecurity-assessment-penetration-testing-2025",
+    technologyStack: ["Security Tools", "Testing Frameworks", "Compliance Tools", "Monitoring Tools", "Reporting Tools"],
+    complianceStandards: ["SOC2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"],
+    integrationCapabilities: ["Security Tools", "Monitoring Systems", "Incident Response", "Compliance Tools", "Reporting Systems"],
+    roiMetrics: ["100% vulnerability identification", "Security improvement", "Compliance assurance"],
+    competitiveAdvantages: ["Comprehensive assessment", "Expert security team", "Proven methodologies", "Ongoing support"]
+  },
+
+  // Cloud Migration & Optimization
+  {
+    id: "cloud-migration-optimization-2025",
+    title: "Cloud Migration & Optimization Services",
+    description: "Comprehensive cloud migration services including assessment, planning, migration, and optimization for improved performance and cost efficiency.",
+    category: "Cloud & Infrastructure",
+    subcategory: "Migration & Optimization",
+    hourlyRate: 155,
+    projectRate: 35000,
+    currency: "$",
+    features: [
+      "Cloud readiness assessment",
+      "Migration strategy planning",
+      "Application migration",
+      "Data migration",
+      "Performance optimization",
+      "Cost optimization",
+      "Security implementation",
+      "Disaster recovery",
+      "Monitoring setup",
+      "Ongoing optimization"
+    ],
+    benefits: [
+      "Reduced infrastructure costs",
+      "Improved scalability",
+      "Enhanced performance",
+      "Better security",
+      "Increased flexibility",
+      "Operational efficiency"
+    ],
+    useCases: [
+      "Legacy system migration",
+      "Data center consolidation",
+      "Application modernization",
+      "Cost optimization",
+      "Performance improvement",
+      "Disaster recovery"
+    ],
+    targetAudience: [
+      "Enterprise businesses",
+      "Mid-market companies",
+      "Technology companies",
+      "Financial institutions",
+      "Healthcare organizations",
+      "Government agencies"
+    ],
+    tags: ["Cloud Migration", "Optimization", "AWS", "Azure", "GCP", "Performance"],
+    estimatedDelivery: "16-24 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$155-210/hour, $35,000-150,000/project",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
+    },
+    websiteUrl: "https://ziontechgroup.com/cloud-migration-optimization-2025",
+    technologyStack: ["AWS", "Azure", "GCP", "Terraform", "Kubernetes", "Docker", "Monitoring Tools"],
+    complianceStandards: ["SOC2", "ISO 27001", "GDPR", "HIPAA", "PCI DSS", "Cloud Standards"],
+    integrationCapabilities: ["On-premise Systems", "Cloud Services", "Monitoring Tools", "Security Tools", "Backup Systems"],
+    roiMetrics: ["30% cost reduction", "40% performance improvement", "99.9% uptime"],
+    competitiveAdvantages: ["Multi-cloud expertise", "Proven methodologies", "Performance optimization", "Cost optimization"]
   }
 ];
