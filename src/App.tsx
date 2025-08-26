@@ -14,6 +14,8 @@ const Login = React.lazy(() => import('./pages/Login.jsx'));
 const ComprehensiveServicesOverview2027 = React.lazy(() => import('./pages/ComprehensiveServicesOverview2027.tsx'));
 const ComprehensivePricingGuide2027 = React.lazy(() => import('./pages/ComprehensivePricingGuide2027.tsx'));
 const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027.tsx'));
+const UltimateInnovativeServicesShowcase2025 = React.lazy(() => import('./pages/UltimateInnovativeServicesShowcase2025.tsx'));
+const ComprehensiveServicesLanding2025 = React.lazy(() => import('./pages/ComprehensiveServicesLanding2025.tsx'));
 
 // Enhanced loading spinner with accessibility
 const LoadingSpinner = () => (
@@ -78,6 +80,8 @@ function App() {
               <Route path="/services/overview" element={<ComprehensiveServicesOverview2027 />} />
               <Route path="/services/pricing" element={<ComprehensivePricingGuide2027 />} />
               <Route path="/services/showcase" element={<InnovativeServicesShowcase2027 />} />
+              <Route path="/ultimate-services-2025" element={<UltimateInnovativeServicesShowcase2025 />} />
+              <Route path="/comprehensive-services-2025" element={<ComprehensiveServicesLanding2025 />} />
             </Routes>
           </Suspense>
         </main>
