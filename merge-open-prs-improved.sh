@@ -1,15 +1,15 @@
 #!/bin/bash
 
-# Test script to merge a small batch of PRs first
+# Improved script to merge open PRs with better conflict resolution
 set -e
 
-echo "🧪 Testing merge process with small batch..."
+echo "🚀 Starting improved merge of open PRs..."
 echo "⏰ Started at: $(date)"
 echo "---"
 
 # Create a backup branch
-BACKUP_BRANCH="test-backup-$(date +%Y%m%d-%H%M%S)"
-echo "🔒 Creating test backup branch: $BACKUP_BRANCH"
+BACKUP_BRANCH="backup-main-$(date +%Y%m%d-%H%M%S)"
+echo "🔒 Creating backup branch: $BACKUP_BRANCH"
 git checkout -b "$BACKUP_BRANCH"
 git push origin "$BACKUP_BRANCH"
 git checkout main
@@ -19,8 +19,6 @@ SUCCESSFUL_MERGES=0
 FAILED_MERGES=0
 CONFLICT_RESOLUTIONS=0
 SKIPPED_BRANCHES=0
-PROCESSED_COUNT=0
-MAX_PROCESS=5
 
 # Function to resolve conflicts in a file
 resolve_conflicts() {
@@ -120,10 +118,10 @@ merge_branch() {
 
 # Get the list of open PRs and extract branch information
 echo "📋 Fetching open PRs from GitHub..."
-curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100" > test_prs.json
+curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls?state=open&per_page=100" > current_prs.json
 
-# Extract PR information and process each one (limited to MAX_PROCESS)
-echo "🔄 Processing first $MAX_PROCESS open PRs..."
+# Extract PR information and process each one
+echo "🔄 Processing open PRs..."
 awk '
 /"number":/ {
     number = $2
@@ -142,13 +140,11 @@ awk '
         in_head = 0
     }
 }
-' test_prs.json | while IFS='|' read -r pr_number branch_name; do
-    if [ -n "$pr_number" ] && [ -n "$branch_name" ] && [ $PROCESSED_COUNT -lt $MAX_PROCESS ]; then
-        PROCESSED_COUNT=$((PROCESSED_COUNT + 1))
-        
+' current_prs.json | while IFS='|' read -r pr_number branch_name; do
+    if [ -n "$pr_number" ] && [ -n "$branch_name" ]; then
         echo ""
         echo "=========================================="
-        echo "🔄 Processing PR #$pr_number from branch: $branch_name ($PROCESSED_COUNT/$MAX_PROCESS)"
+        echo "🔄 Processing PR #$pr_number from branch: $branch_name"
         echo "=========================================="
         
         if merge_branch "$branch_name"; then
@@ -160,19 +156,14 @@ awk '
         echo "=========================================="
         echo ""
         
-        # Push changes after each successful merge for testing
-        if [ $SUCCESSFUL_MERGES -gt 0 ]; then
+        # Push changes every 10 successful merges to avoid losing work
+        if [ $((SUCCESSFUL_MERGES % 10)) -eq 0 ] && [ $SUCCESSFUL_MERGES -gt 0 ]; then
             echo "💾 Pushing progress to remote..."
             git push origin main
         fi
         
         # Add a small delay to avoid overwhelming the system
-        sleep 2
-    fi
-    
-    # Break after processing MAX_PROCESS
-    if [ $PROCESSED_COUNT -ge $MAX_PROCESS ]; then
-        break
+        sleep 1
     fi
 done
 
@@ -182,20 +173,20 @@ git push origin main
 
 # Summary
 echo ""
-echo "🧪 Test batch merge process completed!"
+echo "🎉 Open PR merge process completed!"
 echo "📊 Final Summary:"
 echo "   ✅ Successful merges: $SUCCESSFUL_MERGES"
 echo "   ❌ Failed merges: $FAILED_MERGES"
 echo "   🔧 Conflicts resolved: $CONFLICT_RESOLUTIONS"
 echo "   ⏭️  Skipped branches: $SKIPPED_BRANCHES"
-echo "   🔒 Test backup branch: $BACKUP_BRANCH"
+echo "   🔒 Backup branch: $BACKUP_BRANCH"
 echo "⏰ Completed at: $(date)"
 
 # Cleanup recommendations
 echo ""
 echo "🧹 Cleanup recommendations:"
-echo "   1. Review the merged changes: git log --oneline -10"
+echo "   1. Review the merged changes: git log --oneline -20"
 echo "   2. Test the application thoroughly"
-echo "   3. If satisfied, run the full merge script"
-echo "   4. Delete the test backup branch: git push origin --delete $BACKUP_BRANCH"
+echo "   3. Delete the backup branch when satisfied: git push origin --delete $BACKUP_BRANCH"
+echo "   4. Consider cleaning up old feature branches"
 echo "   5. Run tests to ensure everything works correctly"
