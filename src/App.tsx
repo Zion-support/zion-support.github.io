@@ -19,6 +19,8 @@ const Terms = React.lazy(() => import('./pages/Terms'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const GreenIT = React.lazy(() => import('./pages/GreenIT'));
 const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
+const EnhancedServicesPage = React.lazy(() => import('./pages/EnhancedServicesPage'));
+const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage'));
 
 // Loading component
 const LoadingSpinner = () => (
@@ -55,7 +57,9 @@ function App() {
               <Route path="/green-it" element={<GreenIT />} />
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/services" element={<EnhancedServicesPage />} />
+              <Route path="/services-legacy" element={<ServicesPage />} />
+              <Route path="/it-services" element={<ITServicesPage />} />
             </Routes>
           </Suspense>
         </main>
