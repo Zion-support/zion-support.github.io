@@ -9,6 +9,7 @@ import {
   Lock, Cloud, BarChart3, Settings,
   Eye, Code, Palette, Layers,
 <<<<<<< HEAD
+<<<<<<< HEAD
   Network, Server, ShieldCheck, ZapIcon,
   GlobeIcon, StarIcon, TrendingUpIcon, UsersIcon,
   CheckCircleIcon, ArrowRightIcon, CpuIcon,
@@ -25,6 +26,10 @@ import {
   Heart, GraduationCap, Leaf, Pill, Coins,
   Building2
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-df1a
+=======
+  Network, Server, ShieldCheck,
+  DollarSign, Phone, ArrowRight
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e015
 } from 'lucide-react';
 
 interface NavigationItem {
