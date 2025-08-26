@@ -262,9 +262,12 @@ export const realQ4Services2025: RealQ4Service[] = [
 <<<<<<< HEAD
 	}
 ];
+<<<<<<< HEAD
 =======
 	}];
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-d80e
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-e0d1
 export const real2025Q4Additions = [
   {
     id: 'ai-governance-control-center',
