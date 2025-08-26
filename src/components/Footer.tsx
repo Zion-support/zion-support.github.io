@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Heart, Mail, Phone, MapPin, Globe } from 'lucide-react';
 import { motion, Variants } from 'framer-motion';
 
@@ -180,7 +180,7 @@ const Footer: React.FC = () => {
                     transition={{ type: "spring", stiffness: 300 }}
                   >
                     <Link
-                      href={link.path}
+                      to={link.path}
                       className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm flex items-center gap-2 group"
                     >
                       <span className="w-1 h-1 bg-zion-cyan/50 rounded-full group-hover:bg-zion-cyan transition-colors duration-300" />
@@ -241,11 +241,11 @@ const Footer: React.FC = () => {
             <div className="flex items-center space-x-4 text-zion-slate-light text-sm mb-4 md:mb-0">
               <span>© {currentYear} Zion Tech Group. All rights reserved.</span>
               <span className="w-1 h-1 bg-zion-cyan rounded-full" />
-              <Link href="/privacy" className="hover:text-zion-cyan transition-colors duration-300">Privacy Policy</Link>
+              <Link to="/privacy" className="hover:text-zion-cyan transition-colors duration-300">Privacy Policy</Link>
               <span className="w-1 h-1 bg-zion-cyan rounded-full" />
-              <Link href="/terms" className="hover:text-zion-cyan transition-colors duration-300">Terms of Service</Link>
+              <Link to="/terms" className="hover:text-zion-cyan transition-colors duration-300">Terms of Service</Link>
               <span className="w-1 h-1 bg-zion-cyan rounded-full" />
-              <Link href="/cookies" className="hover:text-zion-cyan transition-colors duration-300">Cookie Policy</Link>
+              <Link to="/cookies" className="hover:text-zion-cyan transition-colors duration-300">Cookie Policy</Link>
             </div>
             <motion.div 
               className="flex items-center space-x-2 text-zion-slate-light text-sm"

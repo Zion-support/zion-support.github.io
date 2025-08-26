@@ -25,30 +25,10 @@
         "./src/*"
       ]
     },
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
-    "strictNullChecks": false,
-    "exactOptionalPropertyTypes": false,
-    "noImplicitOverride": false,
-    "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": false,
-    "allowJs": true,
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "noEmit": true,
-    "isolatedModules": true,
-    "jsx": "preserve"
+    "allowSyntheticDefaultImports": true
   },
   "include": [
-    "src",
-    ".next/types/**/*.ts"
+    "src"
   ],
   "exclude": [
     "node_modules",
