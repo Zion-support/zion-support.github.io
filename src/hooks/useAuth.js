@@ -1,21 +1,23 @@
 import { useState, useEffect } from 'react';
+
 export function useAuth() {
     const [user, setUser] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
+
     useEffect(() => {
         // Check if user is logged in from localStorage or session
         const storedUser = localStorage.getItem('zion_user');
         if (storedUser) {
             try {
                 setUser(JSON.parse(storedUser));
-            }
-            catch (error) {
+            } catch (error) {
                 console.error('Error parsing stored user:', error);
                 localStorage.removeItem('zion_user');
             }
         }
         setIsLoading(false);
     }, []);
+
     const login = async (email, password) => {
         setIsLoading(true);
         try {
@@ -29,15 +31,14 @@ export function useAuth() {
             };
             setUser(mockUser);
             localStorage.setItem('zion_user', JSON.stringify(mockUser));
-        }
-        catch (error) {
+        } catch (error) {
             console.error('Login failed:', error);
             throw error;
-        }
-        finally {
+        } finally {
             setIsLoading(false);
         }
     };
+
     const logout = async () => {
         setIsLoading(true);
         try {
@@ -45,15 +46,14 @@ export function useAuth() {
             await new Promise(resolve => setTimeout(resolve, 500));
             setUser(null);
             localStorage.removeItem('zion_user');
-        }
-        catch (error) {
+        } catch (error) {
             console.error('Logout failed:', error);
             throw error;
-        }
-        finally {
+        } finally {
             setIsLoading(false);
         }
     };
+
     const signup = async (email, password, name) => {
         setIsLoading(true);
         try {
@@ -67,74 +67,20 @@ export function useAuth() {
             };
             setUser(mockUser);
             localStorage.setItem('zion_user', JSON.stringify(mockUser));
-        }
-        catch (error) {
+        } catch (error) {
             console.error('Signup failed:', error);
             throw error;
-        }
-        finally {
+        } finally {
             setIsLoading(false);
         }
     };
+
     return {
         user,
         login,
         logout,
         signup,
-        isLoading
-    const [loading, setLoading] = useState(true);
-    useEffect(() => {
-        // Check if user is logged in (e.g., check localStorage, cookies, etc.)
-        const checkAuth = () => {
-            const storedUser = localStorage.getItem('zion_user');
-            if (storedUser) {
-                try {
-                    setUser(JSON.parse(storedUser));
-                }
-                catch (error) {
-                    console.error('Error parsing stored user:', error);
-                }
-            }
-            setLoading(false);
-        };
-        checkAuth();
-    }, []);
-    const login = async (email, password) => {
-        // Implement actual login logic here
-        const mockUser = {
-            id: '1',
-            email,
-            name: 'User',
-            role: 'user'
-        };
-        setUser(mockUser);
-        localStorage.setItem('zion_user', JSON.stringify(mockUser));
-        return mockUser;
-    };
-    const logout = () => {
-        setUser(null);
-        localStorage.removeItem('zion_user');
-    };
-    const register = async (email, password, name) => {
-        // Implement actual registration logic here
-        const mockUser = {
-            id: '1',
-            email,
-            name,
-            role: 'user'
-        };
-        setUser(mockUser);
-        localStorage.setItem('zion_user', JSON.stringify(mockUser));
-        return mockUser;
-    };
-    return {
-        user,
-        loading,
-        login,
-        logout,
-        register,
-        isAuthenticated: !!user,
-        isAdmin: user?.role === 'admin'
-=======
+        isLoading,
+        isAuthenticated: !!user
     };
 }

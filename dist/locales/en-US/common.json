@@ -20,14 +20,27 @@
   },
   "nav": {
     "home": "Home",
-    "services": "Services",
-=======
     "marketplace": "Marketplace",
-    "ai-hiring": "AI Hiring",
+    "services": "Services",
+    "talent": "Talent",
+    "equipment": "Equipment",
+    "community": "Community",
+    "company": "Company",
+    "blog": "Blog",
+    "dashboard": "Dashboard",
+    "messages": "Messages",
+    "post_job": "Post Job",
+    "analytics": "Analytics",
+    "about": "About Us",
+    "careers": "Careers",
+    "partners": "Partners",
+    "contact": "Contact",
+    "products": "Products",
+    "green-it": "Green IT",
     "help": "Help Center",
-    "faq": "FAQ",
-    "about": "About",
-    "contact": "Contact"
+    "developers": "Developer Portal",
+    "api-docs": "API Documentation",
+    "sitemap": "Sitemap"
   },
   "auth": {
     "login": "Login",
@@ -38,13 +51,7 @@
     "forgot_password": "Forgot Password?",
     "remember_me": "Remember Me",
     "login_success": "Logged in successfully",
-    "logout_success": "Logged out successfully",
-    "errors": {
-      "user_not_found": "No account found with that email.",
-      "wrong_password": "Incorrect password. Please try again.",
-      "account_locked": "Your account is locked. Please contact support.",
-      "generic": "Login failed. Please try again."
-    }
+    "logout_success": "Logged out successfully"
   },
   "home": {
     "hero_title": "The Future of Tech & AI Marketplace",
@@ -87,21 +94,6 @@
     "country": "Country",
     "subtotal": "Subtotal",
     "pay": "Pay with Stripe (test)"
-  },
-  "jobs": {
-    "post_job_title": "Post a Job",
-    "post_job_description": "Fill out the form below to post your job and find the perfect talent",
-    "job_title": "Job Title",
-    "job_description": "Job Description",
-    "skills_required": "Skills Required",
-    "budget": "Budget",
-    "deadline": "Deadline",
-    "job_posted": "Job posted successfully",
-    "title_placeholder": "Enter job title",
-    "description_placeholder": "Describe the job in detail",
-    "requirements_placeholder": "List required skills and qualifications",
-    "submitting": "Submitting...",
-    "post_job_button": "Post Job"
   },
   "language": {
     "en": "English",
