@@ -28,6 +28,8 @@ import { ultimateInnovativeServices2025 } from '../data/2025-ultimate-innovative
 
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { additionalEnhancedServices } from '../data/additional-real-services';
+<<<<<<< HEAD
+=======
 import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
 import { innovativeMicroSaasServicesV3 } from '../data/innovative-micro-saas-v3';
 import { innovativeAIServices } from '../data/innovative-ai-services';
@@ -91,6 +93,7 @@ import { cuttingEdgeInnovations2029V2 } from '../data/2029-cutting-edge-innovati
 import { futuristicAIServices2030 } from '../data/2030-futuristic-ai-services';
 import { innovativeMicroSaas2030 } from '../data/2030-innovative-micro-saas';
 import { enterpriseITServices2030 } from '../data/2030-enterprise-it-services';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-917b
 
 export default function HomePage() {
   const heroStats = [
@@ -196,6 +199,15 @@ const serviceCategories = [
 
   // Combine all services for display
   const allServices = [
+<<<<<<< HEAD
+    ...enhancedRealMicroSaasServices.slice(0, 8),
+    ...emergingTechServices.slice(0, 6),
+    ...nextGenAIServices.slice(0, 6),
+    ...innovativeAIServices.slice(0, 6),
+    ...quantumAIServices.slice(0, 6),
+    ...spaceTechServices.slice(0, 6),
+    ...biotechAIServices.slice(0, 6)
+=======
     ...enhancedRealMicroSaasServices,
     ...innovativeMicroSaasServices,
     ...innovativeMicroSaasServicesV3,
@@ -266,6 +278,7 @@ const serviceCategories = [
     ...futuristicAIServices2030,
     ...innovativeMicroSaas2030,
     ...enterpriseITServices2030
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-917b
   ];
 
   const featuredOffers = professionalServices.slice(0, 3);
