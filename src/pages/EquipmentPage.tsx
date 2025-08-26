@@ -16,7 +16,6 @@ const EQUIPMENT_FILTERS = [
   { label: "Robotics", value: "Robotics" },
 ];
 
-<<<<<<< HEAD
 const EQUIPMENT_CACHE_KEY = 'equipmentCache';
 
 export async function fetchEquipment(): Promise<ProductListing[]> {
@@ -202,14 +201,14 @@ const EquipmentFilterControls = ({
     {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
     <div className="flex items-center gap-2">
       <Filter className="h-4 w-4 text-muted-foreground" />
-      <select value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+      <select value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)} className="bg-background border border-gray-200 px-3 py-2 rounded">
         <option value="">All Categories</option>
         {categories.map((cat: string) => <option key={cat} value={cat}>{cat}</option>)}
       </select>
     </div>
     <div className="flex items-center gap-2">
       <SortAsc className="h-4 w-4 text-muted-foreground" />
-      <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+      <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-background border border-gray-200 px-3 py-2 rounded">
         <option value="newest">Newest First</option>
         <option value="price-low">Price: Low to High</option>
         <option value="price-high">Price: High to Low</option>
@@ -222,14 +221,14 @@ const EquipmentFilterControls = ({
         type="number"
         value={priceRange[0]}
         onChange={(e) => setPriceRange([Number(e.target.value), priceRange[1]])}
-        className="w-20 bg-background border border-border px-2 py-1 rounded"
+        className="w-20 bg-background border border-gray-200 px-2 py-1 rounded"
       />
       <span>-</span>
       <input
         type="number"
         value={priceRange[1]}
         onChange={(e) => setPriceRange([priceRange[0], Number(e.target.value)])}
-        className="w-20 bg-background border border-border px-2 py-1 rounded"
+        className="w-20 bg-background border border-gray-200 px-2 py-1 rounded"
       />
     </div>
     {brandOptions.length > 0 && (
@@ -237,7 +236,7 @@ const EquipmentFilterControls = ({
         <select
           value={filterBrand}
           onChange={(e) => setFilterBrand(e.target.value)}
-          className="bg-background border border-border px-3 py-2 rounded"
+          className="bg-background border border-gray-200 px-3 py-2 rounded"
         >
           <option value="">All Brands</option>
           {brandOptions.map((b: string) => (
@@ -251,7 +250,7 @@ const EquipmentFilterControls = ({
         <select
           value={filterAvailability}
           onChange={(e) => setFilterAvailability(e.target.value)}
-          className="bg-background border border-border px-3 py-2 rounded"
+          className="bg-background border border-gray-200 px-3 py-2 rounded"
         >
           <option value="">Any Availability</option>
           {availabilityOptions.map((a: string) => (
@@ -265,7 +264,7 @@ const EquipmentFilterControls = ({
       <select
         value={minRating}
         onChange={(e) => setMinRating(Number(e.target.value))}
-        className="bg-background border border-border px-2 py-1 rounded"
+        className="bg-background border border-gray-200 px-2 py-1 rounded"
       >
         <option value={0}>Any</option>
         <option value={5}>5</option>
@@ -455,8 +454,6 @@ export default function EquipmentPage() {
     const handleScroll = () => setShowScrollTop(window.scrollY > 800);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-<<<<<<< HEAD
-=======
 export default function EquipmentPage() {
   const [listings, setListings] = useState<ProductListing[]>([
     ...EQUIPMENT_LISTINGS,
@@ -467,9 +464,8 @@ export default function EquipmentPage() {
       setListings((prev) => [...prev, generateRandomEquipment()]);
     }, 120000); // add new equipment every 2 minutes
     return () => clearInterval(interval);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
   }, []);
 
   return (

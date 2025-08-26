@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-import { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useCallback, useEffect, useRef, useMemo } from 'react';
 =======
 import React, { useState, useCallback, useEffect, useRef, useMemo } from 'react';
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { motion } from 'framer-motion';
 import { 
   Users, 

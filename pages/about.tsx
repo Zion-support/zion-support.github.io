@@ -1,5 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import { Users, Target, Award, Globe, Zap, Shield, Brain, Rocket } from 'lucide-react';
 
 const About: NextPage = () => {
   return (
@@ -15,10 +16,6 @@ const About: NextPage = () => {
       </main>
     </div>
   );
-};
-
-export default About;
-=======
 =======
 import Link from 'next/link';
 
@@ -300,6 +297,8 @@ export default function AboutPage() {
       <EnhancedFooter />
     </div>
   );
+}
+=======
 }
 =======
 }

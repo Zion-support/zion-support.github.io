@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Code, 
@@ -227,7 +227,7 @@ export const AICodeGenerator: React.FC = () => {
 
       {/* Main Content */}
       <div className="p-6">
-        <AnimatePresence>
+        <AnimatePresence mode="wait">
           {activeTab === 'generate' && (
             <motion.div
               key="generate"

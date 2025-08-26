@@ -1,8 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
-  Building, Car, Heart, DollarSign, GraduationCap, 
-  Shield, Factory, Globe, Brain, Atom, Rocket,
-  ArrowRight, CheckCircle, Star, Users, Zap
+import { motion } from 'framer-motion';
+import { 
+  Building2, Factory, Car, Heart, GraduationCap, 
+  Shield, Globe, Zap, Brain, Rocket, Users, BarChart3, Cloud
 } from 'lucide-react';
 
 export default function SolutionsPage() {
@@ -439,7 +440,6 @@ export default function SolutionsPage() {
       </div>
     </>
   );
-=======
 import Link from 'next/link';
 
 export default function SolutionsPage() {
@@ -793,4 +793,5 @@ export default function SolutionsPage() {
 			</main>
 		</>
 	);
+=======
 }

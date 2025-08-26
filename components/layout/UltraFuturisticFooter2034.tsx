@@ -1,12 +1,23 @@
 import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  Zap, Brain, Atom, Shield, Rocket, 
+  Globe, Mail, Phone, MapPin, ArrowRight,
+  Star, Sparkles, Cpu, Lock, Cloud, 
+  BarChart3, Settings, Eye, Award, Clock, 
+  Heart, Lightbulb, Target, BookOpen, Truck, 
+  DollarSign, Palette, Code, Database, Users,
+  Twitter, Linkedin, Facebook, Instagram, Youtube,
+  Github, MessageCircle, MessageSquare
+} from 'lucide-react';
+
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-const UltraFuturisticFooter2034: React.FC = () => {
-  const currentYear = new Date().getFullYear();
 =======
 
   const serviceCategories = [

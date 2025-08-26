@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
-<<<<<<< HEAD
-=======
 import { useState, useEffect } from 'react';
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { 
   BarChart3, 
   TrendingUp, 

@@ -1,14 +1,12 @@
-<<<<<<< HEAD
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { useState } from 'react';
 import { Globe } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 export function LanguageSelector() {
-=======
 import React, { useState } from 'react';
 import { ChevronDown, Globe } from 'lucide-react';
 export const LanguageSelector = () => {
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
     const [isOpen, setIsOpen] = useState(false);
     const [currentLanguage, setCurrentLanguage] = useState('EN');
     const languages = [
@@ -21,16 +19,13 @@ export const LanguageSelector = () => {
         { code: 'RU', name: 'Русский', flag: '🇷🇺' },
         { code: 'ZH', name: '中文', flag: '🇨🇳' },
         { code: 'JA', name: '日本語', flag: '🇯🇵' },
-<<<<<<< HEAD
-        { code: 'KO', name: '한국어', flag: '🇰🇷' },
-=======
         { code: 'KO', name: '한국어', flag: '🇰🇷' }
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
+        { code: 'KO', name: '한국어', flag: '🇰🇷' },
     ];
     const handleLanguageChange = (languageCode) => {
         setCurrentLanguage(languageCode);
         setIsOpen(false);
-<<<<<<< HEAD
         // Here you would typically call a function to change the app's language
         console.log(`Language changed to: ${languageCode}`);
     };
@@ -39,7 +34,6 @@ export const LanguageSelector = () => {
                         ? 'bg-zion-blue text-white'
                         : 'text-zion-slate-light hover:bg-zion-blue hover:text-white'}`, children: [_jsx("span", { className: "mr-3", children: language.flag }), _jsx("span", { className: "mr-2", children: language.code }), _jsx("span", { className: "text-sm", children: language.name })] }, language.code))) }))] }));
 }
-=======
         // Here you would typically implement language change logic
     };
     const currentLang = languages.find(lang => lang.code === currentLanguage);
@@ -62,4 +56,4 @@ export const LanguageSelector = () => {
         </div>)}
     </div>);
 };
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======

@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 export function useAuth() {
     const [user, setUser] = useState(null);
-<<<<<<< HEAD
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
         // Check if user is logged in from localStorage or session
@@ -83,7 +82,6 @@ export function useAuth() {
         logout,
         signup,
         isLoading
-=======
     const [loading, setLoading] = useState(true);
     useEffect(() => {
         // Check if user is logged in (e.g., check localStorage, cookies, etc.)
@@ -137,6 +135,6 @@ export function useAuth() {
         register,
         isAuthenticated: !!user,
         isAdmin: user?.role === 'admin'
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
     };
 }

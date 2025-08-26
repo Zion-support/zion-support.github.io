@@ -2,7 +2,6 @@ import React from 'react';
 
 export default function TermsOfService() {
   return (
-=======
     <div className="max-w-4xl mx-auto space-y-8">
       <div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-4">Terms of Service</h1>
@@ -11,6 +10,10 @@ export default function TermsOfService() {
         </p>
       </div>
 =======
+=======
+    <div className="max-w-4xl mx-auto">
+      <h1 className="text-3xl font-bold text-white mb-8">Terms of Service</h1>
+      
       <div className="space-y-6 text-zion-slate-light">
         <section>
           <h2 className="text-2xl font-bold text-white mb-4">1. Acceptance of Terms</h2>
@@ -53,7 +56,6 @@ export default function TermsOfService() {
         <section>
           <h2 className="text-2xl font-bold text-white mb-4">5. Accuracy of Materials</h2>
           <p>
-=======
             The materials appearing on Zion Tech Group's website could include technical, typographical, or photographic errors. Zion Tech Group does not warrant that any of the materials on its website are accurate, complete or current. Zion Tech Group may make changes to the materials contained on its website at any time without notice.
           </p>
         </section>
@@ -87,6 +89,8 @@ export default function TermsOfService() {
               legal@ziontechgroup.com
             </a>
 =======
+=======
+            The materials appearing on Zion Tech Group's website could include technical, typographical, or photographic errors. Zion Tech Group does not warrant that any of the materials on its website are accurate, complete or current.
           </p>
         </section>
       </div>

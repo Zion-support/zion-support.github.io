@@ -6,7 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { 
   Check, 
   X, 
-  Star, 
+ Star, 
   Zap, 
   Shield, 
   TrendingUp, 
@@ -21,8 +21,7 @@ import {
   DollarSign,
   Clock,
   CheckCircle,
-  ArrowRight,
-  Brain
+  ArrowRight
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
@@ -134,7 +133,6 @@ const serviceCategories = [
       { name: "Marketing Automation", starter: 999, professional: 2999, enterprise: 5999 },
       { name: "Web Development", starter: 1999, professional: 4999, enterprise: 9999 },
       { name: "Mobile App Development", starter: 2999, professional: 6999, enterprise: 14999 }
-<<<<<<< HEAD
     ]
   },
   {
@@ -411,7 +409,6 @@ const serviceCategories = [
         link: "https://ziontechgroup.com/marketing-attribution"
       }
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     ]
   }
 ];
@@ -470,10 +467,6 @@ export default function ServicesPricing() {
           <p className="text-xl text-zion-cyan max-w-3xl mx-auto mb-8">
             Choose the perfect plan for your business. Our flexible pricing ensures you only pay for what you need, 
             with the ability to scale up as you grow.
-          </p>
-          <p className="text-zion-slate-light max-w-3xl mx-auto mb-6">
-            Explore our AI services, IT solutions, and micro SaaS products on our website. Learn more at 
-            <a className="underline text-white ml-1" href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer">ziontechgroup.com</a>.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button size="lg" className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light">

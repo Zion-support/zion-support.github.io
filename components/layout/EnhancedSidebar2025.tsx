@@ -273,29 +273,6 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
       child.description?.toLowerCase().includes(searchQuery.toLowerCase())
     ) || []
   );
-  const toggleItem = (itemName: string) => {
-    const newExpanded = new Set(expandedItems);
-    if (newExpanded.has(itemName)) {
-      newExpanded.delete(itemName);
-    } else {
-      newExpanded.add(itemName);
-    }
-    setExpandedItems(newExpanded);
-  };
-
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, [isOpen]);
-
-  const isActive = (href: string) => router.pathname === href;
 =======
 
   return (

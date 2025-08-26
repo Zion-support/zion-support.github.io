@@ -9,30 +9,10 @@
     ],
     "module": "ESNext",
     "skipLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"],
-      "@/pages/*": ["./src/pages/*"],
-      "@/components/*": ["./src/components/*"],
-      "@/api/*": ["./src/api/*"],
-      "@/types/*": ["./src/types/*"],
-      "@/utils/*": ["./src/utils/*"],
-      "@/hooks/*": ["./src/hooks/*"],
-      "@/context/*": ["./src/context/*"],
-      "@/services/*": ["./src/services/*"],
-      "axios": ["./src/lib/axios.ts"],
-      "notistack": ["./src/stubs/notistack.ts"],
-      "@sentry/browser": ["./src/stubs/sentry.ts"]
-    },
-    "typeRoots": ["./node_modules/@types", "./types"],
-    "types": ["node"],
-    "moduleResolution": "node",
-    "allowImportingTsExtensions": true,
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-    "strict": false,
+    "strict": true,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true,
@@ -42,7 +22,6 @@
         "./src/*"
       ]
     },
-    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
 =======
     "target": "es5",
@@ -82,24 +61,20 @@
     "noPropertyAccessFromIndexSignature": false,
     "noUncheckedIndexedAccess": false,
     "allowJs": true,
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    "incremental": true
   },
   "include": [
-    "src",
-    ".next/types/**/*.ts"
+    "src"
   ],
   "exclude": [
-    "src/**",
-    "node_modules"
-  ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
+    "node_modules",
+    "zion.app/recovered-content/**",
+    "contracts/**",
+    "temp_components/**",
+    "zion_academy/**",
+    "zion-os/**",
+    "automation/**",
+    "typechain-types/**",
+    ".next/**"
   ]
 }

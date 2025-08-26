@@ -55,30 +55,29 @@ const Sidebar = () => {
   };
 
   const services = [
-    { name: 'AI Solutions', href: '/services/ai', icon: Cpu, description: 'Machine Learning & AI' },
-    { name: 'Cloud & DevOps', href: '/services/cloud', icon: Cloud, description: 'Cloud Migration & Automation' },
+    { name: 'AI Services', href: '/services/ai', icon: Cpu, description: 'Machine Learning & AI' },
+    { name: 'Cloud', href: '/services/cloud', icon: Cloud, description: 'Cloud Migration & Automation' },
     { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Security & Protection' },
-    { name: 'IT Infrastructure', href: '/services/infrastructure', icon: Database, description: 'Network & Systems' },
+    { name: 'Infrastructure', href: '/services/infrastructure', icon: Database, description: 'Network & Systems' },
+    { name: 'Consulting', href: '/services/consulting', icon: Briefcase, description: 'Advisory & Strategy' },
     { name: 'Digital Transformation', href: '/services/transformation', icon: Zap, description: 'Business Optimization' },
-    { name: 'Quantum Computing', href: '/services/quantum-ai', icon: Target, description: 'Next-Gen Computing' },
-    { name: 'Blockchain Solutions', href: '/services/consulting', icon: Building2, description: 'Distributed Ledger' },
-    { name: 'IoT & Data Analytics', href: '/services/ai', icon: TrendingUp, description: 'Connected Devices' }
+    { name: 'Quantum AI', href: '/services/quantum-ai', icon: Target, description: 'Next-Gen Computing' },
   ];
 
   const talent = [
-    { name: 'Hire Developers', href: '/talents', icon: Users, description: 'Expert developers' },
-    { name: 'Hire Designers', href: '/talents', icon: Users2, description: 'Creative designers' },
-    { name: 'Hire Engineers', href: '/talents', icon: Code2, description: 'Skilled engineers' },
-    { name: 'Hire Consultants', href: '/talents', icon: Briefcase, description: 'Business consultants' }
+    { name: 'Hire Developers', href: '/talent/developers', icon: Users, description: 'Expert developers' },
+    { name: 'Hire Designers', href: '/talent/designers', icon: Users2, description: 'Creative designers' },
+    { name: 'Hire Engineers', href: '/talent/engineers', icon: Code2, description: 'Skilled engineers' },
+    { name: 'Hire Consultants', href: '/talent/consultants', icon: Briefcase, description: 'Business consultants' }
   ];
 
   const company = [
     { name: 'About Us', href: '/about', icon: Building2, description: 'Our story and mission' },
     { name: 'Our Team', href: '/team', icon: Users, description: 'Leadership and experts' },
-    { name: 'Mission & Vision', href: '/about', icon: Target, description: 'Our purpose and goals' },
+    { name: 'Mission & Vision', href: '/mission', icon: Target, description: 'Our purpose and goals' },
     { name: 'Careers', href: '/careers', icon: Star, description: 'Join our team' },
     { name: 'Partners', href: '/partners', icon: Handshake, description: 'Strategic partnerships' },
-    { name: 'News', href: '/blog', icon: Newspaper, description: 'Company updates' },
+    { name: 'News', href: '/news', icon: Newspaper, description: 'Company updates' },
     { name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Service plans' },
     { name: 'Contact', href: '/contact', icon: MessageSquare, description: 'Get in touch' }
   ];
@@ -98,14 +97,14 @@ const Sidebar = () => {
     { name: 'FAQ', href: '/faq', icon: HelpCircle, description: 'Common questions' },
     { name: 'Status Page', href: '/status', icon: BarChart3, description: 'Service status' },
     { name: 'Training', href: '/training', icon: BookOpen, description: 'Learning resources' },
-    { name: 'API Documentation', href: '/docs', icon: Code2, description: 'Developer guides' }
+    { name: 'API Documentation', href: '/api', icon: Code2, description: 'Developer guides' }
   ];
 
   const analytics = [
-    { name: 'Dashboard', href: '/analytics', icon: LayoutDashboard, description: 'Main dashboard' },
-    { name: 'Performance', href: '/analytics', icon: TrendingUp, description: 'Performance metrics' },
-    { name: 'Reports', href: '/analytics', icon: BarChart3, description: 'Analytics reports' },
-    { name: 'Insights', href: '/analytics', icon: Target, description: 'Data insights' }
+    { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard, description: 'Main dashboard' },
+    { name: 'Performance', href: '/analytics/performance', icon: TrendingUp, description: 'Performance metrics' },
+    { name: 'Reports', href: '/analytics/reports', icon: BarChart3, description: 'Analytics reports' },
+    { name: 'Insights', href: '/analytics/insights', icon: Target, description: 'Data insights' }
   ];
 
   const renderMenuItem = (item, isSubItem = false) => {
@@ -198,11 +197,11 @@ const Sidebar = () => {
 
         {/* Dashboard */}
         <Link
-          to="/analytics"
+          to="/dashboard"
           className="flex items-center px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200"
         >
           <LayoutDashboard className="w-4 h-4 mr-3" />
-          {!isCollapsed && 'Analytics'}
+          {!isCollapsed && 'Dashboard'}
         </Link>
 
         {/* Services Section */}
@@ -219,6 +218,9 @@ const Sidebar = () => {
 
         {/* Support Section */}
         {renderSection('Support', support, 'support', HelpCircle)}
+
+        {/* Analytics Section */}
+        {renderSection('Analytics', analytics, 'analytics', BarChart3)}
 
         {/* Settings */}
         <Link

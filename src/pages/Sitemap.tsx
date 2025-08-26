@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import Head from 'next/head';
 import Link from 'next/link';
 
@@ -80,21 +76,19 @@ import { AppHeader } from "@/layout/AppHeader";
 import { Footer } from "@/components/Footer";
 =======
 
-<<<<<<< HEAD
-=======
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+=======
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { completeSitemap } from "@/config/sitemap";
 import { Link } from "react-router-dom";
 import { AppLayout } from "@/layout";
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
@@ -183,9 +177,8 @@ import { AppLayout } from "@/layout";
           <p className="text-gray-300 mb-8">
             Can't find what you're looking for? Our team is here to help.
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
 import { 
   MapIcon, 
   CogIcon, 
@@ -529,19 +522,17 @@ const Sitemap: React.FC = () => {
 =======
 =======
     <AppLayout>
-<<<<<<< HEAD
-=======
     <>
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
+=======
+    <>
       <SEO
         title="Sitemap | Zion AI Marketplace"
         description="Human readable sitemap for all public routes"
         keywords="sitemap, navigation"
-<<<<<<< HEAD
 =======
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
 =======
 =======
@@ -616,7 +607,6 @@ const Sitemap: React.FC = () => {
         </div>
       </main>
 =======
-<<<<<<< HEAD
 =======
         canonical="https://ziontechgroup.com/sitemap"
       />
@@ -637,7 +627,6 @@ const Sitemap: React.FC = () => {
       </main>
       <Footer />
 =======
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
     </>
   );
 };

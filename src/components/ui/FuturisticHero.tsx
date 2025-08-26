@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 
 interface FuturisticHeroProps {
@@ -47,8 +45,6 @@ export default function FuturisticHero({ title, subtitle, children, className = 
       {/* Bottom accent line */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
 =======
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React, { useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe } from 'lucide-react';
@@ -253,10 +249,7 @@ export default function FuturisticHero() {
           />
         ))}
       </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
     </section>
   );
 }

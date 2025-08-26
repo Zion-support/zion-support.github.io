@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, Send, X, Bot, User } from 'lucide-react';
@@ -138,13 +135,11 @@ export function ChatAssistant({
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-<<<<<<< HEAD
               <button
                 onClick={() => setIsOpen(false)}
                 className="p-1 hover:bg-white/20 rounded transition-colors"
               >
                 <X className="w-4 h-4" />
-=======
 import React, { useState } from 'react';
 
 export const ChatAssistant: React.FC = () => {
@@ -201,63 +196,16 @@ export const ChatAssistant: React.FC = () => {
             <div className="flex items-center justify-between">
               <h3 className="text-white font-semibold">Zion Tech Assistant</h3>
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
               <button
                 onClick={() => setIsOpen(false)}
                 className="text-zion-slate-light hover:text-white"
               >
-<<<<<<< HEAD
-                ✕
-              </button>
-            </div>
-          </div>
-          
-          <div className="h-64 overflow-y-auto p-3 space-y-3">
-            {messages.map((msg) => (
-              <div
-                key={msg.id}
-                className={`flex ${msg.isBot ? 'justify-start' : 'justify-end'}`}
-              >
-                <div
-                  className={`max-w-xs px-3 py-2 rounded-lg ${
-                    msg.isBot
-                      ? 'bg-zion-slate text-white'
-                      : 'bg-zion-cyan text-white'
-                  }`}
-                >
-                  <p className="text-sm">{msg.text}</p>
-                  <p className="text-xs opacity-70 mt-1">
-                    {msg.timestamp.toLocaleTimeString()}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-          
-          <div className="p-3 border-t border-zion-blue-light">
-            <div className="flex space-x-2">
-              <input
-                type="text"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
-                placeholder="Type your message..."
-                className="flex-1 px-3 py-2 bg-white/10 border border-zion-blue-light rounded text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-              />
-              <button
-                onClick={handleSendMessage}
-                className="px-4 py-2 bg-zion-cyan text-white rounded hover:bg-zion-cyan-light transition-colors"
-              >
-                Send
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
                 <X className="w-4 h-4" />
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
               </button>
             </div>
           </div>
         </div>
-<<<<<<< HEAD
 
         {!isMinimized && (
           <>
@@ -352,9 +300,8 @@ export const ChatAssistant: React.FC = () => {
     </AnimatePresence>
   );
 }
-=======
       )}
     </>
   );
 };
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======

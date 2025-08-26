@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { GradientHeading } from "./GradientHeading";
 import { Link } from "react-router-dom";
@@ -12,7 +11,6 @@ const categories = [
         link: "/services",
         color: "from-purple-500 to-indigo-600",
         delay: 0.1,
-=======
 import { GradientHeading } from "./GradientHeading";
 import { Link } from "react-router-dom";
 import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Sparkles, Zap, Shield, Rocket } from "lucide-react";
@@ -27,70 +25,62 @@ const categories = [
         gradient: "from-zion-purple/20 to-zion-purple-dark/20",
         features: ["24/7 Support", "Expert Team", "Custom Solutions"],
         stats: "500+ Services"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
     },
     {
         title: "Talents",
         description: "Connect with AI experts, developers, and tech specialists",
-<<<<<<< HEAD
         icon: _jsx(Users, { className: "w-10 h-10" }),
         link: "/talent",
         color: "from-cyan-500 to-blue-600",
         delay: 0.2,
-=======
         icon: <Users className="w-10 h-10"/>,
         link: "/talent",
         color: "from-zion-cyan to-zion-blue",
         gradient: "from-zion-cyan/20 to-zion-blue/20",
         features: ["AI Experts", "Global Network", "Verified Profiles"],
         stats: "10K+ Experts"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
     },
     {
         title: "Equipment",
         description: "Rent or buy specialized hardware, servers, and devices",
-<<<<<<< HEAD
         icon: _jsx(HardDrive, { className: "w-10 h-10" }),
         link: "/equipment",
         color: "from-amber-500 to-orange-600",
         delay: 0.3,
-=======
         icon: <HardDrive className="w-10 h-10"/>,
         link: "/equipment",
         color: "from-zion-cyan-light to-zion-cyan",
         gradient: "from-zion-cyan-light/20 to-zion-cyan/20",
         features: ["High-Performance", "Flexible Rental", "24/7 Monitoring"],
         stats: "1000+ Devices"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
     },
     {
         title: "Innovation",
         description: "Discover cutting-edge solutions and tech breakthroughs",
-<<<<<<< HEAD
         icon: _jsx(Lightbulb, { className: "w-10 h-10" }),
         link: "/category/innovation",
         color: "from-emerald-500 to-green-600",
         delay: 0.4,
-=======
         icon: <Lightbulb className="w-10 h-10"/>,
         link: "/category/innovation",
         color: "from-zion-purple-light to-zion-purple",
         gradient: "from-zion-purple-light/20 to-zion-purple/20",
         features: ["Latest Tech", "AI Solutions", "Future-Ready"],
         stats: "100+ Innovations"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
     },
 ];
 const specialServices = [
     {
-<<<<<<< HEAD
         title: "IT Onsite Services",
         link: "/it-onsite-services"
     },
     {
         title: "Micro SAAS Services",
         link: "/micro-saas-services"
-=======
         title: "Enhanced AI & IT Services",
         link: "/enhanced-services"
     },
@@ -117,7 +107,7 @@ const specialServices = [
         link: "/cloud-solutions",
         icon: <Zap className="w-5 h-5"/>,
         description: "Scalable cloud infrastructure"
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
     }
 ];
 export function CategoriesSection({ showTitle = true }) {
@@ -126,13 +116,11 @@ export function CategoriesSection({ showTitle = true }) {
         visible: {
             opacity: 1,
             transition: {
-<<<<<<< HEAD
-                staggerChildren: 0.1,
-                delayChildren: 0.2
-=======
                 staggerChildren: 0.2,
                 delayChildren: 0.1
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
+                staggerChildren: 0.1,
+                delayChildren: 0.2
             }
         }
     };
@@ -147,7 +135,6 @@ export function CategoriesSection({ showTitle = true }) {
             }
         }
     };
-<<<<<<< HEAD
     return (_jsxs("section", { className: "py-20 bg-zion-blue relative overflow-hidden", children: [_jsx("div", { className: "absolute inset-0 opacity-5", children: _jsx("div", { className: "absolute inset-0", style: {
                         backgroundImage: `radial-gradient(circle at 25% 25%, rgba(34, 221, 210, 0.1) 0%, transparent 50%),
                            radial-gradient(circle at 75% 75%, rgba(140, 21, 233, 0.1) 0%, transparent 50%)`
@@ -156,7 +143,6 @@ export function CategoriesSection({ showTitle = true }) {
                                         scale: 1.02,
                                         transition: { duration: 0.3 }
                                     }, whileTap: { scale: 0.98 }, children: [_jsx(motion.div, { className: `rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`, whileHover: { rotate: 5 }, children: _jsx("div", { className: "text-white", children: category.icon }) }), _jsx("h3", { className: "text-white text-xl font-bold mb-2 group-hover:text-zion-cyan transition-colors duration-300", children: category.title }), _jsx("p", { className: "text-zion-slate-light group-hover:text-zion-slate-light/80 transition-colors duration-300", children: category.description }), _jsx("div", { className: "mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300", children: _jsx("div", { className: "w-8 h-0.5 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full" }) })] }) }) }, category.title))) }), _jsxs(motion.div, { className: "mt-12", initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, transition: { duration: 0.6, delay: 0.5 }, viewport: { once: true }, children: [_jsx("h3", { className: "text-center text-xl font-bold text-white mb-6", children: "Featured Services" }), _jsx("div", { className: "flex flex-wrap justify-center gap-4", children: specialServices.map((service) => (_jsx(motion.div, { whileHover: { scale: 1.05 }, whileTap: { scale: 0.95 }, children: _jsx(Link, { to: service.link, className: "px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/25", children: service.title }) }, service.title))) })] }), _jsx(motion.div, { className: "mt-12 flex justify-center", initial: { opacity: 0, y: 20 }, whileInView: { opacity: 1, y: 0 }, transition: { duration: 0.6, delay: 0.6 }, viewport: { once: true }, children: _jsxs(Link, { to: "/categories", className: "text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors duration-300 hover:text-zion-cyan-light group", children: [_jsx("span", { className: "group-hover:mr-2 transition-all duration-300", children: "View All Categories" }), _jsx("span", { className: "opacity-0 group-hover:opacity-100 transition-all duration-300", children: " \u2192" })] }) })] })] }));
-=======
     const cardVariants = {
         hidden: { scale: 0.95, opacity: 0 },
         visible: {
@@ -260,5 +246,5 @@ export function CategoriesSection({ showTitle = true }) {
         </motion.div>
       </div>
     </section>);
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
 }

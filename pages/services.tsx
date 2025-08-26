@@ -1,3 +1,6 @@
+import React from 'react';
+import Head from 'next/head';
+import { Brain, Shield, Cpu, Cloud, Zap, Database, Users, Target, CheckCircle, ArrowRight } from 'lucide-react';
 
 export default function ServicesPage() {
   return (
@@ -1630,8 +1633,6 @@ const ServicesPage = () => {
       </section>
     </>
   );
-}
-=======
 =======
 import Link from 'next/link';
 
@@ -1972,3 +1973,7 @@ export default function ServicesPage() {
 		</>
 	);
 }
+=======
+};
+
+export default ServicesPage;

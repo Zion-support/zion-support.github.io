@@ -1,5 +1,4 @@
 import React from 'react';
-=======
 export function useScrollToTop() {
   // Simple hook to scroll to top
   React.useEffect(() => {
@@ -15,3 +14,14 @@ export function useAuth() {
   };
 }
 =======
+=======
+
+// Export all hooks from messaging directory
+export * from './messaging';
+export * from './use-toast';
+export * from './useAuth';
+export * from './useOnboardingStatus';
+export * from './usePageViewTracking';
+export * from './useReactId';
+export * from './useScrollToTop';
+export * from './usePostsByCategory';

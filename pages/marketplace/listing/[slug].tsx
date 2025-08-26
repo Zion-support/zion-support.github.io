@@ -3,25 +3,8 @@ import type { GetStaticPaths, GetStaticProps } from 'next';
 import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';
 import type { ProductListing } from '@/types/listings';
 
-// Alias the Prisma generated Product model type.
-type ProductModel = Prisma.Product;
-// Define ProductWithReviewStats here or import from a shared types file
-// This should match the type returned by `/api/products/[id]/details`
-export type ProductWithReviewStats = ProductModel & {
-  averageRating: number | null;
-  reviewCount: number;
-  // Adding fields to match the enriched type from the API / product card expectations
-  title?: string; // Usually mapped from product.name
-  category?: string;
-  images?: { url: string; alt?: string }[];
-  price?: number | null;
-  currency?: string;
-  tags?: string[];
-};
-
-interface RatingStarsProps {
-  value: number;
-  count?: number;
+interface ListingProps {
+  listing: ProductListing | null;
 }
 
 const MarketplaceListing: React.FC<ListingProps> = ({ listing }) => {

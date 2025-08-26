@@ -18,6 +18,7 @@ export interface InnovativeService2025 {
   estimatedDelivery: string;
   supportLevel: 'basic' | 'standard' | 'premium' | 'enterprise';
 }
+
 export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
   {
     id: 'ai-autonomous-business-manager',
@@ -185,6 +186,7 @@ export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
     supportLevel: 'premium'
   }
 ];
+
 export const INNOVATIVE_SERVICE_CATEGORIES = [
   'AI & Automation',
   'Quantum Computing',

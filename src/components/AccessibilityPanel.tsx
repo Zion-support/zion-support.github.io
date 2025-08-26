@@ -10,6 +10,7 @@ interface AccessibilitySettings {
   screenReader: boolean;
   keyboardNavigation: boolean;
   focusIndicator: boolean;
+  colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
 }
 
 interface AccessibilityPanelProps {
@@ -28,7 +29,8 @@ export const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
     reducedMotion: false,
     screenReader: false,
     keyboardNavigation: false,
-    focusIndicator: true
+    focusIndicator: true,
+    colorBlindness: 'none'
   });
   const [accessibilityScore, setAccessibilityScore] = useState(85);
 
@@ -138,15 +140,11 @@ export const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
     return 'Poor';
   };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  if (!isVisible) return null;
-=======
   if (!isOpen) return null;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
   if (!isVisible) return null;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
+  if (!isVisible) return null;
 
   return (
     <>
@@ -207,7 +205,7 @@ export const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
 
             {/* Content */}
             <div className="p-4 max-h-96 overflow-y-auto">
-              <AnimatePresence>
+              <AnimatePresence mode="wait">
                 {activeTab === 'general' && (
                   <motion.div
                     key="general"

@@ -12,8 +12,6 @@ export interface BlogPost {
   image: string;
   readTime: number;
 }
-
-=======
 export const generateRandomBlogPost = (): BlogPost => {
   const titles = [
     'The Future of AI in Business',
@@ -69,4 +67,5 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: 12,
   },
 ];
+=======
 =======

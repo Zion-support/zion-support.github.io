@@ -1,29 +1,3 @@
-import React from 'react';
-import Link from 'next/link';
-import { 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Server, 
-  Zap, 
-  Globe, 
-  Cpu, 
-  Database,
-  Network,
-  Lock,
-  Code,
-  Rocket,
-  Users
-} from 'lucide-react';
-
-import { DynamicListingPage } from "@/components/DynamicListingPage";
-import { ProductListing } from "@/types/listings";
-import { TrustedBySection } from "@/components/TrustedBySection";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { Globe, Shield, Brain, Cloud, Lock, Zap, Users, BarChart3, FileImage, Code, Shield as ShieldIcon, Server, TrendingUp, MessageCircle, Video, FileText, Heart } from "lucide-react";
-import { useEffect, useState } from "react";
-import { EXPANDED_SERVICES } from "@/data/expandedServices";
 =======
 
 import { ProductListing } from "@/types/listings";
@@ -651,73 +625,6 @@ export default function ServicesPage() {
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <h2 className="text-white text-lg font-medium">Featured Services</h2>
           <div className="flex flex-wrap gap-2">
-      <div className="bg-gradient-to-r from-zion-blue-dark via-zion-purple-dark to-zion-slate-dark py-8 px-4 md:px-8 mb-8 border-b border-zion-purple/30">
-        <div className="container mx-auto">
-          <div className="text-center mb-6">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-cyan bg-clip-text text-transparent">
-              Zion Micro SAAS Services
-            </h1>
-            <p className="text-xl text-zion-cyan/80 max-w-4xl mx-auto">
-              Discover our comprehensive suite of AI-powered micro SAAS solutions designed to transform your business operations. 
-              From AI content generation to cybersecurity, we have the tools you need to succeed.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-            <div className="bg-zion-purple/20 backdrop-blur-sm rounded-lg p-4 border border-zion-purple/30">
-              <div className="flex items-center gap-3">
-                <Brain className="h-8 w-8 text-zion-cyan" />
-                <div>
-                  <h3 className="text-white font-semibold">AI & ML Services</h3>
-                  <p className="text-zion-cyan/70 text-sm">Starting at $19/month</p>
-                </div>
-              </div>
-            </div>
-            <div className="bg-zion-purple/20 backdrop-blur-sm rounded-lg p-4 border border-zion-purple/30">
-              <div className="flex items-center gap-3">
-                <Shield className="h-8 w-8 text-zion-cyan" />
-                <div>
-                  <h3 className="text-white font-semibold">Cybersecurity</h3>
-                  <p className="text-zion-cyan/70 text-sm">Starting at $99/month</p>
-                </div>
-              </div>
-            </div>
-            <div className="bg-zion-purple/20 backdrop-blur-sm rounded-lg p-4 border border-zion-purple/30">
-              <div className="flex items-center gap-3">
-                <Cloud className="h-8 w-8 text-zion-cyan" />
-                <div>
-                  <h3 className="text-white font-semibold">Cloud Solutions</h3>
-                  <p className="text-zion-cyan/70 text-sm">Starting at $49/month</p>
-                </div>
-              </div>
-            </div>
-            <div className="bg-zion-purple/20 backdrop-blur-sm rounded-lg p-4 border border-zion-purple/30">
-              <div className="flex items-center gap-3">
-                <Users className="h-8 w-8 text-zion-cyan" />
-                <div>
-                  <h3 className="text-white font-semibold">Business Tools</h3>
-                  <p className="text-zion-cyan/70 text-sm">Starting at $29/month</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/it-onsite-services">
-              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10 backdrop-blur-sm">
-                <Globe className="h-4 w-4 mr-2" />
-                Global IT Onsite Services
-              </Button>
-            </Link>
-            <Link to="/request-quote">
-              <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white shadow-lg shadow-zion-purple/25">
-                Request a Quote
-              </Button>
-            </Link>
-            <Link to="/contact">
-              <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 backdrop-blur-sm">
-                <MessageCircle className="h-4 w-4 mr-2" />
-                Contact Sales
 =======
             <Link to="/comprehensive-services">
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
@@ -779,18 +686,6 @@ export default function ServicesPage() {
         </div>
       </div>
     </div>
-      <DynamicListingPage 
-        title="Comprehensive Micro SAAS Solutions"
-        description="Find the perfect AI-powered tools and services to accelerate your business growth. All services include free trials and expert support."
-        categorySlug="services"
-        listings={listings}
-        categoryFilters={SERVICE_FILTERS}
-        initialPrice={{ min: 19, max: 5000 }}
-      />
-      
-      <TrustedBySection />
-    </>
-=======
   );
 =======
 import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
@@ -800,4 +695,6 @@ import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
 export default function ServicesPage() {
     return (_jsxs(_Fragment, { children: [_jsx(SEO, { title: "Tech Services - Zion Tech Group", description: "Browse our comprehensive range of technology services and solutions.", canonical: "https://ziontechgroup.com/services" }), _jsx(Header, {}), _jsx("main", { className: "min-h-screen bg-zion-blue", children: _jsxs("div", { className: "container mx-auto px-4 py-20", children: [_jsxs("div", { className: "text-center mb-16", children: [_jsx(GradientHeading, { children: "Tech Services" }), _jsx("p", { className: "text-xl text-zion-slate-light mt-6 max-w-3xl mx-auto", children: "Comprehensive technology services to help your business grow and succeed in the digital age." })] }), _jsx("div", { className: "max-w-6xl mx-auto", children: _jsxs("div", { className: "bg-zion-blue-light rounded-lg p-8 border border-zion-blue-lighter",                 children: [_jsx("h2", { className: "text-2xl font-bold text-white mb-6", children: "Revolutionary Services Available Now!" }), _jsx("p", { className: "text-zion-slate-light mb-6", children: "Explore our cutting-edge micro SAAS services, specialized IT solutions, and innovative AI platforms designed to transform your business in 2025 and beyond." }), _jsx("div", { className: "text-center mt-6 mb-8", children: _jsx("a", { href: "/revolutionary-services-2025", className: "bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105", children: "Explore Revolutionary Services 2025" }) }) }), _jsxs("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8", children: [_jsxs("div", { className: "text-center", children: [_jsx("div", { className: "w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4", children: _jsx("span", { className: "text-2xl", children: "\uD83D\uDCBB" }) }), _jsx("h3", { className: "text-lg font-semibold text-white mb-2", children: "Web Development" }), _jsx("p", { className: "text-zion-slate-light text-sm", children: "Custom websites, web apps, and e-commerce solutions" })] }), _jsxs("div", { className: "text-center", children: [_jsx("div", { className: "w-16 h-16 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4", children: _jsx("span", { className: "text-2xl", children: "\uD83D\uDCF1" }) }), _jsx("h3", { className: "text-lg font-semibold text-white mb-2", children: "Mobile Apps" }), _jsx("p", { className: "text-zion-slate-light text-sm", children: "iOS, Android, and cross-platform mobile applications" })] }), _jsxs("div", { className: "text-center", children: [_jsx("div", { className: "w-16 h-16 bg-zion-cyan-light/20 rounded-full flex items-center justify-center mx-auto mb-4", children: _jsx("span", { className: "text-2xl", children: "\u2601\uFE0F" }) }), _jsx("h3", { className: "text-lg font-semibold text-white mb-2", children: "Cloud Services" }), _jsx("p", { className: "text-zion-slate-light text-sm", children: "AWS, Azure, and Google Cloud solutions" })] }), _jsxs("div", { className: "text-center", children: [_jsx("div", { className: "w-16 h-16 bg-zion-purple-light/20 rounded-full flex items-center justify-center mx-auto mb-4", children: _jsx("span", { className: "text-2xl", children: "\uD83D\uDD12" }) }), _jsx("h3", { className: "text-lg font-semibold text-white mb-2", children: "Cybersecurity" }), _jsx("p", { className: "text-zion-slate-light text-sm", children: "Security audits, penetration testing, and compliance" })] })] })] }) })] }) }), _jsx(Footer, {})] }));
+=======
+  );
 }

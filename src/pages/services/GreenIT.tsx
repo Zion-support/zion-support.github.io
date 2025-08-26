@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Head from 'next/head';
 import { Leaf, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
@@ -54,139 +52,10 @@ export default function GreenIT() {
             <a href="#services" className="px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-green-900 font-semibold rounded-lg transition-all duration-300">
               Learn More
             </a>
-=======
-<<<<<<< HEAD
-import { Leaf, Zap, Globe, Cpu, Database, Server, TrendingUp, Target, Shield, Users, Lightbulb, Recycle } from 'lucide-react';
-
-const GreenIT: React.FC = () => {
-  const greenServices = [
-    {
-      icon: Leaf,
-      title: "Sustainable Infrastructure",
-      description: "Design and implement energy-efficient data centers and IT infrastructure",
-      features: ["Energy-efficient hardware", "Renewable energy integration", "Cooling optimization", "Power management"]
-    },
-    {
-      icon: Zap,
-      title: "Energy Optimization",
-      description: "Optimize IT systems for maximum energy efficiency and minimal carbon footprint",
-      features: ["Power consumption analysis", "Efficiency improvements", "Smart scheduling", "Energy monitoring"]
-    },
-    {
-      icon: Database,
-      title: "Green Data Centers",
-      description: "Eco-friendly data center solutions with renewable energy and efficient cooling",
-      features: ["Renewable energy sources", "Efficient cooling systems", "Waste heat recycling", "Carbon neutrality"]
-    },
-    {
-      icon: Server,
-      title: "Virtualization & Consolidation",
-      description: "Reduce physical hardware through virtualization and server consolidation",
-      features: ["Server virtualization", "Storage consolidation", "Resource optimization", "Hardware reduction"]
-    },
-    {
-      icon: Globe,
-      title: "Cloud Optimization",
-      description: "Optimize cloud infrastructure for energy efficiency and sustainability",
-      features: ["Green cloud providers", "Resource optimization", "Carbon-aware scheduling", "Efficient scaling"]
-    },
-    {
-      icon: Recycle,
-      title: "IT Asset Management",
-      description: "Sustainable lifecycle management of IT equipment and e-waste reduction",
-      features: ["Equipment lifecycle", "E-waste recycling", "Refurbishment programs", "Circular economy"]
-    }
-  ];
-
-  const benefits = [
-    "Reduced energy consumption and costs",
-    "Lower carbon footprint and environmental impact",
-    "Improved corporate sustainability ratings",
-    "Compliance with environmental regulations",
-    "Enhanced brand reputation and customer trust",
-    "Long-term cost savings through efficiency"
-  ];
-
-  const technologies = [
-    {
-      name: "Energy-Efficient Hardware",
-      description: "Low-power processors, SSDs, and networking equipment",
-      icon: Cpu
-    },
-    {
-      name: "Renewable Energy",
-      description: "Solar, wind, and hydroelectric power integration",
-      icon: Zap
-    },
-    {
-      name: "Smart Cooling",
-      description: "AI-powered cooling optimization and waste heat recovery",
-      icon: Leaf
-    },
-    {
-      name: "Virtualization",
-      description: "Server and storage virtualization for resource optimization",
-      icon: Server
-    },
-    {
-      name: "Monitoring Tools",
-      description: "Real-time energy consumption and efficiency monitoring",
-      icon: TrendingUp
-    },
-    {
-      name: "Green Software",
-      description: "Energy-efficient algorithms and sustainable coding practices",
-      icon: Lightbulb
-    }
-  ];
-
-  const certifications = [
-    "ISO 14001 Environmental Management",
-    "LEED Data Center Certification",
-    "Energy Star for Data Centers",
-    "Green Grid PUE Standards",
-    "Carbon Trust Certification",
-    "BREEAM Data Center Standards"
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="mb-8">
-            <div className="inline-flex items-center px-4 py-2 bg-green-500/10 text-green-400 rounded-full text-sm font-medium mb-6">
-              <Leaf className="w-4 h-4 mr-2" />
-              Green IT
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Sustainable Technology
-              <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent"> for a Better Future</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              We help organizations implement environmentally responsible IT solutions 
-              that reduce energy consumption, minimize carbon footprint, and promote sustainability.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#services"
-                className="px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                Explore Services
-              </a>
-              <a
-                href="/contact"
-                className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-              >
-                Get Started
-              </a>
-            </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Services Section */}
       <section id="services" className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -200,7 +69,6 @@ const GreenIT: React.FC = () => {
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-=======
       {/* Green Services Grid */}
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -229,7 +97,7 @@ const GreenIT: React.FC = () => {
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="text-sm text-gray-400 flex items-start">
                       <div className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
+=======
                       {feature}
                     </li>
                   ))}
@@ -240,7 +108,6 @@ const GreenIT: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Contact Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -264,7 +131,6 @@ const GreenIT: React.FC = () => {
             Contact Us Today
             <ArrowRight className="w-5 h-5 ml-2" />
           </a>
-=======
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -435,7 +301,6 @@ const GreenIT: React.FC = () => {
           </div>
 =======
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 import { Link } from 'react-router-dom';
 import { CogIcon } from '@heroicons/react/24/outline';
 
@@ -461,29 +326,17 @@ const $service: React.FC = () => {
           >
             Contact Us for More Information
           </Link>
-<<<<<<< HEAD
->>>>>>> origin/cursor/website-audit-and-enhancement-56af
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 =======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
         </div>
       </section>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
+};
+
+export default $service;
+=======
+};
+
+export default $service;
+=======
 }
-=======
-};
-
-<<<<<<< HEAD
-export default GreenIT;
-=======
-export default $service;
->>>>>>> origin/cursor/website-audit-and-enhancement-56af
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
-};
-
-export default $service;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

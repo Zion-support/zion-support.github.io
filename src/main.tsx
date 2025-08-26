@@ -3,10 +3,14 @@ import React from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
+import { I18nextProvider } from 'react-i18next';
+import i18n from './i18n'; // Adjust the path if your i18n.js is elsewhere
 import { HelmetProvider } from 'react-helmet-async';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { showApiError } from '@/utils/apiErrorHandler';
+import './utils/globalFetchInterceptor';
+import './utils/consoleErrorToast';
 import ToastProvider from './components/ToastProvider';
 
 import { LanguageProvider } from '@/context/LanguageContext';
@@ -15,11 +19,12 @@ import { AppLayout } from '@/layout/AppLayout';
 import { store } from '@/store';
 import { Provider as ReduxProvider } from 'react-redux';
 
-// Import auth provider
+// Import auth and notification providers
 import { AuthProvider } from './context/auth/AuthProvider';
+import { NotificationProvider } from './components/ui/notification';
 
-// Import analytics/view mode provider
-import { ViewModeProvider } from './context/ViewModeContext';
+// Providers trimmed for build
+// import { AnalyticsProvider } from './context/AnalyticsContext';
 import { registerServiceWorker } from './serviceWorkerRegistration';
 
 // Initialize a React Query client with global error handling
@@ -32,18 +37,8 @@ const queryClient = new QueryClient({
   },
 })
 
-// Performance monitoring setup
-if (import.meta.env.DEV) {
-  console.log('🚀 Zion Tech Group - Development Mode')
-  console.log('📊 Performance monitoring enabled')
-  console.log('🔧 Accessibility controls available')
-}
+const rootElement = document.getElementById('root');
 
-// Error handling for unhandled promise rejections
-window.addEventListener('unhandledrejection', (event) => {
-  console.error('Unhandled promise rejection:', event.reason)
-  // In production, you might want to send this to an error reporting service
-})
 =======
 const rootElement = document.getElementById('root');
 
@@ -54,17 +49,17 @@ function renderApp() {
         <QueryClientProvider client={queryClient}>
           <WhitelabelProvider>
             <Router>
-              <ReduxProvider store={store}>
-                <AuthProvider>
+              <AuthProvider>
+                <NotificationProvider>
+                  
                   <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                    <ViewModeProvider>
-                      <AppLayout>
-                        <App />
-                      </AppLayout>
-                    </ViewModeProvider>
+                    <AppLayout>
+                      <App />
+                    </AppLayout>
                   </LanguageProvider>
-                </AuthProvider>
-              </ReduxProvider>
+                  
+                </NotificationProvider>
+              </AuthProvider>
             </Router>
           </WhitelabelProvider>
         </QueryClientProvider>
@@ -107,6 +102,29 @@ if ('serviceWorker' in navigator) {
   })
 }
 
+function displayFatalError(message: string) {
+  if (rootElement) {
+    rootElement.innerHTML = `
+      <div style="padding:20px;text-align:center;font-family:sans-serif;">
+        <h1>Application Error</h1>
+        <p>${message}</p>
+      </div>`;
+  }
+}
+
+try {
+  renderApp();
+} catch (error) {
+  console.error('Global error caught in main.tsx:', error);
+  displayFatalError((error as Error).message);
+}
+
+window.addEventListener('error', (e) => {
+  console.error('Unhandled error:', e.error || e.message);
+  displayFatalError(e.message);
+});
+
+// Render the app with proper provider structure
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <HelmetProvider>
@@ -115,24 +133,17 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Router>
             <AuthProvider>
               <NotificationProvider>
-                <AnalyticsProvider>
+                
                   <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
                     <AppLayout>
                       <App />
                     </AppLayout>
-                    <LanguageDetectionPopup />
                   </LanguageProvider>
-                </AnalyticsProvider>
+                
               </NotificationProvider>
             </AuthProvider>
           </Router>
         </WhitelabelProvider>
-        <BrowserRouter>
-          <AppWrapper>
-            <App />
-          </AppWrapper>
-        </BrowserRouter>
-=======
       </QueryClientProvider>
     </HelmetProvider>
   </React.StrictMode>,
@@ -148,5 +159,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
       <App />
     </BrowserRouter>
+=======
+      </QueryClientProvider>
+    </HelmetProvider>
   </React.StrictMode>,
 );

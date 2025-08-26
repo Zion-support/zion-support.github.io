@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
@@ -14,7 +13,6 @@ export function Header() {
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 10);
-=======
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Logo } from './Logo';
@@ -54,12 +52,11 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 20);
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
         };
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
-<<<<<<< HEAD
     const isActive = (path) => location.pathname === path;
     const navigationItems = [
         { name: 'Home', path: '/' },
@@ -94,7 +91,6 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
                                             : 'text-gray-700 hover:text-zion-blue hover:bg-gray-50'}`, children: item.name })) }, item.name))) }), _jsxs("div", { className: "hidden lg:flex items-center space-x-4", children: [_jsxs(Button, { variant: "outline", size: "sm", children: [_jsx(Search, { className: "h-4 w-4 mr-2" }), "Search"] }), _jsx(Button, { size: "sm", children: "Get Started" })] }), _jsx("button", { className: "lg:hidden p-2 rounded-lg text-gray-700 hover:text-zion-blue hover:bg-gray-50", onClick: () => setIsMenuOpen(!isMenuOpen), children: isMenuOpen ? _jsx(X, { className: "h-6 w-6" }) : _jsx(Menu, { className: "h-6 w-6" }) })] }) }) }), isMenuOpen && (_jsx("div", { className: "lg:hidden bg-white border-t border-gray-200 shadow-lg", children: _jsxs("div", { className: "container mx-auto px-4 py-4", children: [_jsx("nav", { className: "space-y-2", children: navigationItems.map((item) => (_jsxs("div", { children: [_jsx(Link, { to: item.path, className: `block py-3 px-4 rounded-lg transition-colors ${isActive(item.path)
                                             ? 'text-zion-blue bg-zion-blue/10'
                                             : 'text-gray-700 hover:text-zion-blue hover:bg-gray-50'}`, onClick: () => setIsMenuOpen(false), children: item.name }), item.hasDropdown && item.name === 'Services' && (_jsx("div", { className: "ml-4 mt-2 space-y-1", children: serviceDropdownItems.map((subItem) => (_jsxs(Link, { to: subItem.path, className: "block py-2 px-4 text-gray-600 hover:text-zion-blue transition-colors", onClick: () => setIsMenuOpen(false), children: ["\u2022 ", subItem.name] }, subItem.name))) })), item.hasDropdown && item.name === 'Talent' && (_jsx("div", { className: "ml-4 mt-2 space-y-1", children: talentDropdownItems.map((subItem) => (_jsxs(Link, { to: subItem.path, className: "block py-2 px-4 text-gray-600 hover:text-zion-blue transition-colors", onClick: () => setIsMenuOpen(false), children: ["\u2022 ", subItem.name] }, subItem.name))) }))] }, item.name))) }), _jsxs("div", { className: "mt-6 pt-6 border-t border-gray-200 space-y-3", children: [_jsxs(Button, { variant: "outline", className: "w-full", children: [_jsx(Search, { className: "h-4 w-4 mr-2" }), "Search"] }), _jsx(Button, { className: "w-full", children: "Get Started" })] })] }) }))] }));
-=======
     const handleSubmit = (e) => {
         e.preventDefault();
         if (query.trim()) {
@@ -295,5 +291,5 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-60"/>
     </>header>
     </>);
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
+=======
 }
