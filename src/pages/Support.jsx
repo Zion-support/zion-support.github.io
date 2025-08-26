@@ -59,6 +59,7 @@ export default function Support() {
             }
         ]
     };
+    
     const supportChannels = [
         {
             name: '24/7 Email Support',
@@ -89,7 +90,8 @@ export default function Support() {
             link: '/docs'
         }
     ];
-    const supportChannels = [
+    
+    const supportResources = [
         {
             title: 'Getting Started Guide',
             description: 'Step-by-step guide to implementing our solutions',
@@ -127,4 +129,77 @@ export default function Support() {
             link: '/community'
         }
     ];
+
+    return (
+        <div className="min-h-screen bg-gray-50">
+            <div className="container mx-auto px-4 py-20">
+                <div className="text-center mb-16">
+                    <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        Support Center
+                    </h1>
+                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Get the help you need with our comprehensive support resources and expert assistance.
+                    </p>
+                </div>
+
+                {/* Support Channels */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                    {supportChannels.map((channel, index) => (
+                        <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <div className="text-3xl mb-4">{channel.icon}</div>
+                            <h3 className="text-lg font-semibold text-gray-900 mb-2">{channel.name}</h3>
+                            <p className="text-gray-600 mb-3">{channel.description}</p>
+                            <p className="text-sm text-blue-600 font-medium">Response: {channel.response}</p>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Support Resources */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                    {supportResources.map((resource, index) => (
+                        <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <div className="text-2xl mb-4">{resource.icon}</div>
+                            <h3 className="text-lg font-semibold text-gray-900 mb-2">{resource.title}</h3>
+                            <p className="text-gray-600 mb-4">{resource.description}</p>
+                            <a href={resource.link} className="text-blue-600 hover:text-blue-800 font-medium">
+                                Learn More →
+                            </a>
+                        </div>
+                    ))}
+                </div>
+
+                {/* FAQ Section */}
+                <div className="bg-white rounded-lg shadow-md p-8">
+                    <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
+                    
+                    {/* Category Tabs */}
+                    <div className="flex flex-wrap justify-center gap-4 mb-8">
+                        {Object.keys(faqCategories).map((category) => (
+                            <button
+                                key={category}
+                                onClick={() => setActiveCategory(category)}
+                                className={`px-6 py-3 rounded-lg font-medium transition-colors ${
+                                    activeCategory === category
+                                        ? 'bg-blue-600 text-white'
+                                        : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                                }`}
+                            >
+                                {category.charAt(0).toUpperCase() + category.slice(1)}
+                            </button>
+                        ))}
+                    </div>
+
+                    {/* FAQ Items */}
+                    <div className="space-y-6">
+                        {faqCategories[activeCategory].map((item, index) => (
+                            <div key={index} className="border-b border-gray-200 pb-6 last:border-b-0">
+                                <h3 className="text-lg font-semibold text-gray-900 mb-3">{item.question}</h3>
+                                <p className="text-gray-600 leading-relaxed">{item.answer}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
 }
