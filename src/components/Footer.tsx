@@ -56,40 +56,15 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-          {/* Company Info */}
-          <div className="lg:col-span-2">
-            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-300 mb-6 max-w-md">
-              Leading provider of innovative technology solutions, AI-powered services, and digital transformation expertise. 
-              We help businesses navigate the future of technology with confidence.
-            </p>
-            
-            {/* Social Links */}
-            <div className="flex space-x-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors duration-300"
-                  aria-label={social.name}
-                >
-                  {social.icon}
-                </a>
-              ))}
-            </div>
-          </div>
-
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
+            <h3 className="text-lg font-semibold mb-4 text-blue-400">Services</h3>
             <ul className="space-y-2">
-              {services.map((service) => (
-                <li key={service.name}>
-                  <Link 
-                    to={service.href} 
+              {services.map((service, index) => (
+                <li key={index}>
+                  <Link
+                    to={service.href}
                     className="text-gray-300 hover:text-white transition-colors duration-300"
                   >
                     {service.name}
@@ -101,12 +76,12 @@ const Footer: React.FC = () => {
 
           {/* Company */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Company</h4>
+            <h3 className="text-lg font-semibold mb-4 text-blue-400">Company</h3>
             <ul className="space-y-2">
-              {company.map((item) => (
-                <li key={item.name}>
-                  <Link 
-                    to={item.href} 
+              {company.map((item, index) => (
+                <li key={index}>
+                  <Link
+                    to={item.href}
                     className="text-gray-300 hover:text-white transition-colors duration-300"
                   >
                     {item.name}
@@ -118,12 +93,12 @@ const Footer: React.FC = () => {
 
           {/* Legal */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Legal</h4>
+            <h3 className="text-lg font-semibold mb-4 text-blue-400">Legal</h3>
             <ul className="space-y-2">
-              {legal.map((item) => (
-                <li key={item.name}>
-                  <Link 
-                    to={item.href} 
+              {legal.map((item, index) => (
+                <li key={index}>
+                  <Link
+                    to={item.href}
                     className="text-gray-300 hover:text-white transition-colors duration-300"
                   >
                     {item.name}
@@ -132,22 +107,20 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
-        </div>
 
-        {/* Newsletter Signup */}
-        <div className="mt-12 pt-8 border-t border-gray-800">
-          <div className="max-w-md">
-            <h4 className="text-lg font-semibold mb-4">Stay Updated</h4>
-            <p className="text-gray-300 mb-4 text-sm">
-              Get the latest insights on technology trends and business innovation.
+          {/* Newsletter */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-blue-400">Stay Updated</h3>
+            <p className="text-gray-300 mb-4">
+              Get the latest insights and updates from Zion Tech Group
             </p>
             <div className="flex">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 bg-white/20 border border-white/30 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400"
+                className="flex-1 px-3 py-2 bg-slate-800 border border-slate-600 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
               />
-              <button className="px-6 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-r-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
+              <button className="px-4 py-2 bg-blue-600 text-white rounded-r-lg hover:bg-blue-700 transition-colors duration-300">
                 Subscribe
               </button>
             </div>
@@ -155,36 +128,38 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="border-t border-gray-800 mt-8 pt-8">
+        <div className="border-t border-slate-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              {legal.map((item) => (
-                <Link 
-                  key={item.name}
-                  to={item.href} 
-                  className="text-gray-400 hover:text-white text-sm transition-colors duration-300"
+            <div className="flex items-center mb-4 md:mb-0">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-3">
+                <span className="text-white font-bold text-sm">Z</span>
+              </div>
+              <span className="text-lg font-bold text-white">Zion Tech Group</span>
+            </div>
+            
+            <div className="flex space-x-6 mb-4 md:mb-0">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                  aria-label={social.name}
                 >
-                  {item.name}
-                </Link>
+                  {social.icon}
+                </a>
               ))}
             </div>
           </div>
+          
+          <div className="text-center mt-6">
+            <p className="text-gray-400 text-sm">
+              Made with ❤️ in San Francisco
+            </p>
+          </div>
         </div>
       </div>
-
-      {/* Back to Top Button */}
-      <button
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300 flex items-center justify-center"
-        aria-label="Back to top"
-      >
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-        </svg>
-      </button>
     </footer>
   );
 };

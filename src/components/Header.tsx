@@ -66,64 +66,55 @@ const Header: React.FC = () => {
             {/* Services Dropdown */}
             <div className="relative group">
               <button
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
                 className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
                   location.pathname.startsWith('/services')
                     ? 'text-white bg-blue-600/20'
                     : 'text-gray-300 hover:text-white hover:bg-white/10'
                 }`}
-                onMouseEnter={() => setIsServicesOpen(true)}
-                onMouseLeave={() => setIsServicesOpen(false)}
               >
                 Services
                 <svg className="ml-1 h-4 w-4 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
-                {location.pathname.startsWith('/services') && (
-                  <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></div>
-                )}
               </button>
               
-              {isServicesOpen && (
-                <div
-                  className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg border border-white/20 rounded-lg shadow-xl"
-                  onMouseEnter={() => setIsServicesOpen(true)}
-                  onMouseLeave={() => setIsServicesOpen(false)}
-                >
-                  <div className="p-4">
-                    <div className="grid grid-cols-1 gap-2">
-                      {services.map((service) => (
-                        <Link
-                          key={service.name}
-                          to={service.href}
-                          className="flex items-start p-3 rounded-lg hover:bg-white/10 transition-all duration-200 group"
-                        >
-                          <div className="flex-1">
-                            <div className="text-white font-medium group-hover:text-blue-400 transition-colors duration-200">
-                              {service.name}
-                            </div>
-                            <div className="text-sm text-gray-400 mt-1">
-                              {service.description}
-                            </div>
-                          </div>
-                          <svg className="h-4 w-4 text-gray-500 group-hover:text-blue-400 transition-colors duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                          </svg>
-                        </Link>
-                      ))}
-                    </div>
-                    <div className="mt-4 pt-4 border-t border-white/10">
+              {/* Services Dropdown Menu */}
+              <div
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
+                className={`absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-lg border border-white/20 rounded-xl shadow-xl transition-all duration-300 ${
+                  isServicesOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 pointer-events-none'
+                }`}
+              >
+                <div className="p-4">
+                  <div className="grid grid-cols-1 gap-2">
+                    {services.map((service, index) => (
                       <Link
-                        to="/services"
-                        className="block w-full text-center bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-200"
+                        key={index}
+                        to={service.href}
+                        className="flex items-start p-3 rounded-lg hover:bg-white/10 transition-all duration-300 group"
+                        onClick={closeMenu}
                       >
-                        View All Services
+                        <div className="flex-1">
+                          <div className="font-medium text-white group-hover:text-blue-400 transition-colors duration-300">
+                            {service.name}
+                          </div>
+                          <div className="text-sm text-gray-400 mt-1">
+                            {service.description}
+                          </div>
+                        </div>
+                        <svg className="w-4 h-4 text-gray-500 group-hover:text-blue-400 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
                       </Link>
-                    </div>
+                    ))}
                   </div>
                 </div>
-              )}
+              </div>
             </div>
-            
+
             <Link
               to="/about"
               className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
@@ -137,6 +128,7 @@ const Header: React.FC = () => {
                 <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></div>
               )}
             </Link>
+
             <Link
               to="/blog"
               className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
@@ -150,6 +142,7 @@ const Header: React.FC = () => {
                 <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></div>
               )}
             </Link>
+
             <Link
               to="/careers"
               className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
@@ -163,6 +156,7 @@ const Header: React.FC = () => {
                 <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></div>
               )}
             </Link>
+
             <Link
               to="/contact"
               className={`relative px-3 py-2 text-sm font-medium rounded-md transition-all duration-300 ${
@@ -178,108 +172,88 @@ const Header: React.FC = () => {
             </Link>
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden lg:block">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-            >
-              Get Started
-            </Link>
-          </div>
-
           {/* Mobile menu button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 rounded-md text-gray-300 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
-            aria-label="Toggle mobile menu"
-          >
-            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="lg:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            >
+              <span className="sr-only">Open main menu</span>
               {isMenuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <svg className="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
               ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                <svg className="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
               )}
-            </svg>
-          </button>
+            </button>
+          </div>
         </div>
+      </div>
 
-        {/* Mobile Navigation */}
-        <div className={`lg:hidden transition-all duration-300 ease-in-out ${
-          isMenuOpen 
-            ? 'max-h-96 opacity-100' 
-            : 'max-h-0 opacity-0 overflow-hidden'
-        }`}>
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 rounded-lg mt-2 border border-white/10">
-            <Link
-              to="/"
-              className={`block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
-                isActive('/')
-                  ? 'text-white bg-blue-600/20 border-l-4 border-blue-400'
-                  : 'text-gray-300 hover:text-white hover:bg-white/10'
-              }`}
-              onClick={closeMenu}
-            >
-              Home
-            </Link>
-            
-            {/* Mobile Services */}
-            <div className="px-3 py-2">
-              <div className="text-gray-300 font-medium mb-2">Services</div>
-              <div className="ml-4 space-y-1">
-                {services.map((service) => (
-                  <Link
-                    key={service.name}
-                    to={service.href}
-                    className="block px-3 py-2 text-gray-400 hover:text-white hover:bg-gray-700 rounded-md text-sm"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {service.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-            
-            <Link
-              to="/about"
-              className={`block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
-                isActive('/about')
-                  ? 'text-white bg-blue-600/20 border-l-4 border-blue-400'
-                  : 'text-gray-300 hover:text-white hover:bg-white/10'
-              }`}
-              onClick={closeMenu}
-            >
-              About
-            </Link>
-            <Link
-              to="/blog"
-              className={`block px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
-                isActive('/blog')
-                  ? 'text-white bg-blue-600/20 border-l-4 border-blue-400'
-                  : 'text-gray-300 hover:text-white hover:bg-white/10'
-              }`}
-              onClick={closeMenu}
-            >
-              Blog
-            </Link>
-            
-            <div className="pt-4 border-t border-white/10">
-              <Link
-                to="/careers"
-                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-700 rounded-md"
-                onClick={closeMenu}
-              >
-                Careers
-              </Link>
-              <Link
-                to="/contact"
-                className="block w-full text-center bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg"
-                onClick={closeMenu}
-              >
-                Get Started
-              </Link>
+      {/* Mobile Navigation */}
+      <div className={`lg:hidden transition-all duration-300 ${
+        isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
+      }`}>
+        <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800/95 backdrop-blur-lg border-t border-white/10">
+          <Link
+            to="/"
+            className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white/10 transition-colors duration-300"
+            onClick={closeMenu}
+          >
+            Home
+          </Link>
+          
+          {/* Services Section */}
+          <div className="px-3 py-2">
+            <div className="text-sm font-medium text-gray-400 mb-2">Services</div>
+            <div className="space-y-1 ml-4">
+              {services.map((service, index) => (
+                <Link
+                  key={index}
+                  to={service.href}
+                  className="block px-3 py-2 rounded-md text-sm text-gray-300 hover:text-white hover:bg-white/10 transition-colors duration-300"
+                  onClick={closeMenu}
+                >
+                  {service.name}
+                </Link>
+              ))}
             </div>
           </div>
+
+          <Link
+            to="/about"
+            className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white/10 transition-colors duration-300"
+            onClick={closeMenu}
+          >
+            About
+          </Link>
+
+          <Link
+            to="/blog"
+            className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white/10 transition-colors duration-300"
+            onClick={closeMenu}
+          >
+            Blog
+          </Link>
+
+          <Link
+            to="/careers"
+            className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white/10 transition-colors duration-300"
+            onClick={closeMenu}
+          >
+            Careers
+          </Link>
+
+          <Link
+            to="/contact"
+            className="block px-3 py-2 rounded-md text-base font-medium text-white hover:bg-white/10 transition-colors duration-300"
+            onClick={closeMenu}
+          >
+            Contact
+          </Link>
         </div>
       </div>
     </header>

@@ -61,14 +61,14 @@ const Careers: React.FC = () => {
     <>
       <Helmet>
         <title>Careers — Zion Tech Group | Join Our Team</title>
-        <meta name="description" content="Join Zion Tech Group's innovative team. Explore career opportunities in technology, AI, cybersecurity, and consulting." />
+        <meta name="description" content="Join Zion Tech Group's dynamic team of technology professionals. Explore career opportunities in AI, cloud computing, cybersecurity, and more." />
         <meta property="og:title" content="Careers — Zion Tech Group" />
-        <meta property="og:description" content="Exciting career opportunities at Zion Tech Group. Join our team of technology innovators." />
+        <meta property="og:description" content="Join our team of technology innovators and help shape the future of business technology." />
         <meta property="og:url" content="https://ziontechgroup.com/careers" />
         <link rel="canonical" href="https://ziontechgroup.com/careers" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
@@ -79,75 +79,67 @@ const Careers: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Be part of a team that's shaping the future of technology. Work with cutting-edge 
-              solutions and make a real impact on businesses worldwide.
+              Be part of a team that's shaping the future of technology. 
+              We're looking for passionate individuals who want to make a difference.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#open-positions"
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-              >
-                View Open Positions
-              </a>
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
-              >
-                Contact Us
-              </Link>
-            </div>
+            <Link
+              to="/contact"
+              className="inline-flex items-center bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+            >
+              Get in Touch
+            </Link>
           </div>
         </section>
 
         {/* Company Culture */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-20 bg-slate-800/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Our Culture
               </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                We foster an environment of innovation, collaboration, and continuous learning
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                At Zion Tech Group, we foster an environment of innovation, collaboration, and continuous learning
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h3 className="text-2xl font-bold mb-6">Why Work With Us?</h3>
-                <p className="text-gray-300 mb-6">
-                  At Zion Tech Group, we believe in empowering our team members to reach their full potential. 
-                  We provide the tools, resources, and support needed to excel in your role.
-                </p>
-                <p className="text-gray-300 mb-6">
-                  Our culture is built on trust, transparency, and teamwork. We encourage innovation, 
-                  celebrate diversity, and value every contribution to our success.
-                </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🚀</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Innovation First</h3>
+                <p className="text-gray-300">We encourage creative thinking and pushing the boundaries of what's possible</p>
               </div>
               
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
-                <h3 className="text-2xl font-bold mb-4">Our Values</h3>
-                <ul className="space-y-3 text-gray-300">
-                  <li>• Innovation at the forefront</li>
-                  <li>• Customer success first</li>
-                  <li>• Excellence in delivery</li>
-                  <li>• Continuous improvement</li>
-                  <li>• Team collaboration</li>
-                  <li>• Integrity in all we do</li>
-                </ul>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🤝</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Collaboration</h3>
+                <p className="text-gray-300">Work with talented professionals who share your passion for technology</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">📈</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">Growth</h3>
+                <p className="text-gray-300">Continuous learning and development opportunities to advance your career</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Benefits */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Benefits & Perks
               </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                We take care of our team with comprehensive benefits and perks
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We believe in taking care of our team members with comprehensive benefits and a great work environment
               </p>
             </div>
             
@@ -155,11 +147,11 @@ const Careers: React.FC = () => {
               {benefits.map((benefit, index) => (
                 <div
                   key={index}
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center"
+                  className="bg-slate-700/50 p-6 rounded-xl border border-white/10 hover:border-blue-400/50 transition-all duration-300"
                 >
                   <div className="text-4xl mb-4">{benefit.icon}</div>
                   <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
-                  <p className="text-sm text-gray-300">{benefit.description}</p>
+                  <p className="text-gray-300">{benefit.description}</p>
                 </div>
               ))}
             </div>
@@ -167,22 +159,22 @@ const Careers: React.FC = () => {
         </section>
 
         {/* Open Positions */}
-        <section id="open-positions" className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-20 bg-slate-800/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Open Positions
               </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Join our team and help us build the future of technology
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Ready to join our team? Check out our current openings and find the perfect role for you
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {openPositions.map((position, index) => (
                 <div
                   key={index}
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
+                  className="bg-slate-700/50 p-6 rounded-xl border border-white/10 hover:border-blue-400/50 transition-all duration-300"
                 >
                   <div className="flex justify-between items-start mb-4">
                     <h3 className="text-xl font-semibold text-white">{position.title}</h3>
@@ -191,7 +183,7 @@ const Careers: React.FC = () => {
                     </span>
                   </div>
                   
-                  <div className="flex items-center text-gray-300 text-sm mb-3">
+                  <div className="flex items-center text-gray-400 text-sm mb-3">
                     <span className="mr-4">{position.department}</span>
                     <span>{position.location}</span>
                   </div>
@@ -203,7 +195,7 @@ const Careers: React.FC = () => {
                     className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300"
                   >
                     Apply Now
-                    <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </Link>
@@ -220,11 +212,11 @@ const Careers: React.FC = () => {
               Don't See the Right Role?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              We're always looking for talented individuals. Send us your resume and we'll keep you in mind for future opportunities.
+              We're always looking for talented individuals. Send us your resume and let's discuss how you can contribute to our team.
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+              className="inline-flex items-center bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
             >
               Send Your Resume
             </Link>
