@@ -5,19 +5,18 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { FilterSidebar } from "@/components/search/FilterSidebar";
 import { ActiveFiltersBar } from "@/components/search/ActiveFiltersBar";
 import { ProductListingCard } from "@/components/ProductListingCard";
-import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from "@/data/marketplaceData";
+import { marketplaceItems, marketplaceFilters } from "@/data/marketplaceData";
 import { generateRandomListing } from "@/utils/generateRandomListing";
-import { toast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
+
 export default function Marketplace() {
     const navigate = useNavigate();
-    const { t } = useTranslation();
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedProductTypes, setSelectedProductTypes] = useState([]);
     const [selectedLocations, setSelectedLocations] = useState([]);
     const [selectedAvailability, setSelectedAvailability] = useState([]);
     const [selectedRating, setSelectedRating] = useState(null);
-    const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
+    const [listings, setListings] = useState(marketplaceItems);
     const [isLoading, setIsLoading] = useState(false);
     const [view, setView] = useState(() => localStorage.getItem('marketplaceView') || 'grid');
     // Automatically append a new listing every 2 minutes
@@ -27,8 +26,7 @@ export default function Marketplace() {
         }, 120000); // 2 minutes
         return () => clearInterval(interval);
     }, []);
-    const searchSuggestions = generateSearchSuggestions();
-    const filterOptions = useMemo(() => generateFilterOptions(listings), [listings]);
+    // Filter options are now imported from marketplaceData
     useEffect(() => {
         setIsLoading(true);
         const timeout = setTimeout(() => setIsLoading(false), 300);
@@ -88,10 +86,8 @@ export default function Marketplace() {
     const handleRequestQuote = (listingId) => {
         const listing = listings.find(item => item.id === listingId);
         if (listing) {
-            toast({
-                title: "Quote Requested",
-                description: `Your quote request for ${listing.title} has been sent.`
-            });
+                    // Quote request functionality would go here
+        console.log(`Quote requested for ${listing.title}`);
             // Navigate to the quote request page with the listing information
             navigate("/request-quote", {
                 state: {
