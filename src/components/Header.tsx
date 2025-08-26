@@ -25,9 +25,9 @@ const Header: React.FC = () => {
       href: '/services',
       dropdown: [
         { name: 'AI Solutions', href: '/ai-solutions', description: 'Advanced AI and machine learning services' },
-        { name: 'Cybersecurity', href: '/cybersecurity', description: 'Comprehensive security solutions' },
-        { name: 'Cloud & DevOps', href: '/cloud-devops', description: 'Scalable cloud infrastructure' },
-        { name: 'Data Analytics', href: '/data-analytics', description: 'Transform data into insights' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Comprehensive security solutions' },
+        { name: 'Cloud & DevOps', href: '/services/cloud', description: 'Scalable cloud infrastructure' },
+        { name: 'Data Analytics', href: '/services/ai', description: 'Transform data into insights' },
         { name: 'Quantum Technology', href: '/quantum-technology', description: 'Next-generation computing' },
         { name: 'Enterprise Solutions', href: '/enterprise-solutions', description: 'Large-scale business solutions' }
       ]
@@ -36,10 +36,10 @@ const Header: React.FC = () => {
       name: 'Solutions', 
       href: '/solutions',
       dropdown: [
-        { name: 'Healthcare', href: '/solutions/healthcare', description: 'AI-powered healthcare solutions' },
-        { name: 'Finance', href: '/solutions/finance', description: 'Financial technology innovations' },
-        { name: 'Manufacturing', href: '/solutions/manufacturing', description: 'Smart manufacturing systems' },
-        { name: 'Retail', href: '/solutions/retail', description: 'Digital retail transformation' }
+        { name: 'Healthcare', href: '/solutions', description: 'AI-powered healthcare solutions' },
+        { name: 'Finance', href: '/solutions', description: 'Financial technology innovations' },
+        { name: 'Manufacturing', href: '/solutions', description: 'Smart manufacturing systems' },
+        { name: 'Retail', href: '/solutions', description: 'Digital retail transformation' }
       ]
     },
     { 

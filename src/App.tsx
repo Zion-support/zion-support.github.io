@@ -139,7 +139,7 @@ const GDPR = React.lazy(() => import('./pages/GDPR'));
 const API = React.lazy(() => import('./pages/API'));
 const Status = React.lazy(() => import('./pages/Status'));
 
-const Accessibility = React.lazy(() => import('./pages/Accessibility'));
+// duplicate removed: const Accessibility = React.lazy(() => import('./pages/Accessibility'));
 const APIDocs = React.lazy(() => import('./pages/APIDocs'));
 
 const baseRoutes = [
