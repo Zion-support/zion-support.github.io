@@ -27,6 +27,7 @@ import { AIServicesShowcase } from "@/components/AIServicesShowcase";
 import { InteractiveTestimonials } from "@/components/InteractiveTestimonials";
 import { EnhancedInnovativeServicesShowcase } from "@/components/EnhancedInnovativeServicesShowcase";
 import { EnhancedPricingComparison } from "@/components/EnhancedPricingComparison";
+import { EnhancedServiceShowcase } from "@/components/EnhancedServiceShowcase";
 
 // Enhanced loading component with better UX
 const EnhancedLoadingSpinner = () => (
@@ -440,6 +441,9 @@ export default function Home() {
       <QuickAccess />
 
 
+
+      {/* Enhanced Service Showcase */}
+      <EnhancedServiceShowcase />
 
       {/* Enhanced Categories Section */}
       <CategoriesSection />
