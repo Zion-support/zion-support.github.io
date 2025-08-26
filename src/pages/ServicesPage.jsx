@@ -596,7 +596,7 @@ export default function ServicesPage() {
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <h2 className="text-white text-lg font-medium">Featured Services</h2>
           <div className="flex flex-wrap gap-2">
-            <Link to="/comprehensive-services">
+            <Link to="/enhanced-services">
               <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                 <Globe className="h-4 w-4 mr-2"/>
                 View All Services
