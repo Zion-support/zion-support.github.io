@@ -42,6 +42,8 @@ const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
 const ContactPage = React.lazy(() => import('./pages/Contact'));
 const ZionHireAI = React.lazy(() => import('./pages/ZionHireAI'));
 const RequestQuotePage = React.lazy(() => import('./pages/RequestQuote'));
+const CuttingEdgeServicesShowcase = React.lazy(() => import('./pages/CuttingEdgeServicesShowcase'));
+const InnovationServicesMarketing = React.lazy(() => import('./pages/InnovationServicesMarketing'));
 
 const baseRoutes = [
   { path: '/', element: <Home /> },
@@ -64,6 +66,8 @@ const baseRoutes = [
   { path: '/zion-hire-ai', element: <ZionHireAI /> },
   { path: '/hire-ai', element: <ZionHireAI /> },
   { path: '/request-quote', element: <RequestQuotePage /> },
+  { path: '/cutting-edge-services', element: <CuttingEdgeServicesShowcase /> },
+  { path: '/innovation-services-marketing', element: <InnovationServicesMarketing /> },
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
 ];
