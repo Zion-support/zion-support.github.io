@@ -16,17 +16,15 @@ import ToastProvider from './components/ToastProvider';
 // Import i18n configuration
 import './i18n';
 import { LanguageProvider } from '@/context/LanguageContext';
-import { LanguageDetectionPopup } from './components/LanguageDetectionPopup';
 import { WhitelabelProvider } from '@/context/WhitelabelContext';
 import { AppLayout } from '@/layout/AppLayout';
 
 // Import auth and notification providers
 import { AuthProvider } from './context/auth/AuthProvider';
-import { NotificationProvider } from './context/notifications/NotificationContext';
+import { NotificationProvider } from './components/ui/notification';
 
-// Import analytics provider
-import { AnalyticsProvider } from './context/AnalyticsContext';
-import { ViewModeProvider } from './context/ViewModeContext';
+// Providers trimmed for build
+// import { AnalyticsProvider } from './context/AnalyticsContext';
 import { registerServiceWorker } from './serviceWorkerRegistration';
 
 // Initialize a React Query client with global error handling
@@ -50,16 +48,13 @@ function renderApp() {
             <Router>
               <AuthProvider>
                 <NotificationProvider>
-                  <AnalyticsProvider>
-                    <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
-                      <ViewModeProvider>
-                        <AppLayout>
-                          <App />
-                        </AppLayout>
-                      </ViewModeProvider>
-                      <LanguageDetectionPopup />
-                    </LanguageProvider>
-                  </AnalyticsProvider>
+                  
+                  <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+                    <AppLayout>
+                      <App />
+                    </AppLayout>
+                  </LanguageProvider>
+                  
                 </NotificationProvider>
               </AuthProvider>
             </Router>
@@ -107,14 +102,13 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Router>
             <AuthProvider>
               <NotificationProvider>
-                <AnalyticsProvider>
+                
                   <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
                     <AppLayout>
                       <App />
                     </AppLayout>
-                    <LanguageDetectionPopup />
                   </LanguageProvider>
-                </AnalyticsProvider>
+                
               </NotificationProvider>
             </AuthProvider>
           </Router>
