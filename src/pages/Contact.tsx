@@ -48,7 +48,7 @@ const Contact: React.FC = () => {
   const contactInfo = [
     {
       title: 'Email',
-      value: 'info@ziontechgroup.com',
+      value: 'kleber@ziontechgroup.com',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -80,28 +80,12 @@ const Contact: React.FC = () => {
 
   const officeLocations = [
     {
-      city: 'New York',
-      address: '123 Tech Avenue, Suite 100',
-      state: 'NY 10001',
+      city: 'Middletown',
+      address: '364 E Main St STE 1008',
+      state: 'DE 19709',
       country: 'United States',
       timezone: 'EST (UTC-5)',
-      phone: '+1 (212) 555-0123'
-    },
-    {
-      city: 'San Francisco',
-      address: '456 Innovation Drive',
-      state: 'CA 94105',
-      country: 'United States',
-      timezone: 'PST (UTC-8)',
-      phone: '+1 (415) 555-0123'
-    },
-    {
-      city: 'London',
-      address: '789 Digital Street',
-      state: 'EC1A 1BB',
-      country: 'United Kingdom',
-      timezone: 'GMT (UTC+0)',
-      phone: '+44 20 7123 4567'
+      phone: '+1 302 464 0950'
     }
   ];
 
@@ -418,7 +402,7 @@ const Contact: React.FC = () => {
               Call Us Now
             </a>
             <a
-              href="mailto:info@ziontechgroup.com"
+              href="mailto:kleber@ziontechgroup.com"
               className="inline-flex items-center px-10 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 hover:border-white/50 transition-all duration-300 transform hover:scale-105"
             >
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
