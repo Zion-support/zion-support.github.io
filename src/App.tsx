@@ -4,17 +4,17 @@ import { AppHeader } from './layout/AppHeader.tsx'
 import { Footer } from './components/Footer.tsx'
 import { ChatAssistant } from './components/ChatAssistant.tsx'
 
-const Home = React.lazy(() => import('./pages/Home'))
-const About = React.lazy(() => import('./pages/About'))
-const Contact = React.lazy(() => import('./pages/Contact'))
-const Blog = React.lazy(() => import('./pages/Blog'))
-const BlogPost = React.lazy(() => import('./pages/BlogPost'))
-const FAQ = React.lazy(() => import('./pages/FAQ'))
-const Careers = React.lazy(() => import('./pages/Careers'))
-const Privacy = React.lazy(() => import('./pages/Privacy'))
-const Terms = React.lazy(() => import('./pages/Terms'))
-const Sitemap = React.lazy(() => import('./pages/Sitemap'))
-const GreenIT = React.lazy(() => import('./pages/GreenIT'))
+const Home = React.lazy(() => import('./pages/Home.tsx'))
+const About = React.lazy(() => import('./pages/Index.tsx'))
+const Contact = React.lazy(() => import('./pages/Contact.tsx'))
+const Blog = React.lazy(() => import('./pages/Blog.tsx'))
+const BlogPost = React.lazy(() => import('./pages/BlogPost.tsx'))
+const FAQ = React.lazy(() => import('./pages/FAQ.tsx'))
+const Careers = React.lazy(() => import('./pages/Careers.tsx'))
+const Privacy = React.lazy(() => import('./pages/GDPR.tsx'))
+const Terms = React.lazy(() => import('./pages/Index.tsx'))
+const Sitemap = React.lazy(() => import('./components/SitemapPage.tsx'))
+const GreenIT = React.lazy(() => import('./pages/GreenIT.tsx'))
 
 const LoadingSpinner = () => (
 	<div className="flex items-center justify-center min-h-screen">
