@@ -553,7 +553,6 @@ body {
 }
 *:focus {
   outline: 2px solid var(--primary);
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   outline-offset: 2px;
 }
 
@@ -1306,7 +1305,6 @@ td {
 /* Animation Classes */
 .animate-float {
   animation: float 6s ease-in-out infinite;
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 }
 
 /* Mobile-First Scrollbar Styles */
@@ -1535,7 +1533,6 @@ td {
   h3 {
     font-size: clamp(1.25rem, 6vw, 2.5rem);
   }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 }
 
 .focus-visible:focus {
@@ -1807,7 +1804,6 @@ td {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 }
 
 .btn-primary:hover {
@@ -2062,4 +2058,3 @@ td {
 @media (min-width: 641px) and (max-width: 1024px) {
   .container { padding-left: 1.25rem; padding-right: 1.25rem; }
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
