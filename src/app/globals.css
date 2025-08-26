@@ -62,14 +62,19 @@
 /* Custom Zion Tech Group styles */
 @layer components {
   .zion-gradient {
-    @apply bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple;
+    background: linear-gradient(to right, #06b6d4, #3b82f6, #8b5cf6);
   }
   
   .zion-text-gradient {
-    @apply bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent;
+    background: linear-gradient(to right, #06b6d4, #3b82f6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
   
   .zion-border-gradient {
-    @apply border border-transparent bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-border;
+    border: 1px solid transparent;
+    background: linear-gradient(to right, #06b6d4, #3b82f6);
+    background-clip: border-box;
   }
 }
