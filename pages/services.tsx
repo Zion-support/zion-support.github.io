@@ -260,6 +260,7 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
 import { extraServices } from '../data/extra-services';
 import { additionalEnhancedServices } from '../data/additional-real-services';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
 import { innovativeAIServices } from '../data/innovative-ai-services';
 import { advancedITServices } from '../data/advanced-it-services';
@@ -276,6 +277,8 @@ import { advancedCybersecurityServices } from '../data/advanced-cybersecurity-se
 import { newRealServices } from '../data/new-real-services';
 import { marketReadyServices } from '../data/market-ready-services';
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8a5d
+=======
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-915b
 
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -399,6 +402,7 @@ export default function ServicesPage() {
       return 0;
     };
 
+<<<<<<< HEAD
     let filtered = allServices.filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -420,6 +424,47 @@ export default function ServicesPage() {
                           (selectedPriceRange === 'premium' && numericPrice >= 20000);
       
       return matchesSearch && matchesCategory && matchesPrice;
+=======
+  const allServices = useMemo(() => {
+    return enhancedRealMicroSaasServices
+      .concat(extraServices)
+      .concat(additionalEnhancedServices);
+  }, []);
+
+  const filteredServices = useMemo(() => {
+    let filtered = allServices.slice();
+
+    if (selectedCategory) {
+      filtered = filtered.filter(s => s.category === selectedCategory);
+    }
+    if (searchTerm) {
+      const q = searchTerm.toLowerCase();
+      filtered = filtered.filter(s =>
+        s.name.toLowerCase().includes(q) ||
+        s.description.toLowerCase().includes(q) ||
+        s.tagline.toLowerCase().includes(q) ||
+        s.category.toLowerCase().includes(q)
+      );
+    }
+
+    filtered.sort((a, b) => {
+      switch (sortBy) {
+        case 'price':
+          return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));
+        case 'rating':
+          return b.rating - a.rating;
+        case 'roi': {
+          const ra = parseFloat((a.roi.match(/(\d+)/)?.[1] || '0'));
+          const rb = parseFloat((b.roi.match(/(\d+)/)?.[1] || '0'));
+          return rb - ra;
+        }
+        case 'category':
+          return a.category.localeCompare(b.category);
+        case 'name':
+        default:
+          return a.name.localeCompare(b.name);
+      }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-915b
     });
 
     // Sort services
@@ -584,10 +629,78 @@ export default function ServicesPage() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               From quantum AI to space technology, discover services that will transform your business and give you unprecedented competitive advantages
             </p>
+<<<<<<< HEAD
             
             {/* Search and Filters */}
             <div className="max-w-4xl mx-auto space-y-6">
               {/* Search Bar */}
+=======
+          </motion.div>
+
+          <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
+            {heroStats.map((s, i) => (
+              <div key={i} className="text-center p-4 rounded-xl bg-gray-900/50 border border-gray-700/50">
+                <div className="mb-1 flex justify-center">{s.icon}</div>
+                <div className="text-2xl font-bold text-white">{s.value}</div>
+                <div className="text-xs text-gray-400">{s.label}</div>
+              </div>
+            ))}
+          </motion.div>
+
+          {/* Contact quick */}
+          <div className="mt-8 bg-gray-900/50 border border-gray-700/50 rounded-2xl p-6 max-w-2xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+              <div className="flex flex-col items-center gap-2"><Phone className="w-5 h-5 text-cyan-400" /><a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="text-sm text-gray-300 hover:text-white">{contactInfo.mobile}</a></div>
+              <div className="flex flex-col items-center gap-2"><Mail className="w-5 h-5 text-cyan-400" /><a href={`mailto:${contactInfo.email}`} className="text-sm text-gray-300 hover:text-white">{contactInfo.email}</a></div>
+              <div className="flex flex-col items-center gap-2"><MapPin className="w-5 h-5 text-cyan-400" /><a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-sm text-gray-300 hover:text-white">{contactInfo.address}</a></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Service Ads */}
+      <section className="py-6 px-4">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {[
+              {
+                title: '💸 Cloud Cost Optimizer Pro',
+                desc: 'Rightsizing, off-hours and anomaly detection with IaC outputs.',
+                price: '$149/month',
+                link: 'https://ziontechgroup.com/cloud-cost-optimizer'
+              },
+              {
+                title: '📈 Uptime & SLO Monitor',
+                desc: 'Error budgets, burn-rate alerts and synthetic checks. OTel-native.',
+                price: 'From $89/month',
+                link: 'https://ziontechgroup.com/uptime-slo-monitor'
+              }
+            ].map((ad) => (
+              <Card key={ad.title} className="bg-gray-900/60 border border-gray-700/50">
+                <div className="p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                  <div>
+                    <h3 className="text-xl font-bold text-white">{ad.title}</h3>
+                    <p className="text-gray-300">{ad.desc}</p>
+                    <div className="text-cyan-400 font-semibold mt-2">{ad.price}</div>
+                    <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-300">
+                      <a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="flex items-center gap-2 hover:text-white"><Phone className="w-4 h-4 text-cyan-400" /> {contactInfo.mobile}</a>
+                      <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-2 hover:text-white"><Mail className="w-4 h-4 text-purple-400" /> {contactInfo.email}</a>
+                    </div>
+                  </div>
+                  <Button href={ad.link} className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-5 py-3 rounded-lg font-semibold">View Details</Button>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Controls */}
+      <section className="py-6 px-4">
+        <div className="container mx-auto">
+          <div className="bg-gray-900/50 border border-gray-700/50 rounded-2xl p-6 flex flex-col lg:flex-row gap-6 items-center">
+            <div className="flex-1 w-full">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-915b
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
@@ -791,6 +904,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Featured Categories */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
         <div className="max-w-7xl mx-auto">
@@ -878,6 +992,27 @@ export default function ServicesPage() {
                 </Card>
               </motion.div>
             ))}
+=======
+      {/* Contact CTA */}
+      <section className="py-16 px-4">
+        <div className="container mx-auto text-center max-w-4xl">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
+          <p className="text-gray-300 text-lg mb-8">Talk to our experts to design your roadmap. Transparent pricing, measurable outcomes.</p>
+          <div className="bg-gray-900/50 border border-gray-700/50 rounded-2xl p-8 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="flex flex-col items-center gap-2"><Phone className="w-6 h-6 text-cyan-400" /><a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="text-white font-semibold hover:text-cyan-300">{contactInfo.mobile}</a></div>
+              <div className="flex flex-col items-center gap-2"><Mail className="w-6 h-6 text-cyan-400" /><a href={`mailto:${contactInfo.email}`} className="text-white font-semibold hover:text-cyan-300">{contactInfo.email}</a></div>
+              <div className="flex flex-col items-center gap-2"><MapPin className="w-6 h-6 text-cyan-400" /><a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="text-white font-semibold text-sm hover:text-cyan-300">{contactInfo.address}</a></div>
+            </div>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 text-lg font-semibold rounded-xl">
+              Start Free Consultation
+            </Button>
+            <Button href="/pricing" variant="outline" className="border-2 border-cyan-500 text-cyan-400 px-8 py-4 text-lg font-semibold rounded-xl">
+              View Pricing
+            </Button>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-915b
           </div>
         </div>
       </section>
