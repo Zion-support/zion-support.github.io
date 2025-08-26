@@ -10,6 +10,17 @@ import InnovativeServices2025 from './pages/InnovativeServices2025';
 import ComprehensivePricing2025 from './pages/ComprehensivePricing2025';
 import Blog from './pages/Blog';
 import NotFound from './pages/NotFound';
+import Careers from './pages/Careers';
+import Privacy from './pages/Privacy';
+import Terms from './pages/Terms';
+
+// Service Detail Pages
+import AISolutions from './pages/services/AISolutions';
+import CloudDevOps from './pages/services/CloudDevOps';
+import Cybersecurity from './pages/services/Cybersecurity';
+import ITInfrastructure from './pages/services/ITInfrastructure';
+import DigitalTransformation from './pages/services/DigitalTransformation';
+import Consulting from './pages/services/Consulting';
 
 function App() {
   return (
@@ -25,6 +36,18 @@ function App() {
             <Route path="/innovative-services-2025" element={<InnovativeServices2025 />} />
             <Route path="/comprehensive-pricing-2025" element={<ComprehensivePricing2025 />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
+            
+            {/* Service Detail Routes */}
+            <Route path="/services/ai" element={<AISolutions />} />
+            <Route path="/services/cloud" element={<CloudDevOps />} />
+            <Route path="/services/cybersecurity" element={<Cybersecurity />} />
+            <Route path="/services/infrastructure" element={<ITInfrastructure />} />
+            <Route path="/services/transformation" element={<DigitalTransformation />} />
+            <Route path="/services/consulting" element={<Consulting />} />
+            
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
