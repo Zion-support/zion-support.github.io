@@ -4,6 +4,40 @@ import { Link } from 'react-router-dom';
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
+  const services = [
+    { name: 'AI Solutions', path: '/services' },
+    { name: 'Cloud & DevOps', path: '/services' },
+    { name: 'Cybersecurity', path: '/services' },
+    { name: 'Digital Transformation', path: '/services' },
+    { name: 'Web Development', path: '/services' },
+    { name: 'Data Analytics', path: '/services' }
+  ];
+
+  const company = [
+    { name: 'About Us', path: '/about' },
+    { name: 'Our Team', path: '/about' },
+    { name: 'Careers', path: '/careers' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'News', path: '/news' },
+    { name: 'Press Kit', path: '/press' }
+  ];
+
+  const resources = [
+    { name: "Case Studies", path: "/case-studies" },
+    { name: "White Papers", path: "/white-papers" },
+    { name: "Webinars", path: "/webinars" },
+    { name: "Documentation", path: "/docs" }
+  ];
+
+  const legal = [
+    { name: 'Privacy Policy', path: '/privacy' },
+    { name: 'Terms of Service', path: '/terms' },
+    { name: 'Cookie Policy', path: '/cookies' },
+    { name: 'GDPR Compliance', path: '/gdpr' },
+    { name: 'Security', path: '/security' },
+    { name: 'Compliance', path: '/compliance' }
+  ];
+
   const socialLinks = [
     {
       name: 'LinkedIn',
@@ -43,97 +77,46 @@ const Footer: React.FC = () => {
     }
   ];
 
-  const footerSections = [
-    {
-      title: 'Services',
-      links: [
-        { name: 'AI Solutions', href: '/services' },
-        { name: 'Cloud & DevOps', href: '/services' },
-        { name: 'Cybersecurity', href: '/services' },
-        { name: 'Digital Transformation', href: '/services' },
-        { name: 'Web Development', href: '/services' },
-        { name: 'Data Analytics', href: '/services' }
-      ]
-    },
-    {
-      title: 'Company',
-      links: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Team', href: '/about' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Blog', href: '/blog' },
-        { name: 'News', href: '/news' },
-        { name: 'Press Kit', href: '/press' }
-      ]
-    },
-    {
-      title: 'Support',
-      links: [
-        { name: 'Contact Us', href: '/contact' },
-        { name: 'Help Center', href: '/help' },
-        { name: 'Documentation', href: '/docs' },
-        { name: 'API Reference', href: '/api' },
-        { name: 'Status Page', href: '/status' },
-        { name: 'Support Portal', href: '/support' }
-      ]
-    },
-    {
-      title: 'Legal',
-      links: [
-        { name: 'Privacy Policy', href: '/privacy' },
-        { name: 'Terms of Service', href: '/terms' },
-        { name: 'Cookie Policy', href: '/cookies' },
-        { name: 'GDPR Compliance', href: '/gdpr' },
-        { name: 'Security', href: '/security' },
-        { name: 'Compliance', href: '/compliance' }
-      ]
-    }
-  ];
-
   return (
     <footer className="bg-slate-900 text-white" role="contentinfo">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="mb-6">
-              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                Zion Tech Group
-              </h3>
-              <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
-                Leading provider of innovative technology solutions, AI-powered services, and digital transformation expertise. 
-                We help businesses thrive in the digital age.
-              </p>
+            <div className="flex items-center mb-4">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mr-3">
+                <span className="text-white font-bold text-lg">Z</span>
+              </div>
+              <span className="text-xl font-bold text-white">Zion Tech Group</span>
             </div>
+            <p className="text-gray-300 mb-6 max-w-md leading-relaxed">
+              Leading provider of innovative technology solutions, AI-powered services, and digital transformation expertise. 
+              We help businesses thrive in the digital age with cutting-edge solutions.
+            </p>
             
             {/* Contact Info */}
-            <div className="space-y-3 mb-6">
-              <div className="flex items-center text-gray-300">
-                <svg className="w-5 h-5 mr-3 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <span>Wilmington, DE, USA</span>
-              </div>
-              <div className="flex items-center text-gray-300">
-                <svg className="w-5 h-5 mr-3 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="space-y-2 mb-6 text-sm text-gray-400">
+              <div className="flex items-center">
+                <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <a href="tel:+13024640950" className="hover:text-blue-400 transition-colors duration-300">
-                  +1 (302) 464-0950
-                </a>
+                +1 (302) 464-0950
               </div>
-              <div className="flex items-center text-gray-300">
-                <svg className="w-5 h-5 mr-3 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="flex items-center">
+                <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <a href="mailto:info@ziontechgroup.com" className="hover:text-blue-400 transition-colors duration-300">
-                  info@ziontechgroup.com
-                </a>
+                info@ziontechgroup.com
+              </div>
+              <div className="flex items-center">
+                <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314-11.314z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                Wilmington, DE & Remote
               </div>
             </div>
-
+            
             {/* Social Links */}
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
@@ -142,8 +125,8 @@ const Footer: React.FC = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-blue-400 transition-colors duration-300 p-2 rounded-lg hover:bg-gray-800"
-                  aria-label={`Follow us on ${social.name}`}
+                  className="text-gray-400 hover:text-white transition-colors duration-300 p-2 hover:bg-white/10 rounded-lg"
+                  aria-label={social.name}
                 >
                   {social.icon}
                 </a>
@@ -151,63 +134,94 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Footer Sections */}
-          {footerSections.map((section) => (
-            <div key={section.title}>
-              <h4 className="text-lg font-semibold mb-4 text-white">{section.title}</h4>
-              <ul className="space-y-3">
-                {section.links.map((link) => (
-                  <li key={link.name}>
-                    <Link 
-                      to={link.href} 
-                      className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+          {/* Services */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-white">Services</h4>
+            <ul className="space-y-2">
+              {services.map((service) => (
+                <li key={service.path}>
+                  <Link 
+                    to={service.path} 
+                    className="text-gray-300 hover:text-white transition-colors duration-300 text-sm"
+                  >
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        {/* Newsletter Signup */}
-        <div className="border-t border-gray-800 pt-8 mb-8">
-          <div className="max-w-md">
-            <h4 className="text-lg font-semibold mb-3 text-white">Stay Updated</h4>
-            <p className="text-gray-300 mb-4 text-sm">
-              Get the latest insights on technology trends and industry updates.
-            </p>
-            <div className="flex">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                aria-label="Email address for newsletter"
-              />
-              <button className="px-6 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-r-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900">
-                Subscribe
-              </button>
-            </div>
+          {/* Company */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-white">Company</h4>
+            <ul className="space-y-2">
+              {company.map((item) => (
+                <li key={item.path}>
+                  <Link 
+                    to={item.path} 
+                    className="text-gray-300 hover:text-white transition-colors duration-300 text-sm"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-white">Resources</h4>
+            <ul className="space-y-2">
+              {resources.map((item) => (
+                <li key={item.path}>
+                  <Link 
+                    to={item.path} 
+                    className="text-gray-300 hover:text-white transition-colors duration-300 text-sm"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-white">Legal</h4>
+            <ul className="space-y-2">
+              {legal.map((item) => (
+                <li key={item.path}>
+                  <Link 
+                    to={item.path} 
+                    className="text-gray-300 hover:text-white transition-colors duration-300 text-sm"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
-        {/* Bottom Footer */}
-        <div className="border-t border-gray-800 pt-8">
+        {/* Bottom Section */}
+        <div className="border-t border-white/10 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </p>
-            <div className="flex space-x-6">
-              <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
-                Terms of Service
-              </Link>
-              <Link to="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors duration-300">
-                Cookie Policy
-              </Link>
+            <div className="text-gray-400 text-sm mb-4 md:mb-0">
+              © 2025 Zion Tech Group. All rights reserved.
+            </div>
+            <div className="flex items-center space-x-6 text-sm text-gray-400">
+              <div className="flex items-center">
+                <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
+                ISO 27001 Certified
+              </div>
+              <div className="flex items-center">
+                <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
+                SOC 2 Type II
+              </div>
+              <div className="flex items-center">
+                <div className="w-2 h-2 bg-purple-400 rounded-full mr-2"></div>
+                Microsoft Gold Partner
+              </div>
             </div>
           </div>
         </div>
