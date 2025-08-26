@@ -303,8 +303,13 @@ const quickLinks = [
   { name: 'Pricing', href: '/pricing', icon: <DollarSign className="w-4 h-4" /> },
   { name: 'Market Pricing', href: '/market-pricing', icon: <DollarSign className="w-4 h-4" /> },
   { name: 'Services Advertising', href: '/services-advertising', icon: <BookOpen className="w-4 h-4" /> },
+<<<<<<< HEAD
   { name: 'Events', href: '/events', icon: <Calendar className="w-4 h-4" /> },
   { name: 'Webinars', href: '/webinars', icon: <Video className="w-4 h-4" /> },
+=======
+  { name: 'Events', href: '/events', icon: <Star className="w-4 h-4" /> },
+  { name: 'Webinars', href: '/webinars', icon: <Star className="w-4 h-4" /> },
+>>>>>>> bb65c1ef0a972fd1f54d0f8109dacb32dae32437
   { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4" /> },
   { name: 'Contact', href: '/contact', icon: <Mail className="w-4 h-4" /> },
   { name: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> }

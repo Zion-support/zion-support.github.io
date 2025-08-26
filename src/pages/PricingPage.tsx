@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SEO } from '@/components/SEO';
+import SEO from '../SEO';
 import { Check, Star, Zap, Brain, Server, Shield, Building } from 'lucide-react';
 
 const PricingPage: React.FC = () => {

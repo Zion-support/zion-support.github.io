@@ -8,8 +8,7 @@ import {
   Zap, Database, Cloud, Lock, Code,
   Sparkles, Target, Award, Lightbulb
 } from 'lucide-react';
-import { innovative2025Services } from '../data/innovative-2025-services';
-import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
+import { innovativeRealMicroSaasServices2025 as allData } from '../data/2025-innovative-real-micro-saas-services';
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
 
 export default function EnhancedServicesShowcase2025() {
@@ -18,10 +17,7 @@ export default function EnhancedServicesShowcase2025() {
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('name');
 
-  const allServices = [
-    ...innovative2025Services,
-    ...emergingTech2025Services
-  ];
+  const allServices = allData;
 
   // Dynamic category counts
   const aiCount = allServices.filter(service => service.category.includes('AI')).length;

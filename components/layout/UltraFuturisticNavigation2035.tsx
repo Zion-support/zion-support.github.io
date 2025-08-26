@@ -40,7 +40,15 @@ const navigationItems: NavigationItem[] = [
       { name: 'Blog', href: '/blog', description: 'Insights and updates' },
       { name: 'Case Studies', href: '/case-studies', description: 'Proven results' },
       { name: 'Developer', href: '/developer', description: 'Docs and SDKs' },
+<<<<<<< HEAD
       { name: 'Services Advertising', href: '/services-advertising', description: 'Features, benefits and market pricing links' }
+=======
+      { name: 'Services Advertising', href: '/services-advertising', description: 'Features, benefits and market pricing links' },
+      { name: 'AI Knowledge Graph Studio', href: '/services/ai-knowledge-graph-studio', description: 'Semantic search & lineage' },
+      { name: 'LLM Guarded API Gateway', href: '/services/llm-guarded-api-gateway', description: 'Safety and policies for LLM apps' },
+      { name: 'Events', href: '/events', description: 'Upcoming events' },
+      { name: 'Webinars', href: '/webinars', description: 'Live and on-demand' }
+>>>>>>> bb65c1ef0a972fd1f54d0f8109dacb32dae32437
     ]
   },
   {
@@ -49,6 +57,7 @@ const navigationItems: NavigationItem[] = [
     icon: <Phone className="w-5 h-5" />,
     description: 'Talk to our team',
     featured: true,
+<<<<<<< HEAD
     children: [
       { name: 'Contact Sales', href: '/contact', description: 'Get a quote' },
       { name: 'Support', href: '/support', description: 'Help center' }
@@ -105,6 +114,8 @@ const navigationItems: NavigationItem[] = [
     description: 'Revolutionary AI consciousness and emotional intelligence',
     badge: 'New',
     color: 'from-purple-500 to-pink-500',
+=======
+>>>>>>> bb65c1ef0a972fd1f54d0f8109dacb32dae32437
     children: [
       { name: 'AI Customer Success Platform', href: '/ai-customer-success-platform', description: 'Predict and prevent churn with AI', featured: true },
       { name: 'AI Sales Intelligence', href: '/ai-sales-intelligence-platform', description: 'Supercharge sales with AI automation' },

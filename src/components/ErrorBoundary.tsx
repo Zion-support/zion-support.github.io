@@ -1,79 +1,188 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 
-interface Props {
-  children: ReactNode;
+interface ErrorBoundaryProps {
+  children: React.ReactNode;
+  fallback?: React.ReactNode;
 }
 
-interface State {
+interface ErrorState {
   hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+  error: Error | null;
+  errorInfo: any;
+  errorId: string;
 }
 
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
+// Extend the Window interface to include gtag
+declare global {
+  interface Window {
+    gtag?: (command: string, action: string, params: any) => void;
   }
+}
 
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
+export function ErrorBoundary({ children, fallback }: ErrorBoundaryProps) {
+  const [errorState, setErrorState] = useState<ErrorState>({
+    hasError: false,
+    error: null,
+    errorInfo: null,
+    errorId: '',
+  });
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-    this.setState({
-      error,
-      errorInfo
+  useEffect(() => {
+    const handleError = (event: ErrorEvent) => {
+      const errorId = `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      
+      setErrorState({
+        hasError: true,
+        error: event.error || new Error(event.message),
+        errorInfo: { componentStack: event.filename },
+        errorId,
+      });
+
+      // Log error to console
+      console.error('Error caught by boundary:', event.error, event);
+
+      // Log to analytics if available
+      if (window.gtag) {
+        window.gtag('event', 'exception', {
+          description: event.message,
+          fatal: true,
+          error_id: errorId,
+        });
+      }
+    };
+
+    const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
+      const errorId = `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      
+      setErrorState({
+        hasError: true,
+        error: event.reason instanceof Error ? event.reason : new Error(String(event.reason)),
+        errorInfo: { componentStack: 'Unhandled Promise Rejection' },
+        errorId,
+      });
+    };
+
+    window.addEventListener('error', handleError);
+    window.addEventListener('unhandledrejection', handleUnhandledRejection);
+
+    return () => {
+      window.removeEventListener('error', handleError);
+      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
+    };
+  }, []);
+
+  const handleRetry = () => {
+    setErrorState({
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: '',
     });
-  }
+  };
 
-  render() {
-    if (this.state.hasError) {
-      return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 text-white flex items-center justify-center px-4">
-          <div className="max-w-2xl mx-auto text-center">
-            <div className="mb-8">
-              <svg className="mx-auto h-24 w-24 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-              </svg>
-            </div>
-            <h1 className="text-4xl font-bold mb-4">Oops! Something went wrong</h1>
-            <p className="text-xl text-gray-300 mb-8">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
-            </p>
-            <div className="space-y-4">
-              <button
-                onClick={() => window.location.reload()}
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-              >
-                Refresh Page
-              </button>
-              <button
-                onClick={() => window.history.back()}
-                className="block w-full sm:w-auto sm:inline-flex sm:items-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
-              >
-                Go Back
-              </button>
-            </div>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-8 text-left">
-                <summary className="cursor-pointer text-blue-400 hover:text-blue-300">
-                  Error Details (Development)
-                </summary>
-                <pre className="mt-4 p-4 bg-black/20 rounded-lg overflow-auto text-sm">
-                  {this.state.error.toString()}
-                  {this.state.errorInfo?.componentStack}
-                </pre>
-              </details>
-            )}
-          </div>
-        </div>
-      );
+  const handleGoHome = () => {
+    window.location.href = '/';
+  };
+
+  const handleReportBug = () => {
+    const errorDetails = {
+      message: errorState.error?.message,
+      stack: errorState.error?.stack,
+      componentStack: errorState.errorInfo?.componentStack,
+      errorId: errorState.errorId,
+      url: window.location.href,
+      userAgent: navigator.userAgent,
+      timestamp: new Date().toISOString(),
+    };
+
+    // Copy error details to clipboard
+    navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
+      .then(() => {
+        alert('Error details copied to clipboard. Please report this to support.');
+      })
+      .catch(() => {
+        // Fallback: open email with error details
+        const subject = encodeURIComponent(`Bug Report - Error ID: ${errorState.errorId}`);
+        const body = encodeURIComponent(JSON.stringify(errorDetails, null, 2));
+        window.open(`mailto:support@ziontechgroup.com?subject=${subject}&body=${body}`);
+      });
+  };
+
+  if (errorState.hasError) {
+    if (fallback) {
+      return <>{fallback}</>;
     }
 
-    return this.props.children;
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center p-4">
+        <Card className="w-full max-w-md border-red-500/20 bg-background/95 backdrop-blur-sm">
+          <CardHeader className="text-center pb-4">
+            <div className="mx-auto w-16 h-16 bg-red-500/10 rounded-full flex items-center justify-center mb-4">
+              <span className="text-red-500 text-2xl">⚠️</span>
+            </div>
+            <CardTitle className="text-xl text-red-500">Something went wrong</CardTitle>
+            <CardDescription className="text-muted-foreground">
+              We've encountered an unexpected error. Our team has been notified.
+            </CardDescription>
+          </CardHeader>
+          
+          <CardContent className="space-y-4">
+            <div className="bg-muted/50 rounded-lg p-3">
+              <p className="text-sm text-muted-foreground font-mono break-all">
+                Error ID: {errorState.errorId}
+              </p>
+              {errorState.error && (
+                <p className="text-sm text-muted-foreground mt-2">
+                  {errorState.error.message}
+                </p>
+              )}
+            </div>
+            
+            <div className="flex flex-col gap-2">
+              <Button onClick={handleRetry} className="w-full">
+                <span className="mr-2">🔄</span>
+                Try Again
+              </Button>
+              
+              <Button variant="outline" onClick={handleGoHome} className="w-full">
+                <span className="mr-2">🏠</span>
+                Go Home
+              </Button>
+              
+              <Button variant="outline" onClick={handleReportBug} className="w-full">
+                <span className="mr-2">🐛</span>
+                Report Bug
+              </Button>
+            </div>
+            
+            <div className="text-center">
+              <p className="text-xs text-muted-foreground">
+                If this problem persists, please contact support
+              </p>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    );
   }
+
+  return <>{children}</>;
 }
 
-export default ErrorBoundary;
+// Hook for functional components to handle errors
+export function useErrorHandler() {
+  const [error, setError] = useState<Error | null>(null);
+
+  const handleError = React.useCallback((error: Error) => {
+    setError(error);
+    console.error('Error caught by hook:', error);
+  }, []);
+
+  const clearError = React.useCallback(() => {
+    setError(null);
+  }, []);
+
+  return { error, handleError, clearError };
+}
