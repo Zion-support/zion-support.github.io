@@ -1,7 +1,9 @@
 import React, { Suspense, lazy } from 'react'
 import { Routes, Route } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
 import Layout from './components/Layout'
-import LoadingSpinner from './components/LoadingSpinner'
+import EnhancedLoadingSpinner from './components/EnhancedLoadingSpinner'
+import PerformanceMonitor from './components/PerformanceMonitor'
 
 // Lazy load pages for better performance
 const Index = lazy(() => import('../pages/index'))
@@ -10,15 +12,18 @@ const Contact = lazy(() => import('../pages/contact'))
 
 function App() {
   return (
-    <Layout>
-      <Suspense fallback={<LoadingSpinner />}>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </Suspense>
-    </Layout>
+    <HelmetProvider>
+      <Layout>
+        <Suspense fallback={<EnhancedLoadingSpinner size="lg" text="Loading page..." />}>
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </Suspense>
+        <PerformanceMonitor />
+      </Layout>
+    </HelmetProvider>
   )
 }
 

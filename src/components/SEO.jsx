@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+
 export function SEO({ title, description, keywords, image, canonical, ogImage, url }) {
     const siteName = 'Zion Tech Group';
     const fullTitle = `${title} | ${siteName}`;
@@ -33,3 +34,6 @@ export function SEO({ title, description, keywords, image, canonical, ogImage, u
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </Helmet>);
 }
+
+// Add default export to match what pages are importing
+export default SEO;
