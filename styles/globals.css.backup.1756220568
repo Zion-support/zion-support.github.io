@@ -455,8 +455,283 @@ body {
 /* Quantum Field Effects */
 .quantum-field-2029 {
   position: relative;
+<<<<<<< HEAD
+  overflow: hidden;
+}
+
+.quantum-field-2029::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    rgba(0, 255, 255, 0.1),
+    transparent,
+    rgba(139, 92, 246, 0.1),
+    transparent
+  );
+  animation: quantum-rotation-2029 20s linear infinite;
+}
+
+@keyframes quantum-rotation-2029 {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Holographic Matrix */
+.holographic-matrix-2029 {
+  background-image: 
+    linear-gradient(90deg, transparent 98%, rgba(139, 92, 246, 0.3) 100%),
+    linear-gradient(0deg, transparent 98%, rgba(139, 92, 246, 0.3) 100%);
+  background-size: 60px 60px;
+  animation: matrix-scroll-2029 30s linear infinite;
+}
+
+@keyframes matrix-scroll-2029 {
+  0% { background-position: 0px 0px; }
+  100% { background-position: 60px 60px; }
+}
+*:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.focus-high-contrast-success {
+  outline: 2px solid var(--focus-ring-success);
+  outline-offset: 2px;
+}
+
+.focus-high-contrast-warning {
+  outline: 2px solid var(--focus-ring-warning);
+  outline-offset: 2px;
+}
+
+.focus-high-contrast-error {
+  outline: 2px solid var(--focus-ring-error);
+  outline-offset: 2px;
+}
+
+/* Enhanced Shadow Utilities */
+.shadow-high-contrast {
+  box-shadow: var(--shadow-md);
+}
+
+.shadow-high-contrast-lg {
+  box-shadow: var(--shadow-lg);
+}
+
+.shadow-high-contrast-xl {
+  box-shadow: var(--shadow-xl);
+}
+
+.shadow-neon-high-contrast {
+  box-shadow: var(--shadow-neon);
+}
+
+.shadow-glow-high-contrast {
+  box-shadow: var(--shadow-glow);
+}
+
+/* Mobile-First Responsive Text Colors */
+.text-gray-300 {
+  color: #d1d5db;
+}
+
+.text-gray-400 {
+  color: #9ca3af;
+}
+
+.text-gray-500 {
+  color: #6b7280;
+}
+
+.text-gray-600 {
+  color: #4b5563;
+}
+
+.text-gray-700 {
+  color: #374151;
+}
+
+.text-gray-800 {
+  color: #1f2937;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.8);
+  border-radius: 6px;
+}
+
+/* Mobile-First Form Elements */
+input, textarea, select {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--neon-blue);
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+input::placeholder, textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Mobile-First Button Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-height: 44px; /* Mobile touch target */
+}
+
+.btn:focus {
+  outline: 2px solid var(--neon-blue);
+  outline-offset: 2px;
+}
+
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-ghost {
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: white;
+}
+
+.btn-ghost:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Mobile-First Card Styles */
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile-First Link Styles */
+a {
+  color: var(--neon-blue);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--neon-purple);
+}
+
+a:focus {
+  outline: 2px solid var(--neon-blue);
+  outline-offset: 2px;
+}
+
+/* Mobile-First Navigation Styles */
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--neon-blue);
+}
+
+nav a:focus {
+  outline: 2px solid var(--neon-blue);
+  outline-offset: 2px;
+}
+
+/* Mobile-First Status Indicators */
+.status-active {
+  color: var(--neon-green);
+  background-color: rgba(16, 185, 129, 0.1);
+}
+
+.status-pending {
+  color: var(--neon-orange);
+  background-color: rgba(245, 158, 11, 0.1);
+}
+
+.status-inactive {
+  color: var(--text-muted);
+  background-color: rgba(203, 213, 225, 0.1);
+}
+
+/* Mobile-First Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: white;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* Accessibility: improved focus outlines */
+:focus-visible {
+  outline: 2px dashed rgba(34, 211, 238, 0.9);
+  outline-offset: 2px;
+}
+
+/* Improve contrast for text over translucent panels */
+.bg-black\/30, .bg-gray-800\/50, .bg-gray-700\/50 {
+  backdrop-filter: saturate(1.1) blur(6px);
+}
+
+/* Prefer-reduced-motion respect */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+=======
   min-height: 100vh;
   background: linear-gradient(135deg, #000000 0%, #0a0a0a 25%, #1a1a2e 50%, #16213e 75%, #0f3460 100%);
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8dd4
 }
 
 /* Enhanced Background Patterns */
@@ -1830,6 +2105,71 @@ body::before {
   }
 }
 
+<<<<<<< HEAD
+/* Enhanced Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .service-card-quantum,
+  .service-card-holographic,
+  .service-card-cyberpunk,
+  .service-card-neural,
+  .service-card-quantum-holographic,
+  .service-card-quantum-advanced,
+  .service-card-holographic-advanced,
+  .service-card-neural-quantum,
+  .service-card-quantum-cyberpunk,
+  .service-card-holographic-neural,
+  .service-card-quantum-holographic-advanced,
+  .service-card-quantum-matrix,
+  .service-card-neural-cyberpunk,
+  .service-card-holographic-quantum,
+  .service-card-quantum-neural-advanced,
+  .service-card-cyberpunk-holographic,
+  .service-card-quantum-space,
+  .service-card-ai-futuristic,
+  .service-card-quantum-entanglement,
+  .service-card-holographic-matrix,
+  .service-card-neural-quantum-cyberpunk,
+  .service-card-space-futuristic,
+  .service-card-biotech-futuristic {
+    animation: none;
+  }
+}
+
+/* Enhanced High Contrast Mode */
+@media (prefers-contrast: high) {
+  :root {
+    --accent-cyan: 0, 255, 255;
+    --accent-blue: 0, 0, 255;
+    --accent-purple: 128, 0, 128;
+  }
+}
+
+/* Enhanced Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-start-rgb: 10, 15, 30;
+    --background-end-rgb: 20, 25, 40;
+  }
+}
+
+/* Enhanced Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Responsive container padding adjustments */
+@media (max-width: 640px) {
+  .container { padding-left: 1rem; padding-right: 1rem; }
+}
+@media (min-width: 641px) and (max-width: 1024px) {
+  .container { padding-left: 1.25rem; padding-right: 1.25rem; }
+}
+=======
 /* New Futuristic Animations */
 @keyframes quantumPulse {
   0%, 100% {
@@ -2008,3 +2348,4 @@ body::before {
   outline-offset: 4px;
   border-radius: 8px;
 }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8dd4

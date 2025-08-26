@@ -8,11 +8,17 @@ import {
   Star, Eye, Zap as Lightning, Shield, Globe2
 } from 'lucide-react';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
+import EnhancedQuantumMatrixBackground from '../components/ui/EnhancedQuantumMatrixBackground';
+import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
+import EnhancedFuturisticServiceCard from '../components/ui/EnhancedFuturisticServiceCard';
+=======
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard';
 import ServiceAds from '../components/sections/ServiceAds';
 import Card from '../components/ui/Card';
 import EnhancedNavigation from '../components/layout/EnhancedNavigation';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8dd4
 import { motion } from 'framer-motion';
 import { ultimateFuturisticMicroSaasServices2025 } from '../data/2025-ultimate-futuristic-micro-saas';
 import { ultimateFuturisticITServices2025 } from '../data/2025-ultimate-futuristic-it-services';
@@ -32,10 +38,31 @@ import { additionalEnhancedServices } from '../data/additional-real-services';
 import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
 import { emergingTechServices } from '../data/emerging-tech-services';
 import { nextGenAIServices } from '../data/next-gen-ai-services';
+<<<<<<< HEAD
+import { comprehensiveITServices } from '../data/comprehensive-it-services';
+import { nextGenerationAIServices } from '../data/next-generation-ai-services';
+import { emergingTechnologyServices } from '../data/emerging-technology-services';
+import { comprehensiveITSolutions } from '../data/comprehensive-it-solutions';
+import { realMarketServices } from '../data/real-market-services';
+import { serviceExpansions2025 } from '../data/service-expansions-2025';
+import { verifiedRealServices2025Batch2 } from '../data/verified-real-services-2025-batch2';
+import { realOperationalServices } from '../data/real-operational-services';
+import { newOperationalServices2025 } from '../data/new-operational-services-2025';
+import { innovative2025Services } from '../data/innovative-2025-services';
+import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
+import { revolutionary2025Services } from '../data/revolutionary-2025-services';
+import { nextGenInnovations2025 } from '../data/next-gen-innovations-2025';
+import { innovative2026Services } from '../data/innovative-2026-services';
+import { emergingTech2026Services } from '../data/emerging-tech-2026-services';
+import { enterpriseIT2026Services } from '../data/enterprise-it-2026-services';
+import { innovative2026MicroSaasServices } from '../data/innovative-2026-micro-saas-services';
+import { emergingTech2026Services as emergingTech2026ServicesNew } from '../data/emerging-tech-2026-services';
+=======
 import { innovativeAIServices } from '../data/innovative-ai-services';
 import { quantumAIServices } from '../data/quantum-ai-services';
 import { spaceTechServices } from '../data/space-tech-services';
 import { biotechAIServices } from '../data/biotech-ai-services';
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8dd4
 
 export default function HomePage() {
   const heroStats = [
@@ -141,6 +168,32 @@ const serviceCategories = [
 
   // Combine all services for display
   const allServices = [
+<<<<<<< HEAD
+    ...enhancedRealMicroSaasServices,
+    ...innovativeMicroSaasServices,
+    ...extraServices,
+    ...additionalEnhancedServices,
+    ...emergingTechServices,
+    ...nextGenAIServices,
+    ...comprehensiveITServices,
+    ...nextGenerationAIServices,
+    ...emergingTechnologyServices,
+    ...comprehensiveITSolutions,
+    ...realMarketServices,
+    ...serviceExpansions2025,
+    ...realOperationalServices,
+    ...newOperationalServices2025,
+    ...verifiedRealServices2025Batch2,
+    ...innovative2025Services,
+    ...emergingTech2025Services,
+    ...revolutionary2025Services,
+    ...nextGenInnovations2025,
+    ...innovative2026Services,
+    ...emergingTech2026Services,
+    ...enterpriseIT2026Services,
+    ...innovative2026MicroSaasServices,
+    ...emergingTech2026ServicesNew
+=======
     ...enhancedRealMicroSaasServices.slice(0, 8),
     ...emergingTechServices.slice(0, 6),
     ...nextGenAIServices.slice(0, 6),
@@ -148,6 +201,7 @@ const serviceCategories = [
     ...quantumAIServices.slice(0, 6),
     ...spaceTechServices.slice(0, 6),
     ...biotechAIServices.slice(0, 6)
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8dd4
   ];
 
   const featuredOffers = professionalServices.slice(0, 3);
@@ -189,11 +243,21 @@ const serviceCategories = [
       <div className="min-h-screen">
         <EnhancedNavigation />
         <Head>
+<<<<<<< HEAD
+          <title>Zion Tech Group - Revolutionary AI, Quantum & IT Services | 800+ Solutions</title>
+          <meta name="description" content="Zion Tech Group offers 800+ revolutionary AI, quantum computing, and IT services. Achieve high ROI with our cutting-edge solutions. Contact: +1 302 464 0950" />
+          <meta name="keywords" content="AI services, quantum computing, IT services, micro SaaS, cybersecurity, cloud migration, neural interface, quantum internet, blockchain, metaverse, IoT, edge computing" />
+          <meta name="author" content="Zion Tech Group" />
+          <meta name="robots" content="index, follow" />
+          <meta property="og:title" content="Zion Tech Group - Revolutionary AI, Quantum & IT Services" />
+          <meta property="og:description" content="800+ cutting-edge services with 1000% ROI guarantee. Contact: +1 302 464 0950" />
+=======
           <title>Zion Tech Group - Revolutionary Micro SaaS Services & AI Solutions | 1000+ Services</title>
           <meta name="description" content="Discover 1000+ revolutionary micro SaaS services, quantum AI solutions, biotech AI, space technology, and cutting-edge technology platforms. Transform your business with our innovative services. Contact: +1 302 464 0950" />
           <meta name="keywords" content="micro SaaS, AI services, quantum computing, space technology, biotech AI, quantum trading, cybersecurity, autonomous vehicles, robotics, quantum internet security, neural interfaces, drug discovery, genetic engineering, protein design" />
           <meta property="og:title" content="Zion Tech Group - 1000+ Revolutionary Micro SaaS Services" />
           <meta property="og:description" content="1000+ revolutionary micro SaaS services with quantum AI, biotech AI, and cutting-edge technology. Contact: +1 302 464 0950" />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8dd4
           <meta property="og:url" content="https://ziontechgroup.com" />
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com" />
@@ -210,6 +274,16 @@ const serviceCategories = [
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
                 Zion Tech Group
               </h1>
+<<<<<<< HEAD
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                Revolutionary AI, Quantum Computing & IT Services
+              </p>
+              <p className="text-lg md:text-xl text-gray-300/90 mb-12 max-w-3xl mx-auto">
+                800+ cutting-edge services delivering measurable ROI. From AI copilots to enterprise IT infrastructure.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+=======
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Discover 1000+ cutting-edge micro SaaS services powered by quantum AI, space technology, 
@@ -299,12 +373,17 @@ const serviceCategories = [
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8dd4
                 <Button 
                   href="/services" 
                   variant="primary"
                   className="text-lg px-8 py-4"
                 >
+<<<<<<< HEAD
+                  Explore 800+ Services
+=======
                   Explore 1000+ Services
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8dd4
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
                 <Button 
@@ -504,6 +583,8 @@ const serviceCategories = [
               </motion.div>
             </div>
 
+<<<<<<< HEAD
+=======
         {/* Service Categories Showcase */}
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -626,6 +707,7 @@ const serviceCategories = [
         {/* All Services Grid */}
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8dd4
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -658,7 +740,11 @@ const serviceCategories = [
                 Revolutionary <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Services</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+<<<<<<< HEAD
+                Discover our comprehensive portfolio of cutting-edge services designed to transform your business
+=======
                 From AI and quantum computing to space technology, biotech AI, and emerging tech - discover 1000+ revolutionary solutions.
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8dd4
               </p>
             </motion.div>
 
@@ -692,8 +778,13 @@ const serviceCategories = [
                 size="lg"
                 className="group"
               >
+<<<<<<< HEAD
+                View All Services
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+=======
                 View All 1000+ Services
                 <ArrowRight className="ml-2 w-5 h-5" />
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8dd4
               </Button>
             </motion.div>
           </div>
