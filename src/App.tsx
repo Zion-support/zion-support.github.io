@@ -10,6 +10,8 @@ const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Services = lazy(() => import('./pages/Services'));
+const AdvancedServicesShowcase2025 = lazy(() => import('./pages/AdvancedServicesShowcase2025'));
+const ComprehensivePricing2025 = lazy(() => import('./pages/ComprehensivePricing2025'));
 const Blog = lazy(() => import('./pages/Blog'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const Careers = lazy(() => import('./pages/Careers'));
@@ -37,6 +39,8 @@ function App() {
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/services" element={<Services />} />
+                <Route path="/advanced-services-showcase-2025" element={<AdvancedServicesShowcase2025 />} />
+                <Route path="/comprehensive-pricing-2025" element={<ComprehensivePricing2025 />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/careers" element={<Careers />} />
                 <Route path="/privacy" element={<Privacy />} />
