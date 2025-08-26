@@ -13,17 +13,17 @@ export function Footer() {
                 { name: 'Careers', path: '/careers' },
                 { name: 'Partners', path: '/partners' },
                 { name: 'Pricing', path: '/pricing' },
-                { name: 'Press & Media', path: '/press' },
+                { name: 'Press & Media', path: '/news' },
                 { name: 'Contact', path: '/contact' },
             ]
         },
         {
             title: 'Services',
             links: [
-                { name: 'IT Solutions', path: '/services/it-solutions' },
-                { name: 'AI Services', path: '/services/ai-services' },
+                { name: 'All Services', path: '/services' },
+                { name: 'AI Services', path: '/services/ai' },
                 { name: 'Cybersecurity', path: '/services/cybersecurity' },
-                { name: 'Green IT', path: '/green-it' },
+                { name: 'Cloud & Infrastructure', path: '/services/infrastructure' },
                 { name: 'On-Site Support', path: '/it-onsite-services' },
             ]
         },
@@ -31,20 +31,20 @@ export function Footer() {
             title: 'Talent',
             links: [
                 { name: 'Browse Talents', path: '/talents' },
-                { name: 'Talent Directory', path: '/talent-directory' },
-                { name: 'AI Matcher', path: '/ai-matcher' },
-                { name: 'Hire Now', path: '/hire-now' },
-                { name: 'Post a Job', path: '/post-job' },
+                { name: 'Talent Directory', path: '/talent' },
+                { name: 'AI Matcher', path: '/match' },
+                { name: 'Hire Now', path: '/request-quote' },
+                { name: 'Post a Job', path: '/contact' },
             ]
         },
         {
             title: 'Resources',
             links: [
                 { name: 'Blog', path: '/blog' },
-                { name: 'Help Center', path: '/help-center' },
+                { name: 'Help Center', path: '/help' },
                 { name: 'FAQ', path: '/faq' },
                 { name: 'Documentation', path: '/docs' },
-                { name: 'API Reference', path: '/api' },
+                { name: 'Sitemap', path: '/sitemap' },
             ]
         },
         {

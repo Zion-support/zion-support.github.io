@@ -79,6 +79,8 @@ const NewServices = lazy(() => import('./pages/NewServices'));
 const Partners = React.lazy(() => import('./pages/Partners'));
 const Documentation = React.lazy(() => import('./pages/Documentation'));
 const Cookies = React.lazy(() => import('./pages/Cookies'));
+const GDPR = React.lazy(() => import('./pages/GDPR'));
+const Accessibility = React.lazy(() => import('./pages/Accessibility'));
 const Sitemap = React.lazy(() => import('./pages/Sitemap'));
 const Training = React.lazy(() => import('./pages/Training'));
 const Webinars = React.lazy(() => import('./pages/Webinars'));
@@ -145,6 +147,8 @@ const baseRoutes = [
   { path: '/partners', element: <Partners /> },
   { path: '/docs', element: <Documentation /> },
   { path: '/cookies', element: <Cookies /> },
+  { path: '/gdpr', element: <GDPR /> },
+  { path: '/accessibility', element: <Accessibility /> },
   { path: '/sitemap', element: <Sitemap /> },
   { path: '/help', element: <HelpCenter /> },
   { path: '/training', element: <Training /> },
@@ -265,6 +269,10 @@ function App() {
               <Route path="/green-it" element={<GreenIT />} />
               <Route path="/partners" element={<PartnersPage />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/cookies" element={<Cookies />} />
+              <Route path="/gdpr" element={<GDPR />} />
+              <Route path="/accessibility" element={<Accessibility />} />
+              <Route path="/docs" element={<Documentation />} />
             </Routes>
           </Suspense>
         </main>
