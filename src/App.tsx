@@ -12,6 +12,7 @@ const ComprehensiveServices = React.lazy(() => import('./pages/ComprehensiveServ
 const ComprehensivePricing = React.lazy(() => import('./pages/ComprehensivePricing.jsx'));
 const Contact = React.lazy(() => import('./pages/Contact.jsx'));
 const Login = React.lazy(() => import('./pages/Login.jsx'));
+const InnovativeServicesShowcase2027 = React.lazy(() => import('./pages/InnovativeServicesShowcase2027.tsx'));
 
 const LoadingSpinner = () => (
   <div className="min-h-screen bg-futuristic flex items-center justify-center">
@@ -37,6 +38,7 @@ function App() {
               <Route path="/comprehensive-pricing" element={<ComprehensivePricing />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/innovative-services-2027" element={<InnovativeServicesShowcase2027 />} />
             </Routes>
           </Suspense>
         </main>
