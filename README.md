@@ -777,7 +777,12 @@ A remote test environment is available at **`/remote/dao`**. This route exposes 
 delay-tolerant governance panel that queues proposals and votes locally and
 syncs them once a low-latency link becomes available.
 
-## Multichain Governance
+If you see `npm WARN deprecated @humanwhocodes/object-schema@2.0.3`, the project
+uses an override to replace this package with `@eslint/object-schema`. Pull the
+latest code and run `npm install` to update your lock file and remove the
+warning.
+
+### Whitelabel Tenant Errors
 
 The `token/multichain` directory provides Solidity contracts for deploying ZION$ across multiple chains. The LayerZero-based bridge wrapper allows deploying on zkSync while mirroring DAO votes to Starknet. Run the Hardhat script in `token/multichain/deploy` to deploy and record addresses.
 
