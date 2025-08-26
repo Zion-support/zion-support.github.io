@@ -43,14 +43,17 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "jsx": "react-jsx"
   },
   "include": [
-    "src",
+    "pages/services-2025.tsx",
+    "next-env.d.ts",
     ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules",
+    "src/**",
     "zion.app/recovered-content/**",
     "contracts/**",
     "temp_components/**",
