@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Toaster as Sonner } from "sonner"
+=======
+"use client";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 
 import { useTheme } from "../ThemeProvider";
 import { Toaster as Sonner } from "sonner";

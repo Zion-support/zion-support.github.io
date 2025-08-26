@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -26,6 +27,8 @@ const forgotPasswordSchema = z.object({
 
 type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../SEO';
@@ -33,7 +36,10 @@ import { GradientHeading } from '../GradientHeading';
 import { Button } from '../ui/Button';
 import { Input } from '../ui/Input';
 import { Mail, ArrowLeft, CheckCircle } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-26c6
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 
 export default function ForgotPassword() {
   const [email, setEmail] = useState('');
@@ -95,6 +101,7 @@ export default function ForgotPassword() {
 
   return (
     <>
+<<<<<<< HEAD
       
       <div className="flex min-h-screen bg-zion-blue">
         <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:px-20 xl:px-24">
@@ -171,6 +178,27 @@ export default function ForgotPassword() {
                 </Form>
               )}
             </div>
+=======
+      <SEO
+        title="Forgot Password - Zion Tech Group"
+        description="Reset your password to access your Zion Tech Group account."
+        canonical="https://ziontechgroup.com/forgot-password"
+      />
+      <div className="min-h-screen bg-zion-blue flex items-center justify-center">
+        <div className="max-w-md w-full mx-auto p-6">
+          <div className="text-center mb-8">
+            <Link
+              to="/login"
+              className="inline-flex items-center text-zion-cyan hover:text-white transition-colors mb-4"
+            >
+              <ArrowLeft className="h-4 w-4 mr-2" />
+              Back to Login
+            </Link>
+            <GradientHeading>Forgot Password?</GradientHeading>
+            <p className="text-zion-slate-light mt-4">
+              Enter your email address and we'll send you a link to reset your password.
+            </p>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
@@ -211,7 +239,10 @@ export default function ForgotPassword() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
       
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
     </>
   );
 }

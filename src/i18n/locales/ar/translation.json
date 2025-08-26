@@ -11,13 +11,7 @@
     "yes": "نعم",
     "no": "لا",
     "success": "نجاح",
-    "error": "خطأ",
-    "open_main_menu": "افتح القائمة الرئيسية",
-    "toggle_mobile_menu": "تبديل قائمة الجوال",
-    "greeting_user": "مرحباً، {{name}}!",
-    "status_page": "صفحة الحالة",
-    "check_status_page": "يمكنك محاولة تحديث الصفحة أو زيارة",
-    "back_to_top": "العودة للأعلى"
+    "error": "خطأ"
   },
   "nav": {
     "home": "الرئيسية",
@@ -63,14 +57,6 @@
     "deadline": "الموعد النهائي",
     "job_posted": "تم نشر الوظيفة بنجاح"
   },
-  "onboarding": {
-    "title": "ما الذي جلبك إلى زيون؟",
-    "subtitle": "اختر كيفية استخدامك لمنصتنا",
-    "talent_title": "أقدم خدمات",
-    "talent_desc": "ابحث عن عمل واعرض مهاراتك",
-    "client_title": "أقوم بالتوظيف",
-    "client_desc": "انشر الوظائف وابحث عن محترفين موهوبين"
-  },
   "language": {
     "en": "English",
     "es": "Español",
@@ -78,6 +64,7 @@
     "ar": "العربية",
     "language_changed": "تم تغيير اللغة إلى {{language}}",
     "switch_to_detected": "التبديل إلى {{language}}؟"
+<<<<<<< HEAD
   }
 ,
   "errors": {
@@ -102,5 +89,7 @@
     "error_help_intro": "إذا كنت تعتقد أن هذا خطأ، يرجى",
     "error_help_contact": "التواصل مع فريق الدعم لدينا",
     "error_help_or": "أو التحقق من"
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   }
 }

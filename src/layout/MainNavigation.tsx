@@ -3,6 +3,10 @@ import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare, ChevronDown, Users, Briefcase, Settings, BarChart3 } from "lucide-react";
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 import { MessageSquare, ChevronDown, Brain, Shield, Cloud, Zap } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState, useRef, useEffect } from "react";
@@ -30,6 +34,7 @@ import { useState } from "react";
 import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+<<<<<<< HEAD
 =======
 import { useTranslation } from "react-i18next";
 import {
@@ -38,6 +43,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 
 interface MainNavigationProps {
   isAdmin?: boolean;
@@ -58,6 +65,15 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const isAuthenticated = !!user;
   const location = useLocation();
   const { t } = useTranslation();
+<<<<<<< HEAD
+=======
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setActiveDropdown(null);
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 =======
@@ -90,6 +106,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     {
       key: 'home',
       href: '/',
+<<<<<<< HEAD
+=======
+      matches: (path: string) => path.startsWith('/services') || path.startsWith('/it-onsite-services') || path.startsWith('/green-it')
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
       key: 'about',
       href: '/about',
       matches: (path: string) => path.startsWith('/about')
@@ -167,6 +188,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: '/micro-saas-services',
       matches: (path: string) => path.startsWith('/micro-saas-services')
 =======
+<<<<<<< HEAD
 =======
       matches: (path: string) => path === '/'
     },
@@ -176,11 +198,20 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       matches: (path: string) => path.startsWith('/marketplace')
     },
     {
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
       key: 'services',
       href: '/services',
       matches: (path: string) => path.startsWith('/services')
     },
     {
+<<<<<<< HEAD
+=======
+      key: 'categories',
+      href: '/categories',
+      matches: (path: string) => path.startsWith('/categories')
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
       key: 'services',
       href: '/services',
       matches: (path: string) => path.startsWith('/services')
@@ -217,7 +248,10 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     {
 =======
 =======
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
       key: 'talent',
       href: '/talent',
       key: 'ai-hiring',
@@ -228,6 +262,14 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 
   const moreLinks = [
     {
+<<<<<<< HEAD
+=======
+      key: 'categories',
+      href: '/categories',
+      icon: <FileText className="w-4 h-4" />,
+      description: 'Browse service categories'
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
       matches: (path: string) => path.startsWith('/equipment'),
       name: t('nav.equipment')
     },
@@ -256,14 +298,24 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
         { href: '/talents', name: 'Talent Directory' },
         { href: '/hire-ai', name: 'Hire AI' }
       ]
+<<<<<<< HEAD
 =======
       key: 'equipment',
       href: '/equipment',
       matches: (path: string) => path.startsWith('/equipment')
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
     },
     {
       key: 'community',
       href: '/community',
+<<<<<<< HEAD
+=======
+      key: 'pricing',
+      href: '/pricing',
+      matches: (path: string) => path === '/pricing'
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
       key: 'about',
       href: '/about',
       matches: (path: string) => path === '/about'
@@ -278,12 +330,22 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       key: 'about',
       href: '/about',
       matches: (path: string) => path === '/about'
+<<<<<<< HEAD
 =======
       matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
     },
     {
       key: 'blog',
       href: '/blog',
+<<<<<<< HEAD
+=======
+      key: 'blog',
+      href: '/blog',
+      matches: (path: string) => path.startsWith('/blog')
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
       key: 'contact',
       href: '/contact',
       matches: (path: string) => path === '/contact'
@@ -318,7 +380,10 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       href: '/blog',
       matches: (path: string) => path.startsWith('/blog')
 =======
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
       matches: (path: string) => path.startsWith('/blog')
     }
   ];
@@ -494,6 +559,30 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   return (
     <nav className={cn("navbar ml-6 hidden lg:flex", className)} ref={dropdownRef}>
       <ul className="flex items-center gap-1">
+<<<<<<< HEAD
+=======
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-all duration-300 relative overflow-hidden group",
+                link.matches(location.pathname)
+                  ? "bg-gradient-to-r from-zion-purple/30 to-zion-cyan/30 text-zion-cyan shadow-lg shadow-zion-purple/20"
+                  : "text-white hover:text-zion-cyan"
+              )}
+            >
+              {/* Hover background effect */}
+              <div className={cn(
+                "absolute inset-0 bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md",
+                link.matches(location.pathname) && "opacity-100"
+              )} />
+              
+              {/* Glowing border effect */}
+              <div className={cn(
+                "absolute inset-0 rounded-md border border-transparent group-hover:border-zion-purple/30 transition-all duration-300",
+                link.matches(location.pathname) && "border-zion-cyan/50"
+              )} />
+              
+              <span className="relative z-10">{link.name}</span>
+            </Link>
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
           <li key={link.key} className="relative" onMouseLeave={handleDropdownClose}>
 =======
           <li key={link.name} className="relative">
@@ -897,6 +986,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               </div>
             </div>
           )}
+<<<<<<< HEAD
 =======
         {links.map((link) => (
           <li key={link.name}>
@@ -982,6 +1072,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
         </li>
         
         {/* Messages link with unread counter */}
@@ -990,17 +1082,28 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             <Link
               to="/messages"
               className={cn(
+<<<<<<< HEAD
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative",
                 location.pathname === "/messages" || location.pathname === "/inbox"
                   ? "bg-zion-purple/20 text-zion-cyan"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+=======
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-all duration-300 relative",
+                location.pathname === "/messages" || location.pathname === "/inbox"
+                  ? "bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 shadow-lg shadow-zion-purple/20"
+                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan hover:border hover:border-zion-purple/20"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
               )}
               onClick={closeDropdown}
             >
               <MessageSquare className="w-4 h-4 mr-1" />
               Messages
               {unreadCount > 0 && (
+<<<<<<< HEAD
                 <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+=======
+                <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center animate-pulse">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
                   {unreadCount}
                 </span>
               )}

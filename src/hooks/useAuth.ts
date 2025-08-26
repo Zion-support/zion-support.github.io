@@ -10,9 +10,24 @@ interface User {
   avatarUrl?: string;
 }
 
+<<<<<<< HEAD
 export function useAuth() {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
+=======
+interface AuthState {
+  user: User | null;
+  isAuthenticated: boolean;
+  isLoading: boolean;
+}
+
+export const useAuth = () => {
+  const [authState, setAuthState] = useState<AuthState>({
+    user: null,
+    isAuthenticated: false,
+    isLoading: true,
+  });
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 
   useEffect(() => {
     // Check if user is logged in (e.g., check localStorage, cookies, etc.)
@@ -31,6 +46,7 @@ export function useAuth() {
     checkAuth();
   }, []);
 
+<<<<<<< HEAD
   const login = async (email: string, password: string) => {
     // Implement actual login logic here
     const mockUser: User = {
@@ -43,6 +59,22 @@ export function useAuth() {
     setUser(mockUser);
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
     return mockUser;
+=======
+  const login = async (email: string, _password: string) => {
+    // In a real app, you would make an API call to your backend
+    setAuthState({
+      user: {
+        id: '1',
+        email,
+        name: 'John Doe',
+        role: 'user',
+        userType: 'creator',
+      },
+      isAuthenticated: true,
+      isLoading: false,
+    });
+    localStorage.setItem('authToken', 'dummy-token');
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   };
 
   const logout = () => {
@@ -50,6 +82,7 @@ export function useAuth() {
     localStorage.removeItem('zion_user');
   };
 
+<<<<<<< HEAD
   const register = async (email: string, password: string, name: string) => {
     // Implement actual registration logic here
     const mockUser: User = {
@@ -64,6 +97,8 @@ export function useAuth() {
     return mockUser;
   };
 
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   return {
     user,
     loading,
@@ -73,4 +108,8 @@ export function useAuth() {
     isAuthenticated: !!user,
     isAdmin: user?.role === 'admin'
   };
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4

@@ -51,4 +51,10 @@ const CardFooter: React.FC<CardProps> = ({ children, className = '' }) => {
       {children}
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4

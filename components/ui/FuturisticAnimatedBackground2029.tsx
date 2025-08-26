@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 
 interface FuturisticAnimatedBackground2029Props {
@@ -291,3 +292,14 @@ export default function FuturisticAnimatedBackground2029({ className = '' }: Fut
   );
 }
 
+=======
+import React from 'react';
+
+const FuturisticAnimatedBackground2029: React.FC = () => {
+  return (
+    <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-black opacity-50" />
+  );
+};
+
+export default FuturisticAnimatedBackground2029;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4

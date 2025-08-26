@@ -7,6 +7,7 @@ import {
   Globe, Database, Cloud, Lock, Palette, Target,
   Layers, Sparkles, Atom, Microscope, Satellite
 } from 'lucide-react';
+<<<<<<< HEAD
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -175,6 +176,123 @@ const companyLinks = [
 							</div>
 						</Link>
 					</motion.div>
+=======
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+
+const serviceCategories = [
+  {
+    title: 'AI & Machine Learning',
+    icon: Brain,
+    services: [
+      { name: 'AI Consciousness Simulator', href: '/ai-consciousness-simulator', description: 'Simulate human-like consciousness in AI systems', price: '$2,999/month' },
+      { name: 'AI Quantum Hybrid Computing', href: '/ai-quantum-hybrid-computing', description: 'Hybrid AI-Quantum computing for complex problem solving', price: '$4,999/month' },
+      { name: 'AI Multimodal Fusion Platform', href: '/ai-multimodal-fusion-platform', description: 'Unified AI platform for text, image, audio, and video processing', price: '$1,999/month' },
+      { name: 'AI Autonomous Decision Engine', href: '/ai-autonomous-decision-engine', description: 'AI system that makes complex decisions autonomously', price: '$3,499/month' }
+    ]
+  },
+  {
+    title: '2026 AI Services',
+    icon: Sparkles,
+    services: [
+      { name: 'AI Consciousness Simulator Pro', href: '/ai-consciousness-simulator-pro', description: 'Simulate human-like consciousness in AI systems', price: '$4,999/month' },
+      { name: 'AI Quantum Hybrid Computing', href: '/quantum-ai-hybrid-computing', description: 'Hybrid AI-Quantum computing for complex problem solving', price: '$7,999/month' },
+      { name: 'AI Multimodal Fusion Platform', href: '/ai-multimodal-fusion-platform', description: 'Unified AI platform for text, image, audio, and video processing', price: '$2,999/month' },
+      { name: 'AI Autonomous Decision Engine', href: '/ai-autonomous-decision-engine', description: 'AI system that makes complex decisions autonomously', price: '$5,999/month' }
+    ]
+  },
+  {
+    title: 'Quantum Computing',
+    icon: Atom,
+    services: [
+      { name: 'Quantum-Secure Communication', href: '/quantum-secure-communication', description: 'Unbreakable encryption for the quantum era', price: '$599/month' },
+      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform', description: 'Quantum computing for financial market advantage', price: '$999/month' },
+      { name: 'Quantum Internet Security', href: '/quantum-internet-security', description: 'Next-generation internet security with quantum technology', price: '$699/month' },
+      { name: 'Quantum Internet Platform', href: '/quantum-internet-platform', description: 'Ultra-secure quantum communication network', price: '$1,599/month' }
+    ]
+  },
+  {
+    title: 'Emerging Technologies',
+    icon: Sparkles,
+    services: [
+      { name: 'Neuromorphic Computing Platform', href: '/neuromorphic-computing-platform', description: 'Brain-inspired computing for next-generation AI', price: '$1,499/month' },
+      { name: 'DNA Computing Platform', href: '/dna-computing-platform', description: 'Molecular computing for complex problem solving', price: '$2,999/month' },
+      { name: 'Photonic Computing Platform', href: '/photonic-computing-platform', description: 'Light-speed computing with photonic processors', price: '$1,999/month' },
+      { name: 'Holographic Display Platform', href: '/holographic-display-platform', description: 'Next-generation 3D holographic visualization', price: '$699/month' }
+    ]
+  },
+  {
+    title: 'Autonomous Systems',
+    icon: Target,
+    services: [
+      { name: 'Autonomous Supply Chain', href: '/autonomous-supply-chain-optimization', description: 'AI-powered supply chain management and optimization', price: '$399/month' },
+      { name: 'Autonomous Manufacturing AI', href: '/autonomous-manufacturing-ai', description: 'AI-powered manufacturing automation and optimization', price: '$599/month' },
+      { name: 'Swarm Robotics Platform', href: '/swarm-robotics-platform', description: 'Coordinated multi-robot systems for complex tasks', price: '$899/month' },
+      { name: 'Quantum Space Mining', href: '/quantum-space-mining-platform', description: 'Revolutionary space resource exploration and mining', price: '$1,299/month' }
+    ]
+  },
+  {
+    title: 'Enterprise IT',
+    icon: Shield,
+    services: [
+      { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture', description: 'Advanced network security', price: 'Custom pricing' },
+      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Distributed computing management', price: 'Custom pricing' },
+      { name: '5G Private Networks', href: '/5g-private-network-solutions', description: 'High-speed private networks', price: 'Custom pricing' },
+      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform', description: 'Secure blockchain solutions', price: 'Custom pricing' }
+    ]
+  },
+  {
+    title: 'Innovative SaaS',
+    icon: Zap,
+    services: [
+      { name: 'AI Autonomous Business Platform', href: '/ai-autonomous-business-platform', description: 'Run your business with AI', price: 'Custom pricing' },
+      { name: 'AI Creative Studio Platform', href: '/ai-creative-studio-platform', description: 'Unlimited AI-powered creativity', price: 'Custom pricing' },
+      { name: 'AI Healthcare Companion', href: '/ai-healthcare-companion', description: 'Personalized healthcare AI', price: 'Custom pricing' },
+      { name: 'Quantum Logistics Platform', href: '/quantum-logistics-platform', description: 'Optimize supply chains with quantum', price: 'Custom pricing' }
+    ]
+  },
+  {
+    title: 'Quantum AI Services',
+    icon: Atom,
+    services: [
+      { name: 'Neuromorphic Computing', href: '/neuromorphic-computing-platform', description: 'Brain-inspired computing for next-generation AI', price: '$6,999/month' },
+      { name: 'DNA Computing Platform', href: '/dna-computing-platform', description: 'Molecular computing for complex problem solving', price: '$11,999/month' },
+      { name: 'Photonic Computing', href: '/photonic-computing-platform', description: 'Light-speed computing with photonic processors', price: '$7,499/month' },
+      { name: 'Holographic Display', href: '/holographic-display-platform', description: 'Next-generation 3D holographic visualization', price: '$5,999/month' }
+    ]
+  },
+  {
+    title: 'Revolutionary 2026 Services',
+    icon: Star,
+    services: [
+      { name: 'AI Consciousness Transfer', href: '/ai-consciousness-transfer', description: 'Transfer consciousness between AI systems and humans', price: '$15,999/month' },
+      { name: 'Quantum Internet Infrastructure', href: '/quantum-internet-infrastructure', description: 'Ultra-secure quantum communication network', price: '$8,999/month' },
+      { name: 'Edge Quantum Computing', href: '/edge-quantum-computing', description: 'Quantum computing at the edge for real-time processing', price: '$4,999/month' },
+      { name: 'AI Space Mining Automation', href: '/ai-space-mining-automation', description: 'Automated space mining using advanced AI', price: '$8,999/month' }
+    ]
+  }
+];
+
+const companyLinks = [
+  { name: 'About Us', href: '/about' },
+  { name: '2026 Services', href: '/2026-services-showcase' },
+  { name: 'Revolutionary 2026', href: '/revolutionary-2026-services-showcase' },
+  { name: 'News', href: '/news' },
+  { name: 'Case Studies', href: '/case-studies' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Resources', href: '/resources' }
+];
+
+export default function UltraAdvancedNavigation() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 
   useEffect(() => {
     const handleScroll = () => {

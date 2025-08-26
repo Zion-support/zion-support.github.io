@@ -228,7 +228,11 @@ export const BlockchainWeb3Dashboard: React.FC<BlockchainDashboardProps> = ({ cl
 
       {/* Content */}
       <div className="p-4">
+<<<<<<< HEAD
         <AnimatePresence mode="wait">
+=======
+        <AnimatePresence>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
           {activeTab === 'overview' && (
             <motion.div
               key="overview"

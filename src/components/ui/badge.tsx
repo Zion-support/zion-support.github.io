@@ -25,4 +25,10 @@ const Badge: React.FC<BadgeProps> = ({
       {children}
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export { Badge };
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4

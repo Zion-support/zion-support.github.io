@@ -1,8 +1,15 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
 import { Link } from "react-router-dom";
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 import { 
   Mail, 
   Phone, 
@@ -141,19 +148,27 @@ export function ContactInfo() {
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                <Link to="/request-quote">
+                <Link href="/request-quote">
                   <Button className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white">
                     Request Free Quote
                   </Button>
                 </Link>
                 
+<<<<<<< HEAD
                 <Link to="/comprehensive-services">
+=======
+                <Link href="/comprehensive-services">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
                   <Button variant="outline" className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
                     View All Services
                   </Button>
                 </Link>
                 
+<<<<<<< HEAD
                 <Link to="/it-onsite-services">
+=======
+                <Link href="/it-onsite-services">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
                   <Button variant="outline" className="w-full border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light/10">
                     IT Onsite Services
                   </Button>
@@ -217,7 +232,7 @@ export function ContactInfo() {
               Join hundreds of satisfied clients who have transformed their businesses with our technology solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/request-quote">
+              <Link href="/request-quote">
                 <Button size="lg" className="bg-white text-zion-purple hover:bg-zion-slate-light px-8 py-3">
                   Get Free Consultation
                 </Button>

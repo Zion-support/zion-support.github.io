@@ -1,4 +1,16 @@
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { useAuth } from "@/hooks/useAuth";
+import { Button } from "../ui/button";
+import { useTranslation } from "react-i18next";
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Menu from 'lucide-react/dist/esm/icons/menu';
@@ -14,6 +26,10 @@ import { useAuth } from '@/hooks/useAuth';
 import { useTranslation } from 'react-i18next';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-23aa
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 
 interface MobileMenuProps {
   className?: string;
@@ -25,6 +41,88 @@ export function MobileMenu({ className }: MobileMenuProps) {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const baseItems = [
+    {
+      key: 'home',
+      href: '/',
+      icon: Home,
+      matches: (path: string) => path === '/'
+    },
+    {
+      key: 'marketplace',
+      href: '/marketplace',
+      icon: Search,
+      matches: (path: string) => path.startsWith('/marketplace')
+    },
+    {
+      key: 'services',
+      href: '/services',
+      icon: BriefcaseIcon,
+      matches: (path: string) => path.startsWith('/services')
+    },
+    {
+      key: 'talent',
+      href: '/talent',
+      icon: User,
+      matches: (path: string) => path.startsWith('/talent')
+    },
+    {
+      key: 'equipment',
+      href: '/equipment',
+      icon: BriefcaseIcon,
+      matches: (path: string) => path.startsWith('/equipment')
+    },
+    {
+      key: 'community',
+      href: '/community',
+      icon: MessageCircle,
+      matches: (path: string) => path.startsWith('/community') || path.startsWith('/forum')
+    },
+    {
+      key: 'about',
+      href: '/about',
+      icon: User,
+      matches: (path: string) => path.startsWith('/about')
+    },
+    {
+      key: 'contact',
+      href: '/contact',
+      icon: MessageCircle,
+      matches: (path: string) => path.startsWith('/contact')
+    },
+    {
+      key: 'faq',
+      href: '/faq',
+      icon: MessageCircle,
+      matches: (path: string) => path.startsWith('/faq')
+    },
+    {
+      key: 'post_job',
+      href: '/post-job',
+      icon: BriefcaseIcon,
+      matches: (path: string) => path.startsWith('/post-job'),
+      authRequired: true
+    },
+    {
+      key: 'messages',
+      href: '/messages',
+      icon: MessageSquare,
+      matches: (path: string) => path.startsWith('/messages') || path.startsWith('/inbox'),
+      badge: unreadCount,
+      authRequired: true
+    },
+    {
+      key: 'dashboard',
+      href: '/dashboard',
+      icon: User,
+      matches: (path: string) => path.startsWith('/dashboard'),
+      authRequired: true
+    }
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const navigationItems = [
@@ -34,6 +132,10 @@ export function MobileMenu({ className }: MobileMenuProps) {
     { href: '/categories', label: t('nav.categories'), icon: Store, matches: (path: string) => path.startsWith('/categories') },
     { href: '/equipment', label: t('nav.equipment'), icon: Store, matches: (path: string) => path.startsWith('/equipment') },
     { href: '/community', label: t('nav.community'), icon: Users, matches: (path: string) => path.startsWith('/community') },
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-23aa
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   ];
 
   if (isAuthenticated) {

@@ -1,21 +1,10 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/tests/jest.setup.ts'],
-  transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': [
-      'babel-jest',
-      {
-        presets: ['next/babel'],
-        plugins: [],
-      },
-    ],
-  },
-  transformIgnorePatterns: [
-    '/node_modules/(?!(@supabase|@sentry|@reown|@walletconnect|msw|bson|fetch-mock|react-markdown|d3-\\w+|internmap|delaunator|robust-predicates|@babel|next|uint8arrays|multiformats|axios|isows|devlop|micromark|mdast-util|unist-util|zwitch|longest-streak|markdown-table|mdurl|uc.micro|linkify-it|argparse)).+\\.(js|jsx|ts|tsx)$',
-  ],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+<<<<<<< HEAD
     // Handle image imports
     '\\.(gif|ttf|eot|svg|png|jpg|jpeg)$':
       '<rootDir>/tests/__mocks__/fileMock.js',
@@ -86,48 +75,20 @@ module.exports = {
     '^@/components/search/(.*)$': '<rootDir>/src/components/talent/$1',
     // Retain original mocks for middleware to avoid heavy imports in Jest
     '^@/middleware/(.*)$': '<rootDir>/tests/__mocks__/emptyModule.js',
+=======
+    '\\.(gif|ttf|eot|svg|png|jpg)$': '<rootDir>/__mocks__/fileMock.js'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   },
-
-  // Test file patterns
-  testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[tj]s?(x)'],
-
-  testPathIgnorePatterns: [
-    '<rootDir>/node_modules/',
-    '<rootDir>/.next/',
-    '<rootDir>/tests/e2e/',
-    '<rootDir>/tests/storybook/',
-    '<rootDir>/supabase/functions/',
-    '<rootDir>/plugins/wallet-connector/cypress/',
-    '<rootDir>/pact/',
-    '<rootDir>/tests/visual-regression.test.ts',
-  ],
-
-  // Coverage configuration
-  collectCoverage: false,
+  testPathIgnorePatterns: ['/node_modules/', '/.next/', '/out/', '/tests.disabled/'],
   coverageDirectory: 'coverage',
-  coverageReporters: ['json', 'lcov', 'text', 'clover'],
-  coveragePathIgnorePatterns: [
-    '/node_modules/',
-    '<rootDir>/tests/',
-    '<rootDir>/src/mocks/',
-    '<rootDir>/src/types/',
-    '<rootDir>/temp_essential_pages/',
-  ],
-
-  // Global configuration
-  globals: {
-    'ts-jest': {
-      useESM: true,
-    },
-  },
-
-  // Module file extensions
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-
-  // Test timeout
-  testTimeout: 30000,
-
-  // Clear mocks between tests
-  clearMocks: true,
-  restoreMocks: true,
+  collectCoverage: true,
+  coverageReporters: ['text', 'lcov'],
+  coverageThreshold: {
+    global: {
+      branches: 60,
+      functions: 60,
+      lines: 60,
+      statements: 60
+    }
+  }
 };

@@ -193,6 +193,7 @@ const CaseStudies: NextPage = () => {
 
   const featuredCaseStudies = caseStudies.filter(study => study.featured);
 
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <Head>
@@ -442,3 +443,22 @@ const CaseStudies: NextPage = () => {
 };
 
 export default CaseStudies;
+=======
+export default function CaseStudiesPage() {
+	return (
+		<>
+			<Head>
+				<title>Case Studies | Zion Tech Group</title>
+				<meta name="description" content="Case Studies by Zion Tech Group" />
+				<link rel="canonical" href="https://ziontechgroup.com/case-studies" />
+			</Head>
+			<main className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
+				<div className="container mx-auto px-6 py-16">
+					<h1 className="text-4xl font-bold mb-4">Case Studies</h1>
+					<p className="text-white/80 max-w-2xl">Coming soon: success stories and outcomes.</p>
+				</div>
+			</main>
+		</>
+	);
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4

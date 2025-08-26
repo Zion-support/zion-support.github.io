@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     phone: '',
     company: '',
     phone: '',
@@ -73,17 +74,33 @@ import {
   Clock, 
   MessageSquare, 
   ArrowRight,
+=======
+import React, { useState } from 'react';
+import { 
+  Mail, 
+  Phone, 
+  MapPin, 
+  Clock, 
+  MessageSquare, 
+  Globe, 
+  Building,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   Send,
   CheckCircle
 } from 'lucide-react';
 
+<<<<<<< HEAD
 const Contact = () => {
+=======
+const Contact: React.FC = () => {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
     company: '',
     phone: '',
+<<<<<<< HEAD
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 =======
@@ -228,6 +245,19 @@ const Contact = () => {
   };
 
 =======
+=======
+    service: '',
+    message: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -248,6 +278,7 @@ const Contact = () => {
         company: '',
         phone: '',
         service: '',
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -397,6 +428,8 @@ const Contact = () => {
       link: 'tel:+13024640950',
       description: 'Available Monday-Friday, 9AM-6PM EST'
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
         message: ''
       });
     }, 3000);
@@ -493,6 +526,7 @@ const Contact = () => {
       zip: 'EC1A 1BB',
       phone: '+44 20 7123 4567',
       email: 'london@ziontechgroup.com'
+<<<<<<< HEAD
 =======
       name: "Headquarters",
       address: "123 Tech Avenue, San Francisco, CA 94105",
@@ -504,10 +538,13 @@ const Contact = () => {
       address: "456 Innovation Street, New York, NY 10001",
       phone: "+1 302 464 0950", 
       email: "commercial@ziontechgroup.com"
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
     }
   ];
 
   return (
+<<<<<<< HEAD
     
       <SEO 
         title="Contact Zion - Get in Touch" 
@@ -624,10 +661,23 @@ const Contact = () => {
           </h1>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             Ready to transform your business? Let's discuss how our AI-powered solutions can drive your success.
+=======
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            Get in Touch
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+            Ready to transform your business with cutting-edge technology? Let's discuss how we can help 
+            you achieve your digital transformation goals.
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
           </p>
         </div>
       </section>
 
+<<<<<<< HEAD
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
@@ -895,23 +945,214 @@ const Contact = () => {
                   )}
                 </button>
               </form>
+=======
+      {/* Contact Information */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {contactInfo.map((info, index) => (
+              <div key={index} className="text-center p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300">
+                <div className="flex justify-center mb-4">
+                  <info.icon className="h-12 w-12 text-blue-400" />
+                </div>
+                <h3 className="text-xl font-semibold mb-4 text-white">{info.title}</h3>
+                <div className="space-y-2">
+                  {info.details.map((detail, idx) => (
+                    <p key={idx} className="text-gray-300 text-sm">{detail}</p>
+                  ))}
+                </div>
+                {info.action !== '#' && (
+                  <a
+                    href={info.action}
+                    className="inline-block mt-4 text-blue-400 hover:text-blue-300 transition-colors duration-300"
+                  >
+                    Contact Now →
+                  </a>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form & Office Locations */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16">
+            {/* Contact Form */}
+            <div>
+              <h2 className="text-3xl font-bold mb-8 text-white">Send Us a Message</h2>
+              
+              {isSubmitted ? (
+                <div className="bg-green-500/20 border border-green-500/30 rounded-xl p-8 text-center">
+                  <CheckCircle className="h-16 w-16 text-green-400 mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold text-green-400 mb-2">Message Sent!</h3>
+                  <p className="text-green-300">
+                    Thank you for reaching out. We'll get back to you within 24 hours.
+                  </p>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-2">
+                        First Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="firstName"
+                        name="firstName"
+                        required
+                        value={formData.firstName}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors"
+                        placeholder="Enter your first name"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="lastName" className="block text-sm font-medium text-gray-300 mb-2">
+                        Last Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="lastName"
+                        name="lastName"
+                        required
+                        value={formData.lastName}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors"
+                        placeholder="Enter your last name"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                        Email Address *
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors"
+                        placeholder="Enter your email address"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                        Phone Number
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors"
+                        placeholder="Enter your phone number"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                      Company Name
+                    </label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors"
+                      placeholder="Enter your company name"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
+                      Service of Interest
+                    </label>
+                    <select
+                      id="service"
+                      name="service"
+                      value={formData.service}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-blue-400 transition-colors"
+                    >
+                      <option value="">Select a service</option>
+                      {services.map((service, index) => (
+                        <option key={index} value={service}>{service}</option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                      Message *
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      required
+                      rows={5}
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 transition-colors resize-none"
+                      placeholder="Tell us about your project or how we can help..."
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                        Sending Message...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="h-5 w-5 mr-2" />
+                        Send Message
+                      </>
+                    )}
+                  </button>
+                </form>
+              )}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
             </div>
 
             {/* Office Locations */}
             <div>
               <h2 className="text-3xl font-bold mb-8 text-white">Our Offices</h2>
               <div className="space-y-6">
+<<<<<<< HEAD
                 {officeLocations.map((office, index) => (
                   <div key={index} className="bg-gray-800/50 rounded-lg border border-gray-700 p-6 hover:border-cyan-500/50 transition-all duration-300">
                     <div className="flex items-start space-x-4">
                       <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
                         <Building className="w-6 h-6 text-cyan-400" />
+=======
+                {offices.map((office, index) => (
+                  <div key={index} className="p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-all duration-300">
+                    <div className="flex items-start space-x-4">
+                      <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Building className="h-6 w-6 text-white" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
                       </div>
                       <div className="flex-1">
                         <h3 className="text-xl font-semibold text-white mb-2">
                           {office.city}, {office.country}
                         </h3>
                         <div className="space-y-2 text-gray-300">
+<<<<<<< HEAD
                           <p className="flex items-center space-x-2">
                             <MapPin className="w-4 h-4 text-gray-400" />
                             <span>{office.address}, {office.city}, {office.zip}</span>
@@ -931,6 +1172,19 @@ const Contact = () => {
                           <p className="flex items-center space-x-2">
                             <Clock className="w-4 h-4 text-gray-400" />
                             <span>{office.hours}</span>
+=======
+                          <p className="flex items-center">
+                            <MapPin className="h-4 w-4 mr-2 text-blue-400" />
+                            {office.address}
+                          </p>
+                          <p className="flex items-center">
+                            <Phone className="h-4 w-4 mr-2 text-blue-400" />
+                            {office.phone}
+                          </p>
+                          <p className="flex items-center">
+                            <Mail className="h-4 w-4 mr-2 text-blue-400" />
+                            {office.email}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
                           </p>
                         </div>
                       </div>
@@ -939,6 +1193,7 @@ const Contact = () => {
                 ))}
               </div>
 
+<<<<<<< HEAD
               {/* Social Media */}
               <div className="mt-8">
                 <h3 className="text-xl font-semibold text-white mb-4">Follow Us</h3>
@@ -1313,6 +1568,37 @@ const Contact = () => {
                 </div>
               </div>
 =======
+=======
+              {/* Additional Contact Options */}
+              <div className="mt-8 p-6 rounded-xl bg-white/5">
+                <h3 className="text-xl font-semibold text-white mb-4">Other Ways to Connect</h3>
+                <div className="space-y-3">
+                  <a
+                    href="https://linkedin.com/company/ziontechgroup"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center text-gray-300 hover:text-blue-400 transition-colors duration-300"
+                  >
+                    <Globe className="h-4 w-4 mr-2" />
+                    Follow us on LinkedIn
+                  </a>
+                  <a
+                    href="mailto:careers@ziontechgroup.com"
+                    className="flex items-center text-gray-300 hover:text-blue-400 transition-colors duration-300"
+                  >
+                    <MessageSquare className="h-4 w-4 mr-2" />
+                    careers@ziontechgroup.com
+                  </a>
+                  <a
+                    href="tel:+13024640950"
+                    className="flex items-center text-gray-300 hover:text-blue-400 transition-colors duration-300"
+                  >
+                    <Phone className="h-4 w-4 mr-2" />
+                    Emergency Support: +1 (302) 464-0950
+                  </a>
+                </div>
+              </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
             </div>
           </div>
         </div>
@@ -1344,6 +1630,7 @@ const Contact = () => {
                 retail, and technology. Our solutions are adaptable to any business sector.
               </p>
             </div>
+<<<<<<< HEAD
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <motion.div
@@ -1882,10 +2169,18 @@ const Contact = () => {
               <h3 className="text-xl font-bold text-white mb-4">Response Time</h3>
               <p className="text-zion-slate-light mb-4">
                 We typically respond to all inquiries within 24 hours during business days.
+=======
+            <div className="bg-white/5 p-6 rounded-xl">
+              <h3 className="text-xl font-semibold text-white mb-3">Do you provide ongoing support?</h3>
+              <p className="text-gray-300">
+                Absolutely! We offer comprehensive support packages including 24/7 monitoring, 
+                regular maintenance, and continuous optimization of your solutions.
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
               </p>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 =======
 
 
@@ -3207,6 +3502,8 @@ export default Contact;
             </Link>
           </div>
         </div>
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
       </section>
     </div>
   );

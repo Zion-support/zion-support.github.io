@@ -1,10 +1,36 @@
+import React from 'react';
+import Link from 'next/link';
+import { 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Server, 
+  Zap, 
+  Globe, 
+  Cpu, 
+  Database,
+  Network,
+  Lock,
+  Code,
+  Rocket,
+  Users
+} from 'lucide-react';
 
+import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
+<<<<<<< HEAD
+=======
+import { TrustedBySection } from "@/components/TrustedBySection";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Globe, Shield, Brain, Cloud, Lock, Zap, Users, BarChart3, FileImage, Code, Shield as ShieldIcon, Server, TrendingUp, MessageCircle, Video, FileText, Heart } from "lucide-react";
 import { useEffect, useState } from "react";
+<<<<<<< HEAD
 import { SEO } from "@/components/SEO";
+=======
+import { EXPANDED_SERVICES } from "@/data/expandedServices";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 
 // Enhanced service listings with new micro SAAS services
 const SERVICE_LISTINGS: ProductListing[] = [
@@ -612,33 +638,81 @@ export default function ServicesPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
-      <SEO 
-        title="IT & AI Services - Zion Tech Group" 
-        description="Find expert technology service providers for your business needs, from AI development to infrastructure management."
-        keywords="IT services, AI services, technology consulting, Zion Tech Group"
-        url="https://ziontechgroup.com/services"
-      />
-      
-      <div className="bg-zion-blue-dark py-4 px-4 md:px-8 mb-6 border-b border-zion-blue-light">
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <h2 className="text-white text-lg font-medium">Featured Services</h2>
-          <div className="flex flex-wrap gap-2">
-            <Link to="/comprehensive-services">
-              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10">
+    <>
+      <div className="bg-gradient-to-r from-zion-blue-dark via-zion-purple-dark to-zion-slate-dark py-8 px-4 md:px-8 mb-8 border-b border-zion-purple/30">
+        <div className="container mx-auto">
+          <div className="text-center mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-cyan bg-clip-text text-transparent">
+              Zion Micro SAAS Services
+            </h1>
+            <p className="text-xl text-zion-cyan/80 max-w-4xl mx-auto">
+              Discover our comprehensive suite of AI-powered micro SAAS solutions designed to transform your business operations. 
+              From AI content generation to cybersecurity, we have the tools you need to succeed.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+            <div className="bg-zion-purple/20 backdrop-blur-sm rounded-lg p-4 border border-zion-purple/30">
+              <div className="flex items-center gap-3">
+                <Brain className="h-8 w-8 text-zion-cyan" />
+                <div>
+                  <h3 className="text-white font-semibold">AI & ML Services</h3>
+                  <p className="text-zion-cyan/70 text-sm">Starting at $19/month</p>
+                </div>
+              </div>
+            </div>
+            <div className="bg-zion-purple/20 backdrop-blur-sm rounded-lg p-4 border border-zion-purple/30">
+              <div className="flex items-center gap-3">
+                <Shield className="h-8 w-8 text-zion-cyan" />
+                <div>
+                  <h3 className="text-white font-semibold">Cybersecurity</h3>
+                  <p className="text-zion-cyan/70 text-sm">Starting at $99/month</p>
+                </div>
+              </div>
+            </div>
+            <div className="bg-zion-purple/20 backdrop-blur-sm rounded-lg p-4 border border-zion-purple/30">
+              <div className="flex items-center gap-3">
+                <Cloud className="h-8 w-8 text-zion-cyan" />
+                <div>
+                  <h3 className="text-white font-semibold">Cloud Solutions</h3>
+                  <p className="text-zion-cyan/70 text-sm">Starting at $49/month</p>
+                </div>
+              </div>
+            </div>
+            <div className="bg-zion-purple/20 backdrop-blur-sm rounded-lg p-4 border border-zion-purple/30">
+              <div className="flex items-center gap-3">
+                <Users className="h-8 w-8 text-zion-cyan" />
+                <div>
+                  <h3 className="text-white font-semibold">Business Tools</h3>
+                  <p className="text-zion-cyan/70 text-sm">Starting at $29/month</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link to="/it-onsite-services">
+              <Button variant="outline" className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10 backdrop-blur-sm">
                 <Globe className="h-4 w-4 mr-2" />
-                View All Services
+                Global IT Onsite Services
+              </Button>
+            </Link>
+            <Link to="/request-quote">
+              <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white shadow-lg shadow-zion-purple/25">
+                Request a Quote
               </Button>
             </Link>
             <Link to="/contact">
-              <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
-                Request a Quote
+              <Button variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 backdrop-blur-sm">
+                <MessageCircle className="h-4 w-4 mr-2" />
+                Contact Sales
               </Button>
             </Link>
           </div>
         </div>
       </div>
 
+<<<<<<< HEAD
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-zion-blue mb-4">IT & AI Services</h1>
@@ -684,5 +758,18 @@ export default function ServicesPage() {
         </div>
       </div>
     </div>
+=======
+      <DynamicListingPage 
+        title="Comprehensive Micro SAAS Solutions"
+        description="Find the perfect AI-powered tools and services to accelerate your business growth. All services include free trials and expert support."
+        categorySlug="services"
+        listings={listings}
+        categoryFilters={SERVICE_FILTERS}
+        initialPrice={{ min: 19, max: 5000 }}
+      />
+      
+      <TrustedBySection />
+    </>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   );
 }

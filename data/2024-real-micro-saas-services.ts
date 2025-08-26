@@ -1,55 +1,40 @@
+<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 export interface RealMicroSaasService2024 {
   id: string;
   name: string;
   tagline: string;
   price: string;
-  period: string;
-  description: string;
+  variant: string;
   features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
   rating: number;
-  reviews: number;
+  customers: string;
 }
 
 export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
-  // AI-Powered Business Intelligence
   {
-    id: 'ai-automation-2024',
-    name: 'AI Automation Platform 2024',
-    tagline: 'Intelligent automation for modern businesses',
-    price: '$299',
+    id: 'ai-content-generator-2024',
+    name: 'AI Content Generator 2024',
+    tagline: 'Generate high-quality content with AI',
+    price: '$99',
     variant: 'ai',
-    features: ['AI-powered workflows', 'Process automation', 'Smart decision making'],
+    features: ['AI-powered content creation', 'SEO optimization', 'Multi-language support'],
     rating: 4.8,
     customers: '500+'
+<<<<<<< HEAD
+=======
+  },
+  {
+    id: 'quantum-security-2024',
+    name: 'Quantum Security Platform 2024',
+    tagline: 'Next-generation quantum security',
+    price: '$299',
+    variant: 'security',
+    features: ['Quantum encryption', 'Advanced threat detection', 'Compliance tools'],
+    rating: 4.9,
+    customers: '200+'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   }
 ];

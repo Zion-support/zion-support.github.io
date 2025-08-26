@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 =======
 import React, { useEffect, useState, useCallback } from 'react';
@@ -960,6 +961,9 @@ const PerformanceMonitor: React.FC = () => {
 =======
 import React, { useEffect, useState, useCallback } from 'react';
 import { Zap, Clock, HardDrive, Wifi, AlertTriangle } from 'lucide-react';
+=======
+import React, { useEffect, useState } from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 
 interface PerformanceMetrics {
   fcp: number | null;
@@ -1053,6 +1057,7 @@ const PerformanceMonitor: React.FC = () => {
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
 
+<<<<<<< HEAD
   // Measure Time to First Byte (TTFB)
   const measureTTFB = () => {
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -2201,6 +2206,9 @@ export const PerformanceMonitor: React.FC = () => {
         clsObserver.observe({ entryTypes: ['layout-shift'] });
 
         // Measure Time to First Byte
+=======
+        // Time to First Byte (TTFB)
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
         const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigationEntry) {
           setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
@@ -2350,5 +2358,10 @@ export const PerformanceMonitor: React.FC = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 =======
 export default PerformanceMonitor;
+=======
+
+export default PerformanceMonitor;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4

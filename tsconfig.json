@@ -11,7 +11,11 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "moduleResolution": "bundler",
+<<<<<<< HEAD
     "esModuleInterop": true,
+=======
+    "allowImportingTsExtensions": true,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
     "resolveJsonModule": true,
     "strict": true,
     "noUnusedLocals": false,
@@ -64,6 +68,7 @@
     "noPropertyAccessFromIndexSignature": false,
     "noUncheckedIndexedAccess": false,
     "allowJs": true,
+<<<<<<< HEAD
     "incremental": true
   },
   "include": [
@@ -82,6 +87,14 @@
 =======
     "noUnusedLocals": false,
     "noUnusedParameters": false
+=======
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   },
   "include": [
     "next-env.d.ts",

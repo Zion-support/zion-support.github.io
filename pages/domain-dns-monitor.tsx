@@ -1,6 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
+<<<<<<<< HEAD:pages/domain-dns-monitor.tsx
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
+========
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import { Button } from '../components/ui/Button';
+import Card from '../components/ui/Card';
+import { FileText, Check, Phone, Mail, MapPin, ExternalLink, ShieldCheck } from 'lucide-react';
+>>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4:temp_components.disabled/audit-log-vault.tsx
 
 
 import { Globe, Check, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
@@ -23,7 +30,11 @@ export default function DomainDNSMonitorPage() {
   ];
 
   return (
+<<<<<<<< HEAD:pages/domain-dns-monitor.tsx
     <QuantumHolographicMatrixBackground intensity={1.5}>
+========
+    <UltraFuturisticBackground variant="quantum" intensity={1.5}>
+>>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4:temp_components.disabled/audit-log-vault.tsx
       <Head>
         <title>Domain & DNS Health Monitor | Zion Tech Group</title>
         <meta name="description" content="Track domain expiry, DNS provider health, NS/DS drift, DNSSEC, and MX/SPF/DMARC correctness. Catch misconfigurations before outages." />
@@ -67,7 +78,11 @@ export default function DomainDNSMonitorPage() {
           </div>
         </div>
       </div>
+<<<<<<<< HEAD:pages/domain-dns-monitor.tsx
     </QuantumHolographicMatrixBackground>
+========
+    </UltraFuturisticBackground>
+>>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4:temp_components.disabled/audit-log-vault.tsx
   );
 }
 

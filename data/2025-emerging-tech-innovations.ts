@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface EmergingTechService {
+=======
+export interface EmergingTechInnovationService {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   id: string;
   name: string;
   tagline: string;
@@ -24,6 +28,7 @@ export interface EmergingTechService {
   setupTime: string;
   competitors: string[];
   roi: string;
+<<<<<<< HEAD
 =======
 import { ServiceVariant } from '../types/service-variants';
 
@@ -55,11 +60,32 @@ export interface EmergingTechInnovationService {
   growthRate: string;
   variant: string;
   contactInfo: {
+=======
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number;
+  technologyStack: string[];
+  innovationLevel: string;
+  futureProofing: string;
+  researchPartnerships: string[];
+  popular?: boolean;
+  icon?: string;
+  color?: string;
+  textColor?: string;
+  link?: string;
+  marketPosition?: string;
+  technology?: string[];
+  growthRate?: string;
+  variant?: string;
+  contactInfo?: {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
     mobile: string;
     email: string;
     address: string;
     website: string;
   };
+<<<<<<< HEAD
   realImplementation: boolean;
   implementationDetails: string;
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-96bc
@@ -75,6 +101,13 @@ export interface EmergingTechInnovationService {
 }
 
 export const emergingTechInnovations2025: EmergingTechService[] = [
+=======
+  realImplementation?: boolean;
+  implementationDetails?: string;
+}
+
+export const emergingTechInnovations2025: EmergingTechInnovationService[] = [
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   // Quantum Computing Services
   {
     id: 'quantum-computing-as-a-service',
@@ -98,22 +131,54 @@ export const emergingTechInnovations2025: EmergingTechService[] = [
     category: 'Quantum Computing & Advanced Computing',
     marketSize: '$8.7B',
     targetAudience: ['Pharmaceutical companies', 'Financial institutions', 'Research universities', 'Government agencies', 'Technology companies'],
+<<<<<<< HEAD
     competitiveAdvantage: 'Largest quantum processor access, hybrid computing capabilities, comprehensive algorithm library, expert consultation',
+=======
+    competitiveAdvantage: 'First-to-market quantum computing platform with proprietary error correction algorithms',
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
     useCases: [
       'Drug discovery and molecular modeling',
       'Financial portfolio optimization',
       'Cryptography and cybersecurity',
       'Materials science research',
+<<<<<<< HEAD
       'Machine learning acceleration'
     ],
     integrations: ['AWS Braket', 'Azure Quantum', 'IBM Quantum', 'Google Quantum AI', 'D-Wave Leap'],
     compliance: ['ISO 27001', 'SOC2', 'FedRAMP', 'GDPR', 'CCPA'],
     website: 'https://ziontechgroup.com/quantum-computing-as-a-service',
+=======
+      'Machine learning acceleration',
+      'Climate modeling and simulation',
+      'Supply chain optimization',
+      'Logistics and routing problems'
+    ],
+    integrations: [
+      'AWS Quantum Braket',
+      'IBM Quantum Experience',
+      'Google Quantum AI',
+      'Microsoft Azure Quantum',
+      'Custom quantum simulators',
+      'Classical computing clusters',
+      'Data visualization tools',
+      'Machine learning frameworks'
+    ],
+    compliance: [
+      'ISO 27001',
+      'SOC 2 Type II',
+      'GDPR compliance',
+      'HIPAA compliance',
+      'Quantum-safe cryptography standards',
+      'Export control compliance'
+    ],
+    website: 'https://ziontechgroup.com/quantum-computing',
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
     contact: {
       phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
+<<<<<<< HEAD
     trialDays: 7,
     setupTime: '2-4 weeks',
     competitors: ['IBM Quantum', 'Google Quantum AI', 'D-Wave', 'Rigetti', 'IonQ'],
@@ -824,3 +889,19 @@ export const emergingTechInnovationServices2025: EmergingTechInnovationService[]
   }
 ];
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-96bc
+=======
+    trialDays: 30,
+    setupTime: '2-4 weeks',
+    competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'Amazon Braket', 'Rigetti Computing'],
+    roi: '300-500% within 18 months',
+    launchDate: '2025-01-15',
+    customers: 45,
+    rating: 4.8,
+    reviews: 127,
+    technologyStack: ['Qiskit', 'Cirq', 'Q#', 'PennyLane', 'Custom quantum algorithms'],
+    innovationLevel: 'Breakthrough',
+    futureProofing: 'Scalable to 1000+ qubits, quantum error correction, hybrid quantum-classical workflows',
+    researchPartnerships: ['MIT Quantum Engineering', 'Stanford Quantum Computing', 'Caltech Quantum Institute', 'National Quantum Initiative']
+  }
+];
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4

@@ -13,7 +13,11 @@ import {
   Settings,
   X
 } from 'lucide-react';
+<<<<<<< HEAD
 import { Button } from '../ui/button';
+=======
+import { Button } from '@/components/ui/button';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 
 // Accessibility Context
 interface AccessibilityContextType {

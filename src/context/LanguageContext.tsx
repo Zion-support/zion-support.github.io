@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 import React, { createContext, useContext, useState, ReactNode } from 'react';
+=======
+import * as React from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
 
 interface LanguageContextType {
   language: string;
   setLanguage: (lang: string) => void;
+<<<<<<< HEAD
   t: (key: string) => string;
   isRTL: boolean;
 }
@@ -51,3 +56,26 @@ export function useLanguage(): LanguageContextType {
   }
   return context;
 }
+=======
+}
+
+const LanguageContext = React.createContext<LanguageContextType | undefined>(undefined);
+
+export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [language, setLanguage] = React.useState('en');
+
+  return (
+    <LanguageContext.Provider value={{ language, setLanguage }}>
+      {children}
+    </LanguageContext.Provider>
+  );
+};
+
+export const useLanguage = (): LanguageContextType => {
+  const context = React.useContext(LanguageContext);
+  if (context === undefined) {
+    throw new Error('useLanguage must be used within a LanguageProvider');
+  }
+  return context;
+};
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4

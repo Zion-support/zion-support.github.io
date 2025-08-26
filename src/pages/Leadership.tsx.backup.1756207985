@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<<< HEAD:src/pages/Leadership.tsx.backup.1756207985
 <<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -18,6 +19,10 @@ import {
 import Link from 'next/link';
 import { Users, Award, Globe, Lightbulb, Target, Heart, Shield, Rocket, Brain, Code, Palette, Database, Network, Zap, Star, Linkedin, Twitter, Mail } from 'lucide-react';
 >>>>>>> origin/cursor/expand-services-and-deploy-updates-e899
+========
+import Link from 'next/link';
+import { Users, Award, Globe, Lightbulb, Target, Heart, Shield, Rocket, Brain, Code, Palette, Database, Network, Zap, Star, Linkedin, Twitter, Mail } from 'lucide-react';
+>>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4:src/pages/Leadership.tsx
 
 const Leadership: React.FC = () => {
   const leadershipTeam = [

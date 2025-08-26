@@ -16,6 +16,7 @@ const EQUIPMENT_FILTERS = [
   { label: "Robotics", value: "Robotics" },
 ];
 
+<<<<<<< HEAD
 const EQUIPMENT_CACHE_KEY = 'equipmentCache';
 
 export async function fetchEquipment(): Promise<ProductListing[]> {
@@ -454,6 +455,18 @@ export default function EquipmentPage() {
     const handleScroll = () => setShowScrollTop(window.scrollY > 800);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+=======
+export default function EquipmentPage() {
+  const [listings, setListings] = useState<ProductListing[]>([
+    ...EQUIPMENT_LISTINGS,
+  ]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setListings((prev) => [...prev, generateRandomEquipment()]);
+    }, 120000); // add new equipment every 2 minutes
+    return () => clearInterval(interval);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
   }, []);
 
   return (
