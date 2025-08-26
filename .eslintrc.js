@@ -1,37 +1,34 @@
 module.exports = {
-  extends: [
-    'next/core-web-vitals'
-  ],
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
-  parserOptions: {
-    ecmaVersion: 2020,
-    sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true
-    }
-  },
+  root: true,
   env: {
     browser: true,
-    es6: true,
-    node: true
+    es2021: true,
+    node: true,
   },
+  extends: [
+    'eslint:recommended',
+    '@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+  ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 12,
+    sourceType: 'module',
+  },
+  plugins: ['react', '@typescript-eslint', 'react-hooks'],
   rules: {
-    '@typescript-eslint/no-unused-vars': 'warn',
+    'react/react-in-jsx-scope': 'off',
+    'react/prop-types': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'warn',
-    'no-console': 'warn',
-    'react/no-unescaped-entities': 'off',
-    '@next/next/no-html-link-for-pages': 'off'
   },
-  ignorePatterns: [
-    'node_modules/',
-    '.next/',
-    'out/',
-    'dist/',
-    'build/',
-    '*.config.js',
-    '*.config.ts',
-    'scripts/',
-    'automation/'
-  ]
-};
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
+}
