@@ -1,412 +1,524 @@
-import React from 'react';
-import Link from 'next/link';
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { 
   CheckCircle, 
   XCircle, 
   AlertTriangle, 
   Clock, 
+  Activity, 
   Server, 
   Database, 
-  Network, 
-  Shield,
-  Activity,
-  BarChart3,
+  Globe,
   RefreshCw,
-  ExternalLink
+  TrendingUp,
+  Users,
+  Zap,
+  Shield,
+  BarChart3,
+  Wifi,
+  HardDrive
 } from 'lucide-react';
 
 const Status: React.FC = () => {
-  const currentTime = new Date().toLocaleString();
-  
+  const [lastUpdated, setLastUpdated] = useState(new Date());
+  const [isRefreshing, setIsRefreshing] = useState(false);
+
+  // Mock data - in a real app, this would come from API calls
+  const systemStatus = {
+    overall: 'operational',
+    uptime: '99.99%',
+    lastIncident: '2024-01-15',
+    responseTime: '45ms'
+  };
+
   const services = [
     {
       name: 'Website',
       status: 'operational',
       uptime: '99.99%',
       responseTime: '45ms',
-      lastChecked: '2 minutes ago'
+      lastCheck: '2 minutes ago',
+      icon: Globe
     },
     {
       name: 'API Services',
       status: 'operational',
       uptime: '99.95%',
       responseTime: '120ms',
-      lastChecked: '1 minute ago'
+      lastCheck: '1 minute ago',
+      icon: Server
     },
     {
       name: 'Database',
       status: 'operational',
       uptime: '99.98%',
-      responseTime: '15ms',
-      lastChecked: '30 seconds ago'
+      responseTime: '25ms',
+      lastCheck: '30 seconds ago',
+      icon: Database
     },
     {
       name: 'Authentication',
       status: 'operational',
       uptime: '99.97%',
-      responseTime: '85ms',
-      lastChecked: '1 minute ago'
+      responseTime: '80ms',
+      lastCheck: '1 minute ago',
+      icon: Shield
     },
     {
       name: 'File Storage',
       status: 'operational',
       uptime: '99.96%',
-      responseTime: '200ms',
-      lastChecked: '2 minutes ago'
+      responseTime: '150ms',
+      lastCheck: '2 minutes ago',
+      icon: HardDrive
     },
     {
-      name: 'Email Services',
+      name: 'Analytics',
       status: 'operational',
       uptime: '99.94%',
-      responseTime: '150ms',
-      lastChecked: '1 minute ago'
-import { 
-  CheckCircle, 
-  AlertTriangle, 
-  XCircle, 
-  Clock, 
-  Server, 
-  Database, 
-  Cloud, 
-  Shield,
-  Activity,
-  Wifi,
-  Zap
-} from 'lucide-react';
-
-const Status: React.FC = () => {
-  const services = [
-    {
-      name: "Website",
-      status: "operational",
-      uptime: "99.99%",
-      responseTime: "45ms",
-      lastIncident: "2024-12-15",
-      description: "Main website and customer portal"
-    },
-    {
-      name: "API Services",
-      status: "operational",
-      uptime: "99.95%",
-      responseTime: "120ms",
-      lastIncident: "2024-12-10",
-      description: "REST API and GraphQL endpoints"
-    },
-    {
-      name: "Cloud Infrastructure",
-      status: "operational",
-      uptime: "99.98%",
-      responseTime: "85ms",
-      lastIncident: "2024-12-08",
-      description: "AWS, Azure, and GCP services"
-    },
-    {
-      name: "AI Services",
-      status: "operational",
-      uptime: "99.92%",
-      responseTime: "200ms",
-      lastIncident: "2024-12-12",
-      description: "Machine learning and AI platforms"
-    },
-    {
-      name: "Database Systems",
-      status: "operational",
-      uptime: "99.99%",
-      responseTime: "25ms",
-      lastIncident: "2024-11-28",
-      description: "Primary and backup databases"
-    },
-    {
-      name: "Security Services",
-      status: "operational",
-      uptime: "99.99%",
-      responseTime: "50ms",
-      lastIncident: "2024-12-01",
-      description: "Firewall, DDoS protection, and monitoring"
+      responseTime: '200ms',
+      lastCheck: '3 minutes ago',
+      icon: BarChart3
     }
   ];
 
-  const incidents = [
+  const regions = [
     {
-      id: 1,
-      title: "Scheduled Maintenance - API Services",
-      status: "resolved",
-      severity: "low",
-      description: "Routine maintenance window for API infrastructure updates",
-      startTime: "2024-12-10T02:00:00Z",
-      endTime: "2024-12-10T04:00:00Z",
-      affectedServices: ["API Services"]
+      name: 'US East',
+      status: 'operational',
+      latency: '25ms',
+      uptime: '99.99%'
     },
     {
-      id: 2,
-      title: "Database Performance Degradation",
-      status: "resolved",
-      severity: "medium",
-      description: "Temporary performance issues due to increased load",
-      startTime: "2024-12-08T14:30:00Z",
-      endTime: "2024-12-08T16:45:00Z",
-      affectedServices: ["Database Systems", "API Services"]
+      name: 'US West',
+      status: 'operational',
+      latency: '45ms',
+      uptime: '99.98%'
+    },
+    {
+      name: 'Europe',
+      status: 'operational',
+      latency: '85ms',
+      uptime: '99.97%'
+    },
+    {
+      name: 'Asia Pacific',
+      status: 'operational',
+      latency: '120ms',
+      uptime: '99.96%'
     }
   ];
 
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'operational':
-        return <CheckCircle className="w-5 h-5 text-green-500" />;
-      case 'degraded':
-        return <AlertTriangle className="w-5 h-5 text-yellow-500" />;
-      case 'outage':
-        return <XCircle className="w-5 h-5 text-red-500" />;
-      case 'maintenance':
-        return <Clock className="w-5 h-5 text-blue-500" />;
-      default:
-        return <CheckCircle className="w-5 h-5 text-green-500" />;
+  const recentIncidents = [
+    {
+      id: 'INC-001',
+      title: 'Scheduled Maintenance - Database Optimization',
+      status: 'resolved',
+      severity: 'low',
+      startTime: '2024-01-15 02:00 UTC',
+      endTime: '2024-01-15 04:00 UTC',
+      description: 'Routine database maintenance and optimization completed successfully.'
+    },
+    {
+      id: 'INC-002',
+      title: 'API Response Time Degradation',
+      status: 'resolved',
+      severity: 'medium',
+      startTime: '2024-01-10 14:30 UTC',
+      endTime: '2024-01-10 16:45 UTC',
+      description: 'Increased API response times due to high traffic load. Resolved by scaling infrastructure.'
     }
-  };
+  ];
 
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'operational':
-        return 'bg-green-500/20 text-green-400 border-green-500/30';
+        return 'text-green-400';
       case 'degraded':
-        return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30';
+        return 'text-yellow-400';
       case 'outage':
-        return 'bg-red-500/20 text-red-400 border-red-500/30';
+        return 'text-red-400';
       case 'maintenance':
-        return 'bg-blue-500/20 text-blue-400 border-blue-500/30';
+        return 'text-blue-400';
       default:
-        return 'bg-green-500/20 text-green-400 border-green-500/30';
+        return 'text-gray-400';
     }
   };
 
-  const getSeverityColor = (severity: string) => {
-    switch (severity) {
-      case 'low':
-        return 'bg-blue-500/20 text-blue-400 border-blue-500/30';
-      case 'medium':
-        return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30';
-      case 'high':
-        return 'bg-red-500/20 text-red-400 border-red-500/30';
+  const getStatusBgColor = (status: string) => {
+    switch (status) {
+      case 'operational':
+        return 'bg-green-600/20';
+      case 'degraded':
+        return 'bg-yellow-600/20';
+      case 'outage':
+        return 'bg-red-600/20';
+      case 'maintenance':
+        return 'bg-blue-600/20';
       default:
-        return 'bg-blue-500/20 text-blue-400 border-blue-500/30';
+        return 'bg-gray-600/20';
     }
   };
 
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit'
-    });
+  const getStatusIcon = (status: string) => {
+    switch (status) {
+      case 'operational':
+        return CheckCircle;
+      case 'degraded':
+        return AlertTriangle;
+      case 'outage':
+        return XCircle;
+      case 'maintenance':
+        return Clock;
+      default:
+        return Clock;
+    }
   };
 
-  const overallStatus = services.every(service => service.status === 'operational') ? 'operational' : 'degraded';
-  const overallUptime = services.reduce((acc, service) => {
-    const uptime = parseFloat(service.uptime.replace('%', ''));
-    return acc + uptime;
-  }, 0) / services.length;
+  const refreshStatus = () => {
+    setIsRefreshing(true);
+    setTimeout(() => {
+      setLastUpdated(new Date());
+      setIsRefreshing(false);
+    }, 1000);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setLastUpdated(new Date());
+    }, 60000); // Update every minute
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          {/* Hero Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              System
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                {" "}Status
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Real-time status of Zion Tech Group's services and infrastructure. We're committed to transparency and keeping you informed.
-            </p>
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-green-900 pt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Header */}
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="flex justify-center mb-6">
+            <div className="p-4 bg-green-600/20 rounded-full">
+              <Activity className="h-16 w-16 text-green-400" />
+            </div>
           </div>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            System
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
+              {" "}Status
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Real-time monitoring of Zion Tech Group's services and infrastructure. 
+            Check the current status of all our systems and services.
+          </p>
+          <div className="flex items-center justify-center gap-4">
+            <button
+              onClick={refreshStatus}
+              disabled={isRefreshing}
+              className="px-6 py-2 bg-green-600 hover:bg-green-700 disabled:bg-gray-600 text-white rounded-lg font-semibold transition-colors duration-200 flex items-center"
+            >
+              <RefreshCw className={`h-5 w-5 mr-2 ${isRefreshing ? 'animate-spin' : ''}`} />
+              Refresh
+            </button>
+            <div className="text-gray-400 text-sm">
+              Last updated: {lastUpdated.toLocaleTimeString()}
+            </div>
+          </div>
+        </motion.div>
 
-          {/* Overall Status */}
-          <div className="mb-16">
-            <div className={`${getStatusColor(overallStatus)} backdrop-blur-lg rounded-xl p-8 border text-center`}>
-              <div className="flex items-center justify-center gap-3 mb-4">
-                {getStatusIcon(overallStatus)}
-                <h2 className="text-3xl font-bold">
-                  {overallStatus === 'operational' ? 'All Systems Operational' : 'Service Degradation'}
-                </h2>
+        {/* Overall Status */}
+        <motion.section 
+          className="mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="flex justify-center mb-4">
+                  <div className={`p-4 ${getStatusBgColor(systemStatus.overall)} rounded-full`}>
+                    <Activity className={`h-12 w-12 ${getStatusColor(systemStatus.overall)}`} />
+                  </div>
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Overall Status</h3>
+                <p className={`text-2xl font-bold ${getStatusColor(systemStatus.overall)}`}>
+                  {systemStatus.overall.charAt(0).toUpperCase() + systemStatus.overall.slice(1)}
+                </p>
               </div>
-              <p className="text-lg mb-6">
-                {overallStatus === 'operational' 
-                  ? 'All services are running normally with excellent performance.'
-                  : 'Some services are experiencing issues. Our team is actively working on resolution.'
-                }
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">{overallUptime.toFixed(2)}%</div>
-                  <div className="text-sm text-gray-300">Overall Uptime</div>
+
+              <div className="text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="p-4 bg-blue-600/20 rounded-full">
+                    <TrendingUp className="h-12 w-12 text-blue-400" />
+                  </div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">{services.length}</div>
-                  <div className="text-sm text-gray-300">Services Monitored</div>
+                <h3 className="text-lg font-semibold text-white mb-2">Uptime</h3>
+                <p className="text-2xl font-bold text-green-400">{systemStatus.uptime}</p>
+              </div>
+
+              <div className="text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="p-4 bg-purple-600/20 rounded-full">
+                    <Zap className="h-12 w-12 text-purple-400" />
+                  </div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">24/7</div>
-                  <div className="text-sm text-gray-300">Monitoring</div>
+                <h3 className="text-lg font-semibold text-white mb-2">Response Time</h3>
+                <p className="text-2xl font-bold text-blue-400">{systemStatus.responseTime}</p>
+              </div>
+
+              <div className="text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="p-4 bg-orange-600/20 rounded-full">
+                    <Clock className="h-12 w-12 text-orange-400" />
+                  </div>
                 </div>
+                <h3 className="text-lg font-semibold text-white mb-2">Last Incident</h3>
+                <p className="text-lg font-bold text-gray-300">{systemStatus.lastIncident}</p>
               </div>
             </div>
           </div>
+        </motion.section>
 
-          {/* Service Status Grid */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-12">Service Status</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {services.map((service) => (
-                <div key={service.name} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center gap-3">
-                      {getStatusIcon(service.status)}
-                      <h3 className="text-xl font-semibold">{service.name}</h3>
+        {/* Service Status */}
+        <motion.section 
+          className="mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Service Status</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service, index) => {
+              const StatusIcon = getStatusIcon(service.status);
+              return (
+                <motion.div
+                  key={service.name}
+                  className="bg-slate-800/50 rounded-xl p-6 border border-slate-700"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center">
+                      <service.icon className="h-6 w-6 text-blue-400 mr-3" />
+                      <h3 className="text-lg font-semibold text-white">{service.name}</h3>
                     </div>
-                    <span className={`px-3 py-1 rounded-full text-sm font-medium border ${getStatusColor(service.status)}`}>
-                      {service.status}
-                    </span>
+                    <StatusIcon className={`h-6 w-6 ${getStatusColor(service.status)}`} />
                   </div>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
-                  <div className="space-y-2 text-sm">
+                  
+                  <div className="space-y-3">
+                    <div className="flex justify-between">
+                      <span className="text-gray-400">Status:</span>
+                      <span className={`font-semibold ${getStatusColor(service.status)}`}>
+                        {service.status.charAt(0).toUpperCase() + service.status.slice(1)}
+                      </span>
+                    </div>
                     <div className="flex justify-between">
                       <span className="text-gray-400">Uptime:</span>
-                      <span className="text-green-400">{service.uptime}</span>
+                      <span className="text-white font-semibold">{service.uptime}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-400">Response Time:</span>
-                      <span className="text-blue-400">{service.responseTime}</span>
+                      <span className="text-gray-400">Response:</span>
+                      <span className="text-white font-semibold">{service.responseTime}</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-400">Last Incident:</span>
-                      <span className="text-gray-300">{formatDate(service.lastIncident)}</span>
+                      <span className="text-gray-400">Last Check:</span>
+                      <span className="text-gray-300 text-sm">{service.lastCheck}</span>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </motion.section>
+
+        {/* Regional Status */}
+        <motion.section 
+          className="mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Regional Performance</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {regions.map((region, index) => (
+              <motion.div
+                key={region.name}
+                className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 text-center"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
+              >
+                <div className="flex justify-center mb-4">
+                  <div className="p-3 bg-blue-600/20 rounded-full">
+                    <Wifi className="h-8 w-8 text-blue-400" />
+                  </div>
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-3">{region.name}</h3>
+                <div className="space-y-2">
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">Status:</span>
+                    <span className={`font-semibold ${getStatusColor(region.status)}`}>
+                      {region.status.charAt(0).toUpperCase() + region.status.slice(1)}
+                    </span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">Latency:</span>
+                    <span className="text-white font-semibold">{region.latency}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">Uptime:</span>
+                    <span className="text-white font-semibold">{region.uptime}</span>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+
+        {/* Recent Incidents */}
+        <motion.section 
+          className="mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Recent Incidents</h2>
+          <div className="space-y-6">
+            {recentIncidents.map((incident, index) => (
+              <motion.div
+                key={incident.id}
+                className="bg-slate-800/50 rounded-xl p-6 border border-slate-700"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.9 + index * 0.1 }}
+              >
+                <div className="flex items-start justify-between mb-4">
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{incident.title}</h3>
+                    <div className="flex items-center gap-4 text-sm">
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+                        incident.status === 'resolved' ? 'bg-green-600/20 text-green-400' :
+                        incident.status === 'investigating' ? 'bg-yellow-600/20 text-yellow-400' :
+                        'bg-red-600/20 text-red-400'
+                      }`}>
+                        {incident.status.charAt(0).toUpperCase() + incident.status.slice(1)}
+                      </span>
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+                        incident.severity === 'low' ? 'bg-blue-600/20 text-blue-400' :
+                        incident.severity === 'medium' ? 'bg-yellow-600/20 text-yellow-400' :
+                        'bg-red-600/20 text-red-400'
+                      }`}>
+                        {incident.severity.charAt(0).toUpperCase() + incident.severity.slice(1)}
+                      </span>
+                      <span className="text-gray-400">ID: {incident.id}</span>
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Recent Incidents */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-12">Recent Incidents</h2>
-            {incidents.length > 0 ? (
-              <div className="space-y-6">
-                {incidents.map((incident) => (
-                  <div key={incident.id} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="flex items-center gap-3">
-                        {incident.status === 'resolved' ? (
-                          <CheckCircle className="w-5 h-5 text-green-500" />
-                        ) : (
-                          <AlertTriangle className="w-5 h-5 text-yellow-500" />
-                        )}
-                        <h3 className="text-xl font-semibold">{incident.title}</h3>
-                      </div>
-                      <div className="flex gap-2">
-                        <span className={`px-3 py-1 rounded-full text-sm font-medium border ${getSeverityColor(incident.severity)}`}>
-                          {incident.severity}
-                        </span>
-                        <span className={`px-3 py-1 rounded-full text-sm font-medium border ${
-                          incident.status === 'resolved' 
-                            ? 'bg-green-500/20 text-green-400 border-green-500/30'
-                            : 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30'
-                        }`}>
-                          {incident.status}
-                        </span>
-                      </div>
-                    </div>
-                    <p className="text-gray-300 mb-4">{incident.description}</p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 text-sm">
-                      <div>
-                        <span className="text-gray-400">Start Time:</span>
-                        <div className="text-white">{formatDate(incident.startTime)}</div>
-                      </div>
-                      <div>
-                        <span className="text-gray-400">End Time:</span>
-                        <div className="text-white">{formatDate(incident.endTime)}</div>
-                      </div>
-                    </div>
-                    <div>
-                      <span className="text-gray-400">Affected Services:</span>
-                      <div className="flex flex-wrap gap-2 mt-2">
-                        {incident.affectedServices.map((service) => (
-                          <span key={service} className="px-2 py-1 bg-white/10 text-blue-400 text-xs rounded-full">
-                            {service}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <span className="text-gray-400">Start Time:</span>
+                    <p className="text-white">{incident.startTime}</p>
                   </div>
-                ))}
-              </div>
-            ) : (
-              <div className="text-center">
-                <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                <p className="text-xl text-gray-300">No recent incidents to report.</p>
-                <p className="text-gray-400">All systems are running smoothly.</p>
-              </div>
-            )}
+                  <div>
+                    <span className="text-gray-400">End Time:</span>
+                    <p className="text-white">{incident.endTime}</p>
+                  </div>
+                </div>
+                
+                <p className="text-gray-300">{incident.description}</p>
+              </motion.div>
+            ))}
           </div>
+        </motion.section>
 
-          {/* Performance Metrics */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-12">Performance Metrics</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
-                <Activity className="w-12 h-12 text-blue-400 mx-auto mb-4" />
-                <div className="text-3xl font-bold text-white mb-2">99.97%</div>
-                <div className="text-gray-400">Average Uptime</div>
+        {/* Performance Metrics */}
+        <motion.section 
+          className="mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.0 }}
+        >
+          <h2 className="text-3xl font-bold text-white text-center mb-12">Performance Metrics</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 text-center">
+              <div className="flex justify-center mb-4">
+                <div className="p-4 bg-green-600/20 rounded-full">
+                  <Users className="h-12 w-12 text-green-400" />
+                </div>
               </div>
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
-                <Zap className="w-12 h-12 text-yellow-400 mx-auto mb-4" />
-                <div className="text-3xl font-bold text-white mb-2">87ms</div>
-                <div className="text-gray-400">Average Response</div>
+              <h3 className="text-xl font-semibold text-white mb-3">Active Users</h3>
+              <p className="text-3xl font-bold text-green-400">12,847</p>
+              <p className="text-gray-400 text-sm">+5.2% from last week</p>
+            </div>
+
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 text-center">
+              <div className="flex justify-center mb-4">
+                <div className="p-4 bg-blue-600/20 rounded-full">
+                  <BarChart3 className="h-12 w-12 text-blue-400" />
+                </div>
               </div>
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
-                <Server className="w-12 h-12 text-green-400 mx-auto mb-4" />
-                <div className="text-3xl font-bold text-white mb-2">6</div>
-                <div className="text-gray-400">Services Monitored</div>
+              <h3 className="text-xl font-semibold text-white mb-3">API Calls</h3>
+              <p className="text-3xl font-bold text-blue-400">2.4M</p>
+              <p className="text-gray-400 text-sm">+12.8% from last week</p>
+            </div>
+
+            <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 text-center">
+              <div className="flex justify-center mb-4">
+                <div className="p-4 bg-purple-600/20 rounded-full">
+                  <Zap className="h-12 w-12 text-purple-400" />
+                </div>
               </div>
-              <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
-                <Shield className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-                <div className="text-3xl font-bold text-white mb-2">0</div>
-                <div className="text-gray-400">Active Issues</div>
-              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Average Response</h3>
+              <p className="text-3xl font-bold text-purple-400">45ms</p>
+              <p className="text-gray-400 text-sm">-8.3% from last week</p>
             </div>
           </div>
+        </motion.section>
 
-          {/* Contact Information */}
-          <div className="text-center">
-            <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-lg rounded-xl p-8 border border-blue-500/30">
-              <h3 className="text-2xl font-bold mb-4">Need Help?</h3>
-              <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                If you're experiencing issues that aren't reflected on this page, please contact our support team.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="mailto:support@ziontechgroup.com"
-                  className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-                >
-                  Contact Support
-                </a>
-                <a
-                  href="/help"
-                  className="border border-blue-500 text-blue-400 px-6 py-3 rounded-lg font-semibold hover:bg-blue-500/20 transition-all duration-300"
-                >
-                  Help Center
-                </a>
-              </div>
+        {/* CTA Section */}
+        <motion.section 
+          className="text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.2 }}
+        >
+          <div className="bg-gradient-to-r from-green-600/20 to-blue-600/20 rounded-2xl p-12 border border-green-500/30">
+            <h2 className="text-3xl font-bold text-white mb-6">Need Help?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              If you're experiencing issues or have questions about our services, 
+              our support team is here to help 24/7.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="px-8 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg font-semibold transition-colors duration-200"
+              >
+                Contact Support
+              </a>
+              <a
+                href="/help"
+                className="px-8 py-3 border border-green-500 text-green-400 hover:bg-green-500 hover:text-white rounded-lg font-semibold transition-colors duration-200"
+              >
+                Help Center
+              </a>
+              <a
+                href="/contact"
+                className="px-8 py-3 border border-gray-600 text-gray-300 hover:border-gray-500 hover:text-white rounded-lg font-semibold transition-colors duration-200"
+              >
+                Report Issue
+              </a>
             </div>
           </div>
-        </div>
-      </section>
+        </motion.section>
+      </div>
     </div>
   );
 };
