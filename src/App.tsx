@@ -1,5 +1,4 @@
-import React from 'react';
-import { Suspense } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import { ThemeProvider } from "./components/ThemeProvider";
@@ -67,6 +66,9 @@ const InnovativeServicesShowcase = lazy(() => import('./pages/InnovativeServices
 // Ultimate Innovative Services 2026
 const UltimateServicesShowcase2026 = lazy(() => import('./pages/UltimateServicesShowcase2026'));
 const ComprehensivePricing2026 = lazy(() => import('./pages/ComprehensivePricing2026'));
+
+// Ultimate Zion Services 2025
+const UltimateServicesShowcase2025 = lazy(() => import('./pages/UltimateServicesShowcase2025'));
 
 // Additional innovative micro SAAS services
 const AILegalDocumentAutomation = lazy(() => import('./pages/services/AILegalDocumentAutomation'));
@@ -208,6 +210,10 @@ const baseRoutes = [
   { path: '/ultimate-services-2026', element: <UltimateServicesShowcase2026 /> },
   { path: '/comprehensive-pricing-2026', element: <ComprehensivePricing2026 /> },
   { path: '/pricing-2026', element: <ComprehensivePricing2026 /> },
+  
+  // Ultimate Zion Services 2025
+  { path: '/ultimate-services-showcase-2025', element: <UltimateServicesShowcase2025 /> },
+  { path: '/ultimate-services-2025', element: <UltimateServicesShowcase2025 /> },
   
   // Other routes
   { path: '/match', element: <AIMatcherPage /> },
