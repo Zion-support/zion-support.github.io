@@ -70,7 +70,18 @@ Zion Tech Group is the world's leading marketplace for high-tech and artificial 
 - **Customer Portal Development** - Self-service customer platforms
 - **API Integration Services** - Third-party system integration
 
-**Average Price: $3,500**
+- **[Supabase Authentication Setup](docs/SUPABASE_AUTHENTICATION_SETUP.md)** - Complete guide for configuring Supabase authentication
+- **[Netlify Deployment Guide](docs/NETLIFY_DEPLOYMENT_GUIDE.md)** - Step-by-step Netlify deployment with environment variables
+- **[Optional Two-Factor Authentication](TWO_FACTOR_AUTHENTICATION_SUMMARY.md)** - Overview of enabling 2FA in the IPO portal
+- **[Logging Guidelines](docs/LOGGING_GUIDELINES.md)** - Usage instructions for the project logger
+- **Collect Logs** - `npm run logs:collect` bundles recent logs under `logs/archive/`
+- **Analyze Logs** - `npm run logs:summary` scans collected logs and reports missing translation keys
+- **Health Check** - `npm run logs:health` prints a quick system status report
+- **Monitor Logs** - `npm run logs:monitor` performs a detailed error analysis and outputs a health score
+- **Export Log Report** - `npm run logs:monitor:export` saves the monitoring report to `logs/error-report-<timestamp>.json`
+- **Automated Alerts** - `npm run logs:alerts` enables real-time log monitoring and sends alerts to the configured webhook
+- **Missing Key Log** - Any translation keys not found at runtime are appended to `logs/missing-keys.log`
+- **Bug Logging** - Run `python3 main_app.py` to generate sample bug logs in `logs/bug/bug_log.json`. Use `python3 bug_logger.py --summary` to view a summary of logged issues.
 
 ### 📊 Data & Analytics Services
 - **Big Data Engineering** - Large-scale data processing solutions
