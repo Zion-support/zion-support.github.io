@@ -54,116 +54,36 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 
   const isActive = (path: string) => location.pathname === path;
 
+  // Align to live site routes discovered in sitemap
   const navigationItems = [
-    {
-      key: 'home',
-      href: '/',
-      label: t('nav.home'),
-      icon: null
-    },
-    {
-      key: 'services',
-      href: '/services',
-      label: t('nav.services'),
-      icon: <ChevronDown className="w-4 h-4 ml-1" />,
-      hasDropdown: true,
-      dropdownItems: [
-        {
-          key: 'ai-services',
-          href: '/enhanced-services',
-          label: t('nav.aiServices'),
-          icon: <Brain className="w-4 h-4" />,
-          description: t('nav.aiServicesDesc')
-        },
-        {
-          key: 'it-services',
-          href: '/it-onsite-services',
-          label: t('nav.itServices'),
-          icon: <Shield className="w-4 h-4" />,
-          description: t('nav.itServicesDesc')
-        },
-        {
-          key: 'micro-saas',
-          href: '/micro-saas-services',
-          label: t('nav.microSaas'),
-          icon: <Cloud className="w-4 h-4" />,
-          description: t('nav.microSaasDesc')
-        },
-        {
-          key: 'equipment',
-          href: '/equipment',
-          label: t('nav.equipment'),
-          icon: <Zap className="w-4 h-4" />,
-          description: t('nav.equipmentDesc')
-        }
-      ]
-    },
-    {
-      key: 'talent',
-      href: '/talent',
-      label: t('nav.talent'),
-      icon: null
-    },
-    {
-      key: 'marketplace',
-      href: '/marketplace',
-      label: t('nav.marketplace'),
-      icon: null
-    },
-    {
-      key: 'community',
-      href: '/community',
-      label: t('nav.community'),
-      icon: null
-    },
-    {
-      key: 'about',
-      href: '/about',
-      label: t('nav.about'),
-      icon: null
-    },
-    {
-      key: 'contact',
-      href: '/contact',
-      label: t('nav.contact'),
-      icon: null
-    }
+    { key: 'home', href: '/', label: t('nav.home'), icon: null },
+    { key: 'about', href: '/about', label: t('nav.about'), icon: null },
+    { key: 'solutions', href: '/solutions', label: t('nav.solutions') ?? 'Solutions', icon: null },
+    { key: 'services', href: '/services', label: t('nav.services'), icon: <ChevronDown className="w-4 h-4 ml-1" />, hasDropdown: true, dropdownItems: [
+      { key: 'ai', href: '/services/ai', label: t('nav.aiServices') ?? 'AI', icon: <Brain className="w-4 h-4" />, description: t('nav.aiServicesDesc') },
+      { key: 'cloud', href: '/services/cloud', label: t('nav.cloud') ?? 'Cloud', icon: <Cloud className="w-4 h-4" />, description: t('nav.cloudDesc') },
+      { key: 'cybersecurity', href: '/services/cybersecurity', label: t('nav.cybersecurity') ?? 'Cybersecurity', icon: <Shield className="w-4 h-4" />, description: t('nav.cybersecurityDesc') },
+      { key: 'infrastructure', href: '/services/infrastructure', label: t('nav.infrastructure') ?? 'Infrastructure', icon: <Zap className="w-4 h-4" />, description: t('nav.infrastructureDesc') },
+      { key: 'transformation', href: '/services/transformation', label: t('nav.transformation') ?? 'Transformation', icon: <FileText className="w-4 h-4" />, description: t('nav.transformationDesc') },
+      { key: 'consulting', href: '/services/consulting', label: t('nav.consulting') ?? 'Consulting', icon: <FileText className="w-4 h-4" />, description: t('nav.consultingDesc') }
+    ]},
+    { key: 'research', href: '/research-development', label: t('nav.research') ?? 'R&D', icon: null },
+    { key: 'case-studies', href: '/case-studies', label: t('nav.caseStudies') ?? 'Case Studies', icon: null },
+    { key: 'news', href: '/news', label: t('nav.news') ?? 'News', icon: null },
+    { key: 'events', href: '/events', label: t('nav.events') ?? 'Events', icon: null },
+    { key: 'careers', href: '/careers', label: t('nav.careers') ?? 'Careers', icon: null },
+    { key: 'contact', href: '/contact', label: t('nav.contact'), icon: null }
   ];
 
   const adminItems = [
-    {
-      key: 'dashboard',
-      href: '/dashboard',
-      label: t('nav.dashboard'),
-      icon: <BarChart3 className="w-4 h-4" />
-    },
-    {
-      key: 'admin',
-      href: '/admin',
-      label: t('nav.admin'),
-      icon: <Settings className="w-4 h-4" />
-    }
+    { key: 'dashboard', href: '/dashboard', label: t('nav.dashboard'), icon: <BarChart3 className="w-4 h-4" /> },
+    { key: 'admin', href: '/admin', label: t('nav.admin'), icon: <Settings className="w-4 h-4" /> }
   ];
 
   const userItems = [
-    {
-      key: 'profile',
-      href: '/dashboard/profile',
-      label: t('nav.profile'),
-      icon: <Users className="w-4 h-4" />
-    },
-    {
-      key: 'projects',
-      href: '/dashboard/projects',
-      label: t('nav.projects'),
-      icon: <Briefcase className="w-4 h-4" />
-    },
-    {
-      key: 'help',
-      href: '/help',
-      label: t('nav.help'),
-      icon: <HelpCircle className="w-4 h-4" />
-    }
+    { key: 'profile', href: '/dashboard/profile', label: t('nav.profile'), icon: <Users className="w-4 h-4" /> },
+    { key: 'projects', href: '/dashboard/projects', label: t('nav.projects'), icon: <Briefcase className="w-4 h-4" /> },
+    { key: 'help', href: '/help', label: t('nav.help'), icon: <HelpCircle className="w-4 h-4" /> }
   ];
 
   return (
