@@ -58,7 +58,15 @@ Zion Tech Group is the world's leading marketplace for high-tech and artificial 
 - **IT Strategy Consulting** - Technology roadmap and digital transformation
 - **24/7 Support & Monitoring** - Round-the-clock infrastructure management
 
-**Average Price: $4,500**
+### Background tasks
+
+The Django backend runs scheduled jobs using Celery. To process abandoned cart emails locally run:
+
+```sh
+celery -A backend.celery worker -B
+```
+
+**Edit a file directly in GitHub**
 
 ### ☁️ Micro SAAS Solutions
 - **Business Process Automation** - Custom workflow automation solutions
