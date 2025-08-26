@@ -42,6 +42,7 @@ const EmergingTech = lazy(() => import('./pages/EmergingTech'));
 // New pages from incoming branch
 const MicroSaasServicesPage = lazy(() => import('./pages/MicroSaasServices'));
 const PricingPage = lazy(() => import('./pages/PricingPage'));
+const ComprehensivePricing2026 = lazy(() => import('./pages/ComprehensivePricing2026'));
 
 // Service pages
 const AIServices = lazy(() => import('./pages/AIServices'));
@@ -67,6 +68,7 @@ const InnovativeServicesShowcase = lazy(() => import('./pages/InnovativeServices
 // Ultimate Innovative Services 2026
 const UltimateServicesShowcase2026 = lazy(() => import('./pages/UltimateServicesShowcase2026'));
 const ComprehensivePricing2026 = lazy(() => import('./pages/ComprehensivePricing2026'));
+const ComprehensiveServicesOverview2026 = lazy(() => import('./pages/ComprehensiveServicesOverview2026'));
 
 // Additional innovative micro SAAS services
 const AILegalDocumentAutomation = lazy(() => import('./pages/services/AILegalDocumentAutomation'));
@@ -182,6 +184,10 @@ const baseRoutes = [
   { path: '/innovative-services-showcase', element: <InnovativeServicesShowcase /> },
   { path: '/micro-saas-services', element: <MicroSaasServicesPage /> },
   { path: '/pricing', element: <PricingPage /> },
+  { path: '/comprehensive-pricing-2026', element: <ComprehensivePricing2026 /> },
+  { path: '/pricing-2026', element: <ComprehensivePricing2026 /> },
+  { path: '/comprehensive-services-overview-2026', element: <ComprehensiveServicesOverview2026 /> },
+  { path: '/services-overview-2026', element: <ComprehensiveServicesOverview2026 /> },
   { path: '/emerging-tech', element: <EmergingTech /> },
   
   // New missing page routes
@@ -191,6 +197,22 @@ const baseRoutes = [
   { path: '/soc2-compliance-automation', element: <SOC2ComplianceAutomation /> },
   { path: '/ai-autonomous-research-assistant', element: <AIAutonomousResearchAssistant /> },
   { path: '/5g-enterprise-solutions', element: <FiveGEnterpriseSolutions /> },
+  
+  // New innovative services routes
+  { path: '/ai-legal-document-automation', element: <InnovativeServicesShowcase2025 /> },
+  { path: '/ai-healthcare-analytics', element: <InnovativeServicesShowcase2025 /> },
+  { path: '/ai-financial-trading', element: <InnovativeServicesShowcase2025 /> },
+  { path: '/ai-supply-chain-optimization', element: <InnovativeServicesShowcase2025 /> },
+  { path: '/ai-customer-service-automation', element: <InnovativeServicesShowcase2025 /> },
+  { path: '/ai-video-production', element: <InnovativeServicesShowcase2025 /> },
+  { path: '/ai-3d-design-modeling', element: <InnovativeServicesShowcase2025 /> },
+  { path: '/ai-music-composition', element: <InnovativeServicesShowcase2025 /> },
+  { path: '/ai-game-development', element: <InnovativeServicesShowcase2025 /> },
+  { path: '/ai-fashion-design', element: <InnovativeServicesShowcase2025 /> },
+  { path: '/ai-architecture-design', element: <InnovativeServicesShowcase2025 /> },
+  { path: '/ai-education-learning', element: <InnovativeServicesShowcase2025 /> },
+  { path: '/ai-agriculture-farming', element: <InnovativeServicesShowcase2025 /> },
+  { path: '/ai-energy-management', element: <InnovativeServicesShowcase2025 /> },
   
   // Service routes
   { path: '/services/ai', element: <AIServices /> },
