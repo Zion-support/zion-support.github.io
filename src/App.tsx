@@ -61,6 +61,7 @@ const Login = React.lazy(() => import('./pages/Login'));
 const Signup = React.lazy(() => import('./pages/Signup'));
 const ITOnsiteServicesPage = React.lazy(() => import('./pages/ITOnsiteServicesPage'));
 const OpenAppRedirect = React.lazy(() => import('./pages/OpenAppRedirect'));
+const ThemeTest = React.lazy(() => import('./pages/ThemeTest'));
 const ContactPage = React.lazy(() => import('./pages/Contact'));
 
 const { lazy, Suspense } = React;
@@ -120,13 +121,13 @@ const baseRoutes = [
   { path: '/cart', element: <CartPage /> },
   { path: '/blog', element: <Blog /> },
   { path: '/blog/:slug', element: <BlogPost /> },
-  { path: '/faq', element: <FAQPage /> },
-=======
   { path: '/wishlist', element: <WishlistPage /> },
   { path: '/cart', element: <CartPage /> },
   { path: '/checkout', element: <Checkout /> },
 =======
   { path: '/privacy-settings', element: <PrivacySettings /> },
+=======
+  { path: '/theme-test', element: <ThemeTest /> },
 ];
 
 // Loading Component
