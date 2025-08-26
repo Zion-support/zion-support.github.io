@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
@@ -668,9 +667,6 @@ export default function Home() {
       
       {/* Newsletter Section */}
       <NewsletterSection />
-      
-      <FloatingCTA />
-=======
       </div>
 
       {/* Enhanced Features Section */}
@@ -903,6 +899,7 @@ export default function Home() {
     <div className="min-h-screen bg-background" id="main-content">
       <CategoriesSection />
       <ServicesShowcase />
+=======
     </div>
   );
 }

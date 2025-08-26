@@ -7,7 +7,7 @@ import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster } from "./components/ui/toaster";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import InstallPrompt from "./components/InstallPrompt";
+import { AppLayout } from "@/layout/AppLayout";
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -130,20 +130,22 @@ const App = () => {
         <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
           <ErrorBoundary>
           <Routes>
-            {baseRoutes.map(({ path, element }) => (
-              <Route key={path} path={path} element={element} />
-            ))}
-            <Route path="/auth/*" element={<AuthRoutes />} />
-            <Route path="/dashboard/*" element={<DashboardRoutes />} />
-            <Route path="/marketplace/*" element={<MarketplaceRoutes />} />
-            <Route path="/talent/*" element={<TalentRoutes />} />
-            <Route path="/admin/*" element={<AdminRoutes />} />
-            <Route path="/mobile/*" element={<MobileAppRoutes />} />
-            <Route path="/content/*" element={<ContentRoutes />} />
-            <Route path="/enterprise/*" element={<EnterpriseRoutes />} />
-            <Route path="/community/*" element={<CommunityRoutes />} />
-            <Route path="/developers/*" element={<DeveloperRoutes />} />
-            <Route path="*" element={<ErrorRoutes />} />
+            <Route element={<AppLayout />}>
+              {baseRoutes.map(({ path, element }) => (
+                <Route key={path} path={path} element={element} />
+              ))}
+              <Route path="/auth/*" element={<AuthRoutes />} />
+              <Route path="/dashboard/*" element={<DashboardRoutes />} />
+              <Route path="/marketplace/*" element={<MarketplaceRoutes />} />
+              <Route path="/talent/*" element={<TalentRoutes />} />
+              <Route path="/admin/*" element={<AdminRoutes />} />
+              <Route path="/mobile/*" element={<MobileAppRoutes />} />
+              <Route path="/content/*" element={<ContentRoutes />} />
+              <Route path="/enterprise/*" element={<EnterpriseRoutes />} />
+              <Route path="/community/*" element={<CommunityRoutes />} />
+              <Route path="/developers/*" element={<DeveloperRoutes />} />
+              <Route path="*" element={<ErrorRoutes />} />
+            </Route>
           </Routes>
           </ErrorBoundary>
         </Suspense>
