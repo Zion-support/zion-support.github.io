@@ -146,8 +146,20 @@ export function AppHeader() {
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-0 left-0 w-full h-full">
             <div className="absolute top-10 left-10 w-32 h-32 border border-zion-cyan/20 rounded-full animate-pulse"></div>
-            <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full animate-pulse delay-1000"></div>
+            <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-pulse delay-1000"></div>
             <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-blue/20 rounded-full animate-pulse delay-2000"></div>
+            <div className="absolute top-20 right-20 w-20 h-20 border border-zion-green/20 rounded-full animate-pulse delay-3000"></div>
+            <div className="absolute bottom-10 left-1/3 w-12 h-12 border border-zion-pink/20 rounded-full animate-pulse delay-4000"></div>
+          </div>
+          
+          {/* Matrix rain effect */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="matrix-rain w-full h-full"></div>
+          </div>
+          
+          {/* Cyber grid overlay */}
+          <div className="absolute inset-0 opacity-3">
+            <div className="cyber-grid w-full h-full"></div>
           </div>
         </div>
 
@@ -162,14 +174,17 @@ export function AppHeader() {
             >
               <Link to="/" className="flex items-center space-x-3 group">
                 <div className="relative">
-                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-2xl font-bold text-white">Z</span>
+                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg hover:shadow-zion-cyan/50">
+                    <span className="text-2xl font-bold text-white group-hover:text-zion-cyan transition-colors duration-300">Z</span>
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                  
+                  {/* Holographic ring effect */}
+                  <div className="absolute inset-0 rounded-xl border-2 border-transparent bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-border opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-spin-slow"></div>
                 </div>
                 <div className="hidden sm:block">
-                  <h1 className="text-2xl font-bold text-gradient">ZION TECH GROUP</h1>
-                  <p className="text-xs text-zion-slate-light font-medium">Innovation • Intelligence • Impact</p>
+                  <h1 className="text-2xl font-bold text-gradient group-hover:scale-105 transition-transform duration-300">ZION TECH GROUP</h1>
+                  <p className="text-xs text-zion-slate-light font-medium group-hover:text-zion-cyan transition-colors duration-300">Innovation • Intelligence • Impact</p>
                 </div>
               </Link>
             </motion.div>

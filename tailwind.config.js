@@ -98,6 +98,7 @@ module.exports = {
         'shimmer': 'shimmer 2.5s linear infinite',
         'gradient': 'gradient 8s ease infinite',
         'neon-pulse': 'neon-pulse 1.5s ease-in-out infinite alternate',
+        'spin-slow': 'spin 3s linear infinite',
       },
       keyframes: {
         float: {
@@ -262,6 +263,23 @@ module.exports = {
           "dark-blue": "#16213e",
           blue: "#0f3460",
         },
+        zion: {
+          cyan: "#22ddd2",
+          "cyan-dark": "#14b8a6",
+          purple: "#8c15e9",
+          "purple-dark": "#6b21a8",
+          "purple-light": "#a855f7",
+          blue: "#2e73ea",
+          "blue-dark": "#172d67",
+          "blue-light": "#2e73ea",
+          green: "#22c55e",
+          orange: "#f97316",
+          pink: "#ec4899",
+          red: "#ef4444",
+          slate: "#64748b",
+          "slate-light": "#94a3b8",
+          "slate-dark": "#475569",
+        },
         "high-contrast": "#ffffff",
         "high-contrast-secondary": "#e5e7eb",
       },
@@ -272,6 +290,11 @@ module.exports = {
         "neon-green": "0 0 20px rgba(16, 185, 129, 0.5)",
         "neon-glow":
           "0 0 30px rgba(0, 212, 255, 0.3), 0 0 60px rgba(0, 212, 255, 0.1)",
+      },
+      opacity: {
+        "2": "0.02",
+        "3": "0.03",
+        "5": "0.05",
       },
       borderWidth: {
         '3': '3px',

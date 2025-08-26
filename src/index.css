@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
@@ -171,12 +171,42 @@
   /* Animated Backgrounds */
   .bg-futuristic {
     background: 
-      radial-gradient(circle at 20% 80%, rgba(34, 221, 210, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, rgba(140, 21, 233, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 40% 40%, rgba(46, 115, 234, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 20% 80%, rgba(34, 221, 210, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(140, 21, 233, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(46, 115, 234, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 60% 60%, rgba(34, 197, 94, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 10% 30%, rgba(236, 72, 153, 0.1) 0%, transparent 50%),
       linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
     background-size: 100% 100%;
-    animation: gradient-shift 15s ease infinite;
+    animation: gradient-shift 20s ease infinite;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .bg-futuristic::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 50% 50%, rgba(34, 221, 210, 0.05) 0%, transparent 70%);
+    animation: pulse-glow 8s ease-in-out infinite;
+    pointer-events: none;
+  }
+
+  .bg-futuristic::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      linear-gradient(45deg, transparent 30%, rgba(140, 21, 233, 0.03) 50%, transparent 70%);
+    animation: scan-line 12s linear infinite;
+    pointer-events: none;
   }
 
   .bg-mesh-gradient {
@@ -212,6 +242,99 @@
 
   .float-slow {
     animation: float 8s ease-in-out infinite;
+  }
+
+  /* Holographic Effects */
+  .holographic {
+    background: linear-gradient(45deg, #00d4ff, #8b5cf6, #ec4899, #10b981);
+    background-size: 400% 400%;
+    animation: holographic-shift 3s ease infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .holographic-border {
+    position: relative;
+    border: 2px solid transparent;
+    background: linear-gradient(45deg, #00d4ff, #8b5cf6, #ec4899, #10b981);
+    background-clip: padding-box;
+    border-radius: 8px;
+  }
+
+  .holographic-border::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #00d4ff, #8b5cf6, #ec4899, #10b981);
+    background-size: 400% 400%;
+    animation: holographic-shift 3s ease infinite;
+    border-radius: 8px;
+    z-index: -1;
+  }
+
+  /* Matrix Rain Effect */
+  .matrix-rain {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .matrix-rain::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, rgba(0, 255, 0, 0.1), transparent);
+    animation: matrix-rain 3s linear infinite;
+    pointer-events: none;
+  }
+
+  /* Cyber Grid */
+  .cyber-grid {
+    background-image: 
+      linear-gradient(rgba(34, 221, 210, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34, 221, 210, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    animation: grid-move 20s linear infinite;
+  }
+
+  /* Neon Text Effects */
+  .neon-text-cyan {
+    color: #22ddd2;
+    text-shadow: 
+      0 0 5px #22ddd2,
+      0 0 10px #22ddd2,
+      0 0 15px #22ddd2,
+      0 0 20px #22ddd2,
+      0 0 35px #22ddd2;
+    animation: neon-flicker 2s ease-in-out infinite alternate;
+  }
+
+  .neon-text-purple {
+    color: #8c15e9;
+    text-shadow: 
+      0 0 5px #8c15e9,
+      0 0 10px #8c15e9,
+      0 0 15px #8c15e9,
+      0 0 20px #8c15e9,
+      0 0 35px #8c15e9;
+    animation: neon-flicker 2s ease-in-out infinite alternate;
+  }
+
+  .neon-text-blue {
+    color: #2e73ea;
+    text-shadow: 
+      0 0 5px #2e73ea,
+      0 0 10px #2e73ea,
+      0 0 15px #2e73ea,
+      0 0 20px #2e73ea,
+      0 0 35px #2e73ea;
+    animation: neon-flicker 2s ease-in-out infinite alternate;
   }
 
   /* Hover Effects */
@@ -377,6 +500,30 @@
   @keyframes fade-in-up {
     from { transform: translateY(30px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes grid-move {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(20px, 20px); }
+  }
+
+  @keyframes holographic-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  @keyframes particle-drift {
+    0% { transform: translateX(-100px) translateY(0px); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateX(calc(100vw + 100px)) translateY(-100px); opacity: 0; }
+  }
+
+  @keyframes cyber-float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    25% { transform: translateY(-10px) rotate(1deg); }
+    50% { transform: translateY(-20px) rotate(0deg); }
+    75% { transform: translateY(-10px) rotate(-1deg); }
   }
 
   /* Utility Classes */
