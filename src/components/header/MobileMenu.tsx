@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "../ui/button";
 import { useTranslation } from "react-i18next";
+import { ModeToggle } from "@/components/ModeToggle";
 
 export interface MobileMenuProps {
   unreadCount?: number;
@@ -144,6 +145,9 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
           </Link>
         ))}
       </nav>
+      <div className="px-6 mt-4">
+        <ModeToggle />
+      </div>
     </div>
   );
 }

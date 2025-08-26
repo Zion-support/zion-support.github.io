@@ -6,9 +6,15 @@ jest.mock('@sentry/nextjs', () => ({'  captureException: jest.fn(),
   // For example, if it uses withSentryConfig, Sentry.XYZ, etc.
   // For now, init and captureException are common ones.
 }));
-import { ModeToggle } from @/components/ModeToggle';// Use the ThemeProvider from src/components to match the hook used by ModeToggle;
-import { ThemeProvider } from @/components/ThemeProvider';
-it('applies dark class when toggled', async () => { // Made test async'  render(
+
+import { ModeToggle } from '@/components/ModeToggle';
+// Use the ThemeProvider from src/components to match the hook used by ModeToggle
+import { ThemeProvider } from '@/components/ThemeProvider';
+
+it('saves theme to localStorage when toggled', async () => {
+  localStorage.setItem('theme', 'light');
+
+  render(
     <ThemeProvider>
       <ModeToggle />
     </ThemeProvider>
@@ -16,6 +22,8 @@ it('applies dark class when toggled', async () => { // Made test async'  render(
 
   const button = document.querySelector('button');  fireEvent.click(button!);
 
-  await waitFor(() => { // Added waitFor for the assertion
-    expect(document.documentElement.classList.contains('dark')).toBe(true);  });
+  await waitFor(() => {
+    expect(localStorage.getItem('theme')).toBe('dark');
+    expect(document.documentElement.classList.contains('dark')).toBe(true);
+  });
 });

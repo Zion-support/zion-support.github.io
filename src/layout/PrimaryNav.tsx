@@ -19,12 +19,7 @@ import { Menu, X, ShoppingCart } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import type { RootState } from '@/store';
-import {
-  HoverCard,
-  HoverCardTrigger,
-  HoverCardContent,
-} from '@/components/ui/hover-card';
-import { MiniCartPreview } from '@/components/cart/MiniCartPreview';
+import { ModeToggle } from '@/components/ModeToggle';
 
 export function PrimaryNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -160,8 +155,20 @@ export function PrimaryNav() {
                   </Link>
                 </>
               )}
-              {isLoggedIn && <UserMenu />}
-            </div>
+            </Link>
+            <LanguageSelector />
+            <ModeToggle />
+            {!isLoggedIn && (
+              <>
+                <Link href="/login" className="text-sm hover:text-primary" data-testid="login-link">
+                  {t('login', 'Login')}
+                </Link>
+                <Link href="/signup" className="ml-2 text-sm hover:text-primary">
+                  {t('signup', 'Sign up')}
+                </Link>
+              </>
+            )}
+            {isLoggedIn && <UserMenu />}
           </div>
           
           {/* Mobile menu button */}
