@@ -67,15 +67,25 @@ const footerSections = [
     description: 'Breakthrough quantum and space technologies',
     icon: <Atom className="w-5 h-5 text-blue-400" />,
     links: [
+<<<<<<< HEAD
       { name: 'Space Resource Mining', href: '/space-resource-mining-platform' },
       { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform' },
       { name: 'Quantum-Secure Cloud Infrastructure', href: '/quantum-secure-cloud-infrastructure' },
       { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading' },
+=======
+      { name: 'Quantum-Secure Cloud Infrastructure', href: '/quantum-secure-cloud-infrastructure' },
+      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading' },
+      { name: 'Quantum Internet Security Platform', href: '/quantum-internet-security' },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8d64
       { name: 'AI-Powered Space Technology', href: '/ai-powered-space-technology' },
       { name: 'Brain-Computer Interface', href: '/brain-computer-interface-platform' },
       { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery-platform' },
       { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai-platform' },
       { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing-platform' },
+<<<<<<< HEAD
+=======
+      { name: 'Space Resource Mining', href: '/space-resource-mining-platform' },
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8d64
       { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' },
       { name: 'Quantum Robotics', href: '/quantum-robotics' }
     ]
@@ -92,7 +102,12 @@ const footerSections = [
       { name: 'AI-Powered DevOps', href: '/ai-powered-devops-platform' },
       { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' },
       { name: 'Zero Trust Security', href: '/zero-trust-security-platform' },
+<<<<<<< HEAD
       { name: 'AI-Powered Cybersecurity', href: '/ai-powered-cybersecurity' }
+=======
+      { name: 'AI-Powered Cybersecurity', href: '/ai-powered-cybersecurity' },
+      { name: 'Quantum Networking', href: '/quantum-networking' }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8d64
     ]
   },
   {
@@ -111,14 +126,22 @@ const footerSections = [
     ]
   },
   {
+<<<<<<< HEAD
     title: 'Industry Solutions',
     description: 'Industry-specific technology solutions',
     icon: <Building className="w-5 h-5 text-orange-400" />,
+=======
+    title: 'Solutions',
+    description: 'Industry-specific technology solutions',
+    icon: <Target className="w-5 h-5 text-orange-400" />,
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8d64
     links: [
-      { name: 'Healthcare Solutions', href: '/healthcare-solutions' },
-      { name: 'Financial Services', href: '/financial-solutions' },
-      { name: 'Manufacturing AI', href: '/manufacturing-ai-solutions' },
+      { name: 'Healthcare AI Platform', href: '/healthcare-ai-platform' },
+      { name: 'Fintech Solutions', href: '/fintech-solutions' },
+      { name: 'Education Technology', href: '/education-technology' },
+      { name: 'Manufacturing AI', href: '/manufacturing-ai-platform' },
       { name: 'Retail Technology', href: '/retail-technology-solutions' },
+<<<<<<< HEAD
       { name: 'Education Technology', href: '/education-technology-solutions' },
       { name: 'Government Solutions', href: '/enterprise-solutions-showcase' },
       { name: 'Energy & Utilities', href: '/quantum-energy' },
@@ -140,10 +163,38 @@ const footerSections = [
       { name: 'Community Forum', href: '/community' },
       { name: 'Market Pricing', href: '/market-pricing' },
       { name: 'Services Advertising', href: '/services-advertising' }
+=======
+      { name: 'Logistics AI', href: '/logistics-ai-platform' },
+      { name: 'Real Estate Technology', href: '/real-estate-technology' },
+      { name: 'Energy Management AI', href: '/energy-management-ai' }
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8d64
     ]
   }
 ];
 
+<<<<<<< HEAD
+=======
+const companyLinks = [
+  { name: 'About Us', href: '/about' },
+  { name: 'Our Team', href: '/team' },
+  { name: 'Careers', href: '/careers' },
+  { name: 'Press & Media', href: '/press' },
+  { name: 'Partners', href: '/partners' },
+  { name: 'Contact Us', href: '/contact' },
+  { name: 'Newsletter', href: '/newsletter' },
+  { name: 'Events', href: '/events' }
+];
+
+const legalLinks = [
+  { name: 'Privacy Policy', href: '/privacy' },
+  { name: 'Terms of Service', href: '/terms' },
+  { name: 'Cookie Policy', href: '/cookies' },
+  { name: 'Security', href: '/security' },
+  { name: 'GDPR Compliance', href: '/gdpr' },
+  { name: 'Accessibility', href: '/accessibility' }
+];
+
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8d64
 const socialLinks = [
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -176,6 +227,10 @@ const UltraFuturisticFooter2035: React.FC = () => {
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-732a
 
 export default function UltraFuturisticFooter2035() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className="bg-gray-900 text-gray-300 border-t border-gray-800 mt-16">
       <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -185,6 +240,139 @@ export default function UltraFuturisticFooter2035() {
           <a href="/terms" className="hover:text-white">Terms</a>
           <a href="/contact" className="hover:text-white">Contact</a>
         </div>
+<<<<<<< HEAD
+=======
+
+        {/* Middle Section - Company Info */}
+        <div className="py-12 border-b border-cyan-500/20">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Company Description */}
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-lg flex items-center justify-center">
+                  <Rocket className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
+                    Zion Tech Group
+                  </h3>
+                  <p className="text-sm text-cyan-400/70">Future Technology Solutions</p>
+                </div>
+              </div>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                Leading the future of technology with revolutionary AI, quantum computing, and autonomous systems. 
+                We deliver cutting-edge solutions that transform businesses and drive innovation across industries.
+              </p>
+              <div className="flex space-x-4">
+                {socialLinks.map((social) => (
+                  <Link
+                    key={social.name}
+                    href={social.href}
+                    className="w-10 h-10 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300 hover:from-cyan-500/30 hover:to-blue-500/30 transition-all duration-200"
+                    aria-label={social.name}
+                  >
+                    {social.icon}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div className="space-y-4">
+              <h4 className="text-lg font-semibold text-white">Quick Links</h4>
+              <div className="grid grid-cols-2 gap-2">
+                {companyLinks.map((link) => (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className="text-cyan-300/70 hover:text-cyan-300 transition-colors duration-200 text-sm hover:translate-x-1 inline-block"
+                  >
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Contact Information */}
+            <div className="space-y-4">
+              <h4 className="text-lg font-semibold text-white">Contact Information</h4>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3">
+                  <Phone className="w-4 h-4 text-cyan-400" />
+                  <span className="text-sm text-gray-300">{contactInfo.mobile}</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Mail className="w-4 h-4 text-cyan-400" />
+                  <span className="text-sm text-gray-300">{contactInfo.email}</span>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <MapPin className="w-4 h-4 text-cyan-400 mt-0.5" />
+                  <span className="text-sm text-gray-300">{contactInfo.address}</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Globe className="w-4 h-4 text-cyan-400" />
+                  <span className="text-sm text-gray-300">{contactInfo.website}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Section */}
+        <div className="py-8">
+          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+            {/* Copyright */}
+            <div className="text-sm text-gray-400">
+              <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
+              <p className="mt-1">Revolutionizing technology, one innovation at a time.</p>
+            </div>
+
+            {/* Legal Links */}
+            <div className="flex flex-wrap items-center space-x-6 text-sm">
+              {legalLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="text-gray-400 hover:text-cyan-300 transition-colors duration-200"
+                >
+                  {link.name}
+                </Link>
+              ))}
+            </div>
+
+            {/* Back to Top */}
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="group flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-lg text-cyan-400 hover:from-cyan-500/30 hover:to-blue-500/30 transition-all duration-200"
+            >
+              <span className="text-sm">Back to Top</span>
+              <ArrowRight className="w-4 h-4 rotate-[-90deg] group-hover:translate-y-[-2px] transition-transform duration-200" />
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Floating Action Button */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5, delay: 1 }}
+        className="fixed bottom-6 right-6 z-50"
+      >
+        <Link
+          href="/contact"
+          className="group w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center shadow-2xl shadow-cyan-500/25 hover:shadow-cyan-500/40 transition-all duration-300 hover:scale-110"
+        >
+          <MessageCircle className="w-6 h-6 text-white group-hover:rotate-12 transition-transform duration-300" />
+        </Link>
+      </motion.div>
+
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-cyan-500/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-3/4 right-1/4 w-24 h-24 bg-blue-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-20 h-20 bg-purple-500/5 rounded-full blur-3xl animate-pulse delay-2000"></div>
+>>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-8d64
       </div>
     </footer>
   );
