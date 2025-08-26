@@ -179,51 +179,33 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1">
-            {navigationItems.map((item) => (
-              <div key={item.name} className="relative">
-                {item.hasDropdown ? (
-                  <div className="relative">
-                    <button
-                      onClick={() => toggleDropdown(item.name)}
-                      className={`flex items-center px-4 py-2 rounded-lg transition-colors duration-300 ${
-                        isActive(item.path) || activeDropdown === item.name
-                          ? 'text-blue-400 font-semibold' 
-                          : 'text-gray-300 hover:text-white'
-                      }`}
-                    >
-                      {item.name}
-                      <ChevronDownIcon className="ml-1 h-4 w-4" />
-                    </button>
-                    
-                    {activeDropdown === item.name && (
-                      <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800 border border-white/10 rounded-lg shadow-xl backdrop-blur-lg">
-                        <div className="py-2">
-                          {item.dropdownItems?.map((dropdownItem) => (
-                            <Link
-                              key={dropdownItem.name}
-                              to={dropdownItem.path}
-                              className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-slate-700 transition-colors duration-200"
-                              onClick={() => setActiveDropdown(null)}
-                            >
-                              {dropdownItem.name}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                ) : (
-                  <Link
-                    to={item.path}
-                    className={`px-4 py-2 rounded-lg transition-colors duration-300 ${
-                      isActive(item.path)
-                        ? 'text-blue-400 font-semibold' 
-                        : 'text-gray-300 hover:text-white'
-                    }`}
-                  >
-                    {item.name}
-                  </Link>
+          <nav 
+            className="hidden md:flex items-center space-x-8"
+            role="navigation"
+            aria-label="Main navigation"
+          >
+            {[
+              { path: '/', label: 'Home' },
+              { path: '/services', label: 'Services' },
+              { path: '/about', label: 'About' },
+              { path: '/news', label: 'News' },
+              { path: '/careers', label: 'Careers' },
+              { path: '/blog', label: 'Blog' },
+              { path: '/contact', label: 'Contact' }
+            ].map(({ path, label }) => (
+              <Link
+                key={path}
+                to={path}
+                className={`relative px-3 py-2 text-sm font-medium transition-colors duration-300 ${
+                  isActive(path)
+                    ? 'text-blue-400'
+                    : 'text-gray-300 hover:text-white'
+                }`}
+                aria-current={isActive(path) ? 'page' : undefined}
+              >
+                {label}
+                {isActive(path) && (
+                  <span className="absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-blue-400 to-cyan-400" />
                 )}
               </div>
             ))}
@@ -286,55 +268,27 @@ export function Header() {
             : 'max-h-0 opacity-0 overflow-hidden'
         }`}>
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 rounded-lg mt-2 border border-white/10">
-            {navigationItems.map((item) => (
-              <div key={item.name}>
-                {item.hasDropdown ? (
-                  <div>
-                    <button
-                      onClick={() => toggleDropdown(item.name)}
-                      className={`w-full text-left px-3 py-2 rounded-md transition-all duration-200 ${
-                        isActive(item.path) || activeDropdown === item.name
-                          ? 'text-blue-400 bg-blue-600/20 font-semibold'
-                          : 'text-gray-300 hover:text-white hover:bg-gray-700'
-                      }`}
-                    >
-                      <div className="flex items-center justify-between">
-                        {item.name}
-                        <ChevronDownIcon className={`h-4 w-4 transition-transform duration-200 ${
-                          activeDropdown === item.name ? 'rotate-180' : ''
-                        }`} />
-                      </div>
-                    </button>
-                    
-                    {activeDropdown === item.name && (
-                      <div className="ml-4 mt-2 space-y-1">
-                        {item.dropdownItems?.map((dropdownItem) => (
-                          <Link
-                            key={dropdownItem.name}
-                            to={dropdownItem.path}
-                            className="block px-3 py-2 rounded-md text-gray-300 hover:text-white hover:bg-gray-700 transition-all duration-200"
-                            onClick={closeMenu}
-                          >
-                            {dropdownItem.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ) : (
-                  <Link
-                    to={item.path}
-                    className={`block px-3 py-2 rounded-md transition-all duration-200 ${
-                      isActive(item.path)
-                        ? 'text-blue-400 bg-blue-600/20 font-semibold'
-                        : 'text-gray-300 hover:text-white hover:bg-gray-700'
-                    }`}
-                    onClick={closeMenu}
-                  >
-                    {item.name}
-                  </Link>
-                )}
-              </div>
+            {[
+              { path: '/', label: 'Home' },
+              { path: '/services', label: 'Services' },
+              { path: '/about', label: 'About' },
+              { path: '/news', label: 'News' },
+              { path: '/careers', label: 'Careers' },
+              { path: '/blog', label: 'Blog' },
+              { path: '/contact', label: 'Contact' }
+            ].map(({ path, label }) => (
+              <Link
+                key={path}
+                to={path}
+                className={`block px-3 py-2 text-base font-medium rounded-md transition-colors duration-200 ${
+                  isActive(path)
+                    ? 'text-blue-400 bg-blue-900/20'
+                    : 'text-gray-300 hover:text-white hover:bg-gray-700'
+                }`}
+                aria-current={isActive(path) ? 'page' : undefined}
+              >
+                {label}
+              </Link>
             ))}
             
             {/* Mobile CTA */}
