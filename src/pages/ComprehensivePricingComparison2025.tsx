@@ -40,16 +40,16 @@ import {
   Percent,
   Calculator
 } from 'lucide-react';
-import { ENHANCED_INNOVATIVE_SERVICES_2025 } from '../data/enhancedInnovativeServices2025';
+import { enhancedInnovativeMicroSaasServices2025 } from '../data/enhancedInnovativeServices2025';
 
 export default function ComprehensivePricingComparison2025() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('price');
   const [sortOrder, setSortOrder] = useState('asc');
 
-  const categories = Array.from(new Set(ENHANCED_INNOVATIVE_SERVICES_2025.map(service => service.category)));
+  const categories = Array.from(new Set(enhancedInnovativeMicroSaasServices2025.map(service => service.category)));
 
-  const filteredServices = ENHANCED_INNOVATIVE_SERVICES_2025.filter(service =>
+  const filteredServices = enhancedInnovativeMicroSaasServices2025.filter(service =>
     selectedCategory === 'all' || service.category === selectedCategory
   );
 
@@ -62,14 +62,14 @@ export default function ComprehensivePricingComparison2025() {
         comparison = a.price - b.price;
         break;
       case 'name':
-        comparison = a.title.localeCompare(b.title);
+        comparison = a.name.localeCompare(b.name);
         break;
       case 'category':
         comparison = a.category.localeCompare(b.category);
         break;
       case 'delivery':
-        const aWeeks = parseInt(a.estimatedDelivery.split('-')[0]);
-        const bWeeks = parseInt(b.estimatedDelivery.split('-')[0]);
+        const aWeeks = parseInt(a.setupTime.split(' ')[0]);
+        const bWeeks = parseInt(b.setupTime.split(' ')[0]);
         comparison = aWeeks - bWeeks;
         break;
       default:
@@ -108,7 +108,7 @@ export default function ComprehensivePricingComparison2025() {
   };
 
   const getCategoryStats = (category: string) => {
-    const servicesInCategory = ENHANCED_INNOVATIVE_SERVICES_2025.filter(service => service.category === category);
+    const servicesInCategory = enhancedInnovativeMicroSaasServices2025.filter(service => service.category === category);
     const totalPrice = servicesInCategory.reduce((sum, service) => sum + service.price, 0);
     const avgPrice = totalPrice / servicesInCategory.length;
     
@@ -120,13 +120,13 @@ export default function ComprehensivePricingComparison2025() {
   };
 
   const getOverallStats = () => {
-    const totalPrice = ENHANCED_INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.price, 0);
-    const avgPrice = totalPrice / ENHANCED_INNOVATIVE_SERVICES_2025.length;
-    const minPrice = Math.min(...ENHANCED_INNOVATIVE_SERVICES_2025.map(s => s.price));
-    const maxPrice = Math.max(...ENHANCED_INNOVATIVE_SERVICES_2025.map(s => s.price));
+    const totalPrice = enhancedInnovativeMicroSaasServices2025.reduce((sum, service) => sum + service.price, 0);
+    const avgPrice = totalPrice / enhancedInnovativeMicroSaasServices2025.length;
+    const minPrice = Math.min(...enhancedInnovativeMicroSaasServices2025.map(s => s.price));
+    const maxPrice = Math.max(...enhancedInnovativeMicroSaasServices2025.map(s => s.price));
     
     return {
-      totalServices: ENHANCED_INNOVATIVE_SERVICES_2025.length,
+              totalServices: enhancedInnovativeMicroSaasServices2025.length,
       totalValue: totalPrice,
       avgPrice: Math.round(avgPrice),
       minPrice,
@@ -318,8 +318,8 @@ export default function ComprehensivePricingComparison2025() {
                               <IconComponent className="w-5 h-5 text-white" />
                             </div>
                             <div>
-                              <div className="text-white font-medium">{service.title}</div>
-                              <div className="text-gray-400 text-sm">{service.subcategory}</div>
+                              <div className="text-white font-medium">{service.name}</div>
+                              <div className="text-gray-400 text-sm">{service.category}</div>
                             </div>
                           </div>
                         </td>
@@ -335,21 +335,17 @@ export default function ComprehensivePricingComparison2025() {
                           <div className="text-gray-400">{service.marketPrice}</div>
                         </td>
                         <td className="p-4">
-                          <div className="text-gray-300">{service.estimatedDelivery}</div>
+                          <div className="text-gray-300">{service.setupTime}</div>
                         </td>
                         <td className="p-4">
-                          <span className={`px-2 py-1 rounded-full text-xs ${
-                            service.supportLevel === 'enterprise' 
-                              ? 'bg-purple-500/20 text-purple-300' 
-                              : 'bg-blue-500/20 text-blue-300'
-                          }`}>
-                            {service.supportLevel}
+                          <span className={`px-2 py-1 rounded-full text-xs bg-blue-500/20 text-blue-300`}>
+                            Standard
                           </span>
                         </td>
                         <td className="p-4">
                           <div className="flex space-x-2">
                             <a
-                              href={`mailto:${service.contactInfo.email}?subject=Quote for ${service.title}`}
+                              href={`mailto:${service.contactInfo.email}?subject=Quote for ${service.name}`}
                               className="bg-cyan-500 text-white px-3 py-1 rounded text-sm hover:bg-cyan-600 transition-colors"
                             >
                               Quote

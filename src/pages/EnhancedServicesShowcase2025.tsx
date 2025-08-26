@@ -34,23 +34,23 @@ import {
   ChevronDown,
   ChevronUp
 } from 'lucide-react';
-import { ENHANCED_INNOVATIVE_SERVICES_2025 } from '../data/enhancedInnovativeServices2025';
+import { enhancedInnovativeMicroSaasServices2025 } from '../data/enhancedInnovativeServices2025';
 
 export default function EnhancedServicesShowcase2025() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [expandedService, setExpandedService] = useState<string | null>(null);
+  const [expandedService, setExpandedService] = useState<number | null>(null);
 
-  const categories = Array.from(new Set(ENHANCED_INNOVATIVE_SERVICES_2025.map(service => service.category)));
+  const categories = Array.from(new Set(enhancedInnovativeMicroSaasServices2025.map(service => service.category)));
 
-  const filteredServices = ENHANCED_INNOVATIVE_SERVICES_2025.filter(service =>
+  const filteredServices = enhancedInnovativeMicroSaasServices2025.filter(service =>
     (selectedCategory === 'all' || service.category === selectedCategory) &&
-    (service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    (service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
      service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
      service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())))
   );
 
-  const toggleServiceExpansion = (serviceId: string) => {
+  const toggleServiceExpansion = (serviceId: number) => {
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
 
@@ -173,7 +173,7 @@ export default function EnhancedServicesShowcase2025() {
         <div className="text-center mb-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700 rounded-lg p-4">
-              <div className="text-3xl font-bold text-cyan-400">{ENHANCED_INNOVATIVE_SERVICES_2025.length}</div>
+                              <div className="text-3xl font-bold text-cyan-400">{enhancedInnovativeMicroSaasServices2025.length}</div>
               <div className="text-gray-400">Total Services</div>
             </div>
             <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700 rounded-lg p-4">
@@ -209,25 +209,21 @@ export default function EnhancedServicesShowcase2025() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-200">
-                      {service.title}
+                      {service.name}
                     </h3>
                     <p className="text-gray-300 text-sm mb-3">
                       {service.description}
                     </p>
                     <div className="flex items-center space-x-4 text-sm">
-                      <span className="text-cyan-400 font-semibold">
-                        {service.currency}{service.price.toLocaleString()}/{service.pricingModel}
-                      </span>
-                      <span className="text-gray-400">
-                        {service.estimatedDelivery}
-                      </span>
-                      <span className={`px-2 py-1 rounded-full text-xs ${
-                        service.supportLevel === 'enterprise' 
-                          ? 'bg-purple-500/20 text-purple-300' 
-                          : 'bg-blue-500/20 text-blue-300'
-                      }`}>
-                        {service.supportLevel}
-                      </span>
+                                              <span className="text-cyan-400 font-semibold">
+                          ${service.price.toLocaleString()}/{service.pricingModel}
+                        </span>
+                                              <span className="text-gray-400">
+                          {service.setupTime}
+                        </span>
+                                              <span className={`px-2 py-1 rounded-full text-xs bg-blue-500/20 text-blue-300`}>
+                          Standard
+                        </span>
                     </div>
                   </div>
                 </div>
@@ -235,7 +231,7 @@ export default function EnhancedServicesShowcase2025() {
                 {/* Category and Tags */}
                 <div className="mb-4">
                   <div className="text-sm text-gray-400 mb-2">
-                    <span className="text-cyan-400">{service.category}</span> • {service.subcategory}
+                    <span className="text-cyan-400">{service.category}</span>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {service.tags.slice(0, 4).map((tag, tagIdx) => (
@@ -311,12 +307,12 @@ export default function EnhancedServicesShowcase2025() {
                           Technology Stack
                         </h4>
                         <div className="flex flex-wrap gap-2">
-                          {service.technologyStack.map((tech, techIdx) => (
+                          {service.tags.slice(0, 3).map((tag, tagIdx) => (
                             <span
-                              key={techIdx}
+                              key={tagIdx}
                               className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-md"
                             >
-                              {tech}
+                              {tag}
                             </span>
                           ))}
                         </div>
@@ -329,7 +325,7 @@ export default function EnhancedServicesShowcase2025() {
                           Integration Capabilities
                         </h4>
                         <div className="flex flex-wrap gap-2">
-                          {service.integrationCapabilities.map((integration, intIdx) => (
+                          {service.integrations.slice(0, 3).map((integration, intIdx) => (
                             <span
                               key={intIdx}
                               className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-md"
@@ -347,12 +343,12 @@ export default function EnhancedServicesShowcase2025() {
                           Compliance Standards
                         </h4>
                         <div className="flex flex-wrap gap-2">
-                          {service.complianceStandards.map((compliance, compIdx) => (
+                          {service.tags.slice(0, 2).map((tag, tagIdx) => (
                             <span
-                              key={compIdx}
+                              key={tagIdx}
                               className="px-2 py-1 bg-green-500/20 text-green-300 text-xs rounded-md"
                             >
-                              {compliance}
+                              {tag}
                             </span>
                           ))}
                         </div>
@@ -365,10 +361,10 @@ export default function EnhancedServicesShowcase2025() {
                           Use Cases
                         </h4>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                          {service.useCases.map((useCase, useCaseIdx) => (
-                            <div key={useCaseIdx} className="text-sm text-gray-300 flex items-start">
+                          {service.benefits.slice(0, 3).map((benefit, benefitIdx) => (
+                            <div key={benefitIdx} className="text-sm text-gray-300 flex items-start">
                               <span className="text-orange-400 mr-2">•</span>
-                              {useCase}
+                              {benefit}
                             </div>
                           ))}
                         </div>
@@ -384,7 +380,7 @@ export default function EnhancedServicesShowcase2025() {
                           <div className="flex justify-between items-center mb-2">
                             <span>Our Price:</span>
                             <span className="text-green-400 font-semibold">
-                              {service.currency}{service.price.toLocaleString()}/{service.pricingModel}
+                              ${service.price.toLocaleString()}/{service.pricingModel}
                             </span>
                           </div>
                           <div className="flex justify-between items-center">
@@ -400,7 +396,7 @@ export default function EnhancedServicesShowcase2025() {
                 {/* Action Buttons */}
                 <div className="mt-6 flex space-x-3">
                   <a
-                    href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title}`}
+                    href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`}
                     className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 flex items-center justify-center"
                   >
                     <Mail className="w-4 h-4 mr-2" />
