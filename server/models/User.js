@@ -5,6 +5,8 @@ const userSchema = new mongoose.Schema({
   name: { type: String, required: true },
   email: { type: String, required: true, unique: true, lowercase: true, trim: true },
   passwordHash: { type: String, required: true, select: false },
+  resetPasswordToken: { type: String, select: false },
+  resetPasswordExpires: Date,
 });
 
 const SALT_ROUNDS = 10;

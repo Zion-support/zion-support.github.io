@@ -31,56 +31,20 @@ export default function ForgotPassword() {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!email.trim()) return;
-
-    setIsLoading(true);
-    
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitted(true);
-      setIsLoading(false);
-    }, 2000);
-  };
-
-  if (isSubmitted) {
-    return (
-      <>
-        <SEO
-          title="Password Reset Sent - Zion Tech Group"
-          description="Check your email for password reset instructions."
-          canonical="https://ziontechgroup.com/forgot-password"
-        />
-        <div className="min-h-screen bg-zion-blue flex items-center justify-center">
-          <div className="max-w-md w-full mx-auto p-6">
-            <div className="text-center">
-              <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mb-4">
-                <CheckCircle className="h-6 w-6 text-green-600" />
-              </div>
-              <h1 className="text-2xl font-bold text-white mb-4">Check Your Email</h1>
-              <p className="text-zion-slate-light mb-6">
-                We've sent password reset instructions to <strong>{email}</strong>
-              </p>
-              <p className="text-zion-slate-light text-sm mb-8">
-                If you don't see the email, check your spam folder or{' '}
-                <button
-                  onClick={() => setIsSubmitted(false)}
-                  className="text-zion-cyan hover:underline"
-                >
-                  try again
-                </button>
-              </p>
-              <Link
-                to="/login"
-                className="inline-block bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-6 py-3 rounded-lg font-medium transition-all duration-300"
-              >
-                Back to Login
-              </Link>
-            </div>
-          </div>
-        </div>
-      </>
-    );
+    e.preventDefault()
+    setLoading(true)
+    try {
+      const res = await fetch(`${API_URL}/auth/forgot-password`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      })
+      if (res.status === 200) {
+        toast.success('Email sent')
+      }
+    } finally {
+      setLoading(false)
+    }
   }
 
   return (
