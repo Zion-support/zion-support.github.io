@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import SEOHead from '../components/SEOHead';
 import { 
   Mail, 
   Phone, 
@@ -22,6 +23,42 @@ export default function Contact() {
     service: '',
     message: ''
   });
+
+  // SEO structured data for the contact page
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Zion Tech Group",
+    "description": "Get in touch with Zion Tech Group for AI-powered technology solutions, IT services, and business consulting. Contact us today to transform your business.",
+    "url": "https://ziontechgroup.com/contact",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com",
+      "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
+      "description": "Leading provider of AI-powered technology solutions and comprehensive IT services",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "364 E Main St STE 1008",
+        "addressLocality": "Middletown",
+        "addressRegion": "DE",
+        "postalCode": "19709",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-302-464-0950",
+        "contactType": "customer service",
+        "email": "kleber@ziontechgroup.com",
+        "availableLanguage": "English"
+      },
+      "sameAs": [
+        "https://linkedin.com/company/ziontechgroup",
+        "https://twitter.com/ziontechgroup",
+        "https://github.com/ziontechgroup"
+      ]
+    }
+  };
 
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -77,7 +114,14 @@ export default function Contact() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24 pb-20">
+    <>
+      <SEOHead 
+        title="Contact Zion Tech Group - Get in Touch for Technology Solutions"
+        description="Get in touch with Zion Tech Group for AI-powered technology solutions, IT services, and business consulting. Contact us today to transform your business."
+        keywords="contact Zion Tech Group, technology consulting, AI services, IT support, business solutions"
+        structuredData={structuredData}
+      />
+      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24 pb-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -307,6 +351,7 @@ export default function Contact() {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

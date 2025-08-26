@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import SEOHead from '../components/SEOHead';
 import { 
   Users, 
   TrendingUp, 
@@ -20,6 +21,41 @@ import {
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  // SEO structured data for the homepage
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Zion Tech Group - AI-Powered Technology Solutions",
+    "description": "Transform your business with cutting-edge AI, cloud infrastructure, and cybersecurity solutions. Expert consulting and enterprise services for modern businesses.",
+    "url": "https://ziontechgroup.com",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com",
+      "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
+      "description": "Leading provider of AI-powered technology solutions and comprehensive IT services",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "364 E Main St STE 1008",
+        "addressLocality": "Middletown",
+        "addressRegion": "DE",
+        "postalCode": "19709",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-302-464-0950",
+        "contactType": "customer service",
+        "email": "kleber@ziontechgroup.com"
+      },
+      "sameAs": [
+        "https://linkedin.com/company/ziontechgroup",
+        "https://twitter.com/ziontechgroup",
+        "https://github.com/ziontechgroup"
+      ]
+    }
+  };
 
   const heroSlides = [
     {
@@ -167,7 +203,14 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <>
+      <SEOHead 
+        title="Zion Tech Group - AI-Powered Technology Solutions & Services"
+        description="Transform your business with cutting-edge AI, cloud infrastructure, and cybersecurity solutions. Expert consulting and enterprise services for modern businesses."
+        keywords="AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation"
+        structuredData={structuredData}
+      />
+      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-24 pb-20">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/20 via-zion-purple/20 to-zion-cyan/20"></div>
@@ -396,6 +439,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }

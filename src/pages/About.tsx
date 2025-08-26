@@ -1,10 +1,55 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SEOHead from '../components/SEOHead';
 
 export default function About() {
+  // SEO structured data for the about page
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Zion Tech Group",
+    "description": "Learn about Zion Tech Group, the world's first free marketplace dedicated to high-tech and artificial intelligence. Discover our mission, values, and commitment to innovation.",
+    "url": "https://ziontechgroup.com/about",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com",
+      "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
+      "description": "The world's first free marketplace dedicated to high-tech and artificial intelligence",
+      "foundingDate": "2020",
+      "numberOfEmployees": "50+",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "364 E Main St STE 1008",
+        "addressLocality": "Middletown",
+        "addressRegion": "DE",
+        "postalCode": "19709",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-302-464-0950",
+        "contactType": "customer service",
+        "email": "kleber@ziontechgroup.com"
+      },
+      "sameAs": [
+        "https://linkedin.com/company/ziontechgroup",
+        "https://twitter.com/ziontechgroup",
+        "https://github.com/ziontechgroup"
+      ]
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24 pb-20">
+    <>
+      <SEOHead 
+        title="About Zion Tech Group - Innovation & AI Technology Marketplace"
+        description="Learn about Zion Tech Group, the world's first free marketplace dedicated to high-tech and artificial intelligence. Discover our mission, values, and commitment to innovation."
+        keywords="about Zion Tech Group, AI marketplace, technology innovation, high-tech solutions, artificial intelligence platform"
+        structuredData={structuredData}
+      />
+      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24 pb-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -119,6 +164,7 @@ export default function About() {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }
