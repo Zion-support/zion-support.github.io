@@ -1,32 +1,62 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-<<<<<<< HEAD
 import React from 'react';
-export function NewsletterSection() {
-    return (_jsx("section", { className: "bg-zion-blue-dark py-16", children: _jsxs("div", { className: "container mx-auto px-4 text-center", children: [_jsx("h2", { className: "text-3xl font-bold text-white mb-4", children: "Stay Updated with Zion Tech Group" }), _jsx("p", { className: "text-zion-cyan mb-8 max-w-2xl mx-auto", children: "Get the latest insights on AI, IT services, and innovative solutions delivered to your inbox." }), _jsx("div", { className: "max-w-md mx-auto", children: _jsxs("div", { className: "flex gap-2", children: [_jsx("input", { type: "email", placeholder: "Enter your email", className: "flex-1 px-4 py-3 rounded-lg border border-zion-blue-light bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-zion-cyan" }), _jsx("button", { className: "px-6 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors", children: "Subscribe" })] }) })] }) }));
-=======
 import { useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { Mail } from 'lucide-react';
 export function NewsletterSection() {
-    const [email, setEmail] = useState('');
-    const [isSubscribed, setIsSubscribed] = useState(false);
-    const [isLoading, setIsLoading] = useState(false);
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        if (!email.trim())
-            return;
-        setIsLoading(true);
-        // Simulate API call
-        setTimeout(() => {
-            setIsSubscribed(true);
-            setIsLoading(false);
-            setEmail('');
-        }, 1000);
-    };
-    if (isSubscribed) {
-        return (_jsx("section", { className: "py-16 bg-zion-blue-light", children: _jsx("div", { className: "container mx-auto px-4 text-center", children: _jsxs("div", { className: "max-w-md mx-auto", children: [_jsx(Mail, { className: "h-12 w-12 text-green-400 mx-auto mb-4" }), _jsx("h3", { className: "text-2xl font-bold text-white mb-2", children: "Thank You!" }), _jsx("p", { className: "text-zion-slate-light", children: "You've been successfully subscribed to our newsletter." })] }) }) }));
-    }
-    return (_jsx("section", { className: "py-16 bg-zion-blue-light", children: _jsx("div", { className: "container mx-auto px-4", children: _jsxs("div", { className: "max-w-2xl mx-auto text-center", children: [_jsx("h2", { className: "text-3xl font-bold text-white mb-4", children: "Stay Updated" }), _jsx("p", { className: "text-zion-slate-light mb-8", children: "Get the latest updates on tech trends, new features, and exclusive opportunities delivered to your inbox." }), _jsxs("form", { onSubmit: handleSubmit, className: "flex flex-col sm:flex-row gap-4 max-w-md mx-auto", children: [_jsx(Input, { type: "email", placeholder: "Enter your email", value: email, onChange: (e) => setEmail(e.target.value), className: "flex-1 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan", required: true }), _jsx(Button, { type: "submit", disabled: isLoading || !email.trim(), className: "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple disabled:opacity-50", children: isLoading ? 'Subscribing...' : 'Subscribe' })] })] }) }) }));
->>>>>>> origin/cursor/install-project-dependencies-and-husky-2974
+  return (
+    <section className="py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-20 w-64 h-64 border border-zion-cyan/10 rounded-full opacity-30"></div>
+        <div className="absolute bottom-20 right-20 w-48 h-48 border border-zion-purple/10 rotate-45 opacity-30"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-zion-cyan/5 rounded-full opacity-20"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Stay Ahead of the Technology Curve
+          </h2>
+          <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
+            Get exclusive insights into the latest AI trends, technology breakthroughs, and industry updates. 
+            Join thousands of professionals who trust Zion Tech Group for cutting-edge technology intelligence.
+          </p>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <div className="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your professional email address"
+                className="flex-1 px-6 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300 text-lg"
+                required
+              />
+              <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:from-zion-cyan-light hover:to-zion-purple-light transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 text-lg">
+                Subscribe Now
+              </button>
+            </div>
+            <p className="text-sm text-zion-slate-light mt-4">
+              🔒 We respect your privacy. Unsubscribe at any time.
+            </p>
+          </div>
+          
+          <div className="mt-8 flex flex-wrap justify-center items-center gap-6 text-zion-slate-light text-sm">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
+              <span>Weekly insights delivered</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-zion-purple rounded-full"></div>
+              <span>Exclusive content access</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
+              <span>Early access to new features</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
