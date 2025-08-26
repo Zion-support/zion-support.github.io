@@ -39,13 +39,8 @@ const InnovativeNewServices2025: React.FC = () => {
   const filteredServices = allServices.filter(service => {
     const categoryMatch = selectedCategory === 'all' || service.category === selectedCategory;
     
-    // Handle different price properties for different service types
-    let servicePrice = 0;
-    if ('price' in service) {
-      servicePrice = service.price;
-    } else if ('hourlyRate' in service) {
-      servicePrice = service.hourlyRate * 160; // Convert hourly rate to monthly (160 hours/month)
-    }
+    // All services have a price property
+    const servicePrice = service.price;
     
     const priceMatch = selectedPriceRange === 'all' || 
       (selectedPriceRange === '0-2000' && servicePrice < 2000) ||
@@ -208,9 +203,9 @@ const InnovativeNewServices2025: React.FC = () => {
                       </div>
                       <div className="text-right">
                         <div className="text-2xl font-bold text-cyan-400">
-                          {service.currency}{('price' in service ? service.price : (service.hourlyRate * 160)).toLocaleString()}/mo
+                          {service.currency}{service.price.toLocaleString()}/mo
                         </div>
-                        <div className="text-sm text-gray-400">{('pricingModel' in service ? service.pricingModel : 'hourly')}</div>
+                        <div className="text-sm text-gray-400">{service.pricingModel}</div>
                       </div>
                     </div>
 
