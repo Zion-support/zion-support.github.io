@@ -1,18 +1,13 @@
 [build]
-  # Deterministic install and build for Next static export
-  command = "npm ci && npm run build"
+  command = "npm run build"
   publish = "out"
+  command_timeout = "30m"
 
 [build.environment]
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max_old_space_size=4096"
-  NPM_FLAGS = "--prefer-offline"
 
-# Use Next.js Netlify plugin for optimal handling
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
-# Static redirects for exported site (since Next redirects don't apply to export)
+# Static redirects (since Next.js redirects are ignored on export)
 [[redirects]]
   from = "/ai-customer-success-platform"
   to = "/services/ai-customer-success-platform/"
@@ -52,3 +47,67 @@
   from = "/affiliate-attribution-suite"
   to = "/services/affiliate-attribution-suite/"
   status = 301
+
+[[redirects]]
+  from = "/ai-content-marketing-automation"
+  to = "/ai-content-generator/"
+  status = 301
+
+[[redirects]]
+  from = "/ai-autonomous-ecosystem"
+  to = "/ai-autonomous-ecosystem-manager/"
+  status = 301
+
+[[redirects]]
+  from = "/autonomous-it-operations"
+  to = "/autonomous-it-operations-center/"
+  status = 301
+
+[[redirects]]
+  from = "/autonomous-vehicle-ai"
+  to = "/autonomous-vehicle-ai-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/blockchain-enterprise-platform"
+  to = "/blockchain-infrastructure-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-networking"
+  to = "/quantum-services/"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-data-center"
+  to = "/quantum-services/"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-encryption-gateway"
+  to = "/quantum-internet-security-platform/"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-threat-detection"
+  to = "/quantum-cybersecurity/"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-identity-verification"
+  to = "/quantum-cybersecurity/"
+  status = 301
+
+# Security and performance headers for static assets
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    X-DNS-Prefetch-Control = "on"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Resource-Policy = "same-origin"
+    X-Permitted-Cross-Domain-Policies = "none"
