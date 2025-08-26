@@ -30,10 +30,6 @@ import { Globe, Zap } from "lucide-react";
 =======
 import { Globe, Brain, Shield } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Globe, Zap, Shield, BarChart3, Database, Code, Network } from "lucide-react";
-import { useEffect, useState } from "react";
-import { IT_SERVICES, getITServicesByCategory } from "@/data/itServices";
-=======
 import { Globe, Zap, Brain } from "lucide-react";
 import { useEffect, useState } from "react";
 import { MICRO_SAAS_SERVICES } from "@/data/microSaasServices";
@@ -44,6 +40,8 @@ import { toast } from "@/hooks/use-toast";
 import Link from "next/link";
 import { Globe } from "lucide-react";
 import ServicesList from '@/components/ServicesList';
+=======
+import apiClient from "@/services/apiClient";
 
 import { Globe, ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -767,16 +765,18 @@ export default function ServicesPage() {
 
   useEffect(() => {
     async function load() {
-      try {
-        const res = await apiClient.get('/services');
-        setListings(res.data as ProductListing[]);
-      } catch (err) {
-        console.error('Failed to fetch services', err);
-        toast.error('Failed to load services. Showing sample data.');
-        setListings(SERVICES);
-      }
+      const res = await apiClient.get<ProductListing[]>('/services');
+      setListings(res.data);
     }
     load();
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setListings(prev => [...prev, generateRandomService(prev.length + 1)]);
+    }, 120000);
+
+    return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
