@@ -125,7 +125,7 @@ const App = () => {
   
   return (
     <WhitelabelProvider>
-      <ThemeProvider defaultTheme="dark">
+      <ThemeProvider>
         <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>
           <ErrorBoundary>
           <Routes>
