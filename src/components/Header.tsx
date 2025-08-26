@@ -1,4 +1,6 @@
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link, useLocation } from 'react-router-dom';
 import { ThemeToggle } from './ThemeToggle';
 import { Button } from './ui/button';
 import { 
@@ -12,6 +14,7 @@ import {
   Shield,
   Zap
 } from 'lucide-react';
+
 // Enhanced navigation structure
 const navigation = [
   {
@@ -19,11 +22,11 @@ const navigation = [
     href: '/services',
     icon: Zap,
     children: [
-      { name: 'AI Solutions', href: '/ai-solutions', description: 'Cutting-edge AI services' },
+      { name: 'AI Solutions', href: '/services/ai', description: 'Cutting-edge AI services' },
       { name: 'Cloud & DevOps', href: '/services/cloud', description: 'Scalable infrastructure' },
       { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Advanced security' },
       { name: 'Digital Transformation', href: '/services/transformation', description: 'Business modernization' },
-      { name: 'Infrastructure', href: '/services/infrastructure', description: 'IT infrastructure' },
+      { name: 'IT Infrastructure', href: '/services/infrastructure', description: 'IT infrastructure' },
       { name: 'Consulting', href: '/services/consulting', description: 'Strategic guidance' },
     ]
   },
@@ -53,11 +56,13 @@ const navigation = [
   { name: 'Resources', href: '/resources' },
   { name: 'Contact', href: '/contact' }
 ];
+
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
@@ -66,14 +71,17 @@ export function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   // Close mobile menu when route changes
   useEffect(() => {
     setIsOpen(false);
     setActiveDropdown(null);
   }, [location]);
+
   const toggleDropdown = (name: string) => {
     setActiveDropdown(activeDropdown === name ? null : name);
   };
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -100,6 +108,7 @@ export function Header() {
               </div>
             </Link>
           </motion.div>
+
           {/* Desktop Navigation */}
           <div className="hidden lg:flex lg:items-center lg:space-x-8">
             {navigation.map((item) => (
@@ -126,6 +135,7 @@ export function Header() {
                     <span>{item.name}</span>
                   </Link>
                 )}
+                
                 {/* Dropdown Menu */}
                 {item.children && (
                   <AnimatePresence>
@@ -165,6 +175,7 @@ export function Header() {
               </div>
             ))}
           </div>
+
           {/* Right side actions */}
           <div className="flex items-center space-x-4">
             {/* Search Button */}
@@ -176,6 +187,7 @@ export function Header() {
             >
               <Search className="w-4 h-4" />
             </Button>
+            
             {/* Notifications */}
             <Button
               variant="ghost"
@@ -185,8 +197,10 @@ export function Header() {
             >
               <Bell className="w-4 h-4" />
             </Button>
+            
             {/* Theme Toggle */}
             <ThemeToggle />
+            
             {/* CTA Button */}
             <Button
               asChild
@@ -196,6 +210,7 @@ export function Header() {
                 Get Started
               </Link>
             </Button>
+            
             {/* Mobile menu button */}
             <Button
               variant="ghost"
@@ -203,13 +218,13 @@ export function Header() {
               className="lg:hidden text-white hover:text-zion-cyan hover:bg-white/10"
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle mobile menu"
-              aria-expanded={isOpen}
             >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </Button>
           </div>
         </div>
       </nav>
+
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -218,7 +233,7 @@ export function Header() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-background/95 backdrop-blur-md border-t border-white/10"
+            className="lg:hidden bg-background/95 backdrop-blur-md border-b border-white/10"
           >
             <div className="px-4 py-6 space-y-4">
               {navigation.map((item) => (
@@ -227,11 +242,10 @@ export function Header() {
                     <div>
                       <button
                         onClick={() => toggleDropdown(item.name)}
-                        className="flex items-center justify-between w-full px-4 py-3 text-left text-white hover:text-zion-cyan transition-colors duration-200 font-medium"
-                        aria-expanded={activeDropdown === item.name}
+                        className="flex items-center justify-between w-full px-4 py-2 text-white hover:text-zion-cyan transition-colors duration-200 font-medium"
                       >
                         <span className="flex items-center space-x-2">
-                          {item.icon && <item.icon className="w-4 h-4" />}
+                          <item.icon className="w-4 h-4" />
                           <span>{item.name}</span>
                         </span>
                         <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
@@ -239,29 +253,23 @@ export function Header() {
                         }`} />
                       </button>
                       {activeDropdown === item.name && (
-                        <motion.div
-                          initial={{ opacity: 0, y: -10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          exit={{ opacity: 0, y: -10 }}
-                          transition={{ duration: 0.2 }}
-                          className="ml-4 mt-2 space-y-2"
-                        >
+                        <div className="pl-8 mt-2 space-y-2">
                           {item.children.map((child) => (
                             <Link
                               key={child.name}
                               to={child.href}
-                              className="block px-4 py-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-200"
+                              className="block px-4 py-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-200 text-sm"
                             >
                               {child.name}
                             </Link>
                           ))}
-                        </motion.div>
+                        </div>
                       )}
                     </div>
                   ) : (
                     <Link
                       to={item.href}
-                      className="flex items-center space-x-2 px-4 py-3 text-white hover:text-zion-cyan transition-colors duration-200 font-medium"
+                      className="flex items-center space-x-2 px-4 py-2 text-white hover:text-zion-cyan transition-colors duration-200 font-medium"
                     >
                       {item.icon && <item.icon className="w-4 h-4" />}
                       <span>{item.name}</span>
@@ -269,11 +277,12 @@ export function Header() {
                   )}
                 </div>
               ))}
+              
               {/* Mobile CTA */}
               <div className="pt-4 border-t border-white/10">
                 <Button
                   asChild
-                  className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan/90 hover:to-zion-blue/90 text-white border-0"
+                  className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan/90 hover:to-zion-blue/90 text-white border-0 shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
                 >
                   <Link to="/contact">
                     Get Started
@@ -284,23 +293,6 @@ export function Header() {
           </motion.div>
         )}
       </AnimatePresence>
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { MainNavigation } from '../layout/MainNavigation';
-export function Header() {
-  return (
-    <header className="bg-white shadow-sm border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0">
-              <h1 className="text-2xl font-bold text-zion-purple">Zion Tech Group</h1>
-            </Link>
-          </div>
-          <MainNavigation />
-        </div>
-      </div>
     </header>
   );
 }
