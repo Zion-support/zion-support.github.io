@@ -5,18 +5,39 @@
 
 [build.environment]
   NODE_VERSION = "20"
-  NODE_OPTIONS = "--max_old_space_size=4096"
+  NODE_OPTIONS = "--max-old-space-size=6144 --openssl-legacy-provider"
   NPM_FLAGS = "--prefer-offline"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-# Optional: a few redirects that were present
+# Redirects to resolve broken internal slugs
 [[redirects]]
   from = "/ai-autonomous-ecosystem"
-  to = "/ai-autonomous-ecosystem-manager"
+  to = "/services"
   status = 301
 
+[[redirects]]
+  from = "/ai-content-marketing-automation"
+  to = "/services"
+  status = 301
+
+[[redirects]]
+  from = "/ai-consciousness-evolution"
+  to = "/ai-consciousness-evolution-2029"
+  status = 301
+
+[[redirects]]
+  from = "/ai-ethics-governance"
+  to = "/services"
+  status = 301
+
+[[redirects]]
+  from = "/quantum-encryption-gateway"
+  to = "/services"
+  status = 301
+
+# Optional: a few redirects that were present
 [[redirects]]
   from = "/autonomous-it-operations"
   to = "/autonomous-it-operations-center"
