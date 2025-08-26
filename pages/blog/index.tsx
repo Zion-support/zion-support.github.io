@@ -1,27 +1,3 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-
-const Index: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>Index - Zion Tech Solutions</title>
-        <meta name="description" content="Index blog post" />
-      </Head>
-      
-      <main>
-        <h1>Index</h1>
-        <p>Blog content coming soon...</p>
-        <Link href="/blog">Back to Blog</Link>
-      </main>
-    </div>
-  );
-};
-
-export default Index;
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -99,54 +75,37 @@ export default function BlogPage() {
                   <div className="text-4xl mb-4">💻</div>
                   <h3 className="text-xl font-bold mb-2 text-fuchsia-400">Technology</h3>
                   <p className="text-white/70 mb-4">
-                    Latest developments in AI, cloud computing, and infrastructure
+                    Latest trends in emerging technologies and innovation
                   </p>
                   <span className="text-fuchsia-400 group-hover:text-fuchsia-300">Explore →</span>
                 </Link>
                 
-                <Link href="/blog/category/industry" className="bg-white/10 rounded-2xl p-6 border border-white/20 hover:border-green-400/30 transition-all group">
+                <Link href="/blog/category/industry" className="bg-white/10 rounded-2xl p-6 border border-white/20 hover:border-yellow-400/30 transition-all group">
                   <div className="text-4xl mb-4">🏭</div>
-                  <h3 className="text-xl font-bold mb-2 text-green-400">Industry</h3>
+                  <h3 className="text-xl font-bold mb-2 text-yellow-400">Industry</h3>
                   <p className="text-white/70 mb-4">
-                    Industry trends and business insights
+                    Industry-specific insights and case studies
                   </p>
-                  <span className="text-green-400 group-hover:text-green-300">Explore →</span>
+                  <span className="text-yellow-400 group-hover:text-yellow-300">Explore →</span>
                 </Link>
               </div>
             </section>
 
-            {/* Latest Articles */}
+            {/* Recent Articles */}
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-center text-green-400">Latest Articles</h2>
+              <h2 className="text-3xl font-bold mb-8 text-center text-purple-400">Recent Articles</h2>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <article className="bg-white/10 rounded-2xl p-6 border border-white/20 hover:border-cyan-400/30 transition-all">
-                  <div className="text-3xl mb-4">🔒</div>
+                  <div className="text-3xl mb-4">🔧</div>
                   <h3 className="text-xl font-bold mb-3 text-cyan-400">
-                    <Link href="/blog/security-automation-2025" className="hover:text-cyan-300">
-                      Security Automation in 2025: What's New?
+                    <Link href="/blog/devops-automation" className="hover:text-cyan-300">
+                      DevOps Automation Strategies
                     </Link>
                   </h3>
                   <p className="text-white/70 mb-4">
-                    Discover the latest advancements in automated security systems and 
-                    how they're protecting digital infrastructure.
-                  </p>
-                  <div className="flex items-center justify-between text-sm text-white/50">
-                    <span>January 12, 2025</span>
-                    <span>5 min read</span>
-                  </div>
-                </article>
-                
-                <article className="bg-white/10 rounded-2xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all">
-                  <div className="text-3xl mb-4">📊</div>
-                  <h3 className="text-xl font-bold mb-3 text-fuchsia-400">
-                    <Link href="/blog/performance-optimization" className="hover:text-fuchsia-300">
-                      Performance Optimization Through AI
-                    </Link>
-                  </h3>
-                  <p className="text-white/70 mb-4">
-                    Learn how artificial intelligence is revolutionizing performance 
-                    optimization and system efficiency.
+                    Streamline your development workflow with intelligent automation 
+                    and continuous improvement practices.
                   </p>
                   <div className="flex items-center justify-between text-sm text-white/50">
                     <span>January 10, 2025</span>
@@ -155,15 +114,15 @@ export default function BlogPage() {
                 </article>
                 
                 <article className="bg-white/10 rounded-2xl p-6 border border-white/20 hover:border-green-400/30 transition-all">
-                  <div className="text-3xl mb-4">🌐</div>
+                  <div className="text-3xl mb-4">🌱</div>
                   <h3 className="text-xl font-bold mb-3 text-green-400">
-                    <Link href="/blog/cloud-native-automation" className="hover:text-green-300">
-                      Cloud-Native Automation Strategies
+                    <Link href="/blog/sustainable-automation" className="hover:text-green-300">
+                      Sustainable Automation Practices
                     </Link>
                   </h3>
                   <p className="text-white/70 mb-4">
-                    Explore best practices for implementing automation in cloud-native 
-                    environments and microservices architectures.
+                    Discover how automation can drive sustainability and reduce 
+                    environmental impact in your operations.
                   </p>
                   <div className="flex items-center justify-between text-sm text-white/50">
                     <span>January 8, 2025</span>
@@ -262,4 +221,3 @@ export default function BlogPage() {
     </>
   );
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
