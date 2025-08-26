@@ -297,24 +297,23 @@ export function FeaturedListingsSection() {
                 </Link>
               </div>
             </div>))}
-        </></div>
-        
-        {/* Enhanced bottom CTA */}
-        <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
-          <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
-            <div className="px-8 py-4 bg-zion-blue-dark rounded-xl">
-              <p className="text-white text-lg mb-4">
-                Ready to start your next project?
-              </p>
-              <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
-                View All Projects
-                <ArrowRight className="w-5 h-5"/>
-              </button>
-            </div>
-          </div>
         </motion.div>
-      </div>);
-    section >
-    ;
-    ;
+      </div>
+      
+      {/* Enhanced bottom CTA */}
+      <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.3 }}>
+        <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
+          <div className="px-8 py-4 bg-zion-blue-dark rounded-xl">
+            <p className="text-white text-lg mb-4">
+              Ready to start your next project?
+            </p>
+            <button className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-zion-cyan/25">
+              View All Projects
+              <ArrowRight className="w-5 h-5"/>
+            </button>
+          </div>
+        </div>
+      </motion.div>
+    </section>
+  );
 }

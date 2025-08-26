@@ -1,6 +1,5 @@
-import { useState } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Logo } from '@/components/header/Logo';
 import { PointsBadge } from '@/components/loyalty/PointsBadge';
 import { UserMenu } from '@/components/header/UserMenu';
@@ -22,13 +21,13 @@ import type { RootState } from '@/store';
 import { ModeToggle } from '@/components/ModeToggle';
 
 export function PrimaryNav() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const { user } = useAuth();
   const isLoggedIn = !!user;
   const isMobile = useIsMobile();
   const { t } = useTranslation();
-  const router = useRouter();
-  const [query, setQuery] = useState('');
+  const router = useLocation();
+  const [query, setQuery] = React.useState('');
   const suggestions = generateSearchSuggestions();
 
   let unreadCount = 0;

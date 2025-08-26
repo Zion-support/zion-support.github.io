@@ -63,6 +63,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
       - name: Partition queue for this shard
         id: part
         env:
@@ -77,7 +83,6 @@ jobs:
           wc -l shard_urls.txt || true
           if [ ! -s shard_urls.txt ]; then echo "No URLs for this shard"; fi
 
-      - uses: actions/setup-node@v4
       - name: Run crawler (linkinator) on shard
         run: |
           set -e
